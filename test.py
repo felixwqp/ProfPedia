@@ -26,12 +26,34 @@ time.sleep(1)
 browser.find_element_by_id('Carnegie%20Mellon%20University-widget').click()
 time.sleep(1)
 soup = BeautifulSoup(browser.page_source, "html.parser")
-# file = open("html_CMU", "w")
+# file = open("html_CMU.txt", "w")
 # file.write(soup.prettify('latin-1'))
-fileLink = open("CMU1", "w")
+# fileLink = open("CMU1.txt", "w")
 """the name and related link"""
-# for link in soup.find_all("a"):
-#     print link.text, link.get("href")
+flag = False
+count = 0
+f = open('CMU1','r')
+f.close()
+for link in soup.find_all("a"):
+    temp =  link.text, link.get("href")
+    if temp[0] == 'Ariel D. Procaccia' or flag:
+        flag = True
+        tempStr = str(temp[0].encode('utf-8'))
+        temp1 = str(temp[1].encode('utf-8'))
+        if count%5 == 0:
+
+            if(len(tempStr)<3):
+                continue
+            f = open('profs/'+tempStr,'w')
+        if count%5 == 1:
+            f.write(temp1+'\n')
+        if count % 5 == 2:
+            f.write(temp1 + '\n')
+        if count % 5 == 3 :
+            f.write(temp1 + '\n')
+        if count % 5 == 4:
+            f.close()
+        count+=1
 data = str()
 for link in soup.find_all(univNama):
     data += str(link.text.encode('utf-8')).replace('\n',' ')
