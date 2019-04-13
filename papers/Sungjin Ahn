@@ -1,0 +1,224 @@
+Bayesian Posterior Sampling via Stochastic Gradient Fisher Scoring
+
+  In this paper we address the following question: Can we approximately sample
+from a Bayesian posterior distribution if we are only allowed to touch a small
+mini-batch of data-items for every sample we generate?. An algorithm based on
+the Langevin equation with stochastic gradients (SGLD) was previously proposed
+to solve this, but its mixing rate was slow. By leveraging the Bayesian Central
+Limit Theorem, we extend the SGLD algorithm so that at high mixing rates it
+will sample from a normal approximation of the posterior, while for slow mixing
+rates it will mimic the behavior of SGLD with a pre-conditioner matrix. As a
+bonus, the proposed algorithm is reminiscent of Fisher scoring (with stochastic
+gradients) and as such an efficient optimizer during burn-in.
+
+
+Large-Scale Distributed Bayesian Matrix Factorization using Stochastic
+  Gradient MCMC
+
+  Despite having various attractive qualities such as high prediction accuracy
+and the ability to quantify uncertainty and avoid over-fitting, Bayesian Matrix
+Factorization has not been widely adopted because of the prohibitive cost of
+inference. In this paper, we propose a scalable distributed Bayesian matrix
+factorization algorithm using stochastic gradient MCMC. Our algorithm, based on
+Distributed Stochastic Gradient Langevin Dynamics, can not only match the
+prediction accuracy of standard MCMC methods like Gibbs sampling, but at the
+same time is as fast and simple as stochastic gradient descent. In our
+experiments, we show that our algorithm can achieve the same level of
+prediction accuracy as Gibbs sampling an order of magnitude faster. We also
+show that our method reduces the prediction error as fast as distributed
+stochastic gradient descent, achieving a 4.1% improvement in RMSE for the
+Netflix dataset and an 1.8% for the Yahoo music dataset.
+
+
+A Neural Knowledge Language Model
+
+  Current language models have a significant limitation in the ability to
+encode and decode factual knowledge. This is mainly because they acquire such
+knowledge from statistical co-occurrences although most of the knowledge words
+are rarely observed. In this paper, we propose a Neural Knowledge Language
+Model (NKLM) which combines symbolic knowledge provided by the knowledge graph
+with the RNN language model. By predicting whether the word to generate has an
+underlying fact or not, the model can generate such knowledge-related words by
+copying from the description of the predicted fact. In experiments, we show
+that the NKLM significantly improves the performance while generating a much
+smaller number of unknown words.
+
+
+Scalable MCMC for Mixed Membership Stochastic Blockmodels
+
+  We propose a stochastic gradient Markov chain Monte Carlo (SG-MCMC) algorithm
+for scalable inference in mixed-membership stochastic blockmodels (MMSB). Our
+algorithm is based on the stochastic gradient Riemannian Langevin sampler and
+achieves both faster speed and higher accuracy at every iteration than the
+current state-of-the-art algorithm based on stochastic variational inference.
+In addition we develop an approximation that can handle models that entertain a
+very large number of communities. The experimental results show that SG-MCMC
+strictly dominates competing algorithms in all cases.
+
+
+Interlayer correlation between two $^4$He monolayers adsorbed on both
+  sides of $α$-graphyne
+
+  Path-integral Monte Carlo calculations have been performed to study the
+$^4$He adsorption on both sides of a single $\alpha$-graphyne sheet. For
+investigation of the interlayer correlation between the upper and the lower
+monolayer of $^4$He adatoms, the $^4$He-substrate interaction is described by
+the sum of the $^4$He-C interatomic pair potentials, for which we use both
+Lennard-Jones and Yukawa-6 anisotropic potentials. When the lower $^4$He layer
+is a C$_{4/3}$ commensurate solid, the upper-layer $^4$He atoms are found to
+form a Kagom\'e lattice structure at a Mott insulating density of 0.0706
+\AA$^{-2}$, and a commensurate solid at an areal density of 0.0941 \AA$^{-2}$
+for both substrate potentials. The correlation between upper- and lower-layer
+pseudospins, which were introduced in Ref. [1] for two degenerate
+configurations of three $^4$He atoms in a hexagonal cell, depends on the
+substrate potential used; With the substrate potential based on the anisotropic
+Yukawa-6 pair potentials, the Ising pseudo-spins of both $^4$He layers are
+found to be anti-parallel to each other while the parallel and anti-parallel
+pseudo-spin alignments between the two $^4$He layers are nearly degenerate with
+the Lennard-Jones potentials. This is attributed to the difference in the
+interlayer distance, which is $\sim 4$ \AA~ with the Yukawa-6 substrate
+potential but as large as $\sim 4.8$ \AA~with the Lennard-Jones potential.
+  [1] Y. Kwon, H. Shin, and H. Lee, Phys. Rev. B 88, 201403(R) (2013)
+
+
+Denoising Criterion for Variational Auto-Encoding Framework
+
+  Denoising autoencoders (DAE) are trained to reconstruct their clean inputs
+with noise injected at the input level, while variational autoencoders (VAE)
+are trained with noise injected in their stochastic hidden layer, with a
+regularizer that encourages this noise injection. In this paper, we show that
+injecting noise both in input and in the stochastic hidden layer can be
+advantageous and we propose a modified variational lower bound as an improved
+objective function in this setup. When input is corrupted, then the standard
+VAE lower bound involves marginalizing the encoder conditional distribution
+over the input noise, which makes the training criterion intractable. Instead,
+we propose a modified training criterion which corresponds to a tractable bound
+when input is corrupted. Experimentally, we find that the proposed denoising
+variational autoencoder (DVAE) yields better average log-likelihood than the
+VAE and the importance weighted autoencoder on the MNIST and Frey Face
+datasets.
+
+
+Generating Factoid Questions With Recurrent Neural Networks: The 30M
+  Factoid Question-Answer Corpus
+
+  Over the past decade, large-scale supervised learning corpora have enabled
+machine learning researchers to make substantial advances. However, to this
+date, there are no large-scale question-answer corpora available. In this paper
+we present the 30M Factoid Question-Answer Corpus, an enormous question answer
+pair corpus produced by applying a novel neural network architecture on the
+knowledge base Freebase to transduce facts into natural language questions. The
+produced question answer pairs are evaluated both by human evaluators and using
+automatic evaluation metrics, including well-established machine translation
+and sentence similarity metrics. Across all evaluation criteria the
+question-generation model outperforms the competing template-based baseline.
+Furthermore, when presented to human evaluators, the generated questions appear
+comparable in quality to real human-generated questions.
+
+
+Pointing the Unknown Words
+
+  The problem of rare and unknown words is an important issue that can
+potentially influence the performance of many NLP systems, including both the
+traditional count-based and the deep learning models. We propose a novel way to
+deal with the rare and unseen words for the neural network models using
+attention. Our model uses two softmax layers in order to predict the next word
+in conditional language models: one predicts the location of a word in the
+source sentence, and the other predicts a word in the shortlist vocabulary. At
+each time-step, the decision of which softmax layer to use choose adaptively
+made by an MLP which is conditioned on the context.~We motivate our work from a
+psychological evidence that humans naturally have a tendency to point towards
+objects in the context or the environment when the name of an object is not
+known.~We observe improvements on two tasks, neural machine translation on the
+Europarl English to French parallel corpora and text summarization on the
+Gigaword dataset using our proposed model.
+
+
+Hierarchical Memory Networks
+
+  Memory networks are neural networks with an explicit memory component that
+can be both read and written to by the network. The memory is often addressed
+in a soft way using a softmax function, making end-to-end training with
+backpropagation possible. However, this is not computationally scalable for
+applications which require the network to read from extremely large memories.
+On the other hand, it is well known that hard attention mechanisms based on
+reinforcement learning are challenging to train successfully. In this paper, we
+explore a form of hierarchical memory network, which can be considered as a
+hybrid between hard and soft attention memory networks. The memory is organized
+in a hierarchical structure such that reading from it is done with less
+computation than soft attention over a flat memory, while also being easier to
+train than hard attention over a flat memory. Specifically, we propose to
+incorporate Maximum Inner Product Search (MIPS) in the training and inference
+procedures for our hierarchical memory network. We explore the use of various
+state-of-the art approximate MIPS techniques and report results on
+SimpleQuestions, a challenging large scale factoid question answering task.
+
+
+Hierarchical Multiscale Recurrent Neural Networks
+
+  Learning both hierarchical and temporal representation has been among the
+long-standing challenges of recurrent neural networks. Multiscale recurrent
+neural networks have been considered as a promising approach to resolve this
+issue, yet there has been a lack of empirical evidence showing that this type
+of models can actually capture the temporal dependencies by discovering the
+latent hierarchical structure of the sequence. In this paper, we propose a
+novel multiscale approach, called the hierarchical multiscale recurrent neural
+networks, which can capture the latent hierarchical structure in the sequence
+by encoding the temporal dependencies with different timescales using a novel
+update mechanism. We show some evidence that our proposed multiscale
+architecture can discover underlying hierarchical structure in the sequences
+without using explicit boundary information. We evaluate our proposed model on
+character-level language modelling and handwriting sequence modelling.
+
+
+Bayesian Model-Agnostic Meta-Learning
+
+  Learning to infer Bayesian posterior from a few-shot dataset is an important
+step towards robust meta-learning due to the model uncertainty inherent in the
+problem. In this paper, we propose a novel Bayesian model-agnostic
+meta-learning method. The proposed method combines scalable gradient-based
+meta-learning with nonparametric variational inference in a principled
+probabilistic framework. During fast adaptation, the method is capable of
+learning complex uncertainty structure beyond a point estimate or a simple
+Gaussian approximation. In addition, a robust Bayesian meta-update mechanism
+with a new meta-loss prevents overfitting during meta-update. Remaining an
+efficient gradient-based meta-learner, the method is also model-agnostic and
+simple to implement. Experiment results show the accuracy and robustness of the
+proposed method in various tasks: sinusoidal regression, image classification,
+active learning, and reinforcement learning.
+
+
+Learning Single-View 3D Reconstruction with Adversarial Training
+
+  Single-view 3D shape reconstruction is an important but challenging problem,
+mainly for two reasons. First, as shape annotation is very expensive to
+acquire, current methods rely on synthetic data, in which ground-truth 3D
+annotation is easy to obtain. However, this results in domain adaptation
+problem when applied to natural images. The second challenge is that it exists
+multiple shapes that can explain a given 2D image. In this paper, we propose a
+framework to improve over these challenges using adversarial training. On one
+hand, we impose domain-confusion between natural and synthetic image
+representations to reduce the distribution gap. On the other hand, we impose
+the reconstruction to be `realistic' by forcing it to lie on a (learned)
+manifold of realistic object shapes. Moreover, our experiments show that these
+constraints improve performance by a large margin over a baseline
+reconstruction model. We achieve results competitive with the state of the art
+using only RGB images and with a much simpler architecture.
+
+
+Reinforced Imitation in Heterogeneous Action Space
+
+  Imitation learning is an effective alternative approach to learn a policy
+when the reward function is sparse. In this paper, we consider a challenging
+setting where an agent and an expert use different actions from each other. We
+assume that the agent has access to a sparse reward function and state-only
+expert observations. We propose a method which gradually balances between the
+imitation learning cost and the reinforcement learning objective. In addition,
+this method adapts the agent's policy based on either mimicking expert behavior
+or maximizing sparse reward. We show, through navigation scenarios, that (i) an
+agent is able to efficiently leverage sparse rewards to outperform standard
+state-only imitation learning, (ii) it can learn a policy even when its actions
+are different from the expert, and (iii) the performance of the agent is not
+bounded by that of the expert, due to the optimized usage of sparse rewards.
+
+

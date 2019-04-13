@@ -1,0 +1,388 @@
+Privacy-Preserving Human Activity Recognition from Extreme Low
+  Resolution
+
+  Privacy protection from surreptitious video recordings is an important
+societal challenge. We desire a computer vision system (e.g., a robot) that can
+recognize human activities and assist our daily life, yet ensure that it is not
+recording video that may invade our privacy. This paper presents a fundamental
+approach to address such contradicting objectives: human activity recognition
+while only using extreme low-resolution (e.g., 16x12) anonymized videos. We
+introduce the paradigm of inverse super resolution (ISR), the concept of
+learning the optimal set of image transformations to generate multiple
+low-resolution (LR) training videos from a single video. Our ISR learns
+different types of sub-pixel transformations optimized for the activity
+classification, allowing the classifier to best take advantage of existing
+high-resolution videos (e.g., YouTube videos) by creating multiple LR training
+videos tailored for the problem. We experimentally confirm that the paradigm of
+inverse super resolution is able to benefit activity recognition from extreme
+low-resolution videos.
+
+
+Learning Latent Sub-events in Activity Videos Using Temporal Attention
+  Filters
+
+  In this paper, we newly introduce the concept of temporal attention filters,
+and describe how they can be used for human activity recognition from videos.
+Many high-level activities are often composed of multiple temporal parts (e.g.,
+sub-events) with different duration/speed, and our objective is to make the
+model explicitly learn such temporal structure using multiple attention filters
+and benefit from them. Our temporal filters are designed to be fully
+differentiable, allowing end-of-end training of the temporal filters together
+with the underlying frame-based or segment-based convolutional neural network
+architectures. This paper presents an approach of learning a set of optimal
+static temporal attention filters to be shared across different videos, and
+extends this approach to dynamically adjust attention filters per testing video
+using recurrent long short-term memory networks (LSTMs). This allows our
+temporal attention filters to learn latent sub-events specific to each
+activity. We experimentally confirm that the proposed concept of temporal
+attention filters benefits the activity recognition, and we visualize the
+learned latent sub-events.
+
+
+Extreme Low Resolution Activity Recognition with Multi-Siamese Embedding
+  Learning
+
+  This paper presents an approach for recognizing human activities from extreme
+low resolution (e.g., 16x12) videos. Extreme low resolution recognition is not
+only necessary for analyzing actions at a distance but also is crucial for
+enabling privacy-preserving recognition of human activities. We design a new
+two-stream multi-Siamese convolutional neural network. The idea is to
+explicitly capture the inherent property of low resolution (LR) videos that two
+images originated from the exact same scene often have totally different pixel
+values depending on their LR transformations. Our approach learns the shared
+embedding space that maps LR videos with the same content to the same location
+regardless of their transformations. We experimentally confirm that our
+approach of jointly learning such transform robust LR video representation and
+the classifier outperforms the previous state-of-the-art low resolution
+recognition approaches on two public standard datasets by a meaningful margin.
+
+
+Evolving Space-Time Neural Architectures for Videos
+
+  In this paper, we present a new method for evolving video CNN models to find
+architectures that more optimally captures rich spatio-temporal information in
+videos. Previous work, taking advantage of 3D convolutional layers, obtained
+promising results by manually designing CNN architectures for videos. We here
+develop an evolutionary algorithm that automatically explores models with
+different types and combinations of space-time convolutional layers to jointly
+capture various spatial and temporal aspects of video representations. We
+further propose a new key component in video model evolution, the iTGM layer,
+which more efficiently utilizes its parameters to allow learning of space-time
+interactions over longer time horizons. The experiments confirm the advantages
+of our video CNN architecture evolution, with results outperforming previous
+state-of-the-art models. Our algorithm discovers new and interesting video
+architecture structures.
+
+
+Pooled Motion Features for First-Person Videos
+
+  In this paper, we present a new feature representation for first-person
+videos. In first-person video understanding (e.g., activity recognition), it is
+very important to capture both entire scene dynamics (i.e., egomotion) and
+salient local motion observed in videos. We describe a representation framework
+based on time series pooling, which is designed to abstract
+short-term/long-term changes in feature descriptor elements. The idea is to
+keep track of how descriptor values are changing over time and summarize them
+to represent motion in the activity video. The framework is general, handling
+any types of per-frame feature descriptors including conventional motion
+descriptors like histogram of optical flows (HOF) as well as appearance
+descriptors from more recent convolutional neural networks (CNN). We
+experimentally confirm that our approach clearly outperforms previous feature
+representations including bag-of-visual-words and improved Fisher vector (IFV)
+when using identical underlying feature descriptors. We also confirm that our
+feature representation has superior performance to existing state-of-the-art
+features like local spatio-temporal features and Improved Trajectory Features
+(originally developed for 3rd-person videos) when handling first-person videos.
+Multiple first-person activity datasets were tested under various settings to
+confirm these findings.
+
+
+Early Recognition of Human Activities from First-Person Videos Using
+  Onset Representations
+
+  In this paper, we propose a methodology for early recognition of human
+activities from videos taken with a first-person viewpoint. Early recognition,
+which is also known as activity prediction, is an ability to infer an ongoing
+activity at its early stage. We present an algorithm to perform recognition of
+activities targeted at the camera from streaming videos, making the system to
+predict intended activities of the interacting person and avoid harmful events
+before they actually happen. We introduce the novel concept of 'onset' that
+efficiently summarizes pre-activity observations, and design an approach to
+consider event history in addition to ongoing video observation for early
+first-person recognition of activities. We propose to represent onset using
+cascade histograms of time series gradients, and we describe a novel
+algorithmic setup to take advantage of onset for early recognition of
+activities. The experimental results clearly illustrate that the proposed
+concept of onset enables better/earlier recognition of human activities from
+first-person videos.
+
+
+Temporal Gaussian Mixture Layer for Videos
+
+  We introduce a new convolutional layer named the Temporal Gaussian Mixture
+(TGM) layer and present how it can be used to efficiently capture longer-term
+temporal information in continuous activity videos. The TGM layer is a temporal
+convolutional layer governed by a much smaller set of parameters (e.g.,
+location/variance of Gaussians) that are fully differentiable. We present our
+fully convolutional video models with multiple TGM layers for activity
+detection. The extensive experiments on multiple datasets, including Charades
+and MultiTHUMOS, confirm the effectiveness of TGM layers, significantly
+outperforming the state-of-the-arts.
+
+
+Fine-grained Activity Recognition in Baseball Videos
+
+  In this paper, we introduce a challenging new dataset, MLB-YouTube, designed
+for fine-grained activity detection. The dataset contains two settings:
+segmented video classification as well as activity detection in continuous
+videos. We experimentally compare various recognition approaches capturing
+temporal structure in activity videos, by classifying segmented videos and
+extending those approaches to continuous videos. We also compare models on the
+extremely difficult task of predicting pitch speed and pitch type from
+broadcast baseball videos. We find that learning temporal structure is valuable
+for fine-grained activity recognition.
+
+
+Unseen Action Recognition with Multimodal Learning
+
+  In this paper, we present a method to learn a joint multimodal representation
+space that allows for the recognition of unseen activities in videos. We
+compare the effect of placing various constraints on the embedding space using
+paired text and video data. Additionally, we propose a method to improve the
+joint embedding space using an adversarial formulation with unpaired text and
+video data. In addition to testing on publicly available datasets, we introduce
+a new, large-scale text/video dataset. We experimentally confirm that learning
+such shared embedding space benefits three difficult tasks (i) zero-shot
+activity classification, (ii) unsupervised activity discovery, and (iii) unseen
+activity captioning.
+
+
+Learning Differentiable Grammars for Continuous Data
+
+  This paper proposes a novel algorithm which learns a formal regular grammar
+from real-world continuous data, such as videos or other streaming data.
+Learning latent terminals, non-terminals, and productions rules directly from
+streaming data allows the construction of a generative model capturing
+sequential structures with multiple possibilities. Our model is fully
+differentiable, and provides easily interpretable results which are important
+in order to understand the learned structures. It outperforms the
+state-of-the-art on several challenging datasets and is more accurate for
+forecasting future activities in videos. We plan to open-source the code.
+
+
+Identifying First-person Camera Wearers in Third-person Videos
+
+  We consider scenarios in which we wish to perform joint scene understanding,
+object tracking, activity recognition, and other tasks in environments in which
+multiple people are wearing body-worn cameras while a third-person static
+camera also captures the scene. To do this, we need to establish person-level
+correspondences across first- and third-person videos, which is challenging
+because the camera wearer is not visible from his/her own egocentric video,
+preventing the use of direct feature matching. In this paper, we propose a new
+semi-Siamese Convolutional Neural Network architecture to address this novel
+challenge. We formulate the problem as learning a joint embedding space for
+first- and third-person videos that considers both spatial- and motion-domain
+cues. A new triplet loss function is designed to minimize the distance between
+correct first- and third-person matches while maximizing the distance between
+incorrect ones. This end-to-end approach performs significantly better than
+several baselines, in part by learning the first- and third-person features
+optimized for matching jointly with the distance measure itself.
+
+
+Multi-Type Activity Recognition in Robot-Centric Scenarios
+
+  Activity recognition is very useful in scenarios where robots interact with,
+monitor or assist humans. In the past years many types of activities -- single
+actions, two persons interactions or ego-centric activities, to name a few --
+have been analyzed. Whereas traditional methods treat such types of activities
+separately, an autonomous robot should be able to detect and recognize multiple
+types of activities to effectively fulfill its tasks. We propose a method that
+is intrinsically able to detect and recognize activities of different types
+that happen in sequence or concurrently. We present a new unified descriptor,
+called Relation History Image (RHI), which can be extracted from all the
+activity types we are interested in. We then formulate an optimization
+procedure to detect and recognize activities of different types. We apply our
+approach to a new dataset recorded from a robot-centric perspective and
+systematically evaluate its quality compared to multiple baselines. Finally, we
+show the efficacy of the RHI descriptor on publicly available datasets
+performing extensive comparisons.
+
+
+Learning Social Affordance Grammar from Videos: Transferring Human
+  Interactions to Human-Robot Interactions
+
+  In this paper, we present a general framework for learning social affordance
+grammar as a spatiotemporal AND-OR graph (ST-AOG) from RGB-D videos of human
+interactions, and transfer the grammar to humanoids to enable a real-time
+motion inference for human-robot interaction (HRI). Based on Gibbs sampling,
+our weakly supervised grammar learning can automatically construct a
+hierarchical representation of an interaction with long-term joint sub-tasks of
+both agents and short term atomic actions of individual agents. Based on a new
+RGB-D video dataset with rich instances of human interactions, our experiments
+of Baxter simulation, human evaluation, and real Baxter test demonstrate that
+the model learned from limited training data successfully generates human-like
+behaviors in unseen scenarios and outperforms both baselines.
+
+
+Learning Robot Activities from First-Person Human Videos Using
+  Convolutional Future Regression
+
+  We design a new approach that allows robot learning of new activities from
+unlabeled human example videos. Given videos of humans executing the same
+activity from a human's viewpoint (i.e., first-person videos), our objective is
+to make the robot learn the temporal structure of the activity as its future
+regression network, and learn to transfer such model for its own motor
+execution. We present a new deep learning model: We extend the state-of-the-art
+convolutional object detection network for the representation/estimation of
+human hands in training videos, and newly introduce the concept of using a
+fully convolutional network to regress (i.e., predict) the intermediate scene
+representation corresponding to the future frame (e.g., 1-2 seconds later).
+Combining these allows direct prediction of future locations of human hands and
+objects, which enables the robot to infer the motor control plan using our
+manipulation network. We experimentally confirm that our approach makes
+learning of robot activities from unlabeled human interaction videos possible,
+and demonstrate that our robot is able to execute the learned collaborative
+activities in real-time directly based on its camera input.
+
+
+Forecasting Hands and Objects in Future Frames
+
+  This paper presents an approach to forecast future presence and location of
+human hands and objects. Given an image frame, the goal is to predict what
+objects will appear in the future frame (e.g., 5 seconds later) and where they
+will be located at, even when they are not visible in the current frame. The
+key idea is that (1) an intermediate representation of a convolutional object
+recognition model abstracts scene information in its frame and that (2) we can
+predict (i.e., regress) such representations corresponding to the future frames
+based on that of the current frame. We design a new two-stream convolutional
+neural network (CNN) architecture for videos by extending the state-of-the-art
+convolutional object detection network, and present a new fully convolutional
+regression network for predicting future scene representations. Our experiments
+confirm that combining the regressed future representation with our detection
+network allows reliable estimation of future hands and objects in videos. We
+obtain much higher accuracy compared to the state-of-the-art future object
+presence forecast method on a public dataset.
+
+
+Learning Latent Super-Events to Detect Multiple Activities in Videos
+
+  In this paper, we introduce the concept of learning latent super-events from
+activity videos, and present how it benefits activity detection in continuous
+videos. We define a super-event as a set of multiple events occurring together
+in videos with a particular temporal organization; it is the opposite concept
+of sub-events. Real-world videos contain multiple activities and are rarely
+segmented (e.g., surveillance videos), and learning latent super-events allows
+the model to capture how the events are temporally related in videos. We design
+temporal structure filters that enable the model to focus on particular
+sub-intervals of the videos, and use them together with a soft attention
+mechanism to learn representations of latent super-events. Super-event
+representations are combined with per-frame or per-segment CNNs to provide
+frame-level annotations. Our approach is designed to be fully differentiable,
+enabling end-to-end learning of latent super-event representations jointly with
+the activity detector using them. Our experiments with multiple public video
+datasets confirm that the proposed concept of latent super-event learning
+significantly benefits activity detection, advancing the state-of-the-arts.
+
+
+Learning to Anonymize Faces for Privacy Preserving Action Detection
+
+  There is an increasing concern in computer vision devices invading users'
+privacy by recording unwanted videos. On the one hand, we want the camera
+systems to recognize important events and assist human daily lives by
+understanding its videos, but on the other hand we want to ensure that they do
+not intrude people's privacy. In this paper, we propose a new principled
+approach for learning a video \emph{face anonymizer}. We use an adversarial
+training setting in which two competing systems fight: (1) a video anonymizer
+that modifies the original video to remove privacy-sensitive information while
+still trying to maximize spatial action detection performance, and (2) a
+discriminator that tries to extract privacy-sensitive information from the
+anonymized videos. The end result is a video anonymizer that performs
+pixel-level modifications to anonymize each person's face, with minimal effect
+on action detection performance. We experimentally confirm the benefits of our
+approach compared to conventional hand-crafted anonymization methods including
+masking, blurring, and noise adding. Code, demo, and more results can be found
+on our project page https://jason718.github.io/project/privacy/main.html.
+
+
+Learning Real-World Robot Policies by Dreaming
+
+  Learning to control robots directly based on images is a primary challenge in
+robotics. However, many existing reinforcement learning approaches require
+iteratively obtaining millions of samples to learn a policy which can take
+significant time. In this paper, we focus on the problem of learning real-world
+robot action policies solely based on a few random off-policy initial samples.
+We learn a realistic dreaming model that can emulate samples equivalent to a
+sequence of images from the actual environment, and make the agent learn action
+policies by interacting with the dreaming model rather than the real-world. We
+experimentally confirm that our dreaming model can learn realistic policies
+that transfer to the real-world.
+
+
+Representation Flow for Action Recognition
+
+  In this paper, we propose a convolutional layer inspired by optical flow
+algorithms to learn motion representations. Our representation flow layer is a
+fully-differentiable layer designed to capture the `flow' of any representation
+channel within a convolutional neural network for action recognition. Its
+parameters for iterative flow optimization are learned in an end-to-end fashion
+together with the other CNN model parameters, maximizing the action recognition
+performance. Furthermore, we newly introduce the concept of learning `flow of
+flow' representations by stacking multiple representation flow layers. We
+conducted extensive experimental evaluations, confirming its advantages over
+previous recognition models using traditional optical flows in both
+computational speed and performance. Code/models available here:
+https://piergiaj.github.io/rep-flow-site/
+
+
+Musical Chair: Efficient Real-Time Recognition Using Collaborative IoT
+  Devices
+
+  The prevalence of Internet of things (IoT) devices and abundance of sensor
+data has created an increase in real-time data processing such as recognition
+of speech, image, and video. While currently such processes are offloaded to
+the computationally powerful cloud system, a localized and distributed approach
+is desirable because (i) it preserves the privacy of users and (ii) it omits
+the dependency on cloud services. However, IoT networks are usually composed of
+resource-constrained devices, and a single device is not powerful enough to
+process real-time data. To overcome this challenge, we examine data and model
+parallelism for such devices in the context of deep neural networks. We propose
+Musical Chair to enable efficient, localized, and dynamic real-time recognition
+by harvesting the aggregated computational power from the resource-constrained
+devices in the same IoT network as input sensors. Musical chair adapts to the
+availability of computing devices at runtime and adjusts to the inherit
+dynamics of IoT networks. To demonstrate Musical Chair, on a network of
+Raspberry PIs (up to 12) each connected to a camera, we implement a
+state-of-the-art action recognition model for videos and two recognition models
+for images. Compared to the Tegra TX2, an embedded low-power platform with a
+six-core CPU and a GPU, our distributed action recognition system achieves not
+only similar energy consumption but also twice the performance of the TX2.
+Furthermore, in image recognition, Musical Chair achieves similar performance
+and saves dynamic energy.
+
+
+Joint Person Segmentation and Identification in Synchronized First- and
+  Third-person Videos
+
+  In a world of pervasive cameras, public spaces are often captured from
+multiple perspectives by cameras of different types, both fixed and mobile. An
+important problem is to organize these heterogeneous collections of videos by
+finding connections between them, such as identifying correspondences between
+the people appearing in the videos and the people holding or wearing the
+cameras. In this paper, we wish to solve two specific problems: (1) given two
+or more synchronized third-person videos of a scene, produce a pixel-level
+segmentation of each visible person and identify corresponding people across
+different views (i.e., determine who in camera A corresponds with whom in
+camera B), and (2) given one or more synchronized third-person videos as well
+as a first-person video taken by a mobile or wearable camera, segment and
+identify the camera wearer in the third-person videos. Unlike previous work
+which requires ground truth bounding boxes to estimate the correspondences, we
+perform person segmentation and identification jointly. We find that solving
+these two problems simultaneously is mutually beneficial, because better
+fine-grained segmentation allows us to better perform matching across views,
+and information from multiple views helps us perform more accurate
+segmentation. We evaluate our approach on two challenging datasets of
+interacting people captured from multiple wearable cameras, and show that our
+proposed method performs significantly better than the state-of-the-art on both
+person segmentation and identification.
+
+

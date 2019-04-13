@@ -1,0 +1,822 @@
+Uniform Solution Sampling Using a Constraint Solver As an Oracle
+
+  We consider the problem of sampling from solutions defined by a set of hard
+constraints on a combinatorial space. We propose a new sampling technique that,
+while enforcing a uniform exploration of the search space, leverages the
+reasoning power of a systematic constraint solver in a black-box scheme. We
+present a series of challenging domains, such as energy barriers and highly
+asymmetric spaces, that reveal the difficulties introduced by hard constraints.
+We demonstrate that standard approaches such as Simulated Annealing and Gibbs
+Sampling are greatly affected, while our new technique can overcome many of
+these difficulties. Finally, we show that our sampling scheme naturally defines
+a new approximate model counting technique, which we empirically show to be
+very accurate on a range of benchmark problems.
+
+
+Playing games against nature: optimal policies for renewable resource
+  allocation
+
+  In this paper we introduce a class of Markov decision processes that arise as
+a natural model for many renewable resource allocation problems. Upon extending
+results from the inventory control literature, we prove that they admit a
+closed form solution and we show how to exploit this structure to speed up its
+computation. We consider the application of the proposed framework to several
+problems arising in very different domains, and as part of the ongoing effort
+in the emerging field of Computational Sustainability we discuss in detail its
+application to the Northern Pacific Halibut marine fishery. Our approach is
+applied to a model based on real world data, obtaining a policy with a
+guaranteed lower bound on the utility function that is structurally very
+different from the one currently employed.
+
+
+Optimization With Parity Constraints: From Binary Codes to Discrete
+  Integration
+
+  Many probabilistic inference tasks involve summations over exponentially
+large sets. Recently, it has been shown that these problems can be reduced to
+solving a polynomial number of MAP inference queries for a model augmented with
+randomly generated parity constraints. By exploiting a connection with
+max-likelihood decoding of binary codes, we show that these optimizations are
+computationally hard. Inspired by iterative message passing decoding
+algorithms, we propose an Integer Linear Programming (ILP) formulation for the
+problem, enhanced with new sparsification techniques to improve decoding
+performance. By solving the ILP through a sequence of LP relaxations, we get
+both lower and upper bounds on the partition function, which hold with high
+probability and are much tighter than those obtained with variational methods.
+
+
+Pattern Decomposition with Complex Combinatorial Constraints:
+  Application to Materials Discovery
+
+  Identifying important components or factors in large amounts of noisy data is
+a key problem in machine learning and data mining. Motivated by a pattern
+decomposition problem in materials discovery, aimed at discovering new
+materials for renewable energy, e.g. for fuel and solar cells, we introduce
+CombiFD, a framework for factor based pattern decomposition that allows the
+incorporation of a-priori knowledge as constraints, including complex
+combinatorial constraints. In addition, we propose a new pattern decomposition
+algorithm, called AMIQO, based on solving a sequence of (mixed-integer)
+quadratic programs. Our approach considerably outperforms the state of the art
+on the materials discovery problem, scaling to larger datasets and recovering
+more precise and physically meaningful decompositions. We also show the
+effectiveness of our approach for enforcing background knowledge on other
+application domains.
+
+
+Generative Adversarial Imitation Learning
+
+  Consider learning a policy from example expert behavior, without interaction
+with the expert or access to reinforcement signal. One approach is to recover
+the expert's cost function with inverse reinforcement learning, then extract a
+policy from that cost function with reinforcement learning. This approach is
+indirect and can be slow. We propose a new general framework for directly
+extracting a policy from data, as if it were obtained by reinforcement learning
+following inverse reinforcement learning. We show that a certain instantiation
+of our framework draws an analogy between imitation learning and generative
+adversarial networks, from which we derive a model-free imitation learning
+algorithm that obtains significant performance gains over existing model-free
+methods in imitating complex behaviors in large, high-dimensional environments.
+
+
+Label-Free Supervision of Neural Networks with Physics and Domain
+  Knowledge
+
+  In many machine learning applications, labeled data is scarce and obtaining
+more labels is expensive. We introduce a new approach to supervising neural
+networks by specifying constraints that should hold over the output space,
+rather than direct examples of input-output pairs. These constraints are
+derived from prior domain knowledge, e.g., from known laws of physics. We
+demonstrate the effectiveness of this approach on real world and simulated
+computer vision tasks. We are able to train a convolutional neural network to
+detect and track objects without any labeled examples. Our approach can
+significantly reduce the need for labeled training data, but introduces new
+challenges for encoding prior knowledge into appropriate loss functions.
+
+
+Learning Hierarchical Features from Generative Models
+
+  Deep neural networks have been shown to be very successful at learning
+feature hierarchies in supervised learning tasks. Generative models, on the
+other hand, have benefited less from hierarchical models with multiple layers
+of latent variables. In this paper, we prove that hierarchical latent variable
+models do not take advantage of the hierarchical structure when trained with
+existing variational methods, and provide some limitations on the kind of
+features existing models can learn. Finally we propose an alternative
+architecture that do not suffer from these limitations. Our model is able to
+learn highly interpretable and disentangled hierarchical features on several
+natural image datasets with no task specific regularization or prior knowledge.
+
+
+Boosted Generative Models
+
+  We propose a novel approach for using unsupervised boosting to create an
+ensemble of generative models, where models are trained in sequence to correct
+earlier mistakes. Our meta-algorithmic framework can leverage any existing base
+learner that permits likelihood evaluation, including recent deep expressive
+models. Further, our approach allows the ensemble to include discriminative
+models trained to distinguish real data from model-generated data. We show
+theoretical conditions under which incorporating a new model in the ensemble
+will improve the fit and empirically demonstrate the effectiveness of our
+black-box boosting algorithms on density estimation, classification, and sample
+generation on benchmark datasets for a wide range of generative models.
+
+
+Towards Deeper Understanding of Variational Autoencoding Models
+
+  We propose a new family of optimization criteria for variational
+auto-encoding models, generalizing the standard evidence lower bound. We
+provide conditions under which they recover the data distribution and learn
+latent features, and formally show that common issues such as blurry samples
+and uninformative latent features arise when these conditions are not met.
+Based on these new insights, we propose a new sequential VAE model that can
+generate sharp samples on the LSUN image dataset based on pixel-wise
+reconstruction loss, and propose an optimization criterion that encourages
+unsupervised learning of informative latent features.
+
+
+Shape optimization in laminar flow with a label-guided variational
+  autoencoder
+
+  Computational design optimization in fluid dynamics usually requires to solve
+non-linear partial differential equations numerically. In this work, we explore
+a Bayesian optimization approach to minimize an object's drag coefficient in
+laminar flow based on predicting drag directly from the object shape. Jointly
+training an architecture combining a variational autoencoder mapping shapes to
+latent representations and Gaussian process regression allows us to generate
+improved shapes in the two dimensional case we consider.
+
+
+Improved Training with Curriculum GANs
+
+  In this paper we introduce Curriculum GANs, a curriculum learning strategy
+for training Generative Adversarial Networks that increases the strength of the
+discriminator over the course of training, thereby making the learning task
+progressively more difficult for the generator. We demonstrate that this
+strategy is key to obtaining state-of-the-art results in image generation. We
+also show evidence that this strategy may be broadly applicable to improving
+GAN training in other data modalities.
+
+
+Multi-Agent Generative Adversarial Imitation Learning
+
+  Imitation learning algorithms can be used to learn a policy from expert
+demonstrations without access to a reward signal. However, most existing
+approaches are not applicable in multi-agent settings due to the existence of
+multiple (Nash) equilibria and non-stationary environments. We propose a new
+framework for multi-agent imitation learning for general Markov games, where we
+build upon a generalized notion of inverse reinforcement learning. We further
+introduce a practical multi-agent actor-critic algorithm with good empirical
+performance. Our method can be used to imitate complex behaviors in
+high-dimensional environments with multiple cooperative or competing agents.
+
+
+Differentiable Antithetic Sampling for Variance Reduction in Stochastic
+  Variational Inference
+
+  Stochastic optimization techniques are standard in variational inference
+algorithms. These methods estimate gradients by approximating expectations with
+independent Monte Carlo samples. In this paper, we explore a technique that
+uses correlated, but more representative , samples to reduce estimator
+variance. Specifically, we show how to generate antithetic samples that match
+sample moments with the true moments of an underlying importance distribution.
+Combining a differentiable antithetic sampler with modern stochastic
+variational inference, we showcase the effectiveness of this approach for
+learning a deep generative model.
+
+
+Bias and Generalization in Deep Generative Models: An Empirical Study
+
+  In high dimensional settings, density estimation algorithms rely crucially on
+their inductive bias. Despite recent empirical success, the inductive bias of
+deep generative models is not well understood. In this paper we propose a
+framework to systematically investigate bias and generalization in deep
+generative models of images. Inspired by experimental methods from cognitive
+psychology, we probe each learning algorithm with carefully designed training
+datasets to characterize when and how existing models generate novel attributes
+and their combinations. We identify similarities to human psychology and verify
+that these patterns are consistent across commonly used models and
+architectures.
+
+
+Taming the Curse of Dimensionality: Discrete Integration by Hashing and
+  Optimization
+
+  Integration is affected by the curse of dimensionality and quickly becomes
+intractable as the dimensionality of the problem grows. We propose a randomized
+algorithm that, with high probability, gives a constant-factor approximation of
+a general discrete integral defined over an exponentially large set. This
+algorithm relies on solving only a small number of instances of a discrete
+combinatorial optimization problem subject to randomly generated parity
+constraints used as a hash function. As an application, we demonstrate that
+with a small number of MAP queries we can efficiently approximate the partition
+function of discrete graphical models, which can in turn be used, for instance,
+for marginal computation or model selection.
+
+
+Closing the Gap Between Short and Long XORs for Model Counting
+
+  Many recent algorithms for approximate model counting are based on a
+reduction to combinatorial searches over random subsets of the space defined by
+parity or XOR constraints. Long parity constraints (involving many variables)
+provide strong theoretical guarantees but are computationally difficult. Short
+parity constraints are easier to solve but have weaker statistical properties.
+It is currently not known how long these parity constraints need to be. We
+close the gap by providing matching necessary and sufficient conditions on the
+required asymptotic length of the parity constraints. Further, we provide a new
+family of lower bounds and the first non-trivial upper bounds on the model
+count that are valid for arbitrarily short XORs. We empirically demonstrate the
+effectiveness of these bounds on model counting benchmarks and in a
+Satisfiability Modulo Theory (SMT) application motivated by the analysis of
+contingency tables in statistics.
+
+
+Variable Elimination in the Fourier Domain
+
+  The ability to represent complex high dimensional probability distributions
+in a compact form is one of the key insights in the field of graphical models.
+Factored representations are ubiquitous in machine learning and lead to major
+computational advantages. We explore a different type of compact representation
+based on discrete Fourier representations, complementing the classical approach
+based on conditional independencies. We show that a large class of
+probabilistic graphical models have a compact Fourier representation. This
+theoretical result opens up an entirely new way of approximating a probability
+distribution. We demonstrate the significance of this approach by applying it
+to the variable elimination algorithm. Compared with the traditional bucket
+representation and other approximate inference algorithms, we obtain
+significant improvements.
+
+
+Tight Variational Bounds via Random Projections and I-Projections
+
+  Information projections are the key building block of variational inference
+algorithms and are used to approximate a target probabilistic model by
+projecting it onto a family of tractable distributions. In general, there is no
+guarantee on the quality of the approximation obtained. To overcome this issue,
+we introduce a new class of random projections to reduce the dimensionality and
+hence the complexity of the original model. In the spirit of random
+projections, the projection preserves (with high probability) key properties of
+the target distribution. We show that information projections can be combined
+with random projections to obtain provable guarantees on the quality of the
+approximation obtained, regardless of the complexity of the original model. We
+demonstrate empirically that augmenting mean field with a random projection
+step dramatically improves partition function and marginal probability
+estimates, both on synthetic and real world data.
+
+
+Model-Free Imitation Learning with Policy Optimization
+
+  In imitation learning, an agent learns how to behave in an environment with
+an unknown cost function by mimicking expert demonstrations. Existing imitation
+learning algorithms typically involve solving a sequence of planning or
+reinforcement learning problems. Such algorithms are therefore not directly
+applicable to large, high-dimensional environments, and their performance can
+significantly degrade if the planning problems are not solved to optimality.
+Under the apprenticeship learning formalism, we develop alternative model-free
+algorithms for finding a parameterized stochastic policy that performs at least
+as well as an expert policy on an unknown cost function, based on sample
+trajectories from the expert. Our approach, based on policy gradients, scales
+to large continuous environments with guaranteed convergence to local minima.
+
+
+Estimating Uncertainty Online Against an Adversary
+
+  Assessing uncertainty is an important step towards ensuring the safety and
+reliability of machine learning systems. Existing uncertainty estimation
+techniques may fail when their modeling assumptions are not met, e.g. when the
+data distribution differs from the one seen at training time. Here, we propose
+techniques that assess a classification algorithm's uncertainty via calibrated
+probabilities (i.e. probabilities that match empirical outcome frequencies in
+the long run) and which are guaranteed to be reliable (i.e. accurate and
+calibrated) on out-of-distribution input, including input generated by an
+adversary. This represents an extension of classical online learning that
+handles uncertainty in addition to guaranteeing accuracy under adversarial
+assumptions. We establish formal guarantees for our methods, and we validate
+them on two real-world problems: question answering and medical diagnosis from
+genomic data.
+
+
+Solving Marginal MAP Problems with NP Oracles and Parity Constraints
+
+  Arising from many applications at the intersection of decision making and
+machine learning, Marginal Maximum A Posteriori (Marginal MAP) Problems unify
+the two main classes of inference, namely maximization (optimization) and
+marginal inference (counting), and are believed to have higher complexity than
+both of them. We propose XOR_MMAP, a novel approach to solve the Marginal MAP
+Problem, which represents the intractable counting subproblem with queries to
+NP oracles, subject to additional parity constraints. XOR_MMAP provides a
+constant factor approximation to the Marginal MAP Problem, by encoding it as a
+single optimization in polynomial size of the original problem. We evaluate our
+approach in several machine learning and decision making applications, and show
+that our approach outperforms several state-of-the-art Marginal MAP solvers.
+
+
+General Bounds on Satisfiability Thresholds for Random CSPs via Fourier
+  Analysis
+
+  Random constraint satisfaction problems (CSPs) have been widely studied both
+in AI and complexity theory. Empirically and theoretically, many random CSPs
+have been shown to exhibit a phase transition. As the ratio of constraints to
+variables passes certain thresholds, they transition from being almost
+certainly satisfiable to unsatisfiable. The exact location of this threshold
+has been thoroughly investigated, but only for certain common classes of
+constraints. In this paper, we present new bounds for the location of these
+thresholds in boolean CSPs. Our main contribution is that our bounds are fully
+general, and apply to any fixed constraint function that could be used to
+generate an ensemble of random CSPs. These bounds rely on a novel Fourier
+analysis and can be easily computed from the Fourier spectrum of a constraint
+function. Our bounds are within a constant factor of the exact threshold
+location for many well-studied random CSPs. We demonstrate that our bounds can
+be easily instantiated to obtain thresholds for many constraint functions that
+had not been previously studied, and evaluate them experimentally.
+
+
+On the Limits of Learning Representations with Label-Based Supervision
+
+  Advances in neural network based classifiers have transformed automatic
+feature learning from a pipe dream of stronger AI to a routine and expected
+property of practical systems. Since the emergence of AlexNet every winning
+submission of the ImageNet challenge has employed end-to-end representation
+learning, and due to the utility of good representations for transfer learning,
+representation learning has become as an important and distinct task from
+supervised learning. At present, this distinction is inconsequential, as
+supervised methods are state-of-the-art in learning transferable
+representations. But recent work has shown that generative models can also be
+powerful agents of representation learning. Will the representations learned
+from these generative methods ever rival the quality of those from their
+supervised competitors? In this work, we argue in the affirmative, that from an
+information theoretic perspective, generative models have greater potential for
+representation learning. Based on several experimentally validated assumptions,
+we show that supervised learning is upper bounded in its capacity for
+representation learning in ways that certain generative models, such as
+Generative Adversarial Networks (GANs) are not. We hope that our analysis will
+provide a rigorous motivation for further exploration of generative
+representation learning.
+
+
+InfoGAIL: Interpretable Imitation Learning from Visual Demonstrations
+
+  The goal of imitation learning is to mimic expert behavior without access to
+an explicit reward signal. Expert demonstrations provided by humans, however,
+often show significant variability due to latent factors that are typically not
+explicitly modeled. In this paper, we propose a new algorithm that can infer
+the latent structure of expert demonstrations in an unsupervised way. Our
+method, built on top of Generative Adversarial Imitation Learning, can not only
+imitate complex behaviors, but also learn interpretable and meaningful
+representations of complex behavioral data, including visual demonstrations. In
+the driving domain, we show that a model learned from human demonstrations is
+able to both accurately reproduce a variety of behaviors and accurately
+anticipate human actions using raw visual inputs. Compared with various
+baselines, our method can better capture the latent structure underlying expert
+demonstrations, often recovering semantically meaningful factors of variation
+in the data.
+
+
+Flow-GAN: Combining Maximum Likelihood and Adversarial Learning in
+  Generative Models
+
+  Adversarial learning of probabilistic models has recently emerged as a
+promising alternative to maximum likelihood. Implicit models such as generative
+adversarial networks (GAN) often generate better samples compared to explicit
+models trained by maximum likelihood. Yet, GANs sidestep the characterization
+of an explicit density which makes quantitative evaluations challenging. To
+bridge this gap, we propose Flow-GANs, a generative adversarial network for
+which we can perform exact likelihood evaluation, thus supporting both
+adversarial and maximum likelihood training. When trained adversarially,
+Flow-GANs generate high-quality samples but attain extremely poor
+log-likelihood scores, inferior even to a mixture model memorizing the training
+data; the opposite is true when trained by maximum likelihood. Results on MNIST
+and CIFAR-10 demonstrate that hybrid training can attain high held-out
+likelihoods while retaining visual fidelity in the generated samples.
+
+
+InfoVAE: Information Maximizing Variational Autoencoders
+
+  A key advance in learning generative models is the use of amortized inference
+distributions that are jointly trained with the models. We find that existing
+training objectives for variational autoencoders can lead to inaccurate
+amortized inference distributions and, in some cases, improving the objective
+provably degrades the inference quality. In addition, it has been observed that
+variational autoencoders tend to ignore the latent variables when combined with
+a decoding distribution that is too flexible. We again identify the cause in
+existing training criteria and propose a new class of objectives (InfoVAE) that
+mitigate these problems. We show that our model can significantly improve the
+quality of the variational posterior and can make effective use of the latent
+features regardless of the flexibility of the decoding distribution. Through
+extensive qualitative and quantitative analyses, we demonstrate that our models
+outperform competing approaches on multiple performance metrics.
+
+
+A-NICE-MC: Adversarial Training for MCMC
+
+  Existing Markov Chain Monte Carlo (MCMC) methods are either based on
+general-purpose and domain-agnostic schemes which can lead to slow convergence,
+or hand-crafting of problem-specific proposals by an expert. We propose
+A-NICE-MC, a novel method to train flexible parametric Markov chain kernels to
+produce samples with desired properties. First, we propose an efficient
+likelihood-free adversarial training method to train a Markov chain and mimic a
+given data distribution. Then, we leverage flexible volume preserving flows to
+obtain parametric kernels for MCMC. Using a bootstrap approach, we show how to
+train efficient Markov chains to sample from a prescribed posterior
+distribution by iteratively improving the quality of both the model and the
+samples. A-NICE-MC provides the first framework to automatically design
+efficient domain-specific MCMC proposals. Empirical results demonstrate that
+A-NICE-MC combines the strong guarantees of MCMC with the expressiveness of
+deep neural networks, and is able to significantly outperform competing methods
+such as Hamiltonian Monte Carlo.
+
+
+Fast Amortized Inference and Learning in Log-linear Models with Randomly
+  Perturbed Nearest Neighbor Search
+
+  Inference in log-linear models scales linearly in the size of output space in
+the worst-case. This is often a bottleneck in natural language processing and
+computer vision tasks when the output space is feasibly enumerable but very
+large. We propose a method to perform inference in log-linear models with
+sublinear amortized cost. Our idea hinges on using Gumbel random variable
+perturbations and a pre-computed Maximum Inner Product Search data structure to
+access the most-likely elements in sublinear amortized time. Our method yields
+provable runtime and accuracy guarantees. Further, we present empirical
+experiments on ImageNet and Word Embeddings showing significant speedups for
+sampling, inference, and learning in log-linear models.
+
+
+Audio Super Resolution using Neural Networks
+
+  We introduce a new audio processing technique that increases the sampling
+rate of signals such as speech or music using deep convolutional neural
+networks. Our model is trained on pairs of low and high-quality audio examples;
+at test-time, it predicts missing samples within a low-resolution signal in an
+interpolation process similar to image super-resolution. Our method is simple
+and does not involve specialized audio processing techniques; in our
+experiments, it outperforms baselines on standard speech and music benchmarks
+at upscaling ratios of 2x, 4x, and 6x. The method has practical applications in
+telephony, compression, and text-to-speech generation; it demonstrates the
+effectiveness of feed-forward convolutional architectures on an audio
+generation task.
+
+
+A Survey of Human Activity Recognition Using WiFi CSI
+
+  In this article, we present a survey of recent advances in passive human
+behaviour recognition in indoor areas using the channel state information (CSI)
+of commercial WiFi systems. Movement of human body causes a change in the
+wireless signal reflections, which results in variations in the CSI. By
+analyzing the data streams of CSIs for different activities and comparing them
+against stored models, human behaviour can be recognized. This is done by
+extracting features from CSI data streams and using machine learning techniques
+to build models and classifiers. The techniques from the literature that are
+presented herein have great performances, however, instead of the machine
+learning techniques employed in these works, we propose to use deep learning
+techniques such as long-short term memory (LSTM) recurrent neural network
+(RNN), and show the improved performance. We also discuss about different
+challenges such as environment change, frame rate selection, and multi-user
+scenario, and suggest possible directions for future work.
+
+
+Neural Variational Inference and Learning in Undirected Graphical Models
+
+  Many problems in machine learning are naturally expressed in the language of
+undirected graphical models. Here, we propose black-box learning and inference
+algorithms for undirected models that optimize a variational approximation to
+the log-likelihood of the model. Central to our approach is an upper bound on
+the log-partition function parametrized by a function q that we express as a
+flexible neural network. Our bound makes it possible to track the partition
+function during learning, to speed-up sampling, and to train a broad class of
+hybrid directed/undirected models via a unified variational inference
+framework. We empirically demonstrate the effectiveness of our method on
+several popular generative modeling datasets.
+
+
+Poverty Prediction with Public Landsat 7 Satellite Imagery and Machine
+  Learning
+
+  Obtaining detailed and reliable data about local economic livelihoods in
+developing countries is expensive, and data are consequently scarce. Previous
+work has shown that it is possible to measure local-level economic livelihoods
+using high-resolution satellite imagery. However, such imagery is relatively
+expensive to acquire, often not updated frequently, and is mainly available for
+recent years. We train CNN models on free and publicly available multispectral
+daytime satellite images of the African continent from the Landsat 7 satellite,
+which has collected imagery with global coverage for almost two decades. We
+show that despite these images' lower resolution, we can achieve accuracies
+that exceed previous benchmarks.
+
+
+Hierarchical Modeling of Seed Variety Yields and Decision Making for
+  Future Planting Plans
+
+  Eradicating hunger and malnutrition is a key development goal of the 21st
+century. We address the problem of optimally identifying seed varieties to
+reliably increase crop yield within a risk-sensitive decision-making framework.
+Specifically, we introduce a novel hierarchical machine learning mechanism for
+predicting crop yield (the yield of different seed varieties of the same crop).
+We integrate this prediction mechanism with a weather forecasting model, and
+propose three different approaches for decision making under uncertainty to
+select seed varieties for planting so as to balance yield maximization and
+risk.We apply our model to the problem of soybean variety selection given in
+the 2016 Syngenta Crop Challenge. Our prediction model achieves a median
+absolute error of 3.74 bushels per acre and thus provides good estimates for
+input into the decision models.Our decision models identify the selection of
+soybean varieties that appropriately balance yield and risk as a function of
+the farmer's risk aversion level. More generally, our models support farmers in
+decision making about which seed varieties to plant.
+
+
+Deterministic Policy Optimization by Combining Pathwise and Score
+  Function Estimators for Discrete Action Spaces
+
+  Policy optimization methods have shown great promise in solving complex
+reinforcement and imitation learning tasks. While model-free methods are
+broadly applicable, they often require many samples to optimize complex
+policies. Model-based methods greatly improve sample-efficiency but at the cost
+of poor generalization, requiring a carefully handcrafted model of the system
+dynamics for each task. Recently, hybrid methods have been successful in
+trading off applicability for improved sample-complexity. However, these have
+been limited to continuous action spaces. In this work, we present a new hybrid
+method based on an approximation of the dynamics as an expectation over the
+next state under the current policy. This relaxation allows us to derive a
+novel hybrid policy gradient estimator, combining score function and pathwise
+derivative estimators, that is applicable to discrete action spaces. We show
+significant gains in sample complexity, ranging between $1.7$ and $25\times$,
+when learning parameterized policies on Cart Pole, Acrobot, Mountain Car and
+Hand Mass. Our method is applicable to both discrete and continuous action
+spaces, when competing pathwise methods are limited to the latter.
+
+
+Approximate Inference via Weighted Rademacher Complexity
+
+  Rademacher complexity is often used to characterize the learnability of a
+hypothesis class and is known to be related to the class size. We leverage this
+observation and introduce a new technique for estimating the size of an
+arbitrary weighted set, defined as the sum of weights of all elements in the
+set. Our technique provides upper and lower bounds on a novel generalization of
+Rademacher complexity to the weighted setting in terms of the weighted set
+size. This generalizes Massart's Lemma, a known upper bound on the Rademacher
+complexity in terms of the unweighted set size. We show that the weighted
+Rademacher complexity can be estimated by solving a randomly perturbed
+optimization problem, allowing us to derive high-probability bounds on the size
+of any weighted set. We apply our method to the problems of calculating the
+partition function of an Ising model and computing propositional model counts
+(#SAT). Our experiments demonstrate that we can produce tighter bounds than
+competing methods in both the weighted and unweighted settings.
+
+
+Accelerating Natural Gradient with Higher-Order Invariance
+
+  An appealing property of the natural gradient is that it is invariant to
+arbitrary differentiable reparameterizations of the model. However, this
+invariance property requires infinitesimal steps and is lost in practical
+implementations with small but finite step sizes. In this paper, we study
+invariance properties from a combined perspective of Riemannian geometry and
+numerical differential equation solving. We define the order of invariance of a
+numerical method to be its convergence order to an invariant solution. We
+propose to use higher-order integrators and geodesic corrections to obtain more
+invariant optimization trajectories. We prove the numerical convergence
+properties of geodesic corrected updates and show that they can be as
+computationally efficient as plain natural gradient. Experimentally, we
+demonstrate that invariance leads to faster optimization and our techniques
+improve on traditional natural gradient in deep neural network training and
+natural policy gradient for reinforcement learning.
+
+
+Graphite: Iterative Generative Modeling of Graphs
+
+  Graphs are a fundamental abstraction for modeling relational data. However,
+graphs are discrete and combinatorial in nature, and learning representations
+suitable for machine learning tasks poses statistical and computational
+challenges. In this work, we propose Graphite an algorithmic framework for
+unsupervised learning of representations over nodes in a graph using deep
+latent variable generative models. Our model is based on variational
+autoencoders (VAE), and uses graph neural networks for parameterizing both the
+generative model (i.e., decoder) and inference model (i.e., encoder). The use
+of graph neural networks directly incorporates inductive biases due to the
+spatial, local structure of graphs directly in the generative model. We draw
+novel connections of our framework with approximate inference via kernel
+embeddings. Empirically, Graphite outperforms competing approaches for the
+tasks of density estimation, link prediction, and node classification on
+synthetic and benchmark datasets.
+
+
+Best arm identification in multi-armed bandits with delayed feedback
+
+  We propose a generalization of the best arm identification problem in
+stochastic multi-armed bandits (MAB) to the setting where every pull of an arm
+is associated with delayed feedback. The delay in feedback increases the
+effective sample complexity of standard algorithms, but can be offset if we
+have access to partial feedback received before a pull is completed. We propose
+a general framework to model the relationship between partial and delayed
+feedback, and as a special case we introduce efficient algorithms for settings
+where the partial feedback are biased or unbiased estimators of the delayed
+feedback. Additionally, we propose a novel extension of the algorithms to the
+parallel MAB setting where an agent can control a batch of arms. Our
+experiments in real-world settings, involving policy search and hyperparameter
+optimization in computational sustainability domains for fast charging of
+batteries and wildlife corridor construction, demonstrate that exploiting the
+structure of partial feedback can lead to significant improvements over
+baselines in both sequential and parallel MAB.
+
+
+End-to-End Learning of Motion Representation for Video Understanding
+
+  Despite the recent success of end-to-end learned representations,
+hand-crafted optical flow features are still widely used in video analysis
+tasks. To fill this gap, we propose TVNet, a novel end-to-end trainable neural
+network, to learn optical-flow-like features from data. TVNet subsumes a
+specific optical flow solver, the TV-L1 method, and is initialized by unfolding
+its optimization iterations as neural layers. TVNet can therefore be used
+directly without any extra learning. Moreover, it can be naturally concatenated
+with other task-specific networks to formulate an end-to-end architecture, thus
+making our method more efficient than current multi-stage approaches by
+avoiding the need to pre-compute and store features on disk. Finally, the
+parameters of the TVNet can be further fine-tuned by end-to-end training. This
+enables TVNet to learn richer and task-specific patterns beyond exact optical
+flow. Extensive experiments on two action recognition benchmarks verify the
+effectiveness of the proposed approach. Our TVNet achieves better accuracies
+than all compared methods, while being competitive with the fastest counterpart
+in terms of features extraction time.
+
+
+Variational Rejection Sampling
+
+  Learning latent variable models with stochastic variational inference is
+challenging when the approximate posterior is far from the true posterior, due
+to high variance in the gradient estimates. We propose a novel rejection
+sampling step that discards samples from the variational posterior which are
+assigned low likelihoods by the model. Our approach provides an arbitrarily
+accurate approximation of the true posterior at the expense of extra
+computation. Using a new gradient estimator for the resulting unnormalized
+proposal distribution, we achieve average improvements of 3.71 nats and 0.21
+nats over state-of-the-art single-sample and multi-sample alternatives
+respectively for estimating marginal log-likelihoods using sigmoid belief
+networks on the MNIST dataset.
+
+
+Tile2Vec: Unsupervised representation learning for spatially distributed
+  data
+
+  Geospatial analysis lacks methods like the word vector representations and
+pre-trained networks that significantly boost performance across a wide range
+of natural language and computer vision tasks. To fill this gap, we introduce
+Tile2Vec, an unsupervised representation learning algorithm that extends the
+distributional hypothesis from natural language -- words appearing in similar
+contexts tend to have similar meanings -- to spatially distributed data. We
+demonstrate empirically that Tile2Vec learns semantically meaningful
+representations on three datasets. Our learned representations significantly
+improve performance in downstream classification tasks and, similar to word
+vectors, visual analogies can be obtained via simple arithmetic in the latent
+space.
+
+
+Amortized Inference Regularization
+
+  The variational autoencoder (VAE) is a popular model for density estimation
+and representation learning. Canonically, the variational principle suggests to
+prefer an expressive inference model so that the variational approximation is
+accurate. However, it is often overlooked that an overly-expressive inference
+model can be detrimental to the test set performance of both the amortized
+posterior approximator and, more importantly, the generative density estimator.
+In this paper, we leverage the fact that VAEs rely on amortized inference and
+propose techniques for amortized inference regularization (AIR) that control
+the smoothness of the inference model. We demonstrate that, by applying AIR, it
+is possible to improve VAE generalization on both inference and generative
+performance. Our paper challenges the belief that amortized inference is simply
+a mechanism for approximating maximum likelihood training and illustrates that
+regularization of the amortization family provides a new direction for
+understanding and improving generalization in VAEs.
+
+
+Semi-supervised Deep Kernel Learning: Regression with Unlabeled Data by
+  Minimizing Predictive Variance
+
+  Large amounts of labeled data are typically required to train deep learning
+models. For many real-world problems, however, acquiring additional data can be
+expensive or even impossible. We present semi-supervised deep kernel learning
+(SSDKL), a semi-supervised regression model based on minimizing predictive
+variance in the posterior regularization framework. SSDKL combines the
+hierarchical representation learning of neural networks with the probabilistic
+modeling capabilities of Gaussian processes. By leveraging unlabeled data, we
+show improvements on a diverse set of real-world regression tasks over
+supervised deep kernel learning and semi-supervised methods such as VAT and
+mean teacher adapted for regression.
+
+
+Adversarial Constraint Learning for Structured Prediction
+
+  Constraint-based learning reduces the burden of collecting labels by having
+users specify general properties of structured outputs, such as constraints
+imposed by physical laws. We propose a novel framework for simultaneously
+learning these constraints and using them for supervision, bypassing the
+difficulty of using domain expertise to manually specify constraints. Learning
+requires a black-box simulator of structured outputs, which generates valid
+labels, but need not model their corresponding inputs or the input-label
+relationship. At training time, we constrain the model to produce outputs that
+cannot be distinguished from simulated labels by adversarial training.
+Providing our framework with a small number of labeled inputs gives rise to a
+new semi-supervised structured prediction model; we evaluate this model on
+multiple tasks --- tracking, pose estimation and time series prediction --- and
+find that it achieves high accuracy with only a small number of labeled inputs.
+In some cases, no labels are required at all.
+
+
+The Information Autoencoding Family: A Lagrangian Perspective on Latent
+  Variable Generative Models
+
+  A large number of objectives have been proposed to train latent variable
+generative models. We show that many of them are Lagrangian dual functions of
+the same primal optimization problem. The primal problem optimizes the mutual
+information between latent and visible variables, subject to the constraints of
+accurately modeling the data distribution and performing correct amortized
+inference. By choosing to maximize or minimize mutual information, and choosing
+different Lagrange multipliers, we obtain different objectives including
+InfoGAN, ALI/BiGAN, ALICE, CycleGAN, beta-VAE, adversarial autoencoders, AVB,
+AS-VAE and InfoVAE. Based on this observation, we provide an exhaustive
+characterization of the statistical and computational trade-offs made by all
+the training objectives in this class of Lagrangian duals. Next, we propose a
+dual optimization method where we optimize model parameters as well as the
+Lagrange multipliers. This method achieves Pareto optimal solutions in terms of
+optimizing information and satisfying the constraints.
+
+
+Accurate Uncertainties for Deep Learning Using Calibrated Regression
+
+  Methods for reasoning under uncertainty are a key building block of accurate
+and reliable machine learning systems. Bayesian methods provide a general
+framework to quantify uncertainty. However, because of model misspecification
+and the use of approximate inference, Bayesian uncertainty estimates are often
+inaccurate -- for example, a 90% credible interval may not contain the true
+outcome 90% of the time. Here, we propose a simple procedure for calibrating
+any regression algorithm; when applied to Bayesian and probabilistic models, it
+is guaranteed to produce calibrated uncertainty estimates given enough data.
+Our procedure is inspired by Platt scaling and extends previous work on
+classification. We evaluate this approach on Bayesian linear regression,
+feedforward, and recurrent neural networks, and find that it consistently
+outputs well-calibrated credible intervals while improving performance on time
+series forecasting and model-based reinforcement learning tasks.
+
+
+Learning to Interpret Satellite Images Using Wikipedia
+
+  Despite recent progress in computer vision, fine-grained interpretation of
+satellite images remains challenging because of a lack of labeled training
+data. To overcome this limitation, we propose using Wikipedia as a previously
+untapped source of rich, georeferenced textual information with global
+coverage. We construct a novel large-scale, multi-modal dataset by pairing
+geo-referenced Wikipedia articles with satellite imagery of their corresponding
+locations. To prove the efficacy of this dataset, we focus on the African
+continent and train a deep network to classify images based on labels extracted
+from articles. We then fine-tune the model on a human annotated dataset and
+demonstrate that this weak form of supervision can drastically reduce the
+quantity of human annotated labels and time required for downstream tasks.
+
+
+Neural Joint Source-Channel Coding
+
+  For reliable transmission across a noisy communication channel, classical
+results from information theory show that it is asymptotically optimal to
+separate out the source and channel coding processes. However, this
+decomposition can fall short in the finite bit-length regime, as it requires
+non-trivial tuning of hand-crafted codes and assumes infinite computational
+power for decoding. In this work, we propose to jointly learn the encoding and
+decoding processes using a new discrete variational autoencoder model. By
+adding noise into the latent codes to simulate the channel during training, we
+learn to both compress and error-correct given a fixed bit-length and
+computational budget. We obtain codes that are not only competitive against
+several separation schemes, but also learn useful robust representations of the
+data for downstream tasks such as classification. Finally, inference
+amortization yields an extremely fast neural decoder, almost an order of
+magnitude faster compared to standard decoding methods based on iterative
+belief propagation.
+
+
+Streamlining Variational Inference for Constraint Satisfaction Problems
+
+  Several algorithms for solving constraint satisfaction problems are based on
+survey propagation, a variational inference scheme used to obtain approximate
+marginal probability estimates for variable assignments. These marginals
+correspond to how frequently each variable is set to true among satisfying
+assignments, and are used to inform branching decisions during search; however,
+marginal estimates obtained via survey propagation are approximate and can be
+self-contradictory. We introduce a more general branching strategy based on
+streamlining constraints, which sidestep hard assignments to variables. We show
+that streamlined solvers consistently outperform decimation-based solvers on
+random k-SAT instances for several problem sizes, shrinking the gap between
+empirical performance and theoretical limits of satisfiability by 16.3% on
+average for k=3,4,5,6.
+
+
+Learning Controllable Fair Representations
+
+  Learning data representations that are transferable and are fair with respect
+to certain protected attributes is crucial to reducing unfair decisions while
+preserving the utility of the data. We propose an information-theoretically
+motivated objective for learning maximally expressive representations subject
+to fairness constraints. We demonstrate that a range of existing approaches
+optimize approximations to the Lagrangian dual of our objective. In contrast to
+these existing approaches, our objective allows the user to control the
+fairness of the representations by specifying limits on unfairness. Exploiting
+duality, we introduce a method that optimizes the model parameters as well as
+the expressiveness-fairness trade-off. Empirical evidence suggests that our
+proposed method can balance the trade-off between multiple notions of fairness
+and achieves higher expressiveness at a lower computational cost.
+
+

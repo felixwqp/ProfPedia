@@ -1,0 +1,227 @@
+Constructing Abstraction Hierarchies Using a Skill-Symbol Loop
+
+  We describe a framework for building abstraction hierarchies whereby an agent
+alternates skill- and representation-acquisition phases to construct a sequence
+of increasingly abstract Markov decision processes. Our formulation builds on
+recent results showing that the appropriate abstract representation of a
+problem is specified by the agent's skills. We describe how such a hierarchy
+can be used for fast planning, and illustrate the construction of an
+appropriate hierarchy for the Taxi domain.
+
+
+Hidden Parameter Markov Decision Processes: A Semiparametric Regression
+  Approach for Discovering Latent Task Parametrizations
+
+  Control applications often feature tasks with similar, but not identical,
+dynamics. We introduce the Hidden Parameter Markov Decision Process (HiP-MDP),
+a framework that parametrizes a family of related dynamical systems with a
+low-dimensional set of latent factors, and introduce a semiparametric
+regression approach for learning its structure from data. In the control
+setting, we show that a learned HiP-MDP rapidly identifies the dynamics of a
+new task instance, allowing an agent to flexibly adapt to task variations.
+
+
+Reinforcement Learning with Parameterized Actions
+
+  We introduce a model-free algorithm for learning in Markov decision processes
+with parameterized actions-discrete actions with continuous parameters. At each
+step the agent must select both which action to use and which parameters to use
+with that action. We introduce the Q-PAMDP algorithm for learning in these
+domains, show that it converges to a local optimum, and compare it to direct
+policy search in the goal-scoring and Platform domains.
+
+
+Mean Actor Critic
+
+  We propose a new algorithm, Mean Actor-Critic (MAC), for discrete-action
+continuous-state reinforcement learning. MAC is a policy gradient algorithm
+that uses the agent's explicit representation of all action values to estimate
+the gradient of the policy, rather than using only the actions that were
+actually executed. We prove that this approach reduces variance in the policy
+gradient estimate relative to traditional actor-critic methods. We show
+empirical results on two control domains and on six Atari games, where MAC is
+competitive with state-of-the-art policy search algorithms.
+
+
+Active Exploration for Learning Symbolic Representations
+
+  We introduce an online active exploration algorithm for data-efficiently
+learning an abstract symbolic model of an environment. Our algorithm is divided
+into two parts: the first part quickly generates an intermediate Bayesian
+symbolic model from the data that the agent has collected so far, which the
+agent can then use along with the second part to guide its future exploration
+towards regions of the state space that the model is uncertain about. We show
+that our algorithm outperforms random and greedy exploration policies on two
+different computer game domains. The first domain is an Asteroids-inspired game
+with complex dynamics but basic logical structure. The second is the Treasure
+Game, with simpler dynamics but more complex logical structure.
+
+
+Discovering Options for Exploration by Minimizing Cover Time
+
+  One of the main challenges in reinforcement learning is solving tasks with
+sparse reward. We show that the difficulty of discovering a distant rewarding
+state in an MDP is bounded by the expected cover time of a random walk over the
+graph induced by the MDP's transition dynamics. We therefore propose to
+accelerate exploration by constructing options that minimize cover time. The
+proposed algorithm finds an option which provably diminishes the expected
+number of steps to visit every state in the state space by a uniform random
+walk. We show empirically that the proposed algorithm improves the learning
+time in several domains with sparse rewards.
+
+
+Learning Parameterized Skills
+
+  We introduce a method for constructing skills capable of solving tasks drawn
+from a distribution of parameterized reinforcement learning problems. The
+method draws example tasks from a distribution of interest and uses the
+corresponding learned policies to estimate the topology of the
+lower-dimensional piecewise-smooth manifold on which the skill policies lie.
+This manifold models how policy parameters change as task parameters vary. The
+method identifies the number of charts that compose the manifold and then
+applies non-linear regression in each chart to construct a parameterized skill
+by predicting policy parameters from task parameters. We evaluate our method on
+an underactuated simulated robotic arm tasked with learning to accurately throw
+darts at a parameterized target location.
+
+
+Transfer Learning Across Patient Variations with Hidden Parameter Markov
+  Decision Processes
+
+  Due to physiological variation, patients diagnosed with the same condition
+may exhibit divergent, but related, responses to the same treatments. Hidden
+Parameter Markov Decision Processes (HiP-MDPs) tackle this transfer-learning
+problem by embedding these tasks into a low-dimensional space. However, the
+original formulation of HiP-MDP had a critical flaw: the embedding uncertainty
+was modeled independently of the agent's state uncertainty, requiring an
+unnatural training procedure in which all tasks visited every part of the state
+space---possible for robots that can be moved to a particular location,
+impossible for human patients. We update the HiP-MDP framework and extend it to
+more robustly develop personalized medicine strategies for HIV treatment.
+
+
+Robust and Efficient Transfer Learning with Hidden-Parameter Markov
+  Decision Processes
+
+  We introduce a new formulation of the Hidden Parameter Markov Decision
+Process (HiP-MDP), a framework for modeling families of related tasks using
+low-dimensional latent embeddings. Our new framework correctly models the joint
+uncertainty in the latent parameters and the state space. We also replace the
+original Gaussian Process-based model with a Bayesian Neural Network, enabling
+more scalable inference. Thus, we expand the scope of the HiP-MDP to
+applications with higher dimensions and more complex dynamics.
+
+
+Communicating Robot Arm Motion Intent Through Mixed Reality Head-mounted
+  Displays
+
+  Efficient motion intent communication is necessary for safe and collaborative
+work environments with collocated humans and robots. Humans efficiently
+communicate their motion intent to other humans through gestures, gaze, and
+social cues. However, robots often have difficulty efficiently communicating
+their motion intent to humans via these methods. Many existing methods for
+robot motion intent communication rely on 2D displays, which require the human
+to continually pause their work and check a visualization. We propose a mixed
+reality head-mounted display visualization of the proposed robot motion over
+the wearer's real-world view of the robot and its environment. To evaluate the
+effectiveness of this system against a 2D display visualization and against no
+visualization, we asked 32 participants to labeled different robot arm motions
+as either colliding or non-colliding with blocks on a table. We found a 16%
+increase in accuracy with a 62% decrease in the time it took to complete the
+task compared to the next best system. This demonstrates that a mixed-reality
+HMD allows a human to more quickly and accurately tell where the robot is going
+to move than the compared baselines.
+
+
+Hybrid Bayesian Eigenobjects: Combining Linear Subspace and Deep Network
+  Methods for 3D Robot Vision
+
+  We introduce Hybrid Bayesian Eigenobjects (HBEOs), a novel representation for
+3D objects designed to allow a robot to jointly estimate the pose, class, and
+full 3D geometry of a novel object observed from a single viewpoint in a single
+practical framework. By combining both linear subspace methods and deep
+convolutional prediction, HBEOs efficiently learn nonlinear object
+representations without directly regressing into high-dimensional space. HBEOs
+also remove the onerous and generally impractical necessity of input data
+voxelization prior to inference. We experimentally evaluate the suitability of
+HBEOs to the challenging task of joint pose, class, and shape inference on
+novel objects and show that, compared to preceding work, HBEOs offer
+dramatically improved performance in all three tasks along with several orders
+of magnitude faster runtime performance.
+
+
+Scanning the Internet for ROS: A View of Security in Robotics Research
+
+  Because robots can directly perceive and affect the physical world, security
+issues take on particular importance. In this paper, we describe the results of
+our work on scanning the entire IPv4 address space of the Internet for
+instances of the Robot Operating System (ROS), a widely used robotics platform
+for research. Our results identified that a number of hosts supporting ROS are
+exposed to the public Internet, thereby allowing anyone to access robotic
+sensors and actuators. As a proof of concept, and with consent, we were able to
+read image sensor information and move the robot of a research group in a US
+university. This paper gives an overview of our findings, including the
+geographic distribution of publicly-accessible platforms, the sorts of sensor
+and actuator data that is available, as well as the different kinds of robots
+and sensors that our scan uncovered. Additionally, we offer recommendations on
+best practices to mitigate these security issues in the future.
+
+
+Finding Options that Minimize Planning Time
+
+  We formalize the problem of selecting the optimal set of options for planning
+as that of computing the smallest set of options so that planning converges in
+less than a given maximum of value-iteration passes. We first show that the
+problem is NP-hard, even if the task is constrained to be deterministic---the
+first such complexity result for option discovery. We then present the first
+polynomial-time boundedly suboptimal approximation algorithm for this setting,
+and empirically evaluate it against both the optimal options and a
+representative collection of heuristic approaches in simple grid-based domains
+including the classic four-rooms problem.
+
+
+Planning for Decentralized Control of Multiple Robots Under Uncertainty
+
+  We describe a probabilistic framework for synthesizing control policies for
+general multi-robot systems, given environment and sensor models and a cost
+function. Decentralized, partially observable Markov decision processes
+(Dec-POMDPs) are a general model of decision processes where a team of agents
+must cooperate to optimize some objective (specified by a shared reward or cost
+function) in the presence of uncertainty, but where communication limitations
+mean that the agents cannot share their state, so execution must proceed in a
+decentralized fashion. While Dec-POMDPs are typically intractable to solve for
+real-world problems, recent research on the use of macro-actions in Dec-POMDPs
+has significantly increased the size of problem that can be practically solved
+as a Dec-POMDP. We describe this general model, and show how, in contrast to
+most existing methods that are specialized to a particular problem class, it
+can synthesize control policies that use whatever opportunities for
+coordination are present in the problem, while balancing off uncertainty in
+outcomes, sensor information, and information about other agents. We use three
+variations on a warehouse task to show that a single planner of this type can
+generate cooperative behavior using task allocation, direct communication, and
+signaling, as appropriate.
+
+
+Learning Multi-Level Hierarchies with Hindsight
+
+  Multi-level hierarchies have the potential to accelerate learning in sparse
+reward tasks because they can divide a problem into a set of short horizon
+subproblems. In order to realize this potential, Hierarchical Reinforcement
+Learning (HRL) algorithms need to be able to learn the multiple levels within a
+hierarchy in parallel, so these simpler subproblems can be solved
+simultaneously. Yet most existing HRL methods that can learn hierarchies are
+not able to efficiently learn multiple levels of policies at the same time,
+particularly in continuous domains. To address this problem, we introduce a
+framework that can learn multiple levels of policies in parallel. Our approach
+consists of two main components: (i) a particular hierarchical architecture and
+(ii) a method for jointly learning multiple levels of policies. The hierarchies
+produced by our framework are comprised of a set of nested, goal-conditioned
+policies that use the state space to decompose a task into short subtasks. All
+policies in the hierarchy are learned simultaneously using two types of
+hindsight transitions. We demonstrate experimentally in both grid world and
+simulated robotics domains that our approach can significantly accelerate
+learning relative to other non-hierarchical and hierarchical methods. Indeed,
+our framework is the first to successfully learn 3-level hierarchies in
+parallel in tasks with continuous state and action spaces.
+
+

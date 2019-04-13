@@ -1,0 +1,254 @@
+Depth-Based 3D Hand Pose Estimation: From Current Achievements to Future
+  Goals
+
+  In this paper, we strive to answer two questions: What is the current state
+of 3D hand pose estimation from depth images? And, what are the next challenges
+that need to be tackled? Following the successful Hands In the Million
+Challenge (HIM2017), we investigate the top 10 state-of-the-art methods on
+three tasks: single frame 3D pose estimation, 3D hand tracking, and hand pose
+estimation during object interaction. We analyze the performance of different
+CNN structures with regard to hand shape, joint visibility, view point and
+articulation distributions. Our findings include: (1) isolated 3D hand pose
+estimation achieves low mean errors (10 mm) in the view point range of [70,
+120] degrees, but it is far from being solved for extreme view points; (2) 3D
+volumetric representations outperform 2D CNNs, better capturing the spatial
+structure of the depth data; (3) Discriminative methods still generalize poorly
+to unseen hand shapes; (4) While joint occlusions pose a challenge for most
+methods, explicit modeling of structure constraints can significantly narrow
+the gap between errors on visible and occluded joints.
+
+
+Robust 3D Hand Pose Estimation in Single Depth Images: from Single-View
+  CNN to Multi-View CNNs
+
+  Articulated hand pose estimation plays an important role in human-computer
+interaction. Despite the recent progress, the accuracy of existing methods is
+still not satisfactory, partially due to the difficulty of embedded
+high-dimensional and non-linear regression problem. Different from the existing
+discriminative methods that regress for the hand pose with a single depth
+image, we propose to first project the query depth image onto three orthogonal
+planes and utilize these multi-view projections to regress for 2D heat-maps
+which estimate the joint positions on each plane. These multi-view heat-maps
+are then fused to produce final 3D hand pose estimation with learned pose
+priors. Experiments show that the proposed method largely outperforms
+state-of-the-art on a challenging dataset. Moreover, a cross-dataset experiment
+also demonstrates the good generalization ability of the proposed method.
+
+
+Influence Maximization Meets Efficiency and Effectiveness: A Hop-Based
+  Approach
+
+  Influence Maximization is an extensively-studied problem that targets at
+selecting a set of initial seed nodes in the Online Social Networks (OSNs) to
+spread the influence as widely as possible. However, it remains an open
+challenge to design fast and accurate algorithms to find solutions in
+large-scale OSNs. Prior Monte-Carlo-simulation-based methods are slow and not
+scalable, while other heuristic algorithms do not have any theoretical
+guarantee and they have been shown to produce poor solutions for quite some
+cases. In this paper, we propose hop-based algorithms that can easily scale to
+millions of nodes and billions of edges. Unlike previous heuristics, our
+proposed hop-based approaches can provide certain theoretical guarantees.
+Experimental evaluations with real OSN datasets demonstrate the efficiency and
+effectiveness of our algorithms.
+
+
+Kernel Cross-Correlator
+
+  Cross-correlator plays a significant role in many visual perception tasks,
+such as object detection and tracking. Beyond the linear cross-correlator, this
+paper proposes a kernel cross-correlator (KCC) that breaks traditional
+limitations. First, by introducing the kernel trick, the KCC extends the linear
+cross-correlation to non-linear space, which is more robust to signal noises
+and distortions. Second, the connection to the existing works shows that KCC
+provides a unified solution for correlation filters. Third, KCC is applicable
+to any kernel function and is not limited to circulant structure on training
+data, thus it is able to predict affine transformations with customized
+properties. Last, by leveraging the fast Fourier transform (FFT), KCC
+eliminates direct calculation of kernel vectors, thus achieves better
+performance yet still with a reasonable computational cost. Comprehensive
+experiments on visual tracking and human activity recognition using wearable
+devices demonstrate its robustness, flexibility, and efficiency. The source
+codes of both experiments are released at https://github.com/wang-chen/KCC
+
+
+Non-iterative RGB-D-inertial Odometry
+
+  This paper presents a non-iterative solution to RGB-D-inertial odometry
+system. Traditional odometry methods resort to iterative algorithms which are
+usually computationally expensive or require well-designed initialization. To
+overcome this problem, this paper proposes to combine a non-iterative front-end
+(odometry) with an iterative back-end (loop closure) for the RGB-D-inertial
+SLAM system. The main contribution lies in the novel non-iterative front-end,
+which leverages on inertial fusion and kernel cross-correlators (KCC) to match
+point clouds in frequency domain. Dominated by the fast Fourier transform
+(FFT), our method is only of complexity $\mathcal{O}(n\log{n})$, where $n$ is
+the number of points. Map fusion is conducted by element-wise operations, so
+that both time and space complexity are further reduced. Extensive experiments
+show that, due to the lightweight of the proposed front-end, the framework is
+able to run at a much faster speed yet still with comparable accuracy with the
+state-of-the-arts.
+
+
+Towards Profit Maximization for Online Social Network Providers
+
+  Online Social Networks (OSNs) attract billions of users to share information
+and communicate where viral marketing has emerged as a new way to promote the
+sales of products. An OSN provider is often hired by an advertiser to conduct
+viral marketing campaigns. The OSN provider generates revenue from the
+commission paid by the advertiser which is determined by the spread of its
+product information. Meanwhile, to propagate influence, the activities
+performed by users such as viewing video ads normally induce diffusion cost to
+the OSN provider. In this paper, we aim to find a seed set to optimize a new
+profit metric that combines the benefit of influence spread with the cost of
+influence propagation for the OSN provider. Under many diffusion models, our
+profit metric is the difference between two submodular functions which is
+challenging to optimize as it is neither submodular nor monotone. We design a
+general two-phase framework to select seeds for profit maximization and develop
+several bounds to measure the quality of the seed set constructed. Experimental
+results with real OSN datasets show that our approach can achieve high
+approximation guarantees and significantly outperform the baseline algorithms,
+including state-of-the-art influence maximization algorithms.
+
+
+Exploiting Local Feature Patterns for Unsupervised Domain Adaptation
+
+  Unsupervised domain adaptation methods aim to alleviate performance
+degradation caused by domain-shift by learning domain-invariant
+representations. Existing deep domain adaptation methods focus on holistic
+feature alignment by matching source and target holistic feature distributions,
+without considering local features and their multi-mode statistics. We show
+that the learned local feature patterns are more generic and transferable and a
+further local feature distribution matching enables fine-grained feature
+alignment. In this paper, we present a method for learning domain-invariant
+local feature patterns and jointly aligning holistic and local feature
+statistics. Comparisons to the state-of-the-art unsupervised domain adaptation
+methods on two popular benchmark datasets demonstrate the superiority of our
+approach and its effectiveness on alleviating negative transfer.
+
+
+3D Hand Shape and Pose Estimation from a Single RGB Image
+
+  This work addresses a novel and challenging problem of estimating the full 3D
+hand shape and pose from a single RGB image. Most current methods in 3D hand
+analysis from monocular RGB images only focus on estimating the 3D locations of
+hand keypoints, which cannot fully express the 3D shape of hand. In contrast,
+we propose a Graph Convolutional Neural Network (Graph CNN) based method to
+reconstruct a full 3D mesh of hand surface that contains richer information of
+both 3D hand shape and pose. To train networks with full supervision, we create
+a large-scale synthetic dataset containing both ground truth 3D meshes and 3D
+poses. When fine-tuning the networks on real-world datasets without 3D ground
+truth, we propose a weakly-supervised approach by leveraging the depth map as a
+weak supervision in training. Through extensive evaluations on our proposed new
+datasets and two public datasets, we show that our proposed method can produce
+accurate and reasonable 3D hand mesh, and can achieve superior 3D hand pose
+estimation accuracy when compared with state-of-the-art methods.
+
+
+Kervolutional Neural Networks
+
+  Convolutional neural networks (CNNs) have enabled the state-of-the-art
+performance in many computer vision tasks. However, little effort has been
+devoted to establishing convolution in non-linear space. Existing works mainly
+leverage on the activation layers, which can only provide point-wise
+non-linearity. To solve this problem, a new operation, kervolution (kernel
+convolution), is introduced to approximate complex behaviors of human
+perception systems leveraging on the kernel trick. It generalizes convolution,
+enhances the model capacity, and captures higher order interactions of
+features, via patch-wise kernel functions, but without introducing additional
+parameters. Extensive experiments show that kervolutional neural networks (KNN)
+achieve higher accuracy and faster convergence than baseline CNN.
+
+
+Non-Iterative SLAM
+
+  The goal of this paper is to create a new framework for dense SLAM that is
+light enough for micro-robot systems based on depth camera and inertial sensor.
+Feature-based and direct methods are two mainstreams in visual SLAM. Both
+methods minimize photometric or reprojection error by iterative solutions,
+which are computationally expensive. To overcome this problem, we propose a
+non-iterative framework to reduce computational requirement. First, the
+attitude and heading reference system (AHRS) and axonometric projection are
+utilized to decouple the 6 Degree-of-Freedom (DoF) data, so that point clouds
+can be matched in independent spaces respectively. Second, based on single
+key-frame training, the matching process is carried out in frequency domain by
+Fourier transformation, which provides a closed-form non-iterative solution. In
+this manner, the time complexity is reduced to $\mathcal{O}(n \log{n})$, where
+$n$ is the number of matched points in each frame. To the best of our
+knowledge, this method is the first non-iterative and online trainable approach
+for data association in visual SLAM. Compared with the state-of-the-arts, it
+runs at a faster speed and obtains 3-D maps with higher resolution yet still
+with comparable accuracy.
+
+
+Actor-Action Semantic Segmentation with Region Masks
+
+  In this paper, we study the actor-action semantic segmentation problem, which
+requires joint labeling of both actor and action categories in video frames.
+One major challenge for this task is that when an actor performs an action,
+different body parts of the actor provide different types of cues for the
+action category and may receive inconsistent action labeling when they are
+labeled independently. To address this issue, we propose an end-to-end
+region-based actor-action segmentation approach which relies on region masks
+from an instance segmentation algorithm. Our main novelty is to avoid labeling
+pixels in a region mask independently - instead we assign a single action label
+to these pixels to achieve consistent action labeling. When a pixel belongs to
+multiple region masks, max pooling is applied to resolve labeling conflicts.
+Our approach uses a two-stream network as the front-end (which learns features
+capturing both appearance and motion information), and uses two region-based
+segmentation networks as the back-end (which takes the fused features from the
+two-stream network as the input and predicts actor-action labeling).
+Experiments on the A2D dataset demonstrate that both the region-based
+segmentation strategy and the fused features from the two-stream network
+contribute to the performance improvements. The proposed approach outperforms
+the state-of-the-art results by more than 8% in mean class accuracy, and more
+than 5% in mean class IOU, which validates its effectiveness.
+
+
+PointCloud Saliency Maps
+
+  3D point-cloud recognition with PointNet and its variants has received
+remarkable progress. A missing ingredient, however, is the ability to
+automatically evaluate point-wise importance w.r.t.\! classification
+performance, which is usually reflected by a saliency map. A saliency map is an
+important tool as it allows one to perform further processes on point-cloud
+data. In this paper, we propose a novel way of characterizing critical points
+and segments to build point-cloud saliency maps. Our method assigns each point
+a score reflecting its contribution to the model-recognition loss. The saliency
+map explicitly explains which points are the key for model recognition.
+Furthermore, aggregations of highly-scored points indicate important
+segments/subsets in a point-cloud. Our motivation for constructing a saliency
+map is by point dropping, which is a non-differentiable operator. To overcome
+this issue, we approximate point-dropping with a differentiable procedure of
+shifting points towards the cloud centroid. Consequently, each saliency score
+can be efficiently measured by the corresponding gradient of the loss w.r.t the
+point under the spherical coordinates. Extensive evaluations on several
+state-of-the-art point-cloud recognition models, including PointNet, PointNet++
+and DGCNN, demonstrate the veracity and generality of our proposed saliency
+map. Code for experiments is released on
+\url{https://github.com/tianzheng4/PointCloud-Saliency-Maps}.
+
+
+Progress Regression RNN for Online Spatial-Temporal Action Localization
+  in Unconstrained Videos
+
+  Previous spatial-temporal action localization methods commonly follow the
+pipeline of object detection to estimate bounding boxes and labels of actions.
+However, the temporal relation of an action has not been fully explored. In
+this paper, we propose an end-to-end Progress Regression Recurrent Neural
+Network (PR-RNN) for online spatial-temporal action localization, which learns
+to infer the action by temporal progress regression. Two new action attributes,
+called progression and progress rate, are introduced to describe the temporal
+engagement and relative temporal position of an action. In our method,
+frame-level features are first extracted by a Fully Convolutional Network
+(FCN). Subsequently, detection results and action progress attributes are
+regressed by the Convolutional Gated Recurrent Unit (ConvGRU) based on all the
+observed frames instead of a single frame or a short clip. Finally, a novel
+online linking method is designed to connect single-frame results to
+spatial-temporal tubes with the help of the estimated action progress
+attributes. Extensive experiments demonstrate that the progress attributes
+improve the localization accuracy by providing more precise temporal position
+of an action in unconstrained videos. Our proposed PR-RNN achieves the
+stateof-the-art performance for most of the IoU thresholds on two benchmark
+datasets.
+
+

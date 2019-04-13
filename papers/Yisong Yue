@@ -1,0 +1,623 @@
+Hierarchical Exploration for Accelerating Contextual Bandits
+
+  Contextual bandit learning is an increasingly popular approach to optimizing
+recommender systems via user feedback, but can be slow to converge in practice
+due to the need for exploring a large feature space. In this paper, we propose
+a coarse-to-fine hierarchical approach for encoding prior knowledge that
+drastically reduces the amount of exploration required. Intuitively, user
+preferences can be reasonably embedded in a coarse low-dimensional feature
+space that can be explored efficiently, requiring exploration in the
+high-dimensional space only as necessary. We introduce a bandit algorithm that
+explores within this coarse-to-fine spectrum, and prove performance guarantees
+that depend on how well the coarse space captures the user's preferences. We
+demonstrate substantial improvement over conventional bandit algorithms through
+extensive simulation as well as a live user study in the setting of
+personalized news recommendation.
+
+
+Coordinated Multi-Agent Imitation Learning
+
+  We study the problem of imitation learning from demonstrations of multiple
+coordinating agents. One key challenge in this setting is that learning a good
+model of coordination can be difficult, since coordination is often implicit in
+the demonstrations and must be inferred as a latent variable. We propose a
+joint approach that simultaneously learns a latent coordination model along
+with the individual policies. In particular, our method integrates unsupervised
+structure learning with conventional imitation learning. We illustrate the
+power of our approach on a difficult problem of learning multiple policies for
+fine-grained behavior modeling in team sports, where different players occupy
+different roles in the coordinated team strategy. We show that having a
+coordination model to infer the roles of players yields substantially improved
+imitation loss compared to conventional baselines.
+
+
+A General Method for Amortizing Variational Filtering
+
+  We introduce the variational filtering EM algorithm, a simple,
+general-purpose method for performing variational inference in dynamical latent
+variable models using information from only past and present variables, i.e.
+filtering. The algorithm is derived from the variational objective in the
+filtering setting and consists of an optimization procedure at each time step.
+By performing each inference optimization procedure with an iterative amortized
+inference model, we obtain a computationally efficient implementation of the
+algorithm, which we call amortized variational filtering. We present
+experiments demonstrating that this general-purpose method improves performance
+across several deep dynamical latent variable models.
+
+
+Knapsack Constrained Contextual Submodular List Prediction with
+  Application to Multi-document Summarization
+
+  We study the problem of predicting a set or list of options under knapsack
+constraint. The quality of such lists are evaluated by a submodular reward
+function that measures both quality and diversity. Similar to DAgger (Ross et
+al., 2010), by a reduction to online learning, we show how to adapt two
+sequence prediction models to imitate greedy maximization under knapsack
+constraint problems: CONSEQOPT (Dey et al., 2012) and SCP (Ross et al., 2013).
+Experiments on extractive multi-document summarization show that our approach
+outperforms existing state-of-the-art methods.
+
+
+Smooth Imitation Learning for Online Sequence Prediction
+
+  We study the problem of smooth imitation learning for online sequence
+prediction, where the goal is to train a policy that can smoothly imitate
+demonstrated behavior in a dynamic and continuous environment in response to
+online, sequential context input. Since the mapping from context to behavior is
+often complex, we take a learning reduction approach to reduce smooth imitation
+learning to a regression problem using complex function classes that are
+regularized to ensure smoothness. We present a learning meta-algorithm that
+achieves fast and stable convergence to a good policy. Our approach enjoys
+several attractive properties, including being fully deterministic, employing
+an adaptive learning rate that can provably yield larger policy improvements
+compared to previous approaches, and the ability to ensure stable convergence.
+Our empirical results demonstrate significant performance gains over previous
+approaches.
+
+
+Learning Policies for Contextual Submodular Prediction
+
+  Many prediction domains, such as ad placement, recommendation, trajectory
+prediction, and document summarization, require predicting a set or list of
+options. Such lists are often evaluated using submodular reward functions that
+measure both quality and diversity. We propose a simple, efficient, and
+provably near-optimal approach to optimizing such prediction problems based on
+no-regret learning. Our method leverages a surprising result from online
+submodular optimization: a single no-regret online learner can compete with an
+optimal sequence of predictions. Compared to previous work, which either learn
+a sequence of classifiers or rely on stronger assumptions such as
+realizability, we ensure both data-efficiency as well as performance guarantees
+in the fully agnostic setting. Experiments validate the efficiency and
+applicability of the approach on a wide range of problems including manipulator
+trajectory optimization, news recommendation and document summarization.
+
+
+A Rotation Invariant Latent Factor Model for Moveme Discovery from
+  Static Poses
+
+  We tackle the problem of learning a rotation invariant latent factor model
+when the training data is comprised of lower-dimensional projections of the
+original feature space. The main goal is the discovery of a set of 3-D bases
+poses that can characterize the manifold of primitive human motions, or
+movemes, from a training set of 2-D projected poses obtained from still images
+taken at various camera angles. The proposed technique for basis discovery is
+data-driven rather than hand-designed. The learned representation is rotation
+invariant, and can reconstruct any training instance from multiple viewing
+angles. We apply our method to modeling human poses in sports (via the Leeds
+Sports Dataset), and demonstrate the effectiveness of the learned bases in a
+range of applications such as activity classification, inference of dynamics
+from a single frame, and synthetic representation of movements.
+
+
+Learning recurrent representations for hierarchical behavior modeling
+
+  We propose a framework for detecting action patterns from motion sequences
+and modeling the sensory-motor relationship of animals, using a generative
+recurrent neural network. The network has a discriminative part (classifying
+actions) and a generative part (predicting motion), whose recurrent cells are
+laterally connected, allowing higher levels of the network to represent high
+level phenomena. We test our framework on two types of data, fruit fly behavior
+and online handwriting. Our results show that 1) taking advantage of unlabeled
+sequences, by predicting future motion, significantly improves action detection
+performance when training labels are scarce, 2) the network learns to represent
+high level phenomena such as writer identity and fly gender, without
+supervision, and 3) simulated motion trajectories, generated by treating motion
+prediction as input to the network, look realistic and may be used to
+qualitatively evaluate whether the model has learnt generative control rules.
+
+
+Multi-dueling Bandits with Dependent Arms
+
+  The dueling bandits problem is an online learning framework for learning from
+pairwise preference feedback, and is particularly well-suited for modeling
+settings that elicit subjective or implicit human feedback. In this paper, we
+study the problem of multi-dueling bandits with dependent arms, which extends
+the original dueling bandits setting by simultaneously dueling multiple arms as
+well as modeling dependencies between arms. These extensions capture key
+characteristics found in many real-world applications, and allow for the
+opportunity to develop significantly more efficient algorithms than were
+possible in the original setting. We propose the \selfsparring algorithm, which
+reduces the multi-dueling bandits problem to a conventional bandit setting that
+can be solved using a stochastic bandit algorithm such as Thompson Sampling,
+and can naturally model dependencies using a Gaussian process prior. We present
+a no-regret analysis for multi-dueling setting, and demonstrate the
+effectiveness of our algorithm empirically on a wide range of simulation
+settings.
+
+
+Generating Long-term Trajectories Using Deep Hierarchical Networks
+
+  We study the problem of modeling spatiotemporal trajectories over long time
+horizons using expert demonstrations. For instance, in sports, agents often
+choose action sequences with long-term goals in mind, such as achieving a
+certain strategic position. Conventional policy learning approaches, such as
+those based on Markov decision processes, generally fail at learning cohesive
+long-term behavior in such high-dimensional state spaces, and are only
+effective when myopic modeling lead to the desired behavior. The key difficulty
+is that conventional approaches are "shallow" models that only learn a single
+state-action policy. We instead propose a hierarchical policy class that
+automatically reasons about both long-term and short-term goals, which we
+instantiate as a hierarchical neural network. We showcase our approach in a
+case study on learning to imitate demonstrated basketball trajectories, and
+show that it generates significantly more realistic trajectories compared to
+non-hierarchical baselines as judged by professional sports analysts.
+
+
+Correlational Dueling Bandits with Application to Clinical Treatment in
+  Large Decision Spaces
+
+  We consider sequential decision making under uncertainty, where the goal is
+to optimize over a large decision space using noisy comparative feedback. This
+problem can be formulated as a $K$-armed Dueling Bandits problem where $K$ is
+the total number of decisions. When $K$ is very large, existing dueling bandits
+algorithms suffer huge cumulative regret before converging on the optimal arm.
+This paper studies the dueling bandits problem with a large number of arms that
+exhibit a low-dimensional correlation structure. Our problem is motivated by a
+clinical decision making process in large decision space. We propose an
+efficient algorithm CorrDuel which optimizes the exploration/exploitation
+tradeoff in this large decision space of clinical treatments. More broadly, our
+approach can be applied to other sequential decision problems with large and
+structured decision spaces. We derive regret bounds, and evaluate performance
+in simulation experiments as well as on a live clinical trial of therapeutic
+spinal cord stimulation. To our knowledge, this marks the first time an online
+learning algorithm was applied towards spinal cord injury treatments. Our
+experimental results show the effectiveness and efficiency of our approach.
+
+
+Fine-Grained Retrieval of Sports Plays using Tree-Based Alignment of
+  Trajectories
+
+  We propose a novel method for effective retrieval of multi-agent
+spatiotemporal tracking data. Retrieval of spatiotemporal tracking data offers
+several unique challenges compared to conventional text-based retrieval
+settings. Most notably, the data is fine-grained meaning that the specific
+location of agents is important in describing behavior. Additionally, the data
+often contains tracks of multiple agents (e.g., multiple players in a sports
+game), which generally leads to a permutational alignment problem when
+performing relevance estimation. Due to the frequent position swap of agents,
+it is difficult to maintain the correspondence of agents, and such issues make
+the pairwise comparison problematic for multi-agent spatiotemporal data. To
+address this issue, we propose a tree-based method to estimate the relevance
+between multi-agent spatiotemporal tracks. It uses a hierarchical structure to
+perform multi-agent data alignment and partitioning in a coarse-to-fine
+fashion. We validate our approach via user studies with domain experts. Our
+results show that our method boosts performance in retrieving similar sports
+plays -- especially in interactive situations where the user selects a subset
+of trajectories compared to current state-of-the-art methods.
+
+
+Long-term Forecasting using Tensor-Train RNNs
+
+  We present Tensor-Train RNN (TT-RNN), a novel family of neural sequence
+architectures for multivariate forecasting in environments with nonlinear
+dynamics. Long-term forecasting in such systems is highly challenging, since
+there exist long-term temporal dependencies, higher-order correlations and
+sensitivity to error propagation. Our proposed tensor recurrent architecture
+addresses these issues by learning the nonlinear dynamics directly using higher
+order moments and high-order state transition functions. Furthermore, we
+decompose the higher-order structure using the tensor-train (TT) decomposition
+to reduce the number of parameters while preserving the model performance. We
+theoretically establish the approximation properties of Tensor-Train RNNs for
+general sequence inputs, and such guarantees are not available for usual RNNs.
+We also demonstrate significant long-term prediction improvements over general
+RNN and LSTM architectures on a range of simulated environments with nonlinear
+dynamics, as well on real-world climate and traffic data.
+
+
+Multi-resolution Tensor Learning for Large-Scale Spatial Data
+
+  High-dimensional tensor models are notoriously computationally expensive to
+train. We present a meta-learning algorithm, MMT, that can significantly speed
+up the process for spatial tensor models. MMT leverages the property that
+spatial data can be viewed at multiple resolutions, which are related by
+coarsening and finegraining from one resolution to another. Using this
+property, MMT learns a tensor model by starting from a coarse resolution and
+iteratively increasing the model complexity. In order to not "over-train" on
+coarse resolution models, we investigate an information-theoretic fine-graining
+criterion to decide when to transition into higher-resolution models. We
+provide both theoretical and empirical evidence for the advantages of this
+approach. When applied to two real-world large-scale spatial datasets for
+basketball player and animal behavior modeling, our approach demonstrate 3 key
+benefits: 1) it efficiently captures higher-order interactions (i.e., tensor
+latent factors), 2) it is orders of magnitude faster than fixed resolution
+learning and scales to very fine-grained spatial resolutions, and 3) it
+reliably yields accurate and interpretable models.
+
+
+Teaching Categories to Human Learners with Visual Explanations
+
+  We study the problem of computer-assisted teaching with explanations.
+Conventional approaches for machine teaching typically only provide feedback at
+the instance level e.g., the category or label of the instance. However, it is
+intuitive that clear explanations from a knowledgeable teacher can
+significantly improve a student's ability to learn a new concept. To address
+these existing limitations, we propose a teaching framework that provides
+interpretable explanations as feedback and models how the learner incorporates
+this additional information. In the case of images, we show that we can
+automatically generate explanations that highlight the parts of the image that
+are responsible for the class label. Experiments on human learners illustrate
+that, on average, participants achieve better test set performance on
+challenging categorization tasks when taught with our interpretable approach
+compared to existing methods.
+
+
+Hierarchical Imitation and Reinforcement Learning
+
+  We study how to effectively leverage expert feedback to learn sequential
+decision-making policies. We focus on problems with sparse rewards and long
+time horizons, which typically pose significant challenges in reinforcement
+learning. We propose an algorithmic framework, called hierarchical guidance,
+that leverages the hierarchical structure of the underlying problem to
+integrate different modes of expert interaction. Our framework can incorporate
+different combinations of imitation learning (IL) and reinforcement learning
+(RL) at different levels, leading to dramatic reductions in both expert effort
+and cost of exploration. Using long-horizon benchmarks, including Montezuma's
+Revenge, we demonstrate that our approach can learn significantly faster than
+hierarchical RL, and be significantly more label-efficient than standard IL. We
+also theoretically analyze labeling cost for certain instantiations of our
+framework.
+
+
+Detecting Adversarial Examples via Neural Fingerprinting
+
+  Deep neural networks are vulnerable to adversarial examples, which
+dramatically alter model output using small input changes. We propose Neural
+Fingerprinting, a simple, yet effective method to detect adversarial examples
+by verifying whether model behavior is consistent with a set of secret
+fingerprints, inspired by the use of biometric and cryptographic signatures.
+The benefits of our method are that 1) it is fast, 2) it is prohibitively
+expensive for an attacker to reverse-engineer which fingerprints were used, and
+3) it does not assume knowledge of the adversary. In this work, we pose a
+formal framework to analyze fingerprints under various threat models, and
+characterize Neural Fingerprinting for linear models. For complex neural
+networks, we empirically demonstrate that Neural Fingerprinting significantly
+improves on state-of-the-art detection mechanisms by detecting the strongest
+known adversarial attacks with 98-100% AUC-ROC scores on the MNIST, CIFAR-10
+and MiniImagenet (20 classes) datasets. In particular, the detection accuracy
+of Neural Fingerprinting generalizes well to unseen test-data under various
+black- and whitebox threat models, and is robust over a wide range of
+hyperparameters and choices of fingerprints.
+
+
+Generating Multi-Agent Trajectories using Programmatic Weak Supervision
+
+  We study the problem of training sequential generative models for capturing
+coordinated multi-agent trajectory behavior, such as offensive basketball
+gameplay. When modeling such settings, it is often beneficial to design
+hierarchical models that can capture long-term coordination using intermediate
+variables. Furthermore, these intermediate variables should capture interesting
+high-level behavioral semantics in an interpretable and manipulatable way. We
+present a hierarchical framework that can effectively learn such sequential
+generative models. Our approach is inspired by recent work on leveraging
+programmatically produced weak labels, which we extend to the spatiotemporal
+regime. In addition to synthetic settings, we show how to instantiate our
+framework to effectively model complex interactions between basketball players
+and generate realistic multi-agent trajectories of basketball gameplay over
+long time periods. We validate our approach using both quantitative and
+qualitative evaluations, including a user study comparison conducted with
+professional sports analysts.
+
+
+Learning to Search via Retrospective Imitation
+
+  We study the problem of learning a good search policy from demonstrations for
+combinatorial search spaces. We propose retrospective imitation learning,
+which, after initial training by an expert, improves itself by learning from
+its own retrospective solutions. That is, when the policy eventually reaches a
+feasible solution in a search tree after making mistakes and backtracks, it
+retrospectively constructs an improved search trace to the solution by removing
+backtracks, which is then used to further train the policy. A key feature of
+our approach is that it can iteratively scale up, or transfer, to larger
+problem sizes than the initial expert demonstrations, thus dramatically
+expanding its applicability beyond that of conventional imitation learning. We
+showcase the effectiveness of our approach on two tasks: synthetic maze
+solving, and integer program based risk-aware path planning.
+
+
+Stagewise Safe Bayesian Optimization with Gaussian Processes
+
+  Enforcing safety is a key aspect of many problems pertaining to sequential
+decision making under uncertainty, which require the decisions made at every
+step to be both informative of the optimal decision and also safe. For example,
+we value both efficacy and comfort in medical therapy, and efficiency and
+safety in robotic control. We consider this problem of optimizing an unknown
+utility function with absolute feedback or preference feedback subject to
+unknown safety constraints. We develop an efficient safe Bayesian optimization
+algorithm, StageOpt, that separates safe region expansion and utility function
+maximization into two distinct stages. Compared to existing approaches which
+interleave between expansion and optimization, we show that StageOpt is more
+efficient and naturally applicable to a broader class of problems. We provide
+theoretical guarantees for both the satisfaction of safety constraints as well
+as convergence to the optimal utility value. We evaluate StageOpt on both a
+variety of synthetic experiments, as well as in clinical practice. We
+demonstrate that StageOpt is more effective than existing safe optimization
+approaches, and is able to safely and effectively optimize spinal cord
+stimulation therapy in our clinical experiments.
+
+
+Iterative Amortized Inference
+
+  Inference models are a key component in scaling variational inference to deep
+latent variable models, most notably as encoder networks in variational
+auto-encoders (VAEs). By replacing conventional optimization-based inference
+with a learned model, inference is amortized over data examples and therefore
+more computationally efficient. However, standard inference models are
+restricted to direct mappings from data to approximate posterior estimates. The
+failure of these models to reach fully optimized approximate posterior
+estimates results in an amortization gap. We aim toward closing this gap by
+proposing iterative inference models, which learn to perform inference
+optimization through repeatedly encoding gradients. Our approach generalizes
+standard inference models in VAEs and provides insight into several empirical
+findings, including top-down inference techniques. We demonstrate the inference
+optimization capabilities of iterative inference models and show that they
+outperform standard inference models on several benchmark data sets of images
+and text.
+
+
+Barrier Certificates for Assured Machine Teaching
+
+  Machine teaching has received significant attention in the past few years as
+a paradigm shift from machine learning. While machine learning is often
+concerned with improving the performance of learners, machine teaching pertains
+to the efficiency of teachers. For example, machine teaching seeks to find the
+optimal (minimum) number of data samples needed for teaching a target
+hypothesis to a learner. Hence, it is natural to raise the question of how can
+we provide assurances for teaching given a machine teaching algorithm. In this
+paper, we address this question by borrowing notions from control theory. We
+begin by proposing a model based on partially observable Markov decision
+processes (POMDPs) for a class of machine teaching problems. We then show that
+the POMDP formulation can be cast as a special hybrid system, i.e., a
+discrete-time switched system. Subsequently, we use barrier certificates to
+verify properties of this special hybrid system. We show how the computation of
+the barrier certificate can be decomposed and numerically implemented as the
+solution to a sum-of-squares (SOS) program. For illustration, we show how the
+proposed framework based on control theory can be used to verify the teaching
+performance of two well-known machine teaching methods.
+
+
+A General Framework for Multi-fidelity Bayesian Optimization with
+  Gaussian Processes
+
+  How can we efficiently gather information to optimize an unknown function,
+when presented with multiple, mutually dependent information sources with
+different costs? For example, when optimizing a robotic system, intelligently
+trading off computer simulations and real robot testings can lead to
+significant savings. Existing methods, such as multi-fidelity GP-UCB or Entropy
+Search-based approaches, either make simplistic assumptions on the interaction
+among different fidelities or use simple heuristics that lack theoretical
+guarantees. In this paper, we study multi-fidelity Bayesian optimization with
+complex structural dependencies among multiple outputs, and propose
+MF-MI-Greedy, a principled algorithmic framework for addressing this problem.
+In particular, we model different fidelities using additive Gaussian processes
+based on shared latent structures with the target function. Then we use
+cost-sensitive mutual information gain for efficient Bayesian global
+optimization. We propose a simple notion of regret which incorporates the cost
+of different fidelities, and prove that MF-MI-Greedy achieves low regret. We
+demonstrate the strong empirical performance of our algorithm on both synthetic
+and real-world datasets.
+
+
+Optimizing Photonic Nanostructures via Multi-fidelity Gaussian Processes
+
+  We apply numerical methods in combination with finite-difference-time-domain
+(FDTD) simulations to optimize transmission properties of plasmonic mirror
+color filters using a multi-objective figure of merit over a five-dimensional
+parameter space by utilizing novel multi-fidelity Gaussian processes approach.
+We compare these results with conventional derivative-free global search
+algorithms, such as (single-fidelity) Gaussian Processes optimization scheme,
+and Particle Swarm Optimization---a commonly used method in nanophotonics
+community, which is implemented in Lumerical commercial photonics software. We
+demonstrate the performance of various numerical optimization approaches on
+several pre-collected real-world datasets and show that by properly trading off
+expensive information sources with cheap simulations, one can more effectively
+optimize the transmission properties with a fixed budget.
+
+
+NAOMI: Non-Autoregressive Multiresolution Sequence Imputation
+
+  Missing value imputation is a fundamental problem in modeling spatiotemporal
+sequences, from motion tracking to the dynamics of physical systems. In this
+paper, we take a non-autoregressive approach and propose a novel deep
+generative model: Non-AutOregressive Multiresolution Imputation (NAOMI) for
+imputing long-range spatiotemporal sequences given arbitrary missing patterns.
+In particular, NAOMI exploits the multiresolution structure of spatiotemporal
+data to interpolate recursively from coarse to fine-grained resolutions. We
+further enhance our model with adversarial training using an imitation learning
+objective. When trained on billiards and basketball trajectories, NAOMI
+demonstrates significant improvement in imputation accuracy (reducing average
+prediction error by 60% compared to autoregressive counterparts) and
+generalization capability for long range trajectories in systems of both
+deterministic and stochastic dynamics.
+
+
+Episodic Learning with Control Lyapunov Functions for Uncertain Robotic
+  Systems
+
+  Many modern nonlinear control methods aim to endow systems with guaranteed
+properties, such as stability or safety, and have been successfully applied to
+the domain of robotics. However, model uncertainty remains a persistent
+challenge, weakening theoretical guarantees and causing implementation failures
+on physical systems. This paper develops a machine learning framework centered
+around Control Lyapunov Functions (CLFs) to adapt to parametric uncertainty and
+unmodeled dynamics in general robotic systems. Our proposed method proceeds by
+iteratively updating estimates of Lyapunov function derivatives and improving
+controllers, ultimately yielding a stabilizing quadratic program model-based
+controller. We validate our approach on a planar Segway simulation,
+demonstrating substantial performance improvements by iteratively refining on a
+base model-free controller.
+
+
+A Control Lyapunov Perspective on Episodic Learning via Projection to
+  State Stability
+
+  The goal of this paper is to understand the impact of learning on control
+synthesis from a Lyapunov function perspective. In particular, rather than
+consider uncertainties in the full system dynamics, we employ Control Lyapunov
+Functions (CLFs) as low-dimensional projections. To understand and characterize
+the uncertainty that these projected dynamics introduce in the system, we
+introduce a new notion: Projection to State Stability (PSS). PSS can be viewed
+as a variant of Input to State Stability defined on projected dynamics, and
+enables characterizing robustness of a CLF with respect to the data used to
+learn system uncertainties. We use PSS to bound uncertainty in affine control,
+and demonstrate that a practical episodic learning approach can use PSS to
+characterize uncertainty in the CLF for robust control synthesis.
+
+
+Batch Policy Learning under Constraints
+
+  When learning policies for real-world domains, two important questions arise:
+(i) how to efficiently use pre-collected off-policy, non-optimal behavior data;
+and (ii) how to mediate among different competing objectives and constraints.
+We thus study the problem of batch policy learning under multiple constraints,
+and offer a systematic solution. We first propose a flexible meta-algorithm
+that admits any batch reinforcement learning and online learning procedure as
+subroutines. We then present a specific algorithmic instantiation and provide
+performance guarantees for the main objective and all constraints. To certify
+constraint satisfaction, we propose a new and simple method for off-policy
+policy evaluation (OPE) and derive PAC-style bounds. Our algorithm achieves
+strong empirical results in different domains, including in a challenging
+problem of simulated car driving subject to multiple constraints such as lane
+keeping and smooth driving. We also show experimentally that our OPE method
+outperforms other popular OPE techniques on a standalone basis, especially in a
+high-dimensional setting.
+
+
+Understanding the Role of Adaptivity in Machine Teaching: The Case of
+  Version Space Learners
+
+  In real-world applications of education, an effective teacher adaptively
+chooses the next example to teach based on the learner's current state.
+However, most existing work in algorithmic machine teaching focuses on the
+batch setting, where adaptivity plays no role. In this paper, we study the case
+of teaching consistent, version space learners in an interactive setting. At
+any time step, the teacher provides an example, the learner performs an update,
+and the teacher observes the learner's new state. We highlight that adaptivity
+does not speed up the teaching process when considering existing models of
+version space learners, such as "worst-case" (the learner picks the next
+hypothesis randomly from the version space) and "preference-based" (the learner
+picks hypothesis according to some global preference). Inspired by human
+teaching, we propose a new model where the learner picks hypotheses according
+to some local preference defined by the current hypothesis. We show that our
+model exhibits several desirable properties, e.g., adaptivity plays a key role,
+and the learner's transitions over hypotheses are smooth/interpretable. We
+develop efficient teaching algorithms and demonstrate our results via
+simulation and user studies.
+
+
+Teaching Multiple Concepts to a Forgetful Learner
+
+  How can we help a forgetful learner learn multiple concepts within a limited
+time frame? For long-term learning, it is crucial to devise teaching strategies
+that leverage the underlying forgetting mechanisms of the learner. In this
+paper, we cast the problem of adaptively teaching a forgetful learner as a
+novel discrete optimization problem, where we seek to optimize a natural
+objective function that characterizes the learner's expected performance
+throughout the teaching session. We then propose a simple greedy teaching
+strategy and derive strong performance guarantees based on two intuitive
+data-dependent properties, which capture the degree of diminishing returns of
+teaching each concept. We show that, given some assumptions about the learner's
+memory model, one can efficiently compute the performance bounds. Furthermore,
+we identify parameter settings of the memory model where the greedy strategy is
+guaranteed to achieve high performance. We demonstrate the effectiveness of our
+algorithm using extensive simulations along with user studies in two concrete
+applications, namely (i) an educational app for online vocabulary teaching and
+(ii) an app for teaching novices how to recognize animal species from images.
+
+
+Neural Lander: Stable Drone Landing Control using Learned Dynamics
+
+  Precise near-ground trajectory control is difficult for multi-rotor drones,
+due to the complex aerodynamic effects caused by interactions between
+multi-rotor airflow and the environment. Conventional control methods often
+fail to properly account for these complex effects and fall short in
+accomplishing smooth landing. In this paper, we present a novel
+deep-learning-based robust nonlinear controller (Neural Lander) that improves
+control performance of a quadrotor during landing. Our approach combines a
+nominal dynamics model with a Deep Neural Network (DNN) that learns high-order
+interactions. We apply spectral normalization (SN) to constrain the Lipschitz
+constant of the DNN. Leveraging this Lipschitz property, we design a nonlinear
+feedback linearization controller using the learned model and prove system
+stability with disturbance rejection. To the best of our knowledge, this is the
+first DNN-based nonlinear feedback controller with stability guarantees that
+can utilize arbitrarily large neural nets. Experimental results demonstrate
+that the proposed controller significantly outperforms a Baseline Nonlinear
+Tracking Controller in both landing and cross-table trajectory tracking cases.
+We also empirically show that the DNN generalizes well to unseen data outside
+the training domain.
+
+
+PhaseLink: A Deep Learning Approach to Seismic Phase Association
+
+  Seismic phase association is a fundamental task in seismology that pertains
+to linking together phase detections on different sensors that originate from a
+common earthquake. It is widely employed to detect earthquakes on permanent and
+temporary seismic networks, and underlies most seismicity catalogs produced
+around the world. This task can be challenging because the number of sources is
+unknown, events frequently overlap in time, or can occur simultaneously in
+different parts of a network. We present PhaseLink, a framework based on recent
+advances in deep learning for grid-free earthquake phase association. Our
+approach learns to link phases together that share a common origin, and is
+trained entirely on tens of millions of synthetic sequences of P- and S-wave
+arrival times generated using a simple 1D velocity model. Our approach is
+simple to implement for any tectonic regime, suitable for real-time processing,
+and can naturally incorporate errors in arrival time picks. Rather than tuning
+a set of ad hoc hyperparameters to improve performance, PhaseLink can be
+improved by simply adding examples of problematic cases to the training
+dataset. We demonstrate the state-of-the-art performance of PhaseLink on a
+challenging recent sequence from southern California, and synthesized sequences
+from Japan designed to test the point at which the method fails. For the
+examined datasets, PhaseLink can precisely associate P- and S-picks to events
+that are separated by ~12 seconds in origin time. This approach is expected to
+improve the resolution of seismicity catalogs, add stability to real-time
+seismic monitoring, and streamline automated processing of large seismic
+datasets.
+
+
+Reliable Real-time Seismic Signal/Noise Discrimination with Machine
+  Learning
+
+  In Earthquake Early Warning (EEW), every sufficiently impulsive signal is
+potentially the first evidence for an unfolding large earthquake. More often
+than not, however, impulsive signals are mere nuisance signals. One of the most
+fundamental - and difficult - tasks in EEW is to rapidly and reliably
+discriminate real local earthquake signals from all other signals. This
+discrimination is necessarily based on very little information, typically a few
+seconds worth of seismic waveforms from a small number of stations. As a
+result, current EEW systems struggle to avoid discrimination errors, and suffer
+from false and missed alerts. In this study we show how modern machine learning
+classifiers can strongly improve real-time signal/noise discrimination. We
+develop and compare a series of non-linear classifiers with variable
+architecture depths, including fully connected, convolutional (CNN) and
+recurrent neural networks, and a model that combines a generative adversarial
+network with a random forest (GAN+RF). We train all classifiers on the same
+data set, which includes 374k local earthquake records (M3.0-9.1) and 946k
+impulsive noise signals. We find that all classifiers outperform existing
+simple linear classifiers, and that complex models trained directly on the raw
+signals yield the greatest degree of improvement. Using 3s long waveform
+snippets, the CNN and the GAN+RF classifiers both reach 99.5% precision and
+99.3% recall on an independent validation data set. Most misclassifications
+stem from impulsive teleseismic records, and from incorrectly labeled records
+in the data set. Our results suggest that machine learning classifiers can
+strongly improve the reliability and speed of EEW alerts.
+
+

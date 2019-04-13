@@ -1,0 +1,391 @@
+Revisiting Active Perception
+
+  Despite the recent successes in robotics, artificial intelligence and
+computer vision, a complete artificial agent necessarily must include active
+perception. A multitude of ideas and methods for how to accomplish this have
+already appeared in the past, their broader utility perhaps impeded by
+insufficient computational power or costly hardware. The history of these
+ideas, perhaps selective due to our perspectives, is presented with the goal of
+organizing the past literature and highlighting the seminal contributions. We
+argue that those contributions are as relevant today as they were decades ago
+and, with the state of modern computational tools, are poised to find new life
+in the robotic perception systems of the next decade.
+
+
+Learning the Semantics of Manipulation Action
+
+  In this paper we present a formal computational framework for modeling
+manipulation actions. The introduced formalism leads to semantics of
+manipulation action and has applications to both observing and understanding
+human manipulation actions as well as executing them with a robotic mechanism
+(e.g. a humanoid robot). It is based on a Combinatory Categorial Grammar. The
+goal of the introduced framework is to: (1) represent manipulation actions with
+both syntax and semantic parts, where the semantic part employs
+$\lambda$-calculus; (2) enable a probabilistic semantic parsing schema to learn
+the $\lambda$-calculus representation of manipulation action from an annotated
+action corpus of videos; (3) use (1) and (2) to develop a system that visually
+observes manipulation actions and understands their meaning while it can reason
+beyond observations using propositional logic and axiom schemata. The
+experiments conducted on a public available large manipulation action dataset
+validate the theoretical framework and our implementation.
+
+
+Neural Self Talk: Image Understanding via Continuous Questioning and
+  Answering
+
+  In this paper we consider the problem of continuously discovering image
+contents by actively asking image based questions and subsequently answering
+the questions being asked. The key components include a Visual Question
+Generation (VQG) module and a Visual Question Answering module, in which
+Recurrent Neural Networks (RNN) and Convolutional Neural Network (CNN) are
+used. Given a dataset that contains images, questions and their answers, both
+modules are trained at the same time, with the difference being VQG uses the
+images as input and the corresponding questions as output, while VQA uses
+images and questions as input and the corresponding answers as output. We
+evaluate the self talk process subjectively using Amazon Mechanical Turk, which
+show effectiveness of the proposed method.
+
+
+What Can I Do Around Here? Deep Functional Scene Understanding for
+  Cognitive Robots
+
+  For robots that have the capability to interact with the physical environment
+through their end effectors, understanding the surrounding scenes is not merely
+a task of image classification or object recognition. To perform actual tasks,
+it is critical for the robot to have a functional understanding of the visual
+scene. Here, we address the problem of localizing and recognition of functional
+areas from an arbitrary indoor scene, formulated as a two-stage deep learning
+based detection pipeline. A new scene functionality testing-bed, which is
+complied from two publicly available indoor scene datasets, is used for
+evaluation. Our method is evaluated quantitatively on the new dataset,
+demonstrating the ability to perform efficient recognition of functional areas
+from arbitrary indoor scenes. We also demonstrate that our detection model can
+be generalized onto novel indoor scenes by cross validating it with the images
+from two different datasets.
+
+
+From Images to Sentences through Scene Description Graphs using
+  Commonsense Reasoning and Knowledge
+
+  In this paper we propose the construction of linguistic descriptions of
+images. This is achieved through the extraction of scene description graphs
+(SDGs) from visual scenes using an automatically constructed knowledge base.
+SDGs are constructed using both vision and reasoning. Specifically, commonsense
+reasoning is applied on (a) detections obtained from existing perception
+methods on given images, (b) a "commonsense" knowledge base constructed using
+natural language processing of image annotations and (c) lexical ontological
+knowledge from resources such as WordNet. Amazon Mechanical Turk(AMT)-based
+evaluations on Flickr8k, Flickr30k and MS-COCO datasets show that in most
+cases, sentences auto-constructed from SDGs obtained by our method give a more
+relevant and thorough description of an image than a recent state-of-the-art
+image caption based approach. Our Image-Sentence Alignment Evaluation results
+are also comparable to that of the recent state-of-the art approaches.
+
+
+LightNet: A Versatile, Standalone Matlab-based Environment for Deep
+  Learning
+
+  LightNet is a lightweight, versatile and purely Matlab-based deep learning
+framework. The idea underlying its design is to provide an easy-to-understand,
+easy-to-use and efficient computational platform for deep learning research.
+The implemented framework supports major deep learning architectures such as
+Multilayer Perceptron Networks (MLP), Convolutional Neural Networks (CNN) and
+Recurrent Neural Networks (RNN). The framework also supports both CPU and GPU
+computation, and the switch between them is straightforward. Different
+applications in computer vision, natural language processing and robotics are
+demonstrated as experiments.
+
+
+Answering Image Riddles using Vision and Reasoning through Probabilistic
+  Soft Logic
+
+  In this work, we explore a genre of puzzles ("image riddles") which involves
+a set of images and a question. Answering these puzzles require both
+capabilities involving visual detection (including object, activity
+recognition) and, knowledge-based or commonsense reasoning. We compile a
+dataset of over 3k riddles where each riddle consists of 4 images and a
+groundtruth answer. The annotations are validated using crowd-sourced
+evaluation. We also define an automatic evaluation metric to track future
+progress. Our task bears similarity with the commonly known IQ tasks such as
+analogy solving, sequence filling that are often used to test intelligence.
+  We develop a Probabilistic Reasoning-based approach that utilizes
+probabilistic commonsense knowledge to answer these riddles with a reasonable
+accuracy. We demonstrate the results of our approach using both automatic and
+human evaluations. Our approach achieves some promising results for these
+riddles and provides a strong baseline for future attempts. We make the entire
+dataset and related materials publicly available to the community in
+ImageRiddle Website (http://bit.ly/22f9Ala).
+
+
+On the Importance of Consistency in Training Deep Neural Networks
+
+  We explain that the difficulties of training deep neural networks come from a
+syndrome of three consistency issues. This paper describes our efforts in their
+analysis and treatment. The first issue is the training speed inconsistency in
+different layers. We propose to address it with an intuitive,
+simple-to-implement, low footprint second-order method. The second issue is the
+scale inconsistency between the layer inputs and the layer residuals. We
+explain how second-order information provides favorable convenience in removing
+this roadblock. The third and most challenging issue is the inconsistency in
+residual propagation. Based on the fundamental theorem of linear algebra, we
+provide a mathematical characterization of the famous vanishing gradient
+problem. Thus, an important design principle for future optimization and neural
+network design is derived. We conclude this paper with the construction of a
+novel contractive neural network.
+
+
+Joint direct estimation of 3D geometry and 3D motion using spatio
+  temporal gradients
+
+  Conventional image motion based structure from motion methods first compute
+optical flow, then solve for the 3D motion parameters based on the epipolar
+constraint, and finally recover the 3D geometry of the scene. However, errors
+in optical flow due to regularization can lead to large errors in 3D motion and
+structure. This paper investigates whether performance and consistency can be
+improved by avoiding optical flow estimation in the early stages of the
+structure from motion pipeline, and it proposes a new direct method based on
+image gradients (normal flow) only. The main idea lies in a reformulation of
+the positive-depth constraint, which allows the use of well-known minimization
+techniques to solve for 3D motion. The 3D motion estimate is then refined and
+structure estimated adding a regularization based on depth. Experimental
+comparisons on standard synthetic datasets and the real-world driving benchmark
+dataset KITTI using three different optic flow algorithms show that the method
+achieves better accuracy in all but one case. Furthermore, it outperforms
+existing normal flow based 3D motion estimation techniques. Finally, the
+recovered 3D geometry is shown to be also very accurate.
+
+
+A Computational Theory for Life-Long Learning of Semantics
+
+  Semantic vectors are learned from data to express semantic relationships
+between elements of information, for the purpose of solving and informing
+downstream tasks. Other models exist that learn to map and classify supervised
+data. However, the two worlds of learning rarely interact to inform one another
+dynamically, whether across types of data or levels of semantics, in order to
+form a unified model. We explore the research problem of learning these vectors
+and propose a framework for learning the semantics of knowledge incrementally
+and online, across multiple mediums of data, via binary vectors. We discuss the
+aspects of this framework to spur future research on this approach and problem.
+
+
+cilantro: A Lean, Versatile, and Efficient Library for Point Cloud Data
+  Processing
+
+  We introduce cilantro, an open-source C++ library for geometric and
+general-purpose point cloud data processing. The library provides functionality
+that covers low-level point cloud operations, spatial reasoning, various
+methods for point cloud segmentation and generic data clustering, flexible
+algorithms for robust or local geometric alignment, model fitting, as well as
+powerful visualization tools. To accommodate all kinds of workflows, cilantro
+is almost fully templated, and most of its generic algorithms operate in
+arbitrary data dimension. At the same time, the library is easy to use and
+highly expressive, promoting a clean and concise coding style. cilantro is
+highly optimized, has a minimal set of external dependencies, and supports
+rapid development of performant point cloud processing software in a wide
+variety of contexts.
+
+
+Evenly Cascaded Convolutional Networks
+
+  We introduce Evenly Cascaded convolutional Network (ECN), a neural network
+taking inspiration from the cascade algorithm of wavelet analysis. ECN employs
+two feature streams - a low-level and high-level steam. At each layer these
+streams interact, such that low-level features are modulated using advanced
+perspectives from the high-level stream. ECN is evenly structured through
+resizing feature map dimensions by a consistent ratio, which removes the burden
+of ad-hoc specification of feature map dimensions. ECN produces easily
+interpretable features maps, a result whose intuition can be understood in the
+context of scale-space theory. We demonstrate that ECN's design facilitates the
+training process through providing easily trainable shortcuts. We report new
+state-of-the-art results for small networks, without the need for additional
+treatment such as pruning or compression - a consequence of ECN's simple
+structure and direct training. A 6-layered ECN design with under 500k
+parameters achieves 95.24% and 78.99% accuracy on CIFAR-10 and CIFAR-100
+datasets, respectively, outperforming the current state-of-the-art on small
+parameter networks, and a 3 million parameter ECN produces results competitive
+to the state-of-the-art.
+
+
+Unsupervised Learning of Dense Optical Flow, Depth and Egomotion from
+  Sparse Event Data
+
+  In this work we present a lightweight, unsupervised learning pipeline for
+\textit{dense} depth, optical flow and egomotion estimation from sparse event
+output of the Dynamic Vision Sensor (DVS). To tackle this low level vision
+task, we use a novel encoder-decoder neural network architecture - ECN.
+  Our work is the first monocular pipeline that generates dense depth and
+optical flow from sparse event data only. The network works in self-supervised
+mode and has just 150k parameters. We evaluate our pipeline on the MVSEC self
+driving dataset and present results for depth, optical flow and and egomotion
+estimation. Due to the lightweight design, the inference part of the network
+runs at 250 FPS on a single GPU, making the pipeline ready for realtime
+robotics applications. Our experiments demonstrate significant improvements
+upon previous works that used deep learning on event data, as well as the
+ability of our pipeline to perform well during both day and night.
+
+
+Computational Tactile Flow for Anthropomorphic Grippers
+
+  Grasping objects requires tight integration between visual and tactile
+feedback. However, there is an inherent difference in the scale at which both
+these input modalities operate. It is thus necessary to be able to analyze
+tactile feedback in isolation in order to gain information about the surface
+the end-effector is operating on, such that more fine-grained features may be
+extracted from the surroundings. For tactile perception of the robot, inspired
+by the concept of the tactile flow in humans, we present the computational
+tactile flow to improve the analysis of the tactile feedback in robots using a
+Shadow Dexterous Hand.
+  In the computational tactile flow model, given a sequence of pressure values
+from the tactile sensors, we define a virtual surface for the pressure values
+and define the tactile flow as the optical flow of this surface. We provide
+case studies that demonstrate how the computational tactile flow maps reveal
+information on the direction of motion and 3D structure of the surface, and
+feedback regarding the action being performed by the robot.
+
+
+GapFlyt: Active Vision Based Minimalist Structure-less Gap Detection For
+  Quadrotor Flight
+
+  Although quadrotors, and aerial robots in general, are inherently active
+agents, their perceptual capabilities in literature so far have been mostly
+passive in nature. Researchers and practitioners today use traditional computer
+vision algorithms with the aim of building a representation of general
+applicability: a 3D reconstruction of the scene. Using this representation,
+planning tasks are constructed and accomplished to allow the quadrotor to
+demonstrate autonomous behavior. These methods are inefficient as they are not
+task driven and such methodologies are not utilized by flying insects and
+birds. Such agents have been solving the problem of navigation and complex
+control for ages without the need to build a 3D map and are highly task driven.
+In this paper, we propose this framework of bio-inspired perceptual design for
+quadrotors. We use this philosophy to design a minimalist sensori-motor
+framework for a quadrotor to fly though unknown gaps without a 3D
+reconstruction of the scene using only a monocular camera and onboard sensing.
+We successfully evaluate and demonstrate the proposed approach in many
+real-world experiments with different settings and window shapes, achieving a
+success rate of 85% at 2.5ms$^{-1}$ even with a minimum tolerance of just 5cm.
+To our knowledge, this is the first paper which addresses the problem of gap
+detection of an unknown shape and location with a monocular camera and onboard
+sensing.
+
+
+SalientDSO: Bringing Attention to Direct Sparse Odometry
+
+  Although cluttered indoor scenes have a lot of useful high-level semantic
+information which can be used for mapping and localization, most Visual
+Odometry (VO) algorithms rely on the usage of geometric features such as
+points, lines and planes. Lately, driven by this idea, the joint optimization
+of semantic labels and obtaining odometry has gained popularity in the robotics
+community. The joint optimization is good for accurate results but is generally
+very slow. At the same time, in the vision community, direct and sparse
+approaches for VO have stricken the right balance between speed and accuracy.
+  We merge the successes of these two communities and present a way to
+incorporate semantic information in the form of visual saliency to Direct
+Sparse Odometry - a highly successful direct sparse VO algorithm. We also
+present a framework to filter the visual saliency based on scene parsing. Our
+framework, SalientDSO, relies on the widely successful deep learning based
+approaches for visual saliency and scene parsing which drives the feature
+selection for obtaining highly-accurate and robust VO even in the presence of
+as few as 40 point features per frame. We provide extensive quantitative
+evaluation of SalientDSO on the ICL-NUIM and TUM monoVO datasets and show that
+we outperform DSO and ORB-SLAM - two very popular state-of-the-art approaches
+in the literature. We also collect and publicly release a CVL-UMD dataset which
+contains two indoor cluttered sequences on which we show qualitative
+evaluations. To our knowledge this is the first paper to use visual saliency
+and scene parsing to drive the feature selection in direct VO.
+
+
+Event-based Moving Object Detection and Tracking
+
+  Event-based vision sensors, such as the Dynamic Vision Sensor (DVS), are
+ideally suited for real-time motion analysis. The unique properties encompassed
+in the readings of such sensors provide high temporal resolution, superior
+sensitivity to light and low latency. These properties provide the grounds to
+estimate motion extremely reliably in the most sophisticated scenarios but they
+come at a price - modern event-based vision sensors have extremely low
+resolution and produce a lot of noise. Moreover, the asynchronous nature of the
+event stream calls for novel algorithms.
+  This paper presents a new, efficient approach to object tracking with
+asynchronous cameras. We present a novel event stream representation which
+enables us to utilize information about the dynamic (temporal) component of the
+event stream, and not only the spatial component, at every moment of time. This
+is done by approximating the 3D geometry of the event stream with a parametric
+model; as a result, the algorithm is capable of producing the
+motion-compensated event stream (effectively approximating egomotion), and
+without using any form of external sensors in extremely low-light and noisy
+conditions without any form of feature tracking or explicit optical flow
+computation. We demonstrate our framework on the task of independent motion
+detection and tracking, where we use the temporal model inconsistencies to
+locate differently moving objects in challenging situations of very fast
+motion.
+
+
+Extracting Contact and Motion from Manipulation Videos
+
+  When we physically interact with our environment using our hands, we touch
+objects and force them to move: contact and motion are defining properties of
+manipulation. In this paper, we present an active, bottom-up method for the
+detection of actor-object contacts and the extraction of moved objects and
+their motions in RGBD videos of manipulation actions. At the core of our
+approach lies non-rigid registration: we continuously warp a point cloud model
+of the observed scene to the current video frame, generating a set of dense 3D
+point trajectories. Under loose assumptions, we employ simple point cloud
+segmentation techniques to extract the actor and subsequently detect
+actor-environment contacts based on the estimated trajectories. For each such
+interaction, using the detected contact as an attention mechanism, we obtain an
+initial motion segment for the manipulated object by clustering trajectories in
+the contact area vicinity and then we jointly refine the object segment and
+estimate its 6DOF pose in all observed frames. Because of its generality and
+the fundamental, yet highly informative, nature of its outputs, our approach is
+applicable to a wide range of perception and planning tasks. We qualitatively
+evaluate our method on a number of input sequences and present a comprehensive
+robot imitation learning example, in which we demonstrate the crucial role of
+our outputs in developing action representations/plans from observation.
+
+
+Topology-Aware Non-Rigid Point Cloud Registration
+
+  In this paper, we introduce a non-rigid registration pipeline for pairs of
+unorganized point clouds that may be topologically different. Standard warp
+field estimation algorithms, even under robust, discontinuity-preserving
+regularization, tend to produce erratic motion estimates on boundaries
+associated with `close-to-open' topology changes. We overcome this limitation
+by exploiting backward motion: in the opposite motion direction, a
+`close-to-open' event becomes `open-to-close', which is by default handled
+correctly. At the core of our approach lies a general, topology-agnostic warp
+field estimation algorithm, similar to those employed in recently introduced
+dynamic reconstruction systems from RGB-D input. We improve motion estimation
+on boundaries associated with topology changes in an efficient post-processing
+phase. Based on both forward and (inverted) backward warp hypotheses, we
+explicitly detect regions of the deformed geometry that undergo topological
+changes by means of local deformation criteria and broadly classify them as
+`contacts' or `separations'. Subsequently, the two motion hypotheses are
+seamlessly blended on a local basis, according to the type and proximity of
+detected events. Our method achieves state-of-the-art motion estimation
+accuracy on the MPI Sintel dataset. Experiments on a custom dataset with
+topological event annotations demonstrate the effectiveness of our pipeline in
+estimating motion on event boundaries, as well as promising performance in
+explicit topological event detection.
+
+
+EV-IMO: Motion Segmentation Dataset and Learning Pipeline for Event
+  Cameras
+
+  We present the first event-based learning approach for motion segmentation in
+indoor scenes and the first event-based dataset - EV-IMO - which includes
+accurate pixel-wise motion masks, egomotion and ground truth depth. Our
+approach is based on an efficient implementation of the SfM learning pipeline
+using a low parameter neural network architecture on event data. In addition to
+camera egomotion and a dense depth map, the network estimates pixel-wise
+independently moving object segmentation and computes per-object 3D
+translational velocities for moving objects. We also train a shallow network
+with just 40k parameters, which is able to compute depth and egomotion.
+  Our EV-IMO dataset features 32 minutes of indoor recording with up to 3 fast
+moving objects simultaneously in the camera field of view. The objects and the
+camera are tracked by the VICON motion capture system. By 3D scanning the room
+and the objects, accurate depth map ground truth and pixel-wise object masks
+are obtained, which are reliable even in poor lighting conditions and during
+fast motion. We then train and evaluate our learning pipeline on EV-IMO and
+demonstrate that our approach far surpasses its rivals and is well suited for
+scene constrained robotics applications.
+
+

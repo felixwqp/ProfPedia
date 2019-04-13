@@ -1,0 +1,684 @@
+Information-Theoretical Learning of Discriminative Clusters for
+  Unsupervised Domain Adaptation
+
+  We study the problem of unsupervised domain adaptation, which aims to adapt
+classifiers trained on a labeled source domain to an unlabeled target domain.
+Many existing approaches first learn domain-invariant features and then
+construct classifiers with them. We propose a novel approach that jointly learn
+the both. Specifically, while the method identifies a feature space where data
+in the source and the target domains are similarly distributed, it also learns
+the feature space discriminatively, optimizing an information-theoretic metric
+as an proxy to the expected misclassification error on the target domain. We
+show how this optimization can be effectively carried out with simple
+gradient-based methods and how hyperparameters can be cross-validated without
+demanding any labeled data from the target domain. Empirical studies on
+benchmark tasks of object recognition and sentiment analysis validated our
+modeling assumptions and demonstrated significant improvement of our method
+over competing ones in classification accuracies.
+
+
+Large-Margin Determinantal Point Processes
+
+  Determinantal point processes (DPPs) offer a powerful approach to modeling
+diversity in many applications where the goal is to select a diverse subset. We
+study the problem of learning the parameters (the kernel matrix) of a DPP from
+labeled training data. We make two contributions. First, we show how to
+reparameterize a DPP's kernel matrix with multiple kernel functions, thus
+enhancing modeling flexibility. Second, we propose a novel parameter estimation
+technique based on the principle of large margin separation. In contrast to the
+state-of-the-art method of maximum likelihood estimation, our large-margin loss
+function explicitly models errors in selecting the target subsets, and it can
+be customized to trade off different types of errors (precision vs. recall).
+Extensive empirical studies validate our contributions, including applications
+on challenging document and video summarization, where flexibility in modeling
+the kernel matrix and balancing different errors is indispensable.
+
+
+Aligning where to see and what to tell: image caption with region-based
+  attention and scene factorization
+
+  Recent progress on automatic generation of image captions has shown that it
+is possible to describe the most salient information conveyed by images with
+accurate and meaningful sentences. In this paper, we propose an image caption
+system that exploits the parallel structures between images and sentences. In
+our model, the process of generating the next word, given the previously
+generated ones, is aligned with the visual perception experience where the
+attention shifting among the visual regions imposes a thread of visual
+ordering. This alignment characterizes the flow of "abstract meaning", encoding
+what is semantically shared by both the visual scene and the text description.
+Our system also makes another novel modeling contribution by introducing
+scene-specific contexts that capture higher-level semantic information encoded
+in an image. The contexts adapt language models for word generation to specific
+scene types. We benchmark our system and contrast to published results on
+several popular datasets. We show that using either region-based attention or
+scene-specific contexts improves systems without those components. Furthermore,
+combining these two modeling ingredients attains the state-of-the-art
+performance.
+
+
+Aiming to Know You Better Perhaps Makes Me a More Engaging Dialogue
+  Partner
+
+  There have been several attempts to define a plausible motivation for a
+chit-chat dialogue agent that can lead to engaging conversations. In this work,
+we explore a new direction where the agent specifically focuses on discovering
+information about its interlocutor. We formalize this approach by defining a
+quantitative metric. We propose an algorithm for the agent to maximize it. We
+validate the idea with human evaluation where our system outperforms various
+baselines. We demonstrate that the metric indeed correlates with the human
+judgments of engagingness.
+
+
+Hyper-parameter Tuning under a Budget Constraint
+
+  We study a budgeted hyper-parameter tuning problem, where we optimize the
+tuning result under a hard resource constraint. We propose to solve it as a
+sequential decision making problem, such that we can use the partial training
+progress of configurations to dynamically allocate the remaining budget. Our
+algorithm combines a Bayesian belief model which estimates the future
+performance of configurations, with an action-value function which balances
+exploration-exploitation tradeoff, to optimize the final output. It
+automatically adapts the tuning behaviors to different constraints, which is
+useful in practice. Experiment results demonstrate superior performance over
+existing algorithms, including the-state-of-the-art one, on real-world tuning
+tasks across a range of different budgets.
+
+
+How to Scale Up Kernel Methods to Be As Good As Deep Neural Nets
+
+  The computational complexity of kernel methods has often been a major barrier
+for applying them to large-scale learning problems. We argue that this barrier
+can be effectively overcome. In particular, we develop methods to scale up
+kernel models to successfully tackle large-scale learning problems that are so
+far only approachable by deep learning architectures. Based on the seminal work
+by Rahimi and Recht on approximating kernel functions with features derived
+from random projections, we advance the state-of-the-art by proposing methods
+that can efficiently train models with hundreds of millions of parameters, and
+learn optimal representations from multiple kernels. We conduct extensive
+empirical studies on problems from image recognition and automatic speech
+recognition, and show that the performance of our kernel models matches that of
+well-engineered deep neural nets (DNNs). To the best of our knowledge, this is
+the first time that a direct comparison between these two methods on
+large-scale problems is reported. Our kernel methods have several appealing
+properties: training with convex optimization, cost for training a single model
+comparable to DNNs, and significantly reduced total cost due to fewer
+hyperparameters to tune for model selection. Our contrastive study between
+these two very different but equally competitive models sheds light on
+fundamental questions such as how to learn good representations.
+
+
+Rapid Feature Learning with Stacked Linear Denoisers
+
+  We investigate unsupervised pre-training of deep architectures as feature
+generators for "shallow" classifiers. Stacked Denoising Autoencoders (SdA),
+when used as feature pre-processing tools for SVM classification, can lead to
+significant improvements in accuracy - however, at the price of a substantial
+increase in computational cost. In this paper we create a simple algorithm
+which mimics the layer by layer training of SdAs. However, in contrast to SdAs,
+our algorithm requires no training through gradient descent as the parameters
+can be computed in closed-form. It can be implemented in less than 20 lines of
+MATLABTMand reduces the computation time from several hours to mere seconds. We
+show that our feature transformation reliably improves the results of SVM
+classification significantly on all our data sets - often outperforming SdAs
+and even deep neural networks in three out of four deep learning benchmarks.
+
+
+Demystifying Information-Theoretic Clustering
+
+  We propose a novel method for clustering data which is grounded in
+information-theoretic principles and requires no parametric assumptions.
+Previous attempts to use information theory to define clusters in an
+assumption-free way are based on maximizing mutual information between data and
+cluster labels. We demonstrate that this intuition suffers from a fundamental
+conceptual flaw that causes clustering performance to deteriorate as the amount
+of data increases. Instead, we return to the axiomatic foundations of
+information theory to define a meaningful clustering measure based on the
+notion of consistency under coarse-graining for finite data.
+
+
+An alternative text representation to TF-IDF and Bag-of-Words
+
+  In text mining, information retrieval, and machine learning, text documents
+are commonly represented through variants of sparse Bag of Words (sBoW) vectors
+(e.g. TF-IDF). Although simple and intuitive, sBoW style representations suffer
+from their inherent over-sparsity and fail to capture word-level synonymy and
+polysemy. Especially when labeled data is limited (e.g. in document
+classification), or the text documents are short (e.g. emails or abstracts),
+many features are rarely observed within the training corpus. This leads to
+overfitting and reduced generalization accuracy. In this paper we propose Dense
+Cohort of Terms (dCoT), an unsupervised algorithm to learn improved sBoW
+document features. dCoT explicitly models absent words by removing and
+reconstructing random sub-sets of words in the unlabeled corpus. With this
+approach, dCoT learns to reconstruct frequent words from co-occurring
+infrequent words and maps the high dimensional sparse sBoW vectors into a
+low-dimensional dense representation. We show that the feature removal can be
+marginalized out and that the reconstruction can be solved for in closed-form.
+We demonstrate empirically, on several benchmark datasets, that dCoT features
+significantly improve the classification accuracy across several document
+classification tasks.
+
+
+A Distributed Frank-Wolfe Algorithm for Communication-Efficient Sparse
+  Learning
+
+  Learning sparse combinations is a frequent theme in machine learning. In this
+paper, we study its associated optimization problem in the distributed setting
+where the elements to be combined are not centrally located but spread over a
+network. We address the key challenges of balancing communication costs and
+optimization errors. To this end, we propose a distributed Frank-Wolfe (dFW)
+algorithm. We obtain theoretical guarantees on the optimization error
+$\epsilon$ and communication cost that do not depend on the total number of
+combining elements. We further show that the communication cost of dFW is
+optimal by deriving a lower-bound on the communication cost required to
+construct an $\epsilon$-approximate solution. We validate our theoretical
+analysis with empirical studies on synthetic and real-world data, which
+demonstrate that dFW outperforms both baselines and competing methods. We also
+study the performance of dFW when the conditions of our analysis are relaxed,
+and show that dFW is fairly robust.
+
+
+Sparse Compositional Metric Learning
+
+  We propose a new approach for metric learning by framing it as learning a
+sparse combination of locally discriminative metrics that are inexpensive to
+generate from the training data. This flexible framework allows us to naturally
+derive formulations for global, multi-task and local metric learning. The
+resulting algorithms have several advantages over existing methods in the
+literature: a much smaller number of parameters to be estimated and a
+principled way to generalize learned metrics to new testing data points. To
+analyze the approach theoretically, we derive a generalization bound that
+justifies the sparse combination. Empirically, we evaluate our algorithms on
+several datasets against state-of-the-art metric learning methods. The results
+are consistent with our theoretical findings and demonstrate the superiority of
+our approach in terms of classification performance and scalability.
+
+
+Two-Stage Metric Learning
+
+  In this paper, we present a novel two-stage metric learning algorithm. We
+first map each learning instance to a probability distribution by computing its
+similarities to a set of fixed anchor points. Then, we define the distance in
+the input data space as the Fisher information distance on the associated
+statistical manifold. This induces in the input data space a new family of
+distance metric with unique properties. Unlike kernelized metric learning, we
+do not require the similarity measure to be positive semi-definite. Moreover,
+it can also be interpreted as a local metric learning algorithm with well
+defined distance approximation. We evaluate its performance on a number of
+datasets. It outperforms significantly other metric learning methods and SVM.
+
+
+Construction of Bound Entangled States Based on Permutation Operators
+
+  We present a construction of new bound entangled states from given bound
+entangled states for arbitrary dimensional bipartite systems. One way to
+construct bound entangled states is to show that these states are PPT (positive
+partial transpose) and violate the range criterion at the same time. By
+applying certain operators to given bound entangled states or to one of the
+subsystems of the given bound entangled states, we obtain a set of new states
+which are both PPT and violate the range criterion. We show that the derived
+bound entangled states are not local unitary equivalent to the original bound
+entangled states by detail examples.
+
+
+Learning Discriminative Metrics via Generative Models and Kernel
+  Learning
+
+  Metrics specifying distances between data points can be learned in a
+discriminative manner or from generative models. In this paper, we show how to
+unify generative and discriminative learning of metrics via a kernel learning
+framework. Specifically, we learn local metrics optimized from parametric
+generative models. These are then used as base kernels to construct a global
+kernel that minimizes a discriminative training criterion. We consider both
+linear and nonlinear combinations of local metric kernels. Our empirical
+results show that these combinations significantly improve performance on
+classification tasks. The proposed learning algorithm is also very efficient,
+achieving order of magnitude speedup in training time compared to previous
+discriminative baseline methods.
+
+
+Marginalized Denoising Autoencoders for Domain Adaptation
+
+  Stacked denoising autoencoders (SDAs) have been successfully used to learn
+new representations for domain adaptation. Recently, they have attained record
+accuracy on standard benchmark tasks of sentiment analysis across different
+text domains. SDAs learn robust data representations by reconstruction,
+recovering original features from data that are artificially corrupted with
+noise. In this paper, we propose marginalized SDA (mSDA) that addresses two
+crucial limitations of SDAs: high computational cost and lack of scalability to
+high-dimensional features. In contrast to SDAs, our approach of mSDA
+marginalizes noise and thus does not require stochastic gradient descent or
+other optimization algorithms to learn parameters ? in fact, they are computed
+in closed-form. Consequently, mSDA, which can be implemented in only 20 lines
+of MATLAB^{TM}, significantly speeds up SDAs by two orders of magnitude.
+Furthermore, the representations learnt by mSDA are as effective as the
+traditional SDAs, attaining almost identical accuracies in benchmark tasks.
+
+
+Synthesized Classifiers for Zero-Shot Learning
+
+  Given semantic descriptions of object classes, zero-shot learning aims to
+accurately recognize objects of the unseen classes, from which no examples are
+available at the training stage, by associating them to the seen classes, from
+which labeled examples are provided. We propose to tackle this problem from the
+perspective of manifold learning. Our main idea is to align the semantic space
+that is derived from external information to the model space that concerns
+itself with recognizing visual features. To this end, we introduce a set of
+"phantom" object classes whose coordinates live in both the semantic space and
+the model space. Serving as bases in a dictionary, they can be optimized from
+labeled data such that the synthesized real object classifiers achieve optimal
+discriminative performance. We demonstrate superior accuracy of our approach
+over the state of the art on four benchmark datasets for zero-shot learning,
+including the full ImageNet Fall 2011 dataset with more than 20,000 unseen
+classes.
+
+
+Summary Transfer: Exemplar-based Subset Selection for Video
+  Summarization
+
+  Video summarization has unprecedented importance to help us digest, browse,
+and search today's ever-growing video collections. We propose a novel subset
+selection technique that leverages supervision in the form of human-created
+summaries to perform automatic keyframe-based video summarization. The main
+idea is to nonparametrically transfer summary structures from annotated videos
+to unseen test videos. We show how to extend our method to exploit semantic
+side information about the video's category/genre to guide the transfer process
+by those training videos semantically consistent with the test input. We also
+show how to generalize our method to subshot-based summarization, which not
+only reduces computational costs but also provides more flexible ways of
+defining visual similarity across subshots spanning several frames. We conduct
+extensive evaluation on several benchmarks and demonstrate promising results,
+outperforming existing methods in several settings.
+
+
+A Comparison between Deep Neural Nets and Kernel Acoustic Models for
+  Speech Recognition
+
+  We study large-scale kernel methods for acoustic modeling and compare to DNNs
+on performance metrics related to both acoustic modeling and recognition.
+Measuring perplexity and frame-level classification accuracy, kernel-based
+acoustic models are as effective as their DNN counterparts. However, on
+token-error-rates DNN models can be significantly better. We have discovered
+that this might be attributed to DNN's unique strength in reducing both the
+perplexity and the entropy of the predicted posterior probabilities. Motivated
+by our findings, we propose a new technique, entropy regularized perplexity,
+for model selection. This technique can noticeably improve the recognition
+performance of both types of models, and reduces the gap between them. While
+effective on Broadcast News, this technique could be also applicable to other
+tasks.
+
+
+Similarity Learning for High-Dimensional Sparse Data
+
+  A good measure of similarity between data points is crucial to many tasks in
+machine learning. Similarity and metric learning methods learn such measures
+automatically from data, but they do not scale well respect to the
+dimensionality of the data. In this paper, we propose a method that can learn
+efficiently similarity measure from high-dimensional sparse data. The core idea
+is to parameterize the similarity measure as a convex combination of rank-one
+matrices with specific sparsity structures. The parameters are then optimized
+with an approximate Frank-Wolfe procedure to maximally satisfy relative
+similarity constraints on the training data. Our algorithm greedily
+incorporates one pair of features at a time into the similarity measure,
+providing an efficient way to control the number of active features and thus
+reduce overfitting. It enjoys very appealing convergence guarantees and its
+time and memory complexity depends on the sparsity of the data instead of the
+dimension of the feature space. Our experiments on real-world high-dimensional
+datasets demonstrate its potential for classification, dimensionality reduction
+and data exploration.
+
+
+An Empirical Study and Analysis of Generalized Zero-Shot Learning for
+  Object Recognition in the Wild
+
+  Zero-shot learning (ZSL) methods have been studied in the unrealistic setting
+where test data are assumed to come from unseen classes only. In this paper, we
+advocate studying the problem of generalized zero-shot learning (GZSL) where
+the test data's class memberships are unconstrained. We show empirically that
+naively using the classifiers constructed by ZSL approaches does not perform
+well in the generalized setting. Motivated by this, we propose a simple but
+effective calibration method that can be used to balance two conflicting
+forces: recognizing data from seen classes versus those from unseen ones. We
+develop a performance metric to characterize such a trade-off and examine the
+utility of this metric in evaluating various ZSL approaches. Our analysis
+further shows that there is a large gap between the performance of existing
+approaches and an upper bound established via idealized semantic embeddings,
+suggesting that improving class semantic embeddings is vital to GZSL.
+
+
+Video Summarization with Long Short-term Memory
+
+  We propose a novel supervised learning technique for summarizing videos by
+automatically selecting keyframes or key subshots. Casting the problem as a
+structured prediction problem on sequential data, our main idea is to use Long
+Short-Term Memory (LSTM), a special type of recurrent neural networks to model
+the variable-range dependencies entailed in the task of video summarization.
+Our learning models attain the state-of-the-art results on two benchmark video
+datasets. Detailed analysis justifies the design of the models. In particular,
+we show that it is crucial to take into consideration the sequential structures
+in videos and model them. Besides advances in modeling techniques, we introduce
+techniques to address the need of a large number of annotated data for training
+complex learning models. There, our main idea is to exploit the existence of
+auxiliary annotated video datasets, albeit heterogeneous in visual styles and
+contents. Specifically, we show domain adaptation techniques can improve
+summarization by reducing the discrepancies in statistical properties across
+those datasets.
+
+
+Predicting Visual Exemplars of Unseen Classes for Zero-Shot Learning
+
+  Leveraging class semantic descriptions and examples of known objects,
+zero-shot learning makes it possible to train a recognition model for an object
+class whose examples are not available. In this paper, we propose a novel
+zero-shot learning model that takes advantage of clustering structures in the
+semantic embedding space. The key idea is to impose the structural constraint
+that semantic representations must be predictive of the locations of their
+corresponding visual exemplars. To this end, this reduces to training multiple
+kernel-based regressors from semantic representation-exemplar pairs from
+labeled data of the seen object categories. Despite its simplicity, our
+approach significantly outperforms existing zero-shot learning methods on
+standard benchmark datasets, including the ImageNet dataset with more than
+20,000 unseen categories.
+
+
+Attention Correctness in Neural Image Captioning
+
+  Attention mechanisms have recently been introduced in deep learning for
+various tasks in natural language processing and computer vision. But despite
+their popularity, the "correctness" of the implicitly-learned attention maps
+has only been assessed qualitatively by visualization of several examples. In
+this paper we focus on evaluating and improving the correctness of attention in
+neural image captioning models. Specifically, we propose a quantitative
+evaluation metric for the consistency between the generated attention maps and
+human annotations, using recently released datasets with alignment between
+regions in images and entities in captions. We then propose novel models with
+different levels of explicit supervision for learning attention maps during
+training. The supervision can be strong when alignment between regions and
+caption entities are available, or weak when only object segments and
+categories are provided. We show on the popular Flickr30k and COCO datasets
+that introducing supervision of attention maps during training solidly improves
+both attention correctness and caption quality, showing the promise of making
+machine perception more human-like.
+
+
+Recalling Holistic Information for Semantic Segmentation
+
+  Semantic segmentation requires a detailed labeling of image pixels by object
+category. Information derived from local image patches is necessary to describe
+the detailed shape of individual objects. However, this information is
+ambiguous and can result in noisy labels. Global inference of image content can
+instead capture the general semantic concepts present. We advocate that
+high-recall holistic inference of image concepts provides valuable information
+for detailed pixel labeling. We build a two-stream neural network architecture
+that facilitates information flow from holistic information to local pixels,
+while keeping common image features shared among the low-level layers of both
+the holistic analysis and segmentation branches. We empirically evaluate our
+network on four standard semantic segmentation datasets. Our network obtains
+state-of-the-art performance on PASCAL-Context and NYUDv2, and ablation studies
+verify its effectiveness on ADE20K and SIFT-Flow.
+
+
+FastMask: Segment Multi-scale Object Candidates in One Shot
+
+  Objects appear to scale differently in natural images. This fact requires
+methods dealing with object-centric tasks (e.g. object proposal) to have robust
+performance over variances in object scales. In the paper, we present a novel
+segment proposal framework, namely FastMask, which takes advantage of
+hierarchical features in deep convolutional neural networks to segment
+multi-scale objects in one shot. Innovatively, we adapt segment proposal
+network into three different functional components (body, neck and head). We
+further propose a weight-shared residual neck module as well as a
+scale-tolerant attentional head module for efficient one-shot inference. On MS
+COCO benchmark, the proposed FastMask outperforms all state-of-the-art segment
+proposal methods in average recall being 2~5 times faster. Moreover, with a
+slight trade-off in accuracy, FastMask can segment objects in near real time
+(~13 fps) with 800*600 resolution images, demonstrating its potential in
+practical applications. Our implementation is available on
+https://github.com/voidrank/FastMask.
+
+
+LabelBank: Revisiting Global Perspectives for Semantic Segmentation
+
+  Semantic segmentation requires a detailed labeling of image pixels by object
+category. Information derived from local image patches is necessary to describe
+the detailed shape of individual objects. However, this information is
+ambiguous and can result in noisy labels. Global inference of image content can
+instead capture the general semantic concepts present. We advocate that
+holistic inference of image concepts provides valuable information for detailed
+pixel labeling. We propose a generic framework to leverage holistic information
+in the form of a LabelBank for pixel-level segmentation.
+  We show the ability of our framework to improve semantic segmentation
+performance in a variety of settings. We learn models for extracting a holistic
+LabelBank from visual cues, attributes, and/or textual descriptions. We
+demonstrate improvements in semantic segmentation accuracy on standard datasets
+across a range of state-of-the-art segmentation architectures and holistic
+inference approaches.
+
+
+Cross-Dataset Adaptation for Visual Question Answering
+
+  We investigate the problem of cross-dataset adaptation for visual question
+answering (Visual QA). Our goal is to train a Visual QA model on a source
+dataset but apply it to another target one. Analogous to domain adaptation for
+visual recognition, this setting is appealing when the target dataset does not
+have a sufficient amount of labeled data to learn an "in-domain" model. The key
+challenge is that the two datasets are constructed differently, resulting in
+the cross-dataset mismatch on images, questions, or answers.
+  We overcome this difficulty by proposing a novel domain adaptation algorithm.
+Our method reduces the difference in statistical distributions by transforming
+the feature representation of the data in the target dataset. Moreover, it
+maximizes the likelihood of answering questions (in the target dataset)
+correctly using the Visual QA model trained on the source dataset. We
+empirically studied the effectiveness of the proposed approach on adapting
+among several popular Visual QA datasets. We show that the proposed method
+improves over baselines where there is no adaptation and several other
+adaptation methods. We both quantitatively and qualitatively analyze when the
+adaptation can be mostly effective.
+
+
+Multi-Task Learning for Sequence Tagging: An Empirical Study
+
+  We study three general multi-task learning (MTL) approaches on 11 sequence
+tagging tasks. Our extensive empirical results show that in about 50% of the
+cases, jointly learning all 11 tasks improves upon either independent or
+pairwise learning of the tasks. We also show that pairwise MTL can inform us
+what tasks can benefit others or what tasks can be benefited if they are
+learned jointly. In particular, we identify tasks that can always benefit
+others as well as tasks that can always be harmed by others. Interestingly, one
+of our MTL approaches yields embeddings of the tasks that reveal the natural
+clustering of semantic and syntactic tasks. Our inquiries have opened the doors
+to further utilization of MTL in NLP.
+
+
+Actor-Attention-Critic for Multi-Agent Reinforcement Learning
+
+  Reinforcement learning in multi-agent scenarios is important for real-world
+applications but presents challenges beyond those seen in single-agent
+settings. We present an actor-critic algorithm that trains decentralized
+policies in multi-agent settings, using centrally computed critics that share
+an attention mechanism which selects relevant information for each agent at
+every timestep. This attention mechanism enables more effective and scalable
+learning in complex multi-agent environments, when compared to recent
+approaches. Our approach is applicable not only to cooperative settings with
+shared rewards, but also individualized reward settings, including adversarial
+settings, and it makes no assumptions about the action spaces of the agents. As
+such, it is flexible enough to be applied to most multi-agent learning
+problems.
+
+
+Cross-Modal and Hierarchical Modeling of Video and Text
+
+  Visual data and text data are composed of information at multiple
+granularities. A video can describe a complex scene that is composed of
+multiple clips or shots, where each depicts a semantically coherent event or
+action. Similarly, a paragraph may contain sentences with different topics,
+which collectively conveys a coherent message or story. In this paper, we
+investigate the modeling techniques for such hierarchical sequential data where
+there are correspondences across multiple modalities. Specifically, we
+introduce hierarchical sequence embedding (HSE), a generic model for embedding
+sequential data of different modalities into hierarchically semantic spaces,
+with either explicit or implicit correspondence information. We perform
+empirical studies on large-scale video and paragraph retrieval datasets and
+demonstrated superior performance by the proposed methods. Furthermore, we
+examine the effectiveness of our learned embeddings when applied to downstream
+tasks. We show its utility in zero-shot action recognition and video
+captioning.
+
+
+Classifier and Exemplar Synthesis for Zero-Shot Learning
+
+  Zero-shot learning (ZSL) enables solving a task without the need to see its
+examples. In this paper, we propose two ZSL frameworks that learn to synthesize
+parameters for novel unseen classes. First, we propose to cast the problem of
+ZSL as learning manifold embeddings from graphs composed of object classes,
+leading to a flexible approach that synthesizes "classifiers" for the unseen
+classes. Then, we define an auxiliary task of synthesizing "exemplars" for the
+unseen classes to be used as an automatic denoising mechanism for any existing
+ZSL approaches or as an effective ZSL model by itself. On five visual
+recognition benchmark datasets, we demonstrate the superior performances of our
+proposed frameworks in various scenarios of both conventional and generalized
+ZSL. Finally, we provide valuable insights through a series of empirical
+analyses, among which are a comparison of semantic representations on the full
+ImageNet benchmark as well as a comparison of metrics used in generalized ZSL.
+Our code and data are publicly available at
+https://github.com/pujols/Zero-shot-learning-journal
+
+
+Synthesized Policies for Transfer and Adaptation across Tasks and
+  Environments
+
+  The ability to transfer in reinforcement learning is key towards building an
+agent of general artificial intelligence. In this paper, we consider the
+problem of learning to simultaneously transfer across both environments (ENV)
+and tasks (TASK), probably more importantly, by learning from only sparse (ENV,
+TASK) pairs out of all the possible combinations. We propose a novel
+compositional neural network architecture which depicts a meta rule for
+composing policies from the environment and task embeddings. Notably, one of
+the main challenges is to learn the embeddings jointly with the meta rule. We
+further propose new training methods to disentangle the embeddings, making them
+both distinctive signatures of the environments and tasks and effective
+building blocks for composing the policies. Experiments on GridWorld and Thor,
+of which the agent takes as input an egocentric view, show that our approach
+gives rise to high success rates on all the (ENV, TASK) pairs after learning
+from only 40\% of them.
+
+
+Being Negative but Constructively: Lessons Learnt from Creating Better
+  Visual Question Answering Datasets
+
+  Visual question answering (Visual QA) has attracted a lot of attention
+lately, seen essentially as a form of (visual) Turing test that artificial
+intelligence should strive to achieve. In this paper, we study a crucial
+component of this task: how can we design good datasets for the task? We focus
+on the design of multiple-choice based datasets where the learner has to select
+the right answer from a set of candidate ones including the target (\ie the
+correct one) and the decoys (\ie the incorrect ones). Through careful analysis
+of the results attained by state-of-the-art learning models and human
+annotators on existing datasets, we show that the design of the decoy answers
+has a significant impact on how and what the learning models learn from the
+datasets. In particular, the resulting learner can ignore the visual
+information, the question, or both while still doing well on the task. Inspired
+by this, we propose automatic procedures to remedy such design deficiencies. We
+apply the procedures to re-construct decoy answers for two popular Visual QA
+datasets as well as to create a new Visual QA dataset from the Visual Genome
+project, resulting in the largest dataset for this task. Extensive empirical
+studies show that the design deficiencies have been alleviated in the remedied
+datasets and the performance on them is likely a more faithful indicator of the
+difference among learning models. The datasets are released and publicly
+available via http://www.teds.usc.edu/website_vqa/.
+
+
+Understanding Image and Text Simultaneously: a Dual Vision-Language
+  Machine Comprehension Task
+
+  We introduce a new multi-modal task for computer systems, posed as a combined
+vision-language comprehension challenge: identifying the most suitable text
+describing a scene, given several similar options. Accomplishing the task
+entails demonstrating comprehension beyond just recognizing "keywords" (or
+key-phrases) and their corresponding visual concepts. Instead, it requires an
+alignment between the representations of the two modalities that achieves a
+visually-grounded "understanding" of various linguistic elements and their
+dependencies. This new task also admits an easy-to-compute and well-studied
+metric: the accuracy in detecting the true target among the decoys.
+  The paper makes several contributions: an effective and extensible mechanism
+for generating decoys from (human-created) image captions; an instance of
+applying this mechanism, yielding a large-scale machine comprehension dataset
+(based on the COCO images and captions) that we make publicly available; human
+evaluation results on this dataset, informing a performance upper-bound; and
+several baseline and competitive learning approaches that illustrate the
+utility of the proposed task and dataset in advancing both image and language
+comprehension. We also show that, in a multi-task learning setting, the
+performance on the proposed task is positively correlated with the end-to-end
+task of image captioning.
+
+
+Learning Answer Embeddings for Visual Question Answering
+
+  We propose a novel probabilistic model for visual question answering (Visual
+QA). The key idea is to infer two sets of embeddings: one for the image and the
+question jointly and the other for the answers. The learning objective is to
+learn the best parameterization of those embeddings such that the correct
+answer has higher likelihood among all possible answers. In contrast to several
+existing approaches of treating Visual QA as multi-way classification, the
+proposed approach takes the semantic relationships (as characterized by the
+embeddings) among answers into consideration, instead of viewing them as
+independent ordinal numbers. Thus, the learned embedded function can be used to
+embed unseen answers (in the training dataset). These properties make the
+approach particularly appealing for transfer learning for open-ended Visual QA,
+where the source dataset on which the model is learned has limited overlapping
+with the target dataset in the space of answers. We have also developed
+large-scale optimization techniques for applying the model to datasets with a
+large number of answers, where the challenge is to properly normalize the
+proposed probabilistic models. We validate our approach on several Visual QA
+datasets and investigate its utility for transferring models across datasets.
+The empirical results have shown that the approach performs well not only on
+in-domain learning but also on transfer learning.
+
+
+Learning Embedding Adaptation for Few-Shot Learning
+
+  Learning with limited data is a key challenge for visual recognition.
+Few-shot learning methods address this challenge by learning an instance
+embedding function from seen classes and apply the function to instances from
+unseen classes with limited labels. This style of transfer learning is
+task-agnostic: the embedding function is not learned optimally discriminative
+with respect to the unseen classes, where discerning among them is the target
+task. In this paper, we propose a novel approach to adapt the embedding model
+to the target classification task, yielding embeddings that are task-specific
+and are discriminative. To this end, we employ a type of self-attention
+mechanism called Transformer to transform the embeddings from task-agnostic to
+task-specific by focusing on relating instances from the test instances to the
+training instances in both seen and unseen classes. We verify the effectiveness
+of our model on both the standard few-shot classification benchmark and four
+extended few-shot learning settings with essential use cases (i.e.
+cross-domain, transductive, generalized few-shot learning, and large scale
+low-shot learning). Our approach archived consistent improvements over baseline
+models and previous state-of-the-art methods.
+
+
+Kernel Approximation Methods for Speech Recognition
+
+  We study large-scale kernel methods for acoustic modeling in speech
+recognition and compare their performance to deep neural networks (DNNs). We
+perform experiments on four speech recognition datasets, including the TIMIT
+and Broadcast News benchmark tasks, and compare these two types of models on
+frame-level performance metrics (accuracy, cross-entropy), as well as on
+recognition metrics (word/character error rate). In order to scale kernel
+methods to these large datasets, we use the random Fourier feature method of
+Rahimi and Recht (2007). We propose two novel techniques for improving the
+performance of kernel acoustic models. First, in order to reduce the number of
+random features required by kernel models, we propose a simple but effective
+method for feature selection. The method is able to explore a large number of
+non-linear features while maintaining a compact model more efficiently than
+existing approaches. Second, we present a number of frame-level metrics which
+correlate very strongly with recognition performance when computed on the
+heldout set; we take advantage of these correlations by monitoring these
+metrics during training in order to decide when to stop learning. This
+technique can noticeably improve the recognition performance of both DNN and
+kernel models, while narrowing the gap between them. Additionally, we show that
+the linear bottleneck method of Sainath et al. (2013) improves the performance
+of our kernel models significantly, in addition to speeding up training and
+making the models more compact. Together, these three methods dramatically
+improve the performance of kernel acoustic models, making their performance
+comparable to DNNs on the tasks we explored.
+
+

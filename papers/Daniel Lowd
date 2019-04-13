@@ -1,0 +1,144 @@
+The Libra Toolkit for Probabilistic Models
+
+  The Libra Toolkit is a collection of algorithms for learning and inference
+with discrete probabilistic models, including Bayesian networks, Markov
+networks, dependency networks, and sum-product networks. Compared to other
+toolkits, Libra places a greater emphasis on learning the structure of
+tractable models in which exact inference is efficient. It also includes a
+variety of algorithms for learning graphical models in which inference is
+potentially intractable, and for performing exact and approximate inference.
+Libra is released under a 2-clause BSD license to encourage broad use in
+academia and industry.
+
+
+Closed-Form Learning of Markov Networks from Dependency Networks
+
+  Markov networks (MNs) are a powerful way to compactly represent a joint
+probability distribution, but most MN structure learning methods are very slow,
+due to the high cost of evaluating candidates structures. Dependency networks
+(DNs) represent a probability distribution as a set of conditional probability
+distributions. DNs are very fast to learn, but the conditional distributions
+may be inconsistent with each other and few inference algorithms support DNs.
+In this paper, we present a closed-form method for converting a DN into an MN,
+allowing us to enjoy both the efficiency of DN learning and the convenience of
+the MN representation. When the DN is consistent, this conversion is exact. For
+inconsistent DNs, we present averaging methods that significantly improve the
+approximation. In experiments on 12 standard datasets, our methods are orders
+of magnitude faster than and often more accurate than combining conditional
+distributions using weight learning.
+
+
+Learning Arithmetic Circuits
+
+  Graphical models are usually learned without regard to the cost of doing
+inference with them. As a result, even if a good model is learned, it may
+perform poorly at prediction, because it requires approximate inference. We
+propose an alternative: learning models with a score function that directly
+penalizes the cost of inference. Specifically, we learn arithmetic circuits
+with a penalty on the number of edges in the circuit (in which the cost of
+inference is linear). Our algorithm is equivalent to learning a Bayesian
+network with context-specific independence by greedily splitting conditional
+distributions, at each step scoring the candidates by compiling the resulting
+network into an arithmetic circuit, and using its size as the penalty. We show
+how this can be done efficiently, without compiling a circuit from scratch for
+each candidate. Experiments on several real-world domains show that our
+algorithm is able to learn tractable models with very large treewidth, and
+yields more accurate predictions than a standard context-specific Bayesian
+network learner, in far less time.
+
+
+HotFlip: White-Box Adversarial Examples for Text Classification
+
+  We propose an efficient method to generate white-box adversarial examples to
+trick a character-level neural classifier. We find that only a few
+manipulations are needed to greatly decrease the accuracy. Our method relies on
+an atomic flip operation, which swaps one token for another, based on the
+gradients of the one-hot input vectors. Due to efficiency of our method, we can
+perform adversarial training which makes the model more robust to attacks at
+test time. With the use of a few semantics-preserving constraints, we
+demonstrate that HotFlip can be adapted to attack a word-level classifier as
+well.
+
+
+Ontology Matching with Knowledge Rules
+
+  Ontology matching is the process of automatically determining the semantic
+equivalences between the concepts of two ontologies. Most ontology matching
+algorithms are based on two types of strategies: terminology-based strategies,
+which align concepts based on their names or descriptions, and structure-based
+strategies, which exploit concept hierarchies to find the alignment. In many
+domains, there is additional information about the relationships of concepts
+represented in various ways, such as Bayesian networks, decision trees, and
+association rules. We propose to use the similarities between these
+relationships to find more accurate alignments. We accomplish this by defining
+soft constraints that prefer alignments where corresponding concepts have the
+same local relationships encoded as knowledge rules. We use a probabilistic
+framework to integrate this new knowledge-based strategy with standard
+terminology-based and structure-based strategies. Furthermore, our method is
+particularly effective in identifying correspondences between complex concepts.
+Our method achieves substantially better F-score than the previous
+state-of-the-art on three ontology matching domains.
+
+
+A Probabilistic Approach to Knowledge Translation
+
+  In this paper, we focus on a novel knowledge reuse scenario where the
+knowledge in the source schema needs to be translated to a semantically
+heterogeneous target schema. We refer to this task as "knowledge translation"
+(KT). Unlike data translation and transfer learning, KT does not require any
+data from the source or target schema. We adopt a probabilistic approach to KT
+by representing the knowledge in the source schema, the mapping between the
+source and target schemas, and the resulting knowledge in the target schema all
+as probability distributions, specially using Markov random fields and Markov
+logic networks. Given the source knowledge and mappings, we use standard
+learning and inference algorithms for probabilistic graphical models to find an
+explicit probability distribution in the target schema that minimizes the
+Kullback-Leibler divergence from the implicit distribution. This gives us a
+compact probabilistic model that represents knowledge from the source schema as
+well as possible, respecting the uncertainty in both the source knowledge and
+the mapping. In experiments on both propositional and relational domains, we
+find that the knowledge obtained by KT is comparable to other approaches that
+require data, demonstrating that knowledge can be reused without data.
+
+
+On Adversarial Examples for Character-Level Neural Machine Translation
+
+  Evaluating on adversarial examples has become a standard procedure to measure
+robustness of deep learning models. Due to the difficulty of creating white-box
+adversarial examples for discrete text input, most analyses of the robustness
+of NLP models have been done through black-box adversarial examples. We
+investigate adversarial examples for character-level neural machine translation
+(NMT), and contrast black-box adversaries with a novel white-box adversary,
+which employs differentiable string-edit operations to rank adversarial
+changes. We propose two novel types of attacks which aim to remove or change a
+word in a translation, rather than simply break the NMT. We demonstrate that
+white-box adversarial examples are significantly stronger than their black-box
+counterparts in different attack scenarios, which show more serious
+vulnerabilities than previously known. In addition, after performing
+adversarial training, which takes only 3 times longer than regular training, we
+can improve the model's robustness significantly.
+
+
+Neural-Symbolic Learning and Reasoning: A Survey and Interpretation
+
+  The study and understanding of human behaviour is relevant to computer
+science, artificial intelligence, neural computation, cognitive science,
+philosophy, psychology, and several other areas. Presupposing cognition as
+basis of behaviour, among the most prominent tools in the modelling of
+behaviour are computational-logic systems, connectionist models of cognition,
+and models of uncertainty. Recent studies in cognitive science, artificial
+intelligence, and psychology have produced a number of cognitive models of
+reasoning, learning, and language that are underpinned by computation. In
+addition, efforts in computer science research have led to the development of
+cognitive computational systems integrating machine learning and automated
+reasoning. Such systems have shown promise in a range of applications,
+including computational biology, fault diagnosis, training and assessment in
+simulators, and software verification. This joint survey reviews the personal
+ideas and views of several researchers on neural-symbolic learning and
+reasoning. The article is organised in three parts: Firstly, we frame the scope
+and goals of neural-symbolic computation and have a look at the theoretical
+foundations. We then proceed to describe the realisations of neural-symbolic
+computation, systems, and applications. Finally we present the challenges
+facing the area and avenues for further research.
+
+

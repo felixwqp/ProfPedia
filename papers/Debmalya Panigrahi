@@ -1,0 +1,452 @@
+A Linear-time Algorithm for Sparsification of Unweighted Graphs
+
+  Given an undirected graph $G$ and an error parameter $\epsilon > 0$, the {\em
+graph sparsification} problem requires sampling edges in $G$ and giving the
+sampled edges appropriate weights to obtain a sparse graph $G_{\epsilon}$ with
+the following property: the weight of every cut in $G_{\epsilon}$ is within a
+factor of $(1\pm \epsilon)$ of the weight of the corresponding cut in $G$. If
+$G$ is unweighted, an $O(m\log n)$-time algorithm for constructing
+$G_{\epsilon}$ with $O(n\log n/\epsilon^2)$ edges in expectation, and an
+$O(m)$-time algorithm for constructing $G_{\epsilon}$ with $O(n\log^2
+n/\epsilon^2)$ edges in expectation have recently been developed
+(Hariharan-Panigrahi, 2010). In this paper, we improve these results by giving
+an $O(m)$-time algorithm for constructing $G_{\epsilon}$ with $O(n\log
+n/\epsilon^2)$ edges in expectation, for unweighted graphs. Our algorithm is
+optimal in terms of its time complexity; further, no efficient algorithm is
+known for constructing a sparser $G_{\epsilon}$. Our algorithm is Monte-Carlo,
+i.e. it produces the correct output with high probability, as are all efficient
+graph sparsification algorithms.
+
+
+Online Service with Delay
+
+  In this paper, we introduce the online service with delay problem. In this
+problem, there are $n$ points in a metric space that issue service requests
+over time, and a server that serves these requests. The goal is to minimize the
+sum of distance traveled by the server and the total delay in serving the
+requests. This problem models the fundamental tradeoff between batching
+requests to improve locality and reducing delay to improve response time, that
+has many applications in operations management, operating systems, logistics,
+supply chain management, and scheduling.
+  Our main result is to show a poly-logarithmic competitive ratio for the
+online service with delay problem. This result is obtained by an algorithm that
+we call the preemptive service algorithm. The salient feature of this algorithm
+is a process called preemptive service, which uses a novel combination of
+(recursive) time forwarding and spatial exploration on a metric space. We hope
+this technique will be useful for related problems such as reordering buffer
+management, online TSP, vehicle routing, etc. We also generalize our results to
+$k > 1$ servers.
+
+
+A General Framework for Graph Sparsification
+
+  Given a weighted graph $G$ and an error parameter $\epsilon > 0$, the {\em
+graph sparsification} problem requires sampling edges in $G$ and giving the
+sampled edges appropriate weights to obtain a sparse graph $G_{\epsilon}$
+(containing O(n\log n) edges in expectation) with the following property: the
+weight of every cut in $G_{\epsilon}$ is within a factor of $(1\pm \epsilon)$
+of the weight of the corresponding cut in $G$. We provide a generic framework
+that sets out sufficient conditions for any particular sampling scheme to
+result in good sparsifiers, and obtain a set of results by simple
+instantiations of this framework. The results we obtain include the following:
+(1) We improve the time complexity of graph sparsification from O(m\log^3 n) to
+O(m + n\log^4 n) for graphs with polynomial edge weights. (2) We improve the
+time complexity of graph sparsification from O(m\log^3 n) to O(m\log^2 n) for
+graphs with arbitrary edge weights. (3) If the size of the sparsifier is
+allowed to be O(n\log^2 n/\epsilon^2) instead of O(n\log n/\epsilon^2), we
+improve the time complexity of sparsification to O(m) for graphs with
+polynomial edge weights. (4) We show that sampling using standard
+connectivities results in good sparsifiers, thus resolving an open question of
+Benczur and Karger. As a corollary, we give a simple proof of (a slightly
+weaker version of) a result due to Spielman and Srivastava showing that
+sampling using effective resistances produces good sparsifiers. (5) We give a
+simple proof showing that sampling using strong connectivities results in good
+sparsifiers, a result obtained previously using a more involved proof by
+Benczur and Karger. A key ingredient of our proofs is a generalization of
+bounds on the number of small cuts in an undirected graph due to Karger; this
+generalization might be of independent interest.
+
+
+Online Load Balancing on Unrelated Machines with Startup Costs
+
+  Motivated by applications in energy-efficient scheduling in data centers,
+Khuller, Li, and Saha introduced the {\em machine activation} problem as a
+generalization of the classical optimization problems of set cover and load
+balancing on unrelated machines. In this problem, a set of $n$ jobs have to be
+distributed among a set of $m$ (unrelated) machines, given the processing time
+of each job on each machine, where each machine has a startup cost. The goal is
+to produce a schedule of minimum total startup cost subject to a constraint
+$\bf L$ on its makespan. While Khuller {\em et al} considered the offline
+version of this problem, a typical scenario in scheduling is one where jobs
+arrive online and have to be assigned to a machine immediately on arrival. We
+give an $(O(\log (mn)\log m), O(\log m))$-competitive randomized online
+algorithm for this problem, i.e. the schedule produced by our algorithm has a
+makespan of $O({\bf L} \log m)$ with high probability, and a total expected
+startup cost of $O(\log (mn)\log m)$ times that of an optimal offline schedule
+with makespan $\bf L$. The competitive ratios of our algorithm are (almost)
+optimal.
+  Our algorithms use the online primal dual framework introduced by Alon {\em
+et al} for the online set cover problem, and subsequently developed further by
+Buchbinder, Naor, and co-authors. To the best of our knowledge, all previous
+applications of this framework have been to linear programs (LPs) with either
+packing or covering constraints. One novelty of our application is that we use
+this framework for a mixed LP that has both covering and packing constraints.
+We hope that the algorithmic techniques developed in this paper to
+simultaneously handle packing and covering constraints will be useful for
+solving other online optimization problems as well.
+
+
+Provenance Views for Module Privacy
+
+  Scientific workflow systems increasingly store provenance information about
+the module executions used to produce a data item, as well as the parameter
+settings and intermediate data items passed between module executions. However,
+authors/owners of workflows may wish to keep some of this information
+confidential. In particular, a module may be proprietary, and users should not
+be able to infer its behavior by seeing mappings between all data inputs and
+outputs. The problem we address in this paper is the following: Given a
+workflow, abstractly modeled by a relation R, a privacy requirement \Gamma and
+costs associated with data. The owner of the workflow decides which data
+(attributes) to hide, and provides the user with a view R' which is the
+projection of R over attributes which have not been hidden. The goal is to
+minimize the cost of hidden data while guaranteeing that individual modules are
+\Gamma -private. We call this the "secureview" problem. We formally define the
+problem, study its complexity, and offer algorithmic solutions.
+
+
+Precedence-constrained Scheduling of Malleable Jobs with Preemption
+
+  Scheduling jobs with precedence constraints on a set of identical machines to
+minimize the total processing time (makespan) is a fundamental problem in
+combinatorial optimization. In practical settings such as cloud computing, jobs
+are often malleable, i.e., can be processed on multiple machines
+simultaneously. The instantaneous processing rate of a job is a non-decreasing
+function of the number of machines assigned to it (we call it the processing
+function). Previous research has focused on practically relevant concave
+processing functions, which obey the law of diminishing utility and generalize
+the classical (non-malleable) problem. Our main result is a
+$(2+\epsilon)$-approximation algorithm for concave processing functions (for
+any $\epsilon > 0$), which is the best possible under complexity theoretic
+assumptions. The approximation ratio improves to $(1 + \epsilon)$ for the
+interesting and practically relevant special case of power functions, i.e.,
+$p_j(z) = c_j \cdot z^{\gamma}$.
+
+
+Online Buy-at-Bulk Network Design
+
+  We present the first non-trivial online algorithms for the non-uniform,
+multicommodity buy-at-bulk (MC-BB) network design problem in undirected and
+directed graphs. Our competitive ratios qualitatively match the best known
+approximation factors for the corresponding offline problems. The main engine
+for our results is an online reduction theorem of MC-BB problems to their
+single-sink (SS-BB) counterparts. We use the concept of junction-tree solutions
+(Chekuri et al., FOCS 2006) that play an important role in solving the offline
+versions of the problem via a greedy subroutine -- an inherently offline
+procedure. Our main technical contribution is in designing an online algorithm
+using only the existence of good junction-trees to reduce an MC-BB instance to
+multiple SS-BB sub-instances. Along the way, we also give the first non-trivial
+online node-weighted/directed single-sink buy-at-bulk algorithms. In addition
+to the new results, our generic reduction also yields new proofs of recent
+results for the online node-weighted Steiner forest and online group Steiner
+forest problems.
+
+
+Minimizing Latency in Online Ride and Delivery Services
+
+  Motivated by the popularity of online ride and delivery services, we study
+natural variants of classical multi-vehicle minimum latency problems where the
+objective is to route a set of vehicles located at depots to serve request
+located on a metric space so as to minimize the total latency. In this paper,
+we consider point-to-point requests that come with source-destination pairs and
+release-time constraints that restrict when each request can be served. The
+point-to-point requests and release-time constraints model taxi rides and
+deliveries. For all the variants considered, we show constant-factor
+approximation algorithms based on a linear programming framework. To the best
+of our knowledge, these are the first set of results for the aforementioned
+variants of the minimum latency problems. Furthermore, we provide an empirical
+study of heuristics based on our theoretical algorithms on a real data set of
+taxi rides.
+
+
+Online Algorithms for Machine Minimization
+
+  In this paper, we consider the online version of the machine minimization
+problem (introduced by Chuzhoy et al., FOCS 2004), where the goal is to
+schedule a set of jobs with release times, deadlines, and processing lengths on
+a minimum number of identical machines. Since the online problem has strong
+lower bounds if all the job parameters are arbitrary, we focus on jobs with
+uniform length. Our main result is a complete resolution of the deterministic
+complexity of this problem by showing that a competitive ratio of $e$ is
+achievable and optimal, thereby improving upon existing lower and upper bounds
+of 2.09 and 5.2 respectively. We also give a constant-competitive online
+algorithm for the case of uniform deadlines (but arbitrary job lengths); to the
+best of our knowledge, no such algorithm was known previously. Finally, we
+consider the complimentary problem of throughput maximization where the goal is
+to maximize the sum of weights of scheduled jobs on a fixed set of identical
+machines (introduced by Bar-Noy et al. STOC 1999). We give a randomized online
+algorithm for this problem with a competitive ratio of e/e-1; previous results
+achieved this bound only for the case of a single machine or in the limit of an
+infinite number of machines.
+
+
+Online Budgeted Allocation with General Budgets
+
+  We study the online budgeted allocation (also called ADWORDS) problem, where
+a set of impressions arriving online are allocated to a set of
+budget-constrained advertisers to maximize revenue. Motivated by connections to
+Internet advertising, several variants of this problem have been studied since
+the seminal work of Mehta, Saberi, Vazirani, and Vazirani (FOCS 2005). However,
+this entire body of work focuses on a single budget for every advertising
+campaign, whereas in order to fully represent the actual agenda of an
+advertiser, an advertising budget should be expressible over multiple tiers of
+user-attribute granularity. A simple example is an advertising campaign that is
+constrained by an overall budget but is also accompanied by a set of
+sub-budgets for each target demographic. In such a contract scheme, an
+advertiser can specify their true user-targeting goals, allowing the publisher
+to fulfill them through relevant allocations.
+  In this paper, we give a complete characterization of the ADWORDS problem for
+general advertising budgets. In the most general setting, we show that, unlike
+in the single-budget ADWORDS problem, obtaining a constant competitive ratio is
+impossible and give asymptotically tight upper and lower bounds. However for
+our main result, we observe that in many real-world scenarios (as in the above
+example), multi-tier budgets have a laminar structure, since most relevant
+consumer or product classifications are hierarchical. For laminar budgets, we
+obtain a competitive ratio of e/(e-1) in the small bids case, which matches the
+best known ADWORDS result for single budgets. Our algorithm has a primal-dual
+structure and generalizes the primal-dual analysis for single- budget ADWORDS
+first given by Buchbinder, Jain, and Naor (ESA 2007).
+
+
+Tight Bounds for Online Vector Scheduling
+
+  Modern data centers face a key challenge of effectively serving user requests
+that arrive online. Such requests are inherently multi-dimensional and
+characterized by demand vectors over multiple resources such as processor
+cycles, storage space, and network bandwidth. Typically, different resources
+require different objectives to be optimized, and $L_r$ norms of loads are
+among the most popular objectives considered. To address these problems, we
+consider the online vector scheduling problem in this paper. Introduced by
+Chekuri and Khanna (SIAM J of Comp. 2006), vector scheduling is a
+generalization of classical load balancing, where every job has a vector load
+instead of a scalar load. In this paper, we resolve the online complexity of
+the vector scheduling problem and its important generalizations. Our main
+results are:
+  -For identical machines, we show that the optimal competitive ratio is
+$\Theta(\log d / \log \log d)$ by giving an online lower bound and an algorithm
+with an asymptotically matching competitive ratio. The lower bound is
+technically challenging, and is obtained via an online lower bound for the
+minimum mono-chromatic clique problem using a novel online coloring game and
+randomized coding scheme.
+  -For unrelated machines, we show that the optimal competitive ratio is
+$\Theta(\log m + \log d)$ by giving an online lower bound that matches a
+previously known upper bound. Unlike identical machines, however, extending
+these results, particularly the upper bound, to general $L_r$ norms requires
+new ideas. In particular, we use a carefully constructed potential function
+that balances the individual $L_r$ objectives with the overall (convexified)
+min-max objective to guide the online algorithm and track the changes in
+potential to bound the competitive ratio.
+
+
+On the Price of Stability of Undirected Multicast Games
+
+  In multicast network design games, a set of agents choose paths from their
+source locations to a common sink with the goal of minimizing their individual
+costs, where the cost of an edge is divided equally among the agents using it.
+Since the work of Anshelevich et al. (FOCS 2004) that introduced network design
+games, the main open problem in this field has been the price of stability
+(PoS) of multicast games. For the special case of broadcast games (every vertex
+is a terminal, i.e., has an agent), a series of works has culminated in a
+constant upper bound on the PoS (Bilo` et al., FOCS 2013). However, no
+significantly sub-logarithmic bound is known for multicast games. In this
+paper, we make progress toward resolving this question by showing a constant
+upper bound on the PoS of multicast games for quasi-bipartite graphs. These are
+graphs where all edges are between two terminals (as in broadcast games) or
+between a terminal and a nonterminal, but there is no edge between
+nonterminals. This represents a natural class of intermediate generality
+between broadcast and multicast games. In addition to the result itself, our
+techniques overcome some of the fundamental difficulties of analyzing the PoS
+of general multicast games, and are a promising step toward resolving this
+major open problem.
+
+
+Online and Dynamic Algorithms for Set Cover
+
+  In this paper, we study the set cover problem in the fully dynamic model. In
+this model, the set of active elements, i.e., those that must be covered at any
+given time, can change due to element arrivals and departures. The goal is to
+maintain an algorithmic solution that is competitive with respect to the
+current optimal solution. This model is popular in both the dynamic algorithms
+and online algorithms communities. The difference is in the restriction placed
+on the algorithm: in dynamic algorithms, the running time of the algorithm
+making updates (called update time) is bounded, while in online algorithms, the
+number of updates made to the solution (called recourse) is limited.
+  In this paper we show the following results: In the update time setting, we
+obtain O(log n)-competitiveness with O(f log n) amortized update time, and
+O(f^3)-competitiveness with O(f^2) update time. The O(log n)-competitive
+algorithm is the first one to achieve a competitive ratio independent of f in
+this setting. In the recourse setting, we show a competitive ratio of O(min{log
+n,f}) with constant amortized recourse. Note that this matches the best offline
+bounds with just constant recourse, something that is impossible in the
+classical online model.
+  Our results are based on two algorithmic frameworks in the fully-dynamic
+model that are inspired by the classic greedy and primal-dual algorithms for
+offline set cover. We show that both frameworks can be used for obtaining both
+recourse and update time bounds, thereby demonstrating algorithmic techniques
+common to these strands of research.
+
+
+Online Load Balancing for Related Machines
+
+  In the load balancing problem, introduced by Graham in the 1960s (SIAM J. of
+Appl. Math. 1966, 1969), jobs arriving online have to be assigned to machines
+so to minimize an objective defined on machine loads. A long line of work has
+addressed this problem for both the makespan norm and arbitrary $\ell_q$-norms
+of machine loads. Recent literature (e.g., Azar et al., STOC 2013; Im et al.,
+FOCS 2015) has further expanded the scope of this problem to vector loads, to
+capture jobs with multi-dimensional resource requirements in applications such
+as data centers. In this paper, we completely resolve the job scheduling
+problem for both scalar and vector jobs on related machines, i.e., where each
+machine has a given speed and the time taken to process a job is inversely
+proportional to the speed of the machine it is assigned on.
+  We show the following results. For scalar scheduling, we give a constant
+competitive algorithm for optimizing any $\ell_q$-norm for related machines.
+The only previously known result was for the makespan norm. For vector
+scheduling, there are two natural variants for vector scheduling, depending on
+whether the speed of a machine is dimension-dependent or not. We show a sharp
+contrast between these two variants, proving that they are respectively
+equivalent to unrelated machines and identical machines for the makespan norm.
+We also extend these results to arbitrary $\ell_q$-norms of the machine loads.
+No previous results were known for vector scheduling on related machines.
+
+
+Pacing Equilibrium in First-Price Auction Markets
+
+  In ad auctions--the prevalent monetization mechanism of Internet
+companies--advertisers compete for online impressions in a sequential auction
+market. Since advertisers are typically budget-constrained, a common tool
+employed to improve their ROI is that of pacing, i.e., uniform scaling of their
+bids to preserve their budget for a longer duration. If the advertisers are
+excessively paced, they end up not spending their budget, while if they are not
+sufficiently paced, they use up their budget too soon. Therefore, it is
+important that they are paced at just the right amount, a solution concept that
+we call a pacing equilibrium. In this paper, we study pacing equilibria in the
+context of first-price auctions, which are popular in the theory of ad
+mechanisms. We show existence, uniqueness, and efficient computability of
+first-price pacing equilibria (FPPE), while also establishing several other
+salient features of this solution concept. In the process, we uncover a sharp
+contrast between these solutions and second price pacing equilibria (SPPE), the
+latter being known to produce non-unique, fragile solutions that are also
+computationally hard to obtain. Simulations show that FPPE have better revenue
+properties than SPPE, that bidders have lower ex-post regret, and that
+incentives to misreport budgets for thick markets are smaller.
+
+
+Faster Algorithms for the Geometric Transportation Problem
+
+  Let $R$ and $B$ be two point sets in $\mathbb{R}^d$, with $|R|+ |B| = n$ and
+where $d$ is a constant. Next, let $\lambda : R \cup B \to \mathbb{N}$ such
+that $\sum_{r \in R } \lambda(r) = \sum_{b \in B} \lambda(b)$ be demand
+functions over $R$ and $B$. Let $\|\cdot\|$ be a suitable distance function
+such as the $L_p$ distance. The transportation problem asks to find a map $\tau
+: R \times B \to \mathbb{N}$ such that $\sum_{b \in B}\tau(r,b) = \lambda(r)$,
+$\sum_{r \in R}\tau(r,b) = \lambda(b)$, and $\sum_{r \in R, b \in B} \tau(r,b)
+\|r-b\|$ is minimized. We present three new results for the transportation
+problem when $\|r-b\|$ is any $L_p$ metric:
+  - For any constant $\varepsilon > 0$, an $O(n^{1+\varepsilon})$ expected time
+randomized algorithm that returns a transportation map with expected cost
+$O(\log^2(1/\varepsilon))$ times the optimal cost.
+  - For any $\varepsilon > 0$, a $(1+\varepsilon)$-approximation in
+$O(n^{3/2}\varepsilon^{-d} \operatorname{polylog}(U)
+\operatorname{polylog}(n))$ time, where $U = \max_{p\in R\cup B} \lambda(p)$.
+  - An exact strongly polynomial $O(n^2 \operatorname{polylog}n)$ time
+algorithm, for $d = 2$.
+
+
+Online Covering with Convex Objectives and Applications
+
+  We give an algorithmic framework for minimizing general convex objectives
+(that are differentiable and monotone non-decreasing) over a set of covering
+constraints that arrive online. This substantially extends previous work on
+online covering for linear objectives (Alon {\em et al.}, STOC 2003) and online
+covering with offline packing constraints (Azar {\em et al.}, SODA 2013). To
+the best of our knowledge, this is the first result in online optimization for
+generic non-linear objectives; special cases of such objectives have previously
+been considered, particularly for energy minimization.
+  As a specific problem in this genre, we consider the unrelated machine
+scheduling problem with startup costs and arbitrary $\ell_p$ norms on machine
+loads (including the surprisingly non-trivial $\ell_1$ norm representing total
+machine load). This problem was studied earlier for the makespan norm in both
+the offline (Khuller~{\em et al.}, SODA 2010; Li and Khuller, SODA 2011) and
+online settings (Azar {\em et al.}, SODA 2013). We adapt the two-phase approach
+of obtaining a fractional solution and then rounding it online (used
+successfully to many linear objectives) to the non-linear objective. The
+fractional algorithm uses ideas from our general framework that we described
+above (but does not fit the framework exactly because of non-positive entries
+in the constraint matrix). The rounding algorithm uses ideas from offline
+rounding of LPs with non-linear objectives (Azar and Epstein, STOC 2005; Kumar
+{\em et al.}, FOCS 2005). Our competitive ratio is tight up to a logarithmic
+factor. Finally, for the important special case of total load ($\ell_1$ norm),
+we give a different rounding algorithm that obtains a better competitive ratio
+than the generic rounding algorithm for $\ell_p$ norms. We show that this
+competitive ratio is asymptotically tight.
+
+
+Timing Matters: Online Dynamics in Broadcast Games
+
+  A central question in algorithmic game theory is to measure the inefficiency
+(ratio of costs) of Nash equilibria (NE) with respect to socially optimal
+solutions. The two established metrics used for this purpose are price of
+anarchy (POA) and price of stability (POS), which respectively provide upper
+and lower bounds on this ratio. A deficiency of these metrics, however, is that
+they are purely existential and shed no light on which of the equilibrium
+states are reachable in an actual game, i.e., via natural game dynamics. This
+is particularly striking if these metrics differ significantly, such as in
+network design games where the exponential gap between the best and worst NE
+states originally prompted the notion of POS in game theory (Anshelevich et
+al., FOCS 2002). In this paper, we make progress toward bridging this gap by
+studying network design games under natural game dynamics.
+  First we show that in a completely decentralized setting, where agents
+arrive, depart, and make improving moves in an arbitrary order, the
+inefficiency of NE attained can be polynomially large. This implies that the
+game designer must have some control over the interleaving of these events in
+order to force the game to attain efficient NE. We complement our negative
+result by showing that if the game designer is allowed to execute a sequence of
+improving moves to create an equilibrium state after every batch of agent
+arrivals or departures, then the resulting equilibrium states attained by the
+game are exponentially more efficient, i.e., the ratio of costs compared to the
+optimum is only logarithmic. Overall, our two results establish that in network
+games, the efficiency of equilibrium states is dictated by whether agents are
+allowed to join or leave the game in arbitrary states, an observation that
+might be useful in analyzing the dynamics of other classes of games with
+divergent POS and POA bounds.
+
+
+Dynamic Set Cover: Improved Algorithms & Lower Bounds
+
+  Set cover is a classic problem in combinatorial optimization where a set of
+$n$ elements have to be covered by a minimum number of subsets from a given
+collection of size $m$. The two traditional lines of inquiry for this problem
+are via greedy and primal dual algorithms, and respectively yield (tight)
+approximation factors of $\ln n$, where $n$ is the total number of elements,
+and $f$, where every element belongs to at most $f$ sets. Recent research has
+focused on the dynamic setting, where the set of elements changes over time.
+Using the same lines of inquiry, this has led to the following results: (a) an
+$O(\log n)$-approximation in $O(f \log n)$ (amortized) update time (Gupta {\em
+et al.}, STOC 2017), and (b) an $O(f^2)$-approximation in $O(f \log (m+n))$
+(amortized) update time (Bhattacharya {\em et al.}, ICALP 2015). While the
+former result matches the offline approximation within a constant factor, the
+latter does not; indeed, the only $O(f)$-approximation known in the dynamic
+setting is by re-solving the problem after every update.
+  In this paper, we show that it is possible to maintain efficiently a solution
+(almost) as good as the primal-dual offline one: we give a $(1+\epsilon)
+f$-approximation for set cover in $O(f^2\log n/\epsilon)$ (amortized) update
+time. If we are in a decremental setting, i.e., there are element deletions but
+no insertions, the update time can be improved to $O(f^2/\epsilon)$, while
+still obtaining an $(1+\epsilon) f$-approximation. Finally, we study the
+dependence of the update time on $f$. Using the recent distributed
+PCP-framework, we show that any dynamic algorithm for set cover that has an
+amortized update time of $O(f^{1-\epsilon})$ must have an approximation factor
+that is $\Omega(n^\delta)$ for some $\delta>0$ under the Strong Exponential
+Time Hypothesis.
+
+

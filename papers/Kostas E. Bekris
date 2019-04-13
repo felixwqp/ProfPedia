@@ -1,0 +1,379 @@
+Efficient Model Identification for Tensegrity Locomotion
+
+  This paper aims to identify in a practical manner unknown physical
+parameters, such as mechanical models of actuated robot links, which are
+critical in dynamical robotic tasks. Key features include the use of an
+off-the-shelf physics engine and the Bayesian optimization framework. The task
+being considered is locomotion with a high-dimensional, compliant Tensegrity
+robot. A key insight, in this case, is the need to project the model
+identification challenge into an appropriate lower dimensional space for
+efficiency. Comparisons with alternatives indicate that the proposed method can
+identify the parameters more accurately within the given time budget, which
+also results in more precise locomotion control.
+
+
+Analysis and Observations from the First Amazon Picking Challenge
+
+  This paper presents a overview of the inaugural Amazon Picking Challenge
+along with a summary of a survey conducted among the 26 participating teams.
+The challenge goal was to design an autonomous robot to pick items from a
+warehouse shelf. This task is currently performed by human workers, and there
+is hope that robots can someday help increase efficiency and throughput while
+lowering cost. We report on a 28-question survey posed to the teams to learn
+about each team's background, mechanism design, perception apparatus, planning
+and control approach. We identify trends in this data, correlate it with each
+team's success in the competition, and discuss observations and lessons learned
+based on survey results and the authors' personal experiences during the
+challenge.
+
+
+Scalable Asymptotically-Optimal Multi-Robot Motion Planning
+
+  Finding asymptotically-optimal paths in multi-robot motion planning problems
+could be achieved, in principle, using sampling-based planners in the composite
+configuration space of all of the robots in the space. The dimensionality of
+this space increases with the number of robots, rendering this approach
+impractical. This work focuses on a scalable sampling-based planner for coupled
+multi-robot problems that provides asymptotic optimality. It extends the dRRT
+approach, which proposed building roadmaps for each robot and searching an
+implicit roadmap in the composite configuration space. This work presents a new
+method, dRRT* , and develops theory for scalable convergence to optimal paths
+in multi-robot problems. Simulated experiments indicate dRRT* converges to
+high-quality paths while scaling to higher numbers of robots where the naive
+approach fails. Furthermore, dRRT* is applicable to high-dimensional problems,
+such as planning for robot manipulators
+
+
+Efficient, High-Quality Stack Rearrangement
+
+  This work studies rearrangement problems involving the sorting of robots or
+objects in stack-like containers, which can be accessed only from one side. Two
+scenarios are considered: one where every robot or object needs to reach a
+particular stack, and a setting in which each robot has a distinct position
+within a stack. In both cases, the goal is to minimize the number of stack
+removals that need to be performed. Stack rearrangement is shown to be
+intimately connected to pebble motion problems, a useful abstraction in
+multi-robot path planning. Through this connection, feasibility of stack
+rearrangement can be readily addressed. The paper continues to establish lower
+and upper bounds on optimality, which differ only by a logarithmic factor, in
+terms of stack removals. An algorithmic solution is then developed that
+produces suboptimal paths much quicker than a pebble motion solver.
+Furthermore, informed search-based methods are proposed for finding
+high-quality solutions. The efficiency and desirable scalability of the methods
+is demonstrated in simulation.
+
+
+Probabilistic completeness of RRT for geometric and kinodynamic planning
+  with forward propagation
+
+  The Rapidly-exploring Random Tree (RRT) algorithm has been one of the most
+prevalent and popular motion-planning techniques for two decades now.
+Surprisingly, in spite of its centrality, there has been an active debate under
+which conditions RRT is probabilistically complete. We provide two new proofs
+of probabilistic completeness (PC) of RRT with a reduced set of assumptions.
+The first one for the purely geometric setting, where we only require that the
+solution path has a certain clearance from the obstacles. For the kinodynamic
+case with forward propagation of random controls and duration, we only consider
+in addition mild Lipschitz-continuity conditions. These proofs fill a gap in
+the study of RRT itself. They also lay sound foundations for a variety of more
+recent and alternative sampling-based methods, whose PC property relies on that
+of RRT.
+
+
+Adaptive Tensegrity Locomotion on Rough Terrain via Reinforcement
+  Learning
+
+  The dynamical properties of tensegrity robots give them appealing ruggedness
+and adaptability, but present major challenges with respect to locomotion
+control. Due to high-dimensionality and complex contact responses, data-driven
+approaches are apt for producing viable feedback policies. Guided Policy Search
+(GPS), a sample-efficient and model-free hybrid framework for optimization and
+reinforcement learning, has recently been used to produce periodic locomotion
+for a spherical 6-bar tensegrity robot on flat or slightly varied surfaces.
+This work provides an extension to non-periodic locomotion and achieves rough
+terrain traversal, which requires more broadly varied, adaptive, and
+non-periodic rover behavior. The contribution alters the control optimization
+step of GPS, which locally fits and exploits surrogate models of the dynamics,
+and employs the existing supervised learning step. The proposed solution
+incorporates new processes to ensure effective local modeling despite the
+disorganized nature of sample data in rough terrain locomotion. Demonstrations
+in simulation reveal that the resulting controller sustains the highly adaptive
+behavior necessary to reliably traverse rough terrain.
+
+
+Sampling-based Roadmap Planners are Probably Near-Optimal after Finite
+  Computation
+
+  Sampling-based motion planners have proven to be efficient solutions to a
+variety of high-dimensional, geometrically complex motion planning problems
+with applications in several domains. The traditional view of these approaches
+is that they solve challenges efficiently by giving up formal guarantees and
+instead attain asymptotic properties in terms of completeness and optimality.
+Recent work has argued based on Monte Carlo experiments that these approaches
+also exhibit desirable probabilistic properties in terms of completeness and
+optimality after finite computation. The current paper formalizes these
+guarantees. It proves a formal bound on the probability that solutions returned
+by asymptotically optimal roadmap-based methods (e.g., PRM*) are within a bound
+of the optimal path length I* with clearance {\epsilon} after a finite
+iteration n. This bound has the form P(|In - I* | {\leq} {\delta}I*) {\leq}
+Psuccess, where {\delta} is an error term for the length a path in the PRM*
+graph, In. This bound is proven for general dimension Euclidean spaces and
+evaluated in simulation. A discussion on how this bound can be used in
+practice, as well as bounds for sparse roadmaps are also provided.
+
+
+Asymptotically Optimal Sampling-based Kinodynamic Planning
+
+  Sampling-based algorithms are viewed as practical solutions for
+high-dimensional motion planning. Recent progress has taken advantage of random
+geometric graph theory to show how asymptotic optimality can also be achieved
+with these methods. Achieving this desirable property for systems with dynamics
+requires solving a two-point boundary value problem (BVP) in the state space of
+the underlying dynamical system. It is difficult, however, if not impractical,
+to generate a BVP solver for a variety of important dynamical models of robots
+or physically simulated ones. Thus, an open challenge was whether it was even
+possible to achieve optimality guarantees when planning for systems without
+access to a BVP solver. This work resolves the above question and describes how
+to achieve asymptotic optimality for kinodynamic planning using incremental
+sampling-based planners by introducing a new rigorous framework. Two new
+methods, Stable Sparse-RRT (SST) and SST*, result from this analysis, which are
+asymptotically near-optimal and optimal, respectively. The techniques are shown
+to converge fast to high-quality paths, while they maintain only a sparse set
+of samples, which makes them computationally efficient. The good performance of
+the planners is confirmed by experimental results using dynamical systems
+benchmarks, as well as physically simulated robots.
+
+
+A Self-supervised Learning System for Object Detection using Physics
+  Simulation and Multi-view Pose Estimation
+
+  Progress has been achieved recently in object detection given advancements in
+deep learning. Nevertheless, such tools typically require a large amount of
+training data and significant manual effort to label objects. This limits their
+applicability in robotics, where solutions must scale to a large number of
+objects and variety of conditions. This work proposes an autonomous process for
+training a Convolutional Neural Network (CNN) for object detection and pose
+estimation in robotic setups. The focus is on detecting objects placed in
+cluttered, tight environments, such as a shelf with multiple objects. In
+particular, given access to 3D object models, several aspects of the
+environment are physically simulated. The models are placed in physically
+realistic poses with respect to their environment to generate a labeled
+synthetic dataset. To further improve object detection, the network self-trains
+over real images that are labeled using a robust multi-view pose estimation
+process. The proposed training process is evaluated on several existing
+datasets and on a dataset collected for this paper with a Motoman robotic arm.
+Results show that the proposed approach outperforms popular training processes
+relying on synthetic - but not physically realistic - data and manual
+annotation. The key contributions are the incorporation of physical reasoning
+in the synthetic data generation process and the automation of the annotation
+process over real images.
+
+
+High-Quality Tabletop Rearrangement with Overhand Grasps: Hardness
+  Results and Fast Methods
+
+  This paper studies the underlying combinatorial structure of a class of
+object rearrangement problems, which appear frequently in applications. The
+problems involve multiple, similar-geometry objects placed on a flat,
+horizontal surface, where a robot can approach them from above and perform
+pick-and-place operations to rearrange them. The paper considers both the case
+where the start and goal object poses overlap, and where they do not. For
+overlapping poses, the primary objective is to minimize the number of
+pick-and-place actions and then to minimize the distance traveled by the
+end-effector. For the non-overlapping case, the objective is solely to minimize
+the end-effector distance. While such problems do not involve all the
+complexities of general rearrangement, they remain computationally hard
+challenges in both cases. This is shown through two-way reductions between
+well-understood, hard combinatorial challenges and these rearrangement
+problems. The benefit of the reduction is that there are well studied
+algorithms for solving these well-established combinatorial challenges. These
+algorithms can be very efficient in practice despite the hardness results. The
+paper builds on these reduction results to propose an algorithmic pipeline for
+dealing with the rearrangement problems. Experimental evaluation shows that the
+proposed pipeline achieves high-quality paths with regards to the optimization
+objectives. Furthermore, it exhibits highly desirable scalability as the number
+of objects increases in both the overlapping and non-overlapping setups.
+
+
+Fast Model Identification via Physics Engines for Data-Efficient Policy
+  Search
+
+  This paper presents a method for identifying mechanical parameters of robots
+or objects, such as their mass and friction coefficients. Key features are the
+use of off-the-shelf physics engines and the adaptation of a Bayesian
+optimization technique towards minimizing the number of real-world experiments
+needed for model-based reinforcement learning. The proposed framework
+reproduces in a physics engine experiments performed on a real robot and
+optimizes the model's mechanical parameters so as to match real-world
+trajectories. The optimized model is then used for learning a policy in
+simulation, before real-world deployment. It is well understood, however, that
+it is hard to exactly reproduce real trajectories in simulation. Moreover, a
+near-optimal policy can be frequently found with an imperfect model. Therefore,
+this work proposes a strategy for identifying a model that is just good enough
+to approximate the value of a locally optimal policy with a certain confidence,
+instead of wasting effort on identifying the most accurate model. Evaluations,
+performed both in simulation and on a real robotic manipulation task, indicate
+that the proposed strategy results in an overall time-efficient, integrated
+model identification and learning solution, which significantly improves the
+data-efficiency of existing policy search algorithms.
+
+
+Complexity Results and Fast Methods for Optimal Tabletop Rearrangement
+  with Overhand Grasps
+
+  This paper studies the underlying combinatorial structure of a class of
+object rearrangement problems, which appear frequently in applications. The
+problems involve multiple, similar-geometry objects placed on a flat,
+horizontal surface, where a robot can approach them from above and perform
+pick-and-place operations to rearrange them. The paper considers both the case
+where the start and goal object poses overlap, and where they do not. For
+overlapping poses, the primary objective is to minimize the number of
+pick-and-place actions and then to minimize the distance traveled by the
+end-effector. For the non-overlapping case, the objective is solely to minimize
+the travel distance of the end-effector. While such problems do not involve all
+the complexities of general rearrangement, they remain computationally hard in
+both cases. This is shown through reductions from well-understood, hard
+combinatorial challenges to these rearrangement problems. The reductions are
+also shown to hold in the reverse direction, which enables the convenient
+application on rearrangement of well studied algorithms. These algorithms can
+be very efficient in practice despite the hardness results. The paper builds on
+these reduction results to propose an algorithmic pipeline for dealing with the
+rearrangement problems. Experimental evaluation, including hardware-based
+trials, shows that the proposed pipeline computes high-quality paths with
+regards to the optimization objectives. Furthermore, it exhibits highly
+desirable scalability as the number of objects increases in both the
+overlapping and non-overlapping setup.
+
+
+Towards Robust Product Packing with a Minimalistic End-Effector
+
+  Advances in sensor technologies, object detection algorithms, planning
+frameworks and hardware designs have motivated the deployment of robots in
+warehouse automation. A variety of such applications, like order fulfillment or
+packing tasks, require picking objects from unstructured piles and carefully
+arranging them in bins or containers. Desirable solutions need to be low-cost,
+easily deployable and controllable, making minimalistic hardware choices
+desirable. The challenge in designing an effective solution to this problem
+relates to appropriately integrating multiple components, so as to achieve a
+robust pipeline that minimizes failure conditions. The current work proposes a
+complete pipeline for solving such packing tasks, given access only to RGB-D
+data and a single robot arm with a vacuum-based end-effector, which is also
+used as a pushing finger. To achieve the desired level of robustness, three key
+manipulation primitives are identified, which take advantage of the environment
+and simple operations to successfully pack multiple cubic objects. The overall
+approach is demonstrated to be robust to execution and perception errors. The
+impact of each manipulation primitive is evaluated by considering different
+versions of the proposed pipeline, which incrementally introduce reasoning
+about object poses and corrective manipulation actions.
+
+
+dRRT*: Scalable and Informed Asymptotically-Optimal Multi-Robot Motion
+  Planning
+
+  Many exciting robotic applications require multiple robots with many degrees
+of freedom, such as manipulators, to coordinate their motion in a shared
+workspace. Discovering high-quality paths in such scenarios can be achieved, in
+principle, by exploring the composite space of all robots. Sampling-based
+planners do so by building a roadmap or a tree data structure in the
+corresponding configuration space and can achieve asymptotic optimality. The
+hardness of motion planning, however, renders the explicit construction of such
+structures in the composite space of multiple robots impractical. This work
+proposes a scalable solution for such coupled multi-robot problems, which
+provides desirable path-quality guarantees and is also computationally
+efficient. In particular, the proposed \drrtstar\ is an informed,
+asymptotically-optimal extension of a prior sampling-based multi-robot motion
+planner, \drrt. The prior approach introduced the idea of building roadmaps for
+each robot and implicitly searching the tensor product of these structures in
+the composite space. This work identifies the conditions for convergence to
+optimal paths in multi-robot problems, which the prior method was not
+achieving. Building on this analysis, \drrt\ is first properly adapted so as to
+achieve the theoretical guarantees and then further extended so as to make use
+of effective heuristics when searching the composite space of all robots. The
+case where the various robots share some degrees of freedom is also studied.
+Evaluation in simulation indicates that the new algorithm, \drrtstar\,
+converges to high-quality paths quickly and scales to a higher number of robots
+where various alternatives fail. This work also demonstrates the planner's
+capability to solve problems involving multiple real-world robotic arms.
+
+
+A Dataset for Improved RGBD-based Object Detection and Pose Estimation
+  for Warehouse Pick-and-Place
+
+  An important logistics application of robotics involves manipulators that
+pick-and-place objects placed in warehouse shelves. A critical aspect of this
+task corre- sponds to detecting the pose of a known object in the shelf using
+visual data. Solving this problem can be assisted by the use of an RGB-D
+sensor, which also provides depth information beyond visual data. Nevertheless,
+it remains a challenging problem since multiple issues need to be addressed,
+such as low illumination inside shelves, clutter, texture-less and reflective
+objects as well as the limitations of depth sensors. This paper provides a new
+rich data set for advancing the state-of-the-art in RGBD- based 3D object pose
+estimation, which is focused on the challenges that arise when solving
+warehouse pick- and-place tasks. The publicly available data set includes
+thousands of images and corresponding ground truth data for the objects used
+during the first Amazon Picking Challenge at different poses and clutter
+conditions. Each image is accompanied with ground truth information to assist
+in the evaluation of algorithms for object detection. To show the utility of
+the data set, a recent algorithm for RGBD-based pose estimation is evaluated in
+this paper. Based on the measured performance of the algorithm on the data set,
+various modifications and improvements are applied to increase the accuracy of
+detection. These steps can be easily applied to a variety of different
+methodologies for object pose detection and improve performance in the domain
+of warehouse pick-and-place.
+
+
+Improving 6D Pose Estimation of Objects in Clutter via Physics-aware
+  Monte Carlo Tree Search
+
+  This work proposes a process for efficiently searching over combinations of
+individual object 6D pose hypotheses in cluttered scenes, especially in cases
+involving occlusions and objects resting on each other. The initial set of
+candidate object poses is generated from state-of-the-art object detection and
+global point cloud registration techniques. The best-scored pose per object by
+using these techniques may not be accurate due to overlaps and occlusions.
+Nevertheless, experimental indications provided in this work show that object
+poses with lower ranks may be closer to the real poses than ones with high
+ranks according to registration techniques. This motivates a global
+optimization process for improving these poses by taking into account
+scene-level physical interactions between objects. It also implies that the
+Cartesian product of candidate poses for interacting objects must be searched
+so as to identify the best scene-level hypothesis. To perform the search
+efficiently, the candidate poses for each object are clustered so as to reduce
+their number but still keep a sufficient diversity. Then, searching over the
+combinations of candidate object poses is performed through a Monte Carlo Tree
+Search (MCTS) process that uses the similarity between the observed depth image
+of the scene and a rendering of the scene given the hypothesized pose as a
+score that guides the search procedure. MCTS handles in a principled way the
+tradeoff between fine-tuning the most promising poses and exploring new ones,
+by using the Upper Confidence Bound (UCB) technique. Experimental results
+indicate that this process is able to quickly identify in cluttered scenes
+physically-consistent object poses that are significantly closer to ground
+truth compared to poses found by point cloud registration methods.
+
+
+Pushing the Boundaries of Asymptotic Optimality for Sampling-based
+  Roadmaps In Motion And Task Planning
+
+  Sampling-based roadmaps have been popular methods for robot motion and task
+planning, given their generality and effectiveness in high-dimensional
+configuration spaces (C-spaces). Following advances in random geometric graphs,
+a seminal analysis result argued the conditions for asymptotic optimality of
+these approaches. In particular, a connection radius for each new C-space
+sample needs to be in the order of $ \gamma (\log n / n)^{1/d} $, where $n$ is
+the existing number of roadmap nodes and $d$ is the dimensionality of the
+C-space. This prior analysis, as well as subsequent efforts, also specified a
+sufficient lower bound for the constant $\gamma$ for asymptotic optimality. All
+of these results assumed that for a finite number of samples there is a path
+with positive clearance from obstacles. Nevertheless, manipulation task
+planning requires solving problems were the start and the goal lie on the
+boundary of the configuration space. The current work builds on previous work,
+to: a) obtain an estimate of $\gamma$ in terms of a bound on the dispersion of
+the samples; and b) propose the modifications necessary to make asymptotic
+optimality hold when the start and goal lie on the boundary of the C-space
+under certain assumptions regarding the boundary. The last point generalizes
+these properties to manipulation task planning and reduces the method's
+requirements for a connection radius that achieves asymptotic optimality in
+this domain as well as the assumptions regarding the boundary's smoothness
+relative to prior work.
+
+

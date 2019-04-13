@@ -1,0 +1,689 @@
+Dual coordinate solvers for large-scale structural SVMs
+
+  This manuscript describes a method for training linear SVMs (including binary
+SVMs, SVM regression, and structural SVMs) from large, out-of-core training
+datasets. Current strategies for large-scale learning fall into one of two
+camps; batch algorithms which solve the learning problem given a finite
+datasets, and online algorithms which can process out-of-core datasets. The
+former typically requires datasets small enough to fit in memory. The latter is
+often phrased as a stochastic optimization problem; such algorithms enjoy
+strong theoretical properties but often require manual tuned annealing
+schedules, and may converge slowly for problems with large output spaces (e.g.,
+structural SVMs). We discuss an algorithm for an "intermediate" regime in which
+the data is too large to fit in memory, but the active constraints (support
+vectors) are small enough to remain in memory. In this case, one can design
+rather efficient learning algorithms that are as stable as batch algorithms,
+but capable of processing out-of-core datasets. We have developed such a
+MATLAB-based solver and used it to train a collection of recognition systems
+for articulated pose estimation, facial analysis, 3D object recognition, and
+action classification, all with publicly-available code. This writeup describes
+the solver in detail.
+
+
+Egocentric Pose Recognition in Four Lines of Code
+
+  We tackle the problem of estimating the 3D pose of an individual's upper
+limbs (arms+hands) from a chest mounted depth-camera. Importantly, we consider
+pose estimation during everyday interactions with objects. Past work shows that
+strong pose+viewpoint priors and depth-based features are crucial for robust
+performance. In egocentric views, hands and arms are observable within a well
+defined volume in front of the camera. We call this volume an egocentric
+workspace. A notable property is that hand appearance correlates with workspace
+location. To exploit this correlation, we classify arm+hand configurations in a
+global egocentric coordinate frame, rather than a local scanning window. This
+greatly simplify the architecture and improves performance. We propose an
+efficient pipeline which 1) generates synthetic workspace exemplars for
+training using a virtual chest-mounted camera whose intrinsic parameters match
+our physical camera, 2) computes perspective-aware depth features on this
+entire volume and 3) recognizes discrete arm+hand pose classes through a sparse
+multi-class SVM. Our method provides state-of-the-art hand pose recognition
+performance from egocentric RGB-D images in real-time.
+
+
+Depth-based hand pose estimation: methods, data, and challenges
+
+  Hand pose estimation has matured rapidly in recent years. The introduction of
+commodity depth sensors and a multitude of practical applications have spurred
+new advances. We provide an extensive analysis of the state-of-the-art,
+focusing on hand pose estimation from a single depth frame. To do so, we have
+implemented a considerable number of systems, and will release all software and
+evaluation code. We summarize important conclusions here: (1) Pose estimation
+appears roughly solved for scenes with isolated hands. However, methods still
+struggle to analyze cluttered scenes where hands may be interacting with nearby
+objects and surfaces. To spur further progress we introduce a challenging new
+dataset with diverse, cluttered scenes. (2) Many methods evaluate themselves
+with disparate criteria, making comparisons difficult. We define a consistent
+evaluation criteria, rigorously motivated by human experiments. (3) We
+introduce a simple nearest-neighbor baseline that outperforms most existing
+systems. This implies that most systems do not generalize beyond their training
+sets. This also reinforces the under-appreciated point that training data is as
+important as the model itself. We conclude with directions for future progress.
+
+
+Multi-scale recognition with DAG-CNNs
+
+  We explore multi-scale convolutional neural nets (CNNs) for image
+classification. Contemporary approaches extract features from a single output
+layer. By extracting features from multiple layers, one can simultaneously
+reason about high, mid, and low-level features during classification. The
+resulting multi-scale architecture can itself be seen as a feed-forward model
+that is structured as a directed acyclic graph (DAG-CNNs). We use DAG-CNNs to
+learn a set of multiscale features that can be effectively shared between
+coarse and fine-grained classification tasks. While fine-tuning such models
+helps performance, we show that even "off-the-self" multiscale features perform
+quite well. We present extensive analysis and demonstrate state-of-the-art
+classification performance on three standard scene benchmarks (SUN397, MIT67,
+and Scene15). In terms of the heavily benchmarked MIT67 and Scene15 datasets,
+our results reduce the lowest previously-reported error by 23.9% and 9.5%,
+respectively.
+
+
+Do We Need More Training Data?
+
+  Datasets for training object recognition systems are steadily increasing in
+size. This paper investigates the question of whether existing detectors will
+continue to improve as data grows, or saturate in performance due to limited
+model complexity and the Bayes risk associated with the feature spaces in which
+they operate. We focus on the popular paradigm of discriminatively trained
+templates defined on oriented gradient features. We investigate the performance
+of mixtures of templates as the number of mixture components and the amount of
+training data grows. Surprisingly, even with proper treatment of regularization
+and "outliers", the performance of classic mixture models appears to saturate
+quickly ($\sim$10 templates and $\sim$100 positive training examples per
+template). This is not a limitation of the feature space as compositional
+mixtures that share template parameters via parts and that can synthesize new
+templates not encountered during training yield significantly better
+performance. Based on our analysis, we conjecture that the greatest gains in
+detection performance will continue to derive from improved representations and
+learning algorithms that can make efficient use of large datasets.
+
+
+The Open World of Micro-Videos
+
+  Micro-videos are six-second videos popular on social media networks with
+several unique properties. Firstly, because of the authoring process, they
+contain significantly more diversity and narrative structure than existing
+collections of video "snippets". Secondly, because they are often captured by
+hand-held mobile cameras, they contain specialized viewpoints including
+third-person, egocentric, and self-facing views seldom seen in traditional
+produced video. Thirdly, due to to their continuous production and publication
+on social networks, aggregate micro-video content contains interesting
+open-world dynamics that reflects the temporal evolution of tag topics. These
+aspects make micro-videos an appealing well of visual data for developing
+large-scale models for video understanding. We analyze a novel dataset of
+micro-videos labeled with 58 thousand tags. To analyze this data, we introduce
+viewpoint-specific and temporally-evolving models for video understanding,
+defined over state-of-the-art motion and deep visual features. We conclude that
+our dataset opens up new research opportunities for large-scale video analysis,
+novel viewpoints, and open-world dynamics.
+
+
+ActionVLAD: Learning spatio-temporal aggregation for action
+  classification
+
+  In this work, we introduce a new video representation for action
+classification that aggregates local convolutional features across the entire
+spatio-temporal extent of the video. We do so by integrating state-of-the-art
+two-stream networks with learnable spatio-temporal feature aggregation. The
+resulting architecture is end-to-end trainable for whole-video classification.
+We investigate different strategies for pooling across space and time and
+combining signals from the different streams. We find that: (i) it is important
+to pool jointly across space and time, but (ii) appearance and motion streams
+are best aggregated into their own separate representations. Finally, we show
+that our representation outperforms the two-stream base architecture by a large
+margin (13% relative) as well as out-performs other baselines with comparable
+base architectures on HMDB51, UCF101, and Charades video classification
+benchmarks.
+
+
+PixelNet: Towards a General Pixel-level Architecture
+
+  We explore architectures for general pixel-level prediction problems, from
+low-level edge detection to mid-level surface normal estimation to high-level
+semantic segmentation. Convolutional predictors, such as the
+fully-convolutional network (FCN), have achieved remarkable success by
+exploiting the spatial redundancy of neighboring pixels through convolutional
+processing. Though computationally efficient, we point out that such approaches
+are not statistically efficient during learning precisely because spatial
+redundancy limits the information learned from neighboring pixels. We
+demonstrate that (1) stratified sampling allows us to add diversity during
+batch updates and (2) sampled multi-scale features allow us to explore more
+nonlinear predictors (multiple fully-connected layers followed by ReLU) that
+improve overall accuracy. Finally, our objective is to show how a architecture
+can get performance better than (or comparable to) the architectures designed
+for a particular task. Interestingly, our single architecture produces
+state-of-the-art results for semantic segmentation on PASCAL-Context, surface
+normal estimation on NYUDv2 dataset, and edge detection on BSDS without
+contextual post-processing.
+
+
+3D Human Pose Estimation = 2D Pose Estimation + Matching
+
+  We explore 3D human pose estimation from a single RGB image. While many
+approaches try to directly predict 3D pose from image measurements, we explore
+a simple architecture that reasons through intermediate 2D pose predictions.
+Our approach is based on two key observations (1) Deep neural nets have
+revolutionized 2D pose estimation, producing accurate 2D predictions even for
+poses with self occlusions. (2) Big-data sets of 3D mocap data are now readily
+available, making it tempting to lift predicted 2D poses to 3D through simple
+memorization (e.g., nearest neighbors). The resulting architecture is trivial
+to implement with off-the-shelf 2D pose estimation systems and 3D mocap
+libraries. Importantly, we demonstrate that such methods outperform almost all
+state-of-the-art 3D pose estimation systems, most of which directly try to
+regress 3D pose from 2D measurements.
+
+
+PixelNet: Representation of the pixels, by the pixels, and for the
+  pixels
+
+  We explore design principles for general pixel-level prediction problems,
+from low-level edge detection to mid-level surface normal estimation to
+high-level semantic segmentation. Convolutional predictors, such as the
+fully-convolutional network (FCN), have achieved remarkable success by
+exploiting the spatial redundancy of neighboring pixels through convolutional
+processing. Though computationally efficient, we point out that such approaches
+are not statistically efficient during learning precisely because spatial
+redundancy limits the information learned from neighboring pixels. We
+demonstrate that stratified sampling of pixels allows one to (1) add diversity
+during batch updates, speeding up learning; (2) explore complex nonlinear
+predictors, improving accuracy; and (3) efficiently train state-of-the-art
+models tabula rasa (i.e., "from scratch") for diverse pixel-labeling tasks. Our
+single architecture produces state-of-the-art results for semantic segmentation
+on PASCAL-Context dataset, surface normal estimation on NYUDv2 depth dataset,
+and edge detection on BSDS.
+
+
+Tracking as Online Decision-Making: Learning a Policy from Streaming
+  Videos with Reinforcement Learning
+
+  We formulate tracking as an online decision-making process, where a tracking
+agent must follow an object despite ambiguous image frames and a limited
+computational budget. Crucially, the agent must decide where to look in the
+upcoming frames, when to reinitialize because it believes the target has been
+lost, and when to update its appearance model for the tracked object. Such
+decisions are typically made heuristically. Instead, we propose to learn an
+optimal decision-making policy by formulating tracking as a partially
+observable decision-making process (POMDP). We learn policies with deep
+reinforcement learning algorithms that need supervision (a reward signal) only
+when the track has gone awry. We demonstrate that sparse rewards allow us to
+quickly train on massive datasets, several orders of magnitude more than past
+work. Interestingly, by treating the data source of Internet videos as
+unlimited streams, we both learn and evaluate our trackers in a single, unified
+computational stream.
+
+
+PixelNN: Example-based Image Synthesis
+
+  We present a simple nearest-neighbor (NN) approach that synthesizes
+high-frequency photorealistic images from an "incomplete" signal such as a
+low-resolution image, a surface normal map, or edges. Current state-of-the-art
+deep generative models designed for such conditional image synthesis lack two
+important things: (1) they are unable to generate a large set of diverse
+outputs, due to the mode collapse problem. (2) they are not interpretable,
+making it difficult to control the synthesized output. We demonstrate that NN
+approaches potentially address such limitations, but suffer in accuracy on
+small datasets. We design a simple pipeline that combines the best of both
+worlds: the first stage uses a convolutional neural network (CNN) to maps the
+input to a (overly-smoothed) image, and the second stage uses a pixel-wise
+nearest neighbor method to map the smoothed output to multiple high-quality,
+high-frequency outputs in a controllable manner. We demonstrate our approach
+for various input modalities, and for various domains ranging from human faces
+to cats-and-dogs to shoes and handbags.
+
+
+Attentional Pooling for Action Recognition
+
+  We introduce a simple yet surprisingly powerful model to incorporate
+attention in action recognition and human object interaction tasks. Our
+proposed attention module can be trained with or without extra supervision, and
+gives a sizable boost in accuracy while keeping the network size and
+computational cost nearly the same. It leads to significant improvements over
+state of the art base architecture on three standard action recognition
+benchmarks across still images and videos, and establishes new state of the art
+on MPII dataset with 12.5% relative improvement. We also perform an extensive
+analysis of our attention module both empirically and analytically. In terms of
+the latter, we introduce a novel derivation of bottom-up and top-down attention
+as low-rank approximations of bilinear pooling methods (typically used for
+fine-grained classification). From this perspective, our attention formulation
+suggests a novel characterization of action recognition as a fine-grained
+recognition problem.
+
+
+Patch Correspondences for Interpreting Pixel-level CNNs
+
+  We present compositional nearest neighbors (CompNN), a simple approach to
+visually interpreting distributed representations learned by a convolutional
+neural network (CNN) for pixel-level tasks (e.g., image synthesis and
+segmentation). It does so by reconstructing both a CNN's input and output image
+by copy-pasting corresponding patches from the training set with similar
+feature embeddings. To do so efficiently, it makes of a patch-match-based
+algorithm that exploits the fact that the patch representations learned by a
+CNN for pixel level tasks vary smoothly. Finally, we show that CompNN can be
+used to establish semantic correspondences between two images and control
+properties of the output image by modifying the images contained in the
+training set. We present qualitative and quantitative experiments for semantic
+segmentation and image-to-image translation that demonstrate that CompNN is a
+good tool for interpreting the embeddings learned by pixel-level CNNs.
+
+
+Active Learning with Partial Feedback
+
+  In the large-scale multiclass setting, assigning labels often consists of
+answering multiple questions to drill down through a hierarchy of classes.
+Here, the labor required per annotation scales with the number of questions
+asked. We propose active learning with partial feedback. In this setup, the
+learner asks the annotator if a chosen example belongs to a (possibly
+composite) chosen class. The answer eliminates some classes, leaving the agent
+with a partial label. Success requires (i) a sampling strategy to choose
+(example, class) pairs, and (ii) learning from partial labels. Experiments on
+the TinyImageNet dataset demonstrate that our most effective method achieves a
+26% relative improvement (8.1% absolute) in top1 classification accuracy for a
+250k (or 30%) binary question budget, compared to a naive baseline. Our work
+may also impact traditional data annotation. For example, our best method fully
+annotates TinyImageNet with only 482k (with EDC though, ERC is 491) binary
+questions (vs 827k for naive method).
+
+
+Cross-Domain Image Matching with Deep Feature Maps
+
+  We investigate the problem of automatically determining what type of shoe
+left an impression found at a crime scene. This recognition problem is made
+difficult by the variability in types of crime scene evidence (ranging from
+traces of dust or oil on hard surfaces to impressions made in soil) and the
+lack of comprehensive databases of shoe outsole tread patterns. We find that
+mid-level features extracted by pre-trained convolutional neural nets are
+surprisingly effective descriptors for this specialized domains. However, the
+choice of similarity measure for matching exemplars to a query image is
+essential to good performance. For matching multi-channel deep features, we
+propose the use of multi-channel normalized cross-correlation and analyze its
+effectiveness. Our proposed metric significantly improves performance in
+matching crime scene shoeprints to laboratory test impressions. We also show
+its effectiveness in other cross-domain image retrieval problems: matching
+facade images to segmentation labels and aerial photos to map images. Finally,
+we introduce a discriminatively trained variant and fine-tune our system
+through our proposed metric, obtaining state-of-the-art performance.
+
+
+Active Testing: An Efficient and Robust Framework for Estimating
+  Accuracy
+
+  Much recent work on visual recognition aims to scale up learning to massive,
+noisily-annotated datasets. We address the problem of scaling- up the
+evaluation of such models to large-scale datasets with noisy labels. Current
+protocols for doing so require a human user to either vet (re-annotate) a small
+fraction of the test set and ignore the rest, or else correct errors in
+annotation as they are found through manual inspection of results. In this
+work, we re-formulate the problem as one of active testing, and examine
+strategies for efficiently querying a user so as to obtain an accu- rate
+performance estimate with minimal vetting. We demonstrate the effectiveness of
+our proposed active testing framework on estimating two performance metrics,
+Precision@K and mean Average Precision, for two popular computer vision tasks,
+multi-label classification and instance segmentation. We further show that our
+approach is able to save significant human annotation effort and is more robust
+than alternative evaluation protocols.
+
+
+Recycle-GAN: Unsupervised Video Retargeting
+
+  We introduce a data-driven approach for unsupervised video retargeting that
+translates content from one domain to another while preserving the style native
+to a domain, i.e., if contents of John Oliver's speech were to be transferred
+to Stephen Colbert, then the generated content/speech should be in Stephen
+Colbert's style. Our approach combines both spatial and temporal information
+along with adversarial losses for content translation and style preservation.
+In this work, we first study the advantages of using spatiotemporal constraints
+over spatial constraints for effective retargeting. We then demonstrate the
+proposed approach for the problems where information in both space and time
+matters such as face-to-face translation, flower-to-flower, wind and cloud
+synthesis, sunrise and sunset.
+
+
+DistInit: Learning Video Representations without a Single Labeled Video
+
+  Video recognition models have progressed significantly over the past few
+years, evolving from shallow classifiers trained on hand-crafted features to
+deep spatiotemporal networks. However, labeled video data required to train
+such models has not been able to keep up with the ever increasing depth and
+sophistication of these networks. In this work we propose an alternative
+approach to learning video representations that requires no semantically
+labeled videos, and instead leverages the years of effort in collecting and
+labeling large and clean still-image datasets. We do so by using
+state-of-the-art models pre-trained on image datasets as "teachers" to train
+video models in a distillation framework. We demonstrate that our method learns
+truly spatiotemporal features, despite being trained only using supervision
+from still-image networks. Moreover, it learns good representations across
+different input modalities, using completely uncurated raw video data sources
+and with different 2D teacher models. Our method obtains strong transfer
+performance, outperforming standard techniques for bootstrapping video
+architectures from image-based models and obtains competitive performance with
+state-of-the-art approaches for video action recognition.
+
+
+Towards Segmenting Everything That Moves
+
+  Video analysis is the task of perceiving the world as it changes. Often,
+though, most of the world doesn't change all that much: it's boring. For many
+applications such as action detection or robotic interaction, segmenting all
+moving objects is a crucial first step. While this problem has been
+well-studied in the field of spatiotemporal segmentation, virtually none of the
+prior works use learning-based approaches, despite significant advances in
+single-frame instance segmentation. We propose the first deep-learning based
+approach for video instance segmentation. Our two-stream models' architecture
+is based on Mask R-CNN, but additionally takes optical flow as input to
+identify moving objects. It then combines the motion and appearance cues to
+correct motion estimation mistakes and capture the full extent of objects. We
+show state-of-the-art results on the Freiburg Berkeley Motion Segmentation
+dataset by a wide margin. One potential worry with learning-based methods is
+that they might overfit to the particular type of objects that they have been
+trained on. While current recognition systems tend to be limited to a "closed
+world" of N objects on which they are trained, our model seems to segment
+almost anything that moves.
+
+
+Microsoft COCO: Common Objects in Context
+
+  We present a new dataset with the goal of advancing the state-of-the-art in
+object recognition by placing the question of object recognition in the context
+of the broader question of scene understanding. This is achieved by gathering
+images of complex everyday scenes containing common objects in their natural
+context. Objects are labeled using per-instance segmentations to aid in precise
+object localization. Our dataset contains photos of 91 objects types that would
+be easily recognizable by a 4 year old. With a total of 2.5 million labeled
+instances in 328k images, the creation of our dataset drew upon extensive crowd
+worker involvement via novel user interfaces for category detection, instance
+spotting and instance segmentation. We present a detailed statistical analysis
+of the dataset in comparison to PASCAL, ImageNet, and SUN. Finally, we provide
+baseline performance analysis for bounding box and segmentation detection
+results using a Deformable Parts Model.
+
+
+3D Hand Pose Detection in Egocentric RGB-D Images
+
+  We focus on the task of everyday hand pose estimation from egocentric
+viewpoints. For this task, we show that depth sensors are particularly
+informative for extracting near-field interactions of the camera wearer with
+his/her environment. Despite the recent advances in full-body pose estimation
+using Kinect-like sensors, reliable monocular hand pose estimation in RGB-D
+images is still an unsolved problem. The problem is considerably exacerbated
+when analyzing hands performing daily activities from a first-person viewpoint,
+due to severe occlusions arising from object manipulations and a limited
+field-of-view. Our system addresses these difficulties by exploiting strong
+priors over viewpoint and pose in a discriminative tracking-by-detection
+framework. Our priors are operationalized through a photorealistic synthetic
+model of egocentric scenes, which is used to generate training data for
+learning depth-based pose classifiers. We evaluate our approach on an annotated
+dataset of real egocentric object manipulation scenes and compare to both
+commercial and academic approaches. Our method provides state-of-the-art
+performance for both hand detection and pose estimation in egocentric RGB-D
+images.
+
+
+Predictive-Corrective Networks for Action Detection
+
+  While deep feature learning has revolutionized techniques for static-image
+understanding, the same does not quite hold for video processing. Architectures
+and optimization techniques used for video are largely based off those for
+static images, potentially underutilizing rich video information. In this work,
+we rethink both the underlying network architecture and the stochastic learning
+paradigm for temporal data. To do so, we draw inspiration from classic theory
+on linear dynamic systems for modeling time series. By extending such models to
+include nonlinear mappings, we derive a series of novel recurrent neural
+networks that sequentially make top-down predictions about the future and then
+correct those predictions with bottom-up observations. Predictive-corrective
+networks have a number of desirable properties: (1) they can adaptively focus
+computation on "surprising" frames where predictions require large corrections,
+(2) they simplify learning in that only "residual-like" corrective terms need
+to be learned over time and (3) they naturally decorrelate an input data stream
+in a hierarchical fashion, producing a more reliable signal for learning at
+each layer of a network. We provide an extensive analysis of our lightweight
+and interpretable framework, and demonstrate that our model is competitive with
+the two-stream network on three challenging datasets without the need for
+computationally expensive optical flow.
+
+
+Bottom-Up and Top-Down Reasoning with Hierarchical Rectified Gaussians
+
+  Convolutional neural nets (CNNs) have demonstrated remarkable performance in
+recent history. Such approaches tend to work in a unidirectional bottom-up
+feed-forward fashion. However, practical experience and biological evidence
+tells us that feedback plays a crucial role, particularly for detailed spatial
+understanding tasks. This work explores bidirectional architectures that also
+reason with top-down feedback: neural units are influenced by both lower and
+higher-level units.
+  We do so by treating units as rectified latent variables in a quadratic
+energy function, which can be seen as a hierarchical Rectified Gaussian model
+(RGs). We show that RGs can be optimized with a quadratic program (QP), that
+can in turn be optimized with a recurrent neural network (with rectified linear
+units). This allows RGs to be trained with GPU-optimized gradient descent. From
+a theoretical perspective, RGs help establish a connection between CNNs and
+hierarchical probabilistic models. From a practical perspective, RGs are well
+suited for detailed spatial tasks that can benefit from top-down reasoning. We
+illustrate them on the challenging task of keypoint localization under
+occlusions, where local bottom-up evidence may be misleading. We demonstrate
+state-of-the-art results on challenging benchmarks.
+
+
+Finding Tiny Faces
+
+  Though tremendous strides have been made in object recognition, one of the
+remaining open challenges is detecting small objects. We explore three aspects
+of the problem in the context of finding small faces: the role of scale
+invariance, image resolution, and contextual reasoning. While most recognition
+approaches aim to be scale-invariant, the cues for recognizing a 3px tall face
+are fundamentally different than those for recognizing a 300px tall face. We
+take a different approach and train separate detectors for different scales. To
+maintain efficiency, detectors are trained in a multi-task fashion: they make
+use of features extracted from multiple layers of single (deep) feature
+hierarchy. While training detectors for large objects is straightforward, the
+crucial challenge remains training detectors for small objects. We show that
+context is crucial, and define templates that make use of massively-large
+receptive fields (where 99% of the template extends beyond the object of
+interest). Finally, we explore the role of scale in pre-trained deep networks,
+providing ways to extrapolate networks tuned for limited scales to rather
+extreme ranges. We demonstrate state-of-the-art results on
+massively-benchmarked face datasets (FDDB and WIDER FACE). In particular, when
+compared to prior art on WIDER FACE, our results reduce error by a factor of 2
+(our models produce an AP of 82% while prior art ranges from 29-64%).
+
+
+Tinkering Under the Hood: Interactive Zero-Shot Learning with Net
+  Surgery
+
+  We consider the task of visual net surgery, in which a CNN can be
+reconfigured without extra data to recognize novel concepts that may be omitted
+from the training set. While most prior work make use of linguistic cues for
+such "zero-shot" learning, we do so by using a pictorial language
+representation of the training set, implicitly learned by a CNN, to generalize
+to new classes. To this end, we introduce a set of visualization techniques
+that better reveal the activation patterns and relations between groups of CNN
+filters. We next demonstrate that knowledge of pictorial languages can be used
+to rewire certain CNN neurons into a part model, which we call a pictorial
+language classifier. We demonstrate the robustness of simple PLCs by applying
+them in a weakly supervised manner: labeling unlabeled concepts for visual
+classes present in the training data. Specifically we show that a PLC built on
+top of a CNN trained for ImageNet classification can localize humans in Graz-02
+and determine the pose of birds in PASCAL-VOC without extra labeled data or
+additional training. We then apply PLCs in an interactive zero-shot manner,
+demonstrating that pictorial languages are expressive enough to detect a set of
+visual classes in MS-COCO that never appear in the ImageNet training set.
+
+
+Need for Speed: A Benchmark for Higher Frame Rate Object Tracking
+
+  In this paper, we propose the first higher frame rate video dataset (called
+Need for Speed - NfS) and benchmark for visual object tracking. The dataset
+consists of 100 videos (380K frames) captured with now commonly available
+higher frame rate (240 FPS) cameras from real world scenarios. All frames are
+annotated with axis aligned bounding boxes and all sequences are manually
+labelled with nine visual attributes - such as occlusion, fast motion,
+background clutter, etc. Our benchmark provides an extensive evaluation of many
+recent and state-of-the-art trackers on higher frame rate sequences. We ranked
+each of these trackers according to their tracking accuracy and real-time
+performance. One of our surprising conclusions is that at higher frame rates,
+simple trackers such as correlation filters outperform complex methods based on
+deep networks. This suggests that for practical applications (such as in
+robotics or embedded vision), one needs to carefully tradeoff bandwidth
+constraints associated with higher frame rate acquisition, computational costs
+of real-time analysis, and the required application accuracy. Our dataset and
+benchmark allows for the first time (to our knowledge) systematic exploration
+of such issues, and will be made available to allow for further research in
+this space.
+
+
+Expecting the Unexpected: Training Detectors for Unusual Pedestrians
+  with Adversarial Imposters
+
+  As autonomous vehicles become an every-day reality, high-accuracy pedestrian
+detection is of paramount practical importance. Pedestrian detection is a
+highly researched topic with mature methods, but most datasets focus on common
+scenes of people engaged in typical walking poses on sidewalks. But performance
+is most crucial for dangerous scenarios, such as children playing in the street
+or people using bicycles/skateboards in unexpected ways. Such "in-the-tail"
+data is notoriously hard to observe, making both training and testing
+difficult. To analyze this problem, we have collected a novel annotated dataset
+of dangerous scenarios called the Precarious Pedestrian dataset. Even given a
+dedicated collection effort, it is relatively small by contemporary standards
+(around 1000 images). To allow for large-scale data-driven learning, we explore
+the use of synthetic data generated by a game engine. A significant challenge
+is selected the right "priors" or parameters for synthesis: we would like
+realistic data with poses and object configurations that mimic true Precarious
+Pedestrians. Inspired by Generative Adversarial Networks (GANs), we generate a
+massive amount of synthetic data and train a discriminative classifier to
+select a realistic subset, which we deem the Adversarial Imposters. We
+demonstrate that this simple pipeline allows one to synthesize realistic
+training data by making use of rendering/animation engines within a GAN
+framework. Interestingly, we also demonstrate that such data can be used to
+rank algorithms, suggesting that Adversarial Imposters can also be used for
+"in-the-tail" validation at test-time, a notoriously difficult challenge for
+real-world deployment.
+
+
+Comparing Apples and Oranges: Off-Road Pedestrian Detection on the NREC
+  Agricultural Person-Detection Dataset
+
+  Person detection from vehicles has made rapid progress recently with the
+advent of multiple highquality datasets of urban and highway driving, yet no
+large-scale benchmark is available for the same problem in off-road or
+agricultural environments. Here we present the NREC Agricultural
+Person-Detection Dataset to spur research in these environments. It consists of
+labeled stereo video of people in orange and apple orchards taken from two
+perception platforms (a tractor and a pickup truck), along with vehicle
+position data from RTK GPS. We define a benchmark on part of the dataset that
+combines a total of 76k labeled person images and 19k sampled person-free
+images. The dataset highlights several key challenges of the domain, including
+varying environment, substantial occlusion by vegetation, people in motion and
+in non-standard poses, and people seen from a variety of distances; meta-data
+are included to allow targeted evaluation of each of these effects. Finally, we
+present baseline detection performance results for three leading approaches
+from urban pedestrian detection and our own convolutional neural network
+approach that benefits from the incorporation of additional image context. We
+show that the success of existing approaches on urban data does not transfer
+directly to this domain.
+
+
+Unconstrained Face Detection and Open-Set Face Recognition Challenge
+
+  Face detection and recognition benchmarks have shifted toward more difficult
+environments. The challenge presented in this paper addresses the next step in
+the direction of automatic detection and identification of people from outdoor
+surveillance cameras. While face detection has shown remarkable success in
+images collected from the web, surveillance cameras include more diverse
+occlusions, poses, weather conditions and image blur. Although face
+verification or closed-set face identification have surpassed human
+capabilities on some datasets, open-set identification is much more complex as
+it needs to reject both unknown identities and false accepts from the face
+detector. We show that unconstrained face detection can approach high detection
+rates albeit with moderate false accept rates. By contrast, open-set face
+recognition is currently weak and requires much more attention.
+
+
+Learning Policies for Adaptive Tracking with Deep Feature Cascades
+
+  Visual object tracking is a fundamental and time-critical vision task. Recent
+years have seen many shallow tracking methods based on real-time pixel-based
+correlation filters, as well as deep methods that have top performance but need
+a high-end GPU. In this paper, we learn to improve the speed of deep trackers
+without losing accuracy. Our fundamental insight is to take an adaptive
+approach, where easy frames are processed with cheap features (such as pixel
+values), while challenging frames are processed with invariant but expensive
+deep features. We formulate the adaptive tracking problem as a decision-making
+process, and learn an agent to decide whether to locate objects with high
+confidence on an early layer, or continue processing subsequent layers of a
+network. This significantly reduces the feed-forward cost for easy frames with
+distinct or slow-moving objects. We train the agent offline in a reinforcement
+learning fashion, and further demonstrate that learning all deep layers (so as
+to provide good features for adaptive tracking) can lead to near real-time
+average tracking speed of 23 fps on a single CPU while achieving
+state-of-the-art performance. Perhaps most tellingly, our approach provides a
+100X speedup for almost 50% of the time, indicating the power of an adaptive
+approach.
+
+
+Brute-Force Facial Landmark Analysis With A 140,000-Way Classifier
+
+  We propose a simple approach to visual alignment, focusing on the
+illustrative task of facial landmark estimation. While most prior work treats
+this as a regression problem, we instead formulate it as a discrete $K$-way
+classification task, where a classifier is trained to return one of $K$
+discrete alignments. One crucial benefit of a classifier is the ability to
+report back a (softmax) distribution over putative alignments. We demonstrate
+that this distribution is a rich representation that can be marginalized (to
+generate uncertainty estimates over groups of landmarks) and conditioned on (to
+incorporate top-down context, provided by temporal constraints in a video
+stream or an interactive human user). Such capabilities are difficult to
+integrate into classic regression-based approaches. We study performance as a
+function of the number of classes $K$, including the extreme "exemplar class"
+setting where $K$ is equal to the number of training examples (140K in our
+setting). Perhaps surprisingly, we show that classifiers can still be learned
+in this setting. When compared to prior work in classification, our $K$ is
+unprecedentedly large, including many "fine-grained" classes that are very
+similar. We address these issues by using a multi-label loss function that
+allows for training examples to be non-uniformly shared across discrete
+classes. We perform a comprehensive experimental analysis of our method on
+standard benchmarks, demonstrating state-of-the-art results for facial
+alignment in videos.
+
+
+Online Model Distillation for Efficient Video Inference
+
+  High-quality computer vision models typically address the problem of
+understanding the general distribution of real-world images. However, most
+cameras observe only a very small fraction of this distribution. This offers
+the possibility of achieving more efficient inference by specializing compact,
+low-cost models to the specific distribution of frames observed by a single
+camera. In this paper, we employ the technique of model distillation
+(supervising a low-cost student model using the output of a high-cost teacher)
+to specialize accurate, low-cost semantic segmentation models to a target video
+stream. Rather than learn a specialized student model on offline data from the
+video stream, we train the student in an online fashion on the live video,
+intermittently running the teacher to provide a target for learning. Online
+model distillation yields semantic segmentation models that closely approximate
+their Mask R-CNN teacher with 7 to 17x lower inference runtime cost (11 to 26x
+in FLOPs), even when the target video's distribution is non-stationary. Our
+method requires no offline pretraining on the target video stream, and achieves
+higher accuracy and lower cost than solutions based on flow or video object
+segmentation. We also provide a new video dataset for evaluating the efficiency
+of inference over long running video streams.
+
+
+Photo-Sketching: Inferring Contour Drawings from Images
+
+  Edges, boundaries and contours are important subjects of study in both
+computer graphics and computer vision. On one hand, they are the 2D elements
+that convey 3D shapes, on the other hand, they are indicative of occlusion
+events and thus separation of objects or semantic concepts. In this paper, we
+aim to generate contour drawings, boundary-like drawings that capture the
+outline of the visual scene. Prior art often cast this problem as boundary
+detection. However, the set of visual cues presented in the boundary detection
+output are different from the ones in contour drawings, and also the artistic
+style is ignored. We address these issues by collecting a new dataset of
+contour drawings and proposing a learning-based method that resolves diversity
+in the annotation and, unlike boundary detectors, can work with imperfect
+alignment of the annotation and the actual ground truth. Our method surpasses
+previous methods quantitatively and qualitatively. Surprisingly, when our model
+fine-tunes on BSDS500, we achieve the state-of-the-art performance in salient
+boundary detection, suggesting contour drawing might be a scalable alternative
+to boundary annotation, which at the same time is easier and more interesting
+for annotators to draw.
+
+

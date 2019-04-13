@@ -1,0 +1,141 @@
+Block-Sparse Recovery via Convex Optimization
+
+  Given a dictionary that consists of multiple blocks and a signal that lives
+in the range space of only a few blocks, we study the problem of finding a
+block-sparse representation of the signal, i.e., a representation that uses the
+minimum number of blocks. Motivated by signal/image processing and computer
+vision applications, such as face recognition, we consider the block-sparse
+recovery problem in the case where the number of atoms in each block is
+arbitrary, possibly much larger than the dimension of the underlying subspace.
+To find a block-sparse representation of a signal, we propose two classes of
+non-convex optimization programs, which aim to minimize the number of nonzero
+coefficient blocks and the number of nonzero reconstructed vectors from the
+blocks, respectively. Since both classes of problems are NP-hard, we propose
+convex relaxations and derive conditions under which each class of the convex
+programs is equivalent to the original non-convex formulation. Our conditions
+depend on the notions of mutual and cumulative subspace coherence of a
+dictionary, which are natural generalizations of existing notions of mutual and
+cumulative coherence. We evaluate the performance of the proposed convex
+programs through simulations as well as real experiments on face recognition.
+We show that treating the face recognition problem as a block-sparse recovery
+problem improves the state-of-the-art results by 10% with only 25% of the
+training data.
+
+
+Approximate Subspace-Sparse Recovery with Corrupted Data via Constrained
+  $\ell_1$-Minimization
+
+  High-dimensional data often lie in low-dimensional subspaces corresponding to
+different classes they belong to. Finding sparse representations of data points
+in a dictionary built using the collection of data helps to uncover
+low-dimensional subspaces and address problems such as clustering,
+classification, subset selection and more. In this paper, we address the
+problem of recovering sparse representations for noisy data points in a
+dictionary whose columns correspond to corrupted data lying close to a union of
+subspaces. We consider a constrained $\ell_1$-minimization and study conditions
+under which the solution of the proposed optimization satisfies the approximate
+subspace-sparse recovery condition. More specifically, we show that each noisy
+data point, perturbed from a subspace by a noise of the magnitude of
+$\varepsilon$, will be reconstructed using data points from the same subspace
+with a small error of the order of $O(\varepsilon)$ and that the coefficients
+corresponding to data points in other subspaces will be sufficiently small,
+\ie, of the order of $O(\varepsilon)$. We do not impose any randomness
+assumption on the arrangement of subspaces or distribution of data points in
+each subspace. Our framework is based on a novel generalization of the
+null-space property to the setting where data lie in multiple subspaces, the
+number of data points in each subspace exceeds the dimension of the subspace,
+and all data points are corrupted by noise. Moreover, assuming a random
+distribution for data points, we further show that coefficients from the
+desired support not only reconstruct a given point with high accuracy, but also
+have sufficiently large values, \ie, of the order of $O(1)$.
+
+
+Dissimilarity-based Sparse Subset Selection
+
+  Finding an informative subset of a large collection of data points or models
+is at the center of many problems in computer vision, recommender systems,
+bio/health informatics as well as image and natural language processing. Given
+pairwise dissimilarities between the elements of a `source set' and a `target
+set,' we consider the problem of finding a subset of the source set, called
+representatives or exemplars, that can efficiently describe the target set. We
+formulate the problem as a row-sparsity regularized trace minimization problem.
+Since the proposed formulation is, in general, NP-hard, we consider a convex
+relaxation. The solution of our optimization finds representatives and the
+assignment of each element of the target set to each representative, hence,
+obtaining a clustering. We analyze the solution of our proposed optimization as
+a function of the regularization parameter. We show that when the two sets
+jointly partition into multiple groups, our algorithm finds representatives
+from all groups and reveals clustering of the sets. In addition, we show that
+the proposed framework can effectively deal with outliers. Our algorithm works
+with arbitrary dissimilarities, which can be asymmetric or violate the triangle
+inequality. To efficiently implement our algorithm, we consider an Alternating
+Direction Method of Multipliers (ADMM) framework, which results in quadratic
+complexity in the problem size. We show that the ADMM implementation allows to
+parallelize the algorithm, hence further reducing the computational time.
+Finally, by experiments on real-world datasets, we show that our proposed
+algorithm improves the state of the art on the two problems of scene
+categorization using representative images and time-series modeling and
+segmentation using representative~models.
+
+
+Sparse Subspace Clustering: Algorithm, Theory, and Applications
+
+  In many real-world problems, we are dealing with collections of
+high-dimensional data, such as images, videos, text and web documents, DNA
+microarray data, and more. Often, high-dimensional data lie close to
+low-dimensional structures corresponding to several classes or categories the
+data belongs to. In this paper, we propose and study an algorithm, called
+Sparse Subspace Clustering (SSC), to cluster data points that lie in a union of
+low-dimensional subspaces. The key idea is that, among infinitely many possible
+representations of a data point in terms of other points, a sparse
+representation corresponds to selecting a few points from the same subspace.
+This motivates solving a sparse optimization program whose solution is used in
+a spectral clustering framework to infer the clustering of data into subspaces.
+Since solving the sparse optimization program is in general NP-hard, we
+consider a convex relaxation and show that, under appropriate conditions on the
+arrangement of subspaces and the distribution of data, the proposed
+minimization program succeeds in recovering the desired sparse representations.
+The proposed algorithm can be solved efficiently and can handle data points
+near the intersections of subspaces. Another key advantage of the proposed
+algorithm with respect to the state of the art is that it can deal with data
+nuisances, such as noise, sparse outlying entries, and missing entries,
+directly by incorporating the model of the data into the sparse optimization
+program. We demonstrate the effectiveness of the proposed algorithm through
+experiments on synthetic data as well as the two real-world problems of motion
+segmentation and face clustering.
+
+
+On the Lagrangian Biduality of Sparsity Minimization Problems
+
+  Recent results in Compressive Sensing have shown that, under certain
+conditions, the solution to an underdetermined system of linear equations with
+sparsity-based regularization can be accurately recovered by solving convex
+relaxations of the original problem. In this work, we present a novel
+primal-dual analysis on a class of sparsity minimization problems. We show that
+the Lagrangian bidual (i.e., the Lagrangian dual of the Lagrangian dual) of the
+sparsity minimization problems can be used to derive interesting convex
+relaxations: the bidual of the $\ell_0$-minimization problem is the
+$\ell_1$-minimization problem; and the bidual of the $\ell_{0,1}$-minimization
+problem for enforcing group sparsity on structured data is the
+$\ell_{1,\infty}$-minimization problem. The analysis provides a means to
+compute per-instance non-trivial lower bounds on the (group) sparsity of the
+desired solutions. In a real-world application, the bidual relaxation improves
+the performance of a sparsity-based classification framework applied to robust
+face recognition.
+
+
+Robust subspace clustering
+
+  Subspace clustering refers to the task of finding a multi-subspace
+representation that best fits a collection of points taken from a
+high-dimensional space. This paper introduces an algorithm inspired by sparse
+subspace clustering (SSC) [In IEEE Conference on Computer Vision and Pattern
+Recognition, CVPR (2009) 2790-2797] to cluster noisy data, and develops some
+novel theory demonstrating its correctness. In particular, the theory uses
+ideas from geometric functional analysis to show that the algorithm can
+accurately recover the underlying subspaces under minimal requirements on their
+orientation, and on the number of samples per subspace. Synthetic as well as
+real data experiments complement our theoretical study, illustrating our
+approach and demonstrating its effectiveness.
+
+

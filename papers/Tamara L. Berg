@@ -1,0 +1,230 @@
+Hierarchically-Attentive RNN for Album Summarization and Storytelling
+
+  We address the problem of end-to-end visual storytelling. Given a photo
+album, our model first selects the most representative (summary) photos, and
+then composes a natural language story for the album. For this task, we make
+use of the Visual Storytelling dataset and a model composed of three
+hierarchically-attentive Recurrent Neural Nets (RNNs) to: encode the album
+photos, select representative (summary) photos, and compose the story.
+Automatic and human evaluations show our model achieves better performance on
+selection, generation, and retrieval than baselines.
+
+
+Visual Madlibs: Fill in the blank Image Generation and Question
+  Answering
+
+  In this paper, we introduce a new dataset consisting of 360,001 focused
+natural language descriptions for 10,738 images. This dataset, the Visual
+Madlibs dataset, is collected using automatically produced fill-in-the-blank
+templates designed to gather targeted descriptions about: people and objects,
+their appearances, activities, and interactions, as well as inferences about
+the general scene or its broader context. We provide several analyses of the
+Visual Madlibs dataset and demonstrate its applicability to two new description
+generation tasks: focused description generation, and multiple-choice
+question-answering for images. Experiments using joint-embedding and deep
+learning methods show promising results on these tasks.
+
+
+Modeling Context in Referring Expressions
+
+  Humans refer to objects in their environments all the time, especially in
+dialogue with other people. We explore generating and comprehending natural
+language referring expressions for objects in images. In particular, we focus
+on incorporating better measures of visual context into referring expression
+models and find that visual comparison to other objects within an image helps
+improve performance significantly. We also develop methods to tie the language
+generation process together, so that we generate expressions for all objects of
+a particular category jointly. Evaluation on three recent datasets - RefCOCO,
+RefCOCO+, and RefCOCOg, shows the advantages of our methods for both referring
+expression generation and comprehension.
+
+
+Solving Visual Madlibs with Multiple Cues
+
+  This paper focuses on answering fill-in-the-blank style multiple choice
+questions from the Visual Madlibs dataset. Previous approaches to Visual
+Question Answering (VQA) have mainly used generic image features from networks
+trained on the ImageNet dataset, despite the wide scope of questions. In
+contrast, our approach employs features derived from networks trained for
+specialized tasks of scene classification, person activity prediction, and
+person and object attribute prediction. We also present a method for selecting
+sub-regions of an image that are relevant for evaluating the appropriateness of
+a putative answer. Visual features are computed both from the whole image and
+from local regions, while sentences are mapped to a common space using a simple
+normalized canonical correlation analysis (CCA) model. Our results show a
+significant improvement over the previous state of the art, and indicate that
+answering different question types benefits from examining a variety of image
+cues and carefully choosing informative image sub-regions.
+
+
+When was that made?
+
+  In this paper, we explore deep learning methods for estimating when objects
+were made. Automatic methods for this task could potentially be useful for
+historians, collectors, or any individual interested in estimating when their
+artifact was created. Direct applications include large-scale data organization
+or retrieval. Toward this goal, we utilize features from existing deep networks
+and also fine-tune new networks for temporal estimation. In addition, we create
+two new datasets of 67,771 dated clothing items from Flickr and museum
+collections. Our method outperforms both a color-based baseline and previous
+state of the art methods for temporal estimation. We also provide several
+analyses of what our networks have learned, and demonstrate applications to
+identifying temporal inspiration in fashion collections.
+
+
+Combining Multiple Cues for Visual Madlibs Question Answering
+
+  This paper presents an approach for answering fill-in-the-blank multiple
+choice questions from the Visual Madlibs dataset. Instead of generic and
+commonly used representations trained on the ImageNet classification task, our
+approach employs a combination of networks trained for specialized tasks such
+as scene recognition, person activity classification, and attribute prediction.
+We also present a method for localizing phrases from candidate answers in order
+to provide spatial support for feature extraction. We map each of these
+features, together with candidate answers, to a joint embedding space through
+normalized canonical correlation analysis (nCCA). Finally, we solve an
+optimization problem to learn to combine scores from nCCA models trained on
+multiple cues to select the best answer. Extensive experimental results show a
+significant improvement over the previous state of the art and confirm that
+answering questions from a wide range of types benefits from examining a
+variety of image cues and carefully choosing the spatial support for feature
+extraction.
+
+
+Learning Temporal Transformations From Time-Lapse Videos
+
+  Based on life-long observations of physical, chemical, and biologic phenomena
+in the natural world, humans can often easily picture in their minds what an
+object will look like in the future. But, what about computers? In this paper,
+we learn computational models of object transformations from time-lapse videos.
+In particular, we explore the use of generative models to create depictions of
+objects at future times. These models explore several different prediction
+tasks: generating a future state given a single depiction of an object,
+generating a future state given two depictions of an object at different times,
+and generating future states recursively in a recurrent framework. We provide
+both qualitative and quantitative evaluations of the generated results, and
+also conduct a human evaluation to compare variations of our models.
+
+
+A Joint Speaker-Listener-Reinforcer Model for Referring Expressions
+
+  Referring expressions are natural language constructions used to identify
+particular objects within a scene. In this paper, we propose a unified
+framework for the tasks of referring expression comprehension and generation.
+Our model is composed of three modules: speaker, listener, and reinforcer. The
+speaker generates referring expressions, the listener comprehends referring
+expressions, and the reinforcer introduces a reward function to guide sampling
+of more discriminative expressions. The listener-speaker modules are trained
+jointly in an end-to-end learning framework, allowing the modules to be aware
+of one another during learning while also benefiting from the discriminative
+reinforcer's feedback. We demonstrate that this unified framework and training
+achieves state-of-the-art results for both comprehension and generation on
+three referring expression datasets. Project and demo page:
+https://vision.cs.unc.edu/refer
+
+
+Visual to Sound: Generating Natural Sound for Videos in the Wild
+
+  As two of the five traditional human senses (sight, hearing, taste, smell,
+and touch), vision and sound are basic sources through which humans understand
+the world. Often correlated during natural events, these two modalities combine
+to jointly affect human perception. In this paper, we pose the task of
+generating sound given visual input. Such capabilities could help enable
+applications in virtual reality (generating sound for virtual scenes
+automatically) or provide additional accessibility to images or videos for
+people with visual impairments. As a first step in this direction, we apply
+learning-based methods to generate raw waveform samples given input video
+frames. We evaluate our models on a dataset of videos containing a variety of
+sounds (such as ambient sounds and sounds from people/animals). Our experiments
+show that the generated sounds are fairly realistic and have good temporal
+synchronization with the visual inputs.
+
+
+MAttNet: Modular Attention Network for Referring Expression
+  Comprehension
+
+  In this paper, we address referring expression comprehension: localizing an
+image region described by a natural language expression. While most recent work
+treats expressions as a single unit, we propose to decompose them into three
+modular components related to subject appearance, location, and relationship to
+other objects. This allows us to flexibly adapt to expressions containing
+different types of information in an end-to-end framework. In our model, which
+we call the Modular Attention Network (MAttNet), two types of attention are
+utilized: language-based attention that learns the module weights as well as
+the word/phrase attention that each module should focus on; and visual
+attention that allows the subject and relationship modules to focus on relevant
+image components. Module weights combine scores from all three modules
+dynamically to output an overall score. Experiments show that MAttNet
+outperforms previous state-of-art methods by a large margin on both
+bounding-box-level and pixel-level comprehension tasks. Demo and code are
+provided.
+
+
+Image2GIF: Generating Cinemagraphs using Recurrent Deep Q-Networks
+
+  Given a still photograph, one can imagine how dynamic objects might move
+against a static background. This idea has been actualized in the form of
+cinemagraphs, where the motion of particular objects within a still image is
+repeated, giving the viewer a sense of animation. In this paper, we learn
+computational models that can generate cinemagraph sequences automatically
+given a single image. To generate cinemagraphs, we explore combining generative
+models with a recurrent neural network and deep Q-networks to enhance the power
+of sequence generation. To enable and evaluate these models we make use of two
+datasets, one synthetically generated and the other containing real video
+generated cinemagraphs. Both qualitative and quantitative evaluations
+demonstrate the effectiveness of our models on the synthetic and real datasets.
+
+
+TVQA: Localized, Compositional Video Question Answering
+
+  Recent years have witnessed an increasing interest in image-based
+question-answering (QA) tasks. However, due to data limitations, there has been
+much less work on video-based QA. In this paper, we present TVQA, a large-scale
+video QA dataset based on 6 popular TV shows. TVQA consists of 152,545 QA pairs
+from 21,793 clips, spanning over 460 hours of video. Questions are designed to
+be compositional in nature, requiring systems to jointly localize relevant
+moments within a clip, comprehend subtitle-based dialogue, and recognize
+relevant visual concepts. We provide analyses of this new dataset as well as
+several baselines and a multi-stream end-to-end trainable neural network
+framework for the TVQA task. The dataset is publicly available at
+http://tvqa.cs.unc.edu.
+
+
+Dance Dance Generation: Motion Transfer for Internet Videos
+
+  This work presents computational methods for transferring body movements from
+one person to another with videos collected in the wild. Specifically, we train
+a personalized model on a single video from the Internet which can generate
+videos of this target person driven by the motions of other people. Our model
+is built on two generative networks: a human (foreground) synthesis net which
+generates photo-realistic imagery of the target person in a novel pose, and a
+fusion net which combines the generated foreground with the scene (background),
+adding shadows or reflections as needed to enhance realism. We validate the the
+efficacy of our proposed models over baselines with qualitative and
+quantitative evaluations as well as a subjective test.
+
+
+Multi-Target Embodied Question Answering
+
+  Embodied Question Answering (EQA) is a relatively new task where an agent is
+asked to answer questions about its environment from egocentric perception. EQA
+makes the fundamental assumption that every question, e.g., "what color is the
+car?", has exactly one target ("car") being inquired about. This assumption
+puts a direct limitation on the abilities of the agent. We present a
+generalization of EQA - Multi-Target EQA (MT-EQA). Specifically, we study
+questions that have multiple targets in them, such as "Is the dresser in the
+bedroom bigger than the oven in the kitchen?", where the agent has to navigate
+to multiple locations ("dresser in bedroom", "oven in kitchen") and perform
+comparative reasoning ("dresser" bigger than "oven") before it can answer a
+question. Such questions require the development of entirely new modules or
+components in the agent. To address this, we propose a modular architecture
+composed of a program generator, a controller, a navigator, and a VQA module.
+The program generator converts the given question into sequential executable
+sub-programs; the navigator guides the agent to multiple locations pertinent to
+the navigation-related sub-programs; and the controller learns to select
+relevant observations along its path. These observations are then fed to the
+VQA module to predict the answer. We perform detailed analysis for each of the
+model components and show that our joint model can outperform previous methods
+and strong baselines by a significant margin.
+
+

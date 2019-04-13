@@ -1,0 +1,65 @@
+An Extensible Benchmarking Infrastructure for Motion Planning Algorithms
+
+  Sampling-based planning algorithms are the most common probabilistically
+complete algorithms and are widely used on many robot platforms. Within this
+class of algorithms, many variants have been proposed over the last 20 years,
+yet there is still no characterization of which algorithms are well-suited for
+which classes of problems. This has motivated us to develop a benchmarking
+infrastructure for motion planning algorithms. It consists of three main
+components. First, we have created an extensive benchmarking software framework
+that is included with the Open Motion Planning Library (OMPL), a C++ library
+that contains implementations of many sampling-based algorithms. Second, we
+have defined extensible formats for storing benchmark results. The formats are
+fairly straightforward so that other planning libraries could easily produce
+compatible output. Finally, we have created an interactive, versatile
+visualization tool for compact presentation of collected benchmark data. The
+tool and underlying database facilitate the analysis of performance across
+benchmark problems and planners.
+
+
+Using Local Experiences for Global Motion Planning
+
+  Sampling-based planners are effective in many real-world applications such as
+robotics manipulation, navigation, and even protein modeling. However, it is
+often challenging to generate a collision-free path in environments where key
+areas are hard to sample. In the absence of any prior information,
+sampling-based planners are forced to explore uniformly or heuristically, which
+can lead to degraded performance. One way to improve performance is to use
+prior knowledge of environments to adapt the sampling strategy to the problem
+at hand. In this work, we decompose the workspace into local primitives,
+memorizing local experiences by these primitives in the form of local samplers,
+and store them in a database. We synthesize an efficient global sampler by
+retrieving local experiences relevant to the given situation. Our method
+transfers knowledge effectively between diverse environments that share local
+primitives and speeds up the performance dramatically. Our results show, in
+terms of solution time, an improvement of multiple orders of magnitude in two
+traditionally challenging high-dimensional problems compared to
+state-of-the-art approaches.
+
+
+Bounded Policy Synthesis for POMDPs with Safe-Reachability Objectives
+
+  Planning robust executions under uncertainty is a fundamental challenge for
+building autonomous robots. Partially Observable Markov Decision Processes
+(POMDPs) provide a standard framework for modeling uncertainty in many
+applications. In this work, we study POMDPs with safe-reachability objectives,
+which require that with a probability above some threshold, a goal state is
+eventually reached while keeping the probability of visiting unsafe states
+below some threshold. This POMDP formulation is different from the traditional
+POMDP models with optimality objectives and we show that in some cases, POMDPs
+with safe-reachability objectives can provide a better guarantee of both safety
+and reachability than the existing POMDP models through an example. A key
+algorithmic problem for POMDPs is policy synthesis, which requires reasoning
+over a vast space of beliefs (probability distributions). To address this
+challenge, we introduce the notion of a goal-constrained belief space, which
+only contains beliefs reachable from the initial belief under desired
+executions that can achieve the given safe-reachability objective. Our method
+compactly represents this space over a bounded horizon using symbolic
+constraints, and employs an incremental Satisfiability Modulo Theories (SMT)
+solver to efficiently search for a valid policy over it. We evaluate our method
+using a case study involving a partially observable robotic domain with
+uncertain obstacles. The results show that our method can synthesize policies
+over large belief spaces with a small number of SMT solver calls by focusing on
+the goal-constrained belief space.
+
+

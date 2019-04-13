@@ -1,0 +1,836 @@
+Coordinate Descent Algorithms
+
+  Coordinate descent algorithms solve optimization problems by successively
+performing approximate minimization along coordinate directions or coordinate
+hyperplanes. They have been used in applications for many years, and their
+popularity continues to grow because of their usefulness in data analysis,
+machine learning, and other areas of current interest. This paper describes the
+fundamentals of the coordinate descent approach, together with variants and
+extensions and their convergence properties, mostly with reference to convex
+objectives. We pay particular attention to a certain problem structure that
+arises frequently in machine learning applications, showing that efficient
+implementations of accelerated coordinate descent algorithms are possible for
+problems of this type. We also present some parallel variants and discuss their
+convergence properties under several models of parallel execution.
+
+
+A proximal method for composite minimization
+
+  We consider minimization of functions that are compositions of convex or
+prox-regular functions (possibly extended-valued) with smooth vector functions.
+A wide variety of important optimization problems fall into this framework. We
+describe an algorithmic framework based on a subproblem constructed from a
+linearized approximation to the objective and a regularization term. Properties
+of local solutions of this subproblem underlie both a global convergence result
+and an identification property of the active manifold containing the solution
+of the original problem. Preliminary computational results on both convex and
+nonconvex examples are promising.
+
+
+An Asynchronous Parallel Randomized Kaczmarz Algorithm
+
+  We describe an asynchronous parallel variant of the randomized Kaczmarz (RK)
+algorithm for solving the linear system $Ax=b$. The analysis shows linear
+convergence and indicates that nearly linear speedup can be expected if the
+number of processors is bounded by a multiple of the number of rows in $A$.
+
+
+$k$-Dependence and Domination in Kings Graphs
+
+  We study k-dependence and half domination problems for king's graphs in
+dimension n (n>1). Various sharp bounds are provided and a few conjectures are
+formulated in the cases the estimates are not the best possible.
+
+
+Constraint Identification and Algorithm Stabilization for Degenerate
+  Nonlinear Programs
+
+  In the vicinity of a solution of a nonlinear programming problem at which
+both strict complementarity and linear independence of the active constraints
+may fail to hold, we describe a technique for distinguishing weakly active from
+strongly active constraints. We show that this information can be used to
+modify the sequential quadratic programming algorithm so that it exhibits
+superlinear convergence to the solution under assumptions weaker than those
+made in previous analyses.
+
+
+On GROUSE and Incremental SVD
+
+  GROUSE (Grassmannian Rank-One Update Subspace Estimation) is an incremental
+algorithm for identifying a subspace of Rn from a sequence of vectors in this
+subspace, where only a subset of components of each vector is revealed at each
+iteration. Recent analysis has shown that GROUSE converges locally at an
+expected linear rate, under certain assumptions. GROUSE has a similar flavor to
+the incremental singular value decomposition algorithm, which updates the SVD
+of a matrix following addition of a single column. In this paper, we modify the
+incremental SVD approach to handle missing data, and demonstrate that this
+modified approach is equivalent to GROUSE, for a certain choice of an
+algorithmic parameter.
+
+
+An Asynchronous Parallel Stochastic Coordinate Descent Algorithm
+
+  We describe an asynchronous parallel stochastic coordinate descent algorithm
+for minimizing smooth unconstrained or separably constrained functions. The
+method achieves a linear convergence rate on functions that satisfy an
+essential strong convexity property and a sublinear rate ($1/K$) on general
+convex functions. Near-linear speedup on a multicore system can be expected if
+the number of processors is $O(n^{1/2})$ in unconstrained optimization and
+$O(n^{1/4})$ in the separable-constrained case, where $n$ is the number of
+variables. We describe results from implementation on 40-core processors.
+
+
+Packing ellipsoids with overlap
+
+  The problem of packing ellipsoids of different sizes and shapes into an
+ellipsoidal container so as to minimize a measure of overlap between ellipsoids
+is considered. A bilevel optimization formulation is given, together with an
+algorithm for the general case and a simpler algorithm for the special case in
+which all ellipsoids are in fact spheres. Convergence results are proved and
+computational experience is described and illustrated. The motivating
+application - chromosome organization in the human cell nucleus - is discussed
+briefly, and some illustrative results are presented.
+
+
+Solving the continuous nonlinear resource allocation problem with an
+  interior point method
+
+  Resource allocation problems are usually solved with specialized methods
+exploiting their general sparsity and problem-specific algebraic structure. We
+show that the sparsity structure alone yields a closed-form Newton search
+direction for the generic primal-dual interior point method. Computational
+tests show that the interior point method consistently outperforms the best
+specialized methods when no additional algebraic structure is available.
+
+
+Analyzing Random Permutations for Cyclic Coordinate Descent
+
+  We consider coordinate descent methods on convex quadratic problems, in which
+exact line searches are performed at each iteration. (This algorithm is
+identical to Gauss-Seidel on the equivalent symmetric positive definite linear
+system.) We describe a class of convex quadratic problems for which the
+random-permutations version of cyclic coordinate descent (RPCD) outperforms the
+standard cyclic coordinate descent (CCD) approach, yielding convergence
+behavior similar to the fully-random variant (RCD). A convergence analysis is
+developed to explain the empirical observations.
+
+
+Randomized sampling for basis functions construction in generalized
+  finite element methods
+
+  In the framework of generalized finite element methods for elliptic equations
+with rough coefficients, efficiency and accuracy of the numerical method depend
+critically on the use of appropriate basis functions. This work explores
+several random sampling strategies that construct approximations to the optimal
+set of basis functions of a given dimension, and proposes a quantitative
+criterion to analyze and compare these sampling strategies. Numerical evidence
+shows that the best results are achieved by two strategies, Random Gaussian and
+Smooth boundary sampling.
+
+
+Random Sampling and Efficient Algorithms for Multiscale PDEs
+
+  We describe an efficient framework for multiscale PDE problems that uses
+random sampling to capture low-rank local solution spaces arising in a domain
+decomposition framework. In contrast to existing techniques, our method does
+not rely on detailed analytical understanding of specific multiscale PDEs, in
+particular, their asymptotic limits. Our framework is applied to two specific
+problems - a linear kinetic equation and an elliptic equation with oscillatory
+media - for which recover the asymptotic preserving scheme and numerical
+homogenization, respectively. Numerical results confirm the efficacy of our
+approach.
+
+
+First-order algorithms converge faster than $O(1/k)$ on convex problems
+
+  It has been known for many years that both gradient descent and stochastic
+coordinate descent achieve a global convergence rate of $O(1/k)$ in the
+objective value, when applied to a scheme for minimizing a
+Lipschitz-continuously differentiable, unconstrained convex function. In this
+work, we improve this rate to $o(1/k)$. We extend the result to proximal
+gradient and proximal coordinate descent on regularized problems to show
+similar $o(1/k)$ convergence rates. The result is tight in the sense that an
+$O(1/k^{1+\epsilon})$ rate is not generally attainable for any $\epsilon>0$,
+for any of these methods.
+
+
+A Log-Barrier Newton-CG Method for Bound Constrained Optimization with
+  Complexity Guarantees
+
+  We describe an algorithm based on a logarithmic barrier function, Newton's
+method, and linear conjugate gradients, that obtains an approximate minimizer
+of a smooth function over the nonnegative orthant. We develop a bound on the
+complexity of the approach, stated in terms of the required accuracy and the
+cost of a single gradient evaluation of the objective function and/or a
+matrix-vector multiplication involving the Hessian of the objective. The
+approach can be implemented without explicit calculation or storage of the
+Hessian.
+
+
+Robustness of superconductivity to competing magnetic phases in
+  tetragonal FeS
+
+  We have determined the superconducting and magnetic properties of a
+hydrothermally synthesized powder sample of tetragonal FeS using muon spin
+rotation ({\mu}SR). The superconducting properties are entirely consistent with
+those of a recently published study, showing fully gapped behavior and giving a
+penetration depth of {\lambda}_{ab} = 204(3) nm. However, our zero-field
+{\mu}SR data are rather different and indicate the presence of a small,
+non-superconducting magnetic phase within the sample. These results highlight
+that sample-to-sample variations in magnetism can arise in hydrothermally
+prepared phases, but interestingly the superconducting behavior is remarkably
+insensitive to these variations.
+
+
+CRATES: An All-Sky Survey of Flat-Spectrum Radio Sources
+
+  We have assembled an 8.4 GHz survey of bright, flat-spectrum (alpha > -0.5)
+radio sources with nearly uniform extragalactic (|b|>10 deg) coverage for
+sources brighter than S_{4.8 GHz} = 65 mJy. The catalog is assembled from
+existing observations (especially CLASS and the Wright et al. PMN-CA survey),
+augmented by reprocessing of archival VLA and ATCA data and by new observations
+to fill in coverage gaps. We refer to this program as CRATES, the Combined
+Radio All-sky Targeted Eight GHz Survey. The resulting catalog provides precise
+positions, sub-arcsecond structures, and spectral indices for some 11,000
+sources. We describe the morphology and spectral index distribution of the
+sample and comment on the survey's power to select several classes of
+interesting sources, especially high energy blazars. Comparison of CRATES with
+other high-frequency surveys also provides unique opportunities for
+identification of high-power radio sources.
+
+
+Magnetic fluctuations and spin freezing in nonsuperconducting LiFeAs
+  derivatives
+
+  We present detailed magnetometry and muon-spin rotation data on
+polycrystalline samples of overdoped, non-superconducting LiFe$_{1-x}$Ni$_x$As
+($x = 0.1,\,0.2$) and Li$_{1-y}$Fe$_{1+y}$As ($0\leq y\leq 0.04$) as well as
+superconducting LiFeAs. While LiFe$_{1-x}$Ni$_x$As exhibits weak
+antiferromagnetic fluctuations down to $1.5\,{\rm K}$, Li$_{1-y}$Fe$_{1+y}$As
+samples, which have a much smaller deviation from the $1:1:1$ stoichiometry,
+show a crossover from ferromagnetic to antiferromagnetic fluctuations on
+cooling and a freezing of dynamically fluctuating moments at low temperatures.
+We do not find any signatures of time-reversal symmetry breaking in
+stoichiometric LiFeAs that would support recent predictions of triplet pairing.
+
+
+G10/COSMOS: 38 band (far-UV to far-IR) panchromatic photometry using
+  LAMBDAR
+
+  We present a consistent total flux catalogue for a $\sim$1 deg$^2$ subset of
+the COSMOS region (R.A. $\in [149.55\degr, 150.65\degr]$, DEC $\in [1.80\degr,
+2.73\degr]$) with near-complete coverage in 38 bands from the far-ultraviolet
+to the far-infrared. We produce aperture matched photometry for 128,304 objects
+with i < 24.5 in a manner that is equivalent to the Wright et al. (2016)
+catalogue from the low-redshift (z < 0.4) Galaxy and Mass Assembly (GAMA)
+survey. This catalogue is based on publicly available imaging from GALEX, CFHT,
+Subaru, VISTA, Spitzer and Herschel, contains a robust total flux measurement
+or upper limit for every object in every waveband and complements our
+re-reduction of publicly available spectra in the same region. We perform a
+number of consistency checks, demonstrating that our catalogue is comparable to
+existing data sets, including the recent COSMOS2015 catalogue (Laigle et al.
+2016). We also release an updated Davies et al. (2015) spectroscopic catalogue
+that folds in new spectroscopic and photometric redshift data sets. The
+catalogues are available for download at
+http://cutout.icrar.org/G10/dataRelease.php. Our analysis is optimised for both
+panchromatic analysis over the full wavelength range and for direct comparison
+to GAMA, thus permitting measurements of galaxy evolution for 0 < z < 1 while
+minimising the systematic error resulting from disparate data reduction
+methods.
+
+
+A Bayesian approach to magnetic moment determination using muSR
+
+  A significant challenge in zero-field muSR experiments arises from the
+uncertainty in the muon site. It is possible to calculate the dipole field (and
+hence precession frequency nu) at any particular site given the magnetic moment
+mu and magnetic structure. One can also evaluate f(nu), the probability
+distribution function of nu assuming that the muon site can be anywhere within
+the unit cell with equal probability, excluding physically forbidden sites.
+Since nu is obtained from experiment, what we would like to know is g(mu|nu),
+the probability density function of mu given the observed nu. This can be
+obtained from our calculated f(nu/mu) using Bayes' theorem. We describe an
+approach to this problem which we have used to extract information about real
+systems including a low-moment osmate compound, a family of molecular magnets,
+and an iron-arsenide compound.
+
+
+Online Algorithms for Factorization-Based Structure from Motion
+
+  We present a family of online algorithms for real-time factorization-based
+structure from motion, leveraging a relationship between incremental singular
+value decomposition and recently proposed methods for online matrix completion.
+Our methods are orders of magnitude faster than previous state of the art, can
+handle missing data and a variable number of feature points, and are robust to
+noise and sparse outliers. We demonstrate our methods on both real and
+synthetic sequences and show that they perform well in both online and batch
+settings. We also provide an implementation which is able to produce 3D models
+in real time using a laptop with a webcam.
+
+
+Effects of Finite-Precision Arithmetic on Interior-Point Methods for
+  Nonlinear Programming
+
+  We show that the effects of finite-precision arithmetic in forming and
+solving the linear system that arises at each iteration of primal-dual
+interior-point algorithms for nonlinear programming are benign, provided that
+the iterates satisfy centrality and feasibility conditions of the type usually
+associated with path-following methods. When we replace the standard assumption
+that the active constraint gradients are independent by the weaker
+Mangasarian-Fromovitz constraint qualification, rapid convergence usually is
+attainable, even when cancellation and roundoff errors occur during the
+calculations. In deriving our main results, we prove a key technical result
+about the size of the exact primal-dual step. This result can be used to modify
+existing analysis of primal-dual interior-point methods for convex programming,
+making it possible to extend the superlinear local convergence results to the
+nonconvex case.
+
+
+Identifying Activity
+
+  Identification of active constraints in constrained optimization is of
+interest from both practical and theoretical viewpoints, as it holds the
+promise of reducing an inequality-constrained problem to an
+equality-constrained problem, in a neighborhood of a solution. We study this
+issue in the more general setting of composite nonsmooth minimization, in which
+the objective is a composition of a smooth vector function c with a lower
+semicontinuous function h, typically nonsmooth but structured. In this setting,
+the graph of the generalized gradient of h can often be decomposed into a union
+(nondisjoint) of simpler subsets. "Identification" amounts to deciding which
+subsets of the graph are "active" in the criticality conditions at a given
+solution. We give conditions under which any convergent sequence of approximate
+critical points finitely identifies the activity. Prominent among these
+properties is a condition akin to the Mangasarian-Fromovitz constraint
+qualification, which ensures boundedness of the set of multiplier vectors that
+satisfy the optimality conditions at the solution.
+
+
+Convex Approaches to Model Wavelet Sparsity Patterns
+
+  Statistical dependencies among wavelet coefficients are commonly represented
+by graphical models such as hidden Markov trees(HMTs). However, in linear
+inverse problems such as deconvolution, tomography, and compressed sensing, the
+presence of a sensing or observation matrix produces a linear mixing of the
+simple Markovian dependency structure. This leads to reconstruction problems
+that are non-convex optimizations. Past work has dealt with this issue by
+resorting to greedy or suboptimal iterative reconstruction methods. In this
+paper, we propose new modeling approaches based on group-sparsity penalties
+that leads to convex optimizations that can be solved exactly and efficiently.
+We show that the methods we develop perform significantly better in
+deconvolution and compressed sensing applications, while being as
+computationally efficient as standard coefficient-wise approaches such as
+lasso.
+
+
+Local Convergence of an Algorithm for Subspace Identification from
+  Partial Data
+
+  GROUSE (Grassmannian Rank-One Update Subspace Estimation) is an iterative
+algorithm for identifying a linear subspace of R^n from data consisting of
+partial observations of random vectors from that subspace. This paper examines
+local convergence properties of GROUSE, under assumptions on the randomness of
+the observed vectors, the randomness of the subset of elements observed at each
+iteration, and incoherence of the subspace with the coordinate directions.
+Convergence at an expected linear rate is demonstrated under certain
+assumptions. The case in which the full random vector is revealed at each
+iteration allows for much simpler analysis, and is also described. GROUSE is
+related to incremental SVD methods and to gradient projection algorithms in
+optimization.
+
+
+An Accelerated Randomized Kaczmarz Algorithm
+
+  The randomized Kaczmarz ($\RK$) algorithm is a simple but powerful approach
+for solving consistent linear systems $Ax=b$. This paper proposes an
+accelerated randomized Kaczmarz ($\ARK$) algorithm with better convergence than
+the standard $\RK$ algorithm on ill conditioned problems. The per-iteration
+cost of $\RK$ and $\ARK$ are similar if $A$ is dense, but $\RK$ is much more
+able to exploit sparsity in $A$ than is $\ARK$. To deal with the sparse case,
+an efficient implementation for $\ARK$, called $\SARK$, is proposed. A
+comparison of convergence rates and average per-iteration complexities among
+$\RK$, $\ARK$, and $\SARK$ is given, taking into account different levels of
+sparseness and conditioning. Comparisons with the leading deterministic
+algorithm --- conjugate gradient applied to the normal equations --- are also
+given. Finally, the analysis is validated via computational testing.
+
+
+Robust Dequantized Compressive Sensing
+
+  We consider the reconstruction problem in compressed sensing in which the
+observations are recorded in a finite number of bits. They may thus contain
+quantization errors (from being rounded to the nearest representable value) and
+saturation errors (from being outside the range of representable values). Our
+formulation has an objective of weighted $\ell_2$-$\ell_1$ type, along with
+constraints that account explicitly for quantization and saturation errors, and
+is solved with an augmented Lagrangian method. We prove a consistency result
+for the recovered solution, stronger than those that have appeared to date in
+the literature, showing in particular that asymptotic consistency can be
+obtained without oversampling. We present extensive computational comparisons
+with formulations proposed previously, and variants thereof.
+
+
+An S$\ell_1$LP-Active Set Approach for Feasibility Restoration in Power
+  Systems
+
+  We consider power networks in which it is not possible to satisfy all loads
+at the demand nodes, due to some attack or disturbance to the network. We
+formulate a model, based on AC power flow equations, to restore the network to
+feasibility by shedding load at demand nodes, but doing so in a way that
+minimizes a weighted measure of the total load shed, and affects as few demand
+nodes as possible. Besides suggesting an optimal response to a given attack,
+our approach can be used to quantify disruption, thereby enabling "stress
+testing" to be performed and vulnerabilities to be identified. Optimization
+techniques including nonsmooth penalty functions, sequential linear
+programming, and active-set heuristics are used to solve this model. We
+describe an algorithmic framework and present convergence results, including a
+quadratic convergence result for the case in which the solution is fully
+determined by its constraints, a situation that arises frequently in the power
+systems application.
+
+
+PMU Placement for Line Outage Identification via Multiclass Logistic
+  Regression
+
+  We consider the problem of identifying a single line outage in a power grid
+by using data from phasor measurement units (PMUs). When a line outage occurs,
+the voltage phasor of each bus node changes in response to the change in
+network topology. Each individual line outage has a consistent "signature," and
+a multiclass logistic regression (MLR) classifier can be trained to distinguish
+between these signatures reliably. We consider first the ideal case in which
+PMUs are attached to every bus, but phasor data alone is used to detect outage
+signatures. We then describe techniques for placing PMUs selectively on a
+subset of buses, with the subset being chosen to allow discrimination between
+as many outage events as possible. We also discuss extensions of the MLR
+technique that incorporate explicit information about identification of outages
+by PMUs measuring line current flow in or out of a bus. Experimental results
+with synthetic 24-hour demand profile data generated for 14, 30, 57 and 118-bus
+systems are presented.
+
+
+Approximate Stochastic Subgradient Estimation Training for Support
+  Vector Machines
+
+  Subgradient algorithms for training support vector machines have been quite
+successful for solving large-scale and online learning problems. However, they
+have been restricted to linear kernels and strongly convex formulations. This
+paper describes efficient subgradient approaches without such limitations. Our
+approaches make use of randomized low-dimensional approximations to nonlinear
+kernels, and minimization of a reduced primal formulation using an algorithm
+based on robust stochastic approximation, which do not require strong
+convexity. Experiments illustrate that our approaches produce solutions of
+comparable prediction accuracy with the solutions acquired from existing SVM
+solvers, but often in much shorter time. We also suggest efficient prediction
+schemes that depend only on the dimension of kernel approximation, not on the
+number of support vectors.
+
+
+An Approximate, Efficient Solver for LP Rounding
+
+  Many problems in machine learning can be solved by rounding the solution of
+an appropriate linear program (LP). This paper shows that we can recover
+solutions of comparable quality by rounding an approximate LP solution instead
+of the ex- act one. These approximate LP solutions can be computed efficiently
+by applying a parallel stochastic-coordinate-descent method to a
+quadratic-penalty formulation of the LP. We derive worst-case runtime and
+solution quality guarantees of this scheme using novel perturbation and
+convergence analysis. Our experiments demonstrate that on such combinatorial
+problems as vertex cover, independent set and multiway-cut, our approximate
+rounding scheme is up to an order of magnitude faster than Cplex (a commercial
+LP solver) while producing solutions of similar quality.
+
+
+HOGWILD!: A Lock-Free Approach to Parallelizing Stochastic Gradient
+  Descent
+
+  Stochastic Gradient Descent (SGD) is a popular algorithm that can achieve
+state-of-the-art performance on a variety of machine learning tasks. Several
+researchers have recently proposed schemes to parallelize SGD, but all require
+performance-destroying memory locking and synchronization. This work aims to
+show using novel theoretical analysis, algorithms, and implementation that SGD
+can be implemented without any locking. We present an update scheme called
+HOGWILD! which allows processors access to shared memory with the possibility
+of overwriting each other's work. We show that when the associated optimization
+problem is sparse, meaning most gradient updates only modify small parts of the
+decision variable, then HOGWILD! achieves a nearly optimal rate of convergence.
+We demonstrate experimentally that HOGWILD! outperforms alternative schemes
+that use locking by an order of magnitude.
+
+
+Asynchronous Stochastic Coordinate Descent: Parallelism and Convergence
+  Properties
+
+  We describe an asynchronous parallel stochastic proximal coordinate descent
+algorithm for minimizing a composite objective function, which consists of a
+smooth convex function plus a separable convex function. In contrast to
+previous analyses, our model of asynchronous computation accounts for the fact
+that components of the unknown vector may be written by some cores
+simultaneously with being read by others. Despite the complications arising
+from this possibility, the method achieves a linear convergence rate on
+functions that satisfy an optimal strong convexity property and a sublinear
+rate ($1/k$) on general convex functions. Near-linear speedup on a multicore
+system can be expected if the number of processors is $O(n^{1/4})$. We describe
+results from implementation on ten cores of a multicore processor.
+
+
+Vulnerability Analysis of Power Systems
+
+  Potential vulnerabilities in a power grid can be exposed by identifying those
+transmission lines on which attacks (in the form of interference with their
+transmission capabilities) causes maximum disruption to the grid. In this
+study, we model the grid by (nonlinear) AC power flow equations, and assume
+that attacks take the form of increased impedance along transmission lines. We
+quantify disruption in several different ways, including (a) overall deviation
+of the voltages at the buses from 1.0 per unit (p.u.), and (b) the minimal
+amount of load that must be shed in order to restore the grid to stable
+operation. We describe optimization formulations of the problem of finding the
+most disruptive attack, which are either nonlinear programing problems or
+nonlinear bilevel optimization problems, and describe customized algorithms for
+solving these problems. Experimental results on the IEEE 118-Bus system and a
+Polish 2383-Bus system are presented.
+
+
+Sorting Network Relaxations for Vector Permutation Problems
+
+  The Birkhoff polytope (the convex hull of the set of permutation matrices) is
+frequently invoked in formulating relaxations of optimization problems over
+permutations. The Birkhoff polytope is represented using $\Theta(n^2)$
+variables and constraints, significantly more than the $n$ variables one could
+use to represent a permutation as a vector. Using a recent construction of
+Goemans (2010), we show that when optimizing over the convex hull of the
+permutation vectors (the permutahedron), we can reduce the number of variables
+and constraints to $\Theta(n \log n)$ in theory and $\Theta(n \log^2 n)$ in
+practice. We modify the recent convex formulation of the 2-SUM problem
+introduced by Fogel et al. (2013) to use this polytope, and demonstrate how we
+can attain results of similar quality in significantly less computational time
+for large $n$. To our knowledge, this is the first usage of Goemans' compact
+formulation of the permutahedron in a convex optimization problem. We also
+introduce a simpler regularization scheme for this convex formulation of the
+2-SUM problem that yields good empirical results.
+
+
+Random Permutations Fix a Worst Case for Cyclic Coordinate Descent
+
+  Variants of the coordinate descent approach for minimizing a nonlinear
+function are distinguished in part by the order in which coordinates are
+considered for relaxation. Three common orderings are cyclic (CCD), in which we
+cycle through the components of $x$ in order; randomized (RCD), in which the
+component to update is selected randomly and independently at each iteration;
+and random-permutations cyclic (RPCD), which differs from CCD only in that a
+random permutation is applied to the variables at the start of each cycle.
+Known convergence guarantees are weaker for CCD and RPCD than for RCD, though
+in most practical cases, computational performance is similar among all these
+variants. There is a certain type of quadratic function for which CCD is
+significantly slower than for RCD; a recent paper by \cite{SunY16a} has
+explored the poor behavior of CCD on functions of this type. The RPCD approach
+performs well on these functions, even better than RCD in a certain regime.
+This paper explains the good behavior of RPCD with a tight analysis.
+
+
+Complexity analysis of second-order line-search algorithms for smooth
+  nonconvex optimization
+
+  There has been much recent interest in finding unconstrained local minima of
+smooth functions, due in part of the prevalence of such problems in machine
+learning and robust statistics. A particular focus is algorithms with good
+complexity guarantees. Second-order Newton-type methods that make use of
+regularization and trust regions have been analyzed from such a perspective.
+More recent proposals, based chiefly on first-order methodology, have also been
+shown to enjoy optimal iteration complexity rates, while providing additional
+guarantees on computational cost.
+  In this paper, we present an algorithm with favorable complexity properties
+that differs in two significant ways from other recently proposed methods.
+First, it is based on line searches only: Each step involves computation of a
+search direction, followed by a backtracking line search along that direction.
+Second, its analysis is rather straightforward, relying for the most part on
+the standard technique for demonstrating sufficient decrease in the objective
+from backtracking. In the latter part of the paper, we consider inexact
+computation of the search directions, using iterative methods in linear
+algebra: the conjugate gradient and Lanczos methods. We derive modified
+convergence and complexity results for these more practical methods.
+
+
+Behavior of Accelerated Gradient Methods Near Critical Points of
+  Nonconvex Functions
+
+  We examine the behavior of accelerated gradient methods in smooth nonconvex
+unconstrained optimization, focusing in particular on their behavior near
+strict saddle points. Accelerated methods are iterative methods that typically
+step along a direction that is a linear combination of the previous step and
+the gradient of the function evaluated at a point at or near the current
+iterate. (The previous step encodes gradient information from earlier stages in
+the iterative process.) We show by means of the stable manifold theorem that
+the heavy-ball method method is unlikely to converge to strict saddle points,
+which are points at which the gradient of the objective is zero but the Hessian
+has at least one negative eigenvalue. We then examine the behavior of the
+heavy-ball method and other accelerated gradient methods in the vicinity of a
+strict saddle point of a nonconvex quadratic function, showing that both
+methods can diverge from this point more rapidly than the steepest-descent
+method.
+
+
+Training Set Debugging Using Trusted Items
+
+  Training set bugs are flaws in the data that adversely affect machine
+learning. The training set is usually too large for man- ual inspection, but
+one may have the resources to verify a few trusted items. The set of trusted
+items may not by itself be adequate for learning, so we propose an algorithm
+that uses these items to identify bugs in the training set and thus im- proves
+learning. Specifically, our approach seeks the smallest set of changes to the
+training set labels such that the model learned from this corrected training
+set predicts labels of the trusted items correctly. We flag the items whose
+labels are changed as potential bugs, whose labels can be checked for veracity
+by human experts. To find the bugs in this way is a challenging combinatorial
+bilevel optimization problem, but it can be relaxed into a continuous
+optimization problem. Ex- periments on toy and real data demonstrate that our
+approach can identify training set bugs effectively and suggest appro- priate
+changes to the labels. Our algorithm is a step toward trustworthy machine
+learning.
+
+
+A Distributed Quasi-Newton Algorithm for Empirical Risk Minimization
+  with Nonsmooth Regularization
+
+  We propose a communication- and computation-efficient distributed
+optimization algorithm using second-order information for solving ERM problems
+with a nonsmooth regularization term. Current second-order and quasi-Newton
+methods for this problem either do not work well in the distributed setting or
+work only for specific regularizers. Our algorithm uses successive quadratic
+approximations, and we describe how to maintain an approximation of the Hessian
+and solve subproblems efficiently in a distributed manner. The proposed method
+enjoys global linear convergence for a broad range of non-strongly convex
+problems that includes the most commonly used ERMs, thus requiring lower
+communication complexity. It also converges on non-convex problems, so has the
+potential to be used on applications such as deep learning. Initial
+computational results on convex problems demonstrate that our method
+significantly improves on communication cost and running time over the current
+state-of-the-art methods.
+
+
+A Newton-CG Algorithm with Complexity Guarantees for Smooth
+  Unconstrained Optimization
+
+  We consider minimization of a smooth nonconvex objective function using an
+iterative algorithm based on Newton's method and the linear conjugate gradient
+algorithm, with explicit detection and use of negative curvature directions for
+the Hessian of the objective function. The algorithm tracks Newton-conjugate
+gradient procedures developed in the 1980s closely, but includes enhancements
+that allow worst-case complexity results to be proved for convergence to points
+that satisfy approximate first-order and second-order optimality conditions.
+The complexity results match the best known results in the literature for
+second-order methods.
+
+
+Randomness and Permutations in Coordinate Descent Methods
+
+  We consider coordinate descent (CD) methods with exact line search on convex
+quadratic problems. Our main focus is to study the performance of the CD method
+that use random permutations in each epoch and compare it to the performance of
+the CD methods that use deterministic orders and random sampling with
+replacement. We focus on a class of convex quadratic problems with a diagonally
+dominant Hessian matrix, for which we show that using random permutations
+instead of random with-replacement sampling improves the performance of the CD
+method in the worst-case. Furthermore, we prove that as the Hessian matrix
+becomes more diagonally dominant, the performance improvement attained by using
+random permutations increases. We also show that for this problem class, using
+any fixed deterministic order yields a superior performance than using random
+permutations. We present detailed theoretical analyses with respect to three
+different convergence criteria that are used in the literature and support our
+theoretical results with numerical experiments.
+
+
+Inexact Variable Metric Stochastic Block-Coordinate Descent for
+  Regularized Optimization
+
+  Block-coordinate descent (BCD) is a popular method for large-scale
+regularized optimization problems with block-separable structure. However,
+existing analyses require either a fixed second-order approximation of the
+smooth part, or restrictions on the subproblem solutions, such as exactness or
+termination conditions that are difficult to verify except in simple cases.
+These assumptions essentially confine the quadratic term in the approximation
+of the smooth part to being diagonal, so the benefits of second-order
+approximation are mostly lost. Moreover, in contrast to the smooth case,
+non-uniform sampling has not yet been shown to improve the convergence rate for
+regularized problems. In this work, we propose an inexact randomized BCD method
+based on a regularized quadratic subproblem, in which the quadratic term can
+vary from iteration to iteration (and is thus known as a `variable metric'). We
+provide a detailed convergence analysis. When specialized to the
+non-regularized case, Nesterov's proposal to improve convergence rate by
+sampling proportional to the blockwise Lipschitz constants is covered in our
+framework. Empirical results also show that significant benefits are attainable
+when a variable quadratic term is used in the subproblem, rather than a fixed
+term.
+
+
+Galaxy And Mass Assembly: the evolution of the cosmic spectral energy
+  distribution from z = 1 to z = 0
+
+  We present the evolution of the Cosmic Spectral Energy Distribution (CSED)
+from $z = 1 - 0$. Our CSEDs originate from stacking individual spectral energy
+distribution fits based on panchromatic photometry from the Galaxy and Mass
+Assembly (GAMA) and COSMOS datasets in ten redshift intervals with completeness
+corrections applied. Below $z = 0.45$, we have credible SED fits from 100 nm to
+1 mm. Due to the relatively low sensitivity of the far-infrared data, our
+far-infrared CSEDs contain a mix of predicted and measured fluxes above $z =
+0.45$. Our results include appropriate errors to highlight the impact of these
+corrections. We show that the bolometric energy output of the Universe has
+declined by a factor of roughly four -- from $5.1 \pm 1.0$ at $z \sim 1$ to
+$1.3 \pm 0.3 \times 10^{35}~h_{70}$~W~Mpc$^{-3}$ at the current epoch. We show
+that this decrease is robust to cosmic variance, SED modelling and other
+various types of error. Our CSEDs are also consistent with an increase in the
+mean age of stellar populations. We also show that dust attenuation has
+decreased over the same period, with the photon escape fraction at 150~nm
+increasing from $16 \pm 3$ at $z \sim 1$ to $24 \pm 5$ per cent at the current
+epoch, equivalent to a decrease in $A_\mathrm{FUV}$ of 0.4~mag. Our CSEDs
+account for $68 \pm 12$ and $61 \pm 13$ per cent of the cosmic optical and
+infrared backgrounds respectively as defined from integrated galaxy counts and
+are consistent with previous estimates of the cosmic infrared background with
+redshift.
+
+
+A transient search using combined human and machine classifications
+
+  Large modern surveys require efficient review of data in order to find
+transient sources such as supernovae, and to distinguish such sources from
+artefacts and noise. Much effort has been put into the development of automatic
+algorithms, but surveys still rely on human review of targets. This paper
+presents an integrated system for the identification of supernovae in data from
+Pan-STARRS1, combining classifications from volunteers participating in a
+citizen science project with those from a convolutional neural network. The
+unique aspect of this work is the deployment, in combination, of both human and
+machine classifications for near real-time discovery in an astronomical
+project. We show that the combination of the two methods outperforms either one
+used individually. This result has important implications for the future
+development of transient searches, especially in the era of LSST and other
+large-throughput surveys.
+
+
+Enhancement of superconducting transition temperature of FeSe by
+  intercalation of a molecular spacer layer
+
+  The recent discovery of high temperature superconductivity in a layered iron
+arsenide has led to an intensive search to optimize the superconducting
+properties of iron-based superconductors by changing the chemical composition
+of the spacer layer that is inserted between adjacent anionic iron arsenide
+layers. Until now, superconductivity has only been found in compounds with a
+cationic spacer layer consisting of metal ions: Li+, Na+, K+, Ba2+ or a
+PbO-type or perovskite-type oxide layer. Electronic doping is usually necessary
+to control the fine balance between antiferromagnetism and superconductivity.
+Superconductivity has also been reported in FeSe, which contains neutral layers
+similar in structure to those found in the iron arsenides but without the
+spacer layer. Here we demonstrate the synthesis of Lix(NH2)y(NH3)1-yFe2Se2 (x
+~0.6 ; y ~ 0.2), with lithium ions, lithium amide and ammonia acting as the
+spacer layer, which exhibits superconductivity at 43(1) K, higher than in any
+FeSe-derived compound reported so far and four times higher at ambient pressure
+than the transition temperature, Tc, of the parent Fe1.01Se. We have determined
+the crystal structure using neutron powder diffraction and used magnetometry
+and muon-spin rotation data to determine the superconducting properties. This
+new synthetic route opens up the possibility of further exploitation of related
+molecular intercalations in this and other systems in order to greatly optimize
+the superconducting properties in this family.
+
+
+Microflare Heating of a Solar Active Region Observed with NuSTAR,
+  Hinode/XRT, and SDO/AIA
+
+  NuSTAR is a highly sensitive focusing hard X-ray (HXR) telescope and has
+observed several small microflares in its initial solar pointings. In this
+paper, we present the first joint observation of a microflare with NuSTAR and
+Hinode/XRT on 2015 April 29 at ~11:29 UT. This microflare shows heating of
+material to several million Kelvin, observed in Soft X-rays (SXRs) with
+Hinode/XRT, and was faintly visible in Extreme Ultraviolet (EUV) with SDO/AIA.
+For three of the four NuSTAR observations of this region (pre-, decay, and post
+phases) the spectrum is well fitted by a single thermal model of 3.2-3.5 MK,
+but the spectrum during the impulsive phase shows additional emission up to 10
+MK, emission equivalent to A0.1 GOES class. We recover the differential
+emission measure (DEM) using SDO/AIA, Hinode/XRT, and NuSTAR, giving
+unprecedented coverage in temperature. We find the pre-flare DEM peaks at ~3 MK
+and falls off sharply by 5 MK; but during the microflare's impulsive phase the
+emission above 3 MK is brighter and extends to 10 MK, giving a heating rate of
+about $2.5 \times 10^{25}$ erg s$^{-1}$. As the NuSTAR spectrum is purely
+thermal we determined upper-limits on the possible non-thermal bremsstrahlung
+emission. We find that for the accelerated electrons to be the source of the
+heating requires a power-law spectrum of $\delta \ge 7$ with a low energy
+cut-off $E_{c} \lesssim 7$ keV. In summary, this first NuSTAR microflare
+strongly resembles much more powerful flares.
+
+
+Accurate high speed single-electron quantum dot preparation
+
+  Using standard microfabrication techniques it is now possible to construct
+devices, which appear to reliably manipulate electrons one at a time. These
+devices have potential use as building blocks in quantum computing devices, or
+as a standard of electrical current derived only from a frequency and the
+fundamental charge. To date the error rate in semiconductor 'tuneable-barrier'
+pump devices, those which show most promise for high frequency operation, have
+not been tested in detail. We present high accuracy measurements of the current
+from an etched GaAs quantum dot pump, operated at zero source-drain bias
+voltage with a single AC-modulated gate driving the pump cycle. By comparison
+with a reference current derived from primary standards, we show that the
+electron transfer accuracy is better than 15 parts per million. High-resolution
+studies of the dependence of the pump current on the quantum dot tuning
+parameters also reveal possible deviations from a model used to describe the
+pumping cycle.
+
+
+The New Galaxy Evolution Paradigm Revealed by the Herschel Surveys
+
+  The Herschel Space Observatory has revealed a very different galaxyscape from
+that shown by optical surveys which presents a challenge for galaxy-evolution
+models. The Herschel surveys reveal (1) that there was rapid galaxy evolution
+in the very recent past and (2) that galaxies lie on a a single Galaxy Sequence
+(GS) rather than a star-forming `main sequence' and a separate region of
+`passive' or `red-and-dead' galaxies. The form of the GS is now clearer because
+far-infrared surveys such as the Herschel ATLAS pick up a population of
+optically-red star-forming galaxies that would have been classified as passive
+using most optical criteria. The space-density of this population is at least
+as high as the traditional star-forming population. By stacking spectra of
+H-ATLAS galaxies over the redshift range 0.001 < z < 0.4, we show that the
+galaxies responsible for the rapid low-redshift evolution have high stellar
+masses, high star-formation rates but, even several billion years in the past,
+old stellar populations - they are thus likely to be relatively recent
+ancestors of early-type galaxies in the Universe today. The form of the GS is
+inconsistent with rapid quenching models and neither the analytic bathtub model
+nor the hydrodynamical EAGLE simulation can reproduce the rapid cosmic
+evolution. We propose a new gentler model of galaxy evolution that can explain
+the new Herschel results and other key properties of the galaxy population.
+
+
+The evolutionary status of Sher25 - implications for blue supergiants
+  and the progenitor of SN1987A
+
+  The blue supergiant Sher25 in the massive Galactic cluster NGC3603 is
+surrounded by a striking emission line nebula. The nebula contains an
+equatorial ring and probable bi-polar outflows, and is similar in morphology,
+mass and kinematics to the structure visible around SN1987A. It has been
+suggested that both nebulae were ejected while Sher25 and the progenitor of
+SN1987A were in previous red supergiant phases. We present optical
+high-resolution spectra of Sher25 and a model photosphere and unified stellar
+wind analysis which determines atmospheric parameters, mass-loss rate and
+photospheric abundances. We compare CNO abundances to other Galactic B-type
+supergiants and find that Sher25 does not appear extreme or abnormal in terms
+of its photospheric nitrogen and helium abundances. The C/N and N/O ratios are
+compared to surface abundances predicted by stellar evolutionary calculations
+and are incompatible with the star having a previous red-supergiant phase. The
+nebula is likely to have been ejected while the star was a blue supergiant. The
+results are compatible with some degree of rotationally induced mixing having
+occurred while the star was on or near the main-sequence. Our analsysis
+suggests the star has a relatively normal stellar wind and mass-loss rate, and
+sits comfortably within the wind momentum-luminosity relationship. In light of
+the evidence regarding massive evolved early-type stars in the Galaxy we
+suggest there is no object which shows clear evidence of having had a previous
+red supergiant phase and hence of undergoing blue loops in the HR diagram.
+[ABRIDGED]
+
+
+A Community-Developed Open-Source Computational Ecosystem for Big Neuro
+  Data
+
+  Big imaging data is becoming more prominent in brain sciences across
+spatiotemporal scales and phylogenies. We have developed a computational
+ecosystem that enables storage, visualization, and analysis of these data in
+the cloud, thusfar spanning 20+ publications and 100+ terabytes including
+nanoscale ultrastructure, microscale synaptogenetic diversity, and mesoscale
+whole brain connectivity, making NeuroData the largest and most diverse open
+repository of brain data.
+
+

@@ -1,0 +1,615 @@
+On the Complexity of Solving Markov Decision Problems
+
+  Markov decision problems (MDPs) provide the foundations for a number of
+problems of interest to AI researchers studying automated planning and
+reinforcement learning. In this paper, we summarize results regarding the
+complexity of solving MDPs and the running time of MDP solution algorithms. We
+argue that, although MDPs can be solved efficiently in theory, more study is
+needed to reveal practical algorithms for solving large problems quickly. To
+encourage future research, we sketch some alternative methods of analysis that
+rely on the structure of MDPs.
+
+
+Bayesian Optimization with Exponential Convergence
+
+  This paper presents a Bayesian optimization method with exponential
+convergence without the need of auxiliary optimization and without the
+delta-cover sampling. Most Bayesian optimization methods require auxiliary
+optimization: an additional non-convex global optimization problem, which can
+be time-consuming and hard to implement in practice. Also, the existing
+Bayesian optimization method with exponential convergence requires access to
+the delta-cover sampling, which was considered to be impractical. Our approach
+eliminates both requirements and achieves an exponential convergence rate.
+
+
+Backward-Forward Search for Manipulation Planning
+
+  In this paper we address planning problems in high-dimensional hybrid
+configuration spaces, with a particular focus on manipulation planning problems
+involving many objects. We present the hybrid backward-forward (HBF) planning
+algorithm that uses a backward identification of constraints to direct the
+sampling of the infinite action space in a forward search from the initial
+state towards a goal configuration. The resulting planner is probabilistically
+complete and can effectively construct long manipulation plans requiring both
+prehensile and nonprehensile actions in cluttered environments.
+
+
+Learning to Rank for Synthesizing Planning Heuristics
+
+  We investigate learning heuristics for domain-specific planning. Prior work
+framed learning a heuristic as an ordinary regression problem. However, in a
+greedy best-first search, the ordering of states induced by a heuristic is more
+indicative of the resulting planner's performance than mean squared error.
+Thus, we instead frame learning a heuristic as a learning to rank problem which
+we solve using a RankSVM formulation. Additionally, we introduce new methods
+for computing features that capture temporal interactions in an approximate
+plan. Our experiments on recent International Planning Competition problems
+show that the RankSVM learned heuristics outperform both the original
+heuristics and heuristics learned through ordinary regression.
+
+
+Generalization in Deep Learning
+
+  Throughout this chapter, we provide theoretical insights into why and how
+deep learning can generalize well, despite its large capacity, complexity,
+possible algorithmic instability, nonrobustness, and sharp minima, responding
+to an open question in the literature. We also propose new open problems and
+discuss the limitations of our results.
+
+
+STRIPStream: Integrating Symbolic Planners and Blackbox Samplers
+
+  Many planning applications involve complex relationships defined on
+high-dimensional, continuous variables. For example, robotic manipulation
+requires planning with kinematic, collision, visibility, and motion constraints
+involving robot configurations, object transforms, and robot trajectories.
+These constraints typically require specialized procedures to sample satisfying
+values. We extend the STRIPS planning language to support a generic,
+declarative specification for these procedures while treating their
+implementation as black boxes. We also describe cost-sensitive planning within
+this framework. We provide several domain-independent algorithms that reduce
+STRIPStream problems to a sequence of finite-domain STRIPS planning problems.
+Finally, we evaluate our algorithms on three robotic planning domains.
+
+
+Learning to Cooperate via Policy Search
+
+  Cooperative games are those in which both agents share the same payoff
+structure. Value-based reinforcement-learning algorithms, such as variants of
+Q-learning, have been applied to learning cooperative games, but they only
+apply when the game state is completely observable to both agents. Policy
+search methods are a reasonable alternative to value-based methods for
+partially observable environments. In this paper, we provide a gradient-based
+distributed policy-search method for cooperative games and compare the notion
+of local optimum to that of Nash equilibrium. We demonstrate the effectiveness
+of this method experimentally in a small, partially observable simulated soccer
+domain.
+
+
+Deliberation Scheduling for Time-Critical Sequential Decision Making
+
+  We describe a method for time-critical decision making involving sequential
+tasks and stochastic processes. The method employs several iterative refinement
+routines for solving different aspects of the decision making problem. This
+paper concentrates on the meta-level control problem of deliberation
+scheduling, allocating computational resources to these routines. We provide
+different models corresponding to optimization problems that capture the
+different circumstances and computational strategies for decision making under
+time constraints. We consider precursor models in which all decision making is
+performed prior to execution and recurrent models in which decision making is
+performed in parallel with execution, accounting for the states observed during
+execution and anticipating future states. We describe algorithms for precursor
+and recurrent models and provide the results of our empirical investigations to
+date.
+
+
+Learning to Cooperate via Policy Search
+
+  Cooperative games are those in which both agents share the same payoff
+structure. Value-based reinforcement-learning algorithms, such as variants of
+Q-learning, have been applied to learning cooperative games, but they only
+apply when the game state is completely observable to both agents. Policy
+search methods are a reasonable alternative to value-based methods for
+partially observable environments. In this paper, we provide a gradient-based
+distributed policy-search method for cooperative games and compare the notion
+of local optimum to that of Nash equilibrium. We demonstrate the effectiveness
+of this method experimentally in a small, partially observable simulated soccer
+domain.
+
+
+The Thing That We Tried Didn't Work Very Well : Deictic Representation
+  in Reinforcement Learning
+
+  Most reinforcement learning methods operate on propositional representations
+of the world state. Such representations are often intractably large and
+generalize poorly. Using a deictic representation is believed to be a viable
+alternative: they promise generalization while allowing the use of existing
+reinforcement-learning methods. Yet, there are few experiments on learning with
+deictic representations reported in the literature. In this paper we explore
+the effectiveness of two forms of deictic representation and a na\"{i}ve
+propositional representation in a simple blocks-world domain. We find,
+empirically, that the deictic representations actually worsen learning
+performance. We conclude with a discussion of possible causes of these results
+and strategies for more effective learning in domains with objects.
+
+
+Adaptive Importance Sampling for Estimation in Structured Domains
+
+  Sampling is an important tool for estimating large, complex sums and
+integrals over high dimensional spaces. For instance, important sampling has
+been used as an alternative to exact methods for inference in belief networks.
+Ideally, we want to have a sampling distribution that provides optimal-variance
+estimators. In this paper, we present methods that improve the sampling
+distribution by systematically adapting it as we obtain information from the
+samples. We present a stochastic-gradient-descent method for sequentially
+updating the sampling distribution based on the direct minization of the
+variance. We also present other stochastic-gradient-descent methods based on
+the minimizationof typical notions of distance between the current sampling
+distribution and approximations of the target, optimal distribution. We finally
+validate and compare the different methods empirically by applying them to the
+problem of action evaluation in influence diagrams.
+
+
+Solving POMDPs by Searching the Space of Finite Policies
+
+  Solving partially observable Markov decision processes (POMDPs) is highly
+intractable in general, at least in part because the optimal policy may be
+infinitely large. In this paper, we explore the problem of finding the optimal
+policy from a restricted set of policies, represented as finite state automata
+of a given size. This problem is also intractable, but we show that the
+complexity can be greatly reduced when the POMDP and/or policy are further
+constrained. We demonstrate good empirical results with a branch-and-bound
+method for finding globally optimal deterministic policies, and a
+gradient-ascent method for finding locally optimal stochastic policies.
+
+
+Learning Finite-State Controllers for Partially Observable Environments
+
+  Reactive (memoryless) policies are sufficient in completely observable Markov
+decision processes (MDPs), but some kind of memory is usually necessary for
+optimal control of a partially observable MDP. Policies with finite memory can
+be represented as finite-state automata. In this paper, we extend Baird and
+Moore's VAPS algorithm to the problem of learning general finite-state
+automata. Because it performs stochastic gradient descent, this algorithm can
+be shown to converge to a locally optimal finite-state controller. We provide
+the details of the algorithm and then consider the question of under what
+conditions stochastic gradient descent will outperform exact gradient descent.
+We conclude with empirical results comparing the performance of stochastic and
+exact gradient descent, and showing the ability of our algorithm to extract the
+useful information contained in the sequence of past observations to compensate
+for the lack of observability at each time-step.
+
+
+Accelerating EM: An Empirical Study
+
+  Many applications require that we learn the parameters of a model from data.
+EM is a method used to learn the parameters of probabilistic models for which
+the data for some of the variables in the models is either missing or hidden.
+There are instances in which this method is slow to converge. Therefore,
+several accelerations have been proposed to improve the method. None of the
+proposed acceleration methods are theoretically dominant and experimental
+comparisons are lacking. In this paper, we present the different proposed
+accelerations and try to compare them experimentally. From the results of the
+experiments, we argue that some acceleration of EM is always possible, but that
+which acceleration is superior depends on properties of the problem.
+
+
+Hierarchical Solution of Markov Decision Processes using Macro-actions
+
+  We investigate the use of temporally abstract actions, or macro-actions, in
+the solution of Markov decision processes. Unlike current models that combine
+both primitive actions and macro-actions and leave the state space unchanged,
+we propose a hierarchical model (using an abstract MDP) that works with
+macro-actions only, and that significantly reduces the size of the state space.
+This is achieved by treating macroactions as local policies that act in certain
+regions of state space, and by restricting states in the abstract MDP to those
+at the boundaries of regions. The abstract MDP approximates the original and
+can be solved more efficiently. We discuss several ways in which macro-actions
+can be generated to ensure good solution quality. Finally, we consider ways in
+which macro-actions can be reused to solve multiple, related MDPs; and we show
+that this can justify the computational overhead of macro-action generation.
+
+
+Object-based World Modeling in Semi-Static Environments with Dependent
+  Dirichlet-Process Mixtures
+
+  To accomplish tasks in human-centric indoor environments, robots need to
+represent and understand the world in terms of objects and their attributes. We
+refer to this attribute-based representation as a world model, and consider how
+to acquire it via noisy perception and maintain it over time, as objects are
+added, changed, and removed in the world. Previous work has framed this as
+multiple-target tracking problem, where objects are potentially in motion at
+all times. Although this approach is general, it is computationally expensive.
+We argue that such generality is not needed in typical world modeling tasks,
+where objects only change state occasionally. More efficient approaches are
+enabled by restricting ourselves to such semi-static environments.
+  We consider a previously-proposed clustering-based world modeling approach
+that assumed static environments, and extend it to semi-static domains by
+applying a dependent Dirichlet-process (DDP) mixture model. We derive a novel
+MAP inference algorithm under this model, subject to data association
+constraints. We demonstrate our approach improves computational performance in
+semi-static environments.
+
+
+Learning Probabilistic Relational Dynamics for Multiple Tasks
+
+  The ways in which an agent's actions affect the world can often be modeled
+compactly using a set of relational probabilistic planning rules. This paper
+addresses the problem of learning such rule sets for multiple related tasks. We
+take a hierarchical Bayesian approach, in which the system learns a prior
+distribution over rule sets. We present a class of prior distributions
+parameterized by a rule set prototype that is stochastically modified to
+produce a task-specific rule set. We also describe a coordinate ascent
+algorithm that iteratively optimizes the task-specific rule sets and the prior
+distribution. Experiments using this algorithm show that transferring
+information from related tasks significantly reduces the amount of training
+data required to predict action effects in blocks-world domains.
+
+
+CAPIR: Collaborative Action Planning with Intention Recognition
+
+  We apply decision theoretic techniques to construct non-player characters
+that are able to assist a human player in collaborative games. The method is
+based on solving Markov decision processes, which can be difficult when the
+game state is described by many variables. To scale to more complex games, the
+method allows decomposition of a game task into subtasks, each of which can be
+modelled by a Markov decision process. Intention recognition is used to infer
+the subtask that the human is currently performing, allowing the helper to
+assist the human in performing the correct task. Experiments show that the
+method can be effective, giving near-human level performance in helping a human
+in a collaborative game.
+
+
+Focused Model-Learning and Planning for Non-Gaussian Continuous
+  State-Action Systems
+
+  We introduce a framework for model learning and planning in stochastic
+domains with continuous state and action spaces and non-Gaussian transition
+models. It is efficient because (1) local models are estimated only when the
+planner requires them; (2) the planner focuses on the most relevant states to
+the current planning problem; and (3) the planner focuses on the most
+informative and/or high-value actions. Our theoretical analysis shows the
+validity and asymptotic optimality of the proposed approach. Empirically, we
+demonstrate the effectiveness of our algorithm on a simulated multi-modal
+pushing problem.
+
+
+STRIPS Planning in Infinite Domains
+
+  Many robotic planning applications involve continuous actions with highly
+non-linear constraints, which cannot be modeled using modern planners that
+construct a propositional representation. We introduce STRIPStream: an
+extension of the STRIPS language which can model these domains by supporting
+the specification of blackbox generators to handle complex constraints. The
+outputs of these generators interact with actions through possibly infinite
+streams of objects and static predicates. We provide two algorithms which both
+reduce STRIPStream problems to a sequence of finite-domain planning problems.
+The representation and algorithms are entirely domain independent. We
+demonstrate our framework on simple illustrative domains, and then on a
+high-dimensional, continuous robotic task and motion planning domain.
+
+
+Provably Safe Robot Navigation with Obstacle Uncertainty
+
+  As drones and autonomous cars become more widespread it is becoming
+increasingly important that robots can operate safely under realistic
+conditions. The noisy information fed into real systems means that robots must
+use estimates of the environment to plan navigation. Efficiently guaranteeing
+that the resulting motion plans are safe under these circumstances has proved
+difficult. We examine how to guarantee that a trajectory or policy is safe with
+only imperfect observations of the environment. We examine the implications of
+various mathematical formalisms of safety and arrive at a mathematical notion
+of safety of a long-term execution, even when conditioned on observational
+information. We present efficient algorithms that can prove that trajectories
+or policies are safe with much tighter bounds than in previous work. Notably,
+the complexity of the environment does not affect our methods ability to
+evaluate if a trajectory or policy is safe. We then use these safety checking
+methods to design a safe variant of the RRT planning algorithm.
+
+
+Selecting Representative Examples for Program Synthesis
+
+  Program synthesis is a class of regression problems where one seeks a
+solution, in the form of a source-code program, mapping the inputs to their
+corresponding outputs exactly. Due to its precise and combinatorial nature,
+program synthesis is commonly formulated as a constraint satisfaction problem,
+where input-output examples are encoded as constraints and solved with a
+constraint solver. A key challenge of this formulation is scalability: while
+constraint solvers work well with a few well-chosen examples, a large set of
+examples can incur significant overhead in both time and memory. We describe a
+method to discover a subset of examples that is both small and representative:
+the subset is constructed iteratively, using a neural network to predict the
+probability of unchosen examples conditioned on the chosen examples in the
+subset, and greedily adding the least probable example. We empirically evaluate
+the representativeness of the subsets constructed by our method, and
+demonstrate such subsets can significantly improve synthesis time and
+stability.
+
+
+Sampling-Based Methods for Factored Task and Motion Planning
+
+  This paper presents a general-purpose formulation of a large class of
+discrete-time planning problems, with hybrid state and control-spaces, as
+factored transition systems. Factoring allows state transitions to be described
+as the intersection of several constraints each affecting a subset of the state
+and control variables. Robotic manipulation problems with many movable objects
+involve constraints that only affect several variables at a time and therefore
+exhibit large amounts of factoring. We develop a theoretical framework for
+solving factored transition systems with sampling-based algorithms. The
+framework characterizes conditions on the submanifold in which solutions lie,
+leading to a characterization of robust feasibility that incorporates
+dimensionality-reducing constraints. It then connects those conditions to
+corresponding conditional samplers that can be composed to produce values on
+this submanifold. We present two domain-independent, probabilistically complete
+planning algorithms that take, as input, a set of conditional samplers. We
+demonstrate the empirical efficiency of these algorithms on a set of
+challenging task and motion planning problems involving picking, placing, and
+pushing.
+
+
+Generalization in Machine Learning via Analytical Learning Theory
+
+  This paper introduces a novel measure-theoretic theory for machine learning
+that does not require statistical assumptions. Based on this theory, a new
+regularization method in deep learning is derived and shown to outperform
+previous methods in CIFAR-10, CIFAR-100, and SVHN. Moreover, the proposed
+theory provides a theoretical basis for a family of practically successful
+regularization methods in deep learning. We discuss several consequences of our
+results on one-shot learning, representation learning, deep learning, and
+curriculum learning. Unlike statistical learning theory, the proposed learning
+theory analyzes each problem instance individually via measure theory, rather
+than a set of problem instances via statistics. As a result, it provides
+different types of results and insights when compared to statistical learning
+theory.
+
+
+Learning What Information to Give in Partially Observed Domains
+
+  In many robotic applications, an autonomous agent must act within and explore
+a partially observed environment that is unobserved by its human teammate. We
+consider such a setting in which the agent can, while acting, transmit
+declarative information to the human that helps them understand aspects of this
+unseen environment. In this work, we address the algorithmic question of how
+the agent should plan out what actions to take and what information to
+transmit. Naturally, one would expect the human to have preferences, which we
+model information-theoretically by scoring transmitted information based on the
+change it induces in weighted entropy of the human's belief state. We formulate
+this setting as a belief MDP and give a tractable algorithm for solving it
+approximately. Then, we give an algorithm that allows the agent to learn the
+human's preferences online, through exploration. We validate our approach
+experimentally in simulated discrete and continuous partially observed
+search-and-recover domains. Visit http://tinyurl.com/chitnis-corl-18 for a
+supplementary video.
+
+
+Learning to guide task and motion planning using score-space
+  representation
+
+  In this paper, we propose a learning algorithm that speeds up the search in
+task and motion planning problems. Our algorithm proposes solutions to three
+different challenges that arise in learning to improve planning efficiency:
+what to predict, how to represent a planning problem instance, and how to
+transfer knowledge from one problem instance to another. We propose a method
+that predicts constraints on the search space based on a generic representation
+of a planning problem instance, called score-space, where we represent a
+problem instance in terms of the performance of a set of solutions attempted so
+far. Using this representation, we transfer knowledge, in the form of
+constraints, from previous problems based on the similarity in score space. We
+design a sequential algorithm that efficiently predicts these constraints, and
+evaluate it in three different challenging task and motion planning problems.
+Results indicate that our approach performs orders of magnitudes faster than an
+unguided planner
+
+
+Learning Quickly to Plan Quickly Using Modular Meta-Learning
+
+  Multi-object manipulation problems in continuous state and action spaces can
+be solved by planners that search over sampled values for the continuous
+parameters of operators. The efficiency of these planners depends critically on
+the effectiveness of the samplers used, but effective sampling in turn depends
+on details of the robot, environment, and task. Our strategy is to learn
+functions called "specializers" that generate values for continuous operator
+parameters, given a state description and values for the discrete parameters.
+Rather than trying to learn a single specializer for each operator from large
+amounts of data on a single task, we take a modular meta-learning approach. We
+train on multiple tasks and learn a variety of specializers that, on a new
+task, can be quickly adapted using relatively little data -- thus, our system
+"learns quickly to plan quickly" using these specializers. We validate our
+approach experimentally in simulated 3D pick-and-place tasks with continuous
+state and action spaces. Visit http://tinyurl.com/chitnis-icra-19 for a
+supplementary video.
+
+
+Learning sparse relational transition models
+
+  We present a representation for describing transition models in complex
+uncertain domains using relational rules. For any action, a rule selects a set
+of relevant objects and computes a distribution over properties of just those
+objects in the resulting state given their properties in the previous state. An
+iterative greedy algorithm is used to construct a set of deictic references
+that determine which objects are relevant in any given state. Feed-forward
+neural networks are used to learn the transition distribution on the relevant
+objects' properties. This strategy is demonstrated to be both more versatile
+and more sample efficient than learning a monolithic transition model in a
+simulated domain in which a robot pushes stacks of objects on a cluttered
+table.
+
+
+Effect of Depth and Width on Local Minima in Deep Learning
+
+  In this paper, we analyze the effects of depth and width on the quality of
+local minima, without strong over-parameterization and simplification
+assumptions in the literature. Without any simplification assumption, for deep
+nonlinear neural networks with the squared loss, we theoretically show that the
+quality of local minima tends to improve towards the global minimum value as
+depth and width increase. Furthermore, with a locally-induced structure on deep
+nonlinear neural networks, the values of local minima of neural networks are
+theoretically proven to be no worse than the globally optimal values of
+corresponding classical machine learning models. We empirically support our
+theoretical observation with a synthetic dataset as well as MNIST, CIFAR-10 and
+SVHN datasets. When compared to previous studies with strong
+over-parameterization assumptions, the results in this paper do not require
+over-parameterization, and instead show the gradual effects of
+over-parameterization as consequences of general results.
+
+
+Regret bounds for meta Bayesian optimization with an unknown Gaussian
+  process prior
+
+  Bayesian optimization usually assumes that a Bayesian prior is given.
+However, the strong theoretical guarantees in Bayesian optimization are often
+regrettably compromised in practice because of unknown parameters in the prior.
+In this paper, we adopt a variant of empirical Bayes and show that, by
+estimating the Gaussian process prior from offline data sampled from the same
+prior and constructing unbiased estimators of the posterior, variants of both
+GP-UCB and probability of improvement achieve a near-zero regret bound, which
+decreases to a constant proportional to the observational noise as the number
+of offline data and the number of online evaluations increase. Empirically, we
+have verified our approach on challenging simulated robotic problems featuring
+task and motion planning.
+
+
+Elimination of All Bad Local Minima in Deep Learning
+
+  In this paper, we theoretically prove that we can eliminate all suboptimal
+local minima by adding one neuron per output unit to any deep neural network,
+for multi-class classification, binary classification, and regression with an
+arbitrary loss function. At every local minimum of any deep neural network with
+added neurons, the set of parameters of the original neural network (without
+added neurons) is guaranteed to be a global minimum of the original neural
+network. The effects of the added neurons are proven to automatically vanish at
+every local minimum. Unlike many related results in the literature, our
+theoretical results are directly applicable to common deep learning tasks
+because the results only rely on the assumptions that automatically hold in the
+common tasks. Moreover, we discuss several limitations in eliminating the
+suboptimal local minima in this manner by providing additional theoretical
+results and several examples.
+
+
+Look before you sweep: Visibility-aware motion planning
+
+  This paper addresses the problem of planning for a robot with a directional
+obstacle-detection sensor that must move through a cluttered environment. The
+planning objective is to remain safe by finding a path for the complete robot,
+including sensor, that guarantees that the robot will not move into any part of
+the workspace before it has been seen by the sensor. Although a great deal of
+work has addressed a version of this problem in which the "field of view" of
+the sensor is a sphere around the robot, there is very little work addressing
+robots with a narrow or occluded field of view. We give a formal definition of
+the problem, several solution methods with different computational trade-offs,
+and experimental results in illustrative domains.
+
+
+Every Local Minimum is a Global Minimum of an Induced Model
+
+  For non-convex optimization in machine learning, this paper proves that every
+local minimum achieves the global optimality of the perturbable gradient basis
+model at any differentiable point. As a result, non-convex machine learning is
+theoretically as supported as convex machine learning with a hand-crafted basis
+in terms of the loss at differentiable local minima, except in the case when a
+preference is given to the hand-crafted basis over the perturbable gradient
+basis. The proofs of these results are derived under mild assumptions.
+Accordingly, the proven results are directly applicable to many machine
+learning models, including practical deep neural networks, without any
+modification of practical methods. Furthermore, as special cases of our general
+results, this paper improves or complements several state-of-the-art
+theoretical results in the literature with a simple and unified proof
+technique.
+
+
+FFRob: Leveraging Symbolic Planning for Efficient Task and Motion
+  Planning
+
+  Mobile manipulation problems involving many objects are challenging to solve
+due to the high dimensionality and multi-modality of their hybrid configuration
+spaces. Planners that perform a purely geometric search are prohibitively slow
+for solving these problems because they are unable to factor the configuration
+space. Symbolic task planners can efficiently construct plans involving many
+variables but cannot represent the geometric and kinematic constraints required
+in manipulation. We present the FFRob algorithm for solving task and motion
+planning problems. First, we introduce Extended Action Specification (EAS) as a
+general purpose planning representation that supports arbitrary predicates as
+conditions. We adapt existing heuristic search ideas for solving \proc{strips}
+planning problems, particularly delete-relaxations, to solve EAS problem
+instances. We then apply the EAS representation and planners to manipulation
+problems resulting in FFRob. FFRob iteratively discretizes task and motion
+planning problems using batch sampling of manipulation primitives and a
+multi-query roadmap structure that can be conditionalized to evaluate
+reachability under different placements of movable objects. This structure
+enables the EAS planner to efficiently compute heuristics that incorporate
+geometric and kinematic planning constraints to give a tight estimate of the
+distance to the goal. Additionally, we show FFRob is probabilistically complete
+and has finite expected runtime. Finally, we empirically demonstrate FFRob's
+effectiveness on complex and diverse task and motion planning tasks including
+rearrangement planning and navigation among movable objects.
+
+
+Guiding the search in continuous state-action spaces by learning an
+  action sampling distribution from off-target samples
+
+  In robotics, it is essential to be able to plan efficiently in
+high-dimensional continuous state-action spaces for long horizons. For such
+complex planning problems, unguided uniform sampling of actions until a path to
+a goal is found is hopelessly inefficient, and gradient-based approaches often
+fall short when the optimization manifold of a given problem is not smooth. In
+this paper we present an approach that guides the search of a state-space
+planner, such as A*, by learning an action-sampling distribution that can
+generalize across different instances of a planning problem. The motivation is
+that, unlike typical learning approaches for planning for continuous action
+space that estimate a policy, an estimated action sampler is more robust to
+error since it has a planner to fall back on. We use a Generative Adversarial
+Network (GAN), and address an important issue: search experience consists of a
+relatively large number of actions that are not on a solution path and a
+relatively small number of actions that actually are on a solution path. We
+introduce a new technique, based on an importance-ratio estimation method, for
+using samples from a non-target distribution to make GAN learning more
+data-efficient. We provide theoretical guarantees and empirical evaluation in
+three challenging continuous robot planning problems to illustrate the
+effectiveness of our algorithm.
+
+
+Integrating Human-Provided Information Into Belief State Representation
+  Using Dynamic Factorization
+
+  In partially observed environments, it can be useful for a human to provide
+the robot with declarative information that represents probabilistic relational
+constraints on properties of objects in the world, augmenting the robot's
+sensory observations. For instance, a robot tasked with a search-and-rescue
+mission may be informed by the human that two victims are probably in the same
+room. An important question arises: how should we represent the robot's
+internal knowledge so that this information is correctly processed and combined
+with raw sensory information? In this paper, we provide an efficient belief
+state representation that dynamically selects an appropriate factoring,
+combining aspects of the belief when they are correlated through information
+and separating them when they are not. This strategy works in open domains, in
+which the set of possible objects is not known in advance, and provides
+significant improvements in inference time over a static factoring, leading to
+more efficient planning for complex partially observed tasks. We validate our
+approach experimentally in two open-domain planning problems: a 2D discrete
+gridworld task and a 3D continuous cooking task. A supplementary video can be
+found at http://tinyurl.com/chitnis-iros-18.
+
+
+Active model learning and diverse action sampling for task and motion
+  planning
+
+  The objective of this work is to augment the basic abilities of a robot by
+learning to use new sensorimotor primitives to enable the solution of complex
+long-horizon problems. Solving long-horizon problems in complex domains
+requires flexible generative planning that can combine primitive abilities in
+novel combinations to solve problems as they arise in the world. In order to
+plan to combine primitive actions, we must have models of the preconditions and
+effects of those actions: under what circumstances will executing this
+primitive achieve some particular effect in the world?
+  We use, and develop novel improvements on, state-of-the-art methods for
+active learning and sampling. We use Gaussian process methods for learning the
+conditions of operator effectiveness from small numbers of expensive training
+examples collected by experimentation on a robot. We develop adaptive sampling
+methods for generating diverse elements of continuous sets (such as robot
+configurations and object poses) during planning for solving a new task, so
+that planning is as efficient as possible. We demonstrate these methods in an
+integrated system, combining newly learned models with an efficient
+continuous-space robot task and motion planner to learn to solve long horizon
+problems more efficiently than was previously possible.
+
+

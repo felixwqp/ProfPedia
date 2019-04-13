@@ -1,0 +1,135 @@
+Progressive Neural Networks for Transfer Learning in Emotion Recognition
+
+  Many paralinguistic tasks are closely related and thus representations
+learned in one domain can be leveraged for another. In this paper, we
+investigate how knowledge can be transferred between three paralinguistic
+tasks: speaker, emotion, and gender recognition. Further, we extend this
+problem to cross-dataset tasks, asking how knowledge captured in one emotion
+dataset can be transferred to another. We focus on progressive neural networks
+and compare these networks to the conventional deep learning method of
+pre-training and fine-tuning. Progressive neural networks provide a way to
+transfer knowledge and avoid the forgetting effect present when pre-training
+neural networks on different tasks. Our experiments demonstrate that: (1)
+emotion recognition can benefit from using representations originally learned
+for different paralinguistic tasks and (2) transfer learning can effectively
+leverage additional datasets to improve the performance of emotion recognition
+systems.
+
+
+Capturing Long-term Temporal Dependencies with Convolutional Networks
+  for Continuous Emotion Recognition
+
+  The goal of continuous emotion recognition is to assign an emotion value to
+every frame in a sequence of acoustic features. We show that incorporating
+long-term temporal dependencies is critical for continuous emotion recognition
+tasks. To this end, we first investigate architectures that use dilated
+convolutions. We show that even though such architectures outperform previously
+reported systems, the output signals produced from such architectures undergo
+erratic changes between consecutive time steps. This is inconsistent with the
+slow moving ground-truth emotion labels that are obtained from human
+annotators. To deal with this problem, we model a downsampled version of the
+input signal and then generate the output signal through upsampling. Not only
+does the resulting downsampling/upsampling network achieve good performance, it
+also generates smooth output trajectories. Our method yields the best known
+audio-only performance on the RECOLA dataset.
+
+
+Improving End-of-turn Detection in Spoken Dialogues by Detecting Speaker
+  Intentions as a Secondary Task
+
+  This work focuses on the use of acoustic cues for modeling turn-taking in
+dyadic spoken dialogues. Previous work has shown that speaker intentions (e.g.,
+asking a question, uttering a backchannel, etc.) can influence turn-taking
+behavior and are good predictors of turn-transitions in spoken dialogues.
+However, speaker intentions are not readily available for use by automated
+systems at run-time; making it difficult to use this information to anticipate
+a turn-transition. To this end, we propose a multi-task neural approach for
+predicting turn- transitions and speaker intentions simultaneously. Our results
+show that adding the auxiliary task of speaker intention prediction improves
+the performance of turn-transition prediction in spoken dialogues, without
+relying on additional input features during run-time.
+
+
+The PRIORI Emotion Dataset: Linking Mood to Emotion Detected In-the-Wild
+
+  Bipolar Disorder is a chronic psychiatric illness characterized by
+pathological mood swings associated with severe disruptions in emotion
+regulation. Clinical monitoring of mood is key to the care of these dynamic and
+incapacitating mood states. Frequent and detailed monitoring improves clinical
+sensitivity to detect mood state changes, but typically requires costly and
+limited resources. Speech characteristics change during both depressed and
+manic states, suggesting automatic methods applied to the speech signal can be
+effectively used to monitor mood state changes. However, speech is modulated by
+many factors, which renders mood state prediction challenging. We hypothesize
+that emotion can be used as an intermediary step to improve mood state
+prediction. This paper presents critical steps in developing this pipeline,
+including (1) a new in the wild emotion dataset, the PRIORI Emotion Dataset,
+collected from everyday smartphone conversational speech recordings, (2)
+activation/valence emotion recognition baselines on this dataset (PCC of 0.71
+and 0.41, respectively), and (3) significant correlation between predicted
+emotion and mood state for individuals with bipolar disorder. This provides
+evidence and a working baseline for the use of emotion as a meta-feature for
+mood state monitoring.
+
+
+Trainable Time Warping: Aligning Time-Series in the Continuous-Time
+  Domain
+
+  DTW calculates the similarity or alignment between two signals, subject to
+temporal warping. However, its computational complexity grows exponentially
+with the number of time-series. Although there have been algorithms developed
+that are linear in the number of time-series, they are generally quadratic in
+time-series length. The exception is generalized time warping (GTW), which has
+linear computational cost. Yet, it can only identify simple time warping
+functions. There is a need for a new fast, high-quality multisequence alignment
+algorithm. We introduce trainable time warping (TTW), whose complexity is
+linear in both the number and the length of time-series. TTW performs alignment
+in the continuous-time domain using a sinc convolutional kernel and a
+gradient-based optimization technique. We compare TTW and GTW on 85 UCR
+datasets in time-series averaging and classification. TTW outperforms GTW on
+67.1% of the datasets for the averaging tasks, and 61.2% of the datasets for
+the classification tasks.
+
+
+MuSE-ing on the Impact of Utterance Ordering On Crowdsourced Emotion
+  Annotations
+
+  Emotion recognition algorithms rely on data annotated with high quality
+labels. However, emotion expression and perception are inherently subjective.
+There is generally not a single annotation that can be unambiguously declared
+"correct". As a result, annotations are colored by the manner in which they
+were collected. In this paper, we conduct crowdsourcing experiments to
+investigate this impact on both the annotations themselves and on the
+performance of these algorithms. We focus on one critical question: the effect
+of context. We present a new emotion dataset, Multimodal Stressed Emotion
+(MuSE), and annotate the dataset using two conditions: randomized, in which
+annotators are presented with clips in random order, and contextualized, in
+which annotators are presented with clips in order. We find that contextual
+labeling schemes result in annotations that are more similar to a speaker's own
+self-reported labels and that labels generated from randomized schemes are most
+easily predictable by automated systems.
+
+
+Barking up the Right Tree: Improving Cross-Corpus Speech Emotion
+  Recognition with Adversarial Discriminative Domain Generalization (ADDoG)
+
+  Automatic speech emotion recognition provides computers with critical context
+to enable user understanding. While methods trained and tested within the same
+dataset have been shown successful, they often fail when applied to unseen
+datasets. To address this, recent work has focused on adversarial methods to
+find more generalized representations of emotional speech. However, many of
+these methods have issues converging, and only involve datasets collected in
+laboratory conditions. In this paper, we introduce Adversarial Discriminative
+Domain Generalization (ADDoG), which follows an easier to train "meet in the
+middle" approach. The model iteratively moves representations learned for each
+dataset closer to one another, improving cross-dataset generalization. We also
+introduce Multiclass ADDoG, or MADDoG, which is able to extend the proposed
+method to more than two datasets, simultaneously. Our results show consistent
+convergence for the introduced methods, with significantly improved results
+when not using labels from the target dataset. We also show how, in most cases,
+ADDoG and MADDoG can be used to improve upon baseline state-of-the-art methods
+when target dataset labels are added and in-the-wild data are considered. Even
+though our experiments focus on cross-corpus speech emotion, these methods
+could be used to remove unwanted factors of variation in other settings.
+
+

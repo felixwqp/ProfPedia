@@ -1,0 +1,540 @@
+Optimal Multi-Robot Path Planning on Graphs: Structure and Computational
+  Complexity
+
+  We study the problem of optimal multi-robot path planning on graphs (MPP)
+over four distinct minimization objectives: the total arrival time, the
+makespan (last arrival time), the total distance, and the maximum (single-robot
+traveled) distance. On the structure side, we show that each pair of these four
+objectives induces a Pareto front and cannot always be optimized
+simultaneously. Then, through reductions from 3-SAT, we further establish that
+computation over each objective is an NP-hard task, providing evidence that
+solving MPP optimally is generally intractable. Nevertheless, in a related
+paper, we design complete algorithms and efficient heuristics for optimizing
+all four objectives, capable of solving MPP optimally or near-optimally for
+hundreds of robots in challenging setups.
+
+
+Coordinating the Motion of Labeled Discs with Optimality Guarantees
+  under Extreme Density
+
+  We push the limit in planning collision-free motions for routing uniform
+labeled discs in two dimensions. First, from a theoretical perspective, we show
+that the constant-factor time-optimal routing of labeled discs can be achieved
+using a polynomial-time algorithm with robot density over $50\%$ in the limit
+(i.e., over half of the workspace may be occupied by the discs). Second, from a
+more practical standpoint, we provide a high performance algorithm that
+computes near-optimal (e.g., $1.x$) solutions under the same density setting.
+
+
+Shortest Path Set Induced Vertex Ordering and its Application to
+  Distributed Distance Optimal Multi-agent Formation Path Planning
+
+  For the task of moving a group of indistinguishable agents on a connected
+graph with unit edge lengths into an arbitrary goal formation, it was
+previously shown that distance optimal paths can be scheduled to complete with
+a tight convergence time guarantee, using a fully centralized algorithm. In
+this study, we show that the problem formulation in fact induces a more
+fundamental ordering of the vertices on the underlying graph network, which
+directly leads to a more intuitive scheduling algorithm that assures the same
+convergence time and runs faster. More importantly, this structure enables a
+distributed scheduling algorithm once individual paths are assigned to the
+agents, which was not possible before. The vertex ordering also readily extends
+to more general graphs - those with non-unit capacities and edge lengths - for
+which we again guarantee the convergence time until the desired formation is
+achieved.
+
+
+Pebble Motion on Graphs with Rotations: Efficient Feasibility Tests and
+  Planning Algorithms
+
+  We study the problem of planning paths for $p$ distinguishable pebbles
+(robots) residing on the vertices of an $n$-vertex connected graph with $p \le
+n$. A pebble may move from a vertex to an adjacent one in a time step provided
+that it does not collide with other pebbles. When $p = n$, the only collision
+free moves are synchronous rotations of pebbles on disjoint cycles of the
+graph. We show that the feasibility of such problems is intrinsically
+determined by the diameter of a (unique) permutation group induced by the
+underlying graph. Roughly speaking, the diameter of a group $\mathbf G$ is the
+minimum length of the generator product required to reach an arbitrary element
+of $\mathbf G$ from the identity element. Through bounding the diameter of this
+associated permutation group, which assumes a maximum value of $O(n^2)$, we
+establish a linear time algorithm for deciding the feasibility of such problems
+and an $O(n^3)$ algorithm for planning complete paths.
+
+
+A Linear Time Algorithm for the Feasibility of Pebble Motion on Graphs
+
+  Given a connected, undirected, simple graph $G = (V, E)$ and $p \le |V|$
+pebbles labeled $1,..., p$, a configuration of these $p$ pebbles is an
+injective map assigning the pebbles to vertices of $G$. Let $S$ and $D$ be two
+such configurations. From a configuration, pebbles can move on $G$ as follows:
+In each step, at most one pebble may move from the vertex it currently occupies
+to an adjacent unoccupied vertex, yielding a new configuration. A natural
+question in this setting is the following: Is configuration $D$ reachable from
+$S$ and if so, how? We show that the feasibility of this problem can be decided
+in time $O(|V| + |E|)$.
+
+
+Optimal Tourist Problem and Anytime Planning of Trip Itineraries
+
+  We introduce and study the problem in which a mobile sensing robot (our
+tourist) is tasked to travel among and gather intelligence at a set of
+spatially distributed point-of-interests (POIs). The quality of the information
+collected at each POI is characterized by some non-decreasing reward function
+over the time spent at the POI. With limited time budget, the robot must
+balance between spending time traveling to POIs and spending time at POIs for
+information collection (sensing) so as to maximize the total reward.
+Alternatively, the robot may be required to acquire a minimum mount of reward
+and hopes to do so with the least amount of time. We propose a mixed integer
+programming (MIP) based anytime algorithm for solving these two NP-hard
+optimization problems to arbitrary precision. The effectiveness of our
+algorithm is demonstrated using an extensive set of computational experiments
+including the planning of a realistic itinerary for a first-time tourist in
+Istanbul.
+
+
+Intractability of Optimal Multi-Robot Path Planning on Planar Graphs
+
+  We study the computational complexity of optimally solving multi-robot path
+planning problems on planar graphs. For four common time- and distance-based
+objectives, we show that the associated path optimization problems for multiple
+robots are all NP-complete, even when the underlying graph is planar.
+Establishing the computational intractability of optimal multi-robot path
+planning problems on planar graphs has important practical implications. In
+particular, our result suggests the preferred approach toward solving such
+problems, when the number of robots is large, is to augment the planar
+environment to reduce the sharing of paths among robots traveling in opposite
+directions on those paths. Indeed, such efficiency boosting structures, such as
+highways and elevated intersections, are ubiquitous in robotics and
+transportation applications.
+
+
+An Effective Algorithmic Framework for Near Optimal Multi-Robot Path
+  Planning
+
+  We present a centralized algorithmic framework for solving multi-robot path
+planning problems in general, two-dimensional, continuous environments while
+minimizing globally the task completion time. The framework obtains high levels
+of effectiveness through the composition of an optimal discretization of the
+continuous environment and the subsequent fast, near-optimal resolution of the
+resulting discrete planning problem. This principled approach achieves orders
+of magnitudes better performance with respect to both speed and the supported
+robot density. For a wide variety of environments, our method is shown to
+compute globally near-optimal solutions for fifty robots in seconds with robots
+packed close to each other. In the extreme, the method can consistently solve
+problems with hundreds of robots that occupy over 30% of the free space.
+
+
+Distance Optimal Formation Control on Graphs with a Tight Convergence
+  Time Guarantee
+
+  For the task of moving a set of indistinguishable agents on a connected graph
+with unit edge distance to an arbitrary set of goal vertices, free of
+collisions, we propose a fast distance optimal control algorithm that guides
+the agents into the desired formation. Moreover, we show that the algorithm
+also provides a tight convergence time guarantee (time optimality and distance
+optimality cannot be simultaneously satisfied). Our generic graph formulation
+allows the algorithm to be applied to scenarios such as grids with holes
+(modeling obstacles) in arbitrary dimensions. Simulations, available online,
+confirm our theoretical developments.
+
+
+Planning Optimal Paths for Multiple Robots on Graphs
+
+  In this paper, we study the problem of optimal multi-robot path planning
+(MPP) on graphs. We propose two multiflow based integer linear programming
+(ILP) models that computes minimum last arrival time and minimum total distance
+solutions for our MPP formulation, respectively. The resulting algorithms from
+these ILP models are complete and guaranteed to yield true optimal solutions.
+In addition, our flexible framework can easily accommodate other variants of
+the MPP problem. Focusing on the time optimal algorithm, we evaluate its
+performance, both as a stand alone algorithm and as a generic heuristic for
+quickly solving large problem instances. Computational results confirm the
+effectiveness of our method.
+
+
+Multi-agent Path Planning and Network Flow
+
+  This paper connects multi-agent path planning on graphs (roadmaps) to network
+flow problems, showing that the former can be reduced to the latter, therefore
+enabling the application of combinatorial network flow algorithms, as well as
+general linear program techniques, to multi-agent path planning problems on
+graphs. Exploiting this connection, we show that when the goals are permutation
+invariant, the problem always has a feasible solution path set with a longest
+finish time of no more than $n + V - 1$ steps, in which $n$ is the number of
+agents and $V$ is the number of vertices of the underlying graph. We then give
+a complete algorithm that finds such a solution in $O(nVE)$ time, with $E$
+being the number of edges of the graph. Taking a further step, we study time
+and distance optimality of the feasible solutions, show that they have a
+pairwise Pareto optimal structure, and again provide efficient algorithms for
+optimizing two of these practical objectives.
+
+
+Correlated Orienteering Problem and it Application to Persistent
+  Monitoring Tasks
+
+  We propose a novel non-linear extension to the Orienteering Problem (OP),
+called the Correlated Orienteering Problem (COP). We use COP to model the
+planning of informative tours for the persistent monitoring of a spatiotemporal
+field with time-invariant spatial correlations, in which the tours are
+constrained to have limited length. Our focus in this paper is QCOP a quadratic
+COP formulation that only looks at correlations between neighboring nodes in a
+node network. The main feature of QCOP is a quadratic utility function
+capturing the said spatial correlation. QCOP may be solved using mixed integer
+quadratic programming (MIQP), with the resulting anytime algorithm capable of
+planning multiple disjoint tours that maximize the quadratic utility. In
+particular, our algorithm can quickly plan a near-optimal tour over a network
+with up to $150$ nodes. Besides performing extensive simulation studies to
+verify the algorithm's correctness and characterize its performance, we also
+successfully applied it to two realistic persistent monitoring tasks: (i)
+estimation over a synthetic spatiotemporal field, and (ii) estimating the
+temperature distribution in the state of Massachusetts.
+
+
+Optimal Multi-Robot Path Planning on Graphs: Complete Algorithms and
+  Effective Heuristics
+
+  We study the problem of optimal multi-robot path planning on graphs MPP over
+four distinct minimization objectives: the makespan (last arrival time), the
+maximum (single-robot traveled) distance, the total arrival time, and the total
+distance. In a related paper, we show that these objectives are distinct and
+NP-hard to optimize. In this work, we focus on efficiently algorithmic
+solutions for solving these optimal MPP problems. Toward this goal, we first
+establish a one-to-one solution mapping between MPP and network-flow. Based on
+this equivalence and integer linear programming (ILP), we design novel and
+complete algorithms for optimizing over each of the four objectives. In
+particular, our exact algorithm for computing optimal makespan solutions is a
+first such that is capable of solving extremely challenging problems with
+robot-vertex ratio as high as 100%. Then, we further improve the computational
+performance of these exact algorithms through the introduction of principled
+heuristics, at the expense of some optimality loss. The combination of ILP
+model based algorithms and the heuristics proves to be highly effective,
+allowing the computation of 1.x-optimal solutions for problems containing
+hundreds of robots, densely populated in the environment, often in just
+seconds.
+
+
+A Portable, 3D-Printing Enabled Multi-Vehicle Platform for Robotics
+  Research and Education
+
+  microMVP is an affordable, portable, and open source micro-scale mobile robot
+platform designed for robotics research and education. As a complete and unique
+multi-vehicle platform enabled by 3D printing and the maker culture, microMVP
+can be easily reproduced and requires little maintenance: a set of six micro
+vehicles, each measuring $8\times 5\times 6$ cubic centimeters and weighing
+under $100$ grams, and the accompanying tracking platform can be fully
+assembled in under two hours, all from readily available components. In this
+paper, we describe microMVP's hardware and software architecture, and the
+design thoughts that go into the making of the platform. The capabilities of
+microMVP APIs are then demonstrated with several single- and multi-robot path
+and motion planning algorithms. microMVP supports all common operation systems.
+
+
+Average Case Constant Factor Time and Distance Optimal Multi-Robot Path
+  Planning in Well-Connected Environments
+
+  Fast algorithms for optimal multi-robot path planning are sought after in
+many real-world applications. Known methods, however, generally do not
+simultaneously guarantee good solution optimality and fast run time (e.g.,
+polynomial). In this work, we develop a low-polynomial running time algorithm,
+called SplitAndGroup (SAG),that solves the multi-robot path planning problem on
+grids and grid-like environments and produces constant factor makespan-optimal
+solutions in the average case. That is, SAG is an average case
+O(1)-approximation algorithm. SAG computes solutions with sub-linear makespan
+and is capable of handling cases when the density of robots is extremely high -
+in a graph-theoretic setting, the algorithm supports cases where all vertices
+of the underlying graph are occupied by robots. SAG attains its desirable
+properties through a careful combination of divide-and-conquer technique and
+network flow based methods for routing the robots. Solutions from SAG, in a
+weaker sense, is also a constant factor approximation on total distance
+optimality.
+
+
+Target Assignment in Robotic Networks: Distance Optimality Guarantees
+  and Hierarchical Strategies
+
+  We study the problem of multi-robot target assignment to minimize the total
+distance traveled by the robots until they all reach an equal number of static
+targets. In the first half of the paper, we present a necessary and sufficient
+condition under which true distance optimality can be achieved for robots with
+limited communication and target-sensing ranges. Moreover, we provide an
+explicit, non-asymptotic formula for computing the number of robots needed to
+achieve distance optimality in terms of the robots' communication and
+target-sensing ranges with arbitrary guaranteed probabilities. The same bounds
+are also shown to be asymptotically tight.
+  In the second half of the paper, we present suboptimal strategies for use
+when the number of robots cannot be chosen freely. Assuming first that all
+targets are known to all robots, we employ a hierarchical communication model
+in which robots communicate only with other robots in the same partitioned
+region. This hierarchical communication model leads to constant approximations
+of true distance-optimal solutions under mild assumptions. We then revisit the
+limited communication and sensing models. By combining simple rendezvous-based
+strategies with a hierarchical communication model, we obtain decentralized
+hierarchical strategies that achieve constant approximation ratios with respect
+to true distance optimality. Results of simulation show that the approximation
+ratio is as low as 1.4.
+
+
+High-Quality Tabletop Rearrangement with Overhand Grasps: Hardness
+  Results and Fast Methods
+
+  This paper studies the underlying combinatorial structure of a class of
+object rearrangement problems, which appear frequently in applications. The
+problems involve multiple, similar-geometry objects placed on a flat,
+horizontal surface, where a robot can approach them from above and perform
+pick-and-place operations to rearrange them. The paper considers both the case
+where the start and goal object poses overlap, and where they do not. For
+overlapping poses, the primary objective is to minimize the number of
+pick-and-place actions and then to minimize the distance traveled by the
+end-effector. For the non-overlapping case, the objective is solely to minimize
+the end-effector distance. While such problems do not involve all the
+complexities of general rearrangement, they remain computationally hard
+challenges in both cases. This is shown through two-way reductions between
+well-understood, hard combinatorial challenges and these rearrangement
+problems. The benefit of the reduction is that there are well studied
+algorithms for solving these well-established combinatorial challenges. These
+algorithms can be very efficient in practice despite the hardness results. The
+paper builds on these reduction results to propose an algorithmic pipeline for
+dealing with the rearrangement problems. Experimental evaluation shows that the
+proposed pipeline achieves high-quality paths with regards to the optimization
+objectives. Furthermore, it exhibits highly desirable scalability as the number
+of objects increases in both the overlapping and non-overlapping setups.
+
+
+Complexity Results and Fast Methods for Optimal Tabletop Rearrangement
+  with Overhand Grasps
+
+  This paper studies the underlying combinatorial structure of a class of
+object rearrangement problems, which appear frequently in applications. The
+problems involve multiple, similar-geometry objects placed on a flat,
+horizontal surface, where a robot can approach them from above and perform
+pick-and-place operations to rearrange them. The paper considers both the case
+where the start and goal object poses overlap, and where they do not. For
+overlapping poses, the primary objective is to minimize the number of
+pick-and-place actions and then to minimize the distance traveled by the
+end-effector. For the non-overlapping case, the objective is solely to minimize
+the travel distance of the end-effector. While such problems do not involve all
+the complexities of general rearrangement, they remain computationally hard in
+both cases. This is shown through reductions from well-understood, hard
+combinatorial challenges to these rearrangement problems. The reductions are
+also shown to hold in the reverse direction, which enables the convenient
+application on rearrangement of well studied algorithms. These algorithms can
+be very efficient in practice despite the hardness results. The paper builds on
+these reduction results to propose an algorithmic pipeline for dealing with the
+rearrangement problems. Experimental evaluation, including hardware-based
+trials, shows that the proposed pipeline computes high-quality paths with
+regards to the optimization objectives. Furthermore, it exhibits highly
+desirable scalability as the number of objects increases in both the
+overlapping and non-overlapping setup.
+
+
+Constant Factor Time Optimal Multi-Robot Routing on High-Dimensional
+  Grids in Mostly Sub-Quadratic Time
+
+  Let $G = (V, E)$ be an $m_1 \times \ldots \times m_k$ grid. Assuming that
+each $v \in V$ is occupied by a robot and a robot may move to a neighboring
+vertex in a step via synchronized rotations along cycles of $G$, we first
+establish that the arbitrary reconfiguration of labeled robots on $G$ can be
+performed in $O(k\sum_i m_i)$ makespan and requires $O(|V|^2)$ running time in
+the worst case and $o(|V|^2)$ when $G$ is non-degenerate (in the current
+context, a grid is degenerate if it is nearly one dimensional). The resulting
+algorithm, iSAG, provides average case $O(1)$-approximate (i.e.,
+constant-factor) time optimality guarantee. When all dimensions are of similar
+size $O(|V|^{\frac{1}{k}})$, the running time of iSAG approaches a linear
+$O(|V|)$. Define $d_g(p)$ as the largest distance between individual initial
+and goal configurations over all robots for a given problem instance $p$,
+building on iSAG, we develop the PartitionAndFlow (PAF) algorithm that computes
+$O(d_g(p))$ makespan solutions for arbitrary fixed $k \ge 2$, using mostly
+$o(|V|^2)$ running time. PAF provides worst case $O(1)$-approximation regarding
+solution time optimality. We note that the worst case running time for the
+problem is $\Omega(|V|^2)$.
+
+
+Persistent Monitoring of Events with Stochastic Arrivals at Multiple
+  Stations
+
+  This paper introduces a new mobile sensor scheduling problem, involving a
+single robot tasked with monitoring several events of interest that occur at
+different locations. Of particular interest is the monitoring of transient
+events that can not be easily forecast. Application areas range from natural
+phenomena ({\em e.g.}, monitoring abnormal seismic activity around a volcano
+using a ground robot) to urban activities ({\em e.g.}, monitoring early
+formations of traffic congestion using an aerial robot). Motivated by those and
+many other examples, this paper focuses on problems in which the precise
+occurrence times of the events are unknown {\em a priori}, but statistics for
+their inter-arrival times are available. The robot's task is to monitor the
+events to optimize the following two objectives: {\em (i)} maximize the number
+of events observed and {\em (ii)} minimize the delay between two consecutive
+observations of events occurring at the same location. The paper considers the
+case when a robot is tasked with optimizing the event observations in a
+balanced manner, following a cyclic patrolling route. First, assuming the
+cyclic ordering of stations is known, we prove the existence and uniqueness of
+the optimal solution, and show that the optimal solution has desirable
+convergence and robustness properties. Our constructive proof also produces an
+efficient algorithm for computing the unique optimal solution with $O(n)$ time
+complexity, in which $n$ is the number of stations, with $O(\log n)$ time
+complexity for incrementally adding or removing stations. Except for the
+algorithm, most of the analysis remains valid when the cyclic order is unknown.
+We then provide a polynomial-time approximation scheme that gives a
+$(1+\epsilon)$-optimal solution for this more general, NP-hard problem.
+
+
+Motion Planning for Unlabeled Discs with Optimality Guarantees
+
+  We study the problem of path planning for unlabeled (indistinguishable)
+unit-disc robots in a planar environment cluttered with polygonal obstacles. We
+introduce an algorithm which minimizes the total path length, i.e., the sum of
+lengths of the individual paths. Our algorithm is guaranteed to find a solution
+if one exists, or report that none exists otherwise. It runs in time
+$\tilde{O}(m^4+m^2n^2)$, where $m$ is the number of robots and $n$ is the total
+complexity of the workspace. Moreover, the total length of the returned
+solution is at most $\text{OPT}+4m$, where OPT is the optimal solution cost. To
+the best of our knowledge this is the first algorithm for the problem that has
+such guarantees. The algorithm has been implemented in an exact manner and we
+present experimental results that attest to its efficiency.
+
+
+Efficient, High-Quality Stack Rearrangement
+
+  This work studies rearrangement problems involving the sorting of robots or
+objects in stack-like containers, which can be accessed only from one side. Two
+scenarios are considered: one where every robot or object needs to reach a
+particular stack, and a setting in which each robot has a distinct position
+within a stack. In both cases, the goal is to minimize the number of stack
+removals that need to be performed. Stack rearrangement is shown to be
+intimately connected to pebble motion problems, a useful abstraction in
+multi-robot path planning. Through this connection, feasibility of stack
+rearrangement can be readily addressed. The paper continues to establish lower
+and upper bounds on optimality, which differ only by a logarithmic factor, in
+terms of stack removals. An algorithmic solution is then developed that
+produces suboptimal paths much quicker than a pebble motion solver.
+Furthermore, informed search-based methods are proposed for finding
+high-quality solutions. The efficiency and desirable scalability of the methods
+is demonstrated in simulation.
+
+
+SEAR: A Polynomial-Time Multi-Robot Path Planning Algorithm with
+  Expected Constant-Factor Optimality Guarantee
+
+  We study the labeled multi-robot path planning problem in continuous 2D and
+3D domains in the absence of obstacles where robots must not collide with each
+other. For an arbitrary number of robots in arbitrary initial and goal
+arrangements, we derive a polynomial time, complete algorithm that produces
+solutions with constant-factor optimality guarantees on both makespan and
+distance optimality, in expectation, under the assumption that the robot labels
+are uniformly randomly distributed. Our algorithm only requires a small
+constant factor expansion of the initial and goal configuration footprints for
+solving the problem, i.e., the problem can be solved in a fairly small bounded
+region. Beside theoretical guarantees, we present a thorough computational
+evaluation of the proposed solution. In addition to the baseline
+implementation, adapting an effective (but non-polynomial time) routing
+subroutine, we also provide a highly efficient implementation that quickly
+computes near-optimal solutions. Hardware experiments on the microMVP platform
+composed of non-holonomic robots confirms the practical applicability of our
+algorithmic pipeline.
+
+
+Fast, High-Quality Dual-Arm Rearrangement in Synchronous, Monotone
+  Tabletop Setups
+
+  Rearranging objects on a planar surface arises in a variety of robotic
+applications, such as product packaging. Using two arms can improve efficiency
+but introduces new computational challenges. This paper studies the structure
+of dual-arm rearrangement for synchronous, monotone tabletop setups and
+develops an optimal mixed integer model. It then describes an efficient and
+scalable algorithm, which first minimizes the cost of object transfers and then
+of moves between objects. This is motivated by the fact that, asymptotically,
+object transfers dominate the cost of solutions. Moreover, a lazy strategy
+minimizes the number of motion planning calls and results in significant
+speedups. Theoretical arguments support the benefits of using two arms and
+indicate that synchronous execution, in which the two arms perform together
+either transfers or moves, introduces only a small overhead. Experiments
+support these points and show that the scalable method can quickly compute
+solutions close to the optimal for the considered setup.
+
+
+Integer Programming as a General Solution Methodology for Path-Based
+  Optimization in Robotics: Principles, Best Practices, and Applications
+
+  Integer programming (IP) has proven to be highly effective in solving many
+path-based optimization problems in robotics. However, the applications of IP
+are generally done in an ad-hoc, problem specific manner. In this work, after
+examined a wide range of path-based optimization problems, we describe an IP
+solution methodology for these problems that is both easy to apply (in two
+simple steps) and high-performance in terms of the computation time and the
+achieved optimality. We demonstrate the generality of our approach through the
+application to three challenging path-based optimization problems: multi-robot
+path planning (MPP), minimum constraint removal (MCR), and reward collection
+problems RCPs). Associated experiments show that the approach can efficiently
+produce (near-)optimal solutions for problems with large state spaces, complex
+constraints, and complicated objective functions. In conjunction with the
+proposition of the IP methodology, we introduce two new and practical robotics
+problems: multi-robot minimum constraint removal (MMCR) and multi-robot path
+planning (MPP) with partial solutions, which can be quickly and effectively
+solved using our proposed IP solution pipeline.
+
+
+DDM*: Fast Near-Optimal Multi-Robot Path Planning using Diversified-Path
+  and Optimal Sub-Problem Solution Database Heuristics
+
+  We propose a novel centralized and decoupled algorithm, DDM*, for solving
+one-shot and dynamic optimal multi-robot path planning problems in a
+graph-based setting. Among other techniques, DDM* is mainly enabled through
+exploiting two innovative heuristics: path diversification and optimal
+sub-problem solution databases. The two heuristics attack two distinct phases
+of a decoupling-based planner: while path diversification allows more effective
+use of the entire workspace for robot travel, optimal sub-problem solution
+databases facilitate the fast resolution of local path conflicts. Extensive
+evaluation demonstrates that DDM* achieves both great scalability and a high
+level of solution optimality.
+
+
+Asset Allocation and Risk Assessment with Gross Exposure Constraints for
+  Vast Portfolios
+
+  Markowitz (1952, 1959) laid down the ground-breaking work on the
+mean-variance analysis. Under his framework, the theoretical optimal allocation
+vector can be very different from the estimated one for large portfolios due to
+the intrinsic difficulty of estimating a vast covariance matrix and return
+vector. This can result in adverse performance in portfolio selected based on
+empirical data due to the accumulation of estimation errors. We address this
+problem by introducing the gross-exposure constrained mean-variance portfolio
+selection. We show that with gross-exposure constraint the theoretical optimal
+portfolios have similar performance to the empirically selected ones based on
+estimated covariance matrices and there is no error accumulation effect from
+estimation of vast covariance matrices. This gives theoretical justification to
+the empirical results in Jagannathan and Ma (2003). We also show that the
+no-short-sale portfolio is not diversified enough and can be improved by
+allowing some short positions. As the constraint on short sales relaxes, the
+number of selected assets varies from a small number to the total number of
+stocks, when tracking portfolios or selecting assets. This achieves the optimal
+sparse portfolio selection, which has close performance to the theoretical
+optimal one. Among 1000 stocks, for example, we are able to identify all
+optimal subsets of portfolios of different sizes, their associated allocation
+vectors, and their estimated risks. The utility of our new approach is
+illustrated by simulation and empirical studies on the 100 Fama-French
+industrial portfolios and the 400 stocks randomly selected from Russell 3000.
+
+
+Towards Robust Product Packing with a Minimalistic End-Effector
+
+  Advances in sensor technologies, object detection algorithms, planning
+frameworks and hardware designs have motivated the deployment of robots in
+warehouse automation. A variety of such applications, like order fulfillment or
+packing tasks, require picking objects from unstructured piles and carefully
+arranging them in bins or containers. Desirable solutions need to be low-cost,
+easily deployable and controllable, making minimalistic hardware choices
+desirable. The challenge in designing an effective solution to this problem
+relates to appropriately integrating multiple components, so as to achieve a
+robust pipeline that minimizes failure conditions. The current work proposes a
+complete pipeline for solving such packing tasks, given access only to RGB-D
+data and a single robot arm with a vacuum-based end-effector, which is also
+used as a pushing finger. To achieve the desired level of robustness, three key
+manipulation primitives are identified, which take advantage of the environment
+and simple operations to successfully pack multiple cubic objects. The overall
+approach is demonstrated to be robust to execution and perception errors. The
+impact of each manipulation primitive is evaluated by considering different
+versions of the proposed pipeline, which incrementally introduce reasoning
+about object poses and corrective manipulation actions.
+
+

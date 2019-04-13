@@ -1,0 +1,746 @@
+Information-theoretically Secure Regenerating Codes for Distributed
+  Storage
+
+  Regenerating codes are a class of codes for distributed storage networks that
+provide reliability and availability of data, and also perform efficient node
+repair. Another important aspect of a distributed storage network is its
+security. In this paper, we consider a threat model where an eavesdropper may
+gain access to the data stored in a subset of the storage nodes, and possibly
+also, to the data downloaded during repair of some nodes. We provide explicit
+constructions of regenerating codes that achieve information-theoretic secrecy
+capacity in this setting.
+
+
+Regenerating Codes for Errors and Erasures in Distributed Storage
+
+  Regenerating codes are a class of codes proposed for providing reliability of
+data and efficient repair of failed nodes in distributed storage systems. In
+this paper, we address the fundamental problem of handling errors and erasures
+during the data-reconstruction and node-repair operations. We provide explicit
+regenerating codes that are resilient to errors and erasures, and show that
+these codes are optimal with respect to storage and bandwidth requirements. As
+a special case, we also establish the capacity of a class of distributed
+storage systems in the presence of malicious adversaries. While our code
+constructions are based on previously constructed Product-Matrix codes, we also
+provide necessary and sufficient conditions for introducing resilience in any
+regenerating code.
+
+
+Double or Nothing: Multiplicative Incentive Mechanisms for Crowdsourcing
+
+  Crowdsourcing has gained immense popularity in machine learning applications
+for obtaining large amounts of labeled data. Crowdsourcing is cheap and fast,
+but suffers from the problem of low-quality data. To address this fundamental
+challenge in crowdsourcing, we propose a simple payment mechanism to
+incentivize workers to answer only the questions that they are sure of and skip
+the rest. We show that surprisingly, under a mild and natural "no-free-lunch"
+requirement, this mechanism is the one and only incentive-compatible payment
+mechanism possible. We also show that among all possible incentive-compatible
+mechanisms (that may or may not satisfy no-free-lunch), our mechanism makes the
+smallest possible payment to spammers. We further extend our results to a more
+general setting in which workers are required to provide a quantized confidence
+for each question. Interestingly, this unique mechanism takes a
+"multiplicative" form. The simplicity of the mechanism is an added benefit. In
+preliminary experiments involving over 900 worker-task pairs, we observe a
+significant drop in the error rates under this unique mechanism for the same or
+lower monetary expenditure.
+
+
+Estimation from Pairwise Comparisons: Sharp Minimax Bounds with Topology
+  Dependence
+
+  Data in the form of pairwise comparisons arises in many domains, including
+preference elicitation, sporting competitions, and peer grading among others.
+We consider parametric ordinal models for such pairwise comparison data
+involving a latent vector $w^* \in \mathbb{R}^d$ that represents the
+"qualities" of the $d$ items being compared; this class of models includes the
+two most widely used parametric models--the Bradley-Terry-Luce (BTL) and the
+Thurstone models. Working within a standard minimax framework, we provide tight
+upper and lower bounds on the optimal error in estimating the quality score
+vector $w^*$ under this class of models. The bounds depend on the topology of
+the comparison graph induced by the subset of pairs being compared via its
+Laplacian spectrum. Thus, in settings where the subset of pairs may be chosen,
+our results provide principled guidelines for making this choice. Finally, we
+compare these error rates to those under cardinal measurement models and show
+that the error rates in the ordinal and cardinal settings have identical
+scalings apart from constant pre-factors.
+
+
+When is it Better to Compare than to Score?
+
+  When eliciting judgements from humans for an unknown quantity, one often has
+the choice of making direct-scoring (cardinal) or comparative (ordinal)
+measurements. In this paper we study the relative merits of either choice,
+providing empirical and theoretical guidelines for the selection of a
+measurement scheme. We provide empirical evidence based on experiments on
+Amazon Mechanical Turk that in a variety of tasks, (pairwise-comparative)
+ordinal measurements have lower per sample noise and are typically faster to
+elicit than cardinal ones. Ordinal measurements however typically provide less
+information. We then consider the popular Thurstone and Bradley-Terry-Luce
+(BTL) models for ordinal measurements and characterize the minimax error rates
+for estimating the unknown quantity. We compare these minimax error rates to
+those under cardinal measurement models and quantify for what noise levels
+ordinal measurements are better. Finally, we revisit the data collected from
+our experiments and show that fitting these models confirms this prediction:
+for tasks where the noise in ordinal measurements is sufficiently low, the
+ordinal approach results in smaller errors in the estimation.
+
+
+A Permutation-based Model for Crowd Labeling: Optimal Estimation and
+  Robustness
+
+  The aggregation and denoising of crowd labeled data is a task that has gained
+increased significance with the advent of crowdsourcing platforms and massive
+datasets. In this paper, we propose a permutation-based model for crowd labeled
+data that is a significant generalization of the common Dawid-Skene model, and
+introduce a new error metric by which to compare different estimators. Working
+in a high-dimensional non-asymptotic framework that allows both the number of
+workers and tasks to scale, we derive optimal rates of convergence for the
+permutation-based model. We show that the permutation-based model offers
+significant robustness in estimation due to its richness, while surprisingly
+incurring only a small additional statistical penalty as compared to the
+Dawid-Skene model. Finally, we propose a computationally-efficient method,
+called the OBI-WAN estimator, that is uniformly optimal over a class
+intermediate between the permutation-based and the Dawid-Skene models, and is
+uniformly consistent over the entire permutation-based model class. In
+contrast, the guarantees for estimators available in prior literature are
+sub-optimal over the original Dawid-Skene model.
+
+
+On the Impossibility of Convex Inference in Human Computation
+
+  Human computation or crowdsourcing involves joint inference of the
+ground-truth-answers and the worker-abilities by optimizing an objective
+function, for instance, by maximizing the data likelihood based on an assumed
+underlying model. A variety of methods have been proposed in the literature to
+address this inference problem. As far as we know, none of the objective
+functions in existing methods is convex. In machine learning and applied
+statistics, a convex function such as the objective function of support vector
+machines (SVMs) is generally preferred, since it can leverage the
+high-performance algorithms and rigorous guarantees established in the
+extensive literature on convex optimization. One may thus wonder if there
+exists a meaningful convex objective function for the inference problem in
+human computation. In this paper, we investigate this convexity issue for human
+computation. We take an axiomatic approach by formulating a set of axioms that
+impose two mild and natural assumptions on the objective function for the
+inference. Under these axioms, we show that it is unfortunately impossible to
+ensure convexity of the inference problem. On the other hand, we show that
+interestingly, in the absence of a requirement to model "spammers", one can
+construct reasonable objective functions for crowdsourcing that guarantee
+convex inference.
+
+
+Approval Voting and Incentives in Crowdsourcing
+
+  The growing need for labeled training data has made crowdsourcing an
+important part of machine learning. The quality of crowdsourced labels is,
+however, adversely affected by three factors: (1) the workers are not experts;
+(2) the incentives of the workers are not aligned with those of the requesters;
+and (3) the interface does not allow workers to convey their knowledge
+accurately, by forcing them to make a single choice among a set of options. In
+this paper, we address these issues by introducing approval voting to utilize
+the expertise of workers who have partial knowledge of the true answer, and
+coupling it with a ("strictly proper") incentive-compatible compensation
+mechanism. We show rigorous theoretical guarantees of optimality of our
+mechanism together with a simple axiomatic characterization. We also conduct
+preliminary empirical studies on Amazon Mechanical Turk which validate our
+approach.
+
+
+Design and Analysis of the NIPS 2016 Review Process
+
+  Neural Information Processing Systems (NIPS) is a top-tier annual conference
+in machine learning. The 2016 edition of the conference comprised more than
+2,400 paper submissions, 3,000 reviewers, and 8,000 attendees. This represents
+a growth of nearly 40% in terms of submissions, 96% in terms of reviewers, and
+over 100% in terms of attendees as compared to the previous year. The massive
+scale as well as rapid growth of the conference calls for a thorough quality
+assessment of the peer-review process and novel means of improvement. In this
+paper, we analyze several aspects of the data collected during the review
+process, including an experiment investigating the efficacy of collecting
+ordinal rankings from reviewers. Our goal is to check the soundness of the
+review process, and provide insights that may be useful in the design of the
+review process of subsequent conferences.
+
+
+Low Permutation-rank Matrices: Structural Properties and Noisy
+  Completion
+
+  We consider the problem of noisy matrix completion, in which the goal is to
+reconstruct a structured matrix whose entries are partially observed in noise.
+Standard approaches to this underdetermined inverse problem are based on
+assuming that the underlying matrix has low rank, or is well-approximated by a
+low rank matrix. In this paper, we propose a richer model based on what we term
+the "permutation-rank" of a matrix. We first describe how the classical
+non-negative rank model enforces restrictions that may be undesirable in
+practice, and how and these restrictions can be avoided by using the richer
+permutation-rank model. Second, we establish the minimax rates of estimation
+under the new permutation-based model, and prove that surprisingly, the minimax
+rates are equivalent up to logarithmic factors to those for estimation under
+the typical low rank model. Third, we analyze a computationally efficient
+singular-value-thresholding algorithm, known to be optimal for the low-rank
+setting, and show that it also simultaneously yields a consistent estimator for
+the low-permutation rank setting. Finally, we present various structural
+results characterizing the uniqueness of the permutation-rank decomposition,
+and characterizing convex approximations of the permutation-rank polytope.
+
+
+Explicit Construction of Optimal Exact Regenerating Codes for
+  Distributed Storage
+
+  Erasure coding techniques are used to increase the reliability of distributed
+storage systems while minimizing storage overhead. Also of interest is
+minimization of the bandwidth required to repair the system following a node
+failure. In a recent paper, Wu et al. characterize the tradeoff between the
+repair bandwidth and the amount of data stored per node. They also prove the
+existence of regenerating codes that achieve this tradeoff.
+  In this paper, we introduce Exact Regenerating Codes, which are regenerating
+codes possessing the additional property of being able to duplicate the data
+stored at a failed node. Such codes require low processing and communication
+overheads, making the system practical and easy to maintain. Explicit
+construction of exact regenerating codes is provided for the minimum bandwidth
+point on the storage-repair bandwidth tradeoff, relevant to
+distributed-mail-server applications. A subspace based approach is provided and
+shown to yield necessary and sufficient conditions on a linear code to possess
+the exact regeneration property as well as prove the uniqueness of our
+construction.
+  Also included in the paper, is an explicit construction of regenerating codes
+for the minimum storage point for parameters relevant to storage in
+peer-to-peer systems. This construction supports a variable number of nodes and
+can handle multiple, simultaneous node failures. All constructions given in the
+paper are of low complexity, requiring low field size in particular.
+
+
+Simple, Robust and Optimal Ranking from Pairwise Comparisons
+
+  We consider data in the form of pairwise comparisons of n items, with the
+goal of precisely identifying the top k items for some value of k < n, or
+alternatively, recovering a ranking of all the items. We analyze the Copeland
+counting algorithm that ranks the items in order of the number of pairwise
+comparisons won, and show it has three attractive features: (a) its
+computational efficiency leads to speed-ups of several orders of magnitude in
+computation time as compared to prior work; (b) it is robust in that
+theoretical guarantees impose no conditions on the underlying matrix of
+pairwise-comparison probabilities, in contrast to some prior work that applies
+only to the BTL parametric model; and (c) it is an optimal method up to
+constant factors, meaning that it achieves the information-theoretic limits for
+recovering the top k-subset. We extend our results to obtain sharp guarantees
+for approximate recovery under the Hamming distortion metric, and more
+generally, to any arbitrary error requirement that satisfies a simple and
+natural monotonicity condition.
+
+
+Enabling Node Repair in Any Erasure Code for Distributed Storage
+
+  Erasure codes are an efficient means of storing data across a network in
+comparison to data replication, as they tend to reduce the amount of data
+stored in the network and offer increased resilience in the presence of node
+failures. The codes perform poorly though, when repair of a failed node is
+called for, as they typically require the entire file to be downloaded to
+repair a failed node. A new class of erasure codes, termed as regenerating
+codes were recently introduced, that do much better in this respect. However,
+given the variety of efficient erasure codes available in the literature, there
+is considerable interest in the construction of coding schemes that would
+enable traditional erasure codes to be used, while retaining the feature that
+only a fraction of the data need be downloaded for node repair. In this paper,
+we present a simple, yet powerful, framework that does precisely this. Under
+this framework, the nodes are partitioned into two 'types' and encoded using
+two codes in a manner that reduces the problem of node-repair to that of
+erasure-decoding of the constituent codes. Depending upon the choice of the two
+codes, the framework can be used to avail one or more of the following
+advantages: simultaneous minimization of storage space and repair-bandwidth,
+low complexity of operation, fewer disk reads at helper nodes during repair,
+and error detection and correction.
+
+
+The MDS Queue: Analysing the Latency Performance of Erasure Codes
+
+  In order to scale economically, data centers are increasingly evolving their
+data storage methods from the use of simple data replication to the use of more
+powerful erasure codes, which provide the same level of reliability as
+replication but at a significantly lower storage cost. In particular, it is
+well known that Maximum-Distance-Separable (MDS) codes, such as Reed-Solomon
+codes, provide the maximum storage efficiency. While the use of codes for
+providing improved reliability in archival storage systems, where the data is
+less frequently accessed (or so-called "cold data"), is well understood, the
+role of codes in the storage of more frequently accessed and active "hot data",
+where latency is the key metric, is less clear.
+  In this paper, we study data storage systems based on MDS codes through the
+lens of queueing theory, and term this the "MDS queue." We analytically
+characterize the (average) latency performance of MDS queues, for which we
+present insightful scheduling policies that form upper and lower bounds to
+performance, and are observed to be quite tight. Extensive simulations are also
+provided and used to validate our theoretical analysis. We also employ the
+framework of the MDS queue to analyse different methods of performing so-called
+degraded reads (reading of partial data) in distributed data storage.
+
+
+On Minimizing Data-read and Download for Storage-Node Recovery
+
+  We consider the problem of efficient recovery of the data stored in any
+individual node of a distributed storage system, from the rest of the nodes.
+Applications include handling failures and degraded reads. We measure
+efficiency in terms of the amount of data-read and the download required. To
+minimize the download, we focus on the minimum bandwidth setting of the
+'regenerating codes' model for distributed storage. Under this model, the
+system has a total of n nodes, and the data stored in any node must be
+(efficiently) recoverable from any d of the other (n-1) nodes. Lower bounds on
+the two metrics under this model were derived previously; it has also been
+shown that these bounds are achievable for the amount of data-read and download
+when d=n-1, and for the amount of download alone when d<n-1.
+  In this paper, we complete this picture by proving the converse result, that
+when d<n-1, these lower bounds are strictly loose with respect to the amount of
+read required. The proof is information-theoretic, and hence applies to
+non-linear codes as well. We also show that under two (practical) relaxations
+of the problem setting, these lower bounds can be met for both read and
+download simultaneously.
+
+
+Distributed Secret Dissemination Across a Network
+
+  Shamir's (n, k) threshold secret sharing is an important component of several
+cryptographic protocols, such as those for secure multiparty-computation and
+key management. These protocols typically assume the presence of direct
+communication links from the dealer to all participants, in which case the
+dealer can directly pass the shares of the secret to each participant. In this
+paper, we consider the problem of secret sharing when the dealer does not have
+direct communication links to all the participants, and instead, the dealer and
+the participants form a general network. Existing methods are based on secure
+message transmissions from the dealer to each participant requiring
+considerable coordination in the network. In this paper, we present a
+distributed algorithm for disseminating shares over a network, which we call
+the SNEAK algorithm, requiring each node to know only the identities of its
+one-hop neighbours. While SNEAK imposes a stronger condition on the network by
+requiring the dealer to be what we call k-propagating rather than k-connected
+as required by the existing solutions, we show that in addition to being
+distributed, SNEAK achieves significant reduction in the communication cost and
+the amount of randomness required.
+
+
+Fundamental Limits on Communication for Oblivious Updates in Storage
+  Networks
+
+  In distributed storage systems, storage nodes intermittently go offline for
+numerous reasons. On coming back online, nodes need to update their contents to
+reflect any modifications to the data in the interim. In this paper, we
+consider a setting where no information regarding modified data needs to be
+logged in the system. In such a setting, a 'stale' node needs to update its
+contents by downloading data from already updated nodes, while neither the
+stale node nor the updated nodes have any knowledge as to which data symbols
+are modified and what their value is. We investigate the fundamental limits on
+the amount of communication necessary for such an "oblivious" update process.
+  We first present a generic lower bound on the amount of communication that is
+necessary under any storage code with a linear encoding (while allowing
+non-linear update protocols). This lower bound is derived under a set of
+extremely weak conditions, giving all updated nodes access to the entire
+modified data and the stale node access to the entire stale data as side
+information. We then present codes and update algorithms that are optimal in
+that they meet this lower bound. Next, we present a lower bound for an
+important subclass of codes, that of linear Maximum-Distance-Separable (MDS)
+codes. We then present an MDS code construction and an associated update
+algorithm that meets this lower bound. These results thus establish the
+capacity of oblivious updates in terms of the communication requirements under
+these settings.
+
+
+Feeling the Bern: Adaptive Estimators for Bernoulli Probabilities of
+  Pairwise Comparisons
+
+  We study methods for aggregating pairwise comparison data in order to
+estimate outcome probabilities for future comparisons among a collection of n
+items. Working within a flexible framework that imposes only a form of strong
+stochastic transitivity (SST), we introduce an adaptivity index defined by the
+indifference sets of the pairwise comparison probabilities. In addition to
+measuring the usual worst-case risk of an estimator, this adaptivity index also
+captures the extent to which the estimator adapts to instance-specific
+difficulty relative to an oracle estimator. We prove three main results that
+involve this adaptivity index and different algorithms. First, we propose a
+three-step estimator termed Count-Randomize-Least squares (CRL), and show that
+it has adaptivity index upper bounded as $\sqrt{n}$ up to logarithmic factors.
+We then show that that conditional on the hardness of planted clique, no
+computationally efficient estimator can achieve an adaptivity index smaller
+than $\sqrt{n}$. Second, we show that a regularized least squares estimator can
+achieve a poly-logarithmic adaptivity index, thereby demonstrating a
+$\sqrt{n}$-gap between optimal and computationally achievable adaptivity.
+Finally, we prove that the standard least squares estimator, which is known to
+be optimally adaptive in several closely related problems, fails to adapt in
+the context of estimating pairwise probabilities.
+
+
+Stochastically Transitive Models for Pairwise Comparisons: Statistical
+  and Computational Issues
+
+  There are various parametric models for analyzing pairwise comparison data,
+including the Bradley-Terry-Luce (BTL) and Thurstone models, but their reliance
+on strong parametric assumptions is limiting. In this work, we study a flexible
+model for pairwise comparisons, under which the probabilities of outcomes are
+required only to satisfy a natural form of stochastic transitivity. This class
+includes parametric models including the BTL and Thurstone models as special
+cases, but is considerably more general. We provide various examples of models
+in this broader stochastically transitive class for which classical parametric
+models provide poor fits. Despite this greater flexibility, we show that the
+matrix of probabilities can be estimated at the same rate as in standard
+parametric models. On the other hand, unlike in the BTL and Thurstone models,
+computing the minimax-optimal estimator in the stochastically transitive model
+is non-trivial, and we explore various computationally tractable alternatives.
+We show that a simple singular value thresholding algorithm is statistically
+consistent but does not achieve the minimax rate. We then propose and study
+algorithms that achieve the minimax rate over interesting sub-classes of the
+full stochastically transitive class. We complement our theoretical results
+with thorough numerical simulations.
+
+
+Explicit Codes Minimizing Repair Bandwidth for Distributed Storage
+
+  We consider the setting of data storage across n nodes in a distributed
+manner. A data collector (DC) should be able to reconstruct the entire data by
+connecting to any k out of the n nodes and downloading all the data stored in
+them. When a node fails, it has to be regenerated back using the existing
+nodes. In a recent paper, Wu et al. have obtained an information theoretic
+lower bound for the repair bandwidth. Also, there has been additional interest
+in storing data in systematic form as no post processing is required when DC
+connects to k systematic nodes. Because of their preferred status there is a
+need to regenerate back any systematic node quickly and exactly. Replacement of
+a failed node by an exact replica is termed Exact Regeneration.In this paper,
+we consider the problem of minimizing the repair bandwidth for exact
+regeneration of the systematic nodes. The file to be stored is of size B and
+each node can store alpha = B/k units of data. A failed systematic node is
+regenerated by downloading beta units of data each from d existing nodes. We
+give a lower bound for the repair bandwidth for exact regeneration of the
+systematic nodes which matches with the bound given by Wu et al. For d >= 2k-1
+we give an explicit code construction which minimizes the repair bandwidth when
+the existing k-1 systematic nodes participate in the regeneration. We show the
+existence and construction of codes that achieve the bound for d >= 2k-3. Here
+we also establish the necessity of interference alignment. We prove that the
+bound is not achievable for d <= 2k-4 when beta=1. We also give a coding scheme
+which can be used for any d and k, which is optimal for d >= 2k-1.
+
+
+Distributed Storage Codes with Repair-by-Transfer and Non-achievability
+  of Interior Points on the Storage-Bandwidth Tradeoff
+
+  Regenerating codes are a class of recently developed codes for distributed
+storage that, like Reed-Solomon codes, permit data recovery from any subset of
+k nodes within the n-node network. However, regenerating codes possess in
+addition, the ability to repair a failed node by connecting to an arbitrary
+subset of d nodes. It has been shown that for the case of functional-repair,
+there is a tradeoff between the amount of data stored per node and the
+bandwidth required to repair a failed node. A special case of functional-repair
+is exact-repair where the replacement node is required to store data identical
+to that in the failed node. Exact-repair is of interest as it greatly
+simplifies system implementation. The first result of the paper is an explicit,
+exact-repair code for the point on the storage-bandwidth tradeoff corresponding
+to the minimum possible repair bandwidth, for the case when d=n-1. This code
+has a particularly simple graphical description and most interestingly, has the
+ability to carry out exact-repair through mere transfer of data and without any
+need to perform arithmetic operations. Hence the term `repair-by-transfer'. The
+second result of this paper shows that the interior points on the
+storage-bandwidth tradeoff cannot be achieved under exact-repair, thus pointing
+to the existence of a separate tradeoff under exact-repair. Specifically, we
+identify a set of scenarios, termed `helper node pooling', and show that it is
+the necessity to satisfy such scenarios that over-constrains the system.
+
+
+Optimal Exact-Regenerating Codes for Distributed Storage at the MSR and
+  MBR Points via a Product-Matrix Construction
+
+  Regenerating codes are a class of distributed storage codes that optimally
+trade the bandwidth needed for repair of a failed node with the amount of data
+stored per node of the network. Minimum Storage Regenerating (MSR) codes
+minimize first, the amount of data stored per node, and then the repair
+bandwidth, while Minimum Bandwidth Regenerating (MBR) codes carry out the
+minimization in the reverse order. An [n, k, d] regenerating code permits the
+data to be recovered by connecting to any k of the n nodes in the network,
+while requiring that repair of a failed node be made possible by connecting
+(using links of lesser capacity) to any d nodes. Previous, explicit and general
+constructions of exact-regenerating codes have been confined to the case n=d+1.
+In this paper, we present optimal, explicit constructions of MBR codes for all
+feasible values of [n, k, d] and MSR codes for all [n, k, d >= 2k-2], using a
+product-matrix framework. The particular product-matrix nature of the
+constructions is shown to significantly simplify system operation. To the best
+of our knowledge, these are the first constructions of exact-regenerating codes
+that allow the number n of nodes in the distributed storage network, to be
+chosen independent of the other parameters. The paper also contains a simpler
+description, in the product-matrix framework, of a previously constructed MSR
+code in which the parameter d satisfies [n=d+1, k, d >= 2k-1].
+
+
+When Do Redundant Requests Reduce Latency ?
+
+  Several systems possess the flexibility to serve requests in more than one
+way. For instance, a distributed storage system storing multiple replicas of
+the data can serve a request from any of the multiple servers that store the
+requested data, or a computational task may be performed in a compute-cluster
+by any one of multiple processors. In such systems, the latency of serving the
+requests may potentially be reduced by sending "redundant requests": a request
+may be sent to more servers than needed, and it is deemed served when the
+requisite number of servers complete service. Such a mechanism trades off the
+possibility of faster execution of at least one copy of the request with the
+increase in the delay due to an increased load on the system. Due to this
+tradeoff, it is unclear when redundant requests may actually help. Several
+recent works empirically evaluate the latency performance of redundant requests
+in diverse settings.
+  This work aims at an analytical study of the latency performance of redundant
+requests, with the primary goals of characterizing under what scenarios sending
+redundant requests will help (and under what scenarios they will not help), as
+well as designing optimal redundant-requesting policies. We first present a
+model that captures the key features of such systems. We show that when service
+times are i.i.d. memoryless or "heavier", and when the additional copies of
+already-completed jobs can be removed instantly, redundant requests reduce the
+average latency. On the other hand, when service times are "lighter" or when
+service times are memoryless and removal of jobs is not instantaneous, then not
+having any redundancy in the requests is optimal under high loads. Our results
+hold for arbitrary arrival processes.
+
+
+A Piggybacking Design Framework for Read-and Download-efficient
+  Distributed Storage Codes
+
+  We present a new 'piggybacking' framework for designing distributed storage
+codes that are efficient in data-read and download required during node-repair.
+We illustrate the power of this framework by constructing classes of explicit
+codes that entail the smallest data-read and download for repair among all
+existing solutions for three important settings: (a) codes meeting the
+constraints of being Maximum-Distance-Separable (MDS), high-rate and having a
+small number of substripes, arising out of practical considerations for
+implementation in data centers, (b) binary MDS codes for all parameters where
+binary MDS codes exist, (c) MDS codes with the smallest repair-locality. In
+addition, we employ this framework to enable efficient repair of parity nodes
+in existing codes that were originally constructed to address the repair of
+only the systematic nodes. The basic idea behind our framework is to take
+multiple instances of existing codes and add carefully designed functions of
+the data of one instance to the other. Typical savings in data-read during
+repair is 25% to 50% depending on the choice of the code parameters.
+
+
+Parametric Prediction from Parametric Agents
+
+  We consider a problem of prediction based on opinions elicited from
+heterogeneous rational agents with private information. Making an accurate
+prediction with a minimal cost requires a joint design of the incentive
+mechanism and the prediction algorithm. Such a problem lies at the nexus of
+statistical learning theory and game theory, and arises in many domains such as
+consumer surveys and mobile crowdsourcing. In order to elicit heterogeneous
+agents' private information and incentivize agents with different capabilities
+to act in the principal's best interest, we design an optimal joint incentive
+mechanism and prediction algorithm called COPE (COst and Prediction
+Elicitation), the analysis of which offers several valuable engineering
+insights. First, when the costs incurred by the agents are linear in the
+exerted effort, COPE corresponds to a "crowd contending" mechanism, where the
+principal only employs the agent with the highest capability. Second, when the
+costs are quadratic, COPE corresponds to a "crowd-sourcing" mechanism that
+employs multiple agents with different capabilities at the same time. Numerical
+simulations show that COPE improves the principal's profit and the network
+profit significantly (larger than 30% in our simulations), comparing to those
+mechanisms that assume all agents have equal capabilities.
+
+
+Regularized Minimax Conditional Entropy for Crowdsourcing
+
+  There is a rapidly increasing interest in crowdsourcing for data labeling. By
+crowdsourcing, a large number of labels can be often quickly gathered at low
+cost. However, the labels provided by the crowdsourcing workers are usually not
+of high quality. In this paper, we propose a minimax conditional entropy
+principle to infer ground truth from noisy crowdsourced labels. Under this
+principle, we derive a unique probabilistic labeling model jointly
+parameterized by worker ability and item difficulty. We also propose an
+objective measurement principle, and show that our method is the only method
+which satisfies this objective measurement principle. We validate our method
+through a variety of real crowdsourcing datasets with binary, multiclass or
+ordinal labels.
+
+
+Information-theoretically Secure Erasure Codes for Distributed Storage
+
+  Repair operations in distributed storage systems potentially expose the data
+to malicious acts of passive eavesdroppers or active adversaries, which can be
+detrimental to the security of the system. This paper presents erasure codes
+and repair algorithms that ensure security of the data in the presence of
+passive eavesdroppers and active adversaries, while maintaining high
+availability, reliability and efficiency in the system. Our codes are optimal
+in that they meet previously proposed lower bounds on the storage,
+network-bandwidth, and reliability requirements for a wide range of system
+parameters. Our results thus establish the capacity of such systems. Our codes
+for security from active adversaries provide an additional appealing feature of
+`on-demand security' where the desired level of security can be chosen
+separately for each instance of repair, and our algorithms remain optimal
+simultaneously for all possible levels. The paper also provides necessary and
+sufficient conditions governing the transformation of any (non-secure) code
+into one providing on-demand security.
+
+
+PeerReview4All: Fair and Accurate Reviewer Assignment in Peer Review
+
+  We consider the problem of automated assignment of papers to reviewers in
+conference peer review, with a focus on fairness and statistical accuracy. Our
+fairness objective is to maximize the review quality of the most disadvantaged
+paper, in contrast to the commonly used objective of maximizing the total
+quality over all papers. We design an assignment algorithm based on an
+incremental max-flow procedure that we prove is near-optimally fair. Our
+statistical accuracy objective is to ensure correct recovery of the papers that
+should be accepted. We provide a sharp minimax analysis of the accuracy of the
+peer-review process for a popular objective-score model as well as for a novel
+subjective-score model that we propose in the paper. Our analysis proves that
+our proposed assignment algorithm also leads to a near-optimal statistical
+accuracy. Finally, we design a novel experiment that allows for an objective
+comparison of various assignment algorithms, and overcomes the inherent
+difficulty posed by the absence of a ground truth in experiments on
+peer-review. The results of this experiment corroborate the theoretical
+guarantees of our algorithm.
+
+
+Choosing How to Choose Papers
+
+  It is common to see a handful of reviewers reject a highly novel paper,
+because they view, say, extensive experiments as far more important than
+novelty, whereas the community as a whole would have embraced the paper. More
+generally, the disparate mapping of criteria scores to final recommendations by
+different reviewers is a major source of inconsistency in peer review. In this
+paper we present a framework --- based on $L(p,q)$-norm empirical risk
+minimization --- for learning the community's aggregate mapping. We draw on
+computational social choice to identify desirable values of $p$ and $q$;
+specifically, we characterize $p=q=1$ as the only choice that satisfies three
+natural axiomatic properties. Finally, we implement and apply our approach to
+reviews from IJCAI 2017.
+
+
+An Incentive Mechanism for Crowd Sensing with Colluding Agents
+
+  Vehicular mobile crowd sensing is a fast-emerging paradigm to collect data
+about the environment by mounting sensors on vehicles such as taxis. An
+important problem in vehicular crowd sensing is to design payment mechanisms to
+incentivize drivers (agents) to collect data, with the overall goal of
+obtaining the maximum amount of data (across multiple vehicles) for a given
+budget. Past works on this problem consider a setting where each agent operates
+in isolation---an assumption which is frequently violated in practice. In this
+paper, we design an incentive mechanism to incentivize agents who can engage in
+arbitrary collusions. We then show that in a "homogeneous" setting, our
+mechanism is optimal, and can do as well as any mechanism which knows the
+agents' preferences a priori. Moreover, if the agents are non-colluding, then
+our mechanism automatically does as well as any other non-colluding mechanism.
+We also show that our proposed mechanism has strong (and asymptotically
+optimal) guarantees for a more general "heterogeneous" setting. Experiments
+based on synthesized data and real-world data reveal gains of over 30\%
+attained by our mechanism compared to past literature.
+
+
+Your 2 is My 1, Your 3 is My 9: Handling Arbitrary Miscalibrations in
+  Ratings
+
+  Cardinal scores (numeric ratings) collected from people are well known to
+suffer from miscalibrations. A popular approach to address this issue is to
+assume simplistic models of miscalibration (such as linear biases) to de-bias
+the scores. This approach, however, often fares poorly because people's
+miscalibrations are typically far more complex and not well understood. In the
+absence of simplifying assumptions on the miscalibration, it is widely believed
+by the crowdsourcing community that the only useful information in the cardinal
+scores is the induced ranking. In this paper, inspired by the framework of
+Stein's shrinkage, empirical Bayes, and the classic two-envelope problem, we
+contest this widespread belief. Specifically, we consider cardinal scores with
+arbitrary (or even adversarially chosen) miscalibrations which are only
+required to be consistent with the induced ranking. We design estimators which
+despite making no assumptions on the miscalibration, strictly and uniformly
+outperform all possible estimators that rely on only the ranking. Our
+estimators are flexible in that they can be used as a plug-in for a variety of
+applications, and we provide a proof-of-concept for A/B testing and ranking.
+Our results thus provide novel insights in the eternal debate between cardinal
+and ordinal data.
+
+
+A Solution to the Network Challenges of Data Recovery in Erasure-coded
+  Distributed Storage Systems: A Study on the Facebook Warehouse Cluster
+
+  Erasure codes, such as Reed-Solomon (RS) codes, are being increasingly
+employed in data centers to combat the cost of reliably storing large amounts
+of data. Although these codes provide optimal storage efficiency, they require
+significantly high network and disk usage during recovery of missing data. In
+this paper, we first present a study on the impact of recovery operations of
+erasure-coded data on the data-center network, based on measurements from
+Facebook's warehouse cluster in production. To the best of our knowledge, this
+is the first study of its kind available in the literature. Our study reveals
+that recovery of RS-coded data results in a significant increase in network
+traffic, more than a hundred terabytes per day, in a cluster storing multiple
+petabytes of RS-coded data.
+  To address this issue, we present a new storage code using our recently
+proposed "Piggybacking" framework, that reduces the network and disk usage
+during recovery by 30% in theory, while also being storage optimal and
+supporting arbitrary design parameters. The implementation of the proposed code
+in the Hadoop Distributed File System (HDFS) is underway. We use the
+measurements from the warehouse cluster to show that the proposed code would
+lead to a reduction of close to fifty terabytes of cross-rack traffic per day.
+
+
+On Strategyproof Conference Peer Review
+
+  We consider peer review in a conference setting where there is typically an
+overlap between the set of reviewers and the set of authors. This overlap can
+incentivize strategic reviews to influence the final ranking of one's own
+papers. In this work, we address this problem through the lens of social
+choice, and present a theoretical framework for strategyproof and efficient
+peer review. We first present and analyze an algorithm for reviewer-assignment
+and aggregation that guarantees strategyproofness and a natural efficiency
+property called unanimity, when the authorship graph satisfies a simple
+property. Our algorithm is based on the so-called partitioning method, and can
+be thought as a generalization of this method to conference peer review
+settings. We then empirically show that the requisite property on the
+authorship graph is indeed satisfied in the ICLR-17 submission data, and
+further demonstrate a simple trick to make the partitioning method more
+practically appealing for conference peer review. Finally, we complement our
+positive results with negative theoretical results where we prove that under
+various ways of strengthening the requirements, it is impossible for any
+algorithm to be strategyproof and efficient.
+
+
+Interference Alignment in Regenerating Codes for Distributed Storage:
+  Necessity and Code Constructions
+
+  Regenerating codes are a class of recently developed codes for distributed
+storage that, like Reed-Solomon codes, permit data recovery from any arbitrary
+k of n nodes. However regenerating codes possess in addition, the ability to
+repair a failed node by connecting to any arbitrary d nodes and downloading an
+amount of data that is typically far less than the size of the data file. This
+amount of download is termed the repair bandwidth. Minimum storage regenerating
+(MSR) codes are a subclass of regenerating codes that require the least amount
+of network storage; every such code is a maximum distance separable (MDS) code.
+Further, when a replacement node stores data identical to that in the failed
+node, the repair is termed as exact.
+  The four principal results of the paper are (a) the explicit construction of
+a class of MDS codes for d = n-1 >= 2k-1 termed the MISER code, that achieves
+the cut-set bound on the repair bandwidth for the exact-repair of systematic
+nodes, (b) proof of the necessity of interference alignment in exact-repair MSR
+codes, (c) a proof showing the impossibility of constructing linear,
+exact-repair MSR codes for d < 2k-3 in the absence of symbol extension, and (d)
+the construction, also explicit, of MSR codes for d = k+1. Interference
+alignment (IA) is a theme that runs throughout the paper: the MISER code is
+built on the principles of IA and IA is also a crucial component to the
+non-existence proof for d < 2k-3. To the best of our knowledge, the
+constructions presented in this paper are the first, explicit constructions of
+regenerating codes that achieve the cut-set bound.
+
+
+Active Ranking from Pairwise Comparisons and when Parametric Assumptions
+  Don't Help
+
+  We consider sequential or active ranking of a set of n items based on noisy
+pairwise comparisons. Items are ranked according to the probability that a
+given item beats a randomly chosen item, and ranking refers to partitioning the
+items into sets of pre-specified sizes according to their scores. This notion
+of ranking includes as special cases the identification of the top-k items and
+the total ordering of the items. We first analyze a sequential ranking
+algorithm that counts the number of comparisons won, and uses these counts to
+decide whether to stop, or to compare another pair of items, chosen based on
+confidence intervals specified by the data collected up to that point. We prove
+that this algorithm succeeds in recovering the ranking using a number of
+comparisons that is optimal up to logarithmic factors. This guarantee does not
+require any structural properties of the underlying pairwise probability
+matrix, unlike a significant body of past work on pairwise ranking based on
+parametric models such as the Thurstone or Bradley-Terry-Luce models. It has
+been a long-standing open question as to whether or not imposing these
+parametric assumptions allows for improved ranking algorithms. For stochastic
+comparison models, in which the pairwise probabilities are bounded away from
+zero, our second contribution is to resolve this issue by proving a lower bound
+for parametric models. This shows, perhaps surprisingly, that these popular
+parametric modeling choices offer at most logarithmic gains for stochastic
+comparisons.
+
+

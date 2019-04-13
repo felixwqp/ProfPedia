@@ -1,0 +1,256 @@
+On the scaling of Polar Codes: II. The behavior of un-polarized channels
+
+  We provide upper and lower bounds on the escape rate of the Bhattacharyya
+process corresponding to polar codes and transmission over the the binary
+erasure channel. More precisely, we bound the exponent of the number of
+sub-channels whose Bhattacharyya constant falls in a fixed interval $[a,b]$.
+Mathematically this can be stated as bounding the limit $\lim_{n \to \infty}
+\frac{1}{n} \ln \mathbb{P}(Z_n \in [a,b])$, where $Z_n$ is the Bhattacharyya
+process. The quantity $\mathbb{P}(Z_n \in [a,b])$ represents the fraction of
+sub-channels that are still un-polarized at time $n$.
+
+
+Coupled Graphical Models and Their Thresholds
+
+  The excellent performance of convolutional low-density parity-check codes is
+the result of the spatial coupling of individual underlying codes across a
+window of growing size, but much smaller than the length of the individual
+codes. Remarkably, the belief-propagation threshold of the coupled ensemble is
+boosted to the maximum-a-posteriori one of the individual system. We
+investigate the generality of this phenomenon beyond coding theory: we couple
+general graphical models into a one-dimensional chain of large individual
+systems. For the later we take the Curie-Weiss, random field Curie-Weiss,
+$K$-satisfiability, and $Q$-coloring models. We always find, based on
+analytical as well as numerical calculations, that the message passing
+thresholds of the coupled systems come very close to the static ones of the
+individual models. The remarkable properties of convolutional low-density
+parity-check codes are a manifestation of this very general phenomenon.
+
+
+Universal Bounds on the Scaling Behavior of Polar Codes
+
+  We consider the problem of determining the trade-off between the rate and the
+block-length of polar codes for a given block error probability when we use the
+successive cancellation decoder. We take the sum of the Bhattacharyya
+parameters as a proxy for the block error probability, and show that there
+exists a universal parameter $\mu$ such that for any binary memoryless
+symmetric channel $W$ with capacity $I(W)$, reliable communication requires
+rates that satisfy $R< I(W)-\alpha N^{-\frac{1}{\mu}}$, where $\alpha$ is a
+positive constant and $N$ is the block-length. We provide lower bounds on
+$\mu$, namely $\mu \geq 3.553$, and we conjecture that indeed $\mu=3.627$, the
+parameter for the binary erasure channel.
+
+
+On the Construction of Polar Codes
+
+  We consider the problem of efficiently constructing polar codes over binary
+memoryless symmetric (BMS) channels. The complexity of designing polar codes
+via an exact evaluation of the polarized channels to find which ones are "good"
+appears to be exponential in the block length. In \cite{TV11}, Tal and Vardy
+show that if instead the evaluation if performed approximately, the
+construction has only linear complexity. In this paper, we follow this approach
+and present a framework where the algorithms of \cite{TV11} and new related
+algorithms can be analyzed for complexity and accuracy. We provide numerical
+and analytical results on the efficiency of such algorithms, in particular we
+show that one can find all the "good" channels (except a vanishing fraction)
+with almost linear complexity in block-length (except a polylogarithmic
+factor).
+
+
+Polar Codes: Robustness of the Successive Cancellation Decoder with
+  Respect to Quantization
+
+  Polar codes provably achieve the capacity of a wide array of channels under
+successive decoding. This assumes infinite precision arithmetic. Given the
+successive nature of the decoding algorithm, one might worry about the
+sensitivity of the performance to the precision of the computation.
+  We show that even very coarsely quantized decoding algorithms lead to
+excellent performance. More concretely, we show that under successive decoding
+with an alphabet of cardinality only three, the decoder still has a threshold
+and this threshold is a sizable fraction of capacity. More generally, we show
+that if we are willing to transmit at a rate $\delta$ below capacity, then we
+need only $c \log(1/\delta)$ bits of precision, where $c$ is a universal
+constant.
+
+
+The Space of Solutions of Coupled XORSAT Formulae
+
+  The XOR-satisfiability (XORSAT) problem deals with a system of $n$ Boolean
+variables and $m$ clauses. Each clause is a linear Boolean equation (XOR) of a
+subset of the variables. A $K$-clause is a clause involving $K$ distinct
+variables. In the random $K$-XORSAT problem a formula is created by choosing
+$m$ $K$-clauses uniformly at random from the set of all possible clauses on $n$
+variables. The set of solutions of a random formula exhibits various
+geometrical transitions as the ratio $\frac{m}{n}$ varies.
+  We consider a {\em coupled} $K$-XORSAT ensemble, consisting of a chain of
+random XORSAT models that are spatially coupled across a finite window along
+the chain direction. We observe that the threshold saturation phenomenon takes
+place for this ensemble and we characterize various properties of the space of
+solutions of such coupled formulae.
+
+
+Rate-Dependent Analysis of the Asymptotic Behavior of Channel
+  Polarization
+
+  For a binary-input memoryless symmetric channel $W$, we consider the
+asymptotic behavior of the polarization process in the large block-length
+regime when transmission takes place over $W$. In particular, we study the
+asymptotics of the cumulative distribution $\mathbb{P}(Z_n \leq z)$, where
+$\{Z_n\}$ is the Bhattacharyya process defined from $W$, and its dependence on
+the rate of transmission. On the basis of this result, we characterize the
+asymptotic behavior, as well as its dependence on the rate, of the block error
+probability of polar codes using the successive cancellation decoder. This
+refines the original bounds by Ar{\i}kan and Telatar. Our results apply to
+general polar codes based on $\ell \times \ell$ kernel matrices.
+  We also provide lower bounds on the block error probability of polar codes
+using the MAP decoder. The MAP lower bound and the successive cancellation
+upper bound coincide when $\ell=2$, but there is a gap for $\ell>2$.
+
+
+Threshold Saturation in Spatially Coupled Constraint Satisfaction
+  Problems
+
+  We consider chains of random constraint satisfaction models that are
+spatially coupled across a finite window along the chain direction. We
+investigate their phase diagram at zero temperature using the survey
+propagation formalism and the interpolation method. We prove that the SAT-UNSAT
+phase transition threshold of an infinite chain is identical to the one of the
+individual standard model, and is therefore not affected by spatial coupling.
+We compute the survey propagation complexity using population dynamics as well
+as large degree approximations, and determine the survey propagation threshold.
+We find that a clustering phase survives coupling. However, as one increases
+the range of the coupling window, the survey propagation threshold increases
+and saturates towards the phase transition threshold. We also briefly discuss
+other aspects of the problem. Namely, the condensation threshold is not
+affected by coupling, but the dynamic threshold displays saturation towards the
+condensation one. All these features may provide a new avenue for obtaining
+better provable algorithmic lower bounds on phase transition thresholds of the
+individual standard model.
+
+
+On the scaling of Polar codes: I. The behavior of polarized channels
+
+  We consider the asymptotic behavior of the polarization process for polar
+codes when the blocklength tends to infinity. In particular, we study the
+problem of asymptotic analysis of the cumulative distribution $\mathbb{P}(Z_n
+\leq z)$, where $Z_n=Z(W_n)$ is the Bhattacharyya process, and its dependence
+to the rate of transmission R. We show that for a BMS channel $W$, for $R <
+I(W)$ we have $\lim_{n \to \infty} \mathbb{P} (Z_n \leq
+2^{-2^{\frac{n}{2}+\sqrt{n} \frac{Q^{-1}(\frac{R}{I(W)})}{2} +o(\sqrt{n})}}) =
+R$ and for $R<1- I(W)$ we have $\lim_{n \to \infty} \mathbb{P} (Z_n \geq
+1-2^{-2^{\frac{n}{2}+ \sqrt{n} \frac{Q^{-1}(\frac{R}{1-I(W)})}{2}
++o(\sqrt{n})}}) = R$, where $Q(x)$ is the probability that a standard normal
+random variable will obtain a value larger than $x$. As a result, if we denote
+by $\mathbb{P}_e ^{\text{SC}}(n,R)$ the probability of error using polar codes
+of block-length $N=2^n$ and rate $R<I(W)$ under successive cancellation
+decoding, then $\log(-\log(\mathbb{P}_e ^{\text{SC}}(n,R)))$ scales as
+$\frac{n}{2}+\sqrt{n}\frac{Q^{-1}(\frac{R}{I(W)})}{2}+ o(\sqrt{n})$. We also
+prove that the same result holds for the block error probability using the MAP
+decoder, i.e., for $\log(-\log(\mathbb{P}_e ^{\text{MAP}}(n,R)))$.
+
+
+Near concavity of the growth rate for coupled LDPC chains
+
+  Convolutional Low-Density-Parity-Check (LDPC) ensembles have excellent
+performance. Their iterative threshold increases with their average degree, or
+with the size of the coupling window in randomized constructions. In the later
+case, as the window size grows, the Belief Propagation (BP) threshold attains
+the maximum-a-posteriori (MAP) threshold of the underlying ensemble. In this
+contribution we show that a similar phenomenon happens for the growth rate of
+coupled ensembles. Loosely speaking, we observe that as the coupling strength
+grows, the growth rate of the coupled ensemble comes close to the concave hull
+of the underlying ensemble's growth rate. For ensembles randomly coupled across
+a window the growth rate actually tends to the concave hull of the underlying
+one as the window size increases. Our observations are supported by the
+calculations of the combinatorial growth rate, and that of the growth rate
+derived from the replica method. The observed concavity is a general feature of
+coupled mean field graphical models and is already present at the level of
+coupled Curie-Weiss models. There, the canonical free energy of the coupled
+system tends to the concave hull of the underlying one. As we explain, the
+behavior of the growth rate of coupled ensembles is exactly analogous.
+
+
+Chains of Mean Field Models
+
+  We consider a collection of Curie-Weiss (CW) spin systems, possibly with a
+random field, each of which is placed along the positions of a one-dimensional
+chain. The CW systems are coupled together by a Kac-type interaction in the
+longitudinal direction of the chain and by an infinite range interaction in the
+direction transverse to the chain. Our motivations for studying this model come
+from recent findings in the theory of error correcting codes based on spatially
+coupled graphs. We find that, although much simpler than the codes, the model
+studied here already displays similar behaviors. We are interested in the van
+der Waals curve in a regime where the size of each Curie-Weiss model tends to
+infinity, and the length of the chain and range of the Kac interaction are
+large but finite. Below the critical temperature, and with appropriate boundary
+conditions, there appears a series of equilibrium states representing kink-like
+interfaces between the two equilibrium states of the individual system. The van
+der Waals curve oscillates periodically around the Maxwell plateau. These
+oscillations have a period inversely proportional to the chain length and an
+amplitude exponentially small in the range of the interaction; in other words
+the spinodal points of the chain model lie exponentially close to the phase
+transition threshold. The amplitude of the oscillations is closely related to a
+Peierls-Nabarro free energy barrier for the motion of the kink along the chain.
+Analogies to similar phenomena and their possible algorithmic significance for
+graphical models of interest in coding theory and theoretical computer science
+are pointed out.
+
+
+Finite-Length Scaling of Polar Codes
+
+  Consider a binary-input memoryless output-symmetric channel $W$. Such a
+channel has a capacity, call it $I(W)$, and for any $R<I(W)$ and strictly
+positive constant $P_{\rm e}$ we know that we can construct a coding scheme
+that allows transmission at rate $R$ with an error probability not exceeding
+$P_{\rm e}$. Assume now that we let the rate $R$ tend to $I(W)$ and we ask how
+we have to "scale" the blocklength $N$ in order to keep the error probability
+fixed to $P_{\rm e}$. We refer to this as the "finite-length scaling" behavior.
+This question was addressed by Strassen as well as Polyanskiy, Poor and Verdu,
+and the result is that $N$ must grow at least as the square of the reciprocal
+of $I(W)-R$.
+  Polar codes are optimal in the sense that they achieve capacity. In this
+paper, we are asking to what degree they are also optimal in terms of their
+finite-length behavior. Our approach is based on analyzing the dynamics of the
+un-polarized channels. The main results of this paper can be summarized as
+follows. Consider the sum of Bhattacharyya parameters of sub-channels chosen
+(by the polar coding scheme) to transmit information. If we require this sum to
+be smaller than a given value $P_{\rm e}>0$, then the required block-length $N$
+scales in terms of the rate $R < I(W)$ as $N \geq
+\frac{\alpha}{(I(W)-R)^{\underline{\mu}}}$, where $\alpha$ is a positive
+constant that depends on $P_{\rm e}$ and $I(W)$, and $\underline{\mu} = 3.579$.
+Also, we show that with the same requirement on the sum of Bhattacharyya
+parameters, the block-length scales in terms of the rate like $N \leq
+\frac{\beta}{(I(W)-R)^{\overline{\mu}}}$, where $\beta$ is a constant that
+depends on $P_{\rm e}$ and $I(W)$, and $\overline{\mu}=6$.
+
+
+Universal Polar Codes
+
+  Polar codes, invented by Arikan in 2009, are known to achieve the capacity of
+any binary-input memoryless output-symmetric channel. One of the few drawbacks
+of the original polar code construction is that it is not universal. This means
+that the code has to be tailored to the channel if we want to transmit close to
+capacity.
+  We present two "polar-like" schemes which are capable of achieving the
+compound capacity of the whole class of binary-input memoryless
+output-symmetric channels with low complexity.
+  Roughly speaking, for the first scheme we stack up $N$ polar blocks of length
+$N$ on top of each other but shift them with respect to each other so that they
+form a "staircase." Coding then across the columns of this staircase with a
+standard Reed-Solomon code, we can achieve the compound capacity using a
+standard successive decoder to process the rows (the polar codes) and in
+addition a standard Reed-Solomon erasure decoder to process the columns.
+Compared to standard polar codes this scheme has essentially the same
+complexity per bit but a block length which is larger by a factor $O(N
+\log_2(N)/\epsilon)$, where $\epsilon$ is the gap to capacity.
+  For the second scheme we first show how to construct a true polar code which
+achieves the compound capacity for a finite number of channels. We achieve this
+by introducing special "polarization" steps which "align" the good indices for
+the various channels. We then show how to exploit the compactness of the space
+of binary-input memoryless output-symmetric channels to reduce the compound
+capacity problem for this class to a compound capacity problem for a finite set
+of channels. This scheme is similar in spirit to standard polar codes, but the
+price for universality is a considerably larger blocklength.
+  We close with what we consider to be some interesting open problems.
+
+

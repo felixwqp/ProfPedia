@@ -1,0 +1,441 @@
+Coinductive Proof Principles for Stochastic Processes
+
+  We give an explicit coinduction principle for recursively-defined stochastic
+processes. The principle applies to any closed property, not just equality, and
+works even when solutions are not unique. The rule encapsulates low-level
+analytic arguments, allowing reasoning about such processes at a higher
+algebraic level. We illustrate the use of the rule in deriving properties of a
+simple coin-flip process.
+
+
+Language to Specify Syntax-Guided Synthesis Problems
+
+  We present a language to specify syntax guided synthesis (SyGuS) problems.
+Syntax guidance is a prominent theme in contemporary program synthesis
+approaches, and SyGuS was first described in [1]. This paper describes
+concretely the input format of a SyGuS solver.
+  [1] Rajeev Alur, Rastislav Bodik, Garvit Juniwal, Milo M. K. Martin, Mukund
+Raghothaman, Sanjit A. Seshia, Rishabh Singh, Armando Solar-Lezama, Emina
+Torlak, and Abhishek Udupa. Syntax-guided synthesis. In FMCAD, pages 1--17,
+2013.
+
+
+First-Order and Temporal Logics for Nested Words
+
+  Nested words are a structured model of execution paths in procedural
+programs, reflecting their call and return nesting structure. Finite nested
+words also capture the structure of parse trees and other tree-structured data,
+such as XML. We provide new temporal logics for finite and infinite nested
+words, which are natural extensions of LTL, and prove that these logics are
+first-order expressively-complete. One of them is based on adding a "within"
+modality, evaluating a formula on a subword, to a logic CaRet previously
+studied in the context of verifying properties of recursive state machines
+(RSMs). The other logic, NWTL, is based on the notion of a summary path that
+uses both the linear and nesting structures. For NWTL we show that
+satisfiability is EXPTIME-complete, and that model-checking can be done in time
+polynomial in the size of the RSM model and exponential in the size of the NWTL
+formula (and is also EXPTIME-complete). Finally, we prove that first-order
+logic over nested words has the three-variable property, and we present a
+temporal logic for nested words which is complete for the two-variable fragment
+of first-order.
+
+
+Streaming Tree Transducers
+
+  Theory of tree transducers provides a foundation for understanding
+expressiveness and complexity of analysis problems for specification languages
+for transforming hierarchically structured data such as XML documents. We
+introduce streaming tree transducers as an analyzable, executable, and
+expressive model for transforming unranked ordered trees in a single pass.
+Given a linear encoding of the input tree, the transducer makes a single
+left-to-right pass through the input, and computes the output in linear time
+using a finite-state control, a visibly pushdown stack, and a finite number of
+variables that store output chunks that can be combined using the operations of
+string-concatenation and tree-insertion. We prove that the expressiveness of
+the model coincides with transductions definable using monadic second-order
+logic (MSO). Existing models of tree transducers either cannot implement all
+MSO-definable transformations, or require regular look ahead that prohibits
+single-pass implementation. We show a variety of analysis problems such as
+type-checking and checking functional equivalence are solvable for our model.
+
+
+Decision Problems for Additive Regular Functions
+
+  Additive Cost Register Automata (ACRA) map strings to integers using a finite
+set of registers that are updated using assignments of the form "x := y + c" at
+every step. The corresponding class of additive regular functions has multiple
+equivalent characterizations, appealing closure properties, and a decidable
+equivalence problem. In this paper, we solve two decision problems for this
+model. First, we define the register complexity of an additive regular function
+to be the minimum number of registers that an ACRA needs to compute it. We
+characterize the register complexity by a necessary and sufficient condition
+regarding the largest subset of registers whose values can be made far apart
+from one another. We then use this condition to design a PSPACE algorithm to
+compute the register complexity of a given ACRA, and establish a matching lower
+bound. Our results also lead to a machine-independent characterization of the
+register complexity of additive regular functions. Second, we consider
+two-player games over ACRAs, where the objective of one of the players is to
+reach a target set while minimizing the cost. We show the corresponding
+decision problem to be EXPTIME-complete when costs are non-negative integers,
+but undecidable when costs are integers.
+
+
+Counter-Strategy Guided Refinement of GR(1) Temporal Logic
+  Specifications
+
+  The reactive synthesis problem is to find a finite-state controller that
+satisfies a given temporal-logic specification regardless of how its
+environment behaves. Developing a formal specification is a challenging and
+tedious task and initial specifications are often unrealizable. In many cases,
+the source of unrealizability is the lack of adequate assumptions on the
+environment of the system. In this paper, we consider the problem of
+automatically correcting an unrealizable specification given in the generalized
+reactivity (1) fragment of linear temporal logic by adding assumptions on the
+environment. When a temporal-logic specification is unrealizable, the synthesis
+algorithm computes a counter-strategy as a witness. Our algorithm then analyzes
+this counter-strategy and synthesizes a set of candidate environment
+assumptions that can be used to remove the counter-strategy from the
+environment's possible behaviors. We demonstrate the applicability of our
+approach with several case studies.
+
+
+Results and Analysis of SyGuS-Comp'15
+
+  Syntax-Guided Synthesis (SyGuS) is the computational problem of finding an
+implementation f that meets both a semantic constraint given by a logical
+formula $\varphi$ in a background theory T, and a syntactic constraint given by
+a grammar G, which specifies the allowed set of candidate implementations. Such
+a synthesis problem can be formally defined in SyGuS-IF, a language that is
+built on top of SMT-LIB.
+  The Syntax-Guided Synthesis Competition (SyGuS-comp) is an effort to
+facilitate, bring together and accelerate research and development of efficient
+solvers for SyGuS by providing a platform for evaluating different synthesis
+techniques on a comprehensive set of benchmarks. In this year's competition we
+added two specialized tracks: a track for conditional linear arithmetic, where
+the grammar need not be specified and is implicitly assumed to be that of the
+LIA logic of SMT-LIB, and a track for invariant synthesis problems, with
+special constructs conforming to the structure of an invariant synthesis
+problem. This paper presents and analyzes the results of SyGuS-comp'15.
+
+
+Synthesizing Finite-state Protocols from Scenarios and Requirements
+
+  Scenarios, or Message Sequence Charts, offer an intuitive way of describing
+the desired behaviors of a distributed protocol. In this paper we propose a new
+way of specifying finite-state protocols using scenarios: we show that it is
+possible to automatically derive a distributed implementation from a set of
+scenarios augmented with a set of safety and liveness requirements, provided
+the given scenarios adequately \emph{cover} all the states of the desired
+implementation. We first derive incomplete state machines from the given
+scenarios, and then synthesis corresponds to completing the transition relation
+of individual processes so that the global product meets the specified
+requirements. This completion problem, in general, has the same complexity,
+PSPACE, as the verification problem, but unlike the verification problem, is
+NP-complete for a constant number of processes. We present two algorithms for
+solving the completion problem, one based on a heuristic search in the space of
+possible completions and one based on OBDD-based symbolic fixpoint computation.
+We evaluate the proposed methodology for protocol specification and the
+effectiveness of the synthesis algorithms using the classical alternating-bit
+protocol.
+
+
+SyGuS-Comp 2016: Results and Analysis
+
+  Syntax-Guided Synthesis (SyGuS) is the computational problem of finding an
+implementation f that meets both a semantic constraint given by a logical
+formula $\varphi$ in a background theory T, and a syntactic constraint given by
+a grammar G, which specifies the allowed set of candidate implementations. Such
+a synthesis problem can be formally defined in SyGuS-IF, a language that is
+built on top of SMT-LIB.
+  The Syntax-Guided Synthesis Competition (SyGuS-Comp) is an effort to
+facilitate, bring together and accelerate research and development of efficient
+solvers for SyGuS by providing a platform for evaluating different synthesis
+techniques on a comprehensive set of benchmarks. In this year's competition we
+added a new track devoted to programming by examples. This track consisted of
+two categories, one using the theory of bit-vectors and one using the theory of
+strings. This paper presents and analyses the results of SyGuS-Comp'16.
+
+
+SyGuS-Comp 2017: Results and Analysis
+
+  Syntax-Guided Synthesis (SyGuS) is the computational problem of finding an
+implementation f that meets both a semantic constraint given by a logical
+formula phi in a background theory T, and a syntactic constraint given by a
+grammar G, which specifies the allowed set of candidate implementations. Such a
+synthesis problem can be formally defined in SyGuS-IF, a language that is built
+on top of SMT-LIB.
+  The Syntax-Guided Synthesis Competition (SyGuS-Comp) is an effort to
+facilitate, bring together and accelerate research and development of efficient
+solvers for SyGuS by providing a platform for evaluating different synthesis
+techniques on a comprehensive set of benchmarks. In this year's competition six
+new solvers competed on over 1500 benchmarks. This paper presents and analyses
+the results of SyGuS-Comp'17.
+
+
+Streamable Regular Transductions
+
+  Motivated by real-time monitoring and data processing applications, we
+develop a formal theory of quantitative queries for streaming data that can be
+evaluated efficiently. We consider the model of unambiguous Cost Register
+Automata (CRAs), which are machines that combine finite-state control (for
+identifying regular patterns) with a finite set of data registers (for
+computing numerical aggregates). The definition of CRAs is parameterized by the
+collection of numerical operations that can be applied to the registers. These
+machines give rise to the class of streamable regular transductions (SR), and
+to the class of streamable linear regular transductions (SLR) when the register
+updates are copyless, i.e. every register appears at most once the
+right-hand-side expressions of the updates. We give a logical characterization
+of the class SR (resp., SLR) using MSO-definable transformations from strings
+to DAGs (resp., trees) without backward edges. Additionally, we establish that
+the two classes SR and SLR are closed under operations that are relevant for
+designing query languages. Finally, we study the relationship with weighted
+automata (WA), and show that CRAs over a suitably chosen set of operations
+correspond to WA, thus establishing that WA are a special case of CRAs.
+
+
+Equilibria in Quantitative Concurrent Games
+
+  Synthesis of finite-state controllers from high-level specifications in
+multi-agent systems can be reduced to solving multi-player concurrent games
+over finite graphs. The complexity of solving such games with qualitative
+objectives for agents, such as reaching a target set, is well understood
+resulting in tools with applications in robotics. In this paper, we introduce
+quantitative concurrent graph games, where transitions have separate costs for
+different agents, and each agent attempts to reach its target set while
+minimizing its own cost along the path. In this model, a solution to the game
+corresponds to a set of strategies, one per agent, that forms a Nash
+equilibrium. We study the problem of computing the set of all Pareto-optimal
+Nash equilibria, and give a comprehensive analysis of its complexity and
+related problems such as the price of stability and the price of anarchy. In
+particular, while checking the existence of a Nash equilibrium is NP-complete
+in general, with multiple parameters contributing to the computational hardness
+separately, two-player games with bounded costs on individual transitions admit
+a polynomial-time solution.
+
+
+Verisig: verifying safety properties of hybrid systems with neural
+  network controllers
+
+  This paper presents Verisig, a hybrid system approach to verifying safety
+properties of closed-loop systems using neural networks as controllers.
+Although techniques exist for verifying input/output properties of the neural
+network itself, these methods cannot be used to verify properties of the
+closed-loop system (since they work with piecewise-linear constraints that do
+not capture non-linear plant dynamics). To overcome this challenge, we focus on
+sigmoid-based networks and exploit the fact that the sigmoid is the solution to
+a quadratic differential equation, which allows us to transform the neural
+network into an equivalent hybrid system. By composing the network's hybrid
+system with the plant's, we transform the problem into a hybrid system
+verification problem which can be solved using state-of-the-art reachability
+tools. We show that reachability is decidable for networks with one hidden
+layer and decidable for general networks if Schanuel's conjecture is true. We
+evaluate the applicability and scalability of Verisig in two case studies, one
+from reinforcement learning and one in which the neural network is used to
+approximate a model predictive controller.
+
+
+Algorithmic Verification of Single-Pass List Processing Programs
+
+  We introduce streaming data string transducers that map input data strings to
+output data strings in a single left-to-right pass in linear time. Data strings
+are (unbounded) sequences of data values, tagged with symbols from a finite
+set, over a potentially infinite data domain that supports only the operations
+of equality and ordering. The transducer uses a finite set of states, a finite
+set of variables ranging over the data domain, and a finite set of variables
+ranging over data strings. At every step, it can make decisions based on the
+next input symbol, updating its state, remembering the input data value in its
+data variables, and updating data-string variables by concatenating data-string
+variables and new symbols formed from data variables, while avoiding
+duplication. We establish that the problems of checking functional equivalence
+of two streaming transducers, and of checking whether a streaming transducer
+satisfies pre/post verification conditions specified by streaming acceptors
+over input/output data-strings, are in PSPACE. We identify a class of
+imperative and a class of functional programs, manipulating lists of data
+items, which can be effectively translated to streaming data-string
+transducers. The imperative programs dynamically modify a singly-linked heap by
+changing next-pointers of heap-nodes and by adding new nodes. The main
+restriction specifies how the next-pointers can be used for traversal. We also
+identify an expressively equivalent fragment of functional programs that
+traverse a list using syntactically restricted recursive calls. Our results
+lead to algorithms for assertion checking and for checking functional
+equivalence of two programs, written possibly in different programming styles,
+for commonly used routines such as insert, delete, and reverse.
+
+
+Safe Schedulability of Bounded-Rate Multi-Mode Systems
+
+  Bounded-rate multi-mode systems (BMMS) are hybrid systems that can switch
+freely among a finite set of modes, and whose dynamics is specified by a finite
+number of real-valued variables with mode-dependent rates that can vary within
+given bounded sets. The schedulability problem for BMMS is defined as an
+infinite-round game between two players---the scheduler and the
+environment---where in each round the scheduler proposes a time and a mode
+while the environment chooses an allowable rate for that mode, and the state of
+the system changes linearly in the direction of the rate vector. The goal of
+the scheduler is to keep the state of the system within a pre-specified safe
+set using a non-Zeno schedule, while the goal of the environment is the
+opposite. Green scheduling under uncertainty is a paradigmatic example of BMMS
+where a winning strategy of the scheduler corresponds to a robust
+energy-optimal policy. We present an algorithm to decide whether the scheduler
+has a winning strategy from an arbitrary starting state, and give an algorithm
+to compute such a winning strategy, if it exists. We show that the
+schedulability problem for BMMS is co-NP complete in general, but for two
+variables it is in PTIME. We also study the discrete schedulability problem
+where the environment has only finitely many choices of rate vectors in each
+mode and the scheduler can make decisions only at multiples of a given clock
+period, and show it to be EXPTIME-complete.
+
+
+Automatic Completion of Distributed Protocols with Symmetry
+
+  A distributed protocol is typically modeled as a set of communicating
+processes, where each process is described as an extended state machine along
+with fairness assumptions, and its correctness is specified using safety and
+liveness requirements. Designing correct distributed protocols is a challenging
+task. Aimed at simplifying this task, we allow the designer to leave some of
+the guards and updates to state variables in the description of extended state
+machines as unknown functions. The protocol completion problem then is to find
+interpretations for these unknown functions while guaranteeing correctness. In
+many distributed protocols, process behaviors are naturally symmetric, and
+thus, synthesized expressions are further required to obey symmetry
+constraints. Our counterexample-guided synthesis algorithm consists of
+repeatedly invoking two phases. In the first phase, candidates for unknown
+expressions are generated using the SMT solver Z3. This phase requires
+carefully orchestrating constraints to enforce the desired symmetry in
+read/write accesses. In the second phase, the resulting completed protocol is
+checked for correctness using a custom-built model checker that handles
+fairness assumptions, safety and liveness requirements, and exploits symmetry.
+When model checking fails, our tool examines a set of counterexamples to
+safety/liveness properties to generate constraints on unknown functions that
+must be satisfied by subsequent completions. For evaluation, we show that our
+prototype is able to automatically discover interesting missing details in
+distributed protocols for mutual exclusion, self stabilization, and cache
+coherence.
+
+
+Synthesis through Unification
+
+  Given a specification and a set of candidate programs (program space), the
+program synthesis problem is to find a candidate program that satisfies the
+specification. We present the synthesis through unification (STUN) approach,
+which is an extension of the counter-example guided inductive synthesis (CEGIS)
+approach. In CEGIS, the synthesizer maintains a subset S of inputs and a
+candidate program Prog that is correct for S. The synthesizer repeatedly checks
+if there exists a counter-example input c such that the execution of Prog is
+incorrect on c. If so, the synthesizer enlarges S to include c, and picks a
+program from the program space that is correct for the new set S.
+  The STUN approach extends CEGIS with the idea that given a program Prog that
+is correct for a subset of inputs, the synthesizer can try to find a program
+Prog' that is correct for the rest of the inputs. If Prog and Prog' can be
+unified into a program in the program space, then a solution has been found. We
+present a generic synthesis procedure based on the STUN approach and specialize
+it for three different domains by providing the appropriate unification
+operators. We implemented these specializations in prototype tools, and we show
+that our tools often per- forms significantly better on standard benchmarks
+than a tool based on a pure CEGIS approach.
+
+
+Regular Functions, Cost Register Automata, and Generalized Min-Cost
+  Problems
+
+  Motivated by the successful application of the theory of regular languages to
+formal verification of finite-state systems, there is a renewed interest in
+developing a theory of analyzable functions from strings to numerical values
+that can provide a foundation for analyzing {\em quantitative} properties of
+finite-state systems. In this paper, we propose a deterministic model for
+associating costs with strings that is parameterized by operations of interest
+(such as addition, scaling, and $\min$), a notion of {\em regularity} that
+provides a yardstick to measure expressiveness, and study decision problems and
+theoretical properties of resulting classes of cost functions. Our definition
+of regularity relies on the theory of string-to-tree transducers, and allows
+associating costs with events that are conditional upon regular properties of
+future events. Our model of {\em cost register automata} allows computation of
+regular functions using multiple "write-only" registers whose values can be
+combined using the allowed set of operations. We show that classical
+shortest-path algorithms as well as algorithms designed for computing {\em
+discounted costs}, can be adopted for solving the min-cost problems for the
+more general classes of functions specified in our model. Cost register
+automata with $\min$ and increment give a deterministic model that is
+equivalent to {\em weighted automata}, an extensively studied nondeterministic
+model, and this connection results in new insights and new open problems.
+
+
+Regular Combinators for String Transformations
+
+  We focus on (partial) functions that map input strings to a monoid such as
+the set of integers with addition and the set of output strings with
+concatenation. The notion of regularity for such functions has been defined
+using two-way finite-state transducers, (one-way) cost register automata, and
+MSO-definable graph transformations. In this paper, we give an algebraic and
+machine-independent characterization of this class analogous to the definition
+of regular languages by regular expressions. When the monoid is commutative, we
+prove that every regular function can be constructed from constant functions
+using the combinators of choice, split sum, and iterated sum, that are analogs
+of union, concatenation, and Kleene-*, respectively, but enforce unique (or
+unambiguous) parsing. Our main result is for the general case of
+non-commutative monoids, which is of particular interest for capturing regular
+string-to-string transformations for document processing. We prove that the
+following additional combinators suffice for constructing all regular
+functions: (1) the left-additive versions of split sum and iterated sum, which
+allow transformations such as string reversal; (2) sum of functions, which
+allows transformations such as copying of strings; and (3) function
+composition, or alternatively, a new concept of chained sum, which allows
+output values from adjacent blocks to mix.
+
+
+REAFFIRM: Model-Based Repair of Hybrid Systems for Improving Resiliency
+
+  Model-based design offers a promising approach for assisting developers to
+build reliable and secure cyber-physical systems (CPSs) in a systematic manner.
+In this methodology, a designer first constructs a model, with mathematically
+precise semantics, of the system under design, and performs extensive analysis
+with respect to correctness requirements before generating the implementation
+from the model. However, as new vulnerabilities are discovered, requirements
+evolve aimed at ensuring resiliency. There is currently a shortage of an
+inexpensive, automated mechanism that can effectively repair the initial
+design, and a model-based system developer regularly needs to redesign and
+reimplement the system from scratch. In this paper, we propose a new
+methodology along with a Matlab toolkit called REAFFIRM to facilitate the
+model-based repair for improving the resiliency of CPSs. REAFFIRM takes the
+inputs including 1) an original hybrid system modeled as a Simulink/Stateflow
+diagram, 2) a given resiliency pattern specified as a model transformation
+script, and 3) a safety requirement expressed as a Signal Temporal Logic
+formula, and then outputs a repaired model which satisfies the requirement. The
+overall structure of REAFFIRM contains two main modules, a model
+transformation, and a model synthesizer built on top of the falsification tool
+Breach. We introduce a new model transformation language for hybrid systems,
+which we call HATL to allow a designer to specify resiliency patterns. To
+evaluate the proposed approach, we use REAFFIRM to automatically synthesize
+repaired models for an adaptive cruise control (ACC) system under a GPS sensor
+spoofing attack, for a single-machine infinite-bus (SMIB) system under a
+sliding-mode switching attack, and for a missile guidance system under
+gyroscopes sensor attack.
+
+
+Systems Computing Challenges in the Internet of Things
+
+  A recent McKinsey report estimates the economic impact of the Internet of
+Things (IoT) to be between $3.9 to $11 trillion dollars by 20251 . IoT has the
+potential to have a profound impact on our daily lives, including technologies
+for the home, for health, for transportation, and for managing our natural
+resources. The Internet was largely driven by information and ideas generated
+by people, but advances in sensing and hardware have enabled computers to more
+easily observe the physical world. Coupling this additional layer of
+information with advances in machine learning brings dramatic new capabilities
+including the ability to capture and process tremendous amounts of data; to
+predict behaviors, activities, and the future in uncanny ways; and to
+manipulate the physical world in response. This trend will fundamentally change
+how people interact with physical objects and the environment. Success in
+developing value-added capabilities around IoT requires a broad approach that
+includes expertise in sensing and hardware, machine learning, networked
+systems, human-computer interaction, security, and privacy. Strategies for
+making IoT practical and spurring its ultimate adoption also require a
+multifaceted approach that often transcends technology, such as with concerns
+over data security, privacy, public policy, and regulatory issues. In this
+paper we argue that existing best practices in building robust and secure
+systems are insufficient to address the new challenges that IoT systems will
+present. We provide recommendations regarding investments in research areas
+that will help address inadequacies in existing systems, practices, tools, and
+policies.
+
+

@@ -1,0 +1,856 @@
+Decentralized Erasure Codes for Distributed Networked Storage
+
+  We consider the problem of constructing an erasure code for storage over a
+network when the data sources are distributed. Specifically, we assume that
+there are n storage nodes with limited memory and k<n sources generating the
+data. We want a data collector, who can appear anywhere in the network, to
+query any k storage nodes and be able to retrieve the data. We introduce
+Decentralized Erasure Codes, which are linear codes with a specific randomized
+structure inspired by network coding on random bipartite graphs. We show that
+decentralized erasure codes are optimally sparse, and lead to reduced
+communication, storage and computation cost over random linear coding.
+
+
+Probabilistic Analysis of Linear Programming Decoding
+
+  We initiate the probabilistic analysis of linear programming (LP) decoding of
+low-density parity-check (LDPC) codes. Specifically, we show that for a random
+LDPC code ensemble, the linear programming decoder of Feldman et al. succeeds
+in correcting a constant fraction of errors with high probability. The fraction
+of correctable errors guaranteed by our analysis surpasses previous
+non-asymptotic results for LDPC codes, and in particular exceeds the best
+previous finite-length result on LP decoding by a factor greater than ten. This
+improvement stems in part from our analysis of probabilistic bit-flipping
+channels, as opposed to adversarial channels. At the core of our analysis is a
+novel combinatorial characterization of LP decoding success, based on the
+notion of a generalized matching. An interesting by-product of our analysis is
+to establish the existence of ``probabilistic expansion'' in random bipartite
+graphs, in which one requires only that almost every (as opposed to every) set
+of a certain size expands, for sets much larger than in the classical
+worst-case setting.
+
+
+Geographic Gossip: Efficient Averaging for Sensor Networks
+
+  Gossip algorithms for distributed computation are attractive due to their
+simplicity, distributed nature, and robustness in noisy and uncertain
+environments. However, using standard gossip algorithms can lead to a
+significant waste in energy by repeatedly recirculating redundant information.
+For realistic sensor network model topologies like grids and random geometric
+graphs, the inefficiency of gossip schemes is related to the slow mixing times
+of random walks on the communication graph. We propose and analyze an
+alternative gossiping scheme that exploits geographic information. By utilizing
+geographic routing combined with a simple resampling method, we demonstrate
+substantial gains over previously proposed gossip protocols. For regular graphs
+such as the ring or grid, our algorithm improves standard gossip by factors of
+$n$ and $\sqrt{n}$ respectively. For the more challenging case of random
+geometric graphs, our algorithm computes the true average to accuracy
+$\epsilon$ using $O(\frac{n^{1.5}}{\sqrt{\log n}} \log \epsilon^{-1})$ radio
+transmissions, which yields a $\sqrt{\frac{n}{\log n}}$ factor improvement over
+standard gossip algorithms. We illustrate these theoretical results with
+experimental comparisons between our algorithm and standard methods as applied
+to various classes of random fields.
+
+
+A Survey on Network Codes for Distributed Storage
+
+  Distributed storage systems often introduce redundancy to increase
+reliability. When coding is used, the repair problem arises: if a node storing
+encoded information fails, in order to maintain the same level of reliability
+we need to create encoded information at a new node. This amounts to a partial
+recovery of the code, whereas conventional erasure coding focuses on the
+complete recovery of the information from a subset of encoded packets. The
+consideration of the repair network traffic gives rise to new design
+challenges. Recently, network coding techniques have been instrumental in
+addressing these challenges, establishing that maintenance bandwidth can be
+reduced by orders of magnitude compared to standard erasure codes. This paper
+provides an overview of the research results on this topic.
+
+
+Reweighted LP Decoding for LDPC Codes
+
+  We introduce a novel algorithm for decoding binary linear codes by linear
+programming. We build on the LP decoding algorithm of Feldman et al. and
+introduce a post-processing step that solves a second linear program that
+reweights the objective function based on the outcome of the original LP
+decoder output. Our analysis shows that for some LDPC ensembles we can improve
+the provable threshold guarantees compared to standard LP decoding. We also
+show significant empirical performance gains for the reweighted LP decoding
+algorithm with very small additional computational complexity.
+
+
+Local Graph Coloring and Index Coding
+
+  We present a novel upper bound for the optimal index coding rate. Our bound
+uses a graph theoretic quantity called the local chromatic number. We show how
+a good local coloring can be used to create a good index code. The local
+coloring is used as an alignment guide to assign index coding vectors from a
+general position MDS code. We further show that a natural LP relaxation yields
+an even stronger index code. Our bounds provably outperform the state of the
+art on index coding but at most by a constant factor.
+
+
+Femtocaching and Device-to-Device Collaboration: A New Architecture for
+  Wireless Video Distribution
+
+  We present a new architecture to handle the ongoing explosive increase in the
+demand for video content in wireless networks. It is based on distributed
+caching of the content in femto-basestations with small or non-existing
+backhaul capacity but with considerable storage space, called helper nodes. We
+also consider using the mobile terminals themselves as caching helpers, which
+can distribute video through device-to-device communications. This approach
+allows an improvement in the video throughput without deployment of any
+additional infrastructure. The new architecture can improve video throughput by
+one to two orders-of-magnitude.
+
+
+Graph Theory versus Minimum Rank for Index Coding
+
+  We obtain novel index coding schemes and show that they provably outperform
+all previously known graph theoretic bounds proposed so far. Further, we
+establish a rather strong negative result: all known graph theoretic bounds are
+within a logarithmic factor from the chromatic number. This is in striking
+contrast to minrank since prior work has shown that it can outperform the
+chromatic number by a polynomial factor in some cases. The conclusion is that
+all known graph theoretic bounds are not much stronger than the chromatic
+number.
+
+
+Gradient Coding
+
+  We propose a novel coding theoretic framework for mitigating stragglers in
+distributed learning. We show how carefully replicating data blocks and coding
+across gradients can provide tolerance to failures and stragglers for
+Synchronous Gradient Descent. We implement our schemes in python (using MPI) to
+run on Amazon EC2, and show how we compare against baseline approaches in
+running time and generalization error.
+
+
+On Approximation Guarantees for Greedy Low Rank Optimization
+
+  We provide new approximation guarantees for greedy low rank matrix estimation
+under standard assumptions of restricted strong convexity and smoothness. Our
+novel analysis also uncovers previously unknown connections between the low
+rank estimation and combinatorial optimization, so much so that our bounds are
+reminiscent of corresponding approximation bounds in submodular maximization.
+Additionally, we also provide statistical recovery guarantees. Finally, we
+present empirical comparison of greedy estimation with established baselines on
+two important real-world problems.
+
+
+From Dumb Wireless Sensors to Smart Networks using Network Coding
+
+  The vision of wireless sensor networks is one of a smart collection of tiny,
+dumb devices. These motes may be individually cheap, unintelligent, imprecise,
+and unreliable. Yet they are able to derive strength from numbers, rendering
+the whole to be strong, reliable and robust. Our approach is to adopt a
+distributed and randomized mindset and rely on in network processing and
+network coding. Our general abstraction is that nodes should act only locally
+and independently, and the desired global behavior should arise as a collective
+property of the network. We summarize our work and present how these ideas can
+be applied for communication and storage in sensor networks.
+
+
+Order-Optimal Consensus through Randomized Path Averaging
+
+  Gossip algorithms have recently received significant attention, mainly
+because they constitute simple and robust message-passing schemes for
+distributed information processing over networks. However for many topologies
+that are realistic for wireless ad-hoc and sensor networks (like grids and
+random geometric graphs), the standard nearest-neighbor gossip converges as
+slowly as flooding ($O(n^2)$ messages).
+  A recently proposed algorithm called geographic gossip improves gossip
+efficiency by a $\sqrt{n}$ factor, by exploiting geographic information to
+enable multi-hop long distance communications. In this paper we prove that a
+variation of geographic gossip that averages along routed paths, improves
+efficiency by an additional $\sqrt{n}$ factor and is order optimal ($O(n)$
+messages) for grids and random geometric graphs.
+  We develop a general technique (travel agency method) based on Markov chain
+mixing time inequalities, which can give bounds on the performance of
+randomized message-passing algorithms operating over various graph topologies.
+
+
+Lower Bounds on the Rate-Distortion Function of LDGM Codes
+
+  A recent line of work has focused on the use of low-density generator matrix
+(LDGM) codes for lossy source coding. In this paper, wedevelop a generic
+technique for deriving lower bounds on the rate-distortion functions of binary
+linear codes, with particular interest on the effect of bounded degrees. The
+underlying ideas can be viewing as the source coding analog of the classical
+result of Gallager, providing bounds for channel coding over the binary
+symmetric channel using bounded degree LDPC codes. We illustrate this method
+for different random ensembles of LDGM codes, including the check-regular
+ensemble and bit-check-regular ensembles, by deriving explicit lower bounds on
+their rate-distortion performance as a function of the degrees.
+
+
+Exact MAP Inference by Avoiding Fractional Vertices
+
+  Given a graphical model, one essential problem is MAP inference, that is,
+finding the most likely configuration of states according to the model.
+Although this problem is NP-hard, large instances can be solved in practice. A
+major open question is to explain why this is true. We give a natural condition
+under which we can provably perform MAP inference in polynomial time. We
+require that the number of fractional vertices in the LP relaxation exceeding
+the optimal solution is bounded by a polynomial in the problem size. This
+resolves an open question by Dimakis, Gohari, and Wainwright. In contrast, for
+general LP relaxations of integer programs, known techniques can only handle a
+constant number of fractional vertices whose value exceeds the optimal
+solution. We experimentally verify this condition and demonstrate how efficient
+various integer programming methods are at removing fractional solutions.
+
+
+Network Coding for Distributed Storage Systems
+
+  Peer-to-peer distributed storage systems provide reliable access to data
+through redundancy spread over nodes across the Internet. A key goal is to
+minimize the amount of bandwidth used to maintain that redundancy. Storing a
+file using an erasure code, in fragments spread across nodes, promises to
+require less redundancy and hence less maintenance bandwidth than simple
+replication to provide the same level of reliability. However, since fragments
+must be periodically replaced as nodes fail, a key question is how to generate
+a new fragment in a distributed way while transferring as little data as
+possible across the network.
+  In this paper, we introduce a general technique to analyze storage
+architectures that combine any form of coding and replication, as well as
+presenting two new schemes for maintaining redundancy using erasure codes.
+First, we show how to optimally generate MDS fragments directly from existing
+fragments in the system. Second, we introduce a new scheme called Regenerating
+Codes which use slightly larger fragments than MDS but have lower overall
+bandwidth use. We also show through simulation that in realistic environments,
+Regenerating Codes can reduce maintenance bandwidth use by 25 percent or more
+compared with the best previous design--a hybrid of replication and erasure
+codes--while simplifying system architecture.
+
+
+Guessing Facets: Polytope Structure and Improved LP Decoding
+
+  In this paper we investigate the structure of the fundamental polytope used
+in the Linear Programming decoding introduced by Feldman, Karger and
+Wainwright. We begin by showing that for expander codes, every fractional
+pseudocodeword always has at least a constant fraction of non-integral bits. We
+then prove that for expander codes, the active set of any fractional
+pseudocodeword is smaller by a constant fraction than the active set of any
+codeword. We further exploit these geometrical properties to devise an improved
+decoding algorithm with the same complexity order as LP decoding that provably
+performs better, for any blocklength. It proceeds by guessing facets of the
+polytope, and then resolving the linear program on these facets. While the LP
+decoder succeeds only if the ML codeword has the highest likelihood over all
+pseudocodewords, we prove that the proposed algorithm, when applied to suitable
+expander codes, succeeds unless there exist a certain number of
+pseudocodewords, all adjacent to the ML codeword on the LP decoding polytope,
+and with higher likelihood than the ML codeword. We then describe an extended
+algorithm, still with polynomial complexity, that succeeds as long as there are
+at most polynomially many pseudocodewords above the ML codeword.
+
+
+Network Coding for Distributed Storage Systems
+
+  Distributed storage systems provide reliable access to data through
+redundancy spread over individually unreliable nodes. Application scenarios
+include data centers, peer-to-peer storage systems, and storage in wireless
+networks. Storing data using an erasure code, in fragments spread across nodes,
+requires less redundancy than simple replication for the same level of
+reliability. However, since fragments must be periodically replaced as nodes
+fail, a key question is how to generate encoded fragments in a distributed way
+while transferring as little data as possible across the network.
+  For an erasure coded system, a common practice to repair from a node failure
+is for a new node to download subsets of data stored at a number of surviving
+nodes, reconstruct a lost coded block using the downloaded data, and store it
+at the new node. We show that this procedure is sub-optimal. We introduce the
+notion of regenerating codes, which allow a new node to download
+\emph{functions} of the stored data from the surviving nodes. We show that
+regenerating codes can significantly reduce the repair bandwidth. Further, we
+show that there is a fundamental tradeoff between storage and repair bandwidth
+which we theoretically characterize using flow arguments on an appropriately
+constructed graph. By invoking constructive results in network coding, we
+introduce regenerating codes that can achieve any point in this optimal
+tradeoff.
+
+
+Near-Optimal Detection in MIMO Systems using Gibbs Sampling
+
+  In this paper we study a Markov Chain Monte Carlo (MCMC) Gibbs sampler for
+solving the integer least-squares problem. In digital communication the problem
+is equivalent to performing Maximum Likelihood (ML) detection in Multiple-Input
+Multiple-Output (MIMO) systems. While the use of MCMC methods for such problems
+has already been proposed, our method is novel in that we optimize the
+"temperature" parameter so that in steady state, i.e. after the Markov chain
+has mixed, there is only polynomially (rather than exponentially) small
+probability of encountering the optimal solution. More precisely, we obtain the
+largest value of the temperature parameter for this to occur, since the higher
+the temperature, the faster the mixing. This is in contrast to simulated
+annealing techniques where, rather than being held fixed, the temperature
+parameter is tended to zero. Simulations suggest that the resulting Gibbs
+sampler provides a computationally efficient way of achieving approximative ML
+detection in MIMO systems having a huge number of transmit and receive
+dimensions. In fact, they further suggest that the Markov chain is rapidly
+mixing. Thus, it has been observed that even in cases were ML detection using,
+e.g. sphere decoding becomes infeasible, the Gibbs sampler can still offer a
+near-optimal solution using much less computations.
+
+
+From Centralized to Decentralized Coded Caching
+
+  We consider the problem of designing decentralized schemes for coded caching.
+In this problem there are $K$ users each caching $M$ files out of a library of
+$N$ total files. The question is to minimize $R$, the number of broadcast
+transmissions to satisfy all the user demands. Decentralized schemes allow the
+creation of each cache independently, allowing users to join or leave without
+dependencies. Previous work showed that to achieve a coding gain $g$, i.e. $R
+\leq K (1-M/N)/g$ transmissions, each file has to be divided into number of
+subpackets that is exponential in $g$.
+  In this work we propose a simple translation scheme that converts any
+constant rate centralized scheme into a random decentralized placement scheme
+that guarantees a target coding gain of $g$. If the file size in the original
+constant rate centralized scheme is subexponential in $K$, then the file size
+for the resulting scheme is subexponential in $g$. When new users join, the
+rest of the system remains the same. However, we require an additional
+communication overhead of $O(\log K)$ bits to determine the new user's cache
+state. We also show that the worst-case rate guarantee degrades only by a
+constant factor due to the dynamics of user arrival and departure.
+
+
+Bipartite Correlation Clustering -- Maximizing Agreements
+
+  In Bipartite Correlation Clustering (BCC) we are given a complete bipartite
+graph $G$ with `+' and `-' edges, and we seek a vertex clustering that
+maximizes the number of agreements: the number of all `+' edges within clusters
+plus all `-' edges cut across clusters. BCC is known to be NP-hard.
+  We present a novel approximation algorithm for $k$-BCC, a variant of BCC with
+an upper bound $k$ on the number of clusters. Our algorithm outputs a
+$k$-clustering that provably achieves a number of agreements within a
+multiplicative ${(1-\delta)}$-factor from the optimal, for any desired accuracy
+$\delta$. It relies on solving a combinatorially constrained bilinear
+maximization on the bi-adjacency matrix of $G$. It runs in time exponential in
+$k$ and $\delta^{-1}$, but linear in the size of the input.
+  Further, we show that, in the (unconstrained) BCC setting, an
+${(1-\delta)}$-approximation can be achieved by $O(\delta^{-1})$ clusters
+regardless of the size of the graph. In turn, our $k$-BCC algorithm implies an
+Efficient PTAS for the BCC objective of maximizing agreements.
+
+
+Stay on path: PCA along graph paths
+
+  We introduce a variant of (sparse) PCA in which the set of feasible support
+sets is determined by a graph. In particular, we consider the following
+setting: given a directed acyclic graph $G$ on $p$ vertices corresponding to
+variables, the non-zero entries of the extracted principal component must
+coincide with vertices lying along a path in $G$.
+  From a statistical perspective, information on the underlying network may
+potentially reduce the number of observations required to recover the
+population principal component. We consider the canonical estimator which
+optimally exploits the prior knowledge by solving a non-convex quadratic
+maximization on the empirical covariance. We introduce a simple network and
+analyze the estimator under the spiked covariance model. We show that side
+information potentially improves the statistical complexity.
+  We propose two algorithms to approximate the solution of the constrained
+quadratic maximization, and recover a component with the desired properties. We
+empirically evaluate our schemes on synthetic and real datasets.
+
+
+Compressed Sensing using Generative Models
+
+  The goal of compressed sensing is to estimate a vector from an
+underdetermined system of noisy linear measurements, by making use of prior
+knowledge on the structure of vectors in the relevant domain. For almost all
+results in this literature, the structure is represented by sparsity in a
+well-chosen basis. We show how to achieve guarantees similar to standard
+compressed sensing but without employing sparsity at all. Instead, we suppose
+that vectors lie near the range of a generative model $G: \mathbb{R}^k \to
+\mathbb{R}^n$. Our main theorem is that, if $G$ is $L$-Lipschitz, then roughly
+$O(k \log L)$ random Gaussian measurements suffice for an $\ell_2/\ell_2$
+recovery guarantee. We demonstrate our results using generative models from
+published variational autoencoder and generative adversarial networks. Our
+method can use $5$-$10$x fewer measurements than Lasso for the same accuracy.
+
+
+Gossip Algorithms for Distributed Signal Processing
+
+  Gossip algorithms are attractive for in-network processing in sensor networks
+because they do not require any specialized routing, there is no bottleneck or
+single point of failure, and they are robust to unreliable wireless network
+conditions. Recently, there has been a surge of activity in the computer
+science, control, signal processing, and information theory communities,
+developing faster and more robust gossip algorithms and deriving theoretical
+performance guarantees. This article presents an overview of recent work in the
+area. We describe convergence rate results, which are related to the number of
+transmitted messages and thus the amount of energy consumed in the network for
+gossiping. We discuss issues related to gossiping over wireless links,
+including the effects of quantization and noise, and we illustrate the use of
+gossip algorithms for canonical signal processing tasks including distributed
+estimation, source localization, and compression.
+
+
+Geographic Gossip: Efficient Aggregation for Sensor Networks
+
+  Gossip algorithms for aggregation have recently received significant
+attention for sensor network applications because of their simplicity and
+robustness in noisy and uncertain environments. However, gossip algorithms can
+waste significant energy by essentially passing around redundant information
+multiple times. For realistic sensor network model topologies like grids and
+random geometric graphs, the inefficiency of gossip schemes is caused by slow
+mixing times of random walks on those graphs. We propose and analyze an
+alternative gossiping scheme that exploits geographic information. By utilizing
+a simple resampling method, we can demonstrate substantial gains over
+previously proposed gossip protocols. In particular, for random geometric
+graphs, our algorithm computes the true average to accuracy $1/n^a$ using
+$O(n^{1.5}\sqrt{\log n})$ radio transmissions, which reduces the energy
+consumption by a $\sqrt{\frac{n}{\log n}}$ factor over standard gossip
+algorithms.
+
+
+The Impact of Mobility on Gossip Algorithms
+
+  The influence of node mobility on the convergence time of averaging gossip
+algorithms in networks is studied. It is shown that a small number of fully
+mobile nodes can yield a significant decrease in convergence time. A method is
+developed for deriving lower bounds on the convergence time by merging nodes
+according to their mobility pattern. This method is used to show that if the
+agents have one-dimensional mobility in the same direction the convergence time
+is improved by at most a constant. Upper bounds are obtained on the convergence
+time using techniques from the theory of Markov chains and show that simple
+models of mobility can dramatically accelerate gossip as long as the mobility
+paths significantly overlap. Simulations verify that different mobility
+patterns can have significantly different effects on the convergence of
+distributed algorithms.
+
+
+LP Decoding meets LP Decoding: A Connection between Channel Coding and
+  Compressed Sensing
+
+  This is a tale of two linear programming decoders, namely channel coding
+linear programming decoding (CC-LPD) and compressed sensing linear programming
+decoding (CS-LPD). So far, they have evolved quite independently. The aim of
+the present paper is to show that there is a tight connection between, on the
+one hand, CS-LPD based on a zero-one measurement matrix over the reals and, on
+the other hand, CC-LPD of the binary linear code that is obtained by viewing
+this measurement matrix as a binary parity-check matrix. This connection allows
+one to translate performance guarantees from one setup to the other.
+
+
+Searching for Minimum Storage Regenerating Codes
+
+  Regenerating codes allow distributed storage systems to recover from the loss
+of a storage node while transmitting the minimum possible amount of data across
+the network. We present a systematic computer search for optimal systematic
+regenerating codes. To search the space of potential codes, we reduce the
+potential search space in several ways. We impose an additional symmetry
+condition on codes that we consider. We specify codes in a simple alternative
+way, using additional recovered coefficients rather than transmission
+coefficients and place codes into equivalence classes to avoid redundant
+checking. Our main finding is a few optimal systematic minimum storage
+regenerating codes for $n=5$ and $k=3$, over several finite fields. No such
+codes were previously known and the matching of the information theoretic
+cut-set bound was an open problem.
+
+
+On the Delay of Network Coding over Line Networks
+
+  We analyze a simple network where a source and a receiver are connected by a
+line of erasure channels of different reliabilities. Recent prior work has
+shown that random linear network coding can achieve the min-cut capacity and
+therefore the asymptotic rate is determined by the worst link of the line
+network. In this paper we investigate the delay for transmitting a batch of
+packets, which is a function of all the erasure probabilities and the number of
+packets in the batch. We show a monotonicity result on the delay function and
+derive simple expressions which characterize the expected delay behavior of
+line networks. Further, we use a martingale bounded differences argument to
+show that the actual delay is tightly concentrated around its expectation.
+
+
+Security in Distributed Storage Systems by Communicating a Logarithmic
+  Number of Bits
+
+  We investigate the problem of maintaining an encoded distributed storage
+system when some nodes contain adversarial errors. Using the error-correction
+capabilities that are built into the existing redundancy of the system, we
+propose a simple linear hashing scheme to detect errors in the storage nodes.
+Our main result is that for storing a data object of total size $\size$ using
+an $(n,k)$ MDS code over a finite field $\F_q$, up to
+$t_1=\lfloor(n-k)/2\rfloor$ errors can be detected, with probability of failure
+smaller than $1/ \size$, by communicating only $O(n(n-k)\log \size)$ bits to a
+trusted verifier. Our result constructs small projections of the data that
+preserve the errors with high probability and builds on a pseudorandom
+generator that fools linear functions. The transmission rate achieved by our
+scheme is asymptotically equal to the min-cut capacity between the source and
+any receiver.
+
+
+Efficient Algorithms for Renewable Energy Allocation to Delay Tolerant
+  Consumers
+
+  We investigate the problem of allocating energy from renewable sources to
+flexible consumers in electricity markets. We assume there is a renewable
+energy supplier that provides energy according to a time-varying (and possibly
+unpredictable) supply process. The plant must serve consumers within a
+specified delay window, and incurs a cost of drawing energy from other
+(possibly non-renewable) sources if its own supply is not sufficient to meet
+the deadlines. We formulate two stochastic optimization problems: The first
+seeks to minimize the time average cost of using the other sources (and hence
+strives for the most efficient utilization of the renewable source). The second
+allows the renewable source to dynamically set a price for its service, and
+seeks to maximize the resulting time average profit. These problems are solved
+via the Lyapunov optimization technique. Our resulting algorithms do not
+require knowledge of the statistics of the time-varying supply and demand
+processes and are robust to arbitrary sample path variations.
+
+
+Rebuilding for Array Codes in Distributed Storage Systems
+
+  In distributed storage systems that use coding, the issue of minimizing the
+communication required to rebuild a storage node after a failure arises. We
+consider the problem of repairing an erased node in a distributed storage
+system that uses an EVENODD code. EVENODD codes are maximum distance separable
+(MDS) array codes that are used to protect against erasures, and only require
+XOR operations for encoding and decoding. We show that when there are two
+redundancy nodes, to rebuild one erased systematic node, only 3/4 of the
+information needs to be transmitted. Interestingly, in many cases, the required
+disk I/O is also minimized.
+
+
+Allocations for Heterogenous Distributed Storage
+
+  We study the problem of storing a data object in a set of data nodes that
+fail independently with given probabilities. Our problem is a natural
+generalization of a homogenous storage allocation problem where all the nodes
+had the same reliability and is naturally motivated for peer-to-peer and cloud
+storage systems with different types of nodes. Assuming optimal erasure coding
+(MDS), the goal is to find a storage allocation (i.e, how much to store in each
+node) to maximize the probability of successful recovery. This problem turns
+out to be a challenging combinatorial optimization problem. In this work we
+introduce an approximation framework based on large deviation inequalities and
+convex optimization. We propose two approximation algorithms and study the
+asymptotic performance of the resulting allocations.
+
+
+Wireless Device-to-Device Communications with Distributed Caching
+
+  We introduce a novel wireless device-to-device (D2D) collaboration
+architecture that exploits distributed storage of popular content to enable
+frequency reuse. We identify a fundamental conflict between collaboration
+distance and interference and show how to optimize the transmission power to
+maximize frequency reuse. Our analysis depends on the user content request
+statistics which are modeled by a Zipf distribution. Our main result is a
+closed form expression of the optimal collaboration distance as a function of
+the content reuse distribution parameters. We show that if the Zipf exponent of
+the content reuse distribution is greater than 1, it is possible to have a
+number of D2D interference-free collaboration pairs that scales linearly in the
+number of nodes. If the Zipf exponent is smaller than 1, we identify the best
+possible scaling in the number of D2D collaborating links. Surprisingly, a very
+simple distributed caching policy achieves the optimal scaling behavior and
+therefore there is no need to centrally coordinate what each node is caching.
+
+
+On the Delay Advantage of Coding in Packet Erasure Networks
+
+  We consider the delay of network coding compared to routing with
+retransmissions in packet erasure networks with probabilistic erasures. We
+investigate the sub-linear term in the block delay required for unicasting $n$
+packets and show that there is an unbounded gap between network coding and
+routing. In particular, we show that delay benefit of network coding scales at
+least as $\sqrt{n}$. Our analysis of the delay function for the routing
+strategy involves a major technical challenge of computing the expectation of
+the maximum of two negative binomial random variables. This problem has been
+studied previously and we derive the first exact characterization which may be
+of independent interest. We also use a martingale bounded differences argument
+to show that the actual coding delay is tightly concentrated around its
+expectation.
+
+
+Network Codes for Real-Time Applications
+
+  We consider the scenario of broadcasting for real-time applications and loss
+recovery via instantly decodable network coding. Past work focused on
+minimizing the completion delay, which is not the right objective for real-time
+applications that have strict deadlines. In this work, we are interested in
+finding a code that is instantly decodable by the maximum number of users.
+First, we prove that this problem is NP-Hard in the general case. Then we
+consider the practical probabilistic scenario, where users have i.i.d. loss
+probability and the number of packets is linear or polynomial in the number of
+users. In this scenario, we provide a polynomial-time (in the number of users)
+algorithm that finds the optimal coded packet. The proposed algorithm is
+evaluated using both simulation and real network traces of a real-time Android
+application. Both results show that the proposed coding scheme significantly
+outperforms the state-of-the-art baselines: an optimal repetition code and a
+COPE-like greedy scheme.
+
+
+Base-Station Assisted Device-to-Device Communications for
+  High-Throughput Wireless Video Networks
+
+  We propose a new scheme for increasing the throughput of video files in
+cellular communications systems. This scheme exploits (i) the redundancy of
+user requests as well as (ii) the considerable storage capacity of smartphones
+and tablets. Users cache popular video files and - after receiving requests
+from other users - serve these requests via device-to-device localized
+transmissions. The file placement is optimal when a central control knows a
+priori the locations of wireless devices when file requests occur. However,
+even a purely random caching scheme shows only a minor performance loss
+compared to such a genie-aided scheme. We then analyze the optimal
+collaboration distance, trading off frequency reuse with the probability of
+finding a requested file within the collaboration distance. We show that an
+improvement of spectral efficiency of one to two orders of magnitude is
+possible, even if there is not very high redundancy in video requests.
+
+
+Scaling Behaviors of Wireless Device-to-Device Communications with
+  Distributed Caching
+
+  We analyze a novel architecture for caching popular video content to enable
+wireless device-to-device collaboration. We focus on the asymptotic scaling
+characteristics and show how they depends on video content popularity
+statistics. We identify a fundamental conflict between collaboration distance
+and interference and show how to optimize the transmission power to maximize
+frequency reuse. Our main result is a closed form expression of the optimal
+collaboration distance as a function of the model parameters. Under the common
+assumption of a Zipf distribution for content reuse, we show that if the Zipf
+exponent is greater than 1, it is possible to have a number of D2D
+interference-free collaboration pairs that scales linearly in the number of
+nodes. If the Zipf exponent is smaller than 1, we identify the best possible
+scaling in the number of D2D collaborating links. Surprisingly, a very simple
+distributed caching policy achieves the optimal scaling behavior and therefore
+there is no need to centrally coordinate what each node is caching.
+
+
+Batch Codes through Dense Graphs without Short Cycles
+
+  Consider a large database of $n$ data items that need to be stored using $m$
+servers. We study how to encode information so that a large number $k$ of read
+requests can be performed in parallel while the rate remains constant (and
+ideally approaches one). This problem is equivalent to the design of multiset
+Batch Codes introduced by Ishai, Kushilevitz, Ostrovsky and Sahai [17].
+  We give families of multiset batch codes with asymptotically optimal rates of
+the form $1-1/\text{poly}(k)$ and a number of servers $m$ scaling polynomially
+in the number of read requests $k$. An advantage of our batch code
+constructions over most previously known multiset batch codes is explicit and
+deterministic decoding algorithms and asymptotically optimal fault tolerance.
+  Our main technical innovation is a graph-theoretic method of designing
+multiset batch codes using dense bipartite graphs with no small cycles. We
+modify prior graph constructions of dense, high-girth graphs to obtain our
+batch code results. We achieve close to optimal tradeoffs between the
+parameters for bipartite graph based batch codes.
+
+
+Repair Optimal Erasure Codes through Hadamard Designs
+
+  In distributed storage systems that employ erasure coding, the issue of
+minimizing the total {\it communication} required to exactly rebuild a storage
+node after a failure arises. This repair bandwidth depends on the structure of
+the storage code and the repair strategies used to restore the lost data.
+Designing high-rate maximum-distance separable (MDS) codes that achieve the
+optimum repair communication has been a well-known open problem. In this work,
+we use Hadamard matrices to construct the first explicit 2-parity MDS storage
+code with optimal repair properties for all single node failures, including the
+parities. Our construction relies on a novel method of achieving perfect
+interference alignment over finite fields with a finite file size, or number of
+extensions. We generalize this construction to design $m$-parity MDS codes that
+achieve the optimum repair communication for single systematic node failures
+and show that there is an interesting connection between our $m$-parity codes
+and the systematic-repair optimal permutation-matrix based codes of Tamo {\it
+et al.} \cite{Tamo} and Cadambe {\it et al.} \cite{PermCodes_ISIT, PermCodes}.
+
+
+Distributed Storage Codes through Hadamard Designs
+
+  In distributed storage systems that employ erasure coding, the issue of
+minimizing the total {\it repair bandwidth} required to exactly regenerate a
+storage node after a failure arises. This repair bandwidth depends on the
+structure of the storage code and the repair strategies used to restore the
+lost data. Minimizing it requires that undesired data during a repair align in
+the smallest possible spaces, using the concept of interference alignment (IA).
+Here, a points-on-a-lattice representation of the symbol extension IA of
+Cadambe {\it et al.} provides cues to perfect IA instances which we combine
+with fundamental properties of Hadamard matrices to construct a new storage
+code with favorable repair properties. Specifically, we build an explicit
+$(k+2,k)$ storage code over $\mathbb{GF}(3)$, whose single systematic node
+failures can be repaired with bandwidth that matches exactly the theoretical
+minimum. Moreover, the repair of single parity node failures generates at most
+the same repair bandwidth as any systematic node failure. Our code can tolerate
+any single node failure and any pair of failures that involves at most one
+systematic failure.
+
+
+Simple Regenerating Codes: Network Coding for Cloud Storage
+
+  Network codes designed specifically for distributed storage systems have the
+potential to provide dramatically higher storage efficiency for the same
+availability. One main challenge in the design of such codes is the exact
+repair problem: if a node storing encoded information fails, in order to
+maintain the same level of reliability we need to create encoded information at
+a new node. One of the main open problems in this emerging area has been the
+design of simple coding schemes that allow exact and low cost repair of failed
+nodes and have high data rates. In particular, all prior known explicit
+constructions have data rates bounded by 1/2.
+  In this paper we introduce the first family of distributed storage codes that
+have simple look-up repair and can achieve arbitrarily high rates. Our
+constructions are very simple to implement and perform exact repair by simple
+XORing of packets. We experimentally evaluate the proposed codes in a realistic
+cloud storage simulator and show significant benefits in both performance and
+reliability compared to replication and standard Reed-Solomon codes.
+
+
+Locality and Availability in Distributed Storage
+
+  This paper studies the problem of code symbol availability: a code symbol is
+said to have $(r, t)$-availability if it can be reconstructed from $t$ disjoint
+groups of other symbols, each of size at most $r$. For example, $3$-replication
+supports $(1, 2)$-availability as each symbol can be read from its $t= 2$ other
+(disjoint) replicas, i.e., $r=1$. However, the rate of replication must vanish
+like $\frac{1}{t+1}$ as the availability increases.
+  This paper shows that it is possible to construct codes that can support a
+scaling number of parallel reads while keeping the rate to be an arbitrarily
+high constant. It further shows that this is possible with the minimum distance
+arbitrarily close to the Singleton bound. This paper also presents a bound
+demonstrating a trade-off between minimum distance, availability and locality.
+Our codes match the aforementioned bound and their construction relies on
+combinatorial objects called resolvable designs.
+  From a practical standpoint, our codes seem useful for distributed storage
+applications involving hot data, i.e., the information which is frequently
+accessed by multiple processes in parallel.
+
+
+Bounding Multiple Unicasts through Index Coding and Locally Repairable
+  Codes
+
+  We establish a duality result between linear index coding and Locally
+Repairable Codes (LRCs). Specifically, we show that a natural extension of LRCs
+we call Generalized Locally Repairable Codes (GLCRs) are exactly dual to linear
+index codes. In a GLRC, every node is decodable from a specific set of other
+nodes and these sets induce a recoverability directed graph. We show that the
+dual linear subspace of a GLRC is a solution to an index coding instance where
+the side information graph is this GLRC recoverability graph. We show that the
+GLRC rate is equivalent to the complementary index coding rate, i.e. the number
+of transmissions saved by coding. Our second result uses this duality to
+establish a new upper bound for the multiple unicast network coding problem. In
+multiple unicast network coding, we are given a directed acyclic graph and r
+sources that want to send independent messages to r corresponding destinations.
+Our new upper bound is efficiently computable and relies on a strong
+approximation result for complementary index coding. We believe that our bound
+could lead to a logarithmic approximation factor for multiple unicast network
+coding if a plausible connection we state is verified.
+
+
+On the Information Theoretic Limits of Learning Ising Models
+
+  We provide a general framework for computing lower-bounds on the sample
+complexity of recovering the underlying graphs of Ising models, given i.i.d
+samples. While there have been recent results for specific graph classes, these
+involve fairly extensive technical arguments that are specialized to each
+specific graph class. In contrast, we isolate two key graph-structural
+ingredients that can then be used to specify sample complexity lower-bounds.
+Presence of these structural properties makes the graph class hard to learn. We
+derive corollaries of our main result that not only recover existing recent
+results, but also provide lower bounds for novel graph classes not considered
+previously. We also extend our framework to the random graph setting and derive
+corollaries for Erd\H{o}s-R\'{e}nyi graphs in a certain dense setting.
+
+
+Index Coding with Coded Side-Information
+
+  This letter investigates a new class of index coding problems. One sender
+broadcasts packets to multiple users, each desiring a subset, by exploiting
+prior knowledge of linear combinations of packets. We refer to this class of
+problems as index coding with coded side-information. Our aim is to
+characterize the minimum index code length that the sender needs to transmit to
+simultaneously satisfy all user requests. We show that the optimal binary
+vector index code length is equal to the minimum rank (minrank) of a matrix
+whose elements consist of the sets of desired packet indices and side-
+information encoding matrices. This is the natural extension of matrix minrank
+in the presence of coded side information. Using the derived expression, we
+propose a greedy randomized algorithm to minimize the rank of the derived
+matrix.
+
+
+FrogWild! -- Fast PageRank Approximations on Graph Engines
+
+  We propose FrogWild, a novel algorithm for fast approximation of high
+PageRank vertices, geared towards reducing network costs of running traditional
+PageRank algorithms. Our algorithm can be seen as a quantized version of power
+iteration that performs multiple parallel random walks over a directed graph.
+One important innovation is that we introduce a modification to the GraphLab
+framework that only partially synchronizes mirror vertices. This partial
+synchronization vastly reduces the network traffic generated by traditional
+PageRank algorithms, thus greatly reducing the per-iteration cost of PageRank.
+On the other hand, this partial synchronization also creates dependencies
+between the random walks used to estimate PageRank. Our main theoretical
+innovation is the analysis of the correlations introduced by this partial
+synchronization process and a bound establishing that our approximation is
+close to the true PageRank vector.
+  We implement our algorithm in GraphLab and compare it against the default
+PageRank implementation. We show that our algorithm is very fast, performing
+each iteration in less than one second on the Twitter graph and can be up to 7x
+faster compared to the standard GraphLab PageRank implementation.
+
+
+Sparse PCA via Bipartite Matchings
+
+  We consider the following multi-component sparse PCA problem: given a set of
+data points, we seek to extract a small number of sparse components with
+disjoint supports that jointly capture the maximum possible variance. These
+components can be computed one by one, repeatedly solving the single-component
+problem and deflating the input data matrix, but as we show this greedy
+procedure is suboptimal. We present a novel algorithm for sparse PCA that
+jointly optimizes multiple disjoint components. The extracted features capture
+variance that lies within a multiplicative factor arbitrarily close to 1 from
+the optimal. Our algorithm is combinatorial and computes the desired components
+by solving multiple instances of the bipartite maximum weight matching problem.
+Its complexity grows as a low order polynomial in the ambient dimension of the
+input data matrix, but exponentially in its rank. However, it can be
+effectively applied on a low-dimensional sketch of the data; this allows us to
+obtain polynomial-time approximation guarantees via spectral bounds. We
+evaluate our algorithm on real data-sets and empirically demonstrate that in
+many cases it outperforms existing, deflation-based approaches.
+
+
+Single Pass PCA of Matrix Products
+
+  In this paper we present a new algorithm for computing a low rank
+approximation of the product $A^TB$ by taking only a single pass of the two
+matrices $A$ and $B$. The straightforward way to do this is to (a) first sketch
+$A$ and $B$ individually, and then (b) find the top components using PCA on the
+sketch. Our algorithm in contrast retains additional summary information about
+$A,B$ (e.g. row and column norms etc.) and uses this additional information to
+obtain an improved approximation from the sketches. Our main analytical result
+establishes a comparable spectral norm guarantee to existing two-pass methods;
+in addition we also provide results from an Apache Spark implementation that
+shows better computational and statistical performance on real-world and
+synthetic evaluation datasets.
+
+
+Restricted Strong Convexity Implies Weak Submodularity
+
+  We connect high-dimensional subset selection and submodular maximization. Our
+results extend the work of Das and Kempe (2011) from the setting of linear
+regression to arbitrary objective functions. For greedy feature selection, this
+connection allows us to obtain strong multiplicative performance bounds on
+several methods without statistical modeling assumptions. We also derive
+recovery guarantees of this form under standard assumptions. Our work shows
+that greedy algorithms perform within a constant factor from the best possible
+subset-selection solution for a broad class of general objective functions. Our
+methods allow a direct control over the number of obtained features as opposed
+to regularization parameters that only implicitly control sparsity. Our proof
+technique uses the concept of weak submodularity initially defined by Das and
+Kempe. We draw a connection between convex analysis and submodular set function
+theory which may be of independent interest for other statistical learning
+applications that have combinatorial structure.
+
+
+Identifying Best Interventions through Online Importance Sampling
+
+  Motivated by applications in computational advertising and systems biology,
+we consider the problem of identifying the best out of several possible soft
+interventions at a source node $V$ in an acyclic causal directed graph, to
+maximize the expected value of a target node $Y$ (located downstream of $V$).
+Our setting imposes a fixed total budget for sampling under various
+interventions, along with cost constraints on different types of interventions.
+We pose this as a best arm identification bandit problem with $K$ arms where
+each arm is a soft intervention at $V,$ and leverage the information leakage
+among the arms to provide the first gap dependent error and simple regret
+bounds for this problem. Our results are a significant improvement over the
+traditional best arm identification results. We empirically show that our
+algorithms outperform the state of the art in the Flow Cytometry data-set, and
+also apply our algorithm for model interpretation of the Inception-v3 deep net
+that classifies images.
+
+

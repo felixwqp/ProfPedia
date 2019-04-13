@@ -1,0 +1,311 @@
+How transferable are the datasets collected by active learners?
+
+  Active learning is a widely-used training strategy for maximizing predictive
+performance subject to a fixed annotation budget. Between rounds of training,
+an active learner iteratively selects examples for annotation, typically based
+on some measure of the model's uncertainty, coupling the acquired dataset with
+the underlying model. However, owing to the high cost of annotation and the
+rapid pace of model development, labeled datasets may remain valuable long
+after a particular model is surpassed by new technology. In this paper, we
+investigate the transferability of datasets collected with an acquisition model
+A to a distinct successor model S. We seek to characterize whether the benefits
+of active learning persist when A and S are different models. To this end, we
+consider two standard NLP tasks and associated datasets: text classification
+and sequence tagging. We find that training S on a dataset actively acquired
+with a (different) model A typically yields worse performance than when S is
+trained with "native" data (i.e., acquired actively using S), and often
+performs worse than training on i.i.d. sampled data. These findings have
+implications for the use of active learning in practice,suggesting that it is
+better suited to cases where models are updated no more frequently than labeled
+data.
+
+
+Rationale-Augmented Convolutional Neural Networks for Text
+  Classification
+
+  We present a new Convolutional Neural Network (CNN) model for text
+classification that jointly exploits labels on documents and their component
+sentences. Specifically, we consider scenarios in which annotators explicitly
+mark sentences (or snippets) that support their overall document
+categorization, i.e., they provide rationales. Our model exploits such
+supervision via a hierarchical approach in which each document is represented
+by a linear combination of the vector representations of its component
+sentences. We propose a sentence-level convolutional model that estimates the
+probability that a given sentence is a rationale, and we then scale the
+contribution of each sentence to the aggregate document representation in
+proportion to these estimates. Experiments on five classification datasets that
+have document labels and associated rationales demonstrate that our approach
+consistently outperforms strong baselines. Moreover, our model naturally
+provides explanations for its predictions.
+
+
+Modelling Context with User Embeddings for Sarcasm Detection in Social
+  Media
+
+  We introduce a deep neural network for automated sarcasm detection. Recent
+work has emphasized the need for models to capitalize on contextual features,
+beyond lexical and syntactic cues present in utterances. For example, different
+speakers will tend to employ sarcasm regarding different subjects and, thus,
+sarcasm detection models ought to encode such speaker information. Current
+methods have achieved this by way of laborious feature engineering. By
+contrast, we propose to automatically learn and then exploit user embeddings,
+to be used in concert with lexical signals to recognize sarcasm. Our approach
+does not require elaborate feature engineering (and concomitant data scraping);
+fitting user embeddings requires only the text from their previous posts. The
+experimental results show that our model outperforms a state-of-the-art
+approach leveraging an extensive set of carefully crafted features.
+
+
+Crowdsourcing Information Extraction for Biomedical Systematic Reviews
+
+  Information extraction is a critical step in the practice of conducting
+biomedical systematic literature reviews. Extracted structured data can be
+aggregated via methods such as statistical meta-analysis. Typically highly
+trained domain experts extract data for systematic reviews. The high expense of
+conducting biomedical systematic reviews has motivated researchers to explore
+lower cost methods that achieve similar rigor without compromising quality.
+Crowdsourcing represents one such promising approach. In this work-in-progress
+study, we designed a crowdsourcing task for biomedical information extraction.
+We briefly report the iterative design process and the results of two pilot
+testings. We found that giving more concrete examples in the task instruction
+can help workers better understand the task, especially for concepts that are
+abstract and confusing. We found a few workers completed most of the work, and
+our payment level appeared more attractive to workers from low-income
+countries. In the future, we will further evaluate our results with reference
+to gold standard extractions, thus assessing the feasibility of tasking crowd
+workers with extracting biomedical intervention information for systematic
+reviews.
+
+
+Exploiting Domain Knowledge via Grouped Weight Sharing with Application
+  to Text Categorization
+
+  A fundamental advantage of neural models for NLP is their ability to learn
+representations from scratch. However, in practice this often means ignoring
+existing external linguistic resources, e.g., WordNet or domain specific
+ontologies such as the Unified Medical Language System (UMLS). We propose a
+general, novel method for exploiting such resources via weight sharing. Prior
+work on weight sharing in neural networks has considered it largely as a means
+of model compression. In contrast, we treat weight sharing as a flexible
+mechanism for incorporating prior knowledge into neural models. We show that
+this approach consistently yields improved performance on classification tasks
+compared to baseline strategies that do not exploit weight sharing.
+
+
+Retrofitting Concept Vector Representations of Medical Concepts to
+  Improve Estimates of Semantic Similarity and Relatedness
+
+  Estimation of semantic similarity and relatedness between biomedical concepts
+has utility for many informatics applications. Automated methods fall into two
+categories: methods based on distributional statistics drawn from text corpora,
+and methods using the structure of existing knowledge resources. Methods in the
+former category disregard taxonomic structure, while those in the latter fail
+to consider semantically relevant empirical information. In this paper, we
+present a method that retrofits distributional context vector representations
+of biomedical concepts using structural information from the UMLS
+Metathesaurus, such that the similarity between vector representations of
+linked concepts is augmented. We evaluated it on the UMNSRS benchmark. Our
+results demonstrate that retrofitting of concept vector representations leads
+to better correlation with human raters for both similarity and relatedness,
+surpassing the best results reported to date. They also demonstrate a clear
+improvement in performance on this reference standard for retrofitted vector
+representations, as compared to those without retrofitting.
+
+
+Learning Disentangled Representations of Texts with Application to
+  Biomedical Abstracts
+
+  We propose a method for learning disentangled representations of texts that
+code for distinct and complementary aspects, with the aim of affording
+efficient model transfer and interpretability. To induce disentangled
+embeddings, we propose an adversarial objective based on the (dis)similarity
+between triplets of documents with respect to specific aspects. Our motivating
+application is embedding biomedical abstracts describing clinical trials in a
+manner that disentangles the populations, interventions, and outcomes in a
+given trial. We show that our method learns representations that encode these
+clinically salient aspects, and that these can be effectively used to perform
+aspect-specific retrieval. We demonstrate that the approach generalizes beyond
+our motivating application in experiments on two multi-aspect review corpora.
+
+
+A Corpus with Multi-Level Annotations of Patients, Interventions and
+  Outcomes to Support Language Processing for Medical Literature
+
+  We present a corpus of 5,000 richly annotated abstracts of medical articles
+describing clinical randomized controlled trials. Annotations include
+demarcations of text spans that describe the Patient population enrolled, the
+Interventions studied and to what they were Compared, and the Outcomes measured
+(the `PICO' elements). These spans are further annotated at a more granular
+level, e.g., individual interventions within them are marked and mapped onto a
+structured medical vocabulary. We acquired annotations from a diverse set of
+workers with varying levels of expertise and cost. We describe our data
+collection process and the corpus itself in detail. We then outline a set of
+challenging NLP tasks that would aid searching of the medical literature and
+the practice of evidence-based medicine.
+
+
+Structured Multi-Label Biomedical Text Tagging via Attentive Neural Tree
+  Decoding
+
+  We propose a model for tagging unstructured texts with an arbitrary number of
+terms drawn from a tree-structured vocabulary (i.e., an ontology). We treat
+this as a special case of sequence-to-sequence learning in which the decoder
+begins at the root node of an ontological tree and recursively elects to expand
+child nodes as a function of the input text, the current node, and the latent
+decoder state. In our experiments the proposed method outperforms
+state-of-the-art approaches on the important task of automatically assigning
+MeSH terms to biomedical abstracts.
+
+
+Structured Neural Topic Models for Reviews
+
+  We present Variational Aspect-based Latent Topic Allocation (VALTA), a family
+of autoencoding topic models that learn aspect-based representations of
+reviews. VALTA defines a user-item encoder that maps bag-of-words vectors for
+combined reviews associated with each paired user and item onto structured
+embeddings, which in turn define per-aspect topic weights. We model individual
+reviews in a structured manner by inferring an aspect assignment for each
+sentence in a given review, where the per-aspect topic weights obtained by the
+user-item encoder serve to define a mixture over topics, conditioned on the
+aspect. The result is an autoencoding neural topic model for reviews, which can
+be trained in a fully unsupervised manner to learn topics that are structured
+into aspects. Experimental evaluation on large number of datasets demonstrates
+that aspects are interpretable, yield higher coherence scores than
+non-structured autoencoding topic model variants, and can be utilized to
+perform aspect-based comparison and genre discovery.
+
+
+Attention is not Explanation
+
+  Attention mechanisms have seen wide adoption in neural NLP models. In
+addition to improving predictive performance, these are often touted as
+affording transparency: models equipped with attention provide a distribution
+over attended-to input units, and this is often presented (at least implicitly)
+as communicating the relative importance of inputs. However, it is unclear what
+relationship exists between attention weights and model outputs. In this work,
+we perform extensive experiments across a variety of NLP tasks that aim to
+assess the degree to which attention weights provide meaningful `explanations'
+for predictions. We find that they largely do not. For example, learned
+attention weights are frequently uncorrelated with gradient-based measures of
+feature importance, and one can identify very different attention distributions
+that nonetheless yield equivalent predictions. Our findings show that standard
+attention modules do not provide meaningful explanations and should not be
+treated as though they do. Code for all experiments is available at
+https://github.com/successar/AttentionExplanation.
+
+
+Inferring Which Medical Treatments Work from Reports of Clinical Trials
+
+  How do we know if a particular medical treatment actually works? Ideally one
+would consult all available evidence from relevant clinical trials.
+Unfortunately, such results are primarily disseminated in natural language
+scientific articles, imposing substantial burden on those trying to make sense
+of them. In this paper, we present a new task and corpus for making this
+unstructured evidence actionable. The task entails inferring reported findings
+from a full-text article describing a randomized controlled trial (RCT) with
+respect to a given intervention, comparator, and outcome of interest, e.g.,
+inferring if an article provides evidence supporting the use of aspirin to
+reduce risk of stroke, as compared to placebo.
+  We present a new corpus for this task comprising 10,000+ prompts coupled with
+full-text articles describing RCTs. Results using a suite of models --- ranging
+from heuristic (rule-based) approaches to attentive neural architectures ---
+demonstrate the difficulty of the task, which we believe largely owes to the
+lengthy, technical input texts. To facilitate further work on this important,
+challenging problem we make the corpus, documentation, a website and
+leaderboard, and code for baselines and evaluation available at
+http://evidence-inference.ebm-nlp.com/.
+
+
+An Analysis of Attention over Clinical Notes for Predictive Tasks
+
+  The shift to electronic medical records (EMRs) has engendered research into
+machine learning and natural language technologies to analyze patient records,
+and to predict from these clinical outcomes of interest. Two observations
+motivate our aims here. First, unstructured notes contained within EMR often
+contain key information, and hence should be exploited by models. Second, while
+strong predictive performance is important, interpretability of models is
+perhaps equally so for applications in this domain. Together, these points
+suggest that neural models for EMR may benefit from incorporation of attention
+over notes, which one may hope will both yield performance gains and afford
+transparency in predictions. In this work we perform experiments to explore
+this question using two EMR corpora and four different predictive tasks, that:
+(i) inclusion of attention mechanisms is critical for neural encoder modules
+that operate over notes fields in order to yield competitive performance, but,
+(ii) unfortunately, while these boost predictive performance, it is decidedly
+less clear whether they provide meaningful support for predictions.
+
+
+Active Discriminative Text Representation Learning
+
+  We propose a new active learning (AL) method for text classification with
+convolutional neural networks (CNNs). In AL, one selects the instances to be
+manually labeled with the aim of maximizing model performance with minimal
+effort. Neural models capitalize on word embeddings as representations
+(features), tuning these to the task at hand. We argue that AL strategies for
+multi-layered neural models should focus on selecting instances that most
+affect the embedding space (i.e., induce discriminative word representations).
+This is in contrast to traditional AL approaches (e.g., entropy-based
+uncertainty sampling), which specify higher level objectives. We propose a
+simple approach for sentence classification that selects instances containing
+words whose embeddings are likely to be updated with the greatest magnitude,
+thereby rapidly learning discriminative, task-specific embeddings. We extend
+this approach to document classification by jointly considering: (1) the
+expected changes to the constituent word representations; and (2) the model's
+current overall uncertainty regarding the instance. The relative emphasis
+placed on these criteria is governed by a stochastic process that favors
+selecting instances likely to improve representations at the outset of
+learning, and then shifts toward general uncertainty sampling as AL progresses.
+Empirical results show that our method outperforms baseline AL approaches on
+both sentence and document classification tasks. We also show that, as
+expected, the method quickly learns discriminative word embeddings. To the best
+of our knowledge, this is the first work on AL addressing neural models for
+text classification.
+
+
+Neural Information Retrieval: A Literature Review
+
+  A recent "third wave" of Neural Network (NN) approaches now delivers
+state-of-the-art performance in many machine learning tasks, spanning speech
+recognition, computer vision, and natural language processing. Because these
+modern NNs often comprise multiple interconnected layers, this new NN research
+is often referred to as deep learning. Stemming from this tide of NN work, a
+number of researchers have recently begun to investigate NN approaches to
+Information Retrieval (IR). While deep NNs have yet to achieve the same level
+of success in IR as seen in other areas, the recent surge of interest and work
+in NNs for IR suggest that this state of affairs may be quickly changing. In
+this work, we survey the current landscape of Neural IR research, paying
+special attention to the use of learned representations of queries and
+documents (i.e., neural embeddings). We highlight the successes of neural IR
+thus far, catalog obstacles to its wider adoption, and suggest potentially
+promising directions for future research.
+
+
+Quantifying Mental Health from Social Media with Neural User Embeddings
+
+  Mental illnesses adversely affect a significant proportion of the population
+worldwide. However, the methods traditionally used for estimating and
+characterizing the prevalence of mental health conditions are time-consuming
+and expensive. Consequently, best-available estimates concerning the prevalence
+of mental health conditions are often years out of date. Automated approaches
+to supplement these survey methods with broad, aggregated information derived
+from social media content provides a potential means for near real-time
+estimates at scale. These may, in turn, provide grist for supporting,
+evaluating and iteratively improving upon public health programs and
+interventions.
+  We propose a novel model for automated mental health status quantification
+that incorporates user embeddings. This builds upon recent work exploring
+representation learning methods that induce embeddings by leveraging social
+media post histories. Such embeddings capture latent characteristics of
+individuals (e.g., political leanings) and encode a soft notion of homophily.
+In this paper, we investigate whether user embeddings learned from twitter post
+histories encode information that correlates with mental health statuses. To
+this end, we estimated user embeddings for a set of users known to be affected
+by depression and post-traumatic stress disorder (PTSD), and for a set of
+demographically matched `control' users. We then evaluated these embeddings
+with respect to: (i) their ability to capture homophilic relations with respect
+to mental health status; and (ii) the performance of downstream mental health
+prediction models based on these features. Our experimental results demonstrate
+that the user embeddings capture similarities between users with respect to
+mental conditions, and are predictive of mental health.
+
+

@@ -1,0 +1,509 @@
+Determining Possible and Necessary Winners Given Partial Orders
+
+  Usually a voting rule requires agents to give their preferences as linear
+orders. However, in some cases it is impractical for an agent to give a linear
+order over all the alternatives. It has been suggested to let agents submit
+partial orders instead. Then, given a voting rule, a profile of partial orders,
+and an alternative (candidate) c, two important questions arise: first, is it
+still possible for c to win, and second, is c guaranteed to win? These are the
+possible winner and necessary winner problems, respectively. Each of these two
+problems is further divided into two sub-problems: determining whether c is a
+unique winner (that is, c is the only winner), or determining whether c is a
+co-winner (that is, c is in the set of winners). We consider the setting where
+the number of alternatives is unbounded and the votes are unweighted. We
+completely characterize the complexity of possible/necessary winner problems
+for the following common voting rules: a class of positional scoring rules
+(including Borda), Copeland, maximin, Bucklin, ranked pairs, voting trees, and
+plurality with runoff.
+
+
+A Statistical Decision-Theoretic Framework for Social Choice
+
+  In this paper, we take a statistical decision-theoretic viewpoint on social
+choice, putting a focus on the decision to be made on behalf of a system of
+agents. In our framework, we are given a statistical ranking model, a decision
+space, and a loss function defined on (parameter, decision) pairs, and
+formulate social choice mechanisms as decision rules that minimize expected
+loss. This suggests a general framework for the design and analysis of new
+social choice mechanisms. We compare Bayesian estimators, which minimize
+Bayesian expected loss, for the Mallows model and the Condorcet model
+respectively, and the Kemeny rule. We consider various normative properties, in
+addition to computational complexity and asymptotic behavior. In particular, we
+show that the Bayesian estimator for the Condorcet model satisfies some desired
+properties such as anonymity, neutrality, and monotonicity, can be computed in
+polynomial time, and is asymptotically different from the other two rules when
+the data are generated from the Condorcet model for some ground truth
+parameter.
+
+
+Allocating Indivisible Items in Categorized Domains
+
+  We formulate a general class of allocation problems called categorized domain
+allocation problems (CDAPs), where indivisible items from multiple categories
+are allocated to agents without monetary transfer and each agent gets at least
+one item per category.
+  We focus on basic CDAPs, where the number of items in each category is equal
+to the number of agents. We characterize serial dictatorships for basic CDAPs
+by a minimal set of three axiomatic properties: strategy-proofness,
+non-bossiness, and category-wise neutrality. Then, we propose a natural
+extension of serial dictatorships called categorial sequential allocation
+mechanisms (CSAMs), which allocate the items in multiple rounds: in each round,
+the active agent chooses an item from a designated category. We fully
+characterize the worst-case rank efficiency of CSAMs for optimistic and
+pessimistic agents, and provide a bound for strategic agents. We also conduct
+experiments to compare expected rank efficiency of various CSAMs w.r.t. random
+generated data.
+
+
+How Many Vote Operations Are Needed to Manipulate A Voting System?
+
+  In this paper, we propose a framework to study a general class of strategic
+behavior in voting, which we call vote operations. We prove the following
+theorem: if we fix the number of alternatives, generate $n$ votes i.i.d.
+according to a distribution $\pi$, and let $n$ go to infinity, then for any
+$\epsilon >0$, with probability at least $1-\epsilon$, the minimum number of
+operations that are needed for the strategic individual to achieve her goal
+falls into one of the following four categories: (1) 0, (2) $\Theta(\sqrt n)$,
+(3) $\Theta(n)$, and (4) $\infty$. This theorem holds for any set of vote
+operations, any individual vote distribution $\pi$, and any integer generalized
+scoring rule, which includes (but is not limited to) almost all commonly
+studied voting rules, e.g., approval voting, all positional scoring rules
+(including Borda, plurality, and veto), plurality with runoff, Bucklin,
+Copeland, maximin, STV, and ranked pairs.
+  We also show that many well-studied types of strategic behavior fall under
+our framework, including (but not limited to) constructive/destructive
+manipulation, bribery, and control by adding/deleting votes, margin of victory,
+and minimum manipulation coalition size. Therefore, our main theorem naturally
+applies to these problems.
+
+
+Mechanism Design for Multi-Type Housing Markets
+
+  We study multi-type housing markets, where there are $p\ge 2$ types of items,
+each agent is initially endowed one item of each type, and the goal is to
+design mechanisms without monetary transfer to (re)allocate items to the agents
+based on their preferences over bundles of items, such that each agent gets one
+item of each type. In sharp contrast to classical housing markets, previous
+studies in multi-type housing markets have been hindered by the lack of natural
+solution concepts, because the strict core might be empty.
+  We break the barrier in the literature by leveraging AI techniques and making
+natural assumptions on agents' preferences. We show that when agents'
+preferences are lexicographic, even with different importance orders, the
+classical top-trading-cycles mechanism can be extended while preserving most of
+its nice properties. We also investigate computational complexity of checking
+whether an allocation is in the strict core and checking whether the strict
+core is empty. Our results convey an encouragingly positive message: it is
+possible to design good mechanisms for multi-type housing markets under natural
+assumptions on preferences.
+
+
+Combining Voting Rules Together
+
+  We propose a simple method for combining together voting rules that performs
+a run-off between the different winners of each voting rule. We prove that this
+combinator has several good properties. For instance, even if just one of the
+base voting rules has a desirable property like Condorcet consistency, the
+combination inherits this property. In addition, we prove that combining voting
+rules together in this way can make finding a manipulation more computationally
+difficult. Finally, we study the impact of this combinator on approximation
+methods that find close to optimal manipulations.
+
+
+New Candidates Welcome! Possible Winners with respect to the Addition of
+  New Candidates
+
+  In voting contexts, some new candidates may show up in the course of the
+process. In this case, we may want to determine which of the initial candidates
+are possible winners, given that a fixed number $k$ of new candidates will be
+added. We give a computational study of this problem, focusing on scoring
+rules, and we provide a formal comparison with related problems such as control
+via adding candidates or cloning.
+
+
+Welfare of Sequential Allocation Mechanisms for Indivisible Goods
+
+  Sequential allocation is a simple and attractive mechanism for the allocation
+of indivisible goods. Agents take turns, according to a policy, to pick items.
+Sequential allocation is guaranteed to return an allocation which is efficient
+but may not have an optimal social welfare. We consider therefore the relation
+between welfare and efficiency. We study the (computational) questions of what
+welfare is possible or necessary depending on the choice of policy. We also
+consider a novel control problem in which the chair chooses a policy to improve
+social welfare.
+
+
+Composite Marginal Likelihood Methods for Random Utility Models
+
+  We propose a novel and flexible
+rank-breaking-then-composite-marginal-likelihood (RBCML) framework for learning
+random utility models (RUMs), which include the Plackett-Luce model. We
+characterize conditions for the objective function of RBCML to be strictly
+log-concave by proving that strict log-concavity is preserved under convolution
+and marginalization. We characterize necessary and sufficient conditions for
+RBCML to satisfy consistency and asymptotic normality. Experiments on synthetic
+data show that RBCML for Gaussian RUMs achieves better statistical efficiency
+and computational efficiency than the state-of-the-art algorithm and our RBCML
+for the Plackett-Luce model provides flexible tradeoffs between running time
+and statistical efficiency.
+
+
+Dominating Manipulations in Voting with Partial Information
+
+  We consider manipulation problems when the manipulator only has partial
+information about the votes of the nonmanipulators. Such partial information is
+described by an information set, which is the set of profiles of the
+nonmanipulators that are indistinguishable to the manipulator. Given such an
+information set, a dominating manipulation is a non-truthful vote that the
+manipulator can cast which makes the winner at least as preferable (and
+sometimes more preferable) as the winner when the manipulator votes truthfully.
+When the manipulator has full information, computing whether or not there
+exists a dominating manipulation is in P for many common voting rules (by known
+results). We show that when the manipulator has no information, there is no
+dominating manipulation for many common voting rules. When the manipulator's
+information is represented by partial orders and only a small portion of the
+preferences are unknown, computing a dominating manipulation is NP-hard for
+many common voting rules. Our results thus throw light on whether we can
+prevent strategic behavior by limiting information about the votes of other
+voters.
+
+
+A Mathematical Model for Optimal Decisions in a Representative Democracy
+
+  Direct democracy is a special case of an ensemble of classifiers, where every
+person (classifier) votes on every issue. This fails when the average voter
+competence (classifier accuracy) falls below 50%, which can happen in noisy
+settings where voters have only limited information, or when there are multiple
+topics and the average voter competence may not be high enough for some topics.
+Representative democracy, where voters choose representatives to vote, can be
+an elixir in both these situations. Representative democracy is a specific way
+to improve the ensemble of classifiers. We introduce a mathematical model for
+studying representative democracy, in particular understanding the parameters
+of a representative democracy that gives maximum decision making capability.
+Our main result states that under general and natural conditions,
+  1. Representative democracy can make the correct decisions simultaneously for
+multiple noisy issues.
+  2. When the cost of voting is fixed, the optimal representative democracy
+requires that representatives are elected from constant sized groups: the
+number of representatives should be linear in the number of voters.
+  3. When the cost and benefit of voting are both polynomial, the optimal group
+size is close to linear in the number of voters. This work sets the
+mathematical foundation for studying the quality-quantity tradeoff in a
+representative democracy-type ensemble (fewer highly qualified representatives
+versus more less qualified representatives).
+
+
+Probabilistic Automata for Computing with Words
+
+  Usually, probabilistic automata and probabilistic grammars have crisp symbols
+as inputs, which can be viewed as the formal models of computing with values.
+In this paper, we first introduce probabilistic automata and probabilistic
+grammars for computing with (some special) words in a probabilistic framework,
+where the words are interpreted as probabilistic distributions or possibility
+distributions over a set of crisp symbols. By probabilistic conditioning, we
+then establish a retraction principle from computing with words to computing
+with values for handling crisp inputs and a generalized extension principle
+from computing with words to computing with all words for handling arbitrary
+inputs. These principles show that computing with values and computing with all
+words can be respectively implemented by computing with some special words. To
+compare the transition probabilities of two near inputs, we also examine some
+analytical properties of the transition probability functions of generalized
+extensions. Moreover, the retractions and the generalized extensions are shown
+to be equivalence-preserving. Finally, we clarify some relationships among the
+retractions, the generalized extensions, and the extensions studied recently by
+Qiu and Wang.
+
+
+Testing and Data Reduction of the Chinese Small Telescope Array (CSTAR)
+  for Dome A, Antarctica
+
+  The Chinese Small Telescope ARray (hereinafter CSTAR) is the first Chinese
+astronomical instrument on the Antarctic ice cap. The low temperature and low
+pressure testing of the data acquisition system was carried out in a laboratory
+refrigerator and on the 4500m Pamirs high plateau, respectively. The results
+from the final four nights of test observations demonstrated that CSTAR was
+ready for operation at Dome A, Antarctica. In this paper we present a
+description of CSTAR and the performance derived from the test observations.
+
+
+Price Updating in Combinatorial Prediction Markets with Bayesian
+  Networks
+
+  To overcome the #P-hardness of computing/updating prices in logarithm market
+scoring rule-based (LMSR-based) combinatorial prediction markets, Chen et al.
+[5] recently used a simple Bayesian network to represent the prices of
+securities in combinatorial predictionmarkets for tournaments, and showed that
+two types of popular securities are structure preserving. In this paper, we
+significantly extend this idea by employing Bayesian networks in general
+combinatorial prediction markets. We reveal a very natural connection between
+LMSR-based combinatorial prediction markets and probabilistic belief
+aggregation,which leads to a complete characterization of all structure
+preserving securities for decomposable network structures. Notably, the main
+results by Chen et al. [5] are corollaries of our characterization. We then
+prove that in order for a very basic set of securities to be structure
+preserving, the graph of the Bayesian network must be decomposable. We also
+discuss some approximation techniques for securities that are not structure
+preserving.
+
+
+Random Utility Theory for Social Choice
+
+  Random utility theory models an agent's preferences on alternatives by
+drawing a real-valued score on each alternative (typically independently) from
+a parameterized distribution, and then ranking the alternatives according to
+scores. A special case that has received significant attention is the
+Plackett-Luce model, for which fast inference methods for maximum likelihood
+estimators are available. This paper develops conditions on general random
+utility models that enable fast inference within a Bayesian framework through
+MC-EM, providing concave loglikelihood functions and bounded sets of global
+maxima solutions. Results on both real-world and simulated data provide support
+for the scalability of the approach and capability for model selection among
+general random utility models including Plackett-Luce.
+
+
+Structure and complexity of ex post efficient random assignments
+
+  In the random assignment problem, objects are randomly assigned to agents
+keeping in view the agents' preferences over objects. A random assignment
+specifies the probability of an agent getting an object. We examine the
+structural and computational aspects of ex post efficiency of random
+assignments. We first show that whereas an ex post efficient assignment can be
+computed easily, checking whether a given random assignment is ex post
+efficient is NP-complete. Hence implementing a given random assignment via
+deterministic Pareto optimal assignments is NP-hard. We then formalize another
+concept of efficiency called robust ex post efficiency that is weaker than
+stochastic dominance efficiency but stronger than ex post efficiency. We
+present a characterization of robust ex post efficiency and show that it can be
+tested in polynomial time if there are a constant number of agent types. It is
+shown that the well-known random serial dictatorship rule is not robust ex post
+efficient. Finally, we show that whereas robust ex post efficiency depends
+solely on which entries of the assignment matrix are zero/non-zero, ex post
+efficiency of an assignment depends on the actual values.
+
+
+Possible and Necessary Allocations via Sequential Mechanisms
+
+  A simple mechanism for allocating indivisible resources is sequential
+allocation in which agents take turns to pick items. We focus on possible and
+necessary allocation problems, checking whether allocations of a given form
+occur in some or all mechanisms for several commonly used classes of sequential
+allocation mechanisms. In particular, we consider whether a given agent
+receives a given item, a set of items, or a subset of items for five natural
+classes of sequential allocation mechanisms: balanced, recursively balanced,
+balanced alternating, strictly alternating and all policies. We identify
+characterizations of allocations produced balanced, recursively balanced,
+balanced alternating policies and strictly alternating policies respectively,
+which extend the well-known characterization by Brams and King [2005] for
+policies without restrictions. In addition, we examine the computational
+complexity of possible and necessary allocation problems for these classes.
+
+
+Manipulation of Nanson's and Baldwin's Rules
+
+  Nanson's and Baldwin's voting rules select a winner by successively
+eliminating candidates with low Borda scores. We show that these rules have a
+number of desirable computational properties. In particular, with unweighted
+votes, it is NP-hard to manipulate either rule with one manipulator, whilst
+with weighted votes, it is NP-hard to manipulate either rule with a small
+number of candidates and a coalition of manipulators. As only a couple of other
+voting rules are known to be NP-hard to manipulate with a single manipulator,
+Nanson's and Baldwin's rules appear to be particularly resistant to
+manipulation from a theoretical perspective. We also propose a number of
+approximation methods for manipulating these two rules. Experiments demonstrate
+that both rules are often difficult to manipulate in practice. These results
+suggest that elimination style voting rules deserve further study.
+
+
+Learning Mixtures of Plackett-Luce Models
+
+  In this paper we address the identifiability and efficient learning problems
+of finite mixtures of Plackett-Luce models for rank data. We prove that for any
+$k\geq 2$, the mixture of $k$ Plackett-Luce models for no more than $2k-1$
+alternatives is non-identifiable and this bound is tight for $k=2$. For generic
+identifiability, we prove that the mixture of $k$ Plackett-Luce models over $m$
+alternatives is generically identifiable if $k\leq\lfloor\frac {m-2}
+2\rfloor!$. We also propose an efficient generalized method of moments (GMM)
+algorithm to learn the mixture of two Plackett-Luce models and show that the
+algorithm is consistent. Our experiments show that our GMM algorithm is
+significantly faster than the EMM algorithm by Gormley and Murphy (2008), while
+achieving competitive statistical efficiency.
+
+
+Preference Elicitation For General Random Utility Models
+
+  This paper discusses {General Random Utility Models (GRUMs)}. These are a
+class of parametric models that generate partial ranks over alternatives given
+attributes of agents and alternatives. We propose two preference elicitation
+scheme for GRUMs developed from principles in Bayesian experimental design, one
+for social choice and the other for personalized choice. We couple this with a
+general Monte-Carlo-Expectation-Maximization (MC-EM) based algorithm for MAP
+inference under GRUMs. We also prove uni-modality of the likelihood functions
+for a class of GRUMs. We examine the performance of various criteria by
+experimental studies, which show that the proposed elicitation scheme increases
+the precision of estimation.
+
+
+A Cost-Effective Framework for Preference Elicitation and Aggregation
+
+  We propose a cost-effective framework for preference elicitation and
+aggregation under the Plackett-Luce model with features. Given a budget, our
+framework iteratively computes the most cost-effective elicitation questions in
+order to help the agents make a better group decision.
+  We illustrate the viability of the framework with experiments on Amazon
+Mechanical Turk, which we use to estimate the cost of answering different types
+of elicitation questions. We compare the prediction accuracy of our framework
+when adopting various information criteria that evaluate the expected
+information gain from a question. Our experiments show carefully designed
+information criteria are much more efficient, i.e., they arrive at the correct
+answer using fewer queries, than randomly asking questions given the budget
+constraint.
+
+
+Practical Algorithms for STV and Ranked Pairs with Parallel Universes
+  Tiebreaking
+
+  STV and ranked pairs (RP) are two well-studied voting rules for group
+decision-making. They proceed in multiple rounds, and are affected by how ties
+are broken in each round. However, the literature is surprisingly vague about
+how ties should be broken. We propose the first algorithms for computing the
+set of alternatives that are winners under some tiebreaking mechanism under STV
+and RP, which is also known as parallel-universes tiebreaking (PUT).
+Unfortunately, PUT-winners are NP-complete to compute under STV and RP, and
+standard search algorithms from AI do not apply. We propose multiple DFS-based
+algorithms along with pruning strategies and heuristics to prioritize search
+direction to significantly improve the performance using machine learning. We
+also propose novel ILP formulations for PUT-winners under STV and RP,
+respectively. Experiments on synthetic and real-world data show that our
+algorithms are overall significantly faster than ILP, while there are a few
+cases where ILP is significantly faster for RP.
+
+
+Towards Non-Parametric Learning to Rank
+
+  This paper studies a stylized, yet natural, learning-to-rank problem and
+points out the critical incorrectness of a widely used nearest neighbor
+algorithm. We consider a model with $n$ agents (users) $\{x_i\}_{i \in [n]}$
+and $m$ alternatives (items) $\{y_j\}_{j \in [m]}$, each of which is associated
+with a latent feature vector. Agents rank items nondeterministically according
+to the Plackett-Luce model, where the higher the utility of an item to the
+agent, the more likely this item will be ranked high by the agent. Our goal is
+to find neighbors of an arbitrary agent or alternative in the latent space.
+  We first show that the Kendall-tau distance based kNN produces incorrect
+results in our model. Next, we fix the problem by introducing a new algorithm
+with features constructed from "global information" of the data matrix. Our
+approach is in sharp contrast to most existing feature engineering methods.
+Finally, we design another new algorithm identifying similar alternatives. The
+construction of alternative features can be done using "local information,"
+highlighting the algorithmic difference between finding similar agents and
+similar alternatives.
+
+
+Practical Algorithms for Multi-Stage Voting Rules with Parallel
+  Universes Tiebreaking
+
+  STV and ranked pairs (RP) are two well-studied voting rules for group
+decision-making. They proceed in multiple rounds, and are affected by how ties
+are broken in each round. However, the literature is surprisingly vague about
+how ties should be broken. We propose the first algorithms for computing the
+set of alternatives that are winners under some tiebreaking mechanism under STV
+and RP, which is also known as parallel-universes tiebreaking (PUT).
+Unfortunately, PUT-winners are NP-complete to compute under STV and RP, and
+standard search algorithms from AI do not apply. We propose multiple DFS-based
+algorithms along with pruning strategies, heuristics, sampling and machine
+learning to prioritize search direction to significantly improve the
+performance. We also propose novel ILP formulations for PUT-winners under STV
+and RP, respectively. Experiments on synthetic and real-world data show that
+our algorithms are overall faster than ILP.
+
+
+Incentive Compatible Budget Elicitation in Multi-unit Auctions
+
+  In this paper, we consider the problem of designing incentive compatible
+auctions for multiple (homogeneous) units of a good, when bidders have private
+valuations and private budget constraints. When only the valuations are private
+and the budgets are public, Dobzinski {\em et al} show that the {\em adaptive
+clinching} auction is the unique incentive-compatible auction achieving
+Pareto-optimality. They further show thatthere is no deterministic
+Pareto-optimal auction with private budgets. Our main contribution is to show
+the following Budget Monotonicity property of this auction: When there is only
+one infinitely divisible good, a bidder cannot improve her utility by reporting
+a budget smaller than the truth. This implies that a randomized modification to
+the adaptive clinching auction is incentive compatible and Pareto-optimal with
+private budgets.
+  The Budget Monotonicity property also implies other improved results in this
+context. For revenue maximization, the same auction improves the best-known
+competitive ratio due to Abrams by a factor of 4, and asymptotically approaches
+the performance of the optimal single-price auction.
+  Finally, we consider the problem of revenue maximization (or social welfare)
+in a Bayesian setting. We allow the bidders have public size constraints (on
+the amount of good they are willing to buy) in addition to private budget
+constraints. We show a simple poly-time computable 5.83-approximation to the
+optimal Bayesian incentive compatible mechanism, that is implementable in
+dominant strategies. Our technique again crucially needs the ability to prevent
+bidders from over-reporting budgets via randomization.
+
+
+How Private Is Your Voting? A Framework for Comparing the Privacy of
+  Voting Mechanisms
+
+  Voting privacy has received a lot of attention across several research
+communities. Traditionally, cryptographic literature has focused on how to
+privately implement a voting mechanism. Yet, a number of recent works attempt
+to minimize the amount of information one can infer from the output (rather
+than the implementation) of the voting mechanism. These works apply
+differential privacy (DP) techniques which noise the outcome to achieve
+privacy. This approach intrinsically compromises accuracy, rendering such a
+voting mechanism unsuitable for most realistic scenarios.
+  In this work we investigate the inherent "noiseless" privacy that different
+voting rules achieve. To this end we utilize the well-accepted notion of
+Distributional Differential Privacy (DDP). We prove that under standard
+assumptions in voting literature about the distribution of votes, most natural
+mechanisms achieve a satisfactory level of DDP, indicating that noising--and
+its negative side-effects for voting--is unnecessary in most cases.
+  We then put forth a systematic study of noiseless privacy of commonly studied
+of voting rules, and compare these rules with respect to their privacy. Note
+that both DP and DDP induce (possibly loose) upper bounds on information
+leakage, which makes them insufficient for such a task. To circumvent this, we
+extend the definitions to require the bound to be exact (i.e. optimal) in a
+well defined manner. Although motivated by voting, our definitions and
+techniques can be generically applied to address the optimality (with respect
+to privacy) of general mechanisms for privacy-preserving data release.
+
+
+The First Release of the CSTAR Point Source Catalog from Dome A,
+  Antarctica
+
+  In 2008 January the 24th Chinese expedition team successfully deployed the
+Chinese Small Telescope ARray (CSTAR) to DomeA, the highest point on the
+Antarctic plateau. CSTAR consists of four 14.5cm optical telescopes, each with
+a different filter (g, r, i and open) and has a 4.5degree x 4.5degree field of
+view (FOV). It operates robotically as part of the Plateau Observatory, PLATO,
+with each telescope taking an image every 30 seconds throughout the year
+whenever it is dark. During 2008, CSTAR #1 performed almost flawlessly,
+acquiring more than 0.3 million i-band images for a total integration time of
+1728 hours during 158 days of observations. For each image taken under good sky
+conditions, more than 10,000 sources down to 16 mag could be detected. We
+performed aperture photometry on all the sources in the field to create the
+catalog described herein. Since CSTAR has a fixed pointing centered on the
+South Celestial Pole (Dec =-90 degree), all the sources within the FOV of CSTAR
+were monitored continuously for several months. The photometric catalog can be
+used for studying any variability in these sources, and for the discovery of
+transient sources such as supernovae, gamma-ray bursts and minor planets.
+
+
+The sky brightness and transparency in i-band at Dome A, Antarctica
+
+  The i-band observing conditions at Dome A on the Antarctic plateau have been
+investigated using data acquired during 2008 with the Chinese Small Telescope
+ARray. The sky brightness, variations in atmospheric transparency, cloud cover,
+and the presence of aurorae are obtained from these images. The median sky
+brightness of moonless clear nights is 20.5 mag arcsec^{-2} in the SDSS $i$
+band at the South Celestial Pole (which includes a contribution of about 0.06
+mag from diffuse Galactic light). The median over all Moon phases in the
+Antarctic winter is about 19.8 mag arcsec^{-2}. There were no thick clouds in
+2008. We model contributions of the Sun and the Moon to the sky background to
+obtain the relationship between the sky brightness and transparency. Aurorae
+are identified by comparing the observed sky brightness to the sky brightness
+expected from this model. About 2% of the images are affected by relatively
+strong aurorae.
+
+

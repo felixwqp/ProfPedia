@@ -1,0 +1,200 @@
+Toward a language-theoretic foundation for planning and filtering
+
+  We address problems underlying the algorithmic question of automating the
+co-design of robot hardware in tandem with its apposite software. Specifically,
+we consider the impact that degradations of a robot's sensor and actuation
+suites may have on the ability of that robot to complete its tasks. We
+introduce a new formal structure that generalizes and consolidates a variety of
+well-known structures including many forms of plans, planning problems, and
+filters, into a single data structure called a procrustean graph, and give
+these graph structures semantics in terms of ideas based in formal language
+theory. We describe a collection of operations on procrustean graphs (both
+semantics-preserving and semantics-mutating), and show how a family of
+questions about the destructiveness of a change to the robot hardware can be
+answered by applying these operations. We also highlight the connections
+between this new approach and existing threads of research, including
+combinatorial filtering, Erdmann's strategy complexes, and hybrid automata.
+
+
+Decentralized State Estimation via a Hybrid of Consensus and Covariance
+  intersection
+
+  This paper presents a new recursive information consensus filter for
+decentralized dynamic-state estimation. No structure is assumed about the
+topology of the network and local estimators are assumed to have access only to
+local information. The network need not be connected at all times. Consensus
+over priors which might become correlated is performed through Covariance
+Intersection (CI) and consensus over new information is handled using weights
+based on a Metropolis Hastings Markov Chains. We establish bounds for
+estimation performance and show that our method produces unbiased conservative
+estimates that are better than CI. The performance of the proposed method is
+evaluated and compared with competing algorithms on an atmospheric dispersion
+problem.
+
+
+Finding plans subject to stipulations on what information they divulge
+
+  Motivated by applications where privacy is important, we consider planning
+problems for robots acting in the presence of an observer. We first formulate
+and then solve planning problems subject to stipulations on the information
+divulged during plan execution---the appropriate solution concept being both a
+plan and an information disclosure policy. We pose this class of problem under
+a worst-case model within the framework of procrustean graphs, formulating the
+disclosure policy as a particular type of map on edge labels. We devise
+algorithms that, given a planning problem supplemented with an information
+stipulation, can find a plan, associated disclosure policy, or both if some
+exists. Both the plan and associated disclosure policy may depend subtlety on
+additional information available to the observer, such as whether the observer
+knows the robot's plan (e.g., leaked via a side-channel). Our implementation
+finds a plan and a suitable disclosure policy, jointly, when any such pair
+exists, albeit for small problem instances.
+
+
+What does my knowing your plans tell me?
+
+  For robots acting in the presence of observers, we examine the information
+that is divulged if the observer is party to the robot's plan. Privacy
+constraints are specified as the stipulations on what can be inferred during
+plan execution. We imagine a case in which the robot's plan is divulged
+beforehand, so that the observer can use this {\em a priori} information along
+with the disclosed executions. The divulged plan, which can be represented by a
+procrustean graph, is shown to undermine privacy precisely to the extent that
+it can eliminate action-observation sequences that will never appear in the
+plan. Future work will consider how the divulged plan might be sought as the
+output of a planning procedure.
+
+
+Non-Uniform Robot Densities in Vibration Driven Swarms Using Phase
+  Separation Theory
+
+  In robot swarms operating under highly restrictive sensing and communication
+constraints, individuals may need to use direct physical proximity to
+facilitate information exchange. However, in certain task-related scenarios,
+this requirement might conflict with the need for robots to spread out in the
+environment, e.g., for distributed sensing or surveillance applications. This
+paper demonstrates how a swarm of minimally-equipped robots can form
+high-density robot aggregates which coexist with lower robot densities in the
+domain. We envision a scenario where a swarm of vibration-driven robots---which
+sit atop bristles and achieve directed motion by vibrating them---move somewhat
+randomly in an environment while colliding with each other. Theoretical
+techniques from the study of far-from-equilibrium collectives and statistical
+mechanics clarify the mechanisms underlying the formation of these high and low
+density regions. Specifically, we capitalize on a transformation that connects
+the collective properties of a system of self-propelled particles with that of
+a well-studied molecular fluid system, thereby inheriting the rich theory of
+equilibrium thermodynamics. This connection is a formal one and is a relatively
+recent result in studies of motility induced phase separation; it is previously
+unexplored in the context of robotics. Real robot experiments as well as
+simulations illustrate how inter-robot collisions can precipitate the formation
+of non-uniform robot densities in a closed and bounded region.
+
+
+Complete characterization of a class of privacy-preserving tracking
+  problems
+
+  We examine the problem of target tracking whilst simultaneously preserving
+the target's privacy as epitomized by the robotic panda tracking scenario,
+which O'Kane introduced at the 2008 Workshop on the Algorithmic Foundations of
+Robotics in order to elegantly illustrate the utility of ignorance. The present
+paper reconsiders his formulation and the tracking strategy he proposed, along
+with its completeness. We explore how the capabilities of the robot and panda
+affect the feasibility of tracking with a privacy stipulation, uncovering
+intrinsic limits, no matter the strategy employed. This paper begins with a
+one-dimensional setting and, putting the trivially infeasible problems aside,
+analyzes the strategy space as a function of problem parameters. We show that
+it is not possible to actively track the target as well as protect its privacy
+for every nontrivial pair of tracking and privacy stipulations. Secondly,
+feasibility can be sensitive, in several cases, to the information available to
+the robot initially. Quite naturally in the one-dimensional model, one may
+quantify sensing power by the number of perceptual (or output) classes
+available to the robot. The robot's power to achieve privacy-preserving
+tracking is bounded, converging asymptotically with increasing sensing power.
+We analyze the entire space of possible tracking problems, characterizing every
+instance as either achievable, constructively by giving a policy where one
+exists (some of which depend on the initial information), or proving the
+instance impossible. Finally, to relate some of the impossibility results in
+one dimension to their higher-dimensional counterparts, including the planar
+panda tracking problem studied by O'Kane, we establish a connection between
+tracking dimensionality and the sensing power of a one-dimensional robot.
+
+
+A New Method to Quantify Environment and Model Ram-Pressure Stripping in
+  N-Body Simulations
+
+  We introduce a Local Background Environment (LBE) estimator that can be
+measured in and around every galaxy or its dark matter subhalo in
+high-resolution cosmological simulations. The LBE is designed to capture the
+influence of environmental effects such as ram-pressure stripping on the
+formation and evolution of galaxies in semi-analytical models. We define the
+LBE directly from the particle data within an adaptive spherical shell, and
+devise a Gaussian mixture estimator to separate background particles from
+previously unidentified subhalo particles. Analyzing the LBE properties, we
+find that the LBE of satellite galaxies is not at rest with respect to their
+host halo, in contrast to typical assumptions. The orientations of the
+velocities of a subhalo and its LBE are well aligned in the outer infall
+regions of haloes, but decorrelated near halo center. Significantly, there is
+no abrupt change in LBE velocity or density at the halo virial radius. This
+suggests that stripping should also happen beyond this radius. Therefore, we
+use the time-evolving LBE of galaxies to develop a method to better account for
+ram-pressure stripping within the Munich semi-analytical model, L-Galaxies.
+Overall, our new approach results in a significant increase in gas stripping
+across cosmic time. Central galaxies, as well as satellites beyond the virial
+radius, can lose a significant fraction of their hot halo gas. As a result, the
+gas fractions and star formation rates of satellite galaxies are suppressed
+relative to the fiducial model, although the stellar masses and global stellar
+mass functions are largely unchanged.
+
+
+Line-driven ablation of circumstellar disks: I. Optically thin decretion
+  disks of classical Oe/Be stars
+
+  The extreme luminosities of hot, massive stars drive strong stellar winds
+through UV line-scattering. For OB stars with an orbiting circumstellar disk,
+we explore the effect of such line-scattering in ablating disk material,
+initially focusing on the marginally optically thin decretion disks of
+classical Oe and Be stars. For this we apply a multi-dimensional
+radiation-hydrodynamics code, assuming optically thin ray tracing for the
+stellar continuum and a multi-ray Sobolev treatment of the line transfer. This
+accounts for desaturation of line-absorption by Keplerian shear in the disk,
+and associated driving by non-radial photons. Results show dense,
+intermediate-speed surface ablation, consistent with the strong, blue-shifted
+absorption seen in UV wind lines of Be shell stars. The asymptotic ablation
+rate is typically an order-unity factor times the stellar wind mass loss rate,
+leading to disk destruction times of order months to years for Be disks,
+consistent with observations. The much stronger radiative forces of O stars
+reduce this time to order days, making sustaining a disk difficult, and so
+providing a natural explanation for the rarity of Galactic Oe stars.
+Additionally, the weakened line-driving at lower metallicity implies both a
+reduction in the winds that help spin-down stars from near-critical rotation,
+and in the ablation of decretion disks, thus providing a natural explanation
+for the higher fraction of Classical Be stars, and the presence of Oe stars, in
+the Magellanic Clouds. We conclude with a discussion of future extensions to
+study line-driven ablation of denser, optically thick, accretion disks around
+pre-main-sequence massive stars.
+
+
+Robot Design: Formalisms, Representations, and the Role of the Designer
+
+  The objective of this paper is to distill the following essential idea from
+the RSS 2016 Workshop on Minimality and Design Automation and the RSS 2017
+Workshop on Minimality and Trade-offs in Automated Robot Design:
+  The information abstractions popular within robotics, designed as they were
+to address insulated sub-problems, are currently inadequate for design
+automation.
+  This paper's first aim is to draw together multiple threads---specifically
+those of formalization, minimality, automation, and integration---and to argue
+that robot design questions involve some of the most interesting and
+fundamental challenges for the discipline. While most efforts in automating
+robot design have focused on optimization of hardware, robot design is also
+inextricably linked to the design of the internal state of the robot, how that
+internal state interacts with sensors and actuators, and how task
+specifications are designed within this context. Focusing attention on those
+considerations is worthwhile for the study of robot design because they are
+currently in a critical intellectual sweet spot, being out of reach
+technically, but only just.
+  The second ingredient of this paper forms a roadmap. It emphasizes two
+aspects: (1) the role of models in robot design, a reprise of the old chestnut
+about representation in robotics (namely, that "the world is its own best
+model"); (2) a consideration of the human-element within the envisioned scheme.
+
+

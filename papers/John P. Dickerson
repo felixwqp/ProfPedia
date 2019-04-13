@@ -1,0 +1,298 @@
+Hardness of the Pricing Problem for Chains in Barter Exchanges
+
+  Kidney exchange is a barter market where patients trade willing but medically
+incompatible donors. These trades occur via cycles, where each patient-donor
+pair both gives and receives a kidney, and via chains, which begin with an
+altruistic donor who does not require a kidney in return. For logistical
+reasons, the maximum length of a cycle is typically limited to a small
+constant, while chains can be much longer. Given a compatibility graph of
+patient-donor pairs, altruists, and feasible potential transplants between
+them, finding even a maximum-cardinality set of vertex-disjoint cycles and
+chains is NP-hard. There has been much work on developing provably optimal
+solvers that are efficient in practice. One of the leading techniques has been
+branch and price, where column generation is used to incrementally bring cycles
+and chains into the optimization model on an as-needed basis. In particular,
+only positive-price columns need to be brought into the model. We prove that
+finding a positive-price chain is NP-complete. This shows incorrectness of two
+leading branch-and-price solvers that suggested polynomial-time chain pricing
+algorithms.
+
+
+Small Representations of Big Kidney Exchange Graphs
+
+  Kidney exchanges are organized markets where patients swap willing but
+incompatible donors. In the last decade, kidney exchanges grew from small and
+regional to large and national---and soon, international. This growth results
+in more lives saved, but exacerbates the empirical hardness of the
+$\mathcal{NP}$-complete problem of optimally matching patients to donors.
+State-of-the-art matching engines use integer programming techniques to clear
+fielded kidney exchanges, but these methods must be tailored to specific models
+and objective functions, and may fail to scale to larger exchanges. In this
+paper, we observe that if the kidney exchange compatibility graph can be
+encoded by a constant number of patient and donor attributes, the clearing
+problem is solvable in polynomial time. We give necessary and sufficient
+conditions for losslessly shrinking the representation of an arbitrary
+compatibility graph. Then, using real compatibility graphs from the UNOS
+nationwide kidney exchange, we show how many attributes are needed to encode
+real compatibility graphs. The experiments show that, indeed, small numbers of
+attributes suffice.
+
+
+Position-Indexed Formulations for Kidney Exchange
+
+  A kidney exchange is an organized barter market where patients in need of a
+kidney swap willing but incompatible donors. Determining an optimal set of
+exchanges is theoretically and empirically hard. Traditionally, exchanges took
+place in cycles, with each participating patient-donor pair both giving and
+receiving a kidney. The recent introduction of chains, where a donor without a
+paired patient triggers a sequence of donations without requiring a kidney in
+return, increased the efficacy of fielded kidney exchanges---while also
+dramatically raising the empirical computational hardness of clearing the
+market in practice. While chains can be quite long, unbounded-length chains are
+not desirable: planned donations can fail before transplant for a variety of
+reasons, and the failure of a single donation causes the rest of that chain to
+fail, so parallel shorter chains are better in practice.
+  In this paper, we address the tractable clearing of kidney exchanges with
+short cycles and chains that are long but bounded. This corresponds to the
+practice at most modern fielded kidney exchanges. We introduce three new
+integer programming formulations, two of which are compact. Furthermore, one of
+these models has a linear programming relaxation that is exactly as tight as
+the previous tightest formulation (which was not compact) for instances in
+which each donor has a paired patient. On real data from the UNOS nationwide
+exchange in the United States and the NLDKSS nationwide exchange in the United
+Kingdom, as well as on generated realistic large-scale data, we show that our
+new models are competitive with all existing solvers---in many cases
+outperforming all other solvers by orders of magnitude.
+
+
+Balancing Lexicographic Fairness and a Utilitarian Objective with
+  Application to Kidney Exchange
+
+  Balancing fairness and efficiency in resource allocation is a classical
+economic and computational problem. The price of fairness measures the
+worst-case loss of economic efficiency when using an inefficient but fair
+allocation rule; for indivisible goods in many settings, this price is
+unacceptably high. One such setting is kidney exchange, where needy patients
+swap willing but incompatible kidney donors. In this work, we close an open
+problem regarding the theoretical price of fairness in modern kidney exchanges.
+We then propose a general hybrid fairness rule that balances a strict
+lexicographic preference ordering over classes of agents, and a utilitarian
+objective that maximizes economic efficiency. We develop a utility function for
+this rule that favors disadvantaged groups lexicographically; but if cost to
+overall efficiency becomes too high, it switches to a utilitarian objective.
+This rule has only one parameter which is proportional to a bound on the price
+of fairness, and can be adjusted by policymakers. We apply this rule to real
+data from a large kidney exchange and show that our hybrid rule produces more
+reliable outcomes than other fairness rules.
+
+
+Learning to Schedule Deadline- and Operator-Sensitive Tasks
+
+  The use of semi-autonomous and autonomous robotic assistants to aid in care
+of the elderly is expected to ease the burden on human caretakers, with
+small-stage testing already occurring in a variety of countries. Yet, it is
+likely that these robots will need to request human assistance via
+teleoperation when domain expertise is needed for a specific task. As
+deployment of robotic assistants moves to scale, mapping these requests for
+human aid to the teleoperators themselves will be a difficult online
+optimization problem. In this paper, we design a system that allocates requests
+to a limited number of teleoperators, each with different specialities, in an
+online fashion. We generalize a recent model of online job scheduling with a
+worst-case competitive-ratio bound to our setting. Next, we design a scalable
+machine-learning-based teleoperator-aware task scheduling algorithm and show,
+experimentally, that it performs well when compared to an omniscient optimal
+scheduling algorithm.
+
+
+Diverse Weighted Bipartite b-Matching
+
+  Bipartite matching, where agents on one side of a market are matched to
+agents or items on the other, is a classical problem in computer science and
+economics, with widespread application in healthcare, education, advertising,
+and general resource allocation. A practitioner's goal is typically to maximize
+a matching market's economic efficiency, possibly subject to some fairness
+requirements that promote equal access to resources. A natural balancing act
+exists between fairness and efficiency in matching markets, and has been the
+subject of much research.
+  In this paper, we study a complementary goal---balancing diversity and
+efficiency---in a generalization of bipartite matching where agents on one side
+of the market can be matched to sets of agents on the other. Adapting a
+classical definition of the diversity of a set, we propose a quadratic
+programming-based approach to solving a supermodular minimization problem that
+balances diversity and total weight of the solution. We also provide a scalable
+greedy algorithm with theoretical performance bounds. We then define the price
+of diversity, a measure of the efficiency loss due to enforcing diversity, and
+give a worst-case theoretical bound. Finally, we demonstrate the efficacy of
+our methods on three real-world datasets, and show that the price of diversity
+is not bad in practice.
+
+
+Operation Frames and Clubs in Kidney Exchange
+
+  A kidney exchange is a centrally-administered barter market where patients
+swap their willing yet incompatible donors. Modern kidney exchanges use
+2-cycles, 3-cycles, and chains initiated by non-directed donors (altruists who
+are willing to give a kidney to anyone) as the means for swapping.
+  We propose significant generalizations to kidney exchange. We allow more than
+one donor to donate in exchange for their desired patient receiving a kidney.
+We also allow for the possibility of a donor willing to donate if any of a
+number of patients receive kidneys. Furthermore, we combine these notions and
+generalize them. The generalization is to exchange among organ clubs, where a
+club is willing to donate organs outside the club if and only if the club
+receives organs from outside the club according to given specifications. We
+prove that unlike in the standard model, the uncapped clearing problem is
+NP-complete.
+  We also present the notion of operation frames that can be used to sequence
+the operations across batches, and present integer programming formulations for
+the market clearing problems for these new types of organ exchanges.
+  Experiments show that in the single-donation setting, operation frames
+improve planning by 34%--51%. Allowing up to two donors to donate in exchange
+for one kidney donated to their designated patient yields a further increase in
+social welfare.
+
+
+The Diverse Cohort Selection Problem
+
+  How should a firm allocate its limited interviewing resources to select the
+optimal cohort of new employees from a large set of job applicants? How should
+that firm allocate cheap but noisy resume screenings and expensive but in-depth
+in-person interviews? We view this problem through the lens of combinatorial
+pure exploration (CPE) in the multi-armed bandit setting, where a central
+learning agent performs costly exploration of a set of arms before selecting a
+final subset with some combinatorial structure. We generalize a recent CPE
+algorithm to the setting where arm pulls can have different costs and return
+different levels of information. We then prove theoretical upper bounds for a
+general class of arm-pulling strategies in this new setting. We apply our
+general algorithm to a real-world problem with combinatorial structure:
+incorporating diversity into university admissions. We take real data from
+admissions at one of the largest US-based computer science graduate programs
+and show that a simulation of our algorithm produces a cohort with hiring
+overall utility while spending comparable budget to the current admissions
+process at that university.
+
+
+Allocation Problems in Ride-Sharing Platforms: Online Matching with
+  Offline Reusable Resources
+
+  Bipartite matching markets pair agents on one side of a market with agents,
+items, or contracts on the opposing side. Prior work addresses online bipartite
+matching markets, where agents arrive over time and are dynamically matched to
+a known set of disposable resources. In this paper, we propose a new model,
+Online Matching with (offline) Reusable Resources under Known Adversarial
+Distributions (OM-RR-KAD), in which resources on the offline side are reusable
+instead of disposable; that is, once matched, resources become available again
+at some point in the future. We show that our model is tractable by presenting
+an LP-based adaptive algorithm that achieves an online competitive ratio of 1/2
+- eps for any given eps greater than 0. We also show that no non-adaptive
+algorithm can achieve a ratio of 1/2 + o(1) based on the same benchmark LP.
+Through a data-driven analysis on a massive openly-available dataset, we show
+our model is robust enough to capture the application of taxi dispatching
+services and ride-sharing systems. We also present heuristics that perform well
+in practice.
+
+
+Dancing Pigs or Externalities? Measuring the Rationality of Security
+  Decisions
+
+  Accurately modeling human decision-making in security is critical to thinking
+about when, why, and how to recommend that users adopt certain secure
+behaviors. In this work, we conduct behavioral economics experiments to model
+the rationality of end-user security decision-making in a realistic online
+experimental system simulating a bank account. We ask participants to make a
+financially impactful security choice, in the face of transparent risks of
+account compromise and benefits offered by an optional security behavior
+(two-factor authentication). We measure the cost and utility of adopting the
+security behavior via measurements of time spent executing the behavior and
+estimates of the participant's wage. We find that more than 50% of our
+participants made rational (e.g., utility optimal) decisions, and we find that
+participants are more likely to behave rationally in the face of higher risk.
+Additionally, we find that users' decisions can be modeled well as a function
+of past behavior (anchoring effects), knowledge of costs, and to a lesser
+extent, users' awareness of risks and context (R2=0.61). We also find evidence
+of endowment effects, as seen in other areas of economic and psychological
+decision-science literature, in our digital-security setting. Finally, using
+our data, we show theoretically that a "one-size-fits"-all emphasis on security
+can lead to market losses, but that adoption by a subset of users with higher
+risks or lower costs can lead to market gains.
+
+
+Scalable Robust Kidney Exchange
+
+  In barter exchanges, participants directly trade their endowed goods in a
+constrained economic setting without money. Transactions in barter exchanges
+are often facilitated via a central clearinghouse that must match participants
+even in the face of uncertainty---over participants, existence and quality of
+potential trades, and so on. Leveraging robust combinatorial optimization
+techniques, we address uncertainty in kidney exchange, a real-world barter
+market where patients swap (in)compatible paired donors. We provide two
+scalable robust methods to handle two distinct types of uncertainty in kidney
+exchange---over the quality and the existence of a potential match. The latter
+case directly addresses a weakness in all stochastic-optimization-based methods
+to the kidney exchange clearing problem, which all necessarily require explicit
+estimates of the probability of a transaction existing---a still-unsolved
+problem in this nascent market. We also propose a novel, scalable kidney
+exchange formulation that eliminates the need for an exponential-time
+constraint generation process in competing formulations, maintains provable
+optimality, and serves as a subsolver for our robust approach. For each type of
+uncertainty we demonstrate the benefits of robustness on real data from a
+large, fielded kidney exchange in the United States. We conclude by drawing
+parallels between robustness and notions of fairness in the kidney exchange
+setting.
+
+
+Balancing Relevance and Diversity in Online Bipartite Matching via
+  Submodularity
+
+  In bipartite matching problems, vertices on one side of a bipartite graph are
+paired with those on the other. In its online variant, one side of the graph is
+available offline, while the vertices on the other side arrive online. When a
+vertex arrives, an irrevocable and immediate decision should be made by the
+algorithm; either match it to an available vertex or drop it. Examples of such
+problems include matching workers to firms, advertisers to keywords, organs to
+patients, and so on. Much of the literature focuses on maximizing the total
+relevance---modeled via total weight---of the matching. However, in many
+real-world problems, it is also important to consider contributions of
+diversity: hiring a diverse pool of candidates, displaying a relevant but
+diverse set of ads, and so on. In this paper, we propose the Online Submodular
+Bipartite Matching (\osbm) problem, where the goal is to maximize a submodular
+function $f$ over the set of matched edges. This objective is general enough to
+capture the notion of both diversity (\emph{e.g.,} a weighted coverage
+function) and relevance (\emph{e.g.,} the traditional linear function)---as
+well as many other natural objective functions occurring in practice
+(\emph{e.g.,} limited total budget in advertising settings). We propose novel
+algorithms that have provable guarantees and are essentially optimal when
+restricted to various special cases. We also run experiments on real-world and
+synthetic datasets to validate our algorithms.
+
+
+Ignorance is Almost Bliss: Near-Optimal Stochastic Matching With Few
+  Queries
+
+  The stochastic matching problem deals with finding a maximum matching in a
+graph whose edges are unknown but can be accessed via queries. This is a
+special case of stochastic $k$-set packing, where the problem is to find a
+maximum packing of sets, each of which exists with some probability. In this
+paper, we provide edge and set query algorithms for these two problems,
+respectively, that provably achieve some fraction of the omniscient optimal
+solution.
+  Our main theoretical result for the stochastic matching (i.e., $2$-set
+packing) problem is the design of an \emph{adaptive} algorithm that queries
+only a constant number of edges per vertex and achieves a $(1-\epsilon)$
+fraction of the omniscient optimal solution, for an arbitrarily small
+$\epsilon>0$. Moreover, this adaptive algorithm performs the queries in only a
+constant number of rounds. We complement this result with a \emph{non-adaptive}
+(i.e., one round of queries) algorithm that achieves a $(0.5 - \epsilon)$
+fraction of the omniscient optimum. We also extend both our results to
+stochastic $k$-set packing by designing an adaptive algorithm that achieves a
+$(\frac{2}{k} - \epsilon)$ fraction of the omniscient optimal solution, again
+with only $O(1)$ queries per element. This guarantee is close to the best known
+polynomial-time approximation ratio of $\frac{3}{k+1} -\epsilon$ for the
+\emph{deterministic} $k$-set packing problem [Furer and Yu, 2013]
+  We empirically explore the application of (adaptations of) these algorithms
+to the kidney exchange problem, where patients with end-stage renal failure
+swap willing but incompatible donors. We show on both generated data and on
+real data from the first 169 match runs of the UNOS nationwide kidney exchange
+that even a very small number of non-adaptive edge queries per vertex results
+in large gains in expected successful matches.
+
+

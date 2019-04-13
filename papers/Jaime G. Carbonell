@@ -1,0 +1,156 @@
+Nonparametric Neural Networks
+
+  Automatically determining the optimal size of a neural network for a given
+task without prior information currently requires an expensive global search
+and training many networks from scratch. In this paper, we address the problem
+of automatically finding a good network size during a single training cycle. We
+introduce *nonparametric neural networks*, a non-probabilistic framework for
+conducting optimization over all possible network sizes and prove its soundness
+when network growth is limited via an L_p penalty. We train networks under this
+framework by continuously adding new units while eliminating redundant units
+via an L_2 penalty. We employ a novel optimization algorithm, which we term
+*adaptive radial-angular gradient descent* or *AdaRad*, and obtain promising
+results.
+
+
+Smoothing Proximal Gradient Method for General Structured Sparse
+  Learning
+
+  We study the problem of learning high dimensional regression models
+regularized by a structured-sparsity-inducing penalty that encodes prior
+structural information on either input or output sides. We consider two widely
+adopted types of such penalties as our motivating examples: 1) overlapping
+group lasso penalty, based on the l1/l2 mixed-norm penalty, and 2) graph-guided
+fusion penalty. For both types of penalties, due to their non-separability,
+developing an efficient optimization method has remained a challenging problem.
+In this paper, we propose a general optimization approach, called smoothing
+proximal gradient method, which can solve the structured sparse regression
+problems with a smooth convex loss and a wide spectrum of
+structured-sparsity-inducing penalties. Our approach is based on a general
+smoothing technique of Nesterov. It achieves a convergence rate faster than the
+standard first-order method, subgradient method, and is much more scalable than
+the most widely used interior-point method. Numerical results are reported to
+demonstrate the efficiency and scalability of the proposed method.
+
+
+Efficient Structured Matrix Rank Minimization
+
+  We study the problem of finding structured low-rank matrices using nuclear
+norm regularization where the structure is encoded by a linear map. In contrast
+to most known approaches for linearly structured rank minimization, we do not
+(a) use the full SVD, nor (b) resort to augmented Lagrangian techniques, nor
+(c) solve linear systems per iteration. Instead, we formulate the problem
+differently so that it is amenable to a generalized conditional gradient
+method, which results in a practical improvement with low per iteration
+computational cost. Numerical results show that our approach significantly
+outperforms state-of-the-art competitors in terms of running time, while
+effectively recovering low rank solutions in stochastic system realization and
+spectral compressed sensing problems.
+
+
+Adapting Word Embeddings to New Languages with Morphological and
+  Phonological Subword Representations
+
+  Much work in Natural Language Processing (NLP) has been for resource-rich
+languages, making generalization to new, less-resourced languages challenging.
+We present two approaches for improving generalization to low-resourced
+languages by adapting continuous word representations using linguistically
+motivated subword units: phonemes, morphemes and graphemes. Our method requires
+neither parallel corpora nor bilingual dictionaries and provides a significant
+gain in performance over previous methods relying on these resources. We
+demonstrate the effectiveness of our approaches on Named Entity Recognition for
+four languages, namely Uyghur, Turkish, Bengali and Hindi, of which Uyghur and
+Bengali are low resource languages, and also perform experiments on Machine
+Translation. Exploiting subwords with transfer learning gives us a boost of
++15.2 NER F1 for Uyghur and +9.7 F1 for Bengali. We also show improvements in
+the monolingual setting where we achieve (avg.) +3 F1 and (avg.) +1.35 BLEU.
+
+
+Graph-Structured Multi-task Regression and an Efficient Optimization
+  Method for General Fused Lasso
+
+  We consider the problem of learning a structured multi-task regression, where
+the output consists of multiple responses that are related by a graph and the
+correlated response variables are dependent on the common inputs in a sparse
+but synergistic manner. Previous methods such as l1/l2-regularized multi-task
+regression assume that all of the output variables are equally related to the
+inputs, although in many real-world problems, outputs are related in a complex
+manner. In this paper, we propose graph-guided fused lasso (GFlasso) for
+structured multi-task regression that exploits the graph structure over the
+output variables. We introduce a novel penalty function based on fusion penalty
+to encourage highly correlated outputs to share a common set of relevant
+inputs. In addition, we propose a simple yet efficient proximal-gradient method
+for optimizing GFlasso that can also be applied to any optimization problems
+with a convex smooth loss and the general class of fusion penalty defined on
+arbitrary graph structures. By exploiting the structure of the non-smooth
+''fusion penalty'', our method achieves a faster convergence rate than the
+standard first-order method, sub-gradient method, and is significantly more
+scalable than the widely adopted second-order cone-programming and
+quadratic-programming formulations. In addition, we provide an analysis of the
+consistency property of the GFlasso model. Experimental results not only
+demonstrate the superiority of GFlasso over the standard lasso but also show
+the efficiency and scalability of our proximal-gradient method.
+
+
+Smoothing proximal gradient method for general structured sparse
+  regression
+
+  We study the problem of estimating high-dimensional regression models
+regularized by a structured sparsity-inducing penalty that encodes prior
+structural information on either the input or output variables. We consider two
+widely adopted types of penalties of this kind as motivating examples: (1) the
+general overlapping-group-lasso penalty, generalized from the group-lasso
+penalty; and (2) the graph-guided-fused-lasso penalty, generalized from the
+fused-lasso penalty. For both types of penalties, due to their nonseparability
+and nonsmoothness, developing an efficient optimization method remains a
+challenging problem. In this paper we propose a general optimization approach,
+the smoothing proximal gradient (SPG) method, which can solve structured sparse
+regression problems with any smooth convex loss under a wide spectrum of
+structured sparsity-inducing penalties. Our approach combines a smoothing
+technique with an effective proximal gradient method. It achieves a convergence
+rate significantly faster than the standard first-order methods, subgradient
+methods, and is much more scalable than the most widely used interior-point
+methods. The efficiency and scalability of our method are demonstrated on both
+simulation experiments and real genetic data sets.
+
+
+The exploding gradient problem demystified - definition, prevalence,
+  impact, origin, tradeoffs, and solutions
+
+  Whereas it is believed that techniques such as Adam, batch normalization and,
+more recently, SeLU nonlinearities "solve" the exploding gradient problem, we
+show that this is not the case in general and that in a range of popular MLP
+architectures, exploding gradients exist and that they limit the depth to which
+networks can be effectively trained, both in theory and in practice. We explain
+why exploding gradients occur and highlight the *collapsing domain problem*,
+which can arise in architectures that avoid exploding gradients.
+  ResNets have significantly lower gradients and thus can circumvent the
+exploding gradient problem, enabling the effective training of much deeper
+networks. We show this is a direct consequence of the Pythagorean equation. By
+noticing that *any neural network is a residual network*, we devise the
+*residual trick*, which reveals that introducing skip connections simplifies
+the network mathematically, and that this simplicity may be the major cause for
+their success.
+
+
+The Nonlinearity Coefficient - Predicting Generalization in Deep Neural
+  Networks
+
+  For a long time, designing neural architectures that exhibit high performance
+was considered a dark art that required expert hand-tuning. One of the few
+well-known guidelines for architecture design is the avoidance of exploding
+gradients, though even this guideline has remained relatively vague and
+circumstantial. We introduce the nonlinearity coefficient (NLC), a measurement
+of the complexity of the function computed by a neural network that is based on
+the magnitude of the gradient. Via an extensive empirical study, we show that
+the NLC is a powerful predictor of test error and that attaining a right-sized
+NLC is essential for optimal performance.
+  The NLC exhibits a range of intriguing and important properties. It is
+closely tied to the amount of information gained from computing a single
+network gradient. It is tied to the error incurred when replacing the
+nonlinearity operations in the network with linear operations. It is not
+susceptible to the confounders of multiplicative scaling, additive bias and
+layer width. It is stable from layer to layer. Hence, we argue that the NLC is
+the first robust predictor of overfitting in deep networks.
+
+

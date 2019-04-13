@@ -1,0 +1,254 @@
+Output Space Search for Structured Prediction
+
+  We consider a framework for structured prediction based on search in the
+space of complete structured outputs. Given a structured input, an output is
+produced by running a time-bounded search procedure guided by a learned cost
+function, and then returning the least cost output uncovered during the search.
+This framework can be instantiated for a wide range of search spaces and search
+procedures, and easily incorporates arbitrary structured-prediction loss
+functions. In this paper, we make two main technical contributions. First, we
+define the limited-discrepancy search space over structured outputs, which is
+able to leverage powerful classification learning algorithms to improve the
+search space quality. Second, we give a generic cost function learning
+approach, where the key idea is to learn a cost function that attempts to mimic
+the behavior of conducting searches guided by the true loss function. Our
+experiments on six benchmark domains demonstrate that using our framework with
+only a small amount of search is sufficient for significantly improving on
+state-of-the-art structured-prediction performance.
+
+
+Machine Learning and Manycore Systems Design: A Serendipitous Symbiosis
+
+  Tight collaboration between experts of machine learning and manycore system
+design is necessary to create a data-driven manycore design framework that
+integrates both learning and expert knowledge. Such a framework will be
+necessary to address the rising complexity of designing large-scale manycore
+systems and machine learning techniques.
+
+
+Preference-Guided Planning: An Active Elicitation Approach
+
+  Planning with preferences has been employed extensively to quickly generate
+high-quality plans. However, it may be difficult for the human expert to supply
+this information without knowledge of the reasoning employed by the planner and
+the distribution of planning problems. We consider the problem of actively
+eliciting preferences from a human expert during the planning process.
+Specifically, we study this problem in the context of the Hierarchical Task
+Network (HTN) planning framework as it allows easy interaction with the human.
+Our experimental results on several diverse planning domains show that the
+preferences gathered using the proposed approach improve the quality and speed
+of the planner, while reducing the burden on the human expert.
+
+
+Learning Scripts as Hidden Markov Models
+
+  Scripts have been proposed to model the stereotypical event sequences found
+in narratives. They can be applied to make a variety of inferences including
+filling gaps in the narratives and resolving ambiguous references. This paper
+proposes the first formal framework for scripts based on Hidden Markov Models
+(HMMs). Our framework supports robust inference and learning algorithms, which
+are lacking in previous clustering models. We develop an algorithm for
+structure and parameter learning based on Expectation Maximization and evaluate
+it on a number of natural datasets. The results show that our algorithm is
+superior to several informed baselines for predicting missing events in partial
+observation sequences.
+
+
+GLAD: GLocalized Anomaly Detection via Active Feature Space Suppression
+
+  We propose an algorithm called GLAD (GLocalized Anomaly Detection) that
+allows end-users to retain the use of simple and understandable global anomaly
+detectors by automatically learning their local relevance to specific data
+instances using label feedback. The key idea is to place a uniform prior on the
+relevance of each member of the anomaly detection ensemble over the input
+feature space via a neural network trained on unlabeled instances, and tune the
+weights of the neural network to adjust the local relevance of each ensemble
+member using all labeled instances. Our experiments on synthetic and real-world
+data show the effectiveness of GLAD in learning the local relevance of ensemble
+members and discovering anomalies via label feedback.
+
+
+Design-Space Exploration and Optimization of an Energy-Efficient and
+  Reliable 3D Small-world Network-on-Chip
+
+  A three-dimensional (3D) Network-on-Chip (NoC) enables the design of high
+performance and low power many-core chips. Existing 3D NoCs are inadequate for
+meeting the ever-increasing performance requirements of many-core processors
+since they are simple extensions of regular 2D architectures and they do not
+fully exploit the advantages provided by 3D integration. Moreover, the
+anticipated performance gain of a 3D NoC-enabled many-core chip may be
+compromised due to the potential failures of through-silicon-vias (TSVs) that
+are predominantly used as vertical interconnects in a 3D IC. To address these
+problems, we propose a machine-learning-inspired predictive design methodology
+for energy-efficient and reliable many-core architectures enabled by 3D
+integration. We demonstrate that a small-world network-based 3D NoC (3D SWNoC)
+performs significantly better than its 3D MESH-based counterparts. On average,
+the 3D SWNoC shows 35% energy-delay-product (EDP) improvement over 3D MESH for
+the PARSEC and SPLASH2 benchmarks considered in this work. To improve the
+reliability of 3D NoC, we propose a computationally efficient spare-vertical
+link (sVL) allocation algorithm based on a state-space search formulation. Our
+results show that the proposed sVL allocation algorithm can significantly
+improve the reliability as well as the lifetime of 3D SWNoC.
+
+
+Learning to Speed Up Query Planning in Graph Databases
+
+  Querying graph structured data is a fundamental operation that enables
+important applications including knowledge graph search, social network
+analysis, and cyber-network security. However, the growing size of real-world
+data graphs poses severe challenges for graph databases to meet the
+response-time requirements of the applications. Planning the computational
+steps of query processing - Query Planning - is central to address these
+challenges. In this paper, we study the problem of learning to speedup query
+planning in graph databases towards the goal of improving the
+computational-efficiency of query processing via training queries.We present a
+Learning to Plan (L2P) framework that is applicable to a large class of query
+reasoners that follow the Threshold Algorithm (TA) approach. First, we define a
+generic search space over candidate query plans, and identify target search
+trajectories (query plans) corresponding to the training queries by performing
+an expensive search. Subsequently, we learn greedy search control knowledge to
+imitate the search behavior of the target query plans. We provide a concrete
+instantiation of our L2P framework for STAR, a state-of-the-art graph query
+reasoner. Our experiments on benchmark knowledge graphs including DBpedia,
+YAGO, and Freebase show that using the query plans generated by the learned
+search control knowledge, we can significantly improve the speed of STAR with
+negligible loss in accuracy.
+
+
+Active Anomaly Detection via Ensembles
+
+  In critical applications of anomaly detection including computer security and
+fraud prevention, the anomaly detector must be configurable by the analyst to
+minimize the effort on false positives. One important way to configure the
+anomaly detector is by providing true labels for a few instances. We study the
+problem of label-efficient active learning to automatically tune anomaly
+detection ensembles and make four main contributions. First, we present an
+important insight into how anomaly detector ensembles are naturally suited for
+active learning. This insight allows us to relate the greedy querying strategy
+to uncertainty sampling, with implications for label-efficiency. Second, we
+present a novel formalism called compact description to describe the discovered
+anomalies and show that it can also be employed to improve the diversity of the
+instances presented to the analyst without loss in the anomaly discovery rate.
+Third, we present a novel data drift detection algorithm that not only detects
+the drift robustly, but also allows us to take corrective actions to adapt the
+detector in a principled manner. Fourth, we present extensive experiments to
+evaluate our insights and algorithms in both batch and streaming settings. Our
+results show that in addition to discovering significantly more anomalies than
+state-of-the-art unsupervised baselines, our active learning algorithms under
+the streaming-data setup are competitive with the batch setup.
+
+
+Trading-off Accuracy and Energy of Deep Inference on Embedded Systems: A
+  Co-Design Approach
+
+  Deep neural networks have seen tremendous success for different modalities of
+data including images, videos, and speech. This success has led to their
+deployment in mobile and embedded systems for real-time applications. However,
+making repeated inferences using deep networks on embedded systems poses
+significant challenges due to constrained resources (e.g., energy and computing
+power). To address these challenges, we develop a principled co-design
+approach. Building on prior work, we develop a formalism referred to as
+Coarse-to-Fine Networks (C2F Nets) that allow us to employ classifiers of
+varying complexity to make predictions. We propose a principled optimization
+algorithm to automatically configure C2F Nets for a specified trade-off between
+accuracy and energy consumption for inference. The key idea is to select a
+classifier on-the-fly whose complexity is proportional to the hardness of the
+input example: simple classifiers for easy inputs and complex classifiers for
+hard inputs. We perform comprehensive experimental evaluation using four
+different C2F Net architectures on multiple real-world image classification
+tasks. Our results show that optimized C2F Net can reduce the Energy Delay
+Product (EDP) by 27 to 60 percent with no loss in accuracy when compared to the
+baseline solution, where all predictions are made using the most complex
+classifier in C2F Net.
+
+
+On-Chip Communication Network for Efficient Training of Deep
+  Convolutional Networks on Heterogeneous Manycore Systems
+
+  Convolutional Neural Networks (CNNs) have shown a great deal of success in
+diverse application domains including computer vision, speech recognition, and
+natural language processing. However, as the size of datasets and the depth of
+neural network architectures continue to grow, it is imperative to design
+high-performance and energy-efficient computing hardware for training CNNs. In
+this paper, we consider the problem of designing specialized CPU-GPU based
+heterogeneous manycore systems for energy-efficient training of CNNs. It has
+already been shown that the typical on-chip communication infrastructures
+employed in conventional CPU-GPU based heterogeneous manycore platforms are
+unable to handle both CPU and GPU communication requirements efficiently. To
+address this issue, we first analyze the on-chip traffic patterns that arise
+from the computational processes associated with training two deep CNN
+architectures, namely, LeNet and CDBNet, to perform image classification. By
+leveraging this knowledge, we design a hybrid Network-on-Chip (NoC)
+architecture, which consists of both wireline and wireless links, to improve
+the performance of CPU-GPU based heterogeneous manycore platforms running the
+above-mentioned CNN training workloads. The proposed NoC achieves 1.8x
+reduction in network latency and improves the network throughput by a factor of
+2.2 for training CNNs, when compared to a highly-optimized wireline mesh NoC.
+For the considered CNN workloads, these network-level improvements translate
+into 25% savings in full-system energy-delay-product (EDP). This demonstrates
+that the proposed hybrid NoC for heterogeneous manycore architectures is
+capable of significantly accelerating training of CNNs while remaining
+energy-efficient.
+
+
+Learning-based Application-Agnostic 3D NoC Design for Heterogeneous
+  Manycore Systems
+
+  The rising use of deep learning and other big-data algorithms has led to an
+increasing demand for hardware platforms that are computationally powerful, yet
+energy-efficient. Due to the amount of data parallelism in these algorithms,
+high-performance 3D manycore platforms that incorporate both CPUs and GPUs
+present a promising direction. However, as systems use heterogeneity (e.g., a
+combination of CPUs, GPUs, and accelerators) to improve performance and
+efficiency, it becomes more pertinent to address the distinct and likely
+conflicting communication requirements (e.g., CPU memory access latency or GPU
+network throughput) that arise from such heterogeneity. Unfortunately, it is
+difficult to quickly explore the hardware design space and choose appropriate
+tradeoffs between these heterogeneous requirements. To address these
+challenges, we propose the design of a 3D Network-on-Chip (NoC) for
+heterogeneous manycore platforms that considers the appropriate design
+objectives for a 3D heterogeneous system and explores various tradeoffs using
+an efficient ML-based multi-objective optimization technique. The proposed
+design space exploration considers the various requirements of its
+heterogeneous components and generates a set of 3D NoC architectures that
+efficiently trades off these design objectives. Our findings show that by
+jointly considering these requirements (latency, throughput, temperature, and
+energy), we can achieve 9.6% better Energy-Delay Product on average at nearly
+iso-temperature conditions when compared to a thermally-optimized design for 3D
+heterogeneous NoCs. More importantly, our results suggest that our 3D NoCs
+optimized for a few applications can be generalized for unknown applications as
+well. Our results show that these generalized 3D NoCs only incur a 1.8%
+(36-tile system) and 1.1% (64-tile system) average performance loss compared to
+application-specific NoCs.
+
+
+Active Anomaly Detection via Ensembles: Insights, Algorithms, and
+  Interpretability
+
+  Anomaly detection (AD) task corresponds to identifying the true anomalies
+from a given set of data instances. AD algorithms score the data instances and
+produce a ranked list of candidate anomalies, which are then analyzed by a
+human to discover the true anomalies. However, this process can be laborious
+for the human analyst when the number of false-positives is very high.
+Therefore, in many real-world AD applications including computer security and
+fraud prevention, the anomaly detector must be configurable by the human
+analyst to minimize the effort on false positives.
+  In this paper, we study the problem of active learning to automatically tune
+ensemble of anomaly detectors to maximize the number of true anomalies
+discovered. We make four main contributions towards this goal. First, we
+present an important insight that explains the practical successes of AD
+ensembles and how ensembles are naturally suited for active learning. Second,
+we present several algorithms for active learning with tree-based AD ensembles.
+These algorithms help us to improve the diversity of discovered anomalies,
+generate rule sets for improved interpretability of anomalous instances, and
+adapt to streaming data settings in a principled manner. Third, we present a
+novel algorithm called GLocalized Anomaly Detection (GLAD) for active learning
+with generic AD ensembles. GLAD allows end-users to retain the use of simple
+and understandable global anomaly detectors by automatically learning their
+local relevance to specific data instances using label feedback. Fourth, we
+present extensive experiments to evaluate our insights and algorithms. Our
+results show that in addition to discovering significantly more anomalies than
+state-of-the-art unsupervised baselines, our active learning algorithms under
+the streaming-data setup are competitive with the batch setup.
+
+

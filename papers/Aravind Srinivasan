@@ -1,0 +1,525 @@
+An Extension of the Lovasz Local Lemma, and its Applications to Integer
+  Programming
+
+  The Lovasz Local Lemma due to Erdos and Lovasz is a powerful tool in proving
+the existence of rare events. We present an extension of this lemma, which
+works well when the event to be shown to exist is a conjunction of individual
+events, each of which asserts that a random variable does not deviate much from
+its mean. As applications, we consider two classes of NP-hard integer programs:
+minimax and covering integer programs. A key technique, randomized rounding of
+linear relaxations, was developed by Raghavan and Thompson to derive good
+approximation algorithms for such problems. We use our extension of the Local
+Lemma to prove that randomized rounding produces, with non-zero probability,
+much better feasible solutions than known before, if the constraint matrices of
+these integer programs are column-sparse (e.g., routing using short paths,
+problems on hypergraphs with small dimension/degree). This complements certain
+well-known results from discrepancy theory. We also generalize the method of
+pessimistic estimators due to Raghavan, to obtain constructive (algorithmic)
+versions of our results for covering integer programs.
+
+
+A New Approximation Technique for Resource-Allocation Problems
+
+  We develop a rounding method based on random walks in polytopes, which leads
+to improved approximation algorithms and integrality gaps for several
+assignment problems that arise in resource allocation and scheduling. In
+particular, it generalizes the work of Shmoys and Tardos on the generalized
+assignment problem to the setting where some jobs can be dropped. New
+concentration bounds for random bipartite matching are developed as well.
+
+
+Lift-and-Round to Improve Weighted Completion Time on Unrelated Machines
+
+  We consider the problem of scheduling jobs on unrelated machines so as to
+minimize the sum of weighted completion times. Our main result is a
+$(3/2-c)$-approximation algorithm for some fixed $c>0$, improving upon the
+long-standing bound of 3/2 (independently due to Skutella, Journal of the ACM,
+2001, and Sethuraman & Squillante, SODA, 1999). To do this, we first introduce
+a new lift-and-project based SDP relaxation for the problem. This is necessary
+as the previous convex programming relaxations have an integrality gap of
+$3/2$. Second, we give a new general bipartite-rounding procedure that produces
+an assignment with certain strong negative correlation properties.
+
+
+Approximation algorithms for stochastic clustering
+
+  We consider stochastic settings for clustering, and develop provably-good
+(approximation) algorithms for a number of these notions. These algorithms
+allow one to obtain better approximation ratios compared to the usual
+deterministic clustering setting. Additionally, they offer a number of
+advantages including providing fairer clustering and clustering which has
+better long-term behavior for each user. In particular, they ensure that *every
+user* is guaranteed to get good service (on average). We also complement some
+of these with impossibility results.
+
+
+Partial resampling to approximate covering integer programs
+
+  We consider column-sparse covering integer programs, a generalization of set
+cover, which have attracted a long line of research developing (randomized)
+approximation algorithms. We develop a new rounding scheme based on the Partial
+Resampling variant of the Lov\'{a}sz Local Lemma developed by Harris &
+Srinivasan (2013).
+  This achieves an approximation ratio of $1 + \frac{\ln
+(\Delta_1+1)}{a_{\text{min}}} + O\Big( \log(1 + \sqrt{ \frac{\log
+(\Delta_1+1)}{a_{\text{min}}}}) \Big)$, where $a_{\text{min}}$ is the minimum
+covering constraint and $\Delta_1$ is the maximum $\ell_1$-norm of any column
+of the covering matrix (whose entries are scaled to lie in $[0,1]$). When there
+are additional constraints on the sizes of the variables, we show an
+approximation ratio of $\ln \Delta_0 + O(\log \log \Delta_0)$ (where $\Delta_0$
+is the maximum number of non-zero entries in any column of the covering
+matrix). We also show nearly-matching inapproximability and integrality-gap
+lower bounds. These results improve asymptotically, in several different ways,
+over results shown by Srinivasan (2006) and Kolliopoulos & Young (2005).
+  We show also that the rounding process leads to negative correlation among
+the variables. This allows us to automatically handle multi-criteria programs,
+efficiently achieving approximation ratios which are essentially equivalent to
+the single-criterion case and apply even when the number of criteria is large.
+
+
+On k-Column Sparse Packing Programs
+
+  We consider the class of packing integer programs (PIPs) that are column
+sparse, i.e. there is a specified upper bound k on the number of constraints
+that each variable appears in. We give an (ek+o(k))-approximation algorithm for
+k-column sparse PIPs, improving on recent results of $k^2\cdot 2^k$ and
+$O(k^2)$. We also show that the integrality gap of our linear programming
+relaxation is at least 2k-1; it is known that k-column sparse PIPs are
+$\Omega(k/ \log k)$-hard to approximate. We also extend our result (at the loss
+of a small constant factor) to the more general case of maximizing a submodular
+objective over k-column sparse packing constraints.
+
+
+On Random Sampling Auctions for Digital Goods
+
+  In the context of auctions for digital goods, an interesting random sampling
+auction has been proposed by Goldberg, Hartline, and Wright [2001]. This
+auction has been analyzed by Feige, Flaxman, Hartline, and Kleinberg [2005],
+who have shown that it is 15-competitive in the worst case {which is
+substantially better than the previously proven constant bounds but still far
+from the conjectured competitive ratio of 4. In this paper, we prove that the
+aforementioned random sampling auction is indeed 4-competitive for a large
+class of instances where the number of bids above (or equal to) the optimal
+sale price is at least 6. We also show that it is 4:68-competitive for the
+small class of remaining instances thus leaving a negligible gap between the
+lower and upper bound. We employ a mix of probabilistic techniques and dynamic
+programming to compute these bounds.
+
+
+Fault-Tolerant Facility Location: a randomized dependent LP-rounding
+  algorithm
+
+  We give a new randomized LP-rounding 1.725-approximation algorithm for the
+metric Fault-Tolerant Uncapacitated Facility Location problem. This improves on
+the previously best known 2.076-approximation algorithm of Swamy & Shmoys. To
+the best of our knowledge, our work provides the first application of a
+dependent-rounding technique in the domain of facility location. The analysis
+of our algorithm benefits from, and extends, methods developed for
+Uncapacitated Facility Location; it also helps uncover new properties of the
+dependent-rounding approach. An important concept that we develop is a novel,
+hierarchical clustering scheme. Typically, LP-rounding approximation algorithms
+for facility location problems are based on partitioning facilities into
+disjoint clusters and opening at least one facility in each cluster. We extend
+this approach and construct a laminar family of clusters, which then guides the
+rounding procedure. It allows to exploit properties of dependent rounding, and
+provides a quite tight analysis resulting in the improved approximation ratio.
+
+
+Network Clustering Approximation Algorithm Using One Pass Black Box
+  Sampling
+
+  Finding a good clustering of vertices in a network, where vertices in the
+same cluster are more tightly connected than those in different clusters, is a
+useful, important, and well-studied task. Many clustering algorithms scale
+well, however they are not designed to operate upon internet-scale networks
+with billions of nodes or more. We study one of the fastest and most memory
+efficient algorithms possible - clustering based on the connected components in
+a random edge-induced subgraph. When defining the cost of a clustering to be
+its distance from such a random clustering, we show that this surprisingly
+simple algorithm gives a solution that is within an expected factor of two or
+three of optimal with either of two natural distance functions. In fact, this
+approximation guarantee works for any problem where there is a probability
+distribution on clusterings. We then examine the behavior of this algorithm in
+the context of social network trust inference.
+
+
+On Computing Maximal Independent Sets of Hypergraphs in Parallel
+
+  Whether or not the problem of finding maximal independent sets (MIS) in
+hypergraphs is in (R)NC is one of the fundamental problems in the theory of
+parallel computing. Unlike the well-understood case of MIS in graphs, for the
+hypergraph problem, our knowledge is quite limited despite considerable work.
+It is known that the problem is in \emph{RNC} when the edges of the hypergraph
+have constant size. For general hypergraphs with $n$ vertices and $m$ edges,
+the fastest previously known algorithm works in time $O(\sqrt{n})$ with
+$\text{poly}(m,n)$ processors. In this paper we give an EREW PRAM algorithm
+that works in time $n^{o(1)}$ with $\text{poly}(m,n)$ processors on general
+hypergraphs satisfying $m \leq n^{\frac{\log^{(2)}n}{8(\log^{(3)}n)^2}}$, where
+$\log^{(2)}n = \log\log n$ and $\log^{(3)}n = \log\log\log n$. Our algorithm is
+based on a sampling idea that reduces the dimension of the hypergraph and
+employs the algorithm for constant dimension hypergraphs as a subroutine.
+
+
+An Improved Approximation for $k$-median, and Positive Correlation in
+  Budgeted Optimization
+
+  Dependent rounding is a useful technique for optimization problems with hard
+budget constraints. This framework naturally leads to \emph{negative
+correlation} properties. However, what if an application naturally calls for
+dependent rounding on the one hand, and desires \emph{positive} correlation on
+the other? More generally, we develop algorithms that guarantee the known
+properties of dependent rounding, but also have nearly best-possible behavior -
+near-independence, which generalizes positive correlation - on "small" subsets
+of the variables. The recent breakthrough of Li & Svensson for the classical
+$k$-median problem has to handle positive correlation in certain
+dependent-rounding settings, and does so implicitly. We improve upon
+Li-Svensson's approximation ratio for $k$-median from $2.732 + \epsilon$ to
+$2.675 + \epsilon$ by developing an algorithm that improves upon various
+aspects of their work. Our dependent-rounding approach helps us improve the
+dependence of the runtime on the parameter $\epsilon$ from Li-Svensson's
+$N^{O(1/\epsilon^2)}$ to $N^{O((1/\epsilon) \log(1/\epsilon))}$.
+
+
+The Moser-Tardos Framework with Partial Resampling
+
+  The resampling algorithm of Moser \& Tardos is a powerful approach to develop
+constructive versions of the Lov\'{a}sz Local Lemma (LLL). We generalize this
+to partial resampling: when a bad event holds, we resample an
+appropriately-random subset of the variables that define this event, rather
+than the entire set as in Moser & Tardos. This is particularly useful when the
+bad events are determined by sums of random variables. This leads to several
+improved algorithmic applications in scheduling, graph transversals, packet
+routing etc. For instance, we settle a conjecture of Szab\'{o} & Tardos (2006)
+on graph transversals asymptotically, and obtain improved approximation ratios
+for a packet routing problem of Leighton, Maggs, & Rao (1994).
+
+
+Fairness in Resource Allocation and Slowed-down Dependent Rounding
+
+  We consider an issue of much current concern: could fairness, an issue that
+is already difficult to guarantee, worsen when algorithms run much of our
+lives? We consider this in the context of resource-allocation problems, we show
+that algorithms can guarantee certain types of fairness in a verifiable way.
+Our conceptual contribution is a simple approach to fairness in this context,
+which only requires that all users trust some public lottery. Our technical
+contributions are in ways to address the $k$-center and knapsack-center
+problems that arise in this context: we develop a novel dependent-rounding
+technique that, via the new ingredients of "slowing down" and additional
+randomization, guarantees stronger correlation properties than known before.
+
+
+A Lottery Model for Center-type Problems With Outliers
+
+  In this paper, we give tight approximation algorithms for the $k$-center and
+matroid center problems with outliers. Unfairness arises naturally in this
+setting: certain clients could always be considered as outliers. To address
+this issue, we introduce a lottery model in which each client $j$ is allowed to
+submit a parameter $p_j \in [0,1]$ and we look for a random solution that
+covers every client $j$ with probability at least $p_j$. Our techniques include
+a randomized rounding procedure to round a point inside a matroid intersection
+polytope to a basis plus at most one extra item such that all marginal
+probabilities are preserved and such that a certain linear function of the
+variables does not decrease in the process with probability one.
+
+
+Algorithms to Approximate Column-Sparse Packing Problems
+
+  Column-sparse packing problems arise in several contexts in both
+deterministic and stochastic discrete optimization. We present two unifying
+ideas, (non-uniform) attenuation and multiple-chance algorithms, to obtain
+improved approximation algorithms for some well-known families of such
+problems. As three main examples, we attain the integrality gap, up to
+lower-order terms, for known LP relaxations for k-column sparse packing integer
+programs (Bansal et al., Theory of Computing, 2012) and stochastic k-set
+packing (Bansal et al., Algorithmica, 2012), and go "half the remaining
+distance" to optimal for a major integrality-gap conjecture of Furedi, Kahn and
+Seymour on hypergraph matching (Combinatorica, 1993).
+
+
+Approximation algorithms for stochastic and risk-averse optimization
+
+  We present improved approximation algorithms in stochastic optimization. We
+prove that the multi-stage stochastic versions of covering integer programs
+(such as set cover and vertex cover) admit essentially the same approximation
+algorithms as their standard (non-stochastic) counterparts; this improves upon
+work of Swamy \& Shmoys which shows an approximability that depends
+multiplicatively on the number of stages. We also present approximation
+algorithms for facility location and some of its variants in the $2$-stage
+recourse model, improving on previous approximation guarantees. We give a
+$2.2975$-approximation algorithm in the standard polynomial-scenario model and
+an algorithm with an expected per-scenario $2.4957$-approximation guarantee,
+which is applicable to the more general black-box distribution model.
+
+
+New Constructive Aspects of the Lovasz Local Lemma
+
+  The Lov\'{a}sz Local Lemma (LLL) states that the probability that none of a
+set of "bad" events happens is nonzero if the probability of each event is
+small compared to the number of bad events it depends on. A series of results
+have provided algorithms to efficiently construct structures whose existence is
+(non-constructively) guaranteed by the full asymmetric LLL, culminating in the
+recent breakthrough of Moser & Tardos. We show that the output distribution of
+the Moser-Tardos procedure has sufficient randomness, leading to two classes of
+algorithmic applications. We first show that when an LLL application provides a
+small amount of slack, the running time of the Moser-Tardos algorithm is
+polynomial in the number of underlying independent variables (not events!), and
+can thus be used to give efficient constructions in cases where the underlying
+proof applies the LLL to super-polynomially many events (or where finding a bad
+event that holds is computationally hard). We demonstrate our method on
+applications including: the first constant-factor approximation algorithm for
+the Santa Claus problem, as well as efficient algorithms for acyclic edge
+coloring, non-repetitive graph colorings, and Ramsey-type graphs. Second, we
+show applications to cases where a few of the bad events can hold, leading to
+the first such algorithmic applications of the LLL: MAX $k$-SAT is an
+illustrative example of this.
+
+
+LP-rounding algorithms for facility-location problems
+
+  We study LP-rounding approximation algorithms for metric uncapacitated
+facility-location problems. We first give a new analysis for the algorithm of
+Chudak and Shmoys, which differs from the analysis of Byrka and Aardal in that
+now we do not need any bound based on the solution to the dual LP program.
+Besides obtaining the optimal bifactor approximation as do Byrka and Aardal, we
+can now also show that the algorithm with scaling parameter equaling 1.58 is,
+in fact, an 1.58-approximation algorithm. More importantly, we suggest an
+approach based on additional randomization and analyses such as ours, which
+could achieve or approach the conjectured optimal 1.46...--approximation for
+this basic problem.
+  Next, using essentially the same techniques, we obtain improved approximation
+algorithms in the 2-stage stochastic variant of the problem, where we must open
+a subset of facilities having only stochastic information about the future
+demand from the clients. For this problem we obtain a 2.2975-approximation
+algorithm in the standard setting, and a 2.4957-approximation in the more
+restricted, per-scenario setting.
+  We then study robust fault-tolerant facility location, introduced by Chechik
+and Peleg: solutions here are designed to provide low connection cost in case
+of failure of up to $k$ facilities. Chechik and Peleg gave a 6.5-approximation
+algorithm for $k=1$ and a ($7.5k + 1.5$)-approximation algorithm for general
+$k$. We improve this to an LP-rounding $(k+5+4/k)$-approximation algorithm. We
+also observe that in case of oblivious failures the expected approximation
+ratio can be reduced to $k + 1.5$, and that the integrality gap of the natural
+LP-relaxation of the problem is at least $k + 1$.
+
+
+Online Stochastic Matching: New Algorithms and Bounds
+
+  Online matching has received significant attention over the last 15 years due
+to its close connection to Internet advertising. As the seminal work of Karp,
+Vazirani, and Vazirani has an optimal (1 - 1/e) competitive ratio in the
+standard adversarial online model, much effort has gone into developing useful
+online models that incorporate some stochasticity in the arrival process. One
+such popular model is the "known I.I.D. model" where different customer-types
+arrive online from a known distribution. We develop algorithms with improved
+competitive ratios for some basic variants of this model with integral arrival
+rates, including (a) the case of general weighted edges, where we improve the
+best-known ratio of 0.667 due to Haeupler, Mirrokni and Zadimoghaddam to 0.705;
+and (b) the vertex-weighted case, where we improve the 0.7250 ratio of Jaillet
+and Lu to 0.7299. We also consider an extension of stochastic rewards, a
+variant where each edge has an independent probability of being present. For
+the setting of stochastic rewards with non-integral arrival rates, we present a
+simple optimal non-adaptive algorithm with a ratio of 1 - 1/e. For the special
+case where each edge is unweighted and has a uniform constant probability of
+being present, we improve upon 1 - 1/e by proposing a strengthened LP
+benchmark.
+
+
+'Beating the news' with EMBERS: Forecasting Civil Unrest using Open
+  Source Indicators
+
+  We describe the design, implementation, and evaluation of EMBERS, an
+automated, 24x7 continuous system for forecasting civil unrest across 10
+countries of Latin America using open source indicators such as tweets, news
+sources, blogs, economic indicators, and other data sources. Unlike
+retrospective studies, EMBERS has been making forecasts into the future since
+Nov 2012 which have been (and continue to be) evaluated by an independent T&E
+team (MITRE). Of note, EMBERS has successfully forecast the uptick and downtick
+of incidents during the June 2013 protests in Brazil. We outline the system
+architecture of EMBERS, individual models that leverage specific data sources,
+and a fusion and suppression engine that supports trading off specific
+evaluation criteria. EMBERS also provides an audit trail interface that enables
+the investigation of why specific predictions were made along with the data
+utilized for forecasting. Through numerous evaluations, we demonstrate the
+superiority of EMBERS over baserate methods and its capability to forecast
+significant societal happenings.
+
+
+A constructive algorithm for the LLL on permutations
+
+  While there has been significant progress on algorithmic aspects of the
+Lov\'{a}sz Local Lemma (LLL) in recent years, a noteworthy exception is when
+the LLL is used in the context of random permutations. The breakthrough
+algorithm of Moser & Tardos only works in the setting of independent variables,
+and does not apply in this context. We resolve this by developing a randomized
+polynomial-time algorithm for such applications. A noteworthy application is
+for Latin transversals: the best-known general result here (Bissacot et al.,
+improving on Erd\H{o}s and Spencer), states that any $n \times n$ matrix in
+which each entry appears at most $(27/256)n$ times, has a Latin transversal. We
+present the first polynomial-time algorithm to construct such a transversal. We
+also develop RNC algorithms for Latin transversals, rainbow Hamiltonian cycles,
+strong chromatic number, and hypergraph packing.
+  In addition to efficiently finding a configuration which avoids bad-events,
+the algorithm of Moser & Tardos has many powerful extensions and properties.
+These include a well-characterized distribution on the output distribution,
+parallel algorithms, and a partial resampling variant. We show that our
+algorithm has nearly all of the same useful properties as the Moser-Tardos
+algorithm, and present a comparison of this aspect with recent works on the LLL
+in general probability spaces.
+
+
+Dependent rounding for knapsack/partition constraints and facility
+  location
+
+  We develop a new dependent rounding algorithm targeting systems with a
+mixture of knapsack and partition constraints. Such constraint systems arise in
+a number of facility location problems, and we study two in particular:
+multi-knapsack median and multi-knapsack center. Our rounding algorithms gives
+new approximation and pseudo-approximation algorithms for these problems.
+  The new dependent rounding process has two main technical advantages over
+previous ones. First, it gives substantial ``near-independence" properties
+among the variables being rounded. These are critical for facility location
+problems with highly non-linear objective functions.
+  Second, the rounding process lends itself to a new type of
+pseudo-approximation guarantee, which has an *additive* violation of the
+knapsack constraints. This is in contrast to previous algorithms which
+typically give $(1+\epsilon)$--multiplicative violations of these constraints.
+This additive violation is different from additive error; it is a more flexible
+notion which can be used as a technical tool to achieve new and more efficient
+multiplicative pseudo-approximations and even true approximation algorithms.
+  One key technical tool we develop, which may be of independent interest, is a
+new tail bound analogous to Feige (2006) for sums of random variables with
+unbounded variances.
+
+
+Allocation Problems in Ride-Sharing Platforms: Online Matching with
+  Offline Reusable Resources
+
+  Bipartite matching markets pair agents on one side of a market with agents,
+items, or contracts on the opposing side. Prior work addresses online bipartite
+matching markets, where agents arrive over time and are dynamically matched to
+a known set of disposable resources. In this paper, we propose a new model,
+Online Matching with (offline) Reusable Resources under Known Adversarial
+Distributions (OM-RR-KAD), in which resources on the offline side are reusable
+instead of disposable; that is, once matched, resources become available again
+at some point in the future. We show that our model is tractable by presenting
+an LP-based adaptive algorithm that achieves an online competitive ratio of 1/2
+- eps for any given eps greater than 0. We also show that no non-adaptive
+algorithm can achieve a ratio of 1/2 + o(1) based on the same benchmark LP.
+Through a data-driven analysis on a massive openly-available dataset, we show
+our model is robust enough to capture the application of taxi dispatching
+services and ride-sharing systems. We also present heuristics that perform well
+in practice.
+
+
+Balancing Relevance and Diversity in Online Bipartite Matching via
+  Submodularity
+
+  In bipartite matching problems, vertices on one side of a bipartite graph are
+paired with those on the other. In its online variant, one side of the graph is
+available offline, while the vertices on the other side arrive online. When a
+vertex arrives, an irrevocable and immediate decision should be made by the
+algorithm; either match it to an available vertex or drop it. Examples of such
+problems include matching workers to firms, advertisers to keywords, organs to
+patients, and so on. Much of the literature focuses on maximizing the total
+relevance---modeled via total weight---of the matching. However, in many
+real-world problems, it is also important to consider contributions of
+diversity: hiring a diverse pool of candidates, displaying a relevant but
+diverse set of ads, and so on. In this paper, we propose the Online Submodular
+Bipartite Matching (\osbm) problem, where the goal is to maximize a submodular
+function $f$ over the set of matched edges. This objective is general enough to
+capture the notion of both diversity (\emph{e.g.,} a weighted coverage
+function) and relevance (\emph{e.g.,} the traditional linear function)---as
+well as many other natural objective functions occurring in practice
+(\emph{e.g.,} limited total budget in advertising settings). We propose novel
+algorithms that have provable guarantees and are essentially optimal when
+restricted to various special cases. We also run experiments on real-world and
+synthetic datasets to validate our algorithms.
+
+
+Improved bounds and algorithms for graph cuts and network reliability
+
+  Karger (SIAM Journal on Computing, 1999) developed the first fully-polynomial
+approximation scheme to estimate the probability that a graph $G$ becomes
+disconnected, given that its edges are removed independently with probability
+$p$. This algorithm runs in $n^{5+o(1)} \epsilon^{-3}$ time to obtain an
+estimate within relative error $\epsilon$.
+  We improve this run-time through algorithmic and graph-theoretic advances.
+First, there is a certain key sub-problem encountered by Karger, for which a
+generic estimation procedure is employed, we show that this has a special
+structure for which a much more efficient algorithm can be used. Second, we
+show better bounds on the number of edge cuts which are likely to fail. Here,
+Karger's analysis uses a variety of bounds for various graph parameters, we
+show that these bounds cannot be simultaneously tight. We describe a new graph
+parameter, which simultaneously influences all the bounds used by Karger, and
+obtain much tighter estimates of the cut structure of $G$. These techniques
+allow us to improve the runtime to $n^{3+o(1)} \epsilon^{-2}$, our results also
+rigorously prove certain experimental observations of Karger & Tai (Proc.
+ACM-SIAM Symposium on Discrete Algorithms, 1997). Our rigorous proofs are
+motivated by certain non-rigorous differential-equation approximations which,
+however, provably track the worst-case trajectories of the relevant parameters.
+  A key driver of Karger's approach (and other cut-related results) is a bound
+on the number of small cuts: we improve these estimates when the min-cut size
+is "small" and odd, augmenting, in part, a result of Bixby (Bulletin of the
+AMS, 1974).
+
+
+Algorithmic and enumerative aspects of the Moser-Tardos distribution
+
+  Moser & Tardos have developed a powerful algorithmic approach (henceforth
+"MT") to the Lovasz Local Lemma (LLL); the basic operation done in MT and its
+variants is a search for "bad" events in a current configuration. In the
+initial stage of MT, the variables are set independently. We examine the
+distributions on these variables which arise during intermediate stages of MT.
+We show that these configurations have a more or less "random" form, building
+further on the "MT-distribution" concept of Haeupler et al. in understanding
+the (intermediate and) output distribution of MT. This has a variety of
+algorithmic applications; the most important is that bad events can be found
+relatively quickly, improving upon MT across the complexity spectrum: it makes
+some polynomial-time algorithms sub-linear (e.g., for Latin transversals, which
+are of basic combinatorial interest), gives lower-degree polynomial run-times
+in some settings, transforms certain super-polynomial-time algorithms into
+polynomial-time ones, and leads to Las Vegas algorithms for some coloring
+problems for which only Monte Carlo algorithms were known.
+  We show that in certain conditions when the LLL condition is violated, a
+variant of the MT algorithm can still produce a distribution which avoids most
+of the bad events. We show in some cases this MT variant can run faster than
+the original MT algorithm itself, and develop the first-known criterion for the
+case of the asymmetric LLL. This can be used to find partial Latin transversals
+-- improving upon earlier bounds of Stein (1975) -- among other applications.
+We furthermore give applications in enumeration, showing that most applications
+(where we aim for all or most of the bad events to be avoided) have many more
+solutions than known before by proving that the MT-distribution has "large"
+min-entropy and hence that its support-size is large.
+
+
+Attenuate Locally, Win Globally: An Attenuation-based Framework for
+  Online Stochastic Matching with Timeouts
+
+  Online matching problems have garnered significant attention in recent years
+due to numerous applications in e-commerce, online advertisements,
+ride-sharing, etc. Many of them capture the uncertainty in the real world by
+including stochasticity in both the arrival process and the matching process.
+The Online Stochastic Matching with Timeouts problem introduced by Bansal, et
+al., (Algorithmica, 2012) models matching markets (e.g., E-Bay, Amazon). Buyers
+arrive from an independent and identically distributed (i.i.d.) known
+distribution on buyer profiles and can be shown a list of items one at a time.
+Each buyer has some probability of purchasing each item and a limit (timeout)
+on the number of items they can be shown.
+  Bansal et al., (Algorithmica, 2012) gave a 0.12-competitive algorithm which
+was improved by Adamczyk, et al., (ESA, 2015) to 0.24. We present an online
+attenuation framework that uses an algorithm for offline stochastic matching as
+a black box. On the upper bound side, we show that this framework, combined
+with a black-box adapted from Bansal et al., (Algorithmica, 2012), yields an
+online algorithm which nearly doubles the ratio to 0.46. On the lower bound
+side, we show that no algorithm can achieve a ratio better than 0.632 using the
+standard LP for this problem. This framework has a high potential for further
+improvements since new algorithms for offline stochastic matching can directly
+improve the ratio for the online problem.
+  Our online framework also has the potential for a variety of extensions. For
+example, we introduce a natural generalization: Online Stochastic Matching with
+Two-sided Timeouts in which both online and offline vertices have timeouts. Our
+framework provides the first algorithm for this problem achieving a ratio of
+0.30. We once again use the algorithm of Adamczyk et al., (ESA, 2015) as a
+black-box and plug-it into our framework.
+
+

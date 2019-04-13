@@ -1,0 +1,473 @@
+A Maximum Likelihood Approach For Selecting Sets of Alternatives
+
+  We consider the problem of selecting a subset of alternatives given noisy
+evaluations of the relative strength of different alternatives. We wish to
+select a k-subset (for a given k) that provides a maximum likelihood estimate
+for one of several objectives, e.g., containing the strongest alternative.
+Although this problem is NP-hard, we show that when the noise level is
+sufficiently high, intuitive methods provide the optimal solution. We thus
+generalize classical results about singling out one alternative and identifying
+the hidden ranking of alternatives by strength. Extensive experiments show that
+our methods perform well in practical settings.
+
+
+A Voting-Based System for Ethical Decision Making
+
+  We present a general approach to automating ethical decisions, drawing on
+machine learning and computational social choice. In a nutshell, we propose to
+learn a model of societal preferences, and, when faced with a specific ethical
+dilemma at runtime, efficiently aggregate those preferences to identify a
+desirable choice. We provide a concrete algorithm that instantiates our
+approach; some of its crucial steps are informed by a new theory of
+swap-dominance efficient voting rules. Finally, we implement and evaluate a
+system for ethical decision making in the autonomous vehicle domain, using
+preference data collected from 1.3 million people through the Moral Machine
+website.
+
+
+Verifiably Truthful Mechanisms
+
+  It is typically expected that if a mechanism is truthful, then the agents
+would, indeed, truthfully report their private information. But why would an
+agent believe that the mechanism is truthful? We wish to design truthful
+mechanisms, whose truthfulness can be verified efficiently (in the
+computational sense). Our approach involves three steps: (i) specifying the
+structure of mechanisms, (ii) constructing a verification algorithm, and (iii)
+measuring the quality of verifiably truthful mechanisms. We demonstrate this
+approach using a case study: approximate mechanism design without money for
+facility location.
+
+
+Influence in Classification via Cooperative Game Theory
+
+  A dataset has been classified by some unknown classifier into two types of
+points. What were the most important factors in determining the classification
+outcome? In this work, we employ an axiomatic approach in order to uniquely
+characterize an influence measure: a function that, given a set of classified
+points, outputs a value for each feature corresponding to its influence in
+determining the classification outcome. We show that our influence measure
+takes on an intuitive form when the unknown classifier is linear. Finally, we
+employ our influence measure in order to analyze the effects of user profiling
+on Google's online display advertising.
+
+
+Learning Cooperative Games
+
+  This paper explores a PAC (probably approximately correct) learning model in
+cooperative games. Specifically, we are given $m$ random samples of coalitions
+and their values, taken from some unknown cooperative game; can we predict the
+values of unseen coalitions? We study the PAC learnability of several
+well-known classes of cooperative games, such as network flow games, threshold
+task games, and induced subgraph games. We also establish a novel connection
+between PAC learnability and core stability: for games that are efficiently
+learnable, it is possible to find payoff divisions that are likely to be stable
+using a polynomial number of samples.
+
+
+The Provable Virtue of Laziness in Motion Planning
+
+  The Lazy Shortest Path (LazySP) class consists of motion-planning algorithms
+that only evaluate edges along shortest paths between the source and target.
+These algorithms were designed to minimize the number of edge evaluations in
+settings where edge evaluation dominates the running time of the algorithm; but
+how close to optimal are LazySP algorithms in terms of this objective? Our main
+result is an analytical upper bound, in a probabilistic model, on the number of
+edge evaluations required by LazySP algorithms; a matching lower bound shows
+that these algorithms are asymptotically optimal in the worst case.
+
+
+A partisan districting protocol with provably nonpartisan outcomes
+
+  We design and analyze a protocol for dividing a state into districts, where
+parties take turns proposing a division, and freezing a district from the other
+party's proposed division. We show that our protocol has predictable and
+provable guarantees for both the number of districts in which each party has a
+majority of supporters, and the extent to which either party has the power to
+pack a specific population into a single district.
+
+
+Opting Into Optimal Matchings
+
+  We revisit the problem of designing optimal, individually rational matching
+mechanisms (in a general sense, allowing for cycles in directed graphs), where
+each player --- who is associated with a subset of vertices --- matches as many
+of his own vertices when he opts into the matching mechanism as when he opts
+out. We offer a new perspective on this problem by considering an arbitrary
+graph, but assuming that vertices are associated with players at random. Our
+main result asserts that, under certain conditions, any fixed optimal matching
+is likely to be individually rational up to lower-order terms. We also show
+that a simple and practical mechanism is (fully) individually rational, and
+likely to be optimal up to lower-order terms. We discuss the implications of
+our results for market design in general, and kidney exchange in particular.
+
+
+Strategyproof Approximation Mechanisms for Location on Networks
+
+  We consider the problem of locating a facility on a network, represented by a
+graph. A set of strategic agents have different ideal locations for the
+facility; the cost of an agent is the distance between its ideal location and
+the facility. A mechanism maps the locations reported by the agents to the
+location of the facility. Specifically, we are interested in social choice
+mechanisms that do not utilize payments. We wish to design mechanisms that are
+strategyproof, in the sense that agents can never benefit by lying, or, even
+better, group strategyproof, in the sense that a coalition of agents cannot all
+benefit by lying. At the same time, our mechanisms must provide a small
+approximation ratio with respect to one of two optimization targets: the social
+cost or the maximum cost.
+  We give an almost complete characterization of the feasible truthful
+approximation ratio under both target functions, deterministic and randomized
+mechanisms, and with respect to different network topologies. Our main results
+are: We show that a simple randomized mechanism is group strategyproof and
+gives a (2-2/n)-approximation for the social cost, where n is the number of
+agents, when the network is a circle (known as a ring in the case of computer
+networks); we design a novel "hybrid" strategyproof randomized mechanism that
+provides a tight approximation ratio of 3/2 for the maximum cost when the
+network is a circle; and we show that no randomized SP mechanism can provide an
+approximation ratio better than 2-o(1) to the maximum cost even when the
+network is a tree, thereby matching a trivial upper bound of two.
+
+
+Sum of Us: Strategyproof Selection from the Selectors
+
+  We consider directed graphs over a set of n agents, where an edge (i,j) is
+taken to mean that agent i supports or trusts agent j. Given such a graph and
+an integer k\leq n, we wish to select a subset of k agents that maximizes the
+sum of indegrees, i.e., a subset of k most popular or most trusted agents. At
+the same time we assume that each individual agent is only interested in being
+selected, and may misreport its outgoing edges to this end. This problem
+formulation captures realistic scenarios where agents choose among themselves,
+which can be found in the context of Internet search, social networks like
+Twitter, or reputation systems like Epinions.
+  Our goal is to design mechanisms without payments that map each graph to a
+k-subset of agents to be selected and satisfy the following two constraints:
+strategyproofness, i.e., agents cannot benefit from misreporting their outgoing
+edges, and approximate optimality, i.e., the sum of indegrees of the selected
+subset of agents is always close to optimal. Our first main result is a
+surprising impossibility: for k \in {1,...,n-1}, no deterministic strategyproof
+mechanism can provide a finite approximation ratio. Our second main result is a
+randomized strategyproof mechanism with an approximation ratio that is bounded
+from above by four for any value of k, and approaches one as k grows.
+
+
+A Smooth Transition from Powerlessness to Absolute Power
+
+  We study the phase transition of the coalitional manipulation problem for
+generalized scoring rules. Previously it has been shown that, under some
+conditions on the distribution of votes, if the number of manipulators is
+$o(\sqrt{n})$, where $n$ is the number of voters, then the probability that a
+random profile is manipulable by the coalition goes to zero as the number of
+voters goes to infinity, whereas if the number of manipulators is
+$\omega(\sqrt{n})$, then the probability that a random profile is manipulable
+goes to one. Here we consider the critical window, where a coalition has size
+$c\sqrt{n}$, and we show that as $c$ goes from zero to infinity, the limiting
+probability that a random profile is manipulable goes from zero to one in a
+smooth fashion, i.e., there is a smooth phase transition between the two
+regimes. This result analytically validates recent empirical results, and
+suggests that deciding the coalitional manipulation problem may be of limited
+computational hardness in practice.
+
+
+Bayesian Vote Manipulation: Optimal Strategies and Impact on Welfare
+
+  Most analyses of manipulation of voting schemes have adopted two assumptions
+that greatly diminish their practical import. First, it is usually assumed that
+the manipulators have full knowledge of the votes of the nonmanipulating
+agents. Second, analysis tends to focus on the probability of manipulation
+rather than its impact on the social choice objective (e.g., social welfare).
+We relax both of these assumptions by analyzing optimal Bayesian manipulation
+strategies when the manipulators have only partial probabilistic information
+about nonmanipulator votes, and assessing the expected loss in social welfare
+(in the broad sense of the term). We present a general optimization framework
+for the derivation of optimal manipulation strategies given arbitrary voting
+rules and distributions over preferences. We theoretically and empirically
+analyze the optimal manipulability of some popular voting rules using
+distributions and real data sets that go well beyond the common, but
+unrealistic, impartial culture assumption. We also shed light on the stark
+difference between the loss in social welfare and the probability of
+manipulation by showing that even when manipulation is likely, impact to social
+welfare is slight (and often negligible).
+
+
+Audit Games
+
+  Effective enforcement of laws and policies requires expending resources to
+prevent and detect offenders, as well as appropriate punishment schemes to
+deter violators. In particular, enforcement of privacy laws and policies in
+modern organizations that hold large volumes of personal information (e.g.,
+hospitals, banks, and Web services providers) relies heavily on internal audit
+mechanisms. We study economic considerations in the design of these mechanisms,
+focusing in particular on effective resource allocation and appropriate
+punishment schemes. We present an audit game model that is a natural
+generalization of a standard security game model for resource allocation with
+an additional punishment parameter. Computing the Stackelberg equilibrium for
+this game is challenging because it involves solving an optimization problem
+with non-convex quadratic constraints. We present an additive FPTAS that
+efficiently computes a solution that is arbitrarily close to the optimal
+solution.
+
+
+An Algorithmic Framework for Strategic Fair Division
+
+  We study the paradigmatic fair division problem of allocating a divisible
+good among agents with heterogeneous preferences, commonly known as cake
+cutting. Classical cake cutting protocols are susceptible to manipulation. Do
+their strategic outcomes still guarantee fairness?
+  To address this question we adopt a novel algorithmic approach, by designing
+a concrete computational framework for fair division---the class of Generalized
+Cut and Choose (GCC) protocols}---and reasoning about the game-theoretic
+properties of algorithms that operate in this model. The class of GCC protocols
+includes the most important discrete cake cutting protocols, and turns out to
+be compatible with the study of fair division among strategic agents. In
+particular, GCC protocols are guaranteed to have approximate subgame perfect
+Nash equilibria, or even exact equilibria if the protocol's tie-breaking rule
+is flexible. We further observe that the (approximate) equilibria of
+proportional GCC protocols---which guarantee each of the $n$ agents a
+$1/n$-fraction of the cake---must be (approximately) proportional. Finally, we
+design a protocol in this framework with the property that its Nash equilibrium
+allocations coincide with the set of (contiguous) envy-free allocations.
+
+
+Small Representations of Big Kidney Exchange Graphs
+
+  Kidney exchanges are organized markets where patients swap willing but
+incompatible donors. In the last decade, kidney exchanges grew from small and
+regional to large and national---and soon, international. This growth results
+in more lives saved, but exacerbates the empirical hardness of the
+$\mathcal{NP}$-complete problem of optimally matching patients to donors.
+State-of-the-art matching engines use integer programming techniques to clear
+fielded kidney exchanges, but these methods must be tailored to specific models
+and objective functions, and may fail to scale to larger exchanges. In this
+paper, we observe that if the kidney exchange compatibility graph can be
+encoded by a constant number of patient and donor attributes, the clearing
+problem is solvable in polynomial time. We give necessary and sufficient
+conditions for losslessly shrinking the representation of an arbitrary
+compatibility graph. Then, using real compatibility graphs from the UNOS
+nationwide kidney exchange, we show how many attributes are needed to encode
+real compatibility graphs. The experiments show that, indeed, small numbers of
+attributes suffice.
+
+
+Game-Theoretic Modeling of Human Adaptation in Human-Robot Collaboration
+
+  In human-robot teams, humans often start with an inaccurate model of the
+robot capabilities. As they interact with the robot, they infer the robot's
+capabilities and partially adapt to the robot, i.e., they might change their
+actions based on the observed outcomes and the robot's actions, without
+replicating the robot's policy. We present a game-theoretic model of human
+partial adaptation to the robot, where the human responds to the robot's
+actions by maximizing a reward function that changes stochastically over time,
+capturing the evolution of their expectations of the robot's capabilities. The
+robot can then use this model to decide optimally between taking actions that
+reveal its capabilities to the human and taking the best action given the
+information that the human currently has. We prove that under certain
+observability assumptions, the optimal policy can be computed efficiently. We
+demonstrate through a human subject experiment that the proposed model
+significantly improves human-robot team performance, compared to policies that
+assume complete adaptation of the human to the robot.
+
+
+Weighted Voting Via No-Regret Learning
+
+  Voting systems typically treat all voters equally. We argue that perhaps they
+should not: Voters who have supported good choices in the past should be given
+higher weight than voters who have supported bad ones. To develop a formal
+framework for desirable weighting schemes, we draw on no-regret learning.
+Specifically, given a voting rule, we wish to design a weighting scheme such
+that applying the voting rule, with voters weighted by the scheme, leads to
+choices that are almost as good as those endorsed by the best voter in
+hindsight. We derive possibility and impossibility results for the existence of
+such weighting schemes, depending on whether the voting rule and the weighting
+scheme are deterministic or randomized, as well as on the social choice axioms
+satisfied by the voting rule.
+
+
+Why You Should Charge Your Friends for Borrowing Your Stuff
+
+  We consider goods that can be shared with k-hop neighbors (i.e., the set of
+nodes within k hops from an owner) on a social network. We examine incentives
+to buy such a good by devising game-theoretic models where each node decides
+whether to buy the good or free ride. First, we find that social inefficiency,
+specifically excessive purchase of the good, occurs in Nash equilibria. Second,
+the social inefficiency decreases as k increases and thus a good can be shared
+with more nodes. Third, and most importantly, the social inefficiency can also
+be significantly reduced by charging free riders an access cost and paying it
+to owners, leading to the conclusion that organizations and system designers
+should impose such a cost. These findings are supported by our theoretical
+analysis in terms of the price of anarchy and the price of stability; and by
+simulations based on synthetic and real social networks.
+
+
+Strategyproof Linear Regression in High Dimensions
+
+  This paper is part of an emerging line of work at the intersection of machine
+learning and mechanism design, which aims to avoid noise in training data by
+correctly aligning the incentives of data sources. Specifically, we focus on
+the ubiquitous problem of linear regression, where strategyproof mechanisms
+have previously been identified in two dimensions. In our setting, agents have
+single-peaked preferences and can manipulate only their response variables. Our
+main contribution is the discovery of a family of group strategyproof linear
+regression mechanisms in any number of dimensions, which we call generalized
+resistant hyperplane mechanisms. The game-theoretic properties of these
+mechanisms -- and, in fact, their very existence -- are established through a
+connection to a discrete version of the Ham Sandwich Theorem.
+
+
+Fairly Allocating Many Goods with Few Queries
+
+  We investigate the query complexity of the fair allocation of indivisible
+goods. For two agents with arbitrary monotonic valuations, we design an
+algorithm that computes an allocation satisfying envy-freeness up to one good
+(EF1), a relaxation of envy-freeness, using a logarithmic number of queries. We
+show that the logarithmic query complexity bound also holds for three agents
+with additive valuations. These results suggest that it is possible to fairly
+allocate goods in practice even when the number of goods is extremely large. By
+contrast, we prove that computing an allocation satisfying envy-freeness and
+another of its relaxations, envy-freeness up to any good (EFX), requires a
+linear number of queries even when there are only two agents with identical
+additive valuations.
+
+
+The Fluid Mechanics of Liquid Democracy
+
+  Liquid democracy is the principle of making collective decisions by letting
+agents transitively delegate their votes. Despite its significant appeal, it
+has become apparent that a weakness of liquid democracy is that a small subset
+of agents may gain massive influence. To address this, we propose to change the
+current practice by allowing agents to specify multiple delegation options
+instead of just one. Much like in nature, where --- fluid mechanics teaches us
+--- liquid maintains an equal level in connected vessels, so do we seek to
+control the flow of votes in a way that balances influence as much as possible.
+Specifically, we analyze the problem of choosing delegations to approximately
+minimize the maximum number of votes entrusted to any agent, by drawing
+connections to the literature on confluent flow. We also introduce a random
+graph model for liquid democracy, and use it to demonstrate the benefits of our
+approach both theoretically and empirically.
+
+
+Choosing How to Choose Papers
+
+  It is common to see a handful of reviewers reject a highly novel paper,
+because they view, say, extensive experiments as far more important than
+novelty, whereas the community as a whole would have embraced the paper. More
+generally, the disparate mapping of criteria scores to final recommendations by
+different reviewers is a major source of inconsistency in peer review. In this
+paper we present a framework --- based on $L(p,q)$-norm empirical risk
+minimization --- for learning the community's aggregate mapping. We draw on
+computational social choice to identify desirable values of $p$ and $q$;
+specifically, we characterize $p=q=1$ as the only choice that satisfies three
+natural axiomatic properties. Finally, we implement and apply our approach to
+reviews from IJCAI 2017.
+
+
+Migration as Submodular Optimization
+
+  Migration presents sweeping societal challenges that have recently attracted
+significant attention from the scientific community. One of the prominent
+approaches that have been suggested employs optimization and machine learning
+to match migrants to localities in a way that maximizes the expected number of
+migrants who find employment. However, it relies on a strong additivity
+assumption that, we argue, does not hold in practice, due to competition
+effects; we propose to enhance the data-driven approach by explicitly
+optimizing for these effects. Specifically, we cast our problem as the
+maximization of an approximately submodular function subject to matroid
+constraints, and prove that the worst-case guarantees given by the classic
+greedy algorithm extend to this setting. We then present three different models
+for competition effects, and show that they all give rise to submodular
+objectives. Finally, we demonstrate via simulations that our approach leads to
+significant gains across the board.
+
+
+Envy-Free Classification
+
+  In classic fair division problems such as cake cutting and rent division,
+envy-freeness requires that each individual (weakly) prefer his allocation to
+anyone else's. On a conceptual level, we argue that envy-freeness also provides
+a compelling notion of fairness for classification tasks. Our technical focus
+is the generalizability of envy-free classification, i.e., understanding
+whether a classifier that is envy free on a sample would be almost envy free
+with respect to the underlying distribution with high probability. Our main
+result establishes that a small sample is sufficient to achieve such
+guarantees, when the classifier in question is a mixture of deterministic
+classifiers that belong to a family of low Natarajan dimension.
+
+
+A Computational Approach to Organizational Structure
+
+  An organizational structure defines how an organization arranges and manages
+its individuals. Because individuals in an organization take time to both
+perform tasks and communicate, organizational structure must take both
+computation and communication into account. Sociologists have studied
+organizational structure from an empirical perspective for decades, but their
+work has been limited by small sample sizes. By contrast, we study
+organizational structure from a computational and theoretical perspective.
+  Specifically, we introduce a model of organizations that involves both
+computation and communication, and captures the spirit of past sociology
+experiments. In our model, each node in a graph starts with a token, and at any
+time can either perform computation to merge two tokens in $t_c$ time, or
+perform communication by sending a token to a neighbor in $t_m$ time. We study
+how to schedule computations and communications so as to merge all tokens as
+quickly as possible.
+  As our first result, we give a polynomial-time algorithm that optimally
+solves this problem on a complete graph. This result characterizes the optimal
+graph structure---the edges used for communication in the optimal
+schedule---and therefore informs the optimal design of large-scale
+organizations. Moreover, since pre-existing organizations may want to optimize
+their workflow, we also study this problem on arbitrary graphs. We demonstrate
+that our problem on arbitrary graphs is not only NP-hard but also hard to
+approximate within a multiplicative $1.5$ factor. Finally, we give an $O(\log n
+\cdot \log \frac{\text{OPT}}{t_m})$-approximation algorithm for our problem on
+arbitrary graphs.
+
+
+Mix and Match
+
+  Consider a matching problem on a graph where disjoint sets of vertices are
+privately owned by self-interested agents. An edge between a pair of vertices
+indicates compatibility and allows the vertices to match. We seek a mechanism
+to maximize the number of matches despite self-interest, with agents that each
+want to maximize the number of their own vertices that match. Each agent can
+choose to hide some of its vertices, and then privately match the hidden
+vertices with any of its own vertices that go unmatched by the mechanism. A
+prominent application of this model is to kidney exchange, where agents
+correspond to hospitals and vertices to donor-patient pairs. Here hospitals may
+game an exchange by holding back pairs and harm social welfare. In this paper
+we seek to design mechanisms that are strategyproof, in the sense that agents
+cannot benefit from hiding vertices, and approximately maximize efficiency,
+i.e., produce a matching that is close in cardinality to the maximum
+cardinality matching. Our main result is the design and analysis of the
+eponymous Mix-and-Match mechanism; we show that this randomized mechanism is
+strategyproof and provides a 2-approximation. Lower bounds establish that the
+mechanism is near optimal.
+
+
+Ignorance is Almost Bliss: Near-Optimal Stochastic Matching With Few
+  Queries
+
+  The stochastic matching problem deals with finding a maximum matching in a
+graph whose edges are unknown but can be accessed via queries. This is a
+special case of stochastic $k$-set packing, where the problem is to find a
+maximum packing of sets, each of which exists with some probability. In this
+paper, we provide edge and set query algorithms for these two problems,
+respectively, that provably achieve some fraction of the omniscient optimal
+solution.
+  Our main theoretical result for the stochastic matching (i.e., $2$-set
+packing) problem is the design of an \emph{adaptive} algorithm that queries
+only a constant number of edges per vertex and achieves a $(1-\epsilon)$
+fraction of the omniscient optimal solution, for an arbitrarily small
+$\epsilon>0$. Moreover, this adaptive algorithm performs the queries in only a
+constant number of rounds. We complement this result with a \emph{non-adaptive}
+(i.e., one round of queries) algorithm that achieves a $(0.5 - \epsilon)$
+fraction of the omniscient optimum. We also extend both our results to
+stochastic $k$-set packing by designing an adaptive algorithm that achieves a
+$(\frac{2}{k} - \epsilon)$ fraction of the omniscient optimal solution, again
+with only $O(1)$ queries per element. This guarantee is close to the best known
+polynomial-time approximation ratio of $\frac{3}{k+1} -\epsilon$ for the
+\emph{deterministic} $k$-set packing problem [Furer and Yu, 2013]
+  We empirically explore the application of (adaptations of) these algorithms
+to the kidney exchange problem, where patients with end-stage renal failure
+swap willing but incompatible donors. We show on both generated data and on
+real data from the first 169 match runs of the UNOS nationwide kidney exchange
+that even a very small number of non-adaptive edge queries per vertex results
+in large gains in expected successful matches.
+
+

@@ -1,0 +1,348 @@
+Active Learning of Linear Embeddings for Gaussian Processes
+
+  We propose an active learning method for discovering low-dimensional
+structure in high-dimensional Gaussian process (GP) tasks. Such problems are
+increasingly frequent and important, but have hitherto presented severe
+practical difficulties. We further introduce a novel technique for
+approximately marginalizing GP hyperparameters, yielding marginal predictions
+robust to hyperparameter mis-specification. Our method offers an efficient
+means of performing GP regression, quadrature, or Bayesian optimization in
+high-dimensional spaces.
+
+
+Propagation Kernels
+
+  We introduce propagation kernels, a general graph-kernel framework for
+efficiently measuring the similarity of structured data. Propagation kernels
+are based on monitoring how information spreads through a set of given graphs.
+They leverage early-stage distributions from propagation schemes such as random
+walks to capture structural information encoded in node labels, attributes, and
+edge information. This has two benefits. First, off-the-shelf propagation
+schemes can be used to naturally construct kernels for many graph types,
+including labeled, partially labeled, unlabeled, directed, and attributed
+graphs. Second, by leveraging existing efficient and informative propagation
+schemes, propagation kernels can be considerably faster than state-of-the-art
+approaches without sacrificing predictive performance. We will also show that
+if the graphs at hand have a regular structure, for instance when modeling
+image or video data, one can exploit this regularity to scale the kernel
+computation to large databases of graphs with thousands of nodes. We support
+our contributions by exhaustive experiments on a number of real-world graphs
+from a variety of application domains.
+
+
+Detecting Damped Lyman-$α$ Absorbers with Gaussian Processes
+
+  We develop an automated technique for detecting damped Lyman-$\alpha$
+absorbers (DLAs) along spectroscopic lines of sight to quasi-stellar objects
+(QSOs or quasars). The detection of DLAs in large-scale spectroscopic surveys
+such as SDSS-III sheds light on galaxy formation at high redshift, showing the
+nucleation of galaxies from diffuse gas. We use nearly 50 000 QSO spectra to
+learn a novel tailored Gaussian process model for quasar emission spectra,
+which we apply to the DLA detection problem via Bayesian model selection. We
+propose models for identifying an arbitrary number of DLAs along a given line
+of sight. We demonstrate our method's effectiveness using a large-scale
+validation experiment, with excellent performance. We also provide a catalog of
+our results applied to 162 858 spectra from SDSS-III data release 12.
+
+
+Statistical properties of damped Lyman-alpha systems from Sloan Digital
+  Sky Survey DR12
+
+  We present new estimates for the statistical properties of damped
+Lyman-$\alpha$ absorbers (DLAs). We compute the column density distribution
+function at $z>2$, the line density, $\mathrm{d}N/\mathrm{d}X$, and the neutral
+hydrogen density, $\Omega_\mathrm{DLA}$. Our estimates are derived from the DLA
+catalogue of Garnett 2016, which uses the SDSS-III DR12 quasar spectroscopic
+survey. This catalogue provides a probability that a given spectrum contains a
+DLA, allowing us to use even the noisiest data without biasing our results and
+thus substantially increase our sample size. We measure a non-zero column
+density distribution function at $95\%$ confidence for all column densities
+$N_\mathrm{HI} < 5\times 10^{22}$ cm$^{-2}$. We make the first measurements
+from SDSS of $\mathrm{d}N/\mathrm{d}X$ and $\Omega_\mathrm{DLA}$ at $z>4$. We
+show that our results are insensitive to the signal-to-noise ratio of the
+spectra, but that there is a residual dependence on quasar redshift for
+$z<2.5$, which may be due to remaining systematics in our analysis.
+
+
+Bayesian Optimal Active Search and Surveying
+
+  We consider two active binary-classification problems with atypical
+objectives. In the first, active search, our goal is to actively uncover as
+many members of a given class as possible. In the second, active surveying, our
+goal is to actively query points to ultimately predict the proportion of a
+given class. Numerous real-world problems can be framed in these terms, and in
+either case typical model-based concerns such as generalization error are only
+of secondary importance.
+  We approach these problems via Bayesian decision theory; after choosing
+natural utility functions, we derive the optimal policies. We provide three
+contributions. In addition to introducing the active surveying problem, we
+extend previous work on active search in two ways. First, we prove a novel
+theoretical result, that less-myopic approximations to the optimal policy can
+outperform more-myopic approximations by any arbitrary degree. We then derive
+bounds that for certain models allow us to reduce (in practice dramatically)
+the exponential search space required by a naive implementation of the optimal
+policy, enabling further lookahead while still ensuring that optimal decisions
+are always made.
+
+
+Newly Identified Star Clusters in M33. II. Radial HST/ACS Fields
+
+  We present integrated photometry and color-magnitude diagrams for 161 star
+clusters in M33, of which 115 were previously uncataloged, using the Advanced
+Camera For Surveys Wide Field Channel onboard the Hubble Space Telescope. The
+integrated V-band magnitudes of these clusters range from Mv~-9 to as faint as
+Mv~-4, extending the depth of the existing M33 cluster catalogs by ~1 mag.
+Comparisons of theoretical isochrones to the color-magnitude diagrams using the
+Padova models yield ages for 148 of these star clusters. The ages range from
+Log (t)~7.0 to Log (t)~9.0. Our color-magnitude diagrams are not sensitive to
+clusters older than ~1 Gyr. We find that the variation of the clusters'
+integrated colors and absolute magnitudes with age is consistent with the
+predictions of simple stellar population models. These same models suggest that
+the masses of the clusters in our sample range from 5x10^3 to 5x10^4 *Msun.
+
+
+Submodularity in Batch Active Learning and Survey Problems on Gaussian
+  Random Fields
+
+  Many real-world datasets can be represented in the form of a graph whose edge
+weights designate similarities between instances. A discrete Gaussian random
+field (GRF) model is a finite-dimensional Gaussian process (GP) whose prior
+covariance is the inverse of a graph Laplacian. Minimizing the trace of the
+predictive covariance Sigma (V-optimality) on GRFs has proven successful in
+batch active learning classification problems with budget constraints. However,
+its worst-case bound has been missing. We show that the V-optimality on GRFs as
+a function of the batch query set is submodular and hence its greedy selection
+algorithm guarantees an (1-1/e) approximation ratio. Moreover, GRF models have
+the absence-of-suppressor (AofS) condition. For active survey problems, we
+propose a similar survey criterion which minimizes 1'(Sigma)1. In practice,
+V-optimality criterion performs better than GPs with mutual information gain
+criteria and allows nonuniform costs for different nodes.
+
+
+Sampling for Inference in Probabilistic Models with Fast Bayesian
+  Quadrature
+
+  We propose a novel sampling framework for inference in probabilistic models:
+an active learning approach that converges more quickly (in wall-clock time)
+than Markov chain Monte Carlo (MCMC) benchmarks. The central challenge in
+probabilistic inference is numerical integration, to average over ensembles of
+models or unknown (hyper-)parameters (for example to compute the marginal
+likelihood or a partition function). MCMC has provided approaches to numerical
+integration that deliver state-of-the-art inference, but can suffer from sample
+inefficiency and poor convergence diagnostics. Bayesian quadrature techniques
+offer a model-based solution to such problems, but their uptake has been
+hindered by prohibitive computation costs. We introduce a warped model for
+probabilistic integrands (likelihoods) that are known to be non-negative,
+permitting a cheap active learning scheme to optimally select sample locations.
+Our algorithm is demonstrated to offer faster convergence (in seconds) relative
+to simple Monte Carlo and annealed importance sampling on both synthetic and
+real-world examples.
+
+
+Differentially Private Bayesian Optimization
+
+  Bayesian optimization is a powerful tool for fine-tuning the hyper-parameters
+of a wide variety of machine learning models. The success of machine learning
+has led practitioners in diverse real-world settings to learn classifiers for
+practical problems. As machine learning becomes commonplace, Bayesian
+optimization becomes an attractive method for practitioners to automate the
+process of classifier hyper-parameter tuning. A key observation is that the
+data used for tuning models in these settings is often sensitive. Certain data
+such as genetic predisposition, personal email statistics, and car accident
+history, if not properly private, may be at risk of being inferred from
+Bayesian optimization outputs. To address this, we introduce methods for
+releasing the best hyper-parameters and classifier accuracy privately.
+Leveraging the strong theoretical guarantees of differential privacy and known
+Bayesian optimization convergence bounds, we prove that under a GP assumption
+these private quantities are also near-optimal. Finally, even if this
+assumption is not satisfied, we can use different smoothness guarantees to
+protect privacy.
+
+
+Anomaly Detection and Removal Using Non-Stationary Gaussian Processes
+
+  This paper proposes a novel Gaussian process approach to fault removal in
+time-series data. Fault removal does not delete the faulty signal data but,
+instead, massages the fault from the data. We assume that only one fault occurs
+at any one time and model the signal by two separate non-parametric Gaussian
+process models for both the physical phenomenon and the fault. In order to
+facilitate fault removal we introduce the Markov Region Link kernel for
+handling non-stationary Gaussian processes. This kernel is piece-wise
+stationary but guarantees that functions generated by it and their derivatives
+(when required) are everywhere continuous. We apply this kernel to the removal
+of drift and bias errors in faulty sensor data and also to the recovery of EOG
+artifact corrupted EEG signals.
+
+
+Exact Sampling from Determinantal Point Processes
+
+  Determinantal point processes (DPPs) are an important concept in random
+matrix theory and combinatorics. They have also recently attracted interest in
+the study of numerical methods for machine learning, as they offer an elegant
+"missing link" between independent Monte Carlo sampling and deterministic
+evaluation on regular grids, applicable to a general set of spaces. This is
+helpful whenever an algorithm explores to reduce uncertainty, such as in active
+learning, Bayesian optimization, reinforcement learning, and marginalization in
+graphical models. To draw samples from a DPP in practice, existing literature
+focuses on approximate schemes of low cost, or comparably inefficient exact
+algorithms like rejection sampling. We point out that, for many settings of
+relevance to machine learning, it is also possible to draw exact samples from
+DPPs on continuous domains. We start from an intuitive example on the real
+line, which is then generalized to multivariate real vector spaces. We also
+compare to previously studied approximations, showing that exact sampling,
+despite higher cost, can be preferable where precision is needed.
+
+
+Improving Quadrature for Constrained Integrands
+
+  We present an improved Bayesian framework for performing inference of affine
+transformations of constrained functions. We focus on quadrature with
+nonnegative functions, a common task in Bayesian inference. We consider
+constraints on the range of the function of interest, such as nonnegativity or
+boundedness. Although our framework is general, we derive explicit
+approximation schemes for these constraints, and argue for the use of a log
+transformation for functions with high dynamic range such as likelihood
+surfaces. We propose a novel method for optimizing hyperparameters in this
+framework: we optimize the marginal likelihood in the original space, as
+opposed to in the transformed space. The result is a model that better explains
+the actual data. Experiments on synthetic and real-world data demonstrate our
+framework achieves superior estimates using less wall-clock time than existing
+Bayesian quadrature procedures.
+
+
+Learning and Anticipating Future Actions During Exploratory Data
+  Analysis
+
+  The goal of visual analytics is to create a symbiosis between human and
+computer by leveraging their unique strengths. While this model has
+demonstrated immense success, we are yet to realize the full potential of such
+a human-computer partnership. In a perfect collaborative mixed-initiative
+system, the computer must possess skills for learning and anticipating the
+users' needs. Addressing this gap, we propose a framework for inferring focus
+areas from passive observations of the user's actions, thereby allowing
+accurate predictions of future events. We evaluate this technique with a crime
+map and demonstrate that users' clicks appear in our prediction set 95% - 97%
+of the time. Further analysis shows that we can achieve high prediction
+accuracy typically after three clicks. Altogether, we show that passive
+observations of interaction data can reveal valuable information that will
+allow the system to learn and anticipate future events, laying the foundation
+for next-generation tools.
+
+
+Automated Model Selection with Bayesian Quadrature
+
+  We present a novel technique for tailoring Bayesian quadrature (BQ) to model
+selection. The state-of-the-art for comparing the evidence of multiple models
+relies on Monte Carlo methods, which converge slowly and are unreliable for
+computationally expensive models. Previous research has shown that BQ offers
+sample efficiency superior to Monte Carlo in computing the evidence of an
+individual model. However, applying BQ directly to model comparison may waste
+computation producing an overly-accurate estimate for the evidence of a clearly
+poor model. We propose an automated and efficient algorithm for computing the
+most-relevant quantity for model selection: the posterior probability of a
+model. Our technique maximizes the mutual information between this quantity and
+observations of the models' likelihoods, yielding efficient acquisition of
+samples across disparate model spaces when likelihood observations are limited.
+Our method produces more-accurate model posterior estimates using fewer model
+likelihood evaluations than standard Bayesian quadrature and Monte Carlo
+estimators, as we demonstrate on synthetic and real-world examples.
+
+
+The entropic basis of collective behaviour
+
+  In this paper, we identify a radically new viewpoint on the collective
+behaviour of groups of intelligent agents. We first develop a highly general
+abstract model for the possible future lives that these agents may encounter as
+a result of their decisions. In the context of these possible futures, we show
+that the causal entropic principle, whereby agents follow behavioural rules
+that maximise their entropy over all paths through the future, predicts many of
+the observed features of social interactions between individuals in both human
+and animal groups. Our results indicate that agents are often able to maximise
+their future path entropy by remaining cohesive as a group, and that this
+cohesion leads to collectively intelligent outcomes that depend strongly on the
+distribution of the number of future paths that are possible. We derive social
+interaction rules that are consistent with maximum-entropy group behaviour for
+both discrete and continuous decision spaces. Our analysis further predicts
+that social interactions are likely to be fundamentally based on Weber's law of
+response to proportional stimuli, supporting many studies that find a
+neurological basis for this stimulus-response mechanism, and providing a novel
+basis for the common assumption of linearly additive 'social forces' in
+simulation studies of collective behaviour.
+
+
+Active Search for Sparse Signals with Region Sensing
+
+  Autonomous systems can be used to search for sparse signals in a large space;
+e.g., aerial robots can be deployed to localize threats, detect gas leaks, or
+respond to distress calls. Intuitively, search algorithms may increase
+efficiency by collecting aggregate measurements summarizing large contiguous
+regions. However, most existing search methods either ignore the possibility of
+such region observations (e.g., Bayesian optimization and multi-armed bandits)
+or make strong assumptions about the sensing mechanism that allow each
+measurement to arbitrarily encode all signals in the entire environment (e.g.,
+compressive sensing). We propose an algorithm that actively collects data to
+search for sparse signals using only noisy measurements of the average values
+on rectangular regions (including single points), based on the greedy
+maximization of information gain. We analyze our algorithm in 1d and show that
+it requires $\tilde{O}(\frac{n}{\mu^2}+k^2)$ measurements to recover all of $k$
+signal locations with small Bayes error, where $\mu$ and $n$ are the signal
+strength and the size of the search space, respectively. We also show that
+active designs can be fundamentally more efficient than passive designs with
+region sensing, contrasting with the results of Arias-Castro, Candes, and
+Davenport (2013). We demonstrate the empirical performance of our algorithm on
+a search problem using satellite image data and in high dimensions.
+
+
+Efficient nonmyopic active search with applications in drug and
+  materials discovery
+
+  Active search is a learning paradigm for actively identifying as many members
+of a given class as possible. A critical target scenario is high-throughput
+screening for scientific discovery, such as drug or materials discovery. In
+this paper, we approach this problem in Bayesian decision framework. We first
+derive the Bayesian optimal policy under a natural utility, and establish a
+theoretical hardness of active search, proving that the optimal policy can not
+be approximated for any constant ratio. We also study the batch setting for the
+first time, where a batch of $b>1$ points can be queried at each iteration. We
+give an asymptotic lower bound, linear in batch size, on the adaptivity gap:
+how much we could lose if we query $b$ points at a time for $t$ iterations,
+instead of one point at a time for $bt$ iterations. We then introduce a novel
+approach to nonmyopic approximations of the optimal policy that admits
+efficient computation. Our proposed policy can automatically trade off
+exploration and exploitation, without relying on any tuning parameters. We also
+generalize our policy to batch setting, and propose two approaches to tackle
+the combinatorial search challenge. We evaluate our proposed policies on a
+large database of drug discovery and materials science. Results demonstrate the
+superior performance of our proposed policy in both sequential and batch
+setting; the nonmyopic behavior is also illustrated in various aspects.
+
+
+Newly Identified Star Clusters in M33. III. Structural Parameters
+
+  We present the morphological properties of 161 star clusters in M33 using the
+Advanced Camera For Surveys Wide Field Channel onboard the Hubble Space
+Telescope using observations with the F606W and F814W filters. We obtain, for
+the first time, ellipticities, position angles, and surface brightness profiles
+for a significant number of clusters. On average, M33 clusters are more
+flattened than those of the Milky Way and M31, and more similar to clusters in
+the Small Magellanic Cloud. The ellipticities do not show any correlation with
+age or mass, suggesting that rotation is not the main cause of elongation in
+the M33 clusters. The position angles of the clusters show a bimodality with a
+strong peak perpendicular to the position angle of the galaxy major axis. These
+results support the notion that tidal forces are the reason for the cluster
+flattening. We fit King and EFF models to the surface brightness profiles and
+derive structural parameters including core radii, concentration, half-light
+radii and central surface brightness for both filters. The surface brightness
+profiles of a significant number of clusters show irregularities such as bumps
+and dips. Young clusters (Log age < 8) are notably better fitted by models with
+no radial truncation (EFF models), while older clusters show no significant
+differences between King or EFF fits. M33 star clusters seem to have smaller
+sizes, smaller concentrations, and smaller central surface brightness as
+compared to clusters in the MW, M31, LMC and SMC. Analysis of the structural
+parameters presents a age-radius relation also detected in other star cluster
+systems. The overall analysis shows differences in the structural evolution
+between the M33 cluster system and cluster systems in nearby galaxies. These
+differences could have been caused by the strong differences in these various
+environments.
+
+

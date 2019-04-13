@@ -1,0 +1,792 @@
+Optimal Densification for Fast and Accurate Minwise Hashing
+
+  Minwise hashing is a fundamental and one of the most successful hashing
+algorithm in the literature. Recent advances based on the idea of
+densification~\cite{Proc:OneHashLSH_ICML14,Proc:Shrivastava_UAI14} have shown
+that it is possible to compute $k$ minwise hashes, of a vector with $d$
+nonzeros, in mere $(d + k)$ computations, a significant improvement over the
+classical $O(dk)$. These advances have led to an algorithmic improvement in the
+query complexity of traditional indexing algorithms based on minwise hashing.
+Unfortunately, the variance of the current densification techniques is
+unnecessarily high, which leads to significantly poor accuracy compared to
+vanilla minwise hashing, especially when the data is sparse. In this paper, we
+provide a novel densification scheme which relies on carefully tailored
+2-universal hashes. We show that the proposed scheme is variance-optimal, and
+without losing the runtime efficiency, it is significantly more accurate than
+existing densification techniques. As a result, we obtain a significantly
+efficient hashing scheme which has the same variance and collision probability
+as minwise hashing. Experimental evaluations on real sparse and
+high-dimensional datasets validate our claims. We believe that given the
+significant advantages, our method will replace minwise hashing implementations
+in practice.
+
+
+Graph Kernels via Functional Embedding
+
+  We propose a representation of graph as a functional object derived from the
+power iteration of the underlying adjacency matrix. The proposed functional
+representation is a graph invariant, i.e., the functional remains unchanged
+under any reordering of the vertices. This property eliminates the difficulty
+of handling exponentially many isomorphic forms. Bhattacharyya kernel
+constructed between these functionals significantly outperforms the
+state-of-the-art graph kernels on 3 out of the 4 standard benchmark graph
+classification datasets, demonstrating the superiority of our approach. The
+proposed methodology is simple and runs in time linear in the number of edges,
+which makes our kernel more efficient and scalable compared to many widely
+adopted graph kernels with running time cubic in the number of vertices.
+
+
+Revisiting Winner Take All (WTA) Hashing for Sparse Datasets
+
+  WTA (Winner Take All) hashing has been successfully applied in many large
+scale vision applications. This hashing scheme was tailored to take advantage
+of the comparative reasoning (or order based information), which showed
+significant accuracy improvements. In this paper, we identify a subtle issue
+with WTA, which grows with the sparsity of the datasets. This issue limits the
+discriminative power of WTA. We then propose a solution for this problem based
+on the idea of Densification which provably fixes the issue. Our experiments
+show that Densified WTA Hashing outperforms Vanilla WTA both in image
+classification and retrieval tasks consistently and significantly.
+
+
+Exact Weighted Minwise Hashing in Constant Time
+
+  Weighted minwise hashing (WMH) is one of the fundamental subroutine, required
+by many celebrated approximation algorithms, commonly adopted in industrial
+practice for large scale-search and learning. The resource bottleneck of the
+algorithms is the computation of multiple (typically a few hundreds to
+thousands) independent hashes of the data. The fastest hashing algorithm is by
+Ioffe \cite{Proc:Ioffe_ICDM10}, which requires one pass over the entire data
+vector, $O(d)$ ($d$ is the number of non-zeros), for computing one hash.
+However, the requirement of multiple hashes demands hundreds or thousands
+passes over the data. This is very costly for modern massive dataset.
+  In this work, we break this expensive barrier and show an expected constant
+amortized time algorithm which computes $k$ independent and unbiased WMH in
+time $O(k)$ instead of $O(dk)$ required by Ioffe's method. Moreover, our
+proposal only needs a few bits (5 - 9 bits) of storage per hash value compared
+to around $64$ bits required by the state-of-art-methodologies. Experimental
+evaluations, on real datasets, show that for computing 500 WMH, our proposal
+can be 60000x faster than the Ioffe's method without losing any accuracy. Our
+method is also around 100x faster than approximate heuristics capitalizing on
+the efficient "densified" one permutation hashing schemes
+\cite{Proc:OneHashLSH_ICML14}. Given the simplicity of our approach and its
+significant advantages, we hope that it will replace existing implementations
+in practice.
+
+
+Arrays of (locality-sensitive) Count Estimators (ACE): High-Speed
+  Anomaly Detection via Cache Lookups
+
+  Anomaly detection is one of the frequent and important subroutines deployed
+in large-scale data processing systems. Even being a well-studied topic,
+existing techniques for unsupervised anomaly detection require storing
+significant amounts of data, which is prohibitive from memory and latency
+perspective. In the big-data world existing methods fail to address the new set
+of memory and latency constraints. In this paper, we propose ACE (Arrays of
+(locality-sensitive) Count Estimators) algorithm that can be 60x faster than
+the ELKI package~\cite{DBLP:conf/ssd/AchtertBKSZ09}, which has the fastest
+implementation of the unsupervised anomaly detection algorithms. ACE algorithm
+requires less than $4MB$ memory, to dynamically compress the full data
+information into a set of count arrays. These tiny $4MB$ arrays of counts are
+sufficient for unsupervised anomaly detection. At the core of the ACE
+algorithm, there is a novel statistical estimator which is derived from the
+sampling view of Locality Sensitive Hashing(LSH). This view is significantly
+different and efficient than the widely popular view of LSH for near-neighbor
+search. We show the superiority of ACE algorithm over 11 popular baselines on 3
+benchmark datasets, including the KDD-Cup99 data which is the largest available
+benchmark comprising of more than half a million entries with ground truth
+anomaly labels.
+
+
+Probabilistic Blocking with An Application to the Syrian Conflict
+
+  Entity resolution seeks to merge databases as to remove duplicate entries
+where unique identifiers are typically unknown. We review modern blocking
+approaches for entity resolution, focusing on those based upon locality
+sensitive hashing (LSH). First, we introduce $k$-means locality sensitive
+hashing (KLSH), which is based upon the information retrieval literature and
+clusters similar records into blocks using a vector-space representation and
+projections. Second, we introduce a subquadratic variant of LSH to the
+literature, known as Densified One Permutation Hashing (DOPH). Third, we
+propose a weighted variant of DOPH. We illustrate each method on an application
+to a subset of the ongoing Syrian conflict, giving a discussion of each method.
+
+
+Training Logistic Regression and SVM on 200GB Data Using b-Bit Minwise
+  Hashing and Comparisons with Vowpal Wabbit (VW)
+
+  We generated a dataset of 200 GB with 10^9 features, to test our recent b-bit
+minwise hashing algorithms for training very large-scale logistic regression
+and SVM. The results confirm our prior work that, compared with the VW hashing
+algorithm (which has the same variance as random projections), b-bit minwise
+hashing is substantially more accurate at the same storage. For example, with
+merely 30 hashed values per data point, b-bit minwise hashing can achieve
+similar accuracies as VW with 2^14 hashed values per data point.
+  We demonstrate that the preprocessing cost of b-bit minwise hashing is
+roughly on the same order of magnitude as the data loading time. Furthermore,
+by using a GPU, the preprocessing cost can be reduced to a small fraction of
+the data loading time.
+  Minwise hashing has been widely used in industry, at least in the context of
+search. One reason for its popularity is that one can efficiently simulate
+permutations by (e.g.,) universal hashing. In other words, there is no need to
+store the permutation matrix. In this paper, we empirically verify this
+practice, by demonstrating that even using the simplest 2-universal hashing
+does not degrade the learning performance.
+
+
+Coding for Random Projections
+
+  The method of random projections has become very popular for large-scale
+applications in statistical learning, information retrieval, bio-informatics
+and other applications. Using a well-designed coding scheme for the projected
+data, which determines the number of bits needed for each projected value and
+how to allocate these bits, can significantly improve the effectiveness of the
+algorithm, in storage cost as well as computational speed. In this paper, we
+study a number of simple coding schemes, focusing on the task of similarity
+estimation and on an application to training linear classifiers. We demonstrate
+that uniform quantization outperforms the standard existing influential method
+(Datar et. al. 2004). Indeed, we argue that in many cases coding with just a
+small number of bits suffices. Furthermore, we also develop a non-uniform 2-bit
+coding scheme that generally performs well in practice, as confirmed by our
+experiments on training linear support vector machines (SVM).
+
+
+Asymmetric LSH (ALSH) for Sublinear Time Maximum Inner Product Search
+  (MIPS)
+
+  We present the first provably sublinear time algorithm for approximate
+\emph{Maximum Inner Product Search} (MIPS). Our proposal is also the first
+hashing algorithm for searching with (un-normalized) inner product as the
+underlying similarity measure. Finding hashing schemes for MIPS was considered
+hard. We formally show that the existing Locality Sensitive Hashing (LSH)
+framework is insufficient for solving MIPS, and then we extend the existing LSH
+framework to allow asymmetric hashing schemes. Our proposal is based on an
+interesting mathematical phenomenon in which inner products, after independent
+asymmetric transformations, can be converted into the problem of approximate
+near neighbor search. This key observation makes efficient sublinear hashing
+scheme for MIPS possible. In the extended asymmetric LSH (ALSH) framework, we
+provide an explicit construction of provably fast hashing scheme for MIPS. The
+proposed construction and the extended LSH framework could be of independent
+theoretical interest. Our proposed algorithm is simple and easy to implement.
+We evaluate the method, for retrieving inner products, in the collaborative
+filtering task of item recommendations on Netflix and Movielens datasets.
+
+
+Improved Asymmetric Locality Sensitive Hashing (ALSH) for Maximum Inner
+  Product Search (MIPS)
+
+  Recently it was shown that the problem of Maximum Inner Product Search (MIPS)
+is efficient and it admits provably sub-linear hashing algorithms. Asymmetric
+transformations before hashing were the key in solving MIPS which was otherwise
+hard. In the prior work, the authors use asymmetric transformations which
+convert the problem of approximate MIPS into the problem of approximate near
+neighbor search which can be efficiently solved using hashing. In this work, we
+provide a different transformation which converts the problem of approximate
+MIPS into the problem of approximate cosine similarity search which can be
+efficiently solved using signed random projections. Theoretical analysis show
+that the new scheme is significantly better than the original scheme for MIPS.
+Experimental evaluations strongly support the theoretical findings.
+
+
+Improved Densification of One Permutation Hashing
+
+  The existing work on densification of one permutation hashing reduces the
+query processing cost of the $(K,L)$-parameterized Locality Sensitive Hashing
+(LSH) algorithm with minwise hashing, from $O(dKL)$ to merely $O(d + KL)$,
+where $d$ is the number of nonzeros of the data vector, $K$ is the number of
+hashes in each hash table, and $L$ is the number of hash tables. While that is
+a substantial improvement, our analysis reveals that the existing densification
+scheme is sub-optimal. In particular, there is no enough randomness in that
+procedure, which affects its accuracy on very sparse datasets.
+  In this paper, we provide a new densification procedure which is provably
+better than the existing scheme. This improvement is more significant for very
+sparse datasets which are common over the web. The improved technique has the
+same cost of $O(d + KL)$ for query processing, thereby making it strictly
+preferable over the existing procedure. Experimental evaluations on public
+datasets, in the task of hashing based near neighbor search, support our
+theoretical findings.
+
+
+Hashing Algorithms for Large-Scale Learning
+
+  In this paper, we first demonstrate that b-bit minwise hashing, whose
+estimators are positive definite kernels, can be naturally integrated with
+learning algorithms such as SVM and logistic regression. We adopt a simple
+scheme to transform the nonlinear (resemblance) kernel into linear (inner
+product) kernel; and hence large-scale problems can be solved extremely
+efficiently. Our method provides a simple effective solution to large-scale
+learning in massive and extremely high-dimensional datasets, especially when
+data do not fit in memory.
+  We then compare b-bit minwise hashing with the Vowpal Wabbit (VW) algorithm
+(which is related the Count-Min (CM) sketch). Interestingly, VW has the same
+variances as random projections. Our theoretical and empirical comparisons
+illustrate that usually $b$-bit minwise hashing is significantly more accurate
+(at the same storage) than VW (and random projections) in binary data.
+Furthermore, $b$-bit minwise hashing can be combined with VW to achieve further
+improvements in terms of training speed, especially when $b$ is large.
+
+
+Coding for Random Projections and Approximate Near Neighbor Search
+
+  This technical note compares two coding (quantization) schemes for random
+projections in the context of sub-linear time approximate near neighbor search.
+The first scheme is based on uniform quantization while the second scheme
+utilizes a uniform quantization plus a uniformly random offset (which has been
+popular in practice). The prior work compared the two schemes in the context of
+similarity estimation and training linear classifiers, with the conclusion that
+the step of random offset is not necessary and may hurt the performance
+(depending on the similarity level). The task of near neighbor search is
+related to similarity estimation with importance distinctions and requires own
+study. In this paper, we demonstrate that in the context of near neighbor
+search, the step of random offset is not needed either and may hurt the
+performance (sometimes significantly so, depending on the similarity and other
+parameters).
+
+
+Near-Isometric Binary Hashing for Large-scale Datasets
+
+  We develop a scalable algorithm to learn binary hash codes for indexing
+large-scale datasets. Near-isometric binary hashing (NIBH) is a data-dependent
+hashing scheme that quantizes the output of a learned low-dimensional embedding
+to obtain a binary hash code. In contrast to conventional hashing schemes,
+which typically rely on an $\ell_2$-norm (i.e., average distortion)
+minimization, NIBH is based on a $\ell_{\infty}$-norm (i.e., worst-case
+distortion) minimization that provides several benefits, including superior
+distance, ranking, and near-neighbor preservation performance. We develop a
+practical and efficient algorithm for NIBH based on column generation that
+scales well to large datasets. A range of experimental evaluations demonstrate
+the superiority of NIBH over ten state-of-the-art binary hashing schemes.
+
+
+Asymmetric Minwise Hashing
+
+  Minwise hashing (Minhash) is a widely popular indexing scheme in practice.
+Minhash is designed for estimating set resemblance and is known to be
+suboptimal in many applications where the desired measure is set overlap (i.e.,
+inner product between binary vectors) or set containment. Minhash has inherent
+bias towards smaller sets, which adversely affects its performance in
+applications where such a penalization is not desirable. In this paper, we
+propose asymmetric minwise hashing (MH-ALSH), to provide a solution to this
+problem. The new scheme utilizes asymmetric transformations to cancel the bias
+of traditional minhash towards smaller sets, making the final "collision
+probability" monotonic in the inner product. Our theoretical comparisons show
+that for the task of retrieving with binary inner products asymmetric minhash
+is provably better than traditional minhash and other recently proposed hashing
+algorithms for general inner products. Thus, we obtain an algorithmic
+improvement over existing approaches in the literature. Experimental
+evaluations on four publicly available high-dimensional datasets validate our
+claims and the proposed scheme outperforms, often significantly, other hashing
+algorithms on the task of near neighbor retrieval with set containment. Our
+proposal is simple and easy to implement in practice.
+
+
+Blocking Methods Applied to Casualty Records from the Syrian Conflict
+
+  Estimation of death counts and associated standard errors is of great
+importance in armed conflict such as the ongoing violence in Syria, as well as
+historical conflicts in Guatemala, Per\'u, Colombia, Timor Leste, and Kosovo.
+For example, statistical estimates of death counts were cited as important
+evidence in the trial of General Efra\'in R\'ios Montt for acts of genocide in
+Guatemala. Estimation relies on both record linkage and multiple systems
+estimation. A key first step in this process is identifying ways to partition
+the records such that they are computationally manageable. This step is
+referred to as blocking and is a major challenge for the Syrian database since
+it is sparse in the number of duplicate records and feature poor in its
+attributes. As a consequence, we propose locality sensitive hashing (LSH)
+methods to overcome these challenges. We demonstrate the computational
+superiority and error rates of these methods by comparing our proposed approach
+with others in the literature. We conclude with a discussion of many challenges
+of merging LSH with record linkage to achieve an estimate of the number of
+uniquely documented deaths in the Syrian conflict.
+
+
+A New Unbiased and Efficient Class of LSH-Based Samplers and Estimators
+  for Partition Function Computation in Log-Linear Models
+
+  Log-linear models are arguably the most successful class of graphical models
+for large-scale applications because of their simplicity and tractability.
+Learning and inference with these models require calculating the partition
+function, which is a major bottleneck and intractable for large state spaces.
+Importance Sampling (IS) and MCMC-based approaches are lucrative. However, the
+condition of having a "good" proposal distribution is often not satisfied in
+practice.
+  In this paper, we add a new dimension to efficient estimation via sampling.
+We propose a new sampling scheme and an unbiased estimator that estimates the
+partition function accurately in sub-linear time. Our samples are generated in
+near-constant time using locality sensitive hashing (LSH), and so are
+correlated and unnormalized. We demonstrate the effectiveness of our proposed
+approach by comparing the accuracy and speed of estimating the partition
+function against other state-of-the-art estimation techniques including IS and
+the efficient variant of Gumbel-Max sampling. With our efficient sampling
+scheme, we accurately train real-world language models using only 1-2% of
+computations.
+
+
+MISSION: Ultra Large-Scale Feature Selection using Count-Sketches
+
+  Feature selection is an important challenge in machine learning. It plays a
+crucial role in the explainability of machine-driven decisions that are rapidly
+permeating throughout modern society. Unfortunately, the explosion in the size
+and dimensionality of real-world datasets poses a severe challenge to standard
+feature selection algorithms. Today, it is not uncommon for datasets to have
+billions of dimensions. At such scale, even storing the feature vector is
+impossible, causing most existing feature selection methods to fail.
+Workarounds like feature hashing, a standard approach to large-scale machine
+learning, helps with the computational feasibility, but at the cost of losing
+the interpretability of features. In this paper, we present MISSION, a novel
+framework for ultra large-scale feature selection that performs stochastic
+gradient descent while maintaining an efficient representation of the features
+in memory using a Count-Sketch data structure. MISSION retains the simplicity
+of feature hashing without sacrificing the interpretability of the features
+while using only O(log^2(p)) working memory. We demonstrate that MISSION
+accurately and efficiently performs feature selection on real-world,
+large-scale datasets with billions of dimensions.
+
+
+Compressing Gradient Optimizers via Count-Sketches
+
+  Many popular first-order optimization methods (e.g., Momentum, AdaGrad, Adam)
+accelerate the convergence rate of deep learning models. However, these
+algorithms require auxiliary parameters, which cost additional memory
+proportional to the number of parameters in the model. The problem is becoming
+more severe as deep learning models continue to grow larger in order to learn
+from complex, large-scale datasets. Our proposed solution is to maintain a
+linear sketch to compress the auxiliary variables. We demonstrate that our
+technique has the same performance as the full-sized baseline, while using
+significantly less space for the auxiliary variables. Theoretically, we prove
+that count-sketch optimization maintains the SGD convergence rate, while
+gracefully reducing memory usage for large-models. On the large-scale 1-Billion
+Word dataset, we save 25% of the memory used during training (8.6 GB instead of
+11.7 GB) by compressing the Adam optimizer in the Embedding and Softmax layers
+with negligible accuracy and performance loss. For an Amazon extreme
+classification task with over 49.5 million classes, we also reduce the training
+time by 38%, by increasing the mini-batch size 3.5x using our count-sketch
+optimizer.
+
+
+RACE: Sub-Linear Memory Sketches for Approximate Near-Neighbor Search on
+  Streaming Data
+
+  We present the first sublinear memory sketch which can be queried to find the
+$v$ nearest neighbors in a dataset. Our online sketching algorithm can compress
+an $N$-element dataset to a sketch of size $O(N^b \log^3{N})$ in $O(N^{b+1}
+\log^3{N})$ time, where $b < 1$ when the query satisfies a data-dependent
+near-neighbor stability condition.
+  We achieve data-dependent sublinear space by combining recent advances in
+locality sensitive hashing (LSH)-based estimators with compressed sensing. Our
+results shed new light on the memory-accuracy tradeoff for near-neighbor
+search. The techniques presented reveal a deep connection between the
+fundamental compressed sensing (or heavy hitters) recovery problem and
+near-neighbor search, leading to new insight for geometric search problems and
+implications for sketching algorithms.
+
+
+Using Local Experiences for Global Motion Planning
+
+  Sampling-based planners are effective in many real-world applications such as
+robotics manipulation, navigation, and even protein modeling. However, it is
+often challenging to generate a collision-free path in environments where key
+areas are hard to sample. In the absence of any prior information,
+sampling-based planners are forced to explore uniformly or heuristically, which
+can lead to degraded performance. One way to improve performance is to use
+prior knowledge of environments to adapt the sampling strategy to the problem
+at hand. In this work, we decompose the workspace into local primitives,
+memorizing local experiences by these primitives in the form of local samplers,
+and store them in a database. We synthesize an efficient global sampler by
+retrieving local experiences relevant to the given situation. Our method
+transfers knowledge effectively between diverse environments that share local
+primitives and speeds up the performance dramatically. Our results show, in
+terms of solution time, an improvement of multiple orders of magnitude in two
+traditionally challenging high-dimensional problems compared to
+state-of-the-art approaches.
+
+
+b-Bit Minwise Hashing in Practice: Large-Scale Batch and Online Learning
+  and Using GPUs for Fast Preprocessing with Simple Hash Functions
+
+  In this paper, we study several critical issues which must be tackled before
+one can apply b-bit minwise hashing to the volumes of data often used
+industrial applications, especially in the context of search.
+  1. (b-bit) Minwise hashing requires an expensive preprocessing step that
+computes k (e.g., 500) minimal values after applying the corresponding
+permutations for each data vector. We developed a parallelization scheme using
+GPUs and observed that the preprocessing time can be reduced by a factor of
+20-80 and becomes substantially smaller than the data loading time.
+  2. One major advantage of b-bit minwise hashing is that it can substantially
+reduce the amount of memory required for batch learning. However, as online
+algorithms become increasingly popular for large-scale learning in the context
+of search, it is not clear if b-bit minwise yields significant improvements for
+them. This paper demonstrates that $b$-bit minwise hashing provides an
+effective data size/dimension reduction scheme and hence it can dramatically
+reduce the data loading time for each epoch of the online training process.
+This is significant because online learning often requires many (e.g., 10 to
+100) epochs to reach a sufficient accuracy.
+  3. Another critical issue is that for very large data sets it becomes
+impossible to store a (fully) random permutation matrix, due to its space
+requirements. Our paper is the first study to demonstrate that $b$-bit minwise
+hashing implemented using simple hash functions, e.g., the 2-universal (2U) and
+4-universal (4U) hash families, can produce very similar learning results as
+using fully random permutations. Experiments on datasets of up to 200GB are
+presented.
+
+
+A New Space for Comparing Graphs
+
+  Finding a new mathematical representations for graph, which allows direct
+comparison between different graph structures, is an open-ended research
+direction. Having such a representation is the first prerequisite for a variety
+of machine learning algorithms like classification, clustering, etc., over
+graph datasets. In this paper, we propose a symmetric positive semidefinite
+matrix with the $(i,j)$-{th} entry equal to the covariance between normalized
+vectors $A^ie$ and $A^je$ ($e$ being vector of all ones) as a representation
+for graph with adjacency matrix $A$. We show that the proposed matrix
+representation encodes the spectrum of the underlying adjacency matrix and it
+also contains information about the counts of small sub-structures present in
+the graph such as triangles and small paths. In addition, we show that this
+matrix is a \emph{"graph invariant"}. All these properties make the proposed
+matrix a suitable object for representing graphs.
+  The representation, being a covariance matrix in a fixed dimensional metric
+space, gives a mathematical embedding for graphs. This naturally leads to a
+measure of similarity on graph objects. We define similarity between two given
+graphs as a Bhattacharya similarity measure between their corresponding
+covariance matrix representations. As shown in our experimental study on the
+task of social network classification, such a similarity measure outperforms
+other widely used state-of-the-art methodologies. Our proposed method is also
+computationally efficient. The computation of both the matrix representation
+and the similarity value can be performed in operations linear in the number of
+edges. This makes our method scalable in practice.
+  We believe our theoretical and empirical results provide evidence for
+studying truncated power iterations, of the adjacency matrix, to characterize
+social networks.
+
+
+2-Bit Random Projections, NonLinear Estimators, and Approximate Near
+  Neighbor Search
+
+  The method of random projections has become a standard tool for machine
+learning, data mining, and search with massive data at Web scale. The effective
+use of random projections requires efficient coding schemes for quantizing
+(real-valued) projected data into integers. In this paper, we focus on a simple
+2-bit coding scheme. In particular, we develop accurate nonlinear estimators of
+data similarity based on the 2-bit strategy. This work will have important
+practical applications. For example, in the task of near neighbor search, a
+crucial step (often called re-ranking) is to compute or estimate data
+similarities once a set of candidate data points have been identified by hash
+table techniques. This re-ranking step can take advantage of the proposed
+coding scheme and estimator.
+  As a related task, in this paper, we also study a simple uniform quantization
+scheme for the purpose of building hash tables with projected data. Our
+analysis shows that typically only a small number of bits are needed. For
+example, when the target similarity level is high, 2 or 3 bits might be
+sufficient. When the target similarity level is not so high, it is preferable
+to use only 1 or 2 bits. Therefore, a 2-bit scheme appears to be overall a good
+choice for the task of sublinear time approximate near neighbor search via hash
+tables.
+  Combining these results, we conclude that 2-bit random projections should be
+recommended for approximate near neighbor search and similarity estimation.
+Extensive experimental results are provided.
+
+
+Scalable and Sustainable Deep Learning via Randomized Hashing
+
+  Current deep learning architectures are growing larger in order to learn from
+complex datasets. These architectures require giant matrix multiplication
+operations to train millions of parameters. Conversely, there is another
+growing trend to bring deep learning to low-power, embedded devices. The matrix
+operations, associated with both training and testing of deep networks, are
+very expensive from a computational and energy standpoint. We present a novel
+hashing based technique to drastically reduce the amount of computation needed
+to train and test deep networks. Our approach combines recent ideas from
+adaptive dropouts and randomized hashing for maximum inner product search to
+select the nodes with the highest activation efficiently. Our new algorithm for
+deep learning reduces the overall computational cost of forward and
+back-propagation by operating on significantly fewer (sparse) nodes. As a
+consequence, our algorithm uses only 5% of the total multiplications, while
+keeping on average within 1% of the accuracy of the original model. A unique
+property of the proposed hashing based back-propagation is that the updates are
+always sparse. Due to the sparse gradient updates, our algorithm is ideally
+suited for asynchronous and parallel training leading to near linear speedup
+with increasing number of cores. We demonstrate the scalability and
+sustainability (energy efficiency) of our proposed algorithm via rigorous
+experimental evaluations on several real datasets.
+
+
+In Defense of MinHash Over SimHash
+
+  MinHash and SimHash are the two widely adopted Locality Sensitive Hashing
+(LSH) algorithms for large-scale data processing applications. Deciding which
+LSH to use for a particular problem at hand is an important question, which has
+no clear answer in the existing literature. In this study, we provide a
+theoretical answer (validated by experiments) that MinHash virtually always
+outperforms SimHash when the data are binary, as common in practice such as
+search.
+  The collision probability of MinHash is a function of resemblance similarity
+($\mathcal{R}$), while the collision probability of SimHash is a function of
+cosine similarity ($\mathcal{S}$). To provide a common basis for comparison, we
+evaluate retrieval results in terms of $\mathcal{S}$ for both MinHash and
+SimHash. This evaluation is valid as we can prove that MinHash is a valid LSH
+with respect to $\mathcal{S}$, by using a general inequality $\mathcal{S}^2\leq
+\mathcal{R}\leq \frac{\mathcal{S}}{2-\mathcal{S}}$. Our worst case analysis can
+show that MinHash significantly outperforms SimHash in high similarity region.
+  Interestingly, our intensive experiments reveal that MinHash is also
+substantially better than SimHash even in datasets where most of the data
+points are not too similar to each other. This is partly because, in practical
+data, often $\mathcal{R}\geq \frac{\mathcal{S}}{z-\mathcal{S}}$ holds where $z$
+is only slightly larger than 2 (e.g., $z\leq 2.1$). Our restricted worst case
+analysis by assuming $\frac{\mathcal{S}}{z-\mathcal{S}}\leq \mathcal{R}\leq
+\frac{\mathcal{S}}{2-\mathcal{S}}$ shows that MinHash indeed significantly
+outperforms SimHash even in low similarity region.
+  We believe the results in this paper will provide valuable guidelines for
+search in practice, especially when the data are sparse.
+
+
+SSH (Sketch, Shingle, & Hash) for Indexing Massive-Scale Time Series
+
+  Similarity search on time series is a frequent operation in large-scale
+data-driven applications. Sophisticated similarity measures are standard for
+time series matching, as they are usually misaligned. Dynamic Time Warping or
+DTW is the most widely used similarity measure for time series because it
+combines alignment and matching at the same time. However, the alignment makes
+DTW slow. To speed up the expensive similarity search with DTW, branch and
+bound based pruning strategies are adopted. However, branch and bound based
+pruning are only useful for very short queries (low dimensional time series),
+and the bounds are quite weak for longer queries. Due to the loose bounds
+branch and bound pruning strategy boils down to a brute-force search.
+  To circumvent this issue, we design SSH (Sketch, Shingle, & Hashing), an
+efficient and approximate hashing scheme which is much faster than the
+state-of-the-art branch and bound searching technique: the UCR suite. SSH uses
+a novel combination of sketching, shingling and hashing techniques to produce
+(probabilistic) indexes which align (near perfectly) with DTW similarity
+measure. The generated indexes are then used to create hash buckets for
+sub-linear search. Our results show that SSH is very effective for longer time
+sequence and prunes around 95% candidates, leading to the massive speedup in
+search with DTW. Empirical results on two large-scale benchmark time series
+data show that our proposed method can be around 20 times faster than the
+state-of-the-art package (UCR suite) without any significant loss in accuracy.
+
+
+Sub-Linear Privacy-Preserving Near-Neighbor Search with Untrusted Server
+  on Large-Scale Datasets
+
+  In Near-Neighbor Search (NNS), a new client queries a database (held by a
+server) for the most similar data (near-neighbors) given a certain similarity
+metric. The Privacy-Preserving variant (PP-NNS) requires that neither server
+nor the client shall learn information about the other party's data except what
+can be inferred from the outcome of NNS. The overwhelming growth in the size of
+current datasets and the lack of a truly secure server in the online world
+render the existing solutions impractical; either due to their high
+computational requirements or non-realistic assumptions which potentially
+compromise privacy. PP-NNS having query time {\it sub-linear} in the size of
+the database has been suggested as an open research direction by Li et al.
+(CCSW'15). In this paper, we provide the first such algorithm, called Secure
+Locality Sensitive Indexing (SLSI) which has a sub-linear query time and the
+ability to handle honest-but-curious parties. At the heart of our proposal lies
+a secure binary embedding scheme generated from a novel probabilistic
+transformation over locality sensitive hashing family. We provide information
+theoretic bound for the privacy guarantees and support our theoretical claims
+using substantial empirical evidence on real-world datasets.
+
+
+Accelerating Dependency Graph Learning from Heterogeneous Categorical
+  Event Streams via Knowledge Transfer
+
+  Dependency graph, as a heterogeneous graph representing the intrinsic
+relationships between different pairs of system entities, is essential to many
+data analysis applications, such as root cause diagnosis, intrusion detection,
+etc. Given a well-trained dependency graph from a source domain and an immature
+dependency graph from a target domain, how can we extract the entity and
+dependency knowledge from the source to enhance the target? One way is to
+directly apply a mature dependency graph learned from a source domain to the
+target domain. But due to the domain variety problem, directly using the source
+dependency graph often can not achieve good performance. Traditional transfer
+learning methods mainly focus on numerical data and are not applicable.
+  In this paper, we propose ACRET, a knowledge transfer based model for
+accelerating dependency graph learning from heterogeneous categorical event
+streams. In particular, we first propose an entity estimation model to filter
+out irrelevant entities from the source domain based on entity embedding and
+manifold learning. Only the entities with statistically high correlations are
+transferred to the target domain. On the surviving entities, we propose a
+dependency construction model for constructing the unbiased dependency
+relationships by solving a two-constraint optimization problem. The
+experimental results on synthetic and real-world datasets demonstrate the
+effectiveness and efficiency of ACRET. We also apply ACRET to a real enterprise
+security system for intrusion detection. Our method is able to achieve superior
+detection performance at least 20 days lead lag time in advance with more than
+70% accuracy.
+
+
+FLASH: Randomized Algorithms Accelerated over CPU-GPU for Ultra-High
+  Dimensional Similarity Search
+
+  We present FLASH (\textbf{F}ast \textbf{L}SH \textbf{A}lgorithm for
+\textbf{S}imilarity search accelerated with \textbf{H}PC), a similarity search
+system for ultra-high dimensional datasets on a single machine, that does not
+require similarity computations and is tailored for high-performance computing
+platforms. By leveraging a LSH style randomized indexing procedure and
+combining it with several principled techniques, such as reservoir sampling,
+recent advances in one-pass minwise hashing, and count based estimations, we
+reduce the computational and parallelization costs of similarity search, while
+retaining sound theoretical guarantees.
+  We evaluate FLASH on several real, high-dimensional datasets from different
+domains, including text, malicious URL, click-through prediction, social
+networks, etc. Our experiments shed new light on the difficulties associated
+with datasets having several million dimensions. Current state-of-the-art
+implementations either fail on the presented scale or are orders of magnitude
+slower than FLASH. FLASH is capable of computing an approximate k-NN graph,
+from scratch, over the full webspam dataset (1.3 billion nonzeros) in less than
+10 seconds. Computing a full k-NN graph in less than 10 seconds on the webspam
+dataset, using brute-force ($n^2D$), will require at least 20 teraflops. We
+provide CPU and GPU implementations of FLASH for replicability of our results.
+
+
+Unique Entity Estimation with Application to the Syrian Conflict
+
+  Entity resolution identifies and removes duplicate entities in large, noisy
+databases and has grown in both usage and new developments as a result of
+increased data availability. Nevertheless, entity resolution has tradeoffs
+regarding assumptions of the data generation process, error rates, and
+computational scalability that make it a difficult task for real applications.
+In this paper, we focus on a related problem of unique entity estimation, which
+is the task of estimating the unique number of entities and associated standard
+errors in a data set with duplicate entities. Unique entity estimation shares
+many fundamental challenges of entity resolution, namely, that the
+computational cost of all-to-all entity comparisons is intractable for large
+databases. To circumvent this computational barrier, we propose an efficient
+(near-linear time) estimation algorithm based on locality sensitive hashing.
+Our estimator, under realistic assumptions, is unbiased and has provably low
+variance compared to existing random sampling based approaches. In addition, we
+empirically show its superiority over the state-of-the-art estimators on three
+real applications. The motivation for our work is to derive an accurate
+estimate of the documented, identifiable deaths in the ongoing Syrian conflict.
+Our methodology, when applied to the Syrian data set, provides an estimate of
+$191,874 \pm 1772$ documented, identifiable deaths, which is very close to the
+Human Rights Data Analysis Group (HRDAG) estimate of 191,369. Our work provides
+an example of challenges and efforts involved in solving a real, noisy
+challenging problem where modeling assumptions may not hold.
+
+
+Scaling-up Split-Merge MCMC with Locality Sensitive Sampling (LSS)
+
+  Split-Merge MCMC (Monte Carlo Markov Chain) is one of the essential and
+popular variants of MCMC for problems when an MCMC state consists of an unknown
+number of components. It is well known that state-of-the-art methods for
+split-merge MCMC do not scale well. Strategies for rapid mixing requires smart
+and informative proposals to reduce the rejection rate. However, all known
+smart proposals involve expensive operations to suggest informative
+transitions. As a result, the cost of each iteration is prohibitive for massive
+scale datasets. It is further known that uninformative but computationally
+efficient proposals, such as random split-merge, leads to extremely slow
+convergence. This tradeoff between mixing time and per update cost seems hard
+to get around.
+  In this paper, we show a sweet spot. We leverage some unique properties of
+weighted MinHash, which is a popular LSH, to design a novel class of
+split-merge proposals which are significantly more informative than random
+sampling but at the same time efficient to compute. Overall, we obtain a
+superior tradeoff between convergence and per update cost. As a direct
+consequence, our proposals are around 6X faster than the state-of-the-art
+sampling methods on two large real datasets KDDCUP and PubMed with several
+millions of entities and thousands of clusters.
+
+
+Want to bring a community together? Create more sub-communities
+
+  Understanding overlapping community structures is crucial for network
+analysis and prediction. AGM (Affiliation Graph Model) is one of the favorite
+models for explaining the densely overlapped community structures. In this
+paper, we thoroughly re-investigate the assumptions made by the AGM model on
+real datasets. We find that the AGM model is not sufficient to explain several
+empirical behaviors observed in popular real-world networks. To our surprise,
+all our experimental results can be explained by a parameter-free hypothesis,
+leading to more straightforward modeling than AGM which has many parameters.
+Based on these findings, we propose a parameter-free Jaccard-based Affiliation
+Graph (JAG) model which models the probability of edge as a network specific
+constant times the Jaccard similarity between community sets associated with
+the individuals. Our modeling is significantly simpler than AGM, and it
+eliminates the need of associating a parameter, the probability value, with
+each community. Furthermore, JAG model naturally explains why (and in fact
+when) overlapping communities are densely connected. Based on these
+observations, we propose a new community-driven friendship formation process,
+which mathematically recovers the JAG model. JAG is the first model that points
+towards a direct causal relationship between tight connections in the given
+community with the number of overlapping communities inside it. Thus, \emph{the
+most effective way to bring a community together is to form more
+sub-communities within it.} The community detection algorithm based on our
+modeling demonstrates a significantly simple algorithm with state-of-the-art
+accuracy on six real-world network datasets compared to the existing link
+analysis based methods.
+
+
+Extreme Classification in Log Memory
+
+  We present Merged-Averaged Classifiers via Hashing (MACH) for
+K-classification with ultra-large values of K. Compared to traditional
+one-vs-all classifiers that require O(Kd) memory and inference cost, MACH only
+need O(d log K) (d is dimensionality )memory while only requiring O(K log K + d
+log K) operation for inference. MACH is a generic K-classification algorithm,
+with provably theoretical guarantees, which requires O(log K) memory without
+any assumption on the relationship between classes. MACH uses universal hashing
+to reduce classification with a large number of classes to few independent
+classification tasks with small (constant) number of classes. We provide
+theoretical quantification of discriminability-memory tradeoff. With MACH we
+can train ODP dataset with 100,000 classes and 400,000 features on a single
+Titan X GPU, with the classification accuracy of 19.28%, which is the
+best-reported accuracy on this dataset. Before this work, the best performing
+baseline is a one-vs-all classifier that requires 40 billion parameters (160 GB
+model size) and achieves 9% accuracy. In contrast, MACH can achieve 9% accuracy
+with 480x reduction in the model size (of mere 0.3GB). With MACH, we also
+demonstrate complete training of fine-grained imagenet dataset (compressed size
+104GB), with 21,000 classes, on a single GPU. To the best of our knowledge,
+this is the first work to demonstrate complete training of these extreme-class
+datasets on a single Titan X.
+
+
+Better accuracy with quantified privacy: representations learned via
+  reconstructive adversarial network
+
+  The remarkable success of machine learning, especially deep learning, has
+produced a variety of cloud-based services for mobile users. Such services
+require an end user to send data to the service provider, which presents a
+serious challenge to end-user privacy. To address this concern, prior works
+either add noise to the data or send features extracted from the raw data. They
+struggle to balance between the utility and privacy because added noise reduces
+utility and raw data can be reconstructed from extracted features. This work
+represents a methodical departure from prior works: we balance between a
+measure of privacy and another of utility by leveraging adversarial learning to
+find a sweeter tradeoff. We design an encoder that optimizes against the
+reconstruction error (a measure of privacy), adversarially by a Decoder, and
+the inference accuracy (a measure of utility) by a Classifier. The result is
+RAN, a novel deep model with a new training algorithm that automatically
+extracts features for classification that are both private and useful. It turns
+out that adversarially forcing the extracted features to only conveys the
+intended information required by classification leads to an implicit
+regularization leading to better classification accuracy than the original
+model which completely ignores privacy. Thus, we achieve better privacy with
+better utility, a surprising possibility in machine learning! We conducted
+extensive experiments on five popular datasets over four training schemes, and
+demonstrate the superiority of RAN compared with existing alternatives.
+
+
+SLIDE : In Defense of Smart Algorithms over Hardware Acceleration for
+  Large-Scale Deep Learning Systems
+
+  Deep Learning (DL) algorithms are the central focus of modern machine
+learning systems. As data volumes keep growing, it has become customary to
+train large neural networks with hundreds of millions of parameters with enough
+capacity to memorize these volumes and obtain state-of-the-art accuracy. To get
+around the costly computations associated with large models and data, the
+community is increasingly investing in specialized hardware for model training.
+However, with the end of Moore's law, there is a limit to such scaling. The
+progress on the algorithmic front has failed to demonstrate a direct advantage
+over powerful hardware such as NVIDIA-V100 GPUs. This paper provides an
+exception. We propose SLIDE (Sub-LInear Deep learning Engine) that uniquely
+blends smart randomized algorithms, which drastically reduce the computation
+during both training and inference, with simple multi-core parallelism on a
+modest CPU. SLIDE is an auspicious illustration of the power of smart
+randomized algorithms over CPUs in outperforming the best available GPU with an
+optimized implementation. Our evaluations on large industry-scale datasets,
+with some large fully connected architectures, show that training with SLIDE on
+a 44 core CPU is more than 2.7 times (2 hours vs. 5.5 hours) faster than the
+same network trained using Tensorflow on Tesla V100 at any given accuracy
+level. We provide codes and benchmark scripts for reproducibility.
+
+

@@ -1,0 +1,41 @@
+Neural Symbolic Machines: Learning Semantic Parsers on Freebase with
+  Weak Supervision
+
+  Harnessing the statistical power of neural networks to perform language
+understanding and symbolic reasoning is difficult, when it requires executing
+efficient discrete operations against a large knowledge-base. In this work, we
+introduce a Neural Symbolic Machine, which contains (a) a neural "programmer",
+i.e., a sequence-to-sequence model that maps language utterances to programs
+and utilizes a key-variable memory to handle compositionality (b) a symbolic
+"computer", i.e., a Lisp interpreter that performs program execution, and helps
+find good programs by pruning the search space. We apply REINFORCE to directly
+optimize the task reward of this structured prediction problem. To train with
+weak supervision and improve the stability of REINFORCE, we augment it with an
+iterative maximum-likelihood training process. NSM outperforms the
+state-of-the-art on the WebQuestionsSP dataset when trained from
+question-answer pairs only, without requiring any feature engineering or
+domain-specific knowledge.
+
+
+Neural Symbolic Machines: Learning Semantic Parsers on Freebase with
+  Weak Supervision (Short Version)
+
+  Extending the success of deep neural networks to natural language
+understanding and symbolic reasoning requires complex operations and external
+memory. Recent neural program induction approaches have attempted to address
+this problem, but are typically limited to differentiable memory, and
+consequently cannot scale beyond small synthetic tasks. In this work, we
+propose the Manager-Programmer-Computer framework, which integrates neural
+networks with non-differentiable memory to support abstract, scalable and
+precise operations through a friendly neural computer interface. Specifically,
+we introduce a Neural Symbolic Machine, which contains a sequence-to-sequence
+neural "programmer", and a non-differentiable "computer" that is a Lisp
+interpreter with code assist. To successfully apply REINFORCE for training, we
+augment it with approximate gold programs found by an iterative maximum
+likelihood training process. NSM is able to learn a semantic parser from weak
+supervision over a large knowledge base. It achieves new state-of-the-art
+performance on WebQuestionsSP, a challenging semantic parsing dataset, with
+weak supervision. Compared to previous approaches, NSM is end-to-end, therefore
+does not rely on feature engineering or domain specific knowledge.
+
+

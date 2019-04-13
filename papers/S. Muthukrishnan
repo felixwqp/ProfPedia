@@ -1,0 +1,1033 @@
+Doubleclick Ad Exchange Auction
+
+  Display advertisements on the web are sold via ad exchanges that use real
+time auction. We describe the challenges of designing a suitable auction, and
+present a simple auction called the Optional Second Price (OSP) auction that is
+currently used in Doubleclick Ad Exchange.
+
+
+Nearly Optimal Private Convolution
+
+  We study computing the convolution of a private input $x$ with a public input
+$h$, while satisfying the guarantees of $(\epsilon, \delta)$-differential
+privacy. Convolution is a fundamental operation, intimately related to Fourier
+Transforms. In our setting, the private input may represent a time series of
+sensitive events or a histogram of a database of confidential personal
+information. Convolution then captures important primitives including linear
+filtering, which is an essential tool in time series analysis, and aggregation
+queries on projections of the data.
+  We give a nearly optimal algorithm for computing convolutions while
+satisfying $(\epsilon, \delta)$-differential privacy. Surprisingly, we follow
+the simple strategy of adding independent Laplacian noise to each Fourier
+coefficient and bounding the privacy loss using the composition theorem of
+Dwork, Rothblum, and Vadhan. We derive a closed form expression for the optimal
+noise to add to each Fourier coefficient using convex programming duality. Our
+algorithm is very efficient -- it is essentially no more computationally
+expensive than a Fast Fourier Transform.
+  To prove near optimality, we use the recent discrepancy lowerbounds of
+Muthukrishnan and Nikolov and derive a spectral lower bound using a
+characterization of discrepancy in terms of determinants.
+
+
+Internet Packet Filter Management and Rectangle Geometry
+
+  We consider rule sets for internet packet routing and filtering, where each
+rule consists of a range of source addresses, a range of destination addresses,
+a priority, and an action. A given packet should be handled by the action from
+the maximum priority rule that matches its source and destination. We describe
+new data structures for quickly finding the rule matching an incoming packet,
+in near-linear space, and a new algorithm for determining whether a rule set
+contains any conflicts, in time O(n^{3/2}).
+
+
+Group testing problems in experimental molecular biology
+
+  In group testing, the task is to determine the distinguished members of a set
+of objects L by asking subset queries of the form ``does the subset Q of L
+contain a distinguished object?'' The primary biological application of group
+testing is for screening libraries of clones with hybridization probes. This is
+a crucial step in constructing physical maps and for finding genes. Group
+testing has also been considered for sequencing by hybridization. Another
+important application includes screening libraries of reagents for useful
+chemically active zones. This preliminary report discusses some of the
+constrained group testing problems which arise in biology.
+
+
+Range Medians
+
+  We study a generalization of the classical median finding problem to batched
+query case: given an array of unsorted $n$ items and $k$ (not necessarily
+disjoint) intervals in the array, the goal is to determine the median in {\em
+each} of the intervals in the array. We give an algorithm that uses $O(n\log n
++ k\log k \log n)$ comparisons and show a lower bound of $\Omega(n\log k)$
+comparisons for this problem. This is optimal for $k=O(n/\log n)$.
+
+
+First Author Advantage: Citation Labeling in Research
+
+  Citations among research papers, and the networks they form, are the primary
+object of study in scientometrics. The act of making a citation reflects the
+citer's knowledge of the related literature, and of the work being cited. We
+aim to gain insight into this process by studying citation keys: user-chosen
+labels to identify a cited work. Our main observation is that the first listed
+author is disproportionately represented in such labels, implying a strong
+mental bias towards the first author.
+
+
+Algorithmic Methods for Sponsored Search Advertising
+
+  Modern commercial Internet search engines display advertisements along side
+the search results in response to user queries. Such sponsored search relies on
+market mechanisms to elicit prices for these advertisements, making use of an
+auction among advertisers who bid in order to have their ads shown for specific
+keywords. We present an overview of the current systems for such auctions and
+also describe the underlying game-theoretic aspects. The game involves three
+parties--advertisers, the search engine, and search users--and we present
+example research directions that emphasize the role of each. The algorithms for
+bidding and pricing in these games use techniques from three mathematical
+areas: mechanism design, optimization, and statistical estimation. Finally, we
+present some challenges in sponsored search advertising.
+
+
+Optimal cache-aware suffix selection
+
+  Given string $S[1..N]$ and integer $k$, the {\em suffix selection} problem is
+to determine the $k$th lexicographically smallest amongst the suffixes $S[i...
+N]$, $1 \leq i \leq N$. We study the suffix selection problem in the
+cache-aware model that captures two-level memory inherent in computing systems,
+for a \emph{cache} of limited size $M$ and block size $B$. The complexity of
+interest is the number of block transfers. We present an optimal suffix
+selection algorithm in the cache-aware model, requiring $\Thetah{N/B}$ block
+transfers, for any string $S$ over an unbounded alphabet (where characters can
+only be compared), under the common tall-cache assumption (i.e.
+$M=\Omegah{B^{1+\epsilon}}$, where $\epsilon<1$). Our algorithm beats the
+bottleneck bound for permuting an input array to the desired output array,
+which holds for nearly any nontrivial problem in hierarchical memory models.
+
+
+Pattern matching in Lempel-Ziv compressed strings: fast, simple, and
+  deterministic
+
+  Countless variants of the Lempel-Ziv compression are widely used in many
+real-life applications. This paper is concerned with a natural modification of
+the classical pattern matching problem inspired by the popularity of such
+compression methods: given an uncompressed pattern s[1..m] and a Lempel-Ziv
+representation of a string t[1..N], does s occur in t? Farach and Thorup gave a
+randomized O(nlog^2(N/n)+m) time solution for this problem, where n is the size
+of the compressed representation of t. We improve their result by developing a
+faster and fully deterministic O(nlog(N/n)+m) time algorithm with the same
+space complexity. Note that for highly compressible texts, log(N/n) might be of
+order n, so for such inputs the improvement is very significant. A (tiny)
+fragment of our method can be used to give an asymptotically optimal solution
+for the substring hashing problem considered by Farach and Muthukrishnan.
+
+
+Estimating Aggregate Properties on Probabilistic Streams
+
+  The probabilistic-stream model was introduced by Jayram et al. \cite{JKV07}.
+It is a generalization of the data stream model that is suited to handling
+``probabilistic'' data where each item of the stream represents a probability
+distribution over a set of possible events. Therefore, a probabilistic stream
+determines a distribution over potentially a very large number of classical
+"deterministic" streams where each item is deterministically one of the domain
+values. The probabilistic model is applicable for not only analyzing streams
+where the input has uncertainties (such as sensor data streams that measure
+physical processes) but also where the streams are derived from the input data
+by post-processing, such as tagging or reconciling inconsistent and poor
+quality data.
+  We present streaming algorithms for computing commonly used aggregates on a
+probabilistic stream. We present the first known, one pass streaming algorithm
+for estimating the \AVG, improving results in \cite{JKV07}. We present the
+first known streaming algorithms for estimating the number of \DISTINCT items
+on probabilistic streams. Further, we present extensions to other aggregates
+such as the repeat rate, quantiles, etc. In all cases, our algorithms work with
+provable accuracy guarantees and within the space constraints of the data
+stream model.
+
+
+Budget Optimization in Search-Based Advertising Auctions
+
+  Internet search companies sell advertisement slots based on users' search
+queries via an auction. While there has been a lot of attention on the auction
+process and its game-theoretic aspects, our focus is on the advertisers. In
+particular, the advertisers have to solve a complex optimization problem of how
+to place bids on the keywords of their interest so that they can maximize their
+return (the number of user clicks on their ads) for a given budget. We model
+the entire process and study this budget optimization problem. While most
+variants are NP hard, we show, perhaps surprisingly, that simply randomizing
+between two uniform strategies that bid equally on all the keywords works well.
+More precisely, this strategy gets at least 1-1/e fraction of the maximum
+clicks possible. Such uniform strategies are likely to be practical. We also
+present inapproximability results, and optimal algorithms for variants of the
+budget optimization problem.
+
+
+Stochastic Models for Budget Optimization in Search-Based Advertising
+
+  Internet search companies sell advertisement slots based on users' search
+queries via an auction. Advertisers have to determine how to place bids on the
+keywords of their interest in order to maximize their return for a given
+budget: this is the budget optimization problem. The solution depends on the
+distribution of future queries.
+  In this paper, we formulate stochastic versions of the budget optimization
+problem based on natural probabilistic models of distribution over future
+queries, and address two questions that arise.
+  [Evaluation] Given a solution, can we evaluate the expected value of the
+objective function?
+  [Optimization] Can we find a solution that maximizes the objective function
+in expectation?
+  Our main results are approximation and complexity results for these two
+problems in our three stochastic models. In particular, our algorithmic results
+show that simple prefix strategies that bid on all cheap keywords up to some
+level are either optimal or good approximations for many cases; we show other
+cases to be NP-hard.
+
+
+Radix Sorting With No Extra Space
+
+  It is well known that n integers in the range [1,n^c] can be sorted in O(n)
+time in the RAM model using radix sorting. More generally, integers in any
+range [1,U] can be sorted in O(n sqrt{loglog n}) time. However, these
+algorithms use O(n) words of extra memory. Is this necessary?
+  We present a simple, stable, integer sorting algorithm for words of size
+O(log n), which works in O(n) time and uses only O(1) words of extra memory on
+a RAM model. This is the integer sorting case most useful in practice. We
+extend this result with same bounds to the case when the keys are read-only,
+which is of theoretical interest. Another interesting question is the case of
+arbitrary c. Here we present a black-box transformation from any RAM sorting
+algorithm to a sorting algorithm which uses only O(1) extra space and has the
+same running time. This settles the complexity of in-place sorting in terms of
+the complexity of sorting.
+
+
+Faster Least Squares Approximation
+
+  Least squares approximation is a technique to find an approximate solution to
+a system of linear equations that has no exact solution. In a typical setting,
+one lets $n$ be the number of constraints and $d$ be the number of variables,
+with $n \gg d$. Then, existing exact methods find a solution vector in
+$O(nd^2)$ time. We present two randomized algorithms that provide very accurate
+relative-error approximations to the optimal value and the solution vector of a
+least squares approximation problem more rapidly than existing exact
+algorithms. Both of our algorithms preprocess the data with the Randomized
+Hadamard Transform. One then uniformly randomly samples constraints and solves
+the smaller problem on those constraints, and the other performs a sparse
+random projection and solves the smaller problem on those projected
+coordinates. In both cases, solving the smaller problem provides relative-error
+approximations, and, if $n$ is sufficiently larger than $d$, the approximate
+solution can be computed in $O(nd \log d)$ time.
+
+
+Selective Call Out and Real Time Bidding
+
+  Ads on the Internet are increasingly sold via ad exchanges such as
+RightMedia, AdECN and Doubleclick Ad Exchange. These exchanges allow real-time
+bidding, that is, each time the publisher contacts the exchange, the exchange
+``calls out'' to solicit bids from ad networks. This aspect of soliciting bids
+introduces a novel aspect, in contrast to existing literature. This suggests
+developing a joint optimization framework which optimizes over the allocation
+and well as solicitation. We model this selective call out as an online
+recurrent Bayesian decision framework with bandwidth type constraints. We
+obtain natural algorithms with bounded performance guarantees for several
+natural optimization criteria. We show that these results hold under different
+call out constraint models, and different arrival processes. Interestingly, the
+paper shows that under MHR assumptions, the expected revenue of generalized
+second price auction with reserve is constant factor of the expected welfare.
+Also the analysis herein allow us prove adaptivity gap type results for the
+adwords problem.
+
+
+Node Classification in Social Networks
+
+  When dealing with large graphs, such as those that arise in the context of
+online social networks, a subset of nodes may be labeled. These labels can
+indicate demographic values, interest, beliefs or other characteristics of the
+nodes (users). A core problem is to use this information to extend the labeling
+so that all nodes are assigned a label (or labels). In this chapter, we survey
+classification techniques that have been proposed for this problem. We consider
+two broad categories: methods based on iterative application of traditional
+classifiers using graph information as features, and methods which propagate
+the existing labels via random walks. We adopt a common perspective on these
+methods to highlight the similarities between different approaches within and
+across the two categories. We also describe some extensions and related
+directions to the central problem of node classification.
+
+
+Private Decayed Sum Estimation under Continual Observation
+
+  In monitoring applications, recent data is more important than distant data.
+How does this affect privacy of data analysis? We study a general class of data
+analyses - computing predicate sums - with privacy. Formally, we study the
+problem of estimating predicate sums {\em privately}, for sliding windows (and
+other well-known decay models of data, i.e. exponential and polynomial decay).
+We extend the recently proposed continual privacy model of Dwork et al.
+  We present algorithms for decayed sum which are $\eps$-differentially
+private, and are accurate. For window and exponential decay sums, our
+algorithms are accurate up to additive $1/\eps$ and polylog terms in the range
+of the computed function; for polynomial decay sums which are technically more
+challenging because partial solutions do not compose easily, our algorithms
+incur additional relative error. Further, we show lower bounds, tight within
+polylog factors and tight with respect to the dependence on the probability of
+error.
+
+
+Scienceography: the study of how science is written
+
+  Scientific literature has itself been the subject of much scientific study,
+for a variety of reasons: understanding how results are communicated, how ideas
+spread, and assessing the influence of areas or individuals. However, most
+prior work has focused on extracting and analyzing citation and stylistic
+patterns. In this work, we introduce the notion of 'scienceography', which
+focuses on the writing of science. We provide a first large scale study using
+data derived from the arXiv e-print repository. Crucially, our data includes
+the "source code" of scientific papers-the LaTEX source-which enables us to
+study features not present in the "final product", such as the tools used and
+private comments between authors. Our study identifies broad patterns and
+trends in two example areas-computer science and mathematics-as well as
+highlighting key differences in the way that science is written in these
+fields. Finally, we outline future directions to extend the new topic of
+scienceography.
+
+
+Analyses of Cardinal Auctions
+
+  We study cardinal auctions for selling multiple copies of a good, in which
+bidders specify not only their bid or how much they are ready to pay for the
+good, but also a cardinality constraint on the number of copies that will be
+sold via the auction. We perform first known Price of Anarchy type analyses
+with detailed comparison of the classical Vickrey-Clarke-Groves (VCG) auction
+and one based on minimum pay property (MPP) which is similar to Generalized
+Second Price auction commonly used in sponsored search. Without cardinality
+constraints, MPP has the same efficiency (total value to bidders) and at least
+as much revenue (total income to the auctioneer) as VCG; this also holds for
+certain other generalizations of MPP (e.g., prefix constrained auctions, as we
+show here). In contrast, our main results are that, with cardinality
+constraints, (a) equilibrium efficiency of MPP is 1/2 of that of VCG and this
+factor is tight, and (b) in equilibrium MPP may collect as little as 1/2 the
+revenue of VCG. These aspects arise because in presence of cardinality
+constraints, more strategies are available to bidders in MPP, including bidding
+above their value, and this makes analyses nontrivial.
+
+
+Socializing the h-index
+
+  A variety of bibliometric measures have been proposed to quantify the impact
+of researchers and their work. The h-index is a notable and widely-used example
+which aims to improve over simple metrics such as raw counts of papers or
+citations. However, a limitation of this measure is that it considers authors
+in isolation and does not account for contributions through a collaborative
+team. To address this, we propose a natural variant that we dub the Social
+h-index. The idea is to redistribute the h-index score to reflect an
+individual's impact on the research community. In addition to describing this
+new measure, we provide examples, discuss its properties, and contrast with
+other measures.
+
+
+Quasi-Proportional Mechanisms: Prior-free Revenue Maximization
+
+  Inspired by Internet ad auction applications, we study the problem of
+allocating a single item via an auction when bidders place very different
+values on the item. We formulate this as the problem of prior-free auction and
+focus on designing a simple mechanism that always allocates the item. Rather
+than designing sophisticated pricing methods like prior literature, we design
+better allocation methods. In particular, we propose quasi-proportional
+allocation methods in which the probability that an item is allocated to a
+bidder depends (quasi-proportionally) on the bids.
+  We prove that corresponding games for both all-pay and winners-pay
+quasi-proportional mechanisms admit pure Nash equilibria and this equilibrium
+is unique. We also give an algorithm to compute this equilibrium in polynomial
+time. Further, we show that the revenue of the auctioneer is promisingly high
+compared to the ultimate, i.e., the highest value of any of the bidders, and
+show bounds on the revenue of equilibria both analytically, as well as using
+experiments for specific quasi-proportional functions. This is the first known
+revenue analysis for these natural mechanisms (including the special case of
+proportional mechanism which is common in network resource allocation
+problems).
+
+
+A Time and Space Efficient Algorithm for Contextual Linear Bandits
+
+  We consider a multi-armed bandit problem where payoffs are a linear function
+of an observed stochastic contextual variable. In the scenario where there
+exists a gap between optimal and suboptimal rewards, several algorithms have
+been proposed that achieve $O(\log T)$ regret after $T$ time steps. However,
+proposed methods either have a computation complexity per iteration that scales
+linearly with $T$ or achieve regrets that grow linearly with the number of
+contexts $|\myset{X}|$. We propose an $\epsilon$-greedy type of algorithm that
+solves both limitations. In particular, when contexts are variables in
+$\reals^d$, we prove that our algorithm has a constant computation complexity
+per iteration of $O(poly(d))$ and can achieve a regret of $O(poly(d) \log T)$
+even when $|\myset{X}| = \Omega (2^d) $. In addition, unlike previous
+algorithms, its space complexity scales like $O(Kd^2)$ and does not grow with
+$T$.
+
+
+People Like Us: Mining Scholarly Data for Comparable Researchers
+
+  We present the problem of finding comparable researchers for any given
+researcher. This problem has many motivations. Firstly, know thyself. The
+answers of where we stand among research community and who we are most alike
+may not be easily found by existing evaluations of ones' research mainly based
+on citation counts. Secondly, there are many situations where one needs to find
+comparable researchers e.g., for reviewing peers, constructing programming
+committees or compiling teams for grants. It is often done through an ad hoc
+and informal basis. Utilizing the large scale scholarly data accessible on the
+web, we address the problem of automatically finding comparable researchers. We
+propose a standard to quantify the quality of research output, via the quality
+of publishing venues. We represent a researcher as a sequence of her
+publication records, and develop a framework of comparison of researchers by
+sequence matching. Several variations of comparisons are considered including
+matching by quality of publication venue and research topics, and performing
+prefix matching. We evaluate our methods on a large corpus and demonstrate the
+effectiveness of our methods through examples. In the end, we identify several
+promising directions for further work.
+
+
+A Consensus-Focused Group Recommender System
+
+  In many cases, recommendations are consumed by groups of users rather than
+individuals. In this paper, we present a system which recommends social events
+to groups. The system helps groups to organize a joint activity and
+collectively select which activity to perform among several possible options.
+We also facilitate the consensus making, following the principle of group
+consensus decision making. Our system allows users to asynchronously vote, add
+and comment on alternatives. We observe social influence within groups through
+post-recommendation feedback during the group decision making process. We
+propose a decision cascading model and estimate such social influence, which
+can be used to improve the performance of group recommendation. We conduct
+experiments to measure the prediction performance of our model. The result
+shows that the model achieves better results than that of independent decision
+making model.
+
+
+Frugal Streaming for Estimating Quantiles:One (or two) memory suffices
+
+  Modern applications require processing streams of data for estimating
+statistical quantities such as quantiles with small amount of memory. In many
+such applications, in fact, one needs to compute such statistical quantities
+for each of a large number of groups, which additionally restricts the amount
+of memory available for the stream for any particular group. We address this
+challenge and introduce frugal streaming, that is algorithms that work with
+tiny -- typically, sub-streaming -- amount of memory per group.
+  We design a frugal algorithm that uses only one unit of memory per group to
+compute a quantile for each group. For stochastic streams where data items are
+drawn from a distribution independently, we analyze and show that the algorithm
+finds an approximation to the quantile rapidly and remains stably close to it.
+We also propose an extension of this algorithm that uses two units of memory
+per group. We show with extensive experiments with real world data from HTTP
+trace and Twitter that our frugal algorithms are comparable to existing
+streaming algorithms for estimating any quantile, but these existing algorithms
+use far more space per group and are unrealistic in frugal applications;
+further, the two memory frugal algorithm converges significantly faster than
+the one memory algorithm.
+
+
+Modeling Collaboration in Academia: A Game Theoretic Approach
+
+  In this work, we aim to understand the mechanisms driving academic
+collaboration. We begin by building a model for how researchers split their
+effort between multiple papers, and how collaboration affects the number of
+citations a paper receives, supported by observations from a large real-world
+publication and citation dataset, which we call the h-Reinvestment model. Using
+tools from the field of Game Theory, we study researchers' collaborative
+behavior over time under this model, with the premise that each researcher
+wants to maximize his or her academic success. We find analytically that there
+is a strong incentive to collaborate rather than work in isolation, and that
+studying collaborative behavior through a game-theoretic lens is a promising
+approach to help us better understand the nature and dynamics of academic
+collaboration.
+
+
+Heavy-Hitter Detection Entirely in the Data Plane
+
+  Identifying the "heavy hitter" flows or flows with large traffic volumes in
+the data plane is important for several applications e.g., flow-size aware
+routing, DoS detection, and traffic engineering. However, measurement in the
+data plane is constrained by the need for line-rate processing (at 10-100Gb/s)
+and limited memory in switching hardware. We propose HashPipe, a heavy hitter
+detection algorithm using emerging programmable data planes. HashPipe
+implements a pipeline of hash tables which retain counters for heavy flows
+while evicting lighter flows over time. We prototype HashPipe in P4 and
+evaluate it with packet traces from an ISP backbone link and a data center. On
+the ISP trace (which contains over 400,000 flows), we find that HashPipe
+identifies 95% of the 300 heaviest flows with less than 80KB of memory.
+
+
+Testable Bounded Degree Graph Properties Are Random Order Streamable
+
+  We study which property testing and sublinear time algorithms can be
+transformed into graph streaming algorithms for random order streams. Our main
+result is that for bounded degree graphs, any property that is constant-query
+testable in the adjacency list model can be tested with constant space in a
+single-pass in random order streams. Our result is obtained by estimating the
+distribution of local neighborhoods of the vertices on a random order graph
+stream using constant space.
+  We then show that our approach can also be applied to constant time
+approximation algorithms for bounded degree graphs in the adjacency list model:
+As an example, we obtain a constant-space single-pass random order streaming
+algorithms for approximating the size of a maximum matching with additive error
+$\epsilon n$ ($n$ is the number of nodes).
+  Our result establishes for the first time that a large class of sublinear
+algorithms can be simulated in random order streams, while $\Omega(n)$ space is
+needed for many graph streaming problems for adversarial orders.
+
+
+Stochastic Low-Rank Bandits
+
+  Many problems in computer vision and recommender systems involve low-rank
+matrices. In this work, we study the problem of finding the maximum entry of a
+stochastic low-rank matrix from sequential observations. At each step, a
+learning agent chooses pairs of row and column arms, and receives the noisy
+product of their latent values as a reward. The main challenge is that the
+latent values are unobserved. We identify a class of non-negative matrices
+whose maximum entry can be found statistically efficiently and propose an
+algorithm for finding them, which we call LowRankElim. We derive a
+$\DeclareMathOperator{\poly}{poly} O((K + L) \poly(d) \Delta^{-1} \log n)$
+upper bound on its $n$-step regret, where $K$ is the number of rows, $L$ is the
+number of columns, $d$ is the rank of the matrix, and $\Delta$ is the minimum
+gap. The bound depends on other problem-specific constants that clearly do not
+depend $K L$. To the best of our knowledge, this is the first such result in
+the literature.
+
+
+Offline Evaluation of Ranking Policies with Click Models
+
+  Many web systems rank and present a list of items to users, from recommender
+systems to search and advertising. An important problem in practice is to
+evaluate new ranking policies offline and optimize them before they are
+deployed. We address this problem by proposing evaluation algorithms for
+estimating the expected number of clicks on ranked lists from historical logged
+data. The existing algorithms are not guaranteed to be statistically efficient
+in our problem because the number of recommended lists can grow exponentially
+with their length. To overcome this challenge, we use models of user
+interaction with the list of items, the so-called click models, to construct
+estimators that learn statistically efficiently. We analyze our estimators and
+prove that they are more efficient than the estimators that do not use the
+structure of the click model, under the assumption that the click model holds.
+We evaluate our estimators in a series of experiments on a real-world dataset
+and show that they consistently outperform prior estimators.
+
+
+The Shapley Value in Knapsack Budgeted Games
+
+  We propose the study of computing the Shapley value for a new class of
+cooperative games that we call budgeted games, and investigate in particular
+knapsack budgeted games, a version modeled after the classical knapsack
+problem. In these games, the "value" of a set $S$ of agents is determined only
+by a critical subset $T\subseteq S$ of the agents and not the entirety of $S$
+due to a budget constraint that limits how large $T$ can be. We show that the
+Shapley value can be computed in time faster than by the na\"ive exponential
+time algorithm when there are sufficiently many agents, and also provide an
+algorithm that approximates the Shapley value within an additive error. For a
+related budgeted game associated with a greedy heuristic, we show that the
+Shapley value can be computed in pseudo-polynomial time. Furthermore, we
+generalize our proof techniques and propose what we term algorithmic
+representation framework that captures a broad class of cooperative games with
+the property of efficient computation of the Shapley value. The main idea is
+that the problem of determining the efficient computation can be reduced to
+that of finding an alternative representation of the games and an associated
+algorithm for computing the underlying value function with small time and space
+complexities in the representation size.
+
+
+Bidding to the Top: VCG and Equilibria of Position-Based Auctions
+
+  Many popular search engines run an auction to determine the placement of
+advertisements next to search results. Current auctions at Google and Yahoo!
+let advertisers specify a single amount as their bid in the auction. This bid
+is interpreted as the maximum amount the advertiser is willing to pay per click
+on its ad. When search queries arrive, the bids are used to rank the ads
+linearly on the search result page. The advertisers pay for each user who
+clicks on their ad, and the amount charged depends on the bids of all the
+advertisers participating in the auction. In order to be effective, advertisers
+seek to be as high on the list as their budget permits, subject to the market.
+  We study the problem of ranking ads and associated pricing mechanisms when
+the advertisers not only specify a bid, but additionally express their
+preference for positions in the list of ads. In particular, we study "prefix
+position auctions" where advertiser $i$ can specify that she is interested only
+in the top $b_i$ positions.
+  We present a simple allocation and pricing mechanism that generalizes the
+desirable properties of current auctions that do not have position constraints.
+In addition, we show that our auction has an "envy-free" or "symmetric" Nash
+equilibrium with the same outcome in allocation and pricing as the well-known
+truthful Vickrey-Clarke-Groves (VCG) auction. Furthermore, we show that this
+equilibrium is the best such equilibrium for the advertisers in terms of the
+profit made by each advertiser. We also discuss other position-based auctions.
+
+
+On the Complexity of Processing Massive, Unordered, Distributed Data
+
+  An existing approach for dealing with massive data sets is to stream over the
+input in few passes and perform computations with sublinear resources. This
+method does not work for truly massive data where even making a single pass
+over the data with a processor is prohibitive. Successful log processing
+systems in practice such as Google's MapReduce and Apache's Hadoop use multiple
+machines. They efficiently perform a certain class of highly distributable
+computations defined by local computations that can be applied in any order to
+the input.
+  Motivated by the success of these systems, we introduce a simple algorithmic
+model for massive, unordered, distributed (mud) computation. We initiate the
+study of understanding its computational complexity. Our main result is a
+positive one: any unordered function that can be computed by a streaming
+algorithm can also be computed with a mud algorithm, with comparable space and
+communication complexity. We extend this result to some useful classes of
+approximate and randomized streaming algorithms. We also give negative results,
+using communication complexity arguments to prove that extensions to private
+randomness, promise problems and indeterminate functions are impossible.
+  We believe that the line of research we introduce in this paper has the
+potential for tremendous impact. The distributed systems that motivate our work
+successfully process data at an unprecedented scale, distributed over hundreds
+or even thousands of machines, and perform hundreds of such analyses each day.
+The mud model (and its generalizations) inspire a set of complexity-theoretic
+questions that lie at their heart.
+
+
+A Truthful Mechanism for Offline Ad Slot Scheduling
+
+  We consider the "Offline Ad Slot Scheduling" problem, where advertisers must
+be scheduled to "sponsored search" slots during a given period of time.
+Advertisers specify a budget constraint, as well as a maximum cost per click,
+and may not be assigned to more than one slot for a particular search.
+  We give a truthful mechanism under the utility model where bidders try to
+maximize their clicks, subject to their personal constraints. In addition, we
+show that the revenue-maximizing mechanism is not truthful, but has a Nash
+equilibrium whose outcome is identical to our mechanism. As far as we can tell,
+this is the first treatment of sponsored search that directly incorporates both
+multiple slots and budget constraints into an analysis of incentives.
+  Our mechanism employs a descending-price auction that maintains a solution to
+a certain machine scheduling problem whose job lengths depend on the price, and
+hence is variable over the auction. The price stops when the set of bidders
+that can afford that price pack exactly into a block of ad slots, at which
+point the mechanism allocates that block and continues on the remaining slots.
+To prove our result on the equilibrium of the revenue-maximizing mechanism, we
+first show that a greedy algorithm suffices to solve the revenue-maximizing
+linear program; we then use this insight to prove that bidders allocated in the
+same block of our mechanism have no incentive to deviate from bidding the fixed
+price of that block.
+
+
+General Auction Mechanism for Search Advertising
+
+  In sponsored search, a number of advertising slots is available on a search
+results page, and have to be allocated among a set of advertisers competing to
+display an ad on the page. This gives rise to a bipartite matching market that
+is typically cleared by the way of an automated auction. Several auction
+mechanisms have been proposed, with variants of the Generalized Second Price
+(GSP) being widely used in practice.
+  A rich body of work on bipartite matching markets builds upon the stable
+marriage model of Gale and Shapley and the assignment model of Shapley and
+Shubik. We apply insights from this line of research into the structure of
+stable outcomes and their incentive properties to advertising auctions.
+  We model advertising auctions in terms of an assignment model with linear
+utilities, extended with bidder and item specific maximum and minimum prices.
+Auction mechanisms like the commonly used GSP or the well-known
+Vickrey-Clarke-Groves (VCG) are interpreted as simply computing a
+\emph{bidder-optimal stable matching} in this model, for a suitably defined set
+of bidder preferences. In our model, the existence of a stable matching is
+guaranteed, and under a non-degeneracy assumption a bidder-optimal stable
+matching exists as well. We give an algorithm to find such matching in
+polynomial time, and use it to design truthful mechanism that generalizes GSP,
+is truthful for profit-maximizing bidders, implements features like
+bidder-specific minimum prices and position-specific bids, and works for rich
+mixtures of bidders and preferences.
+
+
+Bid Optimization in Broad-Match Ad auctions
+
+  Ad auctions in sponsored search support ``broad match'' that allows an
+advertiser to target a large number of queries while bidding only on a limited
+number. While giving more expressiveness to advertisers, this feature makes it
+challenging to optimize bids to maximize their returns: choosing to bid on a
+query as a broad match because it provides high profit results in one bidding
+for related queries which may yield low or even negative profits.
+  We abstract and study the complexity of the {\em bid optimization problem}
+which is to determine an advertiser's bids on a subset of keywords (possibly
+using broad match) so that her profit is maximized. In the query language model
+when the advertiser is allowed to bid on all queries as broad match, we present
+an linear programming (LP)-based polynomial-time algorithm that gets the
+optimal profit. In the model in which an advertiser can only bid on keywords,
+ie., a subset of keywords as an exact or broad match, we show that this problem
+is not approximable within any reasonable approximation factor unless P=NP. To
+deal with this hardness result, we present a constant-factor approximation when
+the optimal profit significantly exceeds the cost. This algorithm is based on
+rounding a natural LP formulation of the problem. Finally, we study a budgeted
+variant of the problem, and show that in the query language model, one can find
+two budget constrained ad campaigns in polynomial time that implement the
+optimal bidding strategy. Our results are the first to address bid optimization
+under the broad match feature which is common in ad auctions.
+
+
+Online Stochastic Matching: Beating 1-1/e
+
+  We study the online stochastic bipartite matching problem, in a form
+motivated by display ad allocation on the Internet. In the online, but
+adversarial case, the celebrated result of Karp, Vazirani and Vazirani gives an
+approximation ratio of $1-1/e$. In the online, stochastic case when nodes are
+drawn repeatedly from a known distribution, the greedy algorithm matches this
+approximation ratio, but still, no algorithm is known that beats the $1 - 1/e$
+bound.
+  Our main result is a 0.67-approximation online algorithm for stochastic
+bipartite matching, breaking this $1 - {1/e}$ barrier. Furthermore, we show
+that no online algorithm can produce a $1-\epsilon$ approximation for an
+arbitrarily small $\epsilon$ for this problem.
+  We employ a novel application of the idea of the power of two choices from
+load balancing: we compute two disjoint solutions to the expected instance, and
+use both of them in the online algorithm in a prescribed preference order.
+  To identify these two disjoint solutions, we solve a max flow problem in a
+boosted flow graph, and then carefully decompose this maximum flow to two
+edge-disjoint (near-)matchings. These two offline solutions are used to
+characterize an upper bound for the optimum in any scenario. This is done by
+identifying a cut whose value we can bound under the arrival distribution.
+
+
+Yield Optimization of Display Advertising with Ad Exchange
+
+  In light of the growing market of Ad Exchanges for the real-time sale of
+advertising slots, publishers face new challenges in choosing between the
+allocation of contract-based reservation ads and spot market ads. In this
+setting, the publisher should take into account the tradeoff between short-term
+revenue from an Ad Exchange and quality of allocating reservation ads. In this
+paper, we formalize this combined optimization problem as a stochastic control
+problem and derive an efficient policy for online ad allocation in settings
+with general joint distribution over placement quality and exchange bids. We
+prove asymptotic optimality of this policy in terms of any trade-off between
+quality of delivered reservation ads and revenue from the exchange, and provide
+a rigorous bound for its convergence rate to the optimal policy. We also give
+experimental results on data derived from real publisher inventory, showing
+that our policy can achieve any pareto-optimal point on the quality vs. revenue
+curve. Finally, we study a parametric training-based algorithm in which instead
+of learning the dual variables from a sample data (as is done in non-parametric
+training-based algorithms), we learn the parameters of the distribution and
+construct those dual variables from the learned parameter values. We compare
+parametric and non-parametric ways to estimate from data both analytically and
+experimentally in the special case without the ad exchange, and show that
+though both methods converge to the optimal policy as the sample size grows,
+our parametric method converges faster, and thus performs better on smaller
+samples.
+
+
+Online Ad Slotting With Cancellations
+
+  Many advertisers buy advertisements (ads) on the Internet or on traditional
+media and seek simple, online mechanisms to reserve ad slots in advance. Media
+publishers represent a vast and varying inventory, and they too seek automatic,
+online mechanisms for pricing and allocating such reservations. In this paper,
+we present and study a simple model for auctioning such ad slots in advance.
+Bidders arrive sequentially and report which slots they are interested in. The
+seller must decide immediately whether or not to grant a reservation. Our model
+allows a seller to accept reservations, but possibly cancel the allocations
+later and pay the bidder a cancellation compensation (bump payment). Our main
+result is an online mechanism to derive prices and bump payments that is
+efficient to implement. This mechanism has many desirable properties. It is
+individually rational; winners have an incentive to be honest and bidding one's
+true value dominates any lower bid. Our mechanism's efficiency is within a
+constant fraction of the a posteriori optimally efficient solution. Its revenue
+is within a constant fraction of the a posteriori revenue of the
+Vickrey-Clarke-Groves mechanism. Our results make no assumptions about the
+order of arrival of bids or the value distribution of bidders and still hold if
+the items for sale are elements of a matroid, a more general setting than slot
+allocation.
+
+
+Optimal Private Halfspace Counting via Discrepancy
+
+  A range counting problem is specified by a set $P$ of size $|P| = n$ of
+points in $\mathbb{R}^d$, an integer weight $x_p$ associated to each point $p
+\in P$, and a range space ${\cal R} \subseteq 2^{P}$. Given a query range $R
+\in {\cal R}$, the target output is $R(\vec{x}) = \sum_{p \in R}{x_p}$. Range
+counting for different range spaces is a central problem in Computational
+Geometry.
+  We study $(\epsilon, \delta)$-differentially private algorithms for range
+counting. Our main results are for the range space given by hyperplanes, that
+is, the halfspace counting problem. We present an $(\epsilon,
+\delta)$-differentially private algorithm for halfspace counting in $d$
+dimensions which achieves $O(n^{1-1/d})$ average squared error. This contrasts
+with the $\Omega(n)$ lower bound established by the classical result of Dinur
+and Nissim [PODS 2003] for arbitrary subset counting queries. We also show a
+matching lower bound on average squared error for any $(\epsilon,
+\delta)$-differentially private algorithm for halfspace counting. Both bounds
+are obtained using discrepancy theory. For the lower bound, we use a modified
+discrepancy measure and bound approximation of $(\epsilon,
+\delta)$-differentially private algorithms for range counting queries in terms
+of this discrepancy. We also relate the modified discrepancy measure to
+classical combinatorial discrepancy, which allows us to exploit known
+discrepancy lower bounds. This approach also yields a lower bound of
+$\Omega((\log n)^{d-1})$ for $(\epsilon, \delta)$-differentially private
+orthogonal range counting in $d$ dimensions, the first known superconstant
+lower bound for this problem. For the upper bound, we use an approach inspired
+by partial coloring methods for proving discrepancy upper bounds, and obtain
+$(\epsilon, \delta)$-differentially private algorithms for range counting with
+polynomially bounded shatter function range spaces.
+
+
+Graphical Model Sketch
+
+  Structured high-cardinality data arises in many domains, and poses a major
+challenge for both modeling and inference. Graphical models are a popular
+approach to modeling structured data but they are unsuitable for
+high-cardinality variables. The count-min (CM) sketch is a popular approach to
+estimating probabilities in high-cardinality data but it does not scale well
+beyond a few variables. In this work, we bring together the ideas of graphical
+models and count sketches; and propose and analyze several approaches to
+estimating probabilities in structured high-cardinality streams of data. The
+key idea of our approximations is to use the structure of a graphical model and
+approximately estimate its factors by "sketches", which hash high-cardinality
+variables using random projections. Our approximations are computationally
+efficient and their space complexity is independent of the cardinality of
+variables. Our error bounds are multiplicative and significantly improve upon
+those of the CM sketch, a state-of-the-art approach to estimating probabilities
+in streams. We evaluate our approximations on synthetic and real-world
+problems, and report an order of magnitude improvements over the CM sketch.
+
+
+Approximation Schemes for Sequential Posted Pricing in Multi-Unit
+  Auctions
+
+  We design algorithms for computing approximately revenue-maximizing {\em
+sequential posted-pricing mechanisms (SPM)} in $K$-unit auctions, in a standard
+Bayesian model. A seller has $K$ copies of an item to sell, and there are $n$
+buyers, each interested in only one copy, who have some value for the item. The
+seller must post a price for each buyer, the buyers arrive in a sequence
+enforced by the seller, and a buyer buys the item if its value exceeds the
+price posted to it. The seller does not know the values of the buyers, but have
+Bayesian information about them. An SPM specifies the ordering of buyers and
+the posted prices, and may be {\em adaptive} or {\em non-adaptive} in its
+behavior.
+  The goal is to design SPM in polynomial time to maximize expected revenue. We
+compare against the expected revenue of optimal SPM, and provide a polynomial
+time approximation scheme (PTAS) for both non-adaptive and adaptive SPMs. This
+is achieved by two algorithms: an efficient algorithm that gives a
+$(1-\frac{1}{\sqrt{2\pi K}})$-approximation (and hence a PTAS for sufficiently
+large $K$), and another that is a PTAS for constant $K$. The first algorithm
+yields a non-adaptive SPM that yields its approximation guarantees against an
+optimal adaptive SPM -- this implies that the {\em adaptivity gap} in SPMs
+vanishes as $K$ becomes larger.
+
+
+Adscape: Harvesting and Analyzing Online Display Ads
+
+  Over the past decade, advertising has emerged as the primary source of
+revenue for many web sites and apps. In this paper we report a
+first-of-its-kind study that seeks to broadly understand the features,
+mechanisms and dynamics of display advertising on the web - i.e., the Adscape.
+Our study takes the perspective of users who are the targets of display ads
+shown on web sites. We develop a scalable crawling capability that enables us
+to gather the details of display ads including creatives and landing pages. Our
+crawling strategy is focused on maximizing the number of unique ads harvested.
+Of critical importance to our study is the recognition that a user's profile
+(i.e. browser profile and cookies) can have a significant impact on which ads
+are shown. We deploy our crawler over a variety of websites and profiles and
+this yields over 175K distinct display ads.
+  We find that while targeting is widely used, there remain many instances in
+which delivered ads do not depend on user profile; further, ads vary more over
+user profiles than over websites. We also assess the population of advertisers
+seen and identify over 3.7K distinct entities from a variety of business
+segments. Finally, we find that when targeting is used, the specific types of
+ads delivered generally correspond with the details of user profiles, and also
+on users' patterns of visit.
+
+
+The Sparse Awakens: Streaming Algorithms for Matching Size Estimation in
+  Sparse Graphs
+
+  Estimating the size of the maximum matching is a canonical problem in graph
+algorithms, and one that has attracted extensive study over a range of
+different computational models. We present improved streaming algorithms for
+approximating the size of maximum matching with sparse (bounded arboricity)
+graphs.
+  * Insert-Only Streams: We present a one-pass algorithm that takes O(c log^2
+n) space and approximates the size of the maximum matching in graphs with
+arboricity c within a factor of O(c). This improves significantly on the
+state-of-the-art O~(cn^{2/3})-space streaming algorithms.
+  * Dynamic Streams: Given a dynamic graph stream (i.e., inserts and deletes)
+of edges of an underlying c-bounded arboricity graph, we present a one-pass
+algorithm that uses space O~(c^{10/3}n^{2/3}) and returns an O(c)-estimator for
+the size of the maximum matching. This algorithm improves the state-of-the-art
+O~(cn^{4/5})-space algorithms, where the O~(.) notation hides logarithmic in
+$n$ dependencies.
+  In contrast to the previous works, our results take more advantage of the
+streaming access to the input and characterize the matching size based on the
+ordering of the edges in the stream in addition to the degree distributions and
+structural properties of the sparse graphs.
+
+
+Budget Feasible Mechanisms for Experimental Design
+
+  In the classical experimental design setting, an experimenter E has access to
+a population of $n$ potential experiment subjects $i\in \{1,...,n\}$, each
+associated with a vector of features $x_i\in R^d$. Conducting an experiment
+with subject $i$ reveals an unknown value $y_i\in R$ to E. E typically assumes
+some hypothetical relationship between $x_i$'s and $y_i$'s, e.g., $y_i \approx
+\beta x_i$, and estimates $\beta$ from experiments, e.g., through linear
+regression. As a proxy for various practical constraints, E may select only a
+subset of subjects on which to conduct the experiment.
+  We initiate the study of budgeted mechanisms for experimental design. In this
+setting, E has a budget $B$. Each subject $i$ declares an associated cost $c_i
+>0$ to be part of the experiment, and must be paid at least her cost. In
+particular, the Experimental Design Problem (EDP) is to find a set $S$ of
+subjects for the experiment that maximizes $V(S) = \log\det(I_d+\sum_{i\in
+S}x_i\T{x_i})$ under the constraint $\sum_{i\in S}c_i\leq B$; our objective
+function corresponds to the information gain in parameter $\beta$ that is
+learned through linear regression methods, and is related to the so-called
+$D$-optimality criterion. Further, the subjects are strategic and may lie about
+their costs.
+  We present a deterministic, polynomial time, budget feasible mechanism
+scheme, that is approximately truthful and yields a constant factor
+approximation to EDP. In particular, for any small $\delta > 0$ and $\epsilon >
+0$, we can construct a (12.98, $\epsilon$)-approximate mechanism that is
+$\delta$-truthful and runs in polynomial time in both $n$ and
+$\log\log\frac{B}{\epsilon\delta}$. We also establish that no truthful,
+budget-feasible algorithms is possible within a factor 2 approximation, and
+show how to generalize our approach to a wide class of learning problems,
+beyond linear regression.
+
+
+Pan-private Algorithms: When Memory Does Not Help
+
+  Consider updates arriving online in which the $t$th input is $(i_t,d_t)$,
+where $i_t$'s are thought of as IDs of users. Informally, a randomized function
+$f$ is {\em differentially private} with respect to the IDs if the probability
+distribution induced by $f$ is not much different from that induced by it on an
+input in which occurrences of an ID $j$ are replaced with some other ID $k$
+Recently, this notion was extended to {\em pan-privacy} where the computation
+of $f$ retains differential privacy, even if the internal memory of the
+algorithm is exposed to the adversary (say by a malicious break-in or by fiat
+by the government). This is a strong notion of privacy, and surprisingly, for
+basic counting tasks such as distinct counts, heavy hitters and others, Dwork
+et al~\cite{dwork-pan} present pan-private algorithms with reasonable accuracy.
+The pan-private algorithms are nontrivial, and rely on sampling. We reexamine
+these basic counting tasks and show improved bounds. In particular, we estimate
+the distinct count $\Dt$ to within $(1\pm \eps)\Dt \pm O(\polylog m)$, where
+$m$ is the number of elements in the universe. This uses suitably noisy
+statistics on sketches known in the streaming literature. We also present the
+first known lower bounds for pan-privacy with respect to a single intrusion.
+Our lower bounds show that, even if allowed to work with unbounded memory,
+pan-private algorithms for distinct counts can not be significantly more
+accurate than our algorithms. Our lower bound uses noisy decoding. For heavy
+hitter counts, we present a pan private streaming algorithm that is accurate to
+within $O(k)$ in worst case; previously known bound for this problem is
+arbitrarily worse. An interesting aspect of our pan-private algorithms is that,
+they deliberately use very small (polylogarithmic) space and tend to be
+streaming algorithms, even though using more space is not forbidden.
+
+
+Wavelet Trees Meet Suffix Trees
+
+  We present an improved wavelet tree construction algorithm and discuss its
+applications to a number of rank/select problems for integer keys and strings.
+  Given a string of length n over an alphabet of size $\sigma\leq n$, our
+method builds the wavelet tree in $O(n \log \sigma/ \sqrt{\log{n}})$ time,
+improving upon the state-of-the-art algorithm by a factor of $\sqrt{\log n}$.
+As a consequence, given an array of n integers we can construct in $O(n
+\sqrt{\log n})$ time a data structure consisting of $O(n)$ machine words and
+capable of answering rank/select queries for the subranges of the array in
+$O(\log n / \log \log n)$ time. This is a $\log \log n$-factor improvement in
+query time compared to Chan and P\u{a}tra\c{s}cu and a $\sqrt{\log n}$-factor
+improvement in construction time compared to Brodal et al.
+  Next, we switch to stringological context and propose a novel notion of
+wavelet suffix trees. For a string w of length n, this data structure occupies
+$O(n)$ words, takes $O(n \sqrt{\log n})$ time to construct, and simultaneously
+captures the combinatorial structure of substrings of w while enabling
+efficient top-down traversal and binary search. In particular, with a wavelet
+suffix tree we are able to answer in $O(\log |x|)$ time the following two
+natural analogues of rank/select queries for suffixes of substrings: for
+substrings x and y of w count the number of suffixes of x that are
+lexicographically smaller than y, and for a substring x of w and an integer k,
+find the k-th lexicographically smallest suffix of x.
+  We further show that wavelet suffix trees allow to compute a
+run-length-encoded Burrows-Wheeler transform of a substring x of w in $O(s \log
+|x|)$ time, where s denotes the length of the resulting run-length encoding.
+This answers a question by Cormode and Muthukrishnan, who considered an
+analogous problem for Lempel-Ziv compression.
+
+
+Partial Data Compression and Text Indexing via Optimal Suffix
+  Multi-Selection
+
+  Consider an input text string T[1,N] drawn from an unbounded alphabet. We
+study partial computation in suffix-based problems for Data Compression and
+Text Indexing such as
+  (I) retrieve any segment of K<=N consecutive symbols from the Burrows-Wheeler
+transform of T, and
+  (II) retrieve any chunk of K<=N consecutive entries of the Suffix Array or
+the Suffix Tree.
+  Prior literature would take O(N log N) comparisons (and time) to solve these
+problems by solving the total problem of building the entire Burrows-Wheeler
+transform or Text Index for T, and performing a post-processing to single out
+the wanted portion.
+  We introduce a novel adaptive approach to partial computational problems
+above, and solve both the partial problems in O(K log K + N) comparisons and
+time, improving the best known running times of O(N log N) for K=o(N).
+  These partial-computation problems are intimately related since they share a
+common bottleneck: the suffix multi-selection problem, which is to output the
+suffixes of rank r_1,r_2,...,r_K under the lexicographic order, where
+r_1<r_2<...<r_K, r_i in [1,N]. Special cases of this problem are well known:
+K=N is the suffix sorting problem that is the workhorse in Stringology with
+hundreds of applications, and K=1 is the recently studied suffix selection.
+  We show that suffix multi-selection can be solved in Theta(N log N -
+sum_{j=0}^K Delta_j log Delta_j+N) time and comparisons, where r_0=0,
+r_{K+1}=N+1, and Delta_j=r_{j+1}-r_j for 0<=j<=K. This is asymptotically
+optimal, and also matches the bound in [Dobkin, Munro, JACM 28(3)] for
+multi-selection on atomic elements (not suffixes). Matching the bound known for
+atomic elements for strings is a long running theme and challenge from 70's,
+which we achieve for the suffix multi-selection problem. The partial suffix
+problems as well as the suffix multi-selection problem have many applications.
+
+
+Relative-Error CUR Matrix Decompositions
+
+  Many data analysis applications deal with large matrices and involve
+approximating the matrix using a small number of ``components.'' Typically,
+these components are linear combinations of the rows and columns of the matrix,
+and are thus difficult to interpret in terms of the original features of the
+input data. In this paper, we propose and study matrix approximations that are
+explicitly expressed in terms of a small number of columns and/or rows of the
+data matrix, and thereby more amenable to interpretation in terms of the
+original data. Our main algorithmic results are two randomized algorithms which
+take as input an $m \times n$ matrix $A$ and a rank parameter $k$. In our first
+algorithm, $C$ is chosen, and we let $A'=CC^+A$, where $C^+$ is the
+Moore-Penrose generalized inverse of $C$. In our second algorithm $C$, $U$, $R$
+are chosen, and we let $A'=CUR$. ($C$ and $R$ are matrices that consist of
+actual columns and rows, respectively, of $A$, and $U$ is a generalized inverse
+of their intersection.) For each algorithm, we show that with probability at
+least $1-\delta$: $$ ||A-A'||_F \leq (1+\epsilon) ||A-A_k||_F, $$ where $A_k$
+is the ``best'' rank-$k$ approximation provided by truncating the singular
+value decomposition (SVD) of $A$. The number of columns of $C$ and rows of $R$
+is a low-degree polynomial in $k$, $1/\epsilon$, and $\log(1/\delta)$. Our two
+algorithms are the first polynomial time algorithms for such low-rank matrix
+approximations that come with relative-error guarantees; previously, in some
+cases, it was not even known whether such matrix decompositions exist. Both of
+our algorithms are simple, they take time of the order needed to approximately
+compute the top $k$ singular vectors of $A$, and they use a novel, intuitive
+sampling method called ``subspace sampling.''
+
+
+Stochastic Budget Optimization in Internet Advertising
+
+  Internet advertising is a sophisticated game in which the many advertisers
+"play" to optimize their return on investment. There are many "targets" for the
+advertisements, and each "target" has a collection of games with a potentially
+different set of players involved. In this paper, we study the problem of how
+advertisers allocate their budget across these "targets". In particular, we
+focus on formulating their best response strategy as an optimization problem.
+Advertisers have a set of keywords ("targets") and some stochastic information
+about the future, namely a probability distribution over scenarios of cost vs
+click combinations. This summarizes the potential states of the world assuming
+that the strategies of other players are fixed. Then, the best response can be
+abstracted as stochastic budget optimization problems to figure out how to
+spread a given budget across these keywords to maximize the expected number of
+clicks.
+  We present the first known non-trivial poly-logarithmic approximation for
+these problems as well as the first known hardness results of getting better
+than logarithmic approximation ratios in the various parameters involved. We
+also identify several special cases of these problems of practical interest,
+such as with fixed number of scenarios or with polynomial-sized parameters
+related to cost, which are solvable either in polynomial time or with improved
+approximation ratios. Stochastic budget optimization with scenarios has
+sophisticated technical structure. Our approximation and hardness results come
+from relating these problems to a special type of (0/1, bipartite) quadratic
+programs inherent in them. Our research answers some open problems raised by
+the authors in (Stochastic Models for Budget Optimization in Search-Based
+Advertising, Algorithmica, 58 (4), 1022-1044, 2010).
+
+

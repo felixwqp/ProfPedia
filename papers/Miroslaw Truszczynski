@@ -1,0 +1,708 @@
+WSAT(cc) - a fast local-search ASP solver
+
+  We describe WSAT(cc), a local-search solver for computing models of theories
+in the language of propositional logic extended by cardinality atoms. WSAT(cc)
+is a processing back-end for the logic PS+, a recently proposed formalism for
+answer-set programming.
+
+
+Origins of Answer-Set Programming - Some Background And Two Personal
+  Accounts
+
+  We discuss the evolution of aspects of nonmonotonic reasoning towards the
+computational paradigm of answer-set programming (ASP). We give a general
+overview of the roots of ASP and follow up with the personal perspective on
+research developments that helped verbalize the main principles of ASP and
+differentiated it from the classical logic programming.
+
+
+Logic programs with monotone abstract constraint atoms
+
+  We introduce and study logic programs whose clauses are built out of monotone
+constraint atoms. We show that the operational concept of the one-step
+provability operator generalizes to programs with monotone constraint atoms,
+but the generalization involves nondeterminism. Our main results demonstrate
+that our formalism is a common generalization of (1) normal logic programming
+with its semantics of models, supported models and stable models, (2) logic
+programming with weight atoms (lparse programs) with the semantics of stable
+models, as defined by Niemela, Simons and Soininen, and (3) of disjunctive
+logic programming with the possible-model semantics of Sakama and Inoue.
+
+
+aspps --- an implementation of answer-set programming with propositional
+  schemata
+
+  We present an implementation of an answer-set programming paradigm, called
+aspps (short for answer-set programming with propositional schemata). The
+system aspps is designed to process PS+ theories. It consists of two basic
+modules. The first module, psgrnd, grounds an PS+ theory. The second module,
+referred to as aspps, is a solver. It computes models of ground PS+ theories.
+
+
+Computing stable models: worst-case performance estimates
+
+  We study algorithms for computing stable models of propositional logic
+programs and derive estimates on their worst-case performance that are
+asymptotically better than the trivial bound of O(m 2^n), where m is the size
+of an input program and n is the number of its atoms. For instance, for
+programs, whose clauses consist of at most two literals (counting the head) we
+design an algorithm to compute stable models that works in time O(m\times
+1.44225^n). We present similar results for several broader classes of programs,
+as well.
+
+
+On graph equivalences preserved under extensions
+
+  Let R be an equivalence relation on graphs. By the strengthening of R we mean
+the relation R' such that graphs G and H are in the relation R' if for every
+graph F, the union of the graphs G and F is in the relation R with the union of
+the graphs H and F. We study strengthenings of equivalence relations on graphs.
+The most important case that we consider concerns equivalence relations defined
+by graph properties. We obtain results on the strengthening of equivalence
+relations determined by the properties such as being a k-connected graph,
+k-colorable, hamiltonian and planar.
+
+
+Stable models and an alternative logic programming paradigm
+
+  In this paper we reexamine the place and role of stable model semantics in
+logic programming and contrast it with a least Herbrand model approach to Horn
+programs. We demonstrate that inherent features of stable model semantics
+naturally lead to a logic programming system that offers an interesting
+alternative to more traditional logic programming styles of Horn logic
+programming, stratified logic programming and logic programming with
+well-founded semantics. The proposed approach is based on the interpretation of
+program clauses as constraints. In this setting programs do not describe a
+single intended model, but a family of stable models. These stable models
+encode solutions to the constraint satisfaction problem described by the
+program. Our approach imposes restrictions on the syntax of logic programs. In
+particular, function symbols are eliminated from the language. We argue that
+the resulting logic programming system is well-attuned to problems in the class
+NP, has a well-defined domain of applications, and an emerging methodology of
+programming. We point out that what makes the whole approach viable is recent
+progress in implementations of algorithms to compute stable models of
+propositional logic programs.
+
+
+Local Diagnosis
+
+  In an earlier work, we have presented operations of belief change which only
+affect the relevant part of a belief base. In this paper, we propose the
+application of the same strategy to the problem of model-based diangosis. We
+first isolate the subset of the system description which is relevant for a
+given observation and then solve the diagnosis problem for this subset.
+
+
+Extremal problems in logic programming and stable model computation
+
+  We study the following problem: given a class of logic programs C, determine
+the maximum number of stable models of a program from C. We establish the
+maximum for the class of all logic programs with at most n clauses, and for the
+class of all logic programs of size at most n. We also characterize the
+programs for which the maxima are attained. We obtain similar results for the
+class of all disjunctive logic programs with at most n clauses, each of length
+at most m, and for the class of all disjunctive logic programs of size at most
+n. Our results on logic programs have direct implication for the design of
+algorithms to compute stable models. Several such algorithms, similar in spirit
+to the Davis-Putnam procedure, are described in the paper. Our results imply
+that there is an algorithm that finds all stable models of a program with n
+clauses after considering the search space of size O(3^{n/3}) in the worst
+case. Our results also provide some insights into the question of
+representability of families of sets as families of stable models of logic
+programs.
+
+
+On the accuracy and running time of GSAT
+
+  Randomized algorithms for deciding satisfiability were shown to be effective
+in solving problems with thousands of variables. However, these algorithms are
+not complete. That is, they provide no guarantee that a satisfying assignment,
+if one exists, will be found. Thus, when studying randomized algorithms, there
+are two important characteristics that need to be considered: the running time
+and, even more importantly, the accuracy --- a measure of likelihood that a
+satisfying assignment will be found, provided one exists. In fact, we argue
+that without a reference to the accuracy, the notion of the running time for
+randomized algorithms is not well-defined. In this paper, we introduce a formal
+notion of accuracy. We use it to define a concept of the running time. We use
+both notions to study the random walk strategy GSAT algorithm. We investigate
+the dependence of accuracy on properties of input formulas such as
+clause-to-variable ratio and the number of satisfying assignments. We
+demonstrate that the running time of GSAT grows exponentially in the number of
+variables of the input formula for randomly generated 3-CNF formulas and for
+the formulas encoding 3- and 4-colorability of graphs.
+
+
+On the problem of computing the well-founded semantics
+
+  The well-founded semantics is one of the most widely studied and used
+semantics of logic programs with negation. In the case of finite propositional
+programs, it can be computed in polynomial time, more specifically, in
+O(|At(P)|size(P)) steps, where size(P) denotes the total number of occurrences
+of atoms in a logic program P. This bound is achieved by an algorithm
+introduced by Van Gelder and known as the alternating-fixpoint algorithm.
+Improving on the alternating-fixpoint algorithm turned out to be difficult. In
+this paper we study extensions and modifications of the alternating-fixpoint
+approach. We then restrict our attention to the class of programs whose rules
+have no more than one positive occurrence of an atom in their bodies. For
+programs in that class we propose a new implementation of the
+alternating-fixpoint method in which false atoms are computed in a top-down
+fashion. We show that our algorithm is faster than other known algorithms and
+that for a wide class of programs it is linear and so, asymptotically optimal.
+
+
+Annotated revision programs
+
+  Revision programming is a formalism to describe and enforce updates of belief
+sets and databases. That formalism was extended by Fitting who assigned
+annotations to revision atoms. Annotations provide a way to quantify the
+confidence (probability) that a revision atom holds. The main goal of our paper
+is to reexamine the work of Fitting, argue that his semantics does not always
+provide results consistent with intuition, and to propose an alternative
+treatment of annotated revision programs. Our approach differs from that
+proposed by Fitting in two key aspects: we change the notion of a model of a
+program and we change the notion of a justified revision. We show that under
+this new approach fundamental properties of justified revisions of standard
+revision programs extend to the annotated case.
+
+
+Propositional satisfiability in answer-set programming
+
+  We show that propositional logic and its extensions can support answer-set
+programming in the same way stable logic programming and disjunctive logic
+programming do. To this end, we introduce a logic based on the logic of
+propositional schemata and on a version of the Closed World Assumption. We call
+it the extended logic of propositional schemata with CWA (PS+, in symbols). An
+important feature of this logic is that it supports explicit modeling of
+constraints on cardinalities of sets. In the paper, we characterize the class
+of problems that can be solved by finite PS+ theories. We implement a
+programming system based on the logic PS+ and design and implement a solver for
+processing theories in PS+. We present encouraging performance results for our
+approach --- we show it to be competitive with smodels, a state-of-the-art
+answer-set programming system based on stable logic programming.
+
+
+Ultimate approximations in nonmonotonic knowledge representation systems
+
+  We study fixpoints of operators on lattices. To this end we introduce the
+notion of an approximation of an operator. We order approximations by means of
+a precision ordering. We show that each lattice operator O has a unique most
+precise or ultimate approximation. We demonstrate that fixpoints of this
+ultimate approximation provide useful insights into fixpoints of the operator
+O.
+  We apply our theory to logic programming and introduce the ultimate
+Kripke-Kleene, well-founded and stable semantics. We show that the ultimate
+Kripke-Kleene and well-founded semantics are more precise then their standard
+counterparts We argue that ultimate semantics for logic programming have
+attractive epistemological properties and that, while in general they are
+computationally more complex than the standard semantics, for many classes of
+theories, their complexity is no worse.
+
+
+Local-search techniques for propositional logic extended with
+  cardinality constraints
+
+  We study local-search satisfiability solvers for propositional logic extended
+with cardinality atoms, that is, expressions that provide explicit ways to
+model constraints on cardinalities of sets. Adding cardinality atoms to the
+language of propositional logic facilitates modeling search problems and often
+results in concise encodings. We propose two ``native'' local-search solvers
+for theories in the extended language. We also describe techniques to reduce
+the problem to standard propositional satisfiability and allow us to use
+off-the-shelf SAT solvers. We study these methods experimentally. Our general
+finding is that native solvers designed specifically for the extended language
+perform better than indirect methods relying on SAT solvers.
+
+
+Logic programs with monotone cardinality atoms
+
+  We investigate mca-programs, that is, logic programs with clauses built of
+monotone cardinality atoms of the form kX, where k is a non-negative integer
+and X is a finite set of propositional atoms. We develop a theory of
+mca-programs. We demonstrate that the operational concept of the one-step
+provability operator generalizes to mca-programs, but the generalization
+involves nondeterminism. Our main results show that the formalism of
+mca-programs is a common generalization of (1) normal logic programming with
+its semantics of models, supported models and stable models, (2) logic
+programming with cardinality atoms and with the semantics of stable models, as
+defined by Niemela, Simons and Soininen, and (3) of disjunctive logic
+programming with the possible-model semantics of Sakama and Inoue.
+
+
+Satisfiability and computing van der Waerden numbers
+
+  In this paper we bring together the areas of combinatorics and propositional
+satisfiability. Many combinatorial theorems establish, often constructively,
+the existence of positive integer functions, without actually providing their
+closed algebraic form or tight lower and upper bounds. The area of Ramsey
+theory is especially rich in such results. Using the problem of computing van
+der Waerden numbers as an example, we show that these problems can be
+represented by parameterized propositional theories in such a way that
+decisions concerning their satisfiability determine the numbers (function) in
+question. We show that by using general-purpose complete and local-search
+techniques for testing propositional satisfiability, this approach becomes
+effective -- competitive with specialized approaches. By following it, we were
+able to obtain several new results pertaining to the problem of computing van
+der Waerden numbers. We also note that due to their properties, especially
+their structural simplicity and computational hardness, propositional theories
+that arise in this research can be of use in development, testing and
+benchmarking of SAT solvers.
+
+
+Trichotomy and Dichotomy Results on the Complexity of Reasoning with
+  Disjunctive Logic Programs
+
+  We present trichotomy results characterizing the complexity of reasoning with
+disjunctive logic programs. To this end, we introduce a certain definition
+schema for classes of programs based on a set of allowed arities of rules. We
+show that each such class of programs has a finite representation, and for each
+of the classes definable in the schema we characterize the complexity of the
+existence of an answer set problem. Next, we derive similar characterizations
+of the complexity of skeptical and credulous reasoning with disjunctive logic
+programs. Such results are of potential interest. On the one hand, they reveal
+some reasons responsible for the hardness of computing answer sets. On the
+other hand, they identify classes of problem instances, for which the problem
+is "easy" (in P) or "easier than in general" (in NP). We obtain similar results
+for the complexity of reasoning with disjunctive programs under the
+supported-model semantics. To appear in Theory and Practice of Logic
+Programming (TPLP)
+
+
+Transition Systems for Model Generators - A Unifying Approach
+
+  A fundamental task for propositional logic is to compute models of
+propositional formulas. Programs developed for this task are called
+satisfiability solvers. We show that transition systems introduced by
+Nieuwenhuis, Oliveras, and Tinelli to model and analyze satisfiability solvers
+can be adapted for solvers developed for two other propositional formalisms:
+logic programming under the answer-set semantics, and the logic PC(ID). We show
+that in each case the task of computing models can be seen as "satisfiability
+modulo answer-set programming," where the goal is to find a model of a theory
+that also is an answer set of a certain program. The unifying perspective we
+develop shows, in particular, that solvers CLASP and MINISATID are closely
+related despite being developed for different formalisms, one for answer-set
+programming and the latter for the logic PC(ID).
+
+
+Constructions of asymptotically shortest k-radius sequences
+
+  Let k be a positive integer. A sequence s over an n-element alphabet A is
+called a k-radius sequence if every two symbols from A occur in s at distance
+of at most k. Let f_k(n) denote the length of a shortest k-radius sequence over
+A. We provide constructions demonstrating that (1) for every fixed k and for
+every fixed e>0, f_k(n) = n^2/(2k) +O(n^(1+e)) and (2) for every k, where k is
+the integer part of n^a for some fixed real a such that 0 < a <1, f_k(n) =
+n^2/(2k) +O(n^b), for some b <2-a. Since f_k(n) >= n^2/(2k) - n/(2k), the
+constructions give asymptotically optimal k-radius sequences. Finally, (3) we
+construct optimal 2-radius sequences for a 2p-element alphabet, where p is a
+prime.
+
+
+Revisiting Epistemic Specifications
+
+  In 1991, Michael Gelfond introduced the language of epistemic specifications.
+The goal was to develop tools for modeling problems that require some form of
+meta-reasoning, that is, reasoning over multiple possible worlds. Despite their
+relevance to knowledge representation, epistemic specifications have received
+relatively little attention so far. In this paper, we revisit the formalism of
+epistemic specification. We offer a new definition of the formalism, propose
+several semantics (one of which, under syntactic restrictions we assume, turns
+out to be equivalent to the original semantics by Gelfond), derive some
+complexity results and, finally, show the effectiveness of the formalism for
+modeling problems requiring meta-reasoning considered recently by Faber and
+Woltran. All these results show that epistemic specifications deserve much more
+attention that has been afforded to them so far.
+
+
+The View-Update Problem for Indefinite Databases
+
+  This paper introduces and studies a declarative framework for updating views
+over indefinite databases. An indefinite database is a database with null
+values that are represented, following the standard database approach, by a
+single null constant. The paper formalizes views over such databases as
+indefinite deductive databases, and defines for them several classes of
+database repairs that realize view-update requests. Most notable is the class
+of constrained repairs. Constrained repairs change the database "minimally" and
+avoid making arbitrary commitments. They narrow down the space of alternative
+ways to fulfill the view-update request to those that are grounded, in a
+certain strong sense, in the database, the view and the view-update request.
+
+
+A Measure of Arbitrariness in Abductive Explanations
+
+  We study the framework of abductive logic programming extended with integrity
+constraints. For this framework, we introduce a new measure of the simplicity
+of an explanation based on its degree of \emph{arbitrariness}: the more
+arbitrary the explanation, the less appealing it is, with explanations having
+no arbitrariness - they are called constrained - being the preferred ones. In
+the paper, we study basic properties of constrained explanations. For the case
+when programs in abductive theories are stratified we establish results
+providing a detailed picture of the complexity of the problem to decide whether
+constrained explanations exist. (To appear in Theory and Practice of Logic
+Programming (TPLP).)
+
+
+Representation Theory for Default Logic
+
+  Default logic can be regarded as a mechanism to represent families of belief
+sets of a reasoning agent. As such, it is inherently second-order. In this
+paper, we study the problem of representability of a family of theories as the
+set of extensions of a default theory. We give a complete solution to the
+representability by means of normal default theories. We obtain partial results
+on representability by arbitrary default theories. We construct examples of
+denumerable families of non-including theories that are not representable. We
+also study the concept of equivalence between default theories.
+
+
+dcs: An Implementation of DATALOG with Constraints
+
+  Answer-set programming (ASP) has emerged recently as a viable programming
+paradigm. We describe here an ASP system, DATALOG with constraints or DC, based
+on non-monotonic logic. Informally, DC theories consist of propositional
+clauses (constraints) and of Horn rules. The semantics is a simple and natural
+extension of the semantics of the propositional logic. However, thanks to the
+presence of Horn rules in the system, modeling of transitive closure becomes
+straightforward. We describe the syntax, use and implementation of DC and
+provide experimental results.
+
+
+On Equivalence of Infinitary Formulas under the Stable Model Semantics
+
+  Propositional formulas that are equivalent in intuitionistic logic, or in its
+extension known as the logic of here-and-there, have the same stable models. We
+extend this theorem to propositional formulas with infinitely long conjunctions
+and disjunctions and show how to apply this generalization to proving
+properties of aggregates in answer set programming. To appear in Theory and
+Practice of Logic Programming (TPLP).
+
+
+Abstract Modular Systems and Solvers
+
+  Integrating diverse formalisms into modular knowledge representation systems
+offers increased expressivity, modeling convenience and computational benefits.
+We introduce concepts of abstract modules and abstract modular systems to study
+general principles behind the design and analysis of model-finding programs, or
+solvers, for integrated heterogeneous multi-logic systems. We show how abstract
+modules and abstract modular systems give rise to transition systems, which are
+a natural and convenient representation of solvers pioneered by the SAT
+community. We illustrate our approach by showing how it applies to answer set
+programming and propositional logic, and to multi-logic systems based on these
+two formalisms.
+
+
+Computing minimal models, stable models and answer sets
+
+  We propose and study algorithms to compute minimal models, stable models and
+answer sets of t-CNF theories, and normal and disjunctive t-programs. We are
+especially interested in algorithms with non-trivial worst-case performance
+bounds. The bulk of the paper is concerned with the classes of 2- and 3-CNF
+theories, and normal and disjunctive 2- and 3-programs, for which we obtain
+significantly stronger results than those implied by our general
+considerations. We show that one can find all minimal models of 2-CNF theories
+and all answer sets of disjunctive 2-programs in time O(m 1.4422..^n). Our main
+results concern computing stable models of normal 3-programs, minimal models of
+3-CNF theories and answer sets of disjunctive 3-programs. We design algorithms
+that run in time O(m 1.6701..^n), in the case of the first problem, and in time
+O(mn^2 2.2782..^n), in the case of the latter two. All these bounds improve by
+exponential factors the best algorithms known previously. We also obtain
+closely related upper bounds on the number of minimal models, stable models and
+answer sets a t-CNF theory, a normal t-program or a disjunctive t-program may
+have.
+  To appear in Theory and Practice of Logic Programming (TPLP).
+
+
+Computing large and small stable models
+
+  In this paper, we focus on the problem of existence and computing of small
+and large stable models. We show that for every fixed integer k, there is a
+linear-time algorithm to decide the problem LSM (large stable models problem):
+does a logic program P have a stable model of size at least |P|-k. In contrast,
+we show that the problem SSM (small stable models problem) to decide whether a
+logic program P has a stable model of size at most k is much harder. We present
+two algorithms for this problem but their running time is given by polynomials
+of order depending on k. We show that the problem SSM is fixed-parameter
+intractable by demonstrating that it is W[2]-hard. This result implies that it
+is unlikely, an algorithm exists to compute stable models of size at most k
+that would run in time O(n^c), where c is a constant independent of k. We also
+provide an upper bound on the fixed-parameter complexity of the problem SSM by
+showing that it belongs to the class W[3].
+
+
+Uniform semantic treatment of default and autoepistemic logics
+
+  We revisit the issue of connections between two leading formalisms in
+nonmonotonic reasoning: autoepistemic logic and default logic. For each logic
+we develop a comprehensive semantic framework based on the notion of a belief
+pair. The set of all belief pairs together with the so called knowledge
+ordering forms a complete lattice. For each logic, we introduce several
+semantics by means of fixpoints of operators on the lattice of belief pairs.
+Our results elucidate an underlying isomorphism of the respective semantic
+constructions. In particular, we show that the interpretation of defaults as
+modal formulas proposed by Konolige allows us to represent all semantics for
+default logic in terms of the corresponding semantics for autoepistemic logic.
+Thus, our results conclusively establish that default logic can indeed be
+viewed as a fragment of autoepistemic logic. However, as we also demonstrate,
+the semantics of Moore and Reiter are given by different operators and occupy
+different locations in their corresponding families of semantics. This result
+explains the source of the longstanding difficulty to formally relate these two
+semantics. In the paper, we also discuss approximating skeptical reasoning with
+autoepistemic and default logics and establish constructive principles behind
+such approximations.
+
+
+Proceedings of the 8th International Workshop on Non-Monotonic
+  Reasoning, NMR'2000
+
+  The papers gathered in this collection were presented at the 8th
+International Workshop on Nonmonotonic Reasoning, NMR2000. The series was
+started by John McCarthy in 1978. The first international NMR workshop was held
+at Mohonk Mountain House, New Paltz, New York in June, 1984, and was organized
+by Ray Reiter and Bonnie Webber.
+  In the last 10 years the area of nonmonotonic reasoning has seen a number of
+important developments. Significant theoretical advances were made in the
+understanding of general abstract principles underlying nonmonotonicity. Key
+results on the expressibility and computational complexity of nonmonotonic
+logics were established. The role of nonmonotonic reasoning in belief revision,
+abduction, reasoning about action, planing and uncertainty was further
+clarified. Several successful NMR systems were built and used in applications
+such as planning, scheduling, logic programming and constraint satisfaction.
+  The papers in the proceedings reflect these recent advances in the field.
+They are grouped into sections corresponding to special sessions as they were
+held at the workshop:
+  1. General NMR track
+  2. Abductive reasonig
+  3. Belief revision: theory and practice
+  4. Representing action and planning
+  5. Systems descriptions and demonstrations
+  6. Uncertainty frameworks in NMR
+
+
+Propositional satisfiability in declarative programming
+
+  Answer-set programming (ASP) paradigm is a way of using logic to solve search
+problems. Given a search problem, to solve it one designs a theory in the logic
+so that models of this theory represent problem solutions. To compute a
+solution to a problem one needs to compute a model of the corresponding theory.
+Several answer-set programming formalisms have been developed on the basis of
+logic programming with the semantics of stable models. In this paper we show
+that also the logic of predicate calculus gives rise to effective
+implementations of the ASP paradigm, similar in spirit to logic programming
+with stable model semantics and with a similar scope of applicability.
+Specifically, we propose two logics based on predicate calculus as formalisms
+for encoding search problems. We show that the expressive power of these logics
+is given by the class NP-search. We demonstrate how to use them in programming
+and develop computational tools for model finding. In the case of one of the
+logics our techniques reduce the problem to that of propositional
+satisfiability and allow one to use off-the-shelf satisfiability solvers. The
+language of the other logic has more complex syntax and provides explicit means
+to model some high-level constraints. For theories in this logic, we designed
+our own solver that takes advantage of the expanded syntax. We present
+experimental results demonstrating computational effectiveness of the overall
+approach.
+
+
+Reiter's Default Logic Is a Logic of Autoepistemic Reasoning And a Good
+  One, Too
+
+  A fact apparently not observed earlier in the literature of nonmonotonic
+reasoning is that Reiter, in his default logic paper, did not directly
+formalize informal defaults. Instead, he translated a default into a certain
+natural language proposition and provided a formalization of the latter. A few
+years later, Moore noted that propositions like the one used by Reiter are
+fundamentally different than defaults and exhibit a certain autoepistemic
+nature. Thus, Reiter had developed his default logic as a formalization of
+autoepistemic propositions rather than of defaults.
+  The first goal of this paper is to show that some problems of Reiter's
+default logic as a formal way to reason about informal defaults are directly
+attributable to the autoepistemic nature of default logic and to the mismatch
+between informal defaults and the Reiter's formal defaults, the latter being a
+formal expression of the autoepistemic propositions Reiter used as a
+representation of informal defaults.
+  The second goal of our paper is to compare the work of Reiter and Moore.
+While each of them attempted to formalize autoepistemic propositions, the modes
+of reasoning in their respective logics were different. We revisit Moore's and
+Reiter's intuitions and present them from the perspective of autotheoremhood,
+where theories can include propositions referring to the theory's own theorems.
+We then discuss the formalization of this perspective in the logics of Moore
+and Reiter, respectively, using the unifying semantic framework for default and
+autoepistemic logics that we developed earlier. We argue that Reiter's default
+logic is a better formalization of Moore's intuitions about autoepistemic
+propositions than Moore's own autoepistemic logic.
+
+
+Fixed-parameter complexity of semantics for logic programs
+
+  A decision problem is called parameterized if its input is a pair of strings.
+One of these strings is referred to as a parameter. The problem: given a
+propositional logic program P and a non-negative integer k, decide whether P
+has a stable model of size no more than k, is an example of a parameterized
+decision problem with k serving as a parameter. Parameterized problems that are
+NP-complete often become solvable in polynomial time if the parameter is fixed.
+The problem to decide whether a program P has a stable model of size no more
+than k, where k is fixed and not a part of input, can be solved in time
+O(mn^k), where m is the size of P and n is the number of atoms in P. Thus, this
+problem is in the class P. However, algorithms with the running time given by a
+polynomial of order k are not satisfactory even for relatively small values of
+k.
+  The key question then is whether significantly better algorithms (with the
+degree of the polynomial not dependent on k) exist. To tackle it, we use the
+framework of fixed-parameter complexity. We establish the fixed-parameter
+complexity for several parameterized decision problems involving models,
+supported models and stable models of logic programs. We also establish the
+fixed-parameter complexity for variants of these problems resulting from
+restricting attention to Horn programs and to purely negative programs. Most of
+the problems considered in the paper have high fixed-parameter complexity.
+Thus, it is unlikely that fixing bounds on models (supported models, stable
+models) will lead to fast algorithms to decide the existence of such models.
+
+
+Relativized hyperequivalence of logic programs for modular programming
+
+  A recent framework of relativized hyperequivalence of programs offers a
+unifying generalization of strong and uniform equivalence. It seems to be
+especially well suited for applications in program optimization and modular
+programming due to its flexibility that allows us to restrict, independently of
+each other, the head and body alphabets in context programs. We study
+relativized hyperequivalence for the three semantics of logic programs given by
+stable, supported and supported minimal models. For each semantics, we identify
+four types of contexts, depending on whether the head and body alphabets are
+given directly or as the complement of a given set. Hyperequivalence relative
+to contexts where the head and body alphabets are specified directly has been
+studied before. In this paper, we establish the complexity of deciding
+relativized hyperequivalence with respect to the three other types of context
+programs.
+  To appear in Theory and Practice of Logic Programming (TPLP).
+
+
+Strong Equivalence of Qualitative Optimization Problems
+
+  We introduce the framework of qualitative optimization problems (or, simply,
+optimization problems) to represent preference theories. The formalism uses
+separate modules to describe the space of outcomes to be compared (the
+generator) and the preferences on outcomes (the selector). We consider two
+types of optimization problems. They differ in the way the generator, which we
+model by a propositional theory, is interpreted: by the standard propositional
+logic semantics, and by the equilibrium-model (answer-set) semantics. Under the
+latter interpretation of generators, optimization problems directly generalize
+answer-set optimization programs proposed previously. We study strong
+equivalence of optimization problems, which guarantees their interchangeability
+within any larger context. We characterize several versions of strong
+equivalence obtained by restricting the class of optimization problems that can
+be used as extensions and establish the complexity of associated reasoning
+tasks. Understanding strong equivalence is essential for modular representation
+of optimization problems and rewriting techniques to simplify them without
+changing their inherent properties.
+
+
+New Models for Generating Hard Random Boolean Formulas and Disjunctive
+  Logic Programs
+
+  We propose two models of random quantified boolean formulas and their natural
+random disjunctive logic program counterparts. The models extend the standard
+models of random k-CNF formulas and the Chen-Interian model of random 2QBFs.
+The first model controls the generation of programs and QSAT formulas by
+imposing a specific structure on rules and clauses, respectively. The second
+model is based on a family of QSAT formulas in a non-clausal form. We provide
+theoretical bounds for the phase transition region in our models, and show
+experimentally the presence of the easy-hard-easy pattern and its alignment
+with the location of the phase transition. We show that boolean formulas and
+logic programs from our models are significantly harder than those obtained
+from the standard k-CNF and Chen-Interian models, and that their combination
+yields formulas and programs that are "super-hard" to evaluate. We also provide
+evidence suggesting that formulas from one of our models are well suited for
+assessing solvers tuned to real-world instances. Finally, it is noteworthy
+that, to the best of our knowledge, our models and results on random
+disjunctive logic programs are the first of their kind.
+
+
+DATALOG with constraints - an answer-set programming system
+
+  Answer-set programming (ASP) has emerged recently as a viable programming
+paradigm well attuned to search problems in AI, constraint satisfaction and
+combinatorics. Propositional logic is, arguably, the simplest ASP system with
+an intuitive semantics supporting direct modeling of problem constraints.
+However, for some applications, especially those requiring that transitive
+closure be computed, it requires additional variables and results in large
+theories. Consequently, it may not be a practical computational tool for such
+problems. On the other hand, ASP systems based on nonmonotonic logics, such as
+stable logic programming, can handle transitive closure computation efficiently
+and, in general, yield very concise theories as problem representations. Their
+semantics is, however, more complex. Searching for the middle ground, in this
+paper we introduce a new nonmonotonic logic, DATALOG with constraints or DC.
+Informally, DC theories consist of propositional clauses (constraints) and of
+Horn rules. The semantics is a simple and natural extension of the semantics of
+the propositional logic. However, thanks to the presence of Horn rules in the
+system, modeling of transitive closure becomes straightforward. We describe the
+syntax and semantics of DC, and study its properties. We discuss an
+implementation of DC and present results of experimental study of the
+effectiveness of DC, comparing it with CSAT, a satisfiability checker and
+SMODELS implementation of stable logic programming. Our results show that DC is
+competitive with the other two approaches, in case of many search problems,
+often yielding much more efficient solutions.
+
+
+ASPMT(QS): Non-Monotonic Spatial Reasoning with Answer Set Programming
+  Modulo Theories
+
+  The systematic modelling of \emph{dynamic spatial systems} [9] is a key
+requirement in a wide range of application areas such as comonsense cognitive
+robotics, computer-aided architecture design, dynamic geographic information
+systems. We present ASPMT(QS), a novel approach and fully-implemented prototype
+for non-monotonic spatial reasoning ---a crucial requirement within dynamic
+spatial systems-- based on Answer Set Programming Modulo Theories (ASPMT).
+ASPMT(QS) consists of a (qualitative) spatial representation module (QS) and a
+method for turning tight ASPMT instances into Sat Modulo Theories (SMT)
+instances in order to compute stable models by means of SMT solvers. We
+formalise and implement concepts of default spatial reasoning and spatial frame
+axioms using choice formulas. Spatial reasoning is performed by encoding
+spatial relations as systems of polynomial constraints, and solving via SMT
+with the theory of real nonlinear arithmetic. We empirically evaluate ASPMT(QS)
+in comparison with other prominent contemporary spatial reasoning systems. Our
+results show that ASPMT(QS) is the only existing system that is capable of
+reasoning about indirect spatial effects (i.e. addressing the ramification
+problem), and integrating geometric and qualitative spatial information within
+a non-monotonic spatial reasoning context.
+
+
+Dual-normal Logic Programs - the Forgotten Class
+
+  Disjunctive Answer Set Programming is a powerful declarative programming
+paradigm with complexity beyond NP. Identifying classes of programs for which
+the consistency problem is in NP is of interest from the theoretical standpoint
+and can potentially lead to improvements in the design of answer set
+programming solvers. One of such classes consists of dual-normal programs,
+where the number of positive body atoms in proper rules is at most one. Unlike
+other classes of programs, dual-normal programs have received little attention
+so far. In this paper we study this class. We relate dual-normal programs to
+propositional theories and to normal programs by presenting several
+inter-translations. With the translation from dual-normal to normal programs at
+hand, we introduce the novel class of body-cycle free programs, which are in
+many respects dual to head-cycle free programs. We establish the expressive
+power of dual-normal programs in terms of SE- and UE-models, and compare them
+to normal programs. We also discuss the complexity of deciding whether
+dual-normal programs are strongly and uniformly equivalent.
+
+
+The informal semantics of Answer Set Programming: A Tarskian perspective
+
+  In Knowledge Representation, it is crucial that knowledge engineers have a
+good understanding of the formal expressions that they write. What formal
+expressions state intuitively about the domain of discourse is studied in the
+theory of the informal semantics of a logic. In this paper we study the
+informal semantics of Answer Set Programming. The roots of answer set
+programming lie in the language of Extended Logic Programming, which was
+introduced initially as an epistemic logic for default and autoepistemic
+reasoning. In 1999, the seminal papers on answer set programming proposed to
+use this logic for a different purpose, namely, to model and solve search
+problems. Currently, the language is used primarily in this new role. However,
+the original epistemic intuitions lose their explanatory relevance in this new
+context. How answer set programs are connected to the specifications of
+problems they model is more easily explained in a classical Tarskian semantics,
+in which models correspond to possible worlds, rather than to belief states of
+an epistemic agent. In this paper, we develop a new theory of the informal
+semantics of answer set programming, which is formulated in the Tarskian
+setting and based on Frege's compositionality principle. It differs
+substantially from the earlier epistemic theory of informal semantics,
+providing a different view on the meaning of the connectives in answer set
+programming and on its relation to other logics, in particular classical logic.
+
+

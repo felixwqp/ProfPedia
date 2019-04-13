@@ -1,0 +1,466 @@
+Set Families with Low Pairwise Intersection
+
+  A $\left(n,\ell,\gamma\right)$-sharing set family of size $m$ is a family of
+sets $S_1,\ldots,S_m\subseteq [n]$ s.t. each set has size $\ell$ and each pair
+of sets shares at most $\gamma$ elements. We let $m\left(n,\ell,\gamma\right)$
+denote the maximum size of any such set family and we consider the following
+question: How large can $m\left(n,\ell,\gamma\right)$ be?
+$\left(n,\ell,\gamma\right)$-sharing set families have a rich set of
+applications including the construction of pseudorandom number generators and
+usable and secure password management schemes. We analyze the explicit
+construction of Blocki et al using recent bounds on the value of the $t$'th
+Ramanujan prime. We show that this explicit construction produces a
+$\left(4\ell^2\ln 4\ell,\ell,\gamma\right)$-sharing set family of size $\left(2
+\ell \ln 2\ell\right)^{\gamma+1}$ for any $\ell\geq \gamma$. We also show that
+the construction of Blocki et al can be used to obtain a weak
+$\left(n,\ell,\gamma\right)$-sharing set family of size $m$ for any $m >0$.
+These results are competitive with the inexplicit construction of Raz et al for
+weak $\left(n,\ell,\gamma\right)$-sharing families. We show that our explicit
+construction of weak $\left(n,\ell,\gamma\right)$-sharing set families can be
+used to obtain a parallelizable pseudorandom number generator with a low memory
+footprint by using the pseudorandom number generator of Nisan and Wigderson. We
+also prove that $m\left(n,n/c_1,c_2n\right)$ must be a constant whenever $c_2
+\leq \frac{2}{c_1^3+c_1^2}$. We show that this bound is nearly tight as
+$m\left(n,n/c_1,c_2n\right)$ grows exponentially fast whenever $c_2 >
+c_1^{-2}$.
+
+
+Resolving the Complexity of Some Data Privacy Problems
+
+  We formally study two methods for data sanitation that have been used
+extensively in the database community: k-anonymity and l-diversity. We settle
+several open problems concerning the difficulty of applying these methods
+optimally, proving both positive and negative results:
+  1. 2-anonymity is in P.
+  2. The problem of partitioning the edges of a triangle-free graph into
+4-stars (degree-three vertices) is NP-hard. This yields an alternative proof
+that 3-anonymity is NP-hard even when the database attributes are all binary.
+  3. 3-anonymity with only 27 attributes per record is MAX SNP-hard.
+  4. For databases with n rows, k-anonymity is in O(4^n poly(n)) time for all k
+> 1.
+  5. For databases with n rows and l <= log_{2c+2} log n attributes over an
+alphabet of cardinality c = O(1), k-anonymity is in P. Assuming c, l = O(1),
+k-anonymity is in O(n).
+  6. 3-diversity with binary attributes is NP-hard, with one sensitive
+attribute.
+  7. 2-diversity with binary attributes is NP-hard, with three sensitive
+attributes.
+
+
+Optimizing Password Composition Policies
+
+  A password composition policy restricts the space of allowable passwords to
+eliminate weak passwords that are vulnerable to statistical guessing attacks.
+Usability studies have demonstrated that existing password composition policies
+can sometimes result in weaker password distributions; hence a more principled
+approach is needed. We introduce the first theoretical model for optimizing
+password composition policies. We study the computational and sample complexity
+of this problem under different assumptions on the structure of policies and on
+users' preferences over passwords. Our main positive result is an algorithm
+that -- with high probability --- constructs almost optimal policies (which are
+specified as a union of subsets of allowed passwords), and requires only a
+small number of samples of users' preferred passwords. We complement our
+theoretical results with simulations using a real-world dataset of 32 million
+passwords.
+
+
+Naturally Rehearsing Passwords
+
+  We introduce quantitative usability and security models to guide the design
+of password management schemes --- systematic strategies to help users create
+and remember multiple passwords. In the same way that security proofs in
+cryptography are based on complexity-theoretic assumptions (e.g., hardness of
+factoring and discrete logarithm), we quantify usability by introducing
+usability assumptions. In particular, password management relies on assumptions
+about human memory, e.g., that a user who follows a particular rehearsal
+schedule will successfully maintain the corresponding memory. These assumptions
+are informed by research in cognitive science and validated through empirical
+studies. Given rehearsal requirements and a user's visitation schedule for each
+account, we use the total number of extra rehearsals that the user would have
+to do to remember all of his passwords as a measure of the usability of the
+password scheme. Our usability model leads us to a key observation: password
+reuse benefits users not only by reducing the number of passwords that the user
+has to memorize, but more importantly by increasing the natural rehearsal rate
+for each password. We also present a security model which accounts for the
+complexity of password management with multiple accounts and associated
+threats, including online, offline, and plaintext password leak attacks.
+Observing that current password management schemes are either insecure or
+unusable, we present Shared Cues--- a new scheme in which the underlying secret
+is strategically shared across accounts to ensure that most rehearsal
+requirements are satisfied naturally while simultaneously providing strong
+security. The construction uses the Chinese Remainder Theorem to achieve these
+competing goals.
+
+
+GOTCHA Password Hackers!
+
+  We introduce GOTCHAs (Generating panOptic Turing Tests to Tell Computers and
+Humans Apart) as a way of preventing automated offline dictionary attacks
+against user selected passwords. A GOTCHA is a randomized puzzle generation
+protocol, which involves interaction between a computer and a human.
+Informally, a GOTCHA should satisfy two key properties: (1) The puzzles are
+easy for the human to solve. (2) The puzzles are hard for a computer to solve
+even if it has the random bits used by the computer to generate the final
+puzzle --- unlike a CAPTCHA. Our main theorem demonstrates that GOTCHAs can be
+used to mitigate the threat of offline dictionary attacks against passwords by
+ensuring that a password cracker must receive constant feedback from a human
+being while mounting an attack. Finally, we provide a candidate construction of
+GOTCHAs based on Inkblot images. Our construction relies on the usability
+assumption that users can recognize the phrases that they originally used to
+describe each Inkblot image --- a much weaker usability assumption than
+previous password systems based on Inkblots which required users to recall
+their phrase exactly. We conduct a user study to evaluate the usability of our
+GOTCHA construction. We also generate a GOTCHA challenge where we encourage
+artificial intelligence and security researchers to try to crack several
+passwords protected with our scheme.
+
+
+Client-CASH: Protecting Master Passwords against Offline Attacks
+
+  Offline attacks on passwords are increasingly commonplace and dangerous. An
+offline adversary is limited only by the amount of computational resources he
+or she is willing to invest to crack a user's password. The danger is
+compounded by the existence of authentication servers who fail to adopt proper
+password storage practices like key-stretching. Password managers can help
+mitigate these risks by adopting key stretching procedures like hash iteration
+or memory hard functions to derive site specific passwords from the user's
+master password on the client-side. While key stretching can reduce the offline
+adversary's success rate, these procedures also increase computational costs
+for a legitimate user. Motivated by the observation that most of the password
+guesses of the offline adversary will be incorrect, we propose a client side
+cost asymmetric secure hashing scheme (Client-CASH). Client-CASH randomizes the
+runtime of client-side key stretching procedure in a way that the expected
+computational cost of our key derivation function is greater when run with an
+incorrect master password. We make several contributions. First, we show how to
+introduce randomness into a client-side key stretching algorithms through the
+use of halting predicates which are selected randomly at the time of account
+creation. Second, we formalize the problem of finding the optimal running time
+distribution subject to certain cost constraints for the client and certain
+security constrains on the halting predicates. Finally, we demonstrate that
+Client-CASH can reduce the adversary's success rate by up to $21\%$. These
+results demonstrate the promise of the Client-CASH mechanism.
+
+
+Differentially Private Data Analysis of Social Networks via Restricted
+  Sensitivity
+
+  We introduce the notion of restricted sensitivity as an alternative to global
+and smooth sensitivity to improve accuracy in differentially private data
+analysis. The definition of restricted sensitivity is similar to that of global
+sensitivity except that instead of quantifying over all possible datasets, we
+take advantage of any beliefs about the dataset that a querier may have, to
+quantify over a restricted class of datasets. Specifically, given a query f and
+a hypothesis H about the structure of a dataset D, we show generically how to
+transform f into a new query f_H whose global sensitivity (over all datasets
+including those that do not satisfy H) matches the restricted sensitivity of
+the query f. Moreover, if the belief of the querier is correct (i.e., D is in
+H) then f_H(D) = f(D). If the belief is incorrect, then f_H(D) may be
+inaccurate.
+  We demonstrate the usefulness of this notion by considering the task of
+answering queries regarding social-networks, which we model as a combination of
+a graph and a labeling of its vertices. In particular, while our generic
+procedure is computationally inefficient, for the specific definition of H as
+graphs of bounded degree, we exhibit efficient ways of constructing f_H using
+different projection-based techniques. We then analyze two important query
+classes: subgraph counting queries (e.g., number of triangles) and local
+profile queries (e.g., number of people who know a spy and a computer-scientist
+who know each other). We demonstrate that the restricted sensitivity of such
+queries can be significantly lower than their smooth sensitivity. Thus, using
+restricted sensitivity we can maintain privacy whether or not D is in H, while
+providing more accurate results in the event that H holds true.
+
+
+Towards Human Computable Passwords
+
+  An interesting challenge for the cryptography community is to design
+authentication protocols that are so simple that a human can execute them
+without relying on a fully trusted computer. We propose several candidate
+authentication protocols for a setting in which the human user can only receive
+assistance from a semi-trusted computer --- a computer that stores information
+and performs computations correctly but does not provide confidentiality. Our
+schemes use a semi-trusted computer to store and display public challenges
+$C_i\in[n]^k$. The human user memorizes a random secret mapping
+$\sigma:[n]\rightarrow\mathbb{Z}_d$ and authenticates by computing responses
+$f(\sigma(C_i))$ to a sequence of public challenges where
+$f:\mathbb{Z}_d^k\rightarrow\mathbb{Z}_d$ is a function that is easy for the
+human to evaluate. We prove that any statistical adversary needs to sample
+$m=\tilde{\Omega}(n^{s(f)})$ challenge-response pairs to recover $\sigma$, for
+a security parameter $s(f)$ that depends on two key properties of $f$. To
+obtain our results, we apply the general hypercontractivity theorem to lower
+bound the statistical dimension of the distribution over challenge-response
+pairs induced by $f$ and $\sigma$. Our lower bounds apply to arbitrary
+functions $f $ (not just to functions that are easy for a human to evaluate),
+and generalize recent results of Feldman et al. As an application, we propose a
+family of human computable password functions $f_{k_1,k_2}$ in which the user
+needs to perform $2k_1+2k_2+1$ primitive operations (e.g., adding two digits or
+remembering $\sigma(i)$), and we show that $s(f) = \min\{k_1+1, (k_2+1)/2\}$.
+For these schemes, we prove that forging passwords is equivalent to recovering
+the secret mapping. Thus, our human computable password schemes can maintain
+strong security guarantees even after an adversary has observed the user login
+to many different accounts.
+
+
+Spaced Repetition and Mnemonics Enable Recall of Multiple Strong
+  Passwords
+
+  We report on a user study that provides evidence that spaced repetition and a
+specific mnemonic technique enable users to successfully recall multiple strong
+passwords over time. Remote research participants were asked to memorize 4
+Person-Action-Object (PAO) stories where they chose a famous person from a
+drop-down list and were given machine-generated random action-object pairs.
+Users were also shown a photo of a scene and asked to imagine the PAO story
+taking place in the scene (e.g., Bill Gates---swallowing---bike on a beach).
+Subsequently, they were asked to recall the action-object pairs when prompted
+with the associated scene-person pairs following a spaced repetition schedule
+over a period of 127+ days. While we evaluated several spaced repetition
+schedules, the best results were obtained when users initially returned after
+12 hours and then in $1.5\times$ increasing intervals: 77% of the participants
+successfully recalled all 4 stories in 10 tests over a period of 158 days. Much
+of the forgetting happened in the first test period (12 hours): 89% of
+participants who remembered their stories during the first test period
+successfully remembered them in every subsequent round. These findings, coupled
+with recent results on naturally rehearsing password schemes, suggest that 4
+PAO stories could be used to create usable and strong passwords for 14
+sensitive accounts following this spaced repetition schedule, possibly with a
+few extra upfront rehearsals. In addition, we find that there is an
+interference effect across multiple PAO stories: the recall rate of 100% (resp.
+90%) for participants who were asked to memorize 1 PAO story (resp. 2 PAO
+stories) is significantly better than the recall rate for participants who were
+asked to memorize 4 PAO stories. These findings yield concrete advice for
+improving constructions of password management schemes and future user studies.
+
+
+Adaptive Regret Minimization in Bounded-Memory Games
+
+  Online learning algorithms that minimize regret provide strong guarantees in
+situations that involve repeatedly making decisions in an uncertain
+environment, e.g. a driver deciding what route to drive to work every day.
+While regret minimization has been extensively studied in repeated games, we
+study regret minimization for a richer class of games called bounded memory
+games. In each round of a two-player bounded memory-m game, both players
+simultaneously play an action, observe an outcome and receive a reward. The
+reward may depend on the last m outcomes as well as the actions of the players
+in the current round. The standard notion of regret for repeated games is no
+longer suitable because actions and rewards can depend on the history of play.
+To account for this generality, we introduce the notion of k-adaptive regret,
+which compares the reward obtained by playing actions prescribed by the
+algorithm against a hypothetical k-adaptive adversary with the reward obtained
+by the best expert in hindsight against the same adversary. Roughly, a
+hypothetical k-adaptive adversary adapts her strategy to the defender's actions
+exactly as the real adversary would within each window of k rounds. Our
+definition is parametrized by a set of experts, which can include both fixed
+and adaptive defender strategies.
+  We investigate the inherent complexity of and design algorithms for adaptive
+regret minimization in bounded memory games of perfect and imperfect
+information. We prove a hardness result showing that, with imperfect
+information, any k-adaptive regret minimizing algorithm (with fixed strategies
+as experts) must be inefficient unless NP=RP even when playing against an
+oblivious adversary. In contrast, for bounded memory games of perfect and
+imperfect information we present approximate 0-adaptive regret minimization
+algorithms against an oblivious adversary running in time n^{O(1)}.
+
+
+CASH: A Cost Asymmetric Secure Hash Algorithm for Optimal Password
+  Protection
+
+  An adversary who has obtained the cryptographic hash of a user's password can
+mount an offline attack to crack the password by comparing this hash value with
+the cryptographic hashes of likely password guesses. This offline attacker is
+limited only by the resources he is willing to invest to crack the password.
+Key-stretching tools can help mitigate the threat of offline attacks by making
+each password guess more expensive for the adversary to verify. However,
+key-stretching increases authentication costs for a legitimate authentication
+server. We introduce a novel Stackelberg game model which captures the
+essential elements of this interaction between a defender and an offline
+attacker. We then introduce Cost Asymmetric Secure Hash (CASH), a randomized
+key-stretching mechanism that minimizes the fraction of passwords that would be
+cracked by a rational offline attacker without increasing amortized
+authentication costs for the legitimate authentication server. CASH is
+motivated by the observation that the legitimate authentication server will
+typically run the authentication procedure to verify a correct password, while
+an offline adversary will typically use incorrect password guesses. By using
+randomization we can ensure that the amortized cost of running CASH to verify a
+correct password guess is significantly smaller than the cost of rejecting an
+incorrect password. Using our Stackelberg game framework we can quantify the
+quality of the underlying CASH running time distribution in terms of the
+fraction of passwords that a rational offline adversary would crack. We provide
+an efficient algorithm to compute high quality CASH distributions for the
+defender. Finally, we analyze CASH using empirical data from two large scale
+password frequency datasets. Our analysis shows that CASH can significantly
+reduce (up to $50\%$) the fraction of password cracked by a rational offline
+adversary.
+
+
+Sustained Space Complexity
+
+  Memory-hard functions (MHF) are functions whose evaluation cost is dominated
+by memory cost. MHFs are egalitarian, in the sense that evaluating them on
+dedicated hardware (like FPGAs or ASICs) is not much cheaper than on
+off-the-shelf hardware (like x86 CPUs). MHFs have interesting cryptographic
+applications, most notably to password hashing and securing blockchains.
+  Alwen and Serbinenko [STOC'15] define the cumulative memory complexity (cmc)
+of a function as the sum (over all time-steps) of the amount of memory required
+to compute the function. They advocate that a good MHF must have high cmc.
+Unlike previous notions, cmc takes into account that dedicated hardware might
+exploit amortization and parallelism. Still, cmc has been critizised as
+insufficient, as it fails to capture possible time-memory trade-offs, as memory
+cost doesn't scale linearly, functions with the same cmc could still have very
+different actual hardware cost.
+  In this work we address this problem, and introduce the notion of
+sustained-memory complexity, which requires that any algorithm evaluating the
+function must use a large amount of memory for many steps. We construct
+functions (in the parallel random oracle model) whose sustained-memory
+complexity is almost optimal: our function can be evaluated using $n$ steps and
+$O(n/\log(n))$ memory, in each step making one query to the (fixed-input
+length) random oracle, while any algorithm that can make arbitrary many
+parallel queries to the random oracle, still needs $\Omega(n/\log(n))$ memory
+for $\Omega(n)$ steps.
+  Our main technical contribution is the construction is a family of DAGs on
+$n$ nodes with constant indegree with high "sustained-space complexity",
+meaning that any parallel black-pebbling strategy requires $\Omega(n/\log(n))$
+pebbles for at least $\Omega(n)$ steps.
+
+
+Audit Games
+
+  Effective enforcement of laws and policies requires expending resources to
+prevent and detect offenders, as well as appropriate punishment schemes to
+deter violators. In particular, enforcement of privacy laws and policies in
+modern organizations that hold large volumes of personal information (e.g.,
+hospitals, banks, and Web services providers) relies heavily on internal audit
+mechanisms. We study economic considerations in the design of these mechanisms,
+focusing in particular on effective resource allocation and appropriate
+punishment schemes. We present an audit game model that is a natural
+generalization of a standard security game model for resource allocation with
+an additional punishment parameter. Computing the Stackelberg equilibrium for
+this game is challenging because it involves solving an optimization problem
+with non-convex quadratic constraints. We present an additive FPTAS that
+efficiently computes a solution that is arbitrarily close to the optimal
+solution.
+
+
+Audit Games with Multiple Defender Resources
+
+  Modern organizations (e.g., hospitals, social networks, government agencies)
+rely heavily on audit to detect and punish insiders who inappropriately access
+and disclose confidential information. Recent work on audit games models the
+strategic interaction between an auditor with a single audit resource and
+auditees as a Stackelberg game, augmenting associated well-studied security
+games with a configurable punishment parameter. We significantly generalize
+this audit game model to account for multiple audit resources where each
+resource is restricted to audit a subset of all potential violations, thus
+enabling application to practical auditing scenarios. We provide an FPTAS that
+computes an approximately optimal solution to the resulting non-convex
+optimization problem. The main technical novelty is in the design and
+correctness proof of an optimization transformation that enables the
+construction of this FPTAS. In addition, we experimentally demonstrate that
+this transformation significantly speeds up computation of solutions for a
+class of audit games and security games.
+
+
+Optimizing Locally Differentially Private Protocols
+
+  Protocols satisfying Local Differential Privacy (LDP) enable parties to
+collect aggregate information about a population while protecting each user's
+privacy, without relying on a trusted third party. LDP protocols (such as
+Google's RAPPOR) have been deployed in real-world scenarios. In these
+protocols, a user encodes his private information and perturbs the encoded
+value locally before sending it to an aggregator, who combines values that
+users contribute to infer statistics about the population. In this paper, we
+introduce a framework that generalizes several LDP protocols proposed in the
+literature. Our framework yields a simple and fast aggregation algorithm, whose
+accuracy can be precisely analyzed. Our in-depth analysis enables us to choose
+optimal parameters, resulting in two new protocols (i.e., Optimized Unary
+Encoding and Optimized Local Hashing) that provide better utility than
+protocols previously proposed. We present precise conditions for when each
+proposed protocol should be used, and perform experiments that demonstrate the
+advantage of our proposed protocols.
+
+
+Relaxed Locally Correctable Codes in Computationally Bounded Channels
+
+  Error-correcting codes that admit local decoding and correcting algorithms
+have been the focus of much recent research due to their numerous theoretical
+and practical applications. An important goal is to obtain the best possible
+tradeoffs between the number of queries the algorithm makes to its oracle (the
+locality of the task), and the amount of redundancy in the encoding (the
+information rate).
+  In Hamming's classical adversarial channel model, the current tradeoffs are
+dramatic, allowing either small locality, but superpolynomial blocklength, or
+small blocklength, but high locality. However, in the computationally bounded,
+adversarial channel model, proposed by Lipton (STACS 1994), constructions of
+locally decodable codes suddenly exhibit small locality and small blocklength,
+but these constructions require strong trusted setup assumptions e.g.,
+Ostrovsky, Pandey and Sahai (ICALP 2007) construct private locally decodable
+codes in the setting where the sender and receiver already share a symmetric
+key.
+  We study variants of locally decodable and locally correctable codes in
+computationally bounded, adversarial channels, in a setting with no public-key
+or private-key cryptographic setup. The only setup assumption we require is the
+selection of the public parameters (seed) for a collision-resistant hash
+function. Specifically, we provide constructions of relaxed locally correctable
+and relaxed locally decodable codes over the binary alphabet, with constant
+information rate, and poly-logarithmic locality.
+  Our constructions, which compare favorably with their classical analogues in
+the computationally unbounded Hamming channel, crucially employ
+collision-resistant hash functions and local expander graphs, extending ideas
+from recent cryptographic constructions of memory-hard functions.
+
+
+The Johnson-Lindenstrauss Transform Itself Preserves Differential
+  Privacy
+
+  This paper proves that an "old dog", namely -- the classical
+Johnson-Lindenstrauss transform, "performs new tricks" -- it gives a novel way
+of preserving differential privacy. We show that if we take two databases, $D$
+and $D'$, such that (i) $D'-D$ is a rank-1 matrix of bounded norm and (ii) all
+singular values of $D$ and $D'$ are sufficiently large, then multiplying either
+$D$ or $D'$ with a vector of iid normal Gaussians yields two statistically
+close distributions in the sense of differential privacy. Furthermore, a small,
+deterministic and \emph{public} alteration of the input is enough to assert
+that all singular values of $D$ are large.
+  We apply the Johnson-Lindenstrauss transform to the task of approximating
+cut-queries: the number of edges crossing a $(S,\bar S)$-cut in a graph. We
+show that the JL transform allows us to \emph{publish a sanitized graph} that
+preserves edge differential privacy (where two graphs are neighbors if they
+differ on a single edge) while adding only $O(|S|/\epsilon)$ random noise to
+any given query (w.h.p). Comparing the additive noise of our algorithm to
+existing algorithms for answering cut-queries in a differentially private
+manner, we outperform all others on small cuts ($|S| = o(n)$).
+  We also apply our technique to the task of estimating the variance of a given
+matrix in any given direction. The JL transform allows us to \emph{publish a
+sanitized covariance matrix} that preserves differential privacy w.r.t bounded
+changes (each row in the matrix can change by at most a norm-1 vector) while
+adding random noise of magnitude independent of the size of the matrix (w.h.p).
+In contrast, existing algorithms introduce an error which depends on the matrix
+dimensions.
+
+
+On the Computational Complexity of Minimal Cumulative Cost Graph
+  Pebbling
+
+  We consider the computational complexity of finding a legal black pebbling of
+a DAG $G=(V,E)$ with minimum cumulative cost. A black pebbling is a sequence
+$P_0,\ldots, P_t \subseteq V$ of sets of nodes which must satisfy the following
+properties: $P_0 = \emptyset$ (we start off with no pebbles on $G$),
+$\mathsf{sinks}(G) \subseteq \bigcup_{j \leq t} P_j$ (every sink node was
+pebbled at some point) and $\mathsf{parents}\big(P_{i+1}\backslash P_i\big)
+\subseteq P_i$ (we can only place a new pebble on a node $v$ if all of $v$'s
+parents had a pebble during the last round). The cumulative cost of a pebbling
+$P_0,P_1,\ldots, P_t \subseteq V$ is $\mathsf{cc}(P) = | P_1| + \ldots + |
+P_t|$. The cumulative pebbling cost is an especially important security metric
+for data-independent memory hard functions, an important primitive for password
+hashing. Thus, an efficient (approximation) algorithm would be an invaluable
+tool for the cryptanalysis of password hash functions as it would provide an
+automated tool to establish tight bounds on the amortized space-time cost of
+computing the function. We show that such a tool is unlikely to exist. In
+particular, we prove the following results. (1) It is
+$\texttt{NP}\mbox{-}\texttt{Hard}$ to find a pebbling minimizing cumulative
+cost. (2) The natural linear program relaxation for the problem has integrality
+gap $\tilde{O}(n)$, where $n$ is the number of nodes in $G$. We conjecture that
+the problem is hard to approximate. (3) We show that a related problem, find
+the minimum size subset $S\subseteq V$ such that $\textsf{depth}(G-S) \leq d$,
+is also $\texttt{NP}\mbox{-}\texttt{Hard}$. In fact, under the unique games
+conjecture there is no $(2-\epsilon)$-approximation algorithm.
+
+

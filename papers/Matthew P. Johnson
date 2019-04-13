@@ -1,0 +1,1064 @@
+Patterns of Scalable Bayesian Inference
+
+  Datasets are growing not just in size but in complexity, creating a demand
+for rich models and quantification of uncertainty. Bayesian methods are an
+excellent fit for this demand, but scaling Bayesian inference is a challenge.
+In response to this challenge, there has been considerable recent work based on
+varying assumptions about model structure, underlying computational resources,
+and the importance of asymptotic correctness. As a result, there is a zoo of
+ideas with few clear overarching principles.
+  In this paper, we seek to identify unifying principles, patterns, and
+intuitions for scaling Bayesian inference. We review existing work on utilizing
+modern computing resources with both MCMC and variational approximation
+techniques. From this taxonomy of ideas, we characterize the general principles
+that have proven successful for designing scalable inference procedures and
+comment on the path forward.
+
+
+Deciding the Closure of Inconsistent Rooted Triples is NP-Complete
+
+  Interpreting three-leaf binary trees or {\em rooted triples} as constraints
+yields an entailment relation, whereby binary trees satisfying some rooted
+triples must also thus satisfy others, and thence a closure operator, which is
+known to be polynomial-time computable. This is extended to inconsistent triple
+sets by defining that a triple is entailed by such a set if it is entailed by
+any consistent subset of it.
+  Determining whether the closure of an inconsistent rooted triple set can be
+computed in polynomial time was posed as an open problem in the Isaac Newton
+Institute's "Phylogenetics" program in 2007. It appears (as NC4) in a
+collection of such open problems maintained by Mike Steel, and it is the last
+of that collection's five problems concerning computational complexity to have
+remained open. We resolve the complexity of computing this closure, proving
+that its decision version is NP-Complete.
+  In the process, we also prove that detecting the existence of {\em any}
+acyclic B-hyperpath (from specified source to destination) is NP-Complete, in a
+significantly narrower special case than the version whose {\em minimization}
+problem was recently proven NP-hard by Ritz et al. This implies it is NP-hard
+to approximate (our special case of) their minimization problem to within {\em
+any} factor.
+
+
+Red-Blue-Partitioned MST, TSP, and Matching
+
+  Arkin et al.~\cite{ArkinBCCJKMM17} recently introduced \textit{partitioned
+pairs} network optimization problems: given a metric-weighted graph on $n$
+pairs of nodes, the task is to color one node from each pair red and the other
+blue, and then to compute two separate \textit{network structures} or disjoint
+(node-covering) subgraphs of a specified sort, one on the graph induced by the
+red nodes and the other on the blue nodes. Three structures have been
+investigated by \cite{ArkinBCCJKMM17}---\textit{spanning trees},
+\textit{traveling salesperson tours}, and \textit{perfect matchings}---and the
+three objectives to optimize for when computing such pairs of structures:
+\textit{min-sum}, \textit{min-max}, and \textit{bottleneck}. We provide
+improved approximation guarantees and/or strengthened hardness results for
+these nine NP-hard problem settings.
+
+
+Finding a Small Number of Colourful Components
+
+  A partition $(V_1,\ldots,V_k)$ of the vertex set of a graph $G$ with a (not
+necessarily proper) colouring $c$ is colourful if no two vertices in any $V_i$
+have the same colour and every set $V_i$ induces a connected graph. The
+COLOURFUL PARTITION problem is to decide whether a coloured graph $(G,c)$ has a
+colourful partition of size at most $k$. This problem is closely related to the
+COLOURFUL COMPONENTS problem, which is to decide whether a graph can be
+modified into a graph whose connected components form a colourful partition by
+deleting at most $p$ edges. Nevertheless we show that COLOURFUL PARTITION and
+COLOURFUL COMPONENTS may have different complexities for restricted instances.
+We tighten known NP-hardness results for both problems and in addition we prove
+new hardness and tractability results for COLOURFUL PARTITION. Using these
+results we complete our paper with a thorough parameterized study of COLOURFUL
+PARTITION.
+
+
+Composing graphical models with neural networks for structured
+  representations and fast inference
+
+  We propose a general modeling and inference framework that composes
+probabilistic graphical models with deep learning methods and combines their
+respective strengths. Our model family augments graphical structure in latent
+variables with neural network observation models. For inference, we extend
+variational autoencoders to use graphical model approximating distributions
+with recognition networks that output conjugate potentials. All components of
+these models are learned simultaneously with a single objective, giving a
+scalable algorithm that leverages stochastic variational inference, natural
+gradients, graphical model message passing, and the reparameterization trick.
+We illustrate this framework with several example models and an application to
+mouse behavioral phenotyping.
+
+
+Multimodal Prediction and Personalization of Photo Edits with Deep
+  Generative Models
+
+  Professional-grade software applications are powerful but
+complicated$-$expert users can achieve impressive results, but novices often
+struggle to complete even basic tasks. Photo editing is a prime example: after
+loading a photo, the user is confronted with an array of cryptic sliders like
+"clarity", "temp", and "highlights". An automatically generated suggestion
+could help, but there is no single "correct" edit for a given image$-$different
+experts may make very different aesthetic decisions when faced with the same
+image, and a single expert may make different choices depending on the intended
+use of the image (or on a whim). We therefore want a system that can propose
+multiple diverse, high-quality edits while also learning from and adapting to a
+user's aesthetic preferences. In this work, we develop a statistical model that
+meets these objectives. Our model builds on recent advances in neural network
+generative modeling and scalable inference, and uses hierarchical structure to
+learn editing patterns across many diverse users. Empirically, we find that our
+model outperforms other approaches on this challenging multimodal prediction
+task.
+
+
+MIMIC-CXR: A large publicly available database of labeled chest
+  radiographs
+
+  Chest radiography is an extremely powerful imaging modality, allowing for a
+detailed inspection of a patient's thorax, but requiring specialized training
+for proper interpretation. With the advent of high performance general purpose
+computer vision algorithms, the accurate automated analysis of chest
+radiographs is becoming increasingly of interest to researchers. However, a key
+challenge in the development of these techniques is the lack of sufficient
+data. Here we describe MIMIC-CXR, a large dataset of 371,920 chest x-rays
+associated with 227,943 imaging studies sourced from the Beth Israel Deaconess
+Medical Center between 2011 - 2016. Each imaging study can pertain to one or
+more images, but most often are associated with two images: a frontal view and
+a lateral view. Images are provided with 14 labels derived from a natural
+language processing tool applied to the corresponding free-text radiology
+reports. All images have been de-identified to protect patient privacy. The
+dataset is made freely available to facilitate and encourage a wide range of
+research in medical computer vision.
+
+
+Dependent Multinomial Models Made Easy: Stick Breaking with the
+  Pólya-Gamma Augmentation
+
+  Many practical modeling problems involve discrete data that are best
+represented as draws from multinomial or categorical distributions. For
+example, nucleotides in a DNA sequence, children's names in a given state and
+year, and text documents are all commonly modeled with multinomial
+distributions. In all of these cases, we expect some form of dependency between
+the draws: the nucleotide at one position in the DNA strand may depend on the
+preceding nucleotides, children's names are highly correlated from year to
+year, and topics in text may be correlated and dynamic. These dependencies are
+not naturally captured by the typical Dirichlet-multinomial formulation. Here,
+we leverage a logistic stick-breaking representation and recent innovations in
+P\'olya-gamma augmentation to reformulate the multinomial distribution in terms
+of latent variables with jointly Gaussian likelihoods, enabling us to take
+advantage of a host of Bayesian inference techniques for Gaussian models with
+minimal overhead.
+
+
+Polycyclic Aromatic Hydrocarbons in Galaxies at z~0.1: the Effect of
+  Star Formation and AGN
+
+  We present the analysis of the Polycyclic Aromatic Hydrocarbon (PAH) spectra
+of a sample of 92 typical star forming galaxies at 0.03 < z < 0.2 observed with
+the Spitzer IRS. We compare the relative strengths of PAH emission features
+with SDSS optical diagnostics to probe the relationship between PAH grain
+properties and star formation and AGN activity. Short-to-long wavelength PAH
+ratios, and in particular the 7.7-to-11.3 micron feature ratio, are strongly
+correlated with the star formation diagnostics D_n(4000) and H-alpha equivalent
+width, increasing with younger stellar populations. This ratio also shows a
+significant difference between active and non-active galaxies, with the active
+galaxies exhibiting weaker 7.7 micron emission. A hard radiation field as
+measured by [OIII]/H-beta and [NeIII]_15.6/[NeII]_12.8 affects PAH ratios
+differently depending on whether this field results from starburst activity or
+an AGN. Our results are consistent with a picture in which larger PAH molecules
+grow more efficiently in richer media and in which smaller PAH molecules are
+preferentially destroyed by AGN.
+
+
+Winning versus losing during gambling and its neural correlates
+
+  Humans often make decisions which maximize an internal utility function. For
+example, humans often maximize their expected reward when gambling and this is
+considered as a "rational" decision. However, humans tend to change their
+betting strategies depending on how they "feel". If someone has experienced a
+losing streak, they may "feel" that they are more likely to win on the next
+hand even though the odds of the game have not changed. That is, their
+decisions are driven by their emotional state. In this paper, we investigate
+how the human brain responds to wins and losses during gambling. Using a
+combination of local field potential recordings in human subjects performing a
+financial decision-making task, spectral analyses, and non-parametric cluster
+statistics, we investigated whether neural responses in different cognitive and
+limbic brain areas differ between wins and losses after decisions are made. In
+eleven subjects, the neural activity modulated significantly between win and
+loss trials in one brain region: the anterior insula ($p=0.01$). In particular,
+gamma activity (30-70 Hz) increased in the anterior insula when subjects just
+realized that they won. Modulation of metabolic activity in the anterior insula
+has been observed previously in functional magnetic resonance imaging studies
+during decision making and when emotions are elicited. However, our study is
+able to characterize temporal dynamics of electrical activity in this brain
+region at the millisecond resolution while decisions are made and after
+outcomes are revealed.
+
+
+Comet 322P/SOHO 1: An asteroid with the smallest perihelion distance?
+
+  We observed comet 322P/SOHO 1 (P/1999 R1) from the ground and with the
+Spitzer Space Telescope when it was between 2.2 and 1.2 AU from the Sun. These
+are the first observations of any SOHO-discovered periodic comet by a non-solar
+observatory, and allow us to investigate its behavior under typical cometary
+circumstances. 322P appeared inactive in all images. Its lightcurve suggests a
+rotation period of 2.8+/-0.3 hr and has an amplitude greater than ~0.3 mag,
+implying a density of at least 1000 kg m$^{-3}$, considerably higher than that
+of any known comet. It has average colors of g'-r' = 0.52+/-0.04 and r'-i' =
+0.04+/-0.09. We converted these to Johnson colors and found that the V-R color
+is consistent with average cometary colors, but R-I is somewhat bluer; these
+colors are most similar to V- and Q-type asteroids. Modeling of the optical and
+IR photometry suggests it has a diameter of 150-320 m and a geometric albedo of
+0.09-0.42, with diameter and albedo inversely related. Our upper limits to any
+undetected coma are still consistent with a sublimation lifetime shorter than
+the typical dynamical lifetimes for Jupiter Family Comets. These results
+suggest that it may be of asteroidal origin and only active in the SOHO fields
+of view via processes different from the volatile-driven activity of
+traditional comets. If so, it has the smallest perihelion distance of any known
+asteroid.
+
+
+Funding Games: the Truth but not the Whole Truth
+
+  We introduce the Funding Game, in which $m$ identical resources are to be
+allocated among $n$ selfish agents. Each agent requests a number of resources
+$x_i$ and reports a valuation $\tilde{v}_i(x_i)$, which verifiably {\em
+lower}-bounds $i$'s true value for receiving $x_i$ items. The pairs $(x_i,
+\tilde{v}_i(x_i))$ can be thought of as size-value pairs defining a knapsack
+problem with capacity $m$. A publicly-known algorithm is used to solve this
+knapsack problem, deciding which requests to satisfy in order to maximize the
+social welfare.
+  We show that a simple mechanism based on the knapsack {\it highest ratio
+greedy} algorithm provides a Bayesian Price of Anarchy of 2, and for the
+complete information version of the game we give an algorithm that computes a
+Nash equilibrium strategy profile in $O(n^2 \log^2 m)$ time. Our primary
+algorithmic result shows that an extension of the mechanism to $k$ rounds has a
+Price of Anarchy of $1 + \frac{1}{k}$, yielding a graceful tradeoff between
+communication complexity and the social welfare.
+
+
+Computing the obstacle number of a plane graph
+
+  An obstacle representation of a plane graph G is V(G) together with a set of
+opaque polygonal obstacles such that G is the visibility graph on V(G)
+determined by the obstacles. We investigate the problem of computing an
+obstacle representation of a plane graph (ORPG) with a minimum number of
+obstacles. We call this minimum size the obstacle number of G.
+  First, we show that ORPG is NP-hard by reduction from planar vertex cover,
+resolving a question posed by [8]. Second, we give a reduction from ORPG to
+maximum degree 3 planar vertex cover. Since this reduction preserves solution
+values, it follows that ORPG is fixed parameter tractable (FPT) and admits a
+polynomial-time approximation scheme (PTAS).
+
+
+Evader Interdiction and Collateral Damage
+
+  In network interdiction problems, evaders (e.g., hostile agents or data
+packets) may be moving through a network towards targets and we wish to choose
+locations for sensors in order to intercept the evaders before they reach their
+destinations. The evaders might follow deterministic routes or Markov chains,
+or they may be reactive}, i.e., able to change their routes in order to avoid
+sensors placed to detect them. The challenge in such problems is to choose
+sensor locations economically, balancing security gains with costs, including
+the inconvenience sensors inflict upon innocent travelers. We study the
+objectives of 1) maximizing the number of evaders captured when limited by a
+budget on sensing cost and 2) capturing all evaders as cheaply as possible. We
+give optimal sensor placement algorithms for several classes of special graphs
+and hardness and approximation results for general graphs, including for
+deterministic or Markov chain-based and reactive or oblivious evaders. In a
+similar-sounding but fundamentally different problem setting posed by
+Rubinstein and Glazer where both evaders and innocent travelers are reactive,
+we again give optimal algorithms for special cases and hardness and
+approximation results on general graphs.
+
+
+Computing Traversal Times on Dynamic Markovian Paths
+
+  In source routing, a complete path is chosen for a packet to travel from
+source to destination. While computing the time to traverse such a path may be
+straightforward in a fixed, static graph, doing so becomes much more
+challenging in dynamic graphs, in which the state of an edge in one time slot
+(i.e., its presence or absence) is random, and may depend on its state in the
+previous time step. The traversal time is due to both time spent waiting for
+edges to appear and time spent crossing them once they become available. We
+compute the expected traversal time (ETT) for a dynamic path in a number of
+special cases of stochastic edge dynamics models, and for three edge failure
+models, culminating in a surprisingly challenging yet realistic setting in
+which the initial configuration of edge states for the entire path is known. We
+show that the ETT for this "initial configuration" setting can be computed in
+quadratic time, by an algorithm based on probability generating functions. We
+also give several linear-time upper and lower bounds on the ETT.
+
+
+Using Photometry to Probe the Circumstellar Environment of delta Scorpii
+
+  We acquired Johnson BV photometry of the binary Be disk system delta~Scorpii
+during its 2009, 2010, 2011, and 2012 observing seasons and used it to probe
+the innermost regions of the disk. We found that several disk building events
+have occurred during this time, resulting in an overall brightening in the
+V-band and reddening of the system. In addition to these long-term trends, we
+found cyclical variability in each observing season on timescales between 60
+and 100 days. We were able to reproduce the changes in the magnitude and colour
+of delta Sco using our theoretical models and found that variable mass-loss
+rates in the range 2.5-7.0x10^{-9} M_{sun}/yr over ~35 days can reproduce the
+observed increase in brightness.
+
+
+High-throughput screening for modulators of cellular contractile force
+
+  When cellular contractile forces are central to pathophysiology, these forces
+comprise a logical target of therapy. Nevertheless, existing high-throughput
+screens are limited to upstream signaling intermediates with poorly defined
+relationship to such a physiological endpoint. Using cellular force as the
+target, here we screened libraries to identify novel drug candidates in the
+case of human airway smooth muscle cells in the context of asthma, and also in
+the case of Schlemm's canal endothelial cells in the context of glaucoma. This
+approach identified several drug candidates for both asthma and glaucoma. We
+attained rates of 1000 compounds per screening day, thus establishing a
+force-based cellular platform for high-throughput drug discovery.
+
+
+Recurrent switching linear dynamical systems
+
+  Many natural systems, such as neurons firing in the brain or basketball teams
+traversing a court, give rise to time series data with complex, nonlinear
+dynamics. We can gain insight into these systems by decomposing the data into
+segments that are each explained by simpler dynamic units. Building on
+switching linear dynamical systems (SLDS), we present a new model class that
+not only discovers these dynamical units, but also explains how their switching
+behavior depends on observations or continuous latent states. These "recurrent"
+switching linear dynamical systems provide further insight by discovering the
+conditions under which each unit is deployed, something that traditional SLDS
+models fail to do. We leverage recent algorithmic advances in approximate
+inference to make Bayesian inference in these models easy, fast, and scalable.
+
+
+Correlations Between the WMAP and MAXIMA Cosmic Microwave Background
+  Anisotropy Maps
+
+  We cross-correlate the cosmic microwave background temperature anisotropy
+maps from the WMAP, MAXIMA-I, and MAXIMA-II experiments. We use the
+cross-spectrum, which is the spherical harmonic transform of the angular
+two-point correlation function, to quantify the correlation as a function of
+angular scale. We find that the three possible pairs of cross-spectra are in
+close agreement with each other and with the power spectra of the individual
+maps. The probability that there is no correlation between the maps is smaller
+than 1 * 10^(-8). We also calculate power spectra for maps made of differences
+between pairs of maps, and show that they are consistent with no signal. The
+results conclusively show that the three experiments not only display the same
+statistical properties of the CMB anisotropy, but also detect the same features
+wherever the observed sky areas overlap. We conclude that the contribution of
+systematic errors to these maps is negligible and that MAXIMA and WMAP have
+accurately mapped the cosmic microwave background anisotropy.
+
+
+Five New Millisecond Pulsars From a Radio Survey of 14 Unidentified
+  Fermi-LAT Gamma-ray Sources
+
+  We have discovered five millisecond pulsars (MSPs) in a survey of 14
+unidentified Fermi-LAT sources in the southern sky using the Parkes radio
+telescope. PSRs J0101-6422, J1514-4946, and J1902-5105 reside in binaries,
+while PSRs J1658-5324 and J1747-4036 are isolated. Using an ephemeris derived
+from timing observations of PSR J0101-6422 (P =2.57 ms, DM=12 pc cm-3), we have
+detected {\gamma}-ray pulsations and measured its proper motion. Its
+{\gamma}-ray spectrum (a power law of {\Gamma} = 0.9 with a cutoff at 1.6 GeV)
+and efficiency are typical of other MSPs, but its radio and {\gamma}-ray light
+curves challenge simple geometric models of emission. The high success rate of
+this survey-enabled by selecting {\gamma}-ray sources based on their detailed
+spectral characteristics-and other similarly successful searches indicate that
+a substantial fraction of the local population of MSPs may soon be known.
+
+
+The Physical Conditions, Metallicity and Metal Abundance Ratios In a
+  Highly Magnified Galaxy at z = 3.6252
+
+  We present optical and near-IR imaging and spectroscopy of SGAS
+J105039.6$+$001730, a strongly lensed galaxy at z $=$ 3.6252 magnified by
+$>$30$\times$, and derive its physical properties. We measure a stellar mass of
+log(M$_{*}$/M$_{\odot}$) $=$ 9.5 $\pm$ 0.35, star formation rates from [O
+II]$\lambda$$\lambda$3727 and H-$\beta$ of 55 $\pm$ 20 and 84 $\pm$ 17
+M$_{\odot}$ yr$^{-1}$, respectively, an electron density of n$_{e} \leq$
+10$^{3}$ cm$^{-2}$, an electron temperature of T$_{e} \leq$ 14000 K, and a
+metallicity of 12+log(O/H) $=$ 8.3 $\pm$ 0.1. The strong C
+III]$\lambda$$\lambda$1907,1909 emission and abundance ratios of C, N, O and Si
+are consistent with well-studied starbursts at z $\sim$ 0 with similar
+metallicities. Strong P Cygni lines and He II$\lambda$1640 emission indicate a
+significant population of Wolf-Rayet stars, but synthetic spectra of individual
+populations of young, hot stars do not reproduce the observed integrated P
+Cygni absorption features. The rest-frame UV spectral features are indicative
+of a young starburst with high ionization, implying either 1) an ionization
+parameter significantly higher than suggest by rest-frame optical nebular
+lines, or 2) differences in one or both of the initial mass function and the
+properties of ionizing spectra of massive stars. We argue that the observed
+features are likely the result of a superposition of star forming regions with
+different physical properties. These results demonstrate the complexity of star
+formation on scales smaller than individual galaxies, and highlight the
+importance of systematic effects that result from smearing together the
+signatures of individual star forming regions within galaxies.
+
+
+Retired A Stars and Their Companions VI. A Pair of Interacting Exoplanet
+  Pairs Around the Subgiants 24 Sextanis and HD200964
+
+  We report radial velocity measurements of the G-type subgiants 24 Sextanis
+(=HD90043) and HD200964. Both are massive, evolved stars that exhibit periodic
+variations due to the presence of a pair of Jovian planets. Photometric
+monitoring with the T12 0.80m APT at Fairborn Observatory demonstrates both
+stars to be constant in brightness to <= 0.002 mag, thus strengthening the
+planetary interpretation of the radial velocity variations. 24 Sex b,c have
+orbital periods of 453.8 days and 883~days, corresponding to semimajor axes
+1.333 AU and 2.08 AU, and minimum masses (Msini) 1.99 Mjup and 0.86 Mjup,
+assuming a stellar mass 1.54 Msun. HD200964 b,c have orbital periods of 613.8
+days and 825 days, corresponding to semimajor axes 1.601 AU and 1.95 AU, and
+minimum masses 1.85 Mjup and 0.90 Mjup, assuming M* = 1.44 Msun. We also carry
+out dynamical simulations to properly account for gravitational interactions
+between the planets. Most, if not all, of the dynamically stable solutions
+include crossing orbits, suggesting that each system is locked in a mean motion
+resonance that prevents close encounters and provides long-term stability. The
+planets in the 24 Sex system likely have a period ratio near 2:1, while the
+HD200964 system is even more tightly packed with a period ratio close to 4:3.
+However, we caution that further radial velocity observations and more detailed
+dynamical modelling will be required to provide definitive and unique orbital
+solutions for both cases, and to determine whether the two systems are truly
+resonant.
+
+
+The NASA-UC Eta-Earth Program: I. A Super-Earth Orbiting HD 7924
+
+  We report the discovery of the first low-mass planet to emerge from the
+NASA-UC Eta-Earth Program, a super-Earth orbiting the K0 dwarf HD 7924.
+Keplerian modeling of precise Doppler radial velocities reveals a planet with
+minimum mass M_P sin i = 9.26 M_Earth in a P = 5.398 d orbit. Based on
+Keck-HIRES measurements from 2001 to 2008, the planet is robustly detected with
+an estimated false alarm probability of less than 0.001. Photometric
+observations using the Automated Photometric Telescopes at Fairborn Observatory
+show that HD 7924 is photometrically constant over the radial velocity period
+to 0.19 mmag, supporting the existence of the planetary companion. No transits
+were detected down to a photometric limit of ~0.5 mmag, eliminating transiting
+planets with a variety of compositions. HD 7924b is one of only eight planets
+known with M_P sin i < 10 M_Earth and as such is a member of an emerging family
+of low-mass planets that together constrain theories of planet formation.
+
+
+Modeling and Analysis of Time-Varying Graphs
+
+  We live in a world increasingly dominated by networks -- communications,
+social, information, biological etc. A central attribute of many of these
+networks is that they are dynamic, that is, they exhibit structural changes
+over time. While the practice of dynamic networks has proliferated, we lag
+behind in the fundamental, mathematical understanding of network dynamism.
+Existing research on time-varying graphs ranges from preliminary algorithmic
+studies (e.g., Ferreira's work on evolving graphs) to analysis of specific
+properties such as flooding time in dynamic random graphs. A popular model for
+studying dynamic graphs is a sequence of graphs arranged by increasing
+snapshots of time. In this paper, we study the fundamental property of
+reachability in a time-varying graph over time and characterize the latency
+with respect to two metrics, namely store-or-advance latency and cut-through
+latency. Instead of expected value analysis, we concentrate on characterizing
+the exact probability distribution of routing latency along a randomly
+intermittent path in two popular dynamic random graph models. Using this
+analysis, we characterize the loss of accuracy (in a probabilistic setting)
+between multiple temporal graph models, ranging from one that preserves all the
+temporal ordering information for the purpose of computing temporal graph
+properties to one that collapses various snapshots into one graph (an operation
+called smashing), with multiple intermediate variants. We also show how some
+other traditional graph theoretic properties can be extended to the temporal
+domain. Finally, we propose algorithms for controlling the progress of a packet
+in single-copy adaptive routing schemes in various dynamic random graphs.
+
+
+Testing Inflation with Large Scale Structure: Connecting Hopes with
+  Reality
+
+  The statistics of primordial curvature fluctuations are our window into the
+period of inflation, where these fluctuations were generated. To date, the
+cosmic microwave background has been the dominant source of information about
+these perturbations. Large scale structure is however from where drastic
+improvements should originate. In this paper, we explain the theoretical
+motivations for pursuing such measurements and the challenges that lie ahead.
+In particular, we discuss and identify theoretical targets regarding the
+measurement of primordial non-Gaussianity. We argue that when quantified in
+terms of the local (equilateral) template amplitude $f_{\rm NL}^{\rm loc}$
+($f_{\rm NL}^{\rm eq}$), natural target levels of sensitivity are $\Delta
+f_{\rm NL}^{\rm loc, eq.} \simeq 1$. We highlight that such levels are within
+reach of future surveys by measuring 2-, 3- and 4-point statistics of the
+galaxy spatial distribution. This paper summarizes a workshop held at CITA
+(University of Toronto) on October 23-24, 2014.
+
+
+Selfish Knapsack
+
+  We consider a selfish variant of the knapsack problem. In our version, the
+items are owned by agents, and each agent can misrepresent the set of items she
+owns---either by avoiding reporting some of them (understating), or by
+reporting additional ones that do not exist (overstating). Each agent's
+objective is to maximize, within the items chosen for inclusion in the
+knapsack, the total valuation of her own chosen items. The knapsack problem, in
+this context, seeks to minimize the worst-case approximation ratio for social
+welfare at equilibrium. We show that a randomized greedy mechanism has
+attractive strategic properties: in general, it has a correlated price of
+anarchy of $2$ (subject to a mild assumption). For overstating-only agents, it
+becomes strategyproof; we also provide a matching lower bound of $2$ on the
+(worst-case) approximation ratio attainable by randomized strategyproof
+mechanisms, and show that no deterministic strategyproof mechanism can provide
+any constant approximation ratio. We also deal with more specialized
+environments. For the case of $2$ understating-only agents, we provide a
+randomized strategyproof $\frac{5+4\sqrt{2}}{7} \approx 1.522$-approximate
+mechanism, and a lower bound of $\frac{5\sqrt{5}-9}{2} \approx 1.09$. When all
+agents but one are honest, we provide a deterministic strategyproof
+$\frac{1+\sqrt{5}}{2} \approx 1.618$-approximate mechanism with a matching
+lower bound. Finally, we consider a model where agents can misreport their
+items' properties rather than existence. Specifically, each agent owns a single
+item, whose value-to-size ratio is publicly known, but whose actual value and
+size are not. We show that an adaptation of the greedy mechanism is
+strategyproof and $2$-approximate, and provide a matching lower bound; we also
+show that no deterministic strategyproof mechanism can provide a constant
+approximation ratio.
+
+
+Estimating the Spectral Density of Large Implicit Matrices
+
+  Many important problems are characterized by the eigenvalues of a large
+matrix. For example, the difficulty of many optimization problems, such as
+those arising from the fitting of large models in statistics and machine
+learning, can be investigated via the spectrum of the Hessian of the empirical
+loss function. Network data can be understood via the eigenstructure of a graph
+Laplacian matrix using spectral graph theory. Quantum simulations and other
+many-body problems are often characterized via the eigenvalues of the solution
+space, as are various dynamic systems. However, naive eigenvalue estimation is
+computationally expensive even when the matrix can be represented; in many of
+these situations the matrix is so large as to only be available implicitly via
+products with vectors. Even worse, one may only have noisy estimates of such
+matrix vector products. In this work, we combine several different techniques
+for randomized estimation and show that it is possible to construct unbiased
+estimators to answer a broad class of questions about the spectra of such
+implicit matrices, even in the presence of noise. We validate these methods on
+large-scale problems in which graph theory and random matrix theory provide
+ground truth.
+
+
+Experimental demonstration of Pauli-frame randomization on a
+  superconducting qubit
+
+  The realization of quantum computing's promise despite noisy imperfect qubits
+relies, at its core, on the ability to scale cheaply through error correction
+and fault-tolerance. While fault-tolerance requires relatively mild assumptions
+about the nature of the errors, the overhead associated with coherent and
+non-Markovian errors can be orders of magnitude larger than the overhead
+associated with purely stochastic Markovian errors. One proposal, known as
+Pauli frame randomization, addresses this challenge by randomizing the circuits
+so that the errors are rendered incoherent, while the computation remains
+unaffected. Similarly, randomization can suppress couplings to slow degrees of
+freedom associated with non-Markovian evolution. Here we demonstrate the
+implementation of circuit randomization in a superconducting circuit system,
+exploiting a flexible programming and control infrastructure to achieve this
+with low effort. We use high-accuracy gate-set tomography to demonstrate that
+without randomization the natural errors experienced by our experiment have
+coherent character, and that with randomization these errors are rendered
+incoherent. We also demonstrate that randomization suppresses signatures of
+non-Markovianity evolution to statistically insignificant levels. This
+demonstrates how noise models can be shaped into more benign forms for improved
+performance.
+
+
+SSGSS: The Spitzer-SDSS-GALEX Spectroscopic Survey
+
+  The Spitzer-SDSS-GALEX Spectroscopic Survey (SSGSS) provides a new sample of
+101 star-forming galaxies at z < 0.2 with unprecedented multi-wavelength
+coverage. New mid- to far-infrared spectroscopy from the Spitzer Space
+Telescope is added to a rich suite of previous imaging and spectroscopy,
+including ROSAT, Galaxy Evolution Explorer, Sloan Digital Sky Survey, Two
+Micron All Sky Survey, and Spitzer/SWIRE. Sample selection ensures an even
+coverage of the full range of normal galaxy properties, spanning two orders of
+magnitude in stellar mass, color, and dust attenuation. In this paper we
+present the SSGSS data set, describe the science drivers, and detail the sample
+selection, observations, data reduction, and quality assessment. Also in this
+paper, we compare the shape of the thermal continuum and the degree of silicate
+absorption of these typical, star-forming galaxies to those of starburst
+galaxies. We investigate the link between star formation rate, infrared
+luminosity, and total polycyclic aromatic hydrocarbon luminosity, with a view
+to calibrating the latter for spectral energy distribution models in
+photometric samples and at high redshift. Last, we take advantage of the 5-40
+micron spectroscopic and far-infrared photometric coverage of this sample to
+perform detailed fitting of the Draine et al. dust models, and investigate the
+link between dust mass and star formation history and active galactic nucleus
+properties.
+
+
+Chemical Cartography with APOGEE: Multi-element abundance ratios
+
+  We map the trends of elemental abundance ratios across the Galactic disk,
+spanning R = 3-15 kpc and midplane distance |Z|= 0-2 kpc, for 15 elements in a
+sample of 20,485 stars measured by the SDSS/APOGEE survey (O, Na, Mg, Al, Si,
+P, S, K, Ca, V, Cr, Mn, Fe, Co, Ni). Adopting Mg rather than Fe as our
+reference element, and separating stars into two populations based on [Fe/Mg],
+we find that the median trends of [X/Mg] vs. [Mg/H] in each population are
+nearly independent of location in the Galaxy. The full multi-element
+cartography can be summarized by combining these nearly universal median
+sequences with our measured metallicity distribution functions and the relative
+proportions of the low-[Fe/Mg] (high-alpha) and high-[Fe/Mg] (low-alpha)
+populations, which depend strongly on R and |Z|. We interpret the median
+sequences with a semi-empirical "2-process" model that describes both the ratio
+of core collapse and Type Ia supernova contributions to each element and the
+metallicity dependence of the supernova yields. These observationally inferred
+trends can provide strong tests of supernova nucleosynthesis calculations. Our
+results lead to a relatively simple picture of abundance ratio variations in
+the Milky Way, in which the trends at any location can be described as the sum
+of two components with relative contributions that change systematically and
+smoothly across the Galaxy. Deviations from this picture and future extensions
+to other elements can provide further insights into the physics of stellar
+nucleosynthesis and unusual events in the Galaxy's history.
+
+
+The Open Cluster Chemical Analysis and Mapping Survey: Local Galactic
+  Metallicity Gradient with APOGEE using SDSS DR10
+
+  The Open Cluster Chemical Analysis and Mapping (OCCAM) Survey aims to produce
+a comprehensive, uniform, infrared-based dataset for hundreds of open clusters,
+and constrain key Galactic dynamical and chemical parameters from this sample.
+This first contribution from the OCCAM survey presents analysis of 141 members
+stars in 28 open clusters with high-resolution metallicities derived from a
+large uniform sample collected as part of the SDSS-III/Apache Point Observatory
+Galactic Evolution Experiment (APOGEE). This sample includes the first
+high-resolution metallicity measurements for 22 open clusters. With this
+largest ever uniformly observed sample of open cluster stars we investigate the
+Galactic disk gradients of both [M/H] and [alpha/M]. We find basically no
+gradient across this range in [alpha/M], but [M/H] does show a gradient for
+R_{GC} < 10 kpc and a significant flattening beyond R_{GC} = 10 kpc. In
+particular, whereas fitting a single linear trend yields an [M/H] gradient of
+-0.09 +/- 0.03$ dex/kpc --- similar to previously measure gradients inside 13
+kpc --- by independently fitting inside and outside 10 kpc separately we find a
+significantly steeper gradient near the Sun (7.9 <= R_{GC} <= 10) than
+previously found (-0.20 +/- 0.08 dex/kpc) and a nearly flat trend beyond 10 kpc
+(-0.02 +/- 0.09 dex/kpc).
+
+
+The Apache Point Observatory Galactic Evolution Experiment: First
+  Detection of High Velocity Milky Way Bar Stars
+
+  Commissioning observations with the Apache Point Observatory Galactic
+Evolution Experiment (APOGEE), part of the Sloan Digital Sky Survey III, have
+produced radial velocities (RVs) for ~4700 K/M-giant stars in the Milky Way
+bulge. These high-resolution (R \sim 22,500), high-S/N (>100 per resolution
+element), near-infrared (1.51-1.70 um; NIR) spectra provide accurate RVs
+(epsilon_v~0.2 km/s) for the sample of stars in 18 Galactic bulge fields
+spanning -1<l<20 deg, |b|<20 deg, and dec>-32 deg. This represents the largest
+NIR high-resolution spectroscopic sample of giant stars ever assembled in this
+region of the Galaxy. A cold (sigma_v~30 km/s), high-velocity peak (V_GSR \sim
++200 km/s) is found to comprise a significant fraction (~10%) of stars in many
+of these fields. These high RVs have not been detected in previous MW surveys
+and are not expected for a simple, circularly rotating disk. Preliminary
+distance estimates rule out an origin from the background Sagittarius tidal
+stream or a new stream in the MW disk. Comparison to various Galactic models
+suggests that these high RVs are best explained by stars in orbits of the
+Galactic bar potential, although some observational features remain
+unexplained.
+
+
+Young alpha-enriched giant stars in the solar neighbourhood
+
+  We derive age constraints for 1639 red giants in the APOKASC sample for which
+seismic parameters from Kepler, as well as effective temperatures,
+metallicities and [alpha/Fe] values from APOGEE DR12 are available. We
+investigate the relation between age and chemical abundances for these stars,
+using a simple and robust approach to obtain ages. We first derive stellar
+masses using standard seismic scaling relations, then determine the maximum
+possible age for each star as function of its mass and metallicity,
+independently of its evolutionary stage. While the overall trend between
+maximum age and chemical abundances is a declining fraction of young stars with
+increasing [alpha/Fe], at least 14 out of 241 stars with [alpha/Fe]>0.13 are
+younger than 6 Gyr. Five stars with [alpha/Fe]>0.2 have ages below 4 Gyr. We
+examine the effect of modifications in the standard seismic scaling relations,
+as well as the effect of very low helium fractions, but these changes are not
+enough to make these stars as old as usually expected for alpha-rich stars
+(i.e., ages greater than 8-9 Gyr). Such unusual alpha-rich young stars have
+also been detected by other surveys, but defy simple explanations in a galaxy
+evolution context.
+
+
+Sodium and Oxygen Abundances in the Open Cluster NGC 6791 from APOGEE
+  H-Band Spectroscopy
+
+  The open cluster NGC 6791 is among the oldest, most massive and metal-rich
+open clusters in the Galaxy. High-resolution $H$-band spectra from the Apache
+Point Observatory Galactic Evolution Experiment (APOGEE) of 11 red giants in
+NGC 6791 are analyzed for their chemical abundances of iron, oxygen, and
+sodium. The abundances of these three elements are found to be homogeneous
+(with abundance dispersions at the level of $\sim$ 0.05 - 0.07 dex) in these
+cluster red giants, which span much of the red-giant branch (T$_{\rm eff}$
+$\sim$ 3500K - 4600K), and include two red-clump giants. From the infrared
+spectra, this cluster is confirmed to be among the most metal-rich clusters in
+the Galaxy ($<$[Fe/H]$>$ = 0.34 $\pm$ 0.06), and is found to have a roughly
+solar value of [O/Fe] and slightly enhanced [Na/Fe]. Non-LTE calculations for
+the studied Na I lines in the APOGEE spectral region ($\lambda$16373.86\AA\ and
+$\lambda$16388.85\AA) indicate only small departures from LTE ($\leq$ 0.04 dex)
+for the parameter range and metallicity of the studied stars. The previously
+reported double population of cluster members with different Na abundances is
+not found among the studied sample.
+
+
+ASPCAP: The Apogee Stellar Parameter and Chemical Abundances Pipeline
+
+  The Apache Point Observatory Galactic Evolution Experiment (APOGEE) has built
+the largest moderately high-resolution (R=22, 500) spectroscopic map of the
+stars across the Milky Way, and including dust-obscured areas. The APOGEE
+Stellar Parameter and Chemical Abundances Pipeline (ASPCAP) is the software
+developed for the automated analysis of these spectra. ASPCAP determines
+atmospheric parameters and chemical abundances from observed spectra by
+comparing observed spectra to libraries of theoretical spectra, using chi-2
+minimization in a multidimensional parameter space. The package consists of a
+fortran90 code that does the actual minimization, and a wrapper IDL code for
+book-keeping and data handling. This paper explains in detail the ASPCAP
+components and functionality, and presents results from a number of tests
+designed to check its performance. ASPCAP provides stellar effective
+temperatures, surface gravities, and metallicities precise to 2%, 0.1 dex, and
+0.05 dex, respectively, for most APOGEE stars, which are predominantly giants.
+It also provides abundances for up to 15 chemical elements with various levels
+of precision, typically under 0.1 dex. The final data release (DR12) of the
+Sloan Digital Sky Survey III contains an APOGEE database of more than 150,000
+stars. ASPCAP development continues in the SDSS-IV APOGEE-2 survey.
+
+
+Enabling New ALMA Science with Improved Support for Time-Domain
+  Observations
+
+  While the Atacama Large Millimeter/submillimeter Array (ALMA) is a uniquely
+powerful telescope, its impact in certain fields of astrophysics has been
+limited by observatory policies rather than the telescope's innate technical
+capabilities. In particular, several observatory policies present challenges
+for observations of variable, mobile, and/or transient sources --- collectively
+referred to here as "time-domain" observations. In this whitepaper we identify
+some of these policies, describe the scientific applications they impair, and
+suggest changes that would increase ALMA's science impact in Cycle 6 and
+beyond.
+  Parties interested in time-domain science with ALMA are encouraged to join
+the ALMA Time-domain Special Interest Group (ATSIG) by signing up for the ATSIG
+mailing list at https://groups.google.com/group/alma-td-sig .
+
+
+Rapid Rotation of Low-Mass Red Giants Using APOKASC: A Measure of
+  Interaction Rates on the Post-main-sequence
+
+  We investigate the occurrence rate of rapidly rotating ($v\sin i$$>$10 km
+s$^{-1}$), low-mass giant stars in the APOGEE-Kepler (APOKASC) fields with
+asteroseismic mass and surface gravity measurements. Such stars are likely
+merger products and their frequency places interesting constraints on stellar
+population models. We also identify anomalous rotators, i.e. stars with 5 km
+s$^{-1}$$<$$v\sin i$$<$10 km s$^{-1}$ that are rotating significantly faster
+than both angular momentum evolution predictions and the measured rates of
+similar stars. Our data set contains fewer rapid rotators than one would expect
+given measurements of the Galactic field star population, which likely
+indicates that asteroseismic detections are less common in rapidly rotating red
+giants. The number of low-mass moderate (5-10 km s$^{-1}$) rotators in our
+sample gives a lower limit of 7% for the rate at which low-mass stars interact
+on the upper red giant branch because single stars in this mass range are
+expected to rotate slowly. Finally, we classify the likely origin of the rapid
+or anomalous rotation where possible. KIC 10293335 is identified as a merger
+product and KIC 6501237 is a possible binary system of two oscillating red
+giants.
+
+
+Chemical abundance gradients from open clusters in the Milky Way disk:
+  results from the APOGEE survey
+
+  Metallicity gradients provide strong constraints for understanding the
+chemical evolution of the Galaxy. We report on radial abundance gradients of
+Fe, Ni, Ca, Si, and Mg obtained from a sample of 304 red-giant members of 29
+disk open clusters, mostly concentrated at galactocentric distances between ~8
+- 15 kpc, but including two open clusters in the outer disk. The observations
+are from the APOGEE survey. The chemical abundances were derived automatically
+by the ASPCAP pipeline and these are part of the SDSS III Data Release 12. The
+gradients, obtained from least squares fits to the data, are relatively flat,
+with slopes ranging from -0.026 to -0.033 dex/kpc for the alpha-elements [O/H],
+[Ca/H], [Si/H] and [Mg/H] and -0.035 dex/kpc and -0.040 dex/kpc for [Fe/H] and
+[Ni/H], respectively. Our results are not at odds with the possibility that
+metallicity ([Fe/H]) gradients are steeper in the inner disk (R_GC ~7 - 12 kpc)
+and flatter towards the outer disk. The open cluster sample studied spans a
+significant range in age. When breaking the sample into age bins, there is some
+indication that the younger open cluster population in our sample (log age <
+8.7) has a flatter metallicity gradient when compared with the gradients
+obtained from older open clusters.
+
+
+The roAp star $α$ Circini as seen by BRITE-Constellation
+
+  We report on an analysis of high-precision, multi-colour photometric
+observations of the rapidly-oscillating Ap (roAp) star $\alpha$ Cir. These
+observations were obtained with the BRITE-Constellation, which is a coordinated
+mission of five nanosatellites that collects continuous
+millimagnitude-precision photometry of dozens of bright stars for up to 180
+days at a time in two colours (Johnson B and R). BRITE stands for BRight Target
+Explorer. The object $\alpha$ Cir is the brightest roAp star and an ideal
+target for such investigations, facilitating the determination of oscillation
+frequencies with high resolution. This star is bright enough for complementary
+interferometry and time-resolved spectroscopy. Four BRITE satellites observed
+$\alpha$ Cir for 146 d or 33 rotational cycles. Phasing the photometry
+according to the 4.4790 d rotational period reveals qualitatively different
+light variations in the two photometric bands. The phased red-band photometry
+is in good agreement with previously-published WIRE data, showing a light curve
+symmetric about phase 0.5 with a strong contribution from the first harmonic.
+The phased blue-band data, in contrast, show an essentially sinusoidal
+variation. We model both light curves with Bayesian Photometric Imaging, which
+suggests the presence of two large-scale, photometrically bright (relative to
+the surrounding photosphere) spots. We also examine the high-frequency
+pulsation spectrum as encoded in the BRITE photometry. Our analysis establishes
+the stability of the main pulsation frequency over the last 20 years, confirms
+the presence of frequency f7, which was not detected (or the mode not excited)
+prior to 2006, and excludes quadrupolar modes for the main pulsation frequency.
+
+
+Excess Optical Enhancement Observed with ARCONS for Early Crab Giant
+  Pulses
+
+  We observe an extraordinary link in the Crab pulsar between the enhancement
+of an optical pulse and the timing of the corresponding giant radio pulse. At
+optical through infrared wavelengths, our observations use the high time
+resolution of ARCONS, a unique superconducting energy-resolving photon-counting
+array at the Palomar 200-inch telescope. At radio wavelengths, we observe with
+the Robert C. Byrd Green Bank Telescope and the GUPPI backend. We see an
+$11.3\pm2.5\%$ increase in peak optical flux for pulses that have an
+accompanying giant radio pulse arriving near the peak of the optical main
+pulse, in contrast to a $3.2\pm0.5\%$ increase when an accompanying giant radio
+pulse arrives soon after the optical peak. We also observe that the peak of the
+optical main pulse is $2.8\pm0.8\%$ enhanced when there is a giant radio pulse
+accompanying the optical interpulse. We observe no statistically significant
+spectral differences between optical pulses accompanied by and not accompanied
+by giant radio pulses. Our results extend previous observations of
+optical-radio correlation to the time and spectral domains. Our refined
+temporal correlation suggests that optical and radio emission are indeed
+causally linked, and the lack of spectral differences suggests that the same
+mechanism is responsible for all optical emission.
+
+
+Kepler Flares II: The Temporal Morphology of White-Light Flares on GJ
+  1243
+
+  We present the largest sample of flares ever compiled for a single M dwarf,
+the active M4 star GJ 1243. Over 6100 individual flare events, with energies
+ranging from $10^{29}$ to $10^{33}$ erg, are found in 11 months of 1-minute
+cadence data from Kepler. This sample is unique for its completeness and
+dynamic range. We have developed automated tools for finding flares in
+short-cadence Kepler light curves, and performed extensive validation and
+classification of the sample by eye. From this pristine sample of flares we
+generate a median flare template. This template shows that two exponential
+cooling phases are present during the white-light flare decay, providing
+fundamental constraints for models of flare physics. The template is also used
+as a basis function to decompose complex multi-peaked flares, allowing us to
+study the energy distribution of these events. Only a small number of flare
+events are not well fit by our template. We find that complex, multi-peaked
+flares occur in over 80% of flares with a duration of 50 minutes or greater.
+The underlying distribution of flare durations for events 10 minutes and longer
+appears to follow a broken power law. Our results support the idea that
+sympathetic flaring may be responsible for some complex flare events.
+
+
+RELICS: Strong-lensing analysis of the massive clusters MACS
+  J0308.9+2645 and PLCK G171.9-40.7
+
+  Strong gravitational lensing by galaxy clusters has become a powerful tool
+for probing the high-redshift Universe, magnifying distant and faint background
+galaxies. Reliable strong lensing (SL) models are crucial for determining the
+intrinsic properties of distant, magnified sources and for constructing their
+luminosity function. We present here the first SL analysis of MACS J0308.9+2645
+and PLCK G171.9-40.7, two massive galaxy clusters imaged with the Hubble Space
+Telescope in the framework of the Reionization Lensing Cluster Survey (RELICS).
+We use the Light-Traces-Mass modeling technique to uncover sets of multiply
+imaged galaxies and constrain the mass distribution of the clusters. Our SL
+analysis reveals that both clusters have particularly large Einstein radii
+($\theta_E>30"$ for a source redshift of $z_s=2$), providing fairly large areas
+with high magnifications, useful for high-redshift galaxy searches ($\sim2$
+arcmin$^{2}$ with $\mu>5$ to $\sim1$ arcmin$^{2}$ with $\mu>10$, similar to a
+typical \textit{Hubble Frontier Fields} cluster). We also find that MACS
+J0308.9+2645 hosts a promising, apparently bright (J$\sim23.2-24.6$ AB),
+multiply imaged high-redshift candidate at $z\sim6.4$. These images are amongst
+the brightest high-redshift candidates found in RELICS. Our mass models,
+including magnification maps, are made publicly available for the community
+through the Mikulski Archive for Space Telescopes.
+
+
+RELICS: A Strong Lens Model for SPT-CLJ0615-5746, a z=0.972 Cluster
+
+  We present a lens model for the cluster SPT-CLJ0615$-$5746, which is the
+highest redshift ($z=0.972$) system in the Reionization of Lensing Clusters
+Survey (RELICS), making it the highest redshift cluster for which a full strong
+lens model is published. We identify three systems of multiply-imaged lensed
+galaxies, two of which we spectroscopically confirm at $z=1.358$ and $z=4.013$,
+which we use as constraints for the model. We find a foreground structure at
+$z\sim0.4$, which we include as a second cluster-sized halo in one of our
+models; however two different statistical tests find the best-fit model
+consists of one cluster-sized halo combined with three individually optimized
+galaxy-sized halos, as well as contributions from the cluster galaxies
+themselves. We find the total projected mass density within $r=26.7"$ (the
+region where the strong lensing constraints exist) to be
+$M=2.51^{+0.15}_{-0.09}\times 10^{14}$~M$_{\odot}$. If we extrapolate out to
+$r_{500}$, our projected mass density is consistent with the mass inferred from
+weak lensing and from the Sunyaev-Zel'dovich effect
+($M\sim10^{15}$~M$_{\odot}$). This cluster is lensing a previously reported
+$z\sim10$ galaxy, which, if spectroscopically confirmed, will be the
+highest-redshift strongly lensed galaxy known.
+
+
+RELICS: High-Resolution Constraints on the Inner Mass Distribution of
+  the z=0.83 Merging Cluster RXJ0152.7-1357 from strong lensing
+
+  Strong gravitational lensing (SL) is a powerful means to map the distribution
+of dark matter. In this work, we perform a SL analysis of the prominent X-ray
+cluster RXJ0152.7-1357 (z=0.83, also known as CL 0152.7-1357) in \textit{Hubble
+Space Telescope} images, taken in the framework of the Reionization Lensing
+Cluster Survey (RELICS). On top of a previously known $z=3.93$ galaxy multiply
+imaged by RXJ0152.7-1357, for which we identify an additional multiple image,
+guided by a light-traces-mass approach we identify seven new sets of multiply
+imaged background sources lensed by this cluster, spanning the redshift range
+[1.79-3.93]. A total of 25 multiple images are seen over a small area of ~0.4
+$arcmin^2$, allowing us to put relatively high-resolution constraints on the
+inner matter distribution. Although modestly massive, the high degree of
+substructure together with its very elongated shape make RXJ0152.7-1357 a very
+efficient lens for its size. This cluster also comprises the third-largest
+sample of z~6-7 candidates in the RELICS survey. Finally, we present a
+comparison of our resulting mass distribution and magnification estimates with
+those from a Lenstool model. These models are made publicly available through
+the MAST archive.
+
+
+Wide-Orbit Exoplanet Demographics
+
+  The Kepler, K2 and TESS transit surveys are revolutionizing our understanding
+of planets orbiting close to their host stars and our understanding of
+exoplanet systems in general, but there remains a gap in our understanding of
+wide-orbit planets. This gap in our understanding must be filled if we are to
+understand planet formation and how it affects exoplanet habitability. We
+summarize current and planned exoplanet detection programs using a variety of
+methods: microlensing (including WFIRST), radial velocities, Gaia astrometry,
+and direct imaging. Finally, we discuss the prospects for joint analyses using
+results from multiple methods and obstacles that could hinder such analyses.
+  We endorse the findings and recommendations published in the 2018 National
+Academy report on Exoplanet Science Strategy. This white paper extends and
+complements the material presented therein.
+
+
+An RF-only ion-funnel for extraction from high-pressure gases
+
+  An RF ion-funnel technique has been developed to extract ions from a
+high-pressure (10 bar) noble-gas environment into vacuum ($10^{-6}$ mbar).
+Detailed simulations have been performed and a prototype has been developed for
+the purpose of extracting $^{136}$Ba ions from Xe gas with high efficiency.
+With this prototype, ions have been extracted for the first time from
+high-pressure xenon gas and argon gas. Systematic studies have been carried out
+and compared to the simulations. This demonstration of extraction of ions with
+mass comparable to that of the gas generating the high-pressure into vacuum has
+applications to Ba tagging from a Xe-gas time-projection chamber (TPC) for
+double beta decay as well as to the general problem of recovering trace amounts
+of an ionized element in a heavy (m$>40$ u) carrier gas.
+
+
+The Size, Shape, and Scattering of Sagittarius A* at 86 GHz: First VLBI
+  with ALMA
+
+  The Galactic Center supermassive black hole Sagittarius A* (Sgr A*) is one of
+the most promising targets to study the dynamics of black hole accretion and
+outflow via direct imaging with very long baseline interferometry (VLBI). At
+3.5 mm (86 GHz), the emission from Sgr A* is resolvable with the Global
+Millimeter VLBI Array (GMVA). We present the first observations of Sgr A* with
+the phased Atacama Large Millimeter/submillimeter Array (ALMA) joining the
+GMVA. Our observations achieve an angular resolution of ~87{\mu}as, improving
+upon previous experiments by a factor of two. We reconstruct a first image of
+the unscattered source structure of Sgr A* at 3.5 mm, mitigating effects of
+interstellar scattering. The unscattered source has a major axis size of 120
+$\pm$ 34{\mu}as (12 $\pm$ 3.4 Schwarzschild radii), and a symmetrical
+morphology (axial ratio of 1.2$^{+0.3}_{-0.2}$), which is further supported by
+closure phases consistent with zero within 3{\sigma}. We show that multiple
+disk-dominated models of Sgr A* match our observational constraints, while the
+two jet-dominated models considered are constrained to small viewing angles.
+Our long-baseline detections to ALMA also provide new constraints on the
+scattering of Sgr A*, and we show that refractive scattering effects are likely
+to be weak for images of Sgr A* at 1.3 mm with the Event Horizon Telescope. Our
+results provide the most stringent constraints to date for the intrinsic
+morphology and refractive scattering of Sgr A*, demonstrating the exceptional
+contribution of ALMA to millimeter VLBI.
+
+
+KELT-19Ab: A P~4.6 Day Hot Jupiter Transiting a Likely Am Star with a
+  Distant Stellar Companion
+
+  We present the discovery of the giant planet KELT-19Ab, which transits the
+moderately bright $(\mathrm{V} \sim 9.9)$ A8V star TYC 764-1494-1 with an
+orbital period of 4.61 days. We confirm the planetary nature of the companion
+via a combination of radial velocities, which limit the mass to $<
+4.1\,\mathrm{M_J}$ $(3\sigma)$, and a clear Doppler tomography signal, which
+indicates a retrograde projected spin-orbit misalignment of $\lambda =
+-179.7^{+3.7}_{-3.8}$ degrees. Global modeling indicates that the $\rm{T_{eff}}
+=7500 \pm 110\,\mathrm{K}$ host star has $\mathrm{M_*} =
+1.62^{+0.25}_{-0.20}\,\mathrm{M_\odot}$ and $\mathrm{R_*} = 1.83 \pm
+0.10\,\mathrm{R_\odot}$. The planet has a radius of $\mathrm{R_P}=1.91 \pm
+0.11\,\mathrm{R_J}$ and receives a stellar insolation flux of $\sim 3.2\times
+10^{9}\,\mathrm{erg\,s^{-1}\,cm^{-2}}$, leading to an inferred equilibrium
+temperature of $\rm{T_{EQ}} = \sim 1935\,\rm{K}$ assuming zero albedo and
+complete heat redistribution. With a $v\sin{I_*}=84.8\pm
+2.0\,\mathrm{km\,s^{-1}}$, the host is relatively slowly rotating compared to
+other stars with similar effective temperatures, and it appears to be enhanced
+in metallic elements but deficient in calcium, suggesting that it is likely an
+Am star. KELT-19A would be the first detection of an Am host of a transiting
+planet of which we are aware. Adaptive optics observations of the system reveal
+the existence of a companion with late G9V/early K1V spectral type at a
+projected separation of $\approx 160\,\mathrm{AU}$. Radial velocity
+measurements indicate that this companion is bound. Most Am stars are known to
+have stellar companions, which are often invoked to explain the relatively slow
+rotation of the primary. In this case, the stellar companion is unlikely to
+have caused the tidal braking of the primary. However, it may have emplaced the
+transiting planetary companion via the Kozai-Lidov mechanism.
+
+
+KELT-22Ab: A Massive Hot Jupiter Transiting a Near Solar Twin
+
+  We present the discovery of KELT-22Ab, a hot Jupiter from the KELT-South
+survey. KELT-22Ab transits the moderately bright ($V\sim 11.1$) Sun-like G2V
+star TYC 7518-468-1. The planet has an orbital period of $P = 1.3866529 \pm
+0.0000027 $ days, a radius of $R_{P} = 1.285_{-0.071}^{+0.12}~R_{J}$, and a
+relatively large mass of $M_{P} = 3.47_{-0.14}^{+0.15}~ M_{J}$. The star has
+$R_{\star} = 1.099_{-0.046}^{+0.079}~ R_{\odot}$, $M_{\star} =
+1.092_{-0.041}^{+0.045}~ M_{\odot}$, ${T_{\rm eff}\,} = 5767_{-49}^{+50}~$ K,
+${\log{g_\star}} = 4.393_{-0.060}^{+0.039}~$ (cgs), and [m/H] =
+$+0.259_{-0.083}^{+0.085}~$, and thus, other than its slightly super-solar
+metallicity, appears to be a near solar twin. Surprisingly, KELT-22A exhibits
+kinematics and a Galactic orbit that are somewhat atypical for thin disk stars.
+Nevertheless, the star is rotating quite rapidly for its estimated age, shows
+evidence of chromospheric activity, and is somewhat metal rich. Imaging reveals
+a slightly fainter companion to KELT-22A that is likely bound, with a projected
+separation of 6\arcsec ($\sim$1400 AU). In addition to the orbital motion
+caused by the transiting planet, we detect a possible linear trend in the
+radial velocity of KELT-22A suggesting the presence of another relatively
+nearby body that is perhaps non-stellar. KELT-22Ab is highly irradiated (as a
+consequence of the small semi-major axis of $a/R_{\star} = 4.97$), and is
+mildly inflated. At such small separations, tidal forces become significant.
+The configuration of this system is optimal for measuring the rate of tidal
+dissipation within the host star. Our models predict that, due to tidal forces,
+the semi-major axis of KELT-22Ab is decreasing rapidly, and is thus predicted
+to spiral into the star within the next Gyr.
+
+
+KELT-6b: A P~7.9 d Hot Saturn Transiting a Metal-Poor Star with a
+  Long-Period Companion
+
+  We report the discovery of KELT-6b, a mildly-inflated Saturn-mass planet
+transiting a metal-poor host. The initial transit signal was identified in
+KELT-North survey data, and the planetary nature of the occulter was
+established using a combination of follow-up photometry, high-resolution
+imaging, high-resolution spectroscopy, and precise radial velocity
+measurements. The fiducial model from a global analysis including constraints
+from isochrones indicates that the V=10.38 host star (BD+31 2447) is a mildly
+evolved, late-F star with T_eff=6102 \pm 43 K, log(g_*)=4.07_{-0.07}^{+0.04}
+and [Fe/H]=-0.28 \pm 0.04, with an inferred mass M_*=1.09 \pm 0.04 M_sun and
+radius R_star=1.58_{-0.09}^{+0.16} R_sun. The planetary companion has mass
+M_P=0.43 \pm 0.05 M_J, radius R_P=1.19_{-0.08}^{+0.13} R_J, surface gravity
+log(g_P)=2.86_{-0.08}^{+0.06}, and density rho_P=0.31_{-0.08}^{+0.07}
+g~cm^{-3}. The planet is on an orbit with semimajor axis a=0.079 \pm 0.001 AU
+and eccentricity e=0.22_{-0.10}^{+0.12}, which is roughly consistent with
+circular, and has ephemeris of T_c(BJD_TDB)=2456347.79679 \pm 0.00036 and
+P=7.845631 \pm 0.000046 d. Equally plausible fits that employ empirical
+constraints on the host star parameters rather than isochrones yield a larger
+planet mass and radius by ~4-7%. KELT-6b has surface gravity and incident flux
+similar to HD209458b, but orbits a host that is more metal poor than HD209458
+by ~0.3 dex. Thus, the KELT-6 system offers an opportunity to perform a
+comparative measurement of two similar planets in similar environments around
+stars of very different metallicities. The precise radial velocity data also
+reveal an acceleration indicative of a longer-period third body in the system,
+although the companion is not detected in Keck adaptive optics images.
+
+

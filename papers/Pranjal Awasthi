@@ -1,0 +1,491 @@
+Learning Mixtures of Ranking Models
+
+  This work concerns learning probabilistic models for ranking data in a
+heterogeneous population. The specific problem we study is learning the
+parameters of a Mallows Mixture Model. Despite being widely studied, current
+heuristics for this problem do not have theoretical guarantees and can get
+stuck in bad local optima. We present the first polynomial time algorithm which
+provably learns the parameters of a mixture of two Mallows models. A key
+component of our algorithm is a novel use of tensor decomposition techniques to
+learn the top-k prefix in both the rankings. Before this work, even the
+question of identifiability in the case of a mixture of two Mallows models was
+unresolved.
+
+
+Center-based Clustering under Perturbation Stability
+
+  Clustering under most popular objective functions is NP-hard, even to
+approximate well, and so unlikely to be efficiently solvable in the worst case.
+Recently, Bilu and Linial \cite{Bilu09} suggested an approach aimed at
+bypassing this computational barrier by using properties of instances one might
+hope to hold in practice. In particular, they argue that instances in practice
+should be stable to small perturbations in the metric space and give an
+efficient algorithm for clustering instances of the Max-Cut problem that are
+stable to perturbations of size $O(n^{1/2})$. In addition, they conjecture that
+instances stable to as little as O(1) perturbations should be solvable in
+polynomial time. In this paper we prove that this conjecture is true for any
+center-based clustering objective (such as $k$-median, $k$-means, and
+$k$-center). Specifically, we show we can efficiently find the optimal
+clustering assuming only stability to factor-3 perturbations of the underlying
+metric in spaces without Steiner points, and stability to factor $2+\sqrt{3}$
+perturbations for general metrics. In particular, we show for such instances
+that the popular Single-Linkage algorithm combined with dynamic programming
+will find the optimal clustering. We also present NP-hardness results under a
+weaker but related condition.
+
+
+Additive Approximation for Near-Perfect Phylogeny Construction
+
+  We study the problem of constructing phylogenetic trees for a given set of
+species. The problem is formulated as that of finding a minimum Steiner tree on
+$n$ points over the Boolean hypercube of dimension $d$. It is known that an
+optimal tree can be found in linear time if the given dataset has a perfect
+phylogeny, i.e. cost of the optimal phylogeny is exactly $d$. Moreover, if the
+data has a near-perfect phylogeny, i.e. the cost of the optimal Steiner tree is
+$d+q$, it is known that an exact solution can be found in running time which is
+polynomial in the number of species and $d$, yet exponential in $q$. In this
+work, we give a polynomial-time algorithm (in both $d$ and $q$) that finds a
+phylogenetic tree of cost $d+O(q^2)$. This provides the best guarantees known -
+namely, a $(1+o(1))$-approximation - for the case $\log(d) \ll q \ll \sqrt{d}$,
+broadening the range of settings for which near-optimal solutions can be
+efficiently found. We also discuss the motivation and reasoning for studying
+such additive approximations.
+
+
+Clustering Semi-Random Mixtures of Gaussians
+
+  Gaussian mixture models (GMM) are the most widely used statistical model for
+the $k$-means clustering problem and form a popular framework for clustering in
+machine learning and data analysis. In this paper, we propose a natural
+semi-random model for $k$-means clustering that generalizes the Gaussian
+mixture model, and that we believe will be useful in identifying robust
+algorithms. In our model, a semi-random adversary is allowed to make arbitrary
+"monotone" or helpful changes to the data generated from the Gaussian mixture
+model.
+  Our first contribution is a polynomial time algorithm that provably recovers
+the ground-truth up to small classification error w.h.p., assuming certain
+separation between the components. Perhaps surprisingly, the algorithm we
+analyze is the popular Lloyd's algorithm for $k$-means clustering that is the
+method-of-choice in practice. Our second result complements the upper bound by
+giving a nearly matching information-theoretic lower bound on the number of
+misclassified points incurred by any $k$-means clustering algorithm on the
+semi-random model.
+
+
+Local algorithms for interactive clustering
+
+  We study the design of interactive clustering algorithms for data sets
+satisfying natural stability assumptions. Our algorithms start with any initial
+clustering and only make local changes in each step; both are desirable
+features in many applications. We show that in this constrained setting one can
+still design provably efficient algorithms that produce accurate clusterings.
+We also show that our algorithms perform well on real-world data.
+
+
+The Power of Localization for Efficiently Learning Linear Separators
+  with Noise
+
+  We introduce a new approach for designing computationally efficient learning
+algorithms that are tolerant to noise, and demonstrate its effectiveness by
+designing algorithms with improved noise tolerance guarantees for learning
+linear separators.
+  We consider both the malicious noise model and the adversarial label noise
+model. For malicious noise, where the adversary can corrupt both the label and
+the features, we provide a polynomial-time algorithm for learning linear
+separators in $\Re^d$ under isotropic log-concave distributions that can
+tolerate a nearly information-theoretically optimal noise rate of $\eta =
+\Omega(\epsilon)$. For the adversarial label noise model, where the
+distribution over the feature vectors is unchanged, and the overall probability
+of a noisy label is constrained to be at most $\eta$, we also give a
+polynomial-time algorithm for learning linear separators in $\Re^d$ under
+isotropic log-concave distributions that can handle a noise rate of $\eta =
+\Omega\left(\epsilon\right)$.
+  We show that, in the active learning model, our algorithms achieve a label
+complexity whose dependence on the error parameter $\epsilon$ is
+polylogarithmic. This provides the first polynomial-time active learning
+algorithm for learning linear separators in the presence of malicious noise or
+adversarial label noise.
+
+
+Improved Spectral-Norm Bounds for Clustering
+
+  Aiming to unify known results about clustering mixtures of distributions
+under separation conditions, Kumar and Kannan[2010] introduced a deterministic
+condition for clustering datasets. They showed that this single deterministic
+condition encompasses many previously studied clustering assumptions. More
+specifically, their proximity condition requires that in the target
+$k$-clustering, the projection of a point $x$ onto the line joining its cluster
+center $\mu$ and some other center $\mu'$, is a large additive factor closer to
+$\mu$ than to $\mu'$. This additive factor can be roughly described as $k$
+times the spectral norm of the matrix representing the differences between the
+given (known) dataset and the means of the (unknown) target clustering.
+Clearly, the proximity condition implies center separation -- the distance
+between any two centers must be as large as the above mentioned bound.
+  In this paper we improve upon the work of Kumar and Kannan along several
+axes. First, we weaken the center separation bound by a factor of $\sqrt{k}$,
+and secondly we weaken the proximity condition by a factor of $k$. Using these
+weaker bounds we still achieve the same guarantees when all points satisfy the
+proximity condition. We also achieve better guarantees when only
+$(1-\epsilon)$-fraction of the points satisfy the weaker proximity condition.
+The bulk of our analysis relies only on center separation under which one can
+produce a clustering which (i) has low error, (ii) has low $k$-means cost, and
+(iii) has centers very close to the target centers.
+  Our improved separation condition allows us to match the results of the
+Planted Partition Model of McSherry[2001], improve upon the results of
+Ostrovsky et al[2006], and improve separation results for mixture of Gaussian
+models in a particular setting.
+
+
+Towards Learning Sparsely Used Dictionaries with Arbitrary Supports
+
+  Dictionary learning is a popular approach for inferring a hidden basis or
+dictionary in which data has a sparse representation. Data generated from the
+dictionary A (an n by m matrix, with m > n in the over-complete setting) is
+given by Y = AX where X is a matrix whose columns have supports chosen from a
+distribution over k-sparse vectors, and the non-zero values chosen from a
+symmetric distribution. Given Y, the goal is to recover A and X in polynomial
+time. Existing algorithms give polytime guarantees for recovering incoherent
+dictionaries, under strong distributional assumptions both on the supports of
+the columns of X, and on the values of the non-zero entries. In this work, we
+study the following question: Can we design efficient algorithms for recovering
+dictionaries when the supports of the columns of X are arbitrary?
+  To address this question while circumventing the issue of
+non-identifiability, we study a natural semirandom model for dictionary
+learning where there are a large number of samples $y=Ax$ with arbitrary
+k-sparse supports for x, along with a few samples where the sparse supports are
+chosen uniformly at random. While the few samples with random supports ensures
+identifiability, the support distribution can look almost arbitrary in
+aggregate. Hence existing algorithmic techniques seem to break down as they
+make strong assumptions on the supports.
+  Our main contribution is a new polynomial time algorithm for learning
+incoherent over-complete dictionaries that works under the semirandom model.
+Additionally the same algorithm provides polynomial time guarantees in new
+parameter regimes when the supports are fully random. Finally using these
+techniques, we also identify a minimal set of conditions on the supports under
+which the dictionary can be (information theoretically) recovered from
+polynomial samples for almost linear sparsity, i.e., $k=\tilde{O}(n)$.
+
+
+Fair k-Center Clustering for Data Summarization
+
+  In data summarization we want to choose k prototypes in order to summarize a
+data set. We study a setting where the data set comprises several demographic
+groups and we are restricted to choose k_i prototypes belonging to group i. A
+common approach to the problem without the fairness constraint is to optimize a
+centroid-based clustering objective such as k-center. A natural extension then
+is to incorporate the fairness constraint into the clustering objective.
+Existing algorithms for doing so run in time super-quadratic in the size of the
+data set. This is in contrast to the standard k-center objective that can be
+approximately optimized in linear time. In this paper, we resolve this gap by
+providing a simple approximation algorithm for the k-center problem under the
+fairness constraint with running time linear in the size of the data set and k.
+If the number of demographic groups is small, the approximation guarantee of
+our algorithm only incurs a constant-factor overhead. We demonstrate the
+applicability of our algorithm on both synthetic and real data sets.
+
+
+Guarantees for Spectral Clustering with Fairness Constraints
+
+  Given the widespread popularity of spectral clustering (SC) for partitioning
+graph data, we study a version of constrained SC in which we try to incorporate
+the fairness notion proposed by Chierichetti et al. (2017). According to this
+notion, a clustering is fair if every demographic group is approximately
+proportionally represented in each cluster. To this end, we develop variants of
+both normalized and unnormalized constrained SC and show that they help find
+fairer clusterings on both synthetic and real data. We also provide a rigorous
+theoretical analysis of our algorithms. While there have been efforts to
+incorporate various constraints into the SC framework, theoretically analyzing
+them is a challenging problem. We overcome this by proposing a natural variant
+of the stochastic block model where h groups have strong inter-group
+connectivity, but also exhibit a "natural" clustering structure which is fair.
+We prove that our algorithms can recover this fair clustering with high
+probability.
+
+
+Learning using Local Membership Queries
+
+  We introduce a new model of membership query (MQ) learning, where the
+learning algorithm is restricted to query points that are \emph{close} to
+random examples drawn from the underlying distribution. The learning model is
+intermediate between the PAC model (Valiant, 1984) and the PAC+MQ model (where
+the queries are allowed to be arbitrary points).
+  Membership query algorithms are not popular among machine learning
+practitioners. Apart from the obvious difficulty of adaptively querying
+labelers, it has also been observed that querying \emph{unnatural} points leads
+to increased noise from human labelers (Lang and Baum, 1992). This motivates
+our study of learning algorithms that make queries that are close to examples
+generated from the data distribution.
+  We restrict our attention to functions defined on the $n$-dimensional Boolean
+hypercube and say that a membership query is local if its Hamming distance from
+some example in the (random) training data is at most $O(\log(n))$. We show the
+following results in this model:
+  (i) The class of sparse polynomials (with coefficients in R) over $\{0,1\}^n$
+is polynomial time learnable under a large class of \emph{locally smooth}
+distributions using $O(\log(n))$-local queries. This class also includes the
+class of $O(\log(n))$-depth decision trees.
+  (ii) The class of polynomial-sized decision trees is polynomial time
+learnable under product distributions using $O(\log(n))$-local queries.
+  (iii) The class of polynomial size DNF formulas is learnable under the
+uniform distribution using $O(\log(n))$-local queries in time
+$n^{O(\log(\log(n)))}$.
+  (iv) In addition we prove a number of results relating the proposed model to
+the traditional PAC model and the PAC+MQ model.
+
+
+Efficient Learning of Linear Separators under Bounded Noise
+
+  We study the learnability of linear separators in $\Re^d$ in the presence of
+bounded (a.k.a Massart) noise. This is a realistic generalization of the random
+classification noise model, where the adversary can flip each example $x$ with
+probability $\eta(x) \leq \eta$. We provide the first polynomial time algorithm
+that can learn linear separators to arbitrarily small excess error in this
+noise model under the uniform distribution over the unit ball in $\Re^d$, for
+some constant value of $\eta$. While widely studied in the statistical learning
+theory community in the context of getting faster convergence rates,
+computationally efficient algorithms in this model had remained elusive. Our
+work provides the first evidence that one can indeed design algorithms
+achieving arbitrarily small excess error in polynomial time under this
+realistic noise model and thus opens up a new and exciting line of research.
+  We additionally provide lower bounds showing that popular algorithms such as
+hinge loss minimization and averaging cannot lead to arbitrarily small excess
+error under Massart noise, even under the uniform distribution. Our work
+instead, makes use of a margin based technique developed in the context of
+active learning. As a result, our algorithm is also an active learning
+algorithm with label complexity that is only a logarithmic the desired excess
+error $\epsilon$.
+
+
+Efficient PAC Learning from the Crowd
+
+  In recent years crowdsourcing has become the method of choice for gathering
+labeled training data for learning algorithms. Standard approaches to
+crowdsourcing view the process of acquiring labeled data separately from the
+process of learning a classifier from the gathered data. This can give rise to
+computational and statistical challenges. For example, in most cases there are
+no known computationally efficient learning algorithms that are robust to the
+high level of noise that exists in crowdsourced data, and efforts to eliminate
+noise through voting often require a large number of queries per example.
+  In this paper, we show how by interleaving the process of labeling and
+learning, we can attain computational efficiency with much less overhead in the
+labeling cost. In particular, we consider the realizable setting where there
+exists a true target function in $\mathcal{F}$ and consider a pool of labelers.
+When a noticeable fraction of the labelers are perfect, and the rest behave
+arbitrarily, we show that any $\mathcal{F}$ that can be efficiently learned in
+the traditional realizable PAC model can be learned in a computationally
+efficient manner by querying the crowd, despite high amounts of noise in the
+responses. Moreover, we show that this can be done while each labeler only
+labels a constant number of examples and the number of labels requested per
+example, on average, is a constant. When no perfect labelers exist, a related
+task is to find a set of the labelers which are good but not perfect. We show
+that we can identify all good labelers, when at least the majority of labelers
+are good.
+
+
+Relax, no need to round: integrality of clustering formulations
+
+  We study exact recovery conditions for convex relaxations of point cloud
+clustering problems, focusing on two of the most common optimization problems
+for unsupervised clustering: $k$-means and $k$-median clustering. Motivations
+for focusing on convex relaxations are: (a) they come with a certificate of
+optimality, and (b) they are generic tools which are relatively parameter-free,
+not tailored to specific assumptions over the input. More precisely, we
+consider the distributional setting where there are $k$ clusters in
+$\mathbb{R}^m$ and data from each cluster consists of $n$ points sampled from a
+symmetric distribution within a ball of unit radius. We ask: what is the
+minimal separation distance between cluster centers needed for convex
+relaxations to exactly recover these $k$ clusters as the optimal integral
+solution? For the $k$-median linear programming relaxation we show a tight
+bound: exact recovery is obtained given arbitrarily small pairwise separation
+$\epsilon > 0$ between the balls. In other words, the pairwise center
+separation is $\Delta > 2+\epsilon$. Under the same distributional model, the
+$k$-means LP relaxation fails to recover such clusters at separation as large
+as $\Delta = 4$. Yet, if we enforce PSD constraints on the $k$-means LP, we get
+exact cluster recovery at center separation $\Delta > 2\sqrt2(1+\sqrt{1/m})$.
+In contrast, common heuristics such as Lloyd's algorithm (a.k.a. the $k$-means
+algorithm) can fail to recover clusters in this setting; even with arbitrarily
+large cluster separation, k-means++ with overseeding by any constant factor
+fails with high probability at exact cluster recovery. To complement the
+theoretical analysis, we provide an experimental study of the recovery
+guarantees for these various methods, and discuss several open problems which
+these experiments suggest.
+
+
+Label optimal regret bounds for online local learning
+
+  We resolve an open question from (Christiano, 2014b) posed in COLT'14
+regarding the optimal dependency of the regret achievable for online local
+learning on the size of the label set. In this framework the algorithm is shown
+a pair of items at each step, chosen from a set of $n$ items. The learner then
+predicts a label for each item, from a label set of size $L$ and receives a
+real valued payoff. This is a natural framework which captures many interesting
+scenarios such as collaborative filtering, online gambling, and online max cut
+among others. (Christiano, 2014a) designed an efficient online learning
+algorithm for this problem achieving a regret of $O(\sqrt{nL^3T})$, where $T$
+is the number of rounds. Information theoretically, one can achieve a regret of
+$O(\sqrt{n \log L T})$. One of the main open questions left in this framework
+concerns closing the above gap.
+  In this work, we provide a complete answer to the question above via two main
+results. We show, via a tighter analysis, that the semi-definite programming
+based algorithm of (Christiano, 2014a), in fact achieves a regret of
+$O(\sqrt{nLT})$. Second, we show a matching computational lower bound. Namely,
+we show that a polynomial time algorithm for online local learning with lower
+regret would imply a polynomial time algorithm for the planted clique problem
+which is widely believed to be hard. We prove a similar hardness result under a
+related conjecture concerning planted dense subgraphs that we put forth. Unlike
+planted clique, the planted dense subgraph problem does not have any known
+quasi-polynomial time algorithms.
+  Computational lower bounds for online learning are relatively rare, and we
+hope that the ideas developed in this work will lead to lower bounds for other
+online learning scenarios as well.
+
+
+On some provably correct cases of variational inference for topic models
+
+  Variational inference is a very efficient and popular heuristic used in
+various forms in the context of latent variable models. It's closely related to
+Expectation Maximization (EM), and is applied when exact EM is computationally
+infeasible. Despite being immensely popular, current theoretical understanding
+of the effectiveness of variaitonal inference based algorithms is very limited.
+In this work we provide the first analysis of instances where variational
+inference algorithms converge to the global optimum, in the setting of topic
+models.
+  More specifically, we show that variational inference provably learns the
+optimal parameters of a topic model under natural assumptions on the topic-word
+matrix and the topic priors. The properties that the topic word matrix must
+satisfy in our setting are related to the topic expansion assumption introduced
+in (Anandkumar et al., 2013), as well as the anchor words assumption in (Arora
+et al., 2012c). The assumptions on the topic priors are related to the well
+known Dirichlet prior, introduced to the area of topic modeling by (Blei et
+al., 2003).
+  It is well known that initialization plays a crucial role in how well
+variational based algorithms perform in practice. The initializations that we
+use are fairly natural. One of them is similar to what is currently used in
+LDA-c, the most popular implementation of variational inference for topic
+models. The other one is an overlapping clustering algorithm, inspired by a
+work by (Arora et al., 2014) on dictionary learning, which is very simple and
+efficient.
+  While our primary goal is to provide insights into when variational inference
+might work in practice, the multiplicative, rather than the additive nature of
+the variational inference updates forces us to use fairly non-standard proof
+arguments, which we believe will be of general interest.
+
+
+The Hardness of Approximation of Euclidean k-means
+
+  The Euclidean $k$-means problem is a classical problem that has been
+extensively studied in the theoretical computer science, machine learning and
+the computational geometry communities. In this problem, we are given a set of
+$n$ points in Euclidean space $R^d$, and the goal is to choose $k$ centers in
+$R^d$ so that the sum of squared distances of each point to its nearest center
+is minimized. The best approximation algorithms for this problem include a
+polynomial time constant factor approximation for general $k$ and a
+$(1+\epsilon)$-approximation which runs in time $poly(n) 2^{O(k/\epsilon)}$. At
+the other extreme, the only known computational complexity result for this
+problem is NP-hardness [ADHP'09]. The main difficulty in obtaining hardness
+results stems from the Euclidean nature of the problem, and the fact that any
+point in $R^d$ can be a potential center. This gap in understanding left open
+the intriguing possibility that the problem might admit a PTAS for all $k,d$.
+  In this paper we provide the first hardness of approximation for the
+Euclidean $k$-means problem. Concretely, we show that there exists a constant
+$\epsilon > 0$ such that it is NP-hard to approximate the $k$-means objective
+to within a factor of $(1+\epsilon)$. We show this via an efficient reduction
+from the vertex cover problem on triangle-free graphs: given a triangle-free
+graph, the goal is to choose the fewest number of vertices which are incident
+on all the edges. Additionally, we give a proof that the current best hardness
+results for vertex cover can be carried over to triangle-free graphs. To show
+this we transform $G$, a known hard vertex cover instance, by taking a graph
+product with a suitably chosen graph $H$, and showing that the size of the
+(normalized) maximum independent set is almost exactly preserved in the product
+graph using a spectral analysis, which might be of independent interest.
+
+
+Robust Communication-Optimal Distributed Clustering Algorithms
+
+  In this work, we study the $k$-median and $k$-means clustering problems when
+the data is distributed across many servers and can contain outliers. While
+there has been a lot of work on these problems for worst-case instances, we
+focus on gaining a finer understanding through the lens of beyond worst-case
+analysis. Our main motivation is the following: for many applications such as
+clustering proteins by function or clustering communities in a social network,
+there is some unknown target clustering, and the hope is that running a
+$k$-median or $k$-means algorithm will produce clusterings which are close to
+matching the target clustering. Worst-case results can guarantee constant
+factor approximations to the optimal $k$-median or $k$-means objective value,
+but not closeness to the target clustering.
+  Our first result is a distributed algorithm which returns a near-optimal
+clustering assuming a natural notion of stability, namely, approximation
+stability [Balcan et. al 2013], even when a constant fraction of the data are
+outliers. The communication complexity is $\tilde O(sk+z)$ where $s$ is the
+number of machines, $k$ is the number of clusters, and $z$ is the number of
+outliers.
+  Next, we show this amount of communication cannot be improved even in the
+setting when the input satisfies various non-worst-case assumptions. We give a
+matching $\Omega(sk+z)$ lower bound on the communication required both for
+approximating the optimal $k$-means or $k$-median cost up to any constant, and
+for returning a clustering that is close to the target clustering in Hamming
+distance. These lower bounds hold even when the data satisfies approximation
+stability or other common notions of stability, and the cluster sizes are
+balanced. Therefore, $\Omega(sk+z)$ is a communication bottleneck, even for
+real-world instances.
+
+
+Robust Vertex Enumeration for Convex Hulls in High Dimensions
+
+  Computation of the vertices of the convex hull of a set $S$ of $n$ points in
+$\mathbb{R} ^m$ is a fundamental problem in computational geometry,
+optimization, machine learning and more. We present "All Vertex Triangle
+Algorithm" (AVTA), a robust and efficient algorithm for computing the subset
+$\overline S$ of all $K$ vertices of $conv(S)$, the convex hull of $S$. If
+$\Gamma_*$ is the minimum of the distances from each vertex to the convex hull
+of the remaining vertices, given any $\gamma \leq \gamma_* = \Gamma_*/R$, $R$
+the diameter of $S$, $AVTA$ computes $\overline S$ in $O(nK(m+ \gamma^{-2}))$
+operations. If $\gamma_*$ is unknown but $K$ is known, AVTA computes $\overline
+S$ in $O(nK(m+ \gamma_*^{-2})) \log(\gamma_*^{-1})$ operations. More generally,
+given $t \in (0,1)$, AVTA computes a subset $\overline S^t$ of $\overline S$ in
+$O(n |\overline S^t|(m+ t^{-2}))$ operations, where the distance between any $p
+\in conv(S)$ to $conv(\overline S^t)$ is at most $t R$. Next we consider AVTA
+where input is $S_\varepsilon$, an $\varepsilon$ perturbation of $S$. Assuming
+a bound on $\varepsilon$ in terms of the minimum of the distances of vertices
+of $conv(S)$ to the convex hull of the remaining point of $S$, we derive
+analogous complexity bounds for computing $\overline S_\varepsilon$. We also
+analyze AVTA under random projections of $S$ or $S_\varepsilon$. Finally, via
+AVTA we design new practical algorithms for two popular machine learning
+problems: topic modeling and non-negative matrix factorization. For topic
+models AVTA leads to significantly better reconstruction of the topic-word
+matrix than state of the art approaches~\cite{arora2013practical,
+bansal2014provable}. For non-negative matrix AVTA is competitive with existing
+methods~\cite{arora2012computing}. Empirically AVTA is robust and can handle
+larger amounts of noise than existing methods.
+
+
+Bilu-Linial stability, certified algorithms and the Independent Set
+  problem
+
+  We study the notion of Bilu-Linial stability in the context of Independent
+Set. A weighted instance $G=(V,E,w)$ of Independent Set is $\gamma$-stable if
+it has a unique optimal solution that remains the unique optimal solution under
+multiplicative perturbations of the weights by a factor of at most $\gamma\geq
+1$. In this work, we use the standard LP as well as the Sherali-Adams hierarchy
+to design algorithms for $(\Delta-1)$-stable instances on graphs of maximum
+degree $\Delta$, for $(k-1)$-stable instances on $k$-colorable graphs and for
+$(1+\varepsilon)$-stable instances on planar graphs. We also show that the
+integrality gap of relaxations of several maximization problems reduces
+dramatically on stable instances. For general graphs we give an algorithm for
+$(\varepsilon n)$-stable instances (for fixed $\varepsilon>0$), and on the
+negative side we show that there are no efficient algorithms for
+$O(n^{\frac{1}{2}-\varepsilon})$-stable instances assuming the planted clique
+conjecture. As a side note, we exploit the connection between Vertex Cover and
+Node Multiway Cut and give the first results about stable instances of Node
+Multiway Cut.
+  Moreover, we initiate the study of certified algorithms for Independent Set.
+The class of $\gamma$-certified algorithms is a class of $\gamma$-approximation
+algorithms introduced by Makarychev and Makarychev (2018) whose returned
+solution is optimal for a perturbation of the original instance. Using results
+of Makarychev and Makarychev (2018) as well as combinatorial techniques, we
+obtain $\Delta$-certified algorithms for Independent Set on graphs of maximum
+degree $\Delta$ and $(1+\varepsilon)$-certified algorithms on planar graphs.
+Finally, we prove that an algorithm of Berman and F\"{u}rer (1994) is a
+$\left(\frac{\Delta+1}{3}+\varepsilon\right)$-certified algorithm on graphs of
+maximum degree $\Delta$ where all weights are equal to 1.
+
+

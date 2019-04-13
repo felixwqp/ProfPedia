@@ -1,0 +1,506 @@
+Simultaneous Object Detection, Tracking, and Event Recognition
+
+  The common internal structure and algorithmic organization of object
+detection, detection-based tracking, and event recognition facilitates a
+general approach to integrating these three components. This supports
+multidirectional information flow between these components allowing object
+detection to influence tracking and event recognition and event recognition to
+influence tracking and object detection. The performance of the combination can
+exceed the performance of the components in isolation. This can be done with
+linear asymptotic complexity.
+
+
+Automatic differentiation in machine learning: a survey
+
+  Derivatives, mostly in the form of gradients and Hessians, are ubiquitous in
+machine learning. Automatic differentiation (AD), also called algorithmic
+differentiation or simply "autodiff", is a family of techniques similar to but
+more general than backpropagation for efficiently and accurately evaluating
+derivatives of numeric functions expressed as computer programs. AD is a small
+but established field with applications in areas including computational fluid
+dynamics, atmospheric sciences, and engineering design optimization. Until very
+recently, the fields of machine learning and AD have largely been unaware of
+each other and, in some cases, have independently discovered each other's
+results. Despite its relevance, general-purpose AD has been missing from the
+machine learning toolbox, a situation slowly changing with its ongoing adoption
+under the names "dynamic computational graphs" and "differentiable
+programming". We survey the intersection of AD and machine learning, cover
+applications where AD has direct relevance, and address the main implementation
+techniques. By precisely defining the main differentiation techniques and their
+interrelationships, we aim to bring clarity to the usage of the terms
+"autodiff", "automatic differentiation", and "symbolic differentiation" as
+these are encountered more and more in machine learning settings.
+
+
+Discriminative Training: Learning to Describe Video with Sentences, from
+  Video Described with Sentences
+
+  We present a method for learning word meanings from complex and realistic
+video clips by discriminatively training (DT) positive sentential labels
+against negative ones, and then use the trained word models to generate
+sentential descriptions for new video. This new work is inspired by recent work
+which adopts a maximum likelihood (ML) framework to address the same problem
+using only positive sentential labels. The new method, like the ML-based one,
+is able to automatically determine which words in the sentence correspond to
+which concepts in the video (i.e., ground words to meanings) in a weakly
+supervised fashion. While both DT and ML yield comparable results with
+sufficient training data, DT outperforms ML significantly with smaller training
+sets because it can exploit negative training labels to better constrain the
+learning problem.
+
+
+Seeing What You're Told: Sentence-Guided Activity Recognition In Video
+
+  We present a system that demonstrates how the compositional structure of
+events, in concert with the compositional structure of language, can interplay
+with the underlying focusing mechanisms in video action recognition, thereby
+providing a medium, not only for top-down and bottom-up integration, but also
+for multi-modal integration between vision and language. We show how the roles
+played by participants (nouns), their characteristics (adjectives), the actions
+performed (verbs), the manner of such actions (adverbs), and changing spatial
+relations between participants (prepositions) in the form of whole sentential
+descriptions mediated by a grammar, guides the activity-recognition process.
+Further, the utility and expressiveness of our framework is demonstrated by
+performing three separate tasks in the domain of multi-activity videos:
+sentence-guided focus of attention, generation of sentential descriptions of
+video, and query-based video search, simply by leveraging the framework in
+different manners.
+
+
+Video In Sentences Out
+
+  We present a system that produces sentential descriptions of video: who did
+what to whom, and where and how they did it. Action class is rendered as a
+verb, participant objects as noun phrases, properties of those objects as
+adjectival modifiers in those noun phrases, spatial relations between those
+participants as prepositional phrases, and characteristics of the event as
+prepositional-phrase adjuncts and adverbial modifiers. Extracting the
+information needed to render these linguistic entities requires an approach to
+event recognition that recovers object tracks, the trackto-role assignments,
+and changing body posture.
+
+
+AD in Fortran, Part 1: Design
+
+  We propose extensions to Fortran which integrate forward and reverse
+Automatic Differentiation (AD) directly into the programming model.
+Irrespective of implementation technology, embedding AD constructs directly
+into the language extends the reach and convenience of AD while allowing
+abstraction of concepts of interest to scientific-computing practice, such as
+root finding, optimization, and finding equilibria of continuous games.
+Multiple different subprograms for these tasks can share common interfaces,
+regardless of whether and how they use AD internally. A programmer can maximize
+a function F by calling a library maximizer, XSTAR=ARGMAX(F,X0), which
+internally constructs derivatives of F by AD, without having to learn how to
+use any particular AD tool. We illustrate the utility of these extensions by
+example: programs become much more concise and closer to traditional
+mathematical notation. A companion paper describes how these extensions can be
+implemented by a program that generates input to existing Fortran-based AD
+tools.
+
+
+AD in Fortran, Part 2: Implementation via Prepreprocessor
+
+  We describe an implementation of the Farfel Fortran AD extensions. These
+extensions integrate forward and reverse AD directly into the programming
+model, with attendant benefits to flexibility, modularity, and ease of use. The
+implementation we describe is a "prepreprocessor" that generates input to
+existing Fortran-based AD tools. In essence, blocks of code which are targeted
+for AD by Farfel constructs are put into subprograms which capture their
+lexical variable context, and these are closure-converted into top-level
+subprograms and specialized to eliminate EXTERNAL arguments, rendering them
+amenable to existing AD preprocessors, which are then invoked, possibly
+repeatedly if the AD is nested.
+
+
+Video In Sentences Out
+
+  We present a system that produces sentential descriptions of video: who did
+what to whom, and where and how they did it. Action class is rendered as a
+verb, participant objects as noun phrases, properties of those objects as
+adjectival modifiers in those noun phrases,spatial relations between those
+participants as prepositional phrases, and characteristics of the event as
+prepositional-phrase adjuncts and adverbial modifiers. Extracting the
+information needed to render these linguistic entities requires an approach to
+event recognition that recovers object tracks, the track-to-role assignments,
+and changing body posture.
+
+
+Seeing Unseeability to See the Unseeable
+
+  We present a framework that allows an observer to determine occluded portions
+of a structure by finding the maximum-likelihood estimate of those occluded
+portions consistent with visible image evidence and a consistency model. Doing
+this requires determining which portions of the structure are occluded in the
+first place. Since each process relies on the other, we determine a solution to
+both problems in tandem. We extend our framework to determine confidence of
+one's assessment of which portions of an observed structure are occluded, and
+the estimate of that occluded structure, by determining the sensitivity of
+one's assessment to potential new observations. We further extend our framework
+to determine a robotic action whose execution would allow a new observation
+that would maximally increase one's confidence.
+
+
+Collecting and Annotating the Large Continuous Action Dataset
+
+  We make available to the community a new dataset to support
+action-recognition research. This dataset is different from prior datasets in
+several key ways. It is significantly larger. It contains streaming video with
+long segments containing multiple action occurrences that often overlap in
+space and/or time. All actions were filmed in the same collection of
+backgrounds so that background gives little clue as to action class. We had
+five humans replicate the annotation of temporal extent of action occurrences
+labeled with their class and measured a surprisingly low level of intercoder
+agreement. A baseline experiment shows that recent state-of-the-art methods
+perform poorly on this dataset. This suggests that this will be a challenging
+dataset to foster advances in action-recognition research. This manuscript
+serves to describe the novel content and characteristics of the LCA dataset,
+present the design decisions made when filming the dataset, and document the
+novel methods employed to annotate the dataset.
+
+
+DiffSharp: Automatic Differentiation Library
+
+  In this paper we introduce DiffSharp, an automatic differentiation (AD)
+library designed with machine learning in mind. AD is a family of techniques
+that evaluate derivatives at machine precision with only a small constant
+factor of overhead, by systematically applying the chain rule of calculus at
+the elementary operator level. DiffSharp aims to make an extensive array of AD
+techniques available, in convenient form, to the machine learning community.
+These including arbitrary nesting of forward/reverse AD operations, AD with
+linear algebra primitives, and a functional API that emphasizes the use of
+higher-order functions and composition. The library exposes this functionality
+through an API that provides gradients, Hessians, Jacobians, directional
+derivatives, and matrix-free Hessian- and Jacobian-vector products. Bearing the
+performance requirements of the latest machine learning techniques in mind, the
+underlying computations are run through a high-performance BLAS/LAPACK backend,
+using OpenBLAS by default. GPU support is currently being implemented.
+
+
+A Faster Method for Tracking and Scoring Videos Corresponding to
+  Sentences
+
+  Prior work presented the sentence tracker, a method for scoring how well a
+sentence describes a video clip or alternatively how well a video clip depicts
+a sentence. We present an improved method for optimizing the same cost function
+employed by this prior work, reducing the space complexity from exponential in
+the sentence length to polynomial, as well as producing a qualitatively
+identical result in time polynomial in the sentence length instead of
+exponential. Since this new method is plug-compatible with the prior method, it
+can be used for the same applications: video retrieval with sentential queries,
+generating sentential descriptions of video clips, and focusing the attention
+of a tracker with a sentence, while allowing these applications to scale with
+significantly larger numbers of object detections, word meanings modeled with
+HMMs with significantly larger numbers of states, and significantly longer
+sentences, with no appreciable degradation in quality of results.
+
+
+Sentence Directed Video Object Codetection
+
+  We tackle the problem of video object codetection by leveraging the weak
+semantic constraint implied by sentences that describe the video content.
+Unlike most existing work that focuses on codetecting large objects which are
+usually salient both in size and appearance, we can codetect objects that are
+small or medium sized. Our method assumes no human pose or depth information
+such as is required by the most recent state-of-the-art method. We employ weak
+semantic constraint on the codetection process by pairing the video with
+sentences. Although the semantic information is usually simple and weak, it can
+greatly boost the performance of our codetection framework by reducing the
+search space of the hypothesized object detections. Our experiment demonstrates
+an average IoU score of 0.423 on a new challenging dataset which contains 15
+object classes and 150 videos with 12,509 frames in total, and an average IoU
+score of 0.373 on a subset of an existing dataset, originally intended for
+activity recognition, which contains 5 object classes and 75 videos with 8,854
+frames in total.
+
+
+Robot Language Learning, Generation, and Comprehension
+
+  We present a unified framework which supports grounding natural-language
+semantics in robotic driving. This framework supports acquisition (learning
+grounded meanings of nouns and prepositions from human annotation of robotic
+driving paths), generation (using such acquired meanings to generate sentential
+description of new robotic driving paths), and comprehension (using such
+acquired meanings to support automated driving to accomplish navigational goals
+specified in natural language). We evaluate the performance of these three
+tasks by having independent human judges rate the semantic fidelity of the
+sentences associated with paths, achieving overall average correctness of 94.6%
+and overall average completeness of 85.6%.
+
+
+Binomial Checkpointing for Arbitrary Programs with No User Annotation
+
+  Heretofore, automatic checkpointing at procedure-call boundaries, to reduce
+the space complexity of reverse mode, has been provided by systems like
+Tapenade. However, binomial checkpointing, or treeverse, has only been provided
+in Automatic Differentiation (AD) systems in special cases, e.g., through
+user-provided pragmas on DO loops in Tapenade, or as the nested taping
+mechanism in adol-c for time integration processes, which requires that user
+code be refactored. We present a framework for applying binomial checkpointing
+to arbitrary code with no special annotation or refactoring required. This is
+accomplished by applying binomial checkpointing directly to a program trace.
+This trace is produced by a general-purpose checkpointing mechanism that is
+orthogonal to AD.
+
+
+Efficient Implementation of a Higher-Order Language with Built-In AD
+
+  We show that Automatic Differentiation (AD) operators can be provided in a
+dynamic language without sacrificing numeric performance. To achieve this,
+general forward and reverse AD functions are added to a simple high-level
+dynamic language, and support for them is included in an aggressive optimizing
+compiler. Novel technical mechanisms are discussed, which have the ability to
+migrate the AD transformations from run-time to compile-time. The resulting
+system, although only a research prototype, exhibits startlingly good
+performance. In fact, despite the potential inefficiencies entailed by support
+of a functional-programming language and a first-class AD operator, performance
+is competitive with the fastest available preprocessor-based Fortran AD
+systems. On benchmarks involving nested use of the AD operators, it can even
+dramatically exceed their performance.
+
+
+DiffSharp: An AD Library for .NET Languages
+
+  DiffSharp is an algorithmic differentiation or automatic differentiation (AD)
+library for the .NET ecosystem, which is targeted by the C# and F# languages,
+among others. The library has been designed with machine learning applications
+in mind, allowing very succinct implementations of models and optimization
+routines. DiffSharp is implemented in F# and exposes forward and reverse AD
+operators as general nestable higher-order functions, usable by any .NET
+language. It provides high-performance linear algebra primitives---scalars,
+vectors, and matrices, with a generalization to tensors underway---that are
+fully supported by all the AD operators, and which use a BLAS/LAPACK backend
+via the highly optimized OpenBLAS library. DiffSharp currently uses operator
+overloading, but we are developing a transformation-based version of the
+library using F#'s "code quotation" metaprogramming facility. Work on a
+CUDA-based GPU backend is also underway.
+
+
+Evolving the Incremental λ Calculus into a Model of Forward
+  Automatic Differentiation (AD)
+
+  Formal transformations somehow resembling the usual derivative are
+surprisingly common in computer science, with two notable examples being
+derivatives of regular expressions and derivatives of types. A newcomer to this
+list is the incremental $\lambda$-calculus, or ILC, a "theory of changes" that
+deploys a formal apparatus allowing the automatic generation of efficient
+update functions which perform incremental computation. The ILC is not only
+defined, but given a formal machine-understandable definition---accompanied by
+mechanically verifiable proofs of various properties, including in particular
+correctness of various sorts. Here, we show how the ILC can be mutated into
+propagating tangents, thus serving as a model of Forward Accumulation Mode
+Automatic Differentiation. This mutation is done in several steps. These steps
+can also be applied to the proofs, resulting in machine-checked proofs of the
+correctness of this model of forward AD.
+
+
+Divide-and-Conquer Checkpointing for Arbitrary Programs with No User
+  Annotation
+
+  Classical reverse-mode automatic differentiation (AD) imposes only a small
+constant-factor overhead in operation count over the original computation, but
+has storage requirements that grow, in the worst case, in proportion to the
+time consumed by the original computation. This storage blowup can be
+ameliorated by checkpointing, a process that reorders application of classical
+reverse-mode AD over an execution interval to tradeoff space \vs\ time.
+Application of checkpointing in a divide-and-conquer fashion to strategically
+chosen nested execution intervals can break classical reverse-mode AD into
+stages which can reduce the worst-case growth in storage from linear to
+sublinear. Doing this has been fully automated only for computations of
+particularly simple form, with checkpoints spanning execution intervals
+resulting from a limited set of program constructs. Here we show how the
+technique can be automated for arbitrary computations. The essential innovation
+is to apply the technique at the level of the language implementation itself,
+thus allowing checkpoints to span any execution interval.
+
+
+The Compositional Nature of Verb and Argument Representations in the
+  Human Brain
+
+  How does the human brain represent simple compositions of objects, actors,and
+actions? We had subjects view action sequence videos during neuroimaging (fMRI)
+sessions and identified lexical descriptions of those videos by decoding (SVM)
+the brain representations based only on their fMRI activation patterns. As a
+precursor to this result, we had demonstrated that we could reliably and with
+high probability decode action labels corresponding to one of six action videos
+(dig, walk, etc.), again while subjects viewed the action sequence during
+scanning (fMRI). This result was replicated at two different brain imaging
+sites with common protocols but different subjects, showing common brain areas,
+including areas known for episodic memory (PHG, MTL, high level visual
+pathways, etc.,i.e. the 'what' and 'where' systems, and TPJ, i.e. 'theory of
+mind'). Given these results, we were also able to successfully show a key
+aspect of language compositionality based on simultaneous decoding of object
+class and actor identity. Finally, combining these novel steps in 'brain
+reading' allowed us to accurately estimate brain representations supporting
+compositional decoding of a complex event composed of an actor, a verb, a
+direction, and an object.
+
+
+Felzenszwalb-Baum-Welch: Event Detection by Changing Appearance
+
+  We propose a method which can detect events in videos by modeling the change
+in appearance of the event participants over time. This method makes it
+possible to detect events which are characterized not by motion, but by the
+changing state of the people or objects involved. This is accomplished by using
+object detectors as output models for the states of a hidden Markov model
+(HMM). The method allows an HMM to model the sequence of poses of the event
+participants over time, and is effective for poses of humans and inanimate
+objects. The ability to use existing object-detection methods as part of an
+event model makes it possible to leverage ongoing work in the object-detection
+community. A novel training method uses an EM loop to simultaneously learn the
+temporal structure and object models automatically, without the need to specify
+either the individual poses to be modeled or the frames in which they occur.
+The E-step estimates the latent assignment of video frames to HMM states, while
+the M-step estimates both the HMM transition probabilities and state output
+models, including the object detectors, which are trained on the weighted
+subset of frames assigned to their state. A new dataset was gathered because
+little work has been done on events characterized by changing object pose, and
+suitable datasets are not available. Our method produced results superior to
+that of comparison systems on this dataset.
+
+
+The Compositional Nature of Event Representations in the Human Brain
+
+  How does the human brain represent simple compositions of constituents:
+actors, verbs, objects, directions, and locations? Subjects viewed videos
+during neuroimaging (fMRI) sessions from which sentential descriptions of those
+videos were identified by decoding the brain representations based only on
+their fMRI activation patterns. Constituents (e.g., "fold" and "shirt") were
+independently decoded from a single presentation. Independent constituent
+classification was then compared to joint classification of aggregate concepts
+(e.g., "fold-shirt"); results were similar as measured by accuracy and
+correlation. The brain regions used for independent constituent classification
+are largely disjoint and largely cover those used for joint classification.
+This allows recovery of sentential descriptions of stimulus videos by composing
+the results of the independent constituent classifiers. Furthermore,
+classifiers trained on the words one set of subjects think of when watching a
+video can recognise sentences a different subject thinks of when watching a
+different video.
+
+
+Large-Scale Automatic Labeling of Video Events with Verbs Based on
+  Event-Participant Interaction
+
+  We present an approach to labeling short video clips with English verbs as
+event descriptions. A key distinguishing aspect of this work is that it labels
+videos with verbs that describe the spatiotemporal interaction between event
+participants, humans and objects interacting with each other, abstracting away
+all object-class information and fine-grained image characteristics, and
+relying solely on the coarse-grained motion of the event participants. We apply
+our approach to a large set of 22 distinct verb classes and a corpus of 2,584
+videos, yielding two surprising outcomes. First, a classification accuracy of
+greater than 70% on a 1-out-of-22 labeling task and greater than 85% on a
+variety of 1-out-of-10 subsets of this labeling task is independent of the
+choice of which of two different time-series classifiers we employ. Second, we
+achieve this level of accuracy using a highly impoverished intermediate
+representation consisting solely of the bounding boxes of one or two event
+participants as a function of time. This indicates that successful event
+recognition depends more on the choice of appropriate features that
+characterize the linguistic invariants of the event classes than on the
+particular classifier algorithms.
+
+
+Saying What You're Looking For: Linguistics Meets Video Search
+
+  We present an approach to searching large video corpora for video clips which
+depict a natural-language query in the form of a sentence. This approach uses
+compositional semantics to encode subtle meaning that is lost in other systems,
+such as the difference between two sentences which have identical words but
+entirely different meaning: "The person rode the horse} vs. \emph{The horse
+rode the person". Given a video-sentence pair and a natural-language parser,
+along with a grammar that describes the space of sentential queries, we produce
+a score which indicates how well the video depicts the sentence. We produce
+such a score for each video clip in a corpus and return a ranked list of clips.
+Furthermore, this approach addresses two fundamental problems simultaneously:
+detecting and tracking objects, and recognizing whether those tracks depict the
+query. Because both tracking and object detection are unreliable, this uses
+knowledge about the intended sentential query to focus the tracker on the
+relevant participants and ensures that the resulting tracks are described by
+the sentential query. While earlier work was limited to single-word queries
+which correspond to either verbs or nouns, we show how one can search for
+complex queries which contain multiple phrases, such as prepositional phrases,
+and modifiers, such as adverbs. We demonstrate this approach by searching for
+141 queries involving people and horses interacting with each other in 10
+full-length Hollywood movies.
+
+
+Tricks from Deep Learning
+
+  The deep learning community has devised a diverse set of methods to make
+gradient optimization, using large datasets, of large and highly complex models
+with deeply cascaded nonlinearities, practical. Taken as a whole, these methods
+constitute a breakthrough, allowing computational structures which are quite
+wide, very deep, and with an enormous number and variety of free parameters to
+be effectively optimized. The result now dominates much of practical machine
+learning, with applications in machine translation, computer vision, and speech
+recognition. Many of these methods, viewed through the lens of algorithmic
+differentiation (AD), can be seen as either addressing issues with the gradient
+itself, or finding ways of achieving increased efficiency using tricks that are
+AD-related, but not provided by current AD systems.
+  The goal of this paper is to explain not just those methods of most relevance
+to AD, but also the technical constraints and mindset which led to their
+discovery. After explaining this context, we present a "laundry list" of
+methods developed by the deep learning community. Two of these are discussed in
+further mathematical detail: a way to dramatically reduce the size of the tape
+when performing reverse-mode AD on a (theoretically) time-reversible process
+like an ODE integrator; and a new mathematical insight that allows for the
+implementation of a stochastic Newton's method.
+
+
+Confusion of Tagged Perturbations in Forward Automatic Differentiation
+  of Higher-Order Functions
+
+  Forward Automatic Differentiation (AD) is a technique for augmenting programs
+to compute derivatives. The essence of Forward AD is to attach perturbations to
+each number, and propagate these through the computation. When derivatives are
+nested, the distinct derivative calculations, and their associated
+perturbations, must be distinguished. This is typically accomplished by
+creating a unique tag for each derivative calculation, tagging the
+perturbations, and overloading the arithmetic operators. We exhibit a subtle
+bug, present in fielded implementations, in which perturbations are confused
+despite the tagging machinery. The essence of the bug is this: each invocation
+of a derivative creates a unique tag but a unique tag is needed for each
+derivative calculation. When taking derivatives of higher-order functions,
+these need not correspond! The derivative of a higher-order function $f$ that
+returns a function $g$ will be a function $f'$ that returns a function
+$\bar{g}$ that performs a derivative calculation. A single invocation of $f'$
+will create a single fresh tag but that same tag will be used for each
+derivative calculation resulting from an invocation of $\bar{g}$. This
+situation arises when taking derivatives of curried functions. Two potential
+solutions are presented, and their serious deficiencies discussed. One requires
+eta expansion to delay the creation of fresh tags from the invocation of $f'$
+to the invocation of $\bar{g}$, which can be difficult or even impossible in
+some circumstances. The other requires $f'$ to wrap $\bar{g}$ with tag
+renaming, which is difficult to implement without violating the desirable
+complexity properties of forward AD.
+
+
+Training on the test set? An analysis of Spampinato et al. [31]
+
+  A recent paper [31] claims to classify brain processing evoked in subjects
+watching ImageNet stimuli as measured with EEG and to use a representation
+derived from this processing to create a novel object classifier. That paper,
+together with a series of subsequent papers [8, 15, 17, 20, 21, 30, 35], claims
+to revolutionize the field by achieving extremely successful results on several
+computer-vision tasks, including object classification, transfer learning, and
+generation of images depicting human perception and thought using brain-derived
+representations measured through EEG. Our novel experiments and analyses
+demonstrate that their results crucially depend on the block design that they
+use, where all stimuli of a given class are presented together, and fail with a
+rapid-event design, where stimuli of different classes are randomly intermixed.
+The block design leads to classification of arbitrary brain states based on
+block-level temporal correlations that tend to exist in all EEG data, rather
+than stimulus-related activity. Because every trial in their test sets comes
+from the same block as many trials in the corresponding training sets, their
+block design thus leads to surreptitiously training on the test set. This
+invalidates all subsequent analyses performed on this data in multiple
+published papers and calls into question all of the purported results. We
+further show that a novel object classifier constructed with a random codebook
+performs as well as or better than a novel object classifier constructed with
+the representation extracted from EEG data, suggesting that the performance of
+their classifier constructed with a representation extracted from EEG data does
+not benefit at all from the brain-derived representation. Our results calibrate
+the underlying difficulty of the tasks involved and caution against sensational
+and overly optimistic, but false, claims to the contrary.
+
+

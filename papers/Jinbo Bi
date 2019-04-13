@@ -1,0 +1,265 @@
+On Multiplicative Multitask Feature Learning
+
+  We investigate a general framework of multiplicative multitask feature
+learning which decomposes each task's model parameters into a multiplication of
+two components. One of the components is used across all tasks and the other
+component is task-specific. Several previous methods have been proposed as
+special cases of our framework. We study the theoretical properties of this
+framework when different regularization conditions are applied to the two
+decomposed components. We prove that this framework is mathematically
+equivalent to the widely used multitask feature learning methods that are based
+on a joint regularization of all model parameters, but with a more general form
+of regularizers. Further, an analytical formula is derived for the across-task
+component as related to the task-specific component for all these regularizers,
+leading to a better understanding of the shrinkage effect. Study of this
+framework motivates new multitask learning algorithms. We propose two new
+learning formulations by varying the parameters in the proposed framework.
+Empirical studies have revealed the relative advantages of the two new
+formulations by comparing with the state of the art, which provides instructive
+insights into the feature learning problem with multiple tasks.
+
+
+A Survey on Multi-View Clustering
+
+  With advances in information acquisition technologies, multi-view data become
+ubiquitous. Multi-view learning has thus become more and more popular in
+machine learning and data mining fields. Multi-view unsupervised or
+semi-supervised learning, such as co-training, co-regularization has gained
+considerable attention. Although recently, multi-view clustering (MVC) methods
+have been developed rapidly, there has not been a survey to summarize and
+analyze the current progress. Therefore, this paper reviews the common
+strategies for combining multiple views of data and based on this summary we
+propose a novel taxonomy of the MVC approaches. We further discuss the
+relationships between MVC and multi-view representation, ensemble clustering,
+multi-task clustering, multi-view supervised and semi-supervised learning.
+Several representative real-world applications are elaborated. To promote
+future development of MVC, we envision several open problems that may require
+further investigation and thorough examination.
+
+
+Communication-Optimal Distributed Dynamic Graph Clustering
+
+  We consider the problem of clustering graph nodes over large-scale dynamic
+graphs, such as citation networks, images and web networks, when graph updates
+such as node/edge insertions/deletions are observed distributively. We propose
+communication-efficient algorithms for two well-established communication
+models namely the message passing and the blackboard models. Given a graph with
+$n$ nodes that is observed at $s$ remote sites over time $[1,t]$, the two
+proposed algorithms have communication costs $\tilde{O}(ns)$ and
+$\tilde{O}(n+s)$ ($\tilde{O}$ hides a polylogarithmic factor), almost matching
+their lower bounds, $\Omega(ns)$ and $\Omega(n+s)$, respectively, in the
+message passing and the blackboard models. More importantly, we prove that at
+each time point in $[1,t]$ our algorithms generate clustering quality nearly as
+good as that of centralizing all updates up to that time and then applying a
+standard centralized clustering algorithm. We conducted extensive experiments
+on both synthetic and real-life datasets which confirmed the communication
+efficiency of our approach over baseline algorithms while achieving comparable
+clustering results.
+
+
+Quantum spin Hall insulators and quantum valley Hall insulators of
+  BiX/SbX (X = H, F, Cl, and Br) monolayers with a record bulk band gap
+
+  Large bulk band gap is critical for application of the quantum spin Hall
+(QSH) insulator or two dimensional (2D) topological insulator (TI) in
+spintronic device operating at room temperature (RT). Based on the
+first-principles calculations, here we predict a group of 2D topological
+insulators BiX/SbX (X = H, F, Cl, and Br) monolayers with extraordinarily large
+bulk gaps from 0.32 to a record value of 1.08 eV. These giant-gaps are entirely
+due to the result of strong spin-orbit interaction related to px and py
+orbitals of Bi/Sb atoms around the two valley K and K' of honeycomb lattice,
+which is different significantly from the one consisted of pz orbital just like
+in graphene/silicene. The topological characteristic of BiX/SbX monolayers is
+confirmed by the calculated nontrivial Z2 index and an explicit construction of
+the low energy effective Hamiltonian in these systems. We show that the
+honeycomb structures of BiX monolayers remain stable even at a temperature of
+600 K. These features make the giant-gap TIs BiX/SbX monolayers an ideal
+platform to realize many exotic phenomena and fabricate new quantum devices
+operating at RT. Furthermore, biased BiX/SbX monolayers become a quantum valley
+Hall insulator, showing valley-selective circular dichroism.
+
+
+Low-Energy Effective Hamiltonian for Giant-Gap Quantum Spin Hall
+  Insulators in Honeycomb X-Hydride/Halide (X=N-Bi) Monolayers
+
+  Using the tight-binding method in combination with first-principles
+calculations, we systematically derive a low-energy effective Hilbert subspace
+and Hamiltonian with spin-orbit coupling for two-dimensional hydrogenated and
+halogenated group-V monolayers. These materials are proposed to be giant-gap
+quantum spin Hall insulators with record huge bulk band gaps opened by the
+spin-orbit coupling at the Dirac points, e.g., from 0.74 to 1.08 eV in
+Bi\textit{X} (\textit{X} = H, F, Cl, and Br) monolayers. We find that the
+low-energy Hilbert subspace mainly consists of $p_{x}$ and $p_{y}$ orbitals
+from the group-V elements, and the giant first-order effective intrinsic
+spin-orbit coupling is from the on-site spin-orbit interaction. These features
+are quite distinct from those of group-IV monolayers such as graphene and
+silicene. There, the relevant orbital is $p_z$ and the effective intrinsic
+spin-orbit coupling is from the next-nearest-neighbor spin-orbit interaction
+processes. These systems represent the first real 2D honeycomb lattice
+materials in which the low-energy physics is associated with $p_{x}$ and
+$p_{y}$ orbitals. A spinful lattice Hamiltonian with an on-site spin-orbit
+coupling term is also derived, which could facilitate further investigations of
+these intriguing topological materials.
+
+
+Hybrid-DCA: A Double Asynchronous Approach for Stochastic Dual
+  Coordinate Ascent
+
+  In prior works, stochastic dual coordinate ascent (SDCA) has been
+parallelized in a multi-core environment where the cores communicate through
+shared memory, or in a multi-processor distributed memory environment where the
+processors communicate through message passing. In this paper, we propose a
+hybrid SDCA framework for multi-core clusters, the most common high performance
+computing environment that consists of multiple nodes each having multiple
+cores and its own shared memory. We distribute data across nodes where each
+node solves a local problem in an asynchronous parallel fashion on its cores,
+and then the local updates are aggregated via an asynchronous across-node
+update scheme. The proposed double asynchronous method converges to a global
+solution for $L$-Lipschitz continuous loss functions, and at a linear
+convergence rate if a smooth convex loss function is used. Extensive empirical
+comparison has shown that our algorithm scales better than the best known
+shared-memory methods and runs faster than previous distributed-memory methods.
+Big datasets, such as one of 280 GB from the LIBSVM repository, cannot be
+accommodated on a single node and hence cannot be solved by a parallel
+algorithm. For such a dataset, our hybrid algorithm takes 30 seconds to achieve
+a duality gap of $10^{-6}$ on 16 nodes each using 8 cores, which is
+significantly faster than the best known distributed algorithms, such as
+CoCoA+, that take more than 300 seconds on 16 nodes.
+
+
+Longitudinal LASSO: Jointly Learning Features and Temporal Contingency
+  for Outcome Prediction
+
+  Longitudinal analysis is important in many disciplines, such as the study of
+behavioral transitions in social science. Only very recently, feature selection
+has drawn adequate attention in the context of longitudinal modeling. Standard
+techniques, such as generalized estimating equations, have been modified to
+select features by imposing sparsity-inducing regularizers. However, they do
+not explicitly model how a dependent variable relies on features measured at
+proximal time points. Recent graphical Granger modeling can select features in
+lagged time points but ignores the temporal correlations within an individual's
+repeated measurements. We propose an approach to automatically and
+simultaneously determine both the relevant features and the relevant temporal
+points that impact the current outcome of the dependent variable. Meanwhile,
+the proposed model takes into account the non-{\em i.i.d} nature of the data by
+estimating the within-individual correlations. This approach decomposes model
+parameters into a summation of two components and imposes separate block-wise
+LASSO penalties to each component when building a linear model in terms of the
+past $\tau$ measurements of features. One component is used to select features
+whereas the other is used to select temporal contingent points. An accelerated
+gradient descent algorithm is developed to efficiently solve the related
+optimization problem with detailed convergence analysis and asymptotic
+analysis. Computational results on both synthetic and real world problems
+demonstrate the superior performance of the proposed approach over existing
+techniques.
+
+
+End-to-end Structure-Aware Convolutional Networks for Knowledge Base
+  Completion
+
+  Knowledge graph embedding has been an active research topic for knowledge
+base completion, with progressive improvement from the initial TransE, TransH,
+DistMult et al to the current state-of-the-art ConvE. ConvE uses 2D convolution
+over embeddings and multiple layers of nonlinear features to model knowledge
+graphs. The model can be efficiently trained and scalable to large knowledge
+graphs. However, there is no structure enforcement in the embedding space of
+ConvE. The recent graph convolutional network (GCN) provides another way of
+learning graph node embedding by successfully utilizing graph connectivity
+structure. In this work, we propose a novel end-to-end Structure-Aware
+Convolutional Network (SACN) that takes the benefit of GCN and ConvE together.
+SACN consists of an encoder of a weighted graph convolutional network (WGCN),
+and a decoder of a convolutional network called Conv-TransE. WGCN utilizes
+knowledge graph node structure, node attributes and edge relation types. It has
+learnable weights that adapt the amount of information from neighbors used in
+local aggregation, leading to more accurate embeddings of graph nodes. Node
+attributes in the graph are represented as additional nodes in the WGCN. The
+decoder Conv-TransE enables the state-of-the-art ConvE to be translational
+between entities and relations while keeps the same link prediction performance
+as ConvE. We demonstrate the effectiveness of the proposed SACN on standard
+FB15k-237 and WN18RR datasets, and it gives about 10% relative improvement over
+the state-of-the-art ConvE in terms of HITS@1, HITS@3 and HITS@10.
+
+
+Classification of Neurological Gait Disorders Using Multi-task Feature
+  Learning
+
+  As our population ages, neurological impairments and degeneration of the
+musculoskeletal system yield gait abnormalities, which can significantly reduce
+quality of life. Gait rehabilitative therapy has been widely adopted to help
+patients maximize community participation and living independence. To further
+improve the precision and efficiency of rehabilitative therapy, more objective
+methods need to be developed based on sensory data. In this paper, an
+algorithmic framework is proposed to provide classification of gait disorders
+caused by two common neurological diseases, stroke and Parkinson's Disease
+(PD), from ground contact force (GCF) data. An advanced machine learning
+method, multi-task feature learning (MTFL), is used to jointly train
+classification models of a subject's gait in three classes, post-stroke, PD and
+healthy gait. Gait parameters related to mobility, balance, strength and rhythm
+are used as features for the classification. Out of all the features used, the
+MTFL models capture the more important ones per disease, which will help
+provide better objective assessment and therapy progress tracking. To evaluate
+the proposed methodology we use data from a human participant study, which
+includes five PD patients, three post-stroke patients, and three healthy
+subjects. Despite the diversity of abnormalities, the evaluation shows that the
+proposed approach can successfully distinguish post-stroke and PD gait from
+healthy gait, as well as post-stroke from PD gait, with Area Under the Curve
+(AUC) score of at least 0.96. Moreover, the methodology helps select important
+gait features to better understand the key characteristics that distinguish
+abnormal gaits and design personalized treatment.
+
+
+VIGAN: Missing View Imputation with Generative Adversarial Networks
+
+  In an era when big data are becoming the norm, there is less concern with the
+quantity but more with the quality and completeness of the data. In many
+disciplines, data are collected from heterogeneous sources, resulting in
+multi-view or multi-modal datasets. The missing data problem has been
+challenging to address in multi-view data analysis. Especially, when certain
+samples miss an entire view of data, it creates the missing view problem.
+Classic multiple imputations or matrix completion methods are hardly effective
+here when no information can be based on in the specific view to impute data
+for such samples. The commonly-used simple method of removing samples with a
+missing view can dramatically reduce sample size, thus diminishing the
+statistical power of a subsequent analysis. In this paper, we propose a novel
+approach for view imputation via generative adversarial networks (GANs), which
+we name by VIGAN. This approach first treats each view as a separate domain and
+identifies domain-to-domain mappings via a GAN using randomly-sampled data from
+each view, and then employs a multi-modal denoising autoencoder (DAE) to
+reconstruct the missing view from the GAN outputs based on paired data across
+the views. Then, by optimizing the GAN and DAE jointly, our model enables the
+knowledge integration for domain mappings and view correspondences to
+effectively recover the missing view. Empirical results on benchmark datasets
+validate the VIGAN approach by comparing against the state of the art. The
+evaluation of VIGAN in a genetic study of substance use disorders further
+proves the effectiveness and usability of this approach in life science.
+
+
+Edge Attention-based Multi-Relational Graph Convolutional Networks
+
+  Graph convolutional network (GCN) is generalization of convolutional neural
+network (CNN) to work with arbitrarily structured graphs. A binary adjacency
+matrix is commonly used in training a GCN. Recently, the attention mechanism
+allows the network to learn a dynamic and adaptive aggregation of the
+neighborhood. We propose a new GCN model on the graphs where edges are
+characterized in multiple views or precisely in terms of multiple
+relationships. For instance, in chemical graph theory, compound structures are
+often represented by the hydrogen-depleted molecular graph where nodes
+correspond to atoms and edges correspond to chemical bonds. Multiple attributes
+can be important to characterize chemical bonds, such as atom pair (the types
+of atoms that a bond connects), aromaticity, and whether a bond is in a ring.
+The different attributes lead to different graph representations for the same
+molecule. There is growing interests in both chemistry and machine learning
+fields to directly learn molecular properties of compounds from the molecular
+graph, instead of from fingerprints predefined by chemists. The proposed GCN
+model, which we call edge attention-based multi-relational GCN (EAGCN), jointly
+learns attention weights and node features in graph convolution. For each bond
+attribute, a real-valued attention matrix is used to replace the binary
+adjacency matrix. By designing a dictionary for the edge attention, and forming
+the attention matrix of each molecule by looking up the dictionary, the EAGCN
+exploits correspondence between bonds in different molecules. The prediction of
+compound properties is based on the aggregated node features, which is
+independent of the varying molecule (graph) size. We demonstrate the efficacy
+of the EAGCN on multiple chemical datasets: Tox21, HIV, Freesolv, and
+Lipophilicity, and interpret the resultant attention weights.
+
+

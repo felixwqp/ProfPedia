@@ -1,0 +1,360 @@
+Algorithm Portfolio Design: Theory vs. Practice
+
+  Stochastic algorithms are among the best for solving computationally hard
+search and reasoning problems. The runtime of such procedures is characterized
+by a random variable. Different algorithms give rise to different probability
+distributions. One can take advantage of such differences by combining several
+algorithms into a portfolio, and running them in parallel or interleaving them
+on a single processor. We provide a detailed evaluation of the portfolio
+approach on distributions of hard combinatorial search problems. We show under
+what conditions the protfolio approach can have a dramatic computational
+advantage over the best traditional methods.
+
+
+Unstructured Human Activity Detection from RGBD Images
+
+  Being able to detect and recognize human activities is essential for several
+applications, including personal assistive robotics. In this paper, we perform
+detection and recognition of unstructured human activity in unstructured
+environments. We use a RGBD sensor (Microsoft Kinect) as the input sensor, and
+compute a set of features based on human pose and motion, as well as based on
+image and pointcloud information. Our algorithm is based on a hierarchical
+maximum entropy Markov model (MEMM), which considers a person's activity as
+composed of a set of sub-activities. We infer the two-layered graph structure
+using a dynamic programming approach. We test our algorithm on detecting and
+recognizing twelve different activities performed by four people in different
+environments, such as a kitchen, a living room, an office, etc., and achieve
+good performance even when the person was not seen before in the training set.
+
+
+Uniform Solution Sampling Using a Constraint Solver As an Oracle
+
+  We consider the problem of sampling from solutions defined by a set of hard
+constraints on a combinatorial space. We propose a new sampling technique that,
+while enforcing a uniform exploration of the search space, leverages the
+reasoning power of a systematic constraint solver in a black-box scheme. We
+present a series of challenging domains, such as energy barriers and highly
+asymmetric spaces, that reveal the difficulties introduced by hard constraints.
+We demonstrate that standard approaches such as Simulated Annealing and Gibbs
+Sampling are greatly affected, while our new technique can overcome many of
+these difficulties. Finally, we show that our sampling scheme naturally defines
+a new approximate model counting technique, which we empirically show to be
+very accurate on a range of benchmark problems.
+
+
+Taming the Curse of Dimensionality: Discrete Integration by Hashing and
+  Optimization
+
+  Integration is affected by the curse of dimensionality and quickly becomes
+intractable as the dimensionality of the problem grows. We propose a randomized
+algorithm that, with high probability, gives a constant-factor approximation of
+a general discrete integral defined over an exponentially large set. This
+algorithm relies on solving only a small number of instances of a discrete
+combinatorial optimization problem subject to randomly generated parity
+constraints used as a hash function. As an application, we demonstrate that
+with a small number of MAP queries we can efficiently approximate the partition
+function of discrete graphical models, which can in turn be used, for instance,
+for marginal computation or model selection.
+
+
+Synthesizing Manipulation Sequences for Under-Specified Tasks using
+  Unrolled Markov Random Fields
+
+  Many tasks in human environments require performing a sequence of navigation
+and manipulation steps involving objects. In unstructured human environments,
+the location and configuration of the objects involved often change in
+unpredictable ways. This requires a high-level planning strategy that is robust
+and flexible in an uncertain environment. We propose a novel dynamic planning
+strategy, which can be trained from a set of example sequences. High level
+tasks are expressed as a sequence of primitive actions or controllers (with
+appropriate parameters). Our score function, based on Markov Random Field
+(MRF), captures the relations between environment, controllers, and their
+arguments. By expressing the environment using sets of attributes, the approach
+generalizes well to unseen scenarios. We train the parameters of our MRF using
+a maximum margin learning method. We provide a detailed empirical validation of
+our overall framework demonstrating successful plan strategies for a variety of
+tasks.
+
+
+Playing games against nature: optimal policies for renewable resource
+  allocation
+
+  In this paper we introduce a class of Markov decision processes that arise as
+a natural model for many renewable resource allocation problems. Upon extending
+results from the inventory control literature, we prove that they admit a
+closed form solution and we show how to exploit this structure to speed up its
+computation. We consider the application of the proposed framework to several
+problems arising in very different domains, and as part of the ongoing effort
+in the emerging field of Computational Sustainability we discuss in detail its
+application to the Northern Pacific Halibut marine fishery. Our approach is
+applied to a model based on real world data, obtaining a policy with a
+guaranteed lower bound on the utility function that is structurally very
+different from the one currently employed.
+
+
+Understanding Sampling Style Adversarial Search Methods
+
+  UCT has recently emerged as an exciting new adversarial reasoning technique
+based on cleverly balancing exploration and exploitation in a Monte-Carlo
+sampling setting. It has been particularly successful in the game of Go but the
+reasons for its success are not well understood and attempts to replicate its
+success in other domains such as Chess have failed. We provide an in-depth
+analysis of the potential of UCT in domain-independent settings, in cases where
+heuristic values are available, and the effect of enhancing random playouts to
+more informed playouts between two weak minimax players. To provide further
+insights, we develop synthetic game tree instances and discuss interesting
+properties of UCT, both empirically and analytically.
+
+
+A Bayesian Approach to Tackling Hard Computational Problems
+
+  We are developing a general framework for using learned Bayesian models for
+decision-theoretic control of search and reasoningalgorithms. We illustrate the
+approach on the specific task of controlling both general and domain-specific
+solvers on a hard class of structured constraint satisfaction problems. A
+successful strategyfor reducing the high (and even infinite) variance in
+running time typically exhibited by backtracking search algorithms is to cut
+off and restart the search if a solution is not found within a certainamount of
+time. Previous work on restart strategies have employed fixed cut off values.
+We show how to create a dynamic cut off strategy by learning a Bayesian model
+that predicts the ultimate length of a trial based on observing the early
+behavior of the search algorithm. Furthermore, we describe the general
+conditions under which a dynamic restart strategy can outperform the
+theoretically optimal fixed strategy.
+
+
+Watch-Bot: Unsupervised Learning for Reminding Humans of Forgotten
+  Actions
+
+  We present a robotic system that watches a human using a Kinect v2 RGB-D
+sensor, detects what he forgot to do while performing an activity, and if
+necessary reminds the person using a laser pointer to point out the related
+object. Our simple setup can be easily deployed on any assistive robot.
+  Our approach is based on a learning algorithm trained in a purely
+unsupervised setting, which does not require any human annotations. This makes
+our approach scalable and applicable to variant scenarios. Our model learns the
+action/object co-occurrence and action temporal relations in the activity, and
+uses the learned rich relationships to infer the forgotten action and the
+related object. We show that our approach not only improves the unsupervised
+action segmentation and action cluster assignment performance, but also
+effectively detects the forgotten actions on a challenging human activity RGB-D
+video dataset. In robotic experiments, we show that our robot is able to remind
+people of forgotten actions successfully.
+
+
+Survey Propagation Revisited
+
+  Survey propagation (SP) is an exciting new technique that has been remarkably
+successful at solving very large hard combinatorial problems, such as
+determining the satisfiability of Boolean formulas. In a promising attempt at
+understanding the success of SP, it was recently shown that SP can be viewed as
+a form of belief propagation, computing marginal probabilities over certain
+objects called covers of a formula. This explanation was, however, shortly
+dismissed by experiments suggesting that non-trivial covers simply do not exist
+for large formulas. In this paper, we show that these experiments were
+misleading: not only do covers exist for large hard random formulas, SP is
+surprisingly accurate at computing marginals over these covers despite the
+existence of many cycles in the formulas. This re-opens a potentially simpler
+line of reasoning for understanding SP, in contrast to some alternative lines
+of explanation that have been proposed assuming covers do not exist.
+
+
+Optimization With Parity Constraints: From Binary Codes to Discrete
+  Integration
+
+  Many probabilistic inference tasks involve summations over exponentially
+large sets. Recently, it has been shown that these problems can be reduced to
+solving a polynomial number of MAP inference queries for a model augmented with
+randomly generated parity constraints. By exploiting a connection with
+max-likelihood decoding of binary codes, we show that these optimizations are
+computationally hard. Inspired by iterative message passing decoding
+algorithms, we propose an Integer Linear Programming (ILP) formulation for the
+problem, enhanced with new sparsification techniques to improve decoding
+performance. By solving the ILP through a sequence of LP relaxations, we get
+both lower and upper bounds on the partition function, which hold with high
+probability and are much tighter than those obtained with variational methods.
+
+
+Pattern Decomposition with Complex Combinatorial Constraints:
+  Application to Materials Discovery
+
+  Identifying important components or factors in large amounts of noisy data is
+a key problem in machine learning and data mining. Motivated by a pattern
+decomposition problem in materials discovery, aimed at discovering new
+materials for renewable energy, e.g. for fuel and solar cells, we introduce
+CombiFD, a framework for factor based pattern decomposition that allows the
+incorporation of a-priori knowledge as constraints, including complex
+combinatorial constraints. In addition, we propose a new pattern decomposition
+algorithm, called AMIQO, based on solving a sequence of (mixed-integer)
+quadratic programs. Our approach considerably outperforms the state of the art
+on the materials discovery problem, scaling to larger datasets and recovering
+more precise and physically meaningful decompositions. We also show the
+effectiveness of our approach for enforcing background knowledge on other
+application domains.
+
+
+Variable Elimination in the Fourier Domain
+
+  The ability to represent complex high dimensional probability distributions
+in a compact form is one of the key insights in the field of graphical models.
+Factored representations are ubiquitous in machine learning and lead to major
+computational advantages. We explore a different type of compact representation
+based on discrete Fourier representations, complementing the classical approach
+based on conditional independencies. We show that a large class of
+probabilistic graphical models have a compact Fourier representation. This
+theoretical result opens up an entirely new way of approximating a probability
+distribution. We demonstrate the significance of this approach by applying it
+to the variable elimination algorithm. Compared with the traditional bucket
+representation and other approximate inference algorithms, we obtain
+significant improvements.
+
+
+Solving Marginal MAP Problems with NP Oracles and Parity Constraints
+
+  Arising from many applications at the intersection of decision making and
+machine learning, Marginal Maximum A Posteriori (Marginal MAP) Problems unify
+the two main classes of inference, namely maximization (optimization) and
+marginal inference (counting), and are believed to have higher complexity than
+both of them. We propose XOR_MMAP, a novel approach to solve the Marginal MAP
+Problem, which represents the intractable counting subproblem with queries to
+NP oracles, subject to additional parity constraints. XOR_MMAP provides a
+constant factor approximation to the Marginal MAP Problem, by encoding it as a
+single optimization in polynomial size of the original problem. We evaluate our
+approach in several machine learning and decision making applications, and show
+that our approach outperforms several state-of-the-art Marginal MAP solvers.
+
+
+XOR-Sampling for Network Design with Correlated Stochastic Events
+
+  Many network optimization problems can be formulated as stochastic network
+design problems in which edges are present or absent stochastically.
+Furthermore, protective actions can guarantee that edges will remain present.
+We consider the problem of finding the optimal protection strategy under a
+budget limit in order to maximize some connectivity measurements of the
+network. Previous approaches rely on the assumption that edges are independent.
+In this paper, we consider a more realistic setting where multiple edges are
+not independent due to natural disasters or regional events that make the
+states of multiple edges stochastically correlated. We use Markov Random Fields
+to model the correlation and define a new stochastic network design framework.
+We provide a novel algorithm based on Sample Average Approximation (SAA)
+coupled with a Gibbs or XOR sampler. The experimental results on real road
+network data show that the policies produced by SAA with the XOR sampler have
+higher quality and lower variance compared to SAA with Gibbs sampler.
+
+
+From spin glasses to hard satisfiable formulas
+
+  We introduce a highly structured family of hard satisfiable 3-SAT formulas
+corresponding to an ordered spin-glass model from statistical physics. This
+model has provably "glassy" behavior; that is, it has many local optima with
+large energy barriers between them, so that local search algorithms get stuck
+and have difficulty finding the true ground state, i.e., the unique satisfying
+assignment. We test the hardness of our formulas with two Davis-Putnam solvers,
+Satz and zChaff, the recently introduced Survey Propagation (SP), and two local
+search algorithms, Walksat and Record-to-Record Travel (RRT). We compare our
+formulas to random 3-XOR-SAT formulas and to two other generators of hard
+satisfiable instances, the minimum disagreement parity formulas of Crawford et
+al., and Hirsch's hgen. For the complete solvers the running time of our
+formulas grows exponentially in sqrt(n), and exceeds that of random 3-XOR-SAT
+formulas for small problem sizes. SP is unable to solve our formulas with as
+few as 25 variables. For Walksat, our formulas appear to be harder than any
+other known generator of satisfiable instances. Finally, our formulas can be
+solved efficiently by RRT but only if the parameter d is tuned to the height of
+the barriers between local minima, and we use this parameter to measure the
+barrier heights in random 3-XOR-SAT formulas as well.
+
+
+Watch-n-Patch: Unsupervised Learning of Actions and Relations
+
+  There is a large variation in the activities that humans perform in their
+everyday lives. We consider modeling these composite human activities which
+comprises multiple basic level actions in a completely unsupervised setting.
+Our model learns high-level co-occurrence and temporal relations between the
+actions. We consider the video as a sequence of short-term action clips, which
+contains human-words and object-words. An activity is about a set of
+action-topics and object-topics indicating which actions are present and which
+objects are interacting with. We then propose a new probabilistic model
+relating the words and the topics. It allows us to model long-range action
+relations that commonly exist in the composite activities, which is challenging
+in previous works. We apply our model to the unsupervised action segmentation
+and clustering, and to a novel application that detects forgotten actions,
+which we call action patching. For evaluation, we contribute a new challenging
+RGB-D activity video dataset recorded by the new Kinect v2, which contains
+several human daily activities as compositions of multiple actions interacting
+with different objects. Moreover, we develop a robotic system that watches
+people and reminds people by applying our action patching algorithm. Our
+robotic setup can be easily deployed on any assistive robot.
+
+
+On the Erdos Discrepancy Problem
+
+  According to the Erd\H{o}s discrepancy conjecture, for any infinite $\pm 1$
+sequence, there exists a homogeneous arithmetic progression of unbounded
+discrepancy. In other words, for any $\pm 1$ sequence $(x_1,x_2,...)$ and a
+discrepancy $C$, there exist integers $m$ and $d$ such that $|\sum_{i=1}^m x_{i
+\cdot d}| > C$. This is an $80$-year-old open problem and recent development
+proved that this conjecture is true for discrepancies up to $2$. Paul Erd\H{o}s
+also conjectured that this property of unbounded discrepancy even holds for the
+restricted case of completely multiplicative sequences (CMSs), namely sequences
+$(x_1,x_2,...)$ where $x_{a \cdot b} = x_{a} \cdot x_{b}$ for any $a,b \geq 1$.
+The longest CMS with discrepancy $2$ has been proven to be of size $246$. In
+this paper, we prove that any completely multiplicative sequence of size
+$127,646$ or more has discrepancy at least $4$, proving the Erd\H{o}s
+discrepancy conjecture for CMSs of discrepancies up to $3$. In addition, we
+prove that this bound is tight and increases the size of the longest known
+sequence of discrepancy $3$ from $17,000$ to $127,645$. Finally, we provide
+inductive construction rules as well as streamlining methods to improve the
+lower bounds for sequences of higher discrepancies.
+
+
+Understanding Batch Normalization
+
+  Batch normalization (BN) is a technique to normalize activations in
+intermediate layers of deep neural networks. Its tendency to improve accuracy
+and speed up training have established BN as a favorite technique in deep
+learning. Yet, despite its enormous success, there remains little consensus on
+the exact reason and mechanism behind these improvements. In this paper we take
+a step towards a better understanding of BN, following an empirical approach.
+We conduct several experiments, and show that BN primarily enables training
+with larger learning rates, which is the cause for faster convergence and
+better generalization. For networks without BN we demonstrate how large
+gradient updates can result in diverging loss and activations growing
+uncontrollably with network depth, which limits possible learning rates. BN
+avoids this problem by constantly correcting activations to be zero-mean and of
+unit standard deviation, which enables larger gradient steps, yields faster
+convergence and may help bypass sharp local minima. We further show various
+ways in which gradients and activations of deep unnormalized networks are
+ill-behaved. We contrast our results against recent findings in random matrix
+theory, shedding new light on classical initialization schemes and their
+consequences.
+
+
+Structure and Problem Hardness: Goal Asymmetry and DPLL Proofs in<br>
+  SAT-Based Planning
+
+  In Verification and in (optimal) AI Planning, a successful method is to
+formulate the application as boolean satisfiability (SAT), and solve it with
+state-of-the-art DPLL-based procedures. There is a lack of understanding of why
+this works so well. Focussing on the Planning context, we identify a form of
+problem structure concerned with the symmetrical or asymmetrical nature of the
+cost of achieving the individual planning goals. We quantify this sort of
+structure with a simple numeric parameter called AsymRatio, ranging between 0
+and 1. We run experiments in 10 benchmark domains from the International
+Planning Competitions since 2000; we show that AsymRatio is a good indicator of
+SAT solver performance in 8 of these domains. We then examine carefully crafted
+synthetic planning domains that allow control of the amount of structure, and
+that are clean enough for a rigorous analysis of the combinatorial search
+space. The domains are parameterized by size, and by the amount of structure.
+The CNFs we examine are unsatisfiable, encoding one planning step less than the
+length of the optimal plan. We prove upper and lower bounds on the size of the
+best possible DPLL refutations, under different settings of the amount of
+structure, as a function of size. We also identify the best possible sets of
+branching variables (backdoors). With minimum AsymRatio, we prove exponential
+lower bounds, and identify minimal backdoors of size linear in the number of
+variables. With maximum AsymRatio, we identify logarithmic DPLL refutations
+(and backdoors), showing a doubly exponential gap between the two structural
+extreme cases. The reasons for this behavior -- the proof arguments --
+illuminate the prototypical patterns of structure causing the empirical
+behavior observed in the competition benchmarks.
+
+

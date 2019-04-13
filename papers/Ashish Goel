@@ -1,0 +1,1039 @@
+Complexity Measures for Map-Reduce, and Comparison to Parallel Computing
+
+  The programming paradigm Map-Reduce and its main open-source implementation,
+Hadoop, have had an enormous impact on large scale data processing. Our goal in
+this expository writeup is two-fold: first, we want to present some complexity
+measures that allow us to talk about Map-Reduce algorithms formally, and
+second, we want to point out why this model is actually different from other
+models of parallel programming, most notably the PRAM (Parallel Random Access
+Memory) model. We are looking for complexity measures that are detailed enough
+to make fine-grained distinction between different algorithms, but which also
+abstract away many of the implementation details.
+
+
+Lower Bounds for Embedding into Distributions over Excluded Minor Graph
+  Families
+
+  It was shown recently by Fakcharoenphol et al that arbitrary finite metrics
+can be embedded into distributions over tree metrics with distortion O(log n).
+It is also known that this bound is tight since there are expander graphs which
+cannot be embedded into distributions over trees with better than Omega(log n)
+distortion.
+  We show that this same lower bound holds for embeddings into distributions
+over any minor excluded family. Given a family of graphs F which excludes minor
+M where |M|=k, we explicitly construct a family of graphs with treewidth-(k+1)
+which cannot be embedded into a distribution over F with better than Omega(log
+n) distortion. Thus, while these minor excluded families of graphs are more
+expressive than trees, they do not provide asymptotically better approximations
+in general. An important corollary of this is that graphs of treewidth-k cannot
+be embedded into distributions over graphs of treewidth-(k-3) with distortion
+less than Omega(log n).
+  We also extend a result of Alon et al by showing that for any k, planar
+graphs cannot be embedded into distributions over treewidth-k graphs with
+better than Omega(log n) distortion.
+
+
+Single pass sparsification in the streaming model with edge deletions
+
+  In this paper we give a construction of cut sparsifiers of Benczur and Karger
+in the {\em dynamic} streaming setting in a single pass over the data stream.
+Previous constructions either required multiple passes or were unable to handle
+edge deletions. We use $\tilde{O}(1/\e^2)$ time for each stream update and
+$\tilde{O}(n/\e^2)$ time to construct a sparsifier. Our $\e$-sparsifiers have
+$O(n\log^3 n/\e^2)$ edges. The main tools behind our result are an application
+of sketching techniques of Ahn et al.[SODA'12] to estimate edge connectivity
+together with a novel application of sampling with limited independence and
+sparse recovery to produce the edges of the sparsifier.
+
+
+The Hemispheric Asymmetry of Solar Activity During the Twentieth Century
+  and the Solar Dynamo
+
+  We believe the Babcock--Leighton process of poloidal field generation to be
+the main source of irregularity in the solar cycle. The random nature of this
+process may make the poloidal field in one hemisphere stronger than that in the
+other hemisphere at the end of a cycle. We expect this to induce an asymmetry
+in the next sunspot cycle. We look for evidence of this in the observational
+data and then model it theoretically with our dynamo code. Since actual polar
+field measurements exist only from 1970s, we use the polar faculae number data
+recorded by Sheeley (1991) as a proxy of the polar field and estimate the
+hemispheric asymmetry of the polar field in different solar minima during the
+major part of the twentieth century. This asymmetry is found to have a
+reasonable correlation with the asymmetry of the next cycle. We then run our
+dynamo code by feeding information about this asymmetry at the successive
+minima and compare with observational data. We find that the theoretically
+computed asymmetries of different cycles compare favourably with the
+observational data, the correlation coefficient being 0.73. Due to the coupling
+between the two hemispheres, any hemispheric asymmetry tends to get attenuated
+with time. The hemispheric asymmetry of a cycle either from observational data
+or from theoretical calculation statistically tends to be less than the
+asymmetry in the polar field (as inferred from the faculae data) in the
+preceding minimum. This reduction factor turns out to be 0.38 and 0.60
+respectively in observational data and theoretical simulation.
+
+
+Hybrid Keyword Search Auctions
+
+  Search auctions have become a dominant source of revenue generation on the
+Internet. Such auctions have typically used per-click bidding and pricing. We
+propose the use of hybrid auctions where an advertiser can make a
+per-impression as well as a per-click bid, and the auctioneer then chooses one
+of the two as the pricing mechanism. We assume that the advertiser and the
+auctioneer both have separate beliefs (called priors) on the click-probability
+of an advertisement. We first prove that the hybrid auction is truthful,
+assuming that the advertisers are risk-neutral. We then show that this auction
+is superior to the existing per-click auction in multiple ways: 1) It takes
+into account the risk characteristics of the advertisers. 2) For obscure
+keywords, the auctioneer is unlikely to have a very sharp prior on the
+click-probabilities. In such situations, the hybrid auction can result in
+significantly higher revenue. 3) An advertiser who believes that its
+click-probability is much higher than the auctioneer's estimate can use
+per-impression bids to correct the auctioneer's prior without incurring any
+extra cost. 4) The hybrid auction can allow the advertiser and auctioneer to
+implement complex dynamic programming strategies. As Internet commerce matures,
+we need more sophisticated pricing models to exploit all the information held
+by each of the participants. We believe that hybrid auctions could be an
+important step in this direction.
+
+
+Perfect Matchings via Uniform Sampling in Regular Bipartite Graphs
+
+  In this paper we further investigate the well-studied problem of finding a
+perfect matching in a regular bipartite graph. The first non-trivial algorithm,
+with running time $O(mn)$, dates back to K\"{o}nig's work in 1916 (here $m=nd$
+is the number of edges in the graph, $2n$ is the number of vertices, and $d$ is
+the degree of each node). The currently most efficient algorithm takes time
+$O(m)$, and is due to Cole, Ost, and Schirra. We improve this running time to
+$O(\min\{m, \frac{n^{2.5}\ln n}{d}\})$; this minimum can never be larger than
+$O(n^{1.75}\sqrt{\ln n})$. We obtain this improvement by proving a uniform
+sampling theorem: if we sample each edge in a $d$-regular bipartite graph
+independently with a probability $p = O(\frac{n\ln n}{d^2})$ then the resulting
+graph has a perfect matching with high probability. The proof involves a
+decomposition of the graph into pieces which are guaranteed to have many
+perfect matchings but do not have any small cuts. We then establish a
+correspondence between potential witnesses to non-existence of a matching
+(after sampling) in any piece and cuts of comparable size in that same piece.
+Karger's sampling theorem for preserving cuts in a graph can now be adapted to
+prove our uniform sampling theorem for preserving perfect matchings. Using the
+$O(m\sqrt{n})$ algorithm (due to Hopcroft and Karp) for finding maximum
+matchings in bipartite graphs on the sampled graph then yields the stated
+running time. We also provide an infinite family of instances to show that our
+uniform sampling result is tight up to poly-logarithmic factors (in fact, up to
+$\ln^2 n$).
+
+
+The Ratio Index for Budgeted Learning, with Applications
+
+  In the budgeted learning problem, we are allowed to experiment on a set of
+alternatives (given a fixed experimentation budget) with the goal of picking a
+single alternative with the largest possible expected payoff. Approximation
+algorithms for this problem were developed by Guha and Munagala by rounding a
+linear program that couples the various alternatives together. In this paper we
+present an index for this problem, which we call the ratio index, which also
+guarantees a constant factor approximation. Index-based policies have the
+advantage that a single number (i.e. the index) can be computed for each
+alternative irrespective of all other alternatives, and the alternative with
+the highest index is experimented upon. This is analogous to the famous Gittins
+index for the discounted multi-armed bandit problem.
+  The ratio index has several interesting structural properties. First, we show
+that it can be computed in strongly polynomial time. Second, we show that with
+the appropriate discount factor, the Gittins index and our ratio index are
+constant factor approximations of each other, and hence the Gittins index also
+gives a constant factor approximation to the budgeted learning problem.
+Finally, we show that the ratio index can be used to create an index-based
+policy that achieves an O(1)-approximation for the finite horizon version of
+the multi-armed bandit problem. Moreover, the policy does not require any
+knowledge of the horizon (whereas we compare its performance against an optimal
+strategy that is aware of the horizon). This yields the following surprising
+result: there is an index-based policy that achieves an O(1)-approximation for
+the multi-armed bandit problem, oblivious to the underlying discount factor.
+
+
+Perfect Matchings in Õ(n^{1.5}) Time in Regular Bipartite Graphs
+
+  We consider the well-studied problem of finding a perfect matching in
+$d$-regular bipartite graphs with $2n$ vertices and $m = nd$ edges. While the
+best-known algorithm for general bipartite graphs (due to Hopcroft and Karp)
+takes $O(m \sqrt{n})$ time, in regular bipartite graphs, a perfect matching is
+known to be computable in $O(m)$ time. Very recently, the $O(m)$ bound was
+improved to $O(\min\{m, \frac{n^{2.5}\ln n}{d}\})$ expected time, an expression
+that is bounded by $\tilde{O}(n^{1.75})$. In this paper, we further improve
+this result by giving an $O(\min\{m, \frac{n^2\ln^3 n}{d}\})$ expected time
+algorithm for finding a perfect matching in regular bipartite graphs; as a
+function of $n$ alone, the algorithm takes expected time $O((n\ln n)^{1.5})$.
+  To obtain this result, we design and analyze a two-stage sampling scheme that
+reduces the problem of finding a perfect matching in a regular bipartite graph
+to the same problem on a subsampled bipartite graph with $O(n\ln n)$ edges that
+has a perfect matching with high probability. The matching is then recovered
+using the Hopcroft-Karp algorithm. While the standard analysis of Hopcroft-Karp
+gives us an $\tilde{O}(n^{1.5})$ running time, we present a tighter analysis
+for our special case that results in the stronger $\tilde{O}(\min\{m,
+\frac{n^2}{d} \})$ time mentioned earlier.
+  Our proof of correctness of this sampling scheme uses a new correspondence
+theorem between cuts and Hall's theorem ``witnesses'' for a perfect matching in
+a bipartite graph that we prove. We believe this theorem may be of independent
+interest; as another example application, we show that a perfect matching in
+the support of an $n \times n$ doubly stochastic matrix with $m$ non-zero
+entries can be found in expected time $\tilde{O}(m + n^{1.5})$.
+
+
+One Tree Suffices: A Simultaneous O(1)-Approximation for Single-Sink
+  Buy-at-Bulk
+
+  We study the single-sink buy-at-bulk problem with an unknown cost function.
+We wish to route flow from a set of demand nodes to a root node, where the cost
+of routing x total flow along an edge is proportional to f(x) for some concave,
+non-decreasing function f satisfying f(0)=0. We present a simple, fast,
+combinatorial algorithm that takes a set of demands and constructs a single
+tree T such that for all f the cost f(T) is a 47.45-approximation of the
+optimal cost for that f. This is within a factor of 2.33 of the best
+approximation ratio currently achievable when the tree can be optimized for a
+specific function. Trees achieving simultaneous O(1)-approximations for all
+concave functions were previously not known to exist regardless of computation
+time.
+
+
+Biased Assimilation, Homophily and the Dynamics of Polarization
+
+  Are we as a society getting more polarized, and if so, why? We try to answer
+this question through a model of opinion formation. Empirical studies have
+shown that homophily results in polarization. However, we show that DeGroot's
+well-known model of opinion formation based on repeated averaging can never be
+polarizing, even if individuals are arbitrarily homophilous. We generalize
+DeGroot's model to account for a phenomenon well-known in social psychology as
+biased assimilation: when presented with mixed or inconclusive evidence on a
+complex issue, individuals draw undue support for their initial position
+thereby arriving at a more extreme opinion. We show that in a simple model of
+homophilous networks, our biased opinion formation process results in either
+polarization, persistent disagreement or consensus depending on how biased
+individuals are. In other words, homophily alone, without biased assimilation,
+is not sufficient to polarize society. Quite interestingly, biased assimilation
+also provides insight into the following related question: do internet based
+recommender algorithms that show us personalized content contribute to
+polarization? We make a connection between biased assimilation and the
+polarizing effects of some random-walk based recommender algorithms that are
+similar in spirit to some commonly used recommender algorithms.
+
+
+Triadic Consensus: A Randomized Algorithm for Voting in a Crowd
+
+  Typical voting rules do not work well in settings with many candidates. If
+there are just several hundred candidates, then even a simple task such as
+choosing a top candidate becomes impractical. Motivated by the hope of
+developing group consensus mechanisms over the internet, where the numbers of
+candidates could easily number in the thousands, we study an urn-based voting
+rule where each participant acts as a voter and a candidate. We prove that when
+participants lie in a one-dimensional space, this voting protocol finds a
+$(1-\epsilon/sqrt{n})$ approximation of the Condorcet winner with high
+probability while only requiring an expected $O(\frac{1}{\epsilon^2}\log^2
+\frac{n}{\epsilon^2})$ comparisons on average per voter. Moreover, this voting
+protocol is shown to have a quasi-truthful Nash equilibrium: namely, a Nash
+equilibrium exists which may not be truthful, but produces a winner with the
+same probability distribution as that of the truthful strategy.
+
+
+Dimension Independent Similarity Computation
+
+  We present a suite of algorithms for Dimension Independent Similarity
+Computation (DISCO) to compute all pairwise similarities between very high
+dimensional sparse vectors. All of our results are provably independent of
+dimension, meaning apart from the initial cost of trivially reading in the
+data, all subsequent operations are independent of the dimension, thus the
+dimension can be very large. We study Cosine, Dice, Overlap, and the Jaccard
+similarity measures. For Jaccard similiarity we include an improved version of
+MinHash. Our results are geared toward the MapReduce framework. We empirically
+validate our theorems at large scale using data from the social networking site
+Twitter. At time of writing, our algorithms are live in production at
+twitter.com.
+
+
+Bidirectional PageRank Estimation: From Average-Case to Worst-Case
+
+  We present a new algorithm for estimating the Personalized PageRank (PPR)
+between a source and target node on undirected graphs, with sublinear
+running-time guarantees over the worst-case choice of source and target nodes.
+Our work builds on a recent line of work on bidirectional estimators for PPR,
+which obtained sublinear running-time guarantees but in an average-case sense,
+for a uniformly random choice of target node. Crucially, we show how the
+reversibility of random walks on undirected networks can be exploited to
+convert average-case to worst-case guarantees. While past bidirectional methods
+combine forward random walks with reverse local pushes, our algorithm combines
+forward local pushes with reverse random walks. We also discuss how to modify
+our methods to estimate random-walk probabilities for any length distribution,
+thereby obtaining fast algorithms for estimating general graph diffusions,
+including the heat kernel, on undirected networks.
+
+
+Towards large-scale deliberative decision-making: small groups and the
+  importance of triads
+
+  Though deliberation is a critical component of democratic decision-making,
+existing deliberative processes do not scale to large groups of people.
+Motivated by this, we propose a model in which large-scale decision-making
+takes place through a sequence of small group interactions. Our model considers
+a group of participants, each having an opinion which together form a graph. We
+show that for median graphs, a class of graphs including grids and trees, it is
+possible to use a small number of three-person interactions to tightly
+approximate the wisdom of the crowd, defined here to be the generalized median
+of participant opinions, even when agents are strategic. Interestingly, we also
+show that this sharply contrasts with small groups of size two, for which we
+prove an impossibility result. Specifically, we show that it is impossible to
+use sequences of two-person interactions satisfying natural axioms to find a
+tight approximation of the generalized median, even when agents are
+non-strategic. Our results demonstrate the potential of small group
+interactions for reaching global decision-making properties.
+
+
+Pruning based Distance Sketches with Provable Guarantees on Random
+  Graphs
+
+  Measuring the distances between vertices on graphs is one of the most
+fundamental components in network analysis. Since finding shortest paths
+requires traversing the graph, it is challenging to obtain distance information
+on large graphs very quickly. In this work, we present a preprocessing
+algorithm that is able to create landmark based distance sketches efficiently,
+with strong theoretical guarantees. When evaluated on a diverse set of social
+and information networks, our algorithm significantly improves over existing
+approaches by reducing the number of landmarks stored, preprocessing time, or
+stretch of the estimated distances.
+  On Erd\"{o}s-R\'{e}nyi graphs and random power law graphs with degree
+distribution exponent $2 < \beta < 3$, our algorithm outputs an exact distance
+data structure with space between $\Theta(n^{5/4})$ and $\Theta(n^{3/2})$
+depending on the value of $\beta$, where $n$ is the number of vertices. We
+complement the algorithm with tight lower bounds for Erdos-Renyi graphs and the
+case when $\beta$ is close to two.
+
+
+Markets Beyond Nash Welfare for Leontief Utilities
+
+  We study the allocation of divisible goods to competing agents via a market
+mechanism, focusing on agents with Leontief utilities. The majority of the
+economics and mechanism design literature has focused on \emph{linear} prices,
+meaning that the cost of a good is proportional to the quantity purchased.
+Equilibria for linear prices are known to be exactly the maximum Nash welfare
+allocations.
+  \emph{Price curves} allow the cost of a good to be any (increasing) function
+of the quantity purchased. We show that price curve equilibria are not limited
+to maximum Nash welfare allocations with two main results. First, we show that
+an allocation can be supported by strictly increasing price curves if and only
+if it is \emph{group-domination-free}. A similarly characterization holds for
+weakly increasing price curves. We use this to show that given any allocation,
+we can compute strictly (or weakly) increasing price curves that support it (or
+show that none exist) in polynomial time. These results involve a connection to
+the \emph{agent-order matrix} of an allocation, which may have other
+applications. Second, we use duality to show that in the bandwidth allocation
+setting, any allocation maximizing a CES welfare function can be supported by
+price curves.
+
+
+Implementing the Lexicographic Maxmin Bargaining Solution
+
+  There has been much work on exhibiting mechanisms that implement various
+bargaining solutions, in particular, the Kalai-Smorodinsky solution
+\cite{moulin1984implementing} and the Nash Bargaining solution. Another
+well-known and axiomatically well-studied solution is the lexicographic maxmin
+solution. However, there is no mechanism known for its implementation. To fill
+this gap, we construct a mechanism that implements the lexicographic maxmin
+solution as the unique subgame perfect equilibrium outcome in the n-player
+setting. As is standard in the literature on implementation of bargaining
+solutions, we use the assumption that any player can grab the entire surplus.
+Our mechanism consists of a binary game tree, with each node corresponding to a
+subgame where the players are allowed to choose between two outcomes. We
+characterize novel combinatorial properties of the lexicographic maxmin
+solution which are crucial to the design of our mechanism.
+
+
+Perfect Matchings in O(n \log n) Time in Regular Bipartite Graphs
+
+  In this paper we consider the well-studied problem of finding a perfect
+matching in a d-regular bipartite graph on 2n nodes with m=nd edges. The
+best-known algorithm for general bipartite graphs (due to Hopcroft and Karp)
+takes time O(m\sqrt{n}). In regular bipartite graphs, however, a matching is
+known to be computable in O(m) time (due to Cole, Ost and Schirra). In a recent
+line of work by Goel, Kapralov and Khanna the O(m) time algorithm was improved
+first to \tilde O(min{m, n^{2.5}/d}) and then to \tilde O(min{m, n^2/d}). It
+was also shown that the latter algorithm is optimal up to polylogarithmic
+factors among all algorithms that use non-adaptive uniform sampling to reduce
+the size of the graph as a first step.
+  In this paper, we give a randomized algorithm that finds a perfect matching
+in a d-regular graph and runs in O(n\log n) time (both in expectation and with
+high probability). The algorithm performs an appropriately truncated random
+walk on a modified graph to successively find augmenting paths. Our algorithm
+may be viewed as using adaptive uniform sampling, and is thus able to bypass
+the limitations of (non-adaptive) uniform sampling established in earlier work.
+We also show that randomization is crucial for obtaining o(nd) time algorithms
+by establishing an \Omega(nd) lower bound for any deterministic algorithm. Our
+techniques also give an algorithm that successively finds a matching in the
+support of a doubly stochastic matrix in expected time O(n\log^2 n) time, with
+O(m) pre-processing time; this gives a simple O(m+mn\log^2 n) time algorithm
+for finding the Birkhoff-von Neumann decomposition of a doubly stochastic
+matrix.
+
+
+Set K-Cover Algorithms for Energy Efficient Monitoring in Wireless
+  Sensor Networks
+
+  Wireless sensor networks (WSNs) are emerging as an effective means for
+environment monitoring. This paper investigates a strategy for energy efficient
+monitoring in WSNs that partitions the sensors into covers, and then activates
+the covers iteratively in a round-robin fashion. This approach takes advantage
+of the overlap created when many sensors monitor a single area. Our work builds
+upon previous work in "Power Efficient Organization of Wireless Sensor
+Networks" by Slijepcevic and Potkonjak, where the model is first formulated. We
+have designed three approximation algorithms for a variation of the SET K-COVER
+problem, where the objective is to partition the sensors into covers such that
+the number of covers that include an area, summed over all areas, is maximized.
+The first algorithm is randomized and partitions the sensors, in expectation,
+within a fraction 1 - 1/e (~.63) of the optimum. We present two other
+deterministic approximation algorithms. One is a distributed greedy algorithm
+with a 1/2 approximation ratio and the other is a centralized greedy algorithm
+with a 1 - 1/e approximation ratio. We show that it is NP-Complete to guarantee
+better than 15/16 of the optimal coverage, indicating that all three algorithms
+perform well with respect to the best approximation algorithm possible.
+Simulations indicate that in practice, the deterministic algorithms perform far
+above their worst case bounds, consistently covering more than 72% of what is
+covered by an optimum solution. Simulations also indicate that the increase in
+longevity is proportional to the amount of overlap amongst the sensors. The
+algorithms are fast, easy to use, and according to simulations, significantly
+increase the longevity of sensor networks. The randomized algorithm in
+particular seems quite practical.
+
+
+Monotone properties of random geometric graphs have sharp thresholds
+
+  Random geometric graphs result from taking $n$ uniformly distributed points
+in the unit cube, $[0,1]^d$, and connecting two points if their Euclidean
+distance is at most $r$, for some prescribed $r$. We show that monotone
+properties for this class of graphs have sharp thresholds by reducing the
+problem to bounding the bottleneck matching on two sets of $n$ points
+distributed uniformly in $[0,1]^d$. We present upper bounds on the threshold
+width, and show that our bound is sharp for $d=1$ and at most a sublogarithmic
+factor away for $d\ge2$. Interestingly, the threshold width is much sharper for
+random geometric graphs than for Bernoulli random graphs. Further, a random
+geometric graph is shown to be a subgraph, with high probability, of another
+independently drawn random geometric graph with a slightly larger radius; this
+property is shown to have no analogue for Bernoulli random graphs.
+
+
+An Oblivious O(1)-Approximation for Single Source Buy-at-Bulk
+
+  We consider the single-source (or single-sink) buy-at-bulk problem with an
+unknown concave cost function. We want to route a set of demands along a graph
+to or from a designated root node, and the cost of routing x units of flow
+along an edge is proportional to some concave, non-decreasing function f such
+that f(0) = 0. We present a polynomial time algorithm that finds a distribution
+over trees such that the expected cost of a tree for any f is within an
+O(1)-factor of the optimum cost for that f. The previous best simultaneous
+approximation for this problem, even ignoring computation time, was O(log |D|),
+where D is the multi-set of demand nodes.
+  We design a simple algorithmic framework using the ellipsoid method that
+finds an O(1)-approximation if one exists, and then construct a separation
+oracle using a novel adaptation of the Guha, Meyerson, and Munagala algorithm
+for the single-sink buy-at-bulk problem that proves an O(1) approximation is
+possible for all f. The number of trees in the support of the distribution
+constructed by our algorithm is at most 1+log |D|.
+
+
+Efficient Distributed Locality Sensitive Hashing
+
+  Distributed frameworks are gaining increasingly widespread use in
+applications that process large amounts of data. One important example
+application is large scale similarity search, for which Locality Sensitive
+Hashing (LSH) has emerged as the method of choice, specially when the data is
+high-dimensional. At its core, LSH is based on hashing the data points to a
+number of buckets such that similar points are more likely to map to the same
+buckets. To guarantee high search quality, the LSH scheme needs a rather large
+number of hash tables. This entails a large space requirement, and in the
+distributed setting, with each query requiring a network call per hash bucket
+look up, this also entails a big network load. The Entropy LSH scheme proposed
+by Panigrahy significantly reduces the number of required hash tables by
+looking up a number of query offsets in addition to the query itself. While
+this improves the LSH space requirement, it does not help with (and in fact
+worsens) the search network efficiency, as now each query offset requires a
+network call. In this paper, focusing on the Euclidian space under $l_2$ norm
+and building up on Entropy LSH, we propose the distributed Layered LSH scheme,
+and prove that it exponentially decreases the network cost, while maintaining a
+good load balance between different machines. Our experiments also verify that
+our scheme results in a significant network traffic reduction that brings about
+large runtime improvement in real world applications.
+
+
+Personalized PageRank to a Target Node
+
+  Personalalized PageRank uses random walks to determine the importance or
+authority of nodes in a graph from the point of view of a given source node.
+Much past work has considered how to compute personalized PageRank from a given
+source node to other nodes. In this work we consider the problem of computing
+personalized PageRanks to a given target node from all source nodes. This
+problem can be interpreted as finding who supports the target or who is
+interested in the target.
+  We present an efficient algorithm for computing personalized PageRank to a
+given target up to any given accuracy. We give a simple analysis of our
+algorithm's running time in both the average case and the parameterized
+worst-case. We show that for any graph with $n$ nodes and $m$ edges, if the
+target node is randomly chosen and the teleport probability $\alpha$ is given,
+the algorithm will compute a result with $\epsilon$ error in time
+$O\left(\frac{1}{\alpha \epsilon} \left(\frac{m}{n} + \log(n)\right)\right)$.
+This is much faster than the previously proposed method of computing
+personalized PageRank separately from every source node, and it is comparable
+to the cost of computing personalized PageRank from a single source. We present
+results from experiments on the Twitter graph which show that the constant
+factors in our running time analysis are small and our algorithm is efficient
+in practice.
+
+
+FAST-PPR: Scaling Personalized PageRank Estimation for Large Graphs
+
+  We propose a new algorithm, FAST-PPR, for estimating personalized PageRank:
+given start node $s$ and target node $t$ in a directed graph, and given a
+threshold $\delta$, FAST-PPR estimates the Personalized PageRank $\pi_s(t)$
+from $s$ to $t$, guaranteeing a small relative error as long $\pi_s(t)>\delta$.
+Existing algorithms for this problem have a running-time of $\Omega(1/\delta)$;
+in comparison, FAST-PPR has a provable average running-time guarantee of
+${O}(\sqrt{d/\delta})$ (where $d$ is the average in-degree of the graph). This
+is a significant improvement, since $\delta$ is often $O(1/n)$ (where $n$ is
+the number of nodes) for applications. We also complement the algorithm with an
+$\Omega(1/\sqrt{\delta})$ lower bound for PageRank estimation, showing that the
+dependence on $\delta$ cannot be improved.
+  We perform a detailed empirical study on numerous massive graphs, showing
+that FAST-PPR dramatically outperforms existing algorithms. For example, on the
+2010 Twitter graph with 1.5 billion edges, for target nodes sampled by
+popularity, FAST-PPR has a $20$ factor speedup over the state of the art.
+Furthermore, an enhanced version of FAST-PPR has a $160$ factor speedup on the
+Twitter graph, and is at least $20$ times faster on all our candidate graphs.
+
+
+Widescope - A social platform for serious conversations on the Web
+
+  There are several web platforms that people use to interact and exchange
+ideas, such as social networks like Facebook, Twitter, and Google+; Q&A sites
+like Quora and Yahoo! Answers; and myriad independent fora. However, there is a
+scarcity of platforms that facilitate discussion of complex subjects where
+people with divergent views can easily rationalize their points of view using a
+shared knowledge base, and leverage it towards shared objectives, e.g. to
+arrive at a mutually acceptable compromise.
+  In this paper, as a first step, we present Widescope, a novel collaborative
+web platform for catalyzing shared understanding of the US Federal and State
+budget debates in order to help users reach data-driven consensus about the
+complex issues involved. It aggregates disparate sources of financial data from
+different budgets (i.e. from past, present, and proposed) and presents a
+unified interface using interactive visualizations. It leverages distributed
+collaboration to encourage exploration of ideas and debate. Users can propose
+budgets ab-initio, support existing proposals, compare between different
+budgets, and collaborate with others in real time.
+  We hypothesize that such a platform can be useful in bringing people's
+thoughts and opinions closer. Toward this, we present preliminary evidence from
+a simple pilot experiment, using triadic voting (which we also formally analyze
+to show that is better than hot-or-not voting), that 5 out of 6 groups of users
+with divergent views (conservatives vs liberals) come to a consensus while
+aiming to halve the deficit using Widescope. We believe that tools like
+Widescope could have a positive impact on other complex, data-driven social
+issues.
+
+
+Crowdsourcing for Participatory Democracies: Efficient Elicitation of
+  Social Choice Functions
+
+  We present theoretical and empirical results demonstrating the usefulness of
+voting rules for participatory democracies. We first give algorithms which
+efficiently elicit \epsilon-approximations to two prominent voting rules: the
+Borda rule and the Condorcet winner. This result circumvents previous
+prohibitive lower bounds and is surprisingly strong: even if the number of
+ideas is as large as the number of participants, each participant will only
+have to make a logarithmic number of comparisons, an exponential improvement
+over the linear number of comparisons previously needed. We demonstrate the
+approach in an experiment in Finland's recent off-road traffic law reform,
+observing that the total number of comparisons needed to achieve a fixed
+\epsilon approximation is linear in the number of ideas and that the constant
+is not large.
+  Finally, we note a few other experimental observations which support the use
+of voting rules for aggregation. First, we observe that rating, one of the
+common alternatives to ranking, manifested effects of bias in our data. Second,
+we show that very few of the topics lacked a Condorcet winner, one of the
+prominent negative results in voting. Finally, we show data hinting at a
+potential future direction: the use of partial rankings as opposed to pairwise
+comparisons to further decrease the elicitation time.
+
+
+Efficient Algorithms for Personalized PageRank
+
+  We present new, more efficient algorithms for estimating random walk scores
+such as Personalized PageRank from a given source node to one or several target
+nodes. These scores are useful for personalized search and recommendations on
+networks including social networks, user-item networks, and the web. Past work
+has proposed using Monte Carlo or using linear algebra to estimate scores from
+a single source to every target, making them inefficient for a single pair. Our
+contribution is a new bidirectional algorithm which combines linear algebra and
+Monte Carlo to achieve significant speed improvements. On a diverse set of six
+graphs, our algorithm is 70x faster than past state-of-the-art algorithms. We
+also present theoretical analysis: while past algorithms require $\Omega(n)$
+time to estimate a random walk score of typical size $\frac{1}{n}$ on an
+$n$-node graph to a given constant accuracy, our algorithm requires only
+$O(\sqrt{m})$ expected time for an average target, where $m$ is the number of
+edges, and is provably accurate.
+  In addition to our core bidirectional estimator for personalized PageRank, we
+present an alternative algorithm for undirected graphs, a generalization to
+arbitrary walk lengths and Markov Chains, an algorithm for personalized search
+ranking, and an algorithm for sampling random paths from a given source to a
+given set of targets. We expect our bidirectional methods can be extended in
+other ways and will be useful subroutines in other graph analysis problems.
+
+
+Approximate Personalized PageRank on Dynamic Graphs
+
+  We propose and analyze two algorithms for maintaining approximate
+Personalized PageRank (PPR) vectors on a dynamic graph, where edges are added
+or deleted. Our algorithms are natural dynamic versions of two known local
+variations of power iteration. One, Forward Push, propagates probability mass
+forwards along edges from a source node, while the other, Reverse Push,
+propagates local changes backwards along edges from a target. In both
+variations, we maintain an invariant between two vectors, and when an edge is
+updated, our algorithm first modifies the vectors to restore the invariant,
+then performs any needed local push operations to restore accuracy.
+  For Reverse Push, we prove that for an arbitrary directed graph in a random
+edge model, or for an arbitrary undirected graph, given a uniformly random
+target node $t$, the cost to maintain a PPR vector to $t$ of additive error
+$\varepsilon$ as $k$ edges are updated is $O(k + \bar{d} / \varepsilon)$, where
+$\bar{d}$ is the average degree of the graph. This is $O(1)$ work per update,
+plus the cost of computing a reverse vector once on a static graph. For Forward
+Push, we show that on an arbitrary undirected graph, given a uniformly random
+start node $s$, the cost to maintain a PPR vector from $s$ of degree-normalized
+error $\varepsilon$ as $k$ edges are updated is $O(k + 1 / \varepsilon)$, which
+is again $O(1)$ per update plus the cost of computing a PPR vector once on a
+static graph.
+
+
+Personalized PageRank Estimation and Search: A Bidirectional Approach
+
+  We present new algorithms for Personalized PageRank estimation and
+Personalized PageRank search. First, for the problem of estimating Personalized
+PageRank (PPR) from a source distribution to a target node, we present a new
+bidirectional estimator with simple yet strong guarantees on correctness and
+performance, and 3x to 8x speedup over existing estimators in experiments on a
+diverse set of networks. Moreover, it has a clean algebraic structure which
+enables it to be used as a primitive for the Personalized PageRank Search
+problem: Given a network like Facebook, a query like "people named John", and a
+searching user, return the top nodes in the network ranked by PPR from the
+perspective of the searching user. Previous solutions either score all nodes or
+score candidate nodes one at a time, which is prohibitively slow for large
+candidate sets. We develop a new algorithm based on our bidirectional PPR
+estimator which identifies the most relevant results by sampling candidates
+based on their PPR; this is the first solution to PPR search that can find the
+best results without iterating through the set of all candidate results.
+Finally, by combining PPR sampling with sequential PPR estimation and Monte
+Carlo, we develop practical algorithms for PPR search, and we show via
+experiments that our algorithms are efficient on networks with billions of
+edges.
+
+
+The Core of the Participatory Budgeting Problem
+
+  In participatory budgeting, communities collectively decide on the allocation
+of public tax dollars for local public projects. In this work, we consider the
+question of fairly aggregating the preferences of community members to
+determine an allocation of funds to projects. This problem is different from
+standard fair resource allocation because of public goods: The allocated goods
+benefit all users simultaneously. Fairness is crucial in participatory decision
+making, since generating equitable outcomes is an important goal of these
+processes. We argue that the classic game theoretic notion of core captures
+fairness in the setting. To compute the core, we first develop a novel
+characterization of a public goods market equilibrium called the Lindahl
+equilibrium, which is always a core solution. We then provide the first (to our
+knowledge) polynomial time algorithm for computing such an equilibrium for a
+broad set of utility functions; our algorithm also generalizes (in a
+non-trivial way) the well-known concept of proportional fairness. We use our
+theoretical insights to perform experiments on real participatory budgeting
+voting data. We empirically show that the core can be efficiently computed for
+utility functions that naturally model our practical setting, and examine the
+relation of the core with the familiar welfare objective. Finally, we address
+concerns of incentives and mechanism design by developing a randomized
+approximately dominant-strategy truthful mechanism building on the exponential
+mechanism from differential privacy.
+
+
+Re-incentivizing Discovery: Mechanisms for Partial-Progress Sharing in
+  Research
+
+  An essential primitive for an efficient research ecosystem is
+\emph{partial-progress sharing} (PPS) -- whereby a researcher shares
+information immediately upon making a breakthrough. This helps prevent
+duplication of work; however there is evidence that existing reward structures
+in research discourage partial-progress sharing. Ensuring PPS is especially
+important for new online collaborative-research platforms, which involve many
+researchers working on large, multi-stage problems.
+  We study the problem of incentivizing information-sharing in research, under
+a stylized model: non-identical agents work independently on subtasks of a
+large project, with dependencies between subtasks captured via an acyclic
+subtask-network. Each subtask carries a reward, given to the first agent who
+publicly shares its solution. Agents can choose which subtasks to work on, and
+more importantly, when to reveal solutions to completed subtasks. Under this
+model, we uncover the strategic rationale behind certain anecdotal phenomena.
+Moreover, for any acyclic subtask-network, and under a general model of
+agent-subtask completion times, we give sufficient conditions that ensure PPS
+is incentive-compatible for all agents.
+  One surprising finding is that rewards which are approximately proportional
+to perceived task-difficulties are sufficient to ensure PPS in all acyclic
+subtask-networks. The fact that there is no tension between local fairness and
+global information-sharing in multi-stage projects is encouraging, as it
+suggests practical mechanisms for real-world settings. Finally, we show that
+PPS is necessary, and in many cases, sufficient, to ensure a high rate of
+progress in research.
+
+
+Iterative Local Voting for Collective Decision-making in Continuous
+  Spaces
+
+  Many societal decision problems lie in high-dimensional continuous spaces not
+amenable to the voting techniques common for their discrete or
+single-dimensional counterparts. These problems are typically discretized
+before running an election or decided upon through negotiation by
+representatives. We propose a algorithm called {\sc Iterative Local Voting} for
+collective decision-making in this setting. In this algorithm, voters are
+sequentially sampled and asked to modify a candidate solution within some local
+neighborhood of its current value, as defined by a ball in some chosen norm,
+with the size of the ball shrinking at a specified rate.
+  We first prove the convergence of this algorithm under appropriate choices of
+neighborhoods to Pareto optimal solutions with desirable fairness properties in
+certain natural settings: when the voters' utilities can be expressed in terms
+of some form of distance from their ideal solution, and when these utilities
+are additively decomposable across dimensions. In many of these cases, we
+obtain convergence to the societal welfare maximizing solution.
+  We then describe an experiment in which we test our algorithm for the
+decision of the U.S. Federal Budget on Mechanical Turk with over 2,000 workers,
+employing neighborhoods defined by $\mathcal{L}^1, \mathcal{L}^2$ and
+$\mathcal{L}^\infty$ balls. We make several observations that inform future
+implementations of such a procedure.
+
+
+Sequential Deliberation for Social Choice
+
+  In large scale collective decision making, social choice is a normative study
+of how one ought to design a protocol for reaching consensus. However, in
+instances where the underlying decision space is too large or complex for
+ordinal voting, standard voting methods of social choice may be impractical.
+How then can we design a mechanism - preferably decentralized, simple,
+scalable, and not requiring any special knowledge of the decision space - to
+reach consensus? We propose sequential deliberation as a natural solution to
+this problem. In this iterative method, successive pairs of agents bargain over
+the decision space using the previous decision as a disagreement alternative.
+We describe the general method and analyze the quality of its outcome when the
+space of preferences define a median graph. We show that sequential
+deliberation finds a 1.208- approximation to the optimal social cost on such
+graphs, coming very close to this value with only a small constant number of
+agents sampled from the population. We also show lower bounds on simpler
+classes of mechanisms to justify our design choices. We further show that
+sequential deliberation is ex-post Pareto efficient and has truthful reporting
+as an equilibrium of the induced extensive form game. We finally show that for
+general metric spaces, the second moment of of the distribution of social cost
+of the outcomes produced by sequential deliberation is also bounded.
+
+
+Markets for Public Decision-making
+
+  A public decision-making problem consists of a set of issues, each with
+multiple possible alternatives, and a set of competing agents, each with a
+preferred alternative for each issue. We study adaptations of market economies
+to this setting, focusing on binary issues. Issues have prices, and each agent
+is endowed with artificial currency that she can use to purchase probability
+for her preferred alternatives (we allow randomized outcomes). We first show
+that when each issue has a single price that is common to all agents, market
+equilibria can be arbitrarily bad. This negative result motivates a different
+approach. We present a novel technique called "pairwise issue expansion", which
+transforms any public decision-making instance into an equivalent Fisher
+market, the simplest type of private goods market. This is done by expanding
+each issue into many goods: one for each pair of agents who disagree on that
+issue. We show that the equilibrium prices in the constructed Fisher market
+yield a "pairwise pricing equilibrium" in the original public decision-making
+problem which maximizes Nash welfare. More broadly, pairwise issue expansion
+uncovers a powerful connection between the public decision-making and private
+goods settings; this immediately yields several interesting results about
+public decisions markets, and furthers the hope that we will be able to find a
+simple iterative voting protocol that leads to near-optimum decisions.
+
+
+Relating Metric Distortion and Fairness of Social Choice Rules
+
+  One way of evaluating social choice (voting) rules is through a utilitarian
+distortion framework. In this model, we assume that agents submit full rankings
+over the alternatives, and these rankings are generated from underlying, but
+unknown, quantitative costs. The \emph{distortion} of a social choice rule is
+then the ratio of the total social cost of the chosen alternative to the
+optimal social cost of any alternative; since the true costs are unknown, we
+consider the worst-case distortion over all possible underlying costs.
+Analogously, we can consider the worst-case \emph{fairness ratio} of a social
+choice rule by comparing a useful notion of fairness (based on approximate
+majorization) for the chosen alternative to that of the optimal alternative.
+With an additional metric assumption -- that the costs equal the
+agent-alternative distances in some metric space -- it is known that the
+Copeland rule achieves both a distortion and fairness ratio of at most 5. For
+other rules, only bounds on the distortion are known, e.g., the popular Single
+Transferable Vote (STV) rule has distortion $O(\log m)$, where $m$ is the
+number of alternatives. We prove that the distinct notions of distortion and
+fairness ratio are in fact closely linked -- within an additive factor of 2 for
+any voting rule -- and thus STV also achieves an $O(\log m)$ fairness ratio. We
+further extend the notions of distortion and fairness ratio to social choice
+rules choosing a \emph{set} of alternatives. By relating the distortion of
+single-winner rules to multiple-winner rules, we establish that Recursive
+Copeland achieves a distortion of 5 and a fairness ratio of at most 7 for
+choosing a set of alternatives.
+
+
+Source Routing and Scheduling in Packet Networks
+
+  We study {\em routing} and {\em scheduling} in packet-switched networks. We
+assume an adversary that controls the injection time, source, and destination
+for each packet injected. A set of paths for these packets is {\em admissible}
+if no link in the network is overloaded. We present the first on-line routing
+algorithm that finds a set of admissible paths whenever this is feasible. Our
+algorithm calculates a path for each packet as soon as it is injected at its
+source using a simple shortest path computation. The length of a link reflects
+its current congestion. We also show how our algorithm can be implemented under
+today's Internet routing paradigms.
+  When the paths are known (either given by the adversary or computed as above)
+our goal is to schedule the packets along the given paths so that the packets
+experience small end-to-end delays. The best previous delay bounds for
+deterministic and distributed scheduling protocols were exponential in the path
+length. In this paper we present the first deterministic and distributed
+scheduling protocol that guarantees a polynomial end-to-end delay for every
+packet.
+  Finally, we discuss the effects of combining routing with scheduling. We
+first show that some unstable scheduling protocols remain unstable no matter
+how the paths are chosen. However, the freedom to choose paths can make a
+difference. For example, we show that a ring with parallel links is stable for
+all greedy scheduling protocols if paths are chosen intelligently, whereas this
+is not the case if the adversary specifies the paths.
+
+
+Graph Sparsification via Refinement Sampling
+
+  A graph G'(V,E') is an \eps-sparsification of G for some \eps>0, if every
+(weighted) cut in G' is within (1\pm \eps) of the corresponding cut in G. A
+celebrated result of Benczur and Karger shows that for every undirected graph
+G, an \eps-sparsification with O(n\log n/\e^2) edges can be constructed in
+O(m\log^2n) time. Applications to modern massive data sets often constrain
+algorithms to use computation models that restrict random access to the input.
+The semi-streaming model, in which the algorithm is constrained to use \tilde
+O(n) space, has been shown to be a good abstraction for analyzing graph
+algorithms in applications to large data sets. Recently, a semi-streaming
+algorithm for graph sparsification was presented by Anh and Guha; the total
+running time of their implementation is \Omega(mn), too large for applications
+where both space and time are important. In this paper, we introduce a new
+technique for graph sparsification, namely refinement sampling, that gives an
+\tilde{O}(m) time semi-streaming algorithm for graph sparsification.
+  Specifically, we show that refinement sampling can be used to design a
+one-pass streaming algorithm for sparsification that takes O(\log\log n) time
+per edge, uses O(\log^2 n) space per node, and outputs an \eps-sparsifier with
+O(n\log^3 n/\eps^2) edges. At a slightly increased space and time complexity,
+we can reduce the sparsifier size to O(n \log n/\e^2) edges matching the
+Benczur-Karger result, while improving upon the Benczur-Karger runtime for
+m=\omega(n\log^3 n). Finally, we show that an \eps-sparsifier with O(n \log
+n/\eps^2) edges can be constructed in two passes over the data and O(m) time
+whenever m =\Omega(n^{1+\delta}) for some constant \delta>0. As a by-product of
+our approach, we also obtain an O(m\log\log n+n \log n) time streaming
+algorithm to compute a sparse k-connectivity certificate of a graph.
+
+
+Fast Incremental and Personalized PageRank
+
+  In this paper, we analyze the efficiency of Monte Carlo methods for
+incremental computation of PageRank, personalized PageRank, and similar random
+walk based methods (with focus on SALSA), on large-scale dynamically evolving
+social networks. We assume that the graph of friendships is stored in
+distributed shared memory, as is the case for large social networks such as
+Twitter.
+  For global PageRank, we assume that the social network has $n$ nodes, and $m$
+adversarially chosen edges arrive in a random order. We show that with a reset
+probability of $\epsilon$, the total work needed to maintain an accurate
+estimate (using the Monte Carlo method) of the PageRank of every node at all
+times is $O(\frac{n\ln m}{\epsilon^{2}})$. This is significantly better than
+all known bounds for incremental PageRank. For instance, if we naively
+recompute the PageRanks as each edge arrives, the simple power iteration method
+needs $\Omega(\frac{m^2}{\ln(1/(1-\epsilon))})$ total time and the Monte Carlo
+method needs $O(mn/\epsilon)$ total time; both are prohibitively expensive.
+Furthermore, we also show that we can handle deletions equally efficiently.
+  We then study the computation of the top $k$ personalized PageRanks starting
+from a seed node, assuming that personalized PageRanks follow a power-law with
+exponent $\alpha < 1$. We show that if we store $R>q\ln n$ random walks
+starting from every node for large enough constant $q$ (using the approach
+outlined for global PageRank), then the expected number of calls made to the
+distributed social network database is $O(k/(R^{(1-\alpha)/\alpha}))$.
+  We also present experimental results from the social networking site,
+Twitter, verifying our assumptions and analyses. The overall result is that
+this algorithm is fast enough for real-time queries over a dynamic social
+network.
+
+
+Similarity Search and Locality Sensitive Hashing using TCAMs
+
+  Similarity search methods are widely used as kernels in various machine
+learning applications. Nearest neighbor search (NNS) algorithms are often used
+to retrieve similar entries, given a query. While there exist efficient
+techniques for exact query lookup using hashing, similarity search using exact
+nearest neighbors is known to be a hard problem and in high dimensions, best
+known solutions offer little improvement over a linear scan. Fast solutions to
+the approximate NNS problem include Locality Sensitive Hashing (LSH) based
+techniques, which need storage polynomial in $n$ with exponent greater than
+$1$, and query time sublinear, but still polynomial in $n$, where $n$ is the
+size of the database. In this work we present a new technique of solving the
+approximate NNS problem in Euclidean space using a Ternary Content Addressable
+Memory (TCAM), which needs near linear space and has O(1) query time. In fact,
+this method also works around the best known lower bounds in the cell probe
+model for the query time using a data structure near linear in the size of the
+data base. TCAMs are high performance associative memories widely used in
+networking applications such as access control lists. A TCAM can query for a
+bit vector within a database of ternary vectors, where every bit position
+represents $0$, $1$ or $*$. The $*$ is a wild card representing either a $0$ or
+a $1$. We leverage TCAMs to design a variant of LSH, called Ternary Locality
+Sensitive Hashing (TLSH) wherein we hash database entries represented by
+vectors in the Euclidean space into $\{0,1,*\}$. By using the added
+functionality of a TLSH scheme with respect to the $*$ character, we solve an
+instance of the approximate nearest neighbor problem with 1 TCAM access and
+storage nearly linear in the size of the database. We believe that this work
+can open new avenues in very high speed data mining.
+
+
+Liquidity in Credit Networks: A Little Trust Goes a Long Way
+
+  Credit networks represent a way of modeling trust between entities in a
+network. Nodes in the network print their own currency and trust each other for
+a certain amount of each other's currency. This allows the network to serve as
+a decentralized payment infrastructure---arbitrary payments can be routed
+through the network by passing IOUs between trusting nodes in their respective
+currencies---and obviates the need for a common currency. Nodes can repeatedly
+transact with each other and pay for the transaction using trusted currency. A
+natural question to ask in this setting is: how long can the network sustain
+liquidity, i.e., how long can the network support the routing of payments
+before credit dries up? We answer this question in terms of the long term
+failure probability of transactions for various network topologies and credit
+values.
+  We prove that the transaction failure probability is independent of the path
+along which transactions are routed. We show that under symmetric transaction
+rates, the transaction failure probability in a number of well-known graph
+families goes to zero as the size, density or credit capacity of the network
+increases. We also show via simulations that even networks of small size and
+credit capacity can route transactions with high probability if they are
+well-connected. Further, we characterize a centralized currency system as a
+special type of a star network (one where edges to the root have infinite
+credit capacity, and transactions occur only between leaf nodes) and compute
+the steady-state transaction failure probability in a centralized system. We
+show that liquidity in star networks, complete graphs and Erd\"{o}s-R\'{e}nyi
+networks is comparable to that in equivalent centralized currency systems; thus
+we do not lose much liquidity in return for their robustness and decentralized
+properties.
+
+
+Metric Distortion of Social Choice Rules: Lower Bounds and Fairness
+  Properties
+
+  We study social choice rules under the utilitarian distortion framework, with
+an additional metric assumption on the agents' costs over the alternatives. In
+this approach, these costs are given by an underlying metric on the set of all
+agents plus alternatives. Social choice rules have access to only the ordinal
+preferences of agents but not the latent cardinal costs that induce them.
+Distortion is then defined as the ratio between the social cost (typically the
+sum of agent costs) of the alternative chosen by the mechanism at hand, and
+that of the optimal alternative chosen by an omniscient algorithm. The
+worst-case distortion of a social choice rule is, therefore, a measure of how
+close it always gets to the optimal alternative without any knowledge of the
+underlying costs. Under this model, it has been conjectured that Ranked Pairs,
+the well-known weighted-tournament rule, achieves a distortion of at most 3
+[Anshelevich et al. 2015]. We disprove this conjecture by constructing a
+sequence of instances which shows that the worst-case distortion of Ranked
+Pairs is at least 5. Our lower bound on the worst case distortion of Ranked
+Pairs matches a previously known upper bound for the Copeland rule, proving
+that in the worst case, the simpler Copeland rule is at least as good as Ranked
+Pairs. And as long as we are limited to (weighted or unweighted) tournament
+rules, we demonstrate that randomization cannot help achieve an expected
+worst-case distortion of less than 3. Using the concept of approximate
+majorization within the distortion framework, we prove that Copeland and
+Randomized Dictatorship achieve low constant factor fairness-ratios (5 and 3
+respectively), which is a considerable generalization of similar results for
+the sum of costs and single largest cost objectives. In addition to all of the
+above, we outline several interesting directions for further research in this
+space.
+
+
+When Hashes Met Wedges: A Distributed Algorithm for Finding High
+  Similarity Vectors
+
+  Finding similar user pairs is a fundamental task in social networks, with
+numerous applications in ranking and personalization tasks such as link
+prediction and tie strength detection. A common manifestation of user
+similarity is based upon network structure: each user is represented by a
+vector that represents the user's network connections, where pairwise cosine
+similarity among these vectors defines user similarity. The predominant task
+for user similarity applications is to discover all similar pairs that have a
+pairwise cosine similarity value larger than a given threshold $\tau$. In
+contrast to previous work where $\tau$ is assumed to be quite close to 1, we
+focus on recommendation applications where $\tau$ is small, but still
+meaningful. The all pairs cosine similarity problem is computationally
+challenging on networks with billions of edges, and especially so for settings
+with small $\tau$. To the best of our knowledge, there is no practical solution
+for computing all user pairs with, say $\tau = 0.2$ on large social networks,
+even using the power of distributed algorithms.
+  Our work directly addresses this challenge by introducing a new algorithm ---
+WHIMP --- that solves this problem efficiently in the MapReduce model. The key
+insight in WHIMP is to combine the "wedge-sampling" approach of Cohen-Lewis for
+approximate matrix multiplication with the SimHash random projection techniques
+of Charikar. We provide a theoretical analysis of WHIMP, proving that it has
+near optimal communication costs while maintaining computation cost comparable
+with the state of the art. We also empirically demonstrate WHIMP's scalability
+by computing all highly similar pairs on four massive data sets, and show that
+it accurately finds high similarity pairs. In particular, we note that WHIMP
+successfully processes the entire Twitter network, which has tens of billions
+of edges.
+
+
+On Evaluating and Comparing Open Domain Dialog Systems
+
+  Conversational agents are exploding in popularity. However, much work remains
+in the area of non goal-oriented conversations, despite significant growth in
+research interest over recent years. To advance the state of the art in
+conversational AI, Amazon launched the Alexa Prize, a 2.5-million dollar
+university competition where sixteen selected university teams built
+conversational agents to deliver the best social conversational experience.
+Alexa Prize provided the academic community with the unique opportunity to
+perform research with a live system used by millions of users. The subjectivity
+associated with evaluating conversations is key element underlying the
+challenge of building non-goal oriented dialogue systems. In this paper, we
+propose a comprehensive evaluation strategy with multiple metrics designed to
+reduce subjectivity by selecting metrics which correlate well with human
+judgement. The proposed metrics provide granular analysis of the conversational
+agents, which is not captured in human ratings. We show that these metrics can
+be used as a reasonable proxy for human judgment. We provide a mechanism to
+unify the metrics for selecting the top performing agents, which has also been
+applied throughout the Alexa Prize competition. To our knowledge, to date it is
+the largest setting for evaluating agents with millions of conversations and
+hundreds of thousands of ratings from users. We believe that this work is a
+step towards an automatic evaluation process for conversational AIs.
+
+
+Random Dictators with a Random Referee: Constant Sample Complexity
+  Mechanisms for Social Choice
+
+  We study social choice mechanisms in an implicit utilitarian framework with a
+metric constraint, where the goal is to minimize \textit{Distortion}, the worst
+case social cost of an ordinal mechanism relative to underlying cardinal
+utilities. We consider two additional desiderata: Constant sample complexity
+and Squared Distortion. Constant sample complexity means that the mechanism
+(potentially randomized) only uses a constant number of ordinal queries
+regardless of the number of voters and alternatives. Squared Distortion is a
+measure of variance of the Distortion of a randomized mechanism.
+  Our primary contribution is the first social choice mechanism with constant
+sample complexity \textit{and} constant Squared Distortion (which also implies
+constant Distortion). We call the mechanism Random Referee, because it uses a
+random agent to compare two alternatives that are the favorites of two other
+random agents. We prove that the use of a comparison query is necessary: no
+mechanism that only elicits the top-k preferred alternatives of voters (for
+constant k) can have Squared Distortion that is sublinear in the number of
+alternatives. We also prove that unlike any top-k only mechanism, the
+Distortion of Random Referee meaningfully improves on benign metric spaces,
+using the Euclidean plane as a canonical example. Finally, among top-1 only
+mechanisms, we introduce Random Oligarchy. The mechanism asks just 3 queries
+and is essentially optimal among the class of such mechanisms with respect to
+Distortion.
+  In summary, we demonstrate the surprising power of constant sample complexity
+mechanisms generally, and just three random voters in particular, to provide
+some of the best known results in the implicit utilitarian framework.
+
+

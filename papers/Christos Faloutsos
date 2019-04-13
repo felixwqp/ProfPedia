@@ -1,0 +1,780 @@
+GMine: A System for Scalable, Interactive Graph Visualization and Mining
+
+  Several graph visualization tools exist. However, they are not able to handle
+large graphs, and/or they do not allow interaction. We are interested on large
+graphs, with hundreds of thousands of nodes. Such graphs bring two challenges:
+the first one is that any straightforward interactive manipulation will be
+prohibitively slow. The second one is sensory overload: even if we could plot
+and replot the graph quickly, the user would be overwhelmed with the vast
+volume of information because the screen would be too cluttered as nodes and
+edges overlap each other. GMine system addresses both these issues, by using
+summarization and multi-resolution. GMine offers multi-resolution graph
+exploration by partitioning a given graph into a hierarchy of
+com-munities-within-communities and storing it into a novel R-tree-like
+structure which we name G-Tree. GMine offers summarization by implementing an
+innovative subgraph extraction algorithm and then visualizing its output.
+
+
+Got the Flu (or Mumps)? Check the Eigenvalue!
+
+  For a given, arbitrary graph, what is the epidemic threshold? That is, under
+what conditions will a virus result in an epidemic? We provide the super-model
+theorem, which generalizes older results in two important, orthogonal
+dimensions. The theorem shows that (a) for a wide range of virus propagation
+models (VPM) that include all virus propagation models in standard literature
+(say, [8][5]), and (b) for any contact graph, the answer always depends on the
+first eigenvalue of the connectivity matrix. We give the proof of the theorem,
+arithmetic examples for popular VPMs, like flu (SIS), mumps (SIR), SIRS and
+more. We also show the implications of our discovery: easy (although sometimes
+counter-intuitive) answers to `what-if' questions; easier design and evaluation
+of immunization policies, and significantly faster agent-based simulations.
+
+
+NetSimile: A Scalable Approach to Size-Independent Network Similarity
+
+  Given a set of k networks, possibly with different sizes and no overlaps in
+nodes or edges, how can we quickly assess similarity between them, without
+solving the node-correspondence problem? Analogously, how can we extract a
+small number of descriptive, numerical features from each graph that
+effectively serve as the graph's "signature"? Having such features will enable
+a wealth of graph mining tasks, including clustering, outlier detection,
+visualization, etc.
+  We propose NetSimile -- a novel, effective, and scalable method for solving
+the aforementioned problem. NetSimile has the following desirable properties:
+(a) It gives similarity scores that are size-invariant. (b) It is scalable,
+being linear on the number of edges for "signature" vector extraction. (c) It
+does not need to solve the node-correspondence problem. We present extensive
+experiments on numerous synthetic and real graphs from disparate domains, and
+show NetSimile's superiority over baseline competitors. We also show how
+NetSimile enables several mining tasks such as clustering, visualization,
+discontinuity detection, network transfer learning, and re-identification
+across networks.
+
+
+DELTACON: A Principled Massive-Graph Similarity Function
+
+  How much did a network change since yesterday? How different is the wiring
+between Bob's brain (a left-handed male) and Alice's brain (a right-handed
+female)? Graph similarity with known node correspondence, i.e. the detection of
+changes in the connectivity of graphs, arises in numerous settings. In this
+work, we formally state the axioms and desired properties of the graph
+similarity functions, and evaluate when state-of-the-art methods fail to detect
+crucial connectivity changes in graphs. We propose DeltaCon, a principled,
+intuitive, and scalable algorithm that assesses the similarity between two
+graphs on the same nodes (e.g. employees of a company, customers of a mobile
+carrier). Experiments on various synthetic and real graphs showcase the
+advantages of our method over existing similarity measures. Finally, we employ
+DeltaCon to real applications: (a) we classify people to groups of high and low
+creativity based on their brain connectivity graphs, and (b) do temporal
+anomaly detection in the who-emails-whom Enron graph.
+
+
+Standards for Graph Algorithm Primitives
+
+  It is our view that the state of the art in constructing a large collection
+of graph algorithms in terms of linear algebraic operations is mature enough to
+support the emergence of a standard set of primitive building blocks. This
+paper is a position paper defining the problem and announcing our intention to
+launch an open effort to define this standard.
+
+
+Revisit Behavior in Social Media: The Phoenix-R Model and Discoveries
+
+  How many listens will an artist receive on a online radio? How about plays on
+a YouTube video? How many of these visits are new or returning users? Modeling
+and mining popularity dynamics of social activity has important implications
+for researchers, content creators and providers. We here investigate the effect
+of revisits (successive visits from a single user) on content popularity. Using
+four datasets of social activity, with up to tens of millions media objects
+(e.g., YouTube videos, Twitter hashtags or LastFM artists), we show the effect
+of revisits in the popularity evolution of such objects. Secondly, we propose
+the Phoenix-R model which captures the popularity dynamics of individual
+objects. Phoenix-R has the desired properties of being: (1) parsimonious, being
+based on the minimum description length principle, and achieving lower root
+mean squared error than state-of-the-art baselines; (2) applicable, the model
+is effective for predicting future popularity values of objects.
+
+
+VoG: Summarizing and Understanding Large Graphs
+
+  How can we succinctly describe a million-node graph with a few simple
+sentences? How can we measure the "importance" of a set of discovered subgraphs
+in a large graph? These are exactly the problems we focus on. Our main ideas
+are to construct a "vocabulary" of subgraph-types that often occur in real
+graphs (e.g., stars, cliques, chains), and from a set of subgraphs, find the
+most succinct description of a graph in terms of this vocabulary. We measure
+success in a well-founded way by means of the Minimum Description Length (MDL)
+principle: a subgraph is included in the summary if it decreases the total
+description length of the graph.
+  Our contributions are three-fold: (a) formulation: we provide a principled
+encoding scheme to choose vocabulary subgraphs; (b) algorithm: we develop
+\method, an efficient method to minimize the description cost, and (c)
+applicability: we report experimental results on multi-million-edge real
+graphs, including Flickr and the Notre Dame web graph.
+
+
+M3A: Model, MetaModel, and Anomaly Detection in Web Searches
+
+  'Alice' is submitting one web search per five minutes, for three hours in a
+row - is it normal? How to detect abnormal search behaviors, among Alice and
+other users? Is there any distinct pattern in Alice's (or other users') search
+behavior? We studied what is probably the largest, publicly available, query
+log that contains more than 30 million queries from 0.6 million users. In this
+paper, we present a novel, user-and group-level framework, M3A: Model,
+MetaModel and Anomaly detection. For each user, we discover and explain a
+surprising, bi-modal pattern of the inter-arrival time (IAT) of landed queries
+(queries with user click-through). Specifically, the model Camel-Log is
+proposed to describe such an IAT distribution; we then notice the correlations
+among its parameters at the group level. Thus, we further propose the metamodel
+Meta-Click, to capture and explain the two-dimensional, heavy-tail distribution
+of the parameters. Combining Camel-Log and Meta-Click, the proposed M3A has the
+following strong points: (1) the accurate modeling of marginal IAT
+distribution, (2) quantitative interpretations, and (3) anomaly detection.
+
+
+A Linear-Time Approximation of the Earth Mover's Distance
+
+  Color descriptors are one of the important features used in content-based
+image retrieval. The Dominant Color Descriptor (DCD) represents a few
+perceptually dominant colors in an image through color quantization. For image
+retrieval based on DCD, the earth mover's distance and the optimal color
+composition distance are proposed to measure the dissimilarity between two
+images. Although providing good retrieval results, both methods are too
+time-consuming to be used in a large image database. To solve the problem, we
+propose a new distance function that calculates an approximate earth mover's
+distance in linear time. To calculate the dissimilarity in linear time, the
+proposed approach employs the space-filling curve for multidimensional color
+space. To improve the accuracy, the proposed approach uses multiple curves and
+adjusts the color positions. As a result, our approach achieves
+order-of-magnitude time improvement but incurs small errors. We have performed
+extensive experiments to show the effectiveness and efficiency of the proposed
+approach. The results reveal that our approach achieves almost the same results
+with the EMD in linear time.
+
+
+V-SMART-Join: A Scalable MapReduce Framework for All-Pair Similarity
+  Joins of Multisets and Vectors
+
+  This work proposes V-SMART-Join, a scalable MapReduce-based framework for
+discovering all pairs of similar entities. The V-SMART-Join framework is
+applicable to sets, multisets, and vectors. V-SMART-Join is motivated by the
+observed skew in the underlying distributions of Internet traffic, and is a
+family of 2-stage algorithms, where the first stage computes and joins the
+partial results, and the second stage computes the similarity exactly for all
+candidate pairs. The V-SMART-Join algorithms are very efficient and scalable in
+the number of entities, as well as their cardinalities. They were up to 30
+times faster than the state of the art algorithm, VCL, when compared on a real
+dataset of a small size. We also established the scalability of the proposed
+algorithms by running them on a dataset of a realistic size, on which VCL never
+succeeded to finish. Experiments were run using real datasets of IPs and
+cookies, where each IP is represented as a multiset of cookies, and the goal is
+to discover similar IPs to identify Internet proxies.
+
+
+Modeling Website Popularity Competition in the Attention-Activity
+  Marketplace
+
+  How does a new startup drive the popularity of competing websites into
+oblivion like Facebook famously did to MySpace? This question is of great
+interest to academics, technologists, and financial investors alike. In this
+work we exploit the singular way in which Facebook wiped out the popularity of
+MySpace, Hi5, Friendster, and Multiply to guide the design of a new popularity
+competition model. Our model provides new insights into what Nobel Laureate
+Herbert A. Simon called the "marketplace of attention," which we recast as the
+attention-activity marketplace. Our model design is further substantiated by
+user-level activity of 250,000 MySpace users obtained between 2004 and 2009.
+The resulting model not only accurately fits the observed Daily Active Users
+(DAU) of Facebook and its competitors but also predicts their fate four years
+into the future.
+
+
+TribeFlow: Mining & Predicting User Trajectories
+
+  Which song will Smith listen to next? Which restaurant will Alice go to
+tomorrow? Which product will John click next? These applications have in common
+the prediction of user trajectories that are in a constant state of flux over a
+hidden network (e.g. website links, geographic location). What users are doing
+now may be unrelated to what they will be doing in an hour from now. Mindful of
+these challenges we propose TribeFlow, a method designed to cope with the
+complex challenges of learning personalized predictive models of
+non-stationary, transient, and time-heterogeneous user trajectories. TribeFlow
+is a general method that can perform next product recommendation, next song
+recommendation, next location prediction, and general arbitrary-length user
+trajectory prediction without domain-specific knowledge. TribeFlow is more
+accurate and up to 413x faster than top competitors.
+
+
+SuperGraph Visualization
+
+  Given a large social or computer network, how can we visualize it, find
+patterns, outliers, communities? Although several graph visualization tools
+exist, they cannot handle large graphs with hundred thousand nodes and possibly
+million edges. Such graphs bring two challenges: interactive visualization
+demands prohibitive processing power and, even if we could interactively update
+the visualization, the user would be overwhelmed by the excessive number of
+graphical items. To cope with this problem, we propose a formal innovation on
+the use of graph hierarchies that leads to GMine system. GMine promotes
+scalability using a hierarchy of graph partitions, promotes concomitant
+presentation for the graph hierarchy and for the original graph, and extends
+analytical possibilities with the integration of the graph partitions in an
+interactive environment.
+
+
+PNP: Fast Path Ensemble Method for Movie Design
+
+  How can we design a product or movie that will attract, for example, the
+interest of Pennsylvania adolescents or liberal newspaper critics? What should
+be the genre of that movie and who should be in the cast? In this work, we seek
+to identify how we can design new movies with features tailored to a specific
+user population. We formulate the movie design as an optimization problem over
+the inference of user-feature scores and selection of the features that
+maximize the number of attracted users. Our approach, PNP, is based on a
+heterogeneous, tripartite graph of users, movies and features (e.g., actors,
+directors, genres), where users rate movies and features contribute to movies.
+We learn the preferences by leveraging user similarities defined through
+different types of relations, and show that our method outperforms
+state-of-the-art approaches, including matrix factorization and other
+heterogeneous graph-based analysis. We evaluate PNP on publicly available
+real-world data and show that it is highly scalable and effectively provides
+movie designs oriented towards different groups of users, including men, women,
+and adolescents.
+
+
+Fast, Warped Graph Embedding: Unifying Framework and One-Click Algorithm
+
+  What is the best way to describe a user in a social network with just a few
+numbers? Mathematically, this is equivalent to assigning a vector
+representation to each node in a graph, a process called graph embedding. We
+propose a novel framework, GEM-D that unifies most of the past algorithms such
+as LapEigs, DeepWalk and node2vec. GEM-D achieves its goal by decomposing any
+graph embedding algorithm into three building blocks: node proximity function,
+warping function and loss function. Based on thorough analysis of GEM-D, we
+propose a novel algorithm, called UltimateWalk, which outperforms the
+most-recently proposed state-of-the-art DeepWalk and node2vec. The
+contributions of this work are: (1) The proposed framework, GEM-D unifies the
+past graph embedding algorithms and provides a general recipe of how to design
+a graph embedding; (2) the nonlinearlity in the warping function contributes
+significantly to the quality of embedding and the exponential function is
+empirically optimal; (3) the proposed algorithm, UltimateWalk is one-click (no
+user-defined parameters), scalable and has a closed-form solution.
+
+
+HoloScope: Topology-and-Spike Aware Fraud Detection
+
+  As online fraudsters invest more resources, including purchasing large pools
+of fake user accounts and dedicated IPs, fraudulent attacks become less obvious
+and their detection becomes increasingly challenging. Existing approaches such
+as average degree maximization suffer from the bias of including more nodes
+than necessary, resulting in lower accuracy and increased need for manual
+verification. Hence, we propose HoloScope, which uses information from graph
+topology and temporal spikes to more accurately detect groups of fraudulent
+users. In terms of graph topology, we introduce "contrast suspiciousness," a
+dynamic weighting approach, which allows us to more accurately detect
+fraudulent blocks, particularly low-density blocks. In terms of temporal
+spikes, HoloScope takes into account the sudden bursts and drops of fraudsters'
+attacking patterns. In addition, we provide theoretical bounds for how much
+this increases the time cost needed for fraudsters to conduct adversarial
+attacks. Additionally, from the perspective of ratings, HoloScope incorporates
+the deviation of rating scores in order to catch fraudsters more accurately.
+Moreover, HoloScope has a concise framework and sub-quadratic time complexity,
+making the algorithm reproducible and scalable. Extensive experiments showed
+that HoloScope achieved significant accuracy improvements on synthetic and real
+data, compared with state-of-the-art fraud detection methods.
+
+
+DenseAlert: Incremental Dense-Subtensor Detection in Tensor Streams
+
+  Consider a stream of retweet events - how can we spot fraudulent lock-step
+behavior in such multi-aspect data (i.e., tensors) evolving over time? Can we
+detect it in real time, with an accuracy guarantee? Past studies have shown
+that dense subtensors tend to indicate anomalous or even fraudulent behavior in
+many tensor data, including social media, Wikipedia, and TCP dumps. Thus,
+several algorithms have been proposed for detecting dense subtensors rapidly
+and accurately. However, existing algorithms assume that tensors are static,
+while many real-world tensors, including those mentioned above, evolve over
+time.
+  We propose DenseStream, an incremental algorithm that maintains and updates a
+dense subtensor in a tensor stream (i.e., a sequence of changes in a tensor),
+and DenseAlert, an incremental algorithm spotting the sudden appearances of
+dense subtensors. Our algorithms are: (1) Fast and 'any time': updates by our
+algorithms are up to a million times faster than the fastest batch algorithms,
+(2) Provably accurate: our algorithms guarantee a lower bound on the density of
+the subtensor they maintain, and (3) Effective: our DenseAlert successfully
+spots anomalies in real-world tensors, especially those overlooked by existing
+algorithms.
+
+
+EagleMine: Vision-Guided Mining in Large Graphs
+
+  Given a graph with millions of nodes, what patterns exist in the
+distributions of node characteristics, and how can we detect them and separate
+anomalous nodes in a way similar to human vision? In this paper, we propose a
+vision-guided algorithm, EagleMine, to summarize micro-cluster patterns in
+two-dimensional histogram plots constructed from node features in a large
+graph. EagleMine utilizes a water-level tree to capture cluster structures
+according to vision-based intuition at multi-resolutions. EagleMine traverses
+the water-level tree from the root and adopts statistical hypothesis tests to
+determine the optimal clusters that should be fitted along the path, and
+summarizes each cluster with a truncated Gaussian distribution. Experiments on
+real data show that our method can find truncated and overlapped elliptical
+clusters, even when some baseline methods split one visual cluster into pieces
+with Gaussian spheres. To identify potentially anomalous microclusters,
+EagleMine also a designates score to measure the suspiciousness of outlier
+groups (i.e. node clusters) and outlier nodes, detecting bots and anomalous
+users with high accuracy in the real Microblog data.
+
+
+DiSLR: Distributed Sampling with Limited Redundancy For Triangle
+  Counting in Graph Streams
+
+  Given a web-scale graph that grows over time, how should its edges be stored
+and processed on multiple machines for rapid and accurate estimation of the
+count of triangles? The count of triangles (i.e., cliques of size three) has
+proven useful in many applications, including anomaly detection, community
+detection, and link recommendation. For triangle counting in large and dynamic
+graphs, recent work has focused largely on streaming algorithms and distributed
+algorithms. To achieve the advantages of both approaches, we propose DiSLR, a
+distributed streaming algorithm that estimates the counts of global triangles
+and local triangles associated with each node. Making one pass over the input
+stream, DiSLR carefully processes and stores the edges across multiple machines
+so that the redundant use of computational and storage resources is minimized.
+Compared to its best competitors, DiSLR is (a) Accurate: giving up to 39X
+smaller estimation error, (b) Fast: up to 10.4X faster, scaling linearly with
+the number of edges in the input stream, and (c) Theoretically sound: yielding
+unbiased estimates with variances decreasing faster as the number of machines
+is scaled up.
+
+
+LinkNBed: Multi-Graph Representation Learning with Entity Linkage
+
+  Knowledge graphs have emerged as an important model for studying complex
+multi-relational data. This has given rise to the construction of numerous
+large scale but incomplete knowledge graphs encoding information extracted from
+various resources. An effective and scalable approach to jointly learn over
+multiple graphs and eventually construct a unified graph is a crucial next step
+for the success of knowledge-based inference for many downstream applications.
+To this end, we propose LinkNBed, a deep relational learning framework that
+learns entity and relationship representations across multiple graphs. We
+identify entity linkage across graphs as a vital component to achieve our goal.
+We design a novel objective that leverage entity linkage and build an efficient
+multi-task training procedure. Experiments on link prediction and entity
+linkage demonstrate substantial improvements over the state-of-the-art
+relational learning approaches.
+
+
+Impact of Load Models on Power Flow Optimization
+
+  Aggregated load models, such as PQ and ZIP, are used to represent the
+approximated load demand at specific buses in grid simulation and optimization
+problems. In this paper we examine the impact of model choice on the optimal
+power flow solution and demonstrate that it is possible for different load
+models to represent the same amount of real and reactive power at the optimal
+solution yet correspond to completely different grid operating points. We
+introduce the metric derived from the maximum power transfer theorem to
+identify the behavior of an aggregated model in the OPF formulation to indicate
+its possible limitations. A dataset from the Carnegie Mellon campus is used to
+characterize three types of load models using a time-series machine learning
+algorithm, from which the optimal power flow results demonstrate that the
+choice of load model type has a significant impact on the solution set points.
+For example, our results show that the PQ load accurately characterizes the CMU
+data behavior correctly for only 16.7% of the cases.
+
+
+Graph Evolution: Densification and Shrinking Diameters
+
+  How do real graphs evolve over time? What are ``normal'' growth patterns in
+social, technological, and information networks? Many studies have discovered
+patterns in static graphs, identifying properties in a single snapshot of a
+large network, or in a very small number of snapshots; these include heavy
+tails for in- and out-degree distributions, communities, small-world phenomena,
+and others. However, given the lack of information about network evolution over
+long periods, it has been hard to convert these findings into statements about
+trends over time.
+  Here we study a wide range of real graphs, and we observe some surprising
+phenomena. First, most of these graphs densify over time, with the number of
+edges growing super-linearly in the number of nodes. Second, the average
+distance between nodes often shrinks over time, in contrast to the conventional
+wisdom that such distance parameters should increase slowly as a function of
+the number of nodes (like O(log n) or O(log(log n)).
+  Existing graph generation models do not exhibit these types of behavior, even
+at a qualitative level. We provide a new graph generator, based on a ``forest
+fire'' spreading process, that has a simple, intuitive justification, requires
+very few parameters (like the ``flammability'' of nodes), and produces graphs
+exhibiting the full range of properties observed both in prior work and in the
+present study.
+  We also notice that the ``forest fire'' model exhibits a sharp transition
+between sparse graphs and graphs that are densifying. Graphs with decreasing
+distance between the nodes are generated around this transition point.
+
+
+Cascading Behavior in Large Blog Graphs
+
+  How do blogs cite and influence each other? How do such links evolve? Does
+the popularity of old blog posts drop exponentially with time? These are some
+of the questions that we address in this work. Our goal is to build a model
+that generates realistic cascades, so that it can help us with link prediction
+and outlier detection.
+  Blogs (weblogs) have become an important medium of information because of
+their timely publication, ease of use, and wide availability. In fact, they
+often make headlines, by discussing and discovering evidence about political
+events and facts. Often blogs link to one another, creating a publicly
+available record of how information and influence spreads through an underlying
+social network. Aggregating links from several blog posts creates a directed
+graph which we analyze to discover the patterns of information propagation in
+blogspace, and thereby understand the underlying social network. Not only are
+blogs interesting on their own merit, but our analysis also sheds light on how
+rumors, viruses, and ideas propagate over social and computer networks.
+  Here we report some surprising findings of the blog linking and information
+propagation structure, after we analyzed one of the largest available datasets,
+with 45,000 blogs and ~ 2.2 million blog-postings. Our analysis also sheds
+light on how rumors, viruses, and ideas propagate over social and computer
+networks. We also present a simple model that mimics the spread of information
+on the blogosphere, and produces information cascades very similar to those
+found in real life.
+
+
+Kronecker Graphs: An Approach to Modeling Networks
+
+  How can we model networks with a mathematically tractable model that allows
+for rigorous analysis of network properties? Networks exhibit a long list of
+surprising properties: heavy tails for the degree distribution; small
+diameters; and densification and shrinking diameters over time. Most present
+network models either fail to match several of the above properties, are
+complicated to analyze mathematically, or both. In this paper we propose a
+generative model for networks that is both mathematically tractable and can
+generate networks that have the above mentioned properties. Our main idea is to
+use the Kronecker product to generate graphs that we refer to as "Kronecker
+graphs".
+  First, we prove that Kronecker graphs naturally obey common network
+properties. We also provide empirical evidence showing that Kronecker graphs
+can effectively model the structure of real networks.
+  We then present KronFit, a fast and scalable algorithm for fitting the
+Kronecker graph generation model to large real networks. A naive approach to
+fitting would take super- exponential time. In contrast, KronFit takes linear
+time, by exploiting the structure of Kronecker matrix multiplication and by
+using statistical simulation techniques.
+  Experiments on large real and synthetic networks show that KronFit finds
+accurate parameters that indeed very well mimic the properties of target
+networks. Once fitted, the model parameters can be used to gain insights about
+the network structure, and the resulting synthetic graphs can be used for null-
+models, anonymization, extrapolations, and graph summarization.
+
+
+Scoup-SMT: Scalable Coupled Sparse Matrix-Tensor Factorization
+
+  How can we correlate neural activity in the human brain as it responds to
+words, with behavioral data expressed as answers to questions about these same
+words? In short, we want to find latent variables, that explain both the brain
+activity, as well as the behavioral responses. We show that this is an instance
+of the Coupled Matrix-Tensor Factorization (CMTF) problem. We propose
+Scoup-SMT, a novel, fast, and parallel algorithm that solves the CMTF problem
+and produces a sparse latent low-rank subspace of the data. In our experiments,
+we find that Scoup-SMT is 50-100 times faster than a state-of-the-art algorithm
+for CMTF, along with a 5 fold increase in sparsity. Moreover, we extend
+Scoup-SMT to handle missing data without degradation of performance. We apply
+Scoup-SMT to BrainQ, a dataset consisting of a (nouns, brain voxels, human
+subjects) tensor and a (nouns, properties) matrix, with coupling along the
+nouns dimension. Scoup-SMT is able to find meaningful latent variables, as well
+as to predict brain activity with competitive accuracy. Finally, we demonstrate
+the generality of Scoup-SMT, by applying it on a Facebook dataset (users,
+friends, wall-postings); there, Scoup-SMT spots spammer-like anomalies.
+
+
+Spotting Suspicious Link Behavior with fBox: An Adversarial Perspective
+
+  How can we detect suspicious users in large online networks? Online
+popularity of a user or product (via follows, page-likes, etc.) can be
+monetized on the premise of higher ad click-through rates or increased sales.
+Web services and social networks which incentivize popularity thus suffer from
+a major problem of fake connections from link fraudsters looking to make a
+quick buck. Typical methods of catching this suspicious behavior use spectral
+techniques to spot large groups of often blatantly fraudulent (but sometimes
+honest) users. However, small-scale, stealthy attacks may go unnoticed due to
+the nature of low-rank eigenanalysis used in practice.
+  In this work, we take an adversarial approach to find and prove claims about
+the weaknesses of modern, state-of-the-art spectral methods and propose fBox,
+an algorithm designed to catch small-scale, stealth attacks that slip below the
+radar. Our algorithm has the following desirable properties: (a) it has
+theoretical underpinnings, (b) it is shown to be highly effective on real data
+and (c) it is scalable (linear on the input size). We evaluate fBox on a large,
+public 41.7 million node, 1.5 billion edge who-follows-whom social graph from
+Twitter in 2010 and with high precision identify many suspicious accounts which
+have persisted without suspension even to this day.
+
+
+Large Graph Analysis in the GMine System
+
+  Current applications have produced graphs on the order of hundreds of
+thousands of nodes and millions of edges. To take advantage of such graphs, one
+must be able to find patterns, outliers and communities. These tasks are better
+performed in an interactive environment, where human expertise can guide the
+process. For large graphs, though, there are some challenges: the excessive
+processing requirements are prohibitive, and drawing hundred-thousand nodes
+results in cluttered images hard to comprehend. To cope with these problems, we
+propose an innovative framework suited for any kind of tree-like graph visual
+design. GMine integrates (a) a representation for graphs organized as
+hierarchies of partitions - the concepts of SuperGraph and Graph-Tree; and (b)
+a graph summarization methodology - CEPS. Our graph representation deals with
+the problem of tracing the connection aspects of a graph hierarchy with sub
+linear complexity, allowing one to grasp the neighborhood of a single node or
+of a group of nodes in a single click. As a proof of concept, the visual
+environment of GMine is instantiated as a system in which large graphs can be
+investigated globally and locally.
+
+
+Universal and Distinct Properties of Communication Dynamics: How to
+  Generate Realistic Inter-event Times
+
+  With the advancement of information systems, means of communications are
+becoming cheaper, faster and more available. Today, millions of people carrying
+smart-phones or tablets are able to communicate at practically any time and
+anywhere they want. Among others, they can access their e-mails, comment on
+weblogs, watch and post comments on videos, make phone calls or text messages
+almost ubiquitously. Given this scenario, in this paper we tackle a fundamental
+aspect of this new era of communication: how the time intervals between
+communication events behave for different technologies and means of
+communications? Are there universal patterns for the inter-event time
+distribution (IED)? In which ways inter-event times behave differently among
+particular technologies? To answer these questions, we analyze eight different
+datasets from real and modern communication data and we found four well defined
+patterns that are seen in all the eight datasets. Moreover, we propose the use
+of the Self-Feeding Process (SFP) to generate inter-event times between
+communications. The SFP is extremely parsimonious point process that requires
+at most two parameters and is able to generate inter-event times with all the
+universal properties we observed in the data. We show the potential application
+of SFP by proposing a framework to generate a synthetic dataset containing
+realistic communication events of any one of the analyzed means of
+communications (e.g. phone calls, e-mails, comments on blogs) and an algorithm
+to detect anomalies.
+
+
+BIRDNEST: Bayesian Inference for Ratings-Fraud Detection
+
+  Review fraud is a pervasive problem in online commerce, in which fraudulent
+sellers write or purchase fake reviews to manipulate perception of their
+products and services. Fake reviews are often detected based on several signs,
+including 1) they occur in short bursts of time; 2) fraudulent user accounts
+have skewed rating distributions. However, these may both be true in any given
+dataset. Hence, in this paper, we propose an approach for detecting fraudulent
+reviews which combines these 2 approaches in a principled manner, allowing
+successful detection even when one of these signs is not present. To combine
+these 2 approaches, we formulate our Bayesian Inference for Rating Data (BIRD)
+model, a flexible Bayesian model of user rating behavior. Based on our model we
+formulate a likelihood-based suspiciousness metric, Normalized Expected
+Surprise Total (NEST). We propose a linear-time algorithm for performing
+Bayesian inference using our model and computing the metric. Experiments on
+real data show that BIRDNEST successfully spots review fraud in large,
+real-world graphs: the 50 most suspicious users of the Flipkart platform
+flagged by our algorithm were investigated and all identified as fraudulent by
+domain experts at Flipkart.
+
+
+The Many Faces of Link Fraud
+
+  Most past work on social network link fraud detection tries to separate
+genuine users from fraudsters, implicitly assuming that there is only one type
+of fraudulent behavior. But is this assumption true? And, in either case, what
+are the characteristics of such fraudulent behaviors? In this work, we set up
+honeypots ("dummy" social network accounts), and buy fake followers (after
+careful IRB approval). We report the signs of such behaviors including oddities
+in local network connectivity, account attributes, and similarities and
+differences across fraud providers. Most valuably, we discover and characterize
+several types of fraud behaviors. We discuss how to leverage our insights in
+practice by engineering strongly performing entropy-based features and
+demonstrating high classification accuracy. Our contributions are (a)
+instrumentation: we detail our experimental setup and carefully engineered data
+collection process to scrape Twitter data while respecting API rate-limits, (b)
+observations on fraud multimodality: we analyze our honeypot fraudster
+ecosystem and give surprising insights into the multifaceted behaviors of these
+fraudster types, and (c) features: we propose novel features that give strong
+(>0.95 precision/recall) discriminative power on ground-truth Twitter data.
+
+
+EdgeCentric: Anomaly Detection in Edge-Attributed Networks
+
+  Given a network with attributed edges, how can we identify anomalous
+behavior? Networks with edge attributes are commonplace in the real world. For
+example, edges in e-commerce networks often indicate how users rated products
+and services in terms of number of stars, and edges in online social and
+phonecall networks contain temporal information about when friendships were
+formed and when users communicated with each other -- in such cases, edge
+attributes capture information about how the adjacent nodes interact with other
+entities in the network. In this paper, we aim to utilize exactly this
+information to discern suspicious from typical node behavior. Our work has a
+number of notable contributions, including (a) formulation: while most other
+graph-based anomaly detection works use structural graph connectivity or node
+information, we focus on the new problem of leveraging edge information, (b)
+methodology: we introduce EdgeCentric, an intuitive and scalable
+compression-based approach for detecting edge-attributed graph anomalies, and
+(c) practicality: we show that EdgeCentric successfully spots numerous such
+anomalies in several large, edge-attributed real-world graphs, including the
+Flipkart e-commerce graph with over 3 million product reviews between 1.1
+million users and 545 thousand products, where it achieved 0.87 precision over
+the top 100 results.
+
+
+Tensor Decomposition for Signal Processing and Machine Learning
+
+  Tensors or {\em multi-way arrays} are functions of three or more indices
+$(i,j,k,\cdots)$ -- similar to matrices (two-way arrays), which are functions
+of two indices $(r,c)$ for (row,column). Tensors have a rich history,
+stretching over almost a century, and touching upon numerous disciplines; but
+they have only recently become ubiquitous in signal and data analytics at the
+confluence of signal processing, statistics, data mining and machine learning.
+This overview article aims to provide a good starting point for researchers and
+practitioners interested in learning about and working with tensors. As such,
+it focuses on fundamentals and motivation (using various application examples),
+aiming to strike an appropriate balance of breadth {\em and depth} that will
+enable someone having taken first graduate courses in matrix algebra and
+probability to get started doing research and/or developing tensor algorithms
+and software. Some background in applied optimization is useful but not
+strictly required. The material covered includes tensor rank and rank
+decomposition; basic tensor factorization models and their relationships and
+properties (including fairly good coverage of identifiability); broad coverage
+of algorithms ranging from alternating optimization to stochastic gradient;
+statistical performance analysis; and applications ranging from source
+separation to collaborative filtering, mixture and topic modeling,
+classification, and multilinear subspace learning.
+
+
+FairJudge: Trustworthy User Prediction in Rating Platforms
+
+  Rating platforms enable large-scale collection of user opinion about items
+(products, other users, etc.). However, many untrustworthy users give
+fraudulent ratings for excessive monetary gains. In the paper, we present
+FairJudge, a system to identify such fraudulent users. We propose three
+metrics: (i) the fairness of a user that quantifies how trustworthy the user is
+in rating the products, (ii) the reliability of a rating that measures how
+reliable the rating is, and (iii) the goodness of a product that measures the
+quality of the product. Intuitively, a user is fair if it provides reliable
+ratings that are close to the goodness of the product. We formulate a mutually
+recursive definition of these metrics, and further address cold start problems
+and incorporate behavioral properties of users and products in the formulation.
+We propose an iterative algorithm, FairJudge, to predict the values of the
+three metrics. We prove that FairJudge is guaranteed to converge in a bounded
+number of iterations, with linear time complexity. By conducting five different
+experiments on five rating platforms, we show that FairJudge significantly
+outperforms nine existing algorithms in predicting fair and unfair users. We
+reported the 100 most unfair users in the Flipkart network to their review
+fraud investigators, and 80 users were correctly identified (80% accuracy). The
+FairJudge algorithm is already being deployed at Flipkart.
+
+
+Structural patterns of information cascades and their implications for
+  dynamics and semantics
+
+  Information cascades are ubiquitous in both physical society and online
+social media, taking on large variations in structures, dynamics and semantics.
+Although the dynamics and semantics of information cascades have been studied,
+the structural patterns and their correlations with dynamics and semantics are
+largely unknown. Here we explore a large-scale dataset including $432$ million
+information cascades with explicit records of spreading traces, spreading
+behaviors, information content as well as user profiles. We find that the
+structural complexity of information cascades is far beyond the previous
+conjectures. We first propose a ten-dimensional metric to quantify the
+structural characteristics of information cascades, reflecting cascade size,
+silhouette, direction and activity aspects. We find that bimodal law governs
+majority of the metrics, information flows in cascades have four directions,
+and the self-loop number and average activity of cascades follows power law. We
+then analyze the high-order structural patterns of information cascades.
+Finally, we evaluate to what extent the structural features of information
+cascades can explain its dynamic patterns and semantics, and finally uncover
+some notable implications of structural patterns in information cascades. Our
+discoveries also provide a foundation for the microscopic mechanisms for
+information spreading, potentially leading to implications for cascade
+prediction and outlier detection.
+
+
+LookOut on Time-Evolving Graphs: Succinctly Explaining Anomalies from
+  Any Detector
+
+  Why is a given node in a time-evolving graph ($t$-graph) marked as an anomaly
+by an off-the-shelf detection algorithm? Is it because of the number of its
+outgoing or incoming edges, or their timings? How can we best convince a human
+analyst that the node is anomalous? Our work aims to provide succinct,
+interpretable, and simple explanations of anomalous behavior in $t$-graphs
+(communications, IP-IP interactions, etc.) while respecting the limited
+attention of human analysts. Specifically, we extract key features from such
+graphs, and propose to output a few pair (scatter) plots from this feature
+space which "best" explain known anomalies. To this end, our work has four main
+contributions: (a) problem formulation: we introduce an "analyst-friendly"
+problem formulation for explaining anomalies via pair plots, (b) explanation
+algorithm: we propose a plot-selection objective and the LookOut algorithm to
+approximate it with optimality guarantees, (c) generality: our explanation
+algorithm is both domain- and detector-agnostic, and (d) scalability: we show
+that LookOut scales linearly on the number of edges of the input graph. Our
+experiments show that LookOut performs near-ideally in terms of maximizing
+explanation objective on several real datasets including Enron e-mail and DBLP
+coauthorship. Furthermore, LookOut produces fast, visually interpretable and
+intuitive results in explaining "ground-truth" anomalies from Enron, DBLP and
+LBNL (computer network) data.
+
+
+Out-of-Core and Distributed Algorithms for Dense Subtensor Mining
+
+  How can we detect fraudulent lockstep behavior in large-scale multi-aspect
+data (i.e., tensors)? Can we detect it when data are too large to fit in memory
+or even on a disk? Past studies have shown that dense subtensors in real-world
+tensors (e.g., social media, Wikipedia, TCP dumps, etc.) signal anomalous or
+fraudulent behavior such as retweet boosting, bot activities, and network
+attacks. Thus, various approaches, including tensor decomposition and search,
+have been proposed for detecting dense subtensors rapidly and accurately.
+However, existing methods have low accuracy, or they assume that tensors are
+small enough to fit in main memory, which is unrealistic in many real-world
+applications such as social media and web. To overcome these limitations, we
+propose D-CUBE, a disk-based dense-subtensor detection method, which also can
+run in a distributed manner across multiple machines. Compared to
+state-of-the-art methods, D-CUBE is (1) Memory Efficient: requires up to 1,600X
+less memory and handles 1,000X larger data (2.6TB), (2) Fast: up to 7X faster
+due to its near-linear scalability, (3) Provably Accurate: gives a guarantee on
+the densities of the detected subtensors, and (4) Effective: spotted network
+attacks from TCP dumps and synchronized behavior in rating data most
+accurately.
+
+
+Did We Get It Right? Predicting Query Performance in E-commerce Search
+
+  In this paper, we address the problem of evaluating whether results served by
+an e-commerce search engine for a query are good or not. This is a critical
+question in evaluating any e-commerce search engine. While this question is
+traditionally answered using simple metrics like query click-through rate
+(CTR), we observe that in e-commerce search, such metrics can be misleading.
+Upon inspection, we find cases where CTR is high but the results are poor and
+vice versa. Similar cases exist for other metrics like time to click which are
+often also used for evaluating search engines. We aim to learn the quality of
+the results served by the search engine based on users' interactions with the
+results. Although this problem has been studied in the web search context, this
+is the first study for e-commerce search, to the best of our knowledge. Despite
+certain commonalities with evaluating web search engines, there are several
+major differences such as underlying reasons for search failure, and
+availability of rich user interaction data with products (e.g. adding a product
+to the cart). We study large-scale user interaction logs from Flipkart's search
+engine, analyze behavioral patterns and build models to classify queries based
+on user behavior signals. We demonstrate the feasibility and efficacy of such
+models in accurately predicting query performance. Our classifier is able to
+achieve an average AUC of 0.75 on a held-out test set.
+
+
+Linearized and Single-Pass Belief Propagation
+
+  How can we tell when accounts are fake or real in a social network? And how
+can we tell which accounts belong to liberal, conservative or centrist users?
+Often, we can answer such questions and label nodes in a network based on the
+labels of their neighbors and appropriate assumptions of homophily ("birds of a
+feather flock together") or heterophily ("opposites attract"). One of the most
+widely used methods for this kind of inference is Belief Propagation (BP) which
+iteratively propagates the information from a few nodes with explicit labels
+throughout a network until convergence. One main problem with BP, however, is
+that there are no known exact guarantees of convergence in graphs with loops.
+  This paper introduces Linearized Belief Propagation (LinBP), a linearization
+of BP that allows a closed-form solution via intuitive matrix equations and,
+thus, comes with convergence guarantees. It handles homophily, heterophily, and
+more general cases that arise in multi-class settings. Plus, it allows a
+compact implementation in SQL. The paper also introduces Single-pass Belief
+Propagation (SBP), a "localized" version of LinBP that propagates information
+across every edge at most once and for which the final class assignments depend
+only on the nearest labeled neighbors. In addition, SBP allows fast incremental
+updates in dynamic networks. Our runtime experiments show that LinBP and SBP
+are orders of magnitude faster than standard
+
+

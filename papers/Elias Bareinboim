@@ -1,0 +1,157 @@
+A General Algorithm for Deciding Transportability of Experimental
+  Results
+
+  Generalizing empirical findings to new environments, settings, or populations
+is essential in most scientific explorations. This article treats a particular
+problem of generalizability, called "transportability", defined as a license to
+transfer information learned in experimental studies to a different population,
+on which only observational studies can be conducted. Given a set of
+assumptions concerning commonalities and differences between the two
+populations, Pearl and Bareinboim (2011) derived sufficient conditions that
+permit such transfer to take place. This article summarizes their findings and
+supplements them with an effective procedure for deciding when and how
+transportability is feasible. It establishes a necessary and sufficient
+condition for deciding when causal effects in the target population are
+estimable from both the statistical information available and the causal
+information transferred from the experiments. The article further provides a
+complete algorithm for computing the transport formula, that is, a way of
+combining observational and experimental information to synthesize bias-free
+estimate of the desired causal relation. Finally, the article examines the
+differences between transportability and other variants of generalizability.
+
+
+Causal Inference by Surrogate Experiments: z-Identifiability
+
+  We address the problem of estimating the effect of intervening on a set of
+variables X from experiments on a different set, Z, that is more accessible to
+manipulation. This problem, which we call z-identifiability, reduces to
+ordinary identifiability when Z = empty and, like the latter, can be given
+syntactic characterization using the do-calculus [Pearl, 1995; 2000]. We
+provide a graphical necessary and sufficient condition for z-identifiability
+for arbitrary sets X,Z, and Y (the outcomes). We further develop a complete
+algorithm for computing the causal effect of X on Y using information provided
+by experiments on Z. Finally, we use our results to prove completeness of
+do-calculus relative to z-identifiability, a result that does not follow from
+completeness relative to ordinary identifiability.
+
+
+Descents and nodal load in scale-free networks
+
+  The load of a node in a network is the total traffic going through it when
+every node pair sustains a uniform bidirectional traffic between them on
+shortest paths. We show that nodal load can be expressed in terms of the more
+elementary notion of a node's descents in breadth-first-search (BFS or
+shortest-path) trees, and study both the descent and nodal-load distributions
+in the case of scale-free networks. Our treatment is both semi-analytical
+(combining a generating-function formalism with simulation-derived BFS
+branching probabilities) and computational for the descent distribution; it is
+exclusively computational in the case of the load distribution. Our main result
+is that the load distribution, even though it can be disguised as a power-law
+through subtle (but inappropriate) binning of the raw data, is in fact a
+succession of sharply delineated probability peaks, each of which can be
+clearly interpreted as a function of the underlying BFS descents. This find is
+in stark contrast with previously held belief, based on which a power law of
+exponent -2.2 was conjectured to be valid regardless of the exponent of the
+power-law distribution of node degrees.
+
+
+External Validity: From Do-Calculus to Transportability Across
+  Populations
+
+  The generalizability of empirical findings to new environments, settings or
+populations, often called "external validity," is essential in most scientific
+explorations. This paper treats a particular problem of generalizability,
+called "transportability," defined as a license to transfer causal effects
+learned in experimental studies to a new population, in which only
+observational studies can be conducted. We introduce a formal representation
+called "selection diagrams" for expressing knowledge about differences and
+commonalities between populations of interest and, using this representation,
+we reduce questions of transportability to symbolic derivations in the
+do-calculus. This reduction yields graph-based procedures for deciding, prior
+to observing any data, whether causal effects in the target population can be
+inferred from experimental findings in the study population. When the answer is
+affirmative, the procedures identify what experimental and observational
+findings need be obtained from the two populations, and how they can be
+combined to ensure bias-free transport.
+
+
+Incorporating Knowledge into Structural Equation Models using Auxiliary
+  Variables
+
+  In this paper, we extend graph-based identification methods by allowing
+background knowledge in the form of non-zero parameter values. Such information
+could be obtained, for example, from a previously conducted randomized
+experiment, from substantive understanding of the domain, or even an
+identification technique. To incorporate such information systematically, we
+propose the addition of auxiliary variables to the model, which are constructed
+so that certain paths will be conveniently cancelled. This cancellation allows
+the auxiliary variables to help conventional methods of identification (e.g.,
+single-door criterion, instrumental variables, half-trek criterion), as well as
+model testing (e.g., d-separation, over-identification). Moreover, by
+iteratively alternating steps of identification and adding auxiliary variables,
+we can improve the power of existing identification methods via a bootstrapping
+approach that does not require external knowledge. We operationalize this
+method for simple instrumental sets (a generalization of instrumental
+variables) and show that the resulting method is able to identify at least as
+many models as the most general identification method for linear systems known
+to date. We further discuss the application of auxiliary variables to the tasks
+of model testing and z-identification.
+
+
+Identification and Model Testing in Linear Structural Equation Models
+  using Auxiliary Variables
+
+  We developed a novel approach to identification and model testing in linear
+structural equation models (SEMs) based on auxiliary variables (AVs), which
+generalizes a widely-used family of methods known as instrumental variables.
+The identification problem is concerned with the conditions under which causal
+parameters can be uniquely estimated from an observational, non-causal
+covariance matrix. In this paper, we provide an algorithm for the
+identification of causal parameters in linear structural models that subsumes
+previous state-of-the-art methods. In other words, our algorithm identifies
+strictly more coefficients and models than methods previously known in the
+literature. Our algorithm builds on a graph-theoretic characterization of
+conditional independence relations between auxiliary and model variables, which
+is developed in this paper. Further, we leverage this new characterization for
+allowing identification when limited experimental data or new substantive
+knowledge about the domain is available. Lastly, we develop a new procedure for
+model testing using AVs.
+
+
+Budgeted Experiment Design for Causal Structure Learning
+
+  We study the problem of causal structure learning when the experimenter is
+limited to perform at most $k$ non-adaptive experiments of size $1$. We
+formulate the problem of finding the best intervention target set as an
+optimization problem, which aims to maximize the average number of edges whose
+directions are resolved. We prove that the corresponding objective function is
+submodular and a greedy algorithm suffices to achieve
+$(1-\frac{1}{e})$-approximation of the optimal value. We further present an
+accelerated variant of the greedy algorithm, which can lead to orders of
+magnitude performance speedup. We validate our proposed approach on synthetic
+and real graphs. The results show that compared to the purely observational
+setting, our algorithm orients the majority of the edges through a considerably
+small number of interventions.
+
+
+Causal Identification under Markov Equivalence
+
+  Assessing the magnitude of cause-and-effect relations is one of the central
+challenges found throughout the empirical sciences. The problem of
+identification of causal effects is concerned with determining whether a causal
+effect can be computed from a combination of observational data and substantive
+knowledge about the domain under investigation, which is formally expressed in
+the form of a causal graph. In many practical settings, however, the knowledge
+available for the researcher is not strong enough so as to specify a unique
+causal graph. Another line of investigation attempts to use observational data
+to learn a qualitative description of the domain called a Markov equivalence
+class, which is the collection of causal graphs that share the same set of
+observed features. In this paper, we marry both approaches and study the
+problem of causal identification from an equivalence class, represented by a
+partial ancestral graph (PAG). We start by deriving a set of graphical
+properties of PAGs that are carried over to its induced subgraphs. We then
+develop an algorithm to compute the effect of an arbitrary set of variables on
+an arbitrary outcome set. We show that the algorithm is strictly more powerful
+than the current state of the art found in the literature.
+
+

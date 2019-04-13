@@ -1,0 +1,970 @@
+Zero Shot Recognition with Unreliable Attributes
+
+  In principle, zero-shot learning makes it possible to train a recognition
+model simply by specifying the category's attributes. For example, with
+classifiers for generic attributes like \emph{striped} and \emph{four-legged},
+one can construct a classifier for the zebra category by enumerating which
+properties it possesses---even without providing zebra training images. In
+practice, however, the standard zero-shot paradigm suffers because attribute
+predictions in novel images are hard to get right. We propose a novel random
+forest approach to train zero-shot models that explicitly accounts for the
+unreliability of attribute predictions. By leveraging statistics about each
+attribute's error tendencies, our method obtains more robust discriminative
+models for the unseen classes. We further devise extensions to handle the
+few-shot scenario and unreliable attribute descriptions. On three datasets, we
+demonstrate the benefit for visual category learning with zero or few training
+examples, a critical domain for rare categories or categories defined on the
+fly.
+
+
+Learning image representations tied to ego-motion
+
+  Understanding how images of objects and scenes behave in response to specific
+ego-motions is a crucial aspect of proper visual development, yet existing
+visual learning methods are conspicuously disconnected from the physical source
+of their images. We propose to exploit proprioceptive motor signals to provide
+unsupervised regularization in convolutional neural networks to learn visual
+representations from egocentric video. Specifically, we enforce that our
+learned features exhibit equivariance i.e. they respond predictably to
+transformations associated with distinct ego-motions. With three datasets, we
+show that our unsupervised feature learning approach significantly outperforms
+previous approaches on visual recognition and next-best-view prediction tasks.
+In the most challenging test, we show that features learned from video captured
+on an autonomous driving platform improve large-scale scene recognition in
+static images from a disjoint domain.
+
+
+Discovering Attribute Shades of Meaning with the Crowd
+
+  To learn semantic attributes, existing methods typically train one
+discriminative model for each word in a vocabulary of nameable properties.
+However, this "one model per word" assumption is problematic: while a word
+might have a precise linguistic definition, it need not have a precise visual
+definition. We propose to discover shades of attribute meaning. Given an
+attribute name, we use crowdsourced image labels to discover the latent factors
+underlying how different annotators perceive the named concept. We show that
+structure in those latent factors helps reveal shades, that is, interpretations
+for the attribute shared by some group of annotators. Using these shades, we
+train classifiers to capture the primary (often subtle) variants of the
+attribute. The resulting models are both semantic and visually precise. By
+catering to users' interpretations, they improve attribute prediction accuracy
+on novel images. Shades also enable more successful attribute-based image
+search, by providing robust personalized models for retrieving multi-attribute
+query results. They are widely applicable to tasks that involve describing
+visual content, such as zero-shot category learning and organization of photo
+collections.
+
+
+Summary Transfer: Exemplar-based Subset Selection for Video
+  Summarization
+
+  Video summarization has unprecedented importance to help us digest, browse,
+and search today's ever-growing video collections. We propose a novel subset
+selection technique that leverages supervision in the form of human-created
+summaries to perform automatic keyframe-based video summarization. The main
+idea is to nonparametrically transfer summary structures from annotated videos
+to unseen test videos. We show how to extend our method to exploit semantic
+side information about the video's category/genre to guide the transfer process
+by those training videos semantically consistent with the test input. We also
+show how to generalize our method to subshot-based summarization, which not
+only reduces computational costs but also provides more flexible ways of
+defining visual similarity across subshots spanning several frames. We conduct
+extensive evaluation on several benchmarks and demonstrate promising results,
+outperforming existing methods in several settings.
+
+
+Seeing Invisible Poses: Estimating 3D Body Pose from Egocentric Video
+
+  Understanding the camera wearer's activity is central to egocentric vision,
+yet one key facet of that activity is inherently invisible to the camera--the
+wearer's body pose. Prior work focuses on estimating the pose of hands and arms
+when they come into view, but this 1) gives an incomplete view of the full body
+posture, and 2) prevents any pose estimate at all in many frames, since the
+hands are only visible in a fraction of daily life activities. We propose to
+infer the "invisible pose" of a person behind the egocentric camera. Given a
+single video, our efficient learning-based approach returns the full body 3D
+joint positions for each frame. Our method exploits cues from the dynamic
+motion signatures of the surrounding scene--which changes predictably as a
+function of body pose--as well as static scene structures that reveal the
+viewpoint (e.g., sitting vs. standing). We further introduce a novel energy
+minimization scheme to infer the pose sequence. It uses soft predictions of the
+poses per time instant together with a non-parametric model of human pose
+dynamics over longer windows. Our method outperforms an array of possible
+alternatives, including deep learning approaches for direct pose regression
+from images.
+
+
+Large-Margin Determinantal Point Processes
+
+  Determinantal point processes (DPPs) offer a powerful approach to modeling
+diversity in many applications where the goal is to select a diverse subset. We
+study the problem of learning the parameters (the kernel matrix) of a DPP from
+labeled training data. We make two contributions. First, we show how to
+reparameterize a DPP's kernel matrix with multiple kernel functions, thus
+enhancing modeling flexibility. Second, we propose a novel parameter estimation
+technique based on the principle of large margin separation. In contrast to the
+state-of-the-art method of maximum likelihood estimation, our large-margin loss
+function explicitly models errors in selecting the target subsets, and it can
+be customized to trade off different types of errors (precision vs. recall).
+Extensive empirical studies validate our contributions, including applications
+on challenging document and video summarization, where flexibility in modeling
+the kernel matrix and balancing different errors is indispensable.
+
+
+Slow and steady feature analysis: higher order temporal coherence in
+  video
+
+  How can unlabeled video augment visual learning? Existing methods perform
+"slow" feature analysis, encouraging the representations of temporally close
+frames to exhibit only small differences. While this standard approach captures
+the fact that high-level visual signals change slowly over time, it fails to
+capture *how* the visual content changes. We propose to generalize slow feature
+analysis to "steady" feature analysis. The key idea is to impose a prior that
+higher order derivatives in the learned feature space must be small. To this
+end, we train a convolutional neural network with a regularizer on tuples of
+sequential frames from unlabeled video. It encourages feature changes over time
+to be smooth, i.e., similar to the most recent changes. Using five diverse
+datasets, including unlabeled YouTube and KITTI videos, we demonstrate our
+method's impact on object, scene, and action recognition tasks. We further show
+that our features learned from unlabeled video can even surpass a standard
+heavily supervised pretraining approach.
+
+
+Leaving Some Stones Unturned: Dynamic Feature Prioritization for
+  Activity Detection in Streaming Video
+
+  Current approaches for activity recognition often ignore constraints on
+computational resources: 1) they rely on extensive feature computation to
+obtain rich descriptors on all frames, and 2) they assume batch-mode access to
+the entire test video at once. We propose a new active approach to activity
+recognition that prioritizes "what to compute when" in order to make timely
+predictions. The main idea is to learn a policy that dynamically schedules the
+sequence of features to compute on selected frames of a given test video. In
+contrast to traditional static feature selection, our approach continually
+re-prioritizes computation based on the accumulated history of observations and
+accounts for the transience of those observations in ongoing video. We develop
+variants to handle both the batch and streaming settings. On two challenging
+datasets, our method provides significantly better accuracy than alternative
+techniques for a wide range of computational budgets.
+
+
+Detecting Engagement in Egocentric Video
+
+  In a wearable camera video, we see what the camera wearer sees. While this
+makes it easy to know roughly what he chose to look at, it does not immediately
+reveal when he was engaged with the environment. Specifically, at what moments
+did his focus linger, as he paused to gather more information about something
+he saw? Knowing this answer would benefit various applications in video
+summarization and augmented reality, yet prior work focuses solely on the
+"what" question (estimating saliency, gaze) without considering the "when"
+(engagement). We propose a learning-based approach that uses long-term
+egomotion cues to detect engagement, specifically in browsing scenarios where
+one frequently takes in new visual information (e.g., shopping, touring). We
+introduce a large, richly annotated dataset for ego-engagement that is the
+first of its kind. Our approach outperforms a wide array of existing methods.
+We show engagement can be detected well independent of both scene appearance
+and the camera wearer's identity.
+
+
+Video Summarization with Long Short-term Memory
+
+  We propose a novel supervised learning technique for summarizing videos by
+automatically selecting keyframes or key subshots. Casting the problem as a
+structured prediction problem on sequential data, our main idea is to use Long
+Short-Term Memory (LSTM), a special type of recurrent neural networks to model
+the variable-range dependencies entailed in the task of video summarization.
+Our learning models attain the state-of-the-art results on two benchmark video
+datasets. Detailed analysis justifies the design of the models. In particular,
+we show that it is crucial to take into consideration the sequential structures
+in videos and model them. Besides advances in modeling techniques, we introduce
+techniques to address the need of a large number of annotated data for training
+complex learning models. There, our main idea is to exploit the existence of
+auxiliary annotated video datasets, albeit heterogeneous in visual styles and
+contents. Specifically, we show domain adaptation techniques can improve
+summarization by reducing the discrepancies in statistical properties across
+those datasets.
+
+
+Efficient Activity Detection in Untrimmed Video with Max-Subgraph Search
+
+  We propose an efficient approach for activity detection in video that unifies
+activity categorization with space-time localization. The main idea is to pose
+activity detection as a maximum-weight connected subgraph problem. Offline, we
+learn a binary classifier for an activity category using positive video
+exemplars that are "trimmed" in time to the activity of interest. Then, given a
+novel \emph{untrimmed} video sequence, we decompose it into a 3D array of
+space-time nodes, which are weighted based on the extent to which their
+component features support the learned activity model. To perform detection, we
+then directly localize instances of the activity by solving for the
+maximum-weight connected subgraph in the test video's space-time graph. We show
+that this detection strategy permits an efficient branch-and-cut solution for
+the best-scoring---and possibly non-cubically shaped---portion of the video for
+a given activity classifier. The upshot is a fast method that can search a
+broader space of space-time region candidates than was previously practical,
+which we find often leads to more accurate detection. We demonstrate the
+proposed algorithm on four datasets, and we show its speed and accuracy
+advantages over multiple existing search strategies.
+
+
+Visual Question: Predicting If a Crowd Will Agree on the Answer
+
+  Visual question answering (VQA) systems are emerging from a desire to empower
+users to ask any natural language question about visual content and receive a
+valid answer in response. However, close examination of the VQA problem reveals
+an unavoidable, entangled problem that multiple humans may or may not always
+agree on a single answer to a visual question. We train a model to
+automatically predict from a visual question whether a crowd would agree on a
+single answer. We then propose how to exploit this system in a novel
+application to efficiently allocate human effort to collect answers to visual
+questions. Specifically, we propose a crowdsourcing system that automatically
+solicits fewer human responses when answer agreement is expected and more human
+responses when answer disagreement is expected. Our system improves upon
+existing crowdsourcing systems, typically eliminating at least 20% of human
+effort with no loss to the information collected from the crowd.
+
+
+Crowdsourcing in Computer Vision
+
+  Computer vision systems require large amounts of manually annotated data to
+properly learn challenging visual concepts. Crowdsourcing platforms offer an
+inexpensive method to capture human knowledge and understanding, for a vast
+number of visual perception tasks. In this survey, we describe the types of
+annotations computer vision researchers have collected using crowdsourcing, and
+how they have ensured that this data is of high quality while annotation effort
+is minimized. We begin by discussing data collection on both classic (e.g.,
+object recognition) and recent (e.g., visual story-telling) vision tasks. We
+then summarize key design decisions for creating effective data collection
+interfaces and workflows, and present strategies for intelligently selecting
+the most important data instances to annotate. Finally, we conclude with some
+thoughts on the future of crowdsourcing in computer vision.
+
+
+Object-Centric Representation Learning from Unlabeled Videos
+
+  Supervised (pre-)training currently yields state-of-the-art performance for
+representation learning for visual recognition, yet it comes at the cost of (1)
+intensive manual annotations and (2) an inherent restriction in the scope of
+data relevant for learning. In this work, we explore unsupervised feature
+learning from unlabeled video. We introduce a novel object-centric approach to
+temporal coherence that encourages similar representations to be learned for
+object-like regions segmented from nearby frames. Our framework relies on a
+Siamese-triplet network to train a deep convolutional neural network (CNN)
+representation. Compared to existing temporal coherence methods, our idea has
+the advantage of lightweight preprocessing of the unlabeled video (no tracking
+required) while still being able to extract object-level regions from which to
+learn invariances. Furthermore, as we show in results on several standard
+datasets, our method typically achieves substantial accuracy gains over
+competing unsupervised methods for image classification and retrieval tasks.
+
+
+On-Demand Learning for Deep Image Restoration
+
+  While machine learning approaches to image restoration offer great promise,
+current methods risk training models fixated on performing well only for image
+corruption of a particular level of difficulty---such as a certain level of
+noise or blur. First, we examine the weakness of conventional "fixated" models
+and demonstrate that training general models to handle arbitrary levels of
+corruption is indeed non-trivial. Then, we propose an on-demand learning
+algorithm for training image restoration models with deep convolutional neural
+networks. The main idea is to exploit a feedback mechanism to self-generate
+training instances where they are needed most, thereby learning models that can
+generalize across difficulty levels. On four restoration tasks---image
+inpainting, pixel interpolation, image deblurring, and image denoising---and
+three diverse datasets, our approach consistently outperforms both the status
+quo training procedure and curriculum learning alternatives.
+
+
+Pano2Vid: Automatic Cinematography for Watching 360$^{\circ}$ Videos
+
+  We introduce the novel task of Pano2Vid $-$ automatic cinematography in
+panoramic 360$^{\circ}$ videos. Given a 360$^{\circ}$ video, the goal is to
+direct an imaginary camera to virtually capture natural-looking normal
+field-of-view (NFOV) video. By selecting "where to look" within the panorama at
+each time step, Pano2Vid aims to free both the videographer and the end viewer
+from the task of determining what to watch. Towards this goal, we first compile
+a dataset of 360$^{\circ}$ videos downloaded from the web, together with
+human-edited NFOV camera trajectories to facilitate evaluation. Next, we
+propose AutoCam, a data-driven approach to solve the Pano2Vid task. AutoCam
+leverages NFOV web video to discriminatively identify space-time "glimpses" of
+interest at each time instant, and then uses dynamic programming to select
+optimal human-like camera trajectories. Through experimental evaluation on
+multiple newly defined Pano2Vid performance measures against several baselines,
+we show that our method successfully produces informative videos that could
+conceivably have been captured by human videographers.
+
+
+Semantic Jitter: Dense Supervision for Visual Comparisons via Synthetic
+  Images
+
+  Distinguishing subtle differences in attributes is valuable, yet learning to
+make visual comparisons remains non-trivial. Not only is the number of possible
+comparisons quadratic in the number of training images, but also access to
+images adequately spanning the space of fine-grained visual differences is
+limited. We propose to overcome the sparsity of supervision problem via
+synthetically generated images. Building on a state-of-the-art image generation
+engine, we sample pairs of training images exhibiting slight modifications of
+individual attributes. Augmenting real training image pairs with these
+examples, we then train attribute ranking models to predict the relative
+strength of an attribute in novel pairs of real images. Our results on datasets
+of faces and fashion images show the great promise of bootstrapping imperfect
+image generators to counteract sample sparsity for learning to rank.
+
+
+Pixel Objectness
+
+  We propose an end-to-end learning framework for generating foreground object
+segmentations. Given a single novel image, our approach produces pixel-level
+masks for all "object-like" regions---even for object categories never seen
+during training. We formulate the task as a structured prediction problem of
+assigning foreground/background labels to all pixels, implemented using a deep
+fully convolutional network. Key to our idea is training with a mix of
+image-level object category examples together with relatively few images with
+boundary-level annotations. Our method substantially improves the
+state-of-the-art on foreground segmentation for ImageNet and MIT Object
+Discovery datasets. Furthermore, on over 1 million images, we show that it
+generalizes well to segment object categories unseen in the foreground maps
+used for training. Finally, we demonstrate how our approach benefits image
+retrieval and image retargeting, both of which flourish when given our
+high-quality foreground maps.
+
+
+FusionSeg: Learning to combine motion and appearance for fully automatic
+  segmention of generic objects in videos
+
+  We propose an end-to-end learning framework for segmenting generic objects in
+videos. Our method learns to combine appearance and motion information to
+produce pixel level segmentation masks for all prominent objects in videos. We
+formulate this task as a structured prediction problem and design a two-stream
+fully convolutional neural network which fuses together motion and appearance
+in a unified framework. Since large-scale video datasets with pixel level
+segmentations are problematic, we show how to bootstrap weakly annotated videos
+together with existing image recognition datasets for training. Through
+experiments on three challenging video segmentation benchmarks, our method
+substantially improves the state-of-the-art for segmenting generic (unseen)
+objects. Code and pre-trained models are available on the project website.
+
+
+Making 360$^{\circ}$ Video Watchable in 2D: Learning Videography for
+  Click Free Viewing
+
+  360$^{\circ}$ video requires human viewers to actively control "where" to
+look while watching the video. Although it provides a more immersive experience
+of the visual content, it also introduces additional burden for viewers;
+awkward interfaces to navigate the video lead to suboptimal viewing
+experiences. Virtual cinematography is an appealing direction to remedy these
+problems, but conventional methods are limited to virtual environments or rely
+on hand-crafted heuristics. We propose a new algorithm for virtual
+cinematography that automatically controls a virtual camera within a
+360$^{\circ}$ video. Compared to the state of the art, our algorithm allows
+more general camera control, avoids redundant outputs, and extracts its output
+videos substantially more efficiently. Experimental results on over 7 hours of
+real "in the wild" video show that our generalized camera control is crucial
+for viewing 360$^{\circ}$ video, while the proposed efficient algorithm is
+essential for making the generalized control computationally tractable.
+
+
+Fashion Forward: Forecasting Visual Style in Fashion
+
+  What is the future of fashion? Tackling this question from a data-driven
+vision perspective, we propose to forecast visual style trends before they
+occur. We introduce the first approach to predict the future popularity of
+styles discovered from fashion images in an unsupervised manner. Using these
+styles as a basis, we train a forecasting model to represent their trends over
+time. The resulting model can hypothesize new mixtures of styles that will
+become popular in the future, discover style dynamics (trendy vs. classic), and
+name the key visual attributes that will dominate tomorrow's fashion. We
+demonstrate our idea applied to three datasets encapsulating 80,000 fashion
+products sold across six years on Amazon. Results indicate that fashion
+forecasting benefits greatly from visual analysis, much more than textual or
+meta-data cues surrounding products.
+
+
+Learning the Latent "Look": Unsupervised Discovery of a Style-Coherent
+  Embedding from Fashion Images
+
+  What defines a visual style? Fashion styles emerge organically from how
+people assemble outfits of clothing, making them difficult to pin down with a
+computational model. Low-level visual similarity can be too specific to detect
+stylistically similar images, while manually crafted style categories can be
+too abstract to capture subtle style differences. We propose an unsupervised
+approach to learn a style-coherent representation. Our method leverages
+probabilistic polylingual topic models based on visual attributes to discover a
+set of latent style factors. Given a collection of unlabeled fashion images,
+our approach mines for the latent styles, then summarizes outfits by how they
+mix those styles. Our approach can organize galleries of outfits by style
+without requiring any style labels. Experiments on over 100K images demonstrate
+its promise for retrieving, mixing, and summarizing fashion images by their
+style.
+
+
+ShapeCodes: Self-Supervised Feature Learning by Lifting Views to
+  Viewgrids
+
+  We introduce an unsupervised feature learning approach that embeds 3D shape
+information into a single-view image representation. The main idea is a
+self-supervised training objective that, given only a single 2D image, requires
+all unseen views of the object to be predictable from learned features. We
+implement this idea as an encoder-decoder convolutional neural network. The
+network maps an input image of an unknown category and unknown viewpoint to a
+latent space, from which a deconvolutional decoder can best "lift" the image to
+its complete viewgrid showing the object from all viewing angles. Our
+class-agnostic training procedure encourages the representation to capture
+fundamental shape primitives and semantic regularities in a data-driven
+manner---without manual semantic labels. Our results on two widely-used shape
+datasets show 1) our approach successfully learns to perform "mental rotation"
+even for objects unseen during training, and 2) the learned latent space is a
+powerful representation for object recognition, outperforming several existing
+unsupervised feature learning methods.
+
+
+Learning to Look Around: Intelligently Exploring Unseen Environments for
+  Unknown Tasks
+
+  It is common to implicitly assume access to intelligently captured inputs
+(e.g., photos from a human photographer), yet autonomously capturing good
+observations is itself a major challenge. We address the problem of learning to
+look around: if a visual agent has the ability to voluntarily acquire new views
+to observe its environment, how can it learn efficient exploratory behaviors to
+acquire informative observations? We propose a reinforcement learning solution,
+where the agent is rewarded for actions that reduce its uncertainty about the
+unobserved portions of its environment. Based on this principle, we develop a
+recurrent neural network-based approach to perform active completion of
+panoramic natural scenes and 3D object shapes. Crucially, the learned policies
+are not tied to any recognition task nor to the particular semantic content
+seen during training. As a result, 1) the learned "look around" behavior is
+relevant even for new tasks in unseen environments, and 2) training data
+acquisition involves no manual labeling. Through tests in diverse settings, we
+demonstrate that our approach learns useful generic policies that transfer to
+new unseen tasks and environments. Completion episodes are shown at
+https://goo.gl/BgWX3W.
+
+
+Creating Capsule Wardrobes from Fashion Images
+
+  We propose to automatically create capsule wardrobes. Given an inventory of
+candidate garments and accessories, the algorithm must assemble a minimal set
+of items that provides maximal mix-and-match outfits. We pose the task as a
+subset selection problem. To permit efficient subset selection over the space
+of all outfit combinations, we develop submodular objective functions capturing
+the key ingredients of visual compatibility, versatility, and user-specific
+preference. Since adding garments to a capsule only expands its possible
+outfits, we devise an iterative approach to allow near-optimal submodular
+function maximization. Finally, we present an unsupervised approach to learn
+visual compatibility from "in the wild" full body outfit photos; the
+compatibility metric translates well to cleaner catalog photos and improves
+over existing methods. Our results on thousands of pieces from popular fashion
+websites show that automatic capsule creation has potential to mimic skilled
+fashionistas in assembling flexible wardrobes, while being significantly more
+scalable.
+
+
+Learning Compressible 360° Video Isomers
+
+  Standard video encoders developed for conventional narrow field-of-view video
+are widely applied to 360{\deg} video as well, with reasonable results.
+However, while this approach commits arbitrarily to a projection of the
+spherical frames, we observe that some orientations of a 360{\deg} video, once
+projected, are more compressible than others. We introduce an approach to
+predict the sphere rotation that will yield the maximal compression rate. Given
+video clips in their original encoding, a convolutional neural network learns
+the association between a clip's visual content and its compressibility at
+different rotations of a cubemap projection. Given a novel video, our
+learning-based approach efficiently infers the most compressible direction in
+one shot, without repeated rendering and compression of the source video. We
+validate our idea on thousands of video clips and multiple popular video
+codecs. The results show that this untapped dimension of 360{\deg} compression
+has substantial potential--"good" rotations are typically 8-10% more
+compressible than bad ones, and our learning approach can predict them reliably
+82% of the time.
+
+
+VizWiz Grand Challenge: Answering Visual Questions from Blind People
+
+  The study of algorithms to automatically answer visual questions currently is
+motivated by visual question answering (VQA) datasets constructed in artificial
+VQA settings. We propose VizWiz, the first goal-oriented VQA dataset arising
+from a natural VQA setting. VizWiz consists of over 31,000 visual questions
+originating from blind people who each took a picture using a mobile phone and
+recorded a spoken question about it, together with 10 crowdsourced answers per
+visual question. VizWiz differs from the many existing VQA datasets because (1)
+images are captured by blind photographers and so are often poor quality, (2)
+questions are spoken and so are more conversational, and (3) often visual
+questions cannot be answered. Evaluation of modern algorithms for answering
+visual questions and deciding if a visual question is answerable reveals that
+VizWiz is a challenging dataset. We introduce this dataset to encourage a
+larger community to develop more generalized algorithms that can assist blind
+people.
+
+
+Attributes as Operators: Factorizing Unseen Attribute-Object
+  Compositions
+
+  We present a new approach to modeling visual attributes. Prior work casts
+attributes in a similar role as objects, learning a latent representation where
+properties (e.g., sliced) are recognized by classifiers much in the way objects
+(e.g., apple) are. However, this common approach fails to separate the
+attributes observed during training from the objects with which they are
+composed, making it ineffectual when encountering new attribute-object
+compositions. Instead, we propose to model attributes as operators. Our
+approach learns a semantic embedding that explicitly factors out attributes
+from their accompanying objects, and also benefits from novel regularizers
+expressing attribute operators' effects (e.g., blunt should undo the effects of
+sharp). Not only does our approach align conceptually with the linguistic role
+of attributes as modifiers, but it also generalizes to recognize unseen
+compositions of objects and attributes. We validate our approach on two
+challenging datasets and demonstrate significant improvements over the
+state-of-the-art. In addition, we show that not only can our model recognize
+unseen compositions robustly in an open-world setting, it can also generalize
+to compositions where objects themselves were unseen during training.
+
+
+Compare and Contrast: Learning Prominent Visual Differences
+
+  Relative attribute models can compare images in terms of all detected
+properties or attributes, exhaustively predicting which image is fancier, more
+natural, and so on without any regard to ordering. However, when humans compare
+images, certain differences will naturally stick out and come to mind first.
+These most noticeable differences, or prominent differences, are likely to be
+described first. In addition, many differences, although present, may not be
+mentioned at all. In this work, we introduce and model prominent differences, a
+rich new functionality for comparing images. We collect instance-level
+annotations of most noticeable differences, and build a model trained on
+relative attribute features that predicts prominent differences for unseen
+pairs. We test our model on the challenging UT-Zap50K shoes and LFW10 faces
+datasets, and outperform an array of baseline methods. We then demonstrate how
+our prominence model improves two vision tasks, image search and description
+generation, enabling more natural communication between people and vision
+systems.
+
+
+Snap Angle Prediction for 360$^{\circ}$ Panoramas
+
+  360$^{\circ}$ panoramas are a rich medium, yet notoriously difficult to
+visualize in the 2D image plane. We explore how intelligent rotations of a
+spherical image may enable content-aware projection with fewer perceptible
+distortions. Whereas existing approaches assume the viewpoint is fixed,
+intuitively some viewing angles within the sphere preserve high-level objects
+better than others. To discover the relationship between these optimal snap
+angles and the spherical panorama's content, we develop a reinforcement
+learning approach for the cubemap projection model. Implemented as a deep
+recurrent neural network, our method selects a sequence of rotation actions and
+receives reward for avoiding cube boundaries that overlap with important
+foreground objects. We show our approach creates more visually pleasing
+panoramas while using 5x less computation than the baseline.
+
+
+Learning to Separate Object Sounds by Watching Unlabeled Video
+
+  Perceiving a scene most fully requires all the senses. Yet modeling how
+objects look and sound is challenging: most natural scenes and events contain
+multiple objects, and the audio track mixes all the sound sources together. We
+propose to learn audio-visual object models from unlabeled video, then exploit
+the visual context to perform audio source separation in novel videos. Our
+approach relies on a deep multi-instance multi-label learning framework to
+disentangle the audio frequency bases that map to individual visual objects,
+even without observing/hearing those objects in isolation. We show how the
+recovered disentangled bases can be used to guide audio source separation to
+obtain better-separated, object-level sounds. Our work is the first to learn
+audio source separation from large-scale "in the wild" videos containing
+multiple audio sources per video. We obtain state-of-the-art results on
+visually-aided audio source separation and audio denoising. Our video results:
+http://vision.cs.utexas.edu/projects/separating_object_sounds/
+
+
+Sidekick Policy Learning for Active Visual Exploration
+
+  We consider an active visual exploration scenario, where an agent must
+intelligently select its camera motions to efficiently reconstruct the full
+environment from only a limited set of narrow field-of-view glimpses. While the
+agent has full observability of the environment during training, it has only
+partial observability once deployed, being constrained by what portions it has
+seen and what camera motions are permissible. We introduce sidekick policy
+learning to capitalize on this imbalance of observability. The main idea is a
+preparatory learning phase that attempts simplified versions of the eventual
+exploration task, then guides the agent via reward shaping or initial policy
+supervision. To support interpretation of the resulting policies, we also
+develop a novel policy visualization technique. Results on active visual
+exploration tasks with 360 scenes and 3D objects show that sidekicks
+consistently improve performance and convergence rates over existing methods.
+Code, data and demos are available.
+
+
+SpotTune: Transfer Learning through Adaptive Fine-tuning
+
+  Transfer learning, which allows a source task to affect the inductive bias of
+the target task, is widely used in computer vision. The typical way of
+conducting transfer learning with deep neural networks is to fine-tune a model
+pre-trained on the source task using data from the target task. In this paper,
+we propose an adaptive fine-tuning approach, called SpotTune, which finds the
+optimal fine-tuning strategy per instance for the target data. In SpotTune,
+given an image from the target task, a policy network is used to make routing
+decisions on whether to pass the image through the fine-tuned layers or the
+pre-trained layers. We conduct extensive experiments to demonstrate the
+effectiveness of the proposed approach. Our method outperforms the traditional
+fine-tuning approach on 12 out of 14 standard datasets.We also compare SpotTune
+with other state-of-the-art fine-tuning strategies, showing superior
+performance. On the Visual Decathlon datasets, our method achieves the highest
+score across the board without bells and whistles.
+
+
+2.5D Visual Sound
+
+  Binaural audio provides a listener with 3D sound sensation, allowing a rich
+perceptual experience of the scene. However, binaural recordings are scarcely
+available and require nontrivial expertise and equipment to obtain. We propose
+to convert common monaural audio into binaural audio by leveraging video. The
+key idea is that visual frames reveal significant spatial cues that, while
+explicitly lacking in the accompanying single-channel audio, are strongly
+linked to it. Our multi-modal approach recovers this link from unlabeled video.
+We devise a deep convolutional neural network that learns to decode the
+monaural (single-channel) soundtrack into its binaural counterpart by injecting
+visual information about object and scene configurations. We call the resulting
+output 2.5D visual sound---the visual stream helps "lift" the flat single
+channel audio into spatialized sound. In addition to sound generation, we show
+the self-supervised representation learned by our network benefits audio-visual
+source separation. Our video results:
+http://vision.cs.utexas.edu/projects/2.5D_visual_sound/
+
+
+Grounded Human-Object Interaction Hotspots from Video
+
+  Learning how to interact with objects is an important step towards embodied
+visual intelligence, but existing techniques suffer from heavy supervision or
+sensing requirements. We propose an approach to learn human-object interaction
+"hotspots" directly from video. Rather than treat affordances as a manually
+supervised semantic segmentation task, our approach learns about interactions
+by watching videos of real human behavior and anticipating afforded actions.
+Given a novel image or video, our model infers a spatial hotspot map indicating
+how an object would be manipulated in a potential interaction-- even if the
+object is currently at rest. Through results with both first and third person
+video, we show the value of grounding affordances in real human-object
+interactions. Not only are our weakly supervised hotspots competitive with
+strongly supervised affordance methods, but they can also anticipate object
+interaction for novel object categories.
+
+
+Extreme Relative Pose Estimation for RGB-D Scans via Scene Completion
+
+  Estimating the relative rigid pose between two RGB-D scans of the same
+underlying environment is a fundamental problem in computer vision, robotics,
+and computer graphics. Most existing approaches allow only limited maximum
+relative pose changes since they require considerable overlap between the input
+scans. We introduce a novel deep neural network that extends the scope to
+extreme relative poses, with little or even no overlap between the input scans.
+The key idea is to infer more complete scene information about the underlying
+environment and match on the completed scans. In particular, instead of only
+performing scene completion from each individual scan, our approach alternates
+between relative pose estimation and scene completion. This allows us to
+perform scene completion by utilizing information from both input scans at late
+iterations, resulting in better results for both scene completion and relative
+pose estimation. Experimental results on benchmark datasets show that our
+approach leads to considerable improvements over state-of-the-art approaches
+for relative pose estimation. In particular, our approach provides encouraging
+relative pose estimates even between non-overlapping scans.
+
+
+Thinking Outside the Pool: Active Training Image Creation for Relative
+  Attributes
+
+  Current wisdom suggests more labeled image data is always better, and
+obtaining labels is the bottleneck. Yet curating a pool of sufficiently diverse
+and informative images is itself a challenge. In particular, training image
+curation is problematic for fine-grained attributes, where the subtle visual
+differences of interest may be rare within traditional image sources. We
+propose an active image generation approach to address this issue. The main
+idea is to jointly learn the attribute ranking task while also learning to
+generate novel realistic image samples that will benefit that task. We
+introduce an end-to-end framework that dynamically "imagines" image pairs that
+would confuse the current model, presents them to human annotators for
+labeling, then improves the predictive model with the new examples. With
+results on two datasets, we show that by thinking outside the pool of real
+images, our approach gains generalization accuracy for challenging fine-grained
+attribute comparisons.
+
+
+Less is More: Learning Highlight Detection from Video Duration
+
+  Highlight detection has the potential to significantly ease video browsing,
+but existing methods often suffer from expensive supervision requirements,
+where human viewers must manually identify highlights in training videos. We
+propose a scalable unsupervised solution that exploits video duration as an
+implicit supervision signal. Our key insight is that video segments from
+shorter user-generated videos are more likely to be highlights than those from
+longer videos, since users tend to be more selective about the content when
+capturing shorter videos. Leveraging this insight, we introduce a novel ranking
+framework that prefers segments from shorter videos, while properly accounting
+for the inherent noise in the (unlabeled) training data. We use it to train a
+highlight detector with 10M hashtagged Instagram videos. In experiments on two
+challenging public video highlight detection benchmarks, our method
+substantially improves the state-of-the-art for unsupervised highlight
+detection.
+
+
+Next-Active-Object prediction from Egocentric Videos
+
+  Although First Person Vision systems can sense the environment from the
+user's perspective, they are generally unable to predict his intentions and
+goals. Since human activities can be decomposed in terms of atomic actions and
+interactions with objects, intelligent wearable systems would benefit from the
+ability to anticipate user-object interactions. Even if this task is not
+trivial, the First Person Vision paradigm can provide important cues to address
+this challenge. We propose to exploit the dynamics of the scene to recognize
+next-active-objects before an object interaction begins. We train a classifier
+to discriminate trajectories leading to an object activation from all others
+and forecast next-active-objects by analyzing fixed-length trajectory segments
+within a temporal sliding window. The proposed method compares favorably with
+respect to several baselines on the Activity of Daily Living (ADL) egocentric
+dataset comprising 10 hours of videos acquired by 20 subjects while performing
+unconstrained interactions with several objects.
+
+
+Predicting Important Objects for Egocentric Video Summarization
+
+  We present a video summarization approach for egocentric or "wearable" camera
+data. Given hours of video, the proposed method produces a compact storyboard
+summary of the camera wearer's day. In contrast to traditional keyframe
+selection techniques, the resulting summary focuses on the most important
+objects and people with which the camera wearer interacts. To accomplish this,
+we develop region cues indicative of high-level saliency in egocentric
+video---such as the nearness to hands, gaze, and frequency of occurrence---and
+learn a regressor to predict the relative importance of any new region based on
+these cues. Using these predictions and a simple form of temporal event
+detection, our method selects frames for the storyboard that reflect the key
+object-driven happenings. We adjust the compactness of the final summary given
+either an importance selection criterion or a length budget; for the latter, we
+design an efficient dynamic programming solution that accounts for importance,
+visual uniqueness, and temporal displacement. Critically, the approach is
+neither camera-wearer-specific nor object-specific; that means the learned
+importance metric need not be trained for a given user or context, and it can
+predict the importance of objects and people that have never been seen
+previously. Our results on two egocentric video datasets show the method's
+promise relative to existing techniques for saliency and summarization.
+
+
+Video Analysis for Body-worn Cameras in Law Enforcement
+
+  The social conventions and expectations around the appropriate use of imaging
+and video has been transformed by the availability of video cameras in our
+pockets. The impact on law enforcement can easily be seen by watching the
+nightly news; more and more arrests, interventions, or even routine stops are
+being caught on cell phones or surveillance video, with both positive and
+negative consequences. This proliferation of the use of video has led law
+enforcement to look at the potential benefits of incorporating video capture
+systematically in their day to day operations. At the same time, recognition of
+the inevitability of widespread use of video for police operations has caused a
+rush to deploy all types of cameras, including body worn cameras. However, the
+vast majority of police agencies have limited experience in utilizing video to
+its full advantage, and thus do not have the capability to fully realize the
+value of expanding their video capabilities. In this white paper, we highlight
+some of the technology needs and challenges of body-worn cameras, and we relate
+these needs to the relevant state of the art in computer vision and multimedia
+research. We conclude with a set of recommendations.
+
+
+Detangling People: Individuating Multiple Close People and Their Body
+  Parts via Region Assembly
+
+  Today's person detection methods work best when people are in common upright
+poses and appear reasonably well spaced out in the image. However, in many real
+images, that's not what people do. People often appear quite close to each
+other, e.g., with limbs linked or heads touching, and their poses are often not
+pedestrian-like. We propose an approach to detangle people in multi-person
+images. We formulate the task as a region assembly problem. Starting from a
+large set of overlapping regions from body part semantic segmentation and
+generic object proposals, our optimization approach reassembles those pieces
+together into multiple person instances. It enforces that the composed body
+part regions of each person instance obey constraints on relative sizes, mutual
+spatial relationships, foreground coverage, and exclusive label assignments
+when overlapping. Since optimal region assembly is a challenging combinatorial
+problem, we present a Lagrangian relaxation method to accelerate the lower
+bound estimation, thereby enabling a fast branch and bound solution for the
+global optimum. As output, our method produces a pixel-level map indicating
+both 1) the body part labels (arm, leg, torso, and head), and 2) which parts
+belong to which individual person. Our results on three challenging datasets
+show our method is robust to clutter, occlusion, and complex poses. It
+outperforms a variety of competing methods, including existing detector CRF
+methods and region CNN approaches. In addition, we demonstrate its impact on a
+proxemics recognition task, which demands a precise representation of "whose
+body part is where" in crowded images.
+
+
+Subjects and Their Objects: Localizing Interactees for a Person-Centric
+  View of Importance
+
+  Understanding images with people often entails understanding their
+\emph{interactions} with other objects or people. As such, given a novel image,
+a vision system ought to infer which other objects/people play an important
+role in a given person's activity. However, existing methods are limited to
+learning action-specific interactions (e.g., how the pose of a tennis player
+relates to the position of his racquet when serving the ball) for improved
+recognition, making them unequipped to reason about novel interactions with
+actions or objects unobserved in the training data.
+  We propose to predict the "interactee" in novel images---that is, to localize
+the \emph{object} of a person's action. Given an arbitrary image with a
+detected person, the goal is to produce a saliency map indicating the most
+likely positions and scales where that person's interactee would be found. To
+that end, we explore ways to learn the generic, action-independent connections
+between (a) representations of a person's pose, gaze, and scene cues and (b)
+the interactee object's position and scale. We provide results on a newly
+collected UT Interactee dataset spanning more than 10,000 images from SUN,
+PASCAL, and COCO. We show that the proposed interaction-informed saliency
+metric has practical utility for four tasks: contextual object detection, image
+retargeting, predicting object importance, and data-driven natural language
+scene description. All four scenarios reveal the value in linking the subject
+to its object in order to understand the story of an image.
+
+
+Look-ahead before you leap: end-to-end active recognition by forecasting
+  the effect of motion
+
+  Visual recognition systems mounted on autonomous moving agents face the
+challenge of unconstrained data, but simultaneously have the opportunity to
+improve their performance by moving to acquire new views of test data. In this
+work, we first show how a recurrent neural network-based system may be trained
+to perform end-to-end learning of motion policies suited for this "active
+recognition" setting. Further, we hypothesize that active vision requires an
+agent to have the capacity to reason about the effects of its motions on its
+view of the world. To verify this hypothesis, we attempt to induce this
+capacity in our active recognition pipeline, by simultaneously learning to
+forecast the effects of the agent's motions on its internal representation of
+the environment conditional on all past views. Results across two challenging
+datasets confirm both that our end-to-end system successfully learns meaningful
+policies for active category recognition, and that "learning to look ahead"
+further boosts recognition performance.
+
+
+Click Carving: Segmenting Objects in Video with Point Clicks
+
+  We present a novel form of interactive video object segmentation where a few
+clicks by the user helps the system produce a full spatio-temporal segmentation
+of the object of interest. Whereas conventional interactive pipelines take the
+user's initialization as a starting point, we show the value in the system
+taking the lead even in initialization. In particular, for a given video frame,
+the system precomputes a ranked list of thousands of possible segmentation
+hypotheses (also referred to as object region proposals) using image and motion
+cues. Then, the user looks at the top ranked proposals, and clicks on the
+object boundary to carve away erroneous ones. This process iterates (typically
+2-3 times), and each time the system revises the top ranked proposal set, until
+the user is satisfied with a resulting segmentation mask. Finally, the mask is
+propagated across the video to produce a spatio-temporal object tube. On three
+challenging datasets, we provide extensive comparisons with both existing work
+and simpler alternative methods. In all, the proposed Click Carving approach
+strikes an excellent balance of accuracy and human effort. It outperforms all
+similarly fast methods, and is competitive or better than those requiring 2 to
+12 times the effort.
+
+
+Predicting Foreground Object Ambiguity and Efficiently Crowdsourcing the
+  Segmentation(s)
+
+  We propose the ambiguity problem for the foreground object segmentation task
+and motivate the importance of estimating and accounting for this ambiguity
+when designing vision systems. Specifically, we distinguish between images
+which lead multiple annotators to segment different foreground objects
+(ambiguous) versus minor inter-annotator differences of the same object. Taking
+images from eight widely used datasets, we crowdsource labeling the images as
+"ambiguous" or "not ambiguous" to segment in order to construct a new dataset
+we call STATIC. Using STATIC, we develop a system that automatically predicts
+which images are ambiguous. Experiments demonstrate the advantage of our
+prediction system over existing saliency-based methods on images from vision
+benchmarks and images taken by blind people who are trying to recognize objects
+in their environment. Finally, we introduce a crowdsourcing system to achieve
+cost savings for collecting the diversity of all valid "ground truth"
+foreground object segmentations by collecting extra segmentations only when
+ambiguity is expected. Experiments show our system eliminates up to 47% of
+human effort compared to existing crowdsourcing methods with no loss in
+capturing the diversity of ground truths.
+
+
+Learning Spherical Convolution for Fast Features from 360° Imagery
+
+  While 360{\deg} cameras offer tremendous new possibilities in vision,
+graphics, and augmented reality, the spherical images they produce make core
+feature extraction non-trivial. Convolutional neural networks (CNNs) trained on
+images from perspective cameras yield "flat" filters, yet 360{\deg} images
+cannot be projected to a single plane without significant distortion. A naive
+solution that repeatedly projects the viewing sphere to all tangent planes is
+accurate, but much too computationally intensive for real problems. We propose
+to learn a spherical convolutional network that translates a planar CNN to
+process 360{\deg} imagery directly in its equirectangular projection. Our
+approach learns to reproduce the flat filter outputs on 360{\deg} data,
+sensitive to the varying distortion effects across the viewing sphere. The key
+benefits are 1) efficient feature extraction for 360{\deg} images and video,
+and 2) the ability to leverage powerful pre-trained networks researchers have
+carefully honed (together with massive labeled image training sets) for
+perspective images. We validate our approach compared to several alternative
+methods in terms of both raw CNN output accuracy as well as applying a
+state-of-the-art "flat" object detector to 360{\deg} data. Our method yields
+the most accurate results while saving orders of magnitude in computation
+versus the existing exact reprojection solution.
+
+
+BlockDrop: Dynamic Inference Paths in Residual Networks
+
+  Very deep convolutional neural networks offer excellent recognition results,
+yet their computational expense limits their impact for many real-world
+applications. We introduce BlockDrop, an approach that learns to dynamically
+choose which layers of a deep network to execute during inference so as to best
+reduce total computation without degrading prediction accuracy. Exploiting the
+robustness of Residual Networks (ResNets) to layer dropping, our framework
+selects on-the-fly which residual blocks to evaluate for a given novel image.
+In particular, given a pretrained ResNet, we train a policy network in an
+associative reinforcement learning setting for the dual reward of utilizing a
+minimal number of blocks while preserving recognition accuracy. We conduct
+extensive experiments on CIFAR and ImageNet. The results provide strong
+quantitative and qualitative evidence that these learned policies not only
+accelerate inference but also encode meaningful visual information. Built upon
+a ResNet-101 model, our method achieves a speedup of 20\% on average, going as
+high as 36\% for some images, while maintaining the same 76.4\% top-1 accuracy
+on ImageNet.
+
+
+Im2Flow: Motion Hallucination from Static Images for Action Recognition
+
+  Existing methods to recognize actions in static images take the images at
+their face value, learning the appearances---objects, scenes, and body
+poses---that distinguish each action class. However, such models are deprived
+of the rich dynamic structure and motions that also define human activity. We
+propose an approach that hallucinates the unobserved future motion implied by a
+single snapshot to help static-image action recognition. The key idea is to
+learn a prior over short-term dynamics from thousands of unlabeled videos,
+infer the anticipated optical flow on novel static images, and then train
+discriminative models that exploit both streams of information. Our main
+contributions are twofold. First, we devise an encoder-decoder convolutional
+neural network and a novel optical flow encoding that can translate a static
+image into an accurate flow map. Second, we show the power of hallucinated flow
+for recognition, successfully transferring the learned motion into a standard
+two-stream network for activity recognition. On seven datasets, we demonstrate
+the power of the approach. It not only achieves state-of-the-art accuracy for
+dense optical flow prediction, but also consistently enhances recognition of
+actions and dynamic scenes.
+
+
+Pixel Objectness: Learning to Segment Generic Objects Automatically in
+  Images and Videos
+
+  We propose an end-to-end learning framework for segmenting generic objects in
+both images and videos. Given a novel image or video, our approach produces a
+pixel-level mask for all "object-like" regions---even for object categories
+never seen during training. We formulate the task as a structured prediction
+problem of assigning an object/background label to each pixel, implemented
+using a deep fully convolutional network. When applied to a video, our model
+further incorporates a motion stream, and the network learns to combine both
+appearance and motion and attempts to extract all prominent objects whether
+they are moving or not. Beyond the core model, a second contribution of our
+approach is how it leverages varying strengths of training annotations.
+Pixel-level annotations are quite difficult to obtain, yet crucial for training
+a deep network approach for segmentation. Thus we propose ways to exploit
+weakly labeled data for learning dense foreground segmentation. For images, we
+show the value in mixing object category examples with image-level labels
+together with relatively few images with boundary-level annotations. For video,
+we show how to bootstrap weakly annotated videos together with the network
+trained for image segmentation. Through experiments on multiple challenging
+image and video segmentation benchmarks, our method offers consistently strong
+results and improves the state-of-the-art for fully automatic segmentation of
+generic (unseen) objects. In addition, we demonstrate how our approach benefits
+image retrieval and image retargeting, both of which flourish when given our
+high-quality foreground maps. Code, models, and videos are
+at:http://vision.cs.utexas.edu/projects/pixelobjectness/
+
+

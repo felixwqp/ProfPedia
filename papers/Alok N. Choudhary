@@ -1,0 +1,57 @@
+Microstructural Materials Design via Deep Adversarial Learning
+  Methodology
+
+  Identifying the key microstructure representations is crucial for
+Computational Materials Design (CMD). However, existing microstructure
+characterization and reconstruction (MCR) techniques have limitations to be
+applied for materials design. Model-based MCR approaches do not have parameters
+that can serve as design variables, while MCR techniques that rely on dimension
+reduction tend to lose important microstructural information. In this work, we
+present a deep adversarial learning methodology that overcomes the limitations
+of existing MCR techniques. In the proposed methodology, generative adversarial
+networks (GAN) are trained to learn the mapping between latent variables and
+microstructures. Thereafter, the low-dimensional latent variables serve as
+design variables, and a Bayesian optimization framework is applied to obtain
+microstructures with desired material property. Due to the special design of
+the network architecture, the proposed methodology is able to identify the
+latent (design) variables with desired dimensionality, as well as minimize the
+information loss even for complex material microstructures. The validity of the
+proposed methodology is tested numerically on a synthetic microstructure
+dataset and its effectiveness for materials design is evaluated through a case
+study of optimizing optical performance for energy absorption. In addition, the
+scalability and transferability of proposed methodology are also demonstrated
+in this work. Specifically, the proposed methodology is scalable to generate
+arbitrary sized microstructures, and it can serve as a pre-trained model to
+improve the performance of a structure-property predictive model via transfer
+learning.
+
+
+A Parallel Monte Carlo Code for Simulating Collisional N-body Systems
+
+  We present a new parallel code for computing the dynamical evolution of
+collisional N-body systems with up to N~10^7 particles. Our code is based on
+the the Henon Monte Carlo method for solving the Fokker-Planck equation, and
+makes assumptions of spherical symmetry and dynamical equilibrium. The
+principal algorithmic developments involve optimizing data structures, and the
+introduction of a parallel random number generation scheme, as well as a
+parallel sorting algorithm, required to find nearest neighbors for interactions
+and to compute the gravitational potential. The new algorithms we introduce
+along with our choice of decomposition scheme minimize communication costs and
+ensure optimal distribution of data and workload among the processing units.
+The implementation uses the Message Passing Interface (MPI) library for
+communication, which makes it portable to many different supercomputing
+architectures. We validate the code by calculating the evolution of clusters
+with initial Plummer distribution functions up to core collapse with the number
+of stars, N, spanning three orders of magnitude, from 10^5 to 10^7. We find
+that our results are in good agreement with self-similar core-collapse
+solutions, and the core collapse times generally agree with expectations from
+the literature. Also, we observe good total energy conservation, within less
+than 0.04% throughout all simulations. We analyze the performance of the code,
+and demonstrate near-linear scaling of the runtime with the number of
+processors up to 64 processors for N=10^5, 128 for N=10^6 and 256 for N=10^7.
+The runtime reaches a saturation with the addition of more processors beyond
+these limits which is a characteristic of the parallel sorting algorithm. The
+resulting maximum speedups we achieve are approximately 60x, 100x, and 220x,
+respectively.
+
+

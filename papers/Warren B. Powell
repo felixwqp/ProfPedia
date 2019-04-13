@@ -1,0 +1,398 @@
+Least Squares Policy Iteration with Instrumental Variables vs. Direct
+  Policy Search: Comparison Against Optimal Benchmarks Using Energy Storage
+
+  This paper studies approximate policy iteration (API) methods which use
+least-squares Bellman error minimization for policy evaluation. We address
+several of its enhancements, namely, Bellman error minimization using
+instrumental variables, least-squares projected Bellman error minimization, and
+projected Bellman error minimization using instrumental variables. We prove
+that for a general discrete-time stochastic control problem, Bellman error
+minimization using instrumental variables is equivalent to both variants of
+projected Bellman error minimization. An alternative to these API methods is
+direct policy search based on knowledge gradient. The practical performance of
+these three approximate dynamic programming methods are then investigated in
+the context of an application in energy storage, integrated with an
+intermittent wind energy supply to fully serve a stochastic time-varying
+electricity demand. We create a library of test problems using real-world data
+and apply value iteration to find their optimal policies. These benchmarks are
+then used to compare the developed policies. Our analysis indicates that API
+with instrumental variables Bellman error minimization prominently outperforms
+API with least-squares Bellman error minimization. However, these approaches
+underperform our direct policy search implementation.
+
+
+Stochastic Search with an Observable State Variable
+
+  In this paper we study convex stochastic search problems where a noisy
+objective function value is observed after a decision is made. There are many
+stochastic search problems whose behavior depends on an exogenous state
+variable which affects the shape of the objective function. Currently, there is
+no general purpose algorithm to solve this class of problems. We use
+nonparametric density estimation to take observations from the joint
+state-outcome distribution and use them to infer the optimal decision for a
+given query state. We propose two solution methods that depend on the problem
+characteristics: function-based and gradient-based optimization. We examine two
+weighting schemes, kernel-based weights and Dirichlet process-based weights,
+for use with the solution methods. The weights and solution methods are tested
+on a synthetic multi-product newsvendor problem and the hour-ahead wind
+commitment problem. Our results show that in some cases Dirichlet process
+weights offer substantial benefits over kernel based weights and more generally
+that nonparametric estimation methods provide good solutions to otherwise
+intractable problems.
+
+
+Dirichlet Process Mixtures of Generalized Linear Models
+
+  We propose Dirichlet Process mixtures of Generalized Linear Models (DP-GLM),
+a new method of nonparametric regression that accommodates continuous and
+categorical inputs, and responses that can be modeled by a generalized linear
+model. We prove conditions for the asymptotic unbiasedness of the DP-GLM
+regression mean function estimate. We also give examples for when those
+conditions hold, including models for compactly supported continuous
+distributions and a model with continuous covariates and categorical response.
+We empirically analyze the properties of the DP-GLM and why it provides better
+results than existing Dirichlet process mixture regression models. We evaluate
+DP-GLM on several data sets, comparing it to modern methods of nonparametric
+regression like CART, Bayesian trees and Gaussian processes. Compared to
+existing techniques, the DP-GLM provides a single model (and corresponding
+inference algorithms) that performs well in many regression settings.
+
+
+Regularized Decomposition of High-Dimensional Multistage Stochastic
+  Programs with Markov Uncertainty
+
+  We develop a quadratic regularization approach for the solution of
+high-dimensional multistage stochastic optimization problems characterized by a
+potentially large number of time periods/stages (e.g. hundreds), a
+high-dimensional resource state variable, and a Markov information process. The
+resulting algorithms are shown to converge to an optimal policy after a finite
+number of iterations under mild technical assumptions. Computational
+experiments are conducted using the setting of optimizing energy storage over a
+large transmission grid, which motivates both the spatial and temporal
+dimensions of our problem. Our numerical results indicate that the proposed
+methods exhibit significantly faster convergence than their classical
+counterparts, with greater gains observed for higher-dimensional problems.
+
+
+A New Optimal Stepsize For Approximate Dynamic Programming
+
+  Approximate dynamic programming (ADP) has proven itself in a wide range of
+applications spanning large-scale transportation problems, health care, revenue
+management, and energy systems. The design of effective ADP algorithms has many
+dimensions, but one crucial factor is the stepsize rule used to update a value
+function approximation. Many operations research applications are
+computationally intensive, and it is important to obtain good results quickly.
+Furthermore, the most popular stepsize formulas use tunable parameters and can
+produce very poor results if tuned improperly. We derive a new stepsize rule
+that optimizes the prediction error in order to improve the short-term
+performance of an ADP algorithm. With only one, relatively insensitive tunable
+parameter, the new rule adapts to the level of noise in the problem and
+produces faster convergence in numerical experiments.
+
+
+Risk-Averse Approximate Dynamic Programming with Quantile-Based Risk
+  Measures
+
+  In this paper, we consider a finite-horizon Markov decision process (MDP) for
+which the objective at each stage is to minimize a quantile-based risk measure
+(QBRM) of the sequence of future costs; we call the overall objective a dynamic
+quantile-based risk measure (DQBRM). In particular, we consider optimizing
+dynamic risk measures where the one-step risk measures are QBRMs, a class of
+risk measures that includes the popular value at risk (VaR) and the conditional
+value at risk (CVaR). Although there is considerable theoretical development of
+risk-averse MDPs in the literature, the computational challenges have not been
+explored as thoroughly. We propose data-driven and simulation-based approximate
+dynamic programming (ADP) algorithms to solve the risk-averse sequential
+decision problem. We address the issue of inefficient sampling for risk
+applications in simulated settings and present a procedure, based on importance
+sampling, to direct samples toward the "risky region" as the ADP algorithm
+progresses. Finally, we show numerical results of our algorithms in the context
+of an application involving risk-averse bidding for energy storage.
+
+
+SDDP vs. ADP: The Effect of Dimensionality in Multistage Stochastic
+  Optimization for Grid Level Energy Storage
+
+  There has been widespread interest in the use of grid-level storage to handle
+the variability from increasing penetrations of wind and solar energy. This
+problem setting requires optimizing energy storage and release decisions for
+anywhere from a half-dozen, to potentially hundreds of storage devices spread
+around the grid as new technologies evolve. We approach this problem using two
+competing algorithmic strategies. The first, developed within the stochastic
+programming literature, is stochastic dual dynamic programming (SDDP) which
+uses Benders decomposition to create a multidimensional value function
+approximations, which have been widely used to manage hydro reservoirs. The
+second approach, which has evolved using the language of approximate dynamic
+programming, uses separable, piecewise linear value function approximations, a
+method which has been successfully applied to high-dimensional fleet management
+problems. This paper brings these two approaches together using a common
+notational system, and contrasts the algorithmic strategies (which are both a
+form of approximate dynamic programming) used by each approach. The methods are
+then subjected to rigorous testing using the context of optimizing grid level
+storage.
+
+
+Optimal Learning for Stochastic Optimization with Nonlinear Parametric
+  Belief Models
+
+  We consider the problem of estimating the expected value of information (the
+knowledge gradient) for Bayesian learning problems where the belief model is
+nonlinear in the parameters. Our goal is to maximize some metric, while
+simultaneously learning the unknown parameters of the nonlinear belief model,
+by guiding a sequential experimentation process which is expensive. We overcome
+the problem of computing the expected value of an experiment, which is
+computationally intractable, by using a sampled approximation, which helps to
+guide experiments but does not provide an accurate estimate of the unknown
+parameters. We then introduce a resampling process which allows the sampled
+model to adapt to new information, exploiting past experiments. We show
+theoretically that the method converges asymptotically to the true parameters,
+while simultaneously maximizing our metric. We show empirically that the
+process exhibits rapid convergence, yielding good results with a very small
+number of experiments.
+
+
+Stochastic Optimization with Parametric Cost Function Approximations
+
+  A widely used heuristic for solving stochastic optimization problems is to
+use a deterministic rolling horizon procedure, which has been modified to
+handle uncertainty (e.g. buffer stocks, schedule slack). This approach has been
+criticized for its use of a deterministic approximation of a stochastic
+problem, which is the major motivation for stochastic programming. We recast
+this debate by identifying both deterministic and stochastic approaches as
+policies for solving a stochastic base model, which may be a simulator or the
+real world. Stochastic lookahead models (stochastic programming) require a
+range of approximations to keep the problem tractable. By contrast, so-called
+deterministic models are actually parametrically modified cost function
+approximations which use parametric adjustments to the objective function
+and/or the constraints. These parameters are then optimized in a stochastic
+base model which does not require making any of the types of simplifications
+required by stochastic programming. We formalize this strategy and describe a
+gradient-based stochastic search strategy to optimize the parameters.
+
+
+Backward Approximate Dynamic Programming with Hidden Semi-Markov
+  Stochastic Models in Energy Storage Optimization
+
+  We consider an energy storage problem involving a wind farm with a forecasted
+power output, a stochastic load, an energy storage device, and a connection to
+the larger power grid with stochastic prices. Electricity prices and wind power
+forecast errors are modeled using a novel hidden semi-Markov model that
+accurately replicates not just the distribution of the errors, but also
+crossing times, capturing the amount of time each process stays above or below
+some benchmark such as the forecast. This is an important property of
+stochastic processes involved in storage problems. We show that we achieve more
+robust solutions using this model than when more common stochastic models are
+considered. The new model introduces some additional complexity to the problem
+as its information states are partially hidden, forming a partially observable
+Markov decision process. We derive a near-optimal time-dependent policy using
+backward approximate dynamic programming, which overcomes the computational
+hurdles of classical (exact) backward dynamic programming, with higher quality
+solutions than the more familiar forward approximate dynamic programming
+methods.
+
+
+An Approximate Dynamic Programming Algorithm for Monotone Value
+  Functions
+
+  Many sequential decision problems can be formulated as Markov Decision
+Processes (MDPs) where the optimal value function (or cost-to-go function) can
+be shown to satisfy a monotone structure in some or all of its dimensions. When
+the state space becomes large, traditional techniques, such as the backward
+dynamic programming algorithm (i.e., backward induction or value iteration),
+may no longer be effective in finding a solution within a reasonable time
+frame, and thus we are forced to consider other approaches, such as approximate
+dynamic programming (ADP). We propose a provably convergent ADP algorithm
+called Monotone-ADP that exploits the monotonicity of the value functions in
+order to increase the rate of convergence. In this paper, we describe a general
+finite-horizon problem setting where the optimal value function is monotone,
+present a convergence proof for Monotone-ADP under various technical
+assumptions, and show numerical results for three application domains: optimal
+stopping, energy storage/allocation, and glycemic control for diabetes
+patients. The empirical results indicate that by taking advantage of
+monotonicity, we can attain high quality solutions within a relatively small
+number of iterations, using up to two orders of magnitude less computation than
+is needed to compute the optimal solution exactly.
+
+
+Monte Carlo Tree Search with Sampled Information Relaxation Dual Bounds
+
+  Monte Carlo Tree Search (MCTS), most famously used in game-play artificial
+intelligence (e.g., the game of Go), is a well-known strategy for constructing
+approximate solutions to sequential decision problems. Its primary innovation
+is the use of a heuristic, known as a default policy, to obtain Monte Carlo
+estimates of downstream values for states in a decision tree. This information
+is used to iteratively expand the tree towards regions of states and actions
+that an optimal policy might visit. However, to guarantee convergence to the
+optimal action, MCTS requires the entire tree to be expanded asymptotically. In
+this paper, we propose a new technique called Primal-Dual MCTS that utilizes
+sampled information relaxation upper bounds on potential actions, creating the
+possibility of "ignoring" parts of the tree that stem from highly suboptimal
+choices. This allows us to prove that despite converging to a partial decision
+tree in the limit, the recommended action from Primal-Dual MCTS is optimal. The
+new approach shows significant promise when used to optimize the behavior of a
+single driver navigating a graph while operating on a ride-sharing platform.
+Numerical experiments on a real dataset of 7,000 trips in New Jersey suggest
+that Primal-Dual MCTS improves upon standard MCTS by producing deeper decision
+trees and exhibits a reduced sensitivity to the size of the action space.
+
+
+Optimal Hour-Ahead Bidding in the Real-Time Electricity Market with
+  Battery Storage using Approximate Dynamic Programming
+
+  There is growing interest in the use of grid-level storage to smooth
+variations in supply that are likely to arise with increased use of wind and
+solar energy. Energy arbitrage, the process of buying, storing, and selling
+electricity to exploit variations in electricity spot prices, is becoming an
+important way of paying for expensive investments into grid-level storage.
+Independent system operators such as the NYISO (New York Independent System
+Operator) require that battery storage operators place bids into an hour-ahead
+market (although settlements may occur in increments as small as 5 minutes,
+which is considered near "real-time"). The operator has to place these bids
+without knowing the energy level in the battery at the beginning of the hour,
+while simultaneously accounting for the value of leftover energy at the end of
+the hour. The problem is formulated as a dynamic program. We describe and
+employ a convergent approximate dynamic programming (ADP) algorithm that
+exploits monotonicity of the value function to find a revenue-generating
+bidding policy; using optimal benchmarks, we empirically show the computational
+benefits of the algorithm. Furthermore, we propose a distribution-free variant
+of the ADP algorithm that does not require any knowledge of the distribution of
+the price process (and makes no assumptions regarding a specific real-time
+price model). We demonstrate that a policy trained on historical real-time
+price data from the NYISO using this distribution-free approach is indeed
+effective.
+
+
+A Knowledge Gradient Policy for Sequencing Experiments to Identify the
+  Structure of RNA Molecules Using a Sparse Additive Belief Model
+
+  We present a sparse knowledge gradient (SpKG) algorithm for adaptively
+selecting the targeted regions within a large RNA molecule to identify which
+regions are most amenable to interactions with other molecules. Experimentally,
+such regions can be inferred from fluorescence measurements obtained by binding
+a complementary probe with fluorescence markers to the targeted regions. We use
+a biophysical model which shows that the fluorescence ratio under the log scale
+has a sparse linear relationship with the coefficients describing the
+accessibility of each nucleotide, since not all sites are accessible (due to
+the folding of the molecule). The SpKG algorithm uniquely combines the Bayesian
+ranking and selection problem with the frequentist $\ell_1$ regularized
+regression approach Lasso. We use this algorithm to identify the sparsity
+pattern of the linear model as well as sequentially decide the best regions to
+test before experimental budget is exhausted. Besides, we also develop two
+other new algorithms: batch SpKG algorithm, which generates more suggestions
+sequentially to run parallel experiments; and batch SpKG with a procedure which
+we call length mutagenesis. It dynamically adds in new alternatives, in the
+form of types of probes, are created by inserting, deleting or mutating
+nucleotides within existing probes. In simulation, we demonstrate these
+algorithms on the Group I intron (a mid-size RNA molecule), showing that they
+efficiently learn the correct sparsity pattern, identify the most accessible
+region, and outperform several other policies.
+
+
+The Information-Collecting Vehicle Routing Problem: Stochastic
+  Optimization for Emergency Storm Response
+
+  Utilities face the challenge of responding to power outages due to storms and
+ice damage, but most power grids are not equipped with sensors to pinpoint the
+precise location of the faults causing the outage. Instead, utilities have to
+depend primarily on phone calls (trouble calls) from customers who have lost
+power to guide the dispatching of utility trucks. In this paper, we develop a
+policy that routes a utility truck to restore outages in the power grid as
+quickly as possible, using phone calls to create beliefs about outages, but
+also using utility trucks as a mechanism for collecting additional information.
+This means that routing decisions change not only the physical state of the
+truck (as it moves from one location to another) and the grid (as the truck
+performs repairs), but also our belief about the network, creating the first
+stochastic vehicle routing problem that explicitly models information
+collection and belief modeling. We address the problem of managing a single
+utility truck, which we start by formulating as a sequential stochastic
+optimization model which captures our belief about the state of the grid. We
+propose a stochastic lookahead policy, and use Monte Carlo tree search (MCTS)
+to produce a practical policy that is asymptotically optimal. Simulation
+results show that the developed policy restores the power grid much faster
+compared to standard industry heuristics.
+
+
+Approximate Dynamic Programming for Planning a Ride-Sharing System using
+  Autonomous Fleets of Electric Vehicles
+
+  Within a decade, almost every major auto company, along with fleet operators
+such as Uber, have announced plans to put autonomous vehicles on the road. At
+the same time, electric vehicles are quickly emerging as a next-generation
+technology that is cost effective, in addition to offering the benefits of
+reducing the carbon footprint. The combination of a centrally managed fleet of
+driverless vehicles, along with the operating characteristics of electric
+vehicles, is creating a transformative new technology that offers significant
+cost savings with high service levels. This problem involves a dispatch problem
+for assigning riders to cars, a surge pricing problem for deciding on the price
+per trip and a planning problem for deciding on the fleet size. We use
+approximate dynamic programming to develop high-quality operational dispatch
+strategies to determine which car is best for a particular trip, when a car
+should be recharged, and when it should be re-positioned to a different zone
+which offers a higher density of trips. We prove that the value functions are
+monotone in the battery and time dimensions and use hierarchical aggregation to
+get better estimates of the value functions with a small number of
+observations. Then, surge pricing is discussed using an adaptive learning
+approach to decide on the price for each trip. Finally, we discuss the fleet
+size problem which depends on the previous two problems.
+
+
+Practicality of Nested Risk Measures for Dynamic Electric Vehicle
+  Charging
+
+  We consider the sequential decision problem faced by the manager of an
+electric vehicle (EV) charging station, who aims to satisfy the charging demand
+of the customer while minimizing cost. Since the total time needed to charge
+the EV up to capacity is often less than the amount of time that the customer
+is away, there are opportunities to exploit electricity spot price variations
+within some reservation window. We formulate the problem as a finite horizon
+Markov decision process (MDP) and consider a risk-averse objective function by
+optimizing under a dynamic risk measure constructed using a convex combination
+of expected value and conditional value at risk (CVaR). It has been recognized
+that the objective function of a risk-averse MDP lacks a practical
+interpretation. Therefore, in both academic and industry practice, the dynamic
+risk measure objective is often not of primary interest; instead, the
+risk-averse MDP is used as a computational tool for solving problems with
+predefined "practical" risk and reward objectives (termed the base model). In
+this paper, we study the extent to which the two sides of this framework are
+compatible with each other for the EV setting -- roughly speaking, does a "more
+risk-averse" MDP provide lower risk in the practical sense as well? In order to
+answer such a question, the effect of the degree of dynamic risk-aversion on
+the optimal MDP policy is analyzed. Based on these results, we also propose a
+principled approximation approach to finding an instance of the risk-averse MDP
+whose optimal policy behaves well under the practical objectives of the base
+model. Our numerical experiments suggest that EV charging stations can be
+operated at a significantly higher level of profitability if dynamic charging
+is adopted and a small amount of risk is tolerated.
+
+
+Recursive Optimization of Convex Risk Measures: Mean-Semideviation
+  Models
+
+  We develop recursive, data-driven, stochastic subgradient methods for
+optimizing a new, versatile, and application-driven class of convex risk
+measures, termed here as mean-semideviations, strictly generalizing the
+well-known and popular mean-upper-semideviation. We introduce the MESSAGEp
+algorithm, which is an efficient compositional subgradient procedure for
+iteratively solving convex mean-semideviation risk-averse problems to
+optimality. We analyze the asymptotic behavior of the MESSAGEp algorithm under
+a flexible and structure-exploiting set of problem assumptions. In particular:
+1) Under appropriate stepsize rules, we establish pathwise convergence of the
+MESSAGEp algorithm in a strong technical sense, confirming its asymptotic
+consistency. 2) Assuming a strongly convex cost, we show that, for fixed
+semideviation order $p>1$ and for $\epsilon\in\left[0,1\right)$, the MESSAGEp
+algorithm achieves a squared-${\cal L}_{2}$ solution suboptimality rate of the
+order of ${\cal O}(n^{-\left(1-\epsilon\right)/2})$ iterations, where, for
+$\epsilon>0$, pathwise convergence is simultaneously guaranteed. This result
+establishes a rate of order arbitrarily close to ${\cal O}(n^{-1/2})$, while
+ensuring strongly stable pathwise operation. For $p\equiv1$, the rate order
+improves to ${\cal O}(n^{-2/3})$, which also suffices for pathwise convergence,
+and matches previous results. 3) Likewise, in the general case of a convex
+cost, we show that, for any $\epsilon\in\left[0,1\right)$, the MESSAGEp
+algorithm with iterate smoothing achieves an ${\cal L}_{1}$ objective
+suboptimality rate of the order of ${\cal
+O}(n^{-\left(1-\epsilon\right)/\left(4\bf{1}_{\left\{ p>1\right\} }+4\right)})$
+iterations. This result provides maximal rates of ${\cal O}(n^{-1/4})$, if
+$p\equiv1$, and ${\cal O}(n^{-1/8})$, if $p>1$, matching the state of the art,
+as well.
+
+

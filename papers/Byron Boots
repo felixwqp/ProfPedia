@@ -1,0 +1,950 @@
+Closing the Learning-Planning Loop with Predictive State Representations
+
+  A central problem in artificial intelligence is that of planning to maximize
+future reward under uncertainty in a partially observable environment. In this
+paper we propose and demonstrate a novel algorithm which accurately learns a
+model of such an environment directly from sequences of action-observation
+pairs. We then close the loop from observations to actions by planning in the
+learned model and recovering a policy which is near-optimal in the original
+environment. Specifically, we present an efficient and statistically consistent
+spectral algorithm for learning the parameters of a Predictive State
+Representation (PSR). We demonstrate the algorithm by learning a model of a
+simulated high-dimensional, vision-based mobile robot planning task, and then
+perform approximate point-based planning in the learned PSR. Analysis of our
+results shows that the algorithm learns a state space which efficiently
+captures the essential features of the environment. This representation allows
+accurate prediction with a small number of parameters, and enables successful
+and efficient planning.
+
+
+A Spectral Learning Approach to Range-Only SLAM
+
+  We present a novel spectral learning algorithm for simultaneous localization
+and mapping (SLAM) from range data with known correspondences. This algorithm
+is an instance of a general spectral system identification framework, from
+which it inherits several desirable properties, including statistical
+consistency and no local optima. Compared with popular batch optimization or
+multiple-hypothesis tracking (MHT) methods for range-only SLAM, our spectral
+approach offers guaranteed low computational requirements and good tracking
+performance. Compared with popular extended Kalman filter (EKF) or extended
+information filter (EIF) approaches, and many MHT ones, our approach does not
+need to linearize a transition or measurement model; such linearizations can
+cause severe errors in EKFs and EIFs, and to a lesser extent MHT, particularly
+for the highly non-Gaussian posteriors encountered in range-only SLAM. We
+provide a theoretical analysis of our method, including finite-sample error
+bounds. Finally, we demonstrate on a real-world robotic SLAM problem that our
+algorithm is not only theoretically justified, but works well in practice: in a
+comparison of multiple methods, the lowest errors come from a combination of
+our algorithm with batch optimization, but our method alone produces nearly as
+good a result at far lower computational cost.
+
+
+Two-Manifold Problems with Applications to Nonlinear System
+  Identification
+
+  Recently, there has been much interest in spectral approaches to learning
+manifolds---so-called kernel eigenmap methods. These methods have had some
+successes, but their applicability is limited because they are not robust to
+noise. To address this limitation, we look at two-manifold problems, in which
+we simultaneously reconstruct two related manifolds, each representing a
+different view of the same data. By solving these interconnected learning
+problems together, two-manifold algorithms are able to succeed where a
+non-integrated approach would fail: each view allows us to suppress noise in
+the other, reducing bias. We propose a class of algorithms for two-manifold
+problems, based on spectral decomposition of cross-covariance operators in
+Hilbert space, and discuss when two-manifold problems are useful. Finally, we
+demonstrate that solving a two-manifold problem can aid in learning a nonlinear
+dynamical system from limited data.
+
+
+Two-Manifold Problems
+
+  Recently, there has been much interest in spectral approaches to learning
+manifolds---so-called kernel eigenmap methods. These methods have had some
+successes, but their applicability is limited because they are not robust to
+noise. To address this limitation, we look at two-manifold problems, in which
+we simultaneously reconstruct two related manifolds, each representing a
+different view of the same data. By solving these interconnected learning
+problems together and allowing information to flow between them, two-manifold
+algorithms are able to succeed where a non-integrated approach would fail: each
+view allows us to suppress noise in the other, reducing bias in the same way
+that an instrumental variable allows us to remove bias in a {linear}
+dimensionality reduction problem. We propose a class of algorithms for
+two-manifold problems, based on spectral decomposition of cross-covariance
+operators in Hilbert space. Finally, we discuss situations where two-manifold
+problems are useful, and demonstrate that solving a two-manifold problem can
+aid in learning a nonlinear dynamical system from limited data.
+
+
+Hilbert Space Embeddings of Predictive State Representations
+
+  Predictive State Representations (PSRs) are an expressive class of models for
+controlled stochastic processes. PSRs represent state as a set of predictions
+of future observable events. Because PSRs are defined entirely in terms of
+observable data, statistically consistent estimates of PSR parameters can be
+learned efficiently by manipulating moments of observed training data. Most
+learning algorithms for PSRs have assumed that actions and observations are
+finite with low cardinality. In this paper, we generalize PSRs to infinite sets
+of observations and actions, using the recent concept of Hilbert space
+embeddings of distributions. The essence is to represent the state as a
+nonparametric conditional embedding operator in a Reproducing Kernel Hilbert
+Space (RKHS) and leverage recent work in kernel methods to estimate, predict,
+and update the representation. We show that these Hilbert space embeddings of
+PSRs are able to gracefully handle continuous actions and observations, and
+that our learned models outperform competing system identification algorithms
+on several prediction benchmarks.
+
+
+Predictive State Temporal Difference Learning
+
+  We propose a new approach to value function approximation which combines
+linear temporal difference reinforcement learning with subspace identification.
+In practical applications, reinforcement learning (RL) is complicated by the
+fact that state is either high-dimensional or partially observable. Therefore,
+RL methods are designed to work with features of state rather than state
+itself, and the success or failure of learning is often determined by the
+suitability of the selected features. By comparison, subspace identification
+(SSID) methods are designed to select a feature set which preserves as much
+information as possible about state. In this paper we connect the two
+approaches, looking at the problem of reinforcement learning with a large set
+of features, each of which may only be marginally useful for value function
+approximation. We introduce a new algorithm for this situation, called
+Predictive State Temporal Difference (PSTD) learning. As in SSID for predictive
+state representations, PSTD finds a linear compression operator that projects a
+large set of features down to a small set that preserves the maximum amount of
+predictive information. As in RL, PSTD then uses a Bellman recursion to
+estimate a value function. We discuss the connection between PSTD and prior
+approaches in RL and SSID. We prove that PSTD is statistically consistent,
+perform several experiments that illustrate its properties, and demonstrate its
+potential on a difficult optimal stopping problem.
+
+
+Incremental Sparse GP Regression for Continuous-time Trajectory
+  Estimation & Mapping
+
+  Recent work on simultaneous trajectory estimation and mapping (STEAM) for
+mobile robots has found success by representing the trajectory as a Gaussian
+process. Gaussian processes can represent a continuous-time trajectory,
+elegantly handle asynchronous and sparse measurements, and allow the robot to
+query the trajectory to recover its estimated position at any time of interest.
+A major drawback of this approach is that STEAM is formulated as a batch
+estimation problem. In this paper we provide the critical extensions necessary
+to transform the existing batch algorithm into an extremely efficient
+incremental algorithm. In particular, we are able to vastly speed up the
+solution time through efficient variable reordering and incremental sparse
+updates, which we believe will greatly increase the practicality of Gaussian
+process methods for robot mapping and localization. Finally, we demonstrate the
+approach and its advantages on both synthetic and real datasets.
+
+
+Learning to Filter with Predictive State Inference Machines
+
+  Latent state space models are a fundamental and widely used tool for modeling
+dynamical systems. However, they are difficult to learn from data and learned
+models often lack performance guarantees on inference tasks such as filtering
+and prediction. In this work, we present the PREDICTIVE STATE INFERENCE MACHINE
+(PSIM), a data-driven method that considers the inference procedure on a
+dynamical system as a composition of predictors. The key idea is that rather
+than first learning a latent state space model, and then using the learned
+model for inference, PSIM directly learns predictors for inference in
+predictive state space. We provide theoretical guarantees for inference, in
+both realizable and agnostic settings, and showcase practical performance on a
+variety of simulated and real world robotics benchmarks.
+
+
+Adaptive Probabilistic Trajectory Optimization via Efficient Approximate
+  Inference
+
+  Robotic systems must be able to quickly and robustly make decisions when
+operating in uncertain and dynamic environments. While Reinforcement Learning
+(RL) can be used to compute optimal policies with little prior knowledge about
+the environment, it suffers from slow convergence. An alternative approach is
+Model Predictive Control (MPC), which optimizes policies quickly, but also
+requires accurate models of the system dynamics and environment. In this paper
+we propose a new approach, adaptive probabilistic trajectory optimization, that
+combines the benefits of RL and MPC. Our method uses scalable approximate
+inference to learn and updates probabilistic models in an online incremental
+fashion while also computing optimal control policies via successive local
+approximations. We present two variations of our algorithm based on the Sparse
+Spectrum Gaussian Process (SSGP) model, and we test our algorithm on three
+learning tasks, demonstrating the effectiveness and efficiency of our approach.
+
+
+4D Crop Monitoring: Spatio-Temporal Reconstruction for Agriculture
+
+  Autonomous crop monitoring at high spatial and temporal resolution is a
+critical problem in precision agriculture. While Structure from Motion and
+Multi-View Stereo algorithms can finely reconstruct the 3D structure of a field
+with low-cost image sensors, these algorithms fail to capture the dynamic
+nature of continuously growing crops. In this paper we propose a 4D
+reconstruction approach to crop monitoring, which employs a spatio-temporal
+model of dynamic scenes that is useful for precision agriculture applications.
+Additionally, we provide a robust data association algorithm to address the
+problem of large appearance changes due to scenes being viewed from different
+angles at different points in time, which is critical to achieving 4D
+reconstruction. Finally, we collected a high quality dataset with ground truth
+statistics to evaluate the performance of our method. We demonstrate that our
+4D reconstruction approach provides models that are qualitatively correct with
+respect to visual appearance and quantitatively accurate when measured against
+the ground truth geometric properties of the monitored crops.
+
+
+Approximately Optimal Continuous-Time Motion Planning and Control via
+  Probabilistic Inference
+
+  The problem of optimal motion planing and control is fundamental in robotics.
+However, this problem is intractable for continuous-time stochastic systems in
+general and the solution is difficult to approximate if non-instantaneous
+nonlinear performance indices are present. In this work, we provide an
+efficient algorithm, PIPC (Probabilistic Inference for Planning and Control),
+that yields approximately optimal policies with arbitrary higher-order
+nonlinear performance indices. Using probabilistic inference and a Gaussian
+process representation of trajectories, PIPC exploits the underlying sparsity
+of the problem such that its complexity scales linearly in the number of
+nonlinear factors. We demonstrate the capabilities of our algorithm in a
+receding horizon setting with multiple systems in simulation.
+
+
+Deeply AggreVaTeD: Differentiable Imitation Learning for Sequential
+  Prediction
+
+  Researchers have demonstrated state-of-the-art performance in sequential
+decision making problems (e.g., robotics control, sequential prediction) with
+deep neural network models. One often has access to near-optimal oracles that
+achieve good performance on the task during training. We demonstrate that
+AggreVaTeD --- a policy gradient extension of the Imitation Learning (IL)
+approach of (Ross & Bagnell, 2014) --- can leverage such an oracle to achieve
+faster and better solutions with less training data than a less-informed
+Reinforcement Learning (RL) technique. Using both feedforward and recurrent
+neural network predictors, we present stochastic gradient procedures on a
+sequential prediction task, dependency-parsing from raw image data, as well as
+on various high dimensional robotics control problems. We also provide a
+comprehensive theoretical study of IL that demonstrates we can expect up to
+exponentially lower sample complexity for learning with AggreVaTeD than with RL
+algorithms, which backs our empirical findings. Our results and theory indicate
+that the proposed approach can achieve superior performance with respect to the
+oracle when the demonstrator is sub-optimal.
+
+
+Sparse Gaussian Processes for Continuous-Time Trajectory Estimation on
+  Matrix Lie Groups
+
+  Continuous-time trajectory representations are a powerful tool that can be
+used to address several issues in many practical simultaneous localization and
+mapping (SLAM) scenarios, like continuously collected measurements distorted by
+robot motion, or during with asynchronous sensor measurements. Sparse Gaussian
+processes (GP) allow for a probabilistic non-parametric trajectory
+representation that enables fast trajectory estimation by sparse GP regression.
+However, previous approaches are limited to dealing with vector space
+representations of state only. In this technical report we extend the work by
+Barfoot et al. [1] to general matrix Lie groups, by applying constant-velocity
+prior, and defining locally linear GP. This enables using sparse GP approach in
+a large space of practical SLAM settings. In this report we give the theory and
+leave the experimental evaluation in future publications.
+
+
+Predictive State Recurrent Neural Networks
+
+  We present a new model, Predictive State Recurrent Neural Networks (PSRNNs),
+for filtering and prediction in dynamical systems. PSRNNs draw on insights from
+both Recurrent Neural Networks (RNNs) and Predictive State Representations
+(PSRs), and inherit advantages from both types of models. Like many successful
+RNN architectures, PSRNNs use (potentially deeply composed) bilinear transfer
+functions to combine information from multiple sources. We show that such
+bilinear functions arise naturally from state updates in Bayes filters like
+PSRs, in which observations can be viewed as gating belief states. We also show
+that PSRNNs can be learned effectively by combining Backpropogation Through
+Time (BPTT) with an initialization derived from a statistically consistent
+learning algorithm for PSRs called two-stage regression (2SR). Finally, we show
+that PSRNNs can be factorized using tensor decomposition, reducing model size
+and suggesting interesting connections to existing multiplicative architectures
+such as LSTMs. We applied PSRNNs to 4 datasets, and showed that we outperform
+several popular alternative approaches to modeling dynamical systems in all
+cases.
+
+
+One-Shot Learning for Semantic Segmentation
+
+  Low-shot learning methods for image classification support learning from
+sparse data. We extend these techniques to support dense semantic image
+segmentation. Specifically, we train a network that, given a small set of
+annotated images, produces parameters for a Fully Convolutional Network (FCN).
+We use this FCN to perform dense pixel-level prediction on a test image for the
+new semantic class. Our architecture shows a 25% relative meanIoU improvement
+compared to the best baseline methods for one-shot segmentation on unseen
+classes in the PASCAL VOC 2012 dataset and is at least 3 times faster.
+
+
+Agile Off-Road Autonomous Driving Using End-to-End Deep Imitation
+  Learning
+
+  We present an end-to-end imitation learning system for agile, off-road
+autonomous driving using only low-cost on-board sensors. By imitating a model
+predictive controller equipped with advanced sensors, we train a deep neural
+network control policy to map raw, high-dimensional observations to continuous
+steering and throttle commands. Compared with recent approaches to similar
+tasks, our method requires neither state estimation nor on-the-fly planning to
+navigate the vehicle. Our approach relies on, and experimentally validates,
+recent imitation learning theory. Empirically, we show that policies trained
+with online imitation learning overcome well-known challenges related to
+covariate shift and generalize better than policies trained with batch
+imitation learning. Built on these insights, our autonomous driving system
+demonstrates successful high-speed off-road driving, matching the
+state-of-the-art performance.
+
+
+Manifold Regularization for Kernelized LSTD
+
+  Policy evaluation or value function or Q-function approximation is a key
+procedure in reinforcement learning (RL). It is a necessary component of policy
+iteration and can be used for variance reduction in policy gradient methods.
+Therefore its quality has a significant impact on most RL algorithms. Motivated
+by manifold regularized learning, we propose a novel kernelized policy
+evaluation method that takes advantage of the intrinsic geometry of the state
+space learned from data, in order to achieve better sample efficiency and
+higher accuracy in Q-function approximation. Applying the proposed method in
+the Least-Squares Policy Iteration (LSPI) framework, we observe superior
+performance compared to widely used parametric basis functions on two standard
+benchmarks in terms of policy quality.
+
+
+Learning Hidden Quantum Markov Models
+
+  Hidden Quantum Markov Models (HQMMs) can be thought of as quantum
+probabilistic graphical models that can model sequential data. We extend
+previous work on HQMMs with three contributions: (1) we show how classical
+hidden Markov models (HMMs) can be simulated on a quantum circuit, (2) we
+reformulate HQMMs by relaxing the constraints for modeling HMMs on quantum
+circuits, and (3) we present a learning algorithm to estimate the parameters of
+an HQMM from data. While our algorithm requires further optimization to handle
+larger datasets, we are able to evaluate our algorithm using several synthetic
+datasets. We show that on HQMM generated data, our algorithm learns HQMMs with
+the same number of hidden states and predictive accuracy as the true HQMMs,
+while HMMs learned with the Baum-Welch algorithm require more states to match
+the predictive accuracy.
+
+
+Deep Forward and Inverse Perceptual Models for Tracking and Prediction
+
+  We consider the problems of learning forward models that map state to
+high-dimensional images and inverse models that map high-dimensional images to
+state in robotics. Specifically, we present a perceptual model for generating
+video frames from state with deep networks, and provide a framework for its use
+in tracking and prediction tasks. We show that our proposed model greatly
+outperforms standard deconvolutional methods and GANs for image generation,
+producing clear, photo-realistic images. We also develop a convolutional neural
+network model for state estimation and compare the result to an Extended Kalman
+Filter to estimate robot trajectories. We validate all models on a real robotic
+system.
+
+
+Variational Inference for Gaussian Process Models with Linear Complexity
+
+  Large-scale Gaussian process inference has long faced practical challenges
+due to time and space complexity that is superlinear in dataset size. While
+sparse variational Gaussian process models are capable of learning from
+large-scale data, standard strategies for sparsifying the model can prevent the
+approximation of complex functions. In this work, we propose a novel
+variational Gaussian process model that decouples the representation of mean
+and covariance functions in reproducing kernel Hilbert space. We show that this
+new parametrization generalizes previous models. Furthermore, it yields a
+variational inference problem that can be solved by stochastic gradient ascent
+with time and space complexity that is only linear in the number of mean
+function parameters, regardless of the choice of kernels, likelihoods, and
+inducing points. This strategy makes the adoption of large-scale expressive
+Gaussian process models possible. We run several experiments on regression
+tasks and show that this decoupled approach greatly outperforms previous sparse
+variational Gaussian process inference procedures.
+
+
+Convergence of Value Aggregation for Imitation Learning
+
+  Value aggregation is a general framework for solving imitation learning
+problems. Based on the idea of data aggregation, it generates a policy sequence
+by iteratively interleaving policy optimization and evaluation in an online
+learning setting. While the existence of a good policy in the policy sequence
+can be guaranteed non-asymptotically, little is known about the convergence of
+the sequence or the performance of the last policy. In this paper, we debunk
+the common belief that value aggregation always produces a convergent policy
+sequence with improving performance. Moreover, we identify a critical stability
+condition for convergence and provide a tight non-asymptotic bound on the
+performance of the last policy. These new theoretical insights let us stabilize
+problems with regularization, which removes the inconvenient process of
+identifying the best policy in the policy sequence in stochastic problems.
+
+
+Fast Policy Learning through Imitation and Reinforcement
+
+  Imitation learning (IL) consists of a set of tools that leverage expert
+demonstrations to quickly learn policies. However, if the expert is suboptimal,
+IL can yield policies with inferior performance compared to reinforcement
+learning (RL). In this paper, we aim to provide an algorithm that combines the
+best aspects of RL and IL. We accomplish this by formulating several popular RL
+and IL algorithms in a common mirror descent framework, showing that these
+algorithms can be viewed as a variation on a single approach. We then propose
+LOKI, a strategy for policy learning that first performs a small but random
+number of IL iterations before switching to a policy gradient RL method. We
+show that if the switching time is properly randomized, LOKI can learn to
+outperform a suboptimal expert and converge faster than running policy gradient
+from scratch. Finally, we evaluate the performance of LOKI experimentally in
+several simulated environments.
+
+
+Dual Policy Iteration
+
+  Recently, a novel class of Approximate Policy Iteration (API) algorithms have
+demonstrated impressive practical performance (e.g., ExIt from [2],
+AlphaGo-Zero from [27]). This new family of algorithms maintains, and
+alternately optimizes, two policies: a fast, reactive policy (e.g., a deep
+neural network) deployed at test time, and a slow, non-reactive policy (e.g.,
+Tree Search), that can plan multiple steps ahead. The reactive policy is
+updated under supervision from the non-reactive policy, while the non-reactive
+policy is improved with guidance from the reactive policy. In this work we
+study this Dual Policy Iteration (DPI) strategy in an alternating optimization
+framework and provide a convergence analysis that extends existing API theory.
+We also develop a special instance of this framework which reduces the update
+of non-reactive policies to model-based optimal control using learned local
+models, and provides a theoretically sound way of unifying model-free and
+model-based RL approaches with unknown dynamics. We demonstrate the efficacy of
+our approach on various continuous control Markov Decision Processes.
+
+
+Truncated Horizon Policy Search: Combining Reinforcement Learning &
+  Imitation Learning
+
+  In this paper, we propose to combine imitation and reinforcement learning via
+the idea of reward shaping using an oracle. We study the effectiveness of the
+near-optimal cost-to-go oracle on the planning horizon and demonstrate that the
+cost-to-go oracle shortens the learner's planning horizon as function of its
+accuracy: a globally optimal oracle can shorten the planning horizon to one,
+leading to a one-step greedy Markov Decision Process which is much easier to
+optimize, while an oracle that is far away from the optimality requires
+planning over a longer horizon to achieve near-optimal performance. Hence our
+new insight bridges the gap and interpolates between imitation learning and
+reinforcement learning. Motivated by the above mentioned insights, we propose
+Truncated HORizon Policy Search (THOR), a method that focuses on searching for
+policies that maximize the total reshaped reward over a finite planning horizon
+when the oracle is sub-optimal. We experimentally demonstrate that a
+gradient-based implementation of THOR can achieve superior performance compared
+to RL baselines and IL baselines even when the oracle is sub-optimal.
+
+
+Accelerating Imitation Learning with Predictive Models
+
+  Sample efficiency is critical in solving real-world reinforcement learning
+problems, where agent-environment interactions can be costly. Imitation
+learning from expert advice has proved to be an effective strategy for reducing
+the number of interactions required to train a policy. Online imitation
+learning, which interleaves policy evaluation and policy optimization, is a
+particularly effective technique with provable performance guarantees. In this
+work, we seek to further accelerate the convergence rate of online imitation
+learning, thereby making it more sample efficient. We propose two model-based
+algorithms inspired by Follow-the-Leader (FTL) with prediction: MoBIL-VI based
+on solving variational inequalities and MoBIL-Prox based on stochastic
+first-order updates. These two methods leverage a model to predict future
+gradients to speed up policy learning. When the model oracle is learned online,
+these algorithms can provably accelerate the best known convergence rate up to
+an order. Our algorithms can be viewed as a generalization of stochastic
+Mirror-Prox (Juditsky et al., 2011), and admit a simple constructive FTL-style
+analysis of performance.
+
+
+Improving Image Clustering With Multiple Pretrained CNN Feature
+  Extractors
+
+  For many image clustering problems, replacing raw image data with features
+extracted by a pretrained convolutional neural network (CNN), leads to better
+clustering performance. However, the specific features extracted, and, by
+extension, the selected CNN architecture, can have a major impact on the
+clustering results. In practice, this crucial design choice is often decided
+arbitrarily due to the impossibility of using cross-validation with
+unsupervised learning problems. However, information contained in the different
+pretrained CNN architectures may be complementary, even when pretrained on the
+same data. To improve clustering performance, we rephrase the image clustering
+problem as a multi-view clustering (MVC) problem that considers multiple
+different pretrained feature extractors as different "views" of the same data.
+We then propose a multi-input neural network architecture that is trained
+end-to-end to solve the MVC problem effectively. Our experimental results,
+conducted on three different natural image datasets, show that: 1. using
+multiple pretrained CNNs jointly as feature extractors improves image
+clustering; 2. using an end-to-end approach improves MVC; and 3. combining both
+produces state-of-the-art results for the problem of image clustering.
+
+
+STEAP: simultaneous trajectory estimation and planning
+
+  We present a unified probabilistic framework for simultaneous trajectory
+estimation and planning (STEAP). Estimation and planning problems are usually
+considered separately, however, within our framework we show that solving them
+simultaneously can be more accurate and efficient. The key idea is to compute
+the full continuous-time trajectory from start to goal at each time-step. While
+the robot traverses the trajectory, the history portion of the trajectory
+signifies the solution to the estimation problem, and the future portion of the
+trajectory signifies a solution to the planning problem. Building on recent
+probabilistic inference approaches to continuous-time localization and mapping
+and continuous-time motion planning, we solve the joint problem by iteratively
+recomputing the maximum a posteriori trajectory conditioned on all available
+sensor data and cost information. Our approach can contend with
+high-degree-of-freedom (DOF) trajectory spaces, uncertainty due to limited
+sensing capabilities, model inaccuracy, the stochastic effect of executing
+actions, and can find a solution in real-time. We evaluate our framework
+empirically in both simulation and on a mobile manipulator.
+
+
+Learning Generalizable Robot Skills from Demonstrations in Cluttered
+  Environments
+
+  Learning from Demonstration (LfD) is a popular approach to endowing robots
+with skills without having to program them by hand. Typically, LfD relies on
+human demonstrations in clutter-free environments. This prevents the
+demonstrations from being affected by irrelevant objects, whose influence can
+obfuscate the true intention of the human or the constraints of the desired
+skill. However, it is unrealistic to assume that the robot's environment can
+always be restructured to remove clutter when capturing human demonstrations.
+To contend with this problem, we develop an importance weighted batch and
+incremental skill learning approach, building on a recent inference-based
+technique for skill representation and reproduction. Our approach reduces
+unwanted environmental influences on the learned skill, while still capturing
+the salient human behavior. We provide both batch and incremental versions of
+our approach and validate our algorithms on a 7-DOF JACO2 manipulator with
+reaching and placing skills.
+
+
+Learning to Align Images using Weak Geometric Supervision
+
+  Image alignment tasks require accurate pixel correspondences, which are
+usually recovered by matching local feature descriptors. Such descriptors are
+often derived using supervised learning on existing datasets with ground truth
+correspondences. However, the cost of creating such datasets is usually
+prohibitive. In this paper, we propose a new approach to align two images
+related by an unknown 2D homography where the local descriptor is learned from
+scratch from the images and the homography is estimated simultaneously. Our key
+insight is that a siamese convolutional neural network can be trained jointly
+while iteratively updating the homography parameters by optimizing a single
+loss function. Our method is currently weakly supervised because the input
+images need to be roughly aligned.
+  We have used this method to align images of different modalities such as RGB
+and near-infra-red (NIR) without using any prior labeled data. Images
+automatically aligned by our method were then used to train descriptors that
+generalize to new images. We also evaluated our method on RGB images. On the
+HPatches benchmark, our method achieves comparable accuracy to deep local
+descriptors that were trained offline in a supervised setting.
+
+
+Adversarial Imitation via Variational Inverse Reinforcement Learning
+
+  We consider a problem of learning the reward and policy from expert examples
+under unknown dynamics. Our proposed method builds on the framework of
+generative adversarial networks and introduces the empowerment-regularized
+maximum-entropy inverse reinforcement learning to learn near-optimal rewards
+and policies. Empowerment-based regularization prevents the policy from
+overfitting to expert demonstrations, which advantageously leads to more
+generalized behaviors that result in learning near-optimal rewards. Our method
+simultaneously learns empowerment through variational information maximization
+along with the reward and policy under the adversarial learning formulation. We
+evaluate our approach on various high-dimensional complex control tasks. We
+also test our learned rewards in challenging transfer learning problems where
+training and testing environments are made to be different from each other in
+terms of dynamics or structure. The results show that our proposed method not
+only learns near-optimal rewards and policies that are matching expert behavior
+but also performs significantly better than state-of-the-art inverse
+reinforcement learning algorithms.
+
+
+Predictor-Corrector Policy Optimization
+
+  We present a predictor-corrector framework, called PicCoLO, that can
+transform a first-order model-free reinforcement or imitation learning
+algorithm into a new hybrid method that leverages predictive models to
+accelerate policy learning. The new "PicCoLOed" algorithm optimizes a policy by
+recursively repeating two steps: In the Prediction Step, the learner uses a
+model to predict the unseen future gradient and then applies the predicted
+estimate to update the policy; in the Correction Step, the learner runs the
+updated policy in the environment, receives the true gradient, and then
+corrects the policy using the gradient error. Unlike previous algorithms,
+PicCoLO corrects for the mistakes of using imperfect predicted gradients and
+hence does not suffer from model bias. The development of PicCoLO is made
+possible by a novel reduction from predictable online learning to adversarial
+online learning, which provides a systematic way to modify existing first-order
+algorithms to achieve the optimal regret with respect to predictable
+information. We show, in both theory and simulation, that the convergence rate
+of several first-order model-free algorithms can be improved by PicCoLO.
+
+
+Truncated Back-propagation for Bilevel Optimization
+
+  Bilevel optimization has been recently revisited for designing and analyzing
+algorithms in hyperparameter tuning and meta learning tasks. However, due to
+its nested structure, evaluating exact gradients for high-dimensional problems
+is computationally challenging. One heuristic to circumvent this difficulty is
+to use the approximate gradient given by performing truncated back-propagation
+through the iterative optimization procedure that solves the lower-level
+problem. Although promising empirical performance has been reported, its
+theoretical properties are still unclear. In this paper, we analyze the
+properties of this family of approximate gradients and establish sufficient
+conditions for convergence. We validate this on several hyperparameter tuning
+and meta learning tasks. We find that optimization with the approximate
+gradient computed using few-step back-propagation often performs comparably to
+optimization with the exact gradient, while requiring far less memory and half
+the computation time.
+
+
+Learning and Inference in Hilbert Space with Quantum Graphical Models
+
+  Quantum Graphical Models (QGMs) generalize classical graphical models by
+adopting the formalism for reasoning about uncertainty from quantum mechanics.
+Unlike classical graphical models, QGMs represent uncertainty with density
+matrices in complex Hilbert spaces. Hilbert space embeddings (HSEs) also
+generalize Bayesian inference in Hilbert spaces. We investigate the link
+between QGMs and HSEs and show that the sum rule and Bayes rule for QGMs are
+equivalent to the kernel sum rule in HSEs and a special case of Nadaraya-Watson
+kernel regression, respectively. We show that these operations can be
+kernelized, and use these insights to propose a Hilbert Space Embedding of
+Hidden Quantum Markov Models (HSE-HQMM) to model dynamics. We present
+experimental results showing that HSE-HQMMs are competitive with
+state-of-the-art models like LSTMs and PSRNNs on several datasets, while also
+providing a nonparametric method for maintaining a probability distribution
+over continuous-valued features.
+
+
+Differentiable MPC for End-to-end Planning and Control
+
+  We present foundations for using Model Predictive Control (MPC) as a
+differentiable policy class for reinforcement learning in continuous state and
+action spaces. This provides one way of leveraging and combining the advantages
+of model-free and model-based approaches. Specifically, we differentiate
+through MPC by using the KKT conditions of the convex approximation at a fixed
+point of the controller. Using this strategy, we are able to learn the cost and
+dynamics of a controller via end-to-end learning. Our experiments focus on
+imitation learning in the pendulum and cartpole domains, where we learn the
+cost and dynamics terms of an MPC policy class. We show that our MPC policies
+are significantly more data-efficient than a generic neural network and that
+our method is superior to traditional system identification in a setting where
+the expert is unrealizable.
+
+
+RMPflow: A Computational Graph for Automatic Motion Policy Generation
+
+  We develop a novel policy synthesis algorithm, RMPflow, based on
+geometrically consistent transformations of Riemannian Motion Policies (RMPs).
+RMPs are a class of reactive motion policies designed to parameterize
+non-Euclidean behaviors as dynamical systems in intrinsically nonlinear task
+spaces. Given a set of RMPs designed for individual tasks, RMPflow can
+consistently combine these local policies to generate an expressive global
+policy, while simultaneously exploiting sparse structure for computational
+efficiency. We study the geometric properties of RMPflow and provide sufficient
+conditions for stability. Finally, we experimentally demonstrate that
+accounting for the geometry of task policies can simplify classically difficult
+problems, such as planning through clutter on high-DOF manipulation systems.
+
+
+Multi-Objective Policy Generation for Multi-Robot Systems Using
+  Riemannian Motion Policies
+
+  In the multi-robot systems literature, control policies are typically
+obtained through descent rules for a potential function which encodes a single
+team-level objective. However, for multi-objective tasks, it can be hard to
+design a single control policy that fulfills all the objectives. In this paper,
+we exploit the idea of decomposing the multi-objective task into a set of
+simple subtasks. We associate each subtask with a potentially lower-dimensional
+manifold, and design Riemannian Motion Policies (RMPs) on these manifolds.
+Centralized and decentralized algorithms are proposed to combine these policies
+into a final control policy on the configuration space that the robots can
+execute. We propose a collection of RMPs for simple multi-robot tasks that can
+be used for building controllers for more complicated tasks. In particular, we
+prove that many existing multi-robot controllers can be closely approximated by
+combining the proposed RMPs. Theoretical analysis shows that the multi-robot
+system under the generated control policy is stable. The proposed framework is
+validated through both simulated tasks and robotic implementations.
+
+
+Online Learning with Continuous Variations: Dynamic Regret and
+  Reductions
+
+  We study the dynamic regret of a new class of online learning problems, in
+which the gradient of the loss function changes continuously across rounds with
+respect to the learner's decisions. This setup is motivated by the use of
+online learning as a tool to analyze the performance of iterative algorithms.
+Our goal is to identify interpretable dynamic regret rates that explicitly
+consider the loss variations as consequences of the learner's decisions as
+opposed to external constraints. We show that achieving sublinear dynamic
+regret in general is equivalent to solving certain variational inequalities,
+equilibrium problems, and fixed-point problems. Leveraging this identification,
+we present necessary and sufficient conditions for the existence of efficient
+algorithms that achieve sublinear dynamic regret. Furthermore, we show a
+reduction from dynamic regret to both static regret and convergence rate to
+equilibriums in the aforementioned problems, which allows us to analyze the
+dynamic regret of many existing learning algorithms in few steps.
+
+
+An Online Learning Approach to Model Predictive Control
+
+  Model predictive control (MPC) is a powerful technique for solving dynamic
+control tasks. In this paper, we show that there exists a close connection
+between MPC and online learning, an abstract theoretical framework for
+analyzing online decision making in the optimization literature. This new
+perspective provides a foundation for leveraging powerful online learning
+algorithms to design MPC algorithms. Specifically, we propose a new algorithm
+based on dynamic mirror descent (DMD), an online learning algorithm that is
+designed for non-stationary setups. Our algorithm, Dynamic Mirror Decent Model
+Predictive Control (DMD-MPC), represents a general family of MPC algorithms
+that includes many existing techniques as special instances. DMD-MPC also
+provides a fresh perspective on previous heuristics used in MPC and suggests a
+principled way to design new MPC algorithms. In the experimental section of
+this paper, we demonstrate the flexibility of DMD-MPC, presenting a set of new
+MPC algorithms on a simple simulated cartpole and a simulated and real-world
+aggressive driving task.
+
+
+Learning Quantum Graphical Models using Constrained Gradient Descent on
+  the Stiefel Manifold
+
+  Quantum graphical models (QGMs) extend the classical framework for reasoning
+about uncertainty by incorporating the quantum mechanical view of probability.
+Prior work on QGMs has focused on hidden quantum Markov models (HQMMs), which
+can be formulated using quantum analogues of the sum rule and Bayes rule used
+in classical graphical models. Despite the focus on developing the QGM
+framework, there has been little progress in learning these models from data.
+The existing state-of-the-art approach randomly initializes parameters and
+iteratively finds unitary transformations that increase the likelihood of the
+data. While this algorithm demonstrated theoretical strengths of HQMMs over
+HMMs, it is slow and can only handle a small number of hidden states. In this
+paper, we tackle the learning problem by solving a constrained optimization
+problem on the Stiefel manifold using a well-known retraction-based algorithm.
+We demonstrate that this approach is not only faster and yields better
+solutions on several datasets, but also scales to larger models that were
+prohibitively slow to train via the earlier method.
+
+
+Stable, Concurrent Controller Composition for Multi-Objective Robotic
+  Tasks
+
+  Robotic systems often need to consider multiple tasks concurrently. This
+challenge calls for control synthesis algorithms that are capable of fulfilling
+multiple control specifications simultaneously while maintaining the stability
+of the overall system. In this paper, we decompose complex, multi-objective
+tasks into subtasks, where individual subtask controllers are designed
+independently and then combined to generate the overall control policy. In
+particular, we adopt Riemannian Motion Policies (RMPs), a recently proposed
+controller structure in robotics, and, RMPflow, its associated computational
+framework for combining RMP controllers. We re-establish and extend the
+stability results of RMPflow through a rigorous Control Lyapunov Function (CLF)
+treatment. We then show that RMPflow can stably combine individually designed
+subtask controllers that satisfy certain CLF constraints. This new insight
+leads to an efficient CLF-based computational framework to generate stable
+controllers that consider all the subtasks simultaneously. Compared with the
+original usage of RMPflow, our framework provides users the flexibility to
+incorporate design heuristics through nominal controllers for the subtasks. We
+validate the proposed computational framework through numerical simulation and
+robotic implementation.
+
+
+Reduced-Rank Hidden Markov Models
+
+  We introduce the Reduced-Rank Hidden Markov Model (RR-HMM), a generalization
+of HMMs that can model smooth state evolution as in Linear Dynamical Systems
+(LDSs) as well as non-log-concave predictive distributions as in
+continuous-observation HMMs. RR-HMMs assume an m-dimensional latent state and n
+discrete observations, with a transition matrix of rank k <= m. This implies
+the dynamics evolve in a k-dimensional subspace, while the shape of the set of
+predictive distributions is determined by m. Latent state belief is represented
+with a k-dimensional state vector and inference is carried out entirely in R^k,
+making RR-HMMs as computationally efficient as k-state HMMs yet more
+expressive. To learn RR-HMMs, we relax the assumptions of a recently proposed
+spectral learning algorithm for HMMs (Hsu, Kakade and Zhang 2009) and apply it
+to learn k-dimensional observable representations of rank-k RR-HMMs. The
+algorithm is consistent and free of local optima, and we extend its performance
+guarantees to cover the RR-HMM case. We show how this algorithm can be used in
+conjunction with a kernel density estimator to efficiently model
+high-dimensional multivariate continuous data. We also relax the assumption
+that single observations are sufficient to disambiguate state, and extend the
+algorithm accordingly. Experiments on synthetic data and a toy video, as well
+as on a difficult robot vision modeling problem, yield accurate models that
+compare favorably with standard alternatives in simulation quality and
+prediction capability.
+
+
+Functional Gradient Motion Planning in Reproducing Kernel Hilbert Spaces
+
+  We introduce a functional gradient descent trajectory optimization algorithm
+for robot motion planning in Reproducing Kernel Hilbert Spaces (RKHSs).
+Functional gradient algorithms are a popular choice for motion planning in
+complex many-degree-of-freedom robots, since they (in theory) work by directly
+optimizing within a space of continuous trajectories to avoid obstacles while
+maintaining geometric properties such as smoothness. However, in practice,
+functional gradient algorithms typically commit to a fixed, finite
+parameterization of trajectories, often as a list of waypoints. Such a
+parameterization can lose much of the benefit of reasoning in a continuous
+trajectory space: e.g., it can require taking an inconveniently small step size
+and large number of iterations to maintain smoothness. Our work generalizes
+functional gradient trajectory optimization by formulating it as minimization
+of a cost functional in an RKHS. This generalization lets us represent
+trajectories as linear combinations of kernel functions, without any need for
+waypoints. As a result, we are able to take larger steps and achieve a locally
+optimal trajectory in just a few iterations. Depending on the selection of
+kernel, we can directly optimize in spaces of trajectories that are inherently
+smooth in velocity, jerk, curvature, etc., and that have a low-dimensional,
+adaptively chosen parameterization. Our experiments illustrate the
+effectiveness of the planner for different kernels, including Gaussian RBFs,
+Laplacian RBFs, and B-splines, as compared to the standard discretized waypoint
+representation.
+
+
+Learning from Conditional Distributions via Dual Embeddings
+
+  Many machine learning tasks, such as learning with invariance and policy
+evaluation in reinforcement learning, can be characterized as problems of
+learning from conditional distributions. In such problems, each sample $x$
+itself is associated with a conditional distribution $p(z|x)$ represented by
+samples $\{z_i\}_{i=1}^M$, and the goal is to learn a function $f$ that links
+these conditional distributions to target values $y$. These learning problems
+become very challenging when we only have limited samples or in the extreme
+case only one sample from each conditional distribution. Commonly used
+approaches either assume that $z$ is independent of $x$, or require an
+overwhelmingly large samples from each conditional distribution.
+  To address these challenges, we propose a novel approach which employs a new
+min-max reformulation of the learning from conditional distribution problem.
+With such new reformulation, we only need to deal with the joint distribution
+$p(z,x)$. We also design an efficient learning algorithm, Embedding-SGD, and
+establish theoretical sample complexity for such problems. Finally, our
+numerical experiments on both synthetic and real-world datasets show that the
+proposed approach can significantly improve over the existing algorithms.
+
+
+Continuous-Time Gaussian Process Motion Planning via Probabilistic
+  Inference
+
+  We introduce a novel formulation of motion planning, for continuous-time
+trajectories, as probabilistic inference. We first show how smooth
+continuous-time trajectories can be represented by a small number of states
+using sparse Gaussian process (GP) models. We next develop an efficient
+gradient-based optimization algorithm that exploits this sparsity and GP
+interpolation. We call this algorithm the Gaussian Process Motion Planner
+(GPMP). We then detail how motion planning problems can be formulated as
+probabilistic inference on a factor graph. This forms the basis for GPMP2, a
+very efficient algorithm that combines GP representations of trajectories with
+fast, structure-exploiting inference via numerical optimization. Finally, we
+extend GPMP2 to an incremental algorithm, iGPMP2, that can efficiently replan
+when conditions change. We benchmark our algorithms against several
+sampling-based and trajectory optimization-based motion planning algorithms on
+planning problems in multiple environments. Our evaluation reveals that GPMP2
+is several times faster than previous algorithms while retaining robustness. We
+also benchmark iGPMP2 on replanning problems, and show that it can find
+successful solutions in a fraction of the time required by GPMP2 to replan from
+scratch.
+
+
+Predictive-State Decoders: Encoding the Future into Recurrent Networks
+
+  Recurrent neural networks (RNNs) are a vital modeling technique that rely on
+internal states learned indirectly by optimization of a supervised,
+unsupervised, or reinforcement training loss. RNNs are used to model dynamic
+processes that are characterized by underlying latent states whose form is
+often unknown, precluding its analytic representation inside an RNN. In the
+Predictive-State Representation (PSR) literature, latent state processes are
+modeled by an internal state representation that directly models the
+distribution of future observations, and most recent work in this area has
+relied on explicitly representing and targeting sufficient statistics of this
+probability distribution. We seek to combine the advantages of RNNs and PSRs by
+augmenting existing state-of-the-art recurrent neural networks with
+Predictive-State Decoders (PSDs), which add supervision to the network's
+internal state representation to target predicting future observations.
+Predictive-State Decoders are simple to implement and easily incorporated into
+existing training pipelines via additional loss regularization. We demonstrate
+the effectiveness of PSDs with experimental results in three different domains:
+probabilistic filtering, Imitation Learning, and Reinforcement Learning. In
+each, our method improves statistical performance of state-of-the-art recurrent
+baselines and does so with fewer iterations and less data.
+
+
+Semantically Meaningful View Selection
+
+  An understanding of the nature of objects could help robots to solve both
+high-level abstract tasks and improve performance at lower-level concrete
+tasks. Although deep learning has facilitated progress in image understanding,
+a robot's performance in problems like object recognition often depends on the
+angle from which the object is observed. Traditionally, robot sorting tasks
+rely on a fixed top-down view of an object. By changing its viewing angle, a
+robot can select a more semantically informative view leading to better
+performance for object recognition. In this paper, we introduce the problem of
+semantic view selection, which seeks to find good camera poses to gain semantic
+knowledge about an observed object. We propose a conceptual formulation of the
+problem, together with a solvable relaxation based on clustering. We then
+present a new image dataset consisting of around 10k images representing
+various views of 144 objects under different poses. Finally we use this dataset
+to propose a first solution to the problem by training a neural network to
+predict a "semantic score" from a top view image and camera pose. The views
+predicted to have higher scores are then shown to provide better clustering
+results than fixed top-down views.
+
+
+Orthogonally Decoupled Variational Gaussian Processes
+
+  Gaussian processes (GPs) provide a powerful non-parametric framework for
+reasoning over functions. Despite appealing theory, its superlinear
+computational and memory complexities have presented a long-standing challenge.
+State-of-the-art sparse variational inference methods trade modeling accuracy
+against complexity. However, the complexities of these methods still scale
+superlinearly in the number of basis functions, implying that that sparse GP
+methods are able to learn from large datasets only when a small model is used.
+Recently, a decoupled approach was proposed that removes the unnecessary
+coupling between the complexities of modeling the mean and the covariance
+functions of a GP. It achieves a linear complexity in the number of mean
+parameters, so an expressive posterior mean function can be modeled. While
+promising, this approach suffers from optimization difficulties due to
+ill-conditioning and non-convexity. In this work, we propose an alternative
+decoupled parametrization. It adopts an orthogonal basis in the mean function
+to model the residues that cannot be learned by the standard coupled approach.
+Therefore, our method extends, rather than replaces, the coupled approach to
+achieve strictly better performance. This construction admits a straightforward
+natural gradient update rule, so the structure of the information manifold that
+is lost during decoupling can be leveraged to speed up learning. Empirically,
+our algorithm demonstrates significantly faster convergence in multiple
+experiments.
+
+
+Robust Learning of Tactile Force Estimation through Robot Interaction
+
+  Current methods for estimating force from tactile sensor signals are either
+inaccurate analytic models or task-specific learned models. In this paper, we
+explore learning a robust model that maps tactile sensor signals to force. We
+specifically explore learning a mapping for the SynTouch BioTac sensor via
+neural networks. We propose a voxelized input feature layer for spatial signals
+and leverage information about the sensor surface to regularize the loss
+function. To learn a robust tactile force model that transfers across tasks, we
+generate ground truth data from three different sources: (1) the BioTac rigidly
+mounted to a force torque~(FT) sensor, (2) a robot interacting with a ball
+rigidly attached to the same FT sensor, and (3) through force inference on a
+planar pushing task by formalizing the mechanics as a system of particles and
+optimizing over the object motion. A total of 140k samples were collected from
+the three sources. We achieve a median angular accuracy of 3.5 degrees in
+predicting force direction (66% improvement over the current state of the art)
+and a median magnitude accuracy of 0.06 N (93% improvement) on a test dataset.
+Additionally, we evaluate the learned force model in a force feedback grasp
+controller performing object lifting and gentle placement. Our results can be
+found on https://sites.google.com/view/tactile-force.
+
+
+Joint Inference of Kinematic and Force Trajectories with Visuo-Tactile
+  Sensing
+
+  To perform complex tasks, robots must be able to interact with and manipulate
+their surroundings. One of the key challenges in accomplishing this is robust
+state estimation during physical interactions, where the state involves not
+only the robot and the object being manipulated, but also the state of the
+contact itself. In this work, within the context of planar pushing, we extend
+previous inference-based approaches to state estimation in several ways. We
+estimate the robot, object, and the contact state on multiple manipulation
+platforms configured with a vision-based articulated model tracker, and either
+a biomimetic tactile sensor or a force-torque sensor. We show how to fuse raw
+measurements from the tracker and tactile sensors to jointly estimate the
+trajectory of the kinematic states and the forces in the system via
+probabilistic inference on factor graphs, in both batch and incremental
+settings. We perform several benchmarks with our framework and show how
+performance is affected by incorporating various geometric and physics based
+constraints, occluding vision sensors, or injecting noise in tactile sensors.
+We also compare with prior work on multiple datasets and demonstrate that our
+approach can effectively optimize over multi-modal sensor data and reduce
+uncertainty to find better state estimates.
+
+

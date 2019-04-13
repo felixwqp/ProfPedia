@@ -1,0 +1,39 @@
+Synthesizing Short-Circuiting Validation of Data Structure Invariants
+
+  This paper presents incremental verification-validation, a novel approach for
+checking rich data structure invariants expressed as separation logic
+assertions. Incremental verification-validation combines static verification of
+separation properties with efficient, short-circuiting dynamic validation of
+arbitrarily rich data constraints. A data structure invariant checker is an
+inductive predicate in separation logic with an executable interpretation; a
+short-circuiting checker is an invariant checker that stops checking whenever
+it detects at run time that an assertion for some sub-structure has been fully
+proven statically. At a high level, our approach does two things: it statically
+proves the separation properties of data structure invariants using a static
+shape analysis in a standard way but then leverages this proof in a novel
+manner to synthesize short-circuiting dynamic validation of the data
+properties. As a consequence, we enable dynamic validation to make up for
+imprecision in sound static analysis while simultaneously leveraging the static
+verification to make the remaining dynamic validation efficient. We show
+empirically that short-circuiting can yield asymptotic improvements in dynamic
+validation, with low overhead over no validation, even in cases where static
+verification is incomplete.
+
+
+Abstracting Event-Driven Systems with Lifestate Rules
+
+  We present lifestate rules--an approach for abstracting event-driven object
+protocols. Developing applications against event-driven software frameworks is
+notoriously difficult. One reason why is that to create functioning
+applications, developers must know about and understand the complex protocols
+that abstract the internal behavior of the framework. Such protocols intertwine
+the proper registering of callbacks to receive control from the framework with
+appropriate application programming interface (API) calls to delegate back to
+it. Lifestate rules unify lifecycle and typestate constraints in one common
+specification language. Our primary contribution is a model of event-driven
+systems from which lifestate rules can be derived. We then apply specification
+mining techniques to learn lifestate specifications for Android framework
+types. In the end, our implementation is able to find several rules that
+characterize actual behavior of the Android framework.
+
+

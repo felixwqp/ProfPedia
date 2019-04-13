@@ -1,0 +1,939 @@
+Comparison-Based Learning with Rank Nets
+
+  We consider the problem of search through comparisons, where a user is
+presented with two candidate objects and reveals which is closer to her
+intended target. We study adaptive strategies for finding the target, that
+require knowledge of rank relationships but not actual distances between
+objects. We propose a new strategy based on rank nets, and show that for target
+distributions with a bounded doubling constant, it finds the target in a number
+of comparisons close to the entropy of the target distribution and, hence, of
+the optimum. We extend these results to the case of noisy oracles, and compare
+this strategy to prior art over multiple datasets.
+
+
+Projection-Free Bandit Convex Optimization
+
+  In this paper, we propose the first computationally efficient projection-free
+algorithm for bandit convex optimization (BCO). We show that our algorithm
+achieves a sublinear regret of $O(nT^{4/5})$ (where $T$ is the horizon and $n$
+is the dimension) for any bounded convex functions with uniformly bounded
+gradients. We also evaluate the performance of our algorithm against baselines
+on both synthetic and real data sets for quadratic programming, portfolio
+selection and matrix completion problems.
+
+
+Coupled Neural Associative Memories
+
+  We propose a novel architecture to design a neural associative memory that is
+capable of learning a large number of patterns and recalling them later in
+presence of noise. It is based on dividing the neurons into local clusters and
+parallel plains, very similar to the architecture of the visual cortex of
+macaque brain. The common features of our proposed architecture with those of
+spatially-coupled codes enable us to show that the performance of such networks
+in eliminating noise is drastically better than the previous approaches while
+maintaining the ability of learning an exponentially large number of patterns.
+Previous work either failed in providing good performance during the recall
+phase or in offering large pattern retrieval (storage) capacities. We also
+present computational experiments that lend additional support to the
+theoretical analysis.
+
+
+Neural Networks Built from Unreliable Components
+
+  Recent advances in associative memory design through strutured pattern sets
+and graph-based inference algorithms have allowed the reliable learning and
+retrieval of an exponential number of patterns. Both these and classical
+associative memories, however, have assumed internally noiseless computational
+nodes. This paper considers the setting when internal computations are also
+noisy. Even if all components are noisy, the final error probability in recall
+can often be made exceedingly small, as we characterize. There is a threshold
+phenomenon. We also show how to optimize inference algorithm parameters when
+knowing statistical properties of internal noise.
+
+
+Noise Facilitation in Associative Memories of Exponential Capacity
+
+  Recent advances in associative memory design through structured pattern sets
+and graph-based inference algorithms have allowed reliable learning and recall
+of an exponential number of patterns. Although these designs correct external
+errors in recall, they assume neurons that compute noiselessly, in contrast to
+the highly variable neurons in brain regions thought to operate associatively
+such as hippocampus and olfactory cortex.
+  Here we consider associative memories with noisy internal computations and
+analytically characterize performance. As long as the internal noise level is
+below a specified threshold, the error probability in the recall phase can be
+made exceedingly small. More surprisingly, we show that internal noise actually
+improves the performance of the recall phase while the pattern retrieval
+capacity remains intact, i.e., the number of stored patterns does not reduce
+with noise (up to a threshold). Computational experiments lend additional
+support to our theoretical analysis. This work suggests a functional benefit to
+noisy neurons in biological neuronal networks.
+
+
+From Small-World Networks to Comparison-Based Search
+
+  The problem of content search through comparisons has recently received
+considerable attention. In short, a user searching for a target object
+navigates through a database in the following manner: the user is asked to
+select the object most similar to her target from a small list of objects. A
+new object list is then presented to the user based on her earlier selection.
+This process is repeated until the target is included in the list presented, at
+which point the search terminates. This problem is known to be strongly related
+to the small-world network design problem.
+  However, contrary to prior work, which focuses on cases where objects in the
+database are equally popular, we consider here the case where the demand for
+objects may be heterogeneous. We show that, under heterogeneous demand, the
+small-world network design problem is NP-hard. Given the above negative result,
+we propose a novel mechanism for small-world design and provide an upper bound
+on its performance under heterogeneous demand. The above mechanism has a
+natural equivalent in the context of content search through comparisons, and we
+establish both an upper bound and a lower bound for the performance of this
+mechanism. These bounds are intuitively appealing, as they depend on the
+entropy of the demand as well as its doubling constant, a quantity capturing
+the topology of the set of target objects. They also illustrate interesting
+connections between comparison-based search to classic results from information
+theory. Finally, we propose an adaptive learning algorithm for content search
+that meets the performance guarantees achieved by the above mechanisms.
+
+
+Multi-Level Error-Resilient Neural Networks with Learning
+
+  The problem of neural network association is to retrieve a previously
+memorized pattern from its noisy version using a network of neurons. An ideal
+neural network should include three components simultaneously: a learning
+algorithm, a large pattern retrieval capacity and resilience against noise.
+Prior works in this area usually improve one or two aspects at the cost of the
+third.
+  Our work takes a step forward in closing this gap. More specifically, we show
+that by forcing natural constraints on the set of learning patterns, we can
+drastically improve the retrieval capacity of our neural network. Moreover, we
+devise a learning algorithm whose role is to learn those patterns satisfying
+the above mentioned constraints. Finally we show that our neural network can
+cope with a fair amount of noise.
+
+
+Lazier Than Lazy Greedy
+
+  Is it possible to maximize a monotone submodular function faster than the
+widely used lazy greedy algorithm (also known as accelerated greedy), both in
+theory and practice? In this paper, we develop the first linear-time algorithm
+for maximizing a general monotone submodular function subject to a cardinality
+constraint. We show that our randomized algorithm, STOCHASTIC-GREEDY, can
+achieve a $(1-1/e-\varepsilon)$ approximation guarantee, in expectation, to the
+optimum solution in time linear in the size of the data and independent of the
+cardinality constraint. We empirically demonstrate the effectiveness of our
+algorithm on submodular functions arising in data summarization, including
+training large-scale kernel methods, exemplar-based clustering, and sensor
+placement. We observe that STOCHASTIC-GREEDY practically achieves the same
+utility value as lazy greedy but runs much faster. More surprisingly, we
+observe that in many practical scenarios STOCHASTIC-GREEDY does not evaluate
+the whole fraction of data points even once and still achieves
+indistinguishable results compared to lazy greedy.
+
+
+Near-Optimally Teaching the Crowd to Classify
+
+  How should we present training examples to learners to teach them
+classification rules? This is a natural problem when training workers for
+crowdsourcing labeling tasks, and is also motivated by challenges in
+data-driven online education. We propose a natural stochastic model of the
+learners, modeling them as randomly switching among hypotheses based on
+observed feedback. We then develop STRICT, an efficient algorithm for selecting
+examples to teach to workers. Our solution greedily maximizes a submodular
+surrogate objective function in order to select examples to show to the
+learners. We prove that our strategy is competitive with the optimal teaching
+policy. Moreover, for the special case of linear separators, we prove that an
+exponential reduction in error probability can be achieved. Our experiments on
+simulated workers as well as three real image annotation tasks on Amazon
+Mechanical Turk show the effectiveness of our teaching algorithm.
+
+
+Near Optimal Bayesian Active Learning for Decision Making
+
+  How should we gather information to make effective decisions? We address
+Bayesian active learning and experimental design problems, where we
+sequentially select tests to reduce uncertainty about a set of hypotheses.
+Instead of minimizing uncertainty per se, we consider a set of overlapping
+decision regions of these hypotheses. Our goal is to drive uncertainty into a
+single decision region as quickly as possible.
+  We identify necessary and sufficient conditions for correctly identifying a
+decision region that contains all hypotheses consistent with observations. We
+develop a novel Hyperedge Cutting (HEC) algorithm for this problem, and prove
+that is competitive with the intractable optimal policy. Our efficient
+implementation of the algorithm relies on computing subsets of the complete
+homogeneous symmetric polynomials. Finally, we demonstrate its effectiveness on
+two practical applications: approximate comparison-based learning and active
+localization using a robot manipulator.
+
+
+Distributed Submodular Maximization
+
+  Many large-scale machine learning problems--clustering, non-parametric
+learning, kernel machines, etc.--require selecting a small yet representative
+subset from a large dataset. Such problems can often be reduced to maximizing a
+submodular set function subject to various constraints. Classical approaches to
+submodular optimization require centralized access to the full dataset, which
+is impractical for truly large-scale problems. In this paper, we consider the
+problem of submodular function maximization in a distributed fashion. We
+develop a simple, two-stage protocol GreeDi, that is easily implemented using
+MapReduce style computations. We theoretically analyze our approach, and show
+that under certain natural conditions, performance close to the centralized
+approach can be achieved. We begin with monotone submodular maximization
+subject to a cardinality constraint, and then extend this approach to obtain
+approximation guarantees for (not necessarily monotone) submodular maximization
+subject to more general constraints including matroid or knapsack constraints.
+In our extensive experiments, we demonstrate the effectiveness of our approach
+on several applications, including sparse Gaussian process inference and
+exemplar based clustering on tens of millions of examples using Hadoop.
+
+
+Fast Mixing for Discrete Point Processes
+
+  We investigate the systematic mechanism for designing fast mixing Markov
+chain Monte Carlo algorithms to sample from discrete point processes under the
+Dobrushin uniqueness condition for Gibbs measures. Discrete point processes are
+defined as probability distributions $\mu(S)\propto \exp(\beta f(S))$ over all
+subsets $S\in 2^V$ of a finite set $V$ through a bounded set function
+$f:2^V\rightarrow \mathbb{R}$ and a parameter $\beta>0$. A subclass of discrete
+point processes characterized by submodular functions (which include
+log-submodular distributions, submodular point processes, and determinantal
+point processes) has recently gained a lot of interest in machine learning and
+shown to be effective for modeling diversity and coverage. We show that if the
+set function (not necessarily submodular) displays a natural notion of decay of
+correlation, then, for $\beta$ small enough, it is possible to design fast
+mixing Markov chain Monte Carlo methods that yield error bounds on marginal
+approximations that do not depend on the size of the set $V$. The sufficient
+conditions that we derive involve a control on the (discrete) Hessian of set
+functions, a quantity that has not been previously considered in the
+literature. We specialize our results for submodular functions, and we discuss
+canonical examples where the Hessian can be easily controlled.
+
+
+Tradeoffs for Space, Time, Data and Risk in Unsupervised Learning
+
+  Faced with massive data, is it possible to trade off (statistical) risk, and
+(computational) space and time? This challenge lies at the heart of large-scale
+machine learning. Using k-means clustering as a prototypical unsupervised
+learning problem, we show how we can strategically summarize the data (control
+space) in order to trade off risk and time when data is generated by a
+probabilistic model. Our summarization is based on coreset constructions from
+computational geometry. We also develop an algorithm, TRAM, to navigate the
+space/time/data/risk tradeoff in practice. In particular, we show that for a
+fixed risk (or data size), as the data size increases (resp. risk increases)
+the running time of TRAM decreases. Our extensive experiments on real data sets
+demonstrate the existence and practical utility of such tradeoffs, not only for
+k-means but also for Gaussian Mixture Models.
+
+
+Streaming Weak Submodularity: Interpreting Neural Networks on the Fly
+
+  In many machine learning applications, it is important to explain the
+predictions of a black-box classifier. For example, why does a deep neural
+network assign an image to a particular class? We cast interpretability of
+black-box classifiers as a combinatorial maximization problem and propose an
+efficient streaming algorithm to solve it subject to cardinality constraints.
+By extending ideas from Badanidiyuru et al. [2014], we provide a constant
+factor approximation guarantee for our algorithm in the case of random stream
+order and a weakly submodular objective function. This is the first such
+theoretical guarantee for this general class of functions, and we also show
+that no such algorithm exists for a worst case stream order. Our algorithm
+obtains similar explanations of Inception V3 predictions $10$ times faster than
+the state-of-the-art LIME framework of Ribeiro et al. [2016].
+
+
+Conditional Gradient Method for Stochastic Submodular Maximization:
+  Closing the Gap
+
+  In this paper, we study the problem of \textit{constrained} and
+\textit{stochastic} continuous submodular maximization. Even though the
+objective function is not concave (nor convex) and is defined in terms of an
+expectation, we develop a variant of the conditional gradient method, called
+\alg, which achieves a \textit{tight} approximation guarantee. More precisely,
+for a monotone and continuous DR-submodular function and subject to a
+\textit{general} convex body constraint, we prove that \alg achieves a
+$[(1-1/e)\text{OPT} -\eps]$ guarantee (in expectation) with
+$\mathcal{O}{(1/\eps^3)}$ stochastic gradient computations. This guarantee
+matches the known hardness results and closes the gap between deterministic and
+stochastic continuous submodular maximization. By using stochastic continuous
+optimization as an interface, we also provide the first $(1-1/e)$ tight
+approximation guarantee for maximizing a \textit{monotone but stochastic}
+submodular \textit{set} function subject to a general matroid constraint.
+
+
+Deletion-Robust Submodular Maximization at Scale
+
+  Can we efficiently extract useful information from a large user-generated
+dataset while protecting the privacy of the users and/or ensuring fairness in
+representation. We cast this problem as an instance of a deletion-robust
+submodular maximization where part of the data may be deleted due to privacy
+concerns or fairness criteria. We propose the first memory-efficient
+centralized, streaming, and distributed methods with constant-factor
+approximation guarantees against any number of adversarial deletions. We
+extensively evaluate the performance of our algorithms against prior
+state-of-the-art on real-world applications, including (i) Uber-pick up
+locations with location privacy constraints; (ii) feature selection with
+fairness constraints for income prediction and crime rate prediction; and (iii)
+robust to deletion summarization of census data, consisting of 2,458,285
+feature vectors.
+
+
+Decentralized Submodular Maximization: Bridging Discrete and Continuous
+  Settings
+
+  In this paper, we showcase the interplay between discrete and continuous
+optimization in network-structured settings. We propose the first fully
+decentralized optimization method for a wide class of non-convex objective
+functions that possess a diminishing returns property. More specifically, given
+an arbitrary connected network and a global continuous submodular function,
+formed by a sum of local functions, we develop Decentralized Continuous Greedy
+(DCG), a message passing algorithm that converges to the tight (1-1/e)
+approximation factor of the optimum global solution using only local
+computation and communication. We also provide strong convergence bounds as a
+function of network size and spectral characteristics of the underlying
+topology. Interestingly, DCG readily provides a simple recipe for decentralized
+discrete submodular maximization through the means of continuous relaxations.
+Formally, we demonstrate that by lifting the local discrete functions to
+continuous domains and using DCG as an interface we can develop a consensus
+algorithm that also achieves the tight (1-1/e) approximation guarantee of the
+global discrete solution once a proper rounding scheme is applied.
+
+
+Online Continuous Submodular Maximization
+
+  In this paper, we consider an online optimization process, where the
+objective functions are not convex (nor concave) but instead belong to a broad
+class of continuous submodular functions. We first propose a variant of the
+Frank-Wolfe algorithm that has access to the full gradient of the objective
+functions. We show that it achieves a regret bound of $O(\sqrt{T})$ (where $T$
+is the horizon of the online optimization problem) against a
+$(1-1/e)$-approximation to the best feasible solution in hindsight. However, in
+many scenarios, only an unbiased estimate of the gradients are available. For
+such settings, we then propose an online stochastic gradient ascent algorithm
+that also achieves a regret bound of $O(\sqrt{T})$ regret, albeit against a
+weaker $1/2$-approximation to the best feasible solution in hindsight. We also
+generalize our results to $\gamma$-weakly submodular functions and prove the
+same sublinear regret bounds. Finally, we demonstrate the efficiency of our
+algorithms on a few problem instances, including non-convex/non-concave
+quadratic programs, multilinear extensions of submodular set functions, and
+D-optimal design.
+
+
+Do Less, Get More: Streaming Submodular Maximization with Subsampling
+
+  In this paper, we develop the first one-pass streaming algorithm for
+submodular maximization that does not evaluate the entire stream even once. By
+carefully subsampling each element of data stream, our algorithm enjoys the
+tightest approximation guarantees in various settings while having the smallest
+memory footprint and requiring the lowest number of function evaluations. More
+specifically, for a monotone submodular function and a $p$-matchoid constraint,
+our randomized algorithm achieves a $4p$ approximation ratio (in expectation)
+with $O(k)$ memory and $O(km/p)$ queries per element ($k$ is the size of the
+largest feasible solution and $m$ is the number of matroids used to define the
+constraint). For the non-monotone case, our approximation ratio increases only
+slightly to $4p+2-o(1)$. To the best or our knowledge, our algorithm is the
+first that combines the benefits of streaming and subsampling in a novel way in
+order to truly scale submodular maximization to massive machine learning
+problems. To showcase its practicality, we empirically evaluated the
+performance of our algorithm on a video summarization application and observed
+that it outperforms the state-of-the-art algorithm by up to fifty fold, while
+maintaining practically the same utility.
+
+
+Submodularity on Hypergraphs: From Sets to Sequences
+
+  In a nutshell, submodular functions encode an intuitive notion of diminishing
+returns. As a result, submodularity appears in many important machine learning
+tasks such as feature selection and data summarization. Although there has been
+a large volume of work devoted to the study of submodular functions in recent
+years, the vast majority of this work has been focused on algorithms that
+output sets, not sequences. However, in many settings, the order in which we
+output items can be just as important as the items themselves.
+  To extend the notion of submodularity to sequences, we use a directed graph
+on the items where the edges encode the additional value of selecting items in
+a particular order. Existing theory is limited to the case where this
+underlying graph is a directed acyclic graph. In this paper, we introduce two
+new algorithms that provably give constant factor approximations for general
+graphs and hypergraphs having bounded in or out degrees. Furthermore, we show
+the utility of our new algorithms for real-world applications in movie
+recommendation, online link prediction, and the design of course sequences for
+MOOCs.
+
+
+Data Summarization at Scale: A Two-Stage Submodular Approach
+
+  The sheer scale of modern datasets has resulted in a dire need for
+summarization techniques that identify representative elements in a dataset.
+Fortunately, the vast majority of data summarization tasks satisfy an intuitive
+diminishing returns condition known as submodularity, which allows us to find
+nearly-optimal solutions in linear time. We focus on a two-stage submodular
+framework where the goal is to use some given training functions to reduce the
+ground set so that optimizing new functions (drawn from the same distribution)
+over the reduced set provides almost as much value as optimizing them over the
+entire ground set. In this paper, we develop the first streaming and
+distributed solutions to this problem. In addition to providing strong
+theoretical guarantees, we demonstrate both the utility and efficiency of our
+algorithms on real-world tasks including image summarization and ride-share
+optimization.
+
+
+Eliminating Latent Discrimination: Train Then Mask
+
+  How can we control for latent discrimination in predictive models? How can we
+provably remove it? Such questions are at the heart of algorithmic fairness and
+its impacts on society. In this paper, we define a new operational fairness
+criteria, inspired by the well-understood notion of omitted variable-bias in
+statistics and econometrics. Our notion of fairness effectively controls for
+sensitive features and provides diagnostics for deviations from fair decision
+making. We then establish analytical and algorithmic results about the
+existence of a fair classifier in the context of supervised learning. Our
+results readily imply a simple, but rather counter-intuitive, strategy for
+eliminating latent discrimination. In order to prevent other features proxying
+for sensitive features, we need to include sensitive features in the training
+phase, but exclude them in the test/evaluation phase while controlling for
+their effects. We evaluate the performance of our algorithm on several
+real-world datasets and show how fairness for these datasets can be improved
+with a very small loss in accuracy.
+
+
+Unconstrained Submodular Maximization with Constant Adaptive Complexity
+
+  In this paper, we consider the unconstrained submodular maximization problem.
+We propose the first algorithm for this problem that achieves a tight
+$(1/2-\varepsilon)$-approximation guarantee using $\tilde{O}(\varepsilon^{-1})$
+adaptive rounds and a linear number of function evaluations. No previously
+known algorithm for this problem achieves an approximation ratio better than
+$1/3$ using less than $\Omega(n)$ rounds of adaptivity, where $n$ is the size
+of the ground set. Moreover, our algorithm easily extends to the maximization
+of a non-negative continuous DR-submodular function subject to a box constraint
+and achieves a tight $(1/2-\varepsilon)$-approximation guarantee for this
+problem while keeping the same adaptive and query complexities.
+
+
+Black Box Submodular Maximization: Discrete and Continuous Settings
+
+  In this paper, we consider the problem of black box continuous submodular
+maximization where we only have access to the function values and no
+information about the derivatives is provided. For a monotone and continuous
+DR-submodular function, and subject to a bounded convex body constraint, we
+propose Black-box Continuous Greedy, a derivative-free algorithm that provably
+achieves the tight $[(1-1/e)OPT-\epsilon]$ approximation guarantee with
+$O(d/\epsilon^3)$ function evaluations. We then extend our result to the
+stochastic setting where function values are subject to stochastic zero-mean
+noise. It is through this stochastic generalization that we revisit the
+discrete submodular maximization problem and use the multi-linear extension as
+a bridge between discrete and continuous settings. Finally, we extensively
+evaluate the performance of our algorithm on continuous and discrete submodular
+objective functions using both synthetic and real data.
+
+
+Adaptive Sequence Submodularity
+
+  In many machine learning applications, one needs to interactively select a
+sequence of items (e.g., recommending movies based on a user's feedback) or
+make sequential decisions in certain orders (e.g., guiding an agent through a
+series of states). Not only do sequences already pose a dauntingly large search
+space, but we must take into account past observations, as well as the
+uncertainty of future outcomes. Without further structure, finding an optimal
+sequence is notoriously challenging, if not completely intractable.
+  In this paper, we introduce adaptive sequence submodularity, a rich framework
+that generalizes the notion of submodularity to adaptive policies that
+explicitly consider sequential dependencies between items. We show that once
+such dependencies are encoded by a directed graph, an adaptive greedy policy is
+guaranteed to achieve a constant factor approximation guarantee, where the
+constant naturally depends on the structural properties of the underlying
+graph. Additionally, to demonstrate the practical utility of our results, we
+run experiments on Amazon product recommendation and Wikipedia link prediction
+tasks.
+
+
+Quantized Frank-Wolfe: Communication-Efficient Distributed Optimization
+
+  How can we efficiently mitigate the overhead of gradient communications in
+distributed optimization? This problem is at the heart of training scalable
+machine learning models and has been mainly studied in the unconstrained
+setting. In this paper, we propose Quantized Frank-Wolfe (QFW), the first
+projection-free and communication-efficient algorithm for solving constrained
+optimization problems at scale. We consider both convex and non-convex
+objective functions, expressed as a finite-sum or more generally a stochastic
+optimization problem, and provide strong theoretical guarantees on the
+convergence rate of QFW. This is done by proposing quantization schemes that
+efficiently compress gradients while controlling the variance introduced during
+this process. Finally, we empirically validate the efficiency of QFW in terms
+of communication and the quality of returned solution against natural
+baselines.
+
+
+Stochastic Conditional Gradient++
+
+  In this paper, we develop Stochastic Continuous Greedy++ (SCG++), the first
+efficient variant of a conditional gradient method for maximizing a continuous
+submodular function subject to a convex constraint. Concretely, for a monotone
+and continuous DR-submodular function, SCG++ achieves a tight
+$[(1-1/e)\text{OPT} -\epsilon]$ solution while using $O(1/\epsilon^2)$
+stochastic oracle queries and $O(1/\epsilon)$ calls to the linear optimization
+oracle. The best previously known algorithms either achieve a suboptimal
+$[(1/2)\text{OPT} -\epsilon]$ solution with $O(1/\epsilon^2)$ stochastic
+gradients or the tight $[(1-1/e)\text{OPT} -\epsilon]$ solution with suboptimal
+$O(1/\epsilon^3)$ stochastic gradients. SCG++ enjoys optimality in terms of
+both approximation guarantee and stochastic stochastic oracle queries. Our
+novel variance reduction method naturally extends to stochastic convex
+minimization. More precisely, we develop Stochastic Frank-Wolfe++ (SFW++) that
+achieves an $\epsilon$-approximate optimum with only $O(1/\epsilon)$ calls to
+the linear optimization oracle while using $O(1/\epsilon^2)$ stochastic oracle
+queries in total. Therefore, SFW++ is the first efficient projection-free
+algorithm that achieves the optimum complexity $O(1/\epsilon^2)$ in terms of
+stochastic oracle queries.
+
+
+Convolutional Neural Associative Memories: Massive Capacity with Noise
+  Tolerance
+
+  The task of a neural associative memory is to retrieve a set of previously
+memorized patterns from their noisy versions using a network of neurons. An
+ideal network should have the ability to 1) learn a set of patterns as they
+arrive, 2) retrieve the correct patterns from noisy queries, and 3) maximize
+the pattern retrieval capacity while maintaining the reliability in responding
+to queries. The majority of work on neural associative memories has focused on
+designing networks capable of memorizing any set of randomly chosen patterns at
+the expense of limiting the retrieval capacity. In this paper, we show that if
+we target memorizing only those patterns that have inherent redundancy (i.e.,
+belong to a subspace), we can obtain all the aforementioned properties. This is
+in sharp contrast with the previous work that could only improve one or two
+aspects at the expense of the third. More specifically, we propose framework
+based on a convolutional neural network along with an iterative algorithm that
+learns the redundancy among the patterns. The resulting network has a retrieval
+capacity that is exponential in the size of the network. Moreover, the
+asymptotic error correction performance of our network is linear in the size of
+the patterns. We then ex- tend our approach to deal with patterns lie
+approximately in a subspace. This extension allows us to memorize datasets
+containing natural patterns (e.g., images). Finally, we report experimental
+results on both synthetic and real datasets to support our claims.
+
+
+An Estimation Theoretic Approach for Sparsity Pattern Recovery in the
+  Noisy Setting
+
+  Compressed sensing deals with the reconstruction of sparse signals using a
+small number of linear measurements. One of the main challenges in compressed
+sensing is to find the support of a sparse signal. In the literature, several
+bounds on the scaling law of the number of measurements for successful support
+recovery have been derived where the main focus is on random Gaussian
+measurement matrices. In this paper, we investigate the noisy support recovery
+problem from an estimation theoretic point of view, where no specific
+assumption is made on the underlying measurement matrix. The linear
+measurements are perturbed by additive white Gaussian noise. We define the
+output of a support estimator to be a set of position values in increasing
+order. We set the error between the true and estimated supports as the
+$\ell_2$-norm of their difference. On the one hand, this choice allows us to
+use the machinery behind the $\ell_2$-norm error metric and on the other hand,
+converts the support recovery into a more intuitive and geometrical problem.
+First, by using the Hammersley-Chapman-Robbins (HCR) bound, we derive a
+fundamental lower bound on the performance of any \emph{unbiased} estimator of
+the support set. This lower bound provides us with necessary conditions on the
+number of measurements for reliable $\ell_2$-norm support recovery, which we
+specifically evaluate for uniform Gaussian measurement matrices. Then, we
+analyze the maximum likelihood estimator and derive conditions under which the
+HCR bound is achievable. This leads us to the number of measurements for the
+optimum decoder which is sufficient for reliable $\ell_2$-norm support
+recovery. Using this framework, we specifically evaluate sufficient conditions
+for uniform Gaussian measurement matrices.
+
+
+Calibration Using Matrix Completion with Application to Ultrasound
+  Tomography
+
+  We study the calibration process in circular ultrasound tomography devices
+where the sensor positions deviate from the circumference of a perfect circle.
+This problem arises in a variety of applications in signal processing ranging
+from breast imaging to sensor network localization. We introduce a novel method
+of calibration/localization based on the time-of-flight (ToF) measurements
+between sensors when the enclosed medium is homogeneous. In the presence of all
+the pairwise ToFs, one can easily estimate the sensor positions using
+multi-dimensional scaling (MDS) method. In practice however, due to the
+transitional behaviour of the sensors and the beam form of the transducers, the
+ToF measurements for close-by sensors are unavailable. Further, random
+malfunctioning of the sensors leads to random missing ToF measurements. On top
+of the missing entries, in practice an unknown time delay is also added to the
+measurements. In this work, we incorporate the fact that a matrix defined from
+all the ToF measurements is of rank at most four. In order to estimate the
+missing ToFs, we apply a state-of-the-art low-rank matrix completion algorithm,
+OPTSPACE . To find the correct positions of the sensors (our ultimate goal) we
+then apply MDS. We show analytic bounds on the overall error of the whole
+process in the presence of noise and hence deduce its robustness. Finally, we
+confirm the functionality of our method in practice by simulations mimicking
+the measurements of a circular ultrasound tomography device.
+
+
+Robust Localization from Incomplete Local Information
+
+  We consider the problem of localizing wireless devices in an ad-hoc network
+embedded in a d-dimensional Euclidean space. Obtaining a good estimation of
+where wireless devices are located is crucial in wireless network applications
+including environment monitoring, geographic routing and topology control. When
+the positions of the devices are unknown and only local distance information is
+given, we need to infer the positions from these local distance measurements.
+This problem is particularly challenging when we only have access to
+measurements that have limited accuracy and are incomplete. We consider the
+extreme case of this limitation on the available information, namely only the
+connectivity information is available, i.e., we only know whether a pair of
+nodes is within a fixed detection range of each other or not, and no
+information is known about how far apart they are. Further, to account for
+detection failures, we assume that even if a pair of devices is within the
+detection range, it fails to detect the presence of one another with some
+probability and this probability of failure depends on how far apart those
+devices are. Given this limited information, we investigate the performance of
+a centralized positioning algorithm MDS-MAP introduced by Shang et al., and a
+distributed positioning algorithm, introduced by Savarese et al., called
+HOP-TERRAIN. In particular, for a network consisting of n devices positioned
+randomly, we provide a bound on the resulting error for both algorithms. We
+show that the error is bounded, decreasing at a rate that is proportional to
+R/Rc, where Rc is the critical detection range when the resulting random
+network starts to be connected, and R is the detection range of each device.
+
+
+Seeing the Unseen Network: Inferring Hidden Social Ties from
+  Respondent-Driven Sampling
+
+  Learning about the social structure of hidden and hard-to-reach populations
+--- such as drug users and sex workers --- is a major goal of epidemiological
+and public health research on risk behaviors and disease prevention.
+Respondent-driven sampling (RDS) is a peer-referral process widely used by many
+health organizations, where research subjects recruit other subjects from their
+social network. In such surveys, researchers observe who recruited whom, along
+with the time of recruitment and the total number of acquaintances (network
+degree) of respondents. However, due to privacy concerns, the identities of
+acquaintances are not disclosed. In this work, we show how to reconstruct the
+underlying network structure through which the subjects are recruited. We
+formulate the dynamics of RDS as a continuous-time diffusion process over the
+underlying graph and derive the likelihood for the recruitment time series
+under an arbitrary recruitment time distribution. We develop an efficient
+stochastic optimization algorithm called RENDER (REspoNdent-Driven nEtwork
+Reconstruction) that finds the network that best explains the collected data.
+We support our analytical results through an exhaustive set of experiments on
+both synthetic and real data.
+
+
+Near-Optimal Active Learning of Halfspaces via Query Synthesis in the
+  Noisy Setting
+
+  In this paper, we consider the problem of actively learning a linear
+classifier through query synthesis where the learner can construct artificial
+queries in order to estimate the true decision boundaries. This problem has
+recently gained a lot of interest in automated science and adversarial reverse
+engineering for which only heuristic algorithms are known. In such
+applications, queries can be constructed de novo to elicit information (e.g.,
+automated science) or to evade detection with minimal cost (e.g., adversarial
+reverse engineering). We develop a general framework, called dimension coupling
+(DC), that 1) reduces a d-dimensional learning problem to d-1 low dimensional
+sub-problems, 2) solves each sub-problem efficiently, 3) appropriately
+aggregates the results and outputs a linear classifier, and 4) provides a
+theoretical guarantee for all possible schemes of aggregation. The proposed
+method is proved resilient to noise. We show that the DC framework avoids the
+curse of dimensionality: its computational complexity scales linearly with the
+dimension. Moreover, we show that the query complexity of DC is near optimal
+(within a constant factor of the optimum algorithm). To further support our
+theoretical analysis, we compare the performance of DC with the existing work.
+We observe that DC consistently outperforms the prior arts in terms of query
+complexity while often running orders of magnitude faster.
+
+
+Submodular Variational Inference for Network Reconstruction
+
+  In real-world and online social networks, individuals receive and transmit
+information in real time. Cascading information transmissions (e.g. phone
+calls, text messages, social media posts) may be understood as a realization of
+a diffusion process operating on the network, and its branching path can be
+represented by a directed tree. The process only traverses and thus reveals a
+limited portion of the edges. The network reconstruction/inference problem is
+to infer the unrevealed connections. Most existing approaches derive a
+likelihood and attempt to find the network topology maximizing the likelihood,
+a problem that is highly intractable. In this paper, we focus on the network
+reconstruction problem for a broad class of real-world diffusion processes,
+exemplified by a network diffusion scheme called respondent-driven sampling
+(RDS). We prove that under realistic and general models of network diffusion,
+the posterior distribution of an observed RDS realization is a Bayesian
+log-submodular model.We then propose VINE (Variational Inference for Network
+rEconstruction), a novel, accurate, and computationally efficient variational
+inference algorithm, for the network reconstruction problem under this model.
+Crucially, we do not assume any particular probabilistic model for the
+underlying network. VINE recovers any connected graph with high accuracy as
+shown by our experimental results on real-life networks.
+
+
+Greed is Good: Near-Optimal Submodular Maximization via Greedy
+  Optimization
+
+  It is known that greedy methods perform well for maximizing monotone
+submodular functions. At the same time, such methods perform poorly in the face
+of non-monotonicity. In this paper, we show - arguably, surprisingly - that
+invoking the classical greedy algorithm $O(\sqrt{k})$-times leads to the
+(currently) fastest deterministic algorithm, called Repeated Greedy, for
+maximizing a general submodular function subject to $k$-independent system
+constraints. Repeated Greedy achieves $(1 + O(1/\sqrt{k}))k$ approximation
+using $O(nr\sqrt{k})$ function evaluations (here, $n$ and $r$ denote the size
+of the ground set and the maximum size of a feasible solution, respectively).
+We then show that by a careful sampling procedure, we can run the greedy
+algorithm only once and obtain the (currently) fastest randomized algorithm,
+called Sample Greedy, for maximizing a submodular function subject to
+$k$-extendible system constraints (a subclass of $k$-independent system
+constrains). Sample Greedy achieves $(k + 3)$-approximation with only $O(nr/k)$
+function evaluations. Finally, we derive an almost matching lower bound, and
+show that no polynomial time algorithm can have an approximation ratio smaller
+than $ k + 1/2 - \varepsilon$. To further support our theoretical results, we
+compare the performance of Repeated Greedy and Sample Greedy with prior art in
+a concrete application (movie recommendation). We consistently observe that
+while Sample Greedy achieves practically the same utility as the best baseline,
+it performs at least two orders of magnitude faster.
+
+
+Estimating the Size of a Large Network and its Communities from a Random
+  Sample
+
+  Most real-world networks are too large to be measured or studied directly and
+there is substantial interest in estimating global network properties from
+smaller sub-samples. One of the most important global properties is the number
+of vertices/nodes in the network. Estimating the number of vertices in a large
+network is a major challenge in computer science, epidemiology, demography, and
+intelligence analysis. In this paper we consider a population random graph G =
+(V;E) from the stochastic block model (SBM) with K communities/blocks. A sample
+is obtained by randomly choosing a subset W and letting G(W) be the induced
+subgraph in G of the vertices in W. In addition to G(W), we observe the total
+degree of each sampled vertex and its block membership. Given this partial
+information, we propose an efficient PopULation Size Estimation algorithm,
+called PULSE, that correctly estimates the size of the whole population as well
+as the size of each community. To support our theoretical analysis, we perform
+an exhaustive set of experiments to study the effects of sample size, K, and
+SBM model parameters on the accuracy of the estimates. The experimental results
+also demonstrate that PULSE significantly outperforms a widely-used method
+called the network scale-up estimator in a wide variety of scenarios. We
+conclude with extensions and directions for future work.
+
+
+Gradient Methods for Submodular Maximization
+
+  In this paper, we study the problem of maximizing continuous submodular
+functions that naturally arise in many learning applications such as those
+involving utility functions in active learning and sensing, matrix
+approximations and network inference. Despite the apparent lack of convexity in
+such functions, we prove that stochastic projected gradient methods can provide
+strong approximation guarantees for maximizing continuous submodular functions
+with convex constraints. More specifically, we prove that for monotone
+continuous DR-submodular functions, all fixed points of projected gradient
+ascent provide a factor $1/2$ approximation to the global maxima. We also study
+stochastic gradient and mirror methods and show that after
+$\mathcal{O}(1/\epsilon^2)$ iterations these methods reach solutions which
+achieve in expectation objective values exceeding
+$(\frac{\text{OPT}}{2}-\epsilon)$. An immediate application of our results is
+to maximize submodular functions that are defined stochastically, i.e. the
+submodular function is defined as an expectation over a family of submodular
+functions with an unknown distribution. We will show how stochastic gradient
+methods are naturally well-suited for this setting, leading to a factor $1/2$
+approximation when the function is monotone. In particular, it allows us to
+approximately maximize discrete, monotone submodular optimization problems via
+projected gradient descent on a continuous relaxation, directly connecting the
+discrete and continuous domains. Finally, experiments on real data demonstrate
+that our projected gradient methods consistently achieve the best utility
+compared to other continuous baselines while remaining competitive in terms of
+computational effort.
+
+
+Comparison Based Learning from Weak Oracles
+
+  There is increasing interest in learning algorithms that involve interaction
+between human and machine. Comparison-based queries are among the most natural
+ways to get feedback from humans. A challenge in designing comparison-based
+interactive learning algorithms is coping with noisy answers. The most common
+fix is to submit a query several times, but this is not applicable in many
+situations due to its prohibitive cost and due to the unrealistic assumption of
+independent noise in different repetitions of the same query.
+  In this paper, we introduce a new weak oracle model, where a non-malicious
+user responds to a pairwise comparison query only when she is quite sure about
+the answer. This model is able to mimic the behavior of a human in noise-prone
+regions. We also consider the application of this weak oracle model to the
+problem of content search (a variant of the nearest neighbor search problem)
+through comparisons. More specifically, we aim at devising efficient algorithms
+to locate a target object in a database equipped with a dissimilarity metric
+via invocation of the weak comparison oracle. We propose two algorithms termed
+WORCS-I and WORCS-II (Weak-Oracle Comparison-based Search), which provably
+locate the target object in a number of comparisons close to the entropy of the
+target distribution. While WORCS-I provides better theoretical guarantees,
+WORCS-II is applicable to more technically challenging scenarios where the
+algorithm has limited access to the ranking dissimilarity between objects. A
+series of experiments validate the performance of our proposed algorithms.
+
+
+Projection-Free Online Optimization with Stochastic Gradient: From
+  Convexity to Submodularity
+
+  Online optimization has been a successful framework for solving large-scale
+problems under computational constraints and partial information. Current
+methods for online convex optimization require either a projection or exact
+gradient computation at each step, both of which can be prohibitively expensive
+for large-scale applications. At the same time, there is a growing trend of
+non-convex optimization in machine learning community and a need for online
+methods. Continuous DR-submodular functions, which exhibit a natural
+diminishing returns condition, have recently been proposed as a broad class of
+non-convex functions which may be efficiently optimized. Although online
+methods have been introduced, they suffer from similar problems. In this work,
+we propose Meta-Frank-Wolfe, the first online projection-free algorithm that
+uses stochastic gradient estimates. The algorithm relies on a careful sampling
+of gradients in each round and achieves the optimal $O( \sqrt{T})$ adversarial
+regret bounds for convex and continuous submodular optimization. We also
+propose One-Shot Frank-Wolfe, a simpler algorithm which requires only a single
+stochastic gradient estimate in each round and achieves an $O(T^{2/3})$
+stochastic regret bound for convex and continuous submodular optimization. We
+apply our methods to develop a novel "lifting" framework for the online
+discrete submodular maximization and also see that they outperform current
+state-of-the-art techniques on various experiments.
+
+
+Graph-Constrained Group Testing
+
+  Non-adaptive group testing involves grouping arbitrary subsets of $n$ items
+into different pools. Each pool is then tested and defective items are
+identified. A fundamental question involves minimizing the number of pools
+required to identify at most $d$ defective items. Motivated by applications in
+network tomography, sensor networks and infection propagation, a variation of
+group testing problems on graphs is formulated. Unlike conventional group
+testing problems, each group here must conform to the constraints imposed by a
+graph. For instance, items can be associated with vertices and each pool is any
+set of nodes that must be path connected. In this paper, a test is associated
+with a random walk. In this context, conventional group testing corresponds to
+the special case of a complete graph on $n$ vertices.
+  For interesting classes of graphs a rather surprising result is obtained,
+namely, that the number of tests required to identify $d$ defective items is
+substantially similar to what is required in conventional group testing
+problems, where no such constraints on pooling is imposed. Specifically, if
+T(n) corresponds to the mixing time of the graph $G$, it is shown that with
+$m=O(d^2T^2(n)\log(n/d))$ non-adaptive tests, one can identify the defective
+items. Consequently, for the Erdos-Renyi random graph $G(n,p)$, as well as
+expander graphs with constant spectral gap, it follows that $m=O(d^2\log^3n)$
+non-adaptive tests are sufficient to identify $d$ defective items. Next, a
+specific scenario is considered that arises in network tomography, for which it
+is shown that $m=O(d^3\log^3n)$ non-adaptive tests are sufficient to identify
+$d$ defective items. Noisy counterparts of the graph constrained group testing
+problem are considered, for which parallel results are developed. We also
+briefly discuss extensions to compressive sensing on graphs.
+
+
+Group Testing with Probabilistic Tests: Theory, Design and Application
+
+  Identification of defective members of large populations has been widely
+studied in the statistics community under the name of group testing. It
+involves grouping subsets of items into different pools and detecting defective
+members based on the set of test results obtained for each pool.
+  In a classical noiseless group testing setup, it is assumed that the sampling
+procedure is fully known to the reconstruction algorithm, in the sense that the
+existence of a defective member in a pool results in the test outcome of that
+pool to be positive. However, this may not be always a valid assumption in some
+cases of interest. In particular, we consider the case where the defective
+items in a pool can become independently inactive with a certain probability.
+Hence, one may obtain a negative test result in a pool despite containing some
+defective items. As a result, any sampling and reconstruction method should be
+able to cope with two different types of uncertainty, i.e., the unknown set of
+defective items and the partially unknown, probabilistic testing procedure.
+  In this work, motivated by the application of detecting infected people in
+viral epidemics, we design non-adaptive sampling procedures that allow
+successful identification of the defective items through a set of probabilistic
+tests. Our design requires only a small number of tests to single out the
+defective items. In particular, for a population of size $N$ and at most $K$
+defective items with activation probability $p$, our results show that $M =
+O(K^2\log{(N/K)}/p^3)$ tests is sufficient if the sampling procedure should
+work for all possible sets of defective items, while $M = O(K\log{(N)}/p^3)$
+tests is enough to be successful for any single set of defective items.
+Moreover, we show that the defective members can be recovered using a simple
+reconstruction algorithm with complexity of $O(MN)$.
+
+
+Compressed Sensing with Probabilistic Measurements: A Group Testing
+  Solution
+
+  Detection of defective members of large populations has been widely studied
+in the statistics community under the name "group testing", a problem which
+dates back to World War II when it was suggested for syphilis screening. There
+the main interest is to identify a small number of infected people among a
+large population using collective samples. In viral epidemics, one way to
+acquire collective samples is by sending agents inside the population. While in
+classical group testing, it is assumed that the sampling procedure is fully
+known to the reconstruction algorithm, in this work we assume that the decoder
+possesses only partial knowledge about the sampling process. This assumption is
+justified by observing the fact that in a viral sickness, there is a chance
+that an agent remains healthy despite having contact with an infected person.
+Therefore, the reconstruction method has to cope with two different types of
+uncertainty; namely, identification of the infected population and the
+partially unknown sampling procedure.
+  In this work, by using a natural probabilistic model for "viral infections",
+we design non-adaptive sampling procedures that allow successful identification
+of the infected population with overwhelming probability 1-o(1). We propose
+both probabilistic and explicit design procedures that require a "small" number
+of agents to single out the infected individuals. More precisely, for a
+contamination probability p, the number of agents required by the probabilistic
+and explicit designs for identification of up to k infected members is bounded
+by m = O(k^2 (log n)/p^2) and m = O(k^2 (log n)^2 /p^2), respectively. In both
+cases, a simple decoder is able to successfully identify the infected
+population in time O(mn).
+
+
+Weakly Submodular Maximization Beyond Cardinality Constraints: Does
+  Randomization Help Greedy?
+
+  Submodular functions are a broad class of set functions, which naturally
+arise in diverse areas. Many algorithms have been suggested for the
+maximization of these functions. Unfortunately, once the function deviates from
+submodularity, the known algorithms may perform arbitrarily poorly. Amending
+this issue, by obtaining approximation results for set functions generalizing
+submodular functions, has been the focus of recent works.
+  One such class, known as weakly submodular functions, has received a lot of
+attention. A key result proved by Das and Kempe (2011) showed that the
+approximation ratio of the greedy algorithm for weakly submodular maximization
+subject to a cardinality constraint degrades smoothly with the distance from
+submodularity. However, no results have been obtained for maximization subject
+to constraints beyond cardinality. In particular, it is not known whether the
+greedy algorithm achieves any non-trivial approximation ratio for such
+constraints.
+  In this paper, we prove that a randomized version of the greedy algorithm
+(previously used by Buchbinder et al. (2014) for a different problem) achieves
+an approximation ratio of $(1 + 1/\gamma)^{-2}$ for the maximization of a
+weakly submodular function subject to a general matroid constraint, where
+$\gamma$ is a parameter measuring the distance of the function from
+submodularity. Moreover, we also experimentally compare the performance of this
+version of the greedy algorithm on real world problems against natural
+benchmarks, and show that the algorithm we study performs well also in
+practice. To the best of our knowledge, this is the first algorithm with a
+non-trivial approximation guarantee for maximizing a weakly submodular function
+subject to a constraint other than the simple cardinality constraint. In
+particular, it is the first algorithm with such a guarantee for the important
+and broad class of matroid constraints.
+
+
+Stochastic Conditional Gradient Methods: From Convex Minimization to
+  Submodular Maximization
+
+  This paper considers stochastic optimization problems for a large class of
+objective functions, including convex and continuous submodular. Stochastic
+proximal gradient methods have been widely used to solve such problems;
+however, their applicability remains limited when the problem dimension is
+large and the projection onto a convex set is costly. Instead, stochastic
+conditional gradient methods are proposed as an alternative solution relying on
+(i) Approximating gradients via a simple averaging technique requiring a single
+stochastic gradient evaluation per iteration; (ii) Solving a linear program to
+compute the descent/ascent direction. The averaging technique reduces the noise
+of gradient approximations as time progresses, and replacing projection step in
+proximal methods by a linear program lowers the computational complexity of
+each iteration. We show that under convexity and smoothness assumptions, our
+proposed method converges to the optimal objective function value at a
+sublinear rate of $O(1/t^{1/3})$. Further, for a monotone and continuous
+DR-submodular function and subject to a general convex body constraint, we
+prove that our proposed method achieves a $((1-1/e)OPT-\eps)$ guarantee with
+$O(1/\eps^3)$ stochastic gradient computations. This guarantee matches the
+known hardness results and closes the gap between deterministic and stochastic
+continuous submodular maximization. Additionally, we obtain $((1/e)OPT -\eps)$
+guarantee after using $O(1/\eps^3)$ stochastic gradients for the case that the
+objective function is continuous DR-submodular but non-monotone and the
+constraint set is down-closed. By using stochastic continuous optimization as
+an interface, we provide the first $(1-1/e)$ tight approximation guarantee for
+maximizing a monotone but stochastic submodular set function subject to a
+matroid constraint and $(1/e)$ approximation guarantee for the non-monotone
+case.
+
+

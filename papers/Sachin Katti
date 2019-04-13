@@ -1,0 +1,169 @@
+A low-latency control plane for dense cellular networks
+
+  In order to keep up with the increasing demands for capacity, cellular
+networks are becoming increasingly dense and heterogeneous. Dense deployments
+are expected to provide a linear capacity scaling with the number of small
+cells deployed due to spatial reuse gains. However in practice network capacity
+is severely limited in dense networks due to interference. The primary reason
+is that the current LTE control plane deployment model has very high latency
+and is unable to cope with the demand of implementing interference management
+techniques that require coordination on a millisecond timeframe.
+  This paper presents SwiftC, a novel low-latency control plane design for LTE
+networks. SwiftC's novel contribution is a design for efficiently sending and
+receiving control plane messages over the LTE spectrum itself, thus creating a
+direct and low-latency coordination signaling link between small cells and the
+macrocell. SwiftC builds on recent work in full duplex radios and shows via
+prototype implementations that a low latency control plane can be built over
+the existing LTE network without wasting licensed spectrum. We also show the
+benefits of SwiftC in implementing complex interference management techniques,
+and show that with SwiftC small cell deployments can achieve almost a linear
+capacity scaling with every small cell deployed.
+
+
+Position Tracking for Virtual Reality Using Commodity WiFi
+
+  Today, experiencing virtual reality (VR) is a cumbersome experience which
+either requires dedicated infrastructure like infrared cameras to track the
+headset and hand-motion controllers (e.g., Oculus Rift, HTC Vive), or provides
+only 3-DoF (Degrees of Freedom) tracking which severely limits the user
+experience (e.g., Samsung Gear). To truly enable VR everywhere, we need
+position tracking to be available as a ubiquitous service. This paper presents
+WiCapture, a novel approach which leverages commodity WiFi infrastructure,
+which is ubiquitous today, for tracking purposes. We prototype WiCapture using
+off-the-shelf WiFi radios and show that it achieves an accuracy of 0.88 cm
+compared to sophisticated infrared based tracking systems like the Oculus,
+while providing much higher range, resistance to occlusion, ubiquity and ease
+of deployment.
+
+
+Bandana: Using Non-volatile Memory for Storing Deep Learning Models
+
+  Typical large-scale recommender systems use deep learning models that are
+stored on a large amount of DRAM. These models often rely on embeddings, which
+consume most of the required memory. We present Bandana, a storage system that
+reduces the DRAM footprint of embeddings, by using Non-volatile Memory (NVM) as
+the primary storage medium, with a small amount of DRAM as cache. The main
+challenge in storing embeddings on NVM is its limited read bandwidth compared
+to DRAM. Bandana uses two primary techniques to address this limitation: first,
+it stores embedding vectors that are likely to be read together in the same
+physical location, using hypergraph partitioning, and second, it decides the
+number of embedding vectors to cache in DRAM by simulating dozens of small
+caches. These techniques allow Bandana to increase the effective read bandwidth
+of NVM by 2-3x and thereby significantly reduce the total cost of ownership.
+
+
+Trevor: Automatic configuration and scaling of stream processing
+  pipelines
+
+  Operating a distributed data stream processing workload efficiently at scale
+is hard. The operator of the workload must parallelize and lay out tasks of the
+workload with resources that match the requirement of target data rate. The
+challenge is that neither the operator nor the programmer is typically aware of
+the scaling behavior of the workload as a function of resources. An operator
+manually searches for a safe operating point that can handle predicted peak
+load and deploys with ample headroom for absorbing unpredictable spikes. Such
+empirical, static over-provisioning is wasteful of both compute and human
+resources. We show that precise performance models can be automatically learned
+for distributed stream processing systems that can predict the execution
+performance of a job even before deployment. Further, those models can be used
+to optimally schedule logically specified jobs onto available physical
+hardware. Finally, those models and the derived execution schedules can be
+refined online to dynamically adapt to unpredictable changes in the runtime
+environment or auto-scale with variations in job load.
+
+
+Programmable Packet Scheduling
+
+  Switches today provide a small set of scheduling algorithms. While we can
+tweak scheduling parameters, we cannot modify algorithmic logic, or add a
+completely new algorithm, after the switch has been designed. This paper
+presents a design for a programmable packet scheduler, which allows scheduling
+algorithms---potentially algorithms that are unknown today---to be programmed
+into a switch without requiring hardware redesign.
+  Our design builds on the observation that scheduling algorithms make two
+decisions: in what order to schedule packets and when to schedule them.
+Further, in many scheduling algorithms these decisions can be made when packets
+are enqueued. We leverage this observation to build a programmable scheduler
+using a single abstraction: the push-in first-out queue (PIFO), a priority
+queue that maintains the scheduling order and time for such algorithms.
+  We show that a programmable scheduler using PIFOs lets us program a wide
+variety of scheduling algorithms. We present a detailed hardware design for
+this scheduler for a 64-port 10 Gbit/s shared-memory switch with <4% chip area
+overhead on a 16-nm standard-cell library. Our design lets us program many
+sophisticated algorithms, such as a 5-level hierarchical scheduler with
+programmable scheduling algorithms at each level.
+
+
+Flashield: a Key-value Cache that Minimizes Writes to Flash
+
+  As its price per bit drops, SSD is increasingly becoming the default storage
+medium for cloud application databases. However, it has not become the
+preferred storage medium for key-value caches, even though SSD offers more than
+10x lower price per bit and sufficient performance compared to DRAM. This is
+because key-value caches need to frequently insert, update and evict small
+objects. This causes excessive writes and erasures on flash storage, since
+flash only supports writes and erasures of large chunks of data. These
+excessive writes and erasures significantly shorten the lifetime of flash,
+rendering it impractical to use for key-value caches. We present Flashield, a
+hybrid key-value cache that uses DRAM as a "filter" to minimize writes to SSD.
+Flashield performs light-weight machine learning profiling to predict which
+objects are likely to be read frequently before getting updated; these objects,
+which are prime candidates to be stored on SSD, are written to SSD in large
+chunks sequentially. In order to efficiently utilize the cache's available
+memory, we design a novel in-memory index for the variable-sized objects stored
+on flash that requires only 4 bytes per object in DRAM. We describe Flashield's
+design and implementation and, we evaluate it on a real-world cache trace.
+Compared to state-of-the-art systems that suffer a write amplification of 2.5x
+or more, Flashield maintains a median write amplification of 0.5x without any
+loss of hit rate or throughput.
+
+
+Light-Field for RF
+
+  Most computer vision systems and computational photography systems are
+visible light based which is a small fraction of the electromagnetic (EM)
+spectrum. In recent years radio frequency (RF) hardware has become more widely
+available, for example, many cars are equipped with a RADAR, and almost every
+home has a WiFi device. In the context of imaging, RF spectrum holds many
+advantages compared to visible light systems. In particular, in this regime, EM
+energy effectively interacts in different ways with matter. This property
+allows for many novel applications such as privacy preserving computer vision
+and imaging through absorbing and scattering materials in visible light such as
+walls. Here, we expand many of the concepts in computational photography in
+visible light to RF cameras. The main limitation of imaging with RF is the
+large wavelength that limits the imaging resolution when compared to visible
+light. However, the output of RF cameras is usually processed by computer
+vision and perception algorithms which would benefit from multi-modal sensing
+of the environment, and from sensing in situations in which visible light
+systems fail. To bridge the gap between computational photography and RF
+imaging, we expand the concept of light-field to RF. This work paves the way to
+novel computational sensing systems with RF.
+
+
+Network Offloading Policies for Cloud Robotics: a Learning-based
+  Approach
+
+  Today's robotic systems are increasingly turning to computationally expensive
+models such as deep neural networks (DNNs) for tasks like localization,
+perception, planning, and object detection. However, resource-constrained
+robots, like low-power drones, often have insufficient on-board compute
+resources or power reserves to scalably run the most accurate, state-of-the art
+neural network compute models. Cloud robotics allows mobile robots the benefit
+of offloading compute to centralized servers if they are uncertain locally or
+want to run more accurate, compute-intensive models. However, cloud robotics
+comes with a key, often understated cost: communicating with the cloud over
+congested wireless networks may result in latency or loss of data. In fact,
+sending high data-rate video or LIDAR from multiple robots over congested
+networks can lead to prohibitive delay for real-time applications, which we
+measure experimentally. In this paper, we formulate a novel Robot Offloading
+Problem --- how and when should robots offload sensing tasks, especially if
+they are uncertain, to improve accuracy while minimizing the cost of cloud
+communication? We formulate offloading as a sequential decision making problem
+for robots, and propose a solution using deep reinforcement learning. In both
+simulations and hardware experiments using state-of-the art vision DNNs, our
+offloading strategy improves vision task performance by between 1.3-2.6x of
+benchmark offloading strategies, allowing robots the potential to significantly
+transcend their on-board sensing accuracy but with limited cost of cloud
+communication.
+
+

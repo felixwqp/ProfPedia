@@ -1,0 +1,365 @@
+A Constructive Semantic Characterization of Aggregates in ASP
+
+  This technical note describes a monotone and continuous fixpoint operator to
+compute the answer sets of programs with aggregates. The fixpoint operator
+relies on the notion of aggregate solution. Under certain conditions, this
+operator behaves identically to the three-valued immediate consequence operator
+$\Phi^{aggr}_P$ for aggregate programs, independently proposed Pelov et al.
+This operator allows us to closely tie the computational complexity of the
+answer set checking and answer sets existence problems to the cost of checking
+a solution of the aggregates in the program. Finally, we relate the semantics
+described by the operator to other proposals for logic programming with
+aggregates.
+  To appear in Theory and Practice of Logic Programming (TPLP).
+
+
+An Unfolding-Based Semantics for Logic Programming with Aggregates
+
+  The paper presents two equivalent definitions of answer sets for logic
+programs with aggregates. These definitions build on the notion of unfolding of
+aggregates, and they are aimed at creating methodologies to translate logic
+programs with aggregates to normal logic programs or positive programs, whose
+answer set semantics can be used to defined the semantics of the original
+programs. The first definition provides an alternative view of the semantics
+for logic programming with aggregates described by Pelov et al.
+  The second definition is similar to the traditional answer set definition for
+normal logic programs, in that, given a logic program with aggregates and an
+interpretation, the unfolding process produces a positive program. The paper
+shows how this definition can be extended to consider aggregates in the head of
+the rules.
+  The proposed views of logic programming with aggregates are simple and
+coincide with the ultimate stable model semantics, and with other semantic
+characterizations for large classes of program (e.g., programs with monotone
+aggregates and programs that are aggregate-stratified).
+  Moreover, it can be directly employed to support an implementation using
+available answer set solvers. The paper describes a system, called ASP^A, that
+is capable of computing answer sets of programs with arbitrary (e.g.,
+recursively defined) aggregates.
+
+
+Logic Programming for Finding Models in the Logics of Knowledge and its
+  Applications: A Case Study
+
+  The logics of knowledge are modal logics that have been shown to be effective
+in representing and reasoning about knowledge in multi-agent domains.
+Relatively few computational frameworks for dealing with computation of models
+and useful transformations in logics of knowledge (e.g., to support multi-agent
+planning with knowledge actions and degrees of visibility) have been proposed.
+This paper explores the use of logic programming (LP) to encode interesting
+forms of logics of knowledge and compute Kripke models. The LP modeling is
+expanded with useful operators on Kripke structures, to support multi-agent
+planning in the presence of both world-altering and knowledge actions. This
+results in the first ever implementation of a planner for this type of complex
+multi-agent domains.
+
+
+The Collaborative Virtual Affinity Group Model: Principles and Design
+
+  The problem addressed in this paper is the challenge arising in enabling
+collaborative learning in the context distance education models. While research
+has made quantum leaps in the development of both effective collaborative
+pedagogical models as well as online learning environments, the research at the
+intersection of these two areas has been scarce. This paper presents the design
+for a new collaborative virtual model, named Collaborative Virtual Affinity
+Group model (CVAG), which is an extension of the successful Affinity Group
+Research (ARG) model. The new model provides an integration of the principles
+underlying ARG with the traditional principles of virtual learning
+environments. The CVAG model is explored in the context of introductory
+Computer Science courses|where students are focused on learning the basic
+principles of computer programming.
+
+
+Planning with Preferences using Logic Programming
+
+  We present a declarative language, PP, for the high-level specification of
+preferences between possible solutions (or trajectories) of a planning problem.
+This novel language allows users to elegantly express non-trivial,
+multi-dimensional preferences and priorities over such preferences. The
+semantics of PP allows the identification of most preferred trajectories for a
+given goal. We also provide an answer set programming implementation of
+planning problems with PP preferences.
+
+
+Multi-valued Action Languages in CLP(FD)
+
+  Action description languages, such as A and B, are expressive instruments
+introduced for formalizing planning domains and planning problem instances. The
+paper starts by proposing a methodology to encode an action language (with
+conditional effects and static causal laws), a slight variation of B, using
+Constraint Logic Programming over Finite Domains. The approach is then
+generalized to raise the use of constraints to the level of the action language
+itself. A prototype implementation has been developed, and the preliminary
+results are presented and discussed.
+  To appear in Theory and Practice of Logic Programming (TPLP)
+
+
+An Implementation of Bubbling
+
+  Non-determinism is of great importance in functional logic programming. It
+provides expressiveness and efficiency to functional logic computations. In
+this paper we describe an implementation of the multi-paradigm functional logic
+language Curry. The evaluation strategy employed by the implementation is based
+on definitional trees and needed narrowing for deterministic operations, while
+non-deterministic operations will depend on the graph transformation, bubbling.
+Bubbling preserves the completeness of non-deterministic operations and avoids
+unnecessary large-scale reconstruction of expressions done by other approaches.
+
+
+Set Unification
+
+  The unification problem in algebras capable of describing sets has been
+tackled, directly or indirectly, by many researchers and it finds important
+applications in various research areas--e.g., deductive databases, theorem
+proving, static analysis, rapid software prototyping. The various solutions
+proposed are spread across a large literature. In this paper we provide a
+uniform presentation of unification of sets, formalizing it at the level of set
+theory. We address the problem of deciding existence of solutions at an
+abstract level. This provides also the ability to classify different types of
+set unification problems. Unification algorithms are uniformly proposed to
+solve the unification problem in each of such classes.
+  The algorithms presented are partly drawn from the literature--and properly
+revisited and analyzed--and partly novel proposals. In particular, we present a
+new goal-driven algorithm for general ACI1 unification and a new simpler
+algorithm for general (Ab)(Cl) unification.
+
+
+Justifications for Logic Programs under Answer Set Semantics
+
+  The paper introduces the notion of off-line justification for Answer Set
+Programming (ASP). Justifications provide a graph-based explanation of the
+truth value of an atom w.r.t. a given answer set. The paper extends also this
+notion to provide justification of atoms during the computation of an answer
+set (on-line justification), and presents an integration of on-line
+justifications within the computation model of Smodels. Off-line and on-line
+justifications provide useful tools to enhance understanding of ASP, and they
+offer a basic data structure to support methodologies and tools for debugging
+answer set programs. A preliminary implementation has been developed in
+ASP-PROLOG.
+  (To appear in Theory and Practice of Logic Programming (TPLP))
+
+
+CLP-based protein fragment assembly
+
+  The paper investigates a novel approach, based on Constraint Logic
+Programming (CLP), to predict the 3D conformation of a protein via fragments
+assembly. The fragments are extracted by a preprocessor-also developed for this
+work- from a database of known protein structures that clusters and classifies
+the fragments according to similarity and frequency. The problem of assembling
+fragments into a complete conformation is mapped to a constraint solving
+problem and solved using CLP. The constraint-based model uses a medium
+discretization degree Ca-side chain centroid protein model that offers
+efficiency and a good approximation for space filling. The approach adapts
+existing energy models to the protein representation used and applies a large
+neighboring search strategy. The results shows the feasibility and efficiency
+of the method. The declarative nature of the solution allows to include future
+extensions, e.g., different size fragments for better accuracy.
+
+
+Autonomous Agents Coordination: Action Languages meet CLP(FD) and Linda
+
+  The paper presents a knowledge representation formalism, in the form of a
+high-level Action Description Language for multi-agent systems, where
+autonomous agents reason and act in a shared environment. Agents are
+autonomously pursuing individual goals, but are capable of interacting through
+a shared knowledge repository. In their interactions through shared portions of
+the world, the agents deal with problems of synchronization and concurrency;
+the action language allows the description of strategies to ensure a consistent
+global execution of the agents' autonomously derived plans. A distributed
+planning problem is formalized by providing the declarative specifications of
+the portion of the problem pertaining a single agent. Each of these
+specifications is executable by a stand-alone CLP-based planner. The
+coordination among agents exploits a Linda infrastructure. The proposal is
+validated in a prototype implementation developed in SICStus Prolog.
+  To appear in Theory and Practice of Logic Programming (TPLP).
+
+
+Logic and Constraint Logic Programming for Distributed Constraint
+  Optimization
+
+  The field of Distributed Constraint Optimization Problems (DCOPs) has gained
+momentum, thanks to its suitability in capturing complex problems (e.g.,
+multi-agent coordination and resource allocation problems) that are naturally
+distributed and cannot be realistically addressed in a centralized manner. The
+state of the art in solving DCOPs relies on the use of ad-hoc infrastructures
+and ad-hoc constraint solving procedures. This paper investigates an
+infrastructure for solving DCOPs that is completely built on logic programming
+technologies. In particular, the paper explores the use of a general constraint
+solver (a constraint logic programming system in this context) to handle the
+agent-level constraint solving. The preliminary experiments show that logic
+programming provides benefits over a state-of-the-art DCOP system, in terms of
+performance and scalability, opening the doors to the use of more advanced
+technology (e.g., search strategies and complex constraints) for solving DCOPs.
+
+
+Distributed Constraint Optimization Problems and Applications: A Survey
+
+  The field of Multi-Agent System (MAS) is an active area of research within
+Artificial Intelligence, with an increasingly important impact in industrial
+and other real-world applications. Within a MAS, autonomous agents interact to
+pursue personal interests and/or to achieve common objectives. Distributed
+Constraint Optimization Problems (DCOPs) have emerged as one of the prominent
+agent architectures to govern the agents' autonomous behavior, where both
+algorithms and communication models are driven by the structure of the specific
+problem. During the last decade, several extensions to the DCOP model have
+enabled them to support MAS in complex, real-time, and uncertain environments.
+This survey aims at providing an overview of the DCOP model, giving a
+classification of its multiple extensions and addressing both resolution
+methods and applications that find a natural mapping within each class of
+DCOPs. The proposed classification suggests several future perspectives for
+DCOP extensions, and identifies challenges in the design of efficient
+resolution algorithms, possibly through the adaptation of strategies from
+different areas.
+
+
+Solving DCOPs with Distributed Large Neighborhood Search
+
+  The field of Distributed Constraint Optimization has gained momentum in
+recent years, thanks to its ability to address various applications related to
+multi-agent cooperation. Nevertheless, solving Distributed Constraint
+Optimization Problems (DCOPs) optimally is NP-hard. Therefore, in large-scale,
+complex applications, incomplete DCOP algorithms are necessary. Current
+incomplete DCOP algorithms suffer of one or more of the following limitations:
+they (a) find local minima without providing quality guarantees; (b) provide
+loose quality assessment; or (c) are unable to benefit from the structure of
+the problem, such as domain-dependent knowledge and hard constraints.
+Therefore, capitalizing on strategies from the centralized constraint solving
+community, we propose a Distributed Large Neighborhood Search (D-LNS) framework
+to solve DCOPs. The proposed framework (with its novel repair phase) provides
+guarantees on solution quality, refining upper and lower bounds during the
+iterative process, and can exploit domain-dependent structures. Our
+experimental results show that D-LNS outperforms other incomplete DCOP
+algorithms on both structured and unstructured problem instances.
+
+
+A Realistic Dataset for the Smart Home Device Scheduling Problem for
+  DCOPs
+
+  The field of Distributed Constraint Optimization has gained momentum in
+recent years thanks to its ability to address various applications related to
+multi-agent cooperation. While techniques to solve Distributed Constraint
+Optimization Problems (DCOPs) are abundant and have matured substantially since
+the field inception, the number of DCOP realistic applications and benchmark
+used to asses the performance of DCOP algorithms is lagging behind. To contrast
+this background we (i) introduce the Smart Home Device Scheduling (SHDS)
+problem, which describe the problem of coordinating smart devices schedules
+across multiple homes as a multi-agent system, (ii) detail the physical models
+adopted to simulate smart sensors, smart actuators, and homes environments, and
+(iii) introduce a DCOP realistic benchmark for SHDS problems.
+
+
+Solving Distributed Constraint Optimization Problems Using Logic
+  Programming
+
+  This paper explores the use of Answer Set Programming (ASP) in solving
+Distributed Constraint Optimization Problems (DCOPs). The paper provides the
+following novel contributions: (1) It shows how one can formulate DCOPs as
+logic programs; (2) It introduces ASP-DPOP, the first DCOP algorithm that is
+based on logic programming; (3) It experimentally shows that ASP-DPOP can be up
+to two orders of magnitude faster than DPOP (its imperative programming
+counterpart) as well as solve some problems that DPOP fails to solve, due to
+memory limitations; and (4) It demonstrates the applicability of ASP in a wide
+array of multi-agent problems currently modeled as DCOPs. Under consideration
+in Theory and Practice of Logic Programming (TPLP).
+
+
+PALS: Efficient Or-Parallelism on Beowulf Clusters
+
+  This paper describes the development of the PALS system, an implementation of
+Prolog capable of efficiently exploiting or-parallelism on distributed-memory
+platforms--specifically Beowulf clusters. PALS makes use of a novel technique,
+called incremental stack-splitting. The technique proposed builds on the
+stack-splitting approach, previously described by the authors and
+experimentally validated on shared-memory systems, which in turn is an
+evolution of the stack-copying method used in a variety of parallel logic and
+constraint systems--e.g., MUSE, YAP, and Penny. The PALS system is the first
+distributed or-parallel implementation of Prolog based on the stack-splitting
+method ever realized. The results presented confirm the superiority of this
+method as a simple yet effective technique to transition from shared-memory to
+distributed-memory systems. PALS extends stack-splitting by combining it with
+incremental copying; the paper provides a description of the implementation of
+PALS, including details of how distributed scheduling is handled. We also
+investigate methodologies to effectively support order-sensitive predicates
+(e.g., side-effects) in the context of the stack-splitting scheme. Experimental
+results obtained from running PALS on both Shared Memory and Beowulf systems
+are presented and analyzed.
+
+
+Accelerating Exact and Approximate Inference for (Distributed) Discrete
+  Optimization with GPUs
+
+  Discrete optimization is a central problem in artificial intelligence. The
+optimization of the aggregated cost of a network of cost functions arises in a
+variety of problems including (W)CSP, DCOP, as well as optimization in
+stochastic variants such as the tasks of finding the most probable explanation
+(MPE) in belief networks. Inference-based algorithms are powerful techniques
+for solving discrete optimization problems, which can be used independently or
+in combination with other techniques. However, their applicability is often
+limited by their compute intensive nature and their space requirements. This
+paper proposes the design and implementation of a novel inference-based
+technique, which exploits modern massively parallel architectures, such as
+those found in Graphical Processing Units (GPUs), to speed up the resolution of
+exact and approximated inference-based algorithms for discrete optimization.
+The paper studies the proposed algorithm in both centralized and distributed
+optimization contexts. The paper demonstrates that the use of GPUs provides
+significant advantages in terms of runtime and scalability, achieving up to two
+orders of magnitude in speedups and showing a considerable reduction in
+execution time (up to 345 times faster) with respect to a sequential version.
+
+
+Phylotastic: An Experiment in Creating, Manipulating, and Evolving
+  Phylogenetic Biology Workflows Using Logic Programming
+
+  Evolutionary Biologists have long struggled with the challenge of developing
+analysis workflows in a flexible manner, thus facilitating the reuse of
+phylogenetic knowledge. An evolutionary biology workflow can be viewed as a
+plan which composes web services that can retrieve, manipulate, and produce
+phylogenetic trees. The Phylotastic project was launched two years ago as a
+collaboration between evolutionary biologists and computer scientists, with the
+goal of developing an open architecture to facilitate the creation of such
+analysis workflows. While composition of web services is a problem that has
+been extensively explored in the literature, including within the logic
+programming domain, the incarnation of the problem in Phylotastic provides a
+number of additional challenges. Along with the need to integrate preferences
+and formal ontologies in the description of the desired workflow, evolutionary
+biologists tend to construct workflows in an incremental manner, by
+successively refining the workflow, by indicating desired changes (e.g.,
+exclusion of certain services, modifications of the desired output). This leads
+to the need of successive iterations of incremental replanning, to develop a
+new workflow that integrates the requested changes while minimizing the changes
+to the original workflow. This paper illustrates how Phylotastic has addressed
+the challenges of creating and refining phylogenetic analysis workflows using
+logic programming technology and how such solutions have been used within the
+general framework of the Phylotastic project. Under consideration in Theory and
+Practice of Logic Programming (TPLP).
+
+
+An Action Language for Multi-Agent Domains: Foundations
+
+  In multi-agent domains (MADs), an agent's action may not just change the
+world and the agent's knowledge and beliefs about the world, but also may
+change other agents' knowledge and beliefs about the world and their knowledge
+and beliefs about other agents' knowledge and beliefs about the world. The
+goals of an agent in a multi-agent world may involve manipulating the knowledge
+and beliefs of other agents' and again, not just their knowledge/belief about
+the world, but also their knowledge about other agents' knowledge about the
+world. Our goal is to present an action language (mA+) that has the necessary
+features to address the above aspects in representing and RAC in MADs. mA+
+allows the representation of and reasoning about different types of actions
+that an agent can perform in a domain where many other agents might be
+present---such as world-altering actions, sensing actions, and
+announcement/communication actions. It also allows the specification of agents'
+dynamic awareness of action occurrences which has future implications on what
+agents' know about the world and other agents' knowledge about the world. mA+
+considers three different types of awareness: full,- partial- awareness, and
+complete oblivion of an action occurrence and its effects. This keeps the
+language simple, yet powerful enough to address a large variety of knowledge
+manipulation scenarios in MADs. The semantics of mA+ relies on the notion of
+state, which is described by a pointed Kripke model and is used to encode the
+agent's knowledge and the real state of the world. It is defined by a
+transition function that maps pairs of actions and states into sets of states.
+We illustrate properties of the action theories, including properties that
+guarantee finiteness of the set of initial states and their practical
+implementability. Finally, we relate mA+ to other related formalisms that
+contribute to RAC in MADs.
+
+

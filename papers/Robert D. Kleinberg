@@ -1,0 +1,201 @@
+Fast matrix multiplication is stable
+
+  We perform forward error analysis for a large class of recursive matrix
+multiplication algorithms in the spirit of [D. Bini and G. Lotti, Stability of
+fast algorithms for matrix multiplication, Numer. Math. 36 (1980), 63--72]. As
+a consequence of our analysis, we show that the exponent of matrix
+multiplication (the optimal running time) can be achieved by numerically stable
+algorithms. We also show that new group-theoretic algorithms proposed in [H.
+Cohn, and C. Umans, A group-theoretic approach to fast matrix multiplication,
+FOCS 2003, 438--449] and [H. Cohn, R. Kleinberg, B. Szegedy and C. Umans,
+Group-theoretic algorithms for matrix multiplication, FOCS 2005, 379--388] are
+all included in the class of algorithms to which our analysis applies, and are
+therefore numerically stable. We perform detailed error analysis for three
+specific fast group-theoretic algorithms.
+
+
+Analysis of a continuous-time model of structural balance
+
+  It is not uncommon for certain social networks to divide into two opposing
+camps in response to stress. This happens, for example, in networks of
+political parties during winner-takes-all elections, in networks of companies
+competing to establish technical standards, and in networks of nations faced
+with mounting threats of war. A simple model for these two-sided separations is
+the dynamical system dX/dt = X^2 where X is a matrix of the friendliness or
+unfriendliness between pairs of nodes in the network. Previous simulations
+suggested that only two types of behavior were possible for this system: either
+all relationships become friendly, or two hostile factions emerge. Here we
+prove that for generic initial conditions, these are indeed the only possible
+outcomes. Our analysis yields a closed-form expression for faction membership
+as a function of the initial conditions, and implies that the initial amount of
+friendliness in large social networks (started from random initial conditions)
+determines whether they will end up in intractable conflict or global harmony.
+
+
+Polymatroid Prophet Inequalities
+
+  Consider a gambler and a prophet who observe a sequence of independent,
+non-negative numbers. The gambler sees the numbers one-by-one whereas the
+prophet sees the entire sequence at once. The goal of both is to decide on
+fractions of each number they want to keep so as to maximize the weighted
+fractional sum of the numbers chosen.
+  The classic result of Krengel and Sucheston (1977-78) asserts that if both
+the gambler and the prophet can pick one number, then the gambler can do at
+least half as well as the prophet. Recently, Kleinberg and Weinberg (2012) have
+generalized this result to settings where the numbers that can be chosen are
+subject to a matroid constraint.
+  In this note we go one step further and show that the bound carries over to
+settings where the fractions that can be chosen are subject to a polymatroid
+constraint. This bound is tight as it is already tight for the simple setting
+where the gambler and the prophet can pick only one number. An interesting
+application of our result is in mechanism design, where it leads to improved
+results for various problems.
+
+
+Approximating Low-Dimensional Coverage Problems
+
+  We study the complexity of the maximum coverage problem, restricted to set
+systems of bounded VC-dimension. Our main result is a fixed-parameter tractable
+approximation scheme: an algorithm that outputs a $(1-\eps)$-approximation to
+the maximum-cardinality union of $k$ sets, in running time $O(f(\eps,k,d)\cdot
+poly(n))$ where $n$ is the problem size, $d$ is the VC-dimension of the set
+system, and $f(\eps,k,d)$ is exponential in $(kd/\eps)^c$ for some constant
+$c$. We complement this positive result by showing that the function
+$f(\eps,k,d)$ in the running-time bound cannot be replaced by a function
+depending only on $(\eps,d)$ or on $(k,d)$, under standard complexity
+assumptions.
+  We also present an improved upper bound on the approximation ratio of the
+greedy algorithm in special cases of the problem, including when the sets have
+bounded cardinality and when they are two-dimensional halfspaces. Complementing
+these positive results, we show that when the sets are four-dimensional
+halfspaces neither the greedy algorithm nor local search is capable of
+improving the worst-case approximation ratio of $1-1/e$ that the greedy
+algorithm achieves on arbitrary instances of maximum coverage.
+
+
+The Lovász Theta Function for Random Regular Graphs and Community
+  Detection in the Hard Regime
+
+  We derive upper and lower bounds on the degree $d$ for which the Lov\'asz
+$\vartheta$ function, or equivalently sum-of-squares proofs with degree two,
+can refute the existence of a $k$-coloring in random regular graphs $G_{n,d}$.
+We show that this type of refutation fails well above the $k$-colorability
+transition, and in particular everywhere below the Kesten-Stigum threshold.
+This is consistent with the conjecture that refuting $k$-colorability, or
+distinguishing $G_{n,d}$ from the planted coloring model, is hard in this
+region. Our results also apply to the disassortative case of the stochastic
+block model, adding evidence to the conjecture that there is a regime where
+community detection is computationally hard even though it is
+information-theoretically possible. Using orthogonal polynomials, we also
+provide explicit upper bounds on $\vartheta(\overline{G})$ for regular graphs
+of a given girth, which may be of independent interest.
+
+
+Prophet Inequalities with Limited Information
+
+  In the classical prophet inequality, a gambler observes a sequence of
+stochastic rewards $V_1,...,V_n$ and must decide, for each reward $V_i$,
+whether to keep it and stop the game or to forfeit the reward forever and
+reveal the next value $V_i$. The gambler's goal is to obtain a constant
+fraction of the expected reward that the optimal offline algorithm would get.
+Recently, prophet inequalities have been generalized to settings where the
+gambler can choose $k$ items, and, more generally, where he can choose any
+independent set in a matroid. However, all the existing algorithms require the
+gambler to know the distribution from which the rewards $V_1,...,V_n$ are
+drawn.
+  The assumption that the gambler knows the distribution from which
+$V_1,...,V_n$ are drawn is very strong. Instead, we work with the much simpler
+assumption that the gambler only knows a few samples from this distribution. We
+construct the first single-sample prophet inequalities for many settings of
+interest, whose guarantees all match the best possible asymptotically,
+\emph{even with full knowledge of the distribution}. Specifically, we provide a
+novel single-sample algorithm when the gambler can choose any $k$ elements
+whose analysis is based on random walks with limited correlation. In addition,
+we provide a black-box method for converting specific types of solutions to the
+related \emph{secretary problem} to single-sample prophet inequalities, and
+apply it to several existing algorithms. Finally, we provide a constant-sample
+prophet inequality for constant-degree bipartite matchings.
+  We apply these results to design the first posted-price and multi-dimensional
+auction mechanisms with limited information in settings with asymmetric
+bidders.
+
+
+A Unified Approach to Online Allocation Algorithms via Randomized Dual
+  Fitting
+
+  We present a unified framework for designing and analyzing algorithms for
+online budgeted allocation problems (including online matching) and their
+generalization, the Online Generalized Assignment Problem (OnGAP). These
+problems have been intensively studied as models of how to allocate impressions
+for online advertising. In contrast to previous analyses of online budgeted
+allocation algorithms (the so-called "balance" or "water-filling" family of
+algorithms) our analysis is based on the method of randomized dual fitting,
+analogous to the recent analysis of the RANKING algorithm for online matching
+due to Devanur et al. Our main contribution is thus to provide a unified method
+of proof that simultaneously derives the optimal competitive ratio bounds for
+online matching and online fractional budgeted allocation. The same method of
+proof also supplies $(1-1/e)$ competitive ratio bounds for greedy algorithms
+for both problems, in the random order arrival model; this simplifies existing
+analyses of greedy online allocation algorithms with random order of arrivals,
+while also strengthening them to apply to a larger family of greedy algorithms.
+Finally, for the more general OnGAP problem, we show that no algorithm can be
+constant-competitive; instead we present an algorithm whose competitive ratio
+depends logarithmically on a certain parameter of the problem instance, and we
+show that this dependence cannot be improved.
+
+
+Simple and Near-Optimal Mechanisms For Market Intermediation
+
+  A prevalent market structure in the Internet economy consists of buyers and
+sellers connected by a platform (such as Amazon or eBay) that acts as an
+intermediary and keeps a share of the revenue of each transaction. While the
+optimal mechanism that maximizes the intermediary's profit in such a setting
+may be quite complicated, the mechanisms observed in reality are generally much
+simpler, e.g., applying an affine function to the price of the transaction as
+the intermediary's fee. Loertscher and Niedermayer [2007] initiated the study
+of such fee-setting mechanisms in two-sided markets, and we continue this
+investigation by addressing the question of when an affine fee schedule is
+approximately optimal for worst-case seller distribution. On one hand our work
+supplies non-trivial sufficient conditions on the buyer side (i.e. linearity of
+marginal revenue function, or MHR property of value and value minus cost
+distributions) under which an affine fee schedule can obtain a constant
+fraction of the intermediary's optimal profit for all seller distributions. On
+the other hand we complement our result by showing that proper affine
+fee-setting mechanisms (e.g. those used in eBay and Amazon selling plans) are
+unable to extract a constant fraction of optimal profit in the worst-case
+seller distribution. As subsidiary results we also show there exists a constant
+gap between maximum surplus and maximum revenue under the aforementioned
+conditions. Most of the mechanisms that we propose are also prior-independent
+with respect to the seller, which signifies the practical implications of our
+result.
+
+
+Truthful Mechanisms with Implicit Payment Computation
+
+  It is widely believed that computing payments needed to induce truthful
+bidding is somehow harder than simply computing the allocation. We show that
+the opposite is true: creating a randomized truthful mechanism is essentially
+as easy as a single call to a monotone allocation rule. Our main result is a
+general procedure to take a monotone allocation rule for a single-parameter
+domain and transform it (via a black-box reduction) into a randomized mechanism
+that is truthful in expectation and individually rational for every
+realization. The mechanism implements the same outcome as the original
+allocation rule with probability arbitrarily close to 1, and requires
+evaluating that allocation rule only once. We also provide an extension of this
+result to multi-parameter domains and cycle-monotone allocation rules, under
+mild star-convexity and non-negativity hypotheses on the type space and
+allocation rule, respectively.
+  Because our reduction is simple, versatile, and general, it has many
+applications to mechanism design problems in which re-evaluating the allocation
+rule is either burdensome or informationally impossible. Applying our result to
+the multi-armed bandit problem, we obtain truthful randomized mechanisms whose
+regret matches the information-theoretic lower bound up to logarithmic factors,
+even though prior work showed this is impossible for truthful deterministic
+mechanisms. We also present applications to offline mechanism design, showing
+that randomization can circumvent a communication complexity lower bound for
+deterministic payments computation, and that it can also be used to create
+truthful shortest path auctions that approximate the welfare of the VCG
+allocation arbitrarily well, while having the same running time complexity as
+Dijkstra's algorithm.
+
+

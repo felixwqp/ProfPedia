@@ -1,0 +1,878 @@
+The Neural Network Pushdown Automaton: Model, Stack and Learning
+  Simulations
+
+  In order for neural networks to learn complex languages or grammars, they
+must have sufficient computational power or resources to recognize or generate
+such languages. Though many approaches have been discussed, one ob- vious
+approach to enhancing the processing power of a recurrent neural network is to
+couple it with an external stack memory - in effect creating a neural network
+pushdown automata (NNPDA). This paper discusses in detail this NNPDA - its
+construction, how it can be trained and how useful symbolic information can be
+extracted from the trained network.
+  In order to couple the external stack to the neural network, an optimization
+method is developed which uses an error function that connects the learning of
+the state automaton of the neural network to the learning of the operation of
+the external stack. To minimize the error function using gradient descent
+learning, an analog stack is designed such that the action and storage of
+information in the stack are continuous. One interpretation of a continuous
+stack is the probabilistic storage of and action on data. After training on
+sample strings of an unknown source grammar, a quantization procedure extracts
+from the analog stack and neural network a discrete pushdown automata (PDA).
+Simulations show that in learning deterministic context-free grammars - the
+balanced parenthesis language, 1*n0*n, and the deterministic Palindrome - the
+extracted PDA is correct in the sense that it can correctly recognize unseen
+strings of arbitrary length. In addition, the extracted PDAs can be shown to be
+identical or equivalent to the PDAs of the source grammars which were used to
+generate the training strings.
+
+
+A Comparison of On-Line Computer Science Citation Databases
+
+  This paper examines the difference and similarities between the two on-line
+computer science citation databases DBLP and CiteSeer. The database entries in
+DBLP are inserted manually while the CiteSeer entries are obtained autonomously
+via a crawl of the Web and automatic processing of user submissions. CiteSeer's
+autonomous citation database can be considered a form of self-selected on-line
+survey. It is important to understand the limitations of such databases,
+particularly when citation information is used to assess the performance of
+authors, institutions and funding bodies.
+  We show that the CiteSeer database contains considerably fewer single author
+papers. This bias can be modeled by an exponential process with intuitive
+explanation. The model permits us to predict that the DBLP database covers
+approximately 24% of the entire literature of Computer Science. CiteSeer is
+also biased against low-cited papers.
+  Despite their difference, both databases exhibit similar and significantly
+different citation distributions compared with previous analysis of the Physics
+community. In both databases, we also observe that the number of authors per
+paper has been increasing over time.
+
+
+ChemXSeer Digital Library Gaussian Search
+
+  We report on the Gaussian file search system designed as part of the
+ChemXSeer digital library. Gaussian files are produced by the Gaussian software
+[4], a software package used for calculating molecular electronic structure and
+properties. The output files are semi-structured, allowing relatively easy
+access to the Gaussian attributes and metadata. Our system is currently capable
+of searching Gaussian documents using a boolean combination of atoms (chemical
+elements) and attributes. We have also implemented a faceted browsing feature
+on three important Gaussian attribute types - Basis Set, Job Type and Method
+Used. The faceted browsing feature enables a user to view and process a
+smaller, filtered subset of documents.
+
+
+Modelling Information Incorporation in Markets, with Application to
+  Detecting and Explaining Events
+
+  We develop a model of how information flows into a market, and derive
+algorithms for automatically detecting and explaining relevant events. We
+analyze data from twenty-two "political stock markets" (i.e., betting markets
+on political outcomes) on the Iowa Electronic Market (IEM). We prove that,
+under certain efficiency assumptions, prices in such betting markets will on
+average approach the correct outcomes over time, and show that IEM data
+conforms closely to the theory. We present a simple model of a betting market
+where information is revealed over time, and show a qualitative correspondence
+between the model and real market data. We also present an algorithm for
+automatically detecting significant events and generating semantic explanations
+of their origin. The algorithm operates by discovering significant changes in
+vocabulary on online news sources (using expected entropy loss) that align with
+major price spikes in related betting markets.
+
+
+Graph-based Approach to Automatic Taxonomy Generation (GraBTax)
+
+  We propose a novel graph-based approach for constructing concept hierarchy
+from a large text corpus. Our algorithm, GraBTax, incorporates both statistical
+co-occurrences and lexical similarity in optimizing the structure of the
+taxonomy. To automatically generate topic-dependent taxonomies from a large
+text corpus, GraBTax first extracts topical terms and their relationships from
+the corpus. The algorithm then constructs a weighted graph representing topics
+and their associations. A graph partitioning algorithm is then used to
+recursively partition the topic graph into a taxonomy. For evaluation, we apply
+GraBTax to articles, primarily computer science, in the CiteSeerX digital
+library and search engine. The quality of the resulting concept hierarchy is
+assessed by both human judges and comparison with Wikipedia categories.
+
+
+An Investigation of Machine Learning Methods Applied to Structure
+  Prediction in Condensed Matter
+
+  Materials characterization remains a significant, time-consuming undertaking.
+Generally speaking, spectroscopic techniques are used in conjunction with
+empirical and ab-initio calculations in order to elucidate structure. These
+experimental and computational methods typically require significant human
+input and interpretation, particularly with regards to novel materials.
+Recently, the application of data mining and machine learning to problems in
+material science have shown great promise in reducing this overhead. In the
+work presented here, several aspects of machine learning are explored with
+regards to characterizing a model material, titania, using solid-state Nuclear
+Magnetic Resonance (NMR). Specifically, a large dataset is generated,
+corresponding to NMR $^{47}$Ti spectra, using ab-initio calculations for
+generated TiO$_2$ structures. Principal Components Analysis (PCA) reveals that
+input spectra may be compressed by more than 90%, before being used for
+subsequent machine learning. Two key methods are used to learn the complex
+mapping between structural details and input NMR spectra, demonstrating
+excellent accuracy when presented with test sample spectra. This work compares
+Support Vector Regression (SVR) and Artificial Neural Networks (ANNs), as one
+step towards the construction of an expert system for solid state materials
+characterization.
+
+
+Random Forest DBSCAN for USPTO Inventor Name Disambiguation
+
+  Name disambiguation and the subsequent name conflation are essential for the
+correct processing of person name queries in a digital library or other
+database. It distinguishes each unique person from all other records in the
+database. We study inventor name disambiguation for a patent database using
+methods and features from earlier work on author name disambiguation and
+propose a feature set appropriate for a patent database. A random forest was
+selected for the pairwise linking classifier since they outperform Naive Bayes,
+Logistic Regression, Support Vector Machines (SVM), Conditional Inference Tree,
+and Decision Trees. Blocking size, very important for scaling, was selected
+based on experiments that determined feature importance and accuracy. The
+DBSCAN algorithm is used for clustering records, using a distance function
+derived from random forest classifier. For additional scalability clustering
+was parallelized. Tests on the USPTO patent database show that our method
+successfully disambiguated 12 million inventor mentions within 6.5 hours.
+Evaluation on datasets from USPTO PatentsView inventor name disambiguation
+competition shows our algorithm outperforms all algorithms in the competition.
+
+
+Online Semi-Supervised Learning with Deep Hybrid Boltzmann Machines and
+  Denoising Autoencoders
+
+  Two novel deep hybrid architectures, the Deep Hybrid Boltzmann Machine and
+the Deep Hybrid Denoising Auto-encoder, are proposed for handling
+semi-supervised learning problems. The models combine experts that model
+relevant distributions at different levels of abstraction to improve overall
+predictive performance on discriminative tasks. Theoretical motivations and
+algorithms for joint learning for each are presented. We apply the new models
+to the domain of data-streams in work towards life-long learning. The proposed
+architectures show improved performance compared to a pseudo-labeled, drop-out
+rectifier network.
+
+
+Unifying Adversarial Training Algorithms with Flexible Deep Data
+  Gradient Regularization
+
+  Many previous proposals for adversarial training of deep neural nets have
+included di- rectly modifying the gradient, training on a mix of original and
+adversarial examples, using contractive penalties, and approximately optimizing
+constrained adversarial ob- jective functions. In this paper, we show these
+proposals are actually all instances of optimizing a general, regularized
+objective we call DataGrad. Our proposed DataGrad framework, which can be
+viewed as a deep extension of the layerwise contractive au- toencoder penalty,
+cleanly simplifies prior work and easily allows extensions such as adversarial
+training with multi-task cues. In our experiments, we find that the deep gra-
+dient regularization of DataGrad (which also has L1 and L2 flavors of
+regularization) outperforms alternative forms of regularization, including
+classical L1, L2, and multi- task, both on the original dataset as well as on
+adversarial sets. Furthermore, we find that combining multi-task optimization
+with DataGrad adversarial training results in the most robust performance.
+
+
+Science and Ethnicity: How Ethnicities Shape the Evolution of Computer
+  Science Research Community
+
+  Globalization and the world wide web has resulted in academia and science
+being an international and multicultural community forged by researchers and
+scientists with different ethnicities. How ethnicity shapes the evolution of
+membership, status and interactions of the scientific community, however, is
+not well understood. This is due to the difficulty of ethnicity identification
+at the large scale. We use name ethnicity classification as an indicator of
+ethnicity. Based on automatic name ethnicity classification of 1.7+ million
+authors gathered from Web, the name ethnicity of computer science scholars is
+investigated by population size, publication contribution and collaboration
+strength. By showing the evolution of name ethnicity from 1936 to 2010, we
+discover that ethnicity diversity has increased significantly over time and
+that different research communities in certain publication venues have
+different ethnicity compositions. We notice a clear rise in the number of Asian
+name ethnicities in papers. Their fraction of publication contribution
+increases from approximately 10% to near 50% from 1970 to 2010. We also find
+that name ethnicity acts as a homophily factor on coauthor networks, shaping
+the formation of coauthorship as well as evolution of research communities.
+
+
+Smart Library: Identifying Books in a Library using Richly Supervised
+  Deep Scene Text Reading
+
+  Physical library collections are valuable and long standing resources for
+knowledge and learning. However, managing books in a large bookshelf and
+finding books on it often leads to tedious manual work, especially for large
+book collections where books might be missing or misplaced. Recently, deep
+neural models, such as Convolutional Neural Networks (CNN) and Recurrent Neural
+Networks (RNN) have achieved great success for scene text detection and
+recognition. Motivated by these recent successes, we aim to investigate their
+viability in facilitating book management, a task that introduces further
+challenges including large amounts of cluttered scene text, distortion, and
+varied lighting conditions. In this paper, we present a library inventory
+building and retrieval system based on scene text reading methods. We
+specifically design our scene text recognition model using rich supervision to
+accelerate training and achieve state-of-the-art performance on several
+benchmark datasets. Our proposed system has the potential to greatly reduce the
+amount of human labor required in managing book inventories as well as the
+space needed to store book information.
+
+
+Learning a Hierarchical Latent-Variable Model of 3D Shapes
+
+  We propose the Variational Shape Learner (VSL), a generative model that
+learns the underlying structure of voxelized 3D shapes in an unsupervised
+fashion. Through the use of skip-connections, our model can successfully learn
+and infer a latent, hierarchical representation of objects. Furthermore,
+realistic 3D objects can be easily generated by sampling the VSL's latent
+probabilistic manifold. We show that our generative model can be trained
+end-to-end from 2D images to perform single image 3D model retrieval.
+Experiments show, both quantitatively and qualitatively, the improved
+generalization of our proposed model over a range of tasks, performing better
+or comparable to various state-of-the-art alternatives.
+
+
+Learning to Extract Semantic Structure from Documents Using Multimodal
+  Fully Convolutional Neural Network
+
+  We present an end-to-end, multimodal, fully convolutional network for
+extracting semantic structures from document images. We consider document
+semantic structure extraction as a pixel-wise segmentation task, and propose a
+unified model that classifies pixels based not only on their visual appearance,
+as in the traditional page segmentation task, but also on the content of
+underlying text. Moreover, we propose an efficient synthetic document
+generation process that we use to generate pretraining data for our network.
+Once the network is trained on a large set of synthetic documents, we fine-tune
+the network on unlabeled real documents using a semi-supervised approach. We
+systematically study the optimum network architecture and show that both our
+multimodal approach and the synthetic data pretraining significantly boost the
+performance.
+
+
+Scaling Author Name Disambiguation with CNF Blocking
+
+  An author name disambiguation (AND) algorithm identifies a unique author
+entity record from all similar or same publication records in scholarly or
+similar databases. Typically, a clustering method is used that requires
+calculation of similarities between each possible record pair. However, the
+total number of pairs grows quadratically with the size of the author database
+making such clustering difficult for millions of records. One remedy for this
+is a blocking function that reduces the number of pairwise similarity
+calculations. Here, we introduce a new way of learning blocking schemes by
+using a conjunctive normal form (CNF) in contrast to the disjunctive normal
+form (DNF). We demonstrate on PubMed author records that CNF blocking reduces
+more pairs while preserving high pairs completeness compared to the previous
+methods that use a DNF with the computation time significantly reduced. Thus,
+these concepts in scholarly data can be better represented with CNFs. Moreover,
+we also show how to ensure that the method produces disjoint blocks so that the
+rest of the AND algorithm can be easily paralleled. Our CNF blocking tested on
+the entire PubMed database of 80 million author mentions efficiently removes
+82.17% of all author record pairs in 10 minutes.
+
+
+An Empirical Evaluation of Rule Extraction from Recurrent Neural
+  Networks
+
+  Rule extraction from black-box models is critical in domains that require
+model validation before implementation, as can be the case in credit scoring
+and medical diagnosis. Though already a challenging problem in statistical
+learning in general, the difficulty is even greater when highly non-linear,
+recursive models, such as recurrent neural networks (RNNs), are fit to data.
+Here, we study the extraction of rules from second-order recurrent neural
+networks trained to recognize the Tomita grammars. We show that production
+rules can be stably extracted from trained RNNs and that in certain cases the
+rules outperform the trained RNNs.
+
+
+Learning to Adapt by Minimizing Discrepancy
+
+  We explore whether useful temporal neural generative models can be learned
+from sequential data without back-propagation through time. We investigate the
+viability of a more neurocognitively-grounded approach in the context of
+unsupervised generative modeling of sequences. Specifically, we build on the
+concept of predictive coding, which has gained influence in cognitive science,
+in a neural framework. To do so we develop a novel architecture, the Temporal
+Neural Coding Network, and its learning algorithm, Discrepancy Reduction. The
+underlying directed generative model is fully recurrent, meaning that it
+employs structural feedback connections and temporal feedback connections,
+yielding information propagation cycles that create local learning signals.
+This facilitates a unified bottom-up and top-down approach for information
+transfer inside the architecture. Our proposed algorithm shows promise on the
+bouncing balls generative modeling problem. Further experiments could be
+conducted to explore the strengths and weaknesses of our approach.
+
+
+Active Learning of Strict Partial Orders: A Case Study on Concept
+  Prerequisite Relations
+
+  Strict partial order is a mathematical structure commonly seen in relational
+data. One obstacle to extracting such type of relations at scale is the lack of
+large-scale labels for building effective data-driven solutions. We develop an
+active learning framework for mining such relations subject to a strict order.
+Our approach incorporates relational reasoning not only in finding new
+unlabeled pairs whose labels can be deduced from an existing label set, but
+also in devising new query strategies that consider the relational structure of
+labels. Our experiments on concept prerequisite relations show our proposed
+framework can substantially improve the classification performance with the
+same query budget compared to other baseline approaches.
+
+
+Conducting Credit Assignment by Aligning Local Representations
+
+  Using back-propagation and its variants to train deep networks is often
+problematic for new users. Issues such as exploding gradients, vanishing
+gradients, and high sensitivity to weight initialization strategies often make
+networks difficult to train, especially when users are experimenting with new
+architectures. Here, we present Local Representation Alignment (LRA), a
+training procedure that is much less sensitive to bad initializations, does not
+require modifications to the network architecture, and can be adapted to
+networks with highly nonlinear and discrete-valued activation functions.
+Furthermore, we show that one variation of LRA can start with a null
+initialization of network weights and still successfully train networks with a
+wide variety of nonlinearities, including tanh, ReLU-6, softplus, signum and
+others that may draw their inspiration from biology.
+  A comprehensive set of experiments on MNIST and the much harder Fashion MNIST
+data sets show that LRA can be used to train networks robustly and effectively,
+succeeding even when back-propagation fails and outperforming other alternative
+learning algorithms, such as target propagation and feedback alignment.
+
+
+Learned Neural Iterative Decoding for Lossy Image Compression Systems
+
+  For lossy image compression systems, we develop an algorithm, iterative
+refinement, to improve the decoder's reconstruction compared to standard
+decoding techniques. Specifically, we propose a recurrent neural network
+approach for nonlinear, iterative decoding. Our decoder, which works with any
+encoder, employs self-connected memory units that make use of causal and
+non-causal spatial context information to progressively reduce reconstruction
+error over a fixed number of steps. We experiment with variants of our
+estimator and find that iterative refinement consistently creates lower
+distortion images of higher perceptual quality compared to other approaches.
+Specifically, on the Kodak Lossless True Color Image Suite, we observe as much
+as a 0.871 decibel (dB) gain over JPEG, a 1.095 dB gain over JPEG 2000, and a
+0.971 dB gain over a competitive neural model.
+
+
+Adversarial Training for Community Question Answer Selection Based on
+  Multi-scale Matching
+
+  Community-based question answering (CQA) websites represent an important
+source of information. As a result, the problem of matching the most valuable
+answers to their corresponding questions has become an increasingly popular
+research topic. We frame this task as a binary (relevant/irrelevant)
+classification problem, and present an adversarial training framework to
+alleviate label imbalance issue. We employ a generative model to iteratively
+sample a subset of challenging negative samples to fool our classification
+model. Both models are alternatively optimized using REINFORCE algorithm. The
+proposed method is completely different from previous ones, where negative
+samples in training set are directly used or uniformly down-sampled. Further,
+we propose using Multi-scale Matching which explicitly inspects the correlation
+between words and ngrams of different levels of granularity. We evaluate the
+proposed method on SemEval 2016 and SemEval 2017 datasets and achieves
+state-of-the-art or similar performance.
+
+
+TextContourNet: a Flexible and Effective Framework for Improving Scene
+  Text Detection Architecture with a Multi-task Cascade
+
+  We study the problem of extracting text instance contour information from
+images and use it to assist scene text detection. We propose a novel and
+effective framework for this and experimentally demonstrate that: (1) A CNN
+that can be effectively used to extract instance-level text contour from
+natural images. (2) The extracted contour information can be used for better
+scene text detection. We propose two ways for learning the contour task
+together with the scene text detection: (1) as an auxiliary task and (2) as
+multi-task cascade. Extensive experiments with different benchmark datasets
+demonstrate that both designs improve the performance of a state-of-the-art
+scene text detector and that a multi-task cascade design achieves the best
+performance.
+
+
+On the utility of graphics cards to perform massively parallel
+  simulation of advanced Monte Carlo methods
+
+  We present a case-study on the utility of graphics cards to perform massively
+parallel simulation of advanced Monte Carlo methods. Graphics cards, containing
+multiple Graphics Processing Units (GPUs), are self-contained parallel
+computational devices that can be housed in conventional desktop and laptop
+computers. For certain classes of Monte Carlo algorithms they offer massively
+parallel simulation, with the added advantage over conventional distributed
+multi-core processors that they are cheap, easily accessible, easy to maintain,
+easy to code, dedicated local devices with low power consumption. On a
+canonical set of stochastic simulation examples including population-based
+Markov chain Monte Carlo methods and Sequential Monte Carlo methods, we find
+speedups from 35 to 500 fold over conventional single-threaded computer code.
+Our findings suggest that GPUs have the potential to facilitate the growth of
+statistical modelling into complex data rich domains through the availability
+of cheap and accessible many-core computation. We believe the speedup we
+observe should motivate wider use of parallelizable simulation methods and
+greater methodological attention to their design.
+
+
+Effectively Searching Maps in Web Documents
+
+  Maps are an important source of information in archaeology and other
+sciences. Users want to search for historical maps to determine recorded
+history of the political geography of regions at different eras, to find out
+where exactly archaeological artifacts were discovered, etc. Currently, they
+have to use a generic search engine and add the term map along with other
+keywords to search for maps. This crude method will generate a significant
+number of false positives that the user will need to cull through to get the
+desired results. To reduce their manual effort, we propose an automatic map
+identification, indexing, and retrieval system that enables users to search and
+retrieve maps appearing in a large corpus of digital documents using simple
+keyword queries. We identify features that can help in distinguishing maps from
+other figures in digital documents and show how a Support-Vector-Machine-based
+classifier can be used to identify maps. We propose map-level-metadata e.g.,
+captions, references to the maps in text, etc. and document-level metadata,
+e.g., title, abstract, citations, how recent the publication is, etc. and show
+how they can be automatically extracted and indexed. Our novel ranking
+algorithm weights different metadata fields differently and also uses the
+document-level metadata to help rank retrieved maps. Empirical evaluations show
+which features should be selected and which metadata fields should be weighted
+more. We also demonstrate improved retrieval results in comparison to
+adaptations of existing methods for map retrieval. Our map search engine has
+been deployed in an online map-search system that is part of the Blind-Review
+digital library system.
+
+
+Extreme alpha-clustering in the 18O nucleus
+
+  The structure of the 18O nucleus at excitation energies above the alpha decay
+threshold was studied using 14C+alpha resonance elastic scattering. A number of
+states with large alpha reduced widths have been observed, indicating that the
+alpha-cluster degree of freedom plays an important role in this N not equal Z
+nucleus. However, the alpha-cluster structure of this nucleus is very different
+from the relatively simple pattern of strong alpha-cluster quasi-rotational
+bands in the neighboring 16O and 20Ne nuclei. A 0+ state with an alpha reduced
+width exceeding the single particle limit was identified at an excitation
+energy of 9.9+/-0.3 MeV. We discuss evidence that states of this kind are
+common in light nuclei and give possible explanations of this feature.
+
+
+Bayesian Classification and Feature Selection from Finite Data Sets
+
+  Feature selection aims to select the smallest subset of features for a
+specified level of performance. The optimal achievable classification
+performance on a feature subset is summarized by its Receiver Operating Curve
+(ROC). When infinite data is available, the Neyman- Pearson (NP) design
+procedure provides the most efficient way of obtaining this curve. In practice
+the design procedure is applied to density estimates from finite data sets. We
+perform a detailed statistical analysis of the resulting error propagation on
+finite alphabets. We show that the estimated performance curve (EPC) produced
+by the design procedure is arbitrarily accurate given sufficient data,
+independent of the size of the feature set. However, the underlying likelihood
+ranking procedure is highly sensitive to errors that reduces the probability
+that the EPC is in fact the ROC. In the worst case, guaranteeing that the EPC
+is equal to the ROC may require data sizes exponential in the size of the
+feature set. These results imply that in theory the NP design approach may only
+be valid for characterizing relatively small feature subsets, even when the
+performance of any given classifier can be estimated very accurately. We
+discuss the practical limitations for on-line methods that ensures that the NP
+procedure operates in a statistically valid region.
+
+
+Collaborative Filtering by Personality Diagnosis: A Hybrid Memory- and
+  Model-Based Approach
+
+  The growth of Internet commerce has stimulated the use of collaborative
+filtering (CF) algorithms as recommender systems. Such systems leverage
+knowledge about the known preferences of multiple users to recommend items of
+interest to other users. CF methods have been harnessed to make recommendations
+about such items as web pages, movies, books, and toys. Researchers have
+proposed and evaluated many approaches for generating recommendations. We
+describe and evaluate a new method called emph{personality diagnosis (PD)}.
+Given a user's preferences for some items, we compute the probability that he
+or she is of the same "personality type" as other users, and, in turn, the
+probability that he or she will like new items. PD retains some of the
+advantages of traditional similarity-weighting techniques in that all data is
+brought to bear on each prediction and new data can be added easily and
+incrementally. Additionally, PD has a meaningful probabilistic interpretation,
+which may be leveraged to justify, explain, and augment results. We report
+empirical results on the EachMovie database of movie ratings, and on user
+profile data collected from the CiteSeer digital library of Computer Science
+research papers. The probabilistic framework naturally supports a variety of
+descriptive measurements - in particular, we consider the applicability of a
+value of information (VOI) computation.
+
+
+Using Non-invertible Data Transformations to Build Adversarial-Robust
+  Neural Networks
+
+  Deep neural networks have proven to be quite effective in a wide variety of
+machine learning tasks, ranging from improved speech recognition systems to
+advancing the development of autonomous vehicles. However, despite their
+superior performance in many applications, these models have been recently
+shown to be susceptible to a particular type of attack possible through the
+generation of particular synthetic examples referred to as adversarial samples.
+These samples are constructed by manipulating real examples from the training
+data distribution in order to "fool" the original neural model, resulting in
+misclassification (with high confidence) of previously correctly classified
+samples. Addressing this weakness is of utmost importance if deep neural
+architectures are to be applied to critical applications, such as those in the
+domain of cybersecurity. In this paper, we present an analysis of this
+fundamental flaw lurking in all neural architectures to uncover limitations of
+previously proposed defense mechanisms. More importantly, we present a unifying
+framework for protecting deep neural models using a non-invertible data
+transformation--developing two adversary-resilient architectures utilizing both
+linear and nonlinear dimensionality reduction. Empirical results indicate that
+our framework provides better robustness compared to state-of-art solutions
+while having negligible degradation in accuracy.
+
+
+A Comparative Study of Rule Extraction for Recurrent Neural Networks
+
+  Understanding recurrent networks through rule extraction has a long history.
+This has taken on new interests due to the need for interpreting or verifying
+neural networks. One basic form for representing stateful rules is
+deterministic finite automata (DFA). Previous research shows that extracting
+DFAs from trained second-order recurrent networks is not only possible but also
+relatively stable. Recently, several new types of recurrent networks with more
+complicated architectures have been introduced. These handle challenging
+learning tasks usually involving sequential data. However, it remains an open
+problem whether DFAs can be adequately extracted from these models.
+Specifically, it is not clear how DFA extraction will be affected when applied
+to different recurrent networks trained on data sets with different levels of
+complexity. Here, we investigate DFA extraction on several widely adopted
+recurrent networks that are trained to learn a set of seven regular Tomita
+grammars. We first formally analyze the complexity of Tomita grammars and
+categorize these grammars according to that complexity. Then we empirically
+evaluate different recurrent networks for their performance of DFA extraction
+on all Tomita grammars. Our experiments show that for most recurrent networks,
+their extraction performance decreases as the complexity of the underlying
+grammar increases. On grammars of lower complexity, most recurrent networks
+obtain desirable extraction performance. As for grammars with the highest level
+of complexity, while several complicated models fail with only certain
+recurrent networks having satisfactory extraction performance.
+
+
+Large Scale Scene Text Verification with Guided Attention
+
+  Many tasks are related to determining if a particular text string exists in
+an image. In this work, we propose a new framework that learns this task in an
+end-to-end way. The framework takes an image and a text string as input and
+then outputs the probability of the text string being present in the image.
+This is the first end-to-end framework that learns such relationships between
+text and images in scene text area. The framework does not require explicit
+scene text detection or recognition and thus no bounding box annotations are
+needed for it. It is also the first work in scene text area that tackles suh a
+weakly labeled problem. Based on this framework, we developed a model called
+Guided Attention. Our designed model achieves much better results than several
+state-of-the-art scene text reading based solutions for a challenging Street
+View Business Matching task. The task tries to find correct business names for
+storefront images and the dataset we collected for it is substantially larger,
+and more challenging than existing scene text dataset. This new real-world task
+provides a new perspective for studying scene text related problems. We also
+demonstrate the uniqueness of our task via a comparison between our problem and
+a typical Visual Question Answering problem.
+
+
+A Neural Temporal Model for Human Motion Prediction
+
+  We propose novel neural temporal models for predicting and synthesizing human
+motion, achieving state-of-the-art in modeling long-term motion trajectories
+while being competitive with prior work in short-term prediction, with
+significantly less required computation. Key aspects of our proposed system
+include: 1) a novel, two-level processing architecture that aids in generating
+planned trajectories, 2) a simple set of easily computable features that
+integrate derivative information into the model, and 3) a novel multi-objective
+loss function that helps the model to slowly progress from the simpler task of
+next-step prediction to the harder task of multi-step closed-loop prediction.
+Our results demonstrate that these innovations facilitate improved modeling of
+long-term motion trajectories. Finally, we propose a novel metric, called
+Normalized Power Spectrum Similarity (NPSS), to evaluate the long-term
+predictive ability of motion synthesis models, complementing the popular
+mean-squared error (MSE) measure of the Euler joint angles over time. We
+conduct a user study to determine if the proposed NPSS correlates with human
+evaluation of long-term motion more strongly than MSE and find that it indeed
+does.
+
+
+Verification of Recurrent Neural Networks Through Rule Extraction
+
+  The verification problem for neural networks is verifying whether a neural
+network will suffer from adversarial samples, or approximating the maximal
+allowed scale of adversarial perturbation that can be endured. While most prior
+work contributes to verifying feed-forward networks, little has been explored
+for verifying recurrent networks. This is due to the existence of a more
+rigorous constraint on the perturbation space for sequential data, and the lack
+of a proper metric for measuring the perturbation. In this work, we address
+these challenges by proposing a metric which measures the distance between
+strings, and use deterministic finite automata (DFA) to represent a rigorous
+oracle which examines if the generated adversarial samples violate certain
+constraints on a perturbation. More specifically, we empirically show that
+certain recurrent networks allow relatively stable DFA extraction. As such,
+DFAs extracted from these recurrent networks can serve as a surrogate oracle
+for when the ground truth DFA is unknown. We apply our verification mechanism
+to several widely used recurrent networks on a set of the Tomita grammars. The
+results demonstrate that only a few models remain robust against adversarial
+samples. In addition, we show that for grammars with different levels of
+complexity, there is also a difference in the difficulty of robust learning of
+these grammars.
+
+
+ExpertSeer: a Keyphrase Based Expert Recommender for Digital Libraries
+
+  We describe ExpertSeer, a generic framework for expert recommendation based
+on the contents of a digital library. Given a query term q, ExpertSeer
+recommends experts of q by retrieving authors who published relevant papers
+determined by related keyphrases and the quality of papers. The system is based
+on a simple yet effective keyphrase extractor and the Bayes' rule for expert
+recommendation. ExpertSeer is domain independent and can be applied to
+different disciplines and applications since the system is automated and not
+tailored to a specific discipline. Digital library providers can employ the
+system to enrich their services and organizations can discover experts of
+interest within an organization. To demonstrate the power of ExpertSeer, we
+apply the framework to build two expert recommender systems. The first, CSSeer,
+utilizes the CiteSeerX digital library to recommend experts primarily in
+computer science. The second, ChemSeer, uses publicly available documents from
+the Royal Society of Chemistry (RSC) to recommend experts in chemistry. Using
+one thousand computer science terms as benchmark queries, we compared the top-n
+experts (n=3, 5, 10) returned by CSSeer to two other expert recommenders --
+Microsoft Academic Search and ArnetMiner -- and a simulator that imitates the
+ranking function of Google Scholar. Although CSSeer, Microsoft Academic Search,
+and ArnetMiner mostly return prestigious researchers who published several
+papers related to the query term, it was found that different expert
+recommenders return moderately different recommendations. To further study
+their performance, we obtained a widely used benchmark dataset as the ground
+truth for comparison. The results show that our system outperforms Microsoft
+Academic Search and ArnetMiner in terms of Precision-at-k (P@k) for k=3, 5, 10.
+We also conducted several case studies to validate the usefulness of our
+system.
+
+
+Adversary Resistant Deep Neural Networks with an Application to Malware
+  Detection
+
+  Beyond its highly publicized victories in Go, there have been numerous
+successful applications of deep learning in information retrieval, computer
+vision and speech recognition. In cybersecurity, an increasing number of
+companies have become excited about the potential of deep learning, and have
+started to use it for various security incidents, the most popular being
+malware detection. These companies assert that deep learning (DL) could help
+turn the tide in the battle against malware infections. However, deep neural
+networks (DNNs) are vulnerable to adversarial samples, a flaw that plagues most
+if not all statistical learning models. Recent research has demonstrated that
+those with malicious intent can easily circumvent deep learning-powered malware
+detection by exploiting this flaw.
+  In order to address this problem, previous work has developed various defense
+mechanisms that either augmenting training data or enhance model's complexity.
+However, after a thorough analysis of the fundamental flaw in DNNs, we discover
+that the effectiveness of current defenses is limited and, more importantly,
+cannot provide theoretical guarantees as to their robustness against
+adversarial sampled-based attacks. As such, we propose a new adversary
+resistant technique that obstructs attackers from constructing impactful
+adversarial samples by randomly nullifying features within samples. In this
+work, we evaluate our proposed technique against a real world dataset with
+14,679 malware variants and 17,399 benign programs. We theoretically validate
+the robustness of our technique, and empirically show that our technique
+significantly boosts DNN robustness to adversarial samples while maintaining
+high accuracy in classification. To demonstrate the general applicability of
+our proposed method, we also conduct experiments using the MNIST and CIFAR-10
+datasets, generally used in image recognition research.
+
+
+Learning Adversary-Resistant Deep Neural Networks
+
+  Deep neural networks (DNNs) have proven to be quite effective in a vast array
+of machine learning tasks, with recent examples in cyber security and
+autonomous vehicles. Despite the superior performance of DNNs in these
+applications, it has been recently shown that these models are susceptible to a
+particular type of attack that exploits a fundamental flaw in their design.
+This attack consists of generating particular synthetic examples referred to as
+adversarial samples. These samples are constructed by slightly manipulating
+real data-points in order to "fool" the original DNN model, forcing it to
+mis-classify previously correctly classified samples with high confidence.
+Addressing this flaw in the model is essential if DNNs are to be used in
+critical applications such as those in cyber security.
+  Previous work has provided various learning algorithms to enhance the
+robustness of DNN models, and they all fall into the tactic of "security
+through obscurity". This means security can be guaranteed only if one can
+obscure the learning algorithms from adversaries. Once the learning technique
+is disclosed, DNNs protected by these defense mechanisms are still susceptible
+to adversarial samples. In this work, we investigate this issue shared across
+previous research work and propose a generic approach to escalate a DNN's
+resistance to adversarial samples. More specifically, our approach integrates a
+data transformation module with a DNN, making it robust even if we reveal the
+underlying learning algorithm. To demonstrate the generality of our proposed
+approach and its potential for handling cyber security applications, we
+evaluate our method and several other existing solutions on datasets publicly
+available. Our results indicate that our approach typically provides superior
+classification performance and resistance in comparison with state-of-art
+solutions.
+
+
+Hot Streaks in Artistic, Cultural, and Scientific Careers
+
+  The hot streak, loosely defined as winning begets more winnings, highlights a
+specific period during which an individual's performance is substantially
+higher than her typical performance. While widely debated in sports, gambling,
+and financial markets over the past several decades, little is known if hot
+streaks apply to individual careers. Here, building on rich literature on
+lifecycle of creativity, we collected large-scale career histories of
+individual artists, movie directors and scientists, tracing the artworks,
+movies, and scientific publications they produced. We find that, across all
+three domains, hit works within a career show a high degree of temporal
+regularity, each career being characterized by bursts of high-impact works
+occurring in sequence. We demonstrate that these observations can be explained
+by a simple hot-streak model we developed, allowing us to probe quantitatively
+the hot streak phenomenon governing individual careers, which we find to be
+remarkably universal across diverse domains we analyzed: The hot streaks are
+ubiquitous yet unique across different careers. While the vast majority of
+individuals have at least one hot streak, hot streaks are most likely to occur
+only once. The hot streak emerges randomly within an individual's sequence of
+works, is temporally localized, and is unassociated with any detectable change
+in productivity. We show that, since works produced during hot streaks garner
+significantly more impact, the uncovered hot streaks fundamentally drives the
+collective impact of an individual, ignoring which leads us to systematically
+over- or under-estimate the future impact of a career. These results not only
+deepen our quantitative understanding of patterns governing individual
+ingenuity and success, they may also have implications for decisions and
+policies involving predicting and nurturing individuals with lasting impact.
+
+
+Text Extraction and Retrieval from Smartphone Screenshots: Building a
+  Repository for Life in Media
+
+  Daily engagement in life experiences is increasingly interwoven with mobile
+device use. Screen capture at the scale of seconds is being used in behavioral
+studies and to implement "just-in-time" health interventions. The increasing
+psychological breadth of digital information will continue to make the actual
+screens that people view a preferred if not required source of data about life
+experiences. Effective and efficient Information Extraction and Retrieval from
+digital screenshots is a crucial prerequisite to successful use of screen data.
+In this paper, we present the experimental workflow we exploited to: (i)
+pre-process a unique collection of screen captures, (ii) extract unstructured
+text embedded in the images, (iii) organize image text and metadata based on a
+structured schema, (iv) index the resulting document collection, and (v) allow
+for Image Retrieval through a dedicated vertical search engine application. The
+adopted procedure integrates different open source libraries for traditional
+image processing, Optical Character Recognition (OCR), and Image Retrieval. Our
+aim is to assess whether and how state-of-the-art methodologies can be applied
+to this novel data set. We show how combining OpenCV-based pre-processing
+modules with a Long short-term memory (LSTM) based release of Tesseract OCR,
+without ad hoc training, led to a 74% character-level accuracy of the extracted
+text. Further, we used the processed repository as baseline for a dedicated
+Image Retrieval system, for the immediate use and application for behavioral
+and prevention scientists. We discuss issues of Text Information Extraction and
+Retrieval that are particular to the screenshot image case and suggest
+important future work.
+
+
+Continual Learning of Recurrent Neural Networks by Locally Aligning
+  Distributed Representations
+
+  Temporal models based on recurrent neural networks have proven to be quite
+powerful in a wide variety of applications, including language modeling and
+speech processing. However, training these models relies on back-propagation
+through time, which entails unfolding the network over many time steps, making
+the process of conducting credit assignment considerably more challenging.
+Furthermore, the nature of back-propagation itself does not permit the use of
+non-differentiable activation functions and is inherently sequential, making
+parallelization of the training process very difficult.
+  In this work, we propose the Parallel Temporal Neural Coding Network
+(P-TNCN), a biologically inspired model trained by the learning algorithm known
+as Local Representation Alignment, that aims to resolve the difficulties that
+plague recurrent networks trained by back-propagation through time. Most
+notably, this architecture requires neither unrolling nor the derivatives of
+its internal activation functions. We compare our model and learning procedure
+to other online back-propagation-through-time alternatives (which tend to be
+computationally expensive), including real-time recurrent learning, echo state
+networks, and unbiased online recurrent optimization, and show that it
+outperforms them on sequence benchmarks such as Bouncing MNIST, a new benchmark
+we call Bouncing NotMNIST, and Penn Treebank. Notably, our approach can, in
+some instances, outperform full back-propagation through time and variants such
+as sparse attentive back-tracking.
+  Significantly, the hidden unit correction phase of P-TNCN allows it to adapt
+to new datasets even if its synaptic weights are held fixed (zero-shot
+adaptation) and facilitates retention of prior knowledge when faced with a task
+sequence. We present results that show the P-TNCN's ability to conduct
+zero-shot adaptation and continual sequence modeling.
+
+
+A Fermi Gamma-ray Burst Monitor Search for Electromagnetic Signals
+  Coincident with Gravitational-Wave Candidates in Advanced LIGO's First
+  Observing Run
+
+  We present a search for prompt gamma-ray counterparts to compact binary
+coalescence gravitational wave (GW) candidates from Advanced LIGO's first
+observing run (O1). As demonstrated by the multimessenger observations of
+GW170817/GRB 170817A, electromagnetic and GW observations provide complementary
+information about the astrophysical source and, in the case of weaker
+candidates, may strengthen the case for an astrophysical origin. Here we
+investigate low-significance GW candidates from the O1 compact-binary
+coalescence searches using the Fermi Gamma-ray Burst Monitor (GBM), leveraging
+its all-sky and broad energy coverage. Candidates are ranked and compared to
+background to measure significance. Those with false alarm rates of less than
+10^-5 Hz (about one per day) are used as the search sample for gamma-ray
+follow-up. No GW candidates were found to be coincident with gamma-ray
+transients independently identified by blind searches of the GBM data. In
+addition, GW candidate event times were followed up by a separate targeted
+search of GBM data. Among the resulting GBM events, the two with lowest false
+alarm rates were the gamma-ray transient GW150914-GBM presented in Connaughton
+et al. (2016) and a solar flare in chance coincidence with a GW candidate.
+
+
+Localization and broadband follow-up of the gravitational-wave transient
+  GW150914
+
+  A gravitational-wave (GW) transient was identified in data recorded by the
+Advanced Laser Interferometer Gravitational-wave Observatory (LIGO) detectors
+on 2015 September 14. The event, initially designated G184098 and later given
+the name GW150914, is described in detail elsewhere. By prior arrangement,
+preliminary estimates of the time, significance, and sky location of the event
+were shared with 63 teams of observers covering radio, optical, near-infrared,
+X-ray, and gamma-ray wavelengths with ground- and space-based facilities. In
+this Letter we describe the low-latency analysis of the GW data and present the
+sky localization of the first observed compact binary merger. We summarize the
+follow-up observations reported by 25 teams via private Gamma-ray Coordinates
+Network circulars, giving an overview of the participating facilities, the GW
+sky localization coverage, the timeline and depth of the observations. As this
+event turned out to be a binary black hole merger, there is little expectation
+of a detectable electromagnetic (EM) signature. Nevertheless, this first
+broadband campaign to search for a counterpart of an Advanced LIGO source
+represents a milestone and highlights the broad capabilities of the transient
+astronomy community and the observing strategies that have been developed to
+pursue neutron star binary merger events. Detailed investigations of the EM
+data and results of the EM follow-up campaign are being disseminated in papers
+by the individual teams.
+
+
+Supplement: Localization and broadband follow-up of the
+  gravitational-wave transient GW150914
+
+  This Supplement provides supporting material for arXiv:1602.08492 . We
+briefly summarize past electromagnetic (EM) follow-up efforts as well as the
+organization and policy of the current EM follow-up program. We compare the
+four probability sky maps produced for the gravitational-wave transient
+GW150914, and provide additional details of the EM follow-up observations that
+were performed in the different bands.
+
+
+The Long-Baseline Neutrino Experiment: Exploring Fundamental Symmetries
+  of the Universe
+
+  The preponderance of matter over antimatter in the early Universe, the
+dynamics of the supernova bursts that produced the heavy elements necessary for
+life and whether protons eventually decay --- these mysteries at the forefront
+of particle physics and astrophysics are key to understanding the early
+evolution of our Universe, its current state and its eventual fate. The
+Long-Baseline Neutrino Experiment (LBNE) represents an extensively developed
+plan for a world-class experiment dedicated to addressing these questions. LBNE
+is conceived around three central components: (1) a new, high-intensity
+neutrino source generated from a megawatt-class proton accelerator at Fermi
+National Accelerator Laboratory, (2) a near neutrino detector just downstream
+of the source, and (3) a massive liquid argon time-projection chamber deployed
+as a far detector deep underground at the Sanford Underground Research
+Facility. This facility, located at the site of the former Homestake Mine in
+Lead, South Dakota, is approximately 1,300 km from the neutrino source at
+Fermilab -- a distance (baseline) that delivers optimal sensitivity to neutrino
+charge-parity symmetry violation and mass ordering effects. This ambitious yet
+cost-effective design incorporates scalability and flexibility and can
+accommodate a variety of upgrades and contributions. With its exceptional
+combination of experimental configuration, technical capabilities, and
+potential for transformative discoveries, LBNE promises to be a vital facility
+for the field of particle physics worldwide, providing physicists from around
+the globe with opportunities to collaborate in a twenty to thirty year program
+of exciting science. In this document we provide a comprehensive overview of
+LBNE's scientific objectives, its place in the landscape of neutrino physics
+worldwide, the technologies it will incorporate and the capabilities it will
+possess.
+
+

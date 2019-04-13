@@ -1,0 +1,21 @@
+Interleaving Optimization with Sampling-Based Motion Planning (IOS-MP):
+  Combining Local Optimization with Global Exploration
+
+  Computing globally optimal motion plans for a robot is challenging in part
+because it requires analyzing a robot's configuration space simultaneously from
+both a macroscopic viewpoint (i.e., considering paths in multiple homotopic
+classes) and a microscopic viewpoint (i.e., locally optimizing path quality).
+We introduce Interleaved Optimization with Sampling-based Motion Planning
+(IOS-MP), a new method that effectively combines global exploration and local
+optimization to quickly compute high quality motion plans. Our approach
+combines two paradigms: (1) asymptotically-optimal sampling-based motion
+planning, which is effective at global exploration but relatively slow at
+locally refining paths, and (2) optimization-based motion planning, which
+locally optimizes paths quickly but lacks a global view of the configuration
+space. IOS-MP iteratively alternates between global exploration and local
+optimization, sharing information between the two, to improve motion planning
+efficiency. We evaluate IOS-MP as it scales with respect to dimensionality and
+complexity, as well as demonstrate its effectiveness on a 7-DOF manipulator for
+tasks specified using goal configurations and workspace goal regions.
+
+

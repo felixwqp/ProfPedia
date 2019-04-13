@@ -1,0 +1,302 @@
+Planning with Preferences using Logic Programming
+
+  We present a declarative language, PP, for the high-level specification of
+preferences between possible solutions (or trajectories) of a planning problem.
+This novel language allows users to elegantly express non-trivial,
+multi-dimensional preferences and priorities over such preferences. The
+semantics of PP allows the identification of most preferred trajectories for a
+given goal. We also provide an answer set programming implementation of
+planning problems with PP preferences.
+
+
+Reasoning and Planning with Sensing Actions, Incomplete Information, and
+  Static Causal Laws using Answer Set Programming
+
+  We extend the 0-approximation of sensing actions and incomplete information
+in [Son and Baral 2000] to action theories with static causal laws and prove
+its soundness with respect to the possible world semantics. We also show that
+the conditional planning problem with respect to this approximation is
+NP-complete. We then present an answer set programming based conditional
+planner, called ASCP, that is capable of generating both conformant plans and
+conditional plans in the presence of sensing actions, incomplete information
+about the initial state, and static causal laws. We prove the correctness of
+our implementation and argue that our planner is sound and complete with
+respect to the proposed approximation. Finally, we present experimental results
+comparing ASCP to other planners.
+
+
+Domain-Dependent Knowledge in Answer Set Planning
+
+  In this paper we consider three different kinds of domain-dependent control
+knowledge (temporal, procedural and HTN-based) that are useful in planning. Our
+approach is declarative and relies on the language of logic programming with
+answer set semantics (AnsProlog*). AnsProlog* is designed to plan without
+control knowledge. We show how temporal, procedural and HTN-based control
+knowledge can be incorporated into AnsProlog* by the modular addition of a
+small number of domain-dependent rules, without the need to modify the planner.
+We formally prove the correctness of our planner, both in the absence and
+presence of the control knowledge. Finally, we perform some initial
+experimentation that demonstrates the potential reduction in planning time that
+can be achieved when procedural domain knowledge is used to solve planning
+problems with large plan length.
+
+
+A State-Based Regression Formulation for Domains with Sensing
+  Actions<br> and Incomplete Information
+
+  We present a state-based regression function for planning domains where an
+agent does not have complete information and may have sensing actions. We
+consider binary domains and employ a three-valued characterization of domains
+with sensing actions to define the regression function. We prove the soundness
+and completeness of our regression formulation with respect to the definition
+of progression. More specifically, we show that (i) a plan obtained through
+regression for a planning problem is indeed a progression solution of that
+planning problem, and that (ii) for each plan found through progression, using
+regression one obtains that plan or an equivalent one.
+
+
+Justifications for Logic Programs under Answer Set Semantics
+
+  The paper introduces the notion of off-line justification for Answer Set
+Programming (ASP). Justifications provide a graph-based explanation of the
+truth value of an atom w.r.t. a given answer set. The paper extends also this
+notion to provide justification of atoms during the computation of an answer
+set (on-line justification), and presents an integration of on-line
+justifications within the computation model of Smodels. Off-line and on-line
+justifications provide useful tools to enhance understanding of ASP, and they
+offer a basic data structure to support methodologies and tools for debugging
+answer set programs. A preliminary implementation has been developed in
+ASP-PROLOG.
+  (To appear in Theory and Practice of Logic Programming (TPLP))
+
+
+Regression with respect to sensing actions and partial states
+
+  In this paper, we present a state-based regression function for planning
+domains where an agent does not have complete information and may have sensing
+actions. We consider binary domains and employ the 0-approximation [Son & Baral
+2001] to define the regression function. In binary domains, the use of
+0-approximation means using 3-valued states. Although planning using this
+approach is incomplete with respect to the full semantics, we adopt it to have
+a lower complexity. We prove the soundness and completeness of our regression
+formulation with respect to the definition of progression. More specifically,
+we show that (i) a plan obtained through regression for a planning problem is
+indeed a progression solution of that planning problem, and that (ii) for each
+plan found through progression, using regression one obtains that plan or an
+equivalent one. We then develop a conditional planner that utilizes our
+regression function. We prove the soundness and completeness of our planning
+algorithm and present experimental results with respect to several well known
+planning problems in the literature.
+
+
+An Action Language for Multi-Agent Domains: Foundations
+
+  In multi-agent domains (MADs), an agent's action may not just change the
+world and the agent's knowledge and beliefs about the world, but also may
+change other agents' knowledge and beliefs about the world and their knowledge
+and beliefs about other agents' knowledge and beliefs about the world. The
+goals of an agent in a multi-agent world may involve manipulating the knowledge
+and beliefs of other agents' and again, not just their knowledge/belief about
+the world, but also their knowledge about other agents' knowledge about the
+world. Our goal is to present an action language (mA+) that has the necessary
+features to address the above aspects in representing and RAC in MADs. mA+
+allows the representation of and reasoning about different types of actions
+that an agent can perform in a domain where many other agents might be
+present---such as world-altering actions, sensing actions, and
+announcement/communication actions. It also allows the specification of agents'
+dynamic awareness of action occurrences which has future implications on what
+agents' know about the world and other agents' knowledge about the world. mA+
+considers three different types of awareness: full,- partial- awareness, and
+complete oblivion of an action occurrence and its effects. This keeps the
+language simple, yet powerful enough to address a large variety of knowledge
+manipulation scenarios in MADs. The semantics of mA+ relies on the notion of
+state, which is described by a pointed Kripke model and is used to encode the
+agent's knowledge and the real state of the world. It is defined by a
+transition function that maps pairs of actions and states into sets of states.
+We illustrate properties of the action theories, including properties that
+guarantee finiteness of the set of initial states and their practical
+implementability. Finally, we relate mA+ to other related formalisms that
+contribute to RAC in MADs.
+
+
+A Constructive Semantic Characterization of Aggregates in ASP
+
+  This technical note describes a monotone and continuous fixpoint operator to
+compute the answer sets of programs with aggregates. The fixpoint operator
+relies on the notion of aggregate solution. Under certain conditions, this
+operator behaves identically to the three-valued immediate consequence operator
+$\Phi^{aggr}_P$ for aggregate programs, independently proposed Pelov et al.
+This operator allows us to closely tie the computational complexity of the
+answer set checking and answer sets existence problems to the cost of checking
+a solution of the aggregates in the program. Finally, we relate the semantics
+described by the operator to other proposals for logic programming with
+aggregates.
+  To appear in Theory and Practice of Logic Programming (TPLP).
+
+
+An Unfolding-Based Semantics for Logic Programming with Aggregates
+
+  The paper presents two equivalent definitions of answer sets for logic
+programs with aggregates. These definitions build on the notion of unfolding of
+aggregates, and they are aimed at creating methodologies to translate logic
+programs with aggregates to normal logic programs or positive programs, whose
+answer set semantics can be used to defined the semantics of the original
+programs. The first definition provides an alternative view of the semantics
+for logic programming with aggregates described by Pelov et al.
+  The second definition is similar to the traditional answer set definition for
+normal logic programs, in that, given a logic program with aggregates and an
+interpretation, the unfolding process produces a positive program. The paper
+shows how this definition can be extended to consider aggregates in the head of
+the rules.
+  The proposed views of logic programming with aggregates are simple and
+coincide with the ultimate stable model semantics, and with other semantic
+characterizations for large classes of program (e.g., programs with monotone
+aggregates and programs that are aggregate-stratified).
+  Moreover, it can be directly employed to support an implementation using
+available answer set solvers. The paper describes a system, called ASP^A, that
+is capable of computing answer sets of programs with arbitrary (e.g.,
+recursively defined) aggregates.
+
+
+Logic Programming for Finding Models in the Logics of Knowledge and its
+  Applications: A Case Study
+
+  The logics of knowledge are modal logics that have been shown to be effective
+in representing and reasoning about knowledge in multi-agent domains.
+Relatively few computational frameworks for dealing with computation of models
+and useful transformations in logics of knowledge (e.g., to support multi-agent
+planning with knowledge actions and degrees of visibility) have been proposed.
+This paper explores the use of logic programming (LP) to encode interesting
+forms of logics of knowledge and compute Kripke models. The LP modeling is
+expanded with useful operators on Kripke structures, to support multi-agent
+planning in the presence of both world-altering and knowledge actions. This
+results in the first ever implementation of a planner for this type of complex
+multi-agent domains.
+
+
+Revisiting Epistemic Specifications
+
+  In 1991, Michael Gelfond introduced the language of epistemic specifications.
+The goal was to develop tools for modeling problems that require some form of
+meta-reasoning, that is, reasoning over multiple possible worlds. Despite their
+relevance to knowledge representation, epistemic specifications have received
+relatively little attention so far. In this paper, we revisit the formalism of
+epistemic specification. We offer a new definition of the formalism, propose
+several semantics (one of which, under syntactic restrictions we assume, turns
+out to be equivalent to the original semantics by Gelfond), derive some
+complexity results and, finally, show the effectiveness of the formalism for
+modeling problems requiring meta-reasoning considered recently by Faber and
+Woltran. All these results show that epistemic specifications deserve much more
+attention that has been afforded to them so far.
+
+
+Logic and Constraint Logic Programming for Distributed Constraint
+  Optimization
+
+  The field of Distributed Constraint Optimization Problems (DCOPs) has gained
+momentum, thanks to its suitability in capturing complex problems (e.g.,
+multi-agent coordination and resource allocation problems) that are naturally
+distributed and cannot be realistically addressed in a centralized manner. The
+state of the art in solving DCOPs relies on the use of ad-hoc infrastructures
+and ad-hoc constraint solving procedures. This paper investigates an
+infrastructure for solving DCOPs that is completely built on logic programming
+technologies. In particular, the paper explores the use of a general constraint
+solver (a constraint logic programming system in this context) to handle the
+agent-level constraint solving. The preliminary experiments show that logic
+programming provides benefits over a state-of-the-art DCOP system, in terms of
+performance and scalability, opening the doors to the use of more advanced
+technology (e.g., search strategies and complex constraints) for solving DCOPs.
+
+
+Query Answering in Object Oriented Knowledge Bases in Logic Programming:
+  Description and Challenge for ASP
+
+  Research on developing efficient and scalable ASP solvers can substantially
+benefit by the availability of data sets to experiment with. KB_Bio_101
+contains knowledge from a biology textbook, has been developed as part of
+Project Halo, and has recently become available for research use. KB_Bio_101 is
+one of the largest KBs available in ASP and the reasoning with it is
+undecidable in general. We give a description of this KB and ASP programs for a
+suite of queries that have been of practical interest. We explain why these
+queries pose significant practical challenges for the current ASP solvers.
+
+
+A Parallel Memory-efficient Epistemic Logic Program Solver: Harder,
+  Better, Faster
+
+  As the practical use of answer set programming (ASP) has grown with the
+development of efficient solvers, we expect a growing interest in extensions of
+ASP as their semantics stabilize and solvers supporting them mature. Epistemic
+Specifications, which adds modal operators K and M to the language of ASP, is
+one such extension. We call a program in this language an epistemic logic
+program (ELP). Solvers have thus far been practical for only the simplest ELPs
+due to exponential growth of the search space. We describe a solver that is
+able to solve harder problems better (e.g., without exponentially-growing
+memory needs w.r.t. K and M occurrences) and faster than any other known ELP
+solver.
+
+
+Solving Distributed Constraint Optimization Problems Using Logic
+  Programming
+
+  This paper explores the use of Answer Set Programming (ASP) in solving
+Distributed Constraint Optimization Problems (DCOPs). The paper provides the
+following novel contributions: (1) It shows how one can formulate DCOPs as
+logic programs; (2) It introduces ASP-DPOP, the first DCOP algorithm that is
+based on logic programming; (3) It experimentally shows that ASP-DPOP can be up
+to two orders of magnitude faster than DPOP (its imperative programming
+counterpart) as well as solve some problems that DPOP fails to solve, due to
+memory limitations; and (4) It demonstrates the applicability of ASP in a wide
+array of multi-agent problems currently modeled as DCOPs. Under consideration
+in Theory and Practice of Logic Programming (TPLP).
+
+
+Experimenting with robotic intra-logistics domains
+
+  We introduce the asprilo [1] framework to facilitate experimental studies of
+approaches addressing complex dynamic applications. For this purpose, we have
+chosen the domain of robotic intra-logistics. This domain is not only highly
+relevant in the context of today's fourth industrial revolution but it moreover
+combines a multitude of challenging issues within a single uniform framework.
+This includes multi-agent planning, reasoning about action, change, resources,
+strategies, etc. In return, asprilo allows users to study alternative solutions
+as regards effectiveness and scalability. Although asprilo relies on Answer Set
+Programming and Python, it is readily usable by any system complying with its
+fact-oriented interface format. This makes it attractive for benchmarking and
+teaching well beyond logic programming. More precisely, asprilo consists of a
+versatile benchmark generator, solution checker and visualizer as well as a
+bunch of reference encodings featuring various ASP techniques. Importantly, the
+visualizer's animation capabilities are indispensable for complex scenarios
+like intra-logistics in order to inspect valid as well as invalid solution
+candidates. Also, it allows for graphically editing benchmark layouts that can
+be used as a basis for generating benchmark suites.
+  [1] asprilo stands for Answer Set Programming for robotic intra-logistics
+
+
+Phylotastic: An Experiment in Creating, Manipulating, and Evolving
+  Phylogenetic Biology Workflows Using Logic Programming
+
+  Evolutionary Biologists have long struggled with the challenge of developing
+analysis workflows in a flexible manner, thus facilitating the reuse of
+phylogenetic knowledge. An evolutionary biology workflow can be viewed as a
+plan which composes web services that can retrieve, manipulate, and produce
+phylogenetic trees. The Phylotastic project was launched two years ago as a
+collaboration between evolutionary biologists and computer scientists, with the
+goal of developing an open architecture to facilitate the creation of such
+analysis workflows. While composition of web services is a problem that has
+been extensively explored in the literature, including within the logic
+programming domain, the incarnation of the problem in Phylotastic provides a
+number of additional challenges. Along with the need to integrate preferences
+and formal ontologies in the description of the desired workflow, evolutionary
+biologists tend to construct workflows in an incremental manner, by
+successively refining the workflow, by indicating desired changes (e.g.,
+exclusion of certain services, modifications of the desired output). This leads
+to the need of successive iterations of incremental replanning, to develop a
+new workflow that integrates the requested changes while minimizing the changes
+to the original workflow. This paper illustrates how Phylotastic has addressed
+the challenges of creating and refining phylogenetic analysis workflows using
+logic programming technology and how such solutions have been used within the
+general framework of the Phylotastic project. Under consideration in Theory and
+Practice of Logic Programming (TPLP).
+
+

@@ -1,0 +1,602 @@
+High Dimensional Multivariate Regression and Precision Matrix Estimation
+  via Nonconvex Optimization
+
+  We propose a nonconvex estimator for joint multivariate regression and
+precision matrix estimation in the high dimensional regime, under sparsity
+constraints. A gradient descent algorithm with hard thresholding is developed
+to solve the nonconvex estimator, and it attains a linear rate of convergence
+to the true regression coefficients and precision matrix simultaneously, up to
+the statistical error. Compared with existing methods along this line of
+research, which have little theoretical guarantee, the proposed algorithm not
+only is computationally much more efficient with provable convergence
+guarantee, but also attains the optimal finite sample statistical rate up to a
+logarithmic factor. Thorough experiments on both synthetic and real datasets
+back up our theory.
+
+
+Stochastic Variance-Reduced Cubic Regularized Newton Method
+
+  We propose a stochastic variance-reduced cubic regularized Newton method for
+non-convex optimization. At the core of our algorithm is a novel
+semi-stochastic gradient along with a semi-stochastic Hessian, which are
+specifically designed for cubic regularization method. We show that our
+algorithm is guaranteed to converge to an
+$(\epsilon,\sqrt{\epsilon})$-approximately local minimum within
+$\tilde{O}(n^{4/5}/\epsilon^{3/2})$ second-order oracle calls, which
+outperforms the state-of-the-art cubic regularization algorithms including
+subsampled cubic regularization. Our work also sheds light on the application
+of variance reduction technique to high-order non-convex optimization methods.
+Thorough experiments on various non-convex optimization problems support our
+theory.
+
+
+On the Convergence of Adaptive Gradient Methods for Nonconvex
+  Optimization
+
+  Adaptive gradient methods are workhorses in deep learning. However, the
+convergence guarantees of adaptive gradient methods for nonconvex optimization
+have not been sufficiently studied. In this paper, we provide a sharp analysis
+of a recently proposed adaptive gradient method namely partially adaptive
+momentum estimation method (Padam) (Chen and Gu, 2018), which admits many
+existing adaptive gradient methods such as RMSProp and AMSGrad as special
+cases. Our analysis shows that, for smooth nonconvex functions, Padam converges
+to a first-order stationary point at the rate of
+$O\big((\sum_{i=1}^d\|\mathbf{g}_{1:T,i}\|_2)^{1/2}/T^{3/4} + d/T\big)$, where
+$T$ is the number of iterations, $d$ is the dimension,
+$\mathbf{g}_1,\ldots,\mathbf{g}_T$ are the stochastic gradients, and
+$\mathbf{g}_{1:T,i} = [g_{1,i},g_{2,i},\ldots,g_{T,i}]^\top$. Our theoretical
+result also suggests that in order to achieve faster convergence rate, it is
+necessary to use Padam instead of AMSGrad. This is well-aligned with the
+empirical results of deep learning reported in Chen and Gu (2018).
+
+
+Generalized Fisher Score for Feature Selection
+
+  Fisher score is one of the most widely used supervised feature selection
+methods. However, it selects each feature independently according to their
+scores under the Fisher criterion, which leads to a suboptimal subset of
+features. In this paper, we present a generalized Fisher score to jointly
+select features. It aims at finding an subset of features, which maximize the
+lower bound of traditional Fisher score. The resulting feature selection
+problem is a mixed integer programming, which can be reformulated as a
+quadratically constrained linear programming (QCLP). It is solved by cutting
+plane algorithm, in each iteration of which a multiple kernel learning problem
+is solved alternatively by multivariate ridge regression and projected gradient
+descent. Experiments on benchmark data sets indicate that the proposed method
+outperforms Fisher score as well as many other state-of-the-art feature
+selection methods.
+
+
+Towards Faster Rates and Oracle Property for Low-Rank Matrix Estimation
+
+  We present a unified framework for low-rank matrix estimation with nonconvex
+penalties. We first prove that the proposed estimator attains a faster
+statistical rate than the traditional low-rank matrix estimator with nuclear
+norm penalty. Moreover, we rigorously show that under a certain condition on
+the magnitude of the nonzero singular values, the proposed estimator enjoys
+oracle property (i.e., exactly recovers the true rank of the matrix), besides
+attaining a faster rate. As far as we know, this is the first work that
+establishes the theory of low-rank matrix estimation with nonconvex penalties,
+confirming the advantages of nonconvex penalties for matrix completion.
+Numerical experiments on both synthetic and real world datasets corroborate our
+theory.
+
+
+Robust Wirtinger Flow for Phase Retrieval with Arbitrary Corruption
+
+  We consider the robust phase retrieval problem of recovering the unknown
+signal from the magnitude-only measurements, where the measurements can be
+contaminated by both sparse arbitrary corruption and bounded random noise. We
+propose a new nonconvex algorithm for robust phase retrieval, namely Robust
+Wirtinger Flow to jointly estimate the unknown signal and the sparse
+corruption. We show that our proposed algorithm is guaranteed to converge
+linearly to the unknown true signal up to a minimax optimal statistical
+precision in such a challenging setting. Compared with existing robust phase
+retrieval methods, we achieve an optimal sample complexity of $O(n)$ in both
+noisy and noise-free settings. Thorough experiments on both synthetic and real
+datasets corroborate our theory.
+
+
+Local and Global Inference for High Dimensional Nonparanormal Graphical
+  Models
+
+  This paper proposes a unified framework to quantify local and global
+inferential uncertainty for high dimensional nonparanormal graphical models. In
+particular, we consider the problems of testing the presence of a single edge
+and constructing a uniform confidence subgraph. Due to the presence of unknown
+marginal transformations, we propose a pseudo likelihood based inferential
+approach. In sharp contrast to the existing high dimensional score test method,
+our method is free of tuning parameters given an initial estimator, and extends
+the scope of the existing likelihood based inferential framework. Furthermore,
+we propose a U-statistic multiplier bootstrap method to construct the
+confidence subgraph. We show that the constructed subgraph is contained in the
+true graph with probability greater than a given nominal level. Compared with
+existing methods for constructing confidence subgraphs, our method does not
+rely on Gaussian or sub-Gaussian assumptions. The theoretical properties of the
+proposed inferential methods are verified by thorough numerical experiments and
+real data analysis.
+
+
+Communication-efficient Distributed Sparse Linear Discriminant Analysis
+
+  We propose a communication-efficient distributed estimation method for sparse
+linear discriminant analysis (LDA) in the high dimensional regime. Our method
+distributes the data of size $N$ into $m$ machines, and estimates a local
+sparse LDA estimator on each machine using the data subset of size $N/m$. After
+the distributed estimation, our method aggregates the debiased local estimators
+from $m$ machines, and sparsifies the aggregated estimator. We show that the
+aggregated estimator attains the same statistical rate as the centralized
+estimation method, as long as the number of machines $m$ is chosen
+appropriately. Moreover, we prove that our method can attain the model
+selection consistency under a milder condition than the centralized method.
+Experiments on both synthetic and real datasets corroborate our theory.
+
+
+A Unified Computational and Statistical Framework for Nonconvex Low-Rank
+  Matrix Estimation
+
+  We propose a unified framework for estimating low-rank matrices through
+nonconvex optimization based on gradient descent algorithm. Our framework is
+quite general and can be applied to both noisy and noiseless observations. In
+the general case with noisy observations, we show that our algorithm is
+guaranteed to linearly converge to the unknown low-rank matrix up to minimax
+optimal statistical error, provided an appropriate initial estimator. While in
+the generic noiseless setting, our algorithm converges to the unknown low-rank
+matrix at a linear rate and enables exact recovery with optimal sample
+complexity. In addition, we develop a new initialization algorithm to provide a
+desired initial estimator, which outperforms existing initialization algorithms
+for nonconvex low-rank matrix estimation. We illustrate the superiority of our
+framework through three examples: matrix regression, matrix completion, and
+one-bit matrix completion. We also corroborate our theory through extensive
+experiments on synthetic data.
+
+
+Stochastic Variance-reduced Gradient Descent for Low-rank Matrix
+  Recovery from Linear Measurements
+
+  We study the problem of estimating low-rank matrices from linear measurements
+(a.k.a., matrix sensing) through nonconvex optimization. We propose an
+efficient stochastic variance reduced gradient descent algorithm to solve a
+nonconvex optimization problem of matrix sensing. Our algorithm is applicable
+to both noisy and noiseless settings. In the case with noisy observations, we
+prove that our algorithm converges to the unknown low-rank matrix at a linear
+rate up to the minimax optimal statistical error. And in the noiseless setting,
+our algorithm is guaranteed to linearly converge to the unknown low-rank matrix
+and achieves exact recovery with optimal sample complexity. Most notably, the
+overall computational complexity of our proposed algorithm, which is defined as
+the iteration complexity times per iteration time complexity, is lower than the
+state-of-the-art algorithms based on gradient descent. Experiments on synthetic
+data corroborate the superiority of the proposed algorithm over the
+state-of-the-art algorithms.
+
+
+A Universal Variance Reduction-Based Catalyst for Nonconvex Low-Rank
+  Matrix Recovery
+
+  We propose a generic framework based on a new stochastic variance-reduced
+gradient descent algorithm for accelerating nonconvex low-rank matrix recovery.
+Starting from an appropriate initial estimator, our proposed algorithm performs
+projected gradient descent based on a novel semi-stochastic gradient
+specifically designed for low-rank matrix recovery. Based upon the mild
+restricted strong convexity and smoothness conditions, we derive a projected
+notion of the restricted Lipschitz continuous gradient property, and prove that
+our algorithm enjoys linear convergence rate to the unknown low-rank matrix
+with an improved computational complexity. Moreover, our algorithm can be
+employed to both noiseless and noisy observations, where the optimal sample
+complexity and the minimax optimal statistical rate can be attained
+respectively. We further illustrate the superiority of our generic framework
+through several specific examples, both theoretically and experimentally.
+
+
+A Unified Framework for Low-Rank plus Sparse Matrix Recovery
+
+  We propose a unified framework to solve general low-rank plus sparse matrix
+recovery problems based on matrix factorization, which covers a broad family of
+objective functions satisfying the restricted strong convexity and smoothness
+conditions. Based on projected gradient descent and the double thresholding
+operator, our proposed generic algorithm is guaranteed to converge to the
+unknown low-rank and sparse matrices at a locally linear rate, while matching
+the best-known robustness guarantee (i.e., tolerance for sparsity). At the core
+of our theory is a novel structural Lipschitz gradient condition for low-rank
+plus sparse matrices, which is essential for proving the linear convergence
+rate of our algorithm, and we believe is of independent interest to prove fast
+rates for general superposition-structured models. We illustrate the
+application of our framework through two concrete examples: robust matrix
+sensing and robust PCA. Experiments on both synthetic and real datasets
+corroborate our theory.
+
+
+Speeding Up Latent Variable Gaussian Graphical Model Estimation via
+  Nonconvex Optimizations
+
+  We study the estimation of the latent variable Gaussian graphical model
+(LVGGM), where the precision matrix is the superposition of a sparse matrix and
+a low-rank matrix. In order to speed up the estimation of the sparse plus
+low-rank components, we propose a sparsity constrained maximum likelihood
+estimator based on matrix factorization, and an efficient alternating gradient
+descent algorithm with hard thresholding to solve it. Our algorithm is orders
+of magnitude faster than the convex relaxation based methods for LVGGM. In
+addition, we prove that our algorithm is guaranteed to linearly converge to the
+unknown sparse and low-rank components up to the optimal statistical precision.
+Experiments on both synthetic and genomic data demonstrate the superiority of
+our algorithm over the state-of-the-art algorithms and corroborate our theory.
+
+
+Saving Gradient and Negative Curvature Computations: Finding Local
+  Minima More Efficiently
+
+  We propose a family of nonconvex optimization algorithms that are able to
+save gradient and negative curvature computations to a large extent, and are
+guaranteed to find an approximate local minimum with improved runtime
+complexity. At the core of our algorithms is the division of the entire domain
+of the objective function into small and large gradient regions: our algorithms
+only perform gradient descent based procedure in the large gradient region, and
+only perform negative curvature descent in the small gradient region. Our novel
+analysis shows that the proposed algorithms can escape the small gradient
+region in only one negative curvature descent step whenever they enter it, and
+thus they only need to perform at most $N_{\epsilon}$ negative curvature
+direction computations, where $N_{\epsilon}$ is the number of times the
+algorithms enter small gradient regions. For both deterministic and stochastic
+settings, we show that the proposed algorithms can potentially beat the
+state-of-the-art local minima finding algorithms. For the finite-sum setting,
+our algorithm can also outperform the best algorithm in a certain regime.
+
+
+Third-order Smoothness Helps: Even Faster Stochastic Optimization
+  Algorithms for Finding Local Minima
+
+  We propose stochastic optimization algorithms that can find local minima
+faster than existing algorithms for nonconvex optimization problems, by
+exploiting the third-order smoothness to escape non-degenerate saddle points
+more efficiently. More specifically, the proposed algorithm only needs
+$\tilde{O}(\epsilon^{-10/3})$ stochastic gradient evaluations to converge to an
+approximate local minimum $\mathbf{x}$, which satisfies $\|\nabla
+f(\mathbf{x})\|_2\leq\epsilon$ and $\lambda_{\min}(\nabla^2 f(\mathbf{x}))\geq
+-\sqrt{\epsilon}$ in the general stochastic optimization setting, where
+$\tilde{O}(\cdot)$ hides logarithm polynomial terms and constants. This
+improves upon the $\tilde{O}(\epsilon^{-7/2})$ gradient complexity achieved by
+the state-of-the-art stochastic local minima finding algorithms by a factor of
+$\tilde{O}(\epsilon^{-1/6})$. For nonconvex finite-sum optimization, our
+algorithm also outperforms the best known algorithms in a certain regime.
+
+
+Stochastic Variance-Reduced Hamilton Monte Carlo Methods
+
+  We propose a fast stochastic Hamilton Monte Carlo (HMC) method, for sampling
+from a smooth and strongly log-concave distribution. At the core of our
+proposed method is a variance reduction technique inspired by the recent
+advance in stochastic optimization. We show that, to achieve $\epsilon$
+accuracy in 2-Wasserstein distance, our algorithm achieves $\tilde
+O\big(n+\kappa^{2}d^{1/2}/\epsilon+\kappa^{4/3}d^{1/3}n^{2/3}/\epsilon^{2/3}\big)$
+gradient complexity (i.e., number of component gradient evaluations), which
+outperforms the state-of-the-art HMC and stochastic gradient HMC methods in a
+wide regime. We also extend our algorithm for sampling from smooth and general
+log-concave distributions, and prove the corresponding gradient complexity as
+well. Experiments on both synthetic and real data demonstrate the superior
+performance of our algorithm.
+
+
+Fast and Sample Efficient Inductive Matrix Completion via Multi-Phase
+  Procrustes Flow
+
+  We revisit the inductive matrix completion problem that aims to recover a
+rank-$r$ matrix with ambient dimension $d$ given $n$ features as the side prior
+information. The goal is to make use of the known $n$ features to reduce sample
+and computational complexities. We present and analyze a new gradient-based
+non-convex optimization algorithm that converges to the true underlying matrix
+at a linear rate with sample complexity only linearly depending on $n$ and
+logarithmically depending on $d$. To the best of our knowledge, all previous
+algorithms either have a quadratic dependency on the number of features in
+sample complexity or a sub-linear computational convergence rate. In addition,
+we provide experiments on both synthetic and real world data to demonstrate the
+effectiveness of our proposed algorithm.
+
+
+Closing the Generalization Gap of Adaptive Gradient Methods in Training
+  Deep Neural Networks
+
+  Adaptive gradient methods, which adopt historical gradient information to
+automatically adjust the learning rate, have been observed to generalize worse
+than stochastic gradient descent (SGD) with momentum in training deep neural
+networks. This leaves how to close the generalization gap of adaptive gradient
+methods an open problem. In this work, we show that adaptive gradient methods
+such as Adam, Amsgrad, are sometimes "over adapted". We design a new algorithm,
+called Partially adaptive momentum estimation method (Padam), which unifies the
+Adam/Amsgrad with SGD to achieve the best from both worlds. Experiments on
+standard benchmarks show that Padam can maintain fast convergence rate as
+Adam/Amsgrad while generalizing as well as SGD in training deep neural
+networks. These results would suggest practitioners pick up adaptive gradient
+methods once again for faster training of deep neural networks.
+
+
+Learning One-hidden-layer ReLU Networks via Gradient Descent
+
+  We study the problem of learning one-hidden-layer neural networks with
+Rectified Linear Unit (ReLU) activation function, where the inputs are sampled
+from standard Gaussian distribution and the outputs are generated from a noisy
+teacher network. We analyze the performance of gradient descent for training
+such kind of neural networks based on empirical risk minimization, and provide
+algorithm-dependent guarantees. In particular, we prove that tensor
+initialization followed by gradient descent can converge to the ground-truth
+parameters at a linear rate up to some statistical error. To the best of our
+knowledge, this is the first work characterizing the recovery guarantee for
+practical learning of one-hidden-layer ReLU networks with multiple neurons.
+Numerical experiments verify our theoretical findings.
+
+
+Stochastic Nested Variance Reduction for Nonconvex Optimization
+
+  We study finite-sum nonconvex optimization problems, where the objective
+function is an average of $n$ nonconvex functions. We propose a new stochastic
+gradient descent algorithm based on nested variance reduction. Compared with
+conventional stochastic variance reduced gradient (SVRG) algorithm that uses
+two reference points to construct a semi-stochastic gradient with diminishing
+variance in each iteration, our algorithm uses $K+1$ nested reference points to
+build a semi-stochastic gradient to further reduce its variance in each
+iteration. For smooth nonconvex functions, the proposed algorithm converges to
+an $\epsilon$-approximate first-order stationary point (i.e., $\|\nabla
+F(\mathbf{x})\|_2\leq \epsilon$) within $\tilde{O}(n\land
+\epsilon^{-2}+\epsilon^{-3}\land n^{1/2}\epsilon^{-2})$ number of stochastic
+gradient evaluations. This improves the best known gradient complexity of SVRG
+$O(n+n^{2/3}\epsilon^{-2})$ and that of SCSG $O(n\land
+\epsilon^{-2}+\epsilon^{-10/3}\land n^{2/3}\epsilon^{-2})$. For gradient
+dominated functions, our algorithm also achieves a better gradient complexity
+than the state-of-the-art algorithms.
+
+
+Finding Local Minima via Stochastic Nested Variance Reduction
+
+  We propose two algorithms that can find local minima faster than the
+state-of-the-art algorithms in both finite-sum and general stochastic nonconvex
+optimization. At the core of the proposed algorithms is
+$\text{One-epoch-SNVRG}^+$ using stochastic nested variance reduction (Zhou et
+al., 2018a), which outperforms the state-of-the-art variance reduction
+algorithms such as SCSG (Lei et al., 2017). In particular, for finite-sum
+optimization problems, the proposed
+$\text{SNVRG}^{+}+\text{Neon2}^{\text{finite}}$ algorithm achieves
+$\tilde{O}(n^{1/2}\epsilon^{-2}+n\epsilon_H^{-3}+n^{3/4}\epsilon_H^{-7/2})$
+gradient complexity to converge to an $(\epsilon, \epsilon_H)$-second-order
+stationary point, which outperforms $\text{SVRG}+\text{Neon2}^{\text{finite}}$
+(Allen-Zhu and Li, 2017) , the best existing algorithm, in a wide regime. For
+general stochastic optimization problems, the proposed
+$\text{SNVRG}^{+}+\text{Neon2}^{\text{online}}$ achieves
+$\tilde{O}(\epsilon^{-3}+\epsilon_H^{-5}+\epsilon^{-2}\epsilon_H^{-3})$
+gradient complexity, which is better than both
+$\text{SVRG}+\text{Neon2}^{\text{online}}$ (Allen-Zhu and Li, 2017) and
+Natasha2 (Allen-Zhu, 2017) in certain regimes. Furthermore, we explore the
+acceleration brought by third-order smoothness of the objective function.
+
+
+A Frank-Wolfe Framework for Efficient and Effective Adversarial Attacks
+
+  Depending on how much information an adversary can access to, adversarial
+attacks can be classified as white-box attack and black-box attack. In both
+cases, optimization-based attack algorithms can achieve relatively low
+distortions and high attack success rates. However, they usually suffer from
+poor time and query complexities, thereby limiting their practical usefulness.
+In this work, we focus on the problem of developing efficient and effective
+optimization-based adversarial attack algorithms. In particular, we propose a
+novel adversarial attack framework for both white-box and black-box settings
+based on the non-convex Frank-Wolfe algorithm. We show in theory that the
+proposed attack algorithms are efficient with an $O(1/\sqrt{T})$ convergence
+rate. The empirical results of attacking Inception V3 model and ResNet V2 model
+on the ImageNet dataset also verify the efficiency and effectiveness of the
+proposed algorithms. More specific, our proposed algorithms attain the highest
+attack success rate in both white-box and black-box attacks among all
+baselines, and are more time and query efficient than the state-of-the-art.
+
+
+Sample Efficient Stochastic Variance-Reduced Cubic Regularization Method
+
+  We propose a sample efficient stochastic variance-reduced cubic
+regularization (Lite-SVRC) algorithm for finding the local minimum efficiently
+in nonconvex optimization. The proposed algorithm achieves a lower sample
+complexity of Hessian matrix computation than existing cubic regularization
+based methods. At the heart of our analysis is the choice of a constant batch
+size of Hessian matrix computation at each iteration and the stochastic
+variance reduction techniques. In detail, for a nonconvex function with $n$
+component functions, Lite-SVRC converges to the local minimum within
+$\tilde{O}(n+n^{2/3}/\epsilon^{3/2})$ Hessian sample complexity, which is
+faster than all existing cubic regularization based methods. Numerical
+experiments with different nonconvex optimization problems conducted on real
+datasets validate our theoretical results.
+
+
+Lower Bounds for Smooth Nonconvex Finite-Sum Optimization
+
+  Smooth finite-sum optimization has been widely studied in both convex and
+nonconvex settings. However, existing lower bounds for finite-sum optimization
+are mostly limited to the setting where each component function is (strongly)
+convex, while the lower bounds for nonconvex finite-sum optimization remain
+largely unsolved. In this paper, we study the lower bounds for smooth nonconvex
+finite-sum optimization, where the objective function is the average of $n$
+nonconvex component functions. We prove tight lower bounds for the complexity
+of finding $\epsilon$-suboptimal point and $\epsilon$-approximate stationary
+point in different settings, for a wide regime of the smallest eigenvalue of
+the Hessian of the objective function (or each component function). Given our
+lower bounds, we can show that existing algorithms including KatyushaX
+(Allen-Zhu, 2018), Natasha (Allen-Zhu, 2017), RapGrad (Lan and Yang, 2018) and
+StagewiseKatyusha (Chen and Yang, 2018) have achieved optimal Incremental
+First-order Oracle (IFO) complexity (i.e., number of IFO calls) up to logarithm
+factors for nonconvex finite-sum optimization. We also point out potential ways
+to further improve these complexity results, in terms of making stronger
+assumptions or by a different convergence analysis.
+
+
+Generalization Error Bounds of Gradient Descent for Learning
+  Over-parameterized Deep ReLU Networks
+
+  Empirical studies show that gradient-based methods can learn deep neural
+networks (DNNs) with very good generalization performance in the
+over-parameterization regime, where DNNs can easily fit a random labeling of
+the training data. While a line of recent work explains in theory that with
+over-parameterization and proper random initialization, gradient-based methods
+can find the global minima of the training loss for DNNs, it does not explain
+the good generalization performance of the gradient-based methods for learning
+over-parameterized DNNs. In this work, we take a step further, and prove that
+under certain assumption on the data distribution that is milder than linear
+separability, gradient descent (GD) with proper random initialization is able
+to train a sufficiently over-parameterized DNN to achieve arbitrarily small
+expected error (i.e., population error). This leads to an algorithmic-dependent
+generalization error bound for deep learning. To the best of our knowledge,
+this is the first result of its kind that can explain the good generalization
+performance of over-parameterized deep neural networks learned by gradient
+descent.
+
+
+Communication-efficient Distributed Estimation and Inference for
+  Transelliptical Graphical Models
+
+  We propose communication-efficient distributed estimation and inference
+methods for the transelliptical graphical model, a semiparametric extension of
+the elliptical distribution in the high dimensional regime. In detail, the
+proposed method distributes the $d$-dimensional data of size $N$ generated from
+a transelliptical graphical model into $m$ worker machines, and estimates the
+latent precision matrix on each worker machine based on the data of size
+$n=N/m$. It then debiases the local estimators on the worker machines and send
+them back to the master machine. Finally, on the master machine, it aggregates
+the debiased local estimators by averaging and hard thresholding. We show that
+the aggregated estimator attains the same statistical rate as the centralized
+estimator based on all the data, provided that the number of machines satisfies
+$m \lesssim \min\{N\log d/d,\sqrt{N/(s^2\log d)}\}$, where $s$ is the maximum
+number of nonzero entries in each column of the latent precision matrix. It is
+worth noting that our algorithm and theory can be directly applied to Gaussian
+graphical models, Gaussian copula graphical models and elliptical graphical
+models, since they are all special cases of transelliptical graphical models.
+Thorough experiments on synthetic data back up our theory.
+
+
+Global Convergence of Langevin Dynamics Based Algorithms for Nonconvex
+  Optimization
+
+  We present a unified framework to analyze the global convergence of Langevin
+dynamics based algorithms for nonconvex finite-sum optimization with $n$
+component functions. At the core of our analysis is a direct analysis of the
+ergodicity of the numerical approximations to Langevin dynamics, which leads to
+faster convergence rates. Specifically, we show that gradient Langevin dynamics
+(GLD) and stochastic gradient Langevin dynamics (SGLD) converge to the almost
+minimizer within $\tilde O\big(nd/(\lambda\epsilon) \big)$ and $\tilde
+O\big(d^7/(\lambda^5\epsilon^5) \big)$ stochastic gradient evaluations
+respectively, where $d$ is the problem dimension, and $\lambda$ is the spectral
+gap of the Markov chain generated by GLD. Both of the results improve upon the
+best known gradient complexity results. Furthermore, for the first time we
+prove the global convergence guarantee for variance reduced stochastic gradient
+Langevin dynamics (VR-SGLD) to the almost minimizer after $\tilde
+O\big(\sqrt{n}d^5/(\lambda^4\epsilon^{5/2})\big)$ stochastic gradient
+evaluations, which outperforms the gradient complexities of GLD and SGLD in a
+wide regime. Our theoretical analyses shed some light on using Langevin
+dynamics based algorithms for nonconvex optimization with provable guarantees.
+
+
+Stochastic Gradient Descent Optimizes Over-parameterized Deep ReLU
+  Networks
+
+  We study the problem of training deep neural networks with Rectified Linear
+Unit (ReLU) activation function using gradient descent and stochastic gradient
+descent. In particular, we study the binary classification problem and show
+that for a broad family of loss functions, with proper random weight
+initialization, both gradient descent and stochastic gradient descent can find
+the global minima of the training loss for an over-parameterized deep ReLU
+network, under mild assumption on the training data. The key idea of our proof
+is that Gaussian random initialization followed by (stochastic) gradient
+descent produces a sequence of iterates that stay inside a small perturbation
+region centering around the initial weights, in which the empirical loss
+function of deep ReLU networks enjoys nice local curvature properties that
+ensure the global convergence of (stochastic) gradient descent. Our theoretical
+results shed light on understanding the optimization for deep learning, and
+pave the way for studying the optimization dynamics of training modern deep
+neural networks.
+
+
+Stochastic Recursive Variance-Reduced Cubic Regularization Methods
+
+  Stochastic Variance-Reduced Cubic regularization (SVRC) algorithms have
+received increasing attention due to its improved gradient/Hessian complexities
+(i.e., number of queries to stochastic gradient/Hessian oracles) to find local
+minima for nonconvex finite-sum optimization. However, it is unclear whether
+existing SVRC algorithms can be further improved. Moreover, the semi-stochastic
+Hessian estimator adopted in existing SVRC algorithms prevents the use of
+Hessian-vector product-based fast cubic subproblem solvers, which makes SVRC
+algorithms computationally intractable for high-dimensional problems. In this
+paper, we first present a Stochastic Recursive Variance-Reduced Cubic
+regularization method (SRVRC) using a recursively updated semi-stochastic
+gradient and Hessian estimators. It enjoys improved gradient and Hessian
+complexities to find an $(\epsilon, \sqrt{\epsilon})$-approximate local
+minimum, and outperforms the state-of-the-art SVRC algorithms. Built upon
+SRVRC, we further propose a Hessian-free SRVRC algorithm, namely
+SRVRC$_{\text{free}}$, which only requires stochastic gradient and
+Hessian-vector product computations, and achieves $\tilde O(dn\epsilon^{-2}
+\land d\epsilon^{-3})$ runtime complexity, where $n$ is the number of component
+functions in the finite-sum structure, $d$ is the problem dimension, and
+$\epsilon$ is the optimization precision. This outperforms the best-known
+runtime complexity $\tilde O(d\epsilon^{-3.5})$ achieved by stochastic cubic
+regularization algorithm proposed in Tripuraneni et al. 2018.
+
+
+High Dimensional Expectation-Maximization Algorithm: Statistical
+  Optimization and Asymptotic Normality
+
+  We provide a general theory of the expectation-maximization (EM) algorithm
+for inferring high dimensional latent variable models. In particular, we make
+two contributions: (i) For parameter estimation, we propose a novel high
+dimensional EM algorithm which naturally incorporates sparsity structure into
+parameter estimation. With an appropriate initialization, this algorithm
+converges at a geometric rate and attains an estimator with the (near-)optimal
+statistical rate of convergence. (ii) Based on the obtained estimator, we
+propose new inferential procedures for testing hypotheses and constructing
+confidence intervals for low dimensional components of high dimensional
+parameters. For a broad family of statistical models, our framework establishes
+the first computationally feasible approach for optimal estimation and
+asymptotic inference in high dimensions. Our theory is supported by thorough
+numerical results.
+
+
+Statistical Limits of Convex Relaxations
+
+  Many high dimensional sparse learning problems are formulated as nonconvex
+optimization. A popular approach to solve these nonconvex optimization problems
+is through convex relaxations such as linear and semidefinite programming. In
+this paper, we study the statistical limits of convex relaxations.
+Particularly, we consider two problems: Mean estimation for sparse principal
+submatrix and edge probability estimation for stochastic block model. We
+exploit the sum-of-squares relaxation hierarchy to sharply characterize the
+limits of a broad class of convex relaxations. Our result shows statistical
+optimality needs to be compromised for achieving computational tractability
+using convex relaxations. Compared with existing results on computational lower
+bounds for statistical problems, which consider general polynomial-time
+algorithms and rely on computational hardness hypotheses on problems like
+planted clique detection, our theory focuses on a broad class of convex
+relaxations and does not rely on unproven hypotheses.
+
+
+Sharp Computational-Statistical Phase Transitions via Oracle
+  Computational Model
+
+  We study the fundamental tradeoffs between computational tractability and
+statistical accuracy for a general family of hypothesis testing problems with
+combinatorial structures. Based upon an oracle model of computation, which
+captures the interactions between algorithms and data, we establish a general
+lower bound that explicitly connects the minimum testing risk under
+computational budget constraints with the intrinsic probabilistic and
+combinatorial structures of statistical problems. This lower bound mirrors the
+classical statistical lower bound by Le Cam (1986) and allows us to quantify
+the optimal statistical performance achievable given limited computational
+budgets in a systematic fashion. Under this unified framework, we sharply
+characterize the statistical-computational phase transition for two testing
+problems, namely, normal mean detection and sparse principal component
+detection. For normal mean detection, we consider two combinatorial structures,
+namely, sparse set and perfect matching. For these problems we identify
+significant gaps between the optimal statistical accuracy that is achievable
+under computational tractability constraints and the classical statistical
+lower bounds. Compared with existing works on computational lower bounds for
+statistical problems, which consider general polynomial-time algorithms on
+Turing machines, and rely on computational hardness hypotheses on problems like
+planted clique detection, we focus on the oracle computational model, which
+covers a broad range of popular algorithms, and do not rely on unproven
+hypotheses. Moreover, our result provides an intuitive and concrete
+interpretation for the intrinsic computational intractability of
+high-dimensional statistical problems. One byproduct of our result is a lower
+bound for a strict generalization of the matrix permanent problem, which is of
+independent interest.
+
+

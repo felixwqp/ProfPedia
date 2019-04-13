@@ -1,0 +1,326 @@
+Region-Based Incremental Pruning for POMDPs
+
+  We present a major improvement to the incremental pruning algorithm for
+solving partially observable Markov decision processes. Our technique targets
+the cross-sum step of the dynamic programming (DP) update, a key source of
+complexity in POMDP algorithms. Instead of reasoning about the whole belief
+space when pruning the cross-sums, our algorithm divides the belief space into
+smaller regions and performs independent pruning in each region. We evaluate
+the benefits of the new technique both analytically and experimentally, and
+show that it produces very significant performance gains. The results
+contribute to the scalability of POMDP algorithms to domains that cannot be
+handled by the best existing techniques.
+
+
+Improved Memory-Bounded Dynamic Programming for Decentralized POMDPs
+
+  Memory-Bounded Dynamic Programming (MBDP) has proved extremely effective in
+solving decentralized POMDPs with large horizons. We generalize the algorithm
+and improve its scalability by reducing the complexity with respect to the
+number of observations from exponential to polynomial. We derive error bounds
+on solution quality with respect to this new approximation and analyze the
+convergence behavior. To evaluate the effectiveness of the improvements, we
+introduce a new, larger benchmark problem. Experimental results show that
+despite the high complexity of decentralized POMDPs, scalable solution
+techniques such as MBDP perform surprisingly well.
+
+
+Feature Selection Using Regularization in Approximate Linear Programs
+  for Markov Decision Processes
+
+  Approximate dynamic programming has been used successfully in a large variety
+of domains, but it relies on a small set of provided approximation features to
+calculate solutions reliably. Large and rich sets of features can cause
+existing algorithms to overfit because of a limited number of samples. We
+address this shortcoming using $L_1$ regularization in approximate linear
+programming. Because the proposed method can automatically select the
+appropriate richness of features, its performance does not degrade with an
+increasing number of features. These results rely on new and stronger sampling
+bounds for regularized approximate linear programs. We also propose a
+computationally efficient homotopy method. The empirical evaluation of the
+approach shows that the proposed method performs well on simple MDPs and
+standard benchmark problems.
+
+
+Global Optimization for Value Function Approximation
+
+  Existing value function approximation methods have been successfully used in
+many applications, but they often lack useful a priori error bounds. We propose
+a new approximate bilinear programming formulation of value function
+approximation, which employs global optimization. The formulation provides
+strong a priori guarantees on both robust and expected policy loss by
+minimizing specific norms of the Bellman residual. Solving a bilinear program
+optimally is NP-hard, but this is unavoidable because the Bellman-residual
+minimization itself is NP-hard. We describe and analyze both optimal and
+approximate algorithms for solving bilinear programs. The analysis shows that
+this algorithm offers a convergent generalization of approximate policy
+iteration. We also briefly analyze the behavior of bilinear programming
+algorithms under incomplete samples. Finally, we demonstrate that the proposed
+approach can consistently minimize the Bellman residual on simple benchmark
+problems.
+
+
+Message-Passing Algorithms for Quadratic Programming Formulations of MAP
+  Estimation
+
+  Computing maximum a posteriori (MAP) estimation in graphical models is an
+important inference problem with many applications. We present message-passing
+algorithms for quadratic programming (QP) formulations of MAP estimation for
+pairwise Markov random fields. In particular, we use the concave-convex
+procedure (CCCP) to obtain a locally optimal algorithm for the non-convex QP
+formulation. A similar technique is used to derive a globally convergent
+algorithm for the convex QP relaxation of MAP. We also show that a recently
+developed expectation-maximization (EM) algorithm for the QP formulation of MAP
+can be derived from the CCCP perspective. Experiments on synthetic and
+real-world problems confirm that our new approach is competitive with
+max-product and its variations. Compared with CPLEX, we achieve more than an
+order-of-magnitude speedup in solving optimally the convex QP relaxation.
+
+
+Symbolic Generalization for On-line Planning
+
+  Symbolic representations have been used successfully in off-line planning
+algorithms for Markov decision processes. We show that they can also improve
+the performance of on-line planners. In addition to reducing computation time,
+symbolic generalization can reduce the amount of costly real-world interactions
+required for convergence. We introduce Symbolic Real-Time Dynamic Programming
+(or sRTDP), an extension of RTDP. After each step of on-line interaction with
+an environment, sRTDP uses symbolic model-checking techniques to generalizes
+its experience by updating a group of states rather than a single state. We
+examine two heuristic approaches to dynamic grouping of states and show that
+they accelerate the planning process significantly in terms of both CPU time
+and the number of steps of interaction with the environment.
+
+
+Anytime Planning for Decentralized POMDPs using Expectation Maximization
+
+  Decentralized POMDPs provide an expressive framework for multi-agent
+sequential decision making. While fnite-horizon DECPOMDPs have enjoyed
+signifcant success, progress remains slow for the infnite-horizon case mainly
+due to the inherent complexity of optimizing stochastic controllers
+representing agent policies. We present a promising new class of algorithms for
+the infnite-horizon case, which recasts the optimization problem as inference
+in a mixture of DBNs. An attractive feature of this approach is the
+straightforward adoption of existing inference techniques in DBNs for solving
+DEC-POMDPs and supporting richer representations such as factored or continuous
+states and actions. We also derive the Expectation Maximization (EM) algorithm
+to optimize the joint policy represented as DBNs. Experiments on benchmark
+domains show that EM compares favorably against the state-of-the-art solvers.
+
+
+Rollout Sampling Policy Iteration for Decentralized POMDPs
+
+  We present decentralized rollout sampling policy iteration (DecRSPI) - a new
+algorithm for multi-agent decision problems formalized as DEC-POMDPs. DecRSPI
+is designed to improve scalability and tackle problems that lack an explicit
+model. The algorithm uses Monte- Carlo methods to generate a sample of
+reachable belief states. Then it computes a joint policy for each belief state
+based on the rollout estimations. A new policy representation allows us to
+represent solutions compactly. The key benefits of the algorithm are its linear
+time complexity over the number of agents, its bounded memory usage and good
+solution quality. It can solve larger problems that are intractable for
+existing planning algorithms. Experimental results confirm the effectiveness
+and scalability of the approach.
+
+
+MAA*: A Heuristic Search Algorithm for Solving Decentralized POMDPs
+
+  We present multi-agent A* (MAA*), the first complete and optimal heuristic
+search algorithm for solving decentralized partially-observable Markov decision
+problems (DEC-POMDPs) with finite horizon. The algorithm is suitable for
+computing optimal plans for a cooperative group of agents that operate in a
+stochastic environment such as multirobot coordination, network traffic
+control, `or distributed resource allocation. Solving such problems efiectively
+is a major challenge in the area of planning under uncertainty. Our solution is
+based on a synthesis of classical heuristic search and decentralized control
+theory. Experimental results show that MAA* has significant advantages. We
+introduce an anytime variant of MAA* and conclude with a discussion of
+promising extensions such as an approach to solving infinite horizon problems.
+
+
+The Complexity of Decentralized Control of Markov Decision Processes
+
+  Planning for distributed agents with partial state information is considered
+from a decision- theoretic perspective. We describe generalizations of both the
+MDP and POMDP models that allow for decentralized control. For even a small
+number of agents, the finite-horizon problems corresponding to both of our
+models are complete for nondeterministic exponential time. These complexity
+results illustrate a fundamental difference between centralized and
+decentralized control of Markov processes. In contrast to the MDP and POMDP
+problems, the problems we consider provably do not admit polynomial-time
+algorithms and most likely require doubly exponential time to solve in the
+worst case. We have thus provided mathematical evidence corresponding to the
+intuition that decentralized planning problems cannot easily be reduced to
+centralized problems and solved exactly using established techniques.
+
+
+A Bilinear Programming Approach for Multiagent Planning
+
+  Multiagent planning and coordination problems are common and known to be
+computationally hard. We show that a wide range of two-agent problems can be
+formulated as bilinear programs. We present a successive approximation
+algorithm that significantly outperforms the coverage set algorithm, which is
+the state-of-the-art method for this class of multiagent problems. Because the
+algorithm is formulated for bilinear programs, it is more general and simpler
+to implement. The new algorithm can be terminated at any time and-unlike the
+coverage set algorithm-it facilitates the derivation of a useful online
+performance bound. It is also much more efficient, on average reducing the
+computation time of the optimal solution by about four orders of magnitude.
+Finally, we introduce an automatic dimensionality reduction method that
+improves the effectiveness of the algorithm, extending its applicability to new
+domains and providing a new way to analyze a subclass of bilinear programs.
+
+
+Optimizing Memory-Bounded Controllers for Decentralized POMDPs
+
+  We present a memory-bounded optimization approach for solving
+infinite-horizon decentralized POMDPs. Policies for each agent are represented
+by stochastic finite state controllers. We formulate the problem of optimizing
+these policies as a nonlinear program, leveraging powerful existing nonlinear
+optimization techniques for solving the problem. While existing solvers only
+guarantee locally optimal solutions, we show that our formulation produces
+higher quality controllers than the state-of-the-art approach. We also
+incorporate a shared source of randomness in the form of a correlation device
+to further increase solution quality with only a limited increase in space and
+time. Our experimental results show that nonlinear optimization can be used to
+provide high quality, concise solutions to decentralized decision problems
+under uncertainty.
+
+
+Robust Optimization for Tree-Structured Stochastic Network Design
+
+  Stochastic network design is a general framework for optimizing network
+connectivity. It has several applications in computational sustainability
+including spatial conservation planning, pre-disaster network preparation, and
+river network optimization. A common assumption in previous work has been made
+that network parameters (e.g., probability of species colonization) are
+precisely known, which is unrealistic in real- world settings. We therefore
+address the robust river network design problem where the goal is to optimize
+river connectivity for fish movement by removing barriers. We assume that fish
+passability probabilities are known only imprecisely, but are within some
+interval bounds. We then develop a planning approach that computes the policies
+with either high robust ratio or low regret. Empirically, our approach scales
+well to large river networks. We also provide insights into the solutions
+generated by our robust approach, which has significantly higher robust ratio
+than the baseline solution with mean parameter estimates.
+
+
+Generalizing the Role of Determinization in Probabilistic Planning
+
+  The stochastic shortest path problem (SSP) is a highly expressive model for
+probabilistic planning. The computational hardness of SSPs has sparked interest
+in determinization-based planners that can quickly solve large problems.
+However, existing methods employ a simplistic approach to determinization. In
+particular, they ignore the possibility of tailoring the determinization to the
+specific characteristics of the target domain. In this work we examine this
+question, by showing that learning a good determinization for a planning domain
+can be done efficiently and can improve performance. Moreover, we show how to
+directly incorporate probabilistic reasoning into the planning problem when a
+good determinization is not sufficient by itself. Based on these insights, we
+introduce a planner, FF-LAO*, that outperforms state-of-the-art probabilistic
+planners on several well-known competition benchmarks.
+
+
+An Anytime Algorithm for Task and Motion MDPs
+
+  Integrated task and motion planning has emerged as a challenging problem in
+sequential decision making, where a robot needs to compute high-level strategy
+and low-level motion plans for solving complex tasks. While high-level
+strategies require decision making over longer time-horizons and scales, their
+feasibility depends on low-level constraints based upon the geometries and
+continuous dynamics of the environment. The hybrid nature of this problem makes
+it difficult to scale; most existing approaches focus on deterministic, fully
+observable scenarios. We present a new approach where the high-level decision
+problem occurs in a stochastic setting and can be modeled as a Markov decision
+process. In contrast to prior efforts, we show that complete MDP policies, or
+contingent behaviors, can be computed effectively in an anytime fashion. Our
+algorithm continuously improves the quality of the solution and is guaranteed
+to be probabilistically complete. We evaluate the performance of our approach
+on a challenging, realistic test problem: autonomous aircraft inspection. Our
+results show that we can effectively compute consistent task and motion
+policies for the most likely execution-time outcomes using only a fraction of
+the computation required to develop the complete task and motion policy.
+
+
+Planning in Stochastic Environments with Goal Uncertainty
+
+  We present the Goal Uncertain Stochastic Shortest Path (GUSSP) problem --- a
+general framework to model stochastic environments with goal uncertainty. The
+model is an extension of the stochastic shortest path (SSP) framework to
+dynamic environments in which it is impossible to determine the exact goal
+states ahead of plan execution. GUSSPs introduce flexibility in goal
+specification by allowing a belief over possible goal configurations. The
+partial observability is restricted to goals, facilitating the reduction to an
+SSP. We formally define a GUSSP and discuss its theoretical properties. We then
+propose an admissible heuristic that reduces the planning time of FLARES --- a
+start-of-the-art probabilistic planner. We also propose a determinization
+approach for solving this class of problems. Finally, we present empirical
+results using a mobile robot and three other problem domains.
+
+
+Lexicographically Ordered Multi-Objective Clustering
+
+  We introduce a rich model for multi-objective clustering with lexicographic
+ordering over objectives and a slack. The slack denotes the allowed
+multiplicative deviation from the optimal objective value of the higher
+priority objective to facilitate improvement in lower-priority objectives. We
+then propose an algorithm called Zeus to solve this class of problems, which is
+characterized by a makeshift function. The makeshift fine tunes the clusters
+formed by the processed objectives so as to improve the clustering with respect
+to the unprocessed objectives, given the slack. We present makeshift for
+solving three different classes of objectives and analyze their solution
+guarantees. Finally, we empirically demonstrate the effectiveness of our
+approach on three applications using real-world data.
+
+
+Policy Iteration for Decentralized Control of Markov Decision Processes
+
+  Coordination of distributed agents is required for problems arising in many
+areas, including multi-robot systems, networking and e-commerce. As a formal
+framework for such problems, we use the decentralized partially observable
+Markov decision process (DEC-POMDP). Though much work has been done on optimal
+dynamic programming algorithms for the single-agent version of the problem,
+optimal algorithms for the multiagent case have been elusive. The main
+contribution of this paper is an optimal policy iteration algorithm for solving
+DEC-POMDPs. The algorithm uses stochastic finite-state controllers to represent
+policies. The solution can include a correlation device, which allows agents to
+correlate their actions without communicating. This approach alternates between
+expanding the controller and performing value-preserving transformations, which
+modify the controller without sacrificing value. We present two efficient
+value-preserving transformations: one can reduce the size of the controller and
+the other can improve its value while keeping the size fixed. Empirical results
+demonstrate the usefulness of value-preserving transformations in increasing
+value while keeping controller size to a minimum. To broaden the applicability
+of the approach, we also present a heuristic version of the policy iteration
+algorithm, which sacrifices convergence to optimality. This algorithm further
+reduces the size of the controllers at each step by assuming that probability
+distributions over the other agents actions are known. While this assumption
+may not hold in general, it helps produce higher quality solutions in our test
+problems.
+
+
+Communication-Based Decomposition Mechanisms for Decentralized MDPs
+
+  Multi-agent planning in stochastic environments can be framed formally as a
+decentralized Markov decision problem. Many real-life distributed problems that
+arise in manufacturing, multi-robot coordination and information gathering
+scenarios can be formalized using this framework. However, finding the optimal
+solution in the general case is hard, limiting the applicability of recently
+developed algorithms. This paper provides a practical approach for solving
+decentralized control problems when communication among the decision makers is
+possible, but costly. We develop the notion of communication-based mechanism
+that allows us to decompose a decentralized MDP into multiple single-agent
+problems. In this framework, referred to as decentralized semi-Markov decision
+process with direct communication (Dec-SMDP-Com), agents operate separately
+between communications. We show that finding an optimal mechanism is equivalent
+to solving optimally a Dec-SMDP-Com. We also provide a heuristic search
+algorithm that converges on the optimal decomposition. Restricting the
+decomposition to some specific types of local behaviors reduces significantly
+the complexity of planning. In particular, we present a polynomial-time
+algorithm for the case in which individual agents perform goal-oriented
+behaviors between communications. The paper concludes with an additional
+tractable algorithm that enables the introduction of human knowledge, thereby
+reducing the overall problem to finding the best time to communicate. Empirical
+results show that these approaches provide good approximate solutions.
+
+

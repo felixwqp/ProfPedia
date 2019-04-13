@@ -1,0 +1,1067 @@
+Learning Models for Following Natural Language Directions in Unknown
+  Environments
+
+  Natural language offers an intuitive and flexible means for humans to
+communicate with the robots that we will increasingly work alongside in our
+homes and workplaces. Recent advancements have given rise to robots that are
+able to interpret natural language manipulation and navigation commands, but
+these methods require a prior map of the robot's environment. In this paper, we
+propose a novel learning framework that enables robots to successfully follow
+natural language route directions without any previous knowledge of the
+environment. The algorithm utilizes spatial and semantic information that the
+human conveys through the command to learn a distribution over the metric and
+semantic properties of spatially extended environments. Our method uses this
+distribution in place of the latent world model and interprets the natural
+language instruction as a distribution over the intended behavior. A novel
+belief space planner reasons directly over the map and behavior distributions
+to solve for a policy using imitation learning. We evaluate our framework on a
+voice-commandable wheelchair. The results demonstrate that by learning and
+performing inference over a latent environment model, the algorithm is able to
+successfully follow natural language route directions within novel, extended
+environments.
+
+
+Inferring Compact Representations for Efficient Natural Language
+  Understanding of Robot Instructions
+
+  The speed and accuracy with which robots are able to interpret natural
+language is fundamental to realizing effective human-robot interaction. A great
+deal of attention has been paid to developing models and approximate inference
+algorithms that improve the efficiency of language understanding. However,
+existing methods still attempt to reason over a representation of the
+environment that is flat and unnecessarily detailed, which limits scalability.
+An open problem is then to develop methods capable of producing the most
+compact environment model sufficient for accurate and efficient natural
+language understanding. We propose a model that leverages environment-related
+information encoded within instructions to identify the subset of observations
+and perceptual classifiers necessary to perceive a succinct,
+instruction-specific environment representation. The framework uses three
+probabilistic graphical models trained from a corpus of annotated instructions
+to infer salient scene semantics, perceptual classifiers, and grounded symbols.
+Experimental results on two robots operating in different environments
+demonstrate that by exploiting the content and the structure of the
+instructions, our method learns compact environment representations that
+significantly improve the efficiency of natural language symbol grounding.
+
+
+Learning Articulated Motion Models from Visual and Lingual Signals
+
+  In order for robots to operate effectively in homes and workplaces, they must
+be able to manipulate the articulated objects common within environments built
+for and by humans. Previous work learns kinematic models that prescribe this
+manipulation from visual demonstrations. Lingual signals, such as natural
+language descriptions and instructions, offer a complementary means of
+conveying knowledge of such manipulation models and are suitable to a wide
+range of interactions (e.g., remote manipulation). In this paper, we present a
+multimodal learning framework that incorporates both visual and lingual
+information to estimate the structure and parameters that define kinematic
+models of articulated objects. The visual signal takes the form of an RGB-D
+image stream that opportunistically captures object motion in an unprepared
+scene. Accompanying natural language descriptions of the motion constitute the
+lingual signal. We present a probabilistic language model that uses word
+embeddings to associate lingual verbs with their corresponding kinematic
+structures. By exploiting the complementary nature of the visual and lingual
+input, our method infers correct kinematic structures for various multiple-part
+objects on which the previous state-of-the-art, visual-only system fails. We
+evaluate our multimodal learning framework on a dataset comprised of a variety
+of household objects, and demonstrate a 36% improvement in model accuracy over
+the vision-only baseline.
+
+
+Atom chips on direct bonded copper substrates
+
+  We present the use of direct bonded copper (DBC) for the straightforward
+fabrication of high power atom chips. Atom chips using DBC have several
+benefits: excellent copper/substrate adhesion, high purity, thick (> 100
+microns) copper layers, high substrate thermal conductivity, high aspect ratio
+wires, the potential for rapid (< 8 hr) fabrication, and three dimensional atom
+chip structures. Two mask options for DBC atom chip fabrication are presented,
+as well as two methods for etching wire patterns into the copper layer. The
+wire aspect ratio that optimizes the magnetic field gradient as a function of
+power dissipation is determined to be 0.84:1 (height:width). The optimal wire
+thickness as a function of magnetic trapping height is also determined. A test
+chip, able to support 100 A of current for 2 s without failing, is used to
+determine the thermal impedance of the DBC. An assembly using two DBC atom
+chips to provide magnetic confinement is also shown.
+
+
+Adjustable microchip ring trap for cold atoms and molecules
+
+  We describe the design and function of a circular magnetic waveguide produced
+from wires on a microchip for atom interferometry using deBroglie waves. The
+guide is a two-dimensional magnetic minimum for trapping weak-field seeking
+states of atoms or molecules with a magnetic dipole moment. The design consists
+of seven circular wires sharing a common radius. We describe the design, the
+time-dependent currents of the wires and show that it is possible to form a
+circular waveguide with adjustable height and gradient while minimizing
+perturbation resulting from leads or wire crossings. This maximal area geometry
+is suited for rotation sensing with atom interferometry via the Sagnac effect
+using either cold atoms, molecules and Bose-condensed systems.
+
+
+Search for Optical Pulsations in PSR J0337+1715
+
+  We report on a search for optical pulsations from PSR J0337+1715 at its
+observed radio pulse period. PSR J0337+1715 is a millisecond pulsar (2.7 ms
+spin period) in a triple hierarchical system with two white dwarfs, and has a
+known optical counterpart with g-band magnitude 18. The observations were done
+with the Array Camera for Optical to Near-IR Spectrophotometry (ARCONS) at the
+200" Hale telescope at Palomar Observatory. No significant pulsations were
+found in the range 4000-11000 angstroms, and we can limit pulsed emission in
+g-band to be fainter than 25 mag.
+
+
+Satellite Image-based Localization via Learned Embeddings
+
+  We propose a vision-based method that localizes a ground vehicle using
+publicly available satellite imagery as the only prior knowledge of the
+environment. Our approach takes as input a sequence of ground-level images
+acquired by the vehicle as it navigates, and outputs an estimate of the
+vehicle's pose relative to a georeferenced satellite image. We overcome the
+significant viewpoint and appearance variations between the images through a
+neural multi-view model that learns location-discriminative embeddings in which
+ground-level images are matched with their corresponding satellite view of the
+scene. We use this learned function as an observation model in a filtering
+framework to maintain a distribution over the vehicle's pose. We evaluate our
+method on different benchmark datasets and demonstrate its ability localize
+ground-level images in environments novel relative to training, despite the
+challenges of significant viewpoint and appearance variations.
+
+
+Listen, Attend, and Walk: Neural Mapping of Navigational Instructions to
+  Action Sequences
+
+  We propose a neural sequence-to-sequence model for direction following, a
+task that is essential to realizing effective autonomous agents. Our
+alignment-based encoder-decoder model with long short-term memory recurrent
+neural networks (LSTM-RNN) translates natural language instructions to action
+sequences based upon a representation of the observable world state. We
+introduce a multi-level aligner that empowers our model to focus on sentence
+"regions" salient to the current world state by using multiple abstractions of
+the input sentence. In contrast to existing methods, our model uses no
+specialized linguistic resources (e.g., parsers) or task-specific annotations
+(e.g., seed lexicons). It is therefore generalizable, yet still achieves the
+best results reported to-date on a benchmark single-sentence dataset and
+competitive results for the limited-training multi-sentence setting. We analyze
+our model through a series of ablations that elucidate the contributions of the
+primary components of our model.
+
+
+What to talk about and how? Selective Generation using LSTMs with
+  Coarse-to-Fine Alignment
+
+  We propose an end-to-end, domain-independent neural encoder-aligner-decoder
+model for selective generation, i.e., the joint task of content selection and
+surface realization. Our model first encodes a full set of over-determined
+database event records via an LSTM-based recurrent neural network, then
+utilizes a novel coarse-to-fine aligner to identify the small subset of salient
+records to talk about, and finally employs a decoder to generate free-form
+descriptions of the aligned, selected records. Our model achieves the best
+selection and generation results reported to-date (with 59% relative
+improvement in generation) on the benchmark WeatherGov dataset, despite using
+no specialized features or linguistic resources. Using an improved k-nearest
+neighbor beam filter helps further. We also perform a series of ablations and
+visualizations to elucidate the contributions of our key model components.
+Lastly, we evaluate the generalizability of our model on the RoboCup dataset,
+and get results that are competitive with or better than the state-of-the-art,
+despite being severely data-starved.
+
+
+Accurate Vision-based Vehicle Localization using Satellite Imagery
+
+  We propose a method for accurately localizing ground vehicles with the aid of
+satellite imagery. Our approach takes a ground image as input, and outputs the
+location from which it was taken on a georeferenced satellite image. We perform
+visual localization by estimating the co-occurrence probabilities between the
+ground and satellite images based on a ground-satellite feature dictionary. The
+method is able to estimate likelihoods over arbitrary locations without the
+need for a dense ground image database. We present a ranking-loss based
+algorithm that learns location-discriminative feature projection matrices that
+result in further improvements in accuracy. We evaluate our method on the
+Malaga and KITTI public datasets and demonstrate significant improvements over
+a baseline that performs exhaustive search.
+
+
+Navigational Instruction Generation as Inverse Reinforcement Learning
+  with Neural Machine Translation
+
+  Modern robotics applications that involve human-robot interaction require
+robots to be able to communicate with humans seamlessly and effectively.
+Natural language provides a flexible and efficient medium through which robots
+can exchange information with their human partners. Significant advancements
+have been made in developing robots capable of interpreting free-form
+instructions, but less attention has been devoted to endowing robots with the
+ability to generate natural language. We propose a navigational guide model
+that enables robots to generate natural language instructions that allow humans
+to navigate a priori unknown environments. We first decide which information to
+share with the user according to their preferences, using a policy trained from
+human demonstrations via inverse reinforcement learning. We then "translate"
+this information into a natural language instruction using a neural
+sequence-to-sequence model that learns to generate free-form instructions from
+natural language corpora. We evaluate our method on a benchmark route
+instruction dataset and achieve a BLEU score of 72.18% when compared to
+human-generated reference instructions. We additionally conduct navigation
+experiments with human participants that demonstrate that our method generates
+instructions that people follow as accurately and easily as those produced by
+humans.
+
+
+Coherent Dialogue with Attention-based Language Models
+
+  We model coherent conversation continuation via RNN-based dialogue models
+equipped with a dynamic attention mechanism. Our attention-RNN language model
+dynamically increases the scope of attention on the history as the conversation
+continues, as opposed to standard attention (or alignment) models with a fixed
+input scope in a sequence-to-sequence model. This allows each generated word to
+be associated with the most relevant words in its corresponding conversation
+history. We evaluate the model on two popular dialogue datasets, the
+open-domain MovieTriples dataset and the closed-domain Ubuntu Troubleshoot
+dataset, and achieve significant improvements over the state-of-the-art and
+baselines on several metrics, including complementary diversity-based metrics,
+human evaluation, and qualitative visualizations. We also show that a vanilla
+RNN with dynamic attention outperforms more complex memory models (e.g., LSTM
+and GRU) by allowing for flexible, long-distance memory. We promote further
+coherence via topic modeling-based reranking.
+
+
+Jointly Optimizing Placement and Inference for Beacon-based Localization
+
+  The ability of robots to estimate their location is crucial for a wide
+variety of autonomous operations. In settings where GPS is unavailable,
+measurements of transmissions from fixed beacons provide an effective means of
+estimating a robot's location as it navigates. The accuracy of such a
+beacon-based localization system depends both on how beacons are distributed in
+the environment, and how the robot's location is inferred based on noisy and
+potentially ambiguous measurements. We propose an approach for making these
+design decisions automatically and without expert supervision, by explicitly
+searching for the placement and inference strategies that, together, are
+optimal for a given environment. Since this search is computationally
+expensive, our approach encodes beacon placement as a differential neural layer
+that interfaces with a neural network for inference. This formulation allows us
+to employ standard techniques for training neural networks to carry out the
+joint optimization. We evaluate this approach on a variety of environments and
+settings, and find that it is able to discover designs that enable high
+localization accuracy.
+
+
+Processing Images from the Zwicky Transient Facility
+
+  The Zwicky Transient Facility is a new robotic-observing program, in which a
+newly engineered 600-MP digital camera with a pioneeringly large field of view,
+47~square degrees, will be installed into the 48-inch Samuel Oschin Telescope
+at the Palomar Observatory. The camera will generate $\sim 1$~petabyte of raw
+image data over three years of operations. In parallel related work, new
+hardware and software systems are being developed to process these data in real
+time and build a long-term archive for the processed products. The first public
+release of archived products is planned for early 2019, which will include
+processed images and astronomical-source catalogs of the northern sky in the
+$g$ and $r$ bands. Source catalogs based on two different methods will be
+generated for the archive: aperture photometry and point-spread-function
+fitting.
+
+
+Learning Articulated Motions From Visual Demonstration
+
+  Many functional elements of human homes and workplaces consist of rigid
+components which are connected through one or more sliding or rotating
+linkages. Examples include doors and drawers of cabinets and appliances;
+laptops; and swivel office chairs. A robotic mobile manipulator would benefit
+from the ability to acquire kinematic models of such objects from observation.
+This paper describes a method by which a robot can acquire an object model by
+capturing depth imagery of the object as a human moves it through its range of
+motion. We envision that in future, a machine newly introduced to an
+environment could be shown by its human user the articulated objects particular
+to that environment, inferring from these "visual demonstrations" enough
+information to actuate each object independently of the user.
+  Our method employs sparse (markerless) feature tracking, motion segmentation,
+component pose estimation, and articulation learning; it does not require prior
+object models. Using the method, a robot can observe an object being exercised,
+infer a kinematic model incorporating rigid, prismatic and revolute joints,
+then use the model to predict the object's motion from a novel vantage point.
+We evaluate the method's performance, and compare it to that of a previously
+published technique, for a variety of household objects.
+
+
+Key Science Goals for the Next Generation Very Large Array (ngVLA):
+  Report from the ngVLA Science Advisory Council
+
+  This document describes some of the fundamental astrophysical problems that
+require observing capabilities at millimeter- and centimeter wavelengths well
+beyond those of existing, or already planned, telescopes. The results
+summarized in this report follow a solicitation from the National Radio
+Astronomy Observatory to develop key science cases for a future U. S.-led radio
+telescope, the "next generation Very Large Array" (ngVLA). The ngVLA will have
+roughly 10 times the collecting area of the Jansky VLA, operate at frequencies
+from 1 GHz to 116 GHz with up to 20 GHz of bandwidth, possess a compact core
+for high surface-brightness sensitivity, and extended baselines of at least
+hundreds of kilometers and ultimately across the continent to provide
+high-resolution imaging. The ngVLA builds on the scientific and technical
+legacy of the Jansky VLA and ALMA, and will be designed to provide the next
+leap forward in our understanding of planets, galaxies, and black holes.
+
+
+Jointly Learning to Construct and Control Agents using Deep
+  Reinforcement Learning
+
+  The physical design of a robot and the policy that controls its motion are
+inherently coupled, and should be determined according to the task and
+environment. In an increasing number of applications, data-driven and
+learning-based approaches, such as deep reinforcement learning, have proven
+effective at designing control policies. For most tasks, the only way to
+evaluate a physical design with respect to such control policies is
+empirical--i.e., by picking a design and training a control policy for it.
+Since training these policies is time-consuming, it is computationally
+infeasible to train separate policies for all possible designs as a means to
+identify the best one. In this work, we address this limitation by introducing
+a method that performs simultaneous joint optimization of the physical design
+and control network. Our approach maintains a distribution over designs and
+uses reinforcement learning to optimize a control policy to maximize expected
+reward over the design distribution. We give the controller access to design
+parameters to allow it to tailor its policy to each design in the distribution.
+Throughout training, we shift the distribution towards higher-performing
+designs, eventually converging to a design and control policy that are jointly
+optimal. We evaluate our approach in the context of legged locomotion, and
+demonstrate that it discovers novel designs and walking gaits, outperforming
+baselines in both performance and efficiency.
+
+
+The AI Driving Olympics at NeurIPS 2018
+
+  Despite recent breakthroughs, the ability of deep learning and reinforcement
+learning to outperform traditional approaches to control physically embodied
+robotic agents remains largely unproven. To help bridge this gap, we created
+the 'AI Driving Olympics' (AI-DO), a competition with the objective of
+evaluating the state of the art in machine learning and artificial intelligence
+for mobile robotics. Based on the simple and well specified autonomous driving
+and navigation environment called 'Duckietown', AI-DO includes a series of
+tasks of increasing complexity -- from simple lane-following to fleet
+management. For each task, we provide tools for competitors to use in the form
+of simulators, logs, code templates, baseline implementations and low-cost
+access to robotic hardware. We evaluate submissions in simulation online, on
+standardized hardware environments, and finally at the competition event. The
+first AI-DO, AI-DO 1, occurred at the Neural Information Processing Systems
+(NeurIPS) conference in December 2018. The results of AI-DO 1 highlight the
+need for better benchmarks, which are lacking in robotics, as well as improved
+mechanisms to bridge the gap between simulation and reality.
+
+
+The case for a 'sub-millimeter SDSS': a 3D map of galaxy evolution to
+  z~10
+
+  The Sloan Digital Sky Survey (SDSS) was revolutionary because of the
+extraordinary breadth and ambition of its optical imaging and spectroscopy. We
+argue that a 'sub-millimeter SDSS' - a sensitive large-area
+imaging+spectroscopic survey in the sub-mm window - will revolutionize our
+understanding of galaxy evolution in the early Universe. By detecting the
+thermal dust continuum emission and atomic and molecular line emission of
+galaxies out to z~10 it will be possible to measure the redshifts, star
+formation rates, dust and gas content of hundreds of thousands of high-z
+galaxies down to ~L*. Many of these galaxies will have counterparts visible in
+the deep optical imaging of the Large Synoptic Survey Telescope. This 3D map of
+galaxy evolution will span the peak epoch of galaxy formation all the way back
+to cosmic dawn, measuring the co-evolution of the star formation rate density
+and molecular gas content of galaxies, tracking the production of metals and
+charting the growth of large-scale structure.
+
+
+The LUVOIR Ultraviolet Multi-Object Spectrograph (LUMOS): Instrument
+  Definition and Design
+
+  The Large Ultraviolet / Optical / Infrared Surveyor (LUVOIR) is one of four
+large mission concepts currently undergoing community study for consideration
+by the 2020 Astronomy and Astrophysics Decadal Survey. The LUVOIR Ultraviolet
+Multi-Object Spectrograph, LUMOS, is being designed to support all of the UV
+science requirements of LUVOIR, from exoplanet host star characterization to
+tomography of circumgalactic halos to water plumes on outer solar system
+satellites. LUMOS offers point source and multi-object spectroscopy across the
+UV bandpass, with multiple resolution modes to support different science goals.
+The instrument will provide low (R = 8,000-18,000) and medium (R =
+30,000-65,000) resolution modes across the far-ultraviolet (FUV: 100-200 nm)
+and near-ultraviolet (NUV: 200-400 nm) windows, and a very low resolution mode
+(R = 500) for spectroscopic investigations of extremely faint objects in the
+FUV. Imaging spectroscopy will be accomplished over a 3 x 1.6 arcminute
+field-of-view by employing holographically-ruled diffraction gratings to
+control optical aberrations, microshutter arrays (MSA), advanced optical
+coatings for high-throughput in the FUV, and next generation large-format
+photon-counting detectors. The spectroscopic capabilities of LUMOS are
+augmented by an FUV imaging channel (100-200nm, 13 milliarcsecond angular
+resolution, 2 x 2 arcminute field-of-view) that will employ a complement of
+narrow and medium-band filters. We present an overview of LUMOS' observing
+modes and estimated performance curves for effective area, spectral resolution,
+and imaging performance. Example "LUMOS 100-hour Highlights" observing programs
+are presented to demonstrate the potential power of LUVOIR's ultraviolet
+spectroscopic capabilities.
+
+
+Instrumentation for the Citizen CATE Experiment: Faroe Islands and
+  Indonesia
+
+  The inner regions of the solar corona from 1-2.5 Rsun are poorly sampled both
+from the ground and space telescopes. A solar eclipse reduces the sky scattered
+background intensity by a factor of about 10,000 and opens a window to view
+this region directly. The goal of the Citizen {\it Continental-America
+Telescopic Eclipse} (CATE) Experiment is to take a 90-minute time sequence of
+calibrated white light images of this coronal region using 60 identical
+telescopes spread from Oregon to South Carolina during the 21 August 2017 total
+solar eclipse. Observations that can address questions of coronal dynamics in
+this region can be collected with rather modest telescope equipment, but the
+large dynamic range of the coronal brightness requires careful camera control.
+The instruments used for test runs on the Faroe Islands in 2015 and at five
+sites in Indonesia in 2016 are described. Intensity calibration of the coronal
+images is done and compared with previous eclipse measurements from November \&
+Koutchmy (1996) and Bazin et al. (2015). The change of coronal brightness with
+distance from the Sun seen in the 2016 eclipse agrees with observations from
+the 1991 eclipse but differ substantially from the 2010 eclipse. The 2015
+observations agree with 2016 and 1991 solar radii near the Sun, but are fainter
+at larger distances. Problems encountered during these test runs are discussed
+as well the solutions which will be implemented for the 2017 eclipse
+experiment.
+
+
+The Zwicky Transient Facility: Data Processing, Products, and Archive
+
+  The Zwicky Transient Facility (ZTF) is a new robotic time-domain survey
+currently in progress using the Palomar 48-inch Schmidt Telescope. ZTF uses a
+47 square degree field with a 600 megapixel camera to scan the entire northern
+visible sky at rates of ~3760 square degrees/hour to median depths of g ~ 20.8
+and r ~ 20.6 mag (AB, 5sigma in 30 sec). We describe the Science Data System
+that is housed at IPAC, Caltech. This comprises the data-processing pipelines,
+alert production system, data archive, and user interfaces for accessing and
+analyzing the products. The realtime pipeline employs a novel
+image-differencing algorithm, optimized for the detection of point source
+transient events. These events are vetted for reliability using a
+machine-learned classifier and combined with contextual information to generate
+data-rich alert packets. The packets become available for distribution
+typically within 13 minutes (95th percentile) of observation. Detected events
+are also linked to generate candidate moving-object tracks using a novel
+algorithm. Objects that move fast enough to streak in the individual exposures
+are also extracted and vetted. The reconstructed astrometric accuracy per
+science image with respect to Gaia is typically 45 to 85 milliarcsec. This is
+the RMS per axis on the sky for sources extracted with photometric S/N >= 10.
+The derived photometric precision (repeatability) at bright unsaturated fluxes
+varies between 8 and 25 millimag. Photometric calibration accuracy with respect
+to Pan-STARRS1 is generally better than 2%. The products support a broad range
+of scientific applications: fast and young supernovae, rare flux transients,
+variable stars, eclipsing binaries, variability from active galactic nuclei,
+counterparts to gravitational wave sources, a more complete census of Type Ia
+supernovae, and Solar System objects.
+
+
+A Brief Technical History of the Large-Area Picosecond Photodetector
+  (LAPPD) Collaboration
+
+  The Large Area Picosecond PhotoDetector (LAPPD) Collaboration was formed in
+2009 to develop large-area photodetectors capable of time resolutions measured
+in pico-seconds, with accompanying sub-millimeter spatial resolution. During
+the next three and one-half years the Collaboration developed the LAPPD design
+of 20 x 20 cm modules with gains greater than $10^7$ and non-uniformity less
+than $15\%$, time resolution less than 50 psec for single photons and spatial
+resolution of 700~microns in both lateral dimensions. We describe the R\&D
+performed to develop large-area micro-channel plate glass substrates, resistive
+and secondary-emitting coatings, large-area bialkali photocathodes, and
+RF-capable hermetic packaging. In addition, the Collaboration developed the
+necessary electronics for large systems capable of precise timing, built up
+from a custom low-power 15-GigaSample/sec waveform sampling 6-channel
+integrated circuit and supported by a two-level modular data acquisition system
+based on Field-Programmable Gate Arrays for local control, data-sparcification,
+and triggering. We discuss the formation, organization, and technical successes
+and short-comings of the Collaboration. The Collaboration ended in December
+2012 with a transition from R\&D to commercialization.
+
+
+Excess Optical Enhancement Observed with ARCONS for Early Crab Giant
+  Pulses
+
+  We observe an extraordinary link in the Crab pulsar between the enhancement
+of an optical pulse and the timing of the corresponding giant radio pulse. At
+optical through infrared wavelengths, our observations use the high time
+resolution of ARCONS, a unique superconducting energy-resolving photon-counting
+array at the Palomar 200-inch telescope. At radio wavelengths, we observe with
+the Robert C. Byrd Green Bank Telescope and the GUPPI backend. We see an
+$11.3\pm2.5\%$ increase in peak optical flux for pulses that have an
+accompanying giant radio pulse arriving near the peak of the optical main
+pulse, in contrast to a $3.2\pm0.5\%$ increase when an accompanying giant radio
+pulse arrives soon after the optical peak. We also observe that the peak of the
+optical main pulse is $2.8\pm0.8\%$ enhanced when there is a giant radio pulse
+accompanying the optical interpulse. We observe no statistically significant
+spectral differences between optical pulses accompanied by and not accompanied
+by giant radio pulses. Our results extend previous observations of
+optical-radio correlation to the time and spectral domains. Our refined
+temporal correlation suggests that optical and radio emission are indeed
+causally linked, and the lack of spectral differences suggests that the same
+mechanism is responsible for all optical emission.
+
+
+2900 square degree search for the optical counterpart of short gamma-ray
+  burst GRB 180523B with the Zwicky Transient Facility
+
+  There is significant interest in the models for production of short gamma-ray
+bursts. Until now, the number of known short gamma-ray bursts with
+multi-wavelength afterglows has been small. While the {\it Fermi} Gamma-Ray
+Burst Monitor detects many gamma-ray bursts relative to the Neil Gehrels {\it
+Swift} Observatory, the large localization regions makes the search for
+counterparts difficult. With the Zwicky Transient Facility recently achieving
+first light, it is now fruitful to use its combination of depth ($m_\textrm{AB}
+\sim 20.6$), field of view ($\approx$ 47 square degrees), and survey cadence
+(every $\sim 3$ days) to perform Target of Opportunity observations. We
+demonstrate this capability on GRB 180523B, which was recently announced by the
+{\it Fermi} Gamma-Ray Burst Monitor as a short gamma-ray burst. ZTF imaged
+$\approx$ 2900\,square degrees of the localization region, resulting in the
+coverage of 61.6\,\% of the enclosed probability over 2 nights to a depth of
+$m_\textrm{AB} \sim 20.5$. We characterized 14 previously unidentified
+transients, and none were found to be consistent with a short gamma-ray burst
+counterpart. This search with the Zwicky Transient Facility shows it is an
+efficient camera for searching for coarsely-localized short gamma-ray burst and
+gravitational-wave counterparts, allowing for a sensitive search with minimal
+interruption to its nominal cadence.
+
+
+Key $^{19}$Ne states identified affecting $γ$-ray emission from
+  $^{18}$F in novae
+
+  Detection of nuclear-decay $\gamma$ rays provides a sensitive thermometer of
+nova nucleosynthesis. The most intense $\gamma$-ray flux is thought to be
+annihilation radiation from the $\beta^+$ decay of $^{18}$F, which is destroyed
+prior to decay by the $^{18}$F($p$,$\alpha$)$^{15}$O reaction. Estimates of
+$^{18}$F production had been uncertain, however, because key near-threshold
+levels in the compound nucleus, $^{19}$Ne, had yet to be identified. This
+Letter reports the first measurement of the
+$^{19}$F($^{3}$He,$t\gamma$)$^{19}$Ne reaction, in which the placement of two
+long-sought 3/2$^+$ levels is suggested via triton-$\gamma$-$\gamma$
+coincidences. The precise determination of their resonance energies reduces the
+upper limit of the rate by a factor of $1.5-17$ at nova temperatures and
+reduces the average uncertainty on the nova detection probability by a factor
+of 2.1.
+
+
+New $γ$-ray Transitions Observed in $^{19}$Ne with Implications for
+  the $^{15}$O($α$,$γ$)$^{19}$Ne Reaction Rate
+
+  The $^{15}$O($\alpha$,$\gamma$)$^{19}$Ne reaction is responsible for breakout
+from the hot CNO cycle in Type I x-ray bursts. Understanding the properties of
+resonances between $E_x = 4$ and 5 MeV in $^{19}$Ne is crucial in the
+calculation of this reaction rate. The spins and parities of these states are
+well known, with the exception of the 4.14- and 4.20-MeV states, which have
+adopted spin-parities of 9/2$^-$ and 7/2$^-$, respectively. Gamma-ray
+transitions from these states were studied using triton-$\gamma$-$\gamma$
+coincidences from the $^{19}$F($^{3}$He,$t\gamma$)$^{19}$Ne reaction measured
+with GODDESS (Gammasphere ORRUBA Dual Detectors for Experimental Structure
+Studies) at Argonne National Laboratory. The observed transitions from the
+4.14- and 4.20-MeV states provide strong evidence that the $J^\pi$ values are
+actually 7/2$^-$ and 9/2$^-$, respectively. These assignments are consistent
+with the values in the $^{19}$F mirror nucleus and in contrast to previously
+accepted assignments.
+
+
+The Zwicky Transient Facility: Science Objectives
+
+  The Zwicky Transient Facility (ZTF), a public-private enterprise, is a new
+time domain survey employing a dedicated camera on the Palomar 48-inch Schmidt
+telescope with a 47 deg$^2$ field of view and 8 second readout time. It is well
+positioned in the development of time domain astronomy, offering operations at
+10% of the scale and style of the Large Synoptic Survey Telescope (LSST) with a
+single 1-m class survey telescope. The public surveys will cover the observable
+northern sky every three nights in g and r filters and the visible Galactic
+plane every night in g and r. Alerts generated by these surveys are sent in
+real time to brokers. A consortium of universities which provided funding
+("partnership") are undertaking several boutique surveys. The combination of
+these surveys producing one million alerts per night allows for exploration of
+transient and variable astrophysical phenomena brighter than r $\sim$ 20.5 on
+timescales of minutes to years. We describe the primary science objectives
+driving ZTF including the physics of supernovae and relativistic explosions,
+multi-messenger astrophysics, supernova cosmology, active galactic nuclei and
+tidal disruption events, stellar variability, and Solar System objects.
+
+
+Machine Learning for Large-Scale Quality Control of 3D Shape Models in
+  Neuroimaging
+
+  As very large studies of complex neuroimaging phenotypes become more common,
+human quality assessment of MRI-derived data remains one of the last major
+bottlenecks. Few attempts have so far been made to address this issue with
+machine learning. In this work, we optimize predictive models of quality for
+meshes representing deep brain structure shapes. We use standard vertex-wise
+and global shape features computed homologously across 19 cohorts and over 7500
+human-rated subjects, training kernelized Support Vector Machine and Gradient
+Boosted Decision Trees classifiers to detect meshes of failing quality. Our
+models generalize across datasets and diseases, reducing human workload by
+30-70\%, or equivalently hundreds of human rater hours for datasets of
+comparable size, with recall rates approaching inter-rater reliability.
+
+
+Deep Learning for Quality Control of Subcortical Brain 3D Shape Models
+
+  We present several deep learning models for assessing the morphometric
+fidelity of deep grey matter region models extracted from brain MRI. We test
+three different convolutional neural net architectures (VGGNet, ResNet and
+Inception) over 2D maps of geometric features. Further, we present a novel
+geometry feature augmentation technique based on a parametric spherical
+mapping. Finally, we present an approach for model decision visualization,
+allowing human raters to see the areas of subcortical shapes most likely to be
+deemed of failing quality by the machine. Our training data is comprised of
+5200 subjects from the ENIGMA Schizophrenia MRI cohorts, and our test dataset
+contains 1500 subjects from the ENIGMA Major Depressive Disorder cohorts. Our
+final models reduce human rater time by 46-70%. ResNet outperforms VGGNet and
+Inception for all of our predictive tasks.
+
+
+Polarimetric Observations of 15 Active Galactic Nuclei at High
+  Frequencies: Jet Kinematics from Bimonthly Monitoring with the Very Long
+  Baseline Array
+
+  We present total and polarized intensity images of 15 active galactic nuclei
+obtained with the Very Long Baseline Array at 7 mm at 17 epochs from 1998 March
+to 2001 April. At some epochs the images are accompanied by nearly simultaneous
+polarization measurements at 3 mm, 1.35/0.85 mm, and optical wavelengths. Here
+we analyze the 7 mm images to define the properties of the jets of two radio
+galaxies, five BL Lac objects, and eight quasars on angular scales $\gtrsim
+0.1$ milliarcseconds. We determine the apparent velocities of 106 features in
+the jets; for many of the features we derive Doppler factors using a new method
+based on comparison of timescale of decline in flux density with the
+light-travel time across the emitting region. This allows us to estimate the
+Lorentz factors, intrinsic brightness temperatures, and viewing angles of 73
+superluminal knots, as well as the opening angle of the jet for each source. We
+analyze the derived physical parameters of the jets. In nine sources we detect
+statistically meaningful deviations from ballistic motion, with the majority of
+components accelerating with distance from the core. In six sources we identify
+jet features with characteristics of trailing shocks that form behind the
+primary strong perturbations in jet simulations. The apparent speeds of these
+components increase with distance from the core suggesting an acceleration of
+the underlying jet.
+
+
+The Pluto Energetic Particle Spectrometer Science Investigation (PEPSSI)
+  on the New Horizons Mission
+
+  The Pluto Energetic Particle Spectrometer Science Investigation (PEPSSI)
+comprises the hardware and accompanying science investigation on the New
+Horizons spacecraft to measure pick-up ions from Pluto's outgassing atmosphere.
+To the extent that Pluto retains its characteristics similar to those of a
+"heavy comet" as detected in stellar occultations since the early 1980s, these
+measurements will characterize the neutral atmosphere of Pluto while providing
+a consistency check on the atmospheric escape rate at the encounter epoch with
+that deduced from the atmospheric structure at lower altitudes by the ALICE,
+REX, and SWAP experiments on New Horizons. In addition, PEPSSI will
+characterize any extended ionosphere and solar wind interaction while also
+characterizing the energetic particle environment of Pluto, Charon, and their
+associated system. First proposed for development for the Pluto Express mission
+in September 1993, what became the PEPSSI instrument went through a number of
+development stages to meet the requirements of such an instrument for a mission
+to Pluto while minimizing the required spacecraft resources. The PEPSSI
+instrument provides for measurements of ions (with compositional information)
+and electrons from 10s of keV to ~1 MeV in a 120 deg x 12 deg fan-shaped beam
+in six sectors for 1.5 kg and ~2.5 W.
+
+
+Herschel Exploitation of Local Galaxy Andromeda (HELGA) III: The Star
+  Formation Law in M31
+
+  We present a detailed study of how the Star Formation Rate (SFR) relates to
+the interstellar medium (ISM) of M31 at ~140pc scales. The SFR is calculated
+using the far-ultraviolet and 24um emission, corrected for the old stellar
+population in M31. We find a global value for the SFR of 0.25+/-0.05Msun/yr and
+compare this with the SFR found using the total far-infrared (FIR) luminosity.
+There is general agreement in regions where young stars dominate the dust
+heating. Atomic hydrogen (HI) and molecular gas (traced by carbon monoxide, CO)
+or the dust mass is used to trace the total gas in the ISM. We show that the
+global surface densities of SFR and gas mass place M31 amongst a set of low-SFR
+galaxies in the plot of Kennicutt (1998b). The relationship between SFR and gas
+surface density is tested in six radial annuli across M31, assuming a power law
+relationship with index, N. The star formation law using total gas traced by HI
+and CO gives a global index of N=2.03+/-0.04, with a significant variation with
+radius; the highest values are observed in the 10kpc ring. We suggest that this
+slope is due to HI turning molecular at ~10Msun/pc2. When looking at H2
+regions, we measure a higher mean SFR suggesting a better spatial correlation
+between H2 and SF. We find N~0.6 with consistent results throughout the disk -
+this is at the low end of values found in previous work and argues against a
+superlinear SF law on small scales.
+
+
+Multiwaveband Polarimetric Observations of 15 Active Galactic Nuclei at
+  High Frequencies: Correlated Polarization Behavior
+
+  We report on multi-frequency linear polarization monitoring of 15 active
+galactic nuclei containing highly relativistic jets with apparent speeds from
+$\sim$4 $c$ to $>40c$. The measurements were obtained at optical, 1 mm, and 3
+mm wavelengths, and at 7 mm with the Very Long Baseline Array. The data show a
+wide range in degree of linear polarization among the sources, from $<$1% to
+$>$30%, and interday polarization variability in individual sources. The
+polarization properties suggest separation of the sample into three groups with
+low, intermediate, and high variability of polarization in the core at 7 mm :
+LVP, IVP, and HVP, respectively. The groups are partially associated with the
+common classification of active galactic nuclei as radio galaxies and quasars
+with low optical polarization (LVP), BL Lacertae objects (IVP), and highly
+optically polarized quasars (HVP). Our study investigates correlations between
+total flux, fractional polarization, and polarization position angle at the
+different wavelengths. We interpret the polarization properties of the sources
+in the sample through models in which weak shocks compress turbulent plasma in
+the jet. The differences in the orientation of sources with respect to the
+observer, jet kinematics, and abundance of thermal matter external to the jet
+near the core can account for the diversity in the polarization properties. The
+results provide strong evidence that the optical polarized emission originates
+in shocks, most likely situated between the 3 mm and 7 mm VLBI cores. They also
+support the idea that the 1 mm core lies at the edge of the transition zone
+between electromagnetically dominated and turbulent hydrodynamical sections of
+the jet.
+
+
+The Atacama Cosmology Telescope: Cross Correlation with Planck maps
+
+  We present the temperature power spectrum of the Cosmic Microwave Background
+obtained by cross-correlating maps from the Atacama Cosmology Telescope (ACT)
+at 148 and 218 GHz with maps from the Planck satellite at 143 and 217 GHz, in
+two overlapping regions covering 592 square degrees. We find excellent
+agreement between the two datasets at both frequencies, quantified using the
+variance of the residuals between the ACT power spectra and the ACTxPlanck
+cross-spectra. We use these cross-correlations to calibrate the ACT data at 148
+and 218 GHz, to 0.7% and 2% precision respectively. We find no evidence for
+anisotropy in the calibration parameter. We compare the Planck 353 GHz power
+spectrum with the measured amplitudes of dust and cosmic infrared background
+(CIB) of ACT data at 148 and 218 GHz. We also compare planet and point source
+measurements from the two experiments.
+
+
+Science with an ngVLA: The ngVLA Science Case and Associated Science
+  Requirements
+
+  The science case and associated science requirements for a next-generation
+Very Large Array (ngVLA) are described, highlighting the five key science goals
+developed out of a community-driven vision of the highest scientific priorities
+in the next decade. Building on the superb cm observing conditions and existing
+infrastructure of the VLA site in the U.S. Southwest, the ngVLA is envisaged to
+be an interferometric array with more than 10 times the sensitivity and spatial
+resolution of the current VLA and ALMA, operating at frequencies spanning
+$\sim1.2 - 116$\,GHz with extended baselines reaching across North America. The
+ngVLA will be optimized for observations at wavelengths between the exquisite
+performance of ALMA at submm wavelengths, and the future SKA-1 at decimeter to
+meter wavelengths, thus lending itself to be highly complementary with these
+facilities. The ngVLA will be the only facility in the world that can tackle a
+broad range of outstanding scientific questions in modern astronomy by
+simultaneously delivering the capability to: (1) unveil the formation of Solar
+System analogues; (2) probe the initial conditions for planetary systems and
+life with astrochemistry; (3) characterize the assembly, structure, and
+evolution of galaxies from the first billion years to the present; (4) use
+pulsars in the Galactic center as fundamental tests of gravity; and (5)
+understand the formation and evolution of stellar and supermassive blackholes
+in the era of multi-messenger astronomy.
+
+
+BLAST: the far-infrared/radio correlation in distant galaxies
+
+  We investigate the correlation between far-infrared (FIR) and radio
+luminosities in distant galaxies, a lynchpin of modern astronomy. We use data
+from the Balloon-borne Large Aperture Submillimetre Telescope (BLAST), Spitzer,
+the Large Apex BOlometer CamerA (LABOCA), the Very Large Array (VLA) and the
+Giant Metre-wave Radio Telescope (GMRT) in the Extended Chandra Deep Field
+South (ECDFS). For a catalogue of BLAST 250-micron-selected galaxies, we
+re-measure the 70--870-micron flux densities at the positions of their most
+likely 24-micron counterparts, which have a median [interquartile] redshift of
+0.74 [0.25, 1.57]. From these, we determine the monochromatic flux density
+ratio, q_250 = log_10 (S_250micron / S_1400MHz), and the bolometric equivalent,
+q_IR. At z ~= 0.6, where our 250-micron filter probes rest-frame 160-micron
+emission, we find no evolution relative to q_160 for local galaxies. We also
+stack the FIR and submm images at the positions of 24-micron- and
+radio-selected galaxies. The difference between q_IR seen for 250-micron- and
+radio-selected galaxies suggests star formation provides most of the IR
+luminosity in ~< 100-uJy radio galaxies, but rather less for those in the mJy
+regime. For the 24-micron sample, the radio spectral index is constant across 0
+< z < 3, but q_IR exhibits tentative evidence of a steady decline such that
+q_IR is proportional to (1+z)^(-0.15 +/- 0.03) - significant evolution,
+spanning the epoch of galaxy formation, with major implications for techniques
+that rely on the FIR/radio correlation. We compare with model predictions and
+speculate that we may be seeing the increase in radio activity that gives rise
+to the radio background.
+
+
+Learning from FITS: Limitations in use in modern astronomical research
+
+  The Flexible Image Transport System (FITS) standard has been a great boon to
+astronomy, allowing observatories, scientists and the public to exchange
+astronomical information easily. The FITS standard, however, is showing its
+age. Developed in the late 1970s, the FITS authors made a number of
+implementation choices that, while common at the time, are now seen to limit
+its utility with modern data. The authors of the FITS standard could not
+anticipate the challenges which we are facing today in astronomical computing.
+Difficulties we now face include, but are not limited to, addressing the need
+to handle an expanded range of specialized data product types (data models),
+being more conducive to the networked exchange and storage of data, handling
+very large datasets, and capturing significantly more complex metadata and data
+relationships.
+  There are members of the community today who find some or all of these
+limitations unworkable, and have decided to move ahead with storing data in
+other formats. If this fragmentation continues, we risk abandoning the
+advantages of broad interoperability, and ready archivability, that the FITS
+format provides for astronomy. In this paper we detail some selected important
+problems which exist within the FITS standard today. These problems may provide
+insight into deeper underlying issues which reside in the format and we provide
+a discussion of some lessons learned. It is not our intention here to prescribe
+specific remedies to these issues; rather, it is to call attention of the FITS
+and greater astronomical computing communities to these problems in the hope
+that it will spur action to address them.
+
+
+US Cosmic Visions: New Ideas in Dark Matter 2017: Community Report
+
+  This white paper summarizes the workshop "U.S. Cosmic Visions: New Ideas in
+Dark Matter" held at University of Maryland on March 23-25, 2017.
+
+
+The Time Domain Spectroscopic Survey: Variable Object Selection and
+  Anticipated Results
+
+  We present the selection algorithm and anticipated results for the Time
+Domain Spectroscopic Survey (TDSS). TDSS is an SDSS-IV eBOSS subproject that
+will provide initial identification spectra of approximately 220,000
+luminosity-variable objects (variable stars and AGN) across 7,500 square
+degrees selected from a combination of SDSS and multi-epoch Pan-STARRS1
+photometry. TDSS will be the largest spectroscopic survey to explicitly target
+variable objects, avoiding pre-selection on the basis of colors or detailed
+modeling of specific variability characteristics. Kernel Density Estimate (KDE)
+analysis of our target population performed on SDSS Stripe 82 data suggests our
+target sample will be 95% pure (meaning 95% of objects we select have genuine
+luminosity variability of a few magnitudes or more). Our final spectroscopic
+sample will contain roughly 135,000 quasars and 85,000 stellar variables,
+approximately 4,000 of which will be RR Lyrae stars which may be used as outer
+Milky Way probes. The variability-selected quasar population has a smoother
+redshift distribution than a color-selected sample, and variability
+measurements similar to those we develop here may be used to make more uniform
+quasar samples in large surveys. The stellar variable targets are distributed
+fairly uniformly across color space, indicating that TDSS will obtain spectra
+for a wide variety of stellar variables including pulsating variables, stars
+with significant chromospheric activity, cataclysmic variables and eclipsing
+binaries. TDSS will serve as a pathfinder mission to identify and characterize
+the multitude of variable objects that will be detected photometrically in even
+larger variability surveys such as LSST.
+
+
+Determining the neutrino mass with Cyclotron Radiation Emission
+  Spectroscopy - Project 8
+
+  The most sensitive direct method to establish the absolute neutrino mass is
+observation of the endpoint of the tritium beta-decay spectrum. Cyclotron
+Radiation Emission Spectroscopy (CRES) is a precision spectrographic technique
+that can probe much of the unexplored neutrino mass range with
+$\mathcal{O}({\rm eV})$ resolution. A lower bound of $m(\nu_e) \gtrsim 9(0.1)\,
+{\rm meV}$ is set by observations of neutrino oscillations, while the KATRIN
+Experiment - the current-generation tritium beta-decay experiment that is based
+on Magnetic Adiabatic Collimation with an Electrostatic (MAC-E) filter - will
+achieve a sensitivity of $m(\nu_e) \lesssim 0.2\,{\rm eV}$. The CRES technique
+aims to avoid the difficulties in scaling up a MAC-E filter-based experiment to
+achieve a lower mass sensitivity. In this paper we review the current status of
+the CRES technique and describe Project 8, a phased absolute neutrino mass
+experiment that has the potential to reach sensitivities down to $m(\nu_e)
+\lesssim 40\,{\rm meV}$ using an atomic tritium source.
+
+
+The Zwicky Transient Facility: System Overview, Performance, and First
+  Results
+
+  The Zwicky Transient Facility (ZTF) is a new optical time-domain survey that
+uses the Palomar 48-inch Schmidt telescope. A custom-built wide-field camera
+provides a 47 deg$^2$ field of view and 8 second readout time, yielding more
+than an order of magnitude improvement in survey speed relative to its
+predecessor survey, the Palomar Transient Factory (PTF). We describe the design
+and implementation of the camera and observing system. The ZTF data system at
+the Infrared Processing and Analysis Center provides near-real-time reduction
+to identify moving and varying objects. We outline the analysis pipelines, data
+products, and associated archive. Finally, we present on-sky performance
+analysis and first scientific results from commissioning and the early survey.
+ZTF's public alert stream will serve as a useful precursor for that of the
+Large Synoptic Survey Telescope.
+
+
+A joint analysis of BLAST 250--500um and LABOCA 870um observations in
+  the Extended Chandra Deep Field South
+
+  We present a joint analysis of the overlapping BLAST 250, 350, 500um, and
+LABOCA 870um observations (from the LESS survey) of the ECDF-S. Out to z~3, the
+BLAST filters sample near the peak wavelength of far-infrared (FIR) emission
+from galaxies (rest-frame wavelengths ~60--200um), primarily produced by dust
+heated through absorption in star-forming clouds. However, identifying
+counterparts to individual BLAST peaks is very challenging, given the large
+beams (FWHM 36--60"). In contrast, the 870um observations have a significantly
+smaller 19" FWHM beam, and are sensitive to higher redshifts (z~1--5, and
+potentially beyond) due to the more favourable negative K-correction. We use
+the LESS data, as well as deep Spitzer and VLA imaging, to identify 118
+individual sources that produce significant emission in the BLAST bands. We
+characterize the temperatures and FIR luminosities for a subset of 69 sources
+which have well-measured submm SEDs and redshift measurements out to z~3. For
+flux-limited sub-samples in each BLAST band, and a dust emissivity index
+\beta=2.0, we find a median temperature T=30K (all bands) as well as median
+redshifts: z=1.1 (interquartile range 0.2--1.9) for S250 > 40mJy; z=1.3
+(interquartile range 0.6--2.1) for S350 > 30mJy; and z=1.6 (interquartile range
+1.3--2.3) for S500 > 20mJy. Taking into account selection effects for our
+survey (a bias toward detecting lower-temperature galaxies), we find no
+evidence for evolution in the local FIR-temperature correlation out to z~2.5.
+Comparing with star-forming galaxy SED templates, about 8% of our sample
+appears to exhibit significant excesses in the radio and/or mid-IR, consistent
+with those sources harbouring an AGN. We describe the following techniques in
+two appendices: our `matched filter' for identifying sources in the presence of
+point-source confusion; and our approach for identifying counterparts using
+likelihood ratios.
+
+
+Characterizing K2 Planet Discoveries: A super-Earth transiting the
+  bright K-dwarf HIP 116454
+
+  We report the first planet discovery from the two-wheeled Kepler (K2)
+mission: HIP 116454 b. The host star HIP 116454 is a bright (V = 10.1, K = 8.0)
+K1-dwarf with high proper motion, and a parallax-based distance of 55.2 +/- 5.4
+pc. Based on high-resolution optical spectroscopy, we find that the host star
+is metal-poor with [Fe/H] = -.16 +/- .18, and has a radius R = 0.716 +/- .0024
+R_sun and mass M = .775 +/- .027 Msun. The star was observed by the Kepler
+spacecraft during its Two-Wheeled Concept Engineering Test in February 2014.
+During the 9 days of observations, K2 observed a single transit event. Using a
+new K2 photometric analysis technique we are able to correct small telescope
+drifts and recover the observed transit at high confidence, corresponding to a
+planetary radius of Rp = 2.53 +/- 0.18 Rearth. Radial velocity observations
+with the HARPS-N spectrograph reveal a 11.82 +/- 1.33 Mearth planet in a 9.1
+day orbit, consistent with the transit depth, duration, and ephemeris.
+Follow-up photometric measurements from the MOST satellite confirm the transit
+observed in the K2 photometry and provide a refined ephemeris, making HIP
+116454 b amenable for future follow-up observations of this latest addition to
+the growing population of transiting super-Earths around nearby, bright stars.
+
+
+High-Angular-Resolution and High-Sensitivity Science Enabled by
+  Beamformed ALMA
+
+  An international consortium is presently constructing a beamformer for the
+Atacama Large Millimeter/submillimeter Array (ALMA) in Chile that will be
+available as a facility instrument. The beamformer will aggregate the entire
+collecting area of the array into a single, very large aperture. The
+extraordinary sensitivity of phased ALMA, combined with the extremely fine
+angular resolution available on baselines to the Northern Hemisphere, will
+enable transformational new very long baseline interferometry (VLBI)
+observations in Bands 6 and 7 (1.3 and 0.8 mm) and provide substantial
+improvements to existing VLBI arrays in Bands 1 and 3 (7 and 3 mm). The ALMA
+beamformer will have impact on a variety of scientific topics, including
+accretion and outflow processes around black holes in active galactic nuclei
+(AGN), tests of general relativity near black holes, jet launch and collimation
+from AGN and microquasars, pulsar and magnetar emission processes, the chemical
+history of the universe and the evolution of fundamental constants across
+cosmic time, maser science, and astrometry.
+
+
+The Survey of Water and Ammonia in the Galactic Center (SWAG): Molecular
+  Cloud Evolution in the Central Molecular Zone
+
+  The Survey of Water and Ammonia in the Galactic Center (SWAG) covers the
+Central Molecular Zone (CMZ) of the Milky Way at frequencies between 21.2 and
+25.4 GHz obtained at the Australia Telescope Compact Array at $\sim 0.9$ pc
+spatial and $\sim 2.0$ km s$^{-1}$ spectral resolution. In this paper, we
+present data on the inner $\sim 250$ pc ($1.4^\circ$) between Sgr C and Sgr B2.
+We focus on the hyperfine structure of the metastable ammonia inversion lines
+(J,K) = (1,1) - (6,6) to derive column density, kinematics, opacity and kinetic
+gas temperature. In the CMZ molecular clouds, we find typical line widths of
+$8-16$ km s$^{-1}$ and extended regions of optically thick ($\tau > 1$)
+emission. Two components in kinetic temperature are detected at $25-50$ K and
+$60-100$ K, both being significantly hotter than dust temperatures throughout
+the CMZ. We discuss the physical state of the CMZ gas as traced by ammonia in
+the context of the orbital model by Kruijssen et al. (2015) that interprets the
+observed distribution as a stream of molecular clouds following an open
+eccentric orbit. This allows us to statistically investigate the time
+dependencies of gas temperature, column density and line width. We find heating
+rates between $\sim 50$ and $\sim 100$ K Myr$^{-1}$ along the stream orbit. No
+strong signs of time dependence are found for column density or line width.
+These quantities are likely dominated by cloud-to-cloud variations. Our results
+qualitatively match the predictions of the current model of tidal triggering of
+cloud collapse, orbital kinematics and the observation of an evolutionary
+sequence of increasing star formation activity with orbital phase.
+
+
+The MALATANG Survey: the L_gas-L_IR correlation on sub-kiloparsec scale
+  in six nearby star-forming galaxies as traced by HCN J=4-3 and HCO^+ J=4-3
+
+  We present HCN J=4-3 and HCO^+ J=4-3 maps of six nearby star-forming
+galaxies, NGC 253, NGC 1068, IC 342, M82, M83, and NGC 6946, obtained with the
+James Clerk Maxwell Telescope as part of the MALATANG survey. All galaxies were
+mapped in the central 2 arcmin $\times$ 2 arcmin region at 14 arcsec (FWHM)
+resolution (corresponding to linear scales of ~ 0.2-1.0 kpc). The L_IR-L'_dense
+relation, where the dense gas is traced by the HCN J=4-3 and the HCO^+ J=4-3
+emission, measured in our sample of spatially-resolved galaxies is found to
+follow the linear correlation established globally in galaxies within the
+scatter. We find that the luminosity ratio, L_IR/L'_dense, shows systematic
+variations with L_IR within individual spatially resolved galaxies, whereas the
+galaxy-integrated ratios vary little. A rising trend is also found between
+L_IR/L'_dense ratio and the warm-dust temperature gauged by the 70 \mu m/100
+\mu m flux ratio. We find the luminosity ratios of IR/HCN(4-3) and
+IR/HCO^+(4-3), which can be taken as a proxy for the efficiency of star
+formation in the dense molecular gas (SFE_dense), appears to be nearly
+independent of the dense-gas fraction (f_dense) for our sample of galaxies. The
+SFE of the total molecular gas (SFE_mol) is found to increase substantially
+with f_dense when combining our data with that on local (ultra)luminous
+infrared galaxies and high-z quasars. The mean L'_HCN(4-3)/L'_HCO^+(4-3) line
+ratio measured for the six targeted galaxies is 0.9+/-0.6. No significant
+correlation is found for the L'_HCN(4-3)/L'_HCO^+(4-3) ratio with the SFR as
+traced by L_IR, nor with the warm-dust temperature, for the different
+populations of galaxies.
+
+
+On the sensitivity of the HAWC observatory to gamma-ray bursts
+
+  We present the sensitivity of HAWC to Gamma Ray Bursts (GRBs). HAWC is a very
+high-energy gamma-ray observatory currently under construction in Mexico at an
+altitude of 4100 m. It will observe atmospheric air showers via the water
+Cherenkov method. HAWC will consist of 300 large water tanks instrumented with
+4 photomultipliers each. HAWC has two data acquisition (DAQ) systems. The main
+DAQ system reads out coincident signals in the tanks and reconstructs the
+direction and energy of individual atmospheric showers. The scaler DAQ counts
+the hits in each photomultiplier tube (PMT) in the detector and searches for a
+statistical excess over the noise of all PMTs. We show that HAWC has a
+realistic opportunity to observe the high-energy power law components of GRBs
+that extend at least up to 30 GeV, as it has been observed by Fermi LAT. The
+two DAQ systems have an energy threshold that is low enough to observe events
+similar to GRB 090510 and GRB 090902b with the characteristics observed by
+Fermi LAT. HAWC will provide information about the high-energy spectra of GRBs
+which in turn could help to understanding about e-pair attenuation in GRB jets,
+extragalactic background light absorption, as well as establishing the highest
+energy to which GRBs accelerate particles.
+
+
+Probing the Fundamental Nature of Dark Matter with the Large Synoptic
+  Survey Telescope
+
+  Astrophysical and cosmological observations currently provide the only
+robust, empirical measurements of dark matter. Future observations with Large
+Synoptic Survey Telescope (LSST) will provide necessary guidance for the
+experimental dark matter program. This white paper represents a community
+effort to summarize the science case for studying the fundamental physics of
+dark matter with LSST. We discuss how LSST will inform our understanding of the
+fundamental properties of dark matter, such as particle mass, self-interaction
+strength, non-gravitational couplings to the Standard Model, and compact object
+abundances. Additionally, we discuss the ways that LSST will complement other
+experiments to strengthen our understanding of the fundamental characteristics
+of dark matter. More information on the LSST dark matter effort can be found at
+https://lsstdarkmatter.github.io/ .
+
+
+The Multi-Object, Fiber-Fed Spectrographs for SDSS and the Baryon
+  Oscillation Spectroscopic Survey
+
+  We present the design and performance of the multi-object fiber spectrographs
+for the Sloan Digital Sky Survey (SDSS) and their upgrade for the Baryon
+Oscillation Spectroscopic Survey (BOSS). Originally commissioned in Fall 1999
+on the 2.5-m aperture Sloan Telescope at Apache Point Observatory, the
+spectrographs produced more than 1.5 million spectra for the SDSS and SDSS-II
+surveys, enabling a wide variety of Galactic and extra-galactic science
+including the first observation of baryon acoustic oscillations in 2005. The
+spectrographs were upgraded in 2009 and are currently in use for BOSS, the
+flagship survey of the third-generation SDSS-III project. BOSS will measure
+redshifts of 1.35 million massive galaxies to redshift 0.7 and Lyman-alpha
+absorption of 160,000 high redshift quasars over 10,000 square degrees of sky,
+making percent level measurements of the absolute cosmic distance scale of the
+Universe and placing tight constraints on the equation of state of dark energy.
+  The twin multi-object fiber spectrographs utilize a simple optical layout
+with reflective collimators, gratings, all-refractive cameras, and
+state-of-the-art CCD detectors to produce hundreds of spectra simultaneously in
+two channels over a bandpass covering the near ultraviolet to the near
+infrared, with a resolving power R = \lambda/FWHM ~ 2000. Building on proven
+heritage, the spectrographs were upgraded for BOSS with volume-phase
+holographic gratings and modern CCD detectors, improving the peak throughput by
+nearly a factor of two, extending the bandpass to cover 360 < \lambda < 1000
+nm, and increasing the number of fibers from 640 to 1000 per exposure. In this
+paper we describe the original SDSS spectrograph design and the upgrades
+implemented for BOSS, and document the predicted and measured performances.
+
+

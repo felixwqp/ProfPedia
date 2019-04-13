@@ -1,0 +1,765 @@
+Convolutional Matching Pursuit and Dictionary Training
+
+  Matching pursuit and K-SVD is demonstrated in the translation invariant
+setting
+
+
+Stacked What-Where Auto-encoders
+
+  We present a novel architecture, the "stacked what-where auto-encoders"
+(SWWAE), which integrates discriminative and generative pathways and provides a
+unified approach to supervised, semi-supervised and unsupervised learning
+without relying on sampling during training. An instantiation of SWWAE uses a
+convolutional net (Convnet) (LeCun et al. (1998)) to encode the input, and
+employs a deconvolutional net (Deconvnet) (Zeiler et al. (2010)) to produce the
+reconstruction. The objective function includes reconstruction terms that
+induce the hidden states in the Deconvnet to be similar to those of the
+Convnet. Each pooling layer produces two sets of variables: the "what" which
+are fed to the next layer, and its complementary variable "where" that are fed
+to the corresponding layer in the generative decoder.
+
+
+Fast Inference in Sparse Coding Algorithms with Applications to Object
+  Recognition
+
+  Adaptive sparse coding methods learn a possibly overcomplete set of basis
+functions, such that natural image patches can be reconstructed by linearly
+combining a small subset of these bases. The applicability of these methods to
+visual object recognition tasks has been limited because of the prohibitive
+cost of the optimization algorithms required to compute the sparse
+representation. In this work we propose a simple and efficient algorithm to
+learn basis functions. After training, this model also provides a fast and
+smooth approximator to the optimal representation, achieving even better
+accuracy than exact sparse coding algorithms on visual object recognition
+tasks.
+
+
+Efficient Learning of Sparse Invariant Representations
+
+  We propose a simple and efficient algorithm for learning sparse invariant
+representations from unlabeled data with fast inference. When trained on short
+movies sequences, the learned features are selective to a range of orientations
+and spatial frequencies, but robust to a wide range of positions, similar to
+complex cells in the primary visual cortex. We give a hierarchical version of
+the algorithm, and give guarantees of fast convergence under certain
+conditions.
+
+
+Learning Representations by Maximizing Compression
+
+  We give an algorithm that learns a representation of data through
+compression. The algorithm 1) predicts bits sequentially from those previously
+seen and 2) has a structure and a number of computations similar to an
+autoencoder. The likelihood under the model can be calculated exactly, and
+arithmetic coding can be used directly for compression. When training on digits
+the algorithm learns filters similar to those of restricted boltzman machines
+and denoising autoencoders. Independent samples can be drawn from the model by
+a single sweep through the pixels. The algorithm has a good compression
+performance when compared to other methods that work under random ordering of
+pixels.
+
+
+Pedestrian Detection with Unsupervised Multi-Stage Feature Learning
+
+  Pedestrian detection is a problem of considerable practical interest. Adding
+to the list of successful applications of deep learning methods to vision, we
+report state-of-the-art and competitive results on all major pedestrian
+datasets with a convolutional network model. The model uses a few new twists,
+such as multi-stage features, connections that skip layers to integrate global
+shape information with local distinctive motif information, and an unsupervised
+method based on convolutional sparse coding to pre-train the filters at each
+stage.
+
+
+Causal graph-based video segmentation
+
+  Numerous approaches in image processing and computer vision are making use of
+super-pixels as a pre-processing step. Among the different methods producing
+such over-segmentation of an image, the graph-based approach of Felzenszwalb
+and Huttenlocher is broadly employed. One of its interesting properties is that
+the regions are computed in a greedy manner in quasi-linear time. The algorithm
+may be trivially extended to video segmentation by considering a video as a 3D
+volume, however, this can not be the case for causal segmentation, when
+subsequent frames are unknown. We propose an efficient video segmentation
+approach that computes temporally consistent pixels in a causal manner, filling
+the need for causal and real time applications.
+
+
+Indoor Semantic Segmentation using depth information
+
+  This work addresses multi-class segmentation of indoor scenes with RGB-D
+inputs. While this area of research has gained much attention recently, most
+works still rely on hand-crafted features. In contrast, we apply a multiscale
+convolutional network to learn features directly from the images and the depth
+information. We obtain state-of-the-art on the NYU-v2 depth dataset with an
+accuracy of 64.5%. We illustrate the labeling of indoor scenes in videos
+sequences that could be processed in real-time using appropriate hardware such
+as an FPGA.
+
+
+Saturating Auto-Encoders
+
+  We introduce a simple new regularizer for auto-encoders whose hidden-unit
+activation functions contain at least one zero-gradient (saturated) region.
+This regularizer explicitly encourages activations in the saturated region(s)
+of the corresponding activation function. We call these Saturating
+Auto-Encoders (SATAE). We show that the saturation regularizer explicitly
+limits the SATAE's ability to reconstruct inputs which are not near the data
+manifold. Furthermore, we show that a wide variety of features can be learned
+when different activation functions are used. Finally, connections are
+established with the Contractive and Sparse Auto-Encoders.
+
+
+Computing the Stereo Matching Cost with a Convolutional Neural Network
+
+  We present a method for extracting depth information from a rectified image
+pair. We train a convolutional neural network to predict how well two image
+patches match and use it to compute the stereo matching cost. The cost is
+refined by cross-based cost aggregation and semiglobal matching, followed by a
+left-right consistency check to eliminate errors in the occluded regions. Our
+stereo method achieves an error rate of 2.61 % on the KITTI stereo dataset and
+is currently (August 2014) the top performing method on this dataset.
+
+
+MoDeep: A Deep Learning Framework Using Motion Features for Human Pose
+  Estimation
+
+  In this work, we propose a novel and efficient method for articulated human
+pose estimation in videos using a convolutional network architecture, which
+incorporates both color and motion features. We propose a new human body pose
+dataset, FLIC-motion, that extends the FLIC dataset with additional motion
+features. We apply our architecture to this dataset and report significantly
+better performance than current state-of-the-art pose detection systems.
+
+
+Spectral classification using convolutional neural networks
+
+  There is a great need for accurate and autonomous spectral classification
+methods in astrophysics. This thesis is about training a convolutional neural
+network (ConvNet) to recognize an object class (quasar, star or galaxy) from
+one-dimension spectra only. Author developed several scripts and C programs for
+datasets preparation, preprocessing and postprocessing of the data. EBLearn
+library (developed by Pierre Sermanet and Yann LeCun) was used to create
+ConvNets. Application on dataset of more than 60000 spectra yielded success
+rate of nearly 95%. This thesis conclusively proved great potential of
+convolutional neural networks and deep learning methods in astrophysics.
+
+
+Unsupervised Feature Learning from Temporal Data
+
+  Current state-of-the-art classification and detection algorithms rely on
+supervised training. In this work we study unsupervised feature learning in the
+context of temporally coherent video data. We focus on feature learning from
+unlabeled video data, using the assumption that adjacent video frames contain
+semantically similar information. This assumption is exploited to train a
+convolutional pooling auto-encoder regularized by slowness and sparsity. We
+establish a connection between slow feature learning to metric learning and
+show that the trained encoder can be used to define a more temporally and
+semantically coherent metric.
+
+
+Signal Recovery from Pooling Representations
+
+  In this work we compute lower Lipschitz bounds of $\ell_p$ pooling operators
+for $p=1, 2, \infty$ as well as $\ell_p$ pooling operators preceded by
+half-rectification layers. These give sufficient conditions for the design of
+invertible neural network layers. Numerical experiments on MNIST and image
+patches confirm that pooling layers can be inverted with phase recovery
+algorithms. Moreover, the regularity of the inverse pooling, controlled by the
+lower Lipschitz constant, is empirically verified with a nearest neighbor
+regression.
+
+
+Joint Training of a Convolutional Network and a Graphical Model for
+  Human Pose Estimation
+
+  This paper proposes a new hybrid architecture that consists of a deep
+Convolutional Network and a Markov Random Field. We show how this architecture
+is successfully applied to the challenging problem of articulated human pose
+estimation in monocular images. The architecture can exploit structural domain
+constraints such as geometric relationships between body joint locations. We
+show that joint training of these two model paradigms improves performance and
+allows us to significantly outperform existing state-of-the-art techniques.
+
+
+No More Pesky Learning Rates
+
+  The performance of stochastic gradient descent (SGD) depends critically on
+how learning rates are tuned and decreased over time. We propose a method to
+automatically adjust multiple learning rates so as to minimize the expected
+error at any one time. The method relies on local gradient variations across
+samples. In our approach, learning rates can increase as well as decrease,
+making it suitable for non-stationary problems. Using a number of convex and
+non-convex learning tasks, we show that the resulting algorithm matches the
+performance of SGD or other adaptive approaches with their best settings
+obtained through systematic search, and effectively removes the need for
+learning rate tuning.
+
+
+Learning to Linearize Under Uncertainty
+
+  Training deep feature hierarchies to solve supervised learning tasks has
+achieved state of the art performance on many problems in computer vision.
+However, a principled way in which to train such hierarchies in the
+unsupervised setting has remained elusive. In this work we suggest a new
+architecture and loss for training deep feature hierarchies that linearize the
+transformations observed in unlabeled natural video sequences. This is done by
+training a generative model to predict video frames. We also address the
+problem of inherent uncertainty in prediction by introducing latent variables
+that are non-deterministic functions of the input into the network
+architecture.
+
+
+Eigenvalues of the Hessian in Deep Learning: Singularity and Beyond
+
+  We look at the eigenvalues of the Hessian of a loss function before and after
+training. The eigenvalue distribution is seen to be composed of two parts, the
+bulk which is concentrated around zero, and the edges which are scattered away
+from zero. We present empirical evidence for the bulk indicating how
+over-parametrized the system is, and for the edges that depend on the input
+data.
+
+
+Prediction Under Uncertainty with Error-Encoding Networks
+
+  In this work we introduce a new framework for performing temporal predictions
+in the presence of uncertainty. It is based on a simple idea of disentangling
+components of the future state which are predictable from those which are
+inherently unpredictable, and encoding the unpredictable components into a
+low-dimensional latent variable which is fed into a forward model. Our method
+uses a supervised training objective which is fast and easy to train. We
+evaluate it in the context of video prediction on multiple datasets and show
+that it is able to consistently generate diverse predictions without the need
+for alternating minimization over a latent space or adversarial training.
+
+
+Distributed stochastic optimization for deep learning (thesis)
+
+  We study the problem of how to distribute the training of large-scale deep
+learning models in the parallel computing environment. We propose a new
+distributed stochastic optimization method called Elastic Averaging SGD
+(EASGD). We analyze the convergence rate of the EASGD method in the synchronous
+scenario and compare its stability condition with the existing ADMM method in
+the round-robin scheme. An asynchronous and momentum variant of the EASGD
+method is applied to train deep convolutional neural networks for image
+classification on the CIFAR and ImageNet datasets. Our approach accelerates the
+training and furthermore achieves better test accuracy. It also requires a much
+smaller amount of communication than other common baseline approaches such as
+the DOWNPOUR method.
+  We then investigate the limit in speedup of the initial and the asymptotic
+phase of the mini-batch SGD, the momentum SGD, and the EASGD methods. We find
+that the spread of the input data distribution has a big impact on their
+initial convergence rate and stability region. We also find a surprising
+connection between the momentum SGD and the EASGD method with a negative moving
+average rate. A non-convex case is also studied to understand when EASGD can
+get trapped by a saddle point.
+  Finally, we scale up the EASGD method by using a tree structured network
+topology. We show empirically its advantage and challenge. We also establish a
+connection between the EASGD and the DOWNPOUR method with the classical Jacobi
+and the Gauss-Seidel method, thus unifying a class of distributed stochastic
+optimization methods.
+
+
+Emergence of Complex-Like Cells in a Temporal Product Network with Local
+  Receptive Fields
+
+  We introduce a new neural architecture and an unsupervised algorithm for
+learning invariant representations from temporal sequence of images. The system
+uses two groups of complex cells whose outputs are combined multiplicatively:
+one that represents the content of the image, constrained to be constant over
+several consecutive frames, and one that represents the precise location of
+features, which is allowed to vary over time but constrained to be sparse. The
+architecture uses an encoder to extract features, and a decoder to reconstruct
+the input from the features. The method was applied to patches extracted from
+consecutive movie frames and produces orientation and frequency selective units
+analogous to the complex cells in V1. An extension of the method is proposed to
+train a network composed of units with local receptive field spread over a
+large image of arbitrary size. A layer of complex cells, subject to sparsity
+constraints, pool feature units over overlapping local neighborhoods, which
+causes the feature units to organize themselves into pinwheel patterns of
+orientation-selective receptive fields, similar to those observed in the
+mammalian visual cortex. A feed-forward encoder efficiently computes the
+feature representation of full images.
+
+
+Fast approximations to structured sparse coding and applications to
+  object classification
+
+  We describe a method for fast approximation of sparse coding. The input space
+is subdivided by a binary decision tree, and we simultaneously learn a
+dictionary and assignment of allowed dictionary elements for each leaf of the
+tree. We store a lookup table with the assignments and the pseudoinverses for
+each node, allowing for very fast inference. We give an algorithm for learning
+the tree, the dictionary and the dictionary element assignment, and In the
+process of describing this algorithm, we discuss the more general problem of
+learning the groups in group structured sparse modelling. We show that our
+method creates good sparse representations by using it in the object
+recognition framework of \cite{lazebnik06,yang-cvpr-09}. Implementing our own
+fast version of the SIFT descriptor the whole system runs at 20 frames per
+second on $321 \times 481$ sized images on a laptop with a quad-core cpu, while
+sacrificing very little accuracy on the Caltech 101 and 15 scenes benchmarks.
+
+
+Pushing Stochastic Gradient towards Second-Order Methods --
+  Backpropagation Learning with Transformations in Nonlinearities
+
+  Recently, we proposed to transform the outputs of each hidden neuron in a
+multi-layer perceptron network to have zero output and zero slope on average,
+and use separate shortcut connections to model the linear dependencies instead.
+We continue the work by firstly introducing a third transformation to normalize
+the scale of the outputs of each hidden neuron, and secondly by analyzing the
+connections to second order optimization methods. We show that the
+transformations make a simple stochastic gradient behave closer to second-order
+optimization methods and thus speed up learning. This is shown both in theory
+and with experiments. The experiments on the third transformation show that
+while it further increases the speed of learning, it can also hurt performance
+by converging to a worse local optimum, where both the inputs and outputs of
+many hidden neurons are close to zero.
+
+
+Learning Stable Group Invariant Representations with Convolutional
+  Networks
+
+  Transformation groups, such as translations or rotations, effectively express
+part of the variability observed in many recognition problems. The group
+structure enables the construction of invariant signal representations with
+appealing mathematical properties, where convolutions, together with pooling
+operators, bring stability to additive and geometric perturbations of the
+input. Whereas physical transformation groups are ubiquitous in image and audio
+applications, they do not account for all the variability of complex signal
+classes.
+  We show that the invariance properties built by deep convolutional networks
+can be cast as a form of stable group invariance. The network wiring
+architecture determines the invariance group, while the trainable filter
+coefficients characterize the group action. We give explanatory examples which
+illustrate how the network architecture controls the resulting invariance
+group. We also explore the principle by which additional convolutional layers
+induce a group factorization enabling more abstract, powerful invariant
+representations.
+
+
+Adaptive learning rates and parallelization for stochastic, sparse,
+  non-smooth gradients
+
+  Recent work has established an empirically successful framework for adapting
+learning rates for stochastic gradient descent (SGD). This effectively removes
+all needs for tuning, while automatically reducing learning rates over time on
+stationary problems, and permitting learning rates to grow appropriately in
+non-stationary tasks. Here, we extend the idea in three directions, addressing
+proper minibatch parallelization, including reweighted updates for sparse or
+orthogonal gradients, improving robustness on non-smooth loss functions, in the
+process replacing the diagonal Hessian estimation procedure that may not always
+be available by a robust finite-difference approximation. The final algorithm
+integrates all these components, has linear complexity and is hyper-parameter
+free.
+
+
+Discriminative Recurrent Sparse Auto-Encoders
+
+  We present the discriminative recurrent sparse auto-encoder model, comprising
+a recurrent encoder of rectified linear units, unrolled for a fixed number of
+iterations, and connected to two linear decoders that reconstruct the input and
+predict its supervised classification. Training via
+backpropagation-through-time initially minimizes an unsupervised sparse
+reconstruction error; the loss function is then augmented with a discriminative
+term on the supervised classification. The depth implicit in the
+temporally-unrolled form allows the system to exhibit all the power of deep
+networks, while substantially reducing the number of trainable parameters.
+  From an initially unstructured network the hidden units differentiate into
+categorical-units, each of which represents an input prototype with a
+well-defined class; and part-units representing deformations of these
+prototypes. The learned organization of the recurrent encoder is hierarchical:
+part-units are driven directly by the input, whereas the activity of
+categorical-units builds up over time through interactions with the part-units.
+Even using a small number of hidden units per layer, discriminative recurrent
+sparse auto-encoders achieve excellent performance on MNIST.
+
+
+Exploiting Linear Structure Within Convolutional Networks for Efficient
+  Evaluation
+
+  We present techniques for speeding up the test-time evaluation of large
+convolutional networks, designed for object recognition tasks. These models
+deliver impressive accuracy but each image evaluation requires millions of
+floating point operations, making their deployment on smartphones and
+Internet-scale clusters problematic. The computation is dominated by the
+convolution operations in the lower layers of the model. We exploit the linear
+structure present within the convolutional filters to derive approximations
+that significantly reduce the required computation. Using large
+state-of-the-art models, we demonstrate we demonstrate speedups of
+convolutional layers on both CPU and GPU by a factor of 2x, while keeping the
+accuracy within 1% of the original model.
+
+
+Fast Approximation of Rotations and Hessians matrices
+
+  A new method to represent and approximate rotation matrices is introduced.
+The method represents approximations of a rotation matrix $Q$ with linearithmic
+complexity, i.e. with $\frac{1}{2}n\lg(n)$ rotations over pairs of coordinates,
+arranged in an FFT-like fashion. The approximation is "learned" using gradient
+descent. It allows to represent symmetric matrices $H$ as $QDQ^T$ where $D$ is
+a diagonal matrix. It can be used to approximate covariance matrix of Gaussian
+models in order to speed up inference, or to estimate and track the inverse
+Hessian of an objective function by relating changes in parameters to changes
+in gradient along the trajectory followed by the optimization procedure.
+Experiments were conducted to approximate synthetic matrices, covariance
+matrices of real data, and Hessian matrices of objective functions involved in
+machine learning problems.
+
+
+Unsupervised Learning of Spatiotemporally Coherent Metrics
+
+  Current state-of-the-art classification and detection algorithms rely on
+supervised training. In this work we study unsupervised feature learning in the
+context of temporally coherent video data. We focus on feature learning from
+unlabeled video data, using the assumption that adjacent video frames contain
+semantically similar information. This assumption is exploited to train a
+convolutional pooling auto-encoder regularized by slowness and sparsity. We
+establish a connection between slow feature learning to metric learning and
+show that the trained encoder can be used to define a more temporally and
+semantically coherent metric.
+
+
+Explorations on high dimensional landscapes
+
+  Finding minima of a real valued non-convex function over a high dimensional
+space is a major challenge in science. We provide evidence that some such
+functions that are defined on high dimensional domains have a narrow band of
+values whose pre-image contains the bulk of its critical points. This is in
+contrast with the low dimensional picture in which this band is wide. Our
+simulations agree with the previous theoretical work on spin glasses that
+proves the existence of such a band when the dimension of the domain tends to
+infinity. Furthermore our experiments on teacher-student networks with the
+MNIST dataset establish a similar phenomenon in deep networks. We finally
+observe that both the gradient descent and the stochastic gradient descent
+methods can reach this level within the same number of steps.
+
+
+Audio Source Separation with Discriminative Scattering Networks
+
+  In this report we describe an ongoing line of research for solving
+single-channel source separation problems. Many monaural signal decomposition
+techniques proposed in the literature operate on a feature space consisting of
+a time-frequency representation of the input data. A challenge faced by these
+approaches is to effectively exploit the temporal dependencies of the signals
+at scales larger than the duration of a time-frame. In this work we propose to
+tackle this problem by modeling the signals using a time-frequency
+representation with multiple temporal resolutions. The proposed representation
+consists of a pyramid of wavelet scattering operators, which generalizes
+Constant Q Transforms (CQT) with extra layers of convolution and complex
+modulus. We first show that learning standard models with this multi-resolution
+setting improves source separation results over fixed-resolution methods. As
+study case, we use Non-Negative Matrix Factorizations (NMF) that has been
+widely considered in many audio application. Then, we investigate the inclusion
+of the proposed multi-resolution setting into a discriminative training regime.
+We discuss several alternatives using different deep neural network
+architectures.
+
+
+Fast Convolutional Nets With fbfft: A GPU Performance Evaluation
+
+  We examine the performance profile of Convolutional Neural Network training
+on the current generation of NVIDIA Graphics Processing Units. We introduce two
+new Fast Fourier Transform convolution implementations: one based on NVIDIA's
+cuFFT library, and another based on a Facebook authored FFT implementation,
+fbfft, that provides significant speedups over cuFFT (over 1.5x) for whole
+CNNs. Both of these convolution implementations are available in open source,
+and are faster than NVIDIA's cuDNN implementation for many common convolutional
+layers (up to 23.5x for some synthetic kernel configurations). We discuss
+different performance regimes of convolutions, comparing areas where
+straightforward time domain convolutions outperform Fourier frequency domain
+convolutions. Details on algorithmic applications of NVIDIA GPU hardware
+specifics in the implementation of fbfft are also provided.
+
+
+Recurrent Orthogonal Networks and Long-Memory Tasks
+
+  Although RNNs have been shown to be powerful tools for processing sequential
+data, finding architectures or optimization strategies that allow them to model
+very long term dependencies is still an active area of research. In this work,
+we carefully analyze two synthetic datasets originally outlined in (Hochreiter
+and Schmidhuber, 1997) which are used to evaluate the ability of RNNs to store
+information over many time steps. We explicitly construct RNN solutions to
+these problems, and using these constructions, illuminate both the problems
+themselves and the way in which RNNs store different types of information in
+their hidden states. These constructions furthermore explain the success of
+recent methods that specify unitary initializations or constraints on the
+transition matrices.
+
+
+What is the Best Feature Learning Procedure in Hierarchical Recognition
+  Architectures?
+
+  (This paper was written in November 2011 and never published. It is posted on
+arXiv.org in its original form in June 2016). Many recent object recognition
+systems have proposed using a two phase training procedure to learn sparse
+convolutional feature hierarchies: unsupervised pre-training followed by
+supervised fine-tuning. Recent results suggest that these methods provide
+little improvement over purely supervised systems when the appropriate
+nonlinearities are included. This paper presents an empirical exploration of
+the space of learning procedures for sparse convolutional networks to assess
+which method produces the best performance. In our study, we introduce an
+augmentation of the Predictive Sparse Decomposition method that includes a
+discriminative term (DPSD). We also introduce a new single phase supervised
+learning procedure that places an L1 penalty on the output state of each layer
+of the network. This forces the network to produce sparse codes without the
+expensive pre-training phase. Using DPSD with a new, complex predictor that
+incorporates lateral inhibition, combined with multi-scale feature pooling, and
+supervised refinement, the system achieves a 70.6\% recognition rate on
+Caltech-101. With the addition of convolutional training, a 77\% recognition
+was obtained on the CIfAR-10 dataset.
+
+
+Very Deep Convolutional Networks for Text Classification
+
+  The dominant approach for many NLP tasks are recurrent neural networks, in
+particular LSTMs, and convolutional neural networks. However, these
+architectures are rather shallow in comparison to the deep convolutional
+networks which have pushed the state-of-the-art in computer vision. We present
+a new architecture (VDCNN) for text processing which operates directly at the
+character level and uses only small convolutions and pooling operations. We are
+able to show that the performance of this model increases with depth: using up
+to 29 convolutional layers, we report improvements over the state-of-the-art on
+several public text classification tasks. To the best of our knowledge, this is
+the first time that very deep convolutional nets have been applied to text
+processing.
+
+
+Fast Incremental Learning for Off-Road Robot Navigation
+
+  A promising approach to autonomous driving is machine learning. In such
+systems, training datasets are created that capture the sensory input to a
+vehicle as well as the desired response. A disadvantage of using a learned
+navigation system is that the learning process itself may require a huge number
+of training examples and a large amount of computing. To avoid the need to
+collect a large training set of driving examples, we describe a system that
+takes advantage of the huge number of training examples provided by ImageNet,
+but is able to adapt quickly using a small training set for the specific
+driving environment.
+
+
+Convolutional Neural Networks Applied to House Numbers Digit
+  Classification
+
+  We classify digits of real-world house numbers using convolutional neural
+networks (ConvNets). ConvNets are hierarchical feature learning neural networks
+whose structure is biologically inspired. Unlike many popular vision approaches
+that are hand-designed, ConvNets can automatically learn a unique set of
+features optimized for a given task. We augmented the traditional ConvNet
+architecture by learning multi-stage features and by using Lp pooling and
+establish a new state-of-the-art of 94.85% accuracy on the SVHN dataset (45.2%
+error improvement). Furthermore, we analyze the benefits of different pooling
+methods and multi-stage features in ConvNets. The source code and a tutorial
+are available at eblearn.sf.net.
+
+
+Universum Prescription: Regularization using Unlabeled Data
+
+  This paper shows that simply prescribing "none of the above" labels to
+unlabeled data has a beneficial regularization effect to supervised learning.
+We call it universum prescription by the fact that the prescribed labels cannot
+be one of the supervised labels. In spite of its simplicity, universum
+prescription obtained competitive results in training deep convolutional
+networks for CIFAR-10, CIFAR-100, STL-10 and ImageNet datasets. A qualitative
+justification of these approaches using Rademacher complexity is presented. The
+effect of a regularization parameter -- probability of sampling from unlabeled
+data -- is also studied empirically.
+
+
+Universal halting times in optimization and machine learning
+
+  The authors present empirical distributions for the halting time (measured by
+the number of iterations to reach a given accuracy) of optimization algorithms
+applied to two random systems: spin glasses and deep learning. Given an
+algorithm, which we take to be both the optimization routine and the form of
+the random landscape, the fluctuations of the halting time follow a
+distribution that, after centering and scaling, remains unchanged even when the
+distribution on the landscape is changed. We observe two qualitative classes: A
+Gumbel-like distribution that appears in Google searches, human decision times,
+the QR eigenvalue algorithm and spin glasses, and a Gaussian-like distribution
+that appears in conjugate gradient method, deep network with MNIST input data
+and deep network with random input data. This empirical evidence suggests
+presence of a class of distributions for which the halting time is independent
+of the underlying distribution under some conditions.
+
+
+Understanding Deep Architectures using a Recursive Convolutional Network
+
+  A key challenge in designing convolutional network models is sizing them
+appropriately. Many factors are involved in these decisions, including number
+of layers, feature maps, kernel sizes, etc. Complicating this further is the
+fact that each of these influence not only the numbers and dimensions of the
+activation units, but also the total number of parameters. In this paper we
+focus on assessing the independent contributions of three of these linked
+variables: The numbers of layers, feature maps, and parameters. To accomplish
+this, we employ a recursive convolutional network whose weights are tied
+between layers; this allows us to vary each of the three factors in a
+controlled setting. We find that while increasing the numbers of layers and
+parameters each have clear benefit, the number of feature maps (and hence
+dimensionality of the representation) appears ancillary, and finds most of its
+benefit through the introduction of more weights. Our results (i) empirically
+confirm the notion that adding layers alone increases computational power,
+within the context of convolutional layers, and (ii) suggest that precise
+sizing of convolutional feature map dimensions is itself of little concern;
+more attention should be paid to the number of parameters in these layers
+instead.
+
+
+Fast Training of Convolutional Networks through FFTs
+
+  Convolutional networks are one of the most widely employed architectures in
+computer vision and machine learning. In order to leverage their ability to
+learn complex functions, large amounts of data are required for training.
+Training a large convolutional network to produce state-of-the-art results can
+take weeks, even when using modern GPUs. Producing labels using a trained
+network can also be costly when dealing with web-scale datasets. In this work,
+we present a simple algorithm which accelerates training and inference by a
+significant factor, and can yield improvements of over an order of magnitude
+compared to existing state-of-the-art implementations. This is done by
+computing convolutions as pointwise products in the Fourier domain while
+reusing the same transformed feature map many times. The algorithm is
+implemented on a GPU architecture and addresses a number of related challenges.
+
+
+Spectral Networks and Locally Connected Networks on Graphs
+
+  Convolutional Neural Networks are extremely efficient architectures in image
+and audio recognition tasks, thanks to their ability to exploit the local
+translational invariance of signal classes over their domain. In this paper we
+consider possible generalizations of CNNs to signals defined on more general
+domains without the action of a translation group. In particular, we propose
+two constructions, one based upon a hierarchical clustering of the domain, and
+another based on the spectrum of the graph Laplacian. We show through
+experiments that for low-dimensional graphs it is possible to learn
+convolutional layers with a number of parameters independent of the input size,
+resulting in efficient deep architectures.
+
+
+OverFeat: Integrated Recognition, Localization and Detection using
+  Convolutional Networks
+
+  We present an integrated framework for using Convolutional Networks for
+classification, localization and detection. We show how a multiscale and
+sliding window approach can be efficiently implemented within a ConvNet. We
+also introduce a novel deep learning approach to localization by learning to
+predict object boundaries. Bounding boxes are then accumulated rather than
+suppressed in order to increase detection confidence. We show that different
+tasks can be learned simultaneously using a single shared network. This
+integrated framework is the winner of the localization task of the ImageNet
+Large Scale Visual Recognition Challenge 2013 (ILSVRC2013) and obtained very
+competitive results for the detection and classifications tasks. In
+post-competition work, we establish a new state of the art for the detection
+task. Finally, we release a feature extractor from our best model called
+OverFeat.
+
+
+Efficient Object Localization Using Convolutional Networks
+
+  Recent state-of-the-art performance on human-body pose estimation has been
+achieved with Deep Convolutional Networks (ConvNets). Traditional ConvNet
+architectures include pooling and sub-sampling layers which reduce
+computational requirements, introduce invariance and prevent over-training.
+These benefits of pooling come at the cost of reduced localization accuracy. We
+introduce a novel architecture which includes an efficient `position
+refinement' model that is trained to estimate the joint offset location within
+a small region of the image. This refinement model is jointly trained in
+cascade with a state-of-the-art ConvNet model to achieve improved accuracy in
+human joint location estimation. We show that the variance of our detector
+approaches the variance of human annotations on the FLIC dataset and
+outperforms all existing approaches on the MPII-human-pose dataset.
+
+
+Text Understanding from Scratch
+
+  This article demontrates that we can apply deep learning to text
+understanding from character-level inputs all the way up to abstract text
+concepts, using temporal convolutional networks (ConvNets). We apply ConvNets
+to various large-scale datasets, including ontology classification, sentiment
+analysis, and text categorization. We show that temporal ConvNets can achieve
+astonishing performance without the knowledge of words, phrases, sentences and
+any other syntactic or semantic structures with regards to a human language.
+Evidence shows that our models can work for both English and Chinese.
+
+
+Deep Convolutional Networks on Graph-Structured Data
+
+  Deep Learning's recent successes have mostly relied on Convolutional
+Networks, which exploit fundamental statistical properties of images, sounds
+and video data: the local stationarity and multi-scale compositional structure,
+that allows expressing long range interactions in terms of shorter, localized
+interactions. However, there exist other important examples, such as text
+documents or bioinformatic data, that may lack some or all of these strong
+statistical regularities.
+  In this paper we consider the general question of how to construct deep
+architectures with small learning complexity on general non-Euclidean domains,
+which are typically unknown and need to be estimated from the data. In
+particular, we develop an extension of Spectral Networks which incorporates a
+Graph Estimation procedure, that we test on large-scale classification
+problems, matching or improving over Dropout Networks with far less parameters
+to estimate.
+
+
+Character-level Convolutional Networks for Text Classification
+
+  This article offers an empirical exploration on the use of character-level
+convolutional networks (ConvNets) for text classification. We constructed
+several large-scale datasets to show that character-level convolutional
+networks could achieve state-of-the-art or competitive results. Comparisons are
+offered against traditional models such as bag of words, n-grams and their
+TFIDF variants, and deep learning models such as word-based ConvNets and
+recurrent neural networks.
+
+
+Stereo Matching by Training a Convolutional Neural Network to Compare
+  Image Patches
+
+  We present a method for extracting depth information from a rectified image
+pair. Our approach focuses on the first stage of many stereo algorithms: the
+matching cost computation. We approach the problem by learning a similarity
+measure on small image patches using a convolutional neural network. Training
+is carried out in a supervised manner by constructing a binary classification
+data set with examples of similar and dissimilar pairs of patches. We examine
+two network architectures for this task: one tuned for speed, the other for
+accuracy. The output of the convolutional neural network is used to initialize
+the stereo matching cost. A series of post-processing steps follow: cross-based
+cost aggregation, semiglobal matching, a left-right consistency check, subpixel
+enhancement, a median filter, and a bilateral filter. We evaluate our method on
+the KITTI 2012, KITTI 2015, and Middlebury stereo data sets and show that it
+outperforms other approaches on all three data sets.
+
+
+Phase 1: DCL System Research Using Advanced Approaches for Land-based or
+  Ship-based Real-Time Recognition and Localization of Marine Mammals - HPC
+  System Implementation
+
+  We aim to investigate advancing the state of the art of detection,
+classification and localization (DCL) in the field of bioacoustics. The two
+primary goals are to develop transferable technologies for detection and
+classification in: (1) the area of advanced algorithms, such as deep learning
+and other methods; and (2) advanced systems, capable of real-time and archival
+and processing. This project will focus on long-term, continuous datasets to
+provide automatic recognition, minimizing human time to annotate the signals.
+Effort will begin by focusing on several years of multi-channel acoustic data
+collected in the Stellwagen Bank National Marine Sanctuary (SBNMS) between 2006
+and 2010. Our efforts will incorporate existing technologies in the
+bioacoustics signal processing community, advanced high performance computing
+(HPC) systems, and new approaches aimed at automatically detecting-classifying
+and measuring features for species-specific marine mammal sounds within passive
+acoustic data.
+
+
+Phase 3: DCL System Using Deep Learning Approaches for Land-based or
+  Ship-based Real-Time Recognition and Localization of Marine Mammals -
+  Bioacoustic Applicaitons
+
+  Goals of this research phase is to investigate advanced detection and
+classification pardims useful for data-mining passive large passive acoustic
+archives. Technical objectives are to develop and refine a High Performance
+Computing, Acoustic Data Accelerator (HPC-ADA) along with MATLAB based software
+based on time series acoustic signal Detection cLassification using Machine
+learning Algorithms, called DeLMA. Data scientists and biologists integrate to
+use the HPC-ADA and DeLMA technologies to explore data using newly developed
+techniques aimed at inspection of data extracted at large spatial and temporal
+scales.
+
+

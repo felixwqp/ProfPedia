@@ -1,0 +1,65 @@
+FWDA: a Fast Wishart Discriminant Analysis with its Application to
+  Electronic Health Records Data Classification
+
+  Linear Discriminant Analysis (LDA) on Electronic Health Records (EHR) data is
+widely-used for early detection of diseases. Classical LDA for EHR data
+classification, however, suffers from two handicaps: the ill-posed estimation
+of LDA parameters (e.g., covariance matrix), and the "linear inseparability" of
+EHR data. To handle these two issues, in this paper, we propose a novel
+classifier FWDA -- Fast Wishart Discriminant Analysis, that makes predictions
+in an ensemble way. Specifically, FWDA first surrogates the distribution of
+inverse covariance matrices using a Wishart distribution estimated from the
+training data, then "weighted-averages" the classification results of multiple
+LDA classifiers parameterized by the sampled inverse covariance matrices via a
+Bayesian Voting scheme. The weights for voting are optimally updated to adapt
+each new input data, so as to enable the nonlinear classification. Theoretical
+analysis indicates that FWDA possesses a fast convergence rate and a robust
+performance on high dimensional data. Extensive experiments on large-scale EHR
+dataset show that our approach outperforms state-of-the-art algorithms by a
+large margin.
+
+
+An Improved Speedup Factor for Sporadic Tasks with Constrained Deadlines
+  under Dynamic Priority Scheduling
+
+  Schedulability is a fundamental problem in real-time scheduling, but it has
+to be approximated due to the intrinsic computational hardness. As the most
+popular algorithm for deciding schedulability on multiprocess platforms, the
+speedup factor of partitioned-EDF is challenging to analyze and is far from
+been determined. Partitioned-EDF was first proposed in 2005 by Barush and
+Fisher [1], and was shown to have a speedup factor at most 3-1/m, meaning that
+if the input of sporadic tasks is feasible on m processors with speed one,
+partitioned-EDF will always return succeeded on m processors with speed 3-1/m.
+In 2011, this upper bound was improved to 2.6322-1/m by Chen and Chakraborty
+[2], and no more improvements have appeared ever since then. In this paper, we
+develop a novel method to discretize and regularize sporadic tasks, which
+enables us to improve, in the case of constrained deadlines, the speedup factor
+of partitioned-EDF to 2.5556-1/m, very close to the asymptotic lower bound 2.5
+in [2].
+
+
+DRESS: Dynamic RESource-reservation Scheme for Congested Data-intensive
+  Computing Platforms
+
+  In the past few years, we have envisioned an increasing number of businesses
+start driving by big data analytics, such as Amazon recommendations and Google
+Advertisements. At the back-end side, the businesses are powered by big data
+processing platforms to quickly extract information and make decisions. Running
+on top of a computing cluster, those platforms utilize scheduling algorithms to
+allocate resources. An efficient scheduler is crucial to the system performance
+due to limited resources, e.g. CPU and Memory, and a large number of user
+demands. However, besides requests from clients and current status of the
+system, it has limited knowledge about execution length of the running jobs,
+and incoming jobs' resource demands, which make assigning resources a
+challenging task. If most of the resources are occupied by a long-running job,
+other jobs will have to keep waiting until it releases them. This paper
+presents a new scheduling strategy, named DRESS that particularly aims to
+optimize the allocation among jobs with various demands. Specifically, it
+classifies the jobs into two categories based on their requests, reserves a
+portion of resources for each of category, and dynamically adjusts the reserved
+ratio by monitoring the pending requests and estimating release patterns of
+running jobs. The results demonstrate DRESS significantly reduces the
+completion time for one category, up to 76.1% in our experiments, and in the
+meanwhile, maintains a stable overall system performance.
+
+

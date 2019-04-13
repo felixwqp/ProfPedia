@@ -1,0 +1,561 @@
+Generating Multi-label Discrete Patient Records using Generative
+  Adversarial Networks
+
+  Access to electronic health record (EHR) data has motivated computational
+advances in medical research. However, various concerns, particularly over
+privacy, can limit access to and collaborative use of EHR data. Sharing
+synthetic EHR data could mitigate risk. In this paper, we propose a new
+approach, medical Generative Adversarial Network (medGAN), to generate
+realistic synthetic patient records. Based on input real patient records,
+medGAN can generate high-dimensional discrete variables (e.g., binary and count
+features) via a combination of an autoencoder and generative adversarial
+networks. We also propose minibatch averaging to efficiently avoid mode
+collapse, and increase the learning efficiency with batch normalization and
+shortcut connections. To demonstrate feasibility, we showed that medGAN
+generates synthetic patient records that achieve comparable performance to real
+data on many experiments including distribution statistics, predictive modeling
+tasks and a medical expert review. We also empirically observe a limited
+privacy risk in both identity and attribute disclosure using medGAN.
+
+
+SLEEPNET: Automated Sleep Staging System via Deep Learning
+
+  Sleep disorders, such as sleep apnea, parasomnias, and hypersomnia, affect
+50-70 million adults in the United States (Hillman et al., 2006). Overnight
+polysomnography (PSG), including brain monitoring using electroencephalography
+(EEG), is a central component of the diagnostic evaluation for sleep disorders.
+While PSG is conventionally performed by trained technologists, the recent rise
+of powerful neural network learning algorithms combined with large
+physiological datasets offers the possibility of automation, potentially making
+expert-level sleep analysis more widely available. We propose SLEEPNET (Sleep
+EEG neural network), a deployed annotation tool for sleep staging. SLEEPNET
+uses a deep recurrent neural network trained on the largest sleep physiology
+database assembled to date, consisting of PSGs from over 10,000 patients from
+the Massachusetts General Hospital (MGH) Sleep Laboratory. SLEEPNET achieves
+human-level annotation performance on an independent test set of 1,000 EEGs,
+with an average accuracy of 85.76% and algorithm-expert inter-rater agreement
+(IRA) of kappa = 79.46%, comparable to expert-expert IRA.
+
+
+Scalable Latent Tree Model and its Application to Health Analytics
+
+  We present an integrated approach to structure and parameter estimation in
+latent tree graphical models, where some nodes are hidden. Our overall approach
+follows a "divide-and-conquer" strategy that learns models over small groups of
+variables and iteratively merges into a global solution. The structure learning
+involves combinatorial operations such as minimum spanning tree construction
+and local recursive grouping; the parameter learning is based on the method of
+moments and on tensor decompositions. Our method is guaranteed to correctly
+recover the unknown tree structure and the model parameters with low sample
+complexity for the class of linear multivariate latent tree models which
+includes discrete and Gaussian distributions, and Gaussian mixtures. Our bulk
+asynchronous parallel algorithm is implemented in parallel using the OpenMP
+framework and scales logarithmically with the number of variables and linearly
+with dimensionality of each variable. Our experiments confirm a high degree of
+efficiency and accuracy on large datasets of electronic health records. The
+proposed algorithm also generates intuitive and clinically meaningful disease
+hierarchies.
+
+
+Multi-layer Representation Learning for Medical Concepts
+
+  Learning efficient representations for concepts has been proven to be an
+important basis for many applications such as machine translation or document
+classification. Proper representations of medical concepts such as diagnosis,
+medication, procedure codes and visits will have broad applications in
+healthcare analytics. However, in Electronic Health Records (EHR) the visit
+sequences of patients include multiple concepts (diagnosis, procedure, and
+medication codes) per visit. This structure provides two types of relational
+information, namely sequential order of visits and co-occurrence of the codes
+within each visit. In this work, we propose Med2Vec, which not only learns
+distributed representations for both medical codes and visits from a large EHR
+dataset with over 3 million visits, but also allows us to interpret the learned
+representations confirmed positively by clinical experts. In the experiments,
+Med2Vec displays significant improvement in key medical applications compared
+to popular baselines such as Skip-gram, GloVe and stacked autoencoder, while
+providing clinically meaningful interpretation.
+
+
+Federated Tensor Factorization for Computational Phenotyping
+
+  Tensor factorization models offer an effective approach to convert massive
+electronic health records into meaningful clinical concepts (phenotypes) for
+data analysis. These models need a large amount of diverse samples to avoid
+population bias. An open challenge is how to derive phenotypes jointly across
+multiple hospitals, in which direct patient-level data sharing is not possible
+(e.g., due to institutional policies). In this paper, we developed a novel
+solution to enable federated tensor factorization for computational phenotyping
+without sharing patient-level data. We developed secure data harmonization and
+federated computation procedures based on alternating direction method of
+multipliers (ADMM). Using this method, the multiple hospitals iteratively
+update tensors and transfer secure summarized information to a central server,
+and the server aggregates the information to generate phenotypes. We
+demonstrated with real medical datasets that our method resembles the
+centralized training model (based on combined datasets) in terms of accuracy
+and phenotypes discovery while respecting privacy.
+
+
+Causal Regularization
+
+  In application domains such as healthcare, we want accurate predictive models
+that are also causally interpretable. In pursuit of such models, we propose a
+causal regularizer to steer predictive models towards causally-interpretable
+solutions and theoretically study its properties. In a large-scale analysis of
+Electronic Health Records (EHR), our causally-regularized model outperforms its
+L1-regularized counterpart in causal accuracy and is competitive in predictive
+performance. We perform non-linear causality analysis by causally regularizing
+a special neural network architecture. We also show that the proposed causal
+regularizer can be used together with neural representation learning algorithms
+to yield up to 20% improvement over multilayer perceptron in detecting
+multivariate causation, a situation common in healthcare, where many causal
+factors should occur simultaneously to have an effect on the target variable.
+
+
+Explainable Prediction of Medical Codes from Clinical Text
+
+  Clinical notes are text documents that are created by clinicians for each
+patient encounter. They are typically accompanied by medical codes, which
+describe the diagnosis and treatment. Annotating these codes is labor intensive
+and error prone; furthermore, the connection between the codes and the text is
+not annotated, obscuring the reasons and details behind specific diagnoses and
+treatments. We present an attentional convolutional network that predicts
+medical codes from clinical text. Our method aggregates information across the
+document using a convolutional neural network, and uses an attention mechanism
+to select the most relevant segments for each of the thousands of possible
+codes. The method is accurate, achieving precision@8 of 0.71 and a Micro-F1 of
+0.54, which are both better than the prior state of the art. Furthermore,
+through an interpretability evaluation by a physician, we show that the
+attention mechanism identifies meaningful explanations for each code assignment
+
+
+GAMENet: Graph Augmented MEmory Networks for Recommending Medication
+  Combination
+
+  Recent progress in deep learning is revolutionizing the healthcare domain
+including providing solutions to medication recommendations, especially
+recommending medication combination for patients with complex health
+conditions. Existing approaches either do not customize based on patient health
+history, or ignore existing knowledge on drug-drug interactions (DDI) that
+might lead to adverse outcomes. To fill this gap, we propose the Graph
+Augmented Memory Networks (GAMENet), which integrates the drug-drug
+interactions knowledge graph by a memory module implemented as a graph
+convolutional networks, and models longitudinal patient records as the query.
+It is trained end-to-end to provide safe and personalized recommendation of
+medication combination. We demonstrate the effectiveness and safety of GAMENet
+by comparing with several state-of-the-art methods on real EHR data. GAMENet
+outperformed all baselines in all effectiveness measures, and also achieved
+3.60% DDI rate reduction from existing EHR data.
+
+
+AWE: Asymmetric Word Embedding for Textual Entailment
+
+  Textual entailment is a fundamental task in natural language processing. It
+refers to the directional relation between text fragments such that the
+"premise" can infer "hypothesis". In recent years deep learning methods have
+achieved great success in this task. Many of them have considered the
+inter-sentence word-word interactions between the premise-hypothesis pairs,
+however, few of them considered the "asymmetry" of these interactions.
+Different from paraphrase identification or sentence similarity evaluation,
+textual entailment is essentially determining a directional (asymmetric)
+relation between the premise and the hypothesis. In this paper, we propose a
+simple but effective way to enhance existing textual entailment algorithms by
+using asymmetric word embeddings. Experimental results on SciTail and SNLI
+datasets show that the learned asymmetric word embeddings could significantly
+improve the word-word interaction based textual entailment models. It is
+noteworthy that the proposed AWE-DeIsTe model can get 2.1% accuracy improvement
+over prior state-of-the-art on SciTail.
+
+
+MiME: Multilevel Medical Embedding of Electronic Health Records for
+  Predictive Healthcare
+
+  Deep learning models exhibit state-of-the-art performance for many predictive
+healthcare tasks using electronic health records (EHR) data, but these models
+typically require training data volume that exceeds the capacity of most
+healthcare systems. External resources such as medical ontologies are used to
+bridge the data volume constraint, but this approach is often not directly
+applicable or useful because of inconsistencies with terminology. To solve the
+data insufficiency challenge, we leverage the inherent multilevel structure of
+EHR data and, in particular, the encoded relationships among medical codes. We
+propose Multilevel Medical Embedding (MiME) which learns the multilevel
+embedding of EHR data while jointly performing auxiliary prediction tasks that
+rely on this inherent EHR structure without the need for external labels. We
+conducted two prediction tasks, heart failure prediction and sequential disease
+prediction, where MiME outperformed baseline methods in diverse evaluation
+settings. In particular, MiME consistently outperformed all baselines when
+predicting heart failure on datasets of different volumes, especially
+demonstrating the greatest performance improvement (15% relative gain in PR-AUC
+over the best baseline) on the smallest dataset, demonstrating its ability to
+effectively model the multilevel structure of EHR data.
+
+
+CarePre: An Intelligent Clinical Decision Assistance System
+
+  Clinical decision support systems (CDSS) are widely used to assist with
+medical decision making. However, CDSS typically require manually curated rules
+and other data which are difficult to maintain and keep up-to-date. Recent
+systems leverage advanced deep learning techniques and electronic health
+records (EHR) to provide more timely and precise results. Many of these
+techniques have been developed with a common focus on predicting upcoming
+medical events. However, while the prediction results from these approaches are
+promising, their value is limited by their lack of interpretability. To address
+this challenge, we introduce CarePre, an intelligent clinical decision
+assistance system. The system extends a state-of-the-art deep learning model to
+predict upcoming diagnosis events for a focal patient based on his/her
+historical medical records. The system includes an interactive framework
+together with intuitive visualizations designed to support the diagnosis,
+treatment outcome analysis, and the interpretation of the analysis results. We
+demonstrate the effectiveness and usefulness of CarePre system by reporting
+results from a quantities evaluation of the prediction algorithm and a case
+study and three interviews with senior physicians.
+
+
+RETAIN: An Interpretable Predictive Model for Healthcare using Reverse
+  Time Attention Mechanism
+
+  Accuracy and interpretability are two dominant features of successful
+predictive models. Typically, a choice must be made in favor of complex black
+box models such as recurrent neural networks (RNN) for accuracy versus less
+accurate but more interpretable traditional models such as logistic regression.
+This tradeoff poses challenges in medicine where both accuracy and
+interpretability are important. We addressed this challenge by developing the
+REverse Time AttentIoN model (RETAIN) for application to Electronic Health
+Records (EHR) data. RETAIN achieves high accuracy while remaining clinically
+interpretable and is based on a two-level neural attention model that detects
+influential past visits and significant clinical variables within those visits
+(e.g. key diagnoses). RETAIN mimics physician practice by attending the EHR
+data in a reverse time order so that recent clinical visits are likely to
+receive higher attention. RETAIN was tested on a large health system EHR
+dataset with 14 million visits completed by 263K patients over an 8 year period
+and demonstrated predictive accuracy and computational scalability comparable
+to state-of-the-art methods such as RNN, and ease of interpretability
+comparable to traditional models.
+
+
+Medical Concept Representation Learning from Electronic Health Records
+  and its Application on Heart Failure Prediction
+
+  Objective: To transform heterogeneous clinical data from electronic health
+records into clinically meaningful constructed features using data driven
+method that rely, in part, on temporal relations among data. Materials and
+Methods: The clinically meaningful representations of medical concepts and
+patients are the key for health analytic applications. Most of existing
+approaches directly construct features mapped to raw data (e.g., ICD or CPT
+codes), or utilize some ontology mapping such as SNOMED codes. However, none of
+the existing approaches leverage EHR data directly for learning such concept
+representation. We propose a new way to represent heterogeneous medical
+concepts (e.g., diagnoses, medications and procedures) based on co-occurrence
+patterns in longitudinal electronic health records. The intuition behind the
+method is to map medical concepts that are co-occuring closely in time to
+similar concept vectors so that their distance will be small. We also derive a
+simple method to construct patient vectors from the related medical concept
+vectors. Results: For qualitative evaluation, we study similar medical concepts
+across diagnosis, medication and procedure. In quantitative evaluation, our
+proposed representation significantly improves the predictive modeling
+performance for onset of heart failure (HF), where classification methods (e.g.
+logistic regression, neural network, support vector machine and K-nearest
+neighbors) achieve up to 23% improvement in area under the ROC curve (AUC)
+using this proposed representation. Conclusion: We proposed an effective method
+for patient and medical concept representation learning. The resulting
+representation can map relevant concepts together and also improves predictive
+modeling performance.
+
+
+FLASH: Fast Bayesian Optimization for Data Analytic Pipelines
+
+  Modern data science relies on data analytic pipelines to organize
+interdependent computational steps. Such analytic pipelines often involve
+different algorithms across multiple steps, each with its own hyperparameters.
+To achieve the best performance, it is often critical to select optimal
+algorithms and to set appropriate hyperparameters, which requires large
+computational efforts. Bayesian optimization provides a principled way for
+searching optimal hyperparameters for a single algorithm. However, many
+challenges remain in solving pipeline optimization problems with
+high-dimensional and highly conditional search space. In this work, we propose
+Fast LineAr SearcH (FLASH), an efficient method for tuning analytic pipelines.
+FLASH is a two-layer Bayesian optimization framework, which firstly uses a
+parametric model to select promising algorithms, then computes a nonparametric
+model to fine-tune hyperparameters of the promising algorithms. FLASH also
+includes an effective caching algorithm which can further accelerate the search
+process. Extensive experiments on a number of benchmark datasets have
+demonstrated that FLASH significantly outperforms previous state-of-the-art
+methods in both search speed and accuracy. Using 50% of the time budget, FLASH
+achieves up to 20% improvement on test error rate compared to the baselines.
+FLASH also yields state-of-the-art performance on a real-world application for
+healthcare predictive modeling.
+
+
+Doctor AI: Predicting Clinical Events via Recurrent Neural Networks
+
+  Leveraging large historical data in electronic health record (EHR), we
+developed Doctor AI, a generic predictive model that covers observed medical
+conditions and medication uses. Doctor AI is a temporal model using recurrent
+neural networks (RNN) and was developed and applied to longitudinal time
+stamped EHR data from 260K patients over 8 years. Encounter records (e.g.
+diagnosis codes, medication codes or procedure codes) were input to RNN to
+predict (all) the diagnosis and medication categories for a subsequent visit.
+Doctor AI assesses the history of patients to make multilabel predictions (one
+label for each diagnosis or medication category). Based on separate blind test
+set evaluation, Doctor AI can perform differential diagnosis with up to 79%
+recall@30, significantly higher than several baselines. Moreover, we
+demonstrate great generalizability of Doctor AI by adapting the resulting
+models from one institution to another without losing substantial accuracy.
+
+
+Phenotyping using Structured Collective Matrix Factorization of
+  Multi--source EHR Data
+
+  The increased availability of electronic health records (EHRs) have
+spearheaded the initiative for precision medicine using data driven approaches.
+Essential to this effort is the ability to identify patients with certain
+medical conditions of interest from simple queries on EHRs, or EHR-based
+phenotypes. Existing rule--based phenotyping approaches are extremely labor
+intensive. Instead, dimensionality reduction and latent factor estimation
+techniques from machine learning can be adapted for phenotype extraction with
+no (or minimal) human supervision.
+  We propose to identify an easily interpretable latent space shared across
+various sources of EHR data as potential candidates for phenotypes. By
+incorporating multiple EHR data sources (e.g., diagnosis, medications, and lab
+reports) available in heterogeneous datatypes in a generalized
+\textit{Collective Matrix Factorization (CMF)}, our methods can generate rich
+phenotypes. Further, easy interpretability in phenotyping application requires
+sparse representations of the candidate phenotypes, for example each phenotype
+derived from patients' medication and diagnosis data should preferably be
+represented by handful of diagnosis and medications, ($5$--$10$ active
+components). We propose a constrained formulation of CMF for estimating sparse
+phenotypes. We demonstrate the efficacy of our model through an extensive
+empirical study on EHR data from Vanderbilt University Medical Center.
+
+
+Sparse Hierarchical Tucker Factorization and its Application to
+  Healthcare
+
+  We propose a new tensor factorization method, called the Sparse
+Hierarchical-Tucker (Sparse H-Tucker), for sparse and high-order data tensors.
+Sparse H-Tucker is inspired by its namesake, the classical Hierarchical Tucker
+method, which aims to compute a tree-structured factorization of an input data
+set that may be readily interpreted by a domain expert. However, Sparse
+H-Tucker uses a nested sampling technique to overcome a key scalability problem
+in Hierarchical Tucker, which is the creation of an unwieldy intermediate dense
+core tensor; the result of our approach is a faster, more space-efficient, and
+more accurate method. We extensively test our method on a real healthcare
+dataset, which is collected from 30K patients and results in an 18th order
+sparse data tensor. Unlike competing methods, Sparse H-Tucker can analyze the
+full data set on a single multi-threaded machine. It can also do so more
+accurately and in less time than the state-of-the-art: on a 12th order subset
+of the input data, Sparse H-Tucker is 18x more accurate and 7.5x faster than a
+previously state-of-the-art method. Even for analyzing low order tensors (e.g.,
+4-order), our method requires close to an order of magnitude less time and over
+two orders of magnitude less memory, as compared to traditional tensor
+factorization methods such as CP and Tucker. Moreover, we observe that Sparse
+H-Tucker scales nearly linearly in the number of non-zero tensor elements. The
+resulting model also provides an interpretable disease hierarchy, which is
+confirmed by a clinical expert.
+
+
+GRAM: Graph-based Attention Model for Healthcare Representation Learning
+
+  Deep learning methods exhibit promising performance for predictive modeling
+in healthcare, but two important challenges remain: -Data insufficiency:Often
+in healthcare predictive modeling, the sample size is insufficient for deep
+learning methods to achieve satisfactory results. -Interpretation:The
+representations learned by deep learning methods should align with medical
+knowledge. To address these challenges, we propose a GRaph-based Attention
+Model, GRAM that supplements electronic health records (EHR) with hierarchical
+information inherent to medical ontologies. Based on the data volume and the
+ontology structure, GRAM represents a medical concept as a combination of its
+ancestors in the ontology via an attention mechanism. We compared predictive
+performance (i.e. accuracy, data needs, interpretability) of GRAM to various
+methods including the recurrent neural network (RNN) in two sequential
+diagnoses prediction tasks and one heart failure prediction task. Compared to
+the basic RNN, GRAM achieved 10% higher accuracy for predicting diseases rarely
+observed in the training data and 3% improved area under the ROC curve for
+predicting heart failure using an order of magnitude less training data.
+Additionally, unlike other methods, the medical concept representations learned
+by GRAM are well aligned with the medical ontology. Finally, GRAM exhibits
+intuitive attention behaviors by adaptively generalizing to higher level
+concepts when facing data insufficiency at the lower level concepts.
+
+
+SPARTan: Scalable PARAFAC2 for Large & Sparse Data
+
+  In exploratory tensor mining, a common problem is how to analyze a set of
+variables across a set of subjects whose observations do not align naturally.
+For example, when modeling medical features across a set of patients, the
+number and duration of treatments may vary widely in time, meaning there is no
+meaningful way to align their clinical records across time points for analysis
+purposes. To handle such data, the state-of-the-art tensor model is the
+so-called PARAFAC2, which yields interpretable and robust output and can
+naturally handle sparse data. However, its main limitation up to now has been
+the lack of efficient algorithms that can handle large-scale datasets.
+  In this work, we fill this gap by developing a scalable method to compute the
+PARAFAC2 decomposition of large and sparse datasets, called SPARTan. Our method
+exploits special structure within PARAFAC2, leading to a novel algorithmic
+reformulation that is both fast (in absolute time) and more memory-efficient
+than prior work. We evaluate SPARTan on both synthetic and real datasets,
+showing 22X performance gains over the best previous implementation and also
+handling larger problem instances for which the baseline fails. Furthermore, we
+are able to apply SPARTan to the mining of temporally-evolving phenotypes on
+data taken from real and medically complex pediatric patients. The clinical
+meaningfulness of the phenotypes identified in this process, as well as their
+temporal evolution over time for several patients, have been endorsed by
+clinical experts.
+
+
+SUSTain: Scalable Unsupervised Scoring for Tensors and its Application
+  to Phenotyping
+
+  This paper presents a new method, which we call SUSTain, that extends
+real-valued matrix and tensor factorizations to data where values are integers.
+Such data are common when the values correspond to event counts or ordinal
+measures. The conventional approach is to treat integer data as real, and then
+apply real-valued factorizations. However, doing so fails to preserve important
+characteristics of the original data, thereby making it hard to interpret the
+results. Instead, our approach extracts factor values from integer datasets as
+scores that are constrained to take values from a small integer set. These
+scores are easy to interpret: a score of zero indicates no feature contribution
+and higher scores indicate distinct levels of feature importance.
+  At its core, SUSTain relies on: a) a problem partitioning into
+integer-constrained subproblems, so that they can be optimally solved in an
+efficient manner; and b) organizing the order of the subproblems' solution, to
+promote reuse of shared intermediate results. We propose two variants,
+SUSTain_M and SUSTain_T, to handle both matrix and tensor inputs, respectively.
+We evaluate SUSTain against several state-of-the-art baselines on both
+synthetic and real Electronic Health Record (EHR) datasets. Comparing to those
+baselines, SUSTain shows either significantly better fit or orders of magnitude
+speedups that achieve a comparable fit (up to 425X faster). We apply SUSTain to
+EHR datasets to extract patient phenotypes (i.e., clinically meaningful patient
+clusters). Furthermore, 87% of them were validated as clinically meaningful
+phenotypes related to heart failure by a cardiologist.
+
+
+RAIM: Recurrent Attentive and Intensive Model of Multimodal Patient
+  Monitoring Data
+
+  With the improvement of medical data capturing, vast amount of continuous
+patient monitoring data, e.g., electrocardiogram (ECG), real-time vital signs
+and medications, become available for clinical decision support at intensive
+care units (ICUs). However, it becomes increasingly challenging to model such
+data, due to high density of the monitoring data, heterogeneous data types and
+the requirement for interpretable models. Integration of these high-density
+monitoring data with the discrete clinical events (including diagnosis,
+medications, labs) is challenging but potentially rewarding since richness and
+granularity in such multimodal data increase the possibilities for accurate
+detection of complex problems and predicting outcomes (e.g., length of stay and
+mortality). We propose Recurrent Attentive and Intensive Model (RAIM) for
+jointly analyzing continuous monitoring data and discrete clinical events. RAIM
+introduces an efficient attention mechanism for continuous monitoring data
+(e.g., ECG), which is guided by discrete clinical events (e.g, medication
+usage). We apply RAIM in predicting physiological decompensation and length of
+stay in those critically ill patients at ICU. With evaluations on MIMIC- III
+Waveform Database Matched Subset, we obtain an AUC-ROC score of 90.18% for
+predicting decompensation and an accuracy of 86.82% for forecasting length of
+stay with our final model, which outperforms our six baseline models.
+
+
+RDPD: Rich Data Helps Poor Data via Imitation
+
+  In many situations, we have both rich- and poor- data environments: in a
+rich-data environment (e.g., intensive care units), we have high-quality
+multi-modality data. On the other hand, in a poor-data environment (e.g., at
+home), we often only have access to a single data modality with low quality.
+How can we learn an accurate and efficient model for the poor-data environment
+by leveraging multi-modality data from the rich-data environment? In this work,
+we propose a knowledge distillation model RDPD to enhance a small model trained
+on poor data with a complex model trained on rich data. In an end-to-end
+fashion, RDPD trains a student model built on a single modality data (poor
+data) to imitate the behavior and performance of a teacher model from
+multimodal data (rich data) via jointly optimizing the combined loss of
+attention imitation and target imitation. We evaluated RDPD on three real-world
+datasets. RDPD consistently outperformed all baselines across all three
+datasets, especially achieving the greatest performance improvement over a
+standard neural network model trained on the common features (Direct model) by
+24.56% on PR-AUC and 12.21% on ROC-AUC, and over the standard knowledge
+distillation model by 5.91% on PR-AUC and 4.44% on ROC-AUC.
+
+
+HAMLET: Interpretable Human And Machine co-LEarning Technique
+
+  Efficient label acquisition processes are key to obtaining robust
+classifiers. However, data labeling is often challenging and subject to high
+levels of label noise. This can arise even when classification targets are well
+defined, if instances to be labeled are more difficult than the prototypes used
+to define the class, leading to disagreements among the expert community. Here,
+we enable efficient training of deep neural networks. From low-confidence
+labels, we iteratively improve their quality by simultaneous learning of
+machines and experts. We call it Human And Machine co-LEarning Technique
+(HAMLET). Throughout the process, experts become more consistent, while the
+algorithm provides them with explainable feedback for confirmation. HAMLET uses
+a neural embedding function and a memory module filled with diverse reference
+embeddings from different classes. Its output includes classification labels
+and highly relevant reference embeddings as explanation. We took the study of
+brain monitoring at intensive care unit (ICU) as an application of HAMLET on
+continuous electroencephalography (cEEG) data. Although cEEG monitoring yields
+large volumes of data, labeling costs and difficulty make it hard to build a
+classifier. Additionally, while experts agree on the labels of clear-cut
+examples of cEEG patterns, labeling many real-world cEEG data can be extremely
+challenging. Thus, a large minority of sequences might be mislabeled. HAMLET
+has shown significant performance gain against deep learning and other
+baselines, increasing accuracy from 7.03% to 68.75% on challenging inputs.
+Besides improved performance, clinical experts confirmed the interpretability
+of those reference embeddings in helping explaining the classification results
+by HAMLET.
+
+
+COPA: Constrained PARAFAC2 for Sparse & Large Datasets
+
+  PARAFAC2 has demonstrated success in modeling irregular tensors, where the
+tensor dimensions vary across one of the modes. An example scenario is modeling
+treatments across a set of patients with the varying number of medical
+encounters over time. Despite recent improvements on unconstrained PARAFAC2,
+its model factors are usually dense and sensitive to noise which limits their
+interpretability. As a result, the following open challenges remain: a) various
+modeling constraints, such as temporal smoothness, sparsity and non-negativity,
+are needed to be imposed for interpretable temporal modeling and b) a scalable
+approach is required to support those constraints efficiently for large
+datasets. To tackle these challenges, we propose a {\it CO}nstrained {\it
+PA}RAFAC2 (COPA) method, which carefully incorporates optimization constraints
+such as temporal smoothness, sparsity, and non-negativity in the resulting
+factors. To efficiently support all those constraints, COPA adopts a hybrid
+optimization framework using alternating optimization and alternating direction
+method of multiplier (AO-ADMM). As evaluated on large electronic health record
+(EHR) datasets with hundreds of thousands of patients, COPA achieves
+significant speedups (up to 36 times faster) over prior PARAFAC2 approaches
+that only attempt to handle a subset of the constraints that COPA enables.
+Overall, our method outperforms all the baselines attempting to handle a subset
+of the constraints in terms of speed, while achieving the same level of
+accuracy. Through a case study on temporal phenotyping of medically complex
+children, we demonstrate how the constraints imposed by COPA reveal concise
+phenotypes and meaningful temporal profiles of patients. The clinical
+interpretation of both the phenotypes and the temporal profiles was confirmed
+by a medical expert.
+
+
+RetainVis: Visual Analytics with Interpretable and Interactive Recurrent
+  Neural Networks on Electronic Medical Records
+
+  We have recently seen many successful applications of recurrent neural
+networks (RNNs) on electronic medical records (EMRs), which contain histories
+of patients' diagnoses, medications, and other various events, in order to
+predict the current and future states of patients. Despite the strong
+performance of RNNs, it is often challenging for users to understand why the
+model makes a particular prediction. Such black-box nature of RNNs can impede
+its wide adoption in clinical practice. Furthermore, we have no established
+methods to interactively leverage users' domain expertise and prior knowledge
+as inputs for steering the model. Therefore, our design study aims to provide a
+visual analytics solution to increase interpretability and interactivity of
+RNNs via a joint effort of medical experts, artificial intelligence scientists,
+and visual analytics researchers. Following the iterative design process
+between the experts, we design, implement, and evaluate a visual analytics tool
+called RetainVis, which couples a newly improved, interpretable and interactive
+RNN-based model called RetainEX and visualizations for users' exploration of
+EMR data in the context of prediction tasks. Our study shows the effective use
+of RetainVis for gaining insights into how individual medical codes contribute
+to making risk predictions, using EMRs of patients with heart failure and
+cataract symptoms. Our study also demonstrates how we made substantial changes
+to the state-of-the-art RNN model called RETAIN in order to make use of
+temporal information and increase interactivity. This study will provide a
+useful guideline for researchers that aim to design an interpretable and
+interactive visual analytics tool for RNNs.
+
+

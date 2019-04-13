@@ -1,0 +1,845 @@
+On the Universality of Online Mirror Descent
+
+  We show that for a general class of convex online learning problems, Mirror
+Descent can always achieve a (nearly) optimal regret guarantee.
+
+
+Optimistic Rates for Learning with a Smooth Loss
+
+  We establish an excess risk bound of O(H R_n^2 + R_n \sqrt{H L*}) for
+empirical risk minimization with an H-smooth loss function and a hypothesis
+class with Rademacher complexity R_n, where L* is the best risk achievable by
+the hypothesis class. For typical hypothesis classes where R_n = \sqrt{R/n},
+this translates to a learning rate of O(RH/n) in the separable (L*=0) case and
+O(RH/n + \sqrt{L^* RH/n}) more generally. We also provide similar guarantees
+for online and stochastic convex optimization with a smooth non-negative
+objective.
+
+
+Better Mini-Batch Algorithms via Accelerated Gradient Methods
+
+  Mini-batch algorithms have been proposed as a way to speed-up stochastic
+convex optimization problems. We study how such algorithms can be improved
+using accelerated gradient methods. We provide a novel analysis, which shows
+how standard gradient methods may sometimes be insufficient to obtain a
+significant speed-up and propose a novel accelerated gradient algorithm, which
+deals with this deficiency, enjoys a uniformly superior guarantee and works
+well in practice.
+
+
+Minimizing The Misclassification Error Rate Using a Surrogate Convex
+  Loss
+
+  We carefully study how well minimizing convex surrogate loss functions,
+corresponds to minimizing the misclassification error rate for the problem of
+binary classification with linear predictors. In particular, we show that
+amongst all convex surrogate losses, the hinge loss gives essentially the best
+possible bound, of all convex loss functions, for the misclassification error
+rate of the resulting linear predictor in terms of the best possible margin
+error rate. We also provide lower bounds for specific convex surrogates that
+show how different commonly used losses qualitatively differ from each other.
+
+
+Learning From An Optimization Viewpoint
+
+  In this dissertation we study statistical and online learning problems from
+an optimization viewpoint.The dissertation is divided into two parts :
+  I. We first consider the question of learnability for statistical learning
+problems in the general learning setting. The question of learnability is well
+studied and fully characterized for binary classification and for real valued
+supervised learning problems using the theory of uniform convergence. However
+we show that for the general learning setting uniform convergence theory fails
+to characterize learnability. To fill this void we use stability of learning
+algorithms to fully characterize statistical learnability in the general
+setting. Next we consider the problem of online learning. Unlike the
+statistical learning framework there is a dearth of generic tools that can be
+used to establish learnability and rates for online learning problems in
+general. We provide online analogs to classical tools from statistical learning
+theory like Rademacher complexity, covering numbers, etc. We further use these
+tools to fully characterize learnability for online supervised learning
+problems.
+  II. In the second part, for general classes of convex learning problems, we
+provide appropriate mirror descent (MD) updates for online and statistical
+learning of these problems. Further, we show that the the MD is near optimal
+for online convex learning and for most cases, is also near optimal for
+statistical convex learning. We next consider the problem of convex
+optimization and show that oracle complexity can be lower bounded by the so
+called fat-shattering dimension of the associated linear class. Thus we
+establish a strong connection between offline convex optimization problems and
+statistical learning problems. We also show that for a large class of high
+dimensional optimization problems, MD is in fact near optimal even for convex
+optimization.
+
+
+Online Learning: Beyond Regret
+
+  We study online learnability of a wide class of problems, extending the
+results of (Rakhlin, Sridharan, Tewari, 2010) to general notions of performance
+measure well beyond external regret. Our framework simultaneously captures such
+well-known notions as internal and general Phi-regret, learning with
+non-additive global cost functions, Blackwell's approachability, calibration of
+forecasters, adaptive regret, and more. We show that learnability in all these
+situations is due to control of the same three quantities: a martingale
+convergence term, a term describing the ability to perform well if future is
+known, and a generalization of sequential Rademacher complexity, studied in
+(Rakhlin, Sridharan, Tewari, 2010). Since we directly study complexity of the
+problem instead of focusing on efficient algorithms, we are able to improve and
+extend many known results which have been previously derived via an algorithmic
+construction.
+
+
+Online Nonparametric Regression
+
+  We establish optimal rates for online regression for arbitrary classes of
+regression functions in terms of the sequential entropy introduced in (Rakhlin,
+Sridharan, Tewari, 2010). The optimal rates are shown to exhibit a phase
+transition analogous to the i.i.d./statistical learning case, studied in
+(Rakhlin, Sridharan, Tsybakov 2013). In the frequently encountered situation
+when sequential entropy and i.i.d. empirical entropy match, our results point
+to the interesting phenomenon that the rates for statistical learning with
+squared loss and online nonparametric regression are the same.
+  In addition to a non-algorithmic study of minimax regret, we exhibit a
+generic forecaster that enjoys the established optimal rates. We also provide a
+recipe for designing online regression algorithms that can be computationally
+efficient. We illustrate the techniques by deriving existing and new
+forecasters for the case of finite experts and for online linear regression.
+
+
+Learning Exponential Families in High-Dimensions: Strong Convexity and
+  Sparsity
+
+  The versatility of exponential families, along with their attendant convexity
+properties, make them a popular and effective statistical model. A central
+issue is learning these models in high-dimensions, such as when there is some
+sparsity pattern of the optimal parameter. This work characterizes a certain
+strong convexity property of general exponential families, which allow their
+generalization ability to be quantified. In particular, we show how this
+property can be used to analyze generic exponential families under L_1
+regularization.
+
+
+Online Learning via Sequential Complexities
+
+  We consider the problem of sequential prediction and provide tools to study
+the minimax value of the associated game. Classical statistical learning theory
+provides several useful complexity measures to study learning with i.i.d. data.
+Our proposed sequential complexities can be seen as extensions of these
+measures to the sequential setting. The developed theory is shown to yield
+precise learning guarantees for the problem of sequential prediction. In
+particular, we show necessary and sufficient conditions for online learnability
+in the setting of supervised learning. Several examples show the utility of our
+framework: we can establish learnability without having to exhibit an explicit
+online learning algorithm.
+
+
+Competing With Strategies
+
+  We study the problem of online learning with a notion of regret defined with
+respect to a set of strategies. We develop tools for analyzing the minimax
+rates and for deriving regret-minimization algorithms in this scenario. While
+the standard methods for minimizing the usual notion of regret fail, through
+our analysis we demonstrate existence of regret-minimization methods that
+compete with such sets of strategies as: autoregressive algorithms, strategies
+based on statistical models, regularized least squares, and follow the
+regularized leader strategies. In several cases we also derive efficient
+learning algorithms.
+
+
+Hypothesis Set Stability and Generalization
+
+  We present an extensive study of generalization for data-dependent hypothesis
+sets. We give a general learning guarantee for data-dependent hypothesis sets
+based on a notion of transductive Rademacher complexity. Our main results are
+two generalization bounds for data-dependent hypothesis sets expressed in terms
+of a notion of hypothesis set stability and a notion of Rademacher complexity
+for data-dependent hypothesis sets that we introduce. These bounds admit as
+special cases both standard Rademacher complexity bounds and
+algorithm-dependent uniform stability bounds. We also illustrate the use of
+these learning bounds in the analysis of several scenarios.
+
+
+Sequential Probability Assignment with Binary Alphabets and Large
+  Classes of Experts
+
+  We analyze the problem of sequential probability assignment for binary
+outcomes with side information and logarithmic loss, where regret---or,
+redundancy---is measured with respect to a (possibly infinite) class of
+experts. We provide upper and lower bounds for minimax regret in terms of
+sequential complexities of the class. These complexities were recently shown to
+give matching (up to logarithmic factors) upper and lower bounds for sequential
+prediction with general convex Lipschitz loss functions (Rakhlin and Sridharan,
+2015). To deal with unbounded gradients of the logarithmic loss, we present a
+new analysis that employs a sequential chaining technique with a Bernstein-type
+bound. The introduced complexities are intrinsic to the problem of sequential
+probability assignment, as illustrated by our lower bound.
+  We also consider an example of a large class of experts parametrized by
+vectors in a high-dimensional Euclidean ball (or a Hilbert ball). The typical
+discretization approach fails, while our techniques give a non-trivial bound.
+For this problem we also present an algorithm based on regularization with a
+self-concordant barrier. This algorithm is of an independent interest, as it
+requires a bound on the function values rather than gradients.
+
+
+Learning Kernel-Based Halfspaces with the Zero-One Loss
+
+  We describe and analyze a new algorithm for agnostically learning
+kernel-based halfspaces with respect to the \emph{zero-one} loss function.
+Unlike most previous formulations which rely on surrogate convex loss functions
+(e.g. hinge-loss in SVM and log-loss in logistic regression), we provide finite
+time/sample guarantees with respect to the more natural zero-one loss function.
+The proposed algorithm can learn kernel-based halfspaces in worst-case time
+$\poly(\exp(L\log(L/\epsilon)))$, for $\emph{any}$ distribution, where $L$ is a
+Lipschitz constant (which can be thought of as the reciprocal of the margin),
+and the learned classifier is worse than the optimal halfspace by at most
+$\epsilon$. We also prove a hardness result, showing that under a certain
+cryptographic assumption, no algorithm can learn kernel-based halfspaces in
+time polynomial in $L$.
+
+
+Online Learning with Predictable Sequences
+
+  We present methods for online linear optimization that take advantage of
+benign (as opposed to worst-case) sequences. Specifically if the sequence
+encountered by the learner is described well by a known "predictable process",
+the algorithms presented enjoy tighter bounds as compared to the typical worst
+case bounds. Additionally, the methods achieve the usual worst-case regret
+bounds if the sequence is not benign. Our approach can be seen as a way of
+adding prior knowledge about the sequence within the paradigm of online
+learning. The setting is shown to encompass partial and side information.
+Variance and path-length bounds can be seen as particular examples of online
+learning with simple predictable sequences.
+  We further extend our methods and results to include competing with a set of
+possible predictable processes (models), that is "learning" the predictable
+process itself concurrently with using it to obtain better regret guarantees.
+We show that such model selection is possible under various assumptions on the
+available feedback. Our results suggest a promising direction of further
+research with potential applications to stock market and time series
+prediction.
+
+
+Optimization, Learning, and Games with Predictable Sequences
+
+  We provide several applications of Optimistic Mirror Descent, an online
+learning algorithm based on the idea of predictable sequences. First, we
+recover the Mirror Prox algorithm for offline optimization, prove an extension
+to Holder-smooth functions, and apply the results to saddle-point type
+problems. Next, we prove that a version of Optimistic Mirror Descent (which has
+a close relation to the Exponential Weights algorithm) can be used by two
+strongly-uncoupled players in a finite zero-sum matrix game to converge to the
+minimax equilibrium at the rate of O((log T)/T). This addresses a question of
+Daskalakis et al 2011. Further, we consider a partial information version of
+the problem. We then apply the results to convex programming and exhibit a
+simple algorithm for the approximate Max Flow problem.
+
+
+Private Causal Inference
+
+  Causal inference deals with identifying which random variables "cause" or
+control other random variables. Recent advances on the topic of causal
+inference based on tools from statistical estimation and machine learning have
+resulted in practical algorithms for causal inference. Causal inference has the
+potential to have significant impact on medical research, prevention and
+control of diseases, and identifying factors that impact economic changes to
+name just a few. However, these promising applications for causal inference are
+often ones that involve sensitive or personal data of users that need to be
+kept private (e.g., medical records, personal finances, etc). Therefore, there
+is a need for the development of causal inference methods that preserve data
+privacy. We study the problem of inferring causality using the current, popular
+causal inference framework, the additive noise model (ANM) while simultaneously
+ensuring privacy of the users. Our framework provides differential privacy
+guarantees for a variety of ANM variants. We run extensive experiments, and
+demonstrate that our techniques are practical and easy to implement.
+
+
+Exploiting the Structure: Stochastic Gradient Methods Using Raw Clusters
+
+  The amount of data available in the world is growing faster than our ability
+to deal with it. However, if we take advantage of the internal
+\emph{structure}, data may become much smaller for machine learning purposes.
+In this paper we focus on one of the fundamental machine learning tasks,
+empirical risk minimization (ERM), and provide faster algorithms with the help
+from the clustering structure of the data.
+  We introduce a simple notion of raw clustering that can be efficiently
+computed from the data, and propose two algorithms based on clustering
+information. Our accelerated algorithm ClusterACDM is built on a novel Haar
+transformation applied to the dual space of the ERM problem, and our
+variance-reduction based algorithm ClusterSVRG introduces a new gradient
+estimator using clustering. Our algorithms outperform their classical
+counterparts ACDM and SVRG respectively.
+
+
+BISTRO: An Efficient Relaxation-Based Method for Contextual Bandits
+
+  We present efficient algorithms for the problem of contextual bandits with
+i.i.d. covariates, an arbitrary sequence of rewards, and an arbitrary class of
+policies. Our algorithm BISTRO requires d calls to the empirical risk
+minimization (ERM) oracle per round, where d is the number of actions. The
+method uses unlabeled data to make the problem computationally simple. When the
+ERM problem itself is computationally hard, we extend the approach by employing
+multiplicative approximation algorithms for the ERM. The integrality gap of the
+relaxation only enters in the regret bound rather than the benchmark. Finally,
+we show that the adversarial version of the contextual bandit problem is
+learnable (and efficient) whenever the full-information supervised online
+learning problem has a non-trivial regret guarantee (and efficient).
+
+
+Relax and Localize: From Value to Algorithms
+
+  We show a principled way of deriving online learning algorithms from a
+minimax analysis. Various upper bounds on the minimax value, previously thought
+to be non-constructive, are shown to yield algorithms. This allows us to
+seamlessly recover known methods and to derive new ones. Our framework also
+captures such "unorthodox" methods as Follow the Perturbed Leader and the R^2
+forecaster. We emphasize that understanding the inherent complexity of the
+learning problem leads to the development of algorithms.
+  We define local sequential Rademacher complexities and associated algorithms
+that allow us to obtain faster rates in online learning, similarly to
+statistical learning theory. Based on these localized complexities we build a
+general adaptive method that can take advantage of the suboptimality of the
+observed sequence.
+  We present a number of new algorithms, including a family of randomized
+methods that use the idea of a "random playout". Several new versions of the
+Follow-the-Perturbed-Leader algorithms are presented, as well as methods based
+on the Littlestone's dimension, efficient methods for matrix completion with
+trace norm, and algorithms for the problems of transductive learning and
+prediction with static experts.
+
+
+Hierarchies of Relaxations for Online Prediction Problems with Evolving
+  Constraints
+
+  We study online prediction where regret of the algorithm is measured against
+a benchmark defined via evolving constraints. This framework captures online
+prediction on graphs, as well as other prediction problems with combinatorial
+structure. A key aspect here is that finding the optimal benchmark predictor
+(even in hindsight, given all the data) might be computationally hard due to
+the combinatorial nature of the constraints. Despite this, we provide
+polynomial-time \emph{prediction} algorithms that achieve low regret against
+combinatorial benchmark sets. We do so by building improper learning algorithms
+based on two ideas that work together. The first is to alleviate part of the
+computational burden through random playout, and the second is to employ
+Lasserre semidefinite hierarchies to approximate the resulting integer program.
+Interestingly, for our prediction algorithms, we only need to compute the
+values of the semidefinite programs and not the rounded solutions. However, the
+integrality gap for Lasserre hierarchy \emph{does} enter the generic regret
+bound in terms of Rademacher complexity of the benchmark set. This establishes
+a trade-off between the computation time and the regret bound of the algorithm.
+
+
+Online Optimization : Competing with Dynamic Comparators
+
+  Recent literature on online learning has focused on developing adaptive
+algorithms that take advantage of a regularity of the sequence of observations,
+yet retain worst-case performance guarantees. A complementary direction is to
+develop prediction methods that perform well against complex benchmarks. In
+this paper, we address these two directions together. We present a fully
+adaptive method that competes with dynamic benchmarks in which regret guarantee
+scales with regularity of the sequence of cost functions and comparators.
+Notably, the regret bound adapts to the smaller complexity measure in the
+problem environment. Finally, we apply our results to drifting zero-sum,
+two-player games where both players achieve no regret guarantees against best
+sequences of actions in hindsight.
+
+
+Online Nonparametric Regression with General Loss Functions
+
+  This paper establishes minimax rates for online regression with arbitrary
+classes of functions and general losses. We show that below a certain threshold
+for the complexity of the function class, the minimax rates depend on both the
+curvature of the loss function and the sequential complexities of the class.
+Above this threshold, the curvature of the loss does not affect the rates.
+Furthermore, for the case of square loss, our results point to the interesting
+phenomenon: whenever sequential and i.i.d. empirical entropies match, the rates
+for statistical and online learning are the same.
+  In addition to the study of minimax regret, we derive a generic forecaster
+that enjoys the established optimal rates. We also provide a recipe for
+designing online prediction algorithms that can be computationally efficient
+for certain problems. We illustrate the techniques by deriving existing and new
+forecasters for the case of finite experts and for online linear regression.
+
+
+Learning with Square Loss: Localization through Offset Rademacher
+  Complexity
+
+  We consider regression with square loss and general classes of functions
+without the boundedness assumption. We introduce a notion of offset Rademacher
+complexity that provides a transparent way to study localization both in
+expectation and in high probability. For any (possibly non-convex) class, the
+excess loss of a two-step estimator is shown to be upper bounded by this offset
+complexity through a novel geometric inequality. In the convex case, the
+estimator reduces to an empirical risk minimizer. The method recovers the
+results of \citep{RakSriTsy15} for the bounded case while also providing
+guarantees without the boundedness assumption.
+
+
+Adaptive Online Learning
+
+  We propose a general framework for studying adaptive regret bounds in the
+online learning framework, including model selection bounds and data-dependent
+bounds. Given a data- or model-dependent bound we ask, "Does there exist some
+algorithm achieving this bound?" We show that modifications to recently
+introduced sequential complexity measures can be used to answer this question
+by providing sufficient conditions under which adaptive rates can be achieved.
+In particular each adaptive rate induces a set of so-called offset complexity
+measures, and obtaining small upper bounds on these quantities is sufficient to
+demonstrate achievability. A cornerstone of our analysis technique is the use
+of one-sided tail inequalities to bound suprema of offset random processes.
+  Our framework recovers and improves a wide variety of adaptive bounds
+including quantile bounds, second-order data-dependent bounds, and small loss
+bounds. In addition we derive a new type of adaptive bound for online linear
+optimization based on the spectral norm, as well as a new online PAC-Bayes
+theorem that holds for countably infinite sets.
+
+
+On Equivalence of Martingale Tail Bounds and Deterministic Regret
+  Inequalities
+
+  We study an equivalence of (i) deterministic pathwise statements appearing in
+the online learning literature (termed \emph{regret bounds}), (ii)
+high-probability tail bounds for the supremum of a collection of martingales
+(of a specific form arising from uniform laws of large numbers for
+martingales), and (iii) in-expectation bounds for the supremum. By virtue of
+the equivalence, we prove exponential tail bounds for norms of Banach space
+valued martingales via deterministic regret bounds for the online mirror
+descent algorithm with an adaptive step size. We extend these results beyond
+the linear structure of the Banach space: we define a notion of
+\emph{martingale type} for general classes of real-valued functions and show
+its equivalence (up to a logarithmic factor) to various sequential complexities
+of the class (in particular, the sequential Rademacher complexity and its
+offset version). For classes with the general martingale type 2, we exhibit a
+finer notion of variation that allows partial adaptation to the function
+indexing the martingale. Our proof technique rests on sequential symmetrization
+and on certifying the \emph{existence} of regret minimization strategies for
+certain online prediction problems.
+
+
+A Tutorial on Online Supervised Learning with Applications to Node
+  Classification in Social Networks
+
+  We revisit the elegant observation of T. Cover '65 which, perhaps, is not as
+well-known to the broader community as it should be. The first goal of the
+tutorial is to explain---through the prism of this elementary result---how to
+solve certain sequence prediction problems by modeling sets of solutions rather
+than the unknown data-generating mechanism. We extend Cover's observation in
+several directions and focus on computational aspects of the proposed
+algorithms. The applicability of the methods is illustrated on several
+examples, including node classification in a network.
+  The second aim of this tutorial is to demonstrate the following phenomenon:
+it is possible to predict as well as a combinatorial "benchmark" for which we
+have a certain multiplicative approximation algorithm, even if the exact
+computation of the benchmark given all the data is NP-hard. The proposed
+prediction methods, therefore, circumvent some of the computational
+difficulties associated with finding the best model given the data. These
+difficulties arise rather quickly when one attempts to develop a probabilistic
+model for graph-based or other problems with a combinatorial structure.
+
+
+Parameter-free online learning via model selection
+
+  We introduce an efficient algorithmic framework for model selection in online
+learning, also known as parameter-free online learning. Departing from previous
+work, which has focused on highly structured function classes such as nested
+balls in Hilbert space, we propose a generic meta-algorithm framework that
+achieves online model selection oracle inequalities under minimal structural
+assumptions. We give the first computationally efficient parameter-free
+algorithms that work in arbitrary Banach spaces under mild smoothness
+assumptions; previous results applied only to Hilbert spaces. We further derive
+new oracle inequalities for matrix classes, non-nested convex sets, and
+$\mathbb{R}^{d}$ with generic regularizers. Finally, we generalize these
+results by providing oracle inequalities for arbitrary non-linear classes in
+the online supervised learning model. These results are all derived through a
+unified meta-algorithm scheme using a novel "multi-scale" algorithm for
+prediction with expert advice based on random playout, which may be of
+independent interest.
+
+
+Online Learning: Sufficient Statistics and the Burkholder Method
+
+  We uncover a fairly general principle in online learning: If regret can be
+(approximately) expressed as a function of certain "sufficient statistics" for
+the data sequence, then there exists a special Burkholder function that 1) can
+be used algorithmically to achieve the regret bound and 2) only depends on
+these sufficient statistics, not the entire data sequence, so that the online
+strategy is only required to keep the sufficient statistics in memory. This
+characterization is achieved by bringing the full power of the Burkholder
+Method --- originally developed for certifying probabilistic martingale
+inequalities --- to bear on the online learning setting.
+  To demonstrate the scope and effectiveness of the Burkholder method, we
+develop a novel online strategy for matrix prediction that attains a regret
+bound corresponding to the variance term in matrix concentration inequalities.
+We also present a linear-time/space prediction strategy for parameter free
+supervised learning with linear classes and general smooth norms.
+
+
+Training Well-Generalizing Classifiers for Fairness Metrics and Other
+  Data-Dependent Constraints
+
+  Classifiers can be trained with data-dependent constraints to satisfy
+fairness goals, reduce churn, achieve a targeted false positive rate, or other
+policy goals. We study the generalization performance for such constrained
+optimization problems, in terms of how well the constraints are satisfied at
+evaluation time, given that they are satisfied at training time. To improve
+generalization performance, we frame the problem as a two-player game where one
+player optimizes the model parameters on a training dataset, and the other
+player enforces the constraints on an independent validation dataset. We build
+on recent work in two-player constrained optimization to show that if one uses
+this two-dataset approach, then constraint generalization can be significantly
+improved. As we illustrate experimentally, this approach works not only in
+theory, but also in practice.
+
+
+Online Learning: Stochastic and Constrained Adversaries
+
+  Learning theory has largely focused on two main learning scenarios. The first
+is the classical statistical setting where instances are drawn i.i.d. from a
+fixed distribution and the second scenario is the online learning, completely
+adversarial scenario where adversary at every time step picks the worst
+instance to provide the learner with. It can be argued that in the real world
+neither of these assumptions are reasonable. It is therefore important to study
+problems with a range of assumptions on data. Unfortunately, theoretical
+results in this area are scarce, possibly due to absence of general tools for
+analysis. Focusing on the regret formulation, we define the minimax value of a
+game where the adversary is restricted in his moves. The framework captures
+stochastic and non-stochastic assumptions on data. Building on the sequential
+symmetrization approach, we define a notion of distribution-dependent
+Rademacher complexity for the spectrum of problems ranging from i.i.d. to
+worst-case. The bounds let us immediately deduce variation-type bounds. We then
+consider the i.i.d. adversary and show equivalence of online and batch
+learnability. In the supervised setting, we consider various hybrid assumptions
+on the way that x and y variables are chosen. Finally, we consider smoothed
+learning problems and show that half-spaces are online learnable in the
+smoothed model. In fact, exponentially small noise added to adversary's
+decisions turns this problem with infinite Littlestone's dimension into a
+learnable problem.
+
+
+Making Gradient Descent Optimal for Strongly Convex Stochastic
+  Optimization
+
+  Stochastic gradient descent (SGD) is a simple and popular method to solve
+stochastic optimization problems which arise in machine learning. For strongly
+convex problems, its convergence rate was known to be O(\log(T)/T), by running
+SGD for T iterations and returning the average point. However, recent results
+showed that using a different algorithm, one can get an optimal O(1/T) rate.
+This might lead one to believe that standard SGD is suboptimal, and maybe
+should even be replaced as a method of choice. In this paper, we investigate
+the optimality of SGD in a stochastic setting. We show that for smooth
+problems, the algorithm attains the optimal O(1/T) rate. However, for
+non-smooth problems, the convergence rate with averaging might really be
+\Omega(\log(T)/T), and this is not just an artifact of the analysis. On the
+flip side, we show that a simple modification of the averaging step suffices to
+recover the O(1/T) rate, and no other change of the algorithm is necessary. We
+also present experimental results which support our findings, and point out
+open problems.
+
+
+ZigZag: A new approach to adaptive online learning
+
+  We develop a novel family of algorithms for the online learning setting with
+regret against any data sequence bounded by the empirical Rademacher complexity
+of that sequence. To develop a general theory of when this type of adaptive
+regret bound is achievable we establish a connection to the theory of
+decoupling inequalities for martingales in Banach spaces. When the hypothesis
+class is a set of linear functions bounded in some norm, such a regret bound is
+achievable if and only if the norm satisfies certain decoupling inequalities
+for martingales. Donald Burkholder's celebrated geometric characterization of
+decoupling inequalities (1984) states that such an inequality holds if and only
+if there exists a special function called a Burkholder function satisfying
+certain restricted concavity properties. Our online learning algorithms are
+efficient in terms of queries to this function.
+  We realize our general theory by giving novel efficient algorithms for
+classes including lp norms, Schatten p-norms, group norms, and reproducing
+kernel Hilbert spaces. The empirical Rademacher complexity regret bound implies
+--- when used in the i.i.d. setting --- a data-dependent complexity bound for
+excess risk after online-to-batch conversion. To showcase the power of the
+empirical Rademacher complexity regret bound, we derive improved rates for a
+supervised learning generalization of the online learning with low rank experts
+task and for the online matrix prediction task.
+  In addition to obtaining tight data-dependent regret bounds, our algorithms
+enjoy improved efficiency over previous techniques based on Rademacher
+complexity, automatically work in the infinite horizon setting, and are
+scale-free. To obtain such adaptive methods, we introduce novel machinery, and
+the resulting algorithms are not based on the standard tools of online convex
+optimization.
+
+
+Inference in Sparse Graphs with Pairwise Measurements and Side
+  Information
+
+  We consider the statistical problem of recovering a hidden "ground truth"
+binary labeling for the vertices of a graph up to low Hamming error from noisy
+edge and vertex measurements. We present new algorithms and a sharp
+finite-sample analysis for this problem on trees and sparse graphs with poor
+expansion properties such as hypergrids and ring lattices. Our method
+generalizes and improves over that of Globerson et al. (2015), who introduced
+the problem for two-dimensional grid lattices.
+  For trees we provide a simple, efficient, algorithm that infers the ground
+truth with optimal Hamming error has optimal sample complexity and implies
+recovery results for all connected graphs. Here, the presence of side
+information is critical to obtain a non-trivial recovery rate. We then show how
+to adapt this algorithm to tree decompositions of edge-subgraphs of certain
+graph families such as lattices, resulting in optimal recovery error rates that
+can be obtained efficiently
+  The thrust of our analysis is to 1) use the tree decomposition along with
+edge measurements to produce a small class of viable vertex labelings and 2)
+apply an analysis influenced by statistical learning theory to show that we can
+infer the ground truth from this class using vertex measurements. We show the
+power of our method in several examples including hypergrids, ring lattices,
+and the Newman-Watts model for small world graphs. For two-dimensional grids,
+our results improve over Globerson et al. (2015) by obtaining optimal recovery
+in the constant-height regime.
+
+
+Small-loss bounds for online learning with partial information
+
+  We consider the problem of adversarial (non-stochastic) online learning with
+partial information feedback, where at each round, a decision maker selects an
+action from a finite set of alternatives. We develop a black-box approach for
+such problems where the learner observes as feedback only losses of a subset of
+the actions that includes the selected action. When losses of actions are
+non-negative, under the graph-based feedback model introduced by Mannor and
+Shamir, we offer algorithms that attain the so called "small-loss" $o(\alpha
+L^{\star})$ regret bounds with high probability, where $\alpha$ is the
+independence number of the graph, and $L^{\star}$ is the loss of the best
+action. Prior to our work, there was no data-dependent guarantee for general
+feedback graphs even for pseudo-regret (without dependence on the number of
+actions, i.e. utilizing the increased information feedback). Taking advantage
+of the black-box nature of our technique, we extend our results to many other
+applications such as semi-bandits (including routing in networks), contextual
+bandits (even with an infinite comparator class), as well as learning with
+slowly changing (shifting) comparators.
+  In the special case of classical bandit and semi-bandit problems, we provide
+optimal small-loss, high-probability guarantees of
+$\tilde{O}(\sqrt{dL^{\star}})$ for actual regret, where $d$ is the number of
+actions, answering open questions of Neu. Previous bounds for bandits and
+semi-bandits were known only for pseudo-regret and only in expectation. We also
+offer an optimal $\tilde{O}(\sqrt{\kappa L^{\star}})$ regret guarantee for
+fixed feedback graphs with clique-partition number at most $\kappa$.
+
+
+Two-Player Games for Efficient Non-Convex Constrained Optimization
+
+  In recent years, constrained optimization has become increasingly relevant to
+the machine learning community, with applications including Neyman-Pearson
+classification, robust optimization, and fair machine learning. A natural
+approach to constrained optimization is to optimize the Lagrangian, but this is
+not guaranteed to work in the non-convex setting, and, if using a first-order
+method, cannot cope with non-differentiable constraints (e.g. constraints on
+rates or proportions).
+  The Lagrangian can be interpreted as a two-player game played between a
+player who seeks to optimize over the model parameters, and a player who wishes
+to maximize over the Lagrange multipliers. We propose a non-zero-sum variant of
+the Lagrangian formulation that can cope with non-differentiable--even
+discontinuous--constraints, which we call the "proxy-Lagrangian". The first
+player minimizes external regret in terms of easy-to-optimize "proxy
+constraints", while the second player enforces the original constraints by
+minimizing swap regret.
+  For this new formulation, as for the Lagrangian in the non-convex setting,
+the result is a stochastic classifier. For both the proxy-Lagrangian and
+Lagrangian formulations, however, we prove that this classifier, instead of
+having unbounded size, can be taken to be a distribution over no more than m+1
+models (where m is the number of constraints). This is a significant
+improvement in practical terms.
+
+
+Optimization with Non-Differentiable Constraints with Applications to
+  Fairness, Recall, Churn, and Other Goals
+
+  We show that many machine learning goals, such as improved fairness metrics,
+can be expressed as constraints on the model's predictions, which we call rate
+constraints. We study the problem of training non-convex models subject to
+these rate constraints (or any non-convex and non-differentiable constraints).
+In the non-convex setting, the standard approach of Lagrange multipliers may
+fail. Furthermore, if the constraints are non-differentiable, then one cannot
+optimize the Lagrangian with gradient-based methods. To solve these issues, we
+introduce the proxy-Lagrangian formulation. This new formulation leads to an
+algorithm that produces a stochastic classifier by playing a two-player
+non-zero-sum game solving for what we call a semi-coarse correlated
+equilibrium, which in turn corresponds to an approximately optimal and feasible
+solution to the constrained optimization problem. We then give a procedure
+which shrinks the randomized solution down to one that is a mixture of at most
+$m+1$ deterministic solutions, given $m$ constraints. This culminates in
+algorithms that can solve non-convex constrained optimization problems with
+possibly non-differentiable and non-convex constraints with theoretical
+guarantees. We provide extensive experimental results enforcing a wide range of
+policy goals including different fairness metrics, and other goals on accuracy,
+coverage, recall, and churn.
+
+
+Uniform Convergence of Gradients for Non-Convex Learning and
+  Optimization
+
+  We investigate 1) the rate at which refined properties of the empirical
+risk---in particular, gradients---converge to their population counterparts in
+standard non-convex learning tasks, and 2) the consequences of this convergence
+for optimization. Our analysis follows the tradition of norm-based capacity
+control. We propose vector-valued Rademacher complexities as a simple,
+composable, and user-friendly tool to derive dimension-free uniform convergence
+bounds for gradients in non-convex learning problems. As an application of our
+techniques, we give a new analysis of batch gradient descent methods for
+non-convex generalized linear models and non-convex robust regression, showing
+how to use any algorithm that finds approximate stationary points to obtain
+optimal sample complexity, even when dimension is high or possibly infinite and
+multiple passes over the dataset are allowed.
+  Moving to non-smooth models we show----in contrast to the smooth case---that
+even for a single ReLU it is not possible to obtain dimension-independent
+convergence rates for gradients in the worst case. On the positive side, it is
+still possible to obtain dimension-independent rates under a new type of
+distributional assumption.
+
+
+The Complexity of Making the Gradient Small in Stochastic Convex
+  Optimization
+
+  We give nearly matching upper and lower bounds on the oracle complexity of
+finding $\epsilon$-stationary points ($\| \nabla F(x) \| \leq\epsilon$) in
+stochastic convex optimization. We jointly analyze the oracle complexity in
+both the local stochastic oracle model and the global oracle (or, statistical
+learning) model. This allows us to decompose the complexity of finding
+near-stationary points into optimization complexity and sample complexity, and
+reveals some surprising differences between the complexity of stochastic
+optimization versus learning. Notably, we show that in the global
+oracle/statistical learning model, only logarithmic dependence on smoothness is
+required to find a near-stationary point, whereas polynomial dependence on
+smoothness is necessary in the local stochastic oracle model. In other words,
+the separation in complexity between the two models can be exponential, and
+that the folklore understanding that smoothness is required to find stationary
+points is only weakly true for statistical learning.
+  Our upper bounds are based on extensions of a recent "recursive
+regularization" technique proposed by Allen-Zhu (2018). We show how to extend
+the technique to achieve near-optimal rates, and in particular show how to
+leverage the extra information available in the global oracle model. Our
+algorithm for the global model can be implemented efficiently through finite
+sum methods, and suggests an interesting new computational-statistical
+tradeoff.
+
+
+Distributed Learning with Sublinear Communication
+
+  In distributed statistical learning, $N$ samples are split across $m$
+machines and a learner wishes to use minimal communication to learn as well as
+if the examples were on a single machine. This model has received substantial
+interest in machine learning due to its scalability and potential for parallel
+speedup. However, in high-dimensional settings, where the number examples is
+smaller than the number of features ("dimension"), the speedup afforded by
+distributed learning may be overshadowed by the cost of communicating a single
+example. This paper investigates the following question: When is it possible to
+learn a $d$-dimensional model in the distributed setting with total
+communication sublinear in $d$?
+  Starting with a negative result, we show that for learning $\ell_1$-bounded
+or sparse linear models, no algorithm can obtain optimal error until
+communication is linear in dimension. Our main result is that that by slightly
+relaxing the standard boundedness assumptions for linear models, we can obtain
+distributed algorithms that enjoy optimal error with communication logarithmic
+in dimension. This result is based on a family of algorithms that combine
+mirror descent with randomized sparsification/quantization of iterates, and
+extends to the general stochastic convex optimization model.
+
+
+Empirical entropy, minimax regret and minimax risk
+
+  We consider the random design regression model with square loss. We propose a
+method that aggregates empirical minimizers (ERM) over appropriately chosen
+random subsets and reduces to ERM in the extreme case, and we establish sharp
+oracle inequalities for its risk. We show that, under the $\varepsilon^{-p}$
+growth of the empirical $\varepsilon$-entropy, the excess risk of the proposed
+method attains the rate $n^{-2/(2+p)}$ for $p\in(0,2)$ and $n^{-1/p}$ for $p>2$
+where $n$ is the sample size. Furthermore, for $p\in(0,2)$, the excess risk
+rate matches the behavior of the minimax risk of function estimation in
+regression problems under the well-specified model. This yields a conclusion
+that the rates of statistical estimation in well-specified models (minimax
+risk) and in misspecified models (minimax regret) are equivalent in the regime
+$p\in(0,2)$. In other words, for $p\in(0,2)$ the problem of statistical
+learning enjoys the same minimax rate as the problem of statistical estimation.
+On the contrary, for $p>2$ we show that the rates of the minimax regret are, in
+general, slower than for the minimax risk. Our oracle inequalities also imply
+the $v\log(n/v)/n$ rates for Vapnik-Chervonenkis type classes of dimension $v$
+without the usual convexity assumption on the class; we show that these rates
+are optimal. Finally, for a slightly modified method, we derive a bound on the
+excess risk of $s$-sparse convex aggregation improving that of Lounici [Math.
+Methods Statist. 16 (2007) 246-259] and providing the optimal rate.
+
+
+Learning in Games: Robustness of Fast Convergence
+
+  We show that learning algorithms satisfying a $\textit{low approximate
+regret}$ property experience fast convergence to approximate optimality in a
+large class of repeated games. Our property, which simply requires that each
+learner has small regret compared to a $(1+\epsilon)$-multiplicative
+approximation to the best action in hindsight, is ubiquitous among learning
+algorithms; it is satisfied even by the vanilla Hedge forecaster. Our results
+improve upon recent work of Syrgkanis et al. [SALS15] in a number of ways. We
+require only that players observe payoffs under other players' realized
+actions, as opposed to expected payoffs. We further show that convergence
+occurs with high probability, and show convergence under bandit feedback.
+Finally, we improve upon the speed of convergence by a factor of $n$, the
+number of players. Both the scope of settings and the class of algorithms for
+which our analysis provides fast convergence are considerably broader than in
+previous work.
+  Our framework applies to dynamic population games via a low approximate
+regret property for shifting experts. Here we strengthen the results of
+Lykouris et al. [LST16] in two ways: We allow players to select learning
+algorithms from a larger class, which includes a minor variant of the basic
+Hedge algorithm, and we increase the maximum churn in players for which
+approximate optimality is achieved.
+  In the bandit setting we present a new algorithm which provides a "small
+loss"-type bound with improved dependence on the number of actions in utility
+settings, and is both simple and efficient. This result may be of independent
+interest.
+
+
+Mixed Precision Training of Convolutional Neural Networks using Integer
+  Operations
+
+  The state-of-the-art (SOTA) for mixed precision training is dominated by
+variants of low precision floating point operations, and in particular, FP16
+accumulating into FP32 Micikevicius et al. (2017). On the other hand, while a
+lot of research has also happened in the domain of low and mixed-precision
+Integer training, these works either present results for non-SOTA networks (for
+instance only AlexNet for ImageNet-1K), or relatively small datasets (like
+CIFAR-10). In this work, we train state-of-the-art visual understanding neural
+networks on the ImageNet-1K dataset, with Integer operations on General Purpose
+(GP) hardware. In particular, we focus on Integer Fused-Multiply-and-Accumulate
+(FMA) operations which take two pairs of INT16 operands and accumulate results
+into an INT32 output.We propose a shared exponent representation of tensors and
+develop a Dynamic Fixed Point (DFP) scheme suitable for common neural network
+operations. The nuances of developing an efficient integer convolution kernel
+is examined, including methods to handle overflow of the INT32 accumulator. We
+implement CNN training for ResNet-50, GoogLeNet-v1, VGG-16 and AlexNet; and
+these networks achieve or exceed SOTA accuracy within the same number of
+iterations as their FP32 counterparts without any change in hyper-parameters
+and with a 1.8X improvement in end-to-end training throughput. To the best of
+our knowledge these results represent the first INT16 training results on GP
+hardware for ImageNet-1K dataset using SOTA CNNs and achieve highest reported
+accuracy using half-precision
+
+
+Logistic Regression: The Importance of Being Improper
+
+  Learning linear predictors with the logistic loss---both in stochastic and
+online settings---is a fundamental task in machine learning and statistics,
+with direct connections to classification and boosting. Existing "fast rates"
+for this setting exhibit exponential dependence on the predictor norm, and
+Hazan et al. (2014) showed that this is unfortunately unimprovable. Starting
+with the simple observation that the logistic loss is $1$-mixable, we design a
+new efficient improper learning algorithm for online logistic regression that
+circumvents the aforementioned lower bound with a regret bound exhibiting a
+doubly-exponential improvement in dependence on the predictor norm. This
+provides a positive resolution to a variant of the COLT 2012 open problem of
+McMahan and Streeter (2012) when improper learning is allowed. This improvement
+is obtained both in the online setting and, with some extra work, in the batch
+statistical setting with high probability. We also show that the improved
+dependence on predictor norm is near-optimal.
+  Leveraging this improved dependency on the predictor norm yields the
+following applications: (a) we give algorithms for online bandit multiclass
+learning with the logistic loss with an $\tilde{O}(\sqrt{n})$ relative mistake
+bound across essentially all parameter ranges, thus providing a solution to the
+COLT 2009 open problem of Abernethy and Rakhlin (2009), and (b) we give an
+adaptive algorithm for online multiclass boosting with optimal sample
+complexity, thus partially resolving an open problem of Beygelzimer et al.
+(2015) and Jung et al. (2017). Finally, we give information-theoretic bounds on
+the optimal rates for improper logistic regression with general function
+classes, thereby characterizing the extent to which our improvement for linear
+classes extends to other parametric and even nonparametric settings.
+
+

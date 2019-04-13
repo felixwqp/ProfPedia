@@ -1,0 +1,498 @@
+Efficient Algorithms for Bayesian Network Parameter Learning from
+  Incomplete Data
+
+  We propose an efficient family of algorithms to learn the parameters of a
+Bayesian network from incomplete data. In contrast to textbook approaches such
+as EM and the gradient method, our approach is non-iterative, yields closed
+form parameter estimates, and eliminates the need for inference in a Bayesian
+network. Our approach provides consistent parameter estimates for missing data
+problems that are MCAR, MAR, and in some cases, MNAR. Empirically, our approach
+is orders of magnitude faster than EM (as our approach requires no inference).
+Given sufficient data, we learn parameters that can be orders of magnitude more
+accurate.
+
+
+Lifted Relax, Compensate and then Recover: From Approximate to Exact
+  Lifted Probabilistic Inference
+
+  We propose an approach to lifted approximate inference for first-order
+probabilistic models, such as Markov logic networks. It is based on performing
+exact lifted inference in a simplified first-order model, which is found by
+relaxing first-order constraints, and then compensating for the relaxation.
+These simplified models can be incrementally improved by carefully recovering
+constraints that have been relaxed, also at the first-order level. This leads
+to a spectrum of approximations, with lifted belief propagation on one end, and
+exact lifted inference on the other. We discuss how relaxation, compensation,
+and recovery can be performed, all at the firstorder level, and show
+empirically that our approach substantially improves on the approximations of
+both propositional solvers and lifted belief propagation.
+
+
+Tractability through Exchangeability: A New Perspective on Efficient
+  Probabilistic Inference
+
+  Exchangeability is a central notion in statistics and probability theory. The
+assumption that an infinite sequence of data points is exchangeable is at the
+core of Bayesian statistics. However, finite exchangeability as a statistical
+property that renders probabilistic inference tractable is less
+well-understood. We develop a theory of finite exchangeability and its relation
+to tractable probabilistic inference. The theory is complementary to that of
+independence and conditional independence. We show that tractable inference in
+probabilistic models with high treewidth and millions of variables can be
+understood using the notion of finite (partial) exchangeability. We also show
+that existing lifted inference algorithms implicitly utilize a combination of
+conditional independence and partial exchangeability.
+
+
+On the Role of Canonicity in Bottom-up Knowledge Compilation
+
+  We consider the problem of bottom-up compilation of knowledge bases, which is
+usually predicated on the existence of a polytime function for combining
+compilations using Boolean operators (usually called an Apply function). While
+such a polytime Apply function is known to exist for certain languages (e.g.,
+OBDDs) and not exist for others (e.g., DNNF), its existence for certain
+languages remains unknown. Among the latter is the recently introduced language
+of Sentential Decision Diagrams (SDDs), for which a polytime Apply function
+exists for unreduced SDDs, but remains unknown for reduced ones (i.e. canonical
+SDDs). We resolve this open question in this paper and consider some of its
+theoretical and practical implications. Some of the findings we report question
+the common wisdom on the relationship between bottom-up compilation, language
+canonicity and the complexity of the Apply function.
+
+
+Lifted Probabilistic Inference for Asymmetric Graphical Models
+
+  Lifted probabilistic inference algorithms have been successfully applied to a
+large number of symmetric graphical models. Unfortunately, the majority of
+real-world graphical models is asymmetric. This is even the case for relational
+representations when evidence is given. Therefore, more recent work in the
+community moved to making the models symmetric and then applying existing
+lifted inference algorithms. However, this approach has two shortcomings.
+First, all existing over-symmetric approximations require a relational
+representation such as Markov logic networks. Second, the induced symmetries
+often change the distribution significantly, making the computed probabilities
+highly biased. We present a framework for probabilistic sampling-based
+inference that only uses the induced approximate symmetries to propose steps in
+a Metropolis-Hastings style Markov chain. The framework, therefore, leads to
+improved probability estimates while remaining unbiased. Experiments
+demonstrate that the approach outperforms existing MCMC algorithms.
+
+
+On the Complexity and Approximation of Binary Evidence in Lifted
+  Inference
+
+  Lifted inference algorithms exploit symmetries in probabilistic models to
+speed up inference. They show impressive performance when calculating
+unconditional probabilities in relational models, but often resort to
+non-lifted inference when computing conditional probabilities. The reason is
+that conditioning on evidence breaks many of the model's symmetries, which can
+preempt standard lifting techniques. Recent theoretical results show, for
+example, that conditioning on evidence which corresponds to binary relations is
+#P-hard, suggesting that no lifting is to be expected in the worst case. In
+this paper, we balance this negative result by identifying the Boolean rank of
+the evidence as a key parameter for characterizing the complexity of
+conditioning in lifted inference. In particular, we show that conditioning on
+binary evidence with bounded Boolean rank is efficient. This opens up the
+possibility of approximating evidence by a low-rank Boolean matrix
+factorization, which we investigate both theoretically and empirically.
+
+
+Skolemization for Weighted First-Order Model Counting
+
+  First-order model counting emerged recently as a novel reasoning task, at the
+core of efficient algorithms for probabilistic logics. We present a
+Skolemization algorithm for model counting problems that eliminates existential
+quantifiers from a first-order logic theory without changing its weighted model
+count. For certain subsets of first-order logic, lifted model counters were
+shown to run in time polynomial in the number of objects in the domain of
+discourse, where propositional model counters require exponential time.
+However, these guarantees apply only to Skolem normal form theories (i.e., no
+existential quantifiers) as the presence of existential quantifiers reduces
+lifted model counters to propositional ones. Since textbook Skolemization is
+not sound for model counting, these restrictions precluded efficient model
+counting for directed models, such as probabilistic logic programs, which rely
+on existential quantification. Our Skolemization procedure extends the
+applicability of first-order model counters to these representations. Moreover,
+it simplifies the design of lifted model counting algorithms.
+
+
+Algebraic Model Counting
+
+  Weighted model counting (WMC) is a well-known inference task on knowledge
+bases, used for probabilistic inference in graphical models. We introduce
+algebraic model counting (AMC), a generalization of WMC to a semiring
+structure. We show that AMC generalizes many well-known tasks in a variety of
+domains such as probabilistic inference, soft constraints and network and
+database analysis. Furthermore, we investigate AMC from a knowledge compilation
+perspective and show that all AMC tasks can be evaluated using sd-DNNF
+circuits. We identify further characteristics of AMC instances that allow for
+the use of even more succinct circuits.
+
+
+Lifted Variable Elimination: A Novel Operator and Completeness Results
+
+  Various methods for lifted probabilistic inference have been proposed, but
+our understanding of these methods and the relationships between them is still
+limited, compared to their propositional counterparts. The only existing
+theoretical characterization of lifting is for weighted first-order model
+counting (WFOMC), which was shown to be complete domain-lifted for the class of
+2-logvar models. This paper makes two contributions to lifted variable
+elimination (LVE). First, we introduce a novel inference operator called group
+inversion. Second, we prove that LVE augmented with this operator is complete
+in the same sense as WFOMC.
+
+
+Probabilistic Program Abstractions
+
+  Abstraction is a fundamental tool for reasoning about complex systems.
+Program abstraction has been utilized to great effect for analyzing
+deterministic programs. At the heart of program abstraction is the relationship
+between a concrete program, which is difficult to analyze, and an abstract
+program, which is more tractable. Program abstractions, however, are typically
+not probabilistic. We generalize non-deterministic program abstractions to
+probabilistic program abstractions by explicitly quantifying the
+non-deterministic choices. Our framework upgrades key definitions and
+properties of abstractions to the probabilistic context. We also discuss
+preliminary ideas for performing inference on probabilistic abstractions and
+general probabilistic programs.
+
+
+On Robust Trimming of Bayesian Network Classifiers
+
+  This paper considers the problem of removing costly features from a Bayesian
+network classifier. We want the classifier to be robust to these changes, and
+maintain its classification behavior. To this end, we propose a closeness
+metric between Bayesian classifiers, called the expected classification
+agreement (ECA). Our corresponding trimming algorithm finds an optimal subset
+of features and a new classification threshold that maximize the expected
+agreement, subject to a budgetary constraint. It utilizes new theoretical
+insights to perform branch-and-bound search in the space of feature sets, while
+computing bounds on the ECA. Our experiments investigate both the runtime cost
+of trimming and its effect on the robustness and accuracy of the final
+classifier.
+
+
+Learning Logistic Circuits
+
+  This paper proposes a new classification model called logistic circuits. On
+MNIST and Fashion datasets, our learning algorithm outperforms neural networks
+that have an order of magnitude more parameters. Yet, logistic circuits have a
+distinct origin in symbolic AI, forming a discriminative counterpart to
+probabilistic-logical circuits such as ACs, SPNs, and PSDDs. We show that
+parameter learning for logistic circuits is convex optimization, and that a
+simple local search algorithm can induce strong model structures from data.
+
+
+Inference and learning in probabilistic logic programs using weighted
+  Boolean formulas
+
+  Probabilistic logic programs are logic programs in which some of the facts
+are annotated with probabilities. This paper investigates how classical
+inference and learning tasks known from the graphical model community can be
+tackled for probabilistic logic programs. Several such tasks such as computing
+the marginals given evidence and learning from (partial) interpretations have
+not really been addressed for probabilistic logic programs before.
+  The first contribution of this paper is a suite of efficient algorithms for
+various inference tasks. It is based on a conversion of the program and the
+queries and evidence to a weighted Boolean formula. This allows us to reduce
+the inference tasks to well-studied tasks such as weighted model counting,
+which can be solved using state-of-the-art methods known from the graphical
+model and knowledge compilation literature. The second contribution is an
+algorithm for parameter estimation in the learning from interpretations
+setting. The algorithm employs Expectation Maximization, and is built on top of
+the developed inference algorithms.
+  The proposed approach is experimentally evaluated. The results show that the
+inference algorithms improve upon the state-of-the-art in probabilistic logic
+programming and that it is indeed possible to learn the parameters of a
+probabilistic logic program from interpretations.
+
+
+Symmetric Weighted First-Order Model Counting
+
+  The FO Model Counting problem (FOMC) is the following: given a sentence
+$\Phi$ in FO and a number $n$, compute the number of models of $\Phi$ over a
+domain of size $n$; the Weighted variant (WFOMC) generalizes the problem by
+associating a weight to each tuple and defining the weight of a model to be the
+product of weights of its tuples. In this paper we study the complexity of the
+symmetric WFOMC, where all tuples of a given relation have the same weight. Our
+motivation comes from an important application, inference in Knowledge Bases
+with soft constraints, like Markov Logic Networks, but the problem is also of
+independent theoretical interest. We study both the data complexity, and the
+combined complexity of FOMC and WFOMC. For the data complexity we prove the
+existence of an FO$^{3}$ formula for which FOMC is #P$_1$-complete, and the
+existence of a Conjunctive Query for which WFOMC is #P$_1$-complete. We also
+prove that all $\gamma$-acyclic queries have polynomial time data complexity.
+For the combined complexity, we prove that, for every fragment FO$^{k}$, $k\geq
+2$, the combined complexity of FOMC (or WFOMC) is #P-complete.
+
+
+Inference in Probabilistic Logic Programs using Weighted CNF's
+
+  Probabilistic logic programs are logic programs in which some of the facts
+are annotated with probabilities. Several classical probabilistic inference
+tasks (such as MAP and computing marginals) have not yet received a lot of
+attention for this formalism. The contribution of this paper is that we develop
+efficient inference algorithms for these tasks. This is based on a conversion
+of the probabilistic logic program and the query and evidence to a weighted CNF
+formula. This allows us to reduce the inference tasks to well-studied tasks
+such as weighted model counting. To solve such tasks, we employ
+state-of-the-art methods. We consider multiple methods for the conversion of
+the programs as well as for inference on the weighted CNF. The resulting
+approach is evaluated experimentally and shown to improve upon the
+state-of-the-art in probabilistic logic programming.
+
+
+Understanding the Complexity of Lifted Inference and Asymmetric Weighted
+  Model Counting
+
+  In this paper we study lifted inference for the Weighted First-Order Model
+Counting problem (WFOMC), which counts the assignments that satisfy a given
+sentence in first-order logic (FOL); it has applications in Statistical
+Relational Learning (SRL) and Probabilistic Databases (PDB). We present several
+results. First, we describe a lifted inference algorithm that generalizes prior
+approaches in SRL and PDB. Second, we provide a novel dichotomy result for a
+non-trivial fragment of FO CNF sentences, showing that for each sentence the
+WFOMC problem is either in PTIME or #P-hard in the size of the input domain; we
+prove that, in the first case our algorithm solves the WFOMC problem in PTIME,
+and in the second case it fails. Third, we present several properties of the
+algorithm. Finally, we discuss limitations of lifted inference for symmetric
+probabilistic databases (where the weights of ground literals depend only on
+the relation name, and not on the constants of the domain), and prove the
+impossibility of a dichotomy result for the complexity of probabilistic
+inference for the entire language FOL.
+
+
+Quantifying Causal Effects on Query Answering in Databases
+
+  The notion of actual causation, as formalized by Halpern and Pearl, has been
+recently applied to relational databases, to characterize and compute actual
+causes for possibly unexpected answers to monotone queries. Causes take the
+form of database tuples, and can be ranked according to their causal
+responsibility, a numerical measure of their relevance as a cause to the query
+answer. In this work we revisit this notion, introducing and making a case for
+an alternative measure of causal contribution, that of causal effect. The
+measure generalizes actual causes, and can be applied beyond monotone queries.
+We show that causal effect provides intuitive and intended results.
+
+
+Knowledge Compilation of Logic Programs Using Approximation Fixpoint
+  Theory
+
+  To appear in Theory and Practice of Logic Programming (TPLP), Proceedings of
+ICLP 2015
+  Recent advances in knowledge compilation introduced techniques to compile
+\emph{positive} logic programs into propositional logic, essentially exploiting
+the constructive nature of the least fixpoint computation. This approach has
+several advantages over existing approaches: it maintains logical equivalence,
+does not require (expensive) loop-breaking preprocessing or the introduction of
+auxiliary variables, and significantly outperforms existing algorithms.
+Unfortunately, this technique is limited to \emph{negation-free} programs. In
+this paper, we show how to extend it to general logic programs under the
+well-founded semantics.
+  We develop our work in approximation fixpoint theory, an algebraical
+framework that unifies semantics of different logics. As such, our algebraical
+results are also applicable to autoepistemic logic, default logic and abstract
+dialectical frameworks.
+
+
+New Liftable Classes for First-Order Probabilistic Inference
+
+  Statistical relational models provide compact encodings of probabilistic
+dependencies in relational domains, but result in highly intractable graphical
+models. The goal of lifted inference is to carry out probabilistic inference
+without needing to reason about each individual separately, by instead treating
+exchangeable, undistinguished objects as a whole. In this paper, we study the
+domain recursion inference rule, which, despite its central role in early
+theoretical results on domain-lifted inference, has later been believed
+redundant. We show that this rule is more powerful than expected, and in fact
+significantly extends the range of models for which lifted inference runs in
+time polynomial in the number of individuals in the domain. This includes an
+open problem called S4, the symmetric transitivity model, and a first-order
+logic encoding of the birthday paradox. We further identify new classes S2FO2
+and S2RU of domain-liftable theories, which respectively subsume FO2 and
+recursively unary theories, the largest classes of domain-liftable theories
+known so far, and show that using domain recursion can achieve exponential
+speedup even in theories that cannot fully be lifted with the existing set of
+inference rules.
+
+
+Don't Fear the Bit Flips: Optimized Coding Strategies for Binary
+  Classification
+
+  After being trained, classifiers must often operate on data that has been
+corrupted by noise. In this paper, we consider the impact of such noise on the
+features of binary classifiers. Inspired by tools for classifier robustness, we
+introduce the same classification probability (SCP) to measure the resulting
+distortion on the classifier outputs. We introduce a low-complexity estimate of
+the SCP based on quantization and polynomial multiplication. We also study
+channel coding techniques based on replication error-correcting codes. In
+contrast to the traditional channel coding approach, where error-correction is
+meant to preserve the data and is agnostic to the application, our schemes
+specifically aim to maximize the SCP (equivalently minimizing the distortion of
+the classifier output) for the same redundancy overhead.
+
+
+A Semantic Loss Function for Deep Learning with Symbolic Knowledge
+
+  This paper develops a novel methodology for using symbolic knowledge in deep
+learning. From first principles, we derive a semantic loss function that
+bridges between neural output vectors and logical constraints. This loss
+function captures how close the neural network is to satisfying the constraints
+on its output. An experimental evaluation shows that it effectively guides the
+learner to achieve (near-)state-of-the-art results on semi-supervised
+multi-class classification. Moreover, it significantly increases the ability of
+the neural network to predict structured objects, such as rankings and paths.
+These discrete concepts are tremendously difficult to learn, and benefit from a
+tight integration of deep learning and symbolic reasoning methods.
+
+
+Approximate Knowledge Compilation by Online Collapsed Importance
+  Sampling
+
+  We introduce collapsed compilation, a novel approximate inference algorithm
+for discrete probabilistic graphical models. It is a collapsed sampling
+algorithm that incrementally selects which variable to sample next based on the
+partial sample obtained so far. This online collapsing, together with knowledge
+compilation inference on the remaining variables, naturally exploits local
+structure and context- specific independence in the distribution. These
+properties are naturally exploited in exact inference, but are difficult to
+harness for approximate inference. More- over, by having a partially compiled
+circuit available during sampling, collapsed compilation has access to a highly
+effective proposal distribution for importance sampling. Our experimental
+evaluation shows that collapsed compilation performs well on standard
+benchmarks. In particular, when the amount of exact inference is equally
+limited, collapsed compilation is competitive with the state of the art, and
+outperforms it on several benchmarks.
+
+
+On Constrained Open-World Probabilistic Databases
+
+  Increasing amounts of available data have led to a heightened need for
+representing large-scale probabilistic knowledge bases. One approach is to use
+a probabilistic database, a model with strong assumptions that allow for
+efficiently answering many interesting queries. Recent work on open-world
+probabilistic databases strengthens the semantics of these probabilistic
+databases by discarding the assumption that any information not present in the
+data must be false. While intuitive, these semantics are not sufficiently
+precise to give reasonable answers to queries. We propose overcoming these
+issues by using constraints to restrict this open world. We provide an
+algorithm for one class of queries, and establish a basic hardness result for
+another. Finally, we propose an efficient and tight approximation for a large
+class of queries.
+
+
+What to Expect of Classifiers? Reasoning about Logistic Regression with
+  Missing Features
+
+  While discriminative classifiers often yield strong predictive performance,
+missing feature values at prediction time can still be a challenge. Classifiers
+may not behave as expected under certain ways of substituting the missing
+values, since they inherently make assumptions about the data distribution they
+were trained on. In this paper, we propose a novel framework that classifies
+examples with missing features by computing the expected prediction on a given
+feature distribution. We then use geometric programming to learn a naive Bayes
+distribution that embeds a given logistic regression classifier and can
+efficiently take its expected predictions. Empirical evaluations show that our
+model achieves the same performance as the logistic regression with all
+features observed, and outperforms standard imputation techniques when features
+go missing during prediction time. Furthermore, we demonstrate that our method
+can be used to generate 'sufficient explanations' of logistic regression
+classifications, by removing features that do not affect the classification.
+
+
+Generating and Sampling Orbits for Lifted Probabilistic Inference
+
+  Lifted inference scales to large probability models by exploiting symmetry.
+However, existing exact lifted inference techniques do not apply to general
+factor graphs, as they require a relational representation. In this work we
+provide a theoretical framework and algorithm for performing exact lifted
+inference on symmetric factor graphs by computing colored graph automorphisms,
+as is often done for approximate lifted inference. Our key insight is to
+represent variable assignments directly in the colored factor graph encoding.
+This allows us to generate representatives and compute the size of each orbit
+of the symmetric distribution. In addition to exact inference, we use this
+encoding to implement an MCMC algorithm that explores the space of orbits
+quickly by uniform orbit sampling.
+
+
+Efficient Search-Based Weighted Model Integration
+
+  Weighted model integration (WMI) extends Weighted model counting (WMC) to the
+integration of functions over mixed discrete-continuous domains. It has shown
+tremendous promise for solving inference problems in graphical models and
+probabilistic programming. Yet, state-of-the-art tools for WMI are limited in
+terms of performance and ignore the independence structure that is crucial to
+improving efficiency. To address this limitation, we propose an efficient model
+integration algorithm for theories with tree primal graphs. We exploit the
+sparse graph structure by using search to performing integration. Our algorithm
+greatly improves the computational efficiency on such problems and exploits
+context-specific independence between variables. Experimental results show
+dramatic speedups compared to existing WMI solvers on problems with tree-shaped
+dependencies.
+
+
+Symbolic Exact Inference for Discrete Probabilistic Programs
+
+  The computational burden of probabilistic inference remains a hurdle for
+applying probabilistic programming languages to practical problems of interest.
+In this work, we provide a semantic and algorithmic foundation for efficient
+exact inference on discrete-valued finite-domain imperative probabilistic
+programs. We leverage and generalize efficient inference procedures for
+Bayesian networks, which exploit the structure of the network to decompose the
+inference task, thereby avoiding full path enumeration. To do this, we first
+compile probabilistic programs to a symbolic representation. Then we adapt
+techniques from the probabilistic logic programming and artificial intelligence
+communities in order to perform inference on the symbolic representation. We
+formalize our approach, prove it sound, and experimentally validate it against
+existing exact and approximate inference techniques. We show that our inference
+approach is competitive with inference procedures specialized for Bayesian
+networks, thereby expanding the class of probabilistic programs which can be
+practically analyzed.
+
+
+Domain Recursion for Lifted Inference with Existential Quantifiers
+
+  In recent work, we proved that the domain recursion inference rule makes
+domain-lifted inference possible on several relational probability models
+(RPMs) for which the best known time complexity used to be exponential. We also
+identified two classes of RPMs for which inference becomes domain lifted when
+using domain recursion. These two classes subsume the largest lifted classes
+that were previously known. In this paper, we show that domain recursion can
+also be applied to models with existential quantifiers. Currently, all lifted
+inference algorithms assume that existential quantifiers have been removed in
+pre-processing by Skolemization. We show that besides introducing potentially
+inconvenient negative weights, Skolemization may increase the time complexity
+of inference. We give two example models where domain recursion can replace
+Skolemization, avoids the need for dealing with negative numbers, and reduces
+the time complexity of inference. These two examples may be interesting from
+three theoretical aspects: 1- they provide a better and deeper understanding of
+domain recursion and, in general, (lifted) inference, 2- they may serve as
+evidence that there are larger classes of models for which domain recursion can
+satisfyingly replace Skolemization, and 3- they may serve as evidence that
+better Skolemization techniques exist.
+
+
+Active Inductive Logic Programming for Code Search
+
+  Modern search techniques either cannot efficiently incorporate human feedback
+to refine search results or to express structural or semantic properties of
+desired code. The key insight of our interactive code search technique ALICE is
+that user feedback could be actively incorporated to allow users to easily
+express and refine search queries. We design a query language to model the
+structure and semantics of code as logic facts. Given a code example with user
+annotations, ALICE automatically extracts a logic query from features that are
+tagged as important. Users can refine the search query by labeling one or more
+examples as desired (positive) or irrelevant (negative). ALICE then infers a
+new logic query that separates the positives from negative examples via active
+inductive logic programming. Our comprehensive and systematic simulation
+experiment shows that ALICE removes a large number of false positives quickly
+by actively incorporating user feedback. Its search algorithm is also robust to
+noise and user labeling mistakes. Our choice of leveraging both positive and
+negative examples and the nested containment structure of selected code is
+effective in refining search queries. Compared with an existing technique,
+Critics, ALICE does not require a user to manually construct a search pattern
+and yet achieves comparable precision and recall with fewer search iterations
+on average. A case study with users shows that ALICE is easy to use and helps
+express complex code patterns.
+
+

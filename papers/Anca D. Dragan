@@ -1,0 +1,506 @@
+Robot Planning with Mathematical Models of Human State and Action
+
+  Robots interacting with the physical world plan with models of physics. We
+advocate that robots interacting with people need to plan with models of
+cognition. This writeup summarizes the insights we have gained in integrating
+computational cognitive models of people into robotics planning and control. It
+starts from a general game-theoretic formulation of interaction, and analyzes
+how different approximations result in different useful coordination behaviors
+for the robot during its interaction with people.
+
+
+Generating Plans that Predict Themselves
+
+  Collaboration requires coordination, and we coordinate by anticipating our
+teammates' future actions and adapting to their plan. In some cases, our
+teammates' actions early on can give us a clear idea of what the remainder of
+their plan is, i.e. what action sequence we should expect. In others, they
+might leave us less confident, or even lead us to the wrong conclusion. Our
+goal is for robot actions to fall in the first category: we want to enable
+robots to select their actions in such a way that human collaborators can
+easily use them to correctly anticipate what will follow. While previous work
+has focused on finding initial plans that convey a set goal, here we focus on
+finding two portions of a plan such that the initial portion conveys the final
+one. We introduce $t$-\ACty{}: a measure that quantifies the accuracy and
+confidence with which human observers can predict the remaining robot plan from
+the overall task goal and the observed initial $t$ actions in the plan. We
+contribute a method for generating $t$-predictable plans: we search for a full
+plan that accomplishes the task, but in which the first $t$ actions make it as
+easy as possible to infer the remaining ones. The result is often different
+from the most efficient plan, in which the initial actions might leave a lot of
+ambiguity as to how the task will be completed. Through an online experiment
+and an in-person user study with physical robots, we find that our approach
+outperforms a traditional efficiency-based planner in objective and subjective
+collaboration metrics.
+
+
+Goal Inference Improves Objective and Perceived Performance in
+  Human-Robot Collaboration
+
+  The study of human-robot interaction is fundamental to the design and use of
+robotics in real-world applications. Robots will need to predict and adapt to
+the actions of human collaborators in order to achieve good performance and
+improve safety and end-user adoption. This paper evaluates a human-robot
+collaboration scheme that combines the task allocation and motion levels of
+reasoning: the robotic agent uses Bayesian inference to predict the next goal
+of its human partner from his or her ongoing motion, and re-plans its own
+actions in real time. This anticipative adaptation is desirable in many
+practical scenarios, where humans are unable or unwilling to take on the
+cognitive overhead required to explicitly communicate their intent to the
+robot. A behavioral experiment indicates that the combination of goal inference
+and dynamic task planning significantly improves both objective and perceived
+performance of the human-robot team. Participants were highly sensitive to the
+differences between robot behaviors, preferring to work with a robot that
+adapted to their actions over one that did not.
+
+
+Expressive Robot Motion Timing
+
+  Our goal is to enable robots to \emph{time} their motion in a way that is
+purposefully expressive of their internal states, making them more transparent
+to people. We start by investigating what types of states motion timing is
+capable of expressing, focusing on robot manipulation and keeping the path
+constant while systematically varying the timing. We find that users naturally
+pick up on certain properties of the robot (like confidence), of the motion
+(like naturalness), or of the task (like the weight of the object that the
+robot is carrying). We then conduct a hypothesis-driven experiment to tease out
+the directions and magnitudes of these effects, and use our findings to develop
+candidate mathematical models for how users make these inferences from the
+timing. We find a strong correlation between the models and real user data,
+suggesting that robots can leverage these models to autonomously optimize the
+timing of their motion to be expressive.
+
+
+Learning from Richer Human Guidance: Augmenting Comparison-Based
+  Learning with Feature Queries
+
+  We focus on learning the desired objective function for a robot. Although
+trajectory demonstrations can be very informative of the desired objective,
+they can also be difficult for users to provide. Answers to comparison queries,
+asking which of two trajectories is preferable, are much easier for users, and
+have emerged as an effective alternative. Unfortunately, comparisons are far
+less informative. We propose that there is much richer information that users
+can easily provide and that robots ought to leverage. We focus on augmenting
+comparisons with feature queries, and introduce a unified formalism for
+treating all answers as observations about the true desired reward. We derive
+an active query selection algorithm, and test these queries in simulation and
+on real users. We find that richer, feature-augmented queries can extract more
+information faster, leading to robots that better match user preferences in
+their behavior.
+
+
+Do You Want Your Autonomous Car To Drive Like You?
+
+  With progress in enabling autonomous cars to drive safely on the road, it is
+time to start asking how they should be driving. A common answer is that they
+should be adopting their users' driving style. This makes the assumption that
+users want their autonomous cars to drive like they drive - aggressive drivers
+want aggressive cars, defensive drivers want defensive cars. In this paper, we
+put that assumption to the test. We find that users tend to prefer a
+significantly more defensive driving style than their own. Interestingly, they
+prefer the style they think is their own, even though their actual driving
+style tends to be more aggressive. We also find that preferences do depend on
+the specific driving scenario, opening the door for new ways of learning
+driving style preference.
+
+
+Probabilistically Safe Robot Planning with Confidence-Based Human
+  Predictions
+
+  In order to safely operate around humans, robots can employ predictive models
+of human motion. Unfortunately, these models cannot capture the full complexity
+of human behavior and necessarily introduce simplifying assumptions. As a
+result, predictions may degrade whenever the observed human behavior departs
+from the assumed structure, which can have negative implications for safety. In
+this paper, we observe that how "rational" human actions appear under a
+particular model can be viewed as an indicator of that model's ability to
+describe the human's current motion. By reasoning about this model confidence
+in a real-time Bayesian framework, we show that the robot can very quickly
+modulate its predictions to become more uncertain when the model performs
+poorly. Building on recent work in provably-safe trajectory planning, we
+leverage these confidence-aware human motion predictions to generate assured
+autonomous robot motion. Our new analysis combines worst-case tracking error
+guarantees for the physical robot with probabilistic time-varying human
+predictions, yielding a quantitative, probabilistic safety certificate. We
+demonstrate our approach with a quadcopter navigating around a human.
+
+
+An Efficient, Generalized Bellman Update For Cooperative Inverse
+  Reinforcement Learning
+
+  Our goal is for AI systems to correctly identify and act according to their
+human user's objectives. Cooperative Inverse Reinforcement Learning (CIRL)
+formalizes this value alignment problem as a two-player game between a human
+and robot, in which only the human knows the parameters of the reward function:
+the robot needs to learn them as the interaction unfolds. Previous work showed
+that CIRL can be solved as a POMDP, but with an action space size exponential
+in the size of the reward parameter space. In this work, we exploit a specific
+property of CIRL---the human is a full information agent---to derive an
+optimality-preserving modification to the standard Bellman update; this reduces
+the complexity of the problem by an exponential factor and allows us to relax
+CIRL's assumption of human rationality. We apply this update to a variety of
+POMDP solvers and find that it enables us to scale CIRL to non-trivial
+problems, with larger reward parameter spaces, and larger action spaces for
+both robot and human. In solutions to these larger problems, the human exhibits
+pedagogic (teaching) behavior, while the robot interprets it as such and
+attains higher value for the human.
+
+
+Model Reconstruction from Model Explanations
+
+  We show through theory and experiment that gradient-based explanations of a
+model quickly reveal the model itself. Our results speak to a tension between
+the desire to keep a proprietary model secret and the ability to offer model
+explanations. On the theoretical side, we give an algorithm that provably
+learns a two-layer ReLU network in a setting where the algorithm may query the
+gradient of the model with respect to chosen inputs. The number of queries is
+independent of the dimension and nearly optimal in its dependence on the model
+size. Of interest not only from a learning-theoretic perspective, this result
+highlights the power of gradients rather than labels as a learning primitive.
+Complementing our theory, we give effective heuristics for reconstructing
+models from gradient explanations that are orders of magnitude more
+query-efficient than reconstruction attacks relying on prediction interfaces.
+
+
+Courteous Autonomous Cars
+
+  Typically, autonomous cars optimize for a combination of safety, efficiency,
+and driving quality. But as we get better at this optimization, we start seeing
+behavior go from too conservative to too aggressive. The car's behavior exposes
+the incentives we provide in its cost function. In this work, we argue for cars
+that are not optimizing a purely selfish cost, but also try to be courteous to
+other interactive drivers. We formalize courtesy as a term in the objective
+that measures the increase in another driver's cost induced by the autonomous
+car's behavior. Such a courtesy term enables the robot car to be aware of
+possible irrationality of the human behavior, and plan accordingly. We analyze
+the effect of courtesy in a variety of scenarios. We find, for example, that
+courteous robot cars leave more space when merging in front of a human driver.
+Moreover, we find that such a courtesy term can help explain real human driver
+behavior on the NGSIM dataset.
+
+
+Social Cohesion in Autonomous Driving
+
+  Autonomous cars can perform poorly for many reasons. They may have perception
+issues, incorrect dynamics models, be unaware of obscure rules of human traffic
+systems, or follow certain rules too conservatively. Regardless of the exact
+failure mode of the car, often human drivers around the car are behaving
+correctly. For example, even if the car does not know that it should pull over
+when an ambulance races by, other humans on the road will know and will pull
+over. We propose to make socially cohesive cars that leverage the behavior of
+nearby human drivers to act in ways that are safer and more socially
+acceptable. The simple intuition behind our algorithm is that if all the humans
+are consistently behaving in a particular way, then the autonomous car probably
+should too. We analyze the performance of our algorithm in a variety of
+scenarios and conduct a user study to assess people's attitudes towards
+socially cohesive cars. We find that people are surprisingly tolerant of
+mistakes that cohesive cars might make in order to get the benefits of driving
+in a car with a safer, or even just more socially acceptable behavior.
+
+
+The Social Cost of Strategic Classification
+
+  Consequential decision-making typically incentivizes individuals to behave
+strategically, tailoring their behavior to the specifics of the decision rule.
+A long line of work has therefore sought to counteract strategic behavior by
+designing more conservative decision boundaries in an effort to increase
+robustness to the effects of strategic covariate shift. We show that these
+efforts benefit the institutional decision maker at the expense of the
+individuals being classified. Introducing a notion of social burden, we prove
+that any increase in institutional utility necessarily leads to a corresponding
+increase in social burden. Moreover, we show that the negative externalities of
+strategic classification can disproportionately harm disadvantaged groups in
+the population. Our results highlight that strategy-robustness must be weighed
+against considerations of social welfare and fairness.
+
+
+Cost Functions for Robot Motion Style
+
+  We focus on autonomously generating robot motion for day to day physical
+tasks that is expressive of a certain style or emotion. Because we seek
+generalization across task instances and task types, we propose to capture
+style via cost functions that the robot can use to augment its nominal task
+cost and task constraints in a trajectory optimization process. We compare two
+approaches to representing such cost functions: a weighted linear combination
+of hand-designed features, and a neural network parameterization operating on
+raw trajectory input. For each cost type, we learn weights for each style from
+user feedback. We contrast these approaches to a nominal motion across
+different tasks and for different styles in a user study, and find that they
+both perform on par with each other, and significantly outperform the baseline.
+Each approach has its advantages: featurized costs require learning fewer
+parameters and can perform better on some styles, but neural network
+representations do not require expert knowledge to design features and could
+even learn more complex, nuanced costs than an expert can easily design.
+
+
+Expressing Robot Incapability
+
+  Our goal is to enable robots to express their incapability, and to do so in a
+way that communicates both what they are trying to accomplish and why they are
+unable to accomplish it. We frame this as a trajectory optimization problem:
+maximize the similarity between the motion expressing incapability and what
+would amount to successful task execution, while obeying the physical limits of
+the robot. We introduce and evaluate candidate similarity measures, and show
+that one in particular generalizes to a range of tasks, while producing
+expressive motions that are tailored to each task. Our user study supports that
+our approach automatically generates motions expressing incapability that
+communicate both what and why to end-users, and improve their overall
+perception of the robot and willingness to collaborate with it in the future.
+
+
+Establishing Appropriate Trust via Critical States
+
+  In order to effectively interact with or supervise a robot, humans need to
+have an accurate mental model of its capabilities and how it acts. Learned
+neural network policies make that particularly challenging. We propose an
+approach for helping end-users build a mental model of such policies. Our key
+observation is that for most tasks, the essence of the policy is captured in a
+few critical states: states in which it is very important to take a certain
+action. Our user studies show that if the robot shows a human what its
+understanding of the task's critical states is, then the human can make a more
+informed decision about whether to deploy the policy, and if she does deploy
+it, when she needs to take control from it at execution time.
+
+
+A Scalable Framework For Real-Time Multi-Robot, Multi-Human Collision
+  Avoidance
+
+  Robust motion planning is a well-studied problem in the robotics literature,
+yet current algorithms struggle to operate scalably and safely in the presence
+of other moving agents, such as humans. This paper introduces a novel framework
+for robot navigation that accounts for high-order system dynamics and maintains
+safety in the presence of external disturbances, other robots, and
+non-deterministic intentional agents. Our approach precomputes a tracking error
+margin for each robot, generates confidence-aware human motion predictions, and
+coordinates multiple robots with a sequential priority ordering, effectively
+enabling scalable safe trajectory planning and execution. We demonstrate our
+approach in hardware with two robots and two humans. We also showcase our
+work's scalability in a larger simulation.
+
+
+Learning from Extrapolated Corrections
+
+  Our goal is to enable robots to learn cost functions from user guidance.
+Often it is difficult or impossible for users to provide full demonstrations,
+so corrections have emerged as an easier guidance channel. However, when robots
+learn cost functions from corrections rather than demonstrations, they have to
+extrapolate a small amount of information -- the change of a waypoint along the
+way -- to the rest of the trajectory. We cast this extrapolation problem as
+online function approximation, which exposes different ways in which the robot
+can interpret what trajectory the person intended, depending on the function
+space used for the approximation. Our simulation results and user study suggest
+that using function spaces with non-Euclidean norms can better capture what
+users intend, particularly if environments are uncluttered. This, in turn, can
+lead to the robot learning a more accurate cost function and improves the
+user's subjective perceptions of the robot.
+
+
+Literal or Pedagogic Human? Analyzing Human Model Misspecification in
+  Objective Learning
+
+  It is incredibly easy for a system designer to misspecify the objective for
+an autonomous system ("robot''), thus motivating the desire to have the robot
+learn the objective from human behavior instead. Recent work has suggested that
+people have an interest in the robot performing well, and will thus behave
+pedagogically, choosing actions that are informative to the robot. In turn,
+robots benefit from interpreting the behavior by accounting for this pedagogy.
+In this work, we focus on misspecification: we argue that robots might not know
+whether people are being pedagogic or literal and that it is important to ask
+which assumption is safer to make. We cast objective learning into the more
+general form of a common-payoff game between the robot and human, and prove
+that in any such game literal interpretation is more robust to
+misspecification. Experiments with human data support our theoretical results
+and point to the sensitivity of the pedagogic assumption.
+
+
+Enabling Robots to Communicate their Objectives
+
+  The overarching goal of this work is to efficiently enable end-users to
+correctly anticipate a robot's behavior in novel situations. Since a robot's
+behavior is often a direct result of its underlying objective function, our
+insight is that end-users need to have an accurate mental model of this
+objective function in order to understand and predict what the robot will do.
+While people naturally develop such a mental model over time through observing
+the robot act, this familiarization process may be lengthy. Our approach
+reduces this time by having the robot model how people infer objectives from
+observed behavior, and then it selects those behaviors that are maximally
+informative. The problem of computing a posterior over objectives from observed
+behavior is known as Inverse Reinforcement Learning (IRL), and has been applied
+to robots learning human objectives. We consider the problem where the roles of
+human and robot are swapped. Our main contribution is to recognize that unlike
+robots, humans will not be exact in their IRL inference. We thus introduce two
+factors to define candidate approximate-inference models for human learning in
+this setting, and analyze them in a user study in the autonomous driving
+domain. We show that certain approximate-inference models lead to the robot
+generating example behaviors that better enable users to anticipate what it
+will do in novel situations. Our results also suggest, however, that additional
+research is needed in modeling how humans extrapolate from examples of robot
+behavior.
+
+
+Pragmatic-Pedagogic Value Alignment
+
+  As intelligent systems gain autonomy and capability, it becomes vital to
+ensure that their objectives match those of their human users; this is known as
+the value-alignment problem. In robotics, value alignment is key to the design
+of collaborative robots that can integrate into human workflows, successfully
+inferring and adapting to their users' objectives as they go. We argue that a
+meaningful solution to value alignment must combine multi-agent decision theory
+with rich mathematical models of human cognition, enabling robots to tap into
+people's natural collaborative capabilities. We present a solution to the
+cooperative inverse reinforcement learning (CIRL) dynamic game based on
+well-established cognitive models of decision making and theory of mind. The
+solution captures a key reciprocity relation: the human will not plan her
+actions in isolation, but rather reason pedagogically about how the robot might
+learn from them; the robot, in turn, can anticipate this and interpret the
+human's actions pragmatically. To our knowledge, this work constitutes the
+first formal analysis of value alignment grounded in empirically validated
+cognitive models.
+
+
+Where Do You Think You're Going?: Inferring Beliefs about Dynamics from
+  Behavior
+
+  Inferring intent from observed behavior has been studied extensively within
+the frameworks of Bayesian inverse planning and inverse reinforcement learning.
+These methods infer a goal or reward function that best explains the actions of
+the observed agent, typically a human demonstrator. Another agent can use this
+inferred intent to predict, imitate, or assist the human user. However, a
+central assumption in inverse reinforcement learning is that the demonstrator
+is close to optimal. While models of suboptimal behavior exist, they typically
+assume that suboptimal actions are the result of some type of random noise or a
+known cognitive bias, like temporal inconsistency. In this paper, we take an
+alternative approach, and model suboptimal behavior as the result of internal
+model misspecification: the reason that user actions might deviate from
+near-optimal actions is that the user has an incorrect set of beliefs about the
+rules -- the dynamics -- governing how actions affect the environment. Our
+insight is that while demonstrated actions may be suboptimal in the real world,
+they may actually be near-optimal with respect to the user's internal model of
+the dynamics. By estimating these internal beliefs from observed behavior, we
+arrive at a new method for inferring intent. We demonstrate in simulation and
+in a user study with 12 participants that this approach enables us to more
+accurately model human intent, and can be used in a variety of applications,
+including offering assistance in a shared autonomy framework and inferring
+human preferences.
+
+
+Simplifying Reward Design through Divide-and-Conquer
+
+  Designing a good reward function is essential to robot planning and
+reinforcement learning, but it can also be challenging and frustrating. The
+reward needs to work across multiple different environments, and that often
+requires many iterations of tuning. We introduce a novel divide-and-conquer
+approach that enables the designer to specify a reward separately for each
+environment. By treating these separate reward functions as observations about
+the underlying true reward, we derive an approach to infer a common reward
+across all environments. We conduct user studies in an abstract grid world
+domain and in a motion planning domain for a 7-DOF manipulator that measure
+user effort and solution quality. We show that our method is faster, easier to
+use, and produces a higher quality solution than the typical method of
+designing a reward jointly across all environments. We additionally conduct a
+series of experiments that measure the sensitivity of these results to
+different properties of the reward design task, such as the number of
+environments, the number of feasible solutions per environment, and the
+fraction of the total features that vary within each environment. We find that
+independent reward design outperforms the standard, joint, reward design
+process but works best when the design problem can be divided into simpler
+subproblems.
+
+
+Learning under Misspecified Objective Spaces
+
+  Learning robot objective functions from human input has become increasingly
+important, but state-of-the-art techniques assume that the human's desired
+objective lies within the robot's hypothesis space. When this is not true, even
+methods that keep track of uncertainty over the objective fail because they
+reason about which hypothesis might be correct, and not whether any of the
+hypotheses are correct. We focus specifically on learning from physical human
+corrections during the robot's task execution, where not having a rich enough
+hypothesis space leads to the robot updating its objective in ways that the
+person did not actually intend. We observe that such corrections appear
+irrelevant to the robot, because they are not the best way of achieving any of
+the candidate objectives. Instead of naively trusting and learning from every
+human interaction, we propose robots learn conservatively by reasoning in real
+time about how relevant the human's correction is for the robot's hypothesis
+space. We test our inference method in an experiment with human interaction
+data, and demonstrate that this alleviates unintended learning in an in-person
+user study with a 7DoF robot manipulator.
+
+
+Hierarchical Game-Theoretic Planning for Autonomous Vehicles
+
+  The actions of an autonomous vehicle on the road affect and are affected by
+those of other drivers, whether overtaking, negotiating a merge, or avoiding an
+accident. This mutual dependence, best captured by dynamic game theory, creates
+a strong coupling between the vehicle's planning and its predictions of other
+drivers' behavior, and constitutes an open problem with direct implications on
+the safety and viability of autonomous driving technology. Unfortunately,
+dynamic games are too computationally demanding to meet the real-time
+constraints of autonomous driving in its continuous state and action space. In
+this paper, we introduce a novel game-theoretic trajectory planning algorithm
+for autonomous driving, that enables real-time performance by hierarchically
+decomposing the underlying dynamic game into a long-horizon "strategic" game
+with simplified dynamics and full information structure, and a short-horizon
+"tactical" game with full dynamics and a simplified information structure. The
+value of the strategic game is used to guide the tactical planning, implicitly
+extending the planning horizon, pushing the local trajectory optimization
+closer to global solutions, and, most importantly, quantitatively accounting
+for the autonomous vehicle and the human driver's ability and incentives to
+influence each other. In addition, our approach admits non-deterministic models
+of human decision-making, rather than relying on perfectly rational
+predictions. Our results showcase richer, safer, and more effective autonomous
+behavior in comparison to existing techniques.
+
+
+Human-AI Learning Performance in Multi-Armed Bandits
+
+  People frequently face challenging decision-making problems in which outcomes
+are uncertain or unknown. Artificial intelligence (AI) algorithms exist that
+can outperform humans at learning such tasks. Thus, there is an opportunity for
+AI agents to assist people in learning these tasks more effectively. In this
+work, we use a multi-armed bandit as a controlled setting in which to explore
+this direction. We pair humans with a selection of agents and observe how well
+each human-agent team performs. We find that team performance can beat both
+human and agent performance in isolation. Interestingly, we also find that an
+agent's performance in isolation does not necessarily correlate with the
+human-agent team's performance. A drop in agent performance can lead to a
+disproportionately large drop in team performance, or in some settings can even
+improve team performance. Pairing a human with an agent that performs slightly
+better than them can make them perform much better, while pairing them with an
+agent that performs the same can make them them perform much worse. Further,
+our results suggest that people have different exploration strategies and might
+perform better with agents that match their strategy. Overall, optimizing
+human-agent team performance requires going beyond optimizing agent
+performance, to understanding how the agent's suggestions will influence human
+decision-making.
+
+
+Shared Autonomy via Deep Reinforcement Learning
+
+  In shared autonomy, user input is combined with semi-autonomous control to
+achieve a common goal. The goal is often unknown ex-ante, so prior work enables
+agents to infer the goal from user input and assist with the task. Such methods
+tend to assume some combination of knowledge of the dynamics of the
+environment, the user's policy given their goal, and the set of possible goals
+the user might target, which limits their application to real-world scenarios.
+We propose a deep reinforcement learning framework for model-free shared
+autonomy that lifts these assumptions. We use human-in-the-loop reinforcement
+learning with neural network function approximation to learn an end-to-end
+mapping from environmental observation and user input to agent action values,
+with task reward as the only form of supervision. This approach poses the
+challenge of following user commands closely enough to provide the user with
+real-time action feedback and thereby ensure high-quality user input, but also
+deviating from the user's actions when they are suboptimal. We balance these
+two needs by discarding actions whose values fall below some threshold, then
+selecting the remaining action closest to the user's input. Controlled studies
+with users (n = 12) and synthetic pilots playing a video game, and a pilot
+study with users (n = 4) flying a real quadrotor, demonstrate the ability of
+our algorithm to assist users with real-time control tasks in which the agent
+cannot directly access the user's private information through observations, but
+receives a reward signal and user input that both depend on the user's intent.
+The agent learns to assist the user without access to this private information,
+implicitly inferring it from the user's input. This paper is a proof of concept
+that illustrates the potential for deep reinforcement learning to enable
+flexible and practical assistive systems.
+
+

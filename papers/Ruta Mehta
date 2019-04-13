@@ -1,0 +1,577 @@
+Settling Some Open Problems on 2-Player Symmetric Nash Equilibria
+
+  Over the years, researchers have studied the complexity of several decision
+versions of Nash equilibrium in (symmetric) two-player games (bimatrix games).
+To the best of our knowledge, the last remaining open problem of this sort is
+the following; it was stated by Papadimitriou in 2007: find a non-symmetric
+Nash equilibrium (NE) in a symmetric game. We show that this problem is
+NP-complete and the problem of counting the number of non-symmetric NE in a
+symmetric game is #P-complete.
+  In 2005, Kannan and Theobald defined the "rank of a bimatrix game"
+represented by matrices (A, B) to be rank(A+B) and asked whether a NE can be
+computed in rank 1 games in polynomial time. Observe that the rank 0 case is
+precisely the zero sum case, for which a polynomial time algorithm follows from
+von Neumann's reduction of such games to linear programming. In 2011, Adsul et.
+al. obtained an algorithm for rank 1 games; however, it does not solve the case
+of symmetric rank 1 games. We resolve this problem.
+
+
+An Incentive Compatible, Efficient Market for Air Traffic Flow
+  Management
+
+  We present a market-based approach to the Air Traffic Flow Management (ATFM)
+problem. The goods in our market are delays and buyers are airline companies;
+the latter pay money to the FAA to buy away the desired amount of delay on a
+per flight basis. We give a notion of equilibrium for this market and an LP
+whose solution gives an equilibrium allocation of flights to landing slots as
+well as equilibrium prices for the landing slots. Via a reduction to matching,
+we show that this equilibrium can be computed combinatorially in strongly
+polynomial time. Moreover, there is a special set of equilibrium prices, which
+can be computed easily, that is identical to the VCG solution, and therefore
+the market is incentive compatible in dominant strategy.
+
+
+Learning Economic Parameters from Revealed Preferences
+
+  A recent line of work, starting with Beigman and Vohra (2006) and
+Zadimoghaddam and Roth (2012), has addressed the problem of {\em learning} a
+utility function from revealed preference data. The goal here is to make use of
+past data describing the purchases of a utility maximizing agent when faced
+with certain prices and budget constraints in order to produce a hypothesis
+function that can accurately forecast the {\em future} behavior of the agent.
+  In this work we advance this line of work by providing sample complexity
+guarantees and efficient algorithms for a number of important classes. By
+drawing a connection to recent advances in multi-class learning, we provide a
+computationally efficient algorithm with tight sample complexity guarantees
+($\Theta(d/\epsilon)$ for the case of $d$ goods) for learning linear utility
+functions under a linear price model. This solves an open question in
+Zadimoghaddam and Roth (2012). Our technique yields numerous generalizations
+including the ability to learn other well-studied classes of utility functions,
+to deal with a misspecified model, and with non-linear prices.
+
+
+Constant Rank Bimatrix Games are PPAD-hard
+
+  The rank of a bimatrix game (A,B) is defined as rank(A+B). Computing a Nash
+equilibrium (NE) of a rank-$0$, i.e., zero-sum game is equivalent to linear
+programming (von Neumann'28, Dantzig'51). In 2005, Kannan and Theobald gave an
+FPTAS for constant rank games, and asked if there exists a polynomial time
+algorithm to compute an exact NE. Adsul et al. (2011) answered this question
+affirmatively for rank-$1$ games, leaving rank-2 and beyond unresolved.
+  In this paper we show that NE computation in games with rank $\ge 3$, is
+PPAD-hard, settling a decade long open problem. Interestingly, this is the
+first instance that a problem with an FPTAS turns out to be PPAD-hard. Our
+reduction bypasses graphical games and game gadgets, and provides a simpler
+proof of PPAD-hardness for NE computation in bimatrix games. In addition, we
+get:
+  * An equivalence between 2D-Linear-FIXP and PPAD, improving a result by
+Etessami and Yannakakis (2007) on equivalence between Linear-FIXP and PPAD.
+  * NE computation in a bimatrix game with convex set of Nash equilibria is as
+hard as solving a simple stochastic game.
+  * Computing a symmetric NE of a symmetric bimatrix game with rank $\ge 6$ is
+PPAD-hard.
+  * Computing a (1/poly(n))-approximate fixed-point of a (Linear-FIXP)
+piecewise-linear function is PPAD-hard.
+  The status of rank-$2$ games remains unresolved.
+
+
+Leontief Exchange Markets Can Solve Multivariate Polynomial Equations,
+  Yielding FIXP and ETR Hardness
+
+  We show FIXP-hardness of computing equilibria in Arrow-Debreu exchange
+markets under Leontief utility functions, and Arrow-Debreu markets under linear
+utility functions and Leontief production sets, thereby settling these open
+questions (Vazirani and Yannakakis, 2009). As corollaries, we obtain
+FIXP-hardness for piecewise-linear concave (PLC) utilities and for Arrow-Debreu
+markets under linear utility functions and polyhedral production sets. In all
+cases, as required under FIXP, the set of instances mapped onto will admit
+equilibria, i.e., will be "yes" instances. If all instances are under
+consideration, then in all cases we prove that the problem of deciding if a
+given instance admits an equilibrium is ETR-complete, where ETR is the class
+Existential Theory of Reals.
+  As a consequence of the results stated above, and the fact that membership in
+FIXP has been established for PLC utilities, the entire computational
+difficulty of Arrow-Debreu markets under PLC utility functions lies in the
+Leontief utility subcase. This is perhaps the most unexpected aspect of our
+result, since Leontief utilities are meant for the case that goods are perfect
+complements, whereas PLC utilities are very general, capturing not only the
+cases when goods are complements and substitutes, but also arbitrary
+combinations of these and much more.
+  The main technical part of our result is the following reduction: Given a set
+'S' of simultaneous multivariate polynomial equations in which the variables
+are constrained to be in a closed bounded region in the positive orthant, we
+construct a Leontief exchange market 'M' which has one good corresponding to
+each variable in 'S'. We prove that the equilibria of 'M', when projected onto
+prices of these latter goods, are in one-to-one correspondence with the set of
+solutions of the polynomials. This reduction is related to a classic result of
+Sonnenschein (1972-73).
+
+
+Nash equilibria in Fisher market
+
+  Much work has been done on the computation of market equilibria. However due
+to strategic play by buyers, it is not clear whether these are actually
+observed in the market. Motivated by the observation that a buyer may derive a
+better payoff by feigning a different utility function and thereby manipulating
+the Fisher market equilibrium, we formulate the {\em Fisher market game} in
+which buyers strategize by posing different utility functions. We show that
+existence of a {\em conflict-free allocation} is a necessary condition for the
+Nash equilibria (NE) and also sufficient for the symmetric NE in this game.
+There are many NE with very different payoffs, and the Fisher equilibrium
+payoff is captured at a symmetric NE. We provide a complete polyhedral
+characterization of all the NE for the two-buyer market game. Surprisingly, all
+the NE of this game turn out to be symmetric and the corresponding payoffs
+constitute a piecewise linear concave curve. We also study the correlated
+equilibria of this game and show that third-party mediation does not help to
+achieve a better payoff than NE payoffs.
+
+
+Rank-1 Bi-matrix Games: A Homeomorphism and a Polynomial Time Algorithm
+
+  Given a rank-1 bimatrix game (A,B), i.e., where rank(A+B)=1, we construct a
+suitable linear subspace of the rank-1 game space and show that this subspace
+is homeomorphic to its Nash equilibrium correspondence. Using this
+homeomorphism, we give the first polynomial time algorithm for computing an
+exact Nash equilibrium of a rank-1 bimatrix game. This settles an open question
+posed in Kannan and Theobald (SODA 2007) and Theobald (2007). In addition, we
+give a novel algorithm to enumerate all the Nash equilibria of a rank-1 game
+and show that a similar technique may also be applied for finding a Nash
+equilibrium of any bimatrix game. This technique also proves the existence,
+oddness and the index theorem of Nash equilibria in a bimatrix game. Further,
+we extend the rank-1 homeomorphism result to a fixed rank game space, and give
+a fixed point formulation on $[0,1]^k$ for solving a rank-k game. The
+homeomorphism and the fixed point formulation are piece-wise linear and
+considerably simpler than the classical constructions.
+
+
+Mutation, Sexual Reproduction and Survival in Dynamic Environments
+
+  A new approach to understanding evolution [Val09], namely viewing it through
+the lens of computation, has already started yielding new insights, e.g.,
+natural selection under sexual reproduction can be interpreted as the
+Multiplicative Weight Update (MWU) Algorithm in coordination games played among
+genes [CLPV14]. Using this machinery, we study the role of mutation in changing
+environments in the presence of sexual reproduction. Following [WVA05], we
+model changing environments via a Markov chain, with the states representing
+environments, each with its own fitness matrix. In this setting, we show that
+in the absence of mutation, the population goes extinct, but in the presence of
+mutation, the population survives with positive probability. On the way to
+proving the above theorem, we need to establish some facts about dynamics in
+games. We provide the first, to our knowledge, polynomial convergence bound for
+noisy MWU in a coordination game. Finally, we also show that in static
+environments, sexual evolution with mutation converges, for any level of
+mutation.
+
+
+A New Class of Combinatorial Markets with Covering Constraints:
+  Algorithms and Applications
+
+  We introduce a new class of combinatorial markets in which agents have
+covering constraints over resources required and are interested in delay
+minimization. Our market model is applicable to several settings including
+scheduling, cloud computing, and communicating over a network. This model is
+quite different from the traditional models, to the extent that neither do the
+classical equilibrium existence results seem to apply to it nor do any of the
+efficient algorithmic techniques developed to compute equilibria seem to apply
+directly. We give a proof of existence of equilibrium and a polynomial time
+algorithm for finding one, drawing heavily on techniques from LP duality and
+submodular minimization. We observe that in our market model, the set of
+equilibrium prices could be a connected, non-convex set. To the best of our
+knowledge, this is the first natural example of the phenomenon where the set of
+solutions could have such complicated structure, yet there is a combinatorial
+polynomial time algorithm to find one. Finally, we show that our model inherits
+many of the fairness properties of traditional equilibrium models.
+
+
+Universal Growth in Production Economies
+
+  We consider a simple variant of the von Neumann model of an expanding
+economy, in which multiple producers make goods according to their production
+function. The players trade their goods at the market and then use the bundles
+acquired for the production in the next round. We study a simple decentralized
+dynamic---known as proportional response---in which players update their bids
+proportionally to how useful the investments were in the past round.
+  We show this dynamic leads to growth of the economy in the long term
+(whenever growth is possible) but also creates unbounded inequality, i.e. very
+rich and very poor players emerge. We analyze several other phenomena, such as
+how the relation of a player with others influences its development and the
+Gini index of the system.
+  One of the key technical findings is that the players learn a global feature
+of the network (the optimal cycle) in a decentralized way, while interacting
+locally with their direct neighbors. We obtain this by studying the volume in
+the resulting dynamical system and showing that the volume of each cycle
+expands or contracts by a constant factor in each round.
+
+
+Maximizing Profit with Convex Costs in the Random-order Model
+
+  Suppose a set of requests arrives online: each request gives some value $v_i$
+if accepted, but requires using some amount of each of $d$ resources. Our cost
+is a convex function of the vector of total utilization of these $d$ resources.
+Which requests should be accept to maximize our profit, i.e., the sum of values
+of the accepted demands, minus the convex cost?
+  We consider this problem in the random-order a.k.a. secretary model, and show
+an $O(d)$-competitive algorithm for the case where the convex cost function is
+also supermodular. If the set of accepted demands must also be independent in a
+given matroid, we give an $O(d^3 \alpha)$-competitive algorithm for the
+supermodular case, and an improved $O(d^2\alpha)$ if the convex cost function
+is also separable. Here $\alpha$ is the competitive ratio of the best algorithm
+for the submodular secretary problem. These extend and improve previous results
+known for this problem. Our techniques are simple but use powerful ideas from
+convex duality, which give clean interpretations of existing work, and allow us
+to give the extensions and improvements.
+
+
+Performance Metric Elicitation from Pairwise Classifier Comparisons
+
+  Given a binary prediction problem, which performance metric should the
+classifier optimize? We address this question by formalizing the problem of
+Metric Elicitation. The goal of metric elicitation is to discover the
+performance metric of a practitioner, which reflects her innate rewards (costs)
+for correct (incorrect) classification. In particular, we focus on eliciting
+binary classification performance metrics from pairwise feedback, where a
+practitioner is queried to provide relative preference between two classifiers.
+By exploiting key geometric properties of the space of confusion matrices, we
+obtain provably query efficient algorithms for eliciting linear and
+linear-fractional performance metrics. We further show that our method is
+robust to feedback and finite sample noise.
+
+
+Fast Algorithms for Rank-1 Bimatrix Games
+
+  The rank of a bimatrix game is the matrix rank of the sum of the two payoff
+matrices. For a game of rank k, the set of its Nash equilibria is the
+intersection of a generically one-dimensional set of equilibria of
+parameterized games of rank k-1 with a hyperplane. We comprehensively analyze
+games of rank one. They are economonically more interesting than zero-sum games
+(which have rank zero), but are nearly as easy to solve. One equilibrium of a
+rank-1 game can be found in polynomial time. All equilibria of a rank-1 game
+can be found by path-following, which finds only one equilibrium of a bimatrix
+game. The number of equilibria of a rank-1 game may be exponential. We also
+present a new rank-preserving homeomorphism between bimatrix games and their
+equilibrium correspondence.
+
+
+Natural Selection as an Inhibitor of Genetic Diversity: Multiplicative
+  Weights Updates Algorithm and a Conjecture of Haploid Genetics
+
+  In a recent series of papers a surprisingly strong connection was discovered
+between standard models of evolution in mathematical biology and Multiplicative
+Weights Updates Algorithm, a ubiquitous model of online learning and
+optimization. These papers establish that mathematical models of biological
+evolution are tantamount to applying discrete Multiplicative Weights Updates
+Algorithm, a close variant of MWUA, on coordination games. This connection
+allows for introducing insights from the study of game theoretic dynamics into
+the field of mathematical biology. Using these results as a stepping stone, we
+show that mathematical models of haploid evolution imply the extinction of
+genetic diversity in the long term limit, a widely believed conjecture in
+genetics. In game theoretic terms we show that in the case of coordination
+games, under minimal genericity assumptions, discrete MWUA converges to pure
+Nash equilibria for all but a zero measure of initial conditions. This result
+holds despite the fact that mixed Nash equilibria can be exponentially (or even
+uncountably) many, completely dominating in number the set of pure Nash
+equilibria. Thus, in haploid organisms the long term preservation of genetic
+diversity needs to be safeguarded by other evolutionary mechanisms such as
+mutations and speciation.
+
+
+To Give or Not to Give: Fair Division for Single Minded Valuations
+
+  Single minded agents have strict preferences, in which a bundle is acceptable
+only if it meets a certain demand. Such preferences arise naturally in
+scenarios such as allocating computational resources among users, where the
+goal is to fairly serve as many requests as possible. In this paper we study
+the fair division problem for such agents, which is harder to handle due to
+discontinuity and complementarities of the preferences.
+  Our solution concept---the competitive allocation from equal incomes
+(CAEI)---is inspired from market equilibria and implements fair outcomes
+through a pricing mechanism. We study the existence and computation of CAEI for
+multiple divisible goods, cake cutting, and multiple discrete goods. For the
+first two scenarios we show that existence of CAEI solutions is guaranteed,
+while for the third we give a succinct characterization of instances that admit
+this solution; then we give an efficient algorithm to find one in all three
+cases. Maximizing social welfare turns out to be NP-hard in general, however we
+obtain efficient algorithms for (i) divisible and discrete goods when the
+number of different \emph{types} of players is a constant, (ii) cake cutting
+with contiguous demands, for which we establish an interesting connection with
+interval scheduling, and (iii) cake cutting with a constant number of players
+with arbitrary demands.
+  Our solution is useful more generally, when the players have a target set of
+desired goods, and very small positive values for any bundle not containing
+their target set.
+
+
+Bilinear Games: Polynomial Time Algorithms for Rank Based Subclasses
+
+  Motivated by the sequence form formulation of Koller et al. (GEB'96), this
+paper defines {\em bilinear games}, and proposes efficient algorithms for its
+rank based subclasses. Bilinear games are two-player non-cooperative
+single-shot games with compact polytopal strategy sets and two payoff matrices
+(A,B) such that when (x,y) is the played strategy profile, the payoffs of the
+players are xAy and xBy respectively. We show that bilinear games are very
+general and capture many interesting classes of games like bimatrix games, two
+player Bayesian games, polymatrix games, two-player extensive form games with
+perfect recall etc. as special cases, and hence are hard to solve in general.
+  Existence of a (symmetric) Nash equilibrium for (symmetric) bilinear games
+follow directly from the known results. For a given bilinear game, we define
+its {\em Best Response Polytopes} (BRPs) and characterize the set of Nash
+equilibria as {\em fully-labeled} pairs in the BRPs. We consider a rank based
+hierarchy of bilinear games, where rank of a game (A,B) is defined as
+rank(A+B). In this paper, we give polynomial time algorithms to compute Nash
+equilibrium for special classes of bilinear games:
+  (i) Rank-1 games (i.e., rank(A+B)=1). (ii) FPTAS for constant rank games
+(i.e., rank(A+B) is constant). (iii) When rank(A) or rank(B) is constant. This
+improves the results by Lipton et al. (EC'03) and Kannan et al. (ET'09), for
+bimatrix games with low rank matrices.
+
+
+The Complexity of Genetic Diversity
+
+  A key question in biological systems is whether genetic diversity persists in
+the long run under evolutionary competition or whether a single dominant
+genotype emerges. Classic work by Kalmus in 1945 has established that even in
+simple diploid species (species with two chromosomes) diversity can be
+guaranteed as long as the heterozygote individuals enjoy a selective advantage.
+Despite the classic nature of the problem, as we move towards increasingly
+polymorphic traits (e.g. human blood types) predicting diversity and
+understanding its implications is still not fully understood. Our key
+contribution is to establish complexity theoretic hardness results implying
+that even in the textbook case of single locus diploid models predicting
+whether diversity survives or not given its fitness landscape is
+algorithmically intractable. We complement our results by establishing that
+under randomly chosen fitness landscapes diversity survives with significant
+probability. Our results are structurally robust along several dimensions
+(e.g., choice of parameter distribution, different definitions of
+stability/persistence, restriction to typical subclasses of fitness
+landscapes). Technically, our results exploit connections between game theory,
+nonlinear dynamical systems, complexity theory and biology and establish
+hardness results for predicting the evolution of a deterministic variant of the
+well known multiplicative weights update algorithm in symmetric coordination
+games which could be of independent interest.
+
+
+CLS: New Problems and Completeness
+
+  The complexity class CLS was introduced by Daskalakis and Papadimitriou with
+the goal of capturing the complexity of some well-known problems in
+PPAD$~\cap~$PLS that have resisted, in some cases for decades, attempts to put
+them in polynomial time. No complete problem was known for CLS, and in previous
+work, the problems ContractionMap, i.e., the problem of finding an approximate
+fixpoint of a contraction map, and PLCP, i.e., the problem of solving a
+P-matrix Linear Complementarity Problem, were identified as prime candidates.
+  First, we present a new CLS-complete problem MetaMetricContractionMap, which
+is closely related to the ContractionMap. Second, we introduce
+EndOfPotentialLine, which captures aspects of PPAD and PLS directly via a
+monotonic directed path, and show that EndOfPotentialLine is in CLS via a
+two-way reduction to EndOfMeteredLine. The latter was defined to keep track of
+how far a vertex is on the PPAD path via a restricted potential function.
+Third, we reduce PLCP to EndOfPotentialLine, thus making EndOfPotentialLine and
+EndOfMeteredLine at least as likely to be hard for CLS as PLCP. This last
+result leverages the monotonic structure of Lemke paths for PLCP problems,
+making EndOfPotentialLine a likely candidate to capture the exact complexity of
+PLCP; we note that the structure of Lemke-Howson paths for finding a Nash
+equilibrium in a two-player game very directly motivated the definition of the
+complexity class PPAD, which eventually ended up capturing this problem's
+complexity exactly.
+
+
+Social welfare and profit maximization from revealed preferences
+
+  Consider the seller's problem of finding optimal prices for her $n$
+(divisible) goods when faced with a set of $m$ consumers, given that she can
+only observe their purchased bundles at posted prices, i.e., revealed
+preferences. We study both social welfare and profit maximization with revealed
+preferences. Although social welfare maximization is a seemingly non-convex
+optimization problem in prices, we show that (i) it can be reduced to a dual
+convex optimization problem in prices, and (ii) the revealed preferences can be
+interpreted as supergradients of the concave conjugate of valuation, with which
+subgradients of the dual function can be computed. We thereby obtain a simple
+subgradient-based algorithm for strongly concave valuations and convex cost,
+with query complexity $O(m^2/\epsilon^2)$, where $\epsilon$ is the additive
+difference between the social welfare induced by our algorithm and the optimum
+social welfare. We also study social welfare maximization under the online
+setting, specifically the random permutation model, where consumers arrive
+one-by-one in a random order. For the case where consumer valuations can be
+arbitrary continuous functions, we propose a price posting mechanism that
+achieves an expected social welfare up to an additive factor of $O(\sqrt{mn})$
+from the maximum social welfare. Finally, for profit maximization (which may be
+non-convex in simple cases), we give nearly matching upper and lower bounds on
+the query complexity for separable valuations and cost (i.e., each good can be
+treated independently).
+
+
+Sum-of-Squares meets Nash: Optimal Lower Bounds for Finding any
+  Equilibrium
+
+  Several works have shown unconditional hardness (via integrality gaps) of
+computing equilibria using strong hierarchies of convex relaxations. Such
+results however only apply to the problem of computing equilibria that optimize
+a certain objective function and not to the (arguably more fundamental) task of
+finding \emph{any} equilibrium.
+  We present an algorithmic model based on the sum-of-squares (SoS) hierarchy
+that allows escaping this inherent limitation of integrality gaps. In this
+model, algorithms access the input game only through a relaxed solution to the
+natural SoS relaxation for computing equilibria. They can then adaptively
+construct a list of candidate solutions and invoke a verification oracle to
+check if any candidate on the list is a solution. This model captures most
+well-studied approximation algorithms such as those for Max-Cut, Sparsest Cut,
+and Unique-Games.
+  The state-of-the-art algorithms for computing exact and approximate
+equilibria in two-player, n-strategy games are captured in this model and
+require that at least one of i) size (~ running time) of the SoS relaxation or
+ii) the size of the list of candidates, be at least $2^{\Omega(n)}$ and
+$n^{\Omega(\log{(n)})}$ respectively. Our main result shows a lower bound that
+matches these upper bound up to constant factors in the exponent.
+  This can be interpreted as an unconditional confirmation, in our restricted
+algorithmic framework, of Rubinstein's recent conditional hardness \cite{Rub}
+for computing approximate equilibria.
+  Our proof strategy involves constructing a family of games that all share a
+common sum-of-squares solution but every (approximate) equilibrium of one game
+is far from every (approximate) equilibrium of any other game in the family.
+
+
+Resource Allocation Game on Social Networks: Best Response Dynamics and
+  Convergence
+
+  The decisions that human beings make to allocate time has significant bearing
+on economic output and to the sustenance of social networks. The time
+allocation problem motivates our formal analysis of the resource allocation
+game, where agents on a social network, who have asymmetric, private
+interaction preferences, make decisions on how to allocate time, a bounded
+endowment, over their neighbors. Unlike the well-known opinion formation game
+on a social network, our game appears not to be a potential game, and the
+Best-Response dynamics is non-differentiable making the analysis of
+Best-Response dynamics non-trivial.
+  In our game, we consider two types of player behavior, namely optimistic or
+pessimistic, based on how they use their time endowment over their neighbors.
+To analyze Best-Response dynamics, we circumvent the problem of the game not
+being a potential game, through the lens of a novel two-level potential
+function approach. We show that the Best-Response dynamics converges point-wise
+to a Nash Equilibrium when players are all: optimistic; pessimistic; a mix of
+both types. Finally, we show that the Nash Equilibrium set is non-convex but
+connected, and Price of Anarchy is unbounded while Price of Stability is one.
+Extensive simulations over a stylized grid reveals that the distribution of
+quality of the convergence points is unimodal-we conjecture that presence of
+unimodality is tied to the connectedness of Nash Equilibrium.
+
+
+Nash Social Welfare Approximation for Strategic Agents
+
+  The fair division of resources is an important age-old problem that has led
+to a rich body of literature. At the center of this literature lies the
+question of whether there exist fair mechanisms despite strategic behavior of
+the agents. A fundamental objective function used for measuring fair outcomes
+is the Nash social welfare, defined as the geometric mean of the agent
+utilities. This objective function is maximized by widely known solution
+concepts such as Nash bargaining and the competitive equilibrium with equal
+incomes. In this work we focus on the question of (approximately) implementing
+the Nash social welfare. The starting point of our analysis is the Fisher
+market, a fundamental model of an economy, whose benchmark is precisely the
+(weighted) Nash social welfare. We begin by studying two extreme classes of
+valuations functions, namely perfect substitutes and perfect complements, and
+find that for perfect substitutes, the Fisher market mechanism has a constant
+approximation: at most 2 and at least e1e. However, for perfect complements,
+the Fisher market does not work well, its bound degrading linearly with the
+number of players.
+  Strikingly, the Trading Post mechanism---an indirect market mechanism also
+known as the Shapley-Shubik game---has significantly better performance than
+the Fisher market on its own benchmark. Not only does Trading Post achieve an
+approximation of 2 for perfect substitutes, but this bound holds for all
+concave utilities and becomes arbitrarily close to optimal for Leontief
+utilities (perfect complements), where it reaches $(1+\epsilon)$ for every
+$\epsilon > 0$. Moreover, all the Nash equilibria of the Trading Post mechanism
+are pure for all concave utilities and satisfy an important notion of fairness
+known as proportionality.
+
+
+End of Potential Line
+
+  We introduce the problem EndOfPotentialLine and the corresponding complexity
+class EOPL of all problems that can be reduced to it in polynomial time. This
+class captures problems that admit a single combinatorial proof of their joint
+membership in the complexity classes PPAD of fixpoint problems and PLS of local
+search problems. EOPL is a combinatorially-defined alternative to the class CLS
+(for Continuous Local Search), which was introduced in with the goal of
+capturing the complexity of some well-known problems in PPAD $\cap$ PLS that
+have resisted, in some cases for decades, attempts to put them in polynomial
+time. Two of these are Contraction, the problem of finding a fixpoint of a
+contraction map, and P-LCP, the problem of solving a P-matrix Linear
+Complementarity Problem.
+  We show that EndOfPotentialLine is in CLS via a two-way reduction to
+EndOfMeteredLine. The latter was defined in to show query and cryptographic
+lower bounds for CLS. Our two main results are to show that both PL-Contraction
+(Piecewise-Linear Contraction) and P-LCP are in EOPL. Our reductions imply that
+the promise versions of PL-Contraction and P-LCP are in the promise class
+UniqueEOPL, which corresponds to the case of a single potential line. This also
+shows that simple-stochastic, discounted, mean-payoff, and parity games are in
+EOPL.
+  Using the insights from our reduction for PL-Contraction, we obtain the first
+polynomial-time algorithms for finding fixed points of contraction maps in
+fixed dimension for any $\ell_p$ norm, where previously such algorithms were
+only known for the $\ell_2$ and $\ell_\infty$ norms. Our reduction from P-LCP
+to EndOfPotentialLine allows a technique of Aldous to be applied, which in turn
+gives the fastest-known randomized algorithm for the P-LCP.
+
+
+Smoothed Efficient Algorithms and Reductions for Network Coordination
+  Games
+
+  Worst-case hardness results for most equilibrium computation problems have
+raised the need for beyond-worst-case analysis. To this end, we study the
+smoothed complexity of finding pure Nash equilibria in Network Coordination
+Games, a PLS-complete problem in the worst case. This is a potential game where
+the sequential-better-response algorithm is known to converge to a pure NE,
+albeit in exponential time. First, we prove polynomial (resp. quasi-polynomial)
+smoothed complexity when the underlying game graph is a complete (resp.
+arbitrary) graph, and every player has constantly many strategies. We note that
+the complete graph case is reminiscent of perturbing all parameters, a common
+assumption in most known smoothed analysis results.
+  Second, we define a notion of smoothness-preserving reduction among search
+problems, and obtain reductions from $2$-strategy network coordination games to
+local-max-cut, and from $k$-strategy games (with arbitrary $k$) to
+local-max-cut up to two flips. The former together with the recent result of
+[BCC18] gives an alternate $O(n^8)$-time smoothed algorithm for the
+$2$-strategy case. This notion of reduction allows for the extension of
+smoothed efficient algorithms from one problem to another.
+  For the first set of results, we develop techniques to bound the probability
+that an (adversarial) better-response sequence makes slow improvements on the
+potential. Our approach combines and generalizes the local-max-cut approaches
+of [ER14,ABPW17] to handle the multi-strategy case: it requires a careful
+definition of the matrix which captures the increase in potential, a tighter
+union bound on adversarial sequences, and balancing it with good enough rank
+bounds. We believe that the approach and notions developed herein could be of
+interest in addressing the smoothed complexity of other potential and/or
+congestion games.
+
+
+Unique End of Potential Line
+
+  This paper studies the complexity of problems in PPAD $\cap$ PLS that have
+unique solutions. Three well-known examples of such problems are the problem of
+finding a fixpoint of a contraction map, finding the unique sink of a Unique
+Sink Orientation (USO), and solving the P-matrix Linear Complementarity Problem
+(P-LCP). Each of these are promise-problems, and when the promise holds, they
+always possess unique solutions.
+  We define the complexity class UEOPL to capture problems of this type. We
+first define a class that we call EOPL, which consists of all problems that can
+be reduced to End-of-Potential-Line. This problem merges the canonical
+PPAD-complete problem End-of-Line, with the canonical PLS-complete problem
+Sink-of-Dag, and so EOPL captures problems that can be solved by a
+line-following algorithm that also simultaneously decreases a potential
+function.
+  Promise-UEOPL is a promise-subclass of EOPL in which the line in the
+End-of-Potential-Line instance is guaranteed to be unique via a promise. We
+turn this into a non-promise class UEOPL, by adding an extra solution type to
+EOPL that captures any pair of points that are provably on two different lines.
+  We show that UEOPL $\subseteq$ EOPL $\subseteq$ CLS, and that all of our
+motivating problems are contained in UEOPL: specifically USO, P-LCP, and
+finding a fixpoint of a Piecewise-Linear Contraction under an $\ell_p$-norm all
+lie in UEOPL. Our results also imply that parity games, mean-payoff games,
+discounted games, and simple-stochastic games lie in UEOPL.
+  All of our containment results are proved via a reduction to a problem that
+we call One-Permutation Discrete Contraction (OPDC). This problem is motivated
+by a discretized version of contraction, but it is also closely related to the
+USO problem. We show that OPDC lies in UEOPL, and we are also able to show that
+OPDC is UEOPL-complete.
+
+

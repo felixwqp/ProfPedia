@@ -1,0 +1,210 @@
+Simple, Fast, and Scalable Reachability Oracle
+
+  A reachability oracle (or hop labeling) assigns each vertex v two sets of
+vertices: Lout(v) and Lin(v), such that u reaches v iff Lout(u) \cap Lin(v)
+\neq \emptyset. Despite their simplicity and elegance, reachability oracles
+have failed to achieve efficiency in more than ten years since their
+introduction: the main problem is high construction cost, which stems from a
+set-cover framework and the need to materialize transitive closure. In this
+paper, we present two simple and efficient labeling algorithms,
+Hierarchical-Labeling and Distribution-Labeling, which can work onmassive
+real-world graphs: their construction time is an order of magnitude faster than
+the setcover based labeling approach, and transitive closure materialization is
+not needed. On large graphs, their index sizes and their query performance can
+now beat the state-of-the-art transitive closure compression and online search
+approaches.
+
+
+Limiting the Neighborhood: De-Small-World Network for Outbreak
+  Prevention
+
+  In this work, we study a basic and practically important strategy to help
+prevent and/or delay an outbreak in the context of network: limiting the
+contact between individuals. In this paper, we introduce the average
+neighborhood size as a new measure for the degree of being small-world and
+utilize it to formally define the desmall- world network problem. We also prove
+the NP-hardness of the general reachable pair cut problem and propose a greedy
+edge betweenness based approach as the benchmark in selecting the candidate
+edges for solving our problem. Furthermore, we transform the de-small-world
+network problem as an OR-AND Boolean function maximization problem, which is
+also an NP-hardness problem. In addition, we develop a numerical relaxation
+approach to solve the Boolean function maximization and the de-small-world
+problem. Also, we introduce the short-betweenness, which measures the edge
+importance in terms of all short paths with distance no greater than a certain
+threshold, and utilize it to speed up our numerical relaxation approach. The
+experimental evaluation demonstrates the effectiveness and efficiency of our
+approaches.
+
+
+Network Backbone Discovery Using Edge Clustering
+
+  In this paper, we investigate the problem of network backbone discovery. In
+complex systems, a "backbone" takes a central role in carrying out the system
+functionality and carries the bulk of system traffic. It also both simplifies
+and highlight underlying networking structure. Here, we propose an integrated
+graph theoretical and information theoretical network backbone model. We
+develop an efficient mining algorithm based on Kullback-Leibler divergence
+optimization procedure and maximal weight connected subgraph discovery
+procedure. A detailed experimental evaluation demonstrates both the
+effectiveness and efficiency of our approach. The case studies in the real
+world domain further illustrates the usefulness of the discovered network
+backbones.
+
+
+Preserving Differential Privacy in Adversarial Learning with Provable
+  Robustness
+
+  In this paper, we aim to develop a novel mechanism to preserve differential
+privacy (DP) in adversarial learning for deep neural networks, with provable
+robustness to adversarial examples. We leverage the sequential composition
+theory in differential privacy, to establish a new connection between
+differential privacy preservation and provable robustness. To address the
+trade-off among model utility, privacy loss, and robustness, we design an
+original, differentially private, adversarial objective function, based on the
+post-processing property in differential privacy, to tighten the sensitivity of
+our model. Theoretical analysis and thorough evaluations show that our
+mechanism notably improves the robustness of DP deep neural networks.
+
+
+Hub-Accelerator: Fast and Exact Shortest Path Computation in Large
+  Social Networks
+
+  Shortest path computation is one of the most fundamental operations for
+managing and analyzing large social networks. Though existing techniques are
+quite effective for finding the shortest path on large but sparse road
+networks, social graphs have quite different characteristics: they are
+generally non-spatial, non-weighted, scale-free, and they exhibit small-world
+properties in addition to their massive size. In particular, the existence of
+hubs, those vertices with a large number of connections, explodes the search
+space, making the shortest path computation surprisingly challenging. In this
+paper, we introduce a set of novel techniques centered around hubs,
+collectively referred to as the Hub-Accelerator framework, to compute the
+k-degree shortest path (finding the shortest path between two vertices if their
+distance is within k). These techniques enable us to significantly reduce the
+search space by either greatly limiting the expansion scope of hubs (using the
+novel distance- preserving Hub-Network concept) or completely pruning away the
+hubs in the online search (using the Hub2-Labeling approach). The
+Hub-Accelerator approaches are more than two orders of magnitude faster than
+BFS and the state-of-the-art approximate shortest path method Sketch for the
+shortest path computation. The Hub- Network approach does not introduce
+additional index cost with light pre-computation cost; the index size and index
+construction cost of Hub2-Labeling are also moderate and better than or
+comparable to the approximation indexing Sketch method.
+
+
+Large Scale Real-time Ridesharing with Service Guarantee on Road
+  Networks
+
+  The mean occupancy rates of personal vehicle trips in the United States is
+only 1.6 persons per vehicle mile. Urban traffic gridlock is a familiar scene.
+Ridesharing has the potential to solve many environmental, congestion, and
+energy problems. In this paper, we introduce the problem of large scale
+real-time ridesharing with service guarantee on road networks. Servers and trip
+requests are dynamically matched while waiting time and service time
+constraints of trips are satisfied. We first propose two basic algorithms: a
+branch-and-bound algorithm and an integer programing algorithm. However, these
+algorithm structures do not adapt well to the dynamic nature of the ridesharing
+problem. Thus, we then propose a kinetic tree algorithm capable of better
+scheduling dynamic requests and adjusting routes on-the-fly. We perform
+experiments on a large real taxi dataset from Shanghai. The results show that
+the kinetic tree algorithm is faster than other algorithms in response time.
+
+
+Distance Preserving Graph Simplification
+
+  Large graphs are difficult to represent, visualize, and understand. In this
+paper, we introduce "gate graph" - a new approach to perform graph
+simplification. A gate graph provides a simplified topological view of the
+original graph. Specifically, we construct a gate graph from a large graph so
+that for any "non-local" vertex pair (distance higher than some threshold) in
+the original graph, their shortest-path distance can be recovered by
+consecutive "local" walks through the gate vertices in the gate graph. We
+perform a theoretical investigation on the gate-vertex set discovery problem.
+We characterize its computational complexity and reveal the upper bound of
+minimum gate-vertex set using VC-dimension theory. We propose an efficient
+mining algorithm to discover a gate-vertex set with guaranteed logarithmic
+bound. We further present a fast technique for pruning redundant edges in a
+gate graph. The detailed experimental results using both real and synthetic
+graphs demonstrate the effectiveness and efficiency of our approach.
+
+
+Relational Approach for Shortest Path Discovery over Large Graphs
+
+  With the rapid growth of large graphs, we cannot assume that graphs can still
+be fully loaded into memory, thus the disk-based graph operation is inevitable.
+In this paper, we take the shortest path discovery as an example to investigate
+the technique issues when leveraging existing infrastructure of relational
+database (RDB) in the graph data management. Based on the observation that a
+variety of graph search queries can be implemented by iterative operations
+including selecting frontier nodes from visited nodes, making expansion from
+the selected frontier nodes, and merging the expanded nodes into the visited
+ones, we introduce a relational FEM framework with three corresponding
+operators to implement graph search tasks in the RDB context. We show new
+features such as window function and merge statement introduced by recent SQL
+standards can not only simplify the expression but also improve the performance
+of the FEM framework. In addition, we propose two optimization strategies
+specific to shortest path discovery inside the FEM framework. First, we take a
+bi-directional set Dijkstra's algorithm in the path finding. The bi-directional
+strategy can reduce the search space, and set Dijkstra's algorithm finds the
+shortest path in a set-at-a-time fashion. Second, we introduce an index named
+SegTable to preserve the local shortest segments, and exploit SegTable to
+further improve the performance. The final extensive experimental results
+illustrate our relational approach with the optimization strategies achieves
+high scalability and performance.
+
+
+Axiomatic Ranking of Network Role Similarity
+
+  A key task in social network and other complex network analysis is role
+analysis: describing and categorizing nodes according to how they interact with
+other nodes. Two nodes have the same role if they interact with equivalent sets
+of neighbors. The most fundamental role equivalence is automorphic equivalence.
+Unfortunately, the fastest algorithms known for graph automorphism are
+nonpolynomial. Moreover, since exact equivalence may be rare, a more meaningful
+task is to measure the role similarity between any two nodes. This task is
+closely related to the structural or link-based similarity problem that SimRank
+attempts to solve. However, SimRank and most of its offshoots are not
+sufficient because they do not fully recognize automorphically or structurally
+equivalent nodes. In this paper we tackle two problems. First, what are the
+necessary properties for a role similarity measure or metric? Second, how can
+we derive a role similarity measure satisfying these properties? For the first
+problem, we justify several axiomatic properties necessary for a role
+similarity measure or metric: range, maximal similarity, automorphic
+equivalence, transitive similarity, and the triangle inequality. For the second
+problem, we present RoleSim, a new similarity metric with a simple iterative
+computational method. We rigorously prove that RoleSim satisfies all the
+axiomatic properties. We also introduce an iceberg RoleSim algorithm which can
+guarantee to discover all pairs with RoleSim score no less than a user-defined
+threshold $\theta$ without computing the RoleSim for every pair. We demonstrate
+the superior interpretative power of RoleSim on both both synthetic and real
+datasets.
+
+
+A Deep Embedding Model for Co-occurrence Learning
+
+  Co-occurrence Data is a common and important information source in many
+areas, such as the word co-occurrence in the sentences, friends co-occurrence
+in social networks and products co-occurrence in commercial transaction data,
+etc, which contains rich correlation and clustering information about the
+items. In this paper, we study co-occurrence data using a general energy-based
+probabilistic model, and we analyze three different categories of energy-based
+model, namely, the $L_1$, $L_2$ and $L_k$ models, which are able to capture
+different levels of dependency in the co-occurrence data. We also discuss how
+several typical existing models are related to these three types of energy
+models, including the Fully Visible Boltzmann Machine (FVBM) ($L_2$), Matrix
+Factorization ($L_2$), Log-BiLinear (LBL) models ($L_2$), and the Restricted
+Boltzmann Machine (RBM) model ($L_k$). Then, we propose a Deep Embedding Model
+(DEM) (an $L_k$ model) from the energy model in a \emph{principled} manner.
+Furthermore, motivated by the observation that the partition function in the
+energy model is intractable and the fact that the major objective of modeling
+the co-occurrence data is to predict using the conditional probability, we
+apply the \emph{maximum pseudo-likelihood} method to learn DEM. In consequence,
+the developed model and its learning method naturally avoid the above
+difficulties and can be easily used to compute the conditional probability in
+prediction. Interestingly, our method is equivalent to learning a special
+structured deep neural network using back-propagation and a special sampling
+strategy, which makes it scalable on large-scale datasets. Finally, in the
+experiments, we show that the DEM can achieve comparable or better results than
+state-of-the-art methods on datasets across several application domains.
+
+

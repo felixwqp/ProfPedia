@@ -1,0 +1,966 @@
+Strong Nash equilibria and mixed strategies
+
+  In this paper we consider strong Nash equilibria, in mixed strategies, for
+finite games. Any strong Nash equilibrium outcome is Pareto efficient for each
+coalition. First, we analyze the two--player setting. Our main result, in its
+simplest form, states that if a game has a strong Nash equilibrium with full
+support (that is, both players randomize among all pure strategies), then the
+game is strictly competitive. In order to get our result we use the
+indifference principle fulfilled by any Nash equilibrium, and the classical KKT
+conditions (in the vector setting), that are necessary conditions for Pareto
+efficiency. Our characterization enables us to design a
+strong-Nash-equilibrium-finding algorithm with complexity in
+Smoothed-$\mathcal{P}$. So, this problem---that Conitzer and Sandholm
+[Conitzer, V., Sandholm, T., 2008. New complexity results about Nash
+equilibria. Games Econ. Behav. 63, 621--641] proved to be computationally hard
+in the worst case---is generically easy. Hence, although the worst case
+complexity of finding a strong Nash equilibrium is harder than that of finding
+a Nash equilibrium, once small perturbations are applied, finding a strong Nash
+is easier than finding a Nash equilibrium. Next we switch to the setting with
+more than two players. We demonstrate that a strong Nash equilibrium can exist
+in which an outcome that is strictly Pareto dominated by a Nash equilibrium
+occurs with positive probability. Finally, we prove that games that have a
+strong Nash equilibrium where at least one player puts positive probability on
+at least two pure strategies are extremely rare: they are of zero measure.
+
+
+Combining local search techniques and path following for bimatrix games
+
+  Computing a Nash equilibrium (NE) is a central task in computer science. An
+NE is a particularly appropriate solution concept for two-agent settings
+because coalitional deviations are not an issue. However, even in this case,
+finding an NE is PPAD-complete. In this paper, we combine path following
+algorithms with local search techniques to design new algorithms for finding
+exact and approximate NEs. We show that our algorithms largely outperform the
+state of the art and that almost all the known benchmark game classes are
+easily solvable or approximable (except for the GAMUT CovariantGameRand class).
+
+
+Common Voting Rules as Maximum Likelihood Estimators
+
+  Voting is a very general method of preference aggregation. A voting rule
+takes as input every voter's vote (typically, a ranking of the alternatives),
+and produces as output either just the winning alternative or a ranking of the
+alternatives. One potential view of voting is the following. There exists a
+'correct' outcome (winner/ranking), and each voter's vote corresponds to a
+noisy perception of this correct outcome. If we are given the noise model, then
+for any vector of votes, we can
+
+
+Reduced Space and Faster Convergence in Imperfect-Information Games via
+  Regret-Based Pruning
+
+  Counterfactual Regret Minimization (CFR) is the most popular iterative
+algorithm for solving zero-sum imperfect-information games. Regret-Based
+Pruning (RBP) is an improvement that allows poorly-performing actions to be
+temporarily pruned, thus speeding up CFR. We introduce Total RBP, a new form of
+RBP that reduces the space requirements of CFR as actions are pruned. We prove
+that in zero-sum games it asymptotically prunes any action that is not part of
+a best response to some Nash equilibrium. This leads to provably faster
+convergence and lower space requirements. Experiments show that Total RBP
+results in an order of magnitude reduction in space, and the reduction factor
+increases with game size.
+
+
+On the Verification and Computation of Strong Nash Equilibrium
+
+  Computing equilibria of games is a central task in computer science. A large
+number of results are known for \emph{Nash equilibrium} (NE). However, these
+can be adopted only when coalitions are not an issue. When instead agents can
+form coalitions, NE is inadequate and an appropriate solution concept is
+\emph{strong Nash equilibrium} (SNE). Few computational results are known about
+SNE. In this paper, we first study the problem of verifying whether a strategy
+profile is an SNE, showing that the problem is in $\mathcal{P}$. We then design
+a spatial branch--and--bound algorithm to find an SNE, and we experimentally
+evaluate the algorithm.
+
+
+Effectiveness of Preference Elicitation in Combinatorial Auctions
+
+  Combinatorial auctions where agents can bid on bundles of items are desirable
+because they allow the agents to express complementarity and substitutability
+between the items. However, expressing one's preferences can require bidding on
+all bundles. Selective incremental preference elicitation by the auctioneer was
+recently proposed to address this problem (Conen & Sandholm 2001), but the idea
+was not evaluated. In this paper we show, experimentally and theoretically,
+that automated elicitation provides a drastic benefit. In all of the
+elicitation schemes under study, as the number of items for sale increases, the
+amount of information elicited is a vanishing fraction of the information
+collected in traditional ``direct revelation mechanisms'' where bidders reveal
+all their valuation information. Most of the elicitation schemes also maintain
+the benefit as the number of agents increases. We develop more effective
+elicitation policies for existing query types. We also present a new query type
+that takes the incremental nature of elicitation to a new level by allowing
+agents to give approximate answers that are refined only on an as-needed basis.
+In the process, we present methods for evaluating different types of
+elicitation policies.
+
+
+Vote Elicitation: Complexity and Strategy-Proofness
+
+  Preference elicitation is a central problem in AI, and has received
+significant attention in single-agent settings. It is also a key problem in
+multiagent systems, but has received little attention here so far. In this
+setting, the agents may have different preferences that often must be
+aggregated using voting. This leads to interesting issues because what, if any,
+information should be elicited from an agent depends on what other agents have
+revealed about their preferences so far.
+  In this paper we study effective elicitation, and its impediments, for the
+most common voting protocols. It turns out that in the Single Transferable Vote
+protocol, even knowing when to terminate elicitation is mathcal NP-complete,
+while this is easy for all the other protocols under study. Even for these
+protocols, determining how to elicit effectively is NP-complete, even with
+perfect suspicions about how the agents will vote. The exception is the
+Plurality protocol where such effective elicitation is easy.
+  We also show that elicitation introduces additional opportunities for
+strategic manipulation by the voters. We demonstrate how to curtail the space
+of elicitation schemes so that no such additional strategic issues arise.
+
+
+Complexity Results about Nash Equilibria
+
+  Noncooperative game theory provides a normative framework for analyzing
+strategic interactions. However, for the toolbox to be operational, the
+solutions it defines will have to be computed. In this paper, we provide a
+single reduction that 1) demonstrates NP-hardness of determining whether Nash
+equilibria with certain natural properties exist, and 2) demonstrates the
+#P-hardness of counting Nash equilibria (or connected sets of Nash equilibria).
+We also show that 3) determining whether a pure-strategy Bayes-Nash equilibrium
+exists is NP-hard, and that 4) determining whether a pure-strategy Nash
+equilibrium exists in a stochastic (Markov) game is PSPACE-hard even if the
+game is invisible (this remains NP-hard if the game is finite). All of our
+hardness results hold even if there are only two players and the game is
+symmetric.
+  Keywords: Nash equilibrium; game theory; computational complexity;
+noncooperative game theory; normal form game; stochastic game; Markov game;
+Bayes-Nash equilibrium; multiagent systems.
+
+
+Complexity of Mechanism Design
+
+  The aggregation of conflicting preferences is a central problem in multiagent
+systems. The key difficulty is that the agents may report their preferences
+insincerely. Mechanism design is the art of designing the rules of the game so
+that the agents are motivated to report their preferences truthfully and a
+(socially) desirable outcome is chosen. We propose an approach where a
+mechanism is automatically created for the preference aggregation setting at
+hand. This has several advantages, but the downside is that the mechanism
+design optimization problem needs to be solved anew each time. Focusing on
+settings where side payments are not possible, we show that the mechanism
+design problem is NP-complete for deterministic mechanisms. This holds both for
+dominant-strategy implementation and for Bayes-Nash implementation. We then
+show that if we allow randomized mechanisms, the mechanism design problem
+becomes tractable. In other words, the coordinator can tackle the computational
+complexity introduced by its uncertainty about the agents' preferences by
+making the agents face additional uncertainty. This comes at no loss, and in
+some cases at a gain, in the (social) objective.
+
+
+AWESOME: A General Multiagent Learning Algorithm that Converges in
+  Self-Play and Learns a Best Response Against Stationary Opponents
+
+  A satisfactory multiagent learning algorithm should, {\em at a minimum},
+learn to play optimally against stationary opponents and converge to a Nash
+equilibrium in self-play. The algorithm that has come closest, WoLF-IGA, has
+been proven to have these two properties in 2-player 2-action repeated
+games--assuming that the opponent's (mixed) strategy is observable. In this
+paper we present AWESOME, the first algorithm that is guaranteed to have these
+two properties in {\em all} repeated (finite) games. It requires only that the
+other players' actual actions (not their strategies) can be observed at each
+step. It also learns to play optimally against opponents that {\em eventually
+become} stationary. The basic idea behind AWESOME ({\em Adapt When Everybody is
+Stationary, Otherwise Move to Equilibrium}) is to try to adapt to the others'
+strategies when they appear stationary, but otherwise to retreat to a
+precomputed equilibrium strategy. The techniques used to prove the properties
+of AWESOME are fundamentally different from those used for previous algorithms,
+and may help in analyzing other multiagent learning algorithms also.
+
+
+Definition and Complexity of Some Basic Metareasoning Problems
+
+  In most real-world settings, due to limited time or other resources, an agent
+cannot perform all potentially useful deliberation and information gathering
+actions. This leads to the metareasoning problem of selecting such actions.
+Decision-theoretic methods for metareasoning have been studied in AI, but there
+are few theoretical results on the complexity of metareasoning.
+  We derive hardness results for three settings which most real metareasoning
+systems would have to encompass as special cases. In the first, the agent has
+to decide how to allocate its deliberation time across anytime algorithms
+running on different problem instances. We show this to be
+$\mathcal{NP}$-complete. In the second, the agent has to (dynamically) allocate
+its deliberation or information gathering resources across multiple actions
+that it has to choose among. We show this to be $\mathcal{NP}$-hard even when
+evaluating each individual action is extremely simple. In the third, the agent
+has to (dynamically) choose a limited number of deliberation or information
+gathering actions to disambiguate the state of the world. We show that this is
+$\mathcal{NP}$-hard under a natural restriction, and $\mathcal{PSPACE}$-hard in
+general.
+
+
+Complexity of Mechanism Design
+
+  The aggregation of conflicting preferences is a central problem in multiagent
+systems. The key difficulty is that the agents may report their preferences
+insincerely. Mechanism design is the art of designing the rules of the game so
+that the agents are motivated to report their preferences truthfully and a
+(socially) desirable outcome is chosen. We propose an approach where a
+mechanism is automatically created for the preference aggregation setting at
+hand. This has several advantages, but the downside is that the mechanism
+design optimization problem needs to be solved anew each time. Focusing on
+settings where side payments are not possible, we show that the mechanism
+design problem is NP-complete for deterministic mechanisms. This holds both for
+dominant-strategy implementation and for Bayes-Nash implementation. We then
+show that if we allow randomized mechanisms, the mechanism design problem
+becomes tractable. In other words, the coordinator can tackle the computational
+complexity introduced by its uncertainty about the agents preferences BY making
+the agents face additional uncertainty.This comes at no loss, AND IN SOME cases
+at a gain, IN the(social) objective.
+
+
+Algorithms for Closed Under Rational Behavior (CURB) Sets
+
+  We provide a series of algorithms demonstrating that solutions according to
+the fundamental game-theoretic solution concept of closed under rational
+behavior (CURB) sets in two-player, normal-form games can be computed in
+polynomial time (we also discuss extensions to n-player games). First, we
+describe an algorithm that identifies all of a player's best responses
+conditioned on the belief that the other player will play from within a given
+subset of its strategy space. This algorithm serves as a subroutine in a series
+of polynomial-time algorithms for finding all minimal CURB sets, one minimal
+CURB set, and the smallest minimal CURB set in a game. We then show that the
+complexity of finding a Nash equilibrium can be exponential only in the size of
+a game's smallest CURB set. Related to this, we show that the smallest CURB set
+can be an arbitrarily small portion of the game, but it can also be arbitrarily
+larger than the supports of its only enclosed Nash equilibrium. We test our
+algorithms empirically and find that most commonly studied academic games tend
+to have either very large or very small minimal CURB sets.
+
+
+Hardness of the Pricing Problem for Chains in Barter Exchanges
+
+  Kidney exchange is a barter market where patients trade willing but medically
+incompatible donors. These trades occur via cycles, where each patient-donor
+pair both gives and receives a kidney, and via chains, which begin with an
+altruistic donor who does not require a kidney in return. For logistical
+reasons, the maximum length of a cycle is typically limited to a small
+constant, while chains can be much longer. Given a compatibility graph of
+patient-donor pairs, altruists, and feasible potential transplants between
+them, finding even a maximum-cardinality set of vertex-disjoint cycles and
+chains is NP-hard. There has been much work on developing provably optimal
+solvers that are efficient in practice. One of the leading techniques has been
+branch and price, where column generation is used to incrementally bring cycles
+and chains into the optimization model on an as-needed basis. In particular,
+only positive-price columns need to be brought into the model. We prove that
+finding a positive-price chain is NP-complete. This shows incorrectness of two
+leading branch-and-price solvers that suggested polynomial-time chain pricing
+algorithms.
+
+
+Small Representations of Big Kidney Exchange Graphs
+
+  Kidney exchanges are organized markets where patients swap willing but
+incompatible donors. In the last decade, kidney exchanges grew from small and
+regional to large and national---and soon, international. This growth results
+in more lives saved, but exacerbates the empirical hardness of the
+$\mathcal{NP}$-complete problem of optimally matching patients to donors.
+State-of-the-art matching engines use integer programming techniques to clear
+fielded kidney exchanges, but these methods must be tailored to specific models
+and objective functions, and may fail to scale to larger exchanges. In this
+paper, we observe that if the kidney exchange compatibility graph can be
+encoded by a constant number of patient and donor attributes, the clearing
+problem is solvable in polynomial time. We give necessary and sufficient
+conditions for losslessly shrinking the representation of an arbitrary
+compatibility graph. Then, using real compatibility graphs from the UNOS
+nationwide kidney exchange, we show how many attributes are needed to encode
+real compatibility graphs. The experiments show that, indeed, small numbers of
+attributes suffice.
+
+
+Safe and Nested Subgame Solving for Imperfect-Information Games
+
+  In imperfect-information games, the optimal strategy in a subgame may depend
+on the strategy in other, unreached subgames. Thus a subgame cannot be solved
+in isolation and must instead consider the strategy for the entire game as a
+whole, unlike perfect-information games. Nevertheless, it is possible to first
+approximate a solution for the whole game and then improve it by solving
+individual subgames. This is referred to as subgame solving. We introduce
+subgame-solving techniques that outperform prior methods both in theory and
+practice. We also show how to adapt them, and past subgame-solving techniques,
+to respond to opponent actions that are outside the original action
+abstraction; this significantly outperforms the prior state-of-the-art
+approach, action translation. Finally, we show that subgame solving can be
+repeated as the game progresses down the game tree, leading to far lower
+exploitability. These techniques were a key component of Libratus, the first AI
+to defeat top humans in heads-up no-limit Texas hold'em poker.
+
+
+Regret Minimization in Behaviorally-Constrained Zero-Sum Games
+
+  No-regret learning has emerged as a powerful tool for solving extensive-form
+games. This was facilitated by the counterfactual-regret minimization (CFR)
+framework, which relies on the instantiation of regret minimizers for simplexes
+at each information set of the game. We use an instantiation of the CFR
+framework to develop algorithms for solving behaviorally-constrained (and, as a
+special case, perturbed in the Selten sense) extensive-form games, which allows
+us to compute approximate Nash equilibrium refinements. Nash equilibrium
+refinements are motivated by a major deficiency in Nash equilibrium: it
+provides virtually no guarantees on how it will play in parts of the game tree
+that are reached with zero probability. Refinements can mend this issue, but
+have not been adopted in practice, mostly due to a lack of scalable algorithms.
+We show that, compared to standard algorithms, our method finds solutions that
+have substantially better refinement properties, while enjoying a convergence
+rate that is comparable to that of state-of-the-art algorithms for Nash
+equilibrium computation both in theory and practice.
+
+
+Robust Stackelberg Equilibria in Extensive-Form Games and Extension to
+  Limited Lookahead
+
+  Stackelberg equilibria have become increasingly important as a solution
+concept in computational game theory, largely inspired by practical problems
+such as security settings. In practice, however, there is typically uncertainty
+regarding the model about the opponent. This paper is, to our knowledge, the
+first to investigate Stackelberg equilibria under uncertainty in extensive-form
+games, one of the broadest classes of game. We introduce robust Stackelberg
+equilibria, where the uncertainty is about the opponent's payoffs, as well as
+ones where the opponent has limited lookahead and the uncertainty is about the
+opponent's node evaluation function. We develop a new mixed-integer program for
+the deterministic limited-lookahead setting. We then extend the program to the
+robust setting for Stackelberg equilibrium under unlimited and under limited
+lookahead by the opponent. We show that for the specific case of interval
+uncertainty about the opponent's payoffs (or about the opponent's node
+evaluations in the case of limited lookahead), robust Stackelberg equilibria
+can be computed with a mixed-integer program that is of the same asymptotic
+size as that for the deterministic setting.
+
+
+Depth-Limited Solving for Imperfect-Information Games
+
+  A fundamental challenge in imperfect-information games is that states do not
+have well-defined values. As a result, depth-limited search algorithms used in
+single-agent settings and perfect-information games do not apply. This paper
+introduces a principled way to conduct depth-limited solving in
+imperfect-information games by allowing the opponent to choose among a number
+of strategies for the remainder of the game at the depth limit. Each one of
+these strategies results in a different set of values for leaf nodes. This
+forces an agent to be robust to the different strategies an opponent may
+employ. We demonstrate the effectiveness of this approach by building a
+master-level heads-up no-limit Texas hold'em poker AI that defeats two prior
+top agents using only a 4-core CPU and 16 GB of memory. Developing such a
+powerful agent would have previously required a supercomputer.
+
+
+Solving Imperfect-Information Games via Discounted Regret Minimization
+
+  Counterfactual regret minimization (CFR) is a family of iterative algorithms
+that are the most popular and, in practice, fastest approach to approximately
+solving large imperfect-information games. In this paper we introduce novel CFR
+variants that 1) discount regrets from earlier iterations in various ways (in
+some cases differently for positive and negative regrets), 2) reweight
+iterations in various ways to obtain the output strategies, 3) use a
+non-standard regret minimizer and/or 4) leverage "optimistic regret matching".
+They lead to dramatically improved performance in many settings. For one, we
+introduce a variant that outperforms CFR+, the prior state-of-the-art
+algorithm, in every game tested, including large-scale realistic settings. CFR+
+is a formidable benchmark: no other algorithm has been able to outperform it.
+Finally, we show that, unlike CFR+, many of the important new variants are
+compatible with modern imperfect-information-game pruning techniques and one is
+also compatible with sampling in the game tree.
+
+
+Deep Counterfactual Regret Minimization
+
+  Counterfactual Regret Minimization (CFR) is the leading algorithm for solving
+large imperfect-information games. It iteratively traverses the game tree in
+order to converge to a Nash equilibrium. In order to deal with extremely large
+games, CFR typically uses domain-specific heuristics to simplify the target
+game in a process known as abstraction. This simplified game is solved with
+tabular CFR, and its solution is mapped back to the full game. This paper
+introduces Deep Counterfactual Regret Minimization (Deep CFR), a form of CFR
+that obviates the need for abstraction by instead using deep neural networks to
+approximate the behavior of CFR in the full game. We show that Deep CFR is
+principled and achieves strong performance in large poker games. This is the
+first non-tabular variant of CFR to be successful in large games.
+
+
+Regret Circuits: Composability of Regret Minimizers
+
+  Regret minimization is a powerful tool for solving large-scale problems; it
+was recently used in breakthrough results for large-scale extensive-form game
+solving. This was achieved by composing simplex regret minimizers into an
+overall regret-minimization framework for extensive-form game strategy spaces.
+In this paper we study the general composability of regret minimizers. We
+derive a calculus for constructing regret minimizers for composite convex sets
+that are obtained from convexity-preserving operations on simpler convex sets.
+We show that local regret minimizers for the simpler sets can be combined with
+additional regret minimizers into an aggregate regret minimizer for the
+composite set. As one application, we show that the CFR framework can be
+constructed easily from our framework. We also show ways to include curtailing
+(constraining) operations into our framework. For one, they enables the
+construction of CFR generalization for extensive-form games with general convex
+strategy constraints that can cut across decision points.
+
+
+Quasi-Perfect Stackelberg Equilibrium
+
+  Equilibrium refinements are important in extensive-form (i.e., tree-form)
+games, where they amend weaknesses of the Nash equilibrium concept by requiring
+sequential rationality and other beneficial properties. One of the most
+attractive refinement concepts is quasi-perfect equilibrium. While
+quasi-perfection has been studied in extensive-form games, it is poorly
+understood in Stackelberg settings---that is, settings where a leader can
+commit to a strategy---which are important for modeling, for example, security
+games. In this paper, we introduce the axiomatic definition of quasi-perfect
+Stackelberg equilibrium. We develop a broad class of game perturbation schemes
+that lead to them in the limit. Our class of perturbation schemes strictly
+generalizes prior perturbation schemes introduced for the computation of
+(non-Stackelberg) quasi-perfect equilibria. Based on our perturbation schemes,
+we develop a branch-and-bound algorithm for computing a quasi-perfect
+Stackelberg equilibrium. It leverages a perturbed variant of the linear program
+for computing a Stackelberg extensive-form correlated equilibrium. Experiments
+show that our algorithm can be used to find an approximate quasi-perfect
+Stackelberg equilibrium in games with thousands of nodes.
+
+
+Stable-Predictive Optimistic Counterfactual Regret Minimization
+
+  The CFR framework has been a powerful tool for solving large-scale
+extensive-form games in practice. However, the theoretical rate at which past
+CFR-based algorithms converge to the Nash equilibrium is on the order of
+$O(T^{-1/2})$, where $T$ is the number of iterations. In contrast, first-order
+methods can be used to achieve a $O(T^{-1})$ dependence on iterations, yet
+these methods have been less successful in practice. In this work we present
+the first CFR variant that breaks the square-root dependence on iterations. By
+combining and extending recent advances on predictive and stable regret
+minimizers for the matrix-game setting we show that it is possible to leverage
+"optimistic" regret minimizers to achieve a $O(T^{-3/4})$ convergence rate
+within CFR. This is achieved by introducing a new notion of
+stable-predictivity, and by setting the stability of each counterfactual regret
+minimizer relative to its location in the decision tree. Experiments show that
+this method is faster than the original CFR algorithm, although not as fast as
+newer variants, in spite of their worst-case $O(T^{-1/2})$ dependence on
+iterations.
+
+
+Limited Lookahead in Imperfect-Information Games
+
+  Limited lookahead has been studied for decades in complete-information games.
+We initiate a new direction via two simultaneous deviation points:
+generalization to incomplete-information games and a game-theoretic approach.
+We study how one should act when facing an opponent whose lookahead is limited.
+We study this for opponents that differ based on their lookahead depth, based
+on whether they, too, have incomplete information, and based on how they break
+ties. We characterize the hardness of finding a Nash equilibrium or an optimal
+commitment strategy for either player, showing that in some of these variations
+the problem can be solved in polynomial time while in others it is PPAD-hard or
+NP-hard. We proceed to design algorithms for computing optimal commitment
+strategies---for when the opponent breaks ties favorably, according to a fixed
+rule, or adversarially. We then experimentally investigate the impact of
+limited lookahead. The limited-lookahead player often obtains the value of the
+game if she knows the expected values of nodes in the game tree for some
+equilibrium---but we prove this is not sufficient in general. Finally, we study
+the impact of noise in those estimates and different lookahead depths. This
+uncovers an incomplete-information game lookahead pathology.
+
+
+Anytime Coalition Structure Generation with Worst Case Guarantees
+
+  Coalition formation is a key topic in multiagent systems. One would prefer a
+coalition structure that maximizes the sum of the values of the coalitions, but
+often the number of coalition structures is too large to allow exhaustive
+search for the optimal one. But then, can the coalition structure found via a
+partial search be guaranteed to be within a bound from optimum? We show that
+none of the previous coalition structure generation algorithms can establish
+any bound because they search fewer nodes than a threshold that we show
+necessary for establishing a bound. We present an algorithm that establishes a
+tight bound within this minimal amount of search, and show that any other
+algorithm would have to search strictly more. The fraction of nodes needed to
+be searched approaches zero as the number of agents grows. If additional time
+remains, our anytime algorithm searches further, and establishes a
+progressively lower tight bound. Surprisingly, just searching one more node
+drops the bound in half. As desired, our algorithm lowers the bound rapidly
+early on, and exhibits diminishing returns to computation. It also drastically
+outperforms its obvious contenders. Finally, we show how to distribute the
+desired search across self-interested manipulative agents.
+
+
+Complexity of Manipulating Elections with Few Candidates
+
+  In multiagent settings where the agents have different preferences,
+preference aggregation is a central issue. Voting is a general method for
+preference aggregation, but seminal results have shown that all general voting
+protocols are manipulable. One could try to avoid manipulation by using voting
+protocols where determining a beneficial manipulation is hard. Especially among
+computational agents, it is reasonable to measure this hardness by
+computational complexity. Some earlier work has been done in this area, but it
+was assumed that the number of voters and candidates is unbounded. We derive
+hardness results for practical multiagent settings where the number of
+candidates is small but the number of voters can be large. We show that with
+complete information about the others' votes, individual manipulation is easy,
+and coalitional manipulation is easy with unweighted voters. However,
+constructive coalitional manipulation with weighted voters is intractable for
+all of the voting protocols under study, except for the nonrandomized Cup.
+Destructive manipulation tends to be easier. Randomizing over instantiations of
+the protocols (such as schedules of the Cup protocol) can be used to make
+manipulation hard. Finally, we show that under weak assumptions, if weighted
+coalitional manipulation with complete information about the others' votes is
+hard in some voting protocol, then individual and unweighted manipulation is
+hard when there is uncertainty about the others' votes.
+
+
+How many candidates are needed to make elections hard to manipulate?
+
+  In multiagent settings where the agents have different preferences,
+preference aggregation is a central issue. Voting is a general method for
+preference aggregation, but seminal results have shown that all general voting
+protocols are manipulable. One could try to avoid manipulation by using voting
+protocols where determining a beneficial manipulation is hard computationally.
+The complexity of manipulating realistic elections where the number of
+candidates is a small constant was recently studied (Conitzer 2002), but the
+emphasis was on the question of whether or not a protocol becomes hard to
+manipulate for some constant number of candidates. That work, in many cases,
+left open the question: How many candidates are needed to make elections hard
+to manipulate? This is a crucial question when comparing the relative
+manipulability of different voting protocols. In this paper we answer that
+question for the voting protocols of the earlier study: plurality, Borda, STV,
+Copeland, maximin, regular cup, and randomized cup. We also answer that
+question for two voting protocols for which no results on the complexity of
+manipulation have been derived before: veto and plurality with runoff. It turns
+out that the voting protocols under study become hard to manipulate at 3
+candidates, 4 candidates, 7 candidates, or never.
+
+
+BL-WoLF: A Framework For Loss-Bounded Learnability In Zero-Sum Games
+
+  We present BL-WoLF, a framework for learnability in repeated zero-sum games
+where the cost of learning is measured by the losses the learning agent accrues
+(rather than the number of rounds). The game is adversarially chosen from some
+family that the learner knows. The opponent knows the game and the learner's
+learning strategy. The learner tries to either not accrue losses, or to quickly
+learn about the game so as to avoid future losses (this is consistent with the
+Win or Learn Fast (WoLF) principle; BL stands for ``bounded loss''). Our
+framework allows for both probabilistic and approximate learning. The resultant
+notion of {\em BL-WoLF}-learnability can be applied to any class of games, and
+allows us to measure the inherent disadvantage to a player that does not know
+which game in the class it is in. We present {\em guaranteed
+BL-WoLF-learnability} results for families of games with deterministic payoffs
+and families of games with stochastic payoffs. We demonstrate that these
+families are {\em guaranteed approximately BL-WoLF-learnable} with lower cost.
+We then demonstrate families of games (both stochastic and deterministic) that
+are not guaranteed BL-WoLF-learnable. We show that those families,
+nevertheless, are {\em BL-WoLF-learnable}. To prove these results, we use a key
+lemma which we derive.
+
+
+Complexity of Determining Nonemptiness of the Core
+
+  Coalition formation is a key problem in automated negotiation among
+self-interested agents, and other multiagent applications. A coalition of
+agents can sometimes accomplish things that the individual agents cannot, or
+can do things more efficiently. However, motivating the agents to abide to a
+solution requires careful analysis: only some of the solutions are stable in
+the sense that no group of agents is motivated to break off and form a new
+coalition. This constraint has been studied extensively in cooperative game
+theory. However, the computational questions around this constraint have
+received less attention. When it comes to coalition formation among software
+agents (that represent real-world parties), these questions become increasingly
+explicit.
+  In this paper we define a concise general representation for games in
+characteristic form that relies on superadditivity, and show that it allows for
+efficient checking of whether a given outcome is in the core. We then show that
+determining whether the core is nonempty is $\mathcal{NP}$-complete both with
+and without transferable utility. We demonstrate that what makes the problem
+hard in both cases is determining the collaborative possibilities (the set of
+outcomes possible for the grand coalition), by showing that if these are given,
+the problem becomes tractable in both cases. However, we then demonstrate that
+for a hybrid version of the problem, where utility transfer is possible only
+within the grand coalition, the problem remains $\mathcal{NP}$-complete even
+when the collaborative possibilities are given.
+
+
+Universal Voting Protocol Tweaks to Make Manipulation Hard
+
+  Voting is a general method for preference aggregation in multiagent settings,
+but seminal results have shown that all (nondictatorial) voting protocols are
+manipulable. One could try to avoid manipulation by using voting protocols
+where determining a beneficial manipulation is hard computationally. A number
+of recent papers study the complexity of manipulating existing protocols. This
+paper is the first work to take the next step of designing new protocols that
+are especially hard to manipulate. Rather than designing these new protocols
+from scratch, we instead show how to tweak existing protocols to make
+manipulation hard, while leaving much of the original nature of the protocol
+intact. The tweak studied consists of adding one elimination preround to the
+election. Surprisingly, this extremely simple and universal tweak makes typical
+protocols hard to manipulate! The protocols become NP-hard, #P-hard, or
+PSPACE-hard to manipulate, depending on whether the schedule of the preround is
+determined before the votes are collected, after the votes are collected, or
+the scheduling and the vote collecting are interleaved, respectively. We prove
+general sufficient conditions on the protocols for this tweak to introduce the
+hardness, and show that the most common voting protocols satisfy those
+conditions. These are the first results in voting settings where manipulation
+is in a higher complexity class than NP (presuming PSPACE $\neq$ NP).
+
+
+On the complexity of strong Nash equilibrium: Hard-to-solve instances
+  and smoothed complexity
+
+  The computational characterization of game-theoretic solution concepts is a
+central topic in artificial intelligence, with the aim of developing
+computationally efficient tools for finding optimal ways to behave in strategic
+interactions. The central solution concept in game theory is Nash equilibrium
+(NE). However, it fails to capture the possibility that agents can form
+coalitions (even in the 2-agent case). Strong Nash equilibrium (SNE) refines NE
+to this setting. It is known that finding an SNE is NP-complete when the number
+of agents is constant. This hardness is solely due to the existence of
+mixed-strategy SNEs, given that the problem of enumerating all pure-strategy
+SNEs is trivially in P. Our central result is that, in order for a game to have
+at least one non-pure-strategy SNE, the agents' payoffs restricted to the
+agents' supports must, in the case of 2 agents, lie on the same line, and, in
+the case of n agents, lie on an (n - 1)-dimensional hyperplane. Leveraging this
+result, we provide two contributions. First, we develop worst-case instances
+for support-enumeration algorithms. These instances have only one SNE and the
+support size can be chosen to be of any size-in particular, arbitrarily large.
+Second, we prove that, unlike NE, finding an SNE is in smoothed polynomial
+time: generic game instances (i.e., all instances except knife-edge cases) have
+only pure-strategy SNEs.
+
+
+Imperfect-Recall Abstractions with Bounds in Games
+
+  Imperfect-recall abstraction has emerged as the leading paradigm for
+practical large-scale equilibrium computation in incomplete-information games.
+However, imperfect-recall abstractions are poorly understood, and only weak
+algorithm-specific guarantees on solution quality are known. In this paper, we
+show the first general, algorithm-agnostic, solution quality guarantees for
+Nash equilibria and approximate self-trembling equilibria computed in
+imperfect-recall abstractions, when implemented in the original
+(perfect-recall) game. Our results are for a class of games that generalizes
+the only previously known class of imperfect-recall abstractions where any
+results had been obtained. Further, our analysis is tighter in two ways, each
+of which can lead to an exponential reduction in the solution quality error
+bound.
+  We then show that for extensive-form games that satisfy certain properties,
+the problem of computing a bound-minimizing abstraction for a single level of
+the game reduces to a clustering problem, where the increase in our bound is
+the distance function. This reduction leads to the first imperfect-recall
+abstraction algorithm with solution quality bounds. We proceed to show a divide
+in the class of abstraction problems. If payoffs are at the same scale at all
+information sets considered for abstraction, the input forms a metric space.
+Conversely, if this condition is not satisfied, we show that the input does not
+form a metric space. Finally, we use these results to experimentally
+investigate the quality of our bound for single-level abstraction.
+
+
+Sample Complexity of Automated Mechanism Design
+
+  The design of revenue-maximizing combinatorial auctions, i.e. multi-item
+auctions over bundles of goods, is one of the most fundamental problems in
+computational economics, unsolved even for two bidders and two items for sale.
+In the traditional economic models, it is assumed that the bidders' valuations
+are drawn from an underlying distribution and that the auction designer has
+perfect knowledge of this distribution. Despite this strong and oftentimes
+unrealistic assumption, it is remarkable that the revenue-maximizing
+combinatorial auction remains unknown. In recent years, automated mechanism
+design has emerged as one of the most practical and promising approaches to
+designing high-revenue combinatorial auctions. The most scalable automated
+mechanism design algorithms take as input samples from the bidders' valuation
+distribution and then search for a high-revenue auction in a rich auction
+class. In this work, we provide the first sample complexity analysis for the
+standard hierarchy of deterministic combinatorial auction classes used in
+automated mechanism design. In particular, we provide tight sample complexity
+bounds on the number of samples needed to guarantee that the empirical revenue
+of the designed mechanism on the samples is close to its expected revenue on
+the underlying, unknown distribution over bidder valuations, for each of the
+auction classes in the hierarchy. In addition to helping set automated
+mechanism design on firm foundations, our results also push the boundaries of
+learning theory. In particular, the hypothesis functions used in our contexts
+are defined through multi-stage combinatorial optimization procedures, rather
+than simple decision boundaries, as are common in machine learning.
+
+
+Theoretical and Practical Advances on Smoothing for Extensive-Form Games
+
+  Sparse iterative methods, in particular first-order methods, are known to be
+among the most effective in solving large-scale two-player zero-sum
+extensive-form games. The convergence rates of these methods depend heavily on
+the properties of the distance-generating function that they are based on. We
+investigate the acceleration of first-order methods for solving extensive-form
+games through better design of the dilated entropy function---a class of
+distance-generating functions related to the domains associated with the
+extensive-form games. By introducing a new weighting scheme for the dilated
+entropy function, we develop the first distance-generating function for the
+strategy spaces of sequential games that has no dependence on the branching
+factor of the player. This result improves the convergence rate of several
+first-order methods by a factor of $\Omega(b^dd)$, where $b$ is the branching
+factor of the player, and $d$ is the depth of the game tree.
+  Thus far, counterfactual regret minimization methods have been faster in
+practice, and more popular, than first-order methods despite their
+theoretically inferior convergence rates. Using our new weighting scheme and
+practical tuning we show that, for the first time, the excessive gap technique
+can be made faster than the fastest counterfactual regret minimization
+algorithm, CFR+, in practice.
+
+
+A General Theory of Sample Complexity for Multi-Item Profit Maximization
+
+  The design of profit-maximizing multi-item mechanisms is a notoriously
+challenging problem with tremendous real-world impact. The mechanism designer's
+goal is to field a mechanism with high expected profit on the distribution over
+buyers' values. Unfortunately, if the set of mechanisms he optimizes over is
+complex, a mechanism may have high empirical profit over a small set of samples
+but low expected profit. This raises the question, how many samples are
+sufficient to ensure that the empirically optimal mechanism is nearly optimal
+in expectation? We uncover structure shared by a myriad of pricing, auction,
+and lottery mechanisms that allows us to prove strong sample complexity bounds:
+for any set of buyers' values, profit is a piecewise linear function of the
+mechanism's parameters. We prove new bounds for mechanism classes not yet
+studied in the sample-based mechanism design literature and match or improve
+over the best known guarantees for many classes. The profit functions we study
+are significantly different from well-understood functions in machine learning,
+so our analysis requires a sharp understanding of the interplay between
+mechanism parameters and buyer values. We strengthen our main results with
+data-dependent bounds when the distribution over buyers' values is
+"well-behaved." Finally, we investigate a fundamental tradeoff in sample-based
+mechanism design: complex mechanisms often have higher profit than simple
+mechanisms, but more samples are required to ensure that empirical and expected
+profit are close. We provide techniques for optimizing this tradeoff.
+
+
+Smoothing Method for Approximate Extensive-Form Perfect Equilibrium
+
+  Nash equilibrium is a popular solution concept for solving
+imperfect-information games in practice. However, it has a major drawback: it
+does not preclude suboptimal play in branches of the game tree that are not
+reached in equilibrium. Equilibrium refinements can mend this issue, but have
+experienced little practical adoption. This is largely due to a lack of
+scalable algorithms.
+  Sparse iterative methods, in particular first-order methods, are known to be
+among the most effective algorithms for computing Nash equilibria in
+large-scale two-player zero-sum extensive-form games. In this paper, we
+provide, to our knowledge, the first extension of these methods to equilibrium
+refinements. We develop a smoothing approach for behavioral perturbations of
+the convex polytope that encompasses the strategy spaces of players in an
+extensive-form game. This enables one to compute an approximate variant of
+extensive-form perfect equilibria. Experiments show that our smoothing approach
+leads to solutions with dramatically stronger strategies at information sets
+that are reached with low probability in approximate Nash equilibria, while
+retaining the overall convergence rate associated with fast algorithms for Nash
+equilibrium. This has benefits both in approximate equilibrium finding (such
+approximation is necessary in practice in large games) where some probabilities
+are low while possibly heading toward zero in the limit, and exact equilibrium
+computation where the low probabilities are actually zero.
+
+
+Operation Frames and Clubs in Kidney Exchange
+
+  A kidney exchange is a centrally-administered barter market where patients
+swap their willing yet incompatible donors. Modern kidney exchanges use
+2-cycles, 3-cycles, and chains initiated by non-directed donors (altruists who
+are willing to give a kidney to anyone) as the means for swapping.
+  We propose significant generalizations to kidney exchange. We allow more than
+one donor to donate in exchange for their desired patient receiving a kidney.
+We also allow for the possibility of a donor willing to donate if any of a
+number of patients receive kidneys. Furthermore, we combine these notions and
+generalize them. The generalization is to exchange among organ clubs, where a
+club is willing to donate organs outside the club if and only if the club
+receives organs from outside the club according to given specifications. We
+prove that unlike in the standard model, the uncapped clearing problem is
+NP-complete.
+  We also present the notion of operation frames that can be used to sequence
+the operations across batches, and present integer programming formulations for
+the market clearing problems for these new types of organ exchanges.
+  Experiments show that in the single-donation setting, operation frames
+improve planning by 34%--51%. Allowing up to two donors to donate in exchange
+for one kidney donated to their designated patient yields a further increase in
+social welfare.
+
+
+Learning to Branch
+
+  Tree search algorithms, such as branch-and-bound, are the most widely used
+tools for solving combinatorial and nonconvex problems. For example, they are
+the foremost method for solving (mixed) integer programs and constraint
+satisfaction problems. Tree search algorithms recursively partition the search
+space to find an optimal solution. In order to keep the tree size small, it is
+crucial to carefully decide, when expanding a tree node, which question
+(typically variable) to branch on at that node in order to partition the
+remaining space. Numerous partitioning techniques (e.g., variable selection)
+have been proposed, but there is no theory describing which technique is
+optimal. We show how to use machine learning to determine an optimal weighting
+of any set of partitioning procedures for the instance distribution at hand
+using samples from the distribution. We provide the first sample complexity
+guarantees for tree search algorithm configuration. These guarantees bound the
+number of samples sufficient to ensure that the empirical performance of an
+algorithm over the samples nearly matches its expected performance on the
+unknown instance distribution. This thorough theoretical investigation
+naturally gives rise to our learning algorithm. Via experiments, we show that
+learning an optimal weighting of partitioning procedures can dramatically
+reduce tree size, and we prove that this reduction can even be exponential.
+Through theory and experiments, we show that learning to branch is both
+practical and hugely beneficial.
+
+
+Online Convex Optimization for Sequential Decision Processes and
+  Extensive-Form Games
+
+  Regret minimization is a powerful tool for solving large-scale extensive-form
+games. State-of-the-art methods rely on minimizing regret locally at each
+decision point. In this work we derive a new framework for regret minimization
+on sequential decision problems and extensive-form games with general compact
+convex sets at each decision point and general convex losses, as opposed to
+prior work which has been for simplex decision points and linear losses. We
+call our framework laminar regret decomposition. It generalizes the CFR
+algorithm to this more general setting. Furthermore, our framework enables a
+new proof of CFR even in the known setting, which is derived from a perspective
+of decomposing polytope regret, thereby leading to an arguably simpler
+interpretation of the algorithm. Our generalization to convex compact sets and
+convex losses allows us to develop new algorithms for several problems:
+regularized sequential decision making, regularized Nash equilibria in
+extensive-form games, and computing approximate extensive-form perfect
+equilibria. Our generalization also leads to the first regret-minimization
+algorithm for computing reduced-normal-form quantal response equilibria based
+on minimizing local regrets. Experiments show that our framework leads to
+algorithms that scale at a rate comparable to the fastest variants of
+counterfactual regret minimization for computing Nash equilibrium, and
+therefore our approach leads to the first algorithm for computing quantal
+response equilibria in extremely large games. Finally we show that our
+framework enables a new kind of scalable opponent exploitation approach.
+
+
+Solving Large Sequential Games with the Excessive Gap Technique
+
+  There has been tremendous recent progress on equilibrium-finding algorithms
+for zero-sum imperfect-information extensive-form games, but there has been a
+puzzling gap between theory and practice. First-order methods have
+significantly better theoretical convergence rates than any
+counterfactual-regret minimization (CFR) variant. Despite this, CFR variants
+have been favored in practice. Experiments with first-order methods have only
+been conducted on small- and medium-sized games because those methods are
+complicated to implement in this setting, and because CFR variants have been
+enhanced extensively for over a decade they perform well in practice. In this
+paper we show that a particular first-order method, a state-of-the-art variant
+of the excessive gap technique---instantiated with the dilated entropy distance
+function---can efficiently solve large real-world problems competitively with
+CFR and its variants. We show this on large endgames encountered by the
+Libratus poker AI, which recently beat top human poker specialist professionals
+at no-limit Texas hold'em. We show experimental results on our variant of the
+excessive gap technique as well as a prior version. We introduce a numerically
+friendly implementation of the smoothed best response computation associated
+with first-order methods for extensive-form game solving. We present, to our
+knowledge, the first GPU implementation of a first-order method for
+extensive-form games. We present comparisons of several excessive gap technique
+and CFR variants.
+
+
+Estimating Approximate Incentive Compatibility
+
+  In practice, most mechanisms for selling, buying, matching, voting, and so on
+are not incentive compatible. We present techniques for estimating how far a
+mechanism is from incentive compatible. Given samples from the agents' type
+distribution, we show how to estimate the extent to which an agent can improve
+his utility by misreporting his type. We do so by first measuring the maximum
+utility an agent can gain by misreporting his type on average over the samples,
+assuming his true and reported types are from a finite subset -- which our
+technique constructs -- of the type space. The challenge is that by measuring
+utility gains over a finite subset of the type space, we might miss pairs of
+types $\theta$ and $\hat{\theta}$ where an agent with type $\theta$ can greatly
+improve his utility by reporting the type $\hat{\theta}$. Our technique
+discretizes the type space by constructing a learning-theoretic cover in a
+higher-dimensional space. The key technical contribution is proving that the
+maximum utility gain over this finite subset nearly matches the maximum utility
+gain overall, despite the volatility of the utility functions we study. We
+apply our tools to the single-item and combinatorial first-price auctions,
+generalized second-price auction, discriminatory auction, uniform-price
+auction, and second-price auction with spiteful bidders. To our knowledge,
+these are the first guarantees for estimating approximate incentive
+compatibility from the mechanism designer's perspective.
+
+
+Position-Indexed Formulations for Kidney Exchange
+
+  A kidney exchange is an organized barter market where patients in need of a
+kidney swap willing but incompatible donors. Determining an optimal set of
+exchanges is theoretically and empirically hard. Traditionally, exchanges took
+place in cycles, with each participating patient-donor pair both giving and
+receiving a kidney. The recent introduction of chains, where a donor without a
+paired patient triggers a sequence of donations without requiring a kidney in
+return, increased the efficacy of fielded kidney exchanges---while also
+dramatically raising the empirical computational hardness of clearing the
+market in practice. While chains can be quite long, unbounded-length chains are
+not desirable: planned donations can fail before transplant for a variety of
+reasons, and the failure of a single donation causes the rest of that chain to
+fail, so parallel shorter chains are better in practice.
+  In this paper, we address the tractable clearing of kidney exchanges with
+short cycles and chains that are long but bounded. This corresponds to the
+practice at most modern fielded kidney exchanges. We introduce three new
+integer programming formulations, two of which are compact. Furthermore, one of
+these models has a linear programming relaxation that is exactly as tight as
+the previous tightest formulation (which was not compact) for instances in
+which each donor has a paired patient. On real data from the UNOS nationwide
+exchange in the United States and the NLDKSS nationwide exchange in the United
+Kingdom, as well as on generated realistic large-scale data, we show that our
+new models are competitive with all existing solvers---in many cases
+outperforming all other solvers by orders of magnitude.
+
+
+Ignorance is Almost Bliss: Near-Optimal Stochastic Matching With Few
+  Queries
+
+  The stochastic matching problem deals with finding a maximum matching in a
+graph whose edges are unknown but can be accessed via queries. This is a
+special case of stochastic $k$-set packing, where the problem is to find a
+maximum packing of sets, each of which exists with some probability. In this
+paper, we provide edge and set query algorithms for these two problems,
+respectively, that provably achieve some fraction of the omniscient optimal
+solution.
+  Our main theoretical result for the stochastic matching (i.e., $2$-set
+packing) problem is the design of an \emph{adaptive} algorithm that queries
+only a constant number of edges per vertex and achieves a $(1-\epsilon)$
+fraction of the omniscient optimal solution, for an arbitrarily small
+$\epsilon>0$. Moreover, this adaptive algorithm performs the queries in only a
+constant number of rounds. We complement this result with a \emph{non-adaptive}
+(i.e., one round of queries) algorithm that achieves a $(0.5 - \epsilon)$
+fraction of the omniscient optimum. We also extend both our results to
+stochastic $k$-set packing by designing an adaptive algorithm that achieves a
+$(\frac{2}{k} - \epsilon)$ fraction of the omniscient optimal solution, again
+with only $O(1)$ queries per element. This guarantee is close to the best known
+polynomial-time approximation ratio of $\frac{3}{k+1} -\epsilon$ for the
+\emph{deterministic} $k$-set packing problem [Furer and Yu, 2013]
+  We empirically explore the application of (adaptations of) these algorithms
+to the kidney exchange problem, where patients with end-stage renal failure
+swap willing but incompatible donors. We show on both generated data and on
+real data from the first 169 match runs of the UNOS nationwide kidney exchange
+that even a very small number of non-adaptive edge queries per vertex results
+in large gains in expected successful matches.
+
+
+Efficiency and Budget Balance in General Quasi-linear Domains
+
+  We study efficiency and budget balance for designing mechanisms in general
+quasi-linear domains. Green and Laffont (1979) proved that one cannot
+generically achieve both. We consider strategyproof budget-balanced mechanisms
+that are approximately efficient. For deterministic mechanisms, we show that a
+strategyproof and budget-balanced mechanism must have a sink agent whose
+valuation function is ignored in selecting an alternative, and she is
+compensated with the payments made by the other agents. We assume the
+valuations of the agents come from a bounded open interval. Using this result,
+we find a tight lower bound on the inefficiencies of strategyproof,
+budget-balanced mechanisms in this domain. The bound shows that the
+inefficiency asymptotically disappears when the number of agents is large---a
+result close in spirit to Green and Laffont (1979, Theorem 9.4). However, our
+results provide worst-case bounds and the best possible rate of convergence.
+  Next, we consider minimizing any convex combination of inefficiency and
+budget imbalance. We show that if the valuations are unrestricted, no
+deterministic mechanism can do asymptotically better than minimizing
+inefficiency alone.
+  Finally, we investigate randomized mechanisms and provide improved lower
+bounds on expected inefficiency. We give a tight lower bound for an interesting
+class of strategyproof, budget-balanced, randomized mechanisms. We also use an
+optimization-based approach---in the spirit of automated mechanism design---to
+provide a lower bound on the minimum achievable inefficiency of any randomized
+mechanism.
+  Experiments with real data from two applications show that the inefficiency
+for a simple randomized mechanism is 5--100 times smaller than the worst case.
+This relative difference increases with the number of agents.
+
+

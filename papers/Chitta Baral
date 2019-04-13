@@ -1,0 +1,442 @@
+Probabilistic reasoning with answer sets
+
+  This paper develops a declarative language, P-log, that combines logical and
+probabilistic arguments in its reasoning. Answer Set Prolog is used as the
+logical foundation, while causal Bayes nets serve as a probabilistic
+foundation. We give several non-trivial examples and illustrate the use of
+P-log for knowledge representation and updating of knowledge. We argue that our
+approach to updates is more appealing than existing approaches. We give
+sufficiency conditions for the coherency of P-log programs and show that Bayes
+nets can be easily mapped to coherent P-log programs.
+
+
+On Selecting a Conjunction Operation in Probabilistic Soft Logic
+
+  Probabilistic Soft Logic has been proposed and used in several applications
+as an efficient way to deal with inconsistency, uncertainty and relational
+representation. In several applications, this approach has led to an adequate
+description of the corresponding human reasoning. In this paper, we provide a
+theoretical explanation for one of the semi-heuristic choices made in this
+approach: namely, we explain the choice of the corresponding conjunction
+operations. Our explanation leads to a more general family of operations which
+may be used in future applications of probabilistic soft logic.
+
+
+Solving puzzles described in English by automated translation to answer
+  set programming and learning how to do that translation
+
+  We present a system capable of automatically solving combinatorial logic
+puzzles given in (simplified) English. It involves translating the English
+descriptions of the puzzles into answer set programming(ASP) and using ASP
+solvers to provide solutions of the puzzles. To translate the descriptions, we
+use a lambda-calculus based approach using Probabilistic Combinatorial
+Categorial Grammars (PCCG) where the meanings of words are associated with
+parameters to be able to distinguish between multiple meanings of the same
+word. Meaning of many words and the parameters are learned. The puzzles are
+represented in ASP using an ontology which is applicable to a large set of
+logic puzzles.
+
+
+Typed Answer Set Programming and Inverse Lambda Algorithms
+
+  Our broader goal is to automatically translate English sentences into
+formulas in appropriate knowledge representation languages as a step towards
+understanding and thus answering questions with respect to English text. Our
+focus in this paper is on the language of Answer Set Programming (ASP). Our
+approach to translate sentences to ASP rules is inspired by Montague's use of
+lambda calculus formulas as meaning of words and phrases. With ASP as the
+target language the meaning of words and phrases are ASP-lambda formulas. In an
+earlier work we illustrated our approach by manually developing a dictionary of
+words and their ASP-lambda formulas. However such an approach is not scalable.
+In this paper our focus is on two algorithms that allow one to construct
+ASP-lambda formulas in an inverse manner. In particular the two algorithms take
+as input two lambda-calculus expressions G and H and compute a lambda-calculus
+expression F such that F with input as G, denoted by F@G, is equal to H; and
+similarly G@F = H. We present correctness and complexity results about these
+algorithms. To do that we develop the notion of typed ASP-lambda calculus
+theories and their orders and use it in developing the completeness results.
+(To appear in Theory and Practice of Logic Programming.)
+
+
+Regression with respect to sensing actions and partial states
+
+  In this paper, we present a state-based regression function for planning
+domains where an agent does not have complete information and may have sensing
+actions. We consider binary domains and employ the 0-approximation [Son & Baral
+2001] to define the regression function. In binary domains, the use of
+0-approximation means using 3-valued states. Although planning using this
+approach is incomplete with respect to the full semantics, we adopt it to have
+a lower complexity. We prove the soundness and completeness of our regression
+formulation with respect to the definition of progression. More specifically,
+we show that (i) a plan obtained through regression for a planning problem is
+indeed a progression solution of that planning problem, and that (ii) for each
+plan found through progression, using regression one obtains that plan or an
+equivalent one. We then develop a conditional planner that utilizes our
+regression function. We prove the soundness and completeness of our planning
+algorithm and present experimental results with respect to several well known
+planning problems in the literature.
+
+
+Reasoning and Planning with Sensing Actions, Incomplete Information, and
+  Static Causal Laws using Answer Set Programming
+
+  We extend the 0-approximation of sensing actions and incomplete information
+in [Son and Baral 2000] to action theories with static causal laws and prove
+its soundness with respect to the possible world semantics. We also show that
+the conditional planning problem with respect to this approximation is
+NP-complete. We then present an answer set programming based conditional
+planner, called ASCP, that is capable of generating both conformant plans and
+conditional plans in the presence of sensing actions, incomplete information
+about the initial state, and static causal laws. We prove the correctness of
+our implementation and argue that our planner is sound and complete with
+respect to the proposed approximation. Finally, we present experimental results
+comparing ASCP to other planners.
+
+
+Domain-Dependent Knowledge in Answer Set Planning
+
+  In this paper we consider three different kinds of domain-dependent control
+knowledge (temporal, procedural and HTN-based) that are useful in planning. Our
+approach is declarative and relies on the language of logic programming with
+answer set semantics (AnsProlog*). AnsProlog* is designed to plan without
+control knowledge. We show how temporal, procedural and HTN-based control
+knowledge can be incorporated into AnsProlog* by the modular addition of a
+small number of domain-dependent rules, without the need to modify the planner.
+We formally prove the correctness of our planner, both in the absence and
+presence of the control knowledge. Finally, we perform some initial
+experimentation that demonstrates the potential reduction in planning time that
+can be achieved when procedural domain knowledge is used to solve planning
+problems with large plan length.
+
+
+A State-Based Regression Formulation for Domains with Sensing
+  Actions<br> and Incomplete Information
+
+  We present a state-based regression function for planning domains where an
+agent does not have complete information and may have sensing actions. We
+consider binary domains and employ a three-valued characterization of domains
+with sensing actions to define the regression function. We prove the soundness
+and completeness of our regression formulation with respect to the definition
+of progression. More specifically, we show that (i) a plan obtained through
+regression for a planning problem is indeed a progression solution of that
+planning problem, and that (ii) for each plan found through progression, using
+regression one obtains that plan or an equivalent one.
+
+
+Towards Effective Sentence Simplification for Automatic Processing of
+  Biomedical Text
+
+  The complexity of sentences characteristic to biomedical articles poses a
+challenge to natural language parsers, which are typically trained on
+large-scale corpora of non-technical text. We propose a text simplification
+process, bioSimplify, that seeks to reduce the complexity of sentences in
+biomedical abstracts in order to improve the performance of syntactic parsers
+on the processed sentences. Syntactic parsing is typically one of the first
+steps in a text mining pipeline. Thus, any improvement in performance would
+have a ripple effect over all processing steps. We evaluated our method using a
+corpus of biomedical sentences annotated with syntactic links. Our empirical
+results show an improvement of 2.90% for the Charniak-McClosky parser and of
+4.23% for the Link Grammar parser when processing simplified sentences rather
+than the original sentences in the corpus.
+
+
+Logic Programming for Finding Models in the Logics of Knowledge and its
+  Applications: A Case Study
+
+  The logics of knowledge are modal logics that have been shown to be effective
+in representing and reasoning about knowledge in multi-agent domains.
+Relatively few computational frameworks for dealing with computation of models
+and useful transformations in logics of knowledge (e.g., to support multi-agent
+planning with knowledge actions and degrees of visibility) have been proposed.
+This paper explores the use of logic programming (LP) to encode interesting
+forms of logics of knowledge and compute Kripke models. The LP modeling is
+expanded with useful operators on Kripke structures, to support multi-agent
+planning in the presence of both world-altering and knowledge actions. This
+results in the first ever implementation of a planner for this type of complex
+multi-agent domains.
+
+
+Using Inverse lambda and Generalization to Translate English to Formal
+  Languages
+
+  We present a system to translate natural language sentences to formulas in a
+formal or a knowledge representation language. Our system uses two inverse
+lambda-calculus operators and using them can take as input the semantic
+representation of some words, phrases and sentences and from that derive the
+semantic representation of other words and phrases. Our inverse lambda operator
+works on many formal languages including first order logic, database query
+languages and answer set programming. Our system uses a syntactic combinatorial
+categorial parser to parse natural language sentences and also to construct the
+semantic meaning of the sentences as directed by their parsing. The same parser
+is used for both. In addition to the inverse lambda-calculus operators, our
+system uses a notion of generalization to learn semantic representation of
+words from the semantic representation of other words that are of the same
+category. Together with this, we use an existing statistical learning approach
+to assign weights to deal with multiple meanings of words. Our system produces
+improved results on standard corpora on natural language interfaces for robot
+command and control and database queries.
+
+
+Language understanding as a step towards human level intelligence -
+  automatizing the construction of the initial dictionary from example
+  sentences
+
+  For a system to understand natural language, it needs to be able to take
+natural language text and answer questions given in natural language with
+respect to that text; it also needs to be able to follow instructions given in
+natural language. To achieve this, a system must be able to process natural
+language and be able to capture the knowledge within that text. Thus it needs
+to be able to translate natural language text into a formal language. We
+discuss our approach to do this, where the translation is achieved by composing
+the meaning of words in a sentence. Our initial approach uses an inverse lambda
+method that we developed (and other methods) to learn meaning of words from
+meaning of sentences and an initial lexicon. We then present an improved method
+where the initial lexicon is also learned by analyzing the training sentence
+and meaning pairs. We evaluate our methods and compare them with other existing
+methods on a corpora of database querying and robot command and control.
+
+
+Encoding Petri Nets in Answer Set Programming for Simulation Based
+  Reasoning
+
+  One of our long term research goals is to develop systems to answer realistic
+questions (e.g., some mentioned in textbooks) about biological pathways that a
+biologist may ask. To answer such questions we need formalisms that can model
+pathways, simulate their execution, model intervention to those pathways, and
+compare simulations under different circumstances. We found Petri Nets to be
+the starting point of a suitable formalism for the modeling and simulation
+needs. However, we need to make extensions to the Petri Net model and also
+reason with multiple simulation runs and parallel state evolutions. Towards
+that end Answer Set Programming (ASP) implementation of Petri Nets would allow
+us to do both. In this paper we show how ASP can be used to encode basic Petri
+Nets in an intuitive manner. We then show how we can modify this encoding to
+model several Petri Net extensions by making small changes. We then highlight
+some of the reasoning capabilities that we will use to accomplish our ultimate
+research goal.
+
+
+Encoding Higher Level Extensions of Petri Nets in Answer Set Programming
+
+  Answering realistic questions about biological systems and pathways similar
+to the ones used by text books to test understanding of students about
+biological systems is one of our long term research goals. Often these
+questions require simulation based reasoning. To answer such questions, we need
+formalisms to build pathway models, add extensions, simulate, and reason with
+them. We chose Petri Nets and Answer Set Programming (ASP) as suitable
+formalisms, since Petri Net models are similar to biological pathway diagrams;
+and ASP provides easy extension and strong reasoning abilities. We found that
+certain aspects of biological pathways, such as locations and substance types,
+cannot be represented succinctly using regular Petri Nets. As a result, we need
+higher level constructs like colored tokens. In this paper, we show how Petri
+Nets with colored tokens can be encoded in ASP in an intuitive manner, how
+additional Petri Net extensions can be added by making small code changes, and
+how this work furthers our long term research goals. Our approach can be
+adapted to other domains with similar modeling needs.
+
+
+Event-Object Reasoning with Curated Knowledge Bases: Deriving Missing
+  Information
+
+  The broader goal of our research is to formulate answers to why and how
+questions with respect to knowledge bases, such as AURA. One issue we face when
+reasoning with many available knowledge bases is that at times needed
+information is missing. Examples of this include partially missing information
+about next sub-event, first sub-event, last sub-event, result of an event,
+input to an event, destination of an event, and raw material involved in an
+event. In many cases one can recover part of the missing knowledge through
+reasoning. In this paper we give a formal definition about how such missing
+information can be recovered and then give an ASP implementation of it. We then
+discuss the implication of this with respect to answering why and how
+questions.
+
+
+From Images to Sentences through Scene Description Graphs using
+  Commonsense Reasoning and Knowledge
+
+  In this paper we propose the construction of linguistic descriptions of
+images. This is achieved through the extraction of scene description graphs
+(SDGs) from visual scenes using an automatically constructed knowledge base.
+SDGs are constructed using both vision and reasoning. Specifically, commonsense
+reasoning is applied on (a) detections obtained from existing perception
+methods on given images, (b) a "commonsense" knowledge base constructed using
+natural language processing of image annotations and (c) lexical ontological
+knowledge from resources such as WordNet. Amazon Mechanical Turk(AMT)-based
+evaluations on Flickr8k, Flickr30k and MS-COCO datasets show that in most
+cases, sentences auto-constructed from SDGs obtained by our method give a more
+relevant and thorough description of an image than a recent state-of-the-art
+image caption based approach. Our Image-Sentence Alignment Evaluation results
+are also comparable to that of the recent state-of-the art approaches.
+
+
+Answering Image Riddles using Vision and Reasoning through Probabilistic
+  Soft Logic
+
+  In this work, we explore a genre of puzzles ("image riddles") which involves
+a set of images and a question. Answering these puzzles require both
+capabilities involving visual detection (including object, activity
+recognition) and, knowledge-based or commonsense reasoning. We compile a
+dataset of over 3k riddles where each riddle consists of 4 images and a
+groundtruth answer. The annotations are validated using crowd-sourced
+evaluation. We also define an automatic evaluation metric to track future
+progress. Our task bears similarity with the commonly known IQ tasks such as
+analogy solving, sequence filling that are often used to test intelligence.
+  We develop a Probabilistic Reasoning-based approach that utilizes
+probabilistic commonsense knowledge to answer these riddles with a reasonable
+accuracy. We demonstrate the results of our approach using both automatic and
+human evaluations. Our approach achieves some promising results for these
+riddles and provides a strong baseline for future attempts. We make the entire
+dataset and related materials publicly available to the community in
+ImageRiddle Website (http://bit.ly/22f9Ala).
+
+
+Incremental and Iterative Learning of Answer Set Programs from Mutually
+  Distinct Examples
+
+  Over the years the Artificial Intelligence (AI) community has produced
+several datasets which have given the machine learning algorithms the
+opportunity to learn various skills across various domains. However, a subclass
+of these machine learning algorithms that aimed at learning logic programs,
+namely the Inductive Logic Programming algorithms, have often failed at the
+task due to the vastness of these datasets. This has impacted the usability of
+knowledge representation and reasoning techniques in the development of AI
+systems. In this research, we try to address this scalability issue for the
+algorithms that learn answer set programs. We present a sound and complete
+algorithm which takes the input in a slightly different manner and performs an
+efficient and more user controlled search for a solution. We show via
+experiments that our algorithm can learn from two popular datasets from machine
+learning community, namely bAbl (a question answering dataset) and MNIST (a
+dataset for handwritten digit recognition), which to the best of our knowledge
+was not previously possible. The system is publicly available at
+https://goo.gl/KdWAcV. This paper is under consideration for acceptance in
+TPLP.
+
+
+Explicit Reasoning over End-to-End Neural Architectures for Visual
+  Question Answering
+
+  Many vision and language tasks require commonsense reasoning beyond
+data-driven image and natural language processing. Here we adopt Visual
+Question Answering (VQA) as an example task, where a system is expected to
+answer a question in natural language about an image. Current state-of-the-art
+systems attempted to solve the task using deep neural architectures and
+achieved promising performance. However, the resulting systems are generally
+opaque and they struggle in understanding questions for which extra knowledge
+is required. In this paper, we present an explicit reasoning layer on top of a
+set of penultimate neural network based systems. The reasoning layer enables
+reasoning and answering questions where additional knowledge is required, and
+at the same time provides an interpretable interface to the end users.
+Specifically, the reasoning layer adopts a Probabilistic Soft Logic (PSL) based
+engine to reason over a basket of inputs: visual relations, the semantic parse
+of the question, and background ontological knowledge from word2vec and
+ConceptNet. Experimental analysis of the answers and the key evidential
+predicates generated on the VQA dataset validate our approach.
+
+
+Proceedings of the 8th International Workshop on Non-Monotonic
+  Reasoning, NMR'2000
+
+  The papers gathered in this collection were presented at the 8th
+International Workshop on Nonmonotonic Reasoning, NMR2000. The series was
+started by John McCarthy in 1978. The first international NMR workshop was held
+at Mohonk Mountain House, New Paltz, New York in June, 1984, and was organized
+by Ray Reiter and Bonnie Webber.
+  In the last 10 years the area of nonmonotonic reasoning has seen a number of
+important developments. Significant theoretical advances were made in the
+understanding of general abstract principles underlying nonmonotonicity. Key
+results on the expressibility and computational complexity of nonmonotonic
+logics were established. The role of nonmonotonic reasoning in belief revision,
+abduction, reasoning about action, planing and uncertainty was further
+clarified. Several successful NMR systems were built and used in applications
+such as planning, scheduling, logic programming and constraint satisfaction.
+  The papers in the proceedings reflect these recent advances in the field.
+They are grouped into sections corresponding to special sessions as they were
+held at the workshop:
+  1. General NMR track
+  2. Abductive reasonig
+  3. Belief revision: theory and practice
+  4. Representing action and planning
+  5. Systems descriptions and demonstrations
+  6. Uncertainty frameworks in NMR
+
+
+Spatial Knowledge Distillation to aid Visual Reasoning
+
+  For tasks involving language and vision, the current state-of-the-art methods
+tend not to leverage any additional information that might be present to gather
+relevant (commonsense) knowledge. A representative task is Visual Question
+Answering where large diagnostic datasets have been proposed to test a system's
+capability of answering questions about images. The training data is often
+accompanied by annotations of individual object properties and spatial
+locations. In this work, we take a step towards integrating this additional
+privileged information in the form of spatial knowledge to aid in visual
+reasoning. We propose a framework that combines recent advances in knowledge
+distillation (teacher-student framework), relational reasoning and
+probabilistic logical languages to incorporate such knowledge in existing
+neural networks for the task of Visual Question Answering. Specifically, for a
+question posed against an image, we use a probabilistic logical language to
+encode the spatial knowledge and the spatial understanding about the question
+in the form of a mask that is directly provided to the teacher network. The
+student network learns from the ground-truth information as well as the
+teachers prediction via distillation. We also demonstrate the impact of
+predicting such a mask inside the teachers network using attention.
+Empirically, we show that both the methods improve the test accuracy over a
+state-of-the-art approach on a publicly available dataset.
+
+
+Developing and Using Special-Purpose Lexicons for Cohort Selection from
+  Clinical Notes
+
+  Background and Significance: Selecting cohorts for a clinical trial typically
+requires costly and time-consuming manual chart reviews resulting in poor
+participation. To help automate the process, National NLP Clinical Challenges
+(N2C2) conducted a shared challenge by defining 13 criteria for clinical trial
+cohort selection and by providing training and test datasets. This research was
+motivated by the N2C2 challenge.
+  Methods: We broke down the task into 13 independent subtasks corresponding to
+each criterion and implemented subtasks using rules or a supervised machine
+learning model. Each task critically depended on knowledge resources in the
+form of task-specific lexicons, for which we developed a novel model-driven
+approach. The approach allowed us to first expand the lexicon from a seed set
+and then remove noise from the list, thus improving the accuracy.
+  Results: Our system achieved an overall F measure of 0.9003 at the challenge,
+and was statistically tied for the first place out of 45 participants. The
+model-driven lexicon development and further debugging the rules/code on the
+training set improved overall F measure to 0.9140, overtaking the best
+numerical result at the challenge.
+  Discussion: Cohort selection, like phenotype extraction and classification,
+is amenable to rule-based or simple machine learning methods, however, the
+lexicons involved, such as medication names or medical terms referring to a
+medical problem, critically determine the overall accuracy. Automated lexicon
+development has the potential for scalability and accuracy.
+
+
+An Action Language for Multi-Agent Domains: Foundations
+
+  In multi-agent domains (MADs), an agent's action may not just change the
+world and the agent's knowledge and beliefs about the world, but also may
+change other agents' knowledge and beliefs about the world and their knowledge
+and beliefs about other agents' knowledge and beliefs about the world. The
+goals of an agent in a multi-agent world may involve manipulating the knowledge
+and beliefs of other agents' and again, not just their knowledge/belief about
+the world, but also their knowledge about other agents' knowledge about the
+world. Our goal is to present an action language (mA+) that has the necessary
+features to address the above aspects in representing and RAC in MADs. mA+
+allows the representation of and reasoning about different types of actions
+that an agent can perform in a domain where many other agents might be
+present---such as world-altering actions, sensing actions, and
+announcement/communication actions. It also allows the specification of agents'
+dynamic awareness of action occurrences which has future implications on what
+agents' know about the world and other agents' knowledge about the world. mA+
+considers three different types of awareness: full,- partial- awareness, and
+complete oblivion of an action occurrence and its effects. This keeps the
+language simple, yet powerful enough to address a large variety of knowledge
+manipulation scenarios in MADs. The semantics of mA+ relies on the notion of
+state, which is described by a pointed Kripke model and is used to encode the
+agent's knowledge and the real state of the world. It is defined by a
+transition function that maps pairs of actions and states into sets of states.
+We illustrate properties of the action theories, including properties that
+guarantee finiteness of the set of initial states and their practical
+implementability. Finally, we relate mA+ to other related formalisms that
+contribute to RAC in MADs.
+
+

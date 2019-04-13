@@ -1,0 +1,607 @@
+Error Compensated Quantized SGD and its Applications to Large-scale
+  Distributed Optimization
+
+  Large-scale distributed optimization is of great importance in various
+applications. For data-parallel based distributed learning, the inter-node
+gradient communication often becomes the performance bottleneck. In this paper,
+we propose the error compensated quantized stochastic gradient descent
+algorithm to improve the training efficiency. Local gradients are quantized to
+reduce the communication overhead, and accumulated quantization error is
+utilized to speed up the convergence. Furthermore, we present theoretical
+analysis on the convergence behaviour, and demonstrate its advantage over
+competitors. Extensive experiments indicate that our algorithm can compress
+gradients by a factor of up to two magnitudes without performance degradation.
+
+
+The Benefit of Group Sparsity
+
+  This paper develops a theory for group Lasso using a concept called strong
+group sparsity. Our result shows that group Lasso is superior to standard Lasso
+for strongly group-sparse signals. This provides a convincing theoretical
+justification for using group sparse regularization when the underlying group
+structure is consistent with the data. Moreover, the theory predicts some
+limitations of the group Lasso formulation that are confirmed by simulation
+studies.
+
+
+On the Acceleration of L-BFGS with Second-Order Information and
+  Stochastic Batches
+
+  This paper proposes a framework of L-BFGS based on the (approximate)
+second-order information with stochastic batches, as a novel approach to the
+finite-sum minimization problems. Different from the classical L-BFGS where
+stochastic batches lead to instability, we use a smooth estimate for the
+evaluations of the gradient differences while achieving acceleration by
+well-scaling the initial Hessians. We provide theoretical analyses for both
+convex and nonconvex cases. In addition, we demonstrate that within the popular
+applications of least-square and cross-entropy losses, the algorithm admits a
+simple implementation in the distributed environment. Numerical experiments
+support the efficiency of our algorithms.
+
+
+Hyperparameter Learning via Distributional Transfer
+
+  Bayesian optimisation is a popular technique for hyperparameter learning but
+typically requires initial 'exploration' even in cases where potentially
+similar prior tasks have been solved. We propose to transfer information across
+tasks using kernel embeddings of distributions of training datasets used in
+those tasks. The resulting method has a faster convergence compared to existing
+baselines, in some cases requiring only a few evaluations of the target
+objective.
+
+
+Adaptive Sampling Towards Fast Graph Representation Learning
+
+  Graph Convolutional Networks (GCNs) have become a crucial tool on learning
+representations of graph vertices. The main challenge of adapting GCNs on
+large-scale graphs is the scalability issue that it incurs heavy cost both in
+computation and memory due to the uncontrollable neighborhood expansion across
+layers. In this paper, we accelerate the training of GCNs through developing an
+adaptive layer-wise sampling method. By constructing the network layer by layer
+in a top-down passway, we sample the lower layer conditioned on the top one,
+where the sampled neighborhoods are shared by different parent nodes and the
+over expansion is avoided owing to the fixed-size sampling. More importantly,
+the proposed sampler is adaptive and applicable for explicit variance
+reduction, which in turn enhances the training of our method. Furthermore, we
+propose a novel and economical approach to promote the message passing over
+distant nodes by applying skip connections. Intensive experiments on several
+benchmarks verify the effectiveness of our method regarding the classification
+accuracy while enjoying faster convergence speed.
+
+
+End-to-End Learning of Motion Representation for Video Understanding
+
+  Despite the recent success of end-to-end learned representations,
+hand-crafted optical flow features are still widely used in video analysis
+tasks. To fill this gap, we propose TVNet, a novel end-to-end trainable neural
+network, to learn optical-flow-like features from data. TVNet subsumes a
+specific optical flow solver, the TV-L1 method, and is initialized by unfolding
+its optimization iterations as neural layers. TVNet can therefore be used
+directly without any extra learning. Moreover, it can be naturally concatenated
+with other task-specific networks to formulate an end-to-end architecture, thus
+making our method more efficient than current multi-stage approaches by
+avoiding the need to pre-compute and store features on disk. Finally, the
+parameters of the TVNet can be further fine-tuned by end-to-end training. This
+enables TVNet to learn richer and task-specific patterns beyond exact optical
+flow. Extensive experiments on two action recognition benchmarks verify the
+effectiveness of the proposed approach. Our TVNet achieves better accuracies
+than all compared methods, while being competitive with the fastest counterpart
+in terms of features extraction time.
+
+
+An Efficient Approach to Informative Feature Extraction from Multimodal
+  Data
+
+  One primary focus in multimodal feature extraction is to find the
+representations of individual modalities that are maximally correlated. As a
+well-known measure of dependence, the Hirschfeld-Gebelein-R\'{e}nyi (HGR)
+maximal correlation becomes an appealing objective because of its operational
+meaning and desirable properties. However, the strict whitening constraints
+formalized in the HGR maximal correlation limit its application. To address
+this problem, this paper proposes Soft-HGR, a novel framework to extract
+informative features from multiple data modalities. Specifically, our framework
+prevents the "hard" whitening constraints, while simultaneously preserving the
+same feature geometry as in the HGR maximal correlation. The objective of
+Soft-HGR is straightforward, only involving two inner products, which
+guarantees the efficiency and stability in optimization. We further generalize
+the framework to handle more than two modalities and missing modalities. When
+labels are partially available, we enhance the discriminative power of the
+feature representations by making a semi-supervised adaptation. Empirical
+evaluation implies that our approach learns more informative feature mappings
+and is more efficient to optimize.
+
+
+Weakly Supervised Dense Event Captioning in Videos
+
+  Dense event captioning aims to detect and describe all events of interest
+contained in a video. Despite the advanced development in this area, existing
+methods tackle this task by making use of dense temporal annotations, which is
+dramatically source-consuming. This paper formulates a new problem: weakly
+supervised dense event captioning, which does not require temporal segment
+annotations for model training. Our solution is based on the one-to-one
+correspondence assumption, each caption describes one temporal segment, and
+each temporal segment has one caption, which holds in current benchmark
+datasets and most real-world cases. We decompose the problem into a pair of
+dual problems: event captioning and sentence localization and present a cycle
+system to train our model. Extensive experimental results are provided to
+demonstrate the ability of our model on both dense event captioning and
+sentence localization in videos.
+
+
+Controllable Image-to-Video Translation: A Case Study on Facial
+  Expression Generation
+
+  The recent advances in deep learning have made it possible to generate
+photo-realistic images by using neural networks and even to extrapolate video
+frames from an input video clip. In this paper, for the sake of both furthering
+this exploration and our own interest in a realistic application, we study
+image-to-video translation and particularly focus on the videos of facial
+expressions. This problem challenges the deep neural networks by another
+temporal dimension comparing to the image-to-image translation. Moreover, its
+single input image fails most existing video generation methods that rely on
+recurrent models. We propose a user-controllable approach so as to generate
+video clips of various lengths from a single face image. The lengths and types
+of the expressions are controlled by users. To this end, we design a novel
+neural network architecture that can incorporate the user input into its skip
+connections and propose several improvements to the adversarial training method
+for the neural network. Experiments and user studies verify the effectiveness
+of our approach. Especially, we would like to highlight that even for the face
+images in the wild (downloaded from the Web and the authors' own photos), our
+model can generate high-quality facial expression videos of which about 50\%
+are labeled as real by Amazon Mechanical Turk workers.
+
+
+Progressive Feature Alignment for Unsupervised Domain Adaptation
+
+  Unsupervised domain adaptation (UDA) transfers knowledge from a label-rich
+source domain to a fully-unlabeled target domain. To tackle this task, recent
+approaches resort to discriminative domain transfer in virtue of pseudo-labels
+to enforce the class-level distribution alignment across the source and target
+domains. These methods, however, are vulnerable to the error accumulation and
+thus incapable of preserving cross-domain category consistency, as the
+pseudo-labeling accuracy is not guaranteed explicitly. In this paper, we
+propose the Progressive Feature Alignment Network (PFAN) to align the
+discriminative features across domains progressively and effectively, via
+exploiting the intra-class variation in the target domain. To be specific, we
+first develop an Easy-to-Hard Transfer Strategy (EHTS) and an Adaptive
+Prototype Alignment (APA) step to train our model iteratively and
+alternatively. Moreover, upon observing that a good domain adaptation usually
+requires a non-saturated source classifier, we consider a simple yet efficient
+way to retard the convergence speed of the source classification loss by
+further involving a temperature variate into the soft-max function. The
+extensive experimental results reveal that the proposed PFAN exceeds the
+state-of-the-art performance on three UDA datasets.
+
+
+Learning with Structured Sparsity
+
+  This paper investigates a new learning formulation called structured
+sparsity, which is a natural extension of the standard sparsity concept in
+statistical learning and compressive sensing. By allowing arbitrary structures
+on the feature set, this concept generalizes the group sparsity idea that has
+become popular in recent years. A general theory is developed for learning with
+structured sparsity, based on the notion of coding complexity associated with
+the structure. It is shown that if the coding complexity of the target signal
+is small, then one can achieve improved performance by using coding complexity
+regularization methods, which generalize the standard sparse regularization.
+Moreover, a structured greedy algorithm is proposed to efficiently solve the
+structured sparsity problem. It is shown that the greedy algorithm
+approximately solves the coding complexity optimization problem under
+appropriate conditions. Experiments are included to demonstrate the advantage
+of structured sparsity over standard sparsity on some real applications.
+
+
+Fast Iteratively Reweighted Least Squares Algorithms for Analysis-Based
+  Sparsity Reconstruction
+
+  In this paper, we propose a novel algorithm for analysis-based sparsity
+reconstruction. It can solve the generalized problem by structured sparsity
+regularization with an orthogonal basis and total variation regularization. The
+proposed algorithm is based on the iterative reweighted least squares (IRLS)
+model, which is further accelerated by the preconditioned conjugate gradient
+method. The convergence rate of the proposed algorithm is almost the same as
+that of the traditional IRLS algorithms, that is, exponentially fast. Moreover,
+with the specifically devised preconditioner, the computational cost for each
+iteration is significantly less than that of traditional IRLS algorithms, which
+enables our approach to handle large scale problems. In addition to the fast
+convergence, it is straightforward to apply our method to standard sparsity,
+group sparsity, overlapping group sparsity and TV based problems. Experiments
+are conducted on a practical application: compressive sensing magnetic
+resonance imaging. Extensive results demonstrate that the proposed algorithm
+achieves superior performance over 14 state-of-the-art algorithms in terms of
+both accuracy and computational cost.
+
+
+Track Facial Points in Unconstrained Videos
+
+  Tracking Facial Points in unconstrained videos is challenging due to the
+non-rigid deformation that changes over time. In this paper, we propose to
+exploit incremental learning for person-specific alignment in wild conditions.
+Our approach takes advantage of part-based representation and cascade
+regression for robust and efficient alignment on each frame. Unlike existing
+methods that usually rely on models trained offline, we incrementally update
+the representation subspace and the cascade of regressors in a unified
+framework to achieve personalized modeling on the fly. To alleviate the
+drifting issue, the fitting results are evaluated using a deep neural network,
+where well-aligned faces are picked out to incrementally update the
+representation and fitting models. Both image and video datasets are employed
+to valid the proposed method. The results demonstrate the superior performance
+of our approach compared with existing approaches in terms of fitting accuracy
+and efficiency.
+
+
+Intra-protein binding peptide fragments have specific and intrinsic
+  sequence patterns
+
+  The key finding in the DNA double helix model is the specific pairing or
+binding between nucleotides A-T and C-G, and the pairing rules are the molecule
+basis of genetic code. Unfortunately, no such rules have been discovered for
+proteins. Here we show that similar rules and intrinsic sequence patterns
+between intra-protein binding peptide fragments do exist, and they can be
+extracted using a deep learning algorithm. Multi-millions of binding and
+non-binding peptide fragments from currently available protein X-ray structures
+are classified with an accuracy of up to 93%. This discovery has the potential
+in helping solve protein folding and protein-protein interaction problems, two
+open and fundamental problems in molecular biology.
+
+
+Group-driven Reinforcement Learning for Personalized mHealth
+  Intervention
+
+  Due to the popularity of smartphones and wearable devices nowadays, mobile
+health (mHealth) technologies are promising to bring positive and wide impacts
+on people's health. State-of-the-art decision-making methods for mHealth rely
+on some ideal assumptions. Those methods either assume that the users are
+completely homogenous or completely heterogeneous. However, in reality, a user
+might be similar with some, but not all, users. In this paper, we propose a
+novel group-driven reinforcement learning method for the mHealth. We aim to
+understand how to share information among similar users to better convert the
+limited user information into sharper learned RL policies. Specifically, we
+employ the K-means clustering method to group users based on their trajectory
+information similarity and learn a shared RL policy for each group. Extensive
+experiment results have shown that our method can achieve clear gains over the
+state-of-the-art RL methods for mHealth.
+
+
+Learning Graph While Training: An Evolving Graph Convolutional Neural
+  Network
+
+  Convolution Neural Networks on Graphs are important generalization and
+extension of classical CNNs. While previous works generally assumed that the
+graph structures of samples are regular with unified dimensions, in many
+applications, they are highly diverse or even not well defined. Under some
+circumstances, e.g. chemical molecular data, clustering or coarsening for
+simplifying the graphs is hard to be justified chemically. In this paper, we
+propose a more general and flexible graph convolution network (EGCN) fed by
+batch of arbitrarily shaped data together with their evolving graph Laplacians
+trained in supervised fashion. Extensive experiments have been conducted to
+demonstrate the superior performance in terms of both the acceleration of
+parameter fitting and the significantly improved prediction accuracy on
+multiple graph-structured datasets.
+
+
+Adaptive Graph Convolutional Neural Networks
+
+  Graph Convolutional Neural Networks (Graph CNNs) are generalizations of
+classical CNNs to handle graph data such as molecular data, point could and
+social networks. Current filters in graph CNNs are built for fixed and shared
+graph structure. However, for most real data, the graph structures varies in
+both size and connectivity. The paper proposes a generalized and flexible graph
+CNN taking data of arbitrary graph structure as input. In that way a
+task-driven adaptive graph is learned for each graph data while training. To
+efficiently learn the graph, a distance metric learning is proposed. Extensive
+experiments on nine graph-structured datasets have demonstrated the superior
+performance improvement on both convergence speed and predictive accuracy.
+
+
+Robust Actor-Critic Contextual Bandit for Mobile Health (mHealth)
+  Interventions
+
+  We consider the actor-critic contextual bandit for the mobile health
+(mHealth) intervention. State-of-the-art decision-making algorithms generally
+ignore the outliers in the dataset. In this paper, we propose a novel robust
+contextual bandit method for the mHealth. It can achieve the conflicting goal
+of reducing the influence of outliers while seeking for a similar solution
+compared with the state-of-the-art contextual bandit methods on the datasets
+without outliers. Such performance relies on two technologies: (1) the
+capped-$\ell_{2}$ norm; (2) a reliable method to set the thresholding
+hyper-parameter, which is inspired by one of the most fundamental techniques in
+the statistics. Although the model is non-convex and non-differentiable, we
+propose an effective reweighted algorithm and provide solid theoretical
+analyses. We prove that the proposed algorithm can find sufficiently decreasing
+points after each iteration and finally converges after a finite number of
+iterations. Extensive experiment results on two datasets demonstrate that our
+method can achieve almost identical results compared with state-of-the-art
+contextual bandit methods on the dataset without outliers, and significantly
+outperform those state-of-the-art methods on the badly noised dataset with
+outliers in a variety of parameter settings.
+
+
+Adaptive Cost-sensitive Online Classification
+
+  Cost-Sensitive Online Classification has drawn extensive attention in recent
+years, where the main approach is to directly online optimize two well-known
+cost-sensitive metrics: (i) weighted sum of sensitivity and specificity; (ii)
+weighted misclassification cost. However, previous existing methods only
+considered first-order information of data stream. It is insufficient in
+practice, since many recent studies have proved that incorporating second-order
+information enhances the prediction performance of classification models. Thus,
+we propose a family of cost-sensitive online classification algorithms with
+adaptive regularization in this paper. We theoretically analyze the proposed
+algorithms and empirically validate their effectiveness and properties in
+extensive experiments. Then, for better trade off between the performance and
+efficiency, we further introduce the sketching technique into our algorithms,
+which significantly accelerates the computational speed with quite slight
+performance loss. Finally, we apply our algorithms to tackle several online
+anomaly detection tasks from real world. Promising results prove that the
+proposed algorithms are effective and efficient in solving cost-sensitive
+online classification problems in various real-world domains.
+
+
+Adversarial Learning with Local Coordinate Coding
+
+  Generative adversarial networks (GANs) aim to generate realistic data from
+some prior distribution (e.g., Gaussian noises). However, such prior
+distribution is often independent of real data and thus may lose semantic
+information (e.g., geometric structure or content in images) of data. In
+practice, the semantic information might be represented by some latent
+distribution learned from data, which, however, is hard to be used for sampling
+in GANs. In this paper, rather than sampling from the pre-defined prior
+distribution, we propose a Local Coordinate Coding (LCC) based sampling method
+to improve GANs. We derive a generalization bound for LCC based GANs and prove
+that a small dimensional input is sufficient to achieve good generalization.
+Extensive experiments on various real-world datasets demonstrate the
+effectiveness of the proposed method.
+
+
+Nonparametric Topic Modeling with Neural Inference
+
+  This work focuses on combining nonparametric topic models with Auto-Encoding
+Variational Bayes (AEVB). Specifically, we first propose iTM-VAE, where the
+topics are treated as trainable parameters and the document-specific topic
+proportions are obtained by a stick-breaking construction. The inference of
+iTM-VAE is modeled by neural networks such that it can be computed in a simple
+feed-forward manner. We also describe how to introduce a hyper-prior into
+iTM-VAE so as to model the uncertainty of the prior parameter. Actually, the
+hyper-prior technique is quite general and we show that it can be applied to
+other AEVB based models to alleviate the {\it collapse-to-prior} problem
+elegantly. Moreover, we also propose HiTM-VAE, where the document-specific
+topic distributions are generated in a hierarchical manner. HiTM-VAE is even
+more flexible and can generate topic distributions with better variability.
+Experimental results on 20News and Reuters RCV1-V2 datasets show that the
+proposed models outperform the state-of-the-art baselines significantly. The
+advantages of the hyper-prior technique and the hierarchical model construction
+are also confirmed by experiments.
+
+
+Weakly Supervised Deep Learning for Thoracic Disease Classification and
+  Localization on Chest X-rays
+
+  Chest X-rays is one of the most commonly available and affordable
+radiological examinations in clinical practice. While detecting thoracic
+diseases on chest X-rays is still a challenging task for machine intelligence,
+due to 1) the highly varied appearance of lesion areas on X-rays from patients
+of different thoracic disease and 2) the shortage of accurate pixel-level
+annotations by radiologists for model training. Existing machine learning
+methods are unable to deal with the challenge that thoracic diseases usually
+happen in localized disease-specific areas. In this article, we propose a
+weakly supervised deep learning framework equipped with squeeze-and-excitation
+blocks, multi-map transfer, and max-min pooling for classifying thoracic
+diseases as well as localizing suspicious lesion regions. The comprehensive
+experiments and discussions are performed on the ChestX-ray14 dataset. Both
+numerical and visual results have demonstrated the effectiveness of the
+proposed model and its better performance against the state-of-the-art
+pipelines.
+
+
+Dual Reconstruction Nets for Image Super-Resolution with Gradient
+  Sensitive Loss
+
+  Deep neural networks have exhibited promising performance in image
+super-resolution (SR) due to the power in learning the non-linear mapping from
+low-resolution (LR) images to high-resolution (HR) images. However, most deep
+learning methods employ feed-forward architectures, and thus the dependencies
+between LR and HR images are not fully exploited, leading to limited learning
+performance. Moreover, most deep learning based SR methods apply the pixel-wise
+reconstruction error as the loss, which, however, may fail to capture
+high-frequency information and produce perceptually unsatisfying results,
+whilst the recent perceptual loss relies on some pre-trained deep model and
+they may not generalize well. In this paper, we introduce a mask to separate
+the image into low- and high-frequency parts based on image gradient magnitude,
+and then devise a gradient sensitive loss to well capture the structures in the
+image without sacrificing the recovery of low-frequency content. Moreover, by
+investigating the duality in SR, we develop a dual reconstruction network (DRN)
+to improve the SR performance. We provide theoretical analysis on the
+generalization performance of our method and demonstrate its effectiveness and
+superiority with thorough experiments.
+
+
+Exploring Fast and Communication-Efficient Algorithms in Large-scale
+  Distributed Networks
+
+  The communication overhead has become a significant bottleneck in
+data-parallel network with the increasing of model size and data samples. In
+this work, we propose a new algorithm LPC-SVRG with quantized gradients and its
+acceleration ALPC-SVRG to effectively reduce the communication complexity while
+maintaining the same convergence as the unquantized algorithms. Specifically,
+we formulate the heuristic gradient clipping technique within the quantization
+scheme and show that unbiased quantization methods in related works [3, 33, 38]
+are special cases of ours. We introduce double sampling in the accelerated
+algorithm ALPC-SVRG to fully combine the gradients of full-precision and
+low-precision, and then achieve acceleration with fewer communication overhead.
+Our analysis focuses on the nonsmooth composite problem, which makes our
+algorithms more general. The experiments on linear models and deep neural
+networks validate the effectiveness of algorithms.
+
+
+Forest Sparsity for Multi-channel Compressive Sensing
+
+  In this paper, we investigate a new compressive sensing model for
+multi-channel sparse data where each channel can be represented as a
+hierarchical tree and different channels are highly correlated. Therefore, the
+full data could follow the forest structure and we call this property as
+\emph{forest sparsity}. It exploits both intra- and inter- channel correlations
+and enriches the family of existing model-based compressive sensing theories.
+The proposed theory indicates that only $\mathcal{O}(Tk+\log(N/k))$
+measurements are required for multi-channel data with forest sparsity, where
+$T$ is the number of channels, $N$ and $k$ are the length and sparsity number
+of each channel respectively. This result is much better than
+$\mathcal{O}(Tk+T\log(N/k))$ of tree sparsity, $\mathcal{O}(Tk+k\log(N/k))$ of
+joint sparsity, and far better than $\mathcal{O}(Tk+Tk\log(N/k))$ of standard
+sparsity. In addition, we extend the forest sparsity theory to the multiple
+measurement vectors problem, where the measurement matrix is a block-diagonal
+matrix. The result shows that the required measurement bound can be the same as
+that for dense random measurement matrix, when the data shares equal energy in
+each channel. A new algorithm is developed and applied on four example
+applications to validate the benefit of the proposed model. Extensive
+experiments demonstrate the effectiveness and efficiency of the proposed theory
+and algorithm.
+
+
+SIRF: Simultaneous Image Registration and Fusion in A Unified Framework
+
+  In this paper, we propose a novel method for image fusion with a
+high-resolution panchromatic image and a low-resolution multispectral image at
+the same geographical location. The fusion is formulated as a convex
+optimization problem which minimizes a linear combination of a least-squares
+fitting term and a dynamic gradient sparsity regularizer. The former is to
+preserve accurate spectral information of the multispectral image, while the
+latter is to keep sharp edges of the high-resolution panchromatic image. We
+further propose to simultaneously register the two images during the fusing
+process, which is naturally achieved by virtue of the dynamic gradient sparsity
+property. An efficient algorithm is then devised to solve the optimization
+problem, accomplishing a linear computational complexity in the size of the
+output image in each iteration. We compare our method against seven
+state-of-the-art image fusion methods on multispectral image datasets from four
+satellites. Extensive experimental results demonstrate that the proposed method
+substantially outperforms the others in terms of both spatial and spectral
+qualities. We also show that our method can provide high-quality products from
+coarsely registered real-world datasets. Finally, a MATLAB implementation is
+provided to facilitate future research.
+
+
+Robust Contextual Bandit via the Capped-$\ell_{2}$ norm
+
+  This paper considers the actor-critic contextual bandit for the mobile health
+(mHealth) intervention. The state-of-the-art decision-making methods in mHealth
+generally assume that the noise in the dynamic system follows the Gaussian
+distribution. Those methods use the least-square-based algorithm to estimate
+the expected reward, which is prone to the existence of outliers. To deal with
+the issue of outliers, we propose a novel robust actor-critic contextual bandit
+method for the mHealth intervention. In the critic updating, the
+capped-$\ell_{2}$ norm is used to measure the approximation error, which
+prevents outliers from dominating our objective. A set of weights could be
+achieved from the critic updating. Considering them gives a weighted objective
+for the actor updating. It provides the badly noised sample in the critic
+updating with zero weights for the actor updating. As a result, the robustness
+of both actor-critic updating is enhanced. There is a key parameter in the
+capped-$\ell_{2}$ norm. We provide a reliable method to properly set it by
+making use of one of the most fundamental definitions of outliers in
+statistics. Extensive experiment results demonstrate that our method can
+achieve almost identical results compared with the state-of-the-art methods on
+the dataset without outliers and dramatically outperform them on the datasets
+noised by outliers.
+
+
+Discrimination-aware Channel Pruning for Deep Neural Networks
+
+  Channel pruning is one of the predominant approaches for deep model
+compression. Existing pruning methods either train from scratch with sparsity
+constraints on channels, or minimize the reconstruction error between the
+pre-trained feature maps and the compressed ones. Both strategies suffer from
+some limitations: the former kind is computationally expensive and difficult to
+converge, whilst the latter kind optimizes the reconstruction error but ignores
+the discriminative power of channels. To overcome these drawbacks, we
+investigate a simple-yet-effective method, called discrimination-aware channel
+pruning, to choose those channels that really contribute to discriminative
+power. To this end, we introduce additional losses into the network to increase
+the discriminative power of intermediate layers and then select the most
+discriminative channels for each layer by considering the additional loss and
+the reconstruction error. Last, we propose a greedy algorithm to conduct
+channel selection and parameter optimization in an iterative way. Extensive
+experiments demonstrate the effectiveness of our method. For example, on
+ILSVRC-12, our pruned ResNet-50 with 30% reduction of channels even outperforms
+the original model by 0.39% in top-1 accuracy.
+
+
+Tencent ML-Images: A Large-Scale Multi-Label Image Database for Visual
+  Representation Learning
+
+  In existing visual representation learning tasks, deep convolutional neural
+networks (CNNs) are often trained on images annotated with single tags, such as
+ImageNet. However, a single tag cannot describe all important contents of one
+image, and some useful visual information may be wasted during training. In
+this work, we propose to train CNNs from images annotated with multiple tags,
+to enhance the quality of visual representation of the trained CNN model. To
+this end, we build a large-scale multi-label image database with 18M images and
+11K categories, dubbed Tencent ML-Images. We efficiently train the ResNet-101
+model with multi-label outputs on Tencent ML-Images, taking 90 hours for 60
+epochs, based on a large-scale distributed deep learning framework,i.e.,TFplus.
+The good quality of the visual representation of the Tencent ML-Images
+checkpoint is verified through three transfer learning tasks, including
+single-label image classification on ImageNet and Caltech-256, object detection
+on PASCAL VOC 2007, and semantic segmentation on PASCAL VOC 2012. The Tencent
+ML-Images database, the checkpoints of ResNet-101, and all the training
+codehave been released at https://github.com/Tencent/tencent-ml-images. It is
+expected to promote other vision tasks in the research and industry community.
+
+
+Semi-Supervised Graph Classification: A Hierarchical Graph Perspective
+
+  Node classification and graph classification are two graph learning problems
+that predict the class label of a node and the class label of a graph
+respectively. A node of a graph usually represents a real-world entity, e.g., a
+user in a social network, or a protein in a protein-protein interaction
+network. In this work, we consider a more challenging but practically useful
+setting, in which a node itself is a graph instance. This leads to a
+hierarchical graph perspective which arises in many domains such as social
+network, biological network and document collection. For example, in a social
+network, a group of people with shared interests forms a user group, whereas a
+number of user groups are interconnected via interactions or common members. We
+study the node classification problem in the hierarchical graph where a `node'
+is a graph instance, e.g., a user group in the above example. As labels are
+usually limited in real-world data, we design two novel semi-supervised
+solutions named \underline{SE}mi-supervised gr\underline{A}ph
+c\underline{L}assification via \underline{C}autious/\underline{A}ctive
+\underline{I}teration (or SEAL-C/AI in short). SEAL-C/AI adopt an iterative
+framework that takes turns to build or update two classifiers, one working at
+the graph instance level and the other at the hierarchical graph level. To
+simplify the representation of the hierarchical graph, we propose a novel
+supervised, self-attentive graph embedding method called SAGE, which embeds
+graph instances of arbitrary size into fixed-length vectors. Through
+experiments on synthetic data and Tencent QQ group data, we demonstrate that
+SEAL-C/AI not only outperform competing methods by a significant margin in
+terms of accuracy/Macro-F1, but also generate meaningful interpretations of the
+learned representations.
+
+
+Cohesion-based Online Actor-Critic Reinforcement Learning for mHealth
+  Intervention
+
+  In the wake of the vast population of smart device users worldwide, mobile
+health (mHealth) technologies are hopeful to generate positive and wide
+influence on people's health. They are able to provide flexible, affordable and
+portable health guides to device users. Current online decision-making methods
+for mHealth assume that the users are completely heterogeneous. They share no
+information among users and learn a separate policy for each user. However,
+data for each user is very limited in size to support the separate online
+learning, leading to unstable policies that contain lots of variances. Besides,
+we find the truth that a user may be similar with some, but not all, users, and
+connected users tend to have similar behaviors. In this paper, we propose a
+network cohesion constrained (actor-critic) Reinforcement Learning (RL) method
+for mHealth. The goal is to explore how to share information among similar
+users to better convert the limited user information into sharper learned
+policies. To the best of our knowledge, this is the first online actor-critic
+RL for mHealth and first network cohesion constrained (actor-critic) RL method
+in all applications. The network cohesion is important to derive effective
+policies. We come up with a novel method to learn the network by using the warm
+start trajectory, which directly reflects the users' property. The optimization
+of our model is difficult and very different from the general supervised
+learning due to the indirect observation of values. As a contribution, we
+propose two algorithms for the proposed online RLs. Apart from mHealth, the
+proposed methods can be easily applied or adapted to other health-related
+tasks. Extensive experiment results on the HeartSteps dataset demonstrates that
+in a variety of parameter settings, the proposed two methods obtain obvious
+improvements over the state-of-the-art methods.
+
+

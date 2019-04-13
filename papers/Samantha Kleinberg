@@ -1,0 +1,59 @@
+Investigating Causal Relationships in Stock Returns with Temporal Logic
+  Based Methods
+
+  We describe a new framework for causal inference and its application to
+return time series. In this system, causal relationships are represented as
+logical formulas, allowing us to test arbitrarily complex hypotheses in a
+computationally efficient way. We simulate return time series using a common
+factor model, and show that on this data the method described significantly
+outperforms Granger causality (a primary approach to this type of problem).
+Finally we apply the method to real return data, showing that the method can
+discover novel relationships between stocks. The approach described is a
+general one that will allow combination of price and volume data with
+qualitative information at varying time scales (from interest rate
+announcements, to earnings reports to news stories) shedding light on some of
+the previously invisible common causes of seemingly correlated price movements.
+
+
+The Temporal Logic of Causal Structures
+
+  Computational analysis of time-course data with an underlying causal
+structure is needed in a variety of domains, including neural spike trains,
+stock price movements, and gene expression levels. However, it can be
+challenging to determine from just the numerical time course data alone what is
+coordinating the visible processes, to separate the underlying prima facie
+causes into genuine and spurious causes and to do so with a feasible
+computational complexity. For this purpose, we have been developing a novel
+algorithm based on a framework that combines notions of causality in philosophy
+with algorithmic approaches built on model checking and statistical techniques
+for multiple hypotheses testing. The causal relationships are described in
+terms of temporal logic formulae, reframing the inference problem in terms of
+model checking. The logic used, PCTL, allows description of both the time
+between cause and effect and the probability of this relationship being
+observed. We show that equipped with these causal formulae with their
+associated probabilities we may compute the average impact a cause makes to its
+effect and then discover statistically significant causes through the concepts
+of multiple hypothesis testing (treating each causal relationship as a
+hypothesis), and false discovery control. By exploring a well-chosen family of
+potentially all significant hypotheses with reasonably minimal description
+length, it is possible to tame the algorithm's computational complexity while
+exploring the nearly complete search-space of all prima facie causes. We have
+tested these ideas in a number of domains and illustrate them here with two
+examples.
+
+
+Proceedings 3rd Workshop on formal reasoning about Causation,
+  Responsibility, and Explanations in Science and Technology
+
+  The CREST 2018 workshop is the third in a series of workshops addressing
+formal approaches to reasoning about causation in systems engineering. The
+topic of formally identifying the cause(s) of specific events - usually some
+form of failures -, and explaining why they occurred, are increasingly in the
+focus of several, disjoint communities. The main objective of CREST is to bring
+together researchers and practitioners from industry and academia in order to
+enable discussions how explicit and implicit reasoning about causation is
+performed. A further objective is to link to the foundations of causal
+reasoning in the philosophy of sciences and to causal reasoning performed in
+other areas of computer science, engineering, and beyond.
+
+

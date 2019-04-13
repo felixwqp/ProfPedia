@@ -1,0 +1,138 @@
+Fairness as a Program Property
+
+  We explore the following question: Is a decision-making program fair, for
+some useful definition of fairness? First, we describe how several algorithmic
+fairness questions can be phrased as program verification problems. Second, we
+discuss an automated verification technique for proving or disproving fairness
+of decision-making programs with respect to a probabilistic model of the
+population.
+
+
+Quantifying Program Bias
+
+  With the range and sensitivity of algorithmic decisions expanding at a
+break-neck speed, it is imperative that we aggressively investigate whether
+programs are biased. We propose a novel probabilistic program analysis
+technique and apply it to quantifying bias in decision-making programs.
+Specifically, we (i) present a sound and complete automated verification
+technique for proving quantitative properties of probabilistic programs; (ii)
+show that certain notions of bias, recently proposed in the fairness
+literature, can be phrased as quantitative correctness properties; and (iii)
+present FairSquare, the first verification tool for quantifying program bias,
+and evaluate it on a range of decision-making programs.
+
+
+Spatial Interpolants
+
+  We propose Splinter, a new technique for proving properties of
+heap-manipulating programs that marries (1) a new separation logic-based
+analysis for heap reasoning with (2) an interpolation-based technique for
+refining heap-shape invariants with data invariants. Splinter is property
+directed, precise, and produces counterexample traces when a property does not
+hold. Using the novel notion of spatial interpolants modulo theories, Splinter
+can infer complex invariants over general recursive predicates, e.g., of the
+form all elements in a linked list are even or a binary tree is sorted.
+Furthermore, we treat interpolation as a black box, which gives us the freedom
+to encode data manipulation in any suitable theory for a given program (e.g.,
+bit vectors, arrays, or linear arithmetic), so that our technique immediately
+benefits from any future advances in SMT solving and interpolation.
+
+
+Constraint-Based Synthesis of Coupling Proofs
+
+  Proof by coupling is a classical technique for proving properties about pairs
+of randomized algorithms by carefully relating (or coupling) two probabilistic
+executions. In this paper, we show how to automatically construct such proofs
+for probabilistic programs. First, we present f-coupled postconditions, an
+abstraction describing two correlated program executions. Second, we show how
+properties of f-coupled postconditions can imply various probabilistic
+properties of the original programs. Third, we demonstrate how to reduce the
+proof-search problem to a purely logical synthesis problem of the form $\exists
+f\ldotp \forall X\ldotp \phi$, making probabilistic reasoning unnecessary. We
+develop a prototype implementation to automatically build coupling proofs for
+probabilistic properties, including uniformity and independence of program
+expressions.
+
+
+Synthesizing Coupling Proofs of Differential Privacy
+
+  Differential privacy has emerged as a promising probabilistic formulation of
+privacy, generating intense interest within academia and industry. We present a
+push-button, automated technique for verifying $\varepsilon$-differential
+privacy of sophisticated randomized algorithms. We make several conceptual,
+algorithmic, and practical contributions: (i) Inspired by the recent advances
+on approximate couplings and randomness alignment, we present a new proof
+technique called coupling strategies, which casts differential privacy proofs
+as a winning strategy in a game where we have finite privacy resources to
+expend. (ii) To discover a winning strategy, we present a constraint-based
+formulation of the problem as a set of Horn modulo couplings (HMC) constraints,
+a novel combination of first-order Horn clauses and probabilistic constraints.
+(iii) We present a technique for solving HMC constraints by transforming
+probabilistic constraints into logical constraints with uninterpreted
+functions. (iv) Finally, we implement our technique in the FairSquare verifier
+and provide the first automated privacy proofs for a number of challenging
+algorithms from the differential privacy literature, including Report Noisy
+Max, the Exponential Mechanism, and the Sparse Vector Mechanism.
+
+
+Neural-Augmented Static Analysis of Android Communication
+
+  We address the problem of discovering communication links between
+applications in the popular Android mobile operating system, an important
+problem for security and privacy in Android. Any scalable static analysis in
+this complex setting is bound to produce an excessive amount of
+false-positives, rendering it impractical. To improve precision, we propose to
+augment static analysis with a trained neural-network model that estimates the
+probability that a communication link truly exists. We describe a
+neural-network architecture that encodes abstractions of communicating objects
+in two applications and estimates the probability with which a link indeed
+exists. At the heart of our architecture are type-directed encoders (TDE), a
+general framework for elegantly constructing encoders of a compound data type
+by recursively composing encoders for its constituent types. We evaluate our
+approach on a large corpus of Android applications, and demonstrate that it
+achieves very high accuracy. Further, we conduct thorough interpretability
+studies to understand the internals of the learned neural networks.
+
+
+Trace Abstraction Modulo Probability
+
+  We propose trace abstraction modulo probability, a proof technique for
+verifying high-probability accuracy guarantees of probabilistic programs. Our
+proofs overapproximate the set of program traces using failure automata,
+finite-state automata that upper bound the probability of failing to satisfy a
+target specification. We automate proof construction by reducing probabilistic
+reasoning to logical reasoning: we use program synthesis methods to select
+axioms for sampling instructions, and then apply Craig interpolation to prove
+that traces fail the target specification with only a small probability. Our
+method handles programs with unknown inputs, parameterized distributions,
+infinite state spaces, and parameterized specifications. We evaluate our
+technique on a range of randomized algorithms drawn from the differential
+privacy literature and beyond. To our knowledge, our approach is the first to
+automatically establish accuracy properties of these algorithms.
+
+
+Scaling-Up In-Memory Datalog Processing: Observations and Techniques
+
+  Recursive query processing has experienced a recent resurgence, as a result
+of its use in many modern application domains, including data integration,
+graph analytics, security, program analysis, networking and decision making.
+Due to the large volumes of data being processed, several research efforts,
+across multiple communities, have explored how to scale up recursive queries,
+typically expressed in Datalog. Our experience with these tools indicated that
+their performance does not translate across domains (e.g., a tool design for
+large-scale graph analytics does not exhibit the same performance on
+program-analysis tasks, and vice versa). As a result, we designed and
+implemented a general-purpose Datalog engine, called RecStep, on top of a
+parallel single-node relational system. In this paper, we outline the different
+techniques we use in RecStep, and the contribution of each technique to overall
+performance. We also present results from a detailed set of experiments
+comparing RecStep with a number of other Datalog systems using both graph
+analytics and program-analysis tasks, summarizing pros and cons of existing
+techniques based on the analysis of our observations. We show that RecStep
+generally outperforms the state-of-the-art parallel Datalog engines on complex
+and large-scale Datalog program evaluation, by a 4-6X margin. An additional
+insight from our work is that we show that it is possible to build a
+high-performance Datalog system on top of a relational engine, an idea that has
+been dismissed in past work in this area.
+
+

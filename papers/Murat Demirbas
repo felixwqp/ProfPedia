@@ -1,0 +1,145 @@
+Does The Cloud Need Stabilizing?
+
+  The last decade has witnessed rapid proliferation of cloud computing. While
+even the smallest distributed programs (with 3-5 actions) produce many
+unanticipated error cases due to concurrency involved, it seems short of a
+miracle these web-services are able to operate at those vast scales. In this
+paper, we explore the factors that contribute most to the high-availability of
+cloud computing services and examine where self-stabilization could fit in that
+picture.
+
+
+WPaxos: Wide Area Network Flexible Consensus
+
+  WPaxos is a multileader Paxos protocol that provides low-latency and
+high-throughput consensus across wide-area network (WAN) deployments. WPaxos
+uses multileaders, and partitions the object-space among these multileaders.
+Unlike statically partitioned multiple Paxos deployments, WPaxos is able to
+adapt to the changing access locality through object stealing. Multiple
+concurrent leaders coinciding in different zones steal ownership of objects
+from each other using phase-1 of Paxos, and then use phase-2 to commit
+update-requests on these objects locally until they are stolen by other
+leaders. To achieve fast phase-2 commits, WPaxos adopts the flexible quorums
+idea in a novel manner, and appoints phase-2 acceptors to be close to their
+respective leaders. We implemented WPaxos and evaluated it on WAN deployments
+across 5 AWS regions. The dynamic partitioning of the object-space and emphasis
+on zone-local commits allow WPaxos to significantly outperform both partitioned
+Paxos deployments and leaderless Paxos approaches.
+
+
+Monitoring Partially Synchronous Distributed Systems using SMT Solvers
+
+  In this paper, we discuss the feasibility of monitoring partially synchronous
+distributed systems to detect latent bugs, i.e., errors caused by concurrency
+and race conditions among concurrent processes. We present a monitoring
+framework where we model both system constraints and latent bugs as
+Satisfiability Modulo Theories (SMT) formulas, and we detect the presence of
+latent bugs using an SMT solver. We demonstrate the feasibility of our
+framework using both synthetic applications where latent bugs occur at any time
+with random probability and an application involving exclusive access to a
+shared resource with a subtle timing bug. We illustrate how the time required
+for verification is affected by parameters such as communication frequency,
+latency, and clock skew. Our results show that our framework can be used for
+real-life applications, and because our framework uses SMT solvers, the range
+of appropriate applications will increase as these solvers become more
+efficient over time.
+
+
+Optimistic Execution in Key-Value Store
+
+  Limitations of CAP theorem imply that if availability is desired in the
+presence of network partitions, one must sacrifice sequential consistency, a
+consistency model that is more natural for system design. We focus on the
+problem of what a designer should do if she has an algorithm that works
+correctly with sequential consistency but is faced with an underlying key-value
+store that provides a weaker (e.g., eventual or causal) consistency. We propose
+a detect-rollback based approach: The designer identifies a correctness
+predicate, say P , and continue to run the protocol, as our system monitors P .
+If P is violated (because the underlying key-value store provides a weaker
+consistency), the system rolls back and resumes the computation at a state
+where P holds.
+  We evaluate this approach in the Voldemort key-value store. Our experiments
+with deployment of Voldemort on Amazon AWS shows that using eventual
+consistency with monitoring can provide 20 - 40% increase in throughput when
+compared with sequential consistency. We also show that the overhead of the
+monitor itself is small (typically less than 8%) and the latency of detecting
+violations is very low. For example, more than 99.9% violations are detected in
+less than 1 second.
+
+
+Precision, Recall, and Sensitivity of Monitoring Partially Synchronous
+  Distributed Systems
+
+  Runtime verification focuses on analyzing the execution of a given program by
+a monitor to determine if it is likely to violate its specifications. There is
+often an impedance mismatch between the assumptions/model of the monitor and
+that of the underlying program. This constitutes problems especially for
+distributed systems, where the concept of current time and state are inherently
+uncertain. A monitor designed with asynchronous system model assumptions may
+cause false-positives for a program executing in a partially synchronous
+system: the monitor may flag a global predicate that does not actually occur in
+the underlying system. A monitor designed with a partially synchronous system
+model assumption may cause false negatives as well as false positives for a
+program executing in an environment where the bounds on partial synchrony
+differ (albeit temporarily) from the monitor model assumptions.
+  In this paper we analyze the effects of the impedance mismatch between the
+monitor and the underlying program for the detection of conjunctive predicates.
+We find that there is a small interval where the monitor assumptions are
+hypersensitive to the underlying program environment. We provide analytical
+derivations for this interval, and also provide simulation support for
+exploring the sensitivity of predicate detection to the impedance mismatch
+between the monitor and the program under a partially synchronous system.
+
+
+Technical Report: Optimistic Execution in Key-Value Store
+
+  Limitations of the CAP theorem imply that if availability is desired in the
+presence of network partitions, one must sacrifice sequential consistency, a
+consistency model that is more natural for system design. We focus on the
+problem of what a designer should do if he/she has an algorithm that works
+correctly with sequential consistency but is faced with an underlying key-value
+store that provides a weaker (e.g., eventual or causal) consistency. We propose
+a detect-rollback based approach: The designer identifies a correctness
+predicate, say $P$, and continues to run the protocol, as our system monitors
+$P$. If $P$ is violated (because the underlying key-value store provides a
+weaker consistency), the system rolls back and resumes the computation at a
+state where $P$ holds.
+  We evaluate this approach with practical graph applications running on the
+Voldemort key-value store. Our experiments with deployment on Amazon AWS EC2
+instances shows that using eventual consistency with monitoring can provide a
+$50-80\%$ increase in throughput when compared with sequential consistency. We
+also show that the overhead of the monitoring itself is low (typically less
+than 4\%) and the latency of detecting violations is small. In particular, more
+than $99.9\%$ of violations are detected in less than $50$ milliseconds in
+regional AWS networks, and in less than $5$ seconds in global AWS networks.
+
+
+CausalSpartanX: Causal Consistency and Non-Blocking Read-Only
+  Transactions
+
+  Causal consistency is an intermediate consistency model that can be achieved
+together with high availability and performance requirements even in presence
+of network partitions. In the context of partitioned data stores, it has been
+shown that implicit dependency tracking using timestamps is more efficient than
+explicit dependency tracking. Existing time-based solutions depend on monotonic
+psychical clocks that are closely synchronized. These requirements make current
+protocols vulnerable to clock anomalies. In this paper, we propose a new
+time-based algorithm, CausalSpartanX, that instead of physical clocks, utilizes
+Hybrid Logical Clocks (HLCs). We show that using HLCs, without any overhead, we
+make the system robust on physical clock anomalies. This improvement is more
+significant in the context of query amplification, where a single query results
+in multiple GET/PUT operations. We also show that CausalSpartanX decreases the
+visibility latency for a given data item compared with existing time-based
+approaches. In turn, this reduces the completion time of collaborative
+applications where two clients accessing two different replicas edit same items
+of the data store. CausalSpartanX also provides causally consistent distributed
+read-only transactions. CausalSpartanX read-only transactions are non-blocking
+and require only one round of communication between the client and the servers.
+Also, the slowdowns of partitions that are unrelated to a transaction do not
+affect the performance of the transaction. Like previous protocols,
+CausalSpartanX assumes that a given client does not access more than one
+replica. We show that in presence of network partitions, this assumption (made
+in several other works) is essential if one were to provide causal consistency
+as well as immediate availability to local updates.
+
+

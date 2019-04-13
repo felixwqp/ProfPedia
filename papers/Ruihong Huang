@@ -1,0 +1,197 @@
+Using Context Events in Neural Network Models for Event Temporal Status
+  Identification
+
+  Focusing on the task of identifying event temporal status, we find that
+events directly or indirectly governing the target event in a dependency tree
+are most important contexts. Therefore, we extract dependency chains containing
+context events and use them as input in neural network models, which
+consistently outperform previous models using local context words as input.
+Visualization verifies that the dependency chain representation can effectively
+capture the context events which are closely related to the target event and
+play key roles in predicting event temporal status.
+
+
+Recognizing Explicit and Implicit Hate Speech Using a Weakly Supervised
+  Two-path Bootstrapping Approach
+
+  In the wake of a polarizing election, social media is laden with hateful
+content. To address various limitations of supervised hate speech
+classification methods including corpus bias and huge cost of annotation, we
+propose a weakly supervised two-path bootstrapping approach for an online hate
+speech detection model leveraging large-scale unlabeled data. This system
+significantly outperforms hate speech detection systems that are trained in a
+supervised manner using manually annotated data. Applying this model on a large
+quantity of tweets collected before, after, and on election day reveals
+motivations and patterns of inflammatory language.
+
+
+Improving Implicit Discourse Relation Classification by Modeling
+  Inter-dependencies of Discourse Units in a Paragraph
+
+  We argue that semantic meanings of a sentence or clause can not be
+interpreted independently from the rest of a paragraph, or independently from
+all discourse relations and the overall paragraph-level discourse structure.
+With the goal of improving implicit discourse relation classification, we
+introduce a paragraph-level neural networks that model inter-dependencies
+between discourse units as well as discourse relation continuity and patterns,
+and predict a sequence of discourse relations in a paragraph. Experimental
+results show that our model outperforms the previous state-of-the-art systems
+on the benchmark corpus of PDTB.
+
+
+Temporal Event Knowledge Acquisition via Identifying Narratives
+
+  Inspired by the double temporality characteristic of narrative texts, we
+propose a novel approach for acquiring rich temporal "before/after" event
+knowledge across sentences in narrative stories. The double temporality states
+that a narrative story often describes a sequence of events following the
+chronological order and therefore, the temporal order of events matches with
+their textual order. We explored narratology principles and built a weakly
+supervised approach that identifies 287k narrative paragraphs from three large
+text corpora. We then extracted rich temporal event knowledge from these
+narrative paragraphs. Such event knowledge is shown useful to improve temporal
+relation classification and outperform several recent neural network models on
+the narrative cloze task.
+
+
+A Sequential Model for Classifying Temporal Relations between
+  Intra-Sentence Events
+
+  We present a sequential model for temporal relation classification between
+intra-sentence events. The key observation is that the overall syntactic
+structure and compositional meanings of the multi-word context between events
+are important for distinguishing among fine-grained temporal relations.
+Specifically, our approach first extracts a sequence of context words that
+indicates the temporal relation between two events, which well align with the
+dependency path between two event mentions. The context word sequence, together
+with a parts-of-speech tag sequence and a dependency relation sequence that are
+generated corresponding to the word sequence, are then provided as input to
+bidirectional recurrent neural network (LSTM) models. The neural nets learn
+compositional syntactic and semantic representations of contexts surrounding
+the two events and predict the temporal relation between them. Evaluation of
+the proposed approach on TimeBank corpus shows that sequential modeling is
+capable of accurately recognizing temporal relations between events, which
+outperforms a neural net model using various discrete features as input that
+imitates previous feature based models.
+
+
+Event Coreference Resolution by Iteratively Unfolding Inter-dependencies
+  among Events
+
+  We introduce a novel iterative approach for event coreference resolution that
+gradually builds event clusters by exploiting inter-dependencies among event
+mentions within the same chain as well as across event chains. Among event
+mentions in the same chain, we distinguish within- and cross-document event
+coreference links by using two distinct pairwise classifiers, trained
+separately to capture differences in feature distributions of within- and
+cross-document event clusters. Our event coreference approach alternates
+between WD and CD clustering and combines arguments from both event clusters
+after every merge, continuing till no more merge can be made. And then it
+performs further merging between event chains that are both closely related to
+a set of other chains of events. Experiments on the ECB+ corpus show that our
+model outperforms state-of-the-art methods in joint task of WD and CD event
+coreference resolution.
+
+
+Online Deception Detection Refueled by Real World Data Collection
+
+  The lack of large realistic datasets presents a bottleneck in online
+deception detection studies. In this paper, we apply a data collection method
+based on social network analysis to quickly identify high-quality deceptive and
+truthful online reviews from Amazon. The dataset contains more than 10,000
+deceptive reviews and is diverse in product domains and reviewers. Using this
+dataset, we explore effective general features for online deception detection
+that perform well across domains. We demonstrate that with generalized features
+- advertising speak and writing complexity scores - deception detection
+performance can be further improved by adding additional deceptive reviews from
+assorted domains in training. Finally, reviewer level evaluation gives an
+interesting insight into different deceptive reviewers' writing styles.
+
+
+A Weakly Supervised Approach to Train Temporal Relation Classifiers and
+  Acquire Regular Event Pairs Simultaneously
+
+  Capabilities of detecting temporal relations between two events can benefit
+many applications. Most of existing temporal relation classifiers were trained
+in a supervised manner. Instead, we explore the observation that regular event
+pairs show a consistent temporal relation despite of their various contexts,
+and these rich contexts can be used to train a contextual temporal relation
+classifier, which can further recognize new temporal relation contexts and
+identify new regular event pairs. We focus on detecting after and before
+temporal relations and design a weakly supervised learning approach that
+extracts thousands of regular event pairs and learns a contextual temporal
+relation classifier simultaneously. Evaluation shows that the acquired regular
+event pairs are of high quality and contain rich commonsense knowledge and
+domain specific knowledge. In addition, the weakly supervised trained temporal
+relation classifier achieves comparable performance with the state-of-the-art
+supervised systems.
+
+
+Detecting Online Hate Speech Using Context Aware Models
+
+  In the wake of a polarizing election, the cyber world is laden with hate
+speech. Context accompanying a hate speech text is useful for identifying hate
+speech, which however has been largely overlooked in existing datasets and hate
+speech detection models. In this paper, we provide an annotated corpus of hate
+speech with context information well kept. Then we propose two types of hate
+speech detection models that incorporate context information, a logistic
+regression model with context features and a neural network model with learning
+components for context. Our evaluation shows that both models outperform a
+strong baseline by around 3% to 4% in F1 score and combining these two models
+further improve the performance by another 7% in F1 score.
+
+
+TAMU at KBP 2017: Event Nugget Detection and Coreference Resolution
+
+  In this paper, we describe TAMU's system submitted to the TAC KBP 2017 event
+nugget detection and coreference resolution task. Our system builds on the
+statistical and empirical observations made on training and development data.
+We found that modifiers of event nuggets tend to have unique syntactic
+distribution. Their parts-of-speech tags and dependency relations provides them
+essential characteristics that are useful in identifying their span and also
+defining their types and realis status. We further found that the joint
+modeling of event span detection and realis status identification performs
+better than the individual models for both tasks. Our simple system designed
+using minimal features achieved the micro-average F1 scores of 57.72, 44.27 and
+42.47 for event span detection, type identification and realis status
+classification tasks respectively. Also, our system achieved the CoNLL F1 score
+of 27.20 in event coreference resolution task.
+
+
+Building Context-aware Clause Representations for Situation Entity Type
+  Classification
+
+  Capabilities to categorize a clause based on the type of situation entity
+(e.g., events, states and generic statements) the clause introduces to the
+discourse can benefit many NLP applications. Observing that the situation
+entity type of a clause depends on discourse functions the clause plays in a
+paragraph and the interpretation of discourse functions depends heavily on
+paragraph-wide contexts, we propose to build context-aware clause
+representations for predicting situation entity types of clauses. Specifically,
+we propose a hierarchical recurrent neural network model to read a whole
+paragraph at a time and jointly learn representations for all the clauses in
+the paragraph by extensively modeling context influences and inter-dependencies
+of clauses. Experimental results show that our model achieves the
+state-of-the-art performance for clause-level situation entity classification
+on the genre-rich MASC+Wiki corpus, which approaches human-level performance.
+
+
+Improving Dialogue State Tracking by Discerning the Relevant Context
+
+  A typical conversation comprises of multiple turns between participants where
+they go back-and-forth between different topics. At each user turn, dialogue
+state tracking (DST) aims to estimate user's goal by processing the current
+utterance. However, in many turns, users implicitly refer to the previous goal,
+necessitating the use of relevant dialogue history. Nonetheless, distinguishing
+relevant history is challenging and a popular method of using dialogue recency
+for that is inefficient. We, therefore, propose a novel framework for DST that
+identifies relevant historical context by referring to the past utterances
+where a particular slot-value changes and uses that together with weighted
+system utterance to identify the relevant context. Specifically, we use the
+current user utterance and the most recent system utterance to determine the
+relevance of a system utterance. Empirical analyses show that our method
+improves joint goal accuracy by 2.75% and 2.36% on WoZ 2.0 and MultiWoZ 2.0
+restaurant domain datasets respectively over the previous state-of-the-art GLAD
+model.
+
+

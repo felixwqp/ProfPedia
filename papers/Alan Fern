@@ -1,0 +1,493 @@
+Active Imitation Learning via Reduction to I.I.D. Active Learning
+
+  In standard passive imitation learning, the goal is to learn a target policy
+by passively observing full execution trajectories of it. Unfortunately,
+generating such trajectories can require substantial expert effort and be
+impractical in some cases. In this paper, we consider active imitation learning
+with the goal of reducing this effort by querying the expert about the desired
+action at individual states, which are selected based on answers to past
+queries and the learner's interactions with an environment simulator. We
+introduce a new approach based on reducing active imitation learning to i.i.d.
+active learning, which can leverage progress in the i.i.d. setting. Our first
+contribution, is to analyze reductions for both non-stationary and stationary
+policies, showing that the label complexity (number of queries) of active
+imitation learning can be substantially less than passive learning. Our second
+contribution, is to introduce a practical algorithm inspired by the reductions,
+which is shown to be highly effective in four test domains compared to a number
+of alternatives.
+
+
+Inferring Strategies from Limited Reconnaissance in Real-time Strategy
+  Games
+
+  In typical real-time strategy (RTS) games, enemy units are visible only when
+they are within sight range of a friendly unit. Knowledge of an opponent's
+disposition is limited to what can be observed through scouting. Information is
+costly, since units dedicated to scouting are unavailable for other purposes,
+and the enemy will resist scouting attempts. It is important to infer as much
+as possible about the opponent's current and future strategy from the available
+observations. We present a dynamic Bayes net model of strategies in the RTS
+game Starcraft that combines a generative model of how strategies relate to
+observable quantities with a principled framework for incorporating evidence
+gained via scouting. We demonstrate the model's ability to infer unobserved
+aspects of the game from realistic observations.
+
+
+Inductive Policy Selection for First-Order MDPs
+
+  We select policies for large Markov Decision Processes (MDPs) with compact
+first-order representations. We find policies that generalize well as the
+number of objects in the domain grows, potentially without bound. Existing
+dynamic-programming approaches based on flat, propositional, or first-order
+representations either are impractical here or do not naturally scale as the
+number of objects grows without bound. We implement and evaluate an alternative
+approach that induces first-order policies using training data constructed by
+solving small problem instances using PGraphplan (Blum & Langford, 1999). Our
+policies are represented as ensembles of decision lists, using a taxonomic
+concept language. This approach extends the work of Martin and Geffner (2000)
+to stochastic domains, ensemble learning, and a wider variety of problems.
+Empirically, we find "good" policies for several stochastic first-order MDPs
+that are beyond the scope of previous approaches. We also discuss the
+application of this work to the relational reinforcement-learning problem.
+
+
+Coactive Learning for Locally Optimal Problem Solving
+
+  Coactive learning is an online problem solving setting where the solutions
+provided by a solver are interactively improved by a domain expert, which in
+turn drives learning. In this paper we extend the study of coactive learning to
+problems where obtaining a globally optimal or near-optimal solution may be
+intractable or where an expert can only be expected to make small, local
+improvements to a candidate solution. The goal of learning in this new setting
+is to minimize the cost as measured by the expert effort over time. We first
+establish theoretical bounds on the average cost of the existing coactive
+Perceptron algorithm. In addition, we consider new online algorithms that use
+cost-sensitive and Passive-Aggressive (PA) updates, showing similar or improved
+theoretical bounds. We provide an empirical evaluation of the learners in
+various domains, which show that the Perceptron based algorithms are quite
+effective and that unlike the case for online classification, the PA algorithms
+do not yield significant performance gains.
+
+
+Adaptation-Based Programming in Haskell
+
+  We present an embedded DSL to support adaptation-based programming (ABP) in
+Haskell. ABP is an abstract model for defining adaptive values, called
+adaptives, which adapt in response to some associated feedback. We show how our
+design choices in Haskell motivate higher-level combinators and constructs and
+help us derive more complicated compositional adaptives.
+  We also show an important specialization of ABP is in support of
+reinforcement learning constructs, which optimize adaptive values based on a
+programmer-specified objective function. This permits ABP users to easily
+define adaptive values that express uncertainty anywhere in their programs.
+Over repeated executions, these adaptive values adjust to more efficient ones
+and enable the user's programs to self optimize.
+  The design of our DSL depends significantly on the use of type classes. We
+will illustrate, along with presenting our DSL, how the use of type classes can
+support the gradual evolution of DSLs.
+
+
+Output Space Search for Structured Prediction
+
+  We consider a framework for structured prediction based on search in the
+space of complete structured outputs. Given a structured input, an output is
+produced by running a time-bounded search procedure guided by a learned cost
+function, and then returning the least cost output uncovered during the search.
+This framework can be instantiated for a wide range of search spaces and search
+procedures, and easily incorporates arbitrary structured-prediction loss
+functions. In this paper, we make two main technical contributions. First, we
+define the limited-discrepancy search space over structured outputs, which is
+able to leverage powerful classification learning algorithms to improve the
+search space quality. Second, we give a generic cost function learning
+approach, where the key idea is to learn a cost function that attempts to mimic
+the behavior of conducting searches guided by the true loss function. Our
+experiments on six benchmark domains demonstrate that using our framework with
+only a small amount of search is sufficient for significantly improving on
+state-of-the-art structured-prediction performance.
+
+
+AutoMode: Relational Learning With Less Black Magic
+
+  Relational databases are valuable resources for learning novel and
+interesting relations and concepts. Relational learning algorithms learn the
+Datalog definition of new relations in terms of the existing relations in the
+database. In order to constraint the search through the large space of
+candidate definitions, users must tune the algorithm by specifying a language
+bias. Unfortunately, specifying the language bias is done via trial and error
+and is guided by the expert's intuitions. Hence, it normally takes a great deal
+of time and effort to effectively use these algorithms. In particular, it is
+hard to find a user that knows computer science concepts, such as database
+schema, and has a reasonable intuition about the target relation in special
+domains, such as biology. We propose AutoMode, a system that leverages
+information in the schema and content of the database to automatically induce
+the language bias used by popular relational learning systems. We show that
+AutoMode delivers the same accuracy as using manually-written language bias by
+imposing only a slight overhead on the running time of the learning algorithm.
+
+
+Visualizing and Understanding Atari Agents
+
+  While deep reinforcement learning (deep RL) agents are effective at
+maximizing rewards, it is often unclear what strategies they use to do so. In
+this paper, we take a step toward explaining deep RL agents through a case
+study using Atari 2600 environments. In particular, we focus on using saliency
+maps to understand how an agent learns and executes a policy. We introduce a
+method for generating useful saliency maps and use it to show 1) what strong
+agents attend to, 2) whether agents are making decisions for the right or wrong
+reasons, and 3) how agents evolve during learning. We also test our method on
+non-expert human subjects and find that it improves their ability to reason
+about these agents. Overall, our results show that saliency information can
+provide significant insight into an RL agent's decisions and learning behavior.
+
+
+Learning Finite State Representations of Recurrent Policy Networks
+
+  Recurrent neural networks (RNNs) are an effective representation of control
+policies for a wide range of reinforcement and imitation learning problems. RNN
+policies, however, are particularly difficult to explain, understand, and
+analyze due to their use of continuous-valued memory vectors and observation
+features. In this paper, we introduce a new technique, Quantized Bottleneck
+Insertion, to learn finite representations of these vectors and features. The
+result is a quantized representation of the RNN that can be analyzed to improve
+our understanding of memory use and general behavior. We present results of
+this approach on synthetic environments and six Atari games. The resulting
+finite representations are surprisingly small in some cases, using as few as 3
+discrete memory states and 10 observations for a perfect Pong policy. We also
+show that these finite policy representations lead to improved
+interpretability.
+
+
+Explaining Reinforcement Learning to Mere Mortals: An Empirical Study
+
+  We present a user study to investigate the impact of explanations on
+non-experts' understanding of reinforcement learning (RL) agents. We
+investigate both a common RL visualization, saliency maps (the focus of
+attention), and a more recent explanation type, reward-decomposition bars
+(predictions of future types of rewards). We designed a 124 participant,
+four-treatment experiment to compare participants' mental models of an RL agent
+in a simple Real-Time Strategy (RTS) game. Our results show that the
+combination of both saliency and reward bars were needed to achieve a
+statistically significant improvement in mental model score over the control.
+In addition, our qualitative analysis of the data reveals a number of effects
+for further study.
+
+
+Magnetohydrodynamics dynamical relaxation of coronal magnetic fields. I.
+  Parallel untwisted magnetic fields in 2D
+
+  Context. For the last thirty years, most of the studies on the relaxation of
+stressed magnetic fields in the solar environment have onlyconsidered the
+Lorentz force, neglecting plasma contributions, and therefore, limiting every
+equilibrium to that of a force-free field. Aims. Here we begin a study of the
+non-resistive evolution of finite beta plasmas and their relaxation to
+magnetohydrostatic states, where magnetic forces are balanced by
+plasma-pressure gradients, by using a simple 2D scenario involving a
+hydromagnetic disturbance to a uniform magnetic field. The final equilibrium
+state is predicted as a function of the initial disturbances, with aims to
+demonstrate what happens to the plasma during the relaxation process and to see
+what effects it has on the final equilibrium state. Methods. A set of numerical
+experiments are run using a full MHD code, with the relaxation driven by
+magnetoacoustic waves damped by viscous effects. The numerical results are
+compared with analytical calculations made within the linear regime, in which
+the whole process must remain adiabatic. Particular attention is paid to the
+thermodynamic behaviour of the plasma during the relaxation. Results. The
+analytical predictions for the final non force-free equilibrium depend only on
+the initial perturbations and the total pressure of the system. It is found
+that these predictions hold surprisingly well even for amplitudes of the
+perturbation far outside the linear regime. Conclusions. Including the effects
+of a finite plasma beta in relaxation experiments leads to significant
+differences from the force-free case.
+
+
+Representation Independent Analytics Over Structured Data
+
+  Database analytics algorithms leverage quantifiable structural properties of
+the data to predict interesting concepts and relationships. The same
+information, however, can be represented using many different structures and
+the structural properties observed over particular representations do not
+necessarily hold for alternative structures. Thus, there is no guarantee that
+current database analytics algorithms will still provide the correct insights,
+no matter what structures are chosen to organize the database. Because these
+algorithms tend to be highly effective over some choices of structure, such as
+that of the databases used to validate them, but not so effective with others,
+database analytics has largely remained the province of experts who can find
+the desired forms for these algorithms. We argue that in order to make database
+analytics usable, we should use or develop algorithms that are effective over a
+wide range of choices of structural organizations. We introduce the notion of
+representation independence, study its fundamental properties for a wide range
+of data analytics algorithms, and empirically analyze the amount of
+representation independence of some popular database analytics algorithms. Our
+results indicate that most algorithms are not generally representation
+independent and find the characteristics of more representation independent
+heuristics under certain representational shifts.
+
+
+Batch Active Learning via Coordinated Matching
+
+  Most prior work on active learning of classifiers has focused on sequentially
+selecting one unlabeled example at a time to be labeled in order to reduce the
+overall labeling effort. In many scenarios, however, it is desirable to label
+an entire batch of examples at once, for example, when labels can be acquired
+in parallel. This motivates us to study batch active learning, which
+iteratively selects batches of $k>1$ examples to be labeled. We propose a novel
+batch active learning method that leverages the availability of high-quality
+and efficient sequential active-learning policies by attempting to approximate
+their behavior when applied for $k$ steps. Specifically, our algorithm first
+uses Monte-Carlo simulation to estimate the distribution of unlabeled examples
+selected by a sequential policy over $k$ step executions. The algorithm then
+attempts to select a set of $k$ examples that best matches this distribution,
+leading to a combinatorial optimization problem that we term "bounded
+coordinated matching". While we show this problem is NP-hard in general, we
+give an efficient greedy solution, which inherits approximation bounds from
+supermodular minimization theory. Our experimental results on eight benchmark
+datasets show that the proposed approach is highly effective
+
+
+Sequential Feature Explanations for Anomaly Detection
+
+  In many applications, an anomaly detection system presents the most anomalous
+data instance to a human analyst, who then must determine whether the instance
+is truly of interest (e.g. a threat in a security setting). Unfortunately, most
+anomaly detectors provide no explanation about why an instance was considered
+anomalous, leaving the analyst with no guidance about where to begin the
+investigation. To address this issue, we study the problems of computing and
+evaluating sequential feature explanations (SFEs) for anomaly detectors. An SFE
+of an anomaly is a sequence of features, which are presented to the analyst one
+at a time (in order) until the information contained in the highlighted
+features is enough for the analyst to make a confident judgement about the
+anomaly. Since analyst effort is related to the amount of information that they
+consider in an investigation, an explanation's quality is related to the number
+of features that must be revealed to attain confidence. One of our main
+contributions is to present a novel framework for large scale quantitative
+evaluations of SFEs, where the quality measure is based on analyst effort. To
+do this we construct anomaly detection benchmarks from real data sets along
+with artificial experts that can be simulated for evaluation. Our second
+contribution is to evaluate several novel explanation approaches within the
+framework and on traditional anomaly detection benchmarks, offering several
+insights into the approaches.
+
+
+A Meta-Analysis of the Anomaly Detection Problem
+
+  This article provides a thorough meta-analysis of the anomaly detection
+problem. To accomplish this we first identify approaches to benchmarking
+anomaly detection algorithms across the literature and produce a large corpus
+of anomaly detection benchmarks that vary in their construction across several
+dimensions we deem important to real-world applications: (a) point difficulty,
+(b) relative frequency of anomalies, (c) clusteredness of anomalies, and (d)
+relevance of features. We apply a representative set of anomaly detection
+algorithms to this corpus, yielding a very large collection of experimental
+results. We analyze these results to understand many phenomena observed in
+previous work. First we observe the effects of experimental design on
+experimental results. Second, results are evaluated with two metrics, ROC Area
+Under the Curve and Average Precision. We employ statistical hypothesis testing
+to demonstrate the value (or lack thereof) of our benchmarks. We then offer
+several approaches to summarizing our experimental results, drawing several
+conclusions about the impact of our methodology as well as the strengths and
+weaknesses of some algorithms. Last, we compare results against a trivial
+solution as an alternate means of normalizing the reported performance of
+algorithms. The intended contributions of this article are many; in addition to
+providing a large publicly-available corpus of anomaly detection benchmarks, we
+provide an ontology for describing anomaly detection contexts, a methodology
+for controlling various aspects of benchmark creation, guidelines for future
+experimental design and a discussion of the many potential pitfalls of trying
+to measure success in this field.
+
+
+A Policy Switching Approach to Consolidating Load Shedding and Islanding
+  Protection Schemes
+
+  In recent years there have been many improvements in the reliability of
+critical infrastructure systems. Despite these improvements, the power systems
+industry has seen relatively small advances in this regard. For instance, power
+quality deficiencies, a high number of localized contingencies, and large
+cascading outages are still too widespread. Though progress has been made in
+improving generation, transmission, and distribution infrastructure, remedial
+action schemes (RAS) remain non-standardized and are often not uniformly
+implemented across different utilities, ISOs, and RTOs. Traditionally, load
+shedding and islanding have been successful protection measures in restraining
+propagation of contingencies and large cascading outages. This paper proposes a
+novel, algorithmic approach to selecting RAS policies to optimize the operation
+of the power network during and after a contingency. Specifically, we use
+policy-switching to consolidate traditional load shedding and islanding
+schemes. In order to model and simulate the functionality of the proposed power
+systems protection algorithm, we conduct Monte-Carlo, time-domain simulations
+using Siemens PSS/E. The algorithm is tested via experiments on the IEEE-39
+topology to demonstrate that the proposed approach achieves optimal power
+system performance during emergency situations, given a specific set of RAS
+policies.
+
+
+Schema Independent Relational Learning
+
+  Learning novel concepts and relations from relational databases is an
+important problem with many applications in database systems and machine
+learning. Relational learning algorithms learn the definition of a new relation
+in terms of existing relations in the database. Nevertheless, the same data set
+may be represented under different schemas for various reasons, such as
+efficiency, data quality, and usability. Unfortunately, the output of current
+relational learning algorithms tends to vary quite substantially over the
+choice of schema, both in terms of learning accuracy and efficiency. This
+variation complicates their off-the-shelf application. In this paper, we
+introduce and formalize the property of schema independence of relational
+learning algorithms, and study both the theoretical and empirical dependence of
+existing algorithms on the common class of (de) composition schema
+transformations. We study both sample-based learning algorithms, which learn
+from sets of labeled examples, and query-based algorithms, which learn by
+asking queries to an oracle. We prove that current relational learning
+algorithms are generally not schema independent. For query-based learning
+algorithms we show that the (de) composition transformations influence their
+query complexity. We propose Castor, a sample-based relational learning
+algorithm that achieves schema independence by leveraging data dependencies. We
+support the theoretical results with an empirical study that demonstrates the
+schema dependence/independence of several algorithms on existing benchmark and
+real-world datasets under (de) compositions.
+
+
+Approximate Policy Iteration for Budgeted Semantic Video Segmentation
+
+  This paper formulates and presents a solution to the new problem of budgeted
+semantic video segmentation. Given a video, the goal is to accurately assign a
+semantic class label to every pixel in the video within a specified time
+budget. Typical approaches to such labeling problems, such as Conditional
+Random Fields (CRFs), focus on maximizing accuracy but do not provide a
+principled method for satisfying a time budget. For video data, the time
+required by CRF and related methods is often dominated by the time to compute
+low-level descriptors of supervoxels across the video. Our key contribution is
+the new budgeted inference framework for CRF models that intelligently selects
+the most useful subsets of descriptors to run on subsets of supervoxels within
+the time budget. The objective is to maintain an accuracy as close as possible
+to the CRF model with no time bound, while remaining within the time budget.
+Our second contribution is the algorithm for learning a policy for the sparse
+selection of supervoxels and their descriptors for budgeted CRF inference. This
+learning algorithm is derived by casting our problem in the framework of Markov
+Decision Processes, and then instantiating a state-of-the-art policy learning
+algorithm known as Classification-Based Approximate Policy Iteration. Our
+experiments on multiple video datasets show that our learning approach and
+framework is able to significantly reduce computation time, and maintain
+competitive accuracy under varying budgets.
+
+
+Incorporating Feedback into Tree-based Anomaly Detection
+
+  Anomaly detectors are often used to produce a ranked list of statistical
+anomalies, which are examined by human analysts in order to extract the actual
+anomalies of interest. Unfortunately, in realworld applications, this process
+can be exceedingly difficult for the analyst since a large fraction of
+high-ranking anomalies are false positives and not interesting from the
+application perspective. In this paper, we aim to make the analyst's job easier
+by allowing for analyst feedback during the investigation process. Ideally, the
+feedback influences the ranking of the anomaly detector in a way that reduces
+the number of false positives that must be examined before discovering the
+anomalies of interest. In particular, we introduce a novel technique for
+incorporating simple binary feedback into tree-based anomaly detectors. We
+focus on the Isolation Forest algorithm as a representative tree-based anomaly
+detector, and show that we can significantly improve its performance by
+incorporating feedback, when compared with the baseline algorithm that does not
+incorporate feedback. Our technique is simple and scales well as the size of
+the data increases, which makes it suitable for interactive discovery of
+anomalies in large datasets.
+
+
+Open Category Detection with PAC Guarantees
+
+  Open category detection is the problem of detecting "alien" test instances
+that belong to categories or classes that were not present in the training
+data. In many applications, reliably detecting such aliens is central to
+ensuring the safety and accuracy of test set predictions. Unfortunately, there
+are no algorithms that provide theoretical guarantees on their ability to
+detect aliens under general assumptions. Further, while there are algorithms
+for open category detection, there are few empirical results that directly
+report alien detection rates. Thus, there are significant theoretical and
+empirical gaps in our understanding of open category detection. In this paper,
+we take a step toward addressing this gap by studying a simple, but
+practically-relevant variant of open category detection. In our setting, we are
+provided with a "clean" training set that contains only the target categories
+of interest and an unlabeled "contaminated" training set that contains a
+fraction $\alpha$ of alien examples. Under the assumption that we know an upper
+bound on $\alpha$, we develop an algorithm with PAC-style guarantees on the
+alien detection rate, while aiming to minimize false alarms. Empirical results
+on synthetic and standard benchmark datasets demonstrate the regimes in which
+the algorithm can be effective and provide a baseline for further advancements.
+
+
+Interactive Naming for Explaining Deep Neural Networks: A Formative
+  Study
+
+  We consider the problem of explaining the decisions of deep neural networks
+for image recognition in terms of human-recognizable visual concepts. In
+particular, given a test set of images, we aim to explain each classification
+in terms of a small number of image regions, or activation maps, which have
+been associated with semantic concepts by a human annotator. This allows for
+generating summary views of the typical reasons for classifications, which can
+help build trust in a classifier and/or identify example types for which the
+classifier may not be trusted. For this purpose, we developed a user interface
+for "interactive naming," which allows a human annotator to manually cluster
+significant activation maps in a test set into meaningful groups called "visual
+concepts". The main contribution of this paper is a systematic study of the
+visual concepts produced by five human annotators using the interactive naming
+interface. In particular, we consider the adequacy of the concepts for
+explaining the classification of test-set images, correspondence of the
+concepts to activations of individual neurons, and the inter-annotator
+agreement of visual concepts. We find that a large fraction of the activation
+maps have recognizable visual concepts, and that there is significant agreement
+between the different annotators about their denotations. Our work is an
+exploratory study of the interplay between machine learning and human
+recognition mediated by visualizations of the results of learning.
+
+
+Consequences of spontaneous reconnection at a two-dimensional
+  non-force-free current layer
+
+  Magnetic neutral points, where the magnitude of the magnetic field vanishes
+locally, are potential locations for energy conversion in the solar corona. The
+fact that the magnetic field is identically zero at these points suggests that
+for the study of current sheet formation and of any subsequent resistive
+dissipation phase, a finite beta plasma should be considered, rather than
+neglecting the plasma pressure as has often been the case in the past. The
+rapid dissipation of a finite current layer in non-force-free equilibrium is
+investigated numerically, after the sudden onset of an anomalous resistivity.
+The aim of this study is to determine how the energy is redistributed during
+the initial diffusion phase, and what is the nature of the outward transmission
+of information and energy. The resistivity rapidly diffuses the current at the
+null point. The presence of a plasma pressure allows the vast majority of the
+free energy to be transferred into internal energy. Most of the converted
+energy is used in direct heating of the surrounding plasma, and only about 3%
+is converted into kinetic energy, causing a perturbation in the magnetic field
+and the plasma which propagates away from the null at the local fast
+magnetoacoustic speed. The propagating pulses show a complex structure due to
+the highly non-uniform initial state. It is shown that this perturbation
+carries no net current as it propagates away from the null. The fact that,
+under the assumptions taken in this paper, most of the magnetic energy released
+in the reconnection converts internal energy of the plasma, may be highly
+important for the chromospheric and coronal heating problem.
+
+
+Magnetohydrodynamics dynamical relaxation of coronal magnetic fields.
+  II. 2D magnetic X-points
+
+  We provide a valid magnetohydrostatic equilibrium from the collapse of a 2D
+X-point in the presence of a finite plasma pressure, in which the current
+density is not simply concentrated in an infinitesimally thin, one-dimensional
+current sheet, as found in force-free solutions. In particular, we wish to
+determine if a finite pressure current sheet will still involve a singular
+current, and if so, what is the nature of the singularity. We use a full MHD
+code, with the resistivity set to zero, so that reconnection is not allowed, to
+run a series of experiments in which an X-point is perturbed and then is
+allowed to relax towards an equilibrium, via real, viscous damping forces.
+Changes to the magnitude of the perturbation and the initial plasma pressure
+are investigated systematically. The final state found in our experiments is a
+"quasi-static" equilibrium where the viscous relaxation has completely ended,
+but the peak current density at the null increases very slowly following an
+asymptotic regime towards an infinite time singularity. Using a high grid
+resolution allows us to resolve the current structures in this state both in
+width and length. In comparison with the well known pressureless studies, the
+system does not evolve towards a thin current sheet, but concentrates the
+current at the null and the separatrices. The growth rate of the singularity is
+found to be tD, with 0 < D < 1. This rate depends directly on the initial
+plasma pressure, and decreases as the pressure is increased. At the end of our
+study, we present an analytical description of the system in a quasi-static
+non-singular equilibrium at a given time, in which a finite thick current layer
+has formed at the null.
+
+

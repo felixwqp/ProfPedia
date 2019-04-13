@@ -1,0 +1,110 @@
+Algorithms for Efficient Mining of Statistically Significant Attribute
+  Association Information
+
+  Knowledge of the association information between the attributes in a data set
+provides insight into the underlying structure of the data and explains the
+relationships (independence, synergy, redundancy) between the attributes and
+class (if present). Complex models learnt computationally from the data are
+more interpretable to a human analyst when such interdependencies are known. In
+this paper, we focus on mining two types of association information among the
+attributes - correlation information and interaction information for both
+supervised (class attribute present) and unsupervised analysis (class attribute
+absent). Identifying the statistically significant attribute associations is a
+computationally challenging task - the number of possible associations
+increases exponentially and many associations contain redundant information
+when a number of correlated attributes are present. In this paper, we explore
+efficient data mining methods to discover non-redundant attribute sets that
+contain significant association information indicating the presence of
+informative patterns in the data.
+
+
+Integrate Multi-omic Data Using Affinity Network Fusion (ANF) for Cancer
+  Patient Clustering
+
+  Clustering cancer patients into subgroups and identifying cancer subtypes is
+an important task in cancer genomics. Clustering based on comprehensive
+multi-omic molecular profiling can often achieve better results than those
+using a single data type, since each omic data type (representing one view of
+patients) may contain complementary information. However, it is challenging to
+integrate heterogeneous omic data types directly. Based on one popular method
+-- Similarity Network Fusion (SNF), we presented Affinity Network Fusion (ANF)
+in this paper, an "upgrade" of SNF with several advantages. Similar to SNF, ANF
+treats each omic data type as one view of patients and learns a fused affinity
+(transition) matrix for clustering. We applied ANF to a carefully processed
+harmonized cancer dataset downloaded from GDC data portals consisting of 2193
+patients, and generated promising results on clustering patients into correct
+disease types. Our experimental results also demonstrated the power of feature
+selection and transformation combined with using ANF in patient clustering.
+Moreover, eigengap analysis suggests that the learned affinity matrices of four
+cancer types using our proposed framework may have successfully captured
+patient group structure and can be used for discovering unknown cancer
+subtypes.
+
+
+Affinity Network Fusion and Semi-supervised Learning for Cancer Patient
+  Clustering
+
+  Defining subtypes of complex diseases such as cancer and stratifying patient
+groups with the same disease but different subtypes for targeted treatments is
+important for personalized and precision medicine. Approaches that incorporate
+multi-omic data are more advantageous to those using only one data type for
+patient clustering and disease subtype discovery. However, it is challenging to
+integrate multi-omic data as they are heterogeneous and noisy. In this paper,
+we present Affinity Network Fusion (ANF) to integrate multi-omic data for
+patient clustering. ANF first constructs patient affinity networks for each
+omic data type, and then calculates a fused network for spectral clustering. We
+applied ANF to a processed harmonized cancer dataset downloaded from GDC data
+portal consisting of 2193 patients, and generated promising results on
+clustering patients into correct disease types. Moreover, we developed a
+semi-supervised model combining ANF and neural network for few-shot learning.
+In several cases, the model can achieve greater than 90% acccuracy on test set
+with training less than 1% of the data. This demonstrates the power of ANF in
+learning a good representation of patients, and shows the great potential of
+semi-supervised learning in cancer patient clustering.
+
+
+Multi-view Factorization AutoEncoder with Network Constraints for
+  Multi-omic Integrative Analysis
+
+  Multi-omic data provides multiple views of the same patients. Integrative
+analysis of multi-omic data is crucial to elucidate the molecular underpinning
+of disease etiology. However, multi-omic data has the "big p, small N" problem
+(the number of features is large, but the number of samples is small), it is
+challenging to train a complicated machine learning model from the multi-omic
+data alone and make it generalize well. Here we propose a framework termed
+Multi-view Factorization AutoEncoder with network constraints to integrate
+multi-omic data with domain knowledge (biological interactions networks). Our
+framework employs deep representation learning to learn feature embeddings and
+patient embeddings simultaneously, enabling us to integrate feature interaction
+network and patient view similarity network constraints into the training
+objective. The whole framework is end-to-end differentiable. We applied our
+approach to the TCGA Pan-cancer dataset and achieved satisfactory results to
+predict disease progression-free interval (PFI) and patient overall survival
+(OS) events. Code will be made publicly available.
+
+
+AffinityNet: semi-supervised few-shot learning for disease type
+  prediction
+
+  While deep learning has achieved great success in computer vision and many
+other fields, currently it does not work very well on patient genomic data with
+the "big p, small N" problem (i.e., a relatively small number of samples with
+high-dimensional features). In order to make deep learning work with a small
+amount of training data, we have to design new models that facilitate few-shot
+learning. Here we present the Affinity Network Model (AffinityNet), a data
+efficient deep learning model that can learn from a limited number of training
+examples and generalize well. The backbone of the AffinityNet model consists of
+stacked k-Nearest-Neighbor (kNN) attention pooling layers. The kNN attention
+pooling layer is a generalization of the Graph Attention Model (GAM), and can
+be applied to not only graphs but also any set of objects regardless of whether
+a graph is given or not. As a new deep learning module, kNN attention pooling
+layers can be plugged into any neural network model just like convolutional
+layers. As a simple special case of kNN attention pooling layer, feature
+attention layer can directly select important features that are useful for
+classification tasks. Experiments on both synthetic data and cancer genomic
+data from TCGA projects show that our AffinityNet model has better
+generalization power than conventional neural network models with little
+training data. The code is freely available at
+https://github.com/BeautyOfWeb/AffinityNet .
+
+

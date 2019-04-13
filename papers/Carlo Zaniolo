@@ -1,0 +1,310 @@
+The Deductive Database System LDL++
+
+  This paper describes the LDL++ system and the research advances that have
+enabled its design and development. We begin by discussing the new nonmonotonic
+and nondeterministic constructs that extend the functionality of the LDL++
+language, while preserving its model-theoretic and fixpoint semantics. Then, we
+describe the execution model and the open architecture designed to support
+these new constructs and to facilitate the integration with existing DBMSs and
+applications. Finally, we describe the lessons learned by using LDL++ on
+various tested applications, such as middleware and datamining.
+
+
+Greedy Algorithms in Datalog
+
+  In the design of algorithms, the greedy paradigm provides a powerful tool for
+solving efficiently classical computational problems, within the framework of
+procedural languages. However, expressing these algorithms within the
+declarative framework of logic-based languages has proven a difficult research
+challenge. In this paper, we extend the framework of Datalog-like languages to
+obtain simple declarative formulations for such problems, and propose effective
+implementation techniques to ensure computational complexities comparable to
+those of procedural formulations. These advances are achieved through the use
+of the "choice" construct, extended with preference annotations to effect the
+selection of alternative stable-models and nondeterministic fixpoints. We show
+that, with suitable storage structures, the differential fixpoint computation
+of our programs matches the complexity of procedural algorithms in classical
+search and optimization problems.
+
+
+Early Accurate Results for Advanced Analytics on MapReduce
+
+  Approximate results based on samples often provide the only way in which
+advanced analytical applications on very massive data sets can satisfy their
+time and resource constraints. Unfortunately, methods and tools for the
+computation of accurate early results are currently not supported in
+MapReduce-oriented systems although these are intended for `big data'.
+Therefore, we proposed and implemented a non-parametric extension of Hadoop
+which allows the incremental computation of early results for arbitrary
+work-flows, along with reliable on-line estimates of the degree of accuracy
+achieved so far in the computation. These estimates are based on a technique
+called bootstrapping that has been widely employed in statistics and can be
+applied to arbitrary functions and data distributions. In this paper, we
+describe our Early Accurate Result Library (EARL) for Hadoop that was designed
+to minimize the changes required to the MapReduce framework. Various tests of
+EARL of Hadoop are presented to characterize the frequent situations where EARL
+can provide major speed-ups over the current version of Hadoop.
+
+
+Co-training Embeddings of Knowledge Graphs and Entity Descriptions for
+  Cross-lingual Entity Alignment
+
+  Multilingual knowledge graph (KG) embeddings provide latent semantic
+representations of entities and structured knowledge with cross-lingual
+inferences, which benefit various knowledge-driven cross-lingual NLP tasks.
+However, precisely learning such cross-lingual inferences is usually hindered
+by the low coverage of entity alignment in many KGs. Since many multilingual
+KGs also provide literal descriptions of entities, in this paper, we introduce
+an embedding-based approach which leverages a weakly aligned multilingual KG
+for semi-supervised cross-lingual learning using entity descriptions. Our
+approach performs co-training of two embedding models, i.e. a multilingual KG
+embedding model and a multilingual literal description embedding model. The
+models are trained on a large Wikipedia-based trilingual dataset where most
+entity alignment is unknown to training. Experimental results show that the
+performance of the proposed approach on the entity alignment task improves at
+each iteration of co-training, and eventually reaches a stage at which it
+significantly surpasses previous approaches. We also show that our approach has
+promising abilities for zero-shot entity alignment, and cross-lingual KG
+completion.
+
+
+Learning to Represent Bilingual Dictionaries
+
+  Bilingual word embeddings have been widely used to capture the similarity of
+lexical semantics in different human languages. However, many applications,
+such as cross-lingual semantic search and question answering, can be largely
+benefited from the cross-lingual correspondence between sentences and lexicons.
+To bridge this gap, we propose a neural embedding model that leverages
+bilingual dictionaries. The proposed model is trained to map the literal word
+definitions to the cross-lingual target words, for which we explore with
+different sentence encoding techniques. To enhance the learning process on
+limited resources, our model adopts several critical learning strategies,
+including multi-task learning on different bridges of languages, and joint
+learning of the dictionary model with a bilingual word embedding model.
+Experimental evaluation focuses on two applications. The results of the
+cross-lingual reverse dictionary retrieval task show our model's promising
+ability of comprehending bilingual concepts based on descriptions, and
+highlight the effectiveness of proposed learning strategies in improving
+performance. Meanwhile, our model effectively addresses the bilingual
+paraphrase identification problem and significantly outperforms previous
+approaches.
+
+
+On2Vec: Embedding-based Relation Prediction for Ontology Population
+
+  Populating ontology graphs represents a long-standing problem for the
+Semantic Web community. Recent advances in translation-based graph embedding
+methods for populating instance-level knowledge graphs lead to promising new
+approaching for the ontology population problem. However, unlike instance-level
+graphs, the majority of relation facts in ontology graphs come with
+comprehensive semantic relations, which often include the properties of
+transitivity and symmetry, as well as hierarchical relations. These
+comprehensive relations are often too complex for existing graph embedding
+methods, and direct application of such methods is not feasible. Hence, we
+propose On2Vec, a novel translation-based graph embedding method for ontology
+population. On2Vec integrates two model components that effectively
+characterize comprehensive relation facts in ontology graphs. The first is the
+Component-specific Model that encodes concepts and relations into
+low-dimensional embedding spaces without a loss of relational properties; the
+second is the Hierarchy Model that performs focused learning of hierarchical
+relation facts. Experiments on several well-known ontology graphs demonstrate
+the promising capabilities of On2Vec in predicting and verifying new relation
+facts. These promising results also make possible significant improvements in
+related methods.
+
+
+Quantification and Analysis of Scientific Language Variation Across
+  Research Fields
+
+  Quantifying differences in terminologies from various academic domains has
+been a longstanding problem yet to be solved. We propose a computational
+approach for analyzing linguistic variation among scientific research fields by
+capturing the semantic change of terms based on a neural language model. The
+model is trained on a large collection of literature in five computer science
+research fields, for which we obtain field-specific vector representations for
+key terms, and global vector representations for other words. Several
+quantitative approaches are introduced to identify the terms whose semantics
+have drastically changed, or remain unchanged across different research fields.
+We also propose a metric to quantify the overall linguistic variation of
+research fields. After quantitative evaluation on human annotated data and
+qualitative comparison with other methods, we show that our model can improve
+cross-disciplinary data collaboration by identifying terms that potentially
+induce confusion during interdisciplinary studies.
+
+
+Succinct Sampling on Streams
+
+  A streaming model is one where data items arrive over long period of time,
+either one item at a time or in bursts. Typical tasks include computing various
+statistics over a sliding window of some fixed time-horizon. What makes the
+streaming model interesting is that as the time progresses, old items expire
+and new ones arrive. One of the simplest and central tasks in this model is
+sampling. That is, the task of maintaining up to $k$ uniformly distributed
+items from a current time-window as old items expire and new ones arrive. We
+call sampling algorithms {\bf succinct} if they use provably optimal (up to
+constant factors) {\bf worst-case} memory to maintain $k$ items (either with or
+without replacement). We stress that in many applications structures that have
+{\em expected} succinct representation as the time progresses are not
+sufficient, as small probability events eventually happen with probability 1.
+Thus, in this paper we ask the following question: are Succinct Sampling on
+Streams (or $S^3$-algorithms)possible, and if so for what models? Perhaps
+somewhat surprisingly, we show that $S^3$-algorithms are possible for {\em all}
+variants of the problem mentioned above, i.e. both with and without replacement
+and both for one-at-a-time and bursty arrival models. Finally, we use $S^3$
+algorithms to solve various problems in sliding windows model, including
+frequency moments, counting triangles, entropy and density estimations. For
+these problems we present \emph{first} solutions with provable worst-case
+memory guarantees.
+
+
+Multilingual Knowledge Graph Embeddings for Cross-lingual Knowledge
+  Alignment
+
+  Many recent works have demonstrated the benefits of knowledge graph
+embeddings in completing monolingual knowledge graphs. Inasmuch as related
+knowledge bases are built in several different languages, achieving
+cross-lingual knowledge alignment will help people in constructing a coherent
+knowledge base, and assist machines in dealing with different expressions of
+entity relationships across diverse human languages. Unfortunately, achieving
+this highly desirable crosslingual alignment by human labor is very costly and
+errorprone. Thus, we propose MTransE, a translation-based model for
+multilingual knowledge graph embeddings, to provide a simple and automated
+solution. By encoding entities and relations of each language in a separated
+embedding space, MTransE provides transitions for each embedding vector to its
+cross-lingual counterparts in other spaces, while preserving the
+functionalities of monolingual embeddings. We deploy three different techniques
+to represent cross-lingual transitions, namely axis calibration, translation
+vectors, and linear transformations, and derive five variants for MTransE using
+different loss functions. Our models can be trained on partially aligned
+graphs, where just a small portion of triples are aligned with their
+cross-lingual counterparts. The experiments on cross-lingual entity matching
+and triple-wise alignment verification show promising results, with some
+variants consistently outperforming others on different tasks. We also explore
+how MTransE preserves the key properties of its monolingual counterpart TransE.
+
+
+Fixpoint Semantics and Optimization of Recursive Datalog Programs with
+  Aggregates
+
+  A very desirable Datalog extension investigated by many researchers in the
+last thirty years consists in allowing the use of the basic SQL aggregates min,
+max, count and sum in recursive rules. In this paper, we propose a simple
+comprehensive solution that extends the declarative least-fixpoint semantics of
+Horn Clauses, along with the optimization techniques used in the bottom-up
+implementation approach adopted by many Datalog systems. We start by
+identifying a large class of programs of great practical interest in which the
+use of min or max in recursive rules does not compromise the declarative
+fixpoint semantics of the programs using those rules. Then, we revisit the
+monotonic versions of count and sum aggregates proposed in (Mazuran et al.
+2013b) and named, respectively, mcount and msum. Since mcount, and also msum on
+positive numbers, are monotonic in the lattice of set-containment, they
+preserve the fixpoint semantics of Horn Clauses. However, in many applications
+of practical interest, their use can lead to inefficiencies, that can be
+eliminated by combining them with max, whereby mcount and msum become the
+standard count and sum. Therefore, the semantics and optimization techniques of
+Datalog are extended to recursive programs with min, max, count and sum, making
+possible the advanced applications of superior performance and scalability
+demonstrated by BigDatalog (Shkapsky et al. 2016) and Datalog-MC (Yang et al.
+2017). This paper is under consideration for acceptance in TPLP.
+
+
+Scaling-Up Reasoning and Advanced Analytics on BigData
+
+  BigDatalog is an extension of Datalog that achieves performance and
+scalability on both Apache Spark and multicore systems to the point that its
+graph analytics outperform those written in GraphX. Looking back, we see how
+this realizes the ambitious goal pursued by deductive database researchers
+beginning forty years ago: this is the goal of combining the rigor and power of
+logic in expressing queries and reasoning with the performance and scalability
+by which relational databases managed Big Data. This goal led to Datalog which
+is based on Horn Clauses like Prolog but employs implementation techniques,
+such as Semi-naive Fixpoint and Magic Sets, that extend the bottom-up
+computation model of relational systems, and thus obtain the performance and
+scalability that relational systems had achieved, as far back as the 80s, using
+data-parallelization on shared-nothing architectures. But this goal proved
+difficult to achieve because of major issues at (i) the language level and (ii)
+at the system level. The paper describes how (i) was addressed by simple rules
+under which the fixpoint semantics extends to programs using count, sum and
+extrema in recursion, and (ii) was tamed by parallel compilation techniques
+that achieve scalability on multicore systems and Apache Spark. This paper is
+under consideration for acceptance in Theory and Practice of Logic Programming
+(TPLP).
+
+
+Neural Article Pair Modeling for Wikipedia Sub-article Matching
+
+  Nowadays, editors tend to separate different subtopics of a long Wiki-pedia
+article into multiple sub-articles. This separation seeks to improve human
+readability. However, it also has a deleterious effect on many Wikipedia-based
+tasks that rely on the article-as-concept assumption, which requires each
+entity (or concept) to be described solely by one article. This underlying
+assumption significantly simplifies knowledge representation and extraction,
+and it is vital to many existing technologies such as automated knowledge base
+construction, cross-lingual knowledge alignment, semantic search and data
+lineage of Wikipedia entities. In this paper we provide an approach to match
+the scattered sub-articles back to their corresponding main-articles, with the
+intent of facilitating automated Wikipedia curation and processing. The
+proposed model adopts a hierarchical learning structure that combines multiple
+variants of neural document pair encoders with a comprehensive set of explicit
+features. A large crowdsourced dataset is created to support the evaluation and
+feature extraction for the task. Based on the large dataset, the proposed model
+achieves promising results of cross-validation and significantly outperforms
+previous approaches. Large-scale serving on the entire English Wikipedia also
+proves the practicability and scalability of the proposed model by effectively
+extracting a vast collection of newly paired main and sub-articles.
+
+
+Embedding Uncertain Knowledge Graphs
+
+  Embedding models for deterministic Knowledge Graphs (KG) have been
+extensively studied, with the purpose of capturing latent semantic relations
+between entities and incorporating the structured knowledge into machine
+learning. However, there are many KGs that model uncertain knowledge, which
+typically model the inherent uncertainty of relations facts with a confidence
+score, and embedding such uncertain knowledge represents an unresolved
+challenge. The capturing of uncertain knowledge will benefit many
+knowledge-driven applications such as question answering and semantic search by
+providing more natural characterization of the knowledge. In this paper, we
+propose a novel uncertain KG embedding model UKGE, which aims to preserve both
+structural and uncertainty information of relation facts in the embedding
+space. Unlike previous models that characterize relation facts with binary
+classification techniques, UKGE learns embeddings according to the confidence
+scores of uncertain relation facts. To further enhance the precision of UKGE,
+we also introduce probabilistic soft logic to infer confidence scores for
+unseen relation facts during training. We propose and evaluate two variants of
+UKGE based on different learning objectives. Experiments are conducted on three
+real-world uncertain KGs via three tasks, i.e. confidence prediction, relation
+fact ranking, and relation fact classification. UKGE shows effectiveness in
+capturing uncertain knowledge by achieving promising results on these tasks,
+and consistently outperforms baselines on these tasks.
+
+
+How Much Are You Willing to Share? A "Poker-Styled" Selective Privacy
+  Preserving Framework for Recommender Systems
+
+  Most industrial recommender systems rely on the popular collaborative
+filtering (CF) technique for providing personalized recommendations to its
+users. However, the very nature of CF is adversarial to the idea of user
+privacy, because users need to share their preferences with others in order to
+be grouped with like-minded people and receive accurate recommendations. While
+previous privacy preserving approaches have been successful inasmuch as they
+concealed user preference information to some extent from a centralized
+recommender system, they have also, nevertheless, incurred significant
+trade-offs in terms of privacy, scalability, and accuracy. They are also
+vulnerable to privacy breaches by malicious actors. In light of these
+observations, we propose a novel selective privacy preserving (SP2) paradigm
+that allows users to custom define the scope and extent of their individual
+privacies, by marking their personal ratings as either public (which can be
+shared) or private (which are never shared and stored only on the user device).
+Our SP2 framework works in two steps: (i) First, it builds an initial
+recommendation model based on the sum of all public ratings that have been
+shared by users and (ii) then, this public model is fine-tuned on each user's
+device based on the user private ratings, thus eventually learning a more
+accurate model. Furthermore, in this work, we introduce three different
+algorithms for implementing an end-to-end SP2 framework that can scale
+effectively from thousands to hundreds of millions of items. Our user survey
+shows that an overwhelming fraction of users are likely to rate much more items
+to improve the overall recommendations when they can control what ratings will
+be publicly shared with others.
+
+

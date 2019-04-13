@@ -1,0 +1,431 @@
+The Complexity of Scheduling for p-norms of Flow and Stretch
+
+  We consider computing optimal k-norm preemptive schedules of jobs that arrive
+over time. In particular, we show that computing the optimal k-norm of flow
+schedule, is strongly NP-hard for k in (0, 1) and integers k in (1, infinity).
+Further we show that computing the optimal k-norm of stretch schedule, is
+strongly NP-hard for k in (0, 1) and integers k in (1, infinity).
+
+
+Scalable K-Means++
+
+  Over half a century old and showing no signs of aging, k-means remains one of
+the most popular data processing algorithms. As is well-known, a proper
+initialization of k-means is crucial for obtaining a good final solution. The
+recently proposed k-means++ initialization algorithm achieves this, obtaining
+an initial set of centers that is provably close to the optimum solution. A
+major downside of the k-means++ is its inherent sequential nature, which limits
+its applicability to massive data: one must make k passes over the data to find
+a good initial set of centers. In this work we show how to drastically reduce
+the number of passes needed to obtain, in parallel, a good initialization. This
+is unlike prevailing efforts on parallelizing k-means that have mostly focused
+on the post-initialization phases of k-means. We prove that our proposed
+initialization algorithm k-means|| obtains a nearly optimal solution after a
+logarithmic number of passes, and then show that in practice a constant number
+of passes suffices. Experimental evaluation on real-world large-scale data
+demonstrates that k-means|| outperforms k-means++ in both sequential and
+parallel settings.
+
+
+An O(log log m)-competitive Algorithm for Online Machine Minimization
+
+  This paper considers the online machine minimization problem, a basic real
+time scheduling problem. The setting for this problem consists of n jobs that
+arrive over time, where each job has a deadline by which it must be completed.
+The goal is to design an online scheduler that feasibly schedules the jobs on a
+nearly minimal number of machines. An algorithm is c-machine optimal if the
+algorithm will feasibly schedule a collection of jobs on cm machines if there
+exists a feasible schedule on m machines. For over two decades the best known
+result was a O(log P)-machine optimal algorithm, where P is the ratio of the
+maximum to minimum job size. In a recent breakthrough, a O(log m)-machine
+optimal algorithm was given. In this paper, we exponentially improve on this
+recent result by giving a O(log log m)-machine optimal algorithm.
+
+
+Fast approximate simulation of seismic waves with deep learning
+
+  We simulate the response of acoustic seismic waves in horizontally layered
+media using a deep neural network. In contrast to traditional finite-difference
+modelling techniques our network is able to directly approximate the recorded
+seismic response at multiple receiver locations in a single inference step,
+without needing to iteratively model the seismic wavefield through time. This
+results in an order of magnitude reduction in simulation time from the order of
+1 s for FD modelling to the order of 0.1 s using our approach. Such a speed
+improvement could lead to real-time seismic simulation applications and benefit
+seismic inversion algorithms based on forward modelling, such as full waveform
+inversion. Our proof of concept deep neural network is trained using 50,000
+synthetic examples of seismic waves propagating through different 2D
+horizontally layered velocity models. We discuss how our approach could be
+extended to arbitrary velocity models. Our deep neural network design is
+inspired by the WaveNet architecture used for speech synthesis. We also
+investigate using deep neural networks for simulating the full seismic
+wavefield and for carrying out seismic inversion directly.
+
+
+Online Scheduling to Minimize the Maximum Delay Factor
+
+  In this paper two scheduling models are addressed. First is the standard
+model (unicast) where requests (or jobs) are independent. The other is the
+broadcast model where broadcasting a page can satisfy multiple outstanding
+requests for that page. We consider online scheduling of requests when they
+have deadlines. Unlike previous models, which mainly consider the objective of
+maximizing throughput while respecting deadlines, here we focus on scheduling
+all the given requests with the goal of minimizing the maximum {\em delay
+factor}.We prove strong lower bounds on the achievable competitive ratios for
+delay factor scheduling even with unit-time requests.For the unicast model we
+give algorithms that are $(1 + \eps)$-speed $O({1 \over \eps})$-competitive in
+both the single machine and multiple machine settings. In the broadcast model
+we give an algorithm for similar-sized pages that is $(2+ \eps)$-speed $O({1
+\over \eps^2})$-competitive. For arbitrary page sizes we give an algorithm that
+is $(4+\eps)$-speed $O({1 \over \eps^2})$-competitive.
+
+
+Longest Wait First for Broadcast Scheduling
+
+  We consider online algorithms for broadcast scheduling. In the pull-based
+broadcast model there are $n$ unit-sized pages of information at a server and
+requests arrive online for pages. When the server transmits a page $p$, all
+outstanding requests for that page are satisfied. The longest-wait-first} (LWF)
+algorithm is a natural algorithm that has been shown to have good empirical
+performance. In this paper we make two main contributions to the analysis of
+LWF and broadcast scheduling. \begin{itemize} \item We give an intuitive and
+easy to understand analysis of LWF which shows that it is
+$O(1/\eps^2)$-competitive for average flow-time with $(4+\eps)$ speed. Using a
+more involved analysis, we show that LWF is $O(1/\eps^3)$-competitive for
+average flow-time with $(3.4+\epsilon)$ speed. \item We show that a natural
+extension of LWF is O(1)-speed O(1)-competitive for more general objective
+functions such as average delay-factor and $L_k$ norms of delay-factor (for
+fixed $k$). \end{itemize}
+
+
+Scheduling to Minimize Energy and Flow Time in Broadcast Scheduling
+
+  In this paper we initiate the study of minimizing power consumption in the
+broadcast scheduling model. In this setting there is a wireless transmitter.
+Over time requests arrive at the transmitter for pages of information. Multiple
+requests may be for the same page. When a page is transmitted, all requests for
+that page receive the transmission simulteneously. The speed the transmitter
+sends data at can be dynamically scaled to conserve energy. We consider the
+problem of minimizing flow time plus energy, the most popular scheduling metric
+considered in the standard scheduling model when the scheduler is energy aware.
+We will assume that the power consumed is modeled by an arbitrary convex
+function. For this problem there is a $\Omega(n)$ lower bound. Due to the lower
+bound, we consider the resource augmentation model of Gupta \etal
+\cite{GuptaKP10}. Using resource augmentation, we give a scalable algorithm.
+Our result also gives a scalable non-clairvoyant algorithm for minimizing
+weighted flow time plus energy in the standard scheduling model.
+
+
+Fast Clustering using MapReduce
+
+  Clustering problems have numerous applications and are becoming more
+challenging as the size of the data increases. In this paper, we consider
+designing clustering algorithms that can be used in MapReduce, the most popular
+programming environment for processing large datasets. We focus on the
+practical and popular clustering problems, $k$-center and $k$-median. We
+develop fast clustering algorithms with constant factor approximation
+guarantees. From a theoretical perspective, we give the first analysis that
+shows several clustering algorithms are in $\mathcal{MRC}^0$, a theoretical
+MapReduce class introduced by Karloff et al. \cite{KarloffSV10}. Our algorithms
+use sampling to decrease the data size and they run a time consuming clustering
+algorithm such as local search or Lloyd's algorithm on the resulting data set.
+Our algorithms have sufficient flexibility to be used in practice since they
+run in a constant number of MapReduce rounds. We complement these results by
+performing experiments using our algorithms. We compare the empirical
+performance of our algorithms to several sequential and parallel algorithms for
+the $k$-median problem. The experiments show that our algorithms' solutions are
+similar to or better than the other algorithms' solutions. Furthermore, on data
+sets that are sufficiently large, our algorithms are faster than the other
+parallel algorithms that we tested.
+
+
+Quantum Secrecy in Thermal States
+
+  We propose to perform quantum key distribution using quantum correlations
+occurring within thermal states produced by low power sources such as LED's.
+These correlations are exploited through the Hanbury Brown and Twiss effect. We
+build an optical central broadcast protocol using a superluminescent diode
+which allows switching between laser and thermal regimes, enabling us to
+provide experimental key rates in both regimes. We provide a theoretical
+analysis and show that quantum secrecy is possible, even in high noise
+situations.
+
+
+Bargaining for Revenue Shares on Tree Trading Networks
+
+  We study trade networks with a tree structure, where a seller with a single
+indivisible good is connected to buyers, each with some value for the good, via
+a unique path of intermediaries. Agents in the tree make multiplicative revenue
+share offers to their parent nodes, who choose the best offer and offer part of
+it to their parent, and so on; the winning path is determined by who finally
+makes the highest offer to the seller. In this paper, we investigate how these
+revenue shares might be set via a natural bargaining process between agents on
+the tree, specifically, egalitarian bargaining between endpoints of each edge
+in the tree. We investigate the fixed point of this system of bargaining
+equations and prove various desirable for this solution concept, including (i)
+existence, (ii) uniqueness, (iii) efficiency, (iv) membership in the core, (v)
+strict monotonicity, (vi) polynomial-time computability to any given accuracy.
+Finally, we present numerical evidence that asynchronous dynamics with randomly
+ordered updates always converges to the fixed point, indicating that the fixed
+point shares might arise from decentralized bargaining amongst agents on the
+trade network.
+
+
+Backprop with Approximate Activations for Memory-efficient Network
+  Training
+
+  Larger and deeper neural network architectures deliver improved accuracy on a
+variety of tasks, but also require a large amount of memory for training to
+store intermediate activations for back-propagation. We introduce an
+approximation strategy to significantly reduce this memory footprint, with
+minimal effect on training performance and negligible computational cost. Our
+method replaces intermediate activations with lower-precision approximations to
+free up memory, after the full-precision versions have been used for
+computation in subsequent layers in the forward pass. Only these approximate
+activations are retained for use in the backward pass. Compared to naive
+low-precision computation, our approach limits the accumulation of errors
+across layers and allows the use of much lower-precision approximations without
+affecting training accuracy. Experiments on CIFAR and ImageNet show that our
+method yields performance comparable to full-precision training, while storing
+activations at a fraction of the memory cost with 8- and even 4-bit fixed-point
+precision.
+
+
+Online Scheduling on Identical Machines using SRPT
+
+  Due to its optimality on a single machine for the problem of minimizing
+average flow time, Shortest-Remaining-Processing-Time (\srpt) appears to be the
+most natural algorithm to consider for the problem of minimizing average flow
+time on multiple identical machines. It is known that $\srpt$ achieves the best
+possible competitive ratio on multiple machines up to a constant factor. Using
+resource augmentation, $\srpt$ is known to achieve total flow time at most that
+of the optimal solution when given machines of speed $2- \frac{1}{m}$. Further,
+it is known that $\srpt$'s competitive ratio improves as the speed increases;
+$\srpt$ is $s$-speed $\frac{1}{s}$-competitive when $s \geq 2- \frac{1}{m}$.
+  However, a gap has persisted in our understanding of $\srpt$. Before this
+work, the performance of $\srpt$ was not known when $\srpt$ is given
+$(1+\eps)$-speed when $0 < \eps < 1-\frac{1}{m}$, even though it has been
+thought that $\srpt$ is $(1+\eps)$-speed $O(1)$-competitive for over a decade.
+Resolving this question was suggested in Open Problem 2.9 from the survey
+"Online Scheduling" by Pruhs, Sgall, and Torng \cite{PruhsST}, and we answer
+the question in this paper. We show that $\srpt$ is \emph{scalable} on $m$
+identical machines. That is, we show $\srpt$ is $(1+\eps)$-speed
+$O(\frac{1}{\eps})$-competitive for $\eps >0$. We complement this by showing
+that $\srpt$ is $(1+\eps)$-speed $O(\frac{1}{\eps^2})$-competitive for the
+objective of minimizing the $\ell_k$-norms of flow time on $m$ identical
+machines. Both of our results rely on new potential functions that capture the
+structure of \srpt. Our results, combined with previous work, show that $\srpt$
+is the best possible online algorithm in essentially every aspect when
+migration is permissible.
+
+
+Minimizing Maximum Response Time and Delay Factor in Broadcast
+  Scheduling
+
+  We consider online algorithms for pull-based broadcast scheduling. In this
+setting there are n pages of information at a server and requests for pages
+arrive online. When the server serves (broadcasts) a page p, all outstanding
+requests for that page are satisfied. We study two related metrics, namely
+maximum response time (waiting time) and maximum delay-factor and their
+weighted versions. We obtain the following results in the worst-case online
+competitive model.
+  - We show that FIFO (first-in first-out) is 2-competitive even when the page
+sizes are different. Previously this was known only for unit-sized pages [10]
+via a delicate argument. Our proof differs from [10] and is perhaps more
+intuitive.
+  - We give an online algorithm for maximum delay-factor that is
+O(1/eps^2)-competitive with (1+\eps)-speed for unit-sized pages and with
+(2+\eps)-speed for different sized pages. This improves on the algorithm in
+[12] which required (2+\eps)-speed and (4+\eps)-speed respectively. In addition
+we show that the algorithm and analysis can be extended to obtain the same
+results for maximum weighted response time and delay factor.
+  - We show that a natural greedy algorithm modeled after LWF
+(Longest-Wait-First) is not O(1)-competitive for maximum delay factor with any
+constant speed even in the setting of standard scheduling with unit-sized jobs.
+This complements our upper bound and demonstrates the importance of the
+tradeoff made in our algorithm.
+
+
+Greed Works - Online Algorithms For Unrelated Machine Stochastic
+  Scheduling
+
+  This paper establishes the first performance guarantees for a combinatorial
+online algorithm that schedules stochastic, nonpreemptive jobs on unrelated
+machines to minimize the expected total weighted completion time. Prior work on
+unrelated machine scheduling with stochastic jobs was restricted to the offline
+case, and required sophisticated linear or convex programming relaxations for
+the assignment of jobs to machines. The algorithm introduced in this paper is
+based on a purely combinatorial assignment of jobs to machines, hence it also
+works online. The performance bounds are of the same order of magnitude as
+those of earlier work, and depend linearly on an upper bound $\Delta$ on the
+squared coefficient of variation of the jobs' processing times. They are
+$4+2\Delta$ when there are no release dates, and $12+6\Delta$ when jobs are
+released over time. For the special case of deterministic processing times,
+without and with release times, this paper shows that the same combinatorial
+greedy algorithm has a competitive ratio of 4 and 6, respectively. As to the
+technical contribution, the paper shows for the first time how dual fitting
+techniques can be used for stochastic and nonpreemptive scheduling problems.
+
+
+Online Non-preemptive Scheduling on Unrelated Machines with Rejections
+
+  When a computer system schedules jobs there is typically a significant cost
+associated with preempting a job during execution. This cost can be from the
+expensive task of saving the memory's state and loading data into and out of
+memory. It is desirable to schedule jobs non-preemptively to avoid the costs of
+preemption. There is a need for non-preemptive system schedulers on desktops,
+servers and data centers. Despite this need, there is a gap between theory and
+practice. Indeed, few non-preemptive \emph{online} schedulers are known to have
+strong foundational guarantees. This gap is likely due to strong lower bounds
+on any online algorithm for popular objectives. Indeed, typical worst case
+analysis approaches, and even resource augmented approaches such as speed
+augmentation, result in all algorithms having poor performance guarantees. This
+paper considers on-line non-preemptive scheduling problems in the worst-case
+rejection model where the algorithm is allowed to reject a small fraction of
+jobs. By rejecting only a few jobs, this paper shows that the strong lower
+bounds can be circumvented. This approach can be used to discover algorithmic
+scheduling policies with desirable worst-case guarantees. Specifically, the
+paper presents algorithms for the following two objectives: minimizing the
+total flow-time and minimizing the total weighted flow-time plus energy under
+the speed-scaling mechanism. The algorithms have a small constant competitive
+ratio while rejecting only a constant fraction of jobs. Beyond specific
+results, the paper asserts that alternative models beyond speed augmentation
+should be explored to aid in the discovery of good schedulers in the face of
+the requirement of being online and non-preemptive.
+
+
+Online Non-Preemptive Scheduling to Minimize Weighted Flow-time on
+  Unrelated Machines
+
+  In this paper, we consider the online problem of scheduling independent jobs
+\emph{non-preemptively} so as to minimize the weighted flow-time on a set of
+unrelated machines. There has been a considerable amount of work on this
+problem in the preemptive setting where several competitive algorithms are
+known in the classical competitive model. %Using the speed augmentation model,
+Anand et al. showed that the greedy algorithm is
+$O\left(\frac{1}{\epsilon}\right)$-competitive in the preemptive setting. In
+the non-preemptive setting, Lucarelli et al. showed that there exists a strong
+lower bound for minimizing weighted flow-time even on a single machine.
+However, the problem in the non-preemptive setting admits a strong lower bound.
+Recently, Lucarelli et al. presented an algorithm that achieves a
+$O\left(\frac{1}{\epsilon^2}\right)$-competitive ratio when the algorithm is
+allowed to reject $\epsilon$-fraction of total weight of jobs and
+$\epsilon$-speed augmentation. They further showed that speed augmentation
+alone is insufficient to derive any competitive algorithm. An intriguing open
+question is whether there exists a scalable competitive algorithm that rejects
+a small fraction of total weights.
+  In this paper, we affirmatively answer this question. Specifically, we show
+that there exists a $O\left(\frac{1}{\epsilon^3}\right)$-competitive algorithm
+for minimizing weighted flow-time on a set of unrelated machine that rejects at
+most $O(\epsilon)$-fraction of total weight of jobs. The design and analysis of
+the algorithm is based on the primal-dual technique. Our result asserts that
+alternative models beyond speed augmentation should be explored when designing
+online schedulers in the non-preemptive setting in an effort to find provably
+good algorithms.
+
+
+Pre-Synaptic Pool Modification (PSPM): A Supervised Learning Procedure
+  for Spiking Neural Networks
+
+  A central question in neuroscience is how to develop realistic models that
+predict output firing behavior based on provided external stimulus. Given a set
+of external inputs and a set of output spike trains, the objective is to
+discover a network structure which can accomplish the transformation as
+accurately as possible. Due to the difficulty of this problem in its most
+general form, approximations have been made in previous work. Past
+approximations have sacrificed network size, recurrence, allowed spiked count,
+or have imposed layered network structure. Here we present a learning rule
+without these sacrifices, which produces a weight matrix of a leaky
+integrate-and-fire (LIF) network to match the output activity of both
+deterministic LIF networks as well as probabilistic integrate-and-fire (PIF)
+networks. Inspired by synaptic scaling, our pre-synaptic pool modification
+(PSPM) algorithm outputs deterministic, fully recurrent spiking neural networks
+that can provide a novel generative model for given spike trains. Similarity in
+output spike trains is evaluated with a variety of metrics including a
+van-Rossum like measure and a numerical comparison of inter-spike interval
+distributions. Application of our algorithm to randomly generated networks
+improves similarity to the reference spike trains on both of these stated
+measures. In addition, we generated LIF networks that operate near criticality
+when trained on critical PIF outputs. Our results establish that learning rules
+based on synaptic homeostasis can be used to represent input-output
+relationships in fully recurrent spiking neural networks.
+
+
+Efficient nonmyopic active search with applications in drug and
+  materials discovery
+
+  Active search is a learning paradigm for actively identifying as many members
+of a given class as possible. A critical target scenario is high-throughput
+screening for scientific discovery, such as drug or materials discovery. In
+this paper, we approach this problem in Bayesian decision framework. We first
+derive the Bayesian optimal policy under a natural utility, and establish a
+theoretical hardness of active search, proving that the optimal policy can not
+be approximated for any constant ratio. We also study the batch setting for the
+first time, where a batch of $b>1$ points can be queried at each iteration. We
+give an asymptotic lower bound, linear in batch size, on the adaptivity gap:
+how much we could lose if we query $b$ points at a time for $t$ iterations,
+instead of one point at a time for $bt$ iterations. We then introduce a novel
+approach to nonmyopic approximations of the optimal policy that admits
+efficient computation. Our proposed policy can automatically trade off
+exploration and exploitation, without relying on any tuning parameters. We also
+generalize our policy to batch setting, and propose two approaches to tackle
+the combinatorial search challenge. We evaluate our proposed policies on a
+large database of drug discovery and materials science. Results demonstrate the
+superior performance of our proposed policy in both sequential and batch
+setting; the nonmyopic behavior is also illustrated in various aspects.
+
+
+On Functional Aggregate Queries with Additive Inequalities
+
+  Motivated by fundamental applications in databases and relational machine
+learning, we formulate and study the problem of answering functional aggregate
+queries (FAQ) in which some of the input factors are defined by a collection of
+additive inequalities between variables. We refer to these queries as FAQ-AI
+for short.
+  To answer FAQ-AI in the Boolean semiring, we define relaxed tree
+decompositions and relaxed submodular and fractional hypertree width
+parameters. We show that an extension of the InsideOut algorithm using
+Chazelle's geometric data structure for solving the semigroup range search
+problem can answer Boolean FAQ-AI in time given by these new width parameters.
+This new algorithm achieves lower complexity than known solutions for FAQ-AI.
+It also recovers some known results in database query answering.
+  Our second contribution is a relaxation of the set of polymatroids that gives
+rise to the counting version of the submodular width, denoted by #subw. This
+new width is sandwiched between the submodular and the fractional hypertree
+widths. Any FAQ and FAQ-AI over one semiring can be answered in time
+proportional to #subw and respectively to the relaxed version of #subw.
+  We present three applications of our FAQ-AI framework to relational machine
+learning: k-means clustering, training linear support vector machines, and
+training models using non-polynomial loss. These optimization problems can be
+solved over a database asymptotically faster than computing the join of the
+database relations.
+
+
+The Atacama Cosmology Telescope: Cosmological parameters from three
+  seasons of data
+
+  We present constraints on cosmological and astrophysical parameters from
+high-resolution microwave background maps at 148 GHz and 218 GHz made by the
+Atacama Cosmology Telescope (ACT) in three seasons of observations from 2008 to
+2010. A model of primary cosmological and secondary foreground parameters is
+fit to the map power spectra and lensing deflection power spectrum, including
+contributions from both the thermal Sunyaev-Zeldovich (tSZ) effect and the
+kinematic Sunyaev-Zeldovich (kSZ) effect, Poisson and correlated anisotropy
+from unresolved infrared sources, radio sources, and the correlation between
+the tSZ effect and infrared sources. The power ell^2 C_ell/2pi of the thermal
+SZ power spectrum at 148 GHz is measured to be 3.4 +\- 1.4 muK^2 at ell=3000,
+while the corresponding amplitude of the kinematic SZ power spectrum has a 95%
+confidence level upper limit of 8.6 muK^2. Combining ACT power spectra with the
+WMAP 7-year temperature and polarization power spectra, we find excellent
+consistency with the LCDM model. We constrain the number of effective
+relativistic degrees of freedom in the early universe to be Neff=2.79 +\- 0.56,
+in agreement with the canonical value of Neff=3.046 for three massless
+neutrinos. We constrain the sum of the neutrino masses to be Sigma m_nu < 0.39
+eV at 95% confidence when combining ACT and WMAP 7-year data with BAO and
+Hubble constant measurements. We constrain the amount of primordial helium to
+be Yp = 0.225 +\- 0.034, and measure no variation in the fine structure
+constant alpha since recombination, with alpha/alpha0 = 1.004 +/- 0.005. We
+also find no evidence for any running of the scalar spectral index, dns/dlnk =
+-0.004 +\- 0.012.
+
+

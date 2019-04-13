@@ -1,0 +1,927 @@
+Parameterizing Region Covariance: An Efficient Way To Apply Sparse Codes
+  On Second Order Statistics
+
+  Sparse representations have been successfully applied to signal processing,
+computer vision and machine learning. Currently there is a trend to learn
+sparse models directly on structure data, such as region covariance. However,
+such methods when combined with region covariance often require complex
+computation. We present an approach to transform a structured sparse model
+learning problem to a traditional vectorized sparse modeling problem by
+constructing a Euclidean space representation for region covariance matrices.
+Our new representation has multiple advantages. Experiments on several vision
+tasks demonstrate competitive performance with the state-of-the-art methods.
+
+
+Scalable Gaussian Processes for Supervised Hashing
+
+  We propose a flexible procedure for large-scale image search by hash
+functions with kernels. Our method treats binary codes and pairwise semantic
+similarity as latent and observed variables, respectively, in a probabilistic
+model based on Gaussian processes for binary classification. We present an
+efficient inference algorithm with the sparse pseudo-input Gaussian process
+(SPGP) model and parallelization. Experiments on three large-scale image
+dataset demonstrate the effectiveness of the proposed hashing method, Gaussian
+Process Hashing (GPH), for short binary codes and the datasets without
+predefined classes in comparison to the state-of-the-art supervised hashing
+methods.
+
+
+Mining Discriminative Triplets of Patches for Fine-Grained
+  Classification
+
+  Fine-grained classification involves distinguishing between similar
+sub-categories based on subtle differences in highly localized regions;
+therefore, accurate localization of discriminative regions remains a major
+challenge. We describe a patch-based framework to address this problem. We
+introduce triplets of patches with geometric constraints to improve the
+accuracy of patch localization, and automatically mine discriminative
+geometrically-constrained triplets for classification. The resulting approach
+only requires object bounding boxes. Its effectiveness is demonstrated using
+four publicly available fine-grained datasets, on which it outperforms or
+achieves comparable performance to the state-of-the-art in classification.
+
+
+Two-Stream Neural Networks for Tampered Face Detection
+
+  We propose a two-stream network for face tampering detection. We train
+GoogLeNet to detect tampering artifacts in a face classification stream, and
+train a patch based triplet network to leverage features capturing local noise
+residuals and camera characteristics as a second stream. In addition, we use
+two different online face swapping applications to create a new dataset that
+consists of 2010 tampered images, each of which contains a tampered face. We
+evaluate the proposed two-stream network on our newly collected dataset.
+Experimental results demonstrate the effectiveness of our method.
+
+
+Comparing apples to apples in the evaluation of binary coding methods
+
+  We discuss methodological issues related to the evaluation of unsupervised
+binary code construction methods for nearest neighbor search. These issues have
+been widely ignored in literature. These coding methods attempt to preserve
+either Euclidean distance or angular (cosine) distance in the binary embedding
+space. We explain why when comparing a method whose goal is preserving cosine
+similarity to one designed for preserving Euclidean distance, the original
+features should be normalized by mapping them to the unit hypersphere before
+learning the binary mapping functions. To compare a method whose goal is to
+preserves Euclidean distance to one that preserves cosine similarity, the
+original feature data must be mapped to a higher dimension by including a bias
+term in binary mapping functions. These conditions ensure the fair comparison
+between different binary code methods for the task of nearest neighbor search.
+Our experiments show under these conditions the very simple methods (e.g. LSH
+and ITQ) often outperform recent state-of-the-art methods (e.g. MDSH and
+OK-means).
+
+
+Exploiting Local Features from Deep Networks for Image Retrieval
+
+  Deep convolutional neural networks have been successfully applied to image
+classification tasks. When these same networks have been applied to image
+retrieval, the assumption has been made that the last layers would give the
+best performance, as they do in classification. We show that for instance-level
+image retrieval, lower layers often perform better than the last layers in
+convolutional neural networks. We present an approach for extracting
+convolutional features from different layers of the networks, and adopt VLAD
+encoding to encode features into a single vector for each image. We investigate
+the effect of different layers and scales of input images on the performance of
+convolutional features using the recent deep networks OxfordNet and GoogLeNet.
+Experiments demonstrate that intermediate layers or higher layers with finer
+scales produce better results for image retrieval, compared to the last layer.
+When using compressed 128-D VLAD descriptors, our method obtains
+state-of-the-art results and outperforms other VLAD and CNN based approaches on
+two out of three test datasets. Our work provides guidance for transferring
+deep networks trained on image classification to image retrieval tasks.
+
+
+G-CNN: an Iterative Grid Based Object Detector
+
+  We introduce G-CNN, an object detection technique based on CNNs which works
+without proposal algorithms. G-CNN starts with a multi-scale grid of fixed
+bounding boxes. We train a regressor to move and scale elements of the grid
+towards objects iteratively. G-CNN models the problem of object detection as
+finding a path from a fixed grid to boxes tightly surrounding the objects.
+G-CNN with around 180 boxes in a multi-scale grid performs comparably to Fast
+R-CNN which uses around 2K bounding boxes generated with a proposal technique.
+This strategy makes detection faster by removing the object proposal stage as
+well as reducing the number of boxes to be processed.
+
+
+Generating Discriminative Object Proposals via Submodular Ranking
+
+  A multi-scale greedy-based object proposal generation approach is presented.
+Based on the multi-scale nature of objects in images, our approach is built on
+top of a hierarchical segmentation. We first identify the representative and
+diverse exemplar clusters within each scale by using a diversity ranking
+algorithm. Object proposals are obtained by selecting a subset from the
+multi-scale segment pool via maximizing a submodular objective function, which
+consists of a weighted coverage term, a single-scale diversity term and a
+multi-scale reward term. The weighted coverage term forces the selected set of
+object proposals to be representative and compact; the single-scale diversity
+term encourages choosing segments from different exemplar clusters so that they
+will cover as many object patterns as possible; the multi-scale reward term
+encourages the selected proposals to be discriminative and selected from
+multiple layers generated by the hierarchical image segmentation. The
+experimental results on the Berkeley Segmentation Dataset and PASCAL VOC2012
+segmentation dataset demonstrate the accuracy and efficiency of our object
+proposal model. Additionally, we validate our object proposals in simultaneous
+segmentation and detection and outperform the state-of-art performance.
+
+
+Searching for Objects using Structure in Indoor Scenes
+
+  To identify the location of objects of a particular class, a passive computer
+vision system generally processes all the regions in an image to finally output
+few regions. However, we can use structure in the scene to search for objects
+without processing the entire image. We propose a search technique that
+sequentially processes image regions such that the regions that are more likely
+to correspond to the query class object are explored earlier. We frame the
+problem as a Markov decision process and use an imitation learning algorithm to
+learn a search strategy. Since structure in the scene is essential for search,
+we work with indoor scene images as they contain both unary scene context
+information and object-object context in the scene. We perform experiments on
+the NYU-depth v2 dataset and show that the unary scene context features alone
+can achieve a significantly high average precision while processing only
+20-25\% of the regions for classes like bed and sofa. By considering
+object-object context along with the scene context features, the performance is
+further improved for classes like counter, lamp, pillow and sofa.
+
+
+Weakly-Supervised Spatial Context Networks
+
+  We explore the power of spatial context as a self-supervisory signal for
+learning visual representations. In particular, we propose spatial context
+networks that learn to predict a representation of one image patch from another
+image patch, within the same image, conditioned on their real-valued relative
+spatial offset. Unlike auto-encoders, that aim to encode and reconstruct
+original image patches, our network aims to encode and reconstruct intermediate
+representations of the spatially offset patches. As such, the network learns a
+spatially conditioned contextual representation. By testing performance with
+various patch selection mechanisms we show that focusing on object-centric
+patches is important, and that using object proposal as a patch selection
+mechanism leads to the highest improvement in performance. Further, unlike
+auto-encoders, context encoders [21], or other forms of unsupervised feature
+learning, we illustrate that contextual supervision (with pre-trained model
+initialization) can improve on existing pre-trained model performance. We build
+our spatial context networks on top of standard VGG_19 and CNN_M architectures
+and, among other things, show that we can achieve improvements (with no
+additional explicit supervision) over the original ImageNet pre-trained VGG_19
+and CNN_M models in object categorization and detection on VOC2007.
+
+
+SHOE: Supervised Hashing with Output Embeddings
+
+  We present a supervised binary encoding scheme for image retrieval that
+learns projections by taking into account similarity between classes obtained
+from output embeddings. Our motivation is that binary hash codes learned in
+this way improve both the visual quality of retrieval results and existing
+supervised hashing schemes. We employ a sequential greedy optimization that
+learns relationship aware projections by minimizing the difference between
+inner products of binary codes and output embedding vectors. We develop a joint
+optimization framework to learn projections which improve the accuracy of
+supervised hashing over the current state of the art with respect to standard
+and sibling evaluation metrics. We further boost performance by applying the
+supervised dimensionality reduction technique on kernelized input CNN features.
+Experiments are performed on three datasets: CUB-2011, SUN-Attribute and
+ImageNet ILSVRC 2010. As a by-product of our method, we show that using a
+simple k-nn pooling classifier with our discriminative codes improves over the
+complex classification models on fine grained datasets like CUB and offer an
+impressive compression ratio of 1024 on CNN features.
+
+
+On Large-Scale Retrieval: Binary or n-ary Coding?
+
+  The growing amount of data available in modern-day datasets makes the need to
+efficiently search and retrieve information. To make large-scale search
+feasible, Distance Estimation and Subset Indexing are the main approaches.
+Although binary coding has been popular for implementing both techniques, n-ary
+coding (known as Product Quantization) is also very effective for Distance
+Estimation. However, their relative performance has not been studied for Subset
+Indexing. We investigate whether binary or n-ary coding works better under
+different retrieval strategies. This leads to the design of a new n-ary coding
+method, "Linear Subspace Quantization (LSQ)" which, unlike other n-ary
+encoders, can be used as a similarity-preserving embedding. Experiments on
+image retrieval show that when Distance Estimation is used, n-ary LSQ
+outperforms other methods. However, when Subset Indexing is applied,
+interestingly, binary codings are more effective and binary LSQ achieves the
+best accuracy.
+
+
+Learning Temporal Regularity in Video Sequences
+
+  Perceiving meaningful activities in a long video sequence is a challenging
+problem due to ambiguous definition of 'meaningfulness' as well as clutters in
+the scene. We approach this problem by learning a generative model for regular
+motion patterns, termed as regularity, using multiple sources with very limited
+supervision. Specifically, we propose two methods that are built upon the
+autoencoders for their ability to work with little to no supervision. We first
+leverage the conventional handcrafted spatio-temporal local features and learn
+a fully connected autoencoder on them. Second, we build a fully convolutional
+feed-forward autoencoder to learn both the local features and the classifiers
+as an end-to-end learning framework. Our model can capture the regularities
+from multiple datasets. We evaluate our methods in both qualitative and
+quantitative ways - showing the learned regularity of videos in various aspects
+and demonstrating competitive performance on anomaly detection datasets as an
+application.
+
+
+Supervised Incremental Hashing
+
+  We propose an incremental strategy for learning hash functions with kernels
+for large-scale image search. Our method is based on a two-stage classification
+framework that treats binary codes as intermediate variables between the
+feature space and the semantic space. In the first stage of classification,
+binary codes are considered as class labels by a set of binary SVMs; each
+corresponds to one bit. In the second stage, binary codes become the input
+space of a multi-class SVM. Hash functions are learned by an efficient
+algorithm where the NP-hard problem of finding optimal binary codes is solved
+via cyclic coordinate descent and SVMs are trained in a parallelized
+incremental manner. For modifications like adding images from a previously
+unseen class, we describe an incremental procedure for effective and efficient
+updates to the previous hash functions. Experiments on three large-scale image
+datasets demonstrate the effectiveness of the proposed hashing method,
+Supervised Incremental Hashing (SIH), over the state-of-the-art supervised
+hashing methods.
+
+
+Modeling Context Between Objects for Referring Expression Understanding
+
+  Referring expressions usually describe an object using properties of the
+object and relationships of the object with other objects. We propose a
+technique that integrates context between objects to understand referring
+expressions. Our approach uses an LSTM to learn the probability of a referring
+expression, with input features from a region and a context region. The context
+regions are discovered using multiple-instance learning (MIL) since annotations
+for context objects are generally not available for training. We utilize
+max-margin based MIL objective functions for training the LSTM. Experiments on
+the Google RefExp and UNC RefExp datasets show that modeling context between
+objects provides better performance than modeling only object properties. We
+also qualitatively show that our technique can ground a referring expression to
+its referred region along with the supporting context region.
+
+
+The Role of Context Selection in Object Detection
+
+  We investigate the reasons why context in object detection has limited
+utility by isolating and evaluating the predictive power of different context
+cues under ideal conditions in which context provided by an oracle. Based on
+this study, we propose a region-based context re-scoring method with dynamic
+context selection to remove noise and emphasize informative context. We
+introduce latent indicator variables to select (or ignore) potential contextual
+regions, and learn the selection strategy with latent-SVM. We conduct
+experiments to evaluate the performance of the proposed context selection
+method on the SUN RGB-D dataset. The method achieves a significant improvement
+in terms of mean average precision (mAP), compared with both appearance based
+detectors and a conventional context model without the selection scheme.
+
+
+Fused DNN: A deep neural network fusion approach to fast and robust
+  pedestrian detection
+
+  We propose a deep neural network fusion architecture for fast and robust
+pedestrian detection. The proposed network fusion architecture allows for
+parallel processing of multiple networks for speed. A single shot deep
+convolutional network is trained as a object detector to generate all possible
+pedestrian candidates of different sizes and occlusions. This network outputs a
+large variety of pedestrian candidates to cover the majority of ground-truth
+pedestrians while also introducing a large number of false positives. Next,
+multiple deep neural networks are used in parallel for further refinement of
+these pedestrian candidates. We introduce a soft-rejection based network fusion
+method to fuse the soft metrics from all networks together to generate the
+final confidence scores. Our method performs better than existing
+state-of-the-arts, especially when detecting small-size and occluded
+pedestrians. Furthermore, we propose a method for integrating pixel-wise
+semantic segmentation network into the network fusion architecture as a
+reinforcement to the pedestrian detector. The approach outperforms
+state-of-the-art methods on most protocols on Caltech Pedestrian dataset, with
+significant boosts on several protocols. It is also faster than all other
+methods.
+
+
+Learning a Discriminative Filter Bank within a CNN for Fine-grained
+  Recognition
+
+  Compared to earlier multistage frameworks using CNN features, recent
+end-to-end deep approaches for fine-grained recognition essentially enhance the
+mid-level learning capability of CNNs. Previous approaches achieve this by
+introducing an auxiliary network to infuse localization information into the
+main classification network, or a sophisticated feature encoding method to
+capture higher order feature statistics. We show that mid-level representation
+learning can be enhanced within the CNN framework, by learning a bank of
+convolutional filters that capture class-specific discriminative patches
+without extra part or bounding box annotations. Such a filter bank is well
+structured, properly initialized and discriminatively learned through a novel
+asymmetric multi-stream architecture with convolutional filter supervision and
+a non-random layer initialization. Experimental results show that our approach
+achieves state-of-the-art on three publicly available fine-grained recognition
+datasets (CUB-200-2011, Stanford Cars and FGVC-Aircraft). Ablation studies and
+visualizations are provided to understand our approach.
+
+
+ActionFlowNet: Learning Motion Representation for Action Recognition
+
+  Even with the recent advances in convolutional neural networks (CNN) in
+various visual recognition tasks, the state-of-the-art action recognition
+system still relies on hand crafted motion feature such as optical flow to
+achieve the best performance. We propose a multitask learning model
+ActionFlowNet to train a single stream network directly from raw pixels to
+jointly estimate optical flow while recognizing actions with convolutional
+neural networks, capturing both appearance and motion in a single model. We
+additionally provide insights to how the quality of the learned optical flow
+affects the action recognition. Our model significantly improves action
+recognition accuracy by a large margin 31% compared to state-of-the-art
+CNN-based action recognition models trained without external large scale data
+and additional optical flow input. Without pretraining on large external
+labeled datasets, our model, by well exploiting the motion information,
+achieves competitive recognition accuracy to the models trained with large
+labeled datasets such as ImageNet and Sport-1M.
+
+
+Generalized Deep Image to Image Regression
+
+  We present a Deep Convolutional Neural Network architecture which serves as a
+generic image-to-image regressor that can be trained end-to-end without any
+further machinery. Our proposed architecture: the Recursively Branched
+Deconvolutional Network (RBDN) develops a cheap multi-context image
+representation very early on using an efficient recursive branching scheme with
+extensive parameter sharing and learnable upsampling. This multi-context
+representation is subjected to a highly non-linear locality preserving
+transformation by the remainder of our network comprising of a series of
+convolutions/deconvolutions without any spatial downsampling. The RBDN
+architecture is fully convolutional and can handle variable sized images during
+inference. We provide qualitative/quantitative results on $3$ diverse tasks:
+relighting, denoising and colorization and show that our proposed RBDN
+architecture obtains comparable results to the state-of-the-art on each of
+these tasks when used off-the-shelf without any post processing or
+task-specific architectural modifications.
+
+
+Fast-AT: Fast Automatic Thumbnail Generation using Deep Neural Networks
+
+  Fast-AT is an automatic thumbnail generation system based on deep neural
+networks. It is a fully-convolutional deep neural network, which learns
+specific filters for thumbnails of different sizes and aspect ratios. During
+inference, the appropriate filter is selected depending on the dimensions of
+the target thumbnail. Unlike most previous work, Fast-AT does not utilize
+saliency but addresses the problem directly. In addition, it eliminates the
+need to conduct region search on the saliency map. The model generalizes to
+thumbnails of different sizes including those with extreme aspect ratios and
+can generate thumbnails in real time. A data set of more than 70,000 thumbnail
+annotations was collected to train Fast-AT. We show competitive results in
+comparison to existing techniques.
+
+
+Visual Relationship Detection with Internal and External Linguistic
+  Knowledge Distillation
+
+  Understanding visual relationships involves identifying the subject, the
+object, and a predicate relating them. We leverage the strong correlations
+between the predicate and the (subj,obj) pair (both semantically and spatially)
+to predict the predicates conditioned on the subjects and the objects. Modeling
+the three entities jointly more accurately reflects their relationships, but
+complicates learning since the semantic space of visual relationships is huge
+and the training data is limited, especially for the long-tail relationships
+that have few instances. To overcome this, we use knowledge of linguistic
+statistics to regularize visual model learning. We obtain linguistic knowledge
+by mining from both training annotations (internal knowledge) and publicly
+available text, e.g., Wikipedia (external knowledge), computing the conditional
+probability distribution of a predicate given a (subj,obj) pair. Then, we
+distill the knowledge into a deep model to achieve better generalization. Our
+experimental results on the Visual Relationship Detection (VRD) and Visual
+Genome datasets suggest that with this linguistic knowledge distillation, our
+model outperforms the state-of-the-art methods significantly, especially when
+predicting unseen relationships (e.g., recall improved from 8.45% to 19.17% on
+VRD zero-shot testing set).
+
+
+Automatic Spatially-aware Fashion Concept Discovery
+
+  This paper proposes an automatic spatially-aware concept discovery approach
+using weakly labeled image-text data from shopping websites. We first fine-tune
+GoogleNet by jointly modeling clothing images and their corresponding
+descriptions in a visual-semantic embedding space. Then, for each attribute
+(word), we generate its spatially-aware representation by combining its
+semantic word vector representation with its spatial representation derived
+from the convolutional maps of the fine-tuned network. The resulting
+spatially-aware representations are further used to cluster attributes into
+multiple groups to form spatially-aware concepts (e.g., the neckline concept
+might consist of attributes like v-neck, round-neck, etc). Finally, we
+decompose the visual-semantic embedding space into multiple concept-specific
+subspaces, which facilitates structured browsing and attribute-feedback product
+retrieval by exploiting multimodal linguistic regularities. We conducted
+extensive experiments on our newly collected Fashion200K dataset, and results
+on clustering quality evaluation and attribute-feedback product retrieval task
+demonstrate the effectiveness of our automatically discovered spatially-aware
+concepts.
+
+
+Temporal Context Network for Activity Localization in Videos
+
+  We present a Temporal Context Network (TCN) for precise temporal localization
+of human activities. Similar to the Faster-RCNN architecture, proposals are
+placed at equal intervals in a video which span multiple temporal scales. We
+propose a novel representation for ranking these proposals. Since pooling
+features only inside a segment is not sufficient to predict activity
+boundaries, we construct a representation which explicitly captures context
+around a proposal for ranking it. For each temporal segment inside a proposal,
+features are uniformly sampled at a pair of scales and are input to a temporal
+convolutional neural network for classification. After ranking proposals,
+non-maximum suppression is applied and classification is performed to obtain
+final detections. TCN outperforms state-of-the-art methods on the ActivityNet
+dataset and the THUMOS14 dataset.
+
+
+On Encoding Temporal Evolution for Real-time Action Prediction
+
+  Anticipating future actions is a key component of intelligence, specifically
+when it applies to real-time systems, such as robots or autonomous cars. While
+recent works have addressed prediction of raw RGB pixel values, we focus on
+anticipating the motion evolution in future video frames. To this end, we
+construct dynamic images (DIs) by summarising moving pixels through a sequence
+of future frames. We train a convolutional LSTMs to predict the next DIs based
+on an unsupervised learning process, and then recognise the activity associated
+with the predicted DI. We demonstrate the effectiveness of our approach on 3
+benchmark action datasets showing that despite running on videos with complex
+activities, our approach is able to anticipate the next human action with high
+accuracy and obtain better results than the state-of-the-art methods.
+
+
+Dynamic Zoom-in Network for Fast Object Detection in Large Images
+
+  We introduce a generic framework that reduces the computational cost of
+object detection while retaining accuracy for scenarios where objects with
+varied sizes appear in high resolution images. Detection progresses in a
+coarse-to-fine manner, first on a down-sampled version of the image and then on
+a sequence of higher resolution regions identified as likely to improve the
+detection accuracy. Built upon reinforcement learning, our approach consists of
+a model (R-net) that uses coarse detection results to predict the potential
+accuracy gain for analyzing a region at a higher resolution and another model
+(Q-net) that sequentially selects regions to zoom in. Experiments on the
+Caltech Pedestrians dataset show that our approach reduces the number of
+processed pixels by over 50% without a drop in detection accuracy. The merits
+of our approach become more significant on a high resolution test set collected
+from YFCC100M dataset, where our approach maintains high detection performance
+while reducing the number of processed pixels by about 70% and the detection
+time by over 50%.
+
+
+C-WSL: Count-guided Weakly Supervised Localization
+
+  We introduce count-guided weakly supervised localization (C-WSL), an approach
+that uses per-class object count as a new form of supervision to improve weakly
+supervised localization (WSL). C-WSL uses a simple count-based region selection
+algorithm to select high-quality regions, each of which covers a single object
+instance during training, and improves existing WSL methods by training with
+the selected regions. To demonstrate the effectiveness of C-WSL, we integrate
+it into two WSL architectures and conduct extensive experiments on VOC2007 and
+VOC2012. Experimental results show that C-WSL leads to large improvements in
+WSL and that the proposed approach significantly outperforms the
+state-of-the-art methods. The results of annotation experiments on VOC2007
+suggest that a modest extra time is needed to obtain per-class object counts
+compared to labeling only object categories in an image. Furthermore, we reduce
+the annotation time by more than $2\times$ and $38\times$ compared to
+center-click and bounding-box annotations.
+
+
+An Analysis of Scale Invariance in Object Detection - SNIP
+
+  An analysis of different techniques for recognizing and detecting objects
+under extreme scale variation is presented. Scale specific and scale invariant
+design of detectors are compared by training them with different configurations
+of input data. By evaluating the performance of different network architectures
+for classifying small objects on ImageNet, we show that CNNs are not robust to
+changes in scale. Based on this analysis, we propose to train and test
+detectors on the same scales of an image-pyramid. Since small and large objects
+are difficult to recognize at smaller and larger scales respectively, we
+present a novel training scheme called Scale Normalization for Image Pyramids
+(SNIP) which selectively back-propagates the gradients of object instances of
+different sizes as a function of the image scale. On the COCO dataset, our
+single model performance is 45.7% and an ensemble of 3 networks obtains an mAP
+of 48.3%. We use off-the-shelf ImageNet-1000 pre-trained models and only train
+with bounding box supervision. Our submission won the Best Student Entry in the
+COCO 2017 challenge. Code will be made available at
+\url{http://bit.ly/2yXVg4c}.
+
+
+VITON: An Image-based Virtual Try-on Network
+
+  We present an image-based VIirtual Try-On Network (VITON) without using 3D
+information in any form, which seamlessly transfers a desired clothing item
+onto the corresponding region of a person using a coarse-to-fine strategy.
+Conditioned upon a new clothing-agnostic yet descriptive person representation,
+our framework first generates a coarse synthesized image with the target
+clothing item overlaid on that same person in the same pose. We further enhance
+the initial blurry clothing area with a refinement network. The network is
+trained to learn how much detail to utilize from the target clothing item, and
+where to apply to the person in order to synthesize a photo-realistic image in
+which the target item deforms naturally with clear visual patterns. Experiments
+on our newly collected Zalando dataset demonstrate its promise in the
+image-based virtual try-on task over state-of-the-art generative models.
+
+
+R-FCN-3000 at 30fps: Decoupling Detection and Classification
+
+  We present R-FCN-3000, a large-scale real-time object detector in which
+objectness detection and classification are decoupled. To obtain the detection
+score for an RoI, we multiply the objectness score with the fine-grained
+classification score. Our approach is a modification of the R-FCN architecture
+in which position-sensitive filters are shared across different object classes
+for performing localization. For fine-grained classification, these
+position-sensitive filters are not needed. R-FCN-3000 obtains an mAP of 34.9%
+on the ImageNet detection dataset and outperforms YOLO-9000 by 18% while
+processing 30 images per second. We also show that the objectness learned by
+R-FCN-3000 generalizes to novel classes and the performance increases with the
+number of training object classes - supporting the hypothesis that it is
+possible to learn a universal objectness detector. Code will be made available.
+
+
+Layout-induced Video Representation for Recognizing Agent-in-Place
+  Actions
+
+  We address the recognition of agent-in-place actions, which are associated
+with agents who perform them and places where they occur, in the context of
+outdoor home surveillance. We introduce a representation of the geometry and
+topology of scene layouts so that a network can generalize from the layouts
+observed in the training set to unseen layouts in the test set. This
+Layout-Induced Video Representation (LIVR) abstracts away low-level appearance
+variance and encodes geometric and topological relationships of places in a
+specific scene layout. LIVR partitions the semantic features of a video clip
+into different places to force the network to learn place-based feature
+descriptions; to predict the confidence of each action, LIVR aggregates
+features from the place associated with an action and its adjacent places on
+the scene layout. We introduce the Agent-in-Place Action dataset to show that
+our method allows neural network models to generalize significantly better to
+unseen scenes.
+
+
+Stacked U-Nets: A No-Frills Approach to Natural Image Segmentation
+
+  Many imaging tasks require global information about all pixels in an image.
+Conventional bottom-up classification networks globalize information by
+decreasing resolution; features are pooled and downsampled into a single
+output. But for semantic segmentation and object detection tasks, a network
+must provide higher-resolution pixel-level outputs. To globalize information
+while preserving resolution, many researchers propose the inclusion of
+sophisticated auxiliary blocks, but these come at the cost of a considerable
+increase in network size and computational cost. This paper proposes stacked
+u-nets (SUNets), which iteratively combine features from different resolution
+scales while maintaining resolution. SUNets leverage the information
+globalization power of u-nets in a deeper network architectures that is capable
+of handling the complexity of natural images. SUNets perform extremely well on
+semantic segmentation tasks using a small number of parameters.
+
+
+Learning Rich Features for Image Manipulation Detection
+
+  Image manipulation detection is different from traditional semantic object
+detection because it pays more attention to tampering artifacts than to image
+content, which suggests that richer features need to be learned. We propose a
+two-stream Faster R-CNN network and train it endto- end to detect the tampered
+regions given a manipulated image. One of the two streams is an RGB stream
+whose purpose is to extract features from the RGB image input to find tampering
+artifacts like strong contrast difference, unnatural tampered boundaries, and
+so on. The other is a noise stream that leverages the noise features extracted
+from a steganalysis rich model filter layer to discover the noise inconsistency
+between authentic and tampered regions. We then fuse features from the two
+streams through a bilinear pooling layer to further incorporate spatial
+co-occurrence of these two modalities. Experiments on four standard image
+manipulation datasets demonstrate that our two-stream framework outperforms
+each individual stream, and also achieves state-of-the-art performance compared
+to alternative methods with robustness to resizing and compression.
+
+
+Soft Sampling for Robust Object Detection
+
+  We study the robustness of object detection under the presence of missing
+annotations. In this setting, the unlabeled object instances will be treated as
+background, which will generate an incorrect training signal for the detector.
+Interestingly, we observe that after dropping 30% of the annotations (and
+labeling them as background), the performance of CNN-based object detectors
+like Faster-RCNN only drops by 5% on the PASCAL VOC dataset. We provide a
+detailed explanation for this result. To further bridge the performance gap, we
+propose a simple yet effective solution, called Soft Sampling. Soft Sampling
+re-weights the gradients of RoIs as a function of overlap with positive
+instances. This ensures that the uncertain background regions are given a
+smaller weight compared to the hardnegatives. Extensive experiments on curated
+PASCAL VOC datasets demonstrate the effectiveness of the proposed Soft Sampling
+method at different annotation drop rates. Finally, we show that on
+OpenImagesV3, which is a real-world dataset with missing annotations, Soft
+Sampling outperforms standard detection baselines by over 3%.
+
+
+Improving Annotation for 3D Pose Dataset of Fine-Grained Object
+  Categories
+
+  Existing 3D pose datasets of object categories are limited to generic object
+types and lack of fine-grained information. In this work, we introduce a new
+large-scale dataset that consists of 409 fine-grained categories and 31,881
+images with accurate 3D pose annotation. Specifically, we augment three
+existing fine-grained object recognition datasets (StanfordCars, CompCars and
+FGVC-Aircraft) by finding a specific 3D model for each sub-category from
+ShapeNet and manually annotating each 2D image by adjusting a full set of 7
+continuous perspective parameters. Since the fine-grained shapes allow 3D
+models to better fit the images, we further improve the annotation quality by
+initializing from the human annotation and conducting local search of the pose
+parameters with the objective of maximizing the IoUs between the projected mask
+and the segmentation reference estimated from state-of-the-art deep
+Convolutional Neural Networks (CNNs). We provide full statistics of the
+annotations with qualitative and quantitative comparisons suggesting that our
+dataset can be a complementary source for studying 3D pose estimation. The
+dataset can be downloaded at http://users.umiacs.umd.edu/~wym/3dpose.html.
+
+
+Temporal Recurrent Networks for Online Action Detection
+
+  Most work on temporal action detection is formulated as an offline problem,
+in which the start and end times of actions are determined after the entire
+video is fully observed. However, important real-time applications including
+surveillance and driver assistance systems require identifying actions as soon
+as each video frame arrives, based only on current and historical observations.
+In this paper, we propose a novel framework, Temporal Recurrent Network (TRN),
+to model greater temporal context of a video frame by simultaneously performing
+online action detection and anticipation of the immediate future. At each
+moment in time, our approach makes use of both accumulated historical evidence
+and predicted future information to better recognize the action that is
+currently occurring, and integrates both of these into a unified end-to-end
+architecture. We evaluate our approach on two popular online action detection
+datasets, HDD and TVSeries, as well as another widely used dataset, THUMOS'14.
+The results show that TRN significantly outperforms the state-of-the-art.
+
+
+Modeling Local Geometric Structure of 3D Point Clouds using Geo-CNN
+
+  Recent advances in deep convolutional neural networks (CNNs) have motivated
+researchers to adapt CNNs to directly model points in 3D point clouds. Modeling
+local structure has been proven to be important for the success of
+convolutional architectures, and researchers exploited the modeling of local
+point sets in the feature extraction hierarchy. However, limited attention has
+been paid to explicitly model the geometric structure amongst points in a local
+region. To address this problem, we propose Geo-CNN, which applies a generic
+convolution-like operation dubbed as GeoConv to each point and its local
+neighborhood. Local geometric relationships among points are captured when
+extracting edge features between the center and its neighboring points. We
+first decompose the edge feature extraction process onto three orthogonal
+bases, and then aggregate the extracted features based on the angles between
+the edge vector and the bases. This encourages the network to preserve the
+geometric structure in Euclidean space throughout the feature extraction
+hierarchy. GeoConv is a generic and efficient operation that can be easily
+integrated into 3D point cloud analysis pipelines for multiple applications. We
+evaluate Geo-CNN on ModelNet40 and KITTI and achieve state-of-the-art
+performance.
+
+
+Explicit Bias Discovery in Visual Question Answering Models
+
+  Researchers have observed that Visual Question Answering (VQA) models tend to
+answer questions by learning statistical biases in the data. For example, their
+answer to the question "What is the color of the grass?" is usually "Green",
+whereas a question like "What is the title of the book?" cannot be answered by
+inferring statistical biases. It is of interest to the community to explicitly
+discover such biases, both for understanding the behavior of such models, and
+towards debugging them. Our work address this problem. In a database, we store
+the words of the question, answer and visual words corresponding to regions of
+interest in attention maps. By running simple rule mining algorithms on this
+database, we discover human-interpretable rules which give us unique insight
+into the behavior of such models. Our results also show examples of unusual
+behaviors learned by models in attempting VQA tasks.
+
+
+Generate, Segment and Replace: Towards Generic Manipulation Segmentation
+
+  It has been witnessed an emerging demand for image manipulation segmentation
+to distinguish between fake images produced by advanced photo editing software
+and authentic ones. In this paper, we describe an approach based on semantic
+segmentation for detecting image manipulation. The approach consists of three
+stages. A generation stage generates hard manipulated images from authentic
+images using a Generative Adversarial Network (GAN) based model by cutting a
+region out of a training sample, pasting it into an authentic image and then
+passing the image through a GAN to generate harder true positive tampered
+region. A segmentation stage and a replacement stage, sharing weights with each
+other, then collaboratively construct dense predictions of tampered regions. We
+achieve state-of-the-art performance on four public image manipulation
+detection benchmarks while maintaining robustness to various attacks.
+
+
+Universal Adversarial Training
+
+  Standard adversarial attacks change the predicted class label of an image by
+adding specially tailored small perturbations to its pixels. In contrast, a
+universal perturbation is an update that can be added to any image in a broad
+class of images, while still changing the predicted class label. We study the
+efficient generation of universal adversarial perturbations, and also efficient
+methods for hardening networks to these attacks. We propose a simple
+optimization-based universal attack that reduces the top-1 accuracy of various
+network architectures on ImageNet to less than 20%, while learning the
+universal perturbation 13X faster than the standard method. To defend against
+these perturbations, we propose universal adversarial training, which models
+the problem of robust classifier generation as a two-player min-max game. This
+method is much faster and more scalable than conventional adversarial training
+with a strong adversary (PGD), and yet yields models that are extremely
+resistant to universal attacks, and comparably resistant to standard
+(per-instance) black box attacks. We also discover a rather fascinating
+side-effect of universal adversarial training: attacks built for universally
+robust models transfer better to other (black box) models than those built with
+conventional adversarial training.
+
+
+AdaFrame: Adaptive Frame Selection for Fast Video Recognition
+
+  We present AdaFrame, a framework that adaptively selects relevant frames on a
+per-input basis for fast video recognition. AdaFrame contains a Long Short-Term
+Memory network augmented with a global memory that provides context information
+for searching which frames to use over time. Trained with policy gradient
+methods, AdaFrame generates a prediction, determines which frame to observe
+next, and computes the utility, i.e., expected future rewards, of seeing more
+frames at each time step. At testing time, AdaFrame exploits predicted
+utilities to achieve adaptive lookahead inference such that the overall
+computational costs are reduced without incurring a decrease in accuracy.
+Extensive experiments are conducted on two large-scale video benchmarks, FCVID
+and ActivityNet. AdaFrame matches the performance of using all frames with only
+8.21 and 8.65 frames on FCVID and ActivityNet, respectively. We further
+qualitatively demonstrate learned frame usage can indicate the difficulty of
+making classification decisions; easier samples need fewer frames while harder
+ones require more, both at instance-level within the same class and at
+class-level among different categories.
+
+
+MAN: Moment Alignment Network for Natural Language Moment Retrieval via
+  Iterative Graph Adjustment
+
+  This research strives for natural language moment retrieval in long,
+untrimmed video streams. The problem nevertheless is not trivial especially
+when a video contains multiple moments of interests and the language describes
+complex temporal dependencies, which often happens in real scenarios. We
+identify two crucial challenges: semantic misalignment and structural
+misalignment. However, existing approaches treat different moments separately
+and do not explicitly model complex moment-wise temporal relations. In this
+paper, we present Moment Alignment Network (MAN), a novel framework that
+unifies the candidate moment encoding and temporal structural reasoning in a
+single-shot feed-forward network. MAN naturally assigns candidate moment
+representations aligned with language semantics over different temporal
+locations and scales. Most importantly, we propose to explicitly model
+moment-wise temporal relations as a structured graph and devise an iterative
+graph adjustment network to jointly learn the best structure in an end-to-end
+manner. We evaluate the proposed approach on two challenging public benchmarks
+Charades-STA and DiDeMo, where our MAN significantly outperforms the
+state-of-the-art by a large margin.
+
+
+FA-RPN: Floating Region Proposals for Face Detection
+
+  We propose a novel approach for generating region proposals for performing
+face-detection. Instead of classifying anchor boxes using features from a pixel
+in the convolutional feature map, we adopt a pooling-based approach for
+generating region proposals. However, pooling hundreds of thousands of anchors
+which are evaluated for generating proposals becomes a computational bottleneck
+during inference. To this end, an efficient anchor placement strategy for
+reducing the number of anchor-boxes is proposed. We then show that proposals
+generated by our network (Floating Anchor Region Proposal Network, FA-RPN) are
+better than RPN for generating region proposals for face detection. We discuss
+several beneficial features of FA-RPN proposals like iterative refinement,
+placement of fractional anchors and changing anchors which can be enabled
+without making any changes to the trained model. Our face detector based on
+FA-RPN obtains 89.4% mAP with a ResNet-50 backbone on the WIDER dataset.
+
+
+TAN: Temporal Aggregation Network for Dense Multi-label Action
+  Recognition
+
+  We present Temporal Aggregation Network (TAN) which decomposes 3D
+convolutions into spatial and temporal aggregation blocks. By stacking spatial
+and temporal convolutions repeatedly, TAN forms a deep hierarchical
+representation for capturing spatio-temporal information in videos. Since we do
+not apply 3D convolutions in each layer but only apply temporal aggregation
+blocks once after each spatial downsampling layer in the network, we
+significantly reduce the model complexity. The use of dilated convolutions at
+different resolutions of the network helps in aggregating multi-scale
+spatio-temporal information efficiently. Experiments show that our model is
+well suited for dense multi-label action recognition, which is a challenging
+sub-topic of action recognition that requires predicting multiple action labels
+in each frame. We outperform state-of-the-art methods by 5% and 3% on the
+Charades and Multi-THUMOS dataset respectively.
+
+
+Compatible and Diverse Fashion Image Inpainting
+
+  Visual compatibility is critical for fashion analysis, yet is missing in
+existing fashion image synthesis systems. In this paper, we propose to
+explicitly model visual compatibility through fashion image inpainting. To this
+end, we present Fashion Inpainting Networks (FiNet), a two-stage image-to-image
+generation framework that is able to perform compatible and diverse inpainting.
+Disentangling the generation of shape and appearance to ensure photorealistic
+results, our framework consists of a shape generation network and an appearance
+generation network. More importantly, for each generation network, we introduce
+two encoders interacting with one another to learn latent code in a shared
+compatibility space. The latent representations are jointly optimized with the
+corresponding generation network to condition the synthesis process,
+encouraging a diverse set of generated results that are visually compatible
+with existing fashion garments. In addition, our framework is readily extended
+to clothing reconstruction and fashion transfer, with impressive results.
+Extensive experiments with comparisons with state-of-the-art approaches on
+fashion synthesis task quantitatively and qualitatively demonstrate the
+effectiveness of our method.
+
+
+StartNet: Online Detection of Action Start in Untrimmed Videos
+
+  We propose StartNet to address Online Detection of Action Start (ODAS) where
+action starts and their associated categories are detected in untrimmed,
+streaming videos. Previous methods aim to localize action starts by learning
+feature representations that can directly separate the start point from its
+preceding background. It is challenging due to the subtle appearance difference
+near the action starts and the lack of training data. Instead, StartNet
+decomposes ODAS into two stages: action classification (using ClsNet) and start
+point localization (using LocNet). ClsNet focuses on per-frame labeling and
+predicts action score distributions online. Based on the predicted action
+scores of the past and current frames, LocNet conducts class-agnostic start
+detection by optimizing long-term localization rewards using policy gradient
+methods. The proposed framework is validated on two large-scale datasets,
+THUMOS'14 and ActivityNet. The experimental results show that StartNet
+significantly outperforms the state-of-the-art by 15%-30% p-mAP under the
+offset tolerance of 1-10 seconds on THUMOS'14, and achieves comparable
+performance on ActivityNet with 10 times smaller time offset.
+
+
+M2KD: Multi-model and Multi-level Knowledge Distillation for Incremental
+  Learning
+
+  Incremental learning targets at achieving good performance on new categories
+without forgetting old ones. Knowledge distillation has been shown critical in
+preserving the performance on old classes. Conventional methods, however,
+sequentially distill knowledge only from the last model, leading to performance
+degradation on the old classes in later incremental learning steps. In this
+paper, we propose a multi-model and multi-level knowledge distillation
+strategy. Instead of sequentially distilling knowledge only from the last
+model, we directly leverage all previous model snapshots. In addition, we
+incorporate an auxiliary distillation to further preserve knowledge encoded at
+the intermediate feature levels. To make the model more memory efficient, we
+adapt mask based pruning to reconstruct all previous models with a small memory
+footprint. Experiments on standard incremental learning benchmarks show that
+our method preserves the knowledge on old classes better and improves the
+overall performance over standard distillation techniques.
+
+
+Referring to Objects in Videos using Spatio-Temporal Identifying
+  Descriptions
+
+  This paper presents a new task, the grounding of spatio-temporal identifying
+descriptions in videos. Previous work suggests potential bias in existing
+datasets and emphasizes the need for a new data creation schema to better model
+linguistic structure. We introduce a new data collection scheme based on
+grammatical constraints for surface realization to enable us to investigate the
+problem of grounding spatio-temporal identifying descriptions in videos. We
+then propose a two-stream modular attention network that learns and grounds
+spatio-temporal identifying descriptions based on appearance and motion. We
+show that motion modules help to ground motion-related words and also help to
+learn in appearance modules because modular neural networks resolve task
+interference between modules. Finally, we propose a future challenge and a need
+for a robust system arising from replacing ground truth visual annotations with
+automatic video object detector and temporal event localization.
+
+
+Deception Detection in Videos
+
+  We present a system for covert automated deception detection in real-life
+courtroom trial videos. We study the importance of different modalities like
+vision, audio and text for this task. On the vision side, our system uses
+classifiers trained on low level video features which predict human
+micro-expressions. We show that predictions of high-level micro-expressions can
+be used as features for deception prediction. Surprisingly, IDT (Improved Dense
+Trajectory) features which have been widely used for action recognition, are
+also very good at predicting deception in videos. We fuse the score of
+classifiers trained on IDT features and high-level micro-expressions to improve
+performance. MFCC (Mel-frequency Cepstral Coefficients) features from the audio
+domain also provide a significant boost in performance, while information from
+transcripts is not very beneficial for our system. Using various classifiers,
+our automated system obtains an AUC of 0.877 (10-fold cross-validation) when
+evaluated on subjects which were not part of the training set. Even though
+state-of-the-art methods use human annotations of micro-expressions for
+deception detection, our fully automated approach outperforms them by 5%. When
+combined with human annotations of micro-expressions, our AUC improves to
+0.922. We also present results of a user-study to analyze how well do average
+humans perform on this task, what modalities they use for deception detection
+and how they perform if only one modality is accessible. Our project page can
+be found at \url{https://doubaibai.github.io/DARE/}.
+
+
+Multi-Directional Multi-Level Dual-Cross Patterns for Robust Face
+  Recognition
+
+  To perform unconstrained face recognition robust to variations in
+illumination, pose and expression, this paper presents a new scheme to extract
+"Multi-Directional Multi-Level Dual-Cross Patterns" (MDML-DCPs) from face
+images. Specifically, the MDMLDCPs scheme exploits the first derivative of
+Gaussian operator to reduce the impact of differences in illumination and then
+computes the DCP feature at both the holistic and component levels. DCP is a
+novel face image descriptor inspired by the unique textural structure of human
+faces. It is computationally efficient and only doubles the cost of computing
+local binary patterns, yet is extremely robust to pose and expression
+variations. MDML-DCPs comprehensively yet efficiently encodes the invariant
+characteristics of a face image from multiple levels into patterns that are
+highly discriminative of inter-personal differences but robust to
+intra-personal variations. Experimental results on the FERET, CAS-PERL-R1, FRGC
+2.0, and LFW databases indicate that DCP outperforms the state-of-the-art local
+descriptors (e.g. LBP, LTP, LPQ, POEM, tLBP, and LGXP) for both face
+identification and face verification tasks. More impressively, the best
+performance is achieved on the challenging LFW and FRGC 2.0 databases by
+deploying MDML-DCPs in a simple recognition scheme.
+
+

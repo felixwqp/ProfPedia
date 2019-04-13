@@ -1,0 +1,491 @@
+On Feedback Vertex Set: New Measure and New Structures
+
+  We present a new parameterized algorithm for the {feedback vertex set}
+problem ({\sc fvs}) on undirected graphs. We approach the problem by
+considering a variation of it, the {disjoint feedback vertex set} problem ({\sc
+disjoint-fvs}), which finds a feedback vertex set of size $k$ that has no
+overlap with a given feedback vertex set $F$ of the graph $G$. We develop an
+improved kernelization algorithm for {\sc disjoint-fvs} and show that {\sc
+disjoint-fvs} can be solved in polynomial time when all vertices in $G
+\setminus F$ have degrees upper bounded by three. We then propose a new
+branch-and-search process on {\sc disjoint-fvs}, and introduce a new
+branch-and-search measure. The process effectively reduces a given graph to a
+graph on which {\sc disjoint-fvs} becomes polynomial-time solvable, and the new
+measure more accurately evaluates the efficiency of the process. These
+algorithmic and combinatorial studies enable us to develop an
+$O^*(3.83^k)$-time parameterized algorithm for the general {\sc fvs} problem,
+improving all previous algorithms for the problem.
+
+
+FAST: Kernelization based on Graph Modular Decomposition
+
+  Kernelization algorithms, usually a preprocessing step before other more
+traditional algorithms, are very special in the sense that they return
+(reduced) instances, instead of final results. This characteristic excludes the
+freedom of applying a kernelization algorithm for the weighted version of a
+problem to its unweighted instances. Thus with only very few special cases,
+kernelization algorithms have to be studied separately for weigthed and
+unweighted versions of a single problem. {\sc feedback arc set on tournament}
+is currently a very popular problem in recent research of parameterized, as
+well as approximation computation, and its wide applications in many areas make
+it appear in all top conferences. The theory of graph modular decompositions is
+a general approach in the study of graph structures, which only had its
+surfaces touched in previous work on kernelization algorithms of {\sc feedback
+arc set on tournament}. In this paper, we study further properties of graph
+modular decompositions and apply them to obtain the first linear kernel for the
+unweighted {\sc feedback arc set on tournament} problem, which only admits
+linear kernel in its weighted version, while quadratic kernel for the
+unweighted.
+
+
+A $2k$-Vertex Kernel for Maximum Internal Spanning Tree
+
+  We consider the parameterized version of the maximum internal spanning tree
+problem, which, given an $n$-vertex graph and a parameter $k$, asks for a
+spanning tree with at least $k$ internal vertices. Fomin et al. [J. Comput.
+System Sci., 79:1-6] crafted a very ingenious reduction rule, and showed that a
+simple application of this rule is sufficient to yield a $3k$-vertex kernel.
+Here we propose a novel way to use the same reduction rule, resulting in an
+improved $2k$-vertex kernel. Our algorithm applies first a greedy procedure
+consisting of a sequence of local exchange operations, which ends with a
+local-optimal spanning tree, and then uses this special tree to find a
+reducible structure. As a corollary of our kernel, we obtain a deterministic
+algorithm for the problem running in time $4^k \cdot n^{O(1)}$.
+
+
+Cluster Editing: Kernelization based on Edge Cuts
+
+  Kernelization algorithms for the {\sc cluster editing} problem have been a
+popular topic in the recent research in parameterized computation. Thus far
+most kernelization algorithms for this problem are based on the concept of {\it
+critical cliques}. In this paper, we present new observations and new
+techniques for the study of kernelization algorithms for the {\sc cluster
+editing} problem. Our techniques are based on the study of the relationship
+between {\sc cluster editing} and graph edge-cuts. As an application, we
+present an ${\cal O}(n^2)$-time algorithm that constructs a $2k$ kernel for the
+{\it weighted} version of the {\sc cluster editing} problem. Our result meets
+the best kernel size for the unweighted version for the {\sc cluster editing}
+problem, and significantly improves the previous best kernel of quadratic size
+for the weighted version of the problem.
+
+
+Joint Representation Learning of Cross-lingual Words and Entities via
+  Attentive Distant Supervision
+
+  Joint representation learning of words and entities benefits many NLP tasks,
+but has not been well explored in cross-lingual settings. In this paper, we
+propose a novel method for joint representation learning of cross-lingual words
+and entities. It captures mutually complementary knowledge, and enables
+cross-lingual inferences among knowledge bases and texts. Our method does not
+require parallel corpora, and automatically generates comparable data via
+distant supervision using multi-lingual knowledge bases. We utilize two types
+of regularizers to align cross-lingual words and entities, and design knowledge
+attention and cross-lingual attention to further reduce noises. We conducted a
+series of experiments on three tasks: word translation, entity relatedness, and
+cross-lingual entity linking. The results, both qualitatively and
+quantitatively, demonstrate the significance of our method.
+
+
+A new Gini correlation between quantitative and qualitative variables
+
+  We propose a new Gini correlation to measure dependence between a categorical
+and numerical variables. Analogous to Pearson $R^2$ in ANOVA model, the Gini
+correlation is interpreted as the ratio of the between-group variation and the
+total variation, but it characterizes independence (zero Gini correlation
+mutually implies independence). Closely related to the distance correlation,
+the Gini correlation is of simple formulation by considering the nature of
+categorical variable. As a result, the proposed Gini correlation has a lower
+computational cost than the distance correlation and is more straightforward to
+perform inference. Simulation and real applications are conducted to
+demonstrate the advantages.
+
+
+An $O^*(1.84^k)$ Parameterized Algorithm for the Multiterminal Cut
+  Problem
+
+  We study the \emph{multiterminal cut} problem, which, given an $n$-vertex
+graph whose edges are integer-weighted and a set of terminals, asks for a
+partition of the vertex set such that each terminal is in a distinct part, and
+the total weight of crossing edges is at most $k$. Our weapons shall be two
+classical results known for decades: \emph{maximum volume minimum ($s,t$)-cuts}
+by [Ford and Fulkerson, \emph{Flows in Networks}, 1962] and \emph{isolating
+cuts} by [Dahlhaus et al., \emph{SIAM J. Comp.} 23(4):864-894, 1994]. We
+sharpen these old weapons with the help of submodular functions, and apply them
+to this problem, which enable us to design a more elaborated branching scheme
+on deciding whether a non-terminal vertex is with a terminal or not. This
+bounded search tree algorithm can be shown to run in $1.84^k\cdot n^{O(1)}$
+time, thereby breaking the $2^k\cdot n^{O(1)}$ barrier. As a by-product, it
+gives a $1.36^k\cdot n^{O(1)}$ time algorithm for $3$-terminal cut. The
+preprocessing applied on non-terminal vertices might be of use for study of
+this problem from other aspects.
+
+
+Combining Fact Extraction and Verification with Neural Semantic Matching
+  Networks
+
+  The increasing concern with misinformation has stimulated research efforts on
+automatic fact checking. The recently-released FEVER dataset introduced a
+benchmark fact-verification task in which a system is asked to verify a claim
+using evidential sentences from Wikipedia documents. In this paper, we present
+a connected system consisting of three homogeneous neural semantic matching
+models that conduct document retrieval, sentence selection, and claim
+verification jointly for fact extraction and verification. For evidence
+retrieval (document retrieval and sentence selection), unlike traditional
+vector space IR models in which queries and sources are matched in some
+pre-designed term vector space, we develop neural models to perform deep
+semantic matching from raw textual input, assuming no intermediate term
+representation and no access to structured external knowledge bases. We also
+show that Pageview frequency can also help improve the performance of evidence
+retrieval results, that later can be matched by using our neural semantic
+matching network. For claim verification, unlike previous approaches that
+simply feed upstream retrieved evidence and the claim to a natural language
+inference (NLI) model, we further enhance the NLI model by providing it with
+internal semantic relatedness scores (hence integrating it with the evidence
+retrieval modules) and ontological WordNet features. Experiments on the FEVER
+dataset indicate that (1) our neural semantic matching method outperforms
+popular TF-IDF and encoder models, by significant margins on all evidence
+retrieval metrics, (2) the additional relatedness score and WordNet features
+improve the NLI model via better semantic awareness, and (3) by formalizing all
+three subtasks as a similar semantic matching problem and improving on all
+three stages, the complete model is able to achieve the state-of-the-art
+results on the FEVER test set.
+
+
+Compressing Neural Networks with the Hashing Trick
+
+  As deep nets are increasingly used in applications suited for mobile devices,
+a fundamental dilemma becomes apparent: the trend in deep learning is to grow
+models to absorb ever-increasing data set sizes; however mobile devices are
+designed with very little memory and cannot store such large models. We present
+a novel network architecture, HashedNets, that exploits inherent redundancy in
+neural networks to achieve drastic reductions in model sizes. HashedNets uses a
+low-cost hash function to randomly group connection weights into hash buckets,
+and all connections within the same hash bucket share a single parameter value.
+These parameters are tuned to adjust to the HashedNets weight sharing
+architecture with standard backprop during training. Our hashing procedure
+introduces no additional memory overhead, and we demonstrate on several
+benchmark data sets that HashedNets shrink the storage requirements of neural
+networks substantially while mostly preserving generalization performance.
+
+
+Compressing Convolutional Neural Networks
+
+  Convolutional neural networks (CNN) are increasingly used in many areas of
+computer vision. They are particularly attractive because of their ability to
+"absorb" great quantities of labeled data through millions of parameters.
+However, as model sizes increase, so do the storage and memory requirements of
+the classifiers. We present a novel network architecture, Frequency-Sensitive
+Hashed Nets (FreshNets), which exploits inherent redundancy in both
+convolutional layers and fully-connected layers of a deep learning model,
+leading to dramatic savings in memory and storage consumption. Based on the key
+observation that the weights of learned convolutional filters are typically
+smooth and low-frequency, we first convert filter weights to the frequency
+domain with a discrete cosine transform (DCT) and use a low-cost hash function
+to randomly group frequency parameters into hash buckets. All parameters
+assigned the same hash bucket share a single value learned with standard
+back-propagation. To further reduce model size we allocate fewer hash buckets
+to high-frequency components, which are generally less important. We evaluate
+FreshNets on eight data sets, and show that it leads to drastically better
+compressed performance than several relevant baselines.
+
+
+SAS+ Planning as Satisfiability
+
+  Planning as satisfiability is a principal approach to planning with many
+eminent advantages. The existing planning as satisfiability techniques usually
+use encodings compiled from STRIPS. We introduce a novel SAT encoding scheme
+(SASE) based on the SAS+ formalism. The new scheme exploits the structural
+information in SAS+, resulting in an encoding that is both more compact and
+efficient for planning. We prove the correctness of the new encoding by
+establishing an isomorphism between the solution plans of SASE and that of
+STRIPS based encodings. We further analyze the transition variables newly
+introduced in SASE to explain why it accommodates modern SAT solving algorithms
+and improves performance. We give empirical statistical results to support our
+analysis. We also develop a number of techniques to further reduce the encoding
+size of SASE, and conduct experimental studies to show the strength of each
+individual technique. Finally, we report extensive experimental results to
+demonstrate significant improvements of SASE over the state-of-the-art STRIPS
+based encoding schemes in terms of both time and memory efficiency.
+
+
+Structural and Topological Nature of Plasticity in Sheared Granular
+  Materials
+
+  Upon mechanical loading, granular materials yield and undergo plastic
+deformation. The nature of plastic deformation is essential for the development
+of the macroscopic constitutive models and the understanding of shear band
+formation. However, we still do not fully understand the microscopic nature of
+plastic deformation in disordered granular materials. Here we used synchrotron
+X-ray tomography technique to track the structural evolutions of
+three-dimensional granular materials under shear. We establish that highly
+distorted coplanar tetrahedra are the structural defects responsible for
+microscopic plasticity in disordered granular packings. The elementary plastic
+events occur through flip events which correspond to a neighbor switching
+process among these coplanar tetrahedra (or equivalently as the rotation motion
+of 4-ring disclinations). These events are discrete in space and possess
+specific orientations with the principal stress direction.
+
+
+An Efficient L-Shape Fitting Method for Vehicle Pose Detection with 2D
+  LiDAR
+
+  Detecting vehicles with strong robustness and high efficiency has become one
+of the key capabilities of fully autonomous driving cars. This topic has
+already been widely studied by GPU-accelerated deep learning approaches using
+image sensors and 3D LiDAR, however, few studies seek to address it with a
+horizontally mounted 2D laser scanner. 2D laser scanner is equipped on almost
+every autonomous vehicle for its superiorities in the field of view, lighting
+invariance, high accuracy and relatively low price. In this paper, we propose a
+highly efficient search-based L-Shape fitting algorithm for detecting positions
+and orientations of vehicles with a 2D laser scanner. Differing from the
+approach to formulating LShape fitting as a complex optimization problem, our
+method decomposes the L-Shape fitting into two steps: L-Shape vertexes
+searching and L-Shape corner localization. Our approach is computationally
+efficient due to its minimized complexity. In on-road experiments, our approach
+is capable of adapting to various circumstances with high efficiency and
+robustness.
+
+
+Generalized Second Price Auction with Probabilistic Broad Match
+
+  Generalized Second Price (GSP) auctions are widely used by search engines
+today to sell their ad slots. Most search engines have supported broad match
+between queries and bid keywords when executing GSP auctions, however, it has
+been revealed that GSP auction with the standard broad-match mechanism they are
+currently using (denoted as SBM-GSP) has several theoretical drawbacks (e.g.,
+its theoretical properties are known only for the single-slot case and
+full-information setting, and even in this simple setting, the corresponding
+worst-case social welfare can be rather bad). To address this issue, we propose
+a novel broad-match mechanism, which we call the Probabilistic Broad-Match
+(PBM) mechanism. Different from SBM that puts together the ads bidding on all
+the keywords matched to a given query for the GSP auction, the GSP with PBM
+(denoted as PBM-GSP) randomly samples a keyword according to a predefined
+probability distribution and only runs the GSP auction for the ads bidding on
+this sampled keyword. We perform a comprehensive study on the theoretical
+properties of the PBM-GSP. Specifically, we study its social welfare in the
+worst equilibrium, in both full-information and Bayesian settings. The results
+show that PBM-GSP can generate larger welfare than SBM-GSP under mild
+conditions. Furthermore, we also study the revenue guarantee for PBM-GSP in
+Bayesian setting. To the best of our knowledge, this is the first work on
+broad-match mechanisms for GSP that goes beyond the single-slot case and the
+full-information setting.
+
+
+A Reduction of the Elastic Net to Support Vector Machines with an
+  Application to GPU Computing
+
+  The past years have witnessed many dedicated open-source projects that built
+and maintain implementations of Support Vector Machines (SVM), parallelized for
+GPU, multi-core CPUs and distributed systems. Up to this point, no comparable
+effort has been made to parallelize the Elastic Net, despite its popularity in
+many high impact applications, including genetics, neuroscience and systems
+biology. The first contribution in this paper is of theoretical nature. We
+establish a tight link between two seemingly different algorithms and prove
+that Elastic Net regression can be reduced to SVM with squared hinge loss
+classification. Our second contribution is to derive a practical algorithm
+based on this reduction. The reduction enables us to utilize prior efforts in
+speeding up and parallelizing SVMs to obtain a highly optimized and parallel
+solver for the Elastic Net and Lasso. With a simple wrapper, consisting of only
+11 lines of MATLAB code, we obtain an Elastic Net implementation that naturally
+utilizes GPU and multi-core CPUs. We demonstrate on twelve real world data
+sets, that our algorithm yields identical results as the popular (and highly
+optimized) glmnet implementation but is one or several orders of magnitude
+faster.
+
+
+Multi-Scale Convolutional Neural Networks for Time Series Classification
+
+  Time series classification (TSC), the problem of predicting class labels of
+time series, has been around for decades within the community of data mining
+and machine learning, and found many important applications such as biomedical
+engineering and clinical prediction. However, it still remains challenging and
+falls short of classification accuracy and efficiency. Traditional approaches
+typically involve extracting discriminative features from the original time
+series using dynamic time warping (DTW) or shapelet transformation, based on
+which an off-the-shelf classifier can be applied. These methods are ad-hoc and
+separate the feature extraction part with the classification part, which limits
+their accuracy performance. Plus, most existing methods fail to take into
+account the fact that time series often have features at different time scales.
+To address these problems, we propose a novel end-to-end neural network model,
+Multi-Scale Convolutional Neural Networks (MCNN), which incorporates feature
+extraction and classification in a single framework. Leveraging a novel
+multi-branch layer and learnable convolutional layers, MCNN automatically
+extracts features at different scales and frequencies, leading to superior
+feature representation. MCNN is also computationally efficient, as it naturally
+leverages GPU computing. We conduct comprehensive empirical evaluation with
+various existing methods on a large number of benchmark datasets, and show that
+MCNN advances the state-of-the-art by achieving superior accuracy performance
+than other leading methods.
+
+
+Theory and Algorithms for Partial Order Based Reduction in Planning
+
+  Search is a major technique for planning. It amounts to exploring a state
+space of planning domains typically modeled as a directed graph. However,
+prohibitively large sizes of the search space make search expensive. Developing
+better heuristic functions has been the main technique for improving search
+efficiency. Nevertheless, recent studies have shown that improving heuristics
+alone has certain fundamental limits on improving search efficiency. Recently,
+a new direction of research called partial order based reduction (POR) has been
+proposed as an alternative to improving heuristics. POR has shown promise in
+speeding up searches.
+  POR has been extensively studied in model checking research and is a key
+enabling technique for scalability of model checking systems. Although the POR
+theory has been extensively studied in model checking, it has never been
+developed systematically for planning before. In addition, the conditions for
+POR in the model checking theory are abstract and not directly applicable in
+planning. Previous works on POR algorithms for planning did not establish the
+connection between these algorithms and existing theory in model checking.
+  In this paper, we develop a theory for POR in planning. The new theory we
+develop connects the stubborn set theory in model checking and POR methods in
+planning. We show that previous POR algorithms in planning can be explained by
+the new theory. Based on the new theory, we propose a new, stronger POR
+algorithm. Experimental results on various planning domains show further search
+cost reduction using the new algorithm.
+
+
+Recovering Metabolic Networks using A Novel Hyperlink Prediction Method
+
+  Studying metabolic networks is vital for many areas such as novel drugs and
+bio-fuels. For biologists, a key challenge is that many reactions are
+impractical or expensive to be found through experiments. Our task is to
+recover the missing reactions. By exploiting the problem structure, we model
+reaction recovery as a hyperlink prediction problem, where each reaction is
+regarded as a hyperlink connecting its participating vertices (metabolites).
+Different from the traditional link prediction problem where two nodes form a
+link, a hyperlink can involve an arbitrary number of nodes. Since the
+cardinality of a hyperlink is variable, existing classifiers based on a fixed
+number of input features become infeasible. Traditional methods, such as common
+neighbors and Katz index, are not applicable either, since they are restricted
+to pairwise similarities. In this paper, we propose a novel hyperlink
+prediction algorithm, called Matrix Boosting (MATBoost). MATBoost conducts
+inference jointly in the incidence space and adjacency space by performing an
+iterative completion-matching optimization. We carry out extensive experiments
+to show that MATBoost achieves state-of-the-art performance. For a metabolic
+network with 1805 metabolites and 2583 reactions, our algorithm can
+successfully recover nearly 200 reactions out of 400 missing reactions.
+
+
+Visually Explainable Recommendation
+
+  Images account for a significant part of user decisions in many application
+scenarios, such as product images in e-commerce, or user image posts in social
+networks. It is intuitive that user preferences on the visual patterns of image
+(e.g., hue, texture, color, etc) can be highly personalized, and this provides
+us with highly discriminative features to make personalized recommendations.
+  Previous work that takes advantage of images for recommendation usually
+transforms the images into latent representation vectors, which are adopted by
+a recommendation component to assist personalized user/item profiling and
+recommendation. However, such vectors are hardly useful in terms of providing
+visual explanations to users about why a particular item is recommended, and
+thus weakens the explainability of recommendation systems.
+  As a step towards explainable recommendation models, we propose visually
+explainable recommendation based on attentive neural networks to model the user
+attention on images, under the supervision of both implicit feedback and
+textual reviews. By this, we can not only provide recommendation results to the
+users, but also tell the users why an item is recommended by providing
+intuitive visual highlights in a personalized manner. Experimental results show
+that our models are not only able to improve the recommendation performance,
+but also can provide persuasive visual explanations for the users to take the
+recommendations.
+
+
+Link Prediction Based on Graph Neural Networks
+
+  Link prediction is a key problem for network-structured data. Link prediction
+heuristics use some score functions, such as common neighbors and Katz index,
+to measure the likelihood of links. They have obtained wide practical uses due
+to their simplicity, interpretability, and for some of them, scalability.
+However, every heuristic has a strong assumption on when two nodes are likely
+to link, which limits their effectiveness on networks where these assumptions
+fail. In this regard, a more reasonable way should be learning a suitable
+heuristic from a given network instead of using predefined ones. By extracting
+a local subgraph around each target link, we aim to learn a function mapping
+the subgraph patterns to link existence, thus automatically learning a
+`heuristic' that suits the current network. In this paper, we study this
+heuristic learning paradigm for link prediction. First, we develop a novel
+$\gamma$-decaying heuristic theory. The theory unifies a wide range of
+heuristics in a single framework, and proves that all these heuristics can be
+well approximated from local subgraphs. Our results show that local subgraphs
+reserve rich information related to link existence. Second, based on the
+$\gamma$-decaying theory, we propose a new algorithm to learn heuristics from
+local subgraphs using a graph neural network (GNN). Its experimental results
+show unprecedented performance, working consistently well on a wide range of
+problems.
+
+
+Dynamical quantum phase transition for mixed states in open systems
+
+  Based on a kinematic approach in defining a geometric phase for a density
+matrix, we define the generalized Loschmidt overlap amplitude (GLOA) for an
+open system for arbitrary quantum evolution. The GLOA reduces to the Loschmidt
+overlap amplitude (LOA) with a modified dynamic phase for unitary evolution of
+a pure state, with the argument of the GLOA well-defined by the geometric
+phase, thus possessing similar physical interpretation to that of the LOA. The
+rate function for the GLOA exhibits non-analyticity at a critical time, which
+corresponds to the dynamical quantum phase transition. We observe that the
+dynamical quantum phase transition related to GLOA is not destroyed under a
+finite temperature and weak enough dissipation. In particular, we find that a
+new type of dynamical quantum phase transition emerges in a dissipation system.
+The proposed GLOA provides a powerful tool in the investigation of a dynamical
+quantum phase transition in an arbitrary quantum system, which not only can
+characterize the robustness of the dynamical quantum phase transition but also
+can be used to search for new transitions.
+
+
+Segmentation of Levator Hiatus Using Multi-Scale Local Region Active
+  contours and Boundary Shape Similarity Constraint
+
+  In this paper, a multi-scale framework with local region based active contour
+and boundary shape similarity constraint is proposed for the segmentation of
+levator hiatus in ultrasound images. In this paper, we proposed a multiscale
+active contour framework to segment levator hiatus ultrasound images by
+combining the local region information and boundary shape similarity
+constraint. In order to get more precisely initializations and reduce the
+computational cost, Gaussian pyramid method is used to decompose the image into
+coarse-to-fine scales. A localized region active contour model is firstly
+performed on the coarsest scale image to get a rough contour of the levator
+hiatus, then the segmentation result on the coarse scale is interpolated into
+the finer scale image as the initialization. The boundary shape similarity
+between different scales is incorporate into the local region based active
+contour model so that the result from coarse scale can guide the contour
+evolution at finer scale. By incorporating the multi-scale and boundary shape
+similarity, the proposed method can precisely locate the levator hiatus
+boundaries despite various ultrasound image artifacts. With a data set of 90
+levator hiatus ultrasound images, the efficiency and accuracy of the proposed
+method are validated by quantitative and qualitative evaluations (TP, FP, Js)
+and comparison with other two state-of-art active contour segmentation methods
+(C-V model, DRLSE model).
+
+
+Extracting Actionability from Machine Learning Models by Sub-optimal
+  Deterministic Planning
+
+  A main focus of machine learning research has been improving the
+generalization accuracy and efficiency of prediction models. Many models such
+as SVM, random forest, and deep neural nets have been proposed and achieved
+great success. However, what emerges as missing in many applications is
+actionability, i.e., the ability to turn prediction results into actions. For
+example, in applications such as customer relationship management, clinical
+prediction, and advertisement, the users need not only accurate prediction, but
+also actionable instructions which can transfer an input to a desirable goal
+(e.g., higher profit repays, lower morbidity rates, higher ads hit rates).
+Existing effort in deriving such actionable knowledge is few and limited to
+simple action models which restricted to only change one attribute for each
+action. The dilemma is that in many real applications those action models are
+often more complex and harder to extract an optimal solution.
+  In this paper, we propose a novel approach that achieves actionability by
+combining learning with planning, two core areas of AI. In particular, we
+propose a framework to extract actionable knowledge from random forest, one of
+the most widely used and best off-the-shelf classifiers. We formulate the
+actionability problem to a sub-optimal action planning (SOAP) problem, which is
+to find a plan to alter certain features of a given input so that the random
+forest would yield a desirable output, while minimizing the total costs of
+actions. Technically, the SOAP problem is formulated in the SAS+ planning
+formalism, and solved using a Max-SAT based approach. Our experimental results
+demonstrate the effectiveness and efficiency of the proposed approach on a
+personal credit dataset and other benchmarks. Our work represents a new
+application of automated planning on an emerging and challenging machine
+learning paradigm.
+
+

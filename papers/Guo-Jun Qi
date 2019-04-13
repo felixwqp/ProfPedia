@@ -1,0 +1,238 @@
+Learning from Collective Intelligence in Groups
+
+  Collective intelligence, which aggregates the shared information from large
+crowds, is often negatively impacted by unreliable information sources with the
+low quality data. This becomes a barrier to the effective use of collective
+intelligence in a variety of applications. In order to address this issue, we
+propose a probabilistic model to jointly assess the reliability of sources and
+find the true data. We observe that different sources are often not independent
+of each other. Instead, sources are prone to be mutually influenced, which
+makes them dependent when sharing information with each other. High dependency
+between sources makes collective intelligence vulnerable to the overuse of
+redundant (and possibly incorrect) information from the dependent sources.
+Thus, we reveal the latent group structure among dependent sources, and
+aggregate the information at the group level rather than from individual
+sources directly. This can prevent the collective intelligence from being
+inappropriately dominated by dependent sources. We will also explicitly reveal
+the reliability of groups, and minimize the negative impacts of unreliable
+groups. Experimental results on real-world data sets show the effectiveness of
+the proposed approach with respect to existing algorithms.
+
+
+Differential Recurrent Neural Networks for Action Recognition
+
+  The long short-term memory (LSTM) neural network is capable of processing
+complex sequential information since it utilizes special gating schemes for
+learning representations from long input sequences. It has the potential to
+model any sequential time-series data, where the current hidden state has to be
+considered in the context of the past hidden states. This property makes LSTM
+an ideal choice to learn the complex dynamics of various actions.
+Unfortunately, the conventional LSTMs do not consider the impact of
+spatio-temporal dynamics corresponding to the given salient motion patterns,
+when they gate the information that ought to be memorized through time. To
+address this problem, we propose a differential gating scheme for the LSTM
+neural network, which emphasizes on the change in information gain caused by
+the salient motions between the successive frames. This change in information
+gain is quantified by Derivative of States (DoS), and thus the proposed LSTM
+model is termed as differential Recurrent Neural Network (dRNN). We demonstrate
+the effectiveness of the proposed model by automatically recognizing actions
+from the real-world 2D and 3D human action datasets. Our study is one of the
+first works towards demonstrating the potential of learning complex time-series
+representations via high-order derivatives of states.
+
+
+Task-Agnostic Meta-Learning for Few-shot Learning
+
+  Meta-learning approaches have been proposed to tackle the few-shot learning
+problem.Typically, a meta-learner is trained on a variety of tasks in the hopes
+of being generalizable to new tasks. However, the generalizability on new tasks
+of a meta-learner could be fragile when it is over-trained on existing tasks
+during meta-training phase. In other words, the initial model of a meta-learner
+could be too biased towards existing tasks to adapt to new tasks, especially
+when only very few examples are available to update the model. To avoid a
+biased meta-learner and improve its generalizability, we propose a novel
+paradigm of Task-Agnostic Meta-Learning (TAML) algorithms. Specifically, we
+present an entropy-based approach that meta-learns an unbiased initial model
+with the largest uncertainty over the output labels by preventing it from
+over-performing in classification tasks. Alternatively, a more general
+inequality-minimization TAML is presented for more ubiquitous scenarios by
+directly minimizing the inequality of initial losses beyond the classification
+tasks wherever a suitable loss can be defined.Experiments on benchmarked
+datasets demonstrate that the proposed approaches outperform compared
+meta-learning algorithms in both few-shot classification and reinforcement
+learning tasks.
+
+
+AVT: Unsupervised Learning of Transformation Equivariant Representations
+  by Autoencoding Variational Transformations
+
+  The learning of Transformation-Equivariant Representations (TERs), which is
+introduced by Hinton et al. \cite{hinton2011transforming}, has been considered
+as a principle to reveal visual structures under various transformations. It
+contains the celebrated Convolutional Neural Networks (CNNs) as a special case
+that only equivary to the translations. In contrast, we seek to train TERs for
+a generic class of transformations and train them in an {\em unsupervised}
+fashion. To this end, we present a novel principled method by Autoencoding
+Variational Transformations (AVT), compared with the conventional approach to
+autoencoding data. Formally, given transformed images, the AVT seeks to train
+the networks by maximizing the mutual information between the transformations
+and representations. This ensures the resultant TERs of individual images
+contain the {\em intrinsic} information about their visual structures that
+would equivary {\em extricably} under various transformations. Technically, we
+show that the resultant optimization problem can be efficiently solved by
+maximizing a variational lower-bound of the mutual information. This
+variational approach introduces a transformation decoder to approximate the
+intractable posterior of transformations, resulting in an autoencoding
+architecture with a pair of the representation encoder and the transformation
+decoder. Experiments demonstrate the proposed AVT model sets a new record for
+the performances on unsupervised tasks, greatly closing the performance gap to
+the supervised models.
+
+
+Loss-Sensitive Generative Adversarial Networks on Lipschitz Densities
+
+  In this paper, we present the Lipschitz regularization theory and algorithms
+for a novel Loss-Sensitive Generative Adversarial Network (LS-GAN).
+Specifically, it trains a loss function to distinguish between real and fake
+samples by designated margins, while learning a generator alternately to
+produce realistic samples by minimizing their losses. The LS-GAN further
+regularizes its loss function with a Lipschitz regularity condition on the
+density of real data, yielding a regularized model that can better generalize
+to produce new data from a reasonable number of training examples than the
+classic GAN. We will further present a Generalized LS-GAN (GLS-GAN) and show it
+contains a large family of regularized GAN models, including both LS-GAN and
+Wasserstein GAN, as its special cases. Compared with the other GAN models, we
+will conduct experiments to show both LS-GAN and GLS-GAN exhibit competitive
+ability in generating new images in terms of the Minimum Reconstruction Error
+(MRE) assessed on a separate test set. We further extend the LS-GAN to a
+conditional form for supervised and semi-supervised learning problems, and
+demonstrate its outstanding performance on image classification tasks.
+
+
+Joint Intermodal and Intramodal Label Transfers for Extremely Rare or
+  Unseen Classes
+
+  In this paper, we present a label transfer model from texts to images for
+image classification tasks. The problem of image classification is often much
+more challenging than text classification. On one hand, labeled text data is
+more widely available than the labeled images for classification tasks. On the
+other hand, text data tends to have natural semantic interpretability, and they
+are often more directly related to class labels. On the contrary, the image
+features are not directly related to concepts inherent in class labels. One of
+our goals in this paper is to develop a model for revealing the functional
+relationships between text and image features as to directly transfer
+intermodal and intramodal labels to annotate the images. This is implemented by
+learning a transfer function as a bridge to propagate the labels between two
+multimodal spaces. However, the intermodal label transfers could be undermined
+by blindly transferring the labels of noisy texts to annotate images. To
+mitigate this problem, we present an intramodal label transfer process, which
+complements the intermodal label transfer by transferring the image labels
+instead when relevant text is absent from the source corpus. In addition, we
+generalize the inter-modal label transfer to zero-shot learning scenario where
+there are only text examples available to label unseen classes of images
+without any positive image examples. We evaluate our algorithm on an image
+classification task and show the effectiveness with respect to the other
+compared algorithms.
+
+
+Global versus Localized Generative Adversarial Nets
+
+  In this paper, we present a novel localized Generative Adversarial Net (GAN)
+to learn on the manifold of real data. Compared with the classic GAN that {\em
+globally} parameterizes a manifold, the Localized GAN (LGAN) uses local
+coordinate charts to parameterize distinct local geometry of how data points
+can transform at different locations on the manifold. Specifically, around each
+point there exists a {\em local} generator that can produce data following
+diverse patterns of transformations on the manifold. The locality nature of
+LGAN enables local generators to adapt to and directly access the local
+geometry without need to invert the generator in a global GAN. Furthermore, it
+can prevent the manifold from being locally collapsed to a dimensionally
+deficient tangent subspace by imposing an orthonormality prior between
+tangents. This provides a geometric approach to alleviating mode collapse at
+least locally on the manifold by imposing independence between data
+transformations in different tangent directions. We will also demonstrate the
+LGAN can be applied to train a robust classifier that prefers locally
+consistent classification decisions on the manifold, and the resultant
+regularizer is closely related with the Laplace-Beltrami operator. Our
+experiments show that the proposed LGANs can not only produce diverse image
+transformations, but also deliver superior classification performances.
+
+
+AET vs. AED: Unsupervised Representation Learning by Auto-Encoding
+  Transformations rather than Data
+
+  The success of deep neural networks often relies on a large amount of labeled
+examples, which can be difficult to obtain in many real scenarios. To address
+this challenge, unsupervised methods are strongly preferred for training neural
+networks without using any labeled data. In this paper, we present a novel
+paradigm of unsupervised representation learning by Auto-Encoding
+Transformation (AET) in contrast to the conventional Auto-Encoding Data (AED)
+approach. Given a randomly sampled transformation, AET seeks to predict it
+merely from the encoded features as accurately as possible at the output end.
+The idea is the following: as long as the unsupervised features successfully
+encode the essential information about the visual structures of original and
+transformed images, the transformation can be well predicted. We will show that
+this AET paradigm allows us to instantiate a large variety of transformations,
+from parameterized, to non-parameterized and GAN-induced ones. Our experiments
+show that AET greatly improves over existing unsupervised approaches, setting
+new state-of-the-art performances being greatly closer to the upper bounds by
+their fully supervised counterparts on CIFAR-10, ImageNet and Places datasets.
+
+
+Small Data Challenges in Big Data Era: A Survey of Recent Progress on
+  Unsupervised and Semi-Supervised Methods
+
+  Small data challenges have emerged in many learning problems, since the
+success of deep neural networks often relies on the availability of a huge
+amount of labeled data that is expensive to collect. To address it, many
+efforts have been made on training complex models with small data in an
+unsupervised and semi-supervised fashion. In this paper, we will review the
+recent progresses on these two major categories of methods. A wide spectrum of
+small data models will be categorized in a big picture, where we will show how
+they interplay with each other to motivate explorations of new ideas. We will
+review the criteria of learning the transformation equivariant, disentangled,
+self-supervised and semi-supervised representations, which underpin the
+foundations of recent developments. Many instantiations of unsupervised and
+semi-supervised generative models have been developed on the basis of these
+criteria, greatly expanding the territory of existing autoencoders, generative
+adversarial nets (GANs) and other deep networks by exploring the distribution
+of unlabeled data for more powerful representations. While we focus on the
+unsupervised and semi-supervised methods, we will also provide a broader review
+of other emerging topics, from unsupervised and semi-supervised domain
+adaptation to the fundamental roles of transformation equivariance and
+invariance in training a wide spectrum of deep networks. It is impossible for
+us to write an exclusive encyclopedia to include all related works. Instead, we
+aim at exploring the main ideas, principles and methods in this area to reveal
+where we are heading on the journey towards addressing the small data
+challenges in this big data era.
+
+
+CapProNet: Deep Feature Learning via Orthogonal Projections onto Capsule
+  Subspaces
+
+  In this paper, we formalize the idea behind capsule nets of using a capsule
+vector rather than a neuron activation to predict the label of samples. To this
+end, we propose to learn a group of capsule subspaces onto which an input
+feature vector is projected. Then the lengths of resultant capsules are used to
+score the probability of belonging to different classes. We train such a
+Capsule Projection Network (CapProNet) by learning an orthogonal projection
+matrix for each capsule subspace, and show that each capsule subspace is
+updated until it contains input feature vectors corresponding to the associated
+class. We will also show that the capsule projection can be viewed as
+normalizing the multiple columns of the weight matrix simultaneously to form an
+orthogonal basis, which makes it more effective in incorporating novel
+components of input features to update capsule representations. In other words,
+the capsule projection can be viewed as a multi-dimensional weight
+normalization in capsule subspaces, where the conventional weight normalization
+is simply a special case of the capsule projection onto 1D lines. Only a small
+negligible computing overhead is incurred to train the network in
+low-dimensional capsule subspaces or through an alternative hyper-power
+iteration to estimate the normalization matrix. Experiment results on image
+datasets show the presented model can greatly improve the performance of the
+state-of-the-art ResNet backbones by $10-20\%$ and that of the Densenet by
+$5-7\%$ respectively at the same level of computing and memory expenses. The
+CapProNet establishes the competitive state-of-the-art performance for the
+family of capsule nets by significantly reducing test errors on the benchmark
+datasets.
+
+

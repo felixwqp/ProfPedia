@@ -1,0 +1,1054 @@
+Path integral formulation of stochastic optimal control with generalized
+  costs
+
+  Path integral control solves a class of stochastic optimal control problems
+with a Monte Carlo (MC) method for an associated Hamilton-Jacobi-Bellman (HJB)
+equation. The MC approach avoids the need for a global grid of the domain of
+the HJB equation and, therefore, path integral control is in principle
+applicable to control problems of moderate to large dimension. The class of
+problems path integral control can solve, however, is defined by requirements
+on the cost function, the noise covariance matrix and the control input matrix.
+We relax the requirements on the cost function by introducing a new state that
+represents an augmented running cost. In our new formulation the cost function
+can contain stochastic integral terms and linear control costs, which are
+important in applications in engineering, economics and finance. We find an
+efficient numerical implementation of our grid-free MC approach and demonstrate
+its performance and usefulness in examples from hierarchical electric load
+management. The dimension of one of our examples is large enough to make
+classical grid-based HJB solvers impractical.
+
+
+Learning Quadrotor Dynamics Using Neural Network for Flight Control
+
+  Traditional learning approaches proposed for controlling quadrotors or
+helicopters have focused on improving performance for specific trajectories by
+iteratively improving upon a nominal controller, for example learning from
+demonstrations, iterative learning, and reinforcement learning. In these
+schemes, however, it is not clear how the information gathered from the
+training trajectories can be used to synthesize controllers for more general
+trajectories. Recently, the efficacy of deep learning in inferring helicopter
+dynamics has been shown. Motivated by the generalization capability of deep
+learning, this paper investigates whether a neural network based dynamics model
+can be employed to synthesize control for trajectories different than those
+used for training. To test this, we learn a quadrotor dynamics model using only
+translational and only rotational training trajectories, each of which can be
+controlled independently, and then use it to simultaneously control the yaw and
+position of a quadrotor, which is non-trivial because of nonlinear couplings
+between the two motions. We validate our approach in experiments on a quadrotor
+testbed.
+
+
+A sampling-based approach to scalable constraint satisfaction in linear
+  sampled-data systems---Part I: Computation
+
+  Sampled-data (SD) systems, which are composed of both discrete- and
+continuous-time components, are arguably one of the most common classes of
+cyberphysical systems in practice; most modern controllers are implemented on
+digital platforms while the plant dynamics that are being controlled evolve
+continuously in time. As with all cyberphysical systems, ensuring hard
+constraint satisfaction is key in the safe operation of SD systems. A powerful
+analytical tool for guaranteeing such constraint satisfaction is the viability
+kernel: the set of all initial conditions for which a safety-preserving control
+law (that is, a control law that satisfies all input and state constraints)
+exists. In this paper we present a novel sampling-based algorithm that tightly
+approximates the viability kernel for high-dimensional sampled-data linear
+time-invariant (LTI) systems. Unlike prior work in this area, our algorithm
+formally handles both the discrete and continuous characteristics of SD
+systems. We prove the correctness and convergence of our approximation
+technique, provide discussions on heuristic methods to optimally bias the
+sampling process, and demonstrate the results on a twelve-dimensional flight
+envelope protection problem.
+
+
+Secure Estimation based Kalman Filter for Cyber-Physical Systems against
+  Adversarial Attacks
+
+  Cyber-physical systems are found in many applications such as power networks,
+manufacturing processes, and air and ground transportation systems. Maintaining
+security of these systems under cyber attacks is an important and challenging
+task, since these attacks can be erratic and thus difficult to model. Secure
+estimation problems study how to estimate the true system states when
+measurements are corrupted and/or control inputs are compromised by attackers.
+The authors in [1] proposed a secure estimation method when the set of attacked
+nodes (sensors, controllers) is fixed. In this paper, we extend these results
+to scenarios in which the set of attacked nodes can change over time. We
+formulate this secure estimation problem into the classical error correction
+problem [2] and we show that accurate decoding can be guaranteed under a
+certain condition. Furthermore, we propose a combined secure estimation method
+with our proposed secure estimator and the Kalman Filter for improved practical
+performance. Finally, we demonstrate the performance of our method through
+simulations of two scenarios where an unmanned aerial vehicle is under
+adversarial attack.
+
+
+Secure Estimation for Unmanned Aerial Vehicles against Adversarial Cyber
+  Attacks
+
+  In the coming years, usage of Unmanned Aerial Vehicles (UAVs) is expected to
+grow tremendously. Maintaining security of UAVs under cyber attacks is an
+important yet challenging task, as these attacks are often erratic and
+difficult to predict. Secure estimation problems study how to estimate the
+states of a dynamical system from a set of noisy and maliciously corrupted
+sensor measurements. The fewer assumptions that an estimator makes about the
+attacker, the larger the set of attacks it can protect the system against. In
+this paper, we focus on sensor attacks on UAVs and attempt to design a secure
+estimator for linear time-invariant systems based on as few assumptions about
+the attackers as possible. We propose a computationally efficient estimator
+that protects the system against arbitrary and unbounded attacks, where the set
+of attacked sensors can also change over time. In addition, we propose to
+combine our secure estimator with a Kalman Filter for improved practical
+performance and demonstrate its effectiveness through simulations of two
+scenarios where an UAV is under adversarial cyber attack.
+
+
+Plug-and-Play Model Predictive Control for Load Shaping and Voltage
+  Control in Smart Grids
+
+  This paper presents a predictive controller for handling plug-and-play (P&P)
+charging requests of flexible loads in a distribution system. We define two
+types of flexible loads: (i) deferrable loads that have a fixed power profile
+but can be deferred in time and (ii) shapeable loads that have flexible power
+profiles but fixed energy requests, such as Plug-in Electric Vehicles (PEVs).
+The proposed method uses a hierarchical control scheme based on a model
+predictive control (MPC) formulation for minimizing the global system cost. The
+first stage computes a reachable reference that trades off deviation from the
+nominal voltage with the required generation control. The second stage uses a
+price-based objective to aggregate flexible loads and provide load shaping
+services, while satisfying system constraints and users' preferences at all
+times. It is shown that the proposed controller is recursively feasible under
+specific conditions, i.e. the flexible load demands are satisfied and bus
+voltages remain within the desired limits. Finally, the proposed scheme is
+illustrated on a 55 bus radial distribution network.
+
+
+Dynamic Contracts with Partial Observations: Application to Indirect
+  Load Control
+
+  This paper proposes a method to design an optimal dynamic contract between a
+principal and an agent, who has the authority to control both the principal's
+revenue and an engineered system. The key characteristic of our problem setting
+is that the principal has very limited information: the principal has no
+capability to monitor the agent's control or the state of the engineered
+system. The agent has perfect observations. With this asymmetry of information,
+we show that the principal can induce the agent to control both the revenue and
+the system processes in a way that maximizes the principal's utility, if the
+principal offers appropriate real-time and end-time compensation. We
+reformulate the dynamic contract design problem as a stochastic optimal control
+of both the engineered system and the agent's future expected payoff, which can
+be numerically solved using an associated Hamilton-Jacobi-Bellman equation. The
+performance and usefulness of the proposed contract are demonstrated with an
+indirect load control problem.
+
+
+Safe Sequential Path Planning Under Disturbances and Imperfect
+  Information
+
+  Multi-UAV systems are safety-critical, and guarantees must be made to ensure
+no unsafe configurations occur. Hamilton-Jacobi (HJ) reachability is ideal for
+analyzing such safety-critical systems; however, its direct application is
+limited to small-scale systems of no more than two vehicles due to an
+exponentially-scaling computational complexity. Previously, the sequential path
+planning (SPP) method, which assigns strict priorities to vehicles, was
+proposed; SPP allows multi-vehicle path planning to be done with a
+linearly-scaling computational complexity. However, the previous formulation
+assumed that there are no disturbances, and that every vehicle has perfect
+knowledge of higher-priority vehicles' positions. In this paper, we make SPP
+more practical by providing three different methods to account for disturbances
+in dynamics and imperfect knowledge of higher-priority vehicles' states. Each
+method has different assumptions about information sharing. We demonstrate our
+proposed methods in simulations.
+
+
+Building Model Identification during Regular Operation - Empirical
+  Results and Challenges
+
+  The inter-temporal consumption flexibility of commercial buildings can be
+harnessed to improve the energy efficiency of buildings, or to provide
+ancillary service to the power grid. To do so, a predictive model of the
+building's thermal dynamics is required. In this paper, we identify a
+physics-based model of a multi-purpose commercial building including its
+heating, ventilation and air conditioning system during regular operation. We
+present our empirical results and show that large uncertainties in internal
+heat gains, due to occupancy and equipment, present several challenges in
+utilizing the building model for long-term prediction. In addition, we show
+that by learning these uncertain loads online and dynamically updating the
+building model, prediction accuracy is improved significantly.
+
+
+Secure State Estimation for Nonlinear Power Systems under Cyber Attacks
+
+  This paper focuses on securely estimating the state of a nonlinear dynamical
+system from a set of corrupted measurements. In particular, we consider two
+broad classes of nonlinear systems, and propose a technique which enables us to
+perform secure state estimation for such nonlinear systems. We then provide
+guarantees on the achievable state estimation error against arbitrary
+corruptions, and analytically characterize the number of errors that can be
+perfectly corrected by a decoder. To illustrate how the proposed nonlinear
+estimation approach can be applied to practical systems, we focus on secure
+estimation for the wide area control of an interconnected power system under
+cyber-physical attacks and communication failures, and propose a secure
+estimator for the power system. Finally, we numerically show that the proposed
+secure estimation algorithm enables us to reconstruct the attack signals
+accurately.
+
+
+On the Powerball Method for Optimization
+
+  We propose a new method to accelerate the convergence of optimization
+algorithms. This method simply adds a power coefficient $\gamma\in[0,1)$ to the
+gradient during optimization. We call this the Powerball method and analyze the
+convergence rate for the Powerball method for strongly convex functions. While
+theoretically the Powerball method is guaranteed to have a linear convergence
+rate in the same order of the gradient method, we show that empirically it
+significantly outperforms the gradient descent and Newton's method, especially
+during the initial iterations. We demonstrate that the Powerball method
+provides a $10$-fold speedup of the convergence of both gradient descent and
+L-BFGS on multiple real datasets.
+
+
+On the Optimal Solutions of the Infinite-Horizon Linear Sensor
+  Scheduling Problem
+
+  This paper studies the infinite-horizon sensor scheduling problem for linear
+Gaussian processes with linear measurement functions. Several important
+properties of the optimal infinite-horizon schedules are derived. In
+particular, it is proved that under some mild conditions, both the optimal
+infinite-horizon average-per-stage cost and the corresponding optimal sensor
+schedules are independent of the covariance matrix of the initial state. It is
+also proved that the optimal estimation cost can be approximated arbitrarily
+closely by a periodic schedule with a finite period. Moreover, it is shown that
+the sequence of the average-per-stage costs of the optimal schedule must
+converge. These theoretical results provide valuable insights into the design
+and analysis of various infinite-horizon sensor scheduling algorithms.
+
+
+Stability Analysis of Wholesale Electricity Markets under Dynamic
+  Consumption Models and Real-Time Pricing
+
+  This paper analyzes stability conditions for wholesale electricity markets
+under real-time retail pricing and realistic consumption models with memory,
+which explicitly take into account previous electricity prices and consumption
+levels. By passing on the current retail price of electricity from supplier to
+consumer and feeding the observed consumption back to the supplier, a
+closed-loop dynamical system for electricity prices and consumption arises
+whose stability is to be investigated. Under mild assumptions on the generation
+cost of electricity and consumers' backlog disutility functions, we show that,
+for consumer models with price memory only, market stability is achieved if the
+ratio between the consumers' marginal backlog disutility and the suppliers'
+marginal cost of supply remains below a fixed threshold. Further, consumer
+models with price and consumption memory can result in greater stability
+regions and faster convergence to the equilibrium compared to models with price
+memory alone, if consumption deviations from nominal demand are adequately
+penalized.
+
+
+Multiplayer Reach-Avoid Games via Pairwise Outcomes
+
+  A multiplayer reach-avoid game is a differential game between an attacking
+team with NA attackers and a defending team with ND defenders playing on a
+compact domain with obstacles. The attacking team aims to send M of the NA
+attackers to some target location, while the defending team aims to prevent
+that by capturing attackers or indefinitely delaying attackers from reaching
+the target. Although the analysis of this game plays an important role in many
+applications, the optimal solution to this game is computationally intractable
+when NA>1 or ND>1. In this paper, we present two approaches for the NA=ND=1
+case to determine pairwise outcomes, and a graph theoretic maximum matching
+approach to merge these pairwise outcomes for an NA,ND>1 solution that provides
+guarantees on the performance of the defending team. We will show that the
+four-dimensional Hamilton-Jacobi-Isaacs approach allows for real-time updates
+to the maximum matching, and that the two-dimensional "path defense" approach
+is considerably more scalable with the number of players while maintaining
+defender performance guarantees.
+
+
+Using Neural Networks to Compute Approximate and Guaranteed Feasible
+  Hamilton-Jacobi-Bellman PDE Solutions
+
+  To sidestep the curse of dimensionality when computing solutions to
+Hamilton-Jacobi-Bellman partial differential equations (HJB PDE), we propose an
+algorithm that leverages a neural network to approximate the value function. We
+show that our final approximation of the value function generates near optimal
+controls which are guaranteed to successfully drive the system to a target
+state. Our framework is not dependent on state space discretization, leading to
+a significant reduction in computation time and space complexity in comparison
+with dynamic programming-based approaches. Using this grid-free approach also
+enables us to plan over longer time horizons with relatively little additional
+computation overhead. Unlike many previous neural network HJB PDE approximating
+formulations, our approximation is strictly conservative and hence any
+trajectories we generate will be strictly feasible. For demonstration, we
+specialize our new general framework to the Dubins car model and discuss how
+the framework can be applied to other models with higher-dimensional state
+spaces.
+
+
+Hedging Strategies for Load-Serving Entities in Wholesale Electricity
+  Markets
+
+  Load-serving entities which procure electricity from the wholesale
+electricity market to service end-users face significant quantity and price
+risks due to the volatile nature of electricity demand and quasi-fixed
+residential tariffs at which electricity is sold. This paper investigates
+strategies for load serving entities to hedge against such price risks.
+Specifically, we compute profit-maximizing portfolios of forward contract and
+call options as a function of the uncertain aggregate user demand. We compare
+the profit to the case of Demand Response, where users are offered monetary
+incentives to temporarily reduce their consumption during periods of supply
+shortages. Using smart meter data of residential customers in California, we
+simulate optimal portfolios and derive conditions under which Demand Response
+outperforms call options and forward contracts.
+
+
+How Peer Effects Influence Energy Consumption
+
+  This paper analyzes the impact of peer effects on electricity consumption of
+a network of rational, utility-maximizing users. Users derive utility from
+consuming electricity as well as consuming less energy than their neighbors.
+However, a disutility is incurred for consuming more than their neighbors. To
+maximize the profit of the load-serving entity that provides electricity to
+such users, we develop a two-stage game-theoretic model, where the entity sets
+the prices in the first stage. In the second stage, consumers decide on their
+demand in response to the observed price set in the first stage so as to
+maximize their utility. To this end, we derive theoretical statements under
+which such peer effects reduce aggregate user consumption. Further, we obtain
+expressions for the resulting electricity consumption and profit of the load
+serving entity for the case of perfect price discrimination and a single price
+under complete information, and approximations under incomplete information.
+Simulations suggest that exposing only a selected subset of all users to peer
+effects maximizes the entity's profit.
+
+
+FaSTrack: a Modular Framework for Fast and Guaranteed Safe Motion
+  Planning
+
+  Fast and safe navigation of dynamical systems through a priori unknown
+cluttered environments is vital to many applications of autonomous systems.
+However, trajectory planning for autonomous systems is computationally
+intensive, often requiring simplified dynamics that sacrifice safety and
+dynamic feasibility in order to plan efficiently. Conversely, safe trajectories
+can be computed using more sophisticated dynamic models, but this is typically
+too slow to be used for real-time planning. We propose a new algorithm
+FaSTrack: Fast and Safe Tracking for High Dimensional systems. A path or
+trajectory planner using simplified dynamics to plan quickly can be
+incorporated into the FaSTrack framework, which provides a safety controller
+for the vehicle along with a guaranteed tracking error bound. This bound
+captures all possible deviations due to high dimensional dynamics and external
+disturbances. Note that FaSTrack is modular and can be used with most current
+path or trajectory planners. We demonstrate this framework using a 10D
+nonlinear quadrotor model tracking a 3D path obtained from an RRT planner.
+
+
+A Hybrid Framework for Multi-Vehicle Collision Avoidance
+
+  With the recent surge of interest in UAVs for civilian services, the
+importance of developing tractable multi-agent analysis techniques that provide
+safety and performance guarantees have drastically increased. Hamilton-Jacobi
+(HJ) reachability has successfully provided these guarantees to small-scale
+systems and is flexible in terms of system dynamics. However, the exponential
+complexity scaling of HJ reachability with respect to system dimension prevents
+its direct application to larger-scale problems where the number of vehicles is
+greater than two. In this paper, we propose a collision avoidance algorithm
+using a hybrid framework for N+1 vehicles through higher-level control logic
+given any N-vehicle collision avoidance algorithm. Our algorithm conservatively
+approximates a guaranteed-safe region in the joint state space of the N+1
+vehicles and produces a safety-preserving controller. In addition, our
+algorithm does not incur significant additional computation cost. We
+demonstrate our proposed method in simulation.
+
+
+Goal-Driven Dynamics Learning via Bayesian Optimization
+
+  Real-world robots are becoming increasingly complex and commonly act in
+poorly understood environments where it is extremely challenging to model or
+learn their true dynamics. Therefore, it might be desirable to take a
+task-specific approach, wherein the focus is on explicitly learning the
+dynamics model which achieves the best control performance for the task at
+hand, rather than learning the true dynamics. In this work, we use Bayesian
+optimization in an active learning framework where a locally linear dynamics
+model is learned with the intent of maximizing the control performance, and
+used in conjunction with optimal control schemes to efficiently design a
+controller for a given task. This model is updated directly based on the
+performance observed in experiments on the physical system in an iterative
+manner until a desired performance is achieved. We demonstrate the efficacy of
+the proposed approach through simulations and real experiments on a quadrotor
+testbed.
+
+
+Hamilton-Jacobi Reachability: A Brief Overview and Recent Advances
+
+  Hamilton-Jacobi (HJ) reachability analysis is an important formal
+verification method for guaranteeing performance and safety properties of
+dynamical systems; it has been applied to many small-scale systems in the past
+decade. Its advantages include compatibility with general nonlinear system
+dynamics, formal treatment of bounded disturbances, and the availability of
+well-developed numerical tools. The main challenge is addressing its
+exponential computational complexity with respect to the number of state
+variables. In this tutorial, we present an overview of basic HJ reachability
+theory and provide instructions for using the most recent numerical tools,
+including an efficient GPU-parallelized implementation of a Level Set Toolbox
+for computing reachable sets. In addition, we review some of the current work
+in high-dimensional HJ reachability to show how the dimensionality challenge
+can be alleviated via various general theoretical and application-specific
+insights.
+
+
+Estimating Heterogeneous Treatment Effects in Residential Demand
+  Response
+
+  We evaluate the causal effect of hour-ahead price interventions on the
+reduction in residential electricity consumption using a data set from a
+large-scale experiment on 7,000 households in California. By estimating
+user-level counterfactuals using time-series prediction, we estimate an average
+treatment effect of ~0.10 kWh (11%) per intervention and household. Next, we
+leverage causal decision trees to detect treatment effect heterogeneity across
+users by incorporating census data. These decision trees depart from
+classification and regression trees, as we intend to estimate a causal effect
+between treated and control units rather than perform outcome regression. We
+compare the performance of causal decision trees with a simpler, yet more
+inaccurate k-means clustering approach that naively detects heterogeneity in
+the feature space, confirming the superiority of causal decision trees. Lastly,
+we comment on how our methods to detect heterogeneity can be used for targeting
+households to improve cost efficiency.
+
+
+Planning, Fast and Slow: A Framework for Adaptive Real-Time Safe
+  Trajectory Planning
+
+  Motion planning is an extremely well-studied problem in the robotics
+community, yet existing work largely falls into one of two categories:
+computationally efficient but with few if any safety guarantees, or able to
+give stronger guarantees but at high computational cost. This work builds on a
+recent development called FaSTrack in which a slow offline computation provides
+a modular safety guarantee for a faster online planner. We introduce the notion
+of "meta-planning" in which a refined offline computation enables safe
+switching between different online planners. This provides autonomous systems
+with the ability to adapt motion plans to a priori unknown environments in
+real-time as sensor measurements detect new obstacles, and the flexibility to
+maneuver differently in the presence of obstacles than they would in free
+space, all while maintaining a strict safety guarantee. We demonstrate the
+meta-planning algorithm both in simulation and in hardware using a small
+Crazyflie 2.0 quadrotor.
+
+
+Budget-Constrained Multi-Armed Bandits with Multiple Plays
+
+  We study the multi-armed bandit problem with multiple plays and a budget
+constraint for both the stochastic and the adversarial setting. At each round,
+exactly $K$ out of $N$ possible arms have to be played (with $1\leq K \leq N$).
+In addition to observing the individual rewards for each arm played, the player
+also learns a vector of costs which has to be covered with an a-priori defined
+budget $B$. The game ends when the sum of current costs associated with the
+played arms exceeds the remaining budget.
+  Firstly, we analyze this setting for the stochastic case, for which we assume
+each arm to have an underlying cost and reward distribution with support
+$[c_{\min}, 1]$ and $[0, 1]$, respectively. We derive an Upper Confidence Bound
+(UCB) algorithm which achieves $O(NK^4 \log B)$ regret.
+  Secondly, for the adversarial case in which the entire sequence of rewards
+and costs is fixed in advance, we derive an upper bound on the regret of order
+$O(\sqrt{NB\log(N/K)})$ utilizing an extension of the well-known
+$\texttt{Exp3}$ algorithm. We also provide upper bounds that hold with high
+probability and a lower bound of order $\Omega((1 - K/N)^2 \sqrt{NB/K})$.
+
+
+Context-Specific Validation of Data-Driven Models
+
+  With an increasing use of data-driven models to control robotic systems, it
+has become important to develop a methodology for validating such models before
+they can be deployed to design a controller for the actual system.
+Specifically, it must be ensured that the controller designed for a learned
+model would perform as expected on the actual physical system. We propose a
+context-specific validation framework to quantify the quality of a learned
+model based on a distance measure between the closed-loop actual system and the
+learned model. We then propose an active sampling scheme to compute a
+probabilistic upper bound on this distance in a sample-efficient manner. The
+proposed framework validates the learned model against only those behaviors of
+the system that are relevant for the purpose for which we intend to use this
+model, and does not require any a priori knowledge of the system dynamics.
+Several simulations illustrate the practicality of the proposed framework for
+validating the models of real-world systems, and consequently, for controller
+synthesis.
+
+
+Classification-based Approximate Reachability with Guarantees Applied to
+  Safe Trajectory Tracking
+
+  Hamilton-Jacobi (HJ) reachability analysis has been developed over the past
+decades into a widely-applicable tool for determining goal satisfaction and
+safety verification in nonlinear systems. While HJ reachability can be
+formulated very generally, computational complexity can be a serious impediment
+for many systems of practical interest. Much prior work has been devoted to
+computing approximate solutions to large reachability problems, yet many of
+these methods apply to only restricted problem classes, do not generate
+controllers, and/or are extremely conservative. In this paper, we present a
+novel approach to approximate HJ reachability in which computing an optimal
+controller is viewed as a sequential classification problem. Even though we
+employ neural networks for this classification task, our method still provides
+safety guarantees in many cases. We demonstrate the utility of our approach in
+the context of safe trajectory following with specific application to quadrotor
+navigation. Offline computation and online evaluation confirm that our method
+preserves safety.
+
+
+Probabilistically Safe Robot Planning with Confidence-Based Human
+  Predictions
+
+  In order to safely operate around humans, robots can employ predictive models
+of human motion. Unfortunately, these models cannot capture the full complexity
+of human behavior and necessarily introduce simplifying assumptions. As a
+result, predictions may degrade whenever the observed human behavior departs
+from the assumed structure, which can have negative implications for safety. In
+this paper, we observe that how "rational" human actions appear under a
+particular model can be viewed as an indicator of that model's ability to
+describe the human's current motion. By reasoning about this model confidence
+in a real-time Bayesian framework, we show that the robot can very quickly
+modulate its predictions to become more uncertain when the model performs
+poorly. Building on recent work in provably-safe trajectory planning, we
+leverage these confidence-aware human motion predictions to generate assured
+autonomous robot motion. Our new analysis combines worst-case tracking error
+guarantees for the physical robot with probabilistic time-varying human
+predictions, yielding a quantitative, probabilistic safety certificate. We
+demonstrate our approach with a quadcopter navigating around a human.
+
+
+A Minimum Discounted Reward Hamilton-Jacobi Formulation for Computing
+  Reachable Sets
+
+  We propose a novel formulation for approximating reachable sets through a
+minimum discounted reward optimal control problem. The formulation yields a
+continuous solution that can be obtained by solving a Hamilton-Jacobi equation.
+Furthermore, the numerical approximation to this solution can be obtained as
+the unique fixed-point to a contraction mapping. This allows for more efficient
+solution methods that could not be applied under traditional formulations for
+solving reachable sets. In addition, this formulation provides a link between
+reinforcement learning and learning reachable sets for systems with unknown
+dynamics, allowing algorithms from the former to be applied to the latter. We
+use two benchmark examples, double integrator, and pursuit-evasion games, to
+show the correctness of the formulation as well as its strengths in comparison
+to previous work.
+
+
+A Scalable Framework For Real-Time Multi-Robot, Multi-Human Collision
+  Avoidance
+
+  Robust motion planning is a well-studied problem in the robotics literature,
+yet current algorithms struggle to operate scalably and safely in the presence
+of other moving agents, such as humans. This paper introduces a novel framework
+for robot navigation that accounts for high-order system dynamics and maintains
+safety in the presence of external disturbances, other robots, and
+non-deterministic intentional agents. Our approach precomputes a tracking error
+margin for each robot, generates confidence-aware human motion predictions, and
+coordinates multiple robots with a sequential priority ordering, effectively
+enabling scalable safe trajectory planning and execution. We demonstrate our
+approach in hardware with two robots and two humans. We also showcase our
+work's scalability in a larger simulation.
+
+
+Safely Probabilistically Complete Real-Time Planning and Exploration in
+  Unknown Environments
+
+  We present a new framework for motion planning that wraps around existing
+kinodynamic planners and guarantees recursive feasibility when operating in a
+priori unknown, static environments. Our approach makes strong guarantees about
+overall safety and collision avoidance by utilizing a robust controller derived
+from reachability analysis. We ensure that motion plans never exit the safe
+backward reachable set of the initial state, while safely exploring the space.
+This preserves the safety of the initial state, and guarantees that that we
+will eventually find the goal if it is possible to do so while exploring
+safely. We implement our framework in the Robot Operating System (ROS) software
+environment and demonstrate it in a real-time simulation.
+
+
+Identification of Parameters and Initial Values for Reaction-Diffusion
+  Systems in Protein Networks (Extended Version)
+
+  Spatio-temporal biochemical signaling in a large class of protein-protein
+interaction networks is well modeled by a reaction-diffusion system. The global
+existence of the solution to the reaction-diffusion system is determined by the
+reaction kinetics model and the protein network topology. We propose a novel
+reaction kinetics model that guarantees that the reaction-diffusion system with
+this model has a nonnegative invariant global classical solution for any
+network topology. We then present a computational method to identify the
+unknown parameters and initial values for a reaction-diffusion system with this
+reaction kinetics model. The identification approach solves an optimization
+problem that minimizes the cost function defined as the $L^2$-norm of the
+difference between the data and the solution of the reaction-diffusion system.
+We utilize an adjoint-based optimal control method to obtain the gradients of
+the cost function with respect to the parameters and initial values. The
+regularity of the global classical solutions of the reaction-diffusion system
+and its corresponding adjoint system avoids situations in which the gradients
+blow up, and therefore guarantees the success of the identification method for
+any network structure. Utilizing this gradient information, an efficient
+algorithm to solve the optimization problem is proposed and applied to estimate
+the mass diffusivities, rate constants and initial values of a
+reaction-diffusion system that models protein-protein interactions in a
+signaling network that regulates the actin cytoskeleton in a malignant breast
+cell.
+
+
+Risk-Limiting Dynamic Contracts for Direct Load Control
+
+  This paper proposes a novel continuous-time dynamic contract framework that
+has a risk-limiting capability. If a principal and an agent enter into such a
+contract, the principal can optimally manage its performance and risk with a
+guarantee that the agent's risk is less than or equal to a pre-specified level
+and that the agent's expected payoff is greater than or equal to another
+pre-specified threshold. We achieve such risk-management capabilities by
+formulating the contract design problem as mean-variance constrained
+risk-sensitive control. A dynamic programming-based method is developed to
+solve the problem. The key idea of our proposed solution method is to
+reformulate the inequality constraints on the mean and the variance of the
+agent's payoff as dynamical system constraints by introducing new state and
+control variables. The reformulations use the martingale representation
+theorem. The proposed contract method enables us to develop a new direct load
+control method that provides the load-serving entity with financial risk
+management solutions in real-time electricity markets. We also propose an
+approximate decomposition of the optimal contract design problem for multiple
+customers into multiple low-dimensional contract problems for one customer.
+This allows the direct load control program to work with a large number of
+customers without any scalability issues. Furthermore, the contract design
+procedure can be completely parallelized. The performance and usefulness of the
+proposed contract method and its application to direct load control are
+demonstrated using data on the electric energy consumption of customers in
+Austin, Texas as well as the Electricity Reliability Council of Texas'
+locational marginal price data.
+
+
+Approximation Algorithms for Optimization of Combinatorial Dynamical
+  Systems
+
+  This paper considers an optimization problem for a dynamical system whose
+evolution depends on a collection of binary decision variables. We develop
+scalable approximation algorithms with provable suboptimality bounds to provide
+computationally tractable solution methods even when the dimension of the
+system and the number of the binary variables are large. The proposed method
+employs a linear approximation of the objective function such that the
+approximate problem is defined over the feasible space of the binary decision
+variables, which is a discrete set. To define such a linear approximation, we
+propose two different variation methods: one uses continuous relaxation of the
+discrete space and the other uses convex combinations of the vector field and
+running payoff. The approximate problem is a 0-1 linear program, which can be
+solved by existing polynomial-time exact or approximation algorithms, and does
+not require the solution of the dynamical system. Furthermore, we characterize
+a sufficient condition ensuring the approximate solution has a provable
+suboptimality bound. We show that this condition can be interpreted as the
+concavity of the objective function. The performance and utility of the
+proposed algorithms are demonstrated with the ON/OFF control problems of
+interdependent refrigeration systems.
+
+
+Safe Sequential Path Planning of Multi-Vehicle Systems via
+  Double-Obstacle Hamilton-Jacobi-Isaacs Variational Inequality
+
+  We consider the problem of planning trajectories for a group of $N$ vehicles,
+each aiming to reach its own target set while avoiding danger zones of other
+vehicles. The analysis of problems like this is extremely important
+practically, especially given the growing interest in utilizing unmanned
+aircraft systems for civil purposes. The direct solution of this problem by
+solving a single-obstacle Hamilton-Jacobi-Isaacs (HJI) variational inequality
+(VI) is numerically intractable due to the exponential scaling of computation
+complexity with problem dimensionality. Furthermore, the single-obstacle HJI VI
+cannot directly handle situations in which vehicles do not have a common
+scheduled arrival time. Instead, we perform sequential path planning by
+considering vehicles in order of priority, modeling higher-priority vehicles as
+time-varying obstacles for lower-priority vehicles. To do this, we solve a
+double-obstacle HJI VI which allows us to obtain the reach-avoid set, defined
+as the set of states from which a vehicle can reach its target while staying
+within a time-varying state constraint set. From the solution of the
+double-obstacle HJI VI, we can also extract the latest start time and the
+optimal control for each vehicle. This is a first application of the
+double-obstacle HJI VI which can handle systems with time-varying dynamics,
+target sets, and state constraint sets, and results in computation complexity
+that scales linearly, as opposed to exponentially, with the number of vehicles
+in consideration.
+
+
+Exact and Efficient Hamilton-Jacobi Reachability for Decoupled Systems
+
+  Reachability analysis is important for studying optimal control problems and
+differential games, which are powerful theoretical tools for analyzing and
+modeling many practical problems in robotics, aircraft control, among other
+application areas. In reachability analysis, one is interested in computing the
+reachable set, defined as the set of states from which there exists a control,
+despite the worst disturbance, that can drive the system into a set of target
+states. The target states can be used to model either unsafe or desirable
+configurations, depending on the application. Many Hamilton-Jacobi formulations
+allow the computation of reachable sets; however, due to the exponential
+complexity scaling in computation time and space, problems involving
+approximately 5 dimensions become intractable. A number of methods that compute
+an approximate solution exist in the literature, but these methods trade off
+complexity for optimality. In this paper, we eliminate complexity-optimality
+trade-offs for time-invariant decoupled systems using a decoupled
+Hamilton-Jacobi formulation that enables the exact reconstruction of high
+dimensional solutions via low dimensional solutions of the decoupled
+subsystems. Our formulation is compatible with existing numerical tools, and we
+show the accuracy, computation benefits, and an application of our novel
+approach using two numerical examples.
+
+
+Safe Platooning of Unmanned Aerial Vehicles via Reachability
+
+  Recently, there has been immense interest in using unmanned aerial vehicles
+(UAVs) for civilian operations such as package delivery, firefighting, and fast
+disaster response. As a result, UAV traffic management systems are needed to
+support potentially thousands of UAVs flying simultaneously in the airspace, in
+order to ensure their liveness and safety requirements are met. Hamilton-Jacobi
+(HJ) reachability is a powerful framework for providing conditions under which
+these requirements can be met, and for synthesizing the optimal controller for
+meeting them. However, due to the curse of dimensionality, HJ reachability is
+only tractable for a small number of vehicles if their set of maneuvers is
+unrestricted. In this paper, we define a platoon to be a group of UAVs in a
+single-file formation. We model each vehicle as a hybrid system with modes
+corresponding to its role in the platoon, and specify the set of allowed
+maneuvers in each mode to make the analysis tractable. We propose several
+liveness controllers based on HJ reachability, and wrap a safety controller,
+also based on HJ reachability, around the liveness controllers. For a single
+altitude range, our approach guarantees safety for one safety breach; in the
+unlikely event of multiple safety breaches, safety can be guaranteed over
+multiple altitude ranges. We demonstrate the satisfaction of liveness and
+safety requirements through simulations of three common scenarios.
+
+
+Multi-Vehicle Collision Avoidance via Hamilton-Jacobi Reachability and
+  Mixed Integer Programming
+
+  Multi-agent differential games are important and useful tools for analyzing
+many practical problems. With the recent surge of interest in using UAVs for
+civil purposes, the importance and urgency of developing tractable multi-agent
+analysis techniques that provide safety and performance guarantees is at an
+all-time high. Hamilton-Jacobi (HJ) reachability has successfully provided
+safety guarantees to small-scale systems and is flexible in terms of system
+dynamics. However, the exponential complexity scaling of HJ reachability
+prevents its direct application to large scale problems when the number of
+vehicles is greater than two. In this paper, we overcome the scalability
+limitations of HJ reachability by using a mixed integer program that exploits
+the properties of HJ solutions to provide higher-level control logic. Our
+proposed method provides safety guarantee for three-vehicle systems -- a
+previously intractable task for HJ reachability -- without incurring
+significant additional computation cost. Furthermore, our method is scalable
+beyond three vehicles and performs significantly better by several metrics than
+an extension of pairwise collision avoidance to multi-vehicle collision
+avoidance. We demonstrate our proposed method in simulations.
+
+
+Fast Reachable Set Approximations via State Decoupling Disturbances
+
+  With the recent surge of interest in using robotics and automation for civil
+purposes, providing safety and performance guarantees has become extremely
+important. In the past, differential games have been successfully used for the
+analysis of safety-critical systems. In particular, the Hamilton-Jacobi (HJ)
+formulation of differential games provides a flexible way to compute the
+reachable set, which can characterize the set of states which lead to either
+desirable or undesirable configurations, depending on the application. While HJ
+reachability is applicable to many small practical systems, the curse of
+dimensionality prevents the direct application of HJ reachability to many
+larger systems. To address computation complexity issues, various efficient
+computation methods in the literature have been developed for approximating or
+exactly computing the solution to HJ partial differential equations, but only
+when the system dynamics are of specific forms. In this paper, we propose a
+flexible method to trade off optimality with computation complexity in HJ
+reachability analysis. To achieve this, we propose to simplify system dynamics
+by treating state variables as disturbances. We prove that the resulting
+approximation is conservative in the desired direction, and demonstrate our
+method using a four-dimensional plane model.
+
+
+Model Comparison of a Data-Driven and a Physical Model for Simulating
+  HVAC Systems
+
+  Commercial buildings are responsible for a large fraction of energy
+consumption in developed countries, and therefore are targets of energy
+efficiency programs. Motivated by the large inherent thermal inertia of
+buildings, the power consumption can be flexibly scheduled without compromising
+occupant comfort. This temporal flexibility offers opportunities for the
+provision of frequency regulation to support grid stability. To realize energy
+savings and frequency regulation, it is of prime importance to identify a
+realistic model for the temperature dynamics of a building. We identify a low-
+dimensional data-driven model and a high-dimensional physics- based model for
+different spatial granularities and temporal seasons based on a case study of
+an entire floor of Sutardja Dai Hall, an office building on the University of
+California, Berkeley campus. A comparison of these contrasting models shows
+that, despite the higher forecasting accuracy of the physics-based model, both
+models perform almost equally well for energy efficient control. We conclude
+that the data-driven model is more amenable to controller design due to its low
+complexity, and could serve as a substitution for highly complex physics- based
+models with an insignificant loss of prediction accuracy for many applications.
+On the other hand, our physics-based approach is more suitable for modeling
+buildings with finer spatial granularities.
+
+
+Exact and Efficient Hamilton-Jacobi-based Guaranteed Safety Analysis via
+  System Decomposition
+
+  Hamilton-Jacobi (HJ) reachability is a method that provides rigorous analyses
+of the safety properties of dynamical systems. This method has been
+successfully applied to many low-dimensional dynamical system models such as
+coarse models of aircraft and quadrotors in order to provide safety guarantees
+in potentially dangerous scenarios. These guarantees can be provided by the
+computation of a backward reachable set (BRS), which represents the set of
+states from which the system may be driven into violating safety properties
+despite the system's best effort to remain safe. Unfortunately, HJ reachability
+is not practical for high-dimensional systems because the complexity of the BRS
+computation scales exponentially with the number of state dimensions. Although
+numerous approximation techniques are able to tractably provide conservative
+estimates of the BRS, they often require restrictive assumptions about system
+dynamics without providing an exact solution. In this paper we propose a
+general method for decomposing dynamical systems. Even when the resulting
+subsystems are coupled, relatively high-dimensional BRSs that were previously
+intractable or expensive to compute can now be quickly and exactly computed in
+lower-dimensional subspaces. As a result, the curse of dimensionality is
+alleviated to a large degree without sacrificing optimality. We demonstrate our
+theoretical results through two numerical examples: a 3D Dubins Car model and a
+6D Acrobatic Quadrotor model.
+
+
+Decomposition of Reachable Sets and Tubes for a Class of Nonlinear
+  Systems
+
+  Reachability analysis provides formal guarantees for performance and safety
+properties of nonlinear control systems. Here, one aims to compute the backward
+reachable set (BRS) or tube (BRT) -- the set of states from which the system
+can be driven into a target set at a particular time or within a time interval,
+respectively. The computational complexity of current approaches scales
+exponentially, making application to high-dimensional systems intractable. We
+propose a technique that decomposes the dynamics of a general class of
+nonlinear systems into subsystems which may be coupled through common states,
+controls, and disturbances. Despite this coupling, BRSs and BRTs can be
+computed efficiently using our technique without incurring additional
+approximation errors and without the need for linearizing dynamics or
+approximating sets as polytopes. Computations of BRSs and BRTs now become
+orders of magnitude faster, and for the first time BRSs and BRTs for many
+high-dimensional nonlinear control systems can be computed using the
+Hamilton-Jacobi (HJ) formulation. In situations involving bounded adversarial
+disturbances, our proposed method can obtain slightly conservative results. We
+demonstrate our theory by numerically computing BRSs and BRTs using the HJ
+formulation for several systems, including the 6D Acrobatic Quadrotor and the
+10D Near-Hover Quadrotor.
+
+
+Robust Sequential Path Planning Under Disturbances and Adversarial
+  Intruder
+
+  Provably safe and scalable multi-vehicle path planning is an important and
+urgent problem due to the expected increase of automation in civilian airspace
+in the near future. Although this problem has been studied in the past, there
+has not been a method that guarantees both goal satisfaction and safety for
+vehicles with general nonlinear dynamics while taking into account disturbances
+and potential adversarial agents, to the best of our knowledge. Hamilton-Jacobi
+(HJ) reachability is the ideal tool for guaranteeing goal satisfaction and
+safety under such scenarios, and has been successfully applied to many
+small-scale problems. However, a direct application of HJ reachability in most
+cases becomes intractable when there are more than two vehicles due to the
+exponentially scaling computational complexity with respect to system
+dimension. In this paper, we take advantage of the guarantees HJ reachability
+provides, and eliminate the computation burden by assigning a strict priority
+ordering to the vehicles under consideration. Under this sequential path
+planning (SPP) scheme, vehicles reserve "space-time" portions in the airspace,
+and the space-time portions guarantee dynamic feasibility, collision avoidance,
+and optimality of the paths given the priority ordering. With a computation
+complexity that scales quadratically when accounting for both disturbances and
+an intruder, and linearly when accounting for only disturbances, SPP can
+tractably solve the multi-vehicle path planning problem for vehicles with
+general nonlinear dynamics in a practical setting. We demonstrate our theory in
+representative simulations.
+
+
+Eliciting Private User Information for Residential Demand Response
+
+  Residential Demand Response has emerged as a viable tool to alleviate supply
+and demand imbalances of electricity, particularly during times when the
+electric grid is strained due a shortage of supply. Demand Response providers
+bid reduction capacity into the wholesale electricity market by asking their
+customers under contract to temporarily reduce their consumption in exchange
+for a monetary incentive. To contribute to the analysis of consumer behavior in
+response to such incentives, this paper formulates Demand Response as a
+Mechanism Design problem, where a Demand Response Provider elicits private
+information of its rational, profit-maximizing customers who derive positive
+expected utility by participating in reduction events. By designing an
+incentive compatible and individually rational mechanism to collect users'
+price elasticities of demand, the Demand Response provider can target the most
+susceptible users to incentives. We measure reductions by comparing the
+materialized consumption to the projected consumption, which we model as the
+"10-in-10"-baseline, the regulatory standard set by the California Independent
+System Operator. Due to the suboptimal performance of this baseline, we show,
+using consumption data of residential customers in California, that Demand
+Response Providers receive payments for "virtual reductions", which exist due
+to the inaccuracies of the baseline rather than actual reductions. Improving
+the accuracy of the baseline diminishes the contribution of these virtual
+reductions.
+
+
+A General Safety Framework for Learning-Based Control in Uncertain
+  Robotic Systems
+
+  The proven efficacy of learning-based control schemes strongly motivates
+their application to robotic systems operating in the physical world. However,
+guaranteeing correct operation during the learning process is currently an
+unresolved issue, which is of vital importance in safety-critical systems. We
+propose a general safety framework based on Hamilton-Jacobi reachability
+methods that can work in conjunction with an arbitrary learning algorithm. The
+method exploits approximate knowledge of the system dynamics to guarantee
+constraint satisfaction while minimally interfering with the learning process.
+We further introduce a Bayesian mechanism that refines the safety analysis as
+the system acquires new evidence, reducing initial conservativeness when
+appropriate while strengthening guarantees through real-time validation. The
+result is a least-restrictive, safety-preserving control law that intervenes
+only when (a) the computed safety guarantees require it, or (b) confidence in
+the computed guarantees decays in light of new observations. We prove
+theoretical safety guarantees combining probabilistic and worst-case analysis
+and demonstrate the proposed framework experimentally on a quadrotor vehicle.
+Even though safety analysis is based on a simple point-mass model, the
+quadrotor successfully arrives at a suitable controller by policy-gradient
+reinforcement learning without ever crashing, and safely retracts away from a
+strong external disturbance introduced during flight.
+
+
+Provably Safe and Robust Drone Routing via Sequential Path Planning: A
+  Case Study in San Francisco and the Bay Area
+
+  Provably safe and scalable multi-vehicle path planning is an important and
+urgent problem due to the expected increase of automation in civilian airspace
+in the near future. Hamilton-Jacobi (HJ) reachability is an ideal tool for
+analyzing such safety-critical systems and has been successfully applied to
+several small-scale problems. However, a direct application of HJ reachability
+to large scale systems is often intractable because of its
+exponentially-scaling computation complexity with respect to system dimension,
+also known as the "curse of dimensionality". To overcome this problem, the
+sequential path planning (SPP) method, which assigns strict priorities to
+vehicles, was previously proposed; SPP allows multi-vehicle path planning to be
+done with a linearly-scaling computation complexity. In this work, we
+demonstrate the potential of SPP algorithm for large-scale systems. In
+particular, we simulate large-scale multi-vehicle systems in two different
+urban environments, a city environment and a multi-city environment, and use
+the SPP algorithm for trajectory planning. SPP is able to efficiently design
+collision-free trajectories in both environments despite the presence of
+disturbances in vehicles' dynamics. To ensure a safe transition of vehicles to
+their destinations, our method automatically allocates space-time reservations
+to vehicles while accounting for the magnitude of disturbances such as wind in
+a provably safe way. Our simulation results show an intuitive multi-lane
+structure in airspace, where the number of lanes and the distance between the
+lanes depend on the size of disturbances and other problem parameters.
+
+
+Safe and Resilient Multi-vehicle Trajectory Planning Under Adversarial
+  Intruder
+
+  Provably safe and scalable multi-vehicle trajectory planning is an important
+and urgent problem. Hamilton-Jacobi (HJ) reachability is an ideal tool for
+analyzing such safety-critical systems and has been successfully applied to
+several small-scale problems. However, a direct application of HJ reachability
+to multi-vehicle trajectory planning is often intractable due to the "curse of
+dimensionality." To overcome this problem, the sequential trajectory planning
+(STP) method, which assigns strict priorities to vehicles, was proposed, STP
+allows multi-vehicle trajectory planning to be done with a linearly-scaling
+computation complexity. However, if a vehicle not in the set of STP vehicles
+enters the system, or even worse, if this vehicle is an adversarial intruder,
+the previous formulation requires the entire system to perform replanning, an
+intractable task for large-scale systems. In this paper, we make STP more
+practical by providing a new algorithm where replanning is only needed only for
+a fixed number of vehicles, irrespective of the total number of STP vehicles.
+Moreover, this number is a design parameter, which can be chosen based on the
+computational resources available during run time. We demonstrate this
+algorithm in a representative simulation of an urban airspace environment.
+
+
+Robust Tracking with Model Mismatch for Fast and Safe Planning: an SOS
+  Optimization Approach
+
+  In the pursuit of real-time motion planning, a commonly adopted practice is
+to compute a trajectory by running a planning algorithm on a simplified,
+low-dimensional dynamical model, and then employ a feedback tracking controller
+that tracks such a trajectory by accounting for the full, high-dimensional
+system dynamics. While this strategy of planning with model mismatch generally
+yields fast computation times, there are no guarantees of dynamic feasibility,
+which hampers application to safety-critical systems. Building upon recent work
+that addressed this problem through the lens of Hamilton-Jacobi (HJ)
+reachability, we devise an algorithmic framework whereby one computes, offline,
+for a pair of "planner" (i.e., low-dimensional) and "tracking" (i.e.,
+high-dimensional) models, a feedback tracking controller and associated
+tracking bound. This bound is then used as a safety margin when generating
+motion plans via the low-dimensional model. Specifically, we harness the
+computational tool of sum-of-squares (SOS) programming to design a bilinear
+optimization algorithm for the computation of the feedback tracking controller
+and associated tracking bound. The algorithm is demonstrated via numerical
+experiments, with an emphasis on investigating the trade-off between the
+increased computational scalability afforded by SOS and its intrinsic
+conservativeness. Collectively, our results enable scaling the appealing
+strategy of planning with model mismatch to systems that are beyond the reach
+of HJ analysis, while maintaining safety guarantees.
+
+
+A New Simulation Metric to Determine Safe Environments and Controllers
+  for Systems with Unknown Dynamics
+
+  We consider the problem of extracting safe environments and controllers for
+reach-avoid objectives for systems with known state and control spaces, but
+unknown dynamics. In a given environment, a common approach is to synthesize a
+controller from an abstraction or a model of the system (potentially learned
+from data). However, in many situations, the relationship between the dynamics
+of the model and the \textit{actual system} is not known; and hence it is
+difficult to provide safety guarantees for the system. In such cases, the
+Standard Simulation Metric (SSM), defined as the worst-case norm distance
+between the model and the system output trajectories, can be used to modify a
+reach-avoid specification for the system into a more stringent specification
+for the abstraction. Nevertheless, the obtained distance, and hence the
+modified specification, can be quite conservative. This limits the set of
+environments for which a safe controller can be obtained. We propose SPEC, a
+specification-centric simulation metric, which overcomes these limitations by
+computing the distance using only the trajectories that violate the
+specification for the system. We show that modifying a reach-avoid
+specification with SPEC allows us to synthesize a safe controller for a larger
+set of environments compared to SSM. We also propose a probabilistic method to
+compute SPEC for a general class of systems. Case studies using simulators for
+quadrotors and autonomous cars illustrate the advantages of the proposed metric
+for determining safe environment sets and controllers.
+
+
+A Risk-Sensitive Finite-Time Reachability Approach for Safety of
+  Stochastic Dynamic Systems
+
+  A classic reachability problem for safety of dynamic systems is to compute
+the set of initial states from which the state trajectory is guaranteed to stay
+inside a given constraint set over a given time horizon. In this paper, we
+leverage existing theory of reachability analysis and risk measures to devise a
+risk-sensitive reachability approach for safety of stochastic dynamic systems
+under non-adversarial disturbances over a finite time horizon. Specifically, we
+first introduce the notion of a risk-sensitive safe set as a set of initial
+states from which the risk of large constraint violations can be reduced to a
+required level via a control policy, where risk is quantified using the
+Conditional Value-at-Risk (CVaR) measure. Second, we show how the computation
+of a risk-sensitive safe set can be reduced to the solution to a Markov
+Decision Process (MDP), where cost is assessed according to CVaR. Third,
+leveraging this reduction, we devise a tractable algorithm to approximate a
+risk-sensitive safe set, and provide theoretical arguments about its
+correctness. Finally, we present a realistic example inspired from stormwater
+catchment design to demonstrate the utility of risk-sensitive reachability
+analysis. In particular, our approach allows a practitioner to tune the level
+of risk sensitivity from worst-case (which is typical for Hamilton-Jacobi
+reachability analysis) to risk-neutral (which is the case for stochastic
+reachability analysis).
+
+
+Reachability-Based Safety Guarantees using Efficient Initializations
+
+  Hamilton-Jacobi-Isaacs (HJI) reachability analysis is a powerful tool for
+analyzing the safety of autonomous systems. This analysis is computationally
+intensive and typically performed offline. Online, however, the autonomous
+system may experience changes in system dynamics, external disturbances, and/or
+the surrounding environment, requiring updated safety guarantees. Rather than
+restarting the safety analysis, we propose a method of "warm-start"
+reachability, which uses a user-defined initialization (typically the
+previously computed solution). By starting with an HJI function that is closer
+to the solution than the standard initialization, convergence may take fewer
+iterations.
+  In this paper we prove that warm-starting will result in guaranteed
+conservative solutions by over-approximating the states that must be avoided to
+maintain safety. We additionally prove that for many common problem
+formulations, warm-starting will result in exact solutions.We demonstrate our
+method on several illustrative examples with a double integrator, and also on a
+more practical example with a 10D quadcopter model that experiences changes in
+mass and disturbances and must update its safety guarantees accordingly. We
+compare our approach to standard reachability and a recently proposed
+"discounted" reachability method, and find for our examples that warm-starting
+is 1.6 times faster than standard and 6.2 times faster than (untuned)
+discounted reachability.
+
+

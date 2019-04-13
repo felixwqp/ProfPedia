@@ -1,0 +1,197 @@
+Contextual Motifs: Increasing the Utility of Motifs using Contextual
+  Data
+
+  Motifs are a powerful tool for analyzing physiological waveform data.
+Standard motif methods, however, ignore important contextual information (e.g.,
+what the patient was doing at the time the data were collected). We hypothesize
+that these additional contextual data could increase the utility of motifs.
+Thus, we propose an extension to motifs, contextual motifs, that incorporates
+context. Recognizing that, oftentimes, context may be unobserved or
+unavailable, we focus on methods to jointly infer motifs and context. Applied
+to both simulated and real physiological data, our proposed approach improves
+upon existing motif methods in terms of the discriminative utility of the
+discovered motifs. In particular, we discovered contextual motifs in continuous
+glucose monitor (CGM) data collected from patients with type 1 diabetes.
+Compared to their contextless counterparts, these contextual motifs led to
+better predictions of hypo- and hyperglycemic events. Our results suggest that
+even when inferred, context is useful in both a long- and short-term prediction
+horizon when processing and interpreting physiological waveform data.
+
+
+Learning Credible Models
+
+  In many settings, it is important that a model be capable of providing
+reasons for its predictions (i.e., the model must be interpretable). However,
+the model's reasoning may not conform with well-established knowledge. In such
+cases, while interpretable, the model lacks \textit{credibility}. In this work,
+we formally define credibility in the linear setting and focus on techniques
+for learning models that are both accurate and credible. In particular, we
+propose a regularization penalty, expert yielded estimates (EYE), that
+incorporates expert knowledge about well-known relationships among covariates
+and the outcome of interest. We give both theoretical and empirical results
+comparing our proposed method to several other regularization techniques.
+Across a range of settings, experiments on both synthetic and real data show
+that models learned using the EYE penalty are significantly more credible than
+those learned using other penalties. Applied to a large-scale patient risk
+stratification task, our proposed technique results in a model whose top
+features overlap significantly with known clinical risk factors, while still
+achieving good predictive performance.
+
+
+Learning the Probability of Activation in the Presence of Latent
+  Spreaders
+
+  When an infection spreads in a community, an individual's probability of
+becoming infected depends on both her susceptibility and exposure to the
+contagion through contact with others. While one often has knowledge regarding
+an individual's susceptibility, in many cases, whether or not an individual's
+contacts are contagious is unknown. We study the problem of predicting if an
+individual will adopt a contagion in the presence of multiple modes of
+infection (exposure/susceptibility) and latent neighbor influence. We present a
+generative probabilistic model and a variational inference method to learn the
+parameters of our model. Through a series of experiments on synthetic data, we
+measure the ability of the proposed model to identify latent spreaders, and
+predict the risk of infection. Applied to a real dataset of 20,000 hospital
+patients, we demonstrate the utility of our model in predicting the onset of a
+healthcare associated infection using patient room-sharing and nurse-sharing
+networks. Our model outperforms existing benchmarks and provides actionable
+insights for the design and implementation of targeted interventions to curb
+the spread of infection.
+
+
+The Advantage of Doubling: A Deep Reinforcement Learning Approach to
+  Studying the Double Team in the NBA
+
+  During the 2017 NBA playoffs, Celtics coach Brad Stevens was faced with a
+difficult decision when defending against the Cavaliers: "Do you double and
+risk giving up easy shots, or stay at home and do the best you can?" It's a
+tough call, but finding a good defensive strategy that effectively incorporates
+doubling can make all the difference in the NBA. In this paper, we analyze
+double teaming in the NBA, quantifying the trade-off between risk and reward.
+Using player trajectory data pertaining to over 643,000 possessions, we
+identified when the ball handler was double teamed. Given these data and the
+corresponding outcome (i.e., was the defense successful), we used deep
+reinforcement learning to estimate the quality of the defensive actions. We
+present qualitative and quantitative results summarizing our learned defensive
+strategy for defending. We show that our policy value estimates are predictive
+of points per possession and win percentage. Overall, the proposed framework
+represents a step toward a more comprehensive understanding of defensive
+strategies in the NBA.
+
+
+Learning to Exploit Invariances in Clinical Time-Series Data using
+  Sequence Transformer Networks
+
+  Recently, researchers have started applying convolutional neural networks
+(CNNs) with one-dimensional convolutions to clinical tasks involving
+time-series data. This is due, in part, to their computational efficiency,
+relative to recurrent neural networks and their ability to efficiently exploit
+certain temporal invariances, (e.g., phase invariance). However, it is
+well-established that clinical data may exhibit many other types of invariances
+(e.g., scaling). While preprocessing techniques, (e.g., dynamic time warping)
+may successfully transform and align inputs, their use often requires one to
+identify the types of invariances in advance. In contrast, we propose the use
+of Sequence Transformer Networks, an end-to-end trainable architecture that
+learns to identify and account for invariances in clinical time-series data.
+Applied to the task of predicting in-hospital mortality, our proposed approach
+achieves an improvement in the area under the receiver operating characteristic
+curve (AUROC) relative to a baseline CNN (AUROC=0.851 vs. AUROC=0.838). Our
+results suggest that a variety of valuable invariances can be learned directly
+from the data.
+
+
+Leveraging Clinical Time-Series Data for Prediction: A Cautionary Tale
+
+  In healthcare, patient risk stratification models are often learned using
+time-series data extracted from electronic health records. When extracting data
+for a clinical prediction task, several formulations exist, depending on how
+one chooses the time of prediction and the prediction horizon. In this paper,
+we show how the formulation can greatly impact both model performance and
+clinical utility. Leveraging a publicly available ICU dataset, we consider two
+clinical prediction tasks: in-hospital mortality, and hypokalemia. Through
+these case studies, we demonstrate the necessity of evaluating models using an
+outcome-independent reference point, since choosing the time of prediction
+relative to the event can result in unrealistic performance. Further, an
+outcome-independent scheme outperforms an outcome-dependent scheme on both
+tasks (In-Hospital Mortality AUROC .882 vs. .831; Serum Potassium: AUROC .829
+vs. .740) when evaluated on test sets that mimic real-world use.
+
+
+Clinically Meaningful Comparisons Over Time: An Approach to Measuring
+  Patient Similarity based on Subsequence Alignment
+
+  Longitudinal patient data has the potential to improve clinical risk
+stratification models for disease. However, chronic diseases that progress
+slowly over time are often heterogeneous in their clinical presentation.
+Patients may progress through disease stages at varying rates. This leads to
+pathophysiological misalignment over time, making it difficult to consistently
+compare patients in a clinically meaningful way. Furthermore, patients present
+clinically for the first time at different stages of disease. This eliminates
+the possibility of simply aligning patients based on their initial
+presentation. Finally, patient data may be sampled at different rates due to
+differences in schedules or missed visits. To address these challenges, we
+propose a robust measure of patient similarity based on subsequence alignment.
+Compared to global alignment techniques that do not account for
+pathophysiological misalignment, focusing on the most relevant subsequences
+allows for an accurate measure of similarity between patients. We demonstrate
+the utility of our approach in settings where longitudinal data, while useful,
+are limited and lack a clear temporal alignment for comparison. Applied to the
+task of stratifying patients for risk of progression to probable Alzheimer's
+Disease, our approach outperforms models that use only snapshot data (AUROC of
+0.839 vs. 0.812) and models that use global alignment techniques (AUROC of
+0.822). Our results support the hypothesis that patients' trajectories are
+useful for quantifying inter-patient similarities and that using subsequence
+matching and can help account for heterogeneity and misalignment in
+longitudinal data.
+
+
+Deep Multi-Output Forecasting: Learning to Accurately Predict Blood
+  Glucose Trajectories
+
+  In many forecasting applications, it is valuable to predict not only the
+value of a signal at a certain time point in the future, but also the values
+leading up to that point. This is especially true in clinical applications,
+where the future state of the patient can be less important than the patient's
+overall trajectory. This requires multi-step forecasting, a forecasting variant
+where one aims to predict multiple values in the future simultaneously.
+Standard methods to accomplish this can propagate error from prediction to
+prediction, reducing quality over the long term. In light of these challenges,
+we propose multi-output deep architectures for multi-step forecasting in which
+we explicitly model the distribution of future values of the signal over a
+prediction horizon. We apply these techniques to the challenging and clinically
+relevant task of blood glucose forecasting. Through a series of experiments on
+a real-world dataset consisting of 550K blood glucose measurements, we
+demonstrate the effectiveness of our proposed approaches in capturing the
+underlying signal dynamics. Compared to existing shallow and deep methods, we
+find that our proposed approaches improve performance individually and capture
+complementary information, leading to a large improvement over the baseline
+when combined (4.87 vs. 5.31 absolute percentage error (APE)). Overall, the
+results suggest the efficacy of our proposed approach in predicting blood
+glucose level and multi-step forecasting more generally.
+
+
+A Domain Guided CNN Architecture for Predicting Age from Structural
+  Brain Images
+
+  Given the wide success of convolutional neural networks (CNNs) applied to
+natural images, researchers have begun to apply them to neuroimaging data. To
+date, however, exploration of novel CNN architectures tailored to neuroimaging
+data has been limited. Several recent works fail to leverage the 3D structure
+of the brain, instead treating the brain as a set of independent 2D slices.
+Approaches that do utilize 3D convolutions rely on architectures developed for
+object recognition tasks in natural 2D images. Such architectures make
+assumptions about the input that may not hold for neuroimaging. For example,
+existing architectures assume that patterns in the brain exhibit translation
+invariance. However, a pattern in the brain may have different meaning
+depending on where in the brain it is located. There is a need to explore novel
+architectures that are tailored to brain images. We present two simple
+modifications to existing CNN architectures based on brain image structure.
+Applied to the task of brain age prediction, our network achieves a mean
+absolute error (MAE) of 1.4 years and trains 30% faster than a CNN baseline
+that achieves a MAE of 1.6 years. Our results suggest that lessons learned from
+developing models on natural images may not directly transfer to neuroimaging
+tasks. Instead, there remains a large space of unexplored questions regarding
+model development in this area, whose answers may differ from conventional
+wisdom.
+
+

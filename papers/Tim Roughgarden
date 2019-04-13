@@ -1,0 +1,773 @@
+Communication Complexity (for Algorithm Designers)
+
+  This document collects the lecture notes from my course "Communication
+Complexity (for Algorithm Designers),'' taught at Stanford in the winter
+quarter of 2015. The two primary goals of the course are: 1. Learn several
+canonical problems that have proved the most useful for proving lower bounds
+(Disjointness, Index, Gap-Hamming, etc.). 2. Learn how to reduce lower bounds
+for fundamental algorithmic problems to communication complexity lower bounds.
+Along the way, we'll also: 3. Get exposure to lots of cool computational models
+and some famous results about them --- data streams and linear sketches,
+compressive sensing, space-query time trade-offs in data structures,
+sublinear-time algorithms, and the extension complexity of linear programs. 4.
+Scratch the surface of techniques for proving communication complexity lower
+bounds (fooling sets, corruption bounds, etc.).
+
+
+Beyond Worst-Case Analysis
+
+  In the worst-case analysis of algorithms, the overall performance of an
+algorithm is summarized by its worst performance on any input. This approach
+has countless success stories, but there are also important computational
+problems --- like linear programming, clustering, online caching, and neural
+network training --- where the worst-case analysis framework does not provide
+any helpful advice on how to solve the problem. This article covers a number of
+modeling methods for going beyond worst-case analysis and articulating which
+inputs are the most relevant.
+
+
+An approximately truthful-in-expectation mechanism for combinatorial
+  auctions using value queries
+
+  This manuscript presents an alternative implementation of the
+truthful-in-expectation mechanism of Dughmi, Roughgarden and Yan for
+combinatorial auctions with weighted-matroid-rank-sum valuations. The new
+implementation uses only value queries and is approximately
+truthful-in-expectation, in the sense that by reporting truthfully each agent
+maximizes his utility within a multiplicative 1-o(1) factor. It still provides
+an optimal (1-1/e-o(1))-approximation in social welfare. We achieve this by
+first presenting an approximately maximal-in-distributional-range allocation
+rule and then showing a black-box transformation to an approximately
+truthful-in-expectation mechanism.
+
+
+On the Computational Power of Online Gradient Descent
+
+  We prove that the evolution of weight vectors in online gradient descent can
+encode arbitrary polynomial-space computations, even in very simple learning
+settings. Our results imply that, under weak complexity-theoretic assumptions,
+it is impossible to reason efficiently about the fine-grained behavior of
+online gradient descent.
+
+
+Optimal Mechansim Design and Money Burning
+
+  Mechanism design is now a standard tool in computer science for aligning the
+incentives of self-interested agents with the objectives of a system designer.
+There is, however, a fundamental disconnect between the traditional application
+domains of mechanism design (such as auctions) and those arising in computer
+science (such as networks): while monetary transfers (i.e., payments) are
+essential for most of the known positive results in mechanism design, they are
+undesirable or even technologically infeasible in many computer systems.
+Classical impossibility results imply that the reach of mechanisms without
+transfers is severely limited.
+  Computer systems typically do have the ability to reduce service
+quality--routing systems can drop or delay traffic, scheduling protocols can
+delay the release of jobs, and computational payment schemes can require
+computational payments from users (e.g., in spam-fighting systems). Service
+degradation is tantamount to requiring that users burn money}, and such
+``payments'' can be used to influence the preferences of the agents at a cost
+of degrading the social surplus.
+  We develop a framework for the design and analysis of money-burning
+mechanisms to maximize the residual surplus--the total value of the chosen
+outcome minus the payments required.
+
+
+Optimal Platform Design
+
+  An auction house cannot generally provide the optimal auction technology to
+every client. Instead it provides one or several auction technologies, and
+clients select the most appropriate one. For example, eBay provides ascending
+auctions and "buy-it-now" pricing. For each client the offered technology may
+not be optimal, but it would be too costly for clients to create their own. We
+call these mechanisms, which emphasize generality rather than optimality,
+platform mechanisms. A platform mechanism will be adopted by a client if its
+performance exceeds that of the client's outside option, e.g., hiring (at a
+cost) a consultant to design the optimal mechanism. We ask two related
+questions. First, for what costs of the outside option will the platform be
+universally adopted? Second, what is the structure of good platform mechanisms?
+We answer these questions using a novel prior-free analysis framework in which
+we seek mechanisms that are approximately optimal for every prior.
+
+
+Complexity Theory, Game Theory, and Economics
+
+  This document collects the lecture notes from my mini-course "Complexity
+Theory, Game Theory, and Economics," taught at the Bellairs Research Institute
+of McGill University, Holetown, Barbados, February 19--23, 2017, as the 29th
+McGill Invitational Workshop on Computational Complexity.
+  The goal of this mini-course is twofold: (i) to explain how complexity theory
+has helped illuminate several barriers in economics and game theory; and (ii)
+to illustrate how game-theoretic questions have led to new and interesting
+complexity theory, including recent several breakthroughs. It consists of two
+five-lecture sequences: the Solar Lectures, focusing on the communication and
+computational complexity of computing equilibria; and the Lunar Lectures,
+focusing on applications of complexity theory in game theory and economics. No
+background in game theory is assumed.
+
+
+Approximately Optimal Mechanism Design
+
+  Optimal mechanism design enjoys a beautiful and well-developed theory, and
+also a number of killer applications. Rules of thumb produced by the field
+influence everything from how governments sell wireless spectrum licenses to
+how the major search engines auction off online advertising. There are,
+however, some basic problems for which the traditional optimal mechanism design
+approach is ill-suited---either because it makes overly strong assumptions, or
+because it advocates overly complex designs. This survey reviews several common
+issues with optimal mechanisms, including exorbitant communication,
+computation, and informational requirements; and it presents several examples
+demonstrating that passing to the relaxed goal of an approximately optimal
+mechanism allows us to reason about fundamental questions that seem out of
+reach of the traditional theory.
+
+
+Approximately Efficient Cost-Sharing Mechanisms
+
+  We make three different types of contributions to cost-sharing: First, we
+identify several new classes of combinatorial cost functions that admit
+incentive-compatible mechanisms achieving both a constant-factor approximation
+of budget-balance and a polylogarithmic approximation of the social cost
+formulation of efficiency. Second, we prove a new, optimal lower bound on the
+approximate efficiency of every budget-balanced Moulin mechanism for Steiner
+tree or SSRoB cost functions. This lower bound exposes a latent approximation
+hierarchy among different cost-sharing problems. Third, we show that weakening
+the definition of incentive-compatibility to strategyproofness can permit
+exponentially more efficient approximately budget-balanced mechanisms, in
+particular for set cover cost-sharing problems.
+
+
+Near-Optimal Multi-Unit Auctions with Ordered Bidders
+
+  We construct prior-free auctions with constant-factor approximation
+guarantees with ordered bidders, in both unlimited and limited supply settings.
+We compare the expected revenue of our auctions on a bid vector to the monotone
+price benchmark, the maximum revenue that can be obtained from a bid vector
+using supply-respecting prices that are nonincreasing in the bidder ordering
+and bounded above by the second-highest bid. As a consequence, our auctions are
+simultaneously near-optimal in a wide range of Bayesian multi-unit
+environments.
+
+
+Public projects, Boolean functions and the borders of Border's theorem
+
+  Border's theorem gives an intuitive linear characterization of the feasible
+interim allocation rules of a Bayesian single-item environment, and it has
+several applications in economic and algorithmic mechanism design. All known
+generalizations of Border's theorem either restrict attention to relatively
+simple settings, or resort to approximation. This paper identifies a
+complexity-theoretic barrier that indicates, assuming standard complexity class
+separations, that Border's theorem cannot be extended significantly beyond the
+state-of-the-art. We also identify a surprisingly tight connection between
+Myerson's optimal auction theory, when applied to public project settings, and
+some fundamental results in the analysis of Boolean functions.
+
+
+The Price of Anarchy in Large Games
+
+  Game-theoretic models relevant for computer science applications usually
+feature a large number of players. The goal of this paper is to develop an
+analytical framework for bounding the price of anarchy in such models. We
+demonstrate the wide applicability of our framework through instantiations for
+several well-studied models, including simultaneous single-item auctions,
+greedy combinatorial auctions, and routing games. In all cases, we identify
+conditions under which the POA of large games is much better than that of
+worst-case instances. Our results also give new senses in which simple auctions
+can perform almost as well as optimal ones in realistic settings.
+
+
+Ironing in the Dark
+
+  This paper presents the first polynomial-time algorithm for position and
+matroid auction environments that learns, from samples from an unknown bounded
+valuation distribution, an auction with expected revenue arbitrarily close to
+the maximum possible. In contrast to most previous work, our results apply to
+arbitrary (not necessarily regular) distributions and the strongest possible
+benchmark, the Myerson-optimal auction. Learning a near-optimal auction for an
+irregular distribution is technically challenging because it requires learning
+the appropriate "ironed intervals," a delicate global property of the
+distribution.
+
+
+Privately Solving Linear Programs
+
+  In this paper, we initiate the systematic study of solving linear programs
+under differential privacy. The first step is simply to define the problem: to
+this end, we introduce several natural classes of private linear programs that
+capture different ways sensitive data can be incorporated into a linear
+program. For each class of linear programs we give an efficient, differentially
+private solver based on the multiplicative weights framework, or we give an
+impossibility result.
+
+
+Pricing Multi-Unit Markets
+
+  We study the power and limitations of posted prices in multi-unit markets,
+where agents arrive sequentially in an arbitrary order. We prove upper and
+lower bounds on the largest fraction of the optimal social welfare that can be
+guaranteed with posted prices, under a range of assumptions about the
+designer's information and agents' valuations. Our results provide insights
+about the relative power of uniform and non-uniform prices, the relative
+difficulty of different valuation classes, and the implications of different
+informational assumptions. Among other results, we prove constant-factor
+guarantees for agents with (symmetric) subadditive valuations, even in an
+incomplete-information setting and with uniform prices.
+
+
+Communication Complexity of Discrete Fair Division
+
+  We initiate the study of the communication complexity of fair division with
+indivisible goods. We focus on some of the most well-studied fairness notions
+(envy-freeness, proportionality, and approximations thereof) and valuation
+classes (submodular, subadditive and unrestricted). Within these parameters,
+our results completely resolve whether the communication complexity of
+computing a fair allocation (or determining that none exist) is polynomial or
+exponential (in the number of goods), for every combination of fairness notion,
+valuation class, and number of players, for both deterministic and randomized
+protocols.
+
+
+Tight Error Bounds for Structured Prediction
+
+  Structured prediction tasks in machine learning involve the simultaneous
+prediction of multiple labels. This is typically done by maximizing a score
+function on the space of labels, which decomposes as a sum of pairwise
+elements, each depending on two specific labels. Intuitively, the more pairwise
+terms are used, the better the expected accuracy. However, there is currently
+no theoretical account of this intuition. This paper takes a significant step
+in this direction.
+  We formulate the problem as classifying the vertices of a known graph
+$G=(V,E)$, where the vertices and edges of the graph are labelled and correlate
+semi-randomly with the ground truth. We show that the prospects for achieving
+low expected Hamming error depend on the structure of the graph $G$ in
+interesting ways. For example, if $G$ is a very poor expander, like a path,
+then large expected Hamming error is inevitable. Our main positive result shows
+that, for a wide class of graphs including 2D grid graphs common in machine
+vision applications, there is a polynomial-time algorithm with small and
+information-theoretically near-optimal expected error. Our results provide a
+first step toward a theoretical justification for the empirical success of the
+efficient approximate inference algorithms that are used for structured
+prediction in models where exact inference is intractable.
+
+
+Approximately Optimal Mechanism Design: Motivation, Examples, and
+  Lessons Learned
+
+  Optimal mechanism design enjoys a beautiful and well-developed theory, and
+also a number of killer applications. Rules of thumb produced by the field
+influence everything from how governments sell wireless spectrum licenses to
+how the major search engines auction off online advertising. There are,
+however, some basic problems for which the traditional optimal mechanism design
+approach is ill-suited --- either because it makes overly strong assumptions,
+or because it advocates overly complex designs. The thesis of this paper is
+that approximately optimal mechanisms allow us to reason about fundamental
+questions that seem out of reach of the traditional theory.
+  This survey has three main parts. The first part describes the approximately
+optimal mechanism design paradigm --- how it works, and what we aim to learn by
+applying it. The second and third parts of the survey cover two case studies,
+where we instantiate the general design paradigm to investigate two basic
+questions. In the first example, we consider revenue maximization in a
+single-item auction with heterogeneous bidders. Our goal is to understand if
+complexity --- in the sense of detailed distributional knowledge --- is an
+essential feature of good auctions for this problem, or alternatively if there
+are simpler auctions that are near-optimal. The second example considers
+welfare maximization with multiple items. Our goal here is similar in spirit:
+when is complexity --- in the form of high-dimensional bid spaces --- an
+essential feature of every auction that guarantees reasonable welfare? Are
+there interesting cases where low-dimensional bid spaces suffice?
+
+
+Interactive Privacy via the Median Mechanism
+
+  We define a new interactive differentially private mechanism -- the median
+mechanism -- for answering arbitrary predicate queries that arrive online.
+Relative to fixed accuracy and privacy constraints, this mechanism can answer
+exponentially more queries than the previously best known interactive privacy
+mechanism (the Laplace mechanism, which independently perturbs each query
+result). Our guarantee is almost the best possible, even for non-interactive
+privacy mechanisms. Conceptually, the median mechanism is the first privacy
+mechanism capable of identifying and exploiting correlations among queries in
+an interactive setting.
+  We also give an efficient implementation of the median mechanism, with
+running time polynomial in the number of queries, the database size, and the
+domain size. This efficient implementation guarantees privacy for all input
+databases, and accurate query results for almost all input databases. The
+dependence of the privacy on the number of queries in this mechanism improves
+over that of the best previously known efficient mechanism by a
+super-polynomial factor, even in the non-interactive setting.
+
+
+A PAC Approach to Application-Specific Algorithm Selection
+
+  The best algorithm for a computational problem generally depends on the
+"relevant inputs," a concept that depends on the application domain and often
+defies formal articulation. While there is a large literature on empirical
+approaches to selecting the best algorithm for a given application domain,
+there has been surprisingly little theoretical analysis of the problem.
+  This paper adapts concepts from statistical and online learning theory to
+reason about application-specific algorithm selection. Our models capture
+several state-of-the-art empirical and theoretical approaches to the problem,
+ranging from self-improving algorithms to empirical performance models, and our
+results identify conditions under which these approaches are guaranteed to
+perform well. We present one framework that models algorithm selection as a
+statistical learning problem, and our work here shows that dimension notions
+from statistical learning theory, historically used to measure the complexity
+of classes of binary- and real-valued functions, are relevant in a much broader
+algorithmic context. We also study the online version of the algorithm
+selection problem, and give possibility and impossibility results for the
+existence of no-regret learning algorithms.
+
+
+Decompositions of Triangle-Dense Graphs
+
+  High triangle density -- the graph property stating that a constant fraction
+of two-hop paths belong to a triangle -- is a common signature of social
+networks. This paper studies triangle-dense graphs from a structural
+perspective. We prove constructively that significant portions of a
+triangle-dense graph are contained in a disjoint union of dense, radius 2
+subgraphs. This result quantifies the extent to which triangle-dense graphs
+resemble unions of cliques. We also show that our algorithm recovers planted
+clusterings in approximation-stable k-median instances.
+
+
+The Pseudo-Dimension of Near-Optimal Auctions
+
+  This paper develops a general approach, rooted in statistical learning
+theory, to learning an approximately revenue-maximizing auction from data. We
+introduce $t$-level auctions to interpolate between simple auctions, such as
+welfare maximization with reserve prices, and optimal auctions, thereby
+balancing the competing demands of expressivity and simplicity. We prove that
+such auctions have small representation error, in the sense that for every
+product distribution $F$ over bidders' valuations, there exists a $t$-level
+auction with small $t$ and expected revenue close to optimal. We show that the
+set of $t$-level auctions has modest pseudo-dimension (for polynomial $t$) and
+therefore leads to small learning error. One consequence of our results is
+that, in arbitrary single-parameter settings, one can learn a mechanism with
+expected revenue arbitrarily close to optimal from a polynomial number of
+samples.
+
+
+Learning Simple Auctions
+
+  We present a general framework for proving polynomial sample complexity
+bounds for the problem of learning from samples the best auction in a class of
+"simple" auctions. Our framework captures all of the most prominent examples of
+"simple" auctions, including anonymous and non-anonymous item and bundle
+pricings, with either a single or multiple buyers. The technique we propose is
+to break the analysis of auctions into two natural pieces. First, one shows
+that the set of allocation rules have large amounts of structure; second,
+fixing an allocation on a sample, one shows that the set of auctions agreeing
+with this allocation on that sample have revenue functions with low
+dimensionality. Our results effectively imply that whenever it's possible to
+compute a near-optimal simple auction with a known prior, it is also possible
+to compute such an auction with an unknown prior (given a polynomial number of
+samples).
+
+
+The Price of Anarchy in Auctions
+
+  This survey outlines a general and modular theory for proving approximation
+guarantees for equilibria of auctions in complex settings. This theory
+complements traditional economic techniques, which generally focus on exact and
+optimal solutions and are accordingly limited to relatively stylized settings.
+  We highlight three user-friendly analytical tools: smoothness-type
+inequalities, which immediately yield approximation guarantees for many auction
+formats of interest in the special case of complete information and
+deterministic strategies; extension theorems, which extend such guarantees to
+randomized strategies, no-regret learning outcomes, and incomplete-information
+settings; and composition theorems, which extend such guarantees from simpler
+to more complex auctions. Combining these tools yields tight worst-case
+approximation guarantees for the equilibria of many widely-used auction
+formats.
+
+
+When Are Welfare Guarantees Robust?
+
+  Computational and economic results suggest that social welfare maximization
+and combinatorial auction design are much easier when bidders' valuations
+satisfy the "gross substitutes" condition. The goal of this paper is to
+evaluate rigorously the folklore belief that the main take-aways from these
+results remain valid in settings where the gross substitutes condition holds
+only approximately. We show that for valuations that pointwise approximate a
+gross substitutes valuation (in fact even a linear valuation), optimal social
+welfare cannot be approximated to within a subpolynomial factor and demand
+oracles cannot be simulated using a subexponential number of value queries. We
+then provide several positive results by imposing additional structure on the
+valuations (beyond gross substitutes), using a more stringent notion of
+approximation, and/or using more powerful oracle access to the valuations. For
+example, we prove that the performance of the greedy algorithm degrades
+gracefully for near-linear valuations with approximately decreasing marginal
+values, that with demand queries, approximate welfare guarantees for XOS
+valuations degrade gracefully for valuations that are pointwise close to XOS,
+and that the performance of the Kelso-Crawford auction degrades gracefully for
+valuations that are close to various subclasses of gross substitutes
+valuations.
+
+
+Online Prediction with Selfish Experts
+
+  We consider the problem of binary prediction with expert advice in settings
+where experts have agency and seek to maximize their credibility. This paper
+makes three main contributions. First, it defines a model to reason formally
+about settings with selfish experts, and demonstrates that "incentive
+compatible" (IC) algorithms are closely related to the design of proper scoring
+rules. Designing a good IC algorithm is easy if the designer's loss function is
+quadratic, but for other loss functions, novel techniques are required. Second,
+we design IC algorithms with good performance guarantees for the absolute loss
+function. Third, we give a formal separation between the power of online
+prediction with selfish experts and online prediction with honest experts by
+proving lower bounds for both IC and non-IC algorithms. In particular, with
+selfish experts and the absolute loss function, there is no (randomized)
+algorithm for online prediction-IC or otherwise-with asymptotically vanishing
+regret.
+
+
+Stability and Recovery for Independence Systems
+
+  Two genres of heuristics that are frequently reported to perform much better
+on "real-world" instances than in the worst case are greedy algorithms and
+local search algorithms. In this paper, we systematically study these two types
+of algorithms for the problem of maximizing a monotone submodular set function
+subject to downward-closed feasibility constraints. We consider
+perturbation-stable instances, in the sense of Bilu and Linial, and precisely
+identify the stability threshold beyond which these algorithms are guaranteed
+to recover the optimal solution. Byproducts of our work include the first
+definition of perturbation-stability for non-additive objective functions, and
+a resolution of the worst-case approximation guarantee of local search in
+p-extendible systems.
+
+
+Finding Cliques in Social Networks: A New Distribution-Free Model
+
+  We propose a new distribution-free model of social networks. Our definitions
+are motivated by one of the most universal signatures of social networks,
+triadic closure---the property that pairs of vertices with common neighbors
+tend to be adjacent. Our most basic definition is that of a "$c$-closed" graph,
+where for every pair of vertices $u,v$ with at least $c$ common neighbors, $u$
+and $v$ are adjacent. We study the classic problem of enumerating all maximal
+cliques, an important task in social network analysis. We prove that this
+problem is fixed-parameter tractable with respect to $c$ on $c$-closed graphs.
+Our results carry over to "weakly $c$-closed graphs", which only require a
+vertex deletion ordering that avoids pairs of non-adjacent vertices with $c$
+common neighbors. Numerical experiments show that well-studied social networks
+tend to be weakly $c$-closed for modest values of $c$.
+
+
+Simple versus Optimal Contracts
+
+  We consider the classic principal-agent model of contract theory, in which a
+principal designs an outcome-dependent compensation scheme to incentivize an
+agent to take a costly and unobservable action. When all of the model
+parameters---including the full distribution over principal rewards resulting
+from each agent action---are known to the designer, an optimal contract can in
+principle be computed by linear programming. In addition to their demanding
+informational requirements, such optimal contracts are often complex and
+unintuitive, and do not resemble contracts used in practice.
+  This paper examines contract theory through the theoretical computer science
+lens, with the goal of developing novel theory to explain and justify the
+prevalence of relatively simple contracts, such as linear (pure commission)
+contracts. First, we consider the case where the principal knows only the first
+moment of each action's reward distribution, and we prove that linear contracts
+are guaranteed to be worst-case optimal, ranging over all reward distributions
+consistent with the given moments. Second, we study linear contracts from a
+worst-case approximation perspective, and prove several tight parameterized
+approximation bounds.
+
+
+Universally Utility-Maximizing Privacy Mechanisms
+
+  A mechanism for releasing information about a statistical database with
+sensitive data must resolve a trade-off between utility and privacy. Privacy
+can be rigorously quantified using the framework of {\em differential privacy},
+which requires that a mechanism's output distribution is nearly the same
+whether or not a given database row is included or excluded. The goal of this
+paper is strong and general utility guarantees, subject to differential
+privacy.
+  We pursue mechanisms that guarantee near-optimal utility to every potential
+user, independent of its side information (modeled as a prior distribution over
+query results) and preferences (modeled via a loss function).
+  Our main result is: for each fixed count query and differential privacy
+level, there is a {\em geometric mechanism} $M^*$ -- a discrete variant of the
+simple and well-studied Laplace mechanism -- that is {\em simultaneously
+expected loss-minimizing} for every possible user, subject to the differential
+privacy constraint. This is an extremely strong utility guarantee: {\em every}
+potential user $u$, no matter what its side information and preferences,
+derives as much utility from $M^*$ as from interacting with a differentially
+private mechanism $M_u$ that is optimally tailored to $u$.
+
+
+From Convex Optimization to Randomized Mechanisms: Toward Optimal
+  Combinatorial Auctions
+
+  We design an expected polynomial-time, truthful-in-expectation,
+(1-1/e)-approximation mechanism for welfare maximization in a fundamental class
+of combinatorial auctions. Our results apply to bidders with valuations that
+are m matroid rank sums (MRS), which encompass most concrete examples of
+submodular functions studied in this context, including coverage functions,
+matroid weighted-rank functions, and convex combinations thereof. Our
+approximation factor is the best possible, even for known and explicitly given
+coverage valuations, assuming P != NP. Ours is the first
+truthful-in-expectation and polynomial-time mechanism to achieve a
+constant-factor approximation for an NP-hard welfare maximization problem in
+combinatorial auctions with heterogeneous goods and restricted valuations.
+  Our mechanism is an instantiation of a new framework for designing
+approximation mechanisms based on randomized rounding algorithms. A typical
+such algorithm first optimizes over a fractional relaxation of the original
+problem, and then randomly rounds the fractional solution to an integral one.
+With rare exceptions, such algorithms cannot be converted into truthful
+mechanisms. The high-level idea of our mechanism design framework is to
+optimize directly over the (random) output of the rounding algorithm, rather
+than over the input to the rounding algorithm. This approach leads to
+truthful-in-expectation mechanisms, and these mechanisms can be implemented
+efficiently when the corresponding objective function is concave. For bidders
+with MRS valuations, we give a novel randomized rounding algorithm that leads
+to both a concave objective function and a (1-1/e)-approximation of the optimal
+welfare.
+
+
+Making the Most of Your Samples
+
+  We study the problem of setting a price for a potential buyer with a
+valuation drawn from an unknown distribution $D$. The seller has "data"' about
+$D$ in the form of $m \ge 1$ i.i.d. samples, and the algorithmic challenge is
+to use these samples to obtain expected revenue as close as possible to what
+could be achieved with advance knowledge of $D$.
+  Our first set of results quantifies the number of samples $m$ that are
+necessary and sufficient to obtain a $(1-\epsilon)$-approximation. For example,
+for an unknown distribution that satisfies the monotone hazard rate (MHR)
+condition, we prove that $\tilde{\Theta}(\epsilon^{-3/2})$ samples are
+necessary and sufficient. Remarkably, this is fewer samples than is necessary
+to accurately estimate the expected revenue obtained by even a single reserve
+price. We also prove essentially tight sample complexity bounds for regular
+distributions, bounded-support distributions, and a wide class of irregular
+distributions. Our lower bound approach borrows tools from differential privacy
+and information theory, and we believe it could find further applications in
+auction theory.
+  Our second set of results considers the single-sample case. For regular
+distributions, we prove that no pricing strategy is better than
+$\tfrac{1}{2}$-approximate, and this is optimal by the Bulow-Klemperer theorem.
+For MHR distributions, we show how to do better: we give a simple pricing
+strategy that guarantees expected revenue at least $0.589$ times the maximum
+possible. We also prove that no pricing strategy achieves an approximation
+guarantee better than $\frac{e}{4} \approx .68$.
+
+
+Almost Envy-Freeness with General Valuations
+
+  The goal of fair division is to distribute resources among competing players
+in a "fair" way. Envy-freeness is the most extensively studied fairness notion
+in fair division. Envy-free allocations do not always exist with indivisible
+goods, motivating the study of relaxed versions of envy-freeness. We study the
+envy-freeness up to any good (EFX) property, which states that no player
+prefers the bundle of another player following the removal of any single good,
+and prove the first general results about this property. We use the leximin
+solution to show existence of EFX allocations in several contexts, sometimes in
+conjunction with Pareto optimality. For two players with valuations obeying a
+mild assumption, one of these results provides stronger guarantees than the
+currently deployed algorithm on Spliddit, a popular fair division website.
+Unfortunately, finding the leximin solution can require exponential time. We
+show that this is necessary by proving an exponential lower bound on the number
+of value queries needed to identify an EFX allocation, even for two players
+with identical valuations. We consider both additive and more general
+valuations, and our work suggests that there is a rich landscape of problems to
+explore in the fair division of indivisible goods with different classes of
+player valuations.
+
+
+Optimal Algorithms for Continuous Non-monotone Submodular and
+  DR-Submodular Maximization
+
+  In this paper we study the fundamental problems of maximizing a continuous
+non-monotone submodular function over the hypercube, both with and without
+coordinate-wise concavity. This family of optimization problems has several
+applications in machine learning, economics, and communication systems. Our
+main result is the first $\frac{1}{2}$-approximation algorithm for continuous
+submodular function maximization; this approximation factor of $\frac{1}{2}$ is
+the best possible for algorithms that only query the objective function at
+polynomially many points. For the special case of DR-submodular maximization,
+i.e. when the submodular functions is also coordinate wise concave along all
+coordinates, we provide a different $\frac{1}{2}$-approximation algorithm that
+runs in quasilinear time. Both of these results improve upon prior work [Bian
+et al, 2017, Soma and Yoshida, 2017].
+  Our first algorithm uses novel ideas such as reducing the guaranteed
+approximation problem to analyzing a zero-sum game for each coordinate, and
+incorporates the geometry of this zero-sum game to fix the value at this
+coordinate. Our second algorithm exploits coordinate-wise concavity to identify
+a monotone equilibrium condition sufficient for getting the required
+approximation guarantee, and hunts for the equilibrium point using binary
+search. We further run experiments to verify the performance of our proposed
+algorithms in related machine learning applications.
+
+
+An Optimal Algorithm for Online Unconstrained Submodular Maximization
+
+  We consider a basic problem at the interface of two fundamental fields:
+submodular optimization and online learning. In the online unconstrained
+submodular maximization (online USM) problem, there is a universe
+$[n]=\{1,2,...,n\}$ and a sequence of $T$ nonnegative (not necessarily
+monotone) submodular functions arrive over time. The goal is to design a
+computationally efficient online algorithm, which chooses a subset of $[n]$ at
+each time step as a function only of the past, such that the accumulated value
+of the chosen subsets is as close as possible to the maximum total value of a
+fixed subset in hindsight. Our main result is a polynomial-time no-$1/2$-regret
+algorithm for this problem, meaning that for every sequence of nonnegative
+submodular functions, the algorithm's expected total value is at least $1/2$
+times that of the best subset in hindsight, up to an error term sublinear in
+$T$. The factor of $1/2$ cannot be improved upon by any polynomial-time online
+algorithm when the submodular functions are presented as value oracles.
+Previous work on the offline problem implies that picking a subset uniformly at
+random in each time step achieves zero $1/4$-regret.
+  A byproduct of our techniques is an explicit subroutine for the two-experts
+problem that has an unusually strong regret guarantee: the total value of its
+choices is comparable to twice the total value of either expert on rounds it
+did not pick that expert. This subroutine may be of independent interest.
+
+
+Combinatorial Auctions with Restricted Complements
+
+  Complements between goods - where one good takes on added value in the
+presence of another - have been a thorn in the side of algorithmic mechanism
+designers. On the one hand, complements are common in the standard motivating
+applications for combinatorial auctions, like spectrum license auctions. On the
+other, welfare maximization in the presence of complements is notoriously
+difficult, and this intractability has stymied theoretical progress in the
+area. For example, there are no known positive results for combinatorial
+auctions in which bidder valuations are multi-parameter and
+non-complement-free, other than the relatively weak results known for general
+valuations.
+  To make inroads on the problem of combinatorial auction design in the
+presence of complements, we propose a model for valuations with complements
+that is parameterized by the "size" of the complements. A valuation in our
+model is represented succinctly by a weighted hypergraph, where the size of the
+hyper-edges corresponds to degree of complementarity. Our model permits a
+variety of computationally efficient queries, and non-trivial
+welfare-maximization algorithms and mechanisms.
+  We design the following polynomial-time approximation algorithms and truthful
+mechanisms for welfare maximization with bidders with hypergraph valuations.
+  1- For bidders whose valuations correspond to subgraphs of a known graph that
+is planar (or more generally, excludes a fixed minor), we give a truthful and
+(1+epsilon)-approximate mechanism.
+  2- We give a polynomial-time, r-approximation algorithm for welfare
+maximization with hypergraph-r valuations. Our algorithm randomly rounds a
+compact linear programming relaxation of the problem.
+  3- We design a different approximation algorithm and use it to give a
+polynomial-time, truthful-in-expectation mechanism that has an approximation
+factor of O(log^r m).
+
+
+Private Matchings and Allocations
+
+  We consider a private variant of the classical allocation problem: given k
+goods and n agents with individual, private valuation functions over bundles of
+goods, how can we partition the goods amongst the agents to maximize social
+welfare? An important special case is when each agent desires at most one good,
+and specifies her (private) value for each good: in this case, the problem is
+exactly the maximum-weight matching problem in a bipartite graph.
+  Private matching and allocation problems have not been considered in the
+differential privacy literature, and for good reason: they are plainly
+impossible to solve under differential privacy. Informally, the allocation must
+match agents to their preferred goods in order to maximize social welfare, but
+this preference is exactly what agents wish to hide. Therefore, we consider the
+problem under the relaxed constraint of joint differential privacy: for any
+agent i, no coalition of agents excluding i should be able to learn about the
+valuation function of agent i. In this setting, the full allocation is no
+longer published---instead, each agent is told what good to get. We first show
+that with a small number of identical copies of each good, it is possible to
+efficiently and accurately solve the maximum weight matching problem while
+guaranteeing joint differential privacy. We then consider the more general
+allocation problem, when bidder valuations satisfy the gross substitutes
+condition. Finally, we prove that the allocation problem cannot be solved to
+non-trivial accuracy under joint differential privacy without requiring
+multiple copies of each type of good.
+
+
+The Sample Complexity of Revenue Maximization
+
+  In the design and analysis of revenue-maximizing auctions, auction
+performance is typically measured with respect to a prior distribution over
+inputs. The most obvious source for such a distribution is past data. The goal
+is to understand how much data is necessary and sufficient to guarantee
+near-optimal expected revenue.
+  Our basic model is a single-item auction in which bidders' valuations are
+drawn independently from unknown and non-identical distributions. The seller is
+given $m$ samples from each of these distributions "for free" and chooses an
+auction to run on a fresh sample. How large does m need to be, as a function of
+the number k of bidders and eps > 0, so that a (1 - eps)-approximation of the
+optimal revenue is achievable?
+  We prove that, under standard tail conditions on the underlying
+distributions, m = poly(k, 1/eps) samples are necessary and sufficient. Our
+lower bound stands in contrast to many recent results on simple and
+prior-independent auctions and fundamentally involves the interplay between
+bidder competition, non-identical distributions, and a very close (but still
+constant) approximation of the optimal revenue. It effectively shows that the
+only way to achieve a sufficiently good constant approximation of the optimal
+revenue is through a detailed understanding of bidders' valuation
+distributions. Our upper bound is constructive and applies in particular to a
+variant of the empirical Myerson auction, the natural auction that runs the
+revenue-maximizing auction with respect to the empirical distributions of the
+samples.
+  Our sample complexity lower bound depends on the set of allowable
+distributions, and to capture this we introduce alpha-strongly regular
+distributions, which interpolate between the well-studied classes of regular
+(alpha = 0) and MHR (alpha = 1) distributions. We give evidence that this
+definition is of independent interest.
+
+
+Approximately Efficient Two-Sided Combinatorial Auctions
+
+  Mechanism design for one-sided markets has been investigated for several
+decades in economics and in computer science. More recently, there has been an
+increased attention on mechanisms for two-sided markets, in which buyers and
+sellers act strategically. For two-sided markets, an impossibility result of
+Myerson and Satterthwaite states that no mechanism can simultaneously satisfy
+individual rationality (IR), incentive compatibility (IC), strong
+budget-balance (SBB), and be efficient. On the other hand, important
+applications to web advertisement, stock exchange, and frequency spectrum
+allocation, require us to consider two-sided combinatorial auctions in which
+buyers have preferences on subsets of items, and sellers may offer multiple
+heterogeneous items. No efficient mechanism was known so far for such two-sided
+combinatorial markets. This work provides the first IR, IC and SBB mechanisms
+that provides an O(1)-approximation to the optimal social welfare for two-sided
+markets. An initial construction yields such a mechanism, but exposes a
+conceptual problem in the traditional SBB notion. This leads us to define the
+stronger notion of direct trade strong budget balance (DSBB). We then proceed
+to design mechanisms that are IR, IC, DSBB, and again provide an
+O(1)-approximation to the optimal social welfare. Our mechanisms work for any
+number of buyers with XOS valuations - a class in between submodular and
+subadditive functions - and any number of sellers. We provide a mechanism that
+is dominant strategy incentive compatible (DSIC) if the sellers each have one
+item for sale, and one that is bayesian incentive compatible (BIC) if sellers
+hold multiple items and have additive valuations over them. Finally, we present
+a DSIC mechanism for the case that the valuation functions of all buyers and
+sellers are additive.
+
+
+The idemetric property: when most distances are (almost) the same
+
+  We introduce the \emph{idemetric} property, which formalises the idea that
+most nodes in a graph have similar distances between them, and which turns out
+to be quite standard amongst small-world network models. Modulo reasonable
+sparsity assumptions, we are then able to show that a strong form of
+idemetricity is actually equivalent to a very weak expander condition (PUMP).
+This provides a direct way of providing short proofs that small-world network
+models such as the Watts-Strogatz model are strongly idemetric (for a wide
+range of parameters), and also provides further evidence that being idemetric
+is a common property.
+  We then consider how satisfaction of the idemetric property is relevant to
+algorithm design. For idemetric graphs we observe, for example, that a single
+breadth-first search provides a solution to the all-pairs shortest paths
+problem, so long as one is prepared to accept paths which are of stretch close
+to 2 with high probability. Since we are able to show that Kleinberg's model is
+idemetric, these results contrast nicely with the well known negative results
+of Kleinberg concerning efficient decentralised algorithms for finding short
+paths: for precisely the same model as Kleinberg's negative results hold, we
+are able to show that very efficient (and decentralised) algorithms exist if
+one allows for reasonable preprocessing. For deterministic distributed routing
+algorithms we are also able to obtain results proving that less routing
+information is required for idemetric graphs than the worst case in order to
+achieve stretch less than 3 with high probability: while $\Omega(n^2)$ routing
+information is required in the worst case for stretch strictly less than 3 on
+almost all pairs, for idemetric graphs the total routing information required
+is $O(nlog(n))$.
+
+
