@@ -1,279 +1,64 @@
-Approximate Inference Algorithms for Hybrid Bayesian Networks with
-  Discrete Constraints
-
-  In this paper, we consider Hybrid Mixed Networks (HMN) which are Hybrid
-Bayesian Networks that allow discrete deterministic information to be modeled
-explicitly in the form of constraints. We present two approximate inference
-algorithms for HMNs that integrate and adjust well known algorithmic principles
-such as Generalized Belief Propagation, Rao-Blackwellised Importance Sampling
-and Constraint Propagation to address the complexity of modeling and reasoning
-in HMNs. We demonstrate the performance of our approximate inference algorithms
-on randomly generated HMNs.
-
-
 AND/OR Importance Sampling
 
-  The paper introduces AND/OR importance sampling for probabilistic graphical
-models. In contrast to importance sampling, AND/OR importance sampling caches
-samples in the AND/OR space and then extracts a new sample mean from the stored
-samples. We prove that AND/OR importance sampling may have lower variance than
-importance sampling; thereby providing a theoretical justification for
-preferring it over importance sampling. Our empirical evaluation demonstrates
-that AND/OR importance sampling is far more accurate than importance sampling
-in many cases.
+  The paper introduces AND/OR importance sampling for probabilistic graphicalmodels. In contrast to importance sampling, AND/OR importance sampling cachessamples in the AND/OR space and then extracts a new sample mean from the storedsamples. We prove that AND/OR importance sampling may have lower variance thanimportance sampling; thereby providing a theoretical justification forpreferring it over importance sampling. Our empirical evaluation demonstratesthat AND/OR importance sampling is far more accurate than importance samplingin many cases.
 
+Approximate Inference Algorithms for Hybrid Bayesian Networks with  Discrete Constraints
+
+  In this paper, we consider Hybrid Mixed Networks (HMN) which are HybridBayesian Networks that allow discrete deterministic information to be modeledexplicitly in the form of constraints. We present two approximate inferencealgorithms for HMNs that integrate and adjust well known algorithmic principlessuch as Generalized Belief Propagation, Rao-Blackwellised Importance Samplingand Constraint Propagation to address the complexity of modeling and reasoningin HMNs. We demonstrate the performance of our approximate inference algorithmson randomly generated HMNs.
 
 Approximation by Quantization
 
-  Inference in graphical models consists of repeatedly multiplying and summing
-out potentials. It is generally intractable because the derived potentials
-obtained in this way can be exponentially large. Approximate inference
-techniques such as belief propagation and variational methods combat this by
-simplifying the derived potentials, typically by dropping variables from them.
-We propose an alternate method for simplifying potentials: quantizing their
-values. Quantization causes different states of a potential to have the same
-value, and therefore introduces context-specific independencies that can be
-exploited to represent the potential more compactly. We use algebraic decision
-diagrams (ADDs) to do this efficiently. We apply quantization and ADD reduction
-to variable elimination and junction tree propagation, yielding a family of
-bounded approximate inference schemes. Our experimental tests show that our new
-schemes significantly outperform state-of-the-art approaches on many benchmark
-instances.
-
+  Inference in graphical models consists of repeatedly multiplying and summingout potentials. It is generally intractable because the derived potentialsobtained in this way can be exponentially large. Approximate inferencetechniques such as belief propagation and variational methods combat this bysimplifying the derived potentials, typically by dropping variables from them.We propose an alternate method for simplifying potentials: quantizing theirvalues. Quantization causes different states of a potential to have the samevalue, and therefore introduces context-specific independencies that can beexploited to represent the potential more compactly. We use algebraic decisiondiagrams (ADDs) to do this efficiently. We apply quantization and ADD reductionto variable elimination and junction tree propagation, yielding a family ofbounded approximate inference schemes. Our experimental tests show that our newschemes significantly outperform state-of-the-art approaches on many benchmarkinstances.
 
 Probabilistic Theorem Proving
 
-  Many representation schemes combining first-order logic and probability have
-been proposed in recent years. Progress in unifying logical and probabilistic
-inference has been slower. Existing methods are mainly variants of lifted
-variable elimination and belief propagation, neither of which take logical
-structure into account. We propose the first method that has the full power of
-both graphical model inference and first-order theorem proving (in finite
-domains with Herbrand interpretations). We first define probabilistic theorem
-proving, their generalization, as the problem of computing the probability of a
-logical formula given the probabilities or weights of a set of formulas. We
-then show how this can be reduced to the problem of lifted weighted model
-counting, and develop an efficient algorithm for the latter. We prove the
-correctness of this algorithm, investigate its properties, and show how it
-generalizes previous approaches. Experiments show that it greatly outperforms
-lifted variable elimination when logical structure is present. Finally, we
-propose an algorithm for approximate probabilistic theorem proving, and show
-that it can greatly outperform lifted belief propagation.
-
+  Many representation schemes combining first-order logic and probability havebeen proposed in recent years. Progress in unifying logical and probabilisticinference has been slower. Existing methods are mainly variants of liftedvariable elimination and belief propagation, neither of which take logicalstructure into account. We propose the first method that has the full power ofboth graphical model inference and first-order theorem proving (in finitedomains with Herbrand interpretations). We first define probabilistic theoremproving, their generalization, as the problem of computing the probability of alogical formula given the probabilities or weights of a set of formulas. Wethen show how this can be reduced to the problem of lifted weighted modelcounting, and develop an efficient algorithm for the latter. We prove thecorrectness of this algorithm, investigate its properties, and show how itgeneralizes previous approaches. Experiments show that it greatly outperformslifted variable elimination when logical structure is present. Finally, wepropose an algorithm for approximate probabilistic theorem proving, and showthat it can greatly outperform lifted belief propagation.
 
 Formula-Based Probabilistic Inference
 
-  Computing the probability of a formula given the probabilities or weights
-associated with other formulas is a natural extension of logical inference to
-the probabilistic setting. Surprisingly, this problem has received little
-attention in the literature to date, particularly considering that it includes
-many standard inference problems as special cases. In this paper, we propose
-two algorithms for this problem: formula decomposition and conditioning, which
-is an exact method, and formula importance sampling, which is an approximate
-method. The latter is, to our knowledge, the first application of model
-counting to approximate probabilistic inference. Unlike conventional
-variable-based algorithms, our algorithms work in the dual realm of logical
-formulas. Theoretically, we show that our algorithms can greatly improve
-efficiency by exploiting the structural information in the formulas.
-Empirically, we show that they are indeed quite powerful, often achieving
-substantial performance gains over state-of-the-art schemes.
+  Computing the probability of a formula given the probabilities or weightsassociated with other formulas is a natural extension of logical inference tothe probabilistic setting. Surprisingly, this problem has received littleattention in the literature to date, particularly considering that it includesmany standard inference problems as special cases. In this paper, we proposetwo algorithms for this problem: formula decomposition and conditioning, whichis an exact method, and formula importance sampling, which is an approximatemethod. The latter is, to our knowledge, the first application of modelcounting to approximate probabilistic inference. Unlike conventionalvariable-based algorithms, our algorithms work in the dual realm of logicalformulas. Theoretically, we show that our algorithms can greatly improveefficiency by exploiting the structural information in the formulas.Empirically, we show that they are indeed quite powerful, often achievingsubstantial performance gains over state-of-the-art schemes.
 
+Studies in Lower Bounding Probabilities of Evidence using the Markov  Inequality
+
+  Computing the probability of evidence even with known error bounds isNP-hard. In this paper we address this hard problem by settling on an easierproblem. We propose an approximation which provides high confidence lowerbounds on probability of evidence but does not have any guarantees in terms ofrelative or absolute error. Our proposed approximation is a randomizedimportance sampling scheme that uses the Markov inequality. However, astraight-forward application of the Markov inequality may lead to poor lowerbounds. We therefore propose several heuristic measures to improve itsperformance in practice. Empirical evaluation of our scheme with state-of-the-art lower bounding schemes reveals the promise of our approach.
 
 Modeling Transportation Routines using Hybrid Dynamic Mixed Networks
 
-  This paper describes a general framework called Hybrid Dynamic Mixed Networks
-(HDMNs) which are Hybrid Dynamic Bayesian Networks that allow representation of
-discrete deterministic information in the form of constraints. We propose
-approximate inference algorithms that integrate and adjust well known
-algorithmic principles such as Generalized Belief Propagation,
-Rao-Blackwellised Particle Filtering and Constraint Propagation to address the
-complexity of modeling and reasoning in HDMNs. We use this framework to model a
-person's travel activity over time and to predict destination and routes given
-the current location. We present a preliminary empirical evaluation
-demonstrating the effectiveness of our modeling framework and algorithms using
-several variants of the activity model.
-
+  This paper describes a general framework called Hybrid Dynamic Mixed Networks(HDMNs) which are Hybrid Dynamic Bayesian Networks that allow representation ofdiscrete deterministic information in the form of constraints. We proposeapproximate inference algorithms that integrate and adjust well knownalgorithmic principles such as Generalized Belief Propagation,Rao-Blackwellised Particle Filtering and Constraint Propagation to address thecomplexity of modeling and reasoning in HDMNs. We use this framework to model aperson's travel activity over time and to predict destination and routes giventhe current location. We present a preliminary empirical evaluationdemonstrating the effectiveness of our modeling framework and algorithms usingseveral variants of the activity model.
 
 A Complete Anytime Algorithm for Treewidth
 
-  In this paper, we present a Branch and Bound algorithm called QuickBB for
-computing the treewidth of an undirected graph. This algorithm performs a
-search in the space of perfect elimination ordering of vertices of the graph.
-The algorithm uses novel pruning and propagation techniques which are derived
-from the theory of graph minors and graph isomorphism. We present a new
-algorithm called minor-min-width for computing a lower bound on treewidth that
-is used within the branch and bound algorithm and which improves over earlier
-available lower bounds. Empirical evaluation of QuickBB on randomly generated
-graphs and benchmarks in Graph Coloring and Bayesian Networks shows that it is
-consistently better than complete algorithms like QuickTree [Shoikhet and
-Geiger, 1997] in terms of cpu time. QuickBB also has good anytime performance,
-being able to generate a better upper bound on treewidth of some graphs whose
-optimal treewidth could not be computed up to now.
-
-
-Studies in Lower Bounding Probabilities of Evidence using the Markov
-  Inequality
-
-  Computing the probability of evidence even with known error bounds is
-NP-hard. In this paper we address this hard problem by settling on an easier
-problem. We propose an approximation which provides high confidence lower
-bounds on probability of evidence but does not have any guarantees in terms of
-relative or absolute error. Our proposed approximation is a randomized
-importance sampling scheme that uses the Markov inequality. However, a
-straight-forward application of the Markov inequality may lead to poor lower
-bounds. We therefore propose several heuristic measures to improve its
-performance in practice. Empirical evaluation of our scheme with state-of-
-the-art lower bounding schemes reveals the promise of our approach.
-
+  In this paper, we present a Branch and Bound algorithm called QuickBB forcomputing the treewidth of an undirected graph. This algorithm performs asearch in the space of perfect elimination ordering of vertices of the graph.The algorithm uses novel pruning and propagation techniques which are derivedfrom the theory of graph minors and graph isomorphism. We present a newalgorithm called minor-min-width for computing a lower bound on treewidth thatis used within the branch and bound algorithm and which improves over earlieravailable lower bounds. Empirical evaluation of QuickBB on randomly generatedgraphs and benchmarks in Graph Coloring and Bayesian Networks shows that it isconsistently better than complete algorithms like QuickTree [Shoikhet andGeiger, 1997] in terms of cpu time. QuickBB also has good anytime performance,being able to generate a better upper bound on treewidth of some graphs whoseoptimal treewidth could not be computed up to now.
 
 Structured Message Passing
 
-  In this paper, we present structured message passing (SMP), a unifying
-framework for approximate inference algorithms that take advantage of
-structured representations such as algebraic decision diagrams and sparse hash
-tables. These representations can yield significant time and space savings over
-the conventional tabular representation when the message has several identical
-values (context-specific independence) or zeros (determinism) or both in its
-range. Therefore, in order to fully exploit the power of structured
-representations, we propose to artificially introduce context-specific
-independence and determinism in the messages. This yields a new class of
-powerful approximate inference algorithms which includes popular algorithms
-such as cluster-graph Belief propagation (BP), expectation propagation and
-particle BP as special cases. We show that our new algorithms introduce several
-interesting bias-variance trade-offs. We evaluate these trade-offs empirically
-and demonstrate that our new algorithms are more accurate and scalable than
-state-of-the-art techniques.
+  In this paper, we present structured message passing (SMP), a unifyingframework for approximate inference algorithms that take advantage ofstructured representations such as algebraic decision diagrams and sparse hashtables. These representations can yield significant time and space savings overthe conventional tabular representation when the message has several identicalvalues (context-specific independence) or zeros (determinism) or both in itsrange. Therefore, in order to fully exploit the power of structuredrepresentations, we propose to artificially introduce context-specificindependence and determinism in the messages. This yields a new class ofpowerful approximate inference algorithms which includes popular algorithmssuch as cluster-graph Belief propagation (BP), expectation propagation andparticle BP as special cases. We show that our new algorithms introduce severalinteresting bias-variance trade-offs. We evaluate these trade-offs empiricallyand demonstrate that our new algorithms are more accurate and scalable thanstate-of-the-art techniques.
 
+Scalable Neural Network Compression and Pruning Using Hard Clustering  and L1 Regularization
 
-Scalable Neural Network Compression and Pruning Using Hard Clustering
-  and L1 Regularization
-
-  We propose a simple and easy to implement neural network compression
-algorithm that achieves results competitive with more complicated
-state-of-the-art methods. The key idea is to modify the original optimization
-problem by adding K independent Gaussian priors (corresponding to the k-means
-objective) over the network parameters to achieve parameter quantization, as
-well as an L1 penalty to achieve pruning. Unlike many existing
-quantization-based methods, our method uses hard clustering assignments of
-network parameters, which adds minimal change or overhead to standard network
-training. We also demonstrate experimentally that tying neural network
-parameters provides less gain in generalization performance than changing
-network architecture and connectivity patterns entirely.
-
-
-Join-Graph Propagation Algorithms
-
-  The paper investigates parameterized approximate message-passing schemes that
-are based on bounded inference and are inspired by Pearl's belief propagation
-algorithm (BP). We start with the bounded inference mini-clustering algorithm
-and then move to the iterative scheme called Iterative Join-Graph Propagation
-(IJGP), that combines both iteration and bounded inference. Algorithm IJGP
-belongs to the class of Generalized Belief Propagation algorithms, a framework
-that allowed connections with approximate algorithms from statistical physics
-and is shown empirically to surpass the performance of mini-clustering and
-belief propagation, as well as a number of other state-of-the-art algorithms on
-several classes of networks. We also provide insight into the accuracy of
-iterative BP and IJGP by relating these algorithms to well known classes of
-constraint propagation schemes.
-
-
-Lifted Region-Based Belief Propagation
-
-  Due to the intractable nature of exact lifted inference, research has
-recently focused on the discovery of accurate and efficient approximate
-inference algorithms in Statistical Relational Models (SRMs), such as Lifted
-First-Order Belief Propagation. FOBP simulates propositional factor graph
-belief propagation without constructing the ground factor graph by identifying
-and lifting over redundant message computations. In this work, we propose a
-generalization of FOBP called Lifted Generalized Belief Propagation, in which
-both the region structure and the message structure can be lifted. This
-approach allows more of the inference to be performed intra-region (in the
-exact inference step of BP), thereby allowing simulation of propagation on a
-graph structure with larger region scopes and fewer edges, while still
-maintaining tractability. We demonstrate that the resulting algorithm converges
-in fewer iterations to more accurate results on a variety of SRMs.
-
+  We propose a simple and easy to implement neural network compressionalgorithm that achieves results competitive with more complicatedstate-of-the-art methods. The key idea is to modify the original optimizationproblem by adding K independent Gaussian priors (corresponding to the k-meansobjective) over the network parameters to achieve parameter quantization, aswell as an L1 penalty to achieve pruning. Unlike many existingquantization-based methods, our method uses hard clustering assignments ofnetwork parameters, which adds minimal change or overhead to standard networktraining. We also demonstrate experimentally that tying neural networkparameters provides less gain in generalization performance than changingnetwork architecture and connectivity patterns entirely.
 
 Dynamic Blocking and Collapsing for Gibbs Sampling
 
-  In this paper, we investigate combining blocking and collapsing -- two widely
-used strategies for improving the accuracy of Gibbs sampling -- in the context
-of probabilistic graphical models (PGMs). We show that combining them is not
-straight-forward because collapsing (or eliminating variables) introduces new
-dependencies in the PGM and in computation-limited settings, this may adversely
-affect blocking. We therefore propose a principled approach for tackling this
-problem. Specifically, we develop two scoring functions, one each for blocking
-and collapsing, and formulate the problem of partitioning the variables in the
-PGM into blocked and collapsed subsets as simultaneously maximizing both
-scoring functions (i.e., a multi-objective optimization problem). We propose a
-dynamic, greedy algorithm for approximately solving this intractable
-optimization problem. Our dynamic algorithm periodically updates the
-partitioning into blocked and collapsed variables by leveraging correlation
-statistics gathered from the generated samples and enables rapid mixing by
-blocking together and collapsing highly correlated variables. We demonstrate
-experimentally the clear benefit of our dynamic approach: as more samples are
-drawn, our dynamic approach significantly outperforms static graph-based
-approaches by an order of magnitude in terms of accuracy.
+  In this paper, we investigate combining blocking and collapsing -- two widelyused strategies for improving the accuracy of Gibbs sampling -- in the contextof probabilistic graphical models (PGMs). We show that combining them is notstraight-forward because collapsing (or eliminating variables) introduces newdependencies in the PGM and in computation-limited settings, this may adverselyaffect blocking. We therefore propose a principled approach for tackling thisproblem. Specifically, we develop two scoring functions, one each for blockingand collapsing, and formulate the problem of partitioning the variables in thePGM into blocked and collapsed subsets as simultaneously maximizing bothscoring functions (i.e., a multi-objective optimization problem). We propose adynamic, greedy algorithm for approximately solving this intractableoptimization problem. Our dynamic algorithm periodically updates thepartitioning into blocked and collapsed variables by leveraging correlationstatistics gathered from the generated samples and enables rapid mixing byblocking together and collapsing highly correlated variables. We demonstrateexperimentally the clear benefit of our dynamic approach: as more samples aredrawn, our dynamic approach significantly outperforms static graph-basedapproaches by an order of magnitude in terms of accuracy.
 
+Join-Graph Propagation Algorithms
+
+  The paper investigates parameterized approximate message-passing schemes thatare based on bounded inference and are inspired by Pearl's belief propagationalgorithm (BP). We start with the bounded inference mini-clustering algorithmand then move to the iterative scheme called Iterative Join-Graph Propagation(IJGP), that combines both iteration and bounded inference. Algorithm IJGPbelongs to the class of Generalized Belief Propagation algorithms, a frameworkthat allowed connections with approximate algorithms from statistical physicsand is shown empirically to surpass the performance of mini-clustering andbelief propagation, as well as a number of other state-of-the-art algorithms onseveral classes of networks. We also provide insight into the accuracy ofiterative BP and IJGP by relating these algorithms to well known classes ofconstraint propagation schemes.
 
 Probabilistic Inference Modulo Theories
 
-  We present SGDPLL(T), an algorithm that solves (among many other problems)
-probabilistic inference modulo theories, that is, inference problems over
-probabilistic models defined via a logic theory provided as a parameter
-(currently, propositional, equalities on discrete sorts, and inequalities, more
-specifically difference arithmetic, on bounded integers). While many solutions
-to probabilistic inference over logic representations have been proposed,
-SGDPLL(T) is simultaneously (1) lifted, (2) exact and (3) modulo theories, that
-is, parameterized by a background logic theory. This offers a foundation for
-extending it to rich logic languages such as data structures and relational
-data. By lifted, we mean algorithms with constant complexity in the domain size
-(the number of values that variables can take). We also detail a solver for
-summations with difference arithmetic and show experimental results from a
-scenario in which SGDPLL(T) is much faster than a state-of-the-art
-probabilistic solver.
+  We present SGDPLL(T), an algorithm that solves (among many other problems)probabilistic inference modulo theories, that is, inference problems overprobabilistic models defined via a logic theory provided as a parameter(currently, propositional, equalities on discrete sorts, and inequalities, morespecifically difference arithmetic, on bounded integers). While many solutionsto probabilistic inference over logic representations have been proposed,SGDPLL(T) is simultaneously (1) lifted, (2) exact and (3) modulo theories, thatis, parameterized by a background logic theory. This offers a foundation forextending it to rich logic languages such as data structures and relationaldata. By lifted, we mean algorithms with constant complexity in the domain size(the number of values that variables can take). We also detail a solver forsummations with difference arithmetic and show experimental results from ascenario in which SGDPLL(T) is much faster than a state-of-the-artprobabilistic solver.
 
+Lifted Region-Based Belief Propagation
+
+  Due to the intractable nature of exact lifted inference, research hasrecently focused on the discovery of accurate and efficient approximateinference algorithms in Statistical Relational Models (SRMs), such as LiftedFirst-Order Belief Propagation. FOBP simulates propositional factor graphbelief propagation without constructing the ground factor graph by identifyingand lifting over redundant message computations. In this work, we propose ageneralization of FOBP called Lifted Generalized Belief Propagation, in whichboth the region structure and the message structure can be lifted. Thisapproach allows more of the inference to be performed intra-region (in theexact inference step of BP), thereby allowing simulation of propagation on agraph structure with larger region scopes and fewer edges, while stillmaintaining tractability. We demonstrate that the resulting algorithm convergesin fewer iterations to more accurate results on a variety of SRMs.
 
 Lifted Marginal MAP Inference
 
-  Lifted inference reduces the complexity of inference in relational
-probabilistic models by identifying groups of constants (or atoms) which behave
-symmetric to each other. A number of techniques have been proposed in the
-literature for lifting marginal as well MAP inference. We present the first
-application of lifting rules for marginal-MAP (MMAP), an important inference
-problem in models having latent (random) variables. Our main contribution is
-two fold: (1) we define a new equivalence class of (logical) variables, called
-Single Occurrence for MAX (SOM), and show that solution lies at extreme with
-respect to the SOM variables, i.e., predicate groundings differing only in the
-instantiation of the SOM variables take the same truth value (2) we define a
-sub-class {\em SOM-R} (SOM Reduce) and exploit properties of extreme
-assignments to show that MMAP inference can be performed by reducing the domain
-of SOM-R variables to a single constant.We refer to our lifting technique as
-the {\em SOM-R} rule for lifted MMAP. Combined with existing rules such as
-decomposer and binomial, this results in a powerful framework for lifted MMAP.
-Experiments on three benchmark domains show significant gains in both time and
-memory compared to ground inference as well as lifted approaches not using
-SOM-R.
-
+  Lifted inference reduces the complexity of inference in relationalprobabilistic models by identifying groups of constants (or atoms) which behavesymmetric to each other. A number of techniques have been proposed in theliterature for lifting marginal as well MAP inference. We present the firstapplication of lifting rules for marginal-MAP (MMAP), an important inferenceproblem in models having latent (random) variables. Our main contribution istwo fold: (1) we define a new equivalence class of (logical) variables, calledSingle Occurrence for MAX (SOM), and show that solution lies at extreme withrespect to the SOM variables, i.e., predicate groundings differing only in theinstantiation of the SOM variables take the same truth value (2) we define asub-class {\em SOM-R} (SOM Reduce) and exploit properties of extremeassignments to show that MMAP inference can be performed by reducing the domainof SOM-R variables to a single constant.We refer to our lifting technique asthe {\em SOM-R} rule for lifted MMAP. Combined with existing rules such asdecomposer and binomial, this results in a powerful framework for lifted MMAP.Experiments on three benchmark domains show significant gains in both time andmemory compared to ground inference as well as lifted approaches not usingSOM-R.
 
 Domain Aware Markov Logic Networks
 
-  Combining logic and probability has been a long stand- ing goal of AI
-research. Markov Logic Networks (MLNs) achieve this by attaching weights to
-formulas in first-order logic, and can be seen as templates for constructing
-features for ground Markov networks. Most techniques for learning weights of
-MLNs are domain-size agnostic, i.e., the size of the domain is not explicitly
-taken into account while learn- ing the parameters of the model. This often
-results in ex- treme probabilities when testing on domain sizes different from
-those seen during training. In this paper, we propose Domain Aware Markov logic
-Networks (DA-MLNs) which present a principled solution to this problem. While
-defin- ing the ground network distribution, DA-MLNs divide the ground feature
-weight by a scaling factor which is a function of the number of connections the
-ground atoms appearing in the feature are involved in. We show that standard
-MLNs fall out as a special case of our formalism when this func- tion evaluates
-to a constant equal to 1. Experiments on the benchmark Friends & Smokers domain
-show that our ap- proach results in significantly higher accuracies compared to
-existing methods when testing on domains whose sizes different from those seen
-during training.
-
+  Combining logic and probability has been a long stand- ing goal of AIresearch. Markov Logic Networks (MLNs) achieve this by attaching weights toformulas in first-order logic, and can be seen as templates for constructingfeatures for ground Markov networks. Most techniques for learning weights ofMLNs are domain-size agnostic, i.e., the size of the domain is not explicitlytaken into account while learn- ing the parameters of the model. This oftenresults in ex- treme probabilities when testing on domain sizes different fromthose seen during training. In this paper, we propose Domain Aware Markov logicNetworks (DA-MLNs) which present a principled solution to this problem. Whiledefin- ing the ground network distribution, DA-MLNs divide the ground featureweight by a scaling factor which is a function of the number of connections theground atoms appearing in the feature are involved in. We show that standardMLNs fall out as a special case of our formalism when this func- tion evaluatesto a constant equal to 1. Experiments on the benchmark Friends & Smokers domainshow that our ap- proach results in significantly higher accuracies compared toexisting methods when testing on domains whose sizes different from those seenduring training.
 

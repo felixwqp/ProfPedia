@@ -1,596 +1,112 @@
 Locating a Small Cluster Privately
 
-  We present a new algorithm for locating a small cluster of points with
-differential privacy [Dwork, McSherry, Nissim, and Smith, 2006]. Our algorithm
-has implications to private data exploration, clustering, and removal of
-outliers. Furthermore, we use it to significantly relax the requirements of the
-sample and aggregate technique [Nissim, Raskhodnikova, and Smith, 2007], which
-allows compiling of "off the shelf" (non-private) analyses into analyses that
-preserve differential privacy.
-
+  We present a new algorithm for locating a small cluster of points withdifferential privacy [Dwork, McSherry, Nissim, and Smith, 2006]. Our algorithmhas implications to private data exploration, clustering, and removal ofoutliers. Furthermore, we use it to significantly relax the requirements of thesample and aggregate technique [Nissim, Raskhodnikova, and Smith, 2007], whichallows compiling of "off the shelf" (non-private) analyses into analyses thatpreserve differential privacy.
 
 Linear Program Reconstruction in Practice
 
-  We briefly report on a successful linear program reconstruction attack
-performed on a production statistical queries system and using a real dataset.
-The attack was deployed in test environment in the course of the Aircloak
-Challenge bug bounty program and is based on the reconstruction algorithm of
-Dwork, McSherry, and Talwar. We empirically evaluate the effectiveness of the
-algorithm and a related algorithm by Dinur and Nissim with various dataset
-sizes, error rates, and numbers of queries in a Gaussian noise setting.
-
+  We briefly report on a successful linear program reconstruction attackperformed on a production statistical queries system and using a real dataset.The attack was deployed in test environment in the course of the AircloakChallenge bug bounty program and is based on the reconstruction algorithm ofDwork, McSherry, and Talwar. We empirically evaluate the effectiveness of thealgorithm and a related algorithm by Dinur and Nissim with various datasetsizes, error rates, and numbers of queries in a Gaussian noise setting.
 
 Communication Complexity and Secure Function Evaluation
 
-  We suggest two new methodologies for the design of efficient secure
-protocols, that differ with respect to their underlying computational models.
-In one methodology we utilize the communication complexity tree (or branching
-for f and transform it into a secure protocol. In other words, "any function f
-that can be computed using communication complexity c can be can be computed
-securely using communication complexity that is polynomial in c and a security
-parameter". The second methodology uses the circuit computing f, enhanced with
-look-up tables as its underlying computational model. It is possible to
-simulate any RAM machine in this model with polylogarithmic blowup. Hence it is
-possible to start with a computation of f on a RAM machine and transform it
-into a secure protocol.
-  We show many applications of these new methodologies resulting in protocols
-efficient either in communication or in computation. In particular, we
-exemplify a protocol for the "millionaires problem", where two participants
-want to compare their values but reveal no other information. Our protocol is
-more efficient than previously known ones in either communication or
-computation.
-
+  We suggest two new methodologies for the design of efficient secureprotocols, that differ with respect to their underlying computational models.In one methodology we utilize the communication complexity tree (or branchingfor f and transform it into a secure protocol. In other words, "any function fthat can be computed using communication complexity c can be can be computedsecurely using communication complexity that is polynomial in c and a securityparameter". The second methodology uses the circuit computing f, enhanced withlook-up tables as its underlying computational model. It is possible tosimulate any RAM machine in this model with polylogarithmic blowup. Hence it ispossible to start with a computation of f on a RAM machine and transform itinto a secure protocol.  We show many applications of these new methodologies resulting in protocolsefficient either in communication or in computation. In particular, weexemplify a protocol for the "millionaires problem", where two participantswant to compare their values but reveal no other information. Our protocol ismore efficient than previously known ones in either communication orcomputation.
 
 Approximately Optimal Mechanism Design via Differential Privacy
 
-  In this paper we study the implementation challenge in an abstract
-interdependent values model and an arbitrary objective function. We design a
-mechanism that allows for approximate optimal implementation of insensitive
-objective functions in ex-post Nash equilibrium. If, furthermore, values are
-private then the same mechanism is strategy proof. We cast our results onto two
-specific models: pricing and facility location. The mechanism we design is
-optimal up to an additive factor of the order of magnitude of one over the
-square root of the number of agents and involves no utility transfers.
-  Underlying our mechanism is a lottery between two auxiliary mechanisms: with
-high probability we actuate a mechanism that reduces players' influence on the
-choice of the social alternative, while choosing the optimal outcome with high
-probability. This is where the recent notion of differential privacy is
-employed. With the complementary probability we actuate a mechanism that is
-typically far from optimal but is incentive compatible. The joint mechanism
-inherits the desired properties from both.
-
+  In this paper we study the implementation challenge in an abstractinterdependent values model and an arbitrary objective function. We design amechanism that allows for approximate optimal implementation of insensitiveobjective functions in ex-post Nash equilibrium. If, furthermore, values areprivate then the same mechanism is strategy proof. We cast our results onto twospecific models: pricing and facility location. The mechanism we design isoptimal up to an additive factor of the order of magnitude of one over thesquare root of the number of agents and involves no utility transfers.  Underlying our mechanism is a lottery between two auxiliary mechanisms: withhigh probability we actuate a mechanism that reduces players' influence on thechoice of the social alternative, while choosing the optimal outcome with highprobability. This is where the recent notion of differential privacy isemployed. With the complementary probability we actuate a mechanism that istypically far from optimal but is incentive compatible. The joint mechanisminherits the desired properties from both.
 
 Impossibility of Differentially Private Universally Optimal Mechanisms
 
-  The notion of a universally utility-maximizing privacy mechanism was recently
-introduced by Ghosh, Roughgarden, and Sundararajan [STOC 2009]. These are
-mechanisms that guarantee optimal utility to a large class of information
-consumers, simultaneously, while preserving Differential Privacy [Dwork,
-McSherry, Nissim, and Smith, TCC 2006]. Ghosh et al. have demonstrated, quite
-surprisingly, a case where such a universally-optimal differentially-private
-mechanisms exists, when the information consumers are Bayesian. This result was
-recently extended by Gupte and Sundararajan [PODS 2010] to risk-averse
-consumers.
-  Both positive results deal with mechanisms (approximately) computing a single
-count query (i.e., the number of individuals satisfying a specific property in
-a given population), and the starting point of our work is a trial at extending
-these results to similar settings, such as sum queries with non-binary
-individual values, histograms, and two (or more) count queries. We show,
-however, that universally-optimal mechanisms do not exist for all these
-queries, both for Bayesian and risk-averse consumers.
-  For the Bayesian case, we go further, and give a characterization of those
-functions that admit universally-optimal mechanisms, showing that a
-universally-optimal mechanism exists, essentially, only for a (single) count
-query. At the heart of our proof is a representation of a query function $f$ by
-its privacy constraint graph $G_f$ whose edges correspond to values resulting
-by applying $f$ to neighboring databases.
-
+  The notion of a universally utility-maximizing privacy mechanism was recentlyintroduced by Ghosh, Roughgarden, and Sundararajan [STOC 2009]. These aremechanisms that guarantee optimal utility to a large class of informationconsumers, simultaneously, while preserving Differential Privacy [Dwork,McSherry, Nissim, and Smith, TCC 2006]. Ghosh et al. have demonstrated, quitesurprisingly, a case where such a universally-optimal differentially-privatemechanisms exists, when the information consumers are Bayesian. This result wasrecently extended by Gupte and Sundararajan [PODS 2010] to risk-averseconsumers.  Both positive results deal with mechanisms (approximately) computing a singlecount query (i.e., the number of individuals satisfying a specific property ina given population), and the starting point of our work is a trial at extendingthese results to similar settings, such as sum queries with non-binaryindividual values, histograms, and two (or more) count queries. We show,however, that universally-optimal mechanisms do not exist for all thesequeries, both for Bayesian and risk-averse consumers.  For the Bayesian case, we go further, and give a characterization of thosefunctions that admit universally-optimal mechanisms, showing that auniversally-optimal mechanism exists, essentially, only for a (single) countquery. At the heart of our proof is a representation of a query function $f$ byits privacy constraint graph $G_f$ whose edges correspond to values resultingby applying $f$ to neighboring databases.
 
 PSI (Ψ): a Private data Sharing Interface
 
-  We provide an overview of PSI ("a Private data Sharing Interface"), a system
-we are developing to enable researchers in the social sciences and other fields
-to share and explore privacy-sensitive datasets with the strong privacy
-protections of differential privacy.
-
+  We provide an overview of PSI ("a Private data Sharing Interface"), a systemwe are developing to enable researchers in the social sciences and other fieldsto share and explore privacy-sensitive datasets with the strong privacyprotections of differential privacy.
 
 Segmentation, Incentives and Privacy
 
-  Data driven segmentation is the powerhouse behind the success of online
-advertising. Various underlying challenges for successful segmentation have
-been studied by the academic community, with one notable exception - consumers
-incentives have been typically ignored. This lacuna is troubling as consumers
-have much control over the data being collected. Missing or manipulated data
-could lead to inferior segmentation. The current work proposes a model of
-prior-free segmentation, inspired by models of facility location, and to the
-best of our knowledge provides the first segmentation mechanism that addresses
-incentive compatibility, efficient market segmentation and privacy in the
-absence of a common prior.
+  Data driven segmentation is the powerhouse behind the success of onlineadvertising. Various underlying challenges for successful segmentation havebeen studied by the academic community, with one notable exception - consumersincentives have been typically ignored. This lacuna is troubling as consumershave much control over the data being collected. Missing or manipulated datacould lead to inferior segmentation. The current work proposes a model ofprior-free segmentation, inspired by models of facility location, and to thebest of our knowledge provides the first segmentation mechanism that addressesincentive compatibility, efficient market segmentation and privacy in theabsence of a common prior.
 
+Distributed Private Data Analysis: On Simultaneously Solving How and  What
 
-Distributed Private Data Analysis: On Simultaneously Solving How and
-  What
+  We examine the combination of two directions in the field of privacyconcerning computations over distributed private inputs - secure functionevaluation (SFE) and differential privacy. While in both the goal is toprivately evaluate some function of the individual inputs, the privacyrequirements are significantly different. The general feasibility results forSFE suggest a natural paradigm for implementing differentially private analysesdistributively: First choose what to compute, i.e., a differentially privateanalysis; Then decide how to compute it, i.e., construct an SFE protocol forthis analysis.  We initiate an examination whether there are advantages to a paradigm whereboth decisions are made simultaneously. In particular, we investigate underwhich accuracy requirements it is beneficial to adapt this paradigm forcomputing a collection of functions including binary sum, gap threshold, andapproximate median queries. Our results imply that when computing the binarysum of $n$ distributed inputs then:  * When we require that the error is $o(\sqrt{n})$ and the number of rounds isconstant, there is no benefit in the new paradigm.  * When we allow an error of $O(\sqrt{n})$, the new paradigm yields moreefficient protocols when we consider protocols that compute symmetricfunctions.  Our results also yield new separations between the local and global models ofcomputations for private data analysis.
 
-  We examine the combination of two directions in the field of privacy
-concerning computations over distributed private inputs - secure function
-evaluation (SFE) and differential privacy. While in both the goal is to
-privately evaluate some function of the individual inputs, the privacy
-requirements are significantly different. The general feasibility results for
-SFE suggest a natural paradigm for implementing differentially private analyses
-distributively: First choose what to compute, i.e., a differentially private
-analysis; Then decide how to compute it, i.e., construct an SFE protocol for
-this analysis.
-  We initiate an examination whether there are advantages to a paradigm where
-both decisions are made simultaneously. In particular, we investigate under
-which accuracy requirements it is beneficial to adapt this paradigm for
-computing a collection of functions including binary sum, gap threshold, and
-approximate median queries. Our results imply that when computing the binary
-sum of $n$ distributed inputs then:
-  * When we require that the error is $o(\sqrt{n})$ and the number of rounds is
-constant, there is no benefit in the new paradigm.
-  * When we allow an error of $O(\sqrt{n})$, the new paradigm yields more
-efficient protocols when we consider protocols that compute symmetric
-functions.
-  Our results also yield new separations between the local and global models of
-computations for private data analysis.
+Private Learning and Sanitization: Pure vs. Approximate Differential  Privacy
 
-
-Private Learning and Sanitization: Pure vs. Approximate Differential
-  Privacy
-
-  We compare the sample complexity of private learning [Kasiviswanathan et al.
-2008] and sanitization~[Blum et al. 2008] under pure $\epsilon$-differential
-privacy [Dwork et al. TCC 2006] and approximate
-$(\epsilon,\delta)$-differential privacy [Dwork et al. Eurocrypt 2006]. We show
-that the sample complexity of these tasks under approximate differential
-privacy can be significantly lower than that under pure differential privacy.
-  We define a family of optimization problems, which we call Quasi-Concave
-Promise Problems, that generalizes some of our considered tasks. We observe
-that a quasi-concave promise problem can be privately approximated using a
-solution to a smaller instance of a quasi-concave promise problem. This allows
-us to construct an efficient recursive algorithm solving such problems
-privately. Specifically, we construct private learners for point functions,
-threshold functions, and axis-aligned rectangles in high dimension. Similarly,
-we construct sanitizers for point functions and threshold functions.
-  We also examine the sample complexity of label-private learners, a relaxation
-of private learning where the learner is required to only protect the privacy
-of the labels in the sample. We show that the VC dimension completely
-characterizes the sample complexity of such learners, that is, the sample
-complexity of learning with label privacy is equal (up to constants) to
-learning without privacy.
-
+  We compare the sample complexity of private learning [Kasiviswanathan et al.2008] and sanitization~[Blum et al. 2008] under pure $\epsilon$-differentialprivacy [Dwork et al. TCC 2006] and approximate$(\epsilon,\delta)$-differential privacy [Dwork et al. Eurocrypt 2006]. We showthat the sample complexity of these tasks under approximate differentialprivacy can be significantly lower than that under pure differential privacy.  We define a family of optimization problems, which we call Quasi-ConcavePromise Problems, that generalizes some of our considered tasks. We observethat a quasi-concave promise problem can be privately approximated using asolution to a smaller instance of a quasi-concave promise problem. This allowsus to construct an efficient recursive algorithm solving such problemsprivately. Specifically, we construct private learners for point functions,threshold functions, and axis-aligned rectangles in high dimension. Similarly,we construct sanitizers for point functions and threshold functions.  We also examine the sample complexity of label-private learners, a relaxationof private learning where the learner is required to only protect the privacyof the labels in the sample. We show that the VC dimension completelycharacterizes the sample complexity of such learners, that is, the samplecomplexity of learning with label privacy is equal (up to constants) tolearning without privacy.
 
 Hard Instances of the Constrained Discrete Logarithm Problem
 
-  The discrete logarithm problem (DLP) generalizes to the constrained DLP,
-where the secret exponent $x$ belongs to a set known to the attacker. The
-complexity of generic algorithms for solving the constrained DLP depends on the
-choice of the set. Motivated by cryptographic applications, we study sets with
-succinct representation for which the constrained DLP is hard. We draw on
-earlier results due to Erd\"os et al. and Schnorr, develop geometric tools such
-as generalized Menelaus' theorem for proving lower bounds on the complexity of
-the constrained DLP, and construct sets with succinct representation with
-provable non-trivial lower bounds.
-
+  The discrete logarithm problem (DLP) generalizes to the constrained DLP,where the secret exponent $x$ belongs to a set known to the attacker. Thecomplexity of generic algorithms for solving the constrained DLP depends on thechoice of the set. Motivated by cryptographic applications, we study sets withsuccinct representation for which the constrained DLP is hard. We draw onearlier results due to Erd\"os et al. and Schnorr, develop geometric tools suchas generalized Menelaus' theorem for proving lower bounds on the complexity ofthe constrained DLP, and construct sets with succinct representation withprovable non-trivial lower bounds.
 
 Privacy-Aware Mechanism Design
 
-  In traditional mechanism design, agents only care about the utility they
-derive from the outcome of the mechanism. We look at a richer model where
-agents also assign non-negative dis-utility to the information about their
-private types leaked by the outcome of the mechanism.
-  We present a new model for privacy-aware mechanism design, where we only
-assume an upper bound on the agents' loss due to leakage, as opposed to
-previous work where a full characterization of the loss was required.
-  In this model, under a mild assumption on the distribution of how agents
-value their privacy, we show a generic construction of privacy-aware mechanisms
-and demonstrate its applicability to electronic polling and pricing of a
-digital good.
-
+  In traditional mechanism design, agents only care about the utility theyderive from the outcome of the mechanism. We look at a richer model whereagents also assign non-negative dis-utility to the information about theirprivate types leaked by the outcome of the mechanism.  We present a new model for privacy-aware mechanism design, where we onlyassume an upper bound on the agents' loss due to leakage, as opposed toprevious work where a full characterization of the loss was required.  In this model, under a mild assumption on the distribution of how agentsvalue their privacy, we show a generic construction of privacy-aware mechanismsand demonstrate its applicability to electronic polling and pricing of adigital good.
 
 Simultaneous Private Learning of Multiple Concepts
 
-  We investigate the direct-sum problem in the context of differentially
-private PAC learning: What is the sample complexity of solving $k$ learning
-tasks simultaneously under differential privacy, and how does this cost compare
-to that of solving $k$ learning tasks without privacy? In our setting, an
-individual example consists of a domain element $x$ labeled by $k$ unknown
-concepts $(c_1,\ldots,c_k)$. The goal of a multi-learner is to output $k$
-hypotheses $(h_1,\ldots,h_k)$ that generalize the input examples.
-  Without concern for privacy, the sample complexity needed to simultaneously
-learn $k$ concepts is essentially the same as needed for learning a single
-concept. Under differential privacy, the basic strategy of learning each
-hypothesis independently yields sample complexity that grows polynomially with
-$k$. For some concept classes, we give multi-learners that require fewer
-samples than the basic strategy. Unfortunately, however, we also give lower
-bounds showing that even for very simple concept classes, the sample cost of
-private multi-learning must grow polynomially in $k$.
+  We investigate the direct-sum problem in the context of differentiallyprivate PAC learning: What is the sample complexity of solving $k$ learningtasks simultaneously under differential privacy, and how does this cost compareto that of solving $k$ learning tasks without privacy? In our setting, anindividual example consists of a domain element $x$ labeled by $k$ unknownconcepts $(c_1,\ldots,c_k)$. The goal of a multi-learner is to output $k$hypotheses $(h_1,\ldots,h_k)$ that generalize the input examples.  Without concern for privacy, the sample complexity needed to simultaneouslylearn $k$ concepts is essentially the same as needed for learning a singleconcept. Under differential privacy, the basic strategy of learning eachhypothesis independently yields sample complexity that grows polynomially with$k$. For some concept classes, we give multi-learners that require fewersamples than the basic strategy. Unfortunately, however, we also give lowerbounds showing that even for very simple concept classes, the sample cost ofprivate multi-learning must grow polynomially in $k$.
 
+Concentration Bounds for High Sensitivity Functions Through Differential  Privacy
 
-Concentration Bounds for High Sensitivity Functions Through Differential
-  Privacy
-
-  A new line of work [Dwork et al. STOC 2015], [Hardt and Ullman FOCS 2014],
-[Steinke and Ullman COLT 2015], [Bassily et al. STOC 2016] demonstrates how
-differential privacy [Dwork et al. TCC 2006] can be used as a mathematical tool
-for guaranteeing generalization in adaptive data analysis. Specifically, if a
-differentially private analysis is applied on a sample S of i.i.d. examples to
-select a low-sensitivity function f, then w.h.p. f(S) is close to its
-expectation, although f is being chosen based on the data.
-  Very recently, Steinke and Ullman observed that these generalization
-guarantees can be used for proving concentration bounds in the non-adaptive
-setting, where the low-sensitivity function is fixed beforehand. In particular,
-they obtain alternative proofs for classical concentration bounds for
-low-sensitivity functions, such as the Chernoff bound and McDiarmid's
-Inequality.
-  In this work, we set out to examine the situation for functions with
-high-sensitivity, for which differential privacy does not imply generalization
-guarantees under adaptive analysis. We show that differential privacy can be
-used to prove concentration bounds for such functions in the non-adaptive
-setting.
-
+  A new line of work [Dwork et al. STOC 2015], [Hardt and Ullman FOCS 2014],[Steinke and Ullman COLT 2015], [Bassily et al. STOC 2016] demonstrates howdifferential privacy [Dwork et al. TCC 2006] can be used as a mathematical toolfor guaranteeing generalization in adaptive data analysis. Specifically, if adifferentially private analysis is applied on a sample S of i.i.d. examples toselect a low-sensitivity function f, then w.h.p. f(S) is close to itsexpectation, although f is being chosen based on the data.  Very recently, Steinke and Ullman observed that these generalizationguarantees can be used for proving concentration bounds in the non-adaptivesetting, where the low-sensitivity function is fixed beforehand. In particular,they obtain alternative proofs for classical concentration bounds forlow-sensitivity functions, such as the Chernoff bound and McDiarmid'sInequality.  In this work, we set out to examine the situation for functions withhigh-sensitivity, for which differential privacy does not imply generalizationguarantees under adaptive analysis. We show that differential privacy can beused to prove concentration bounds for such functions in the non-adaptivesetting.
 
 Accessing Data while Preserving Privacy
 
-  As organizations struggle with vast amounts of data, outsourcing sensitive
-data to third parties becomes a necessity. To protect the data, various
-cryptographic techniques are used in outsourced database systems to ensure data
-privacy, while allowing efficient querying. Recent attacks on such systems
-demonstrate that outsourced database systems must trade-off efficiency and
-privacy. Towards designing systems that strike a good balance between these two
-aspects, we present a new model of differentially private outsourced database
-systems, where differential privacy is preserved at the record level even
-against an untrusted server that controls data and queries. Beginning with an
-atomic storage model where the server can observe both the memory access
-pattern and communication volume, we provide upper- and lower-bounds on the
-efficiency of differentially private outsourced database systems. Our
-lower-bounds motivate the examination of models where the memory access pattern
-is kept hidden from the server. Combining oblivious RAM with differentially
-private sanitizers, we present a generic construction of differentially private
-outsourced databases. We have implemented our constructions and report on their
-efficiency.
-
+  As organizations struggle with vast amounts of data, outsourcing sensitivedata to third parties becomes a necessity. To protect the data, variouscryptographic techniques are used in outsourced database systems to ensure dataprivacy, while allowing efficient querying. Recent attacks on such systemsdemonstrate that outsourced database systems must trade-off efficiency andprivacy. Towards designing systems that strike a good balance between these twoaspects, we present a new model of differentially private outsourced databasesystems, where differential privacy is preserved at the record level evenagainst an untrusted server that controls data and queries. Beginning with anatomic storage model where the server can observe both the memory accesspattern and communication volume, we provide upper- and lower-bounds on theefficiency of differentially private outsourced database systems. Ourlower-bounds motivate the examination of models where the memory access patternis kept hidden from the server. Combining oblivious RAM with differentiallyprivate sanitizers, we present a generic construction of differentially privateoutsourced databases. We have implemented our constructions and report on theirefficiency.
 
 Clustering Algorithms for the Centralized and Local Models
 
-  We revisit the problem of finding a minimum enclosing ball with differential
-privacy: Given a set of $n$ points in the Euclidean space $\mathbb{R}^d$ and an
-integer $t\leq n$, the goal is to find a ball of the smallest radius $r_{opt}$
-enclosing at least $t$ input points. The problem is motivated by its various
-applications to differential privacy, including the sample and aggregate
-technique, private data exploration, and clustering.
-  Without privacy concerns, minimum enclosing ball has a polynomial time
-approximation scheme (PTAS), which computes a ball of radius almost $r_{opt}$
-(the problem is NP-hard to solve exactly). In contrast, under differential
-privacy, until this work, only a $O(\sqrt{\log n})$-approximation algorithm was
-known.
-  We provide new constructions of differentially private algorithms for minimum
-enclosing ball achieving constant factor approximation to $r_{opt}$ both in the
-centralized model (where a trusted curator collects the sensitive information
-and analyzes it with differential privacy) and in the local model (where each
-respondent randomizes her answers to the data curator to protect her privacy).
-  We demonstrate how to use our algorithms as a building block for
-approximating $k$-means in both models.
-
+  We revisit the problem of finding a minimum enclosing ball with differentialprivacy: Given a set of $n$ points in the Euclidean space $\mathbb{R}^d$ and aninteger $t\leq n$, the goal is to find a ball of the smallest radius $r_{opt}$enclosing at least $t$ input points. The problem is motivated by its variousapplications to differential privacy, including the sample and aggregatetechnique, private data exploration, and clustering.  Without privacy concerns, minimum enclosing ball has a polynomial timeapproximation scheme (PTAS), which computes a ball of radius almost $r_{opt}$(the problem is NP-hard to solve exactly). In contrast, under differentialprivacy, until this work, only a $O(\sqrt{\log n})$-approximation algorithm wasknown.  We provide new constructions of differentially private algorithms for minimumenclosing ball achieving constant factor approximation to $r_{opt}$ both in thecentralized model (where a trusted curator collects the sensitive informationand analyzes it with differential privacy) and in the local model (where eachrespondent randomizes her answers to the data curator to protect her privacy).  We demonstrate how to use our algorithms as a building block forapproximating $k$-means in both models.
 
 Practical Locally Private Heavy Hitters
 
-  We present new practical local differentially private heavy hitters
-algorithms achieving optimal or near-optimal worst-case error and running time
--- TreeHist and Bitstogram. In both algorithms, server running time is $\tilde
-O(n)$ and user running time is $\tilde O(1)$, hence improving on the prior
-state-of-the-art result of Bassily and Smith [STOC 2015] requiring $O(n^{5/2})$
-server time and $O(n^{3/2})$ user time. With a typically large number of
-participants in local algorithms ($n$ in the millions), this reduction in time
-complexity, in particular at the user side, is crucial for making locally
-private heavy hitters algorithms usable in practice. We implemented Algorithm
-TreeHist to verify our theoretical analysis and compared its performance with
-the performance of Google's RAPPOR code.
-
+  We present new practical local differentially private heavy hittersalgorithms achieving optimal or near-optimal worst-case error and running time-- TreeHist and Bitstogram. In both algorithms, server running time is $\tildeO(n)$ and user running time is $\tilde O(1)$, hence improving on the priorstate-of-the-art result of Bassily and Smith [STOC 2015] requiring $O(n^{5/2})$server time and $O(n^{3/2})$ user time. With a typically large number ofparticipants in local algorithms ($n$ in the millions), this reduction in timecomplexity, in particular at the user side, is crucial for making locallyprivate heavy hitters algorithms usable in practice. We implemented AlgorithmTreeHist to verify our theoretical analysis and compared its performance withthe performance of Google's RAPPOR code.
 
 The Limits of Post-Selection Generalization
 
-  While statistics and machine learning offers numerous methods for ensuring
-generalization, these methods often fail in the presence of adaptivity---the
-common practice in which the choice of analysis depends on previous
-interactions with the same dataset. A recent line of work has introduced
-powerful, general purpose algorithms that ensure post hoc generalization (also
-called robust or post-selection generalization), which says that, given the
-output of the algorithm, it is hard to find any statistic for which the data
-differs significantly from the population it came from.
-  In this work we show several limitations on the power of algorithms
-satisfying post hoc generalization. First, we show a tight lower bound on the
-error of any algorithm that satisfies post hoc generalization and answers
-adaptively chosen statistical queries, showing a strong barrier to progress in
-post selection data analysis. Second, we show that post hoc generalization is
-not closed under composition, despite many examples of such algorithms
-exhibiting strong composition properties.
-
+  While statistics and machine learning offers numerous methods for ensuringgeneralization, these methods often fail in the presence of adaptivity---thecommon practice in which the choice of analysis depends on previousinteractions with the same dataset. A recent line of work has introducedpowerful, general purpose algorithms that ensure post hoc generalization (alsocalled robust or post-selection generalization), which says that, given theoutput of the algorithm, it is hard to find any statistic for which the datadiffers significantly from the population it came from.  In this work we show several limitations on the power of algorithmssatisfying post hoc generalization. First, we show a tight lower bound on theerror of any algorithm that satisfies post hoc generalization and answersadaptively chosen statistical queries, showing a strong barrier to progress inpost selection data analysis. Second, we show that post hoc generalization isnot closed under composition, despite many examples of such algorithmsexhibiting strong composition properties.
 
 Private Center Points and Learning of Halfspaces
 
-  We present a private learner for halfspaces over an arbitrary finite domain
-$X\subset \mathbb{R}^d$ with sample complexity $mathrm{poly}(d,2^{\log^*|X|})$.
-The building block for this learner is a differentially private algorithm for
-locating an approximate center point of $m>\mathrm{poly}(d,2^{\log^*|X|})$
-points -- a high dimensional generalization of the median function. Our
-construction establishes a relationship between these two problems that is
-reminiscent of the relation between the median and learning one-dimensional
-thresholds [Bun et al.\ FOCS '15]. This relationship suggests that the problem
-of privately locating a center point may have further applications in the
-design of differentially private algorithms.
-  We also provide a lower bound on the sample complexity for privately finding
-a point in the convex hull. For approximate differential privacy, we show a
-lower bound of $m=\Omega(d+\log^*|X|)$, whereas for pure differential privacy
-$m=\Omega(d\log|X|)$.
-
+  We present a private learner for halfspaces over an arbitrary finite domain$X\subset \mathbb{R}^d$ with sample complexity $mathrm{poly}(d,2^{\log^*|X|})$.The building block for this learner is a differentially private algorithm forlocating an approximate center point of $m>\mathrm{poly}(d,2^{\log^*|X|})$points -- a high dimensional generalization of the median function. Ourconstruction establishes a relationship between these two problems that isreminiscent of the relation between the median and learning one-dimensionalthresholds [Bun et al.\ FOCS '15]. This relationship suggests that the problemof privately locating a center point may have further applications in thedesign of differentially private algorithms.  We also provide a lower bound on the sample complexity for privately findinga point in the convex hull. For approximate differential privacy, we show alower bound of $m=\Omega(d+\log^*|X|)$, whereas for pure differential privacy$m=\Omega(d\log|X|)$.
 
 What Can We Learn Privately?
 
-  Learning problems form an important category of computational tasks that
-generalizes many of the computations researchers apply to large real-life data
-sets. We ask: what concept classes can be learned privately, namely, by an
-algorithm whose output does not depend too heavily on any one input or specific
-training example? More precisely, we investigate learning algorithms that
-satisfy differential privacy, a notion that provides strong confidentiality
-guarantees in contexts where aggregate information is released about a database
-containing sensitive information about individuals. We demonstrate that,
-ignoring computational constraints, it is possible to privately agnostically
-learn any concept class using a sample size approximately logarithmic in the
-cardinality of the concept class. Therefore, almost anything learnable is
-learnable privately: specifically, if a concept class is learnable by a
-(non-private) algorithm with polynomial sample complexity and output size, then
-it can be learned privately using a polynomial number of samples. We also
-present a computationally efficient private PAC learner for the class of parity
-functions. Local (or randomized response) algorithms are a practical class of
-private algorithms that have received extensive investigation. We provide a
-precise characterization of local private learning algorithms. We show that a
-concept class is learnable by a local algorithm if and only if it is learnable
-in the statistical query (SQ) model. Finally, we present a separation between
-the power of interactive and noninteractive local learning algorithms.
+  Learning problems form an important category of computational tasks thatgeneralizes many of the computations researchers apply to large real-life datasets. We ask: what concept classes can be learned privately, namely, by analgorithm whose output does not depend too heavily on any one input or specifictraining example? More precisely, we investigate learning algorithms thatsatisfy differential privacy, a notion that provides strong confidentialityguarantees in contexts where aggregate information is released about a databasecontaining sensitive information about individuals. We demonstrate that,ignoring computational constraints, it is possible to privately agnosticallylearn any concept class using a sample size approximately logarithmic in thecardinality of the concept class. Therefore, almost anything learnable islearnable privately: specifically, if a concept class is learnable by a(non-private) algorithm with polynomial sample complexity and output size, thenit can be learned privately using a polynomial number of samples. We alsopresent a computationally efficient private PAC learner for the class of parityfunctions. Local (or randomized response) algorithms are a practical class ofprivate algorithms that have received extensive investigation. We provide aprecise characterization of local private learning algorithms. We show that aconcept class is learnable by a local algorithm if and only if it is learnablein the statistical query (SQ) model. Finally, we present a separation betweenthe power of interactive and noninteractive local learning algorithms.
 
+Redrawing the Boundaries on Purchasing Data from Privacy-Sensitive  Individuals
 
-Redrawing the Boundaries on Purchasing Data from Privacy-Sensitive
-  Individuals
-
-  We prove new positive and negative results concerning the existence of
-truthful and individually rational mechanisms for purchasing private data from
-individuals with unbounded and sensitive privacy preferences. We strengthen the
-impossibility results of Ghosh and Roth (EC 2011) by extending it to a much
-wider class of privacy valuations. In particular, these include privacy
-valuations that are based on ({\epsilon}, {\delta})-differentially private
-mechanisms for non-zero {\delta}, ones where the privacy costs are measured in
-a per-database manner (rather than taking the worst case), and ones that do not
-depend on the payments made to players (which might not be observable to an
-adversary). To bypass this impossibility result, we study a natural special
-setting where individuals have mono- tonic privacy valuations, which captures
-common contexts where certain values for private data are expected to lead to
-higher valuations for privacy (e.g. having a particular disease). We give new
-mech- anisms that are individually rational for all players with monotonic
-privacy valuations, truthful for all players whose privacy valuations are not
-too large, and accurate if there are not too many players with too-large
-privacy valuations. We also prove matching lower bounds showing that in some
-respects our mechanism cannot be improved significantly.
-
-
-On the Generalization Properties of Differential Privacy
-
-  A new line of work, started with Dwork et al., studies the task of answering
-statistical queries using a sample and relates the problem to the concept of
-differential privacy. By the Hoeffding bound, a sample of size $O(\log
-k/\alpha^2)$ suffices to answer $k$ non-adaptive queries within error $\alpha$,
-where the answers are computed by evaluating the statistical queries on the
-sample. This argument fails when the queries are chosen adaptively (and can
-hence depend on the sample). Dwork et al. showed that if the answers are
-computed with $(\epsilon,\delta)$-differential privacy then $O(\epsilon)$
-accuracy is guaranteed with probability $1-O(\delta^\epsilon)$. Using the
-Private Multiplicative Weights mechanism, they concluded that the sample size
-can still grow polylogarithmically with the $k$.
-  Very recently, Bassily et al. presented an improved bound and showed that (a
-variant of) the private multiplicative weights algorithm can answer $k$
-adaptively chosen statistical queries using sample complexity that grows
-logarithmically in $k$. However, their results no longer hold for every
-differentially private algorithm, and require modifying the private
-multiplicative weights algorithm in order to obtain their high probability
-bounds.
-  We greatly simplify the results of Dwork et al. and improve on the bound by
-showing that differential privacy guarantees $O(\epsilon)$ accuracy with
-probability $1-O(\delta\log(1/\epsilon)/\epsilon)$. It would be tempting to
-guess that an $(\epsilon,\delta)$-differentially private computation should
-guarantee $O(\epsilon)$ accuracy with probability $1-O(\delta)$. However, we
-show that this is not the case, and that our bound is tight (up to logarithmic
-factors).
-
-
-Adaptive Learning with Robust Generalization Guarantees
-
-  The traditional notion of generalization---i.e., learning a hypothesis whose
-empirical error is close to its true error---is surprisingly brittle. As has
-recently been noted in [DFH+15b], even if several algorithms have this
-guarantee in isolation, the guarantee need not hold if the algorithms are
-composed adaptively. In this paper, we study three notions of
-generalization---increasing in strength---that are robust to postprocessing and
-amenable to adaptive composition, and examine the relationships between them.
-We call the weakest such notion Robust Generalization. A second, intermediate,
-notion is the stability guarantee known as differential privacy. The strongest
-guarantee we consider we call Perfect Generalization. We prove that every
-hypothesis class that is PAC learnable is also PAC learnable in a robustly
-generalizing fashion, with almost the same sample complexity. It was previously
-known that differentially private algorithms satisfy robust generalization. In
-this paper, we show that robust generalization is a strictly weaker concept,
-and that there is a learning task that can be carried out subject to robust
-generalization guarantees, yet cannot be carried out subject to differential
-privacy. We also show that perfect generalization is a strictly stronger
-guarantee than differential privacy, but that, nevertheless, many learning
-tasks can be carried out subject to the guarantees of perfect generalization.
-
+  We prove new positive and negative results concerning the existence oftruthful and individually rational mechanisms for purchasing private data fromindividuals with unbounded and sensitive privacy preferences. We strengthen theimpossibility results of Ghosh and Roth (EC 2011) by extending it to a muchwider class of privacy valuations. In particular, these include privacyvaluations that are based on ({\epsilon}, {\delta})-differentially privatemechanisms for non-zero {\delta}, ones where the privacy costs are measured ina per-database manner (rather than taking the worst case), and ones that do notdepend on the payments made to players (which might not be observable to anadversary). To bypass this impossibility result, we study a natural specialsetting where individuals have mono- tonic privacy valuations, which capturescommon contexts where certain values for private data are expected to lead tohigher valuations for privacy (e.g. having a particular disease). We give newmech- anisms that are individually rational for all players with monotonicprivacy valuations, truthful for all players whose privacy valuations are nottoo large, and accurate if there are not too many players with too-largeprivacy valuations. We also prove matching lower bounds showing that in somerespects our mechanism cannot be improved significantly.
 
 Characterizing the Sample Complexity of Private Learners
 
-  In 2008, Kasiviswanathan et al. defined private learning as a combination of
-PAC learning and differential privacy. Informally, a private learner is applied
-to a collection of labeled individual information and outputs a hypothesis
-while preserving the privacy of each individual. Kasiviswanathan et al. gave a
-generic construction of private learners for (finite) concept classes, with
-sample complexity logarithmic in the size of the concept class. This sample
-complexity is higher than what is needed for non-private learners, hence
-leaving open the possibility that the sample complexity of private learning may
-be sometimes significantly higher than that of non-private learning.
-  We give a combinatorial characterization of the sample size sufficient and
-necessary to privately learn a class of concepts. This characterization is
-analogous to the well known characterization of the sample complexity of
-non-private learning in terms of the VC dimension of the concept class. We
-introduce the notion of probabilistic representation of a concept class, and
-our new complexity measure RepDim corresponds to the size of the smallest
-probabilistic representation of the concept class.
-  We show that any private learning algorithm for a concept class C with sample
-complexity m implies RepDim(C)=O(m), and that there exists a private learning
-algorithm with sample complexity m=O(RepDim(C)). We further demonstrate that a
-similar characterization holds for the database size needed for privately
-computing a large class of optimization problems and also for the well studied
-problem of private data release.
+  In 2008, Kasiviswanathan et al. defined private learning as a combination ofPAC learning and differential privacy. Informally, a private learner is appliedto a collection of labeled individual information and outputs a hypothesiswhile preserving the privacy of each individual. Kasiviswanathan et al. gave ageneric construction of private learners for (finite) concept classes, withsample complexity logarithmic in the size of the concept class. This samplecomplexity is higher than what is needed for non-private learners, henceleaving open the possibility that the sample complexity of private learning maybe sometimes significantly higher than that of non-private learning.  We give a combinatorial characterization of the sample size sufficient andnecessary to privately learn a class of concepts. This characterization isanalogous to the well known characterization of the sample complexity ofnon-private learning in terms of the VC dimension of the concept class. Weintroduce the notion of probabilistic representation of a concept class, andour new complexity measure RepDim corresponds to the size of the smallestprobabilistic representation of the concept class.  We show that any private learning algorithm for a concept class C with samplecomplexity m implies RepDim(C)=O(m), and that there exists a private learningalgorithm with sample complexity m=O(RepDim(C)). We further demonstrate that asimilar characterization holds for the database size needed for privatelycomputing a large class of optimization problems and also for the well studiedproblem of private data release.
 
+On the Generalization Properties of Differential Privacy
+
+  A new line of work, started with Dwork et al., studies the task of answeringstatistical queries using a sample and relates the problem to the concept ofdifferential privacy. By the Hoeffding bound, a sample of size $O(\logk/\alpha^2)$ suffices to answer $k$ non-adaptive queries within error $\alpha$,where the answers are computed by evaluating the statistical queries on thesample. This argument fails when the queries are chosen adaptively (and canhence depend on the sample). Dwork et al. showed that if the answers arecomputed with $(\epsilon,\delta)$-differential privacy then $O(\epsilon)$accuracy is guaranteed with probability $1-O(\delta^\epsilon)$. Using thePrivate Multiplicative Weights mechanism, they concluded that the sample sizecan still grow polylogarithmically with the $k$.  Very recently, Bassily et al. presented an improved bound and showed that (avariant of) the private multiplicative weights algorithm can answer $k$adaptively chosen statistical queries using sample complexity that growslogarithmically in $k$. However, their results no longer hold for everydifferentially private algorithm, and require modifying the privatemultiplicative weights algorithm in order to obtain their high probabilitybounds.  We greatly simplify the results of Dwork et al. and improve on the bound byshowing that differential privacy guarantees $O(\epsilon)$ accuracy withprobability $1-O(\delta\log(1/\epsilon)/\epsilon)$. It would be tempting toguess that an $(\epsilon,\delta)$-differentially private computation shouldguarantee $O(\epsilon)$ accuracy with probability $1-O(\delta)$. However, weshow that this is not the case, and that our bound is tight (up to logarithmicfactors).
+
+Adaptive Learning with Robust Generalization Guarantees
+
+  The traditional notion of generalization---i.e., learning a hypothesis whoseempirical error is close to its true error---is surprisingly brittle. As hasrecently been noted in [DFH+15b], even if several algorithms have thisguarantee in isolation, the guarantee need not hold if the algorithms arecomposed adaptively. In this paper, we study three notions ofgeneralization---increasing in strength---that are robust to postprocessing andamenable to adaptive composition, and examine the relationships between them.We call the weakest such notion Robust Generalization. A second, intermediate,notion is the stability guarantee known as differential privacy. The strongestguarantee we consider we call Perfect Generalization. We prove that everyhypothesis class that is PAC learnable is also PAC learnable in a robustlygeneralizing fashion, with almost the same sample complexity. It was previouslyknown that differentially private algorithms satisfy robust generalization. Inthis paper, we show that robust generalization is a strictly weaker concept,and that there is a learning task that can be carried out subject to robustgeneralization guarantees, yet cannot be carried out subject to differentialprivacy. We also show that perfect generalization is a strictly strongerguarantee than differential privacy, but that, nevertheless, many learningtasks can be carried out subject to the guarantees of perfect generalization.
 
 Private Incremental Regression
 
-  Data is continuously generated by modern data sources, and a recent challenge
-in machine learning has been to develop techniques that perform well in an
-incremental (streaming) setting. In this paper, we investigate the problem of
-private machine learning, where as common in practice, the data is not given at
-once, but rather arrives incrementally over time.
-  We introduce the problems of private incremental ERM and private incremental
-regression where the general goal is to always maintain a good empirical risk
-minimizer for the history observed under differential privacy. Our first
-contribution is a generic transformation of private batch ERM mechanisms into
-private incremental ERM mechanisms, based on a simple idea of invoking the
-private batch ERM procedure at some regular time intervals. We take this
-construction as a baseline for comparison. We then provide two mechanisms for
-the private incremental regression problem. Our first mechanism is based on
-privately constructing a noisy incremental gradient function, which is then
-used in a modified projected gradient procedure at every timestep. This
-mechanism has an excess empirical risk of $\approx\sqrt{d}$, where $d$ is the
-dimensionality of the data. While from the results of [Bassily et al. 2014]
-this bound is tight in the worst-case, we show that certain geometric
-properties of the input and constraint set can be used to derive significantly
-better results for certain interesting regression problems.
-
-
-Differentially Private Release and Learning of Threshold Functions
-
-  We prove new upper and lower bounds on the sample complexity of $(\epsilon,
-\delta)$ differentially private algorithms for releasing approximate answers to
-threshold functions. A threshold function $c_x$ over a totally ordered domain
-$X$ evaluates to $c_x(y) = 1$ if $y \le x$, and evaluates to $0$ otherwise. We
-give the first nontrivial lower bound for releasing thresholds with
-$(\epsilon,\delta)$ differential privacy, showing that the task is impossible
-over an infinite domain $X$, and moreover requires sample complexity $n \ge
-\Omega(\log^*|X|)$, which grows with the size of the domain. Inspired by the
-techniques used to prove this lower bound, we give an algorithm for releasing
-thresholds with $n \le 2^{(1+ o(1))\log^*|X|}$ samples. This improves the
-previous best upper bound of $8^{(1 + o(1))\log^*|X|}$ (Beimel et al., RANDOM
-'13).
-  Our sample complexity upper and lower bounds also apply to the tasks of
-learning distributions with respect to Kolmogorov distance and of properly PAC
-learning thresholds with differential privacy. The lower bound gives the first
-separation between the sample complexity of properly learning a concept class
-with $(\epsilon,\delta)$ differential privacy and learning without privacy. For
-properly learning thresholds in $\ell$ dimensions, this lower bound extends to
-$n \ge \Omega(\ell \cdot \log^*|X|)$.
-  To obtain our results, we give reductions in both directions from releasing
-and properly learning thresholds and the simpler interior point problem. Given
-a database $D$ of elements from $X$, the interior point problem asks for an
-element between the smallest and largest elements in $D$. We introduce new
-recursive constructions for bounding the sample complexity of the interior
-point problem, as well as further reductions and techniques for proving
-impossibility results for other basic problems in differential privacy.
-
-
-Algorithmic Stability for Adaptive Data Analysis
-
-  Adaptivity is an important feature of data analysis---the choice of questions
-to ask about a dataset often depends on previous interactions with the same
-dataset. However, statistical validity is typically studied in a nonadaptive
-model, where all questions are specified before the dataset is drawn. Recent
-work by Dwork et al. (STOC, 2015) and Hardt and Ullman (FOCS, 2014) initiated
-the formal study of this problem, and gave the first upper and lower bounds on
-the achievable generalization error for adaptive data analysis.
-  Specifically, suppose there is an unknown distribution $\mathbf{P}$ and a set
-of $n$ independent samples $\mathbf{x}$ is drawn from $\mathbf{P}$. We seek an
-algorithm that, given $\mathbf{x}$ as input, accurately answers a sequence of
-adaptively chosen queries about the unknown distribution $\mathbf{P}$. How many
-samples $n$ must we draw from the distribution, as a function of the type of
-queries, the number of queries, and the desired level of accuracy?
-  In this work we make two new contributions:
-  (i) We give upper bounds on the number of samples $n$ that are needed to
-answer statistical queries. The bounds improve and simplify the work of Dwork
-et al. (STOC, 2015), and have been applied in subsequent work by those authors
-(Science, 2015, NIPS, 2015).
-  (ii) We prove the first upper bounds on the number of samples required to
-answer more general families of queries. These include arbitrary
-low-sensitivity queries and an important class of optimization queries.
-  As in Dwork et al., our algorithms are based on a connection with algorithmic
-stability in the form of differential privacy. We extend their work by giving a
-quantitatively optimal, more general, and simpler proof of their main theorem
-that stability implies low generalization error. We also study weaker stability
-guarantees such as bounded KL divergence and total variation distance.
-
+  Data is continuously generated by modern data sources, and a recent challengein machine learning has been to develop techniques that perform well in anincremental (streaming) setting. In this paper, we investigate the problem ofprivate machine learning, where as common in practice, the data is not given atonce, but rather arrives incrementally over time.  We introduce the problems of private incremental ERM and private incrementalregression where the general goal is to always maintain a good empirical riskminimizer for the history observed under differential privacy. Our firstcontribution is a generic transformation of private batch ERM mechanisms intoprivate incremental ERM mechanisms, based on a simple idea of invoking theprivate batch ERM procedure at some regular time intervals. We take thisconstruction as a baseline for comparison. We then provide two mechanisms forthe private incremental regression problem. Our first mechanism is based onprivately constructing a noisy incremental gradient function, which is thenused in a modified projected gradient procedure at every timestep. Thismechanism has an excess empirical risk of $\approx\sqrt{d}$, where $d$ is thedimensionality of the data. While from the results of [Bassily et al. 2014]this bound is tight in the worst-case, we show that certain geometricproperties of the input and constraint set can be used to derive significantlybetter results for certain interesting regression problems.
 
 Learning Privately with Labeled and Unlabeled Examples
 
-  A private learner is an algorithm that given a sample of labeled individual
-examples outputs a generalizing hypothesis while preserving the privacy of each
-individual. In 2008, Kasiviswanathan et al. (FOCS 2008) gave a generic
-construction of private learners, in which the sample complexity is (generally)
-higher than what is needed for non-private learners. This gap in the sample
-complexity was then further studied in several followup papers, showing that
-(at least in some cases) this gap is unavoidable. Moreover, those papers
-considered ways to overcome the gap, by relaxing either the privacy or the
-learning guarantees of the learner.
-  We suggest an alternative approach, inspired by the (non-private) models of
-semi-supervised learning and active-learning, where the focus is on the sample
-complexity of labeled examples whereas unlabeled examples are of a
-significantly lower cost. We consider private semi-supervised learners that
-operate on a random sample, where only a (hopefully small) portion of this
-sample is labeled. The learners have no control over which of the sample
-elements are labeled. Our main result is that the labeled sample complexity of
-private learners is characterized by the VC dimension.
-  We present two generic constructions of private semi-supervised learners. The
-first construction is of learners where the labeled sample complexity is
-proportional to the VC dimension of the concept class, however, the unlabeled
-sample complexity of the algorithm is as big as the representation length of
-domain elements. Our second construction presents a new technique for
-decreasing the labeled sample complexity of a given private learner, while
-roughly maintaining its unlabeled sample complexity. In addition, we show that
-in some settings the labeled sample complexity does not depend on the privacy
-parameters of the learner.
+  A private learner is an algorithm that given a sample of labeled individualexamples outputs a generalizing hypothesis while preserving the privacy of eachindividual. In 2008, Kasiviswanathan et al. (FOCS 2008) gave a genericconstruction of private learners, in which the sample complexity is (generally)higher than what is needed for non-private learners. This gap in the samplecomplexity was then further studied in several followup papers, showing that(at least in some cases) this gap is unavoidable. Moreover, those papersconsidered ways to overcome the gap, by relaxing either the privacy or thelearning guarantees of the learner.  We suggest an alternative approach, inspired by the (non-private) models ofsemi-supervised learning and active-learning, where the focus is on the samplecomplexity of labeled examples whereas unlabeled examples are of asignificantly lower cost. We consider private semi-supervised learners thatoperate on a random sample, where only a (hopefully small) portion of thissample is labeled. The learners have no control over which of the sampleelements are labeled. Our main result is that the labeled sample complexity ofprivate learners is characterized by the VC dimension.  We present two generic constructions of private semi-supervised learners. Thefirst construction is of learners where the labeled sample complexity isproportional to the VC dimension of the concept class, however, the unlabeledsample complexity of the algorithm is as big as the representation length ofdomain elements. Our second construction presents a new technique fordecreasing the labeled sample complexity of a given private learner, whileroughly maintaining its unlabeled sample complexity. In addition, we show thatin some settings the labeled sample complexity does not depend on the privacyparameters of the learner.
 
+Differentially Private Release and Learning of Threshold Functions
+
+  We prove new upper and lower bounds on the sample complexity of $(\epsilon,\delta)$ differentially private algorithms for releasing approximate answers tothreshold functions. A threshold function $c_x$ over a totally ordered domain$X$ evaluates to $c_x(y) = 1$ if $y \le x$, and evaluates to $0$ otherwise. Wegive the first nontrivial lower bound for releasing thresholds with$(\epsilon,\delta)$ differential privacy, showing that the task is impossibleover an infinite domain $X$, and moreover requires sample complexity $n \ge\Omega(\log^*|X|)$, which grows with the size of the domain. Inspired by thetechniques used to prove this lower bound, we give an algorithm for releasingthresholds with $n \le 2^{(1+ o(1))\log^*|X|}$ samples. This improves theprevious best upper bound of $8^{(1 + o(1))\log^*|X|}$ (Beimel et al., RANDOM'13).  Our sample complexity upper and lower bounds also apply to the tasks oflearning distributions with respect to Kolmogorov distance and of properly PAClearning thresholds with differential privacy. The lower bound gives the firstseparation between the sample complexity of properly learning a concept classwith $(\epsilon,\delta)$ differential privacy and learning without privacy. Forproperly learning thresholds in $\ell$ dimensions, this lower bound extends to$n \ge \Omega(\ell \cdot \log^*|X|)$.  To obtain our results, we give reductions in both directions from releasingand properly learning thresholds and the simpler interior point problem. Givena database $D$ of elements from $X$, the interior point problem asks for anelement between the smallest and largest elements in $D$. We introduce newrecursive constructions for bounding the sample complexity of the interiorpoint problem, as well as further reductions and techniques for provingimpossibility results for other basic problems in differential privacy.
+
+Algorithmic Stability for Adaptive Data Analysis
+
+  Adaptivity is an important feature of data analysis---the choice of questionsto ask about a dataset often depends on previous interactions with the samedataset. However, statistical validity is typically studied in a nonadaptivemodel, where all questions are specified before the dataset is drawn. Recentwork by Dwork et al. (STOC, 2015) and Hardt and Ullman (FOCS, 2014) initiatedthe formal study of this problem, and gave the first upper and lower bounds onthe achievable generalization error for adaptive data analysis.  Specifically, suppose there is an unknown distribution $\mathbf{P}$ and a setof $n$ independent samples $\mathbf{x}$ is drawn from $\mathbf{P}$. We seek analgorithm that, given $\mathbf{x}$ as input, accurately answers a sequence ofadaptively chosen queries about the unknown distribution $\mathbf{P}$. How manysamples $n$ must we draw from the distribution, as a function of the type ofqueries, the number of queries, and the desired level of accuracy?  In this work we make two new contributions:  (i) We give upper bounds on the number of samples $n$ that are needed toanswer statistical queries. The bounds improve and simplify the work of Dworket al. (STOC, 2015), and have been applied in subsequent work by those authors(Science, 2015, NIPS, 2015).  (ii) We prove the first upper bounds on the number of samples required toanswer more general families of queries. These include arbitrarylow-sensitivity queries and an important class of optimization queries.  As in Dwork et al., our algorithms are based on a connection with algorithmicstability in the form of differential privacy. We extend their work by giving aquantitatively optimal, more general, and simpler proof of their main theoremthat stability implies low generalization error. We also study weaker stabilityguarantees such as bounded KL divergence and total variation distance.
 
 The Privacy Blanket of the Shuffle Model
 
-  This work studies differential privacy in the context of the recently
-proposed shuffle model. Unlike in the local model, where the server collecting
-privatized data from users can track back an input to a specific user, in the
-shuffle model users submit their privatized inputs to a server anonymously.
-This setup yields a trust model which sits in between the classical curator and
-local models for differential privacy. The shuffle model is the core idea in
-the Encode, Shuffle, Analyze (ESA) model introduced by Bittau et al. (SOPS
-2017). Recent work by Cheu et al. (Forthcoming, EUROCRYPT 2019) analyzes the
-differential privacy properties of the shuffle model and shows that in some
-cases shuffled protocols provide strictly better accuracy than local protocols.
-Additionally, Erlignsson et al. (SODA 2019) provide a privacy amplification
-bound quantifying the level of curator differential privacy achieved by the
-shuffle model in terms of the local differential privacy of the randomizer used
-by each user.
-  In this context, we make three contributions. First, we provide an optimal
-single message protocol for summation of real numbers in the shuffle model. Our
-protocol is very simple and has better accuracy and communication than the
-protocols for this same problem proposed by Cheu et al. Optimality of this
-protocol follows from our second contribution, a new lower bound for the
-accuracy of private protocols for summation of real numbers in the shuffle
-model. The third contribution is a new amplification bound for analyzing the
-privacy of protocols in the shuffle model in terms of the privacy provided by
-the corresponding local randomizer. Our amplification bound generalizes the
-results by Erlingsson et al. to a wider range of parameters, and provides a
-whole family of methods to analyze privacy amplification in the shuffle model.
-
+  This work studies differential privacy in the context of the recentlyproposed shuffle model. Unlike in the local model, where the server collectingprivatized data from users can track back an input to a specific user, in theshuffle model users submit their privatized inputs to a server anonymously.This setup yields a trust model which sits in between the classical curator andlocal models for differential privacy. The shuffle model is the core idea inthe Encode, Shuffle, Analyze (ESA) model introduced by Bittau et al. (SOPS2017). Recent work by Cheu et al. (Forthcoming, EUROCRYPT 2019) analyzes thedifferential privacy properties of the shuffle model and shows that in somecases shuffled protocols provide strictly better accuracy than local protocols.Additionally, Erlignsson et al. (SODA 2019) provide a privacy amplificationbound quantifying the level of curator differential privacy achieved by theshuffle model in terms of the local differential privacy of the randomizer usedby each user.  In this context, we make three contributions. First, we provide an optimalsingle message protocol for summation of real numbers in the shuffle model. Ourprotocol is very simple and has better accuracy and communication than theprotocols for this same problem proposed by Cheu et al. Optimality of thisprotocol follows from our second contribution, a new lower bound for theaccuracy of private protocols for summation of real numbers in the shufflemodel. The third contribution is a new amplification bound for analyzing theprivacy of protocols in the shuffle model in terms of the privacy provided bythe corresponding local randomizer. Our amplification bound generalizes theresults by Erlingsson et al. to a wider range of parameters, and provides awhole family of methods to analyze privacy amplification in the shuffle model.
 

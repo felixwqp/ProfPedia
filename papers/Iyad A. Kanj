@@ -1,362 +1,72 @@
 Computing the flip distance between triangulations
 
-  Let ${\cal T}$ be a triangulation of a set ${\cal P}$ of $n$ points in the
-plane, and let $e$ be an edge shared by two triangles in ${\cal T}$ such that
-the quadrilateral $Q$ formed by these two triangles is convex. A {\em flip} of
-$e$ is the operation of replacing $e$ by the other diagonal of $Q$ to obtain a
-new triangulation of ${\cal P}$ from ${\cal T}$. The {\em flip distance}
-between two triangulations of ${\cal P}$ is the minimum number of flips needed
-to transform one triangulation into the other. The Flip Distance problem asks
-if the flip distance between two given triangulations of ${\cal P}$ is at most
-$k$, for some given $k \in N$. It is a fundamental and a challenging problem.
-  We present an algorithm for the {\sc Flip Distance} problem that runs in time
-$O(n + k \cdot c^{k})$, for a constant $c \leq 2 \cdot 14^{11}$, which implies
-that the problem is fixed-parameter tractable. We extend our results to
-triangulations of polygonal regions with holes, and to labeled triangulated
-graphs.
-
+  Let ${\cal T}$ be a triangulation of a set ${\cal P}$ of $n$ points in theplane, and let $e$ be an edge shared by two triangles in ${\cal T}$ such thatthe quadrilateral $Q$ formed by these two triangles is convex. A {\em flip} of$e$ is the operation of replacing $e$ by the other diagonal of $Q$ to obtain anew triangulation of ${\cal P}$ from ${\cal T}$. The {\em flip distance}between two triangulations of ${\cal P}$ is the minimum number of flips neededto transform one triangulation into the other. The Flip Distance problem asksif the flip distance between two given triangulations of ${\cal P}$ is at most$k$, for some given $k \in N$. It is a fundamental and a challenging problem.  We present an algorithm for the {\sc Flip Distance} problem that runs in time$O(n + k \cdot c^{k})$, for a constant $c \leq 2 \cdot 14^{11}$, which impliesthat the problem is fixed-parameter tractable. We extend our results totriangulations of polygonal regions with holes, and to labeled triangulatedgraphs.
 
 On the Subexponential Time Complexity of CSP
 
-  A CSP with n variables ranging over a domain of d values can be solved by
-brute-force in d^n steps (omitting a polynomial factor). With a more careful
-approach, this trivial upper bound can be improved for certain natural
-restrictions of the CSP. In this paper we establish theoretical limits to such
-improvements, and draw a detailed landscape of the subexponential-time
-complexity of CSP.
-  We first establish relations between the subexponential-time complexity of
-CSP and that of other problems, including CNF-Sat. We exploit this connection
-to provide tight characterizations of the subexponential-time complexity of CSP
-under common assumptions in complexity theory. For several natural CSP
-parameters, we obtain threshold functions that precisely dictate the
-subexponential-time complexity of CSP with respect to the parameters under
-consideration.
-  Our analysis provides fundamental results indicating whether and when one can
-significantly improve on the brute-force search approach for solving CSP.
-
+  A CSP with n variables ranging over a domain of d values can be solved bybrute-force in d^n steps (omitting a polynomial factor). With a more carefulapproach, this trivial upper bound can be improved for certain naturalrestrictions of the CSP. In this paper we establish theoretical limits to suchimprovements, and draw a detailed landscape of the subexponential-timecomplexity of CSP.  We first establish relations between the subexponential-time complexity ofCSP and that of other problems, including CNF-Sat. We exploit this connectionto provide tight characterizations of the subexponential-time complexity of CSPunder common assumptions in complexity theory. For several natural CSPparameters, we obtain threshold functions that precisely dictate thesubexponential-time complexity of CSP with respect to the parameters underconsideration.  Our analysis provides fundamental results indicating whether and when one cansignificantly improve on the brute-force search approach for solving CSP.
 
 Finding Points in General Position
 
-  We study computational aspects of the General Position Subset Selection
-problem defined as follows: Given a set of points in the plane, find a
-maximum-cardinality subset of points in general position. We prove that General
-Position Subset Selection is NP-hard, APX-hard, and give several
-fixed-parameter tractability results as well as a subexponential running time
-lower bound based on the Exponential Time Hypothesis.
-
+  We study computational aspects of the General Position Subset Selectionproblem defined as follows: Given a set of points in the plane, find amaximum-cardinality subset of points in general position. We prove that GeneralPosition Subset Selection is NP-hard, APX-hard, and give severalfixed-parameter tractability results as well as a subexponential running timelower bound based on the Exponential Time Hypothesis.
 
 The Complexity of Tree Partitioning
 
-  Given a tree $T$ on $n$ vertices, and $k, b, s_1, \ldots, s_b \in N$, the
-Tree Partitioning problem asks if at most $k$ edges can be removed from $T$ so
-that the resulting components can be grouped into $b$ groups such that the
-number of vertices in group $i$ is $s_i$, for $i =1, \ldots, b$. The case when
-$s_1=\cdots =s_b =n/b$, referred to as the Balanced Tree Partitioning problem,
-was shown to be NP-complete for trees of maximum degree at most 5, and the
-complexity of the problem for trees of maximum degree 4 and 3 was posed as an
-open question. The parameterized complexity of Balanced Tree Partitioning was
-also posed as an open question in another work.
-  In this paper, we answer both open questions negatively. We show that
-Balanced Tree Partitioning (and hence, Tree Partitioning) is NP-complete for
-trees of maximum degree 3, thus closing the door on the complexity of Balanced
-Tree Partitioning, as the simple case when $T$ is a path is in P. In terms of
-the parameterized complexity of the problems, we show that both Balanced Tree
-Partitioning and Tree Partitioning are $W[1]$-complete. Finally, using a
-compact representation of the solution space for an instance of the problem, we
-present a dynamic programming algorithm for Tree Partitioning (and hence, for
-Balanced Tree Partitioning) that runs in subexponential-time $2^{O(\sqrt{n})}$,
-adding a natural problem to the list of problems that can be solved in
-subexponential time.
-
+  Given a tree $T$ on $n$ vertices, and $k, b, s_1, \ldots, s_b \in N$, theTree Partitioning problem asks if at most $k$ edges can be removed from $T$ sothat the resulting components can be grouped into $b$ groups such that thenumber of vertices in group $i$ is $s_i$, for $i =1, \ldots, b$. The case when$s_1=\cdots =s_b =n/b$, referred to as the Balanced Tree Partitioning problem,was shown to be NP-complete for trees of maximum degree at most 5, and thecomplexity of the problem for trees of maximum degree 4 and 3 was posed as anopen question. The parameterized complexity of Balanced Tree Partitioning wasalso posed as an open question in another work.  In this paper, we answer both open questions negatively. We show thatBalanced Tree Partitioning (and hence, Tree Partitioning) is NP-complete fortrees of maximum degree 3, thus closing the door on the complexity of BalancedTree Partitioning, as the simple case when $T$ is a path is in P. In terms ofthe parameterized complexity of the problems, we show that both Balanced TreePartitioning and Tree Partitioning are $W[1]$-complete. Finally, using acompact representation of the solution space for an instance of the problem, wepresent a dynamic programming algorithm for Tree Partitioning (and hence, forBalanced Tree Partitioning) that runs in subexponential-time $2^{O(\sqrt{n})}$,adding a natural problem to the list of problems that can be solved insubexponential time.
 
 How to navigate through obstacles?
 
-  Given a set of obstacles and two points, is there a path between the two
-points that does not cross more than $k$ different obstacles? This is a
-fundamental problem that has undergone a tremendous amount of work. It is known
-to be NP-hard, even when the obstacles are very simple geometric shapes (e.g.,
-unit-length line segments). The problem can be generalized into the following
-graph problem: Given a planar graph $G$ whose vertices are colored by color
-sets, two designated vertices $s, t \in V(G)$, and $k \in \mathbb{N}$, is there
-an $s$-$t$ path in $G$ that uses at most $k$ colors? If each obstacle is
-connected, the resulting graph satisfies the color-connectivity property,
-namely that each color induces a connected subgraph.
-  We study the complexity and design algorithms for the above graph problem
-with an eye on its geometric applications. We prove that without the
-color-connectivity property, the problem is W[SAT]-hard parameterized by $k$. A
-corollary of this result is that, unless W[2] $=$ FPT, the problem cannot be
-approximated in FPT time to within a factor that is a function of $k$. By
-describing a generic plane embedding of the graph instances, we show that our
-hardness results translate to the geometric instances of the problem.
-  We then focus on graphs satisfying the color-connectivity property. By
-exploiting the planarity of the graph and the connectivity of the colors, we
-develop topological results to "represent" the valid $s$-$t$ paths containing
-subsets of colors from any vertex $v$. We employ these results to design an FPT
-algorithm for the problem parameterized by both $k$ and the treewidth of the
-graph, and extend this result to obtain an FPT algorithm for the
-parameterization by both $k$ and the length of the path. The latter result
-directly implies previous FPT results for various obstacle shapes, such as unit
-disks and fat regions.
-
+  Given a set of obstacles and two points, is there a path between the twopoints that does not cross more than $k$ different obstacles? This is afundamental problem that has undergone a tremendous amount of work. It is knownto be NP-hard, even when the obstacles are very simple geometric shapes (e.g.,unit-length line segments). The problem can be generalized into the followinggraph problem: Given a planar graph $G$ whose vertices are colored by colorsets, two designated vertices $s, t \in V(G)$, and $k \in \mathbb{N}$, is therean $s$-$t$ path in $G$ that uses at most $k$ colors? If each obstacle isconnected, the resulting graph satisfies the color-connectivity property,namely that each color induces a connected subgraph.  We study the complexity and design algorithms for the above graph problemwith an eye on its geometric applications. We prove that without thecolor-connectivity property, the problem is W[SAT]-hard parameterized by $k$. Acorollary of this result is that, unless W[2] $=$ FPT, the problem cannot beapproximated in FPT time to within a factor that is a function of $k$. Bydescribing a generic plane embedding of the graph instances, we show that ourhardness results translate to the geometric instances of the problem.  We then focus on graphs satisfying the color-connectivity property. Byexploiting the planarity of the graph and the connectivity of the colors, wedevelop topological results to "represent" the valid $s$-$t$ paths containingsubsets of colors from any vertex $v$. We employ these results to design an FPTalgorithm for the problem parameterized by both $k$ and the treewidth of thegraph, and extend this result to obtain an FPT algorithm for theparameterization by both $k$ and the length of the path. The latter resultdirectly implies previous FPT results for various obstacle shapes, such as unitdisks and fat regions.
 
 Degree Four Plane Spanners: Simpler and Better
 
-  Let ${\cal P}$ be a set of $n$ points embedded in the plane, and let ${\cal
-C}$ be the complete Euclidean graph whose point-set is ${\cal P}$. Each edge in
-${\cal C}$ between two points $p, q$ is realized as the line segment $[pq]$,
-and is assigned a weight equal to the Euclidean distance $|pq|$. In this paper,
-we show how to construct in $O(n\lg{n})$ time a plane spanner of ${\cal C}$ of
-maximum degree at most 4 and stretch factor at most 20. This improves a long
-sequence of results on the construction of plane spanners of ${\cal C}$. Our
-result matches the smallest known upper bound of 4 by Bonichon et al. on the
-maximum degree of plane spanners of ${\cal C}$, while significantly improving
-their stretch factor upper bound from 156.82 to 20. The construction of our
-spanner is based on Delaunay triangulations defined with respect to the
-equilateral-triangle distance, and uses a different approach than that used by
-Bonichon et al. Our approach leads to a simple and intuitive construction of a
-well-structured spanner, and reveals useful structural properties of the
-Delaunay triangulations defined with respect to the equilateral-triangle
-distance.
-  The structure of the constructed spanner implies that when ${\cal P}$ is in
-convex position, the maximum degree of this spanner is at most 3. Combining the
-above degree upper bound with the fact that 3 is a lower bound on the maximum
-degree of any plane spanner of ${\cal C}$ when the point-set ${\cal P}$ is in
-convex position, the results in this paper give a tight bound of 3 on the
-maximum degree of plane spanners of ${\cal C}$ for point-sets in convex
-position.
-
+  Let ${\cal P}$ be a set of $n$ points embedded in the plane, and let ${\calC}$ be the complete Euclidean graph whose point-set is ${\cal P}$. Each edge in${\cal C}$ between two points $p, q$ is realized as the line segment $[pq]$,and is assigned a weight equal to the Euclidean distance $|pq|$. In this paper,we show how to construct in $O(n\lg{n})$ time a plane spanner of ${\cal C}$ ofmaximum degree at most 4 and stretch factor at most 20. This improves a longsequence of results on the construction of plane spanners of ${\cal C}$. Ourresult matches the smallest known upper bound of 4 by Bonichon et al. on themaximum degree of plane spanners of ${\cal C}$, while significantly improvingtheir stretch factor upper bound from 156.82 to 20. The construction of ourspanner is based on Delaunay triangulations defined with respect to theequilateral-triangle distance, and uses a different approach than that used byBonichon et al. Our approach leads to a simple and intuitive construction of awell-structured spanner, and reveals useful structural properties of theDelaunay triangulations defined with respect to the equilateral-triangledistance.  The structure of the constructed spanner implies that when ${\cal P}$ is inconvex position, the maximum degree of this spanner is at most 3. Combining theabove degree upper bound with the fact that 3 is a lower bound on the maximumdegree of any plane spanner of ${\cal C}$ when the point-set ${\cal P}$ is inconvex position, the results in this paper give a tight bound of 3 on themaximum degree of plane spanners of ${\cal C}$ for point-sets in convexposition.
 
 What makes normalized weighted satisfiability tractable
 
-  We consider the weighted antimonotone and the weighted monotone
-satisfiability problems on normalized circuits of depth at most $t \geq 2$,
-abbreviated {\sc wsat$^-[t]$} and {\sc wsat$^+[t]$}, respectively. These
-problems model the weighted satisfiability of antimonotone and monotone
-propositional formulas (including weighted anitmonoone/monotone {\sc cnf-sat})
-in a natural way, and serve as the canonical problems in the definition of the
-parameterized complexity hierarchy. We characterize the parameterized
-complexity of {\sc wsat$^-[t]$} and {\sc wsat$^+[t]$} with respect to the genus
-of the circuit. For {\sc wsat$^-[t]$}, which is $W[t]$-complete for odd $t$ and
-$W[t-1]$-complete for even $t$, the characterization is precise: We show that
-{\sc wsat$^-[t]$} is fixed-parameter tractable (FPT) if the genus of the
-circuit is $n^{o(1)}$ ($n$ is the number of the variables in the circuit), and
-that it has the same $W$-hardness as the general {\sc wsat$^-[t]$} problem
-(i.e., with no restriction on the genus) if the genus is $n^{O(1)}$. For {\sc
-wsat$^+[2]$} (i.e., weighted monotone {\sc cnf-sat}), which is $W[2]$-complete,
-the characterization is also precise: We show that {\sc wsat$^+[2]$} is FPT if
-the genus is $n^{o(1)}$ and $W[2]$-complete if the genus is $n^{O(1)}$. For
-{\sc wsat$^+[t]$} where $t > 2$, which is $W[t]$-complete for even $t$ and
-$W[t-1]$-complete for odd $t$, we show that it is FPT if the genus is
-$O(\sqrt{\log{n}})$, and that it has the same $W$-hardness as the general {\sc
-wsat$^+[t]$} problem if the genus is $n^{O(1)}$.
-
+  We consider the weighted antimonotone and the weighted monotonesatisfiability problems on normalized circuits of depth at most $t \geq 2$,abbreviated {\sc wsat$^-[t]$} and {\sc wsat$^+[t]$}, respectively. Theseproblems model the weighted satisfiability of antimonotone and monotonepropositional formulas (including weighted anitmonoone/monotone {\sc cnf-sat})in a natural way, and serve as the canonical problems in the definition of theparameterized complexity hierarchy. We characterize the parameterizedcomplexity of {\sc wsat$^-[t]$} and {\sc wsat$^+[t]$} with respect to the genusof the circuit. For {\sc wsat$^-[t]$}, which is $W[t]$-complete for odd $t$ and$W[t-1]$-complete for even $t$, the characterization is precise: We show that{\sc wsat$^-[t]$} is fixed-parameter tractable (FPT) if the genus of thecircuit is $n^{o(1)}$ ($n$ is the number of the variables in the circuit), andthat it has the same $W$-hardness as the general {\sc wsat$^-[t]$} problem(i.e., with no restriction on the genus) if the genus is $n^{O(1)}$. For {\scwsat$^+[2]$} (i.e., weighted monotone {\sc cnf-sat}), which is $W[2]$-complete,the characterization is also precise: We show that {\sc wsat$^+[2]$} is FPT ifthe genus is $n^{o(1)}$ and $W[2]$-complete if the genus is $n^{O(1)}$. For{\sc wsat$^+[t]$} where $t > 2$, which is $W[t]$-complete for even $t$ and$W[t-1]$-complete for odd $t$, we show that it is FPT if the genus is$O(\sqrt{\log{n}})$, and that it has the same $W$-hardness as the general {\scwsat$^+[t]$} problem if the genus is $n^{O(1)}$.
 
 There are Plane Spanners of Maximum Degree 4
 
-  Let E be the complete Euclidean graph on a set of points embedded in the
-plane. Given a constant t >= 1, a spanning subgraph G of E is said to be a
-t-spanner, or simply a spanner, if for any pair of vertices u,v in E the
-distance between u and v in G is at most t times their distance in E. A spanner
-is plane if its edges do not cross.
-  This paper considers the question: "What is the smallest maximum degree that
-can always be achieved for a plane spanner of E?" Without the planarity
-constraint, it is known that the answer is 3 which is thus the best known lower
-bound on the degree of any plane spanner. With the planarity requirement, the
-best known upper bound on the maximum degree is 6, the last in a long sequence
-of results improving the upper bound. In this paper we show that the complete
-Euclidean graph always contains a plane spanner of maximum degree at most 4 and
-make a big step toward closing the question. Our construction leads to an
-efficient algorithm for obtaining the spanner from Chew's L1-Delaunay
-triangulation.
+  Let E be the complete Euclidean graph on a set of points embedded in theplane. Given a constant t >= 1, a spanning subgraph G of E is said to be at-spanner, or simply a spanner, if for any pair of vertices u,v in E thedistance between u and v in G is at most t times their distance in E. A spanneris plane if its edges do not cross.  This paper considers the question: "What is the smallest maximum degree thatcan always be achieved for a plane spanner of E?" Without the planarityconstraint, it is known that the answer is 3 which is thus the best known lowerbound on the degree of any plane spanner. With the planarity requirement, thebest known upper bound on the maximum degree is 6, the last in a long sequenceof results improving the upper bound. In this paper we show that the completeEuclidean graph always contains a plane spanner of maximum degree at most 4 andmake a big step toward closing the question. Our construction leads to anefficient algorithm for obtaining the spanner from Chew's L1-Delaunaytriangulation.
 
+Parameterized Algorithms for Recognizing Monopolar and 2-Subcolorable  Graphs
 
-Parameterized Algorithms for Recognizing Monopolar and 2-Subcolorable
-  Graphs
-
-  A graph $G$ is a $(\Pi_A,\Pi_B)$-graph if $V(G)$ can be bipartitioned into
-$A$ and $B$ such that $G[A]$ satisfies property $\Pi_A$ and $G[B]$ satisfies
-property $\Pi_B$. The $(\Pi_{A},\Pi_{B})$-Recognition problem is to recognize
-whether a given graph is a $(\Pi_A,\Pi_B)$-graph. There are many
-$(\Pi_{A},\Pi_{B})$-Recognition problems, including the recognition problems
-for bipartite, split, and unipolar graphs. We present efficient algorithms for
-many cases of $(\Pi_A,\Pi_B)$-Recognition based on a technique which we dub
-inductive recognition. In particular, we give fixed-parameter algorithms for
-two NP-hard $(\Pi_{A},\Pi_{B})$-Recognition problems, Monopolar Recognition and
-2-Subcoloring. We complement our algorithmic results with several hardness
-results for $(\Pi_{A},\Pi_{B})$-Recognition.
-
+  A graph $G$ is a $(\Pi_A,\Pi_B)$-graph if $V(G)$ can be bipartitioned into$A$ and $B$ such that $G[A]$ satisfies property $\Pi_A$ and $G[B]$ satisfiesproperty $\Pi_B$. The $(\Pi_{A},\Pi_{B})$-Recognition problem is to recognizewhether a given graph is a $(\Pi_A,\Pi_B)$-graph. There are many$(\Pi_{A},\Pi_{B})$-Recognition problems, including the recognition problemsfor bipartite, split, and unipolar graphs. We present efficient algorithms formany cases of $(\Pi_A,\Pi_B)$-Recognition based on a technique which we dubinductive recognition. In particular, we give fixed-parameter algorithms fortwo NP-hard $(\Pi_{A},\Pi_{B})$-Recognition problems, Monopolar Recognition and2-Subcoloring. We complement our algorithmic results with several hardnessresults for $(\Pi_{A},\Pi_{B})$-Recognition.
 
 Near-optimal Smooth Path Planning for Multisection Continuum Arms
 
-  We study the path planning problem for continuum-arm robots, in which we are
-given a starting and an end point, and we need to compute a path for the tip of
-the continuum arm between the two points. We consider both cases where
-obstacles are present and where they are not. We demonstrate how to leverage
-the continuum arm features to introduce a new model that enables a path
-planning approach based on the configurations graph, for a continuum arm
-consisting of three sections, each consisting of three muscle actuators. The
-algorithm we apply to the configurations graph allows us to exploit parallelism
-in the computation to obtain efficient implementation. We conducted extensive
-tests, and the obtained results show the completeness of the proposed algorithm
-under the considered discretizations, in both cases where obstacles are present
-and where they are not. We compared our approach to the standard inverse
-kinematics approach. While the inverse kinematics approach is much faster when
-successful, our algorithm always succeeds in finding a path or reporting that
-no path exists, compared to a roughly 70% success rate of the inverse
-kinematics approach (when a path exists).
-
+  We study the path planning problem for continuum-arm robots, in which we aregiven a starting and an end point, and we need to compute a path for the tip ofthe continuum arm between the two points. We consider both cases whereobstacles are present and where they are not. We demonstrate how to leveragethe continuum arm features to introduce a new model that enables a pathplanning approach based on the configurations graph, for a continuum armconsisting of three sections, each consisting of three muscle actuators. Thealgorithm we apply to the configurations graph allows us to exploit parallelismin the computation to obtain efficient implementation. We conducted extensivetests, and the obtained results show the completeness of the proposed algorithmunder the considered discretizations, in both cases where obstacles are presentand where they are not. We compared our approach to the standard inversekinematics approach. While the inverse kinematics approach is much faster whensuccessful, our algorithm always succeeds in finding a path or reporting thatno path exists, compared to a roughly 70% success rate of the inversekinematics approach (when a path exists).
 
 Local Backbones
 
-  A backbone of a propositional CNF formula is a variable whose truth value is
-the same in every truth assignment that satisfies the formula. The notion of
-backbones for CNF formulas has been studied in various contexts. In this paper,
-we introduce local variants of backbones, and study the computational
-complexity of detecting them. In particular, we consider k-backbones, which are
-backbones for sub-formulas consisting of at most k clauses, and iterative
-k-backbones, which are backbones that result after repeated instantiations of
-k-backbones. We determine the parameterized complexity of deciding whether a
-variable is a k-backbone or an iterative k-backbone for various restricted
-formula classes, including Horn, definite Horn, and Krom. We also present some
-first empirical results regarding backbones for CNF-Satisfiability (SAT). The
-empirical results we obtain show that a large fraction of the backbones of
-structured SAT instances are local, in contrast to random instances, which
-appear to have few local backbones.
+  A backbone of a propositional CNF formula is a variable whose truth value isthe same in every truth assignment that satisfies the formula. The notion ofbackbones for CNF formulas has been studied in various contexts. In this paper,we introduce local variants of backbones, and study the computationalcomplexity of detecting them. In particular, we consider k-backbones, which arebackbones for sub-formulas consisting of at most k clauses, and iterativek-backbones, which are backbones that result after repeated instantiations ofk-backbones. We determine the parameterized complexity of deciding whether avariable is a k-backbone or an iterative k-backbone for various restrictedformula classes, including Horn, definite Horn, and Krom. We also present somefirst empirical results regarding backbones for CNF-Satisfiability (SAT). Theempirical results we obtain show that a large fraction of the backbones ofstructured SAT instances are local, in contrast to random instances, whichappear to have few local backbones.
 
+Well-Formed Separator Sequences, with an Application to Hypergraph  Drawing
 
-Well-Formed Separator Sequences, with an Application to Hypergraph
-  Drawing
-
-  Given a hypergraph $H$, the Planar Support problem asks whether there is a
-planar graph $G$ on the same vertex set as $H$ such that each hyperedge induces
-a connected subgraph of $G$. Planar Support is motivated by applications in
-graph drawing and data visualization. We show that Planar Support is
-fixed-parameter tractable when parameterized by the number of hyperedges in the
-input hypergraph and the outerplanarity number of the sought planar graph. To
-this end, we develop novel structural results for $r$-outerplanar triangulated
-disks, showing that they admit sequences of separators with structural
-properties enabling data reduction. This allows us to obtain a problem kernel
-for Planar Support, thus showing its fixed-parameter tractability.
-
+  Given a hypergraph $H$, the Planar Support problem asks whether there is aplanar graph $G$ on the same vertex set as $H$ such that each hyperedge inducesa connected subgraph of $G$. Planar Support is motivated by applications ingraph drawing and data visualization. We show that Planar Support isfixed-parameter tractable when parameterized by the number of hyperedges in theinput hypergraph and the outerplanarity number of the sought planar graph. Tothis end, we develop novel structural results for $r$-outerplanar triangulateddisks, showing that they admit sequences of separators with structuralproperties enabling data reduction. This allows us to obtain a problem kernelfor Planar Support, thus showing its fixed-parameter tractability.
 
 Algorithms for Cut Problems on Trees
 
-  We study the {\sc multicut on trees} and the {\sc generalized multiway Cut on
-trees} problems. For the {\sc multicut on trees} problem, we present a
-parameterized algorithm that runs in time $O^{*}(\rho^k)$, where $\rho =
-\sqrt{\sqrt{2} + 1} \approx 1.555$ is the positive root of the polynomial
-$x^4-2x^2-1$. This improves the current-best algorithm of Chen et al. that runs
-in time $O^{*}(1.619^k)$. For the {\sc generalized multiway cut on trees}
-problem, we show that this problem is solvable in polynomial time if the number
-of terminal sets is fixed; this answers an open question posed in a recent
-paper by Liu and Zhang. By reducing the {\sc generalized multiway cut on trees}
-problem to the {\sc multicut on trees} problem, our results give a
-parameterized algorithm that solves the {\sc generalized multiway cut on trees}
-problem in time $O^{*}(\rho^k)$, where $\rho = \sqrt{\sqrt{2} + 1} \approx
-1.555$ time.
-
+  We study the {\sc multicut on trees} and the {\sc generalized multiway Cut ontrees} problems. For the {\sc multicut on trees} problem, we present aparameterized algorithm that runs in time $O^{*}(\rho^k)$, where $\rho =\sqrt{\sqrt{2} + 1} \approx 1.555$ is the positive root of the polynomial$x^4-2x^2-1$. This improves the current-best algorithm of Chen et al. that runsin time $O^{*}(1.619^k)$. For the {\sc generalized multiway cut on trees}problem, we show that this problem is solvable in polynomial time if the numberof terminal sets is fixed; this answers an open question posed in a recentpaper by Liu and Zhang. By reducing the {\sc generalized multiway cut on trees}problem to the {\sc multicut on trees} problem, our results give aparameterized algorithm that solves the {\sc generalized multiway cut on trees}problem in time $O^{*}(\rho^k)$, where $\rho = \sqrt{\sqrt{2} + 1} \approx1.555$ time.
 
 Parameterized Algorithms for the Matrix Completion Problem
 
-  We consider two matrix completion problems, in which we are given a matrix
-with missing entries and the task is to complete the matrix in a way that (1)
-minimizes the rank, or (2) minimizes the number of distinct rows. We study the
-parameterized complexity of the two aforementioned problems with respect to
-several parameters of interest, including the minimum number of matrix rows,
-columns, and rows plus columns needed to cover all missing entries. We obtain
-new algorithmic results showing that, for the bounded domain case, both
-problems are fixed-parameter tractable with respect to all aforementioned
-parameters. We complement these results with a lower-bound result for the
-unbounded domain case that rules out fixed-parameter tractability w.r.t. some
-of the parameters under consideration.
-
+  We consider two matrix completion problems, in which we are given a matrixwith missing entries and the task is to complete the matrix in a way that (1)minimizes the rank, or (2) minimizes the number of distinct rows. We study theparameterized complexity of the two aforementioned problems with respect toseveral parameters of interest, including the minimum number of matrix rows,columns, and rows plus columns needed to cover all missing entries. We obtainnew algorithmic results showing that, for the bounded domain case, bothproblems are fixed-parameter tractable with respect to all aforementionedparameters. We complement these results with a lower-bound result for theunbounded domain case that rules out fixed-parameter tractability w.r.t. someof the parameters under consideration.
 
 On Geometric Spanners of Euclidean and Unit Disk Graphs
 
-  We consider the problem of constructing bounded-degree planar geometric
-spanners of Euclidean and unit-disk graphs. It is well known that the Delaunay
-subgraph is a planar geometric spanner with stretch factor $C_{del\approx
-2.42$; however, its degree may not be bounded. Our first result is a very
-simple linear time algorithm for constructing a subgraph of the Delaunay graph
-with stretch factor $\rho =1+2\pi(k\cos{\frac{\pi{k)^{-1$ and degree bounded by
-$k$, for any integer parameter $k\geq 14$. This result immediately implies an
-algorithm for constructing a planar geometric spanner of a Euclidean graph with
-stretch factor $\rho \cdot C_{del$ and degree bounded by $k$, for any integer
-parameter $k\geq 14$. Moreover, the resulting spanner contains a Euclidean
-Minimum Spanning Tree (EMST) as a subgraph. Our second contribution lies in
-developing the structural results necessary to transfer our analysis and
-algorithm from Euclidean graphs to unit disk graphs, the usual model for
-wireless ad-hoc networks. We obtain a very simple distributed, {\em
-strictly-localized algorithm that, given a unit disk graph embedded in the
-plane, constructs a geometric spanner with the above stretch factor and degree
-bound, and also containing an EMST as a subgraph. The obtained results
-dramatically improve the previous results in all aspects, as shown in the
-paper.
+  We consider the problem of constructing bounded-degree planar geometricspanners of Euclidean and unit-disk graphs. It is well known that the Delaunaysubgraph is a planar geometric spanner with stretch factor $C_{del\approx2.42$; however, its degree may not be bounded. Our first result is a verysimple linear time algorithm for constructing a subgraph of the Delaunay graphwith stretch factor $\rho =1+2\pi(k\cos{\frac{\pi{k)^{-1$ and degree bounded by$k$, for any integer parameter $k\geq 14$. This result immediately implies analgorithm for constructing a planar geometric spanner of a Euclidean graph withstretch factor $\rho \cdot C_{del$ and degree bounded by $k$, for any integerparameter $k\geq 14$. Moreover, the resulting spanner contains a EuclideanMinimum Spanning Tree (EMST) as a subgraph. Our second contribution lies indeveloping the structural results necessary to transfer our analysis andalgorithm from Euclidean graphs to unit disk graphs, the usual model forwireless ad-hoc networks. We obtain a very simple distributed, {\emstrictly-localized algorithm that, given a unit disk graph embedded in theplane, constructs a geometric spanner with the above stretch factor and degreebound, and also containing an EMST as a subgraph. The obtained resultsdramatically improve the previous results in all aspects, as shown in thepaper.
 
+Solving Partition Problems Almost Always Requires Pushing Many Vertices  Around
 
-Solving Partition Problems Almost Always Requires Pushing Many Vertices
-  Around
-
-  A fundamental graph problem is to recognize whether the vertex set of a graph
-G can be bipartitioned into sets A and B such that G[A] and G[B] satisfy
-properties P_A and P_B, respectively. This so-called (P_A,P_B)-RECOGNITION
-problem generalizes amongst others the recognition of 3-colorable, bipartite,
-split, and monopolar graphs. A powerful algorithmic technique that can be used
-to obtain fixed-parameter algorithms for many cases of (P_A,P_B)-RECOGNITION,
-as well as several other problems, is the pushing process. For bipartition
-problems, the process starts with an "almost correct" bipartition (A',B'), and
-pushes appropriate vertices from A' to B' and vice versa to eventually arrive
-at a correct bipartition.
-  In this paper, we study whether (P_A,P_B)-RECOGNITION problems for which the
-pushing process yields fixed-parameter algorithms also admit polynomial problem
-kernels. In our study, we focus on the first level above triviality, where P_A
-is the set of P_3-free graphs (disjoint unions of cliques, or cluster graphs),
-the parameter is the number of clusters in the cluster graph G[A], and P_B is
-characterized by a set H of connected forbidden induced subgraphs. We prove
-that, under the assumption that NP is not contained in coNP/poly,
-(P_A,P_B)-RECOGNITION admits a polynomial kernel if and only if H contains a
-graph of order at most 2. In both the kernelization and the lower bound
-results, we make crucial use of the pushing process.
-
+  A fundamental graph problem is to recognize whether the vertex set of a graphG can be bipartitioned into sets A and B such that G[A] and G[B] satisfyproperties P_A and P_B, respectively. This so-called (P_A,P_B)-RECOGNITIONproblem generalizes amongst others the recognition of 3-colorable, bipartite,split, and monopolar graphs. A powerful algorithmic technique that can be usedto obtain fixed-parameter algorithms for many cases of (P_A,P_B)-RECOGNITION,as well as several other problems, is the pushing process. For bipartitionproblems, the process starts with an "almost correct" bipartition (A',B'), andpushes appropriate vertices from A' to B' and vice versa to eventually arriveat a correct bipartition.  In this paper, we study whether (P_A,P_B)-RECOGNITION problems for which thepushing process yields fixed-parameter algorithms also admit polynomial problemkernels. In our study, we focus on the first level above triviality, where P_Ais the set of P_3-free graphs (disjoint unions of cliques, or cluster graphs),the parameter is the number of clusters in the cluster graph G[A], and P_B ischaracterized by a set H of connected forbidden induced subgraphs. We provethat, under the assumption that NP is not contained in coNP/poly,(P_A,P_B)-RECOGNITION admits a polynomial kernel if and only if H contains agraph of order at most 2. In both the kernelization and the lower boundresults, we make crucial use of the pushing process.
 
 Twins in Subdivision Drawings of Hypergraphs
 
-  Visualizing hypergraphs, systems of subsets of some universe, has
-continuously attracted research interest in the last decades. We study a
-natural kind of hypergraph visualization called subdivision drawings. Dinkla et
-al. [Comput. Graph. Forum '12] claimed that only few hypergraphs have a
-subdivision drawing. However, this statement seems to be based on the
-assumption (also used in previous work) that the input hypergraph does not
-contain twins, pairs of vertices which are in precisely the same hyperedges
-(subsets of the universe). We show that such vertices may be necessary for a
-hypergraph to admit a subdivision drawing. As a counterpart, we show that the
-number of such "necessary twins" is upper-bounded by a function of the number m
-of hyperedges and a further parameter r of the desired drawing related to its
-number of layers. This leads to a linear-time algorithm for determining such
-subdivision drawings if m and r are constant; in other words, the problem is
-linear-time fixed-parameter tractable with respect to the parameters m and r.
-
+  Visualizing hypergraphs, systems of subsets of some universe, hascontinuously attracted research interest in the last decades. We study anatural kind of hypergraph visualization called subdivision drawings. Dinkla etal. [Comput. Graph. Forum '12] claimed that only few hypergraphs have asubdivision drawing. However, this statement seems to be based on theassumption (also used in previous work) that the input hypergraph does notcontain twins, pairs of vertices which are in precisely the same hyperedges(subsets of the universe). We show that such vertices may be necessary for ahypergraph to admit a subdivision drawing. As a counterpart, we show that thenumber of such "necessary twins" is upper-bounded by a function of the number mof hyperedges and a further parameter r of the desired drawing related to itsnumber of layers. This leads to a linear-time algorithm for determining suchsubdivision drawings if m and r are constant; in other words, the problem islinear-time fixed-parameter tractable with respect to the parameters m and r.
 
 On the Ordered List Subgraph Embedding Problems
 
-  In the (parameterized) Ordered List Subgraph Embedding problem (p-OLSE) we
-are given two graphs $G$ and $H$, each with a linear order defined on its
-vertices, a function $L$ that associates with every vertex in $G$ a list of
-vertices in $H$, and a parameter $k$. The question is to decide if we can embed
-(one-to-one) a subgraph $S$ of $G$ of $k$ vertices into $H$ such that: (1)
-every vertex of $S$ is mapped to a vertex from its associated list, (2) the
-linear orders inherited by $S$ and its image under the embedding are respected,
-and (3) if there is an edge between two vertices in $S$ then there is an edge
-between their images. If we require the subgraph $S$ to be embedded as an
-induced subgraph, we obtain the Ordered List Induced Subgraph Embedding problem
-(p-OLISE). The p-OLSE and p-OLISE problems model various problems in
-Bioinformatics related to structural comparison/alignment of proteins.
-  We investigate the complexity of p-OLSE and p-OLISE with respect to the
-following structural parameters: the width $\Delta_L$ of the function $L$ (size
-of the largest list), and the maximum degree $\Delta_H$ of $H$ and $\Delta_G$
-of $G$. In terms of the structural parameters under consideration, we draw a
-complete complexity landscape of p-OLSE and p-OLISE (and their optimization
-versions) with respect to the computational frameworks of classical complexity,
-parameterized complexity, and approximation.
-
+  In the (parameterized) Ordered List Subgraph Embedding problem (p-OLSE) weare given two graphs $G$ and $H$, each with a linear order defined on itsvertices, a function $L$ that associates with every vertex in $G$ a list ofvertices in $H$, and a parameter $k$. The question is to decide if we can embed(one-to-one) a subgraph $S$ of $G$ of $k$ vertices into $H$ such that: (1)every vertex of $S$ is mapped to a vertex from its associated list, (2) thelinear orders inherited by $S$ and its image under the embedding are respected,and (3) if there is an edge between two vertices in $S$ then there is an edgebetween their images. If we require the subgraph $S$ to be embedded as aninduced subgraph, we obtain the Ordered List Induced Subgraph Embedding problem(p-OLISE). The p-OLSE and p-OLISE problems model various problems inBioinformatics related to structural comparison/alignment of proteins.  We investigate the complexity of p-OLSE and p-OLISE with respect to thefollowing structural parameters: the width $\Delta_L$ of the function $L$ (sizeof the largest list), and the maximum degree $\Delta_H$ of $H$ and $\Delta_G$of $G$. In terms of the structural parameters under consideration, we draw acomplete complexity landscape of p-OLSE and p-OLISE (and their optimizationversions) with respect to the computational frameworks of classical complexity,parameterized complexity, and approximation.
 

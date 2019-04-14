@@ -1,774 +1,136 @@
 A Scalable Asynchronous Distributed Algorithm for Topic Modeling
 
-  Learning meaningful topic models with massive document collections which
-contain millions of documents and billions of tokens is challenging because of
-two reasons: First, one needs to deal with a large number of topics (typically
-in the order of thousands). Second, one needs a scalable and efficient way of
-distributing the computation across multiple machines. In this paper we present
-a novel algorithm F+Nomad LDA which simultaneously tackles both these problems.
-In order to handle large number of topics we use an appropriately modified
-Fenwick tree. This data structure allows us to sample from a multinomial
-distribution over $T$ items in $O(\log T)$ time. Moreover, when topic counts
-change the data structure can be updated in $O(\log T)$ time. In order to
-distribute the computation across multiple processor we present a novel
-asynchronous framework inspired by the Nomad algorithm of
-\cite{YunYuHsietal13}. We show that F+Nomad LDA significantly outperform
-state-of-the-art on massive problems which involve millions of documents,
-billions of words, and thousands of topics.
-
+  Learning meaningful topic models with massive document collections whichcontain millions of documents and billions of tokens is challenging because oftwo reasons: First, one needs to deal with a large number of topics (typicallyin the order of thousands). Second, one needs a scalable and efficient way ofdistributing the computation across multiple machines. In this paper we presenta novel algorithm F+Nomad LDA which simultaneously tackles both these problems.In order to handle large number of topics we use an appropriately modifiedFenwick tree. This data structure allows us to sample from a multinomialdistribution over $T$ items in $O(\log T)$ time. Moreover, when topic countschange the data structure can be updated in $O(\log T)$ time. In order todistribute the computation across multiple processor we present a novelasynchronous framework inspired by the Nomad algorithm of\cite{YunYuHsietal13}. We show that F+Nomad LDA significantly outperformstate-of-the-art on massive problems which involve millions of documents,billions of words, and thousands of topics.
 
 Metric and Kernel Learning using a Linear Transformation
 
-  Metric and kernel learning are important in several machine learning
-applications. However, most existing metric learning algorithms are limited to
-learning metrics over low-dimensional data, while existing kernel learning
-algorithms are often limited to the transductive setting and do not generalize
-to new data points. In this paper, we study metric learning as a problem of
-learning a linear transformation of the input data. We show that for
-high-dimensional data, a particular framework for learning a linear
-transformation of the data based on the LogDet divergence can be efficiently
-kernelized to learn a metric (or equivalently, a kernel function) over an
-arbitrarily high dimensional space. We further demonstrate that a wide class of
-convex loss functions for learning linear transformations can similarly be
-kernelized, thereby considerably expanding the potential applications of metric
-learning. We demonstrate our learning approach by applying it to large-scale
-real world problems in computer vision and text mining.
-
-
-Sparse Inverse Covariance Matrix Estimation Using Quadratic
-  Approximation
-
-  The L1-regularized Gaussian maximum likelihood estimator (MLE) has been shown
-to have strong statistical guarantees in recovering a sparse inverse covariance
-matrix, or alternatively the underlying graph structure of a Gaussian Markov
-Random Field, from very limited samples. We propose a novel algorithm for
-solving the resulting optimization problem which is a regularized
-log-determinant program. In contrast to recent state-of-the-art methods that
-largely use first order gradient information, our algorithm is based on
-Newton's method and employs a quadratic approximation, but with some
-modifications that leverage the structure of the sparse Gaussian MLE problem.
-We show that our method is superlinearly convergent, and present experimental
-results using synthetic and real-world application data that demonstrate the
-considerable improvements in performance of our method when compared to other
-state-of-the-art methods.
-
-
-Optimal Decision-Theoretic Classification Using Non-Decomposable
-  Performance Metrics
-
-  We provide a general theoretical analysis of expected out-of-sample utility,
-also referred to as decision-theoretic classification, for non-decomposable
-binary classification metrics such as F-measure and Jaccard coefficient. Our
-key result is that the expected out-of-sample utility for many performance
-metrics is provably optimized by a classifier which is equivalent to a signed
-thresholding of the conditional probability of the positive class. Our analysis
-bridges a gap in the literature on binary classification, revealed in light of
-recent results for non-decomposable metrics in population utility maximization
-style classification. Our results identify checkable properties of a
-performance metric which are sufficient to guarantee a probability ranking
-principle. We propose consistent estimators for optimal expected out-of-sample
-classification. As a consequence of the probability ranking principle,
-computational requirements can be reduced from exponential to cubic complexity
-in the general case, and further reduced to quadratic complexity in special
-cases. We provide empirical results on simulated and benchmark datasets
-evaluating the performance of the proposed algorithms for decision-theoretic
-classification and comparing them to baseline and state-of-the-art methods in
-population utility maximization for non-decomposable metrics.
-
-
-Proximal Quasi-Newton for Computationally Intensive L1-regularized
-  M-estimators
-
-  We consider the class of optimization problems arising from computationally
-intensive L1-regularized M-estimators, where the function or gradient values
-are very expensive to compute. A particular instance of interest is the
-L1-regularized MLE for learning Conditional Random Fields (CRFs), which are a
-popular class of statistical models for varied structured prediction problems
-such as sequence labeling, alignment, and classification with label taxonomy.
-L1-regularized MLEs for CRFs are particularly expensive to optimize since
-computing the gradient values requires an expensive inference step. In this
-work, we propose the use of a carefully constructed proximal quasi-Newton
-algorithm for such computationally intensive M-estimation problems, where we
-employ an aggressive active set selection technique. In a key contribution of
-the paper, we show that the proximal quasi-Newton method is provably
-super-linearly convergent, even in the absence of strong convexity, by
-leveraging a restricted variant of strong convexity. In our experiments, the
-proposed algorithm converges considerably faster than current state-of-the-art
-on the problems of sequence labeling and hierarchical classification.
-
+  Metric and kernel learning are important in several machine learningapplications. However, most existing metric learning algorithms are limited tolearning metrics over low-dimensional data, while existing kernel learningalgorithms are often limited to the transductive setting and do not generalizeto new data points. In this paper, we study metric learning as a problem oflearning a linear transformation of the input data. We show that forhigh-dimensional data, a particular framework for learning a lineartransformation of the data based on the LogDet divergence can be efficientlykernelized to learn a metric (or equivalently, a kernel function) over anarbitrarily high dimensional space. We further demonstrate that a wide class ofconvex loss functions for learning linear transformations can similarly bekernelized, thereby considerably expanding the potential applications of metriclearning. We demonstrate our learning approach by applying it to large-scalereal world problems in computer vision and text mining.
 
 Multi-Scale Link Prediction
 
-  The automated analysis of social networks has become an important problem due
-to the proliferation of social networks, such as LiveJournal, Flickr and
-Facebook. The scale of these social networks is massive and continues to grow
-rapidly. An important problem in social network analysis is proximity
-estimation that infers the closeness of different users. Link prediction, in
-turn, is an important application of proximity estimation. However, many
-methods for computing proximity measures have high computational complexity and
-are thus prohibitive for large-scale link prediction problems. One way to
-address this problem is to estimate proximity measures via low-rank
-approximation. However, a single low-rank approximation may not be sufficient
-to represent the behavior of the entire network. In this paper, we propose
-Multi-Scale Link Prediction (MSLP), a framework for link prediction, which can
-handle massive networks. The basis idea of MSLP is to construct low rank
-approximations of the network at multiple scales in an efficient manner. Based
-on this approach, MSLP combines predictions at multiple scales to make robust
-and accurate predictions. Experimental results on real-life datasets with more
-than a million nodes show the superior performance and scalability of our
-method.
+  The automated analysis of social networks has become an important problem dueto the proliferation of social networks, such as LiveJournal, Flickr andFacebook. The scale of these social networks is massive and continues to growrapidly. An important problem in social network analysis is proximityestimation that infers the closeness of different users. Link prediction, inturn, is an important application of proximity estimation. However, manymethods for computing proximity measures have high computational complexity andare thus prohibitive for large-scale link prediction problems. One way toaddress this problem is to estimate proximity measures via low-rankapproximation. However, a single low-rank approximation may not be sufficientto represent the behavior of the entire network. In this paper, we proposeMulti-Scale Link Prediction (MSLP), a framework for link prediction, which canhandle massive networks. The basis idea of MSLP is to construct low rankapproximations of the network at multiple scales in an efficient manner. Basedon this approach, MSLP combines predictions at multiple scales to make robustand accurate predictions. Experimental results on real-life datasets with morethan a million nodes show the superior performance and scalability of ourmethod.
 
+Sparse Inverse Covariance Matrix Estimation Using Quadratic  Approximation
 
-Square Root Graphical Models: Multivariate Generalizations of Univariate
-  Exponential Families that Permit Positive Dependencies
+  The L1-regularized Gaussian maximum likelihood estimator (MLE) has been shownto have strong statistical guarantees in recovering a sparse inverse covariancematrix, or alternatively the underlying graph structure of a Gaussian MarkovRandom Field, from very limited samples. We propose a novel algorithm forsolving the resulting optimization problem which is a regularizedlog-determinant program. In contrast to recent state-of-the-art methods thatlargely use first order gradient information, our algorithm is based onNewton's method and employs a quadratic approximation, but with somemodifications that leverage the structure of the sparse Gaussian MLE problem.We show that our method is superlinearly convergent, and present experimentalresults using synthetic and real-world application data that demonstrate theconsiderable improvements in performance of our method when compared to otherstate-of-the-art methods.
 
-  We develop Square Root Graphical Models (SQR), a novel class of parametric
-graphical models that provides multivariate generalizations of univariate
-exponential family distributions. Previous multivariate graphical models [Yang
-et al. 2015] did not allow positive dependencies for the exponential and
-Poisson generalizations. However, in many real-world datasets, variables
-clearly have positive dependencies. For example, the airport delay time in New
-York---modeled as an exponential distribution---is positively related to the
-delay time in Boston. With this motivation, we give an example of our model
-class derived from the univariate exponential distribution that allows for
-almost arbitrary positive and negative dependencies with only a mild condition
-on the parameter matrix---a condition akin to the positive definiteness of the
-Gaussian covariance matrix. Our Poisson generalization allows for both positive
-and negative dependencies without any constraints on the parameter values. We
-also develop parameter estimation methods using node-wise regressions with
-$\ell_1$ regularization and likelihood approximation methods using sampling.
-Finally, we demonstrate our exponential generalization on a synthetic dataset
-and a real-world dataset of airport delay times.
+NOMAD: Non-locking, stOchastic Multi-machine algorithm for Asynchronous  and Decentralized matrix completion
 
+  We develop an efficient parallel distributed algorithm for matrix completion,named NOMAD (Non-locking, stOchastic Multi-machine algorithm for Asynchronousand Decentralized matrix completion). NOMAD is a decentralized algorithm withnon-blocking communication between processors. One of the key features of NOMADis that the ownership of a variable is asynchronously transferred betweenprocessors in a decentralized fashion. As a consequence it is a lock-freeparallel algorithm. In spite of being an asynchronous algorithm, the variableupdates of NOMAD are serializable, that is, there is an equivalent updateordering in a serial implementation. NOMAD outperforms synchronous algorithmswhich require explicit bulk synchronization after every iteration: ourextensive empirical evaluation shows that not only does our algorithm performwell in distributed setting on commodity hardware, but also outperformsstate-of-the-art algorithms on a HPC cluster both in multi-core and distributedmemory settings.
 
-NOMAD: Non-locking, stOchastic Multi-machine algorithm for Asynchronous
-  and Decentralized matrix completion
+Proximal Quasi-Newton for Computationally Intensive L1-regularized  M-estimators
 
-  We develop an efficient parallel distributed algorithm for matrix completion,
-named NOMAD (Non-locking, stOchastic Multi-machine algorithm for Asynchronous
-and Decentralized matrix completion). NOMAD is a decentralized algorithm with
-non-blocking communication between processors. One of the key features of NOMAD
-is that the ownership of a variable is asynchronously transferred between
-processors in a decentralized fashion. As a consequence it is a lock-free
-parallel algorithm. In spite of being an asynchronous algorithm, the variable
-updates of NOMAD are serializable, that is, there is an equivalent update
-ordering in a serial implementation. NOMAD outperforms synchronous algorithms
-which require explicit bulk synchronization after every iteration: our
-extensive empirical evaluation shows that not only does our algorithm perform
-well in distributed setting on commodity hardware, but also outperforms
-state-of-the-art algorithms on a HPC cluster both in multi-core and distributed
-memory settings.
+  We consider the class of optimization problems arising from computationallyintensive L1-regularized M-estimators, where the function or gradient valuesare very expensive to compute. A particular instance of interest is theL1-regularized MLE for learning Conditional Random Fields (CRFs), which are apopular class of statistical models for varied structured prediction problemssuch as sequence labeling, alignment, and classification with label taxonomy.L1-regularized MLEs for CRFs are particularly expensive to optimize sincecomputing the gradient values requires an expensive inference step. In thiswork, we propose the use of a carefully constructed proximal quasi-Newtonalgorithm for such computationally intensive M-estimation problems, where weemploy an aggressive active set selection technique. In a key contribution ofthe paper, we show that the proximal quasi-Newton method is provablysuper-linearly convergent, even in the absence of strong convexity, byleveraging a restricted variant of strong convexity. In our experiments, theproposed algorithm converges considerably faster than current state-of-the-arton the problems of sequence labeling and hierarchical classification.
 
+Optimal Decision-Theoretic Classification Using Non-Decomposable  Performance Metrics
 
-Preference Completion: Large-scale Collaborative Ranking from Pairwise
-  Comparisons
+  We provide a general theoretical analysis of expected out-of-sample utility,also referred to as decision-theoretic classification, for non-decomposablebinary classification metrics such as F-measure and Jaccard coefficient. Ourkey result is that the expected out-of-sample utility for many performancemetrics is provably optimized by a classifier which is equivalent to a signedthresholding of the conditional probability of the positive class. Our analysisbridges a gap in the literature on binary classification, revealed in light ofrecent results for non-decomposable metrics in population utility maximizationstyle classification. Our results identify checkable properties of aperformance metric which are sufficient to guarantee a probability rankingprinciple. We propose consistent estimators for optimal expected out-of-sampleclassification. As a consequence of the probability ranking principle,computational requirements can be reduced from exponential to cubic complexityin the general case, and further reduced to quadratic complexity in specialcases. We provide empirical results on simulated and benchmark datasetsevaluating the performance of the proposed algorithms for decision-theoreticclassification and comparing them to baseline and state-of-the-art methods inpopulation utility maximization for non-decomposable metrics.
 
-  In this paper we consider the collaborative ranking setting: a pool of users
-each provides a small number of pairwise preferences between $d$ possible
-items; from these we need to predict preferences of the users for items they
-have not yet seen. We do so by fitting a rank $r$ score matrix to the pairwise
-data, and provide two main contributions: (a) we show that an algorithm based
-on convex optimization provides good generalization guarantees once each user
-provides as few as $O(r\log^2 d)$ pairwise comparisons -- essentially matching
-the sample complexity required in the related matrix completion setting (which
-uses actual numerical as opposed to pairwise information), and (b) we develop a
-large-scale non-convex implementation, which we call AltSVM, that trains a
-factored form of the matrix via alternating minimization (which we show reduces
-to alternating SVM problems), and scales and parallelizes very well to large
-problem settings. It also outperforms common baselines on many moderately large
-popular collaborative filtering datasets in both NDCG and in other measures of
-ranking performance.
+Preference Completion: Large-scale Collaborative Ranking from Pairwise  Comparisons
 
+  In this paper we consider the collaborative ranking setting: a pool of userseach provides a small number of pairwise preferences between $d$ possibleitems; from these we need to predict preferences of the users for items theyhave not yet seen. We do so by fitting a rank $r$ score matrix to the pairwisedata, and provide two main contributions: (a) we show that an algorithm basedon convex optimization provides good generalization guarantees once each userprovides as few as $O(r\log^2 d)$ pairwise comparisons -- essentially matchingthe sample complexity required in the related matrix completion setting (whichuses actual numerical as opposed to pairwise information), and (b) we develop alarge-scale non-convex implementation, which we call AltSVM, that trains afactored form of the matrix via alternating minimization (which we show reducesto alternating SVM problems), and scales and parallelizes very well to largeproblem settings. It also outperforms common baselines on many moderately largepopular collaborative filtering datasets in both NDCG and in other measures ofranking performance.
 
 High-dimensional Time Series Prediction with Missing Values
 
-  High-dimensional time series prediction is needed in applications as diverse
-as demand forecasting and climatology. Often, such applications require methods
-that are both highly scalable, and deal with noisy data in terms of corruptions
-or missing values. Classical time series methods usually fall short of handling
-both these issues. In this paper, we propose to adapt matrix matrix completion
-approaches that have previously been successfully applied to large scale noisy
-data, but which fail to adequately model high-dimensional time series due to
-temporal dependencies. We present a novel temporal regularized matrix
-factorization (TRMF) framework which supports data-driven temporal dependency
-learning and enables forecasting ability to our new matrix factorization
-approach. TRMF is highly general, and subsumes many existing matrix
-factorization approaches for time series data. We make interesting connections
-to graph regularized matrix factorization methods in the context of learning
-the dependencies. Experiments on both real and synthetic data show that TRMF
-outperforms several existing approaches for common time series tasks.
+  High-dimensional time series prediction is needed in applications as diverseas demand forecasting and climatology. Often, such applications require methodsthat are both highly scalable, and deal with noisy data in terms of corruptionsor missing values. Classical time series methods usually fall short of handlingboth these issues. In this paper, we propose to adapt matrix matrix completionapproaches that have previously been successfully applied to large scale noisydata, but which fail to adequately model high-dimensional time series due totemporal dependencies. We present a novel temporal regularized matrixfactorization (TRMF) framework which supports data-driven temporal dependencylearning and enables forecasting ability to our new matrix factorizationapproach. TRMF is highly general, and subsumes many existing matrixfactorization approaches for time series data. We make interesting connectionsto graph regularized matrix factorization methods in the context of learningthe dependencies. Experiments on both real and synthetic data show that TRMFoutperforms several existing approaches for common time series tasks.
 
+Square Root Graphical Models: Multivariate Generalizations of Univariate  Exponential Families that Permit Positive Dependencies
+
+  We develop Square Root Graphical Models (SQR), a novel class of parametricgraphical models that provides multivariate generalizations of univariateexponential family distributions. Previous multivariate graphical models [Yanget al. 2015] did not allow positive dependencies for the exponential andPoisson generalizations. However, in many real-world datasets, variablesclearly have positive dependencies. For example, the airport delay time in NewYork---modeled as an exponential distribution---is positively related to thedelay time in Boston. With this motivation, we give an example of our modelclass derived from the univariate exponential distribution that allows foralmost arbitrary positive and negative dependencies with only a mild conditionon the parameter matrix---a condition akin to the positive definiteness of theGaussian covariance matrix. Our Poisson generalization allows for both positiveand negative dependencies without any constraints on the parameter values. Wealso develop parameter estimation methods using node-wise regressions with$\ell_1$ regularization and likelihood approximation methods using sampling.Finally, we demonstrate our exponential generalization on a synthetic datasetand a real-world dataset of airport delay times.
 
 A Greedy Approach for Budgeted Maximum Inner Product Search
 
-  Maximum Inner Product Search (MIPS) is an important task in many machine
-learning applications such as the prediction phase of a low-rank matrix
-factorization model for a recommender system. There have been some works on how
-to perform MIPS in sub-linear time recently. However, most of them do not have
-the flexibility to control the trade-off between search efficient and search
-quality. In this paper, we study the MIPS problem with a computational budget.
-By carefully studying the problem structure of MIPS, we develop a novel
-Greedy-MIPS algorithm, which can handle budgeted MIPS by design. While simple
-and intuitive, Greedy-MIPS yields surprisingly superior performance compared to
-state-of-the-art approaches. As a specific example, on a candidate set
-containing half a million vectors of dimension 200, Greedy-MIPS runs 200x
-faster than the naive approach while yielding search results with the top-5
-precision greater than 75\%.
+  Maximum Inner Product Search (MIPS) is an important task in many machinelearning applications such as the prediction phase of a low-rank matrixfactorization model for a recommender system. There have been some works on howto perform MIPS in sub-linear time recently. However, most of them do not havethe flexibility to control the trade-off between search efficient and searchquality. In this paper, we study the MIPS problem with a computational budget.By carefully studying the problem structure of MIPS, we develop a novelGreedy-MIPS algorithm, which can handle budgeted MIPS by design. While simpleand intuitive, Greedy-MIPS yields surprisingly superior performance compared tostate-of-the-art approaches. As a specific example, on a candidate setcontaining half a million vectors of dimension 200, Greedy-MIPS runs 200xfaster than the naive approach while yielding search results with the top-5precision greater than 75\%.
 
+Learning Non-overlapping Convolutional Neural Networks with Multiple  Kernels
 
-Learning Non-overlapping Convolutional Neural Networks with Multiple
-  Kernels
-
-  In this paper, we consider parameter recovery for non-overlapping
-convolutional neural networks (CNNs) with multiple kernels. We show that when
-the inputs follow Gaussian distribution and the sample size is sufficiently
-large, the squared loss of such CNNs is $\mathit{~locally~strongly~convex}$ in
-a basin of attraction near the global optima for most popular activation
-functions, like ReLU, Leaky ReLU, Squared ReLU, Sigmoid and Tanh. The required
-sample complexity is proportional to the dimension of the input and polynomial
-in the number of kernels and a condition number of the parameters. We also show
-that tensor methods are able to initialize the parameters to the local strong
-convex region. Hence, for most smooth activations, gradient descent following
-tensor initialization is guaranteed to converge to the global optimal with time
-that is linear in input dimension, logarithmic in precision and polynomial in
-other factors. To the best of our knowledge, this is the first work that
-provides recovery guarantees for CNNs with multiple kernels under polynomial
-sample and computational complexities.
-
+  In this paper, we consider parameter recovery for non-overlappingconvolutional neural networks (CNNs) with multiple kernels. We show that whenthe inputs follow Gaussian distribution and the sample size is sufficientlylarge, the squared loss of such CNNs is $\mathit{~locally~strongly~convex}$ ina basin of attraction near the global optima for most popular activationfunctions, like ReLU, Leaky ReLU, Squared ReLU, Sigmoid and Tanh. The requiredsample complexity is proportional to the dimension of the input and polynomialin the number of kernels and a condition number of the parameters. We also showthat tensor methods are able to initialize the parameters to the local strongconvex region. Hence, for most smooth activations, gradient descent followingtensor initialization is guaranteed to converge to the global optimal with timethat is linear in input dimension, logarithmic in precision and polynomial inother factors. To the best of our knowledge, this is the first work thatprovides recovery guarantees for CNNs with multiple kernels under polynomialsample and computational complexities.
 
 Learning Long Term Dependencies via Fourier Recurrent Units
 
-  It is a known fact that training recurrent neural networks for tasks that
-have long term dependencies is challenging. One of the main reasons is the
-vanishing or exploding gradient problem, which prevents gradient information
-from propagating to early layers. In this paper we propose a simple recurrent
-architecture, the Fourier Recurrent Unit (FRU), that stabilizes the gradients
-that arise in its training while giving us stronger expressive power.
-Specifically, FRU summarizes the hidden states $h^{(t)}$ along the temporal
-dimension with Fourier basis functions. This allows gradients to easily reach
-any layer due to FRU's residual learning structure and the global support of
-trigonometric functions. We show that FRU has gradient lower and upper bounds
-independent of temporal dimension. We also show the strong expressivity of
-sparse Fourier basis, from which FRU obtains its strong expressive power. Our
-experimental study also demonstrates that with fewer parameters the proposed
-architecture outperforms other recurrent architectures on many tasks.
-
+  It is a known fact that training recurrent neural networks for tasks thathave long term dependencies is challenging. One of the main reasons is thevanishing or exploding gradient problem, which prevents gradient informationfrom propagating to early layers. In this paper we propose a simple recurrentarchitecture, the Fourier Recurrent Unit (FRU), that stabilizes the gradientsthat arise in its training while giving us stronger expressive power.Specifically, FRU summarizes the hidden states $h^{(t)}$ along the temporaldimension with Fourier basis functions. This allows gradients to easily reachany layer due to FRU's residual learning structure and the global support oftrigonometric functions. We show that FRU has gradient lower and upper boundsindependent of temporal dimension. We also show the strong expressivity ofsparse Fourier basis, from which FRU obtains its strong expressive power. Ourexperimental study also demonstrates that with fewer parameters the proposedarchitecture outperforms other recurrent architectures on many tasks.
 
 Extreme Stochastic Variational Inference: Distributed and Asynchronous
 
-  Stochastic variational inference (SVI), the state-of-the-art algorithm for
-scaling variational inference to large-datasets, is inherently serial.
-Moreover, it requires the parameters to fit in the memory of a single
-processor; this is problematic when the number of parameters is in billions. In
-this paper, we propose extreme stochastic variational inference (ESVI), an
-asynchronous and lock-free algorithm to perform variational inference for
-mixture models on massive real world datasets. ESVI overcomes the limitations
-of SVI by requiring that each processor only access a subset of the data and a
-subset of the parameters, thus providing data and model parallelism
-simultaneously. We demonstrate the effectiveness of ESVI by running Latent
-Dirichlet Allocation (LDA) on UMBC-3B, a dataset that has a vocabulary of 3
-million and a token size of 3 billion. In our experiments, we found that ESVI
-not only outperforms VI and SVI in wallclock-time, but also achieves a better
-quality solution. In addition, we propose a strategy to speed up computation
-and save memory when fitting large number of topics.
-
-
-Provable Inductive Matrix Completion
-
-  Consider a movie recommendation system where apart from the ratings
-information, side information such as user's age or movie's genre is also
-available. Unlike standard matrix completion, in this setting one should be
-able to predict inductively on new users/movies. In this paper, we study the
-problem of inductive matrix completion in the exact recovery setting. That is,
-we assume that the ratings matrix is generated by applying feature vectors to a
-low-rank matrix and the goal is to recover back the underlying matrix.
-Furthermore, we generalize the problem to that of low-rank matrix estimation
-using rank-1 measurements. We study this generic problem and provide conditions
-that the set of measurements should satisfy so that the alternating
-minimization method (which otherwise is a non-convex method with no convergence
-guarantees) is able to recover back the {\em exact} underlying low-rank matrix.
-  In addition to inductive matrix completion, we show that two other low-rank
-estimation problems can be studied in our framework: a) general low-rank matrix
-sensing using rank-1 measurements, and b) multi-label regression with missing
-labels. For both the problems, we provide novel and interesting bounds on the
-number of measurements required by alternating minimization to provably
-converges to the {\em exact} low-rank matrix. In particular, our analysis for
-the general low rank matrix sensing problem significantly improves the required
-storage and computational cost than that required by the RIP-based matrix
-sensing methods \cite{RechtFP2007}. Finally, we provide empirical validation of
-our approach and demonstrate that alternating minimization is able to recover
-the true matrix for the above mentioned problems using a small number of
-measurements.
-
+  Stochastic variational inference (SVI), the state-of-the-art algorithm forscaling variational inference to large-datasets, is inherently serial.Moreover, it requires the parameters to fit in the memory of a singleprocessor; this is problematic when the number of parameters is in billions. Inthis paper, we propose extreme stochastic variational inference (ESVI), anasynchronous and lock-free algorithm to perform variational inference formixture models on massive real world datasets. ESVI overcomes the limitationsof SVI by requiring that each processor only access a subset of the data and asubset of the parameters, thus providing data and model parallelismsimultaneously. We demonstrate the effectiveness of ESVI by running LatentDirichlet Allocation (LDA) on UMBC-3B, a dataset that has a vocabulary of 3million and a token size of 3 billion. In our experiments, we found that ESVInot only outperforms VI and SVI in wallclock-time, but also achieves a betterquality solution. In addition, we propose a strategy to speed up computationand save memory when fitting large number of topics.
 
 Guaranteed Rank Minimization via Singular Value Projection
 
-  Minimizing the rank of a matrix subject to affine constraints is a
-fundamental problem with many important applications in machine learning and
-statistics. In this paper we propose a simple and fast algorithm SVP (Singular
-Value Projection) for rank minimization with affine constraints (ARMP) and show
-that SVP recovers the minimum rank solution for affine constraints that satisfy
-the "restricted isometry property" and show robustness of our method to noise.
-Our results improve upon a recent breakthrough by Recht, Fazel and Parillo
-(RFP07) and Lee and Bresler (LB09) in three significant ways:
-  1) our method (SVP) is significantly simpler to analyze and easier to
-implement,
-  2) we give recovery guarantees under strictly weaker isometry assumptions
-  3) we give geometric convergence guarantees for SVP even in presense of noise
-and, as demonstrated empirically, SVP is significantly faster on real-world and
-synthetic problems.
-  In addition, we address the practically important problem of low-rank matrix
-completion (MCP), which can be seen as a special case of ARMP. We empirically
-demonstrate that our algorithm recovers low-rank incoherent matrices from an
-almost optimal number of uniformly sampled entries. We make partial progress
-towards proving exact recovery and provide some intuition for the strong
-performance of SVP applied to matrix completion by showing a more restricted
-isometry property. Our algorithm outperforms existing methods, such as those of
-\cite{RFP07,CR08,CT09,CCS08,KOM09,LB09}, for ARMP and the matrix-completion
-problem by an order of magnitude and is also significantly more robust to
-noise.
-
-
-Large-scale Multi-label Learning with Missing Labels
-
-  The multi-label classification problem has generated significant interest in
-recent years. However, existing approaches do not adequately address two key
-challenges: (a) the ability to tackle problems with a large number (say
-millions) of labels, and (b) the ability to handle data with missing labels. In
-this paper, we directly address both these problems by studying the multi-label
-problem in a generic empirical risk minimization (ERM) framework. Our
-framework, despite being simple, is surprisingly able to encompass several
-recent label-compression based methods which can be derived as special cases of
-our method. To optimize the ERM problem, we develop techniques that exploit the
-structure of specific loss functions - such as the squared loss function - to
-offer efficient algorithms. We further show that our learning framework admits
-formal excess risk bounds even in the presence of missing labels. Our risk
-bounds are tight and demonstrate better generalization performance for low-rank
-promoting trace-norm regularization when compared to (rank insensitive)
-Frobenius norm regularization. Finally, we present extensive empirical results
-on a variety of benchmark datasets and show that our methods perform
-significantly better than existing label compression based methods and can
-scale up to very large datasets such as the Wikipedia dataset.
-
-
-PASSCoDe: Parallel ASynchronous Stochastic dual Co-ordinate Descent
-
-  Stochastic Dual Coordinate Descent (SDCD) has become one of the most
-efficient ways to solve the family of $\ell_2$-regularized empirical risk
-minimization problems, including linear SVM, logistic regression, and many
-others. The vanilla implementation of DCD is quite slow; however, by
-maintaining primal variables while updating dual variables, the time complexity
-of SDCD can be significantly reduced. Such a strategy forms the core algorithm
-in the widely-used LIBLINEAR package. In this paper, we parallelize the SDCD
-algorithms in LIBLINEAR. In recent research, several synchronized parallel SDCD
-algorithms have been proposed, however, they fail to achieve good speedup in
-the shared memory multi-core setting. In this paper, we propose a family of
-asynchronous stochastic dual coordinate descent algorithms (ASDCD). Each thread
-repeatedly selects a random dual variable and conducts coordinate updates using
-the primal variables that are stored in the shared memory. We analyze the
-convergence properties when different locking/atomic mechanisms are applied.
-For implementation with atomic operations, we show linear convergence under
-mild conditions. For implementation without any atomic operations or locking,
-we present the first {\it backward error analysis} for ASDCD under the
-multi-core environment, showing that the converged solution is the exact
-solution for a primal problem with perturbed regularizer. Experimental results
-show that our methods are much faster than previous parallel coordinate descent
-solvers.
-
-
-A Divide-and-Conquer Solver for Kernel Support Vector Machines
-
-  The kernel support vector machine (SVM) is one of the most widely used
-classification methods; however, the amount of computation required becomes the
-bottleneck when facing millions of samples. In this paper, we propose and
-analyze a novel divide-and-conquer solver for kernel SVMs (DC-SVM). In the
-division step, we partition the kernel SVM problem into smaller subproblems by
-clustering the data, so that each subproblem can be solved independently and
-efficiently. We show theoretically that the support vectors identified by the
-subproblem solution are likely to be support vectors of the entire kernel SVM
-problem, provided that the problem is partitioned appropriately by kernel
-clustering. In the conquer step, the local solutions from the subproblems are
-used to initialize a global coordinate descent solver, which converges quickly
-as suggested by our analysis. By extending this idea, we develop a multilevel
-Divide-and-Conquer SVM algorithm with adaptive clustering and early prediction
-strategy, which outperforms state-of-the-art methods in terms of training
-speed, testing accuracy, and memory usage. As an example, on the covtype
-dataset with half-a-million samples, DC-SVM is 7 times faster than LIBSVM in
-obtaining the exact SVM solution (to within $10^{-6}$ relative error) which
-achieves 96.15% prediction accuracy. Moreover, with our proposed early
-prediction strategy, DC-SVM achieves about 96% accuracy in only 12 minutes,
-which is more than 100 times faster than LIBSVM.
-
-
-Fast Multiplier Methods to Optimize Non-exhaustive, Overlapping
-  Clustering
-
-  Clustering is one of the most fundamental and important tasks in data mining.
-Traditional clustering algorithms, such as K-means, assign every data point to
-exactly one cluster. However, in real-world datasets, the clusters may overlap
-with each other. Furthermore, often, there are outliers that should not belong
-to any cluster. We recently proposed the NEO-K-Means (Non-Exhaustive,
-Overlapping K-Means) objective as a way to address both issues in an integrated
-fashion. Optimizing this discrete objective is NP-hard, and even though there
-is a convex relaxation of the objective, straightforward convex optimization
-approaches are too expensive for large datasets. A practical alternative is to
-use a low-rank factorization of the solution matrix in the convex formulation.
-The resulting optimization problem is non-convex, and we can locally optimize
-the objective function using an augmented Lagrangian method. In this paper, we
-consider two fast multiplier methods to accelerate the convergence of an
-augmented Lagrangian scheme: a proximal method of multipliers and an
-alternating direction method of multipliers (ADMM). For the proximal augmented
-Lagrangian or proximal method of multipliers, we show a convergence result for
-the non-convex case with bound-constrained subproblems. These methods are up to
-13 times faster---with no change in quality---compared with a standard
-augmented Lagrangian method on problems with over 10,000 variables and bring
-runtimes down from over an hour to around 5 minutes.
-
-
-Generalized Root Models: Beyond Pairwise Graphical Models for Univariate
-  Exponential Families
-
-  We present a novel k-way high-dimensional graphical model called the
-Generalized Root Model (GRM) that explicitly models dependencies between
-variable sets of size k > 2---where k = 2 is the standard pairwise graphical
-model. This model is based on taking the k-th root of the original sufficient
-statistics of any univariate exponential family with positive sufficient
-statistics, including the Poisson and exponential distributions. As in the
-recent work with square root graphical (SQR) models [Inouye et al.
-2016]---which was restricted to pairwise dependencies---we give the conditions
-of the parameters that are needed for normalization using the radial
-conditionals similar to the pairwise case [Inouye et al. 2016]. In particular,
-we show that the Poisson GRM has no restrictions on the parameters and the
-exponential GRM only has a restriction akin to negative definiteness. We
-develop a simple but general learning algorithm based on L1-regularized
-node-wise regressions. We also present a general way of numerically
-approximating the log partition function and associated derivatives of the GRM
-univariate node conditionals---in contrast to [Inouye et al. 2016], which only
-provided algorithm for estimating the exponential SQR. To illustrate GRM, we
-model word counts with a Poisson GRM and show the associated k-sized variable
-sets. We finish by discussing methods for reducing the parameter space in
-various situations.
-
+  Minimizing the rank of a matrix subject to affine constraints is afundamental problem with many important applications in machine learning andstatistics. In this paper we propose a simple and fast algorithm SVP (SingularValue Projection) for rank minimization with affine constraints (ARMP) and showthat SVP recovers the minimum rank solution for affine constraints that satisfythe "restricted isometry property" and show robustness of our method to noise.Our results improve upon a recent breakthrough by Recht, Fazel and Parillo(RFP07) and Lee and Bresler (LB09) in three significant ways:  1) our method (SVP) is significantly simpler to analyze and easier toimplement,  2) we give recovery guarantees under strictly weaker isometry assumptions  3) we give geometric convergence guarantees for SVP even in presense of noiseand, as demonstrated empirically, SVP is significantly faster on real-world andsynthetic problems.  In addition, we address the practically important problem of low-rank matrixcompletion (MCP), which can be seen as a special case of ARMP. We empiricallydemonstrate that our algorithm recovers low-rank incoherent matrices from analmost optimal number of uniformly sampled entries. We make partial progresstowards proving exact recovery and provide some intuition for the strongperformance of SVP applied to matrix completion by showing a more restrictedisometry property. Our algorithm outperforms existing methods, such as those of\cite{RFP07,CR08,CT09,CCS08,KOM09,LB09}, for ARMP and the matrix-completionproblem by an order of magnitude and is also significantly more robust tonoise.
 
 Orthogonal Matching Pursuit with Replacement
 
-  In this paper, we consider the problem of compressed sensing where the goal
-is to recover almost all the sparse vectors using a small number of fixed
-linear measurements. For this problem, we propose a novel partial
-hard-thresholding operator that leads to a general family of iterative
-algorithms. While one extreme of the family yields well known hard thresholding
-algorithms like ITI (Iterative Thresholding with Inversion) and HTP (Hard
-Thresholding Pursuit), the other end of the spectrum leads to a novel algorithm
-that we call Orthogonal Matching Pursuit with Replacement (OMPR). OMPR, like
-the classic greedy algorithm OMP, adds exactly one coordinate to the support at
-each iteration, based on the correlation with the current residual. However,
-unlike OMP, OMPR also removes one coordinate from the support. This simple
-change allows us to prove that OMPR has the best known guarantees for sparse
-recovery in terms of the Restricted Isometry Property (a condition on the
-measurement matrix). In contrast, OMP is known to have very weak performance
-guarantees under RIP. Given its simple structure, we are able to extend OMPR
-using locality sensitive hashing to get OMPR-Hash, the first provably
-sub-linear (in dimensionality) algorithm for sparse recovery. Our proof
-techniques are novel and flexible enough to also permit the tightest known
-analysis of popular iterative algorithms such as CoSaMP and Subspace Pursuit.
-We provide experimental results on large problems providing recovery for
-vectors of size up to million dimensions. We demonstrate that for large-scale
-problems our proposed methods are more robust and faster than existing methods.
+  In this paper, we consider the problem of compressed sensing where the goalis to recover almost all the sparse vectors using a small number of fixedlinear measurements. For this problem, we propose a novel partialhard-thresholding operator that leads to a general family of iterativealgorithms. While one extreme of the family yields well known hard thresholdingalgorithms like ITI (Iterative Thresholding with Inversion) and HTP (HardThresholding Pursuit), the other end of the spectrum leads to a novel algorithmthat we call Orthogonal Matching Pursuit with Replacement (OMPR). OMPR, likethe classic greedy algorithm OMP, adds exactly one coordinate to the support ateach iteration, based on the correlation with the current residual. However,unlike OMP, OMPR also removes one coordinate from the support. This simplechange allows us to prove that OMPR has the best known guarantees for sparserecovery in terms of the Restricted Isometry Property (a condition on themeasurement matrix). In contrast, OMP is known to have very weak performanceguarantees under RIP. Given its simple structure, we are able to extend OMPRusing locality sensitive hashing to get OMPR-Hash, the first provablysub-linear (in dimensionality) algorithm for sparse recovery. Our prooftechniques are novel and flexible enough to also permit the tightest knownanalysis of popular iterative algorithms such as CoSaMP and Subspace Pursuit.We provide experimental results on large problems providing recovery forvectors of size up to million dimensions. We demonstrate that for large-scaleproblems our proposed methods are more robust and faster than existing methods.
 
+Provable Inductive Matrix Completion
 
-Overlapping Community Detection Using Neighborhood-Inflated Seed
-  Expansion
+  Consider a movie recommendation system where apart from the ratingsinformation, side information such as user's age or movie's genre is alsoavailable. Unlike standard matrix completion, in this setting one should beable to predict inductively on new users/movies. In this paper, we study theproblem of inductive matrix completion in the exact recovery setting. That is,we assume that the ratings matrix is generated by applying feature vectors to alow-rank matrix and the goal is to recover back the underlying matrix.Furthermore, we generalize the problem to that of low-rank matrix estimationusing rank-1 measurements. We study this generic problem and provide conditionsthat the set of measurements should satisfy so that the alternatingminimization method (which otherwise is a non-convex method with no convergenceguarantees) is able to recover back the {\em exact} underlying low-rank matrix.  In addition to inductive matrix completion, we show that two other low-rankestimation problems can be studied in our framework: a) general low-rank matrixsensing using rank-1 measurements, and b) multi-label regression with missinglabels. For both the problems, we provide novel and interesting bounds on thenumber of measurements required by alternating minimization to provablyconverges to the {\em exact} low-rank matrix. In particular, our analysis forthe general low rank matrix sensing problem significantly improves the requiredstorage and computational cost than that required by the RIP-based matrixsensing methods \cite{RechtFP2007}. Finally, we provide empirical validation ofour approach and demonstrate that alternating minimization is able to recoverthe true matrix for the above mentioned problems using a small number ofmeasurements.
 
-  Community detection is an important task in network analysis. A community
-(also referred to as a cluster) is a set of cohesive vertices that have more
-connections inside the set than outside. In many social and information
-networks, these communities naturally overlap. For instance, in a social
-network, each vertex in a graph corresponds to an individual who usually
-participates in multiple communities. In this paper, we propose an efficient
-overlapping community detection algorithm using a seed expansion approach. The
-key idea of our algorithm is to find good seeds, and then greedily expand these
-seeds based on a community metric. Within this seed expansion method, we
-investigate the problem of how to determine good seed nodes in a graph. In
-particular, we develop new seeding strategies for a personalized PageRank
-clustering scheme that optimizes the conductance community score. Experimental
-results show that our seed expansion algorithm outperforms other
-state-of-the-art overlapping community detection methods in terms of producing
-cohesive clusters and identifying ground-truth communities. We also show that
-our new seeding strategies are better than existing strategies, and are thus
-effective in finding good overlapping communities in real-world networks.
+Large-scale Multi-label Learning with Missing Labels
 
+  The multi-label classification problem has generated significant interest inrecent years. However, existing approaches do not adequately address two keychallenges: (a) the ability to tackle problems with a large number (saymillions) of labels, and (b) the ability to handle data with missing labels. Inthis paper, we directly address both these problems by studying the multi-labelproblem in a generic empirical risk minimization (ERM) framework. Ourframework, despite being simple, is surprisingly able to encompass severalrecent label-compression based methods which can be derived as special cases ofour method. To optimize the ERM problem, we develop techniques that exploit thestructure of specific loss functions - such as the squared loss function - tooffer efficient algorithms. We further show that our learning framework admitsformal excess risk bounds even in the presence of missing labels. Our riskbounds are tight and demonstrate better generalization performance for low-rankpromoting trace-norm regularization when compared to (rank insensitive)Frobenius norm regularization. Finally, we present extensive empirical resultson a variety of benchmark datasets and show that our methods performsignificantly better than existing label compression based methods and canscale up to very large datasets such as the Wikipedia dataset.
+
+A Divide-and-Conquer Solver for Kernel Support Vector Machines
+
+  The kernel support vector machine (SVM) is one of the most widely usedclassification methods; however, the amount of computation required becomes thebottleneck when facing millions of samples. In this paper, we propose andanalyze a novel divide-and-conquer solver for kernel SVMs (DC-SVM). In thedivision step, we partition the kernel SVM problem into smaller subproblems byclustering the data, so that each subproblem can be solved independently andefficiently. We show theoretically that the support vectors identified by thesubproblem solution are likely to be support vectors of the entire kernel SVMproblem, provided that the problem is partitioned appropriately by kernelclustering. In the conquer step, the local solutions from the subproblems areused to initialize a global coordinate descent solver, which converges quicklyas suggested by our analysis. By extending this idea, we develop a multilevelDivide-and-Conquer SVM algorithm with adaptive clustering and early predictionstrategy, which outperforms state-of-the-art methods in terms of trainingspeed, testing accuracy, and memory usage. As an example, on the covtypedataset with half-a-million samples, DC-SVM is 7 times faster than LIBSVM inobtaining the exact SVM solution (to within $10^{-6}$ relative error) whichachieves 96.15% prediction accuracy. Moreover, with our proposed earlyprediction strategy, DC-SVM achieves about 96% accuracy in only 12 minutes,which is more than 100 times faster than LIBSVM.
+
+Overlapping Community Detection Using Neighborhood-Inflated Seed  Expansion
+
+  Community detection is an important task in network analysis. A community(also referred to as a cluster) is a set of cohesive vertices that have moreconnections inside the set than outside. In many social and informationnetworks, these communities naturally overlap. For instance, in a socialnetwork, each vertex in a graph corresponds to an individual who usuallyparticipates in multiple communities. In this paper, we propose an efficientoverlapping community detection algorithm using a seed expansion approach. Thekey idea of our algorithm is to find good seeds, and then greedily expand theseseeds based on a community metric. Within this seed expansion method, weinvestigate the problem of how to determine good seed nodes in a graph. Inparticular, we develop new seeding strategies for a personalized PageRankclustering scheme that optimizes the conductance community score. Experimentalresults show that our seed expansion algorithm outperforms otherstate-of-the-art overlapping community detection methods in terms of producingcohesive clusters and identifying ground-truth communities. We also show thatour new seeding strategies are better than existing strategies, and are thuseffective in finding good overlapping communities in real-world networks.
+
+PASSCoDe: Parallel ASynchronous Stochastic dual Co-ordinate Descent
+
+  Stochastic Dual Coordinate Descent (SDCD) has become one of the mostefficient ways to solve the family of $\ell_2$-regularized empirical riskminimization problems, including linear SVM, logistic regression, and manyothers. The vanilla implementation of DCD is quite slow; however, bymaintaining primal variables while updating dual variables, the time complexityof SDCD can be significantly reduced. Such a strategy forms the core algorithmin the widely-used LIBLINEAR package. In this paper, we parallelize the SDCDalgorithms in LIBLINEAR. In recent research, several synchronized parallel SDCDalgorithms have been proposed, however, they fail to achieve good speedup inthe shared memory multi-core setting. In this paper, we propose a family ofasynchronous stochastic dual coordinate descent algorithms (ASDCD). Each threadrepeatedly selects a random dual variable and conducts coordinate updates usingthe primal variables that are stored in the shared memory. We analyze theconvergence properties when different locking/atomic mechanisms are applied.For implementation with atomic operations, we show linear convergence undermild conditions. For implementation without any atomic operations or locking,we present the first {\it backward error analysis} for ASDCD under themulti-core environment, showing that the converged solution is the exactsolution for a primal problem with perturbed regularizer. Experimental resultsshow that our methods are much faster than previous parallel coordinate descentsolvers.
+
+Fast Multiplier Methods to Optimize Non-exhaustive, Overlapping  Clustering
+
+  Clustering is one of the most fundamental and important tasks in data mining.Traditional clustering algorithms, such as K-means, assign every data point toexactly one cluster. However, in real-world datasets, the clusters may overlapwith each other. Furthermore, often, there are outliers that should not belongto any cluster. We recently proposed the NEO-K-Means (Non-Exhaustive,Overlapping K-Means) objective as a way to address both issues in an integratedfashion. Optimizing this discrete objective is NP-hard, and even though thereis a convex relaxation of the objective, straightforward convex optimizationapproaches are too expensive for large datasets. A practical alternative is touse a low-rank factorization of the solution matrix in the convex formulation.The resulting optimization problem is non-convex, and we can locally optimizethe objective function using an augmented Lagrangian method. In this paper, weconsider two fast multiplier methods to accelerate the convergence of anaugmented Lagrangian scheme: a proximal method of multipliers and analternating direction method of multipliers (ADMM). For the proximal augmentedLagrangian or proximal method of multipliers, we show a convergence result forthe non-convex case with bound-constrained subproblems. These methods are up to13 times faster---with no change in quality---compared with a standardaugmented Lagrangian method on problems with over 10,000 variables and bringruntimes down from over an hour to around 5 minutes.
+
+Generalized Root Models: Beyond Pairwise Graphical Models for Univariate  Exponential Families
+
+  We present a novel k-way high-dimensional graphical model called theGeneralized Root Model (GRM) that explicitly models dependencies betweenvariable sets of size k > 2---where k = 2 is the standard pairwise graphicalmodel. This model is based on taking the k-th root of the original sufficientstatistics of any univariate exponential family with positive sufficientstatistics, including the Poisson and exponential distributions. As in therecent work with square root graphical (SQR) models [Inouye et al.2016]---which was restricted to pairwise dependencies---we give the conditionsof the parameters that are needed for normalization using the radialconditionals similar to the pairwise case [Inouye et al. 2016]. In particular,we show that the Poisson GRM has no restrictions on the parameters and theexponential GRM only has a restriction akin to negative definiteness. Wedevelop a simple but general learning algorithm based on L1-regularizednode-wise regressions. We also present a general way of numericallyapproximating the log partition function and associated derivatives of the GRMunivariate node conditionals---in contrast to [Inouye et al. 2016], which onlyprovided algorithm for estimating the exponential SQR. To illustrate GRM, wemodel word counts with a Poisson GRM and show the associated k-sized variablesets. We finish by discussing methods for reducing the parameter space invarious situations.
 
 Communication-Efficient Parallel Block Minimization for Kernel Machines
 
-  Kernel machines often yield superior predictive performance on various tasks;
-however, they suffer from severe computational challenges. In this paper, we
-show how to overcome the important challenge of speeding up kernel machines. In
-particular, we develop a parallel block minimization framework for solving
-kernel machines, including kernel SVM and kernel logistic regression. Our
-framework proceeds by dividing the problem into smaller subproblems by forming
-a block-diagonal approximation of the Hessian matrix. The subproblems are then
-solved approximately in parallel. After that, a communication efficient line
-search procedure is developed to ensure sufficient reduction of the objective
-function value at each iteration. We prove global linear convergence rate of
-the proposed method with a wide class of subproblem solvers, and our analysis
-covers strongly convex and some non-strongly convex functions. We apply our
-algorithm to solve large-scale kernel SVM problems on distributed systems, and
-show a significant improvement over existing parallel solvers. As an example,
-on the covtype dataset with half-a-million samples, our algorithm can obtain an
-approximate solution with 96% accuracy in 20 seconds using 32 machines, while
-all the other parallel kernel SVM solvers require more than 2000 seconds to
-achieve a solution with 95% accuracy. Moreover, our algorithm can scale to very
-large data sets, such as the kdd algebra dataset with 8 million samples and 20
-million features.
-
+  Kernel machines often yield superior predictive performance on various tasks;however, they suffer from severe computational challenges. In this paper, weshow how to overcome the important challenge of speeding up kernel machines. Inparticular, we develop a parallel block minimization framework for solvingkernel machines, including kernel SVM and kernel logistic regression. Ourframework proceeds by dividing the problem into smaller subproblems by forminga block-diagonal approximation of the Hessian matrix. The subproblems are thensolved approximately in parallel. After that, a communication efficient linesearch procedure is developed to ensure sufficient reduction of the objectivefunction value at each iteration. We prove global linear convergence rate ofthe proposed method with a wide class of subproblem solvers, and our analysiscovers strongly convex and some non-strongly convex functions. We apply ouralgorithm to solve large-scale kernel SVM problems on distributed systems, andshow a significant improvement over existing parallel solvers. As an example,on the covtype dataset with half-a-million samples, our algorithm can obtain anapproximate solution with 96% accuracy in 20 seconds using 32 machines, whileall the other parallel kernel SVM solvers require more than 2000 seconds toachieve a solution with 95% accuracy. Moreover, our algorithm can scale to verylarge data sets, such as the kdd algebra dataset with 8 million samples and 20million features.
 
 Similarity Preserving Representation Learning for Time Series Analysis
 
-  A considerable amount of machine learning algorithms take instance-feature
-matrices as their inputs. As such, they cannot directly analyze time series
-data due to its temporal nature, usually unequal lengths, and complex
-properties. This is a great pity since many of these algorithms are effective,
-robust, efficient, and easy to use. In this paper, we bridge this gap by
-proposing an efficient representation learning framework that is able to
-convert a set of time series with equal or unequal lengths to a matrix format.
-In particular, we guarantee that the pairwise similarities between time series
-are well preserved after the transformation. The learned feature representation
-is particularly suitable to the class of learning problems that are sensitive
-to data similarities. Given a set of $n$ time series, we first construct an
-$n\times n$ partially observed similarity matrix by randomly sampling $O(n \log
-n)$ pairs of time series and computing their pairwise similarities. We then
-propose an extremely efficient algorithm that solves a highly non-convex and
-NP-hard problem to learn new features based on the partially observed
-similarity matrix. We use the learned features to conduct experiments on both
-data classification and clustering tasks. Our extensive experimental results
-demonstrate that the proposed framework is both effective and efficient.
-
+  A considerable amount of machine learning algorithms take instance-featurematrices as their inputs. As such, they cannot directly analyze time seriesdata due to its temporal nature, usually unequal lengths, and complexproperties. This is a great pity since many of these algorithms are effective,robust, efficient, and easy to use. In this paper, we bridge this gap byproposing an efficient representation learning framework that is able toconvert a set of time series with equal or unequal lengths to a matrix format.In particular, we guarantee that the pairwise similarities between time seriesare well preserved after the transformation. The learned feature representationis particularly suitable to the class of learning problems that are sensitiveto data similarities. Given a set of $n$ time series, we first construct an$n\times n$ partially observed similarity matrix by randomly sampling $O(n \logn)$ pairs of time series and computing their pairwise similarities. We thenpropose an extremely efficient algorithm that solves a highly non-convex andNP-hard problem to learn new features based on the partially observedsimilarity matrix. We use the learned features to conduct experiments on bothdata classification and clustering tasks. Our extensive experimental resultsdemonstrate that the proposed framework is both effective and efficient.
 
 Recovery Guarantees for One-hidden-layer Neural Networks
 
-  In this paper, we consider regression problems with one-hidden-layer neural
-networks (1NNs). We distill some properties of activation functions that lead
-to $\mathit{local~strong~convexity}$ in the neighborhood of the ground-truth
-parameters for the 1NN squared-loss objective. Most popular nonlinear
-activation functions satisfy the distilled properties, including rectified
-linear units (ReLUs), leaky ReLUs, squared ReLUs and sigmoids. For activation
-functions that are also smooth, we show $\mathit{local~linear~convergence}$
-guarantees of gradient descent under a resampling rule. For homogeneous
-activations, we show tensor methods are able to initialize the parameters to
-fall into the local strong convexity region. As a result, tensor initialization
-followed by gradient descent is guaranteed to recover the ground truth with
-sample complexity $ d \cdot \log(1/\epsilon) \cdot \mathrm{poly}(k,\lambda )$
-and computational complexity $n\cdot d \cdot \mathrm{poly}(k,\lambda) $ for
-smooth homogeneous activations with high probability, where $d$ is the
-dimension of the input, $k$ ($k\leq d$) is the number of hidden nodes,
-$\lambda$ is a conditioning property of the ground-truth parameter matrix
-between the input layer and the hidden layer, $\epsilon$ is the targeted
-precision and $n$ is the number of samples. To the best of our knowledge, this
-is the first work that provides recovery guarantees for 1NNs with both sample
-complexity and computational complexity $\mathit{linear}$ in the input
-dimension and $\mathit{logarithmic}$ in the precision.
+  In this paper, we consider regression problems with one-hidden-layer neuralnetworks (1NNs). We distill some properties of activation functions that leadto $\mathit{local~strong~convexity}$ in the neighborhood of the ground-truthparameters for the 1NN squared-loss objective. Most popular nonlinearactivation functions satisfy the distilled properties, including rectifiedlinear units (ReLUs), leaky ReLUs, squared ReLUs and sigmoids. For activationfunctions that are also smooth, we show $\mathit{local~linear~convergence}$guarantees of gradient descent under a resampling rule. For homogeneousactivations, we show tensor methods are able to initialize the parameters tofall into the local strong convexity region. As a result, tensor initializationfollowed by gradient descent is guaranteed to recover the ground truth withsample complexity $ d \cdot \log(1/\epsilon) \cdot \mathrm{poly}(k,\lambda )$and computational complexity $n\cdot d \cdot \mathrm{poly}(k,\lambda) $ forsmooth homogeneous activations with high probability, where $d$ is thedimension of the input, $k$ ($k\leq d$) is the number of hidden nodes,$\lambda$ is a conditioning property of the ground-truth parameter matrixbetween the input layer and the hidden layer, $\epsilon$ is the targetedprecision and $n$ is the number of samples. To the best of our knowledge, thisis the first work that provides recovery guarantees for 1NNs with both samplecomplexity and computational complexity $\mathit{linear}$ in the inputdimension and $\mathit{logarithmic}$ in the precision.
 
+Stabilizing Gradients for Deep Neural Networks via Efficient SVD  Parameterization
 
-Stabilizing Gradients for Deep Neural Networks via Efficient SVD
-  Parameterization
+  Vanishing and exploding gradients are two of the main obstacles in trainingdeep neural networks, especially in capturing long range dependencies inrecurrent neural networks~(RNNs). In this paper, we present an efficientparametrization of the transition matrix of an RNN that allows us to stabilizethe gradients that arise in its training. Specifically, we parameterize thetransition matrix by its singular value decomposition(SVD), which allows us toexplicitly track and control its singular values. We attain efficiency by usingtools that are common in numerical linear algebra, namely Householderreflectors for representing the orthogonal matrices that arise in the SVD. Byexplicitly controlling the singular values, our proposed Spectral-RNN methodallows us to easily solve the exploding gradient problem and we observe that itempirically solves the vanishing gradient issue to a large extent. We note thatthe SVD parameterization can be used for any rectangular weight matrix, henceit can be easily extended to any deep neural network, such as a multi-layerperceptron. Theoretically, we demonstrate that our parameterization does notlose any expressive power, and show how it controls generalization of RNN forthe classification task. %, and show how it potentially makes the optimizationprocess easier. Our extensive experimental results also demonstrate that theproposed framework converges faster, and has good generalization, especially incapturing long range dependencies, as shown on the synthetic addition and copytasks, as well as on MNIST and Penn Tree Bank data sets.
 
-  Vanishing and exploding gradients are two of the main obstacles in training
-deep neural networks, especially in capturing long range dependencies in
-recurrent neural networks~(RNNs). In this paper, we present an efficient
-parametrization of the transition matrix of an RNN that allows us to stabilize
-the gradients that arise in its training. Specifically, we parameterize the
-transition matrix by its singular value decomposition(SVD), which allows us to
-explicitly track and control its singular values. We attain efficiency by using
-tools that are common in numerical linear algebra, namely Householder
-reflectors for representing the orthogonal matrices that arise in the SVD. By
-explicitly controlling the singular values, our proposed Spectral-RNN method
-allows us to easily solve the exploding gradient problem and we observe that it
-empirically solves the vanishing gradient issue to a large extent. We note that
-the SVD parameterization can be used for any rectangular weight matrix, hence
-it can be easily extended to any deep neural network, such as a multi-layer
-perceptron. Theoretically, we demonstrate that our parameterization does not
-lose any expressive power, and show how it controls generalization of RNN for
-the classification task. %, and show how it potentially makes the optimization
-process easier. Our extensive experimental results also demonstrate that the
-proposed framework converges faster, and has good generalization, especially in
-capturing long range dependencies, as shown on the synthetic addition and copy
-tasks, as well as on MNIST and Penn Tree Bank data sets.
+Discrete Adversarial Attacks and Submodular Optimization with  Applications to Text Classification
 
-
-Discrete Adversarial Attacks and Submodular Optimization with
-  Applications to Text Classification
-
-  Adversarial examples are carefully constructed modifications to an input that
-completely change the output of a classifier but are imperceptible to humans.
-Despite these successful attacks for continuous data (such as image and audio
-samples), generating adversarial examples for discrete structures such as text
-has proven significantly more challenging. In this paper we formulate the
-attacks with discrete input on a set function as an optimization task. We prove
-that this set function is submodular for some popular neural network text
-classifiers under simplifying assumption. This finding guarantees a $1-1/e$
-approximation factor for attacks that use the greedy algorithm. Meanwhile, we
-show how to use the gradient of the attacked classifier to guide the greedy
-search. Empirical studies with our proposed optimization scheme show
-significantly improved attack ability and efficiency, on three different text
-classification tasks over various baselines. We also use a joint sentence and
-word paraphrasing technique to maintain the original semantics and syntax of
-the text. This is validated by a human subject evaluation in subjective metrics
-on the quality and semantic coherence of our generated adversarial text.
-
+  Adversarial examples are carefully constructed modifications to an input thatcompletely change the output of a classifier but are imperceptible to humans.Despite these successful attacks for continuous data (such as image and audiosamples), generating adversarial examples for discrete structures such as texthas proven significantly more challenging. In this paper we formulate theattacks with discrete input on a set function as an optimization task. We provethat this set function is submodular for some popular neural network textclassifiers under simplifying assumption. This finding guarantees a $1-1/e$approximation factor for attacks that use the greedy algorithm. Meanwhile, weshow how to use the gradient of the attacked classifier to guide the greedysearch. Empirical studies with our proposed optimization scheme showsignificantly improved attack ability and efficiency, on three different textclassification tasks over various baselines. We also use a joint sentence andword paraphrasing technique to maintain the original semantics and syntax ofthe text. This is validated by a human subject evaluation in subjective metricson the quality and semantic coherence of our generated adversarial text.
 
 The Limitations of Adversarial Training and the Blind-Spot Attack
 
-  The adversarial training procedure proposed by Madry et al. (2018) is one of
-the most effective methods to defend against adversarial examples in deep
-neural networks (DNNs). In our paper, we shed some lights on the practicality
-and the hardness of adversarial training by showing that the effectiveness
-(robustness on test set) of adversarial training has a strong correlation with
-the distance between a test point and the manifold of training data embedded by
-the network. Test examples that are relatively far away from this manifold are
-more likely to be vulnerable to adversarial attacks. Consequentially, an
-adversarial training based defense is susceptible to a new class of attacks,
-the "blind-spot attack", where the input images reside in "blind-spots" (low
-density regions) of the empirical distribution of training data but is still on
-the ground-truth data manifold. For MNIST, we found that these blind-spots can
-be easily found by simply scaling and shifting image pixel values. Most
-importantly, for large datasets with high dimensional and complex data manifold
-(CIFAR, ImageNet, etc), the existence of blind-spots in adversarial training
-makes defending on any valid test examples difficult due to the curse of
-dimensionality and the scarcity of training data. Additionally, we find that
-blind-spots also exist on provable defenses including (Wong & Kolter, 2018) and
-(Sinha et al., 2018) because these trainable robustness certificates can only
-be practically optimized on a limited set of training data.
+  The adversarial training procedure proposed by Madry et al. (2018) is one ofthe most effective methods to defend against adversarial examples in deepneural networks (DNNs). In our paper, we shed some lights on the practicalityand the hardness of adversarial training by showing that the effectiveness(robustness on test set) of adversarial training has a strong correlation withthe distance between a test point and the manifold of training data embedded bythe network. Test examples that are relatively far away from this manifold aremore likely to be vulnerable to adversarial attacks. Consequentially, anadversarial training based defense is susceptible to a new class of attacks,the "blind-spot attack", where the input images reside in "blind-spots" (lowdensity regions) of the empirical distribution of training data but is still onthe ground-truth data manifold. For MNIST, we found that these blind-spots canbe easily found by simply scaling and shifting image pixel values. Mostimportantly, for large datasets with high dimensional and complex data manifold(CIFAR, ImageNet, etc), the existence of blind-spots in adversarial trainingmakes defending on any valid test examples difficult due to the curse ofdimensionality and the scarcity of training data. Additionally, we find thatblind-spots also exist on provable defenses including (Wong & Kolter, 2018) and(Sinha et al., 2018) because these trainable robustness certificates can onlybe practically optimized on a limited set of training data.
 
+Prediction and Clustering in Signed Networks: A Local to Global  Perspective
 
-Prediction and Clustering in Signed Networks: A Local to Global
-  Perspective
-
-  The study of social networks is a burgeoning research area. However, most
-existing work deals with networks that simply encode whether relationships
-exist or not. In contrast, relationships in signed networks can be positive
-("like", "trust") or negative ("dislike", "distrust"). The theory of social
-balance shows that signed networks tend to conform to some local patterns that,
-in turn, induce certain global characteristics. In this paper, we exploit both
-local as well as global aspects of social balance theory for two fundamental
-problems in the analysis of signed networks: sign prediction and clustering.
-Motivated by local patterns of social balance, we first propose two families of
-sign prediction methods: measures of social imbalance (MOIs), and supervised
-learning using high order cycles (HOCs). These methods predict signs of edges
-based on triangles and \ell-cycles for relatively small values of \ell.
-Interestingly, by examining measures of social imbalance, we show that the
-classic Katz measure, which is used widely in unsigned link prediction,
-actually has a balance theoretic interpretation when applied to signed
-networks. Furthermore, motivated by the global structure of balanced networks,
-we propose an effective low rank modeling approach for both sign prediction and
-clustering. For the low rank modeling approach, we provide theoretical
-performance guarantees via convex relaxations, scale it up to large problem
-sizes using a matrix factorization based algorithm, and provide extensive
-experimental validation including comparisons with local approaches. Our
-experimental results indicate that, by adopting a more global viewpoint of
-balance structure, we get significant performance and computational gains in
-prediction and clustering tasks on signed networks. Our work therefore
-highlights the usefulness of the global aspect of balance theory for the
-analysis of signed networks.
-
+  The study of social networks is a burgeoning research area. However, mostexisting work deals with networks that simply encode whether relationshipsexist or not. In contrast, relationships in signed networks can be positive("like", "trust") or negative ("dislike", "distrust"). The theory of socialbalance shows that signed networks tend to conform to some local patterns that,in turn, induce certain global characteristics. In this paper, we exploit bothlocal as well as global aspects of social balance theory for two fundamentalproblems in the analysis of signed networks: sign prediction and clustering.Motivated by local patterns of social balance, we first propose two families ofsign prediction methods: measures of social imbalance (MOIs), and supervisedlearning using high order cycles (HOCs). These methods predict signs of edgesbased on triangles and \ell-cycles for relatively small values of \ell.Interestingly, by examining measures of social imbalance, we show that theclassic Katz measure, which is used widely in unsigned link prediction,actually has a balance theoretic interpretation when applied to signednetworks. Furthermore, motivated by the global structure of balanced networks,we propose an effective low rank modeling approach for both sign prediction andclustering. For the low rank modeling approach, we provide theoreticalperformance guarantees via convex relaxations, scale it up to large problemsizes using a matrix factorization based algorithm, and provide extensiveexperimental validation including comparisons with local approaches. Ourexperimental results indicate that, by adopting a more global viewpoint ofbalance structure, we get significant performance and computational gains inprediction and clustering tasks on signed networks. Our work thereforehighlights the usefulness of the global aspect of balance theory for theanalysis of signed networks.
 
 PU Learning for Matrix Completion
 
-  In this paper, we consider the matrix completion problem when the
-observations are one-bit measurements of some underlying matrix M, and in
-particular the observed samples consist only of ones and no zeros. This problem
-is motivated by modern applications such as recommender systems and social
-networks where only "likes" or "friendships" are observed. The problem of
-learning from only positive and unlabeled examples, called PU
-(positive-unlabeled) learning, has been studied in the context of binary
-classification. We consider the PU matrix completion problem, where an
-underlying real-valued matrix M is first quantized to generate one-bit
-observations and then a subset of positive entries is revealed. Under the
-assumption that M has bounded nuclear norm, we provide recovery guarantees for
-two different observation models: 1) M parameterizes a distribution that
-generates a binary matrix, 2) M is thresholded to obtain a binary matrix. For
-the first case, we propose a "shifted matrix completion" method that recovers M
-using only a subset of indices corresponding to ones, while for the second
-case, we propose a "biased matrix completion" method that recovers the
-(thresholded) binary matrix. Both methods yield strong error bounds --- if M is
-n by n, the Frobenius error is bounded as O(1/((1-rho)n), where 1-rho denotes
-the fraction of ones observed. This implies a sample complexity of O(n\log n)
-ones to achieve a small error, when M is dense and n is large. We extend our
-methods and guarantees to the inductive matrix completion problem, where rows
-and columns of M have associated features. We provide efficient and scalable
-optimization procedures for both the methods and demonstrate the effectiveness
-of the proposed methods for link prediction (on real-world networks consisting
-of over 2 million nodes and 90 million links) and semi-supervised clustering
-tasks.
-
+  In this paper, we consider the matrix completion problem when theobservations are one-bit measurements of some underlying matrix M, and inparticular the observed samples consist only of ones and no zeros. This problemis motivated by modern applications such as recommender systems and socialnetworks where only "likes" or "friendships" are observed. The problem oflearning from only positive and unlabeled examples, called PU(positive-unlabeled) learning, has been studied in the context of binaryclassification. We consider the PU matrix completion problem, where anunderlying real-valued matrix M is first quantized to generate one-bitobservations and then a subset of positive entries is revealed. Under theassumption that M has bounded nuclear norm, we provide recovery guarantees fortwo different observation models: 1) M parameterizes a distribution thatgenerates a binary matrix, 2) M is thresholded to obtain a binary matrix. Forthe first case, we propose a "shifted matrix completion" method that recovers Musing only a subset of indices corresponding to ones, while for the secondcase, we propose a "biased matrix completion" method that recovers the(thresholded) binary matrix. Both methods yield strong error bounds --- if M isn by n, the Frobenius error is bounded as O(1/((1-rho)n), where 1-rho denotesthe fraction of ones observed. This implies a sample complexity of O(n\log n)ones to achieve a small error, when M is dense and n is large. We extend ourmethods and guarantees to the inductive matrix completion problem, where rowsand columns of M have associated features. We provide efficient and scalableoptimization procedures for both the methods and demonstrate the effectivenessof the proposed methods for link prediction (on real-world networks consistingof over 2 million nodes and 90 million links) and semi-supervised clusteringtasks.
 
 Towards Fast Computation of Certified Robustness for ReLU Networks
 
-  Verifying the robustness property of a general Rectified Linear Unit (ReLU)
-network is an NP-complete problem [Katz, Barrett, Dill, Julian and Kochenderfer
-CAV17]. Although finding the exact minimum adversarial distortion is hard,
-giving a certified lower bound of the minimum distortion is possible. Current
-available methods of computing such a bound are either time-consuming or
-delivering low quality bounds that are too loose to be useful. In this paper,
-we exploit the special structure of ReLU networks and provide two
-computationally efficient algorithms Fast-Lin and Fast-Lip that are able to
-certify non-trivial lower bounds of minimum distortions, by bounding the ReLU
-units with appropriate linear functions Fast-Lin, or by bounding the local
-Lipschitz constant Fast-Lip. Experiments show that (1) our proposed methods
-deliver bounds close to (the gap is 2-3X) exact minimum distortion found by
-Reluplex in small MNIST networks while our algorithms are more than 10,000
-times faster; (2) our methods deliver similar quality of bounds (the gap is
-within 35% and usually around 10%; sometimes our bounds are even better) for
-larger networks compared to the methods based on solving linear programming
-problems but our algorithms are 33-14,000 times faster; (3) our method is
-capable of solving large MNIST and CIFAR networks up to 7 layers with more than
-10,000 neurons within tens of seconds on a single CPU core.
-  In addition, we show that, in fact, there is no polynomial time algorithm
-that can approximately find the minimum $\ell_1$ adversarial distortion of a
-ReLU network with a $0.99\ln n$ approximation ratio unless
-$\mathsf{NP}$=$\mathsf{P}$, where $n$ is the number of neurons in the network.
-
+  Verifying the robustness property of a general Rectified Linear Unit (ReLU)network is an NP-complete problem [Katz, Barrett, Dill, Julian and KochenderferCAV17]. Although finding the exact minimum adversarial distortion is hard,giving a certified lower bound of the minimum distortion is possible. Currentavailable methods of computing such a bound are either time-consuming ordelivering low quality bounds that are too loose to be useful. In this paper,we exploit the special structure of ReLU networks and provide twocomputationally efficient algorithms Fast-Lin and Fast-Lip that are able tocertify non-trivial lower bounds of minimum distortions, by bounding the ReLUunits with appropriate linear functions Fast-Lin, or by bounding the localLipschitz constant Fast-Lip. Experiments show that (1) our proposed methodsdeliver bounds close to (the gap is 2-3X) exact minimum distortion found byReluplex in small MNIST networks while our algorithms are more than 10,000times faster; (2) our methods deliver similar quality of bounds (the gap iswithin 35% and usually around 10%; sometimes our bounds are even better) forlarger networks compared to the methods based on solving linear programmingproblems but our algorithms are 33-14,000 times faster; (3) our method iscapable of solving large MNIST and CIFAR networks up to 7 layers with more than10,000 neurons within tens of seconds on a single CPU core.  In addition, we show that, in fact, there is no polynomial time algorithmthat can approximately find the minimum $\ell_1$ adversarial distortion of aReLU network with a $0.99\ln n$ approximation ratio unless$\mathsf{NP}$=$\mathsf{P}$, where $n$ is the number of neurons in the network.
 
 Nonlinear Inductive Matrix Completion based on One-layer Neural Networks
 
-  The goal of a recommendation system is to predict the interest of a user in a
-given item by exploiting the existing set of ratings as well as certain
-user/item features. A standard approach to modeling this problem is Inductive
-Matrix Completion where the predicted rating is modeled as an inner product of
-the user and the item features projected onto a latent space. In order to learn
-the parameters effectively from a small number of observed ratings, the latent
-space is constrained to be low-dimensional which implies that the parameter
-matrix is constrained to be low-rank. However, such bilinear modeling of the
-ratings can be limiting in practice and non-linear prediction functions can
-lead to significant improvements. A natural approach to introducing
-non-linearity in the prediction function is to apply a non-linear activation
-function on top of the projected user/item features. Imposition of
-non-linearities further complicates an already challenging problem that has two
-sources of non-convexity: a) low-rank structure of the parameter matrix, and b)
-non-linear activation function. We show that one can still solve the non-linear
-Inductive Matrix Completion problem using gradient descent type methods as long
-as the solution is initialized well. That is, close to the optima, the
-optimization function is strongly convex and hence admits standard optimization
-techniques, at least for certain activation functions, such as Sigmoid and
-tanh. We also highlight the importance of the activation function and show how
-ReLU can behave significantly differently than say a sigmoid function. Finally,
-we apply our proposed technique to recommendation systems and semi-supervised
-clustering, and show that our method can lead to much better performance than
-standard linear Inductive Matrix Completion methods.
-
+  The goal of a recommendation system is to predict the interest of a user in agiven item by exploiting the existing set of ratings as well as certainuser/item features. A standard approach to modeling this problem is InductiveMatrix Completion where the predicted rating is modeled as an inner product ofthe user and the item features projected onto a latent space. In order to learnthe parameters effectively from a small number of observed ratings, the latentspace is constrained to be low-dimensional which implies that the parametermatrix is constrained to be low-rank. However, such bilinear modeling of theratings can be limiting in practice and non-linear prediction functions canlead to significant improvements. A natural approach to introducingnon-linearity in the prediction function is to apply a non-linear activationfunction on top of the projected user/item features. Imposition ofnon-linearities further complicates an already challenging problem that has twosources of non-convexity: a) low-rank structure of the parameter matrix, and b)non-linear activation function. We show that one can still solve the non-linearInductive Matrix Completion problem using gradient descent type methods as longas the solution is initialized well. That is, close to the optima, theoptimization function is strongly convex and hence admits standard optimizationtechniques, at least for certain activation functions, such as Sigmoid andtanh. We also highlight the importance of the activation function and show howReLU can behave significantly differently than say a sigmoid function. Finally,we apply our proposed technique to recommendation systems and semi-supervisedclustering, and show that our method can lead to much better performance thanstandard linear Inductive Matrix Completion methods.
 
 SysML: The New Frontier of Machine Learning Systems
 
-  Machine learning (ML) techniques are enjoying rapidly increasing adoption.
-However, designing and implementing the systems that support ML models in
-real-world deployments remains a significant obstacle, in large part due to the
-radically different development and deployment profile of modern ML methods,
-and the range of practical concerns that come with broader adoption. We propose
-to foster a new systems machine learning research community at the intersection
-of the traditional systems and ML communities, focused on topics such as
-hardware systems for ML, software systems for ML, and ML optimized for metrics
-beyond predictive accuracy. To do this, we describe a new conference, SysML,
-that explicitly targets research at the intersection of systems and machine
-learning with a program committee split evenly between experts in systems and
-ML, and an explicit focus on topics at the intersection of the two.
-
+  Machine learning (ML) techniques are enjoying rapidly increasing adoption.However, designing and implementing the systems that support ML models inreal-world deployments remains a significant obstacle, in large part due to theradically different development and deployment profile of modern ML methods,and the range of practical concerns that come with broader adoption. We proposeto foster a new systems machine learning research community at the intersectionof the traditional systems and ML communities, focused on topics such ashardware systems for ML, software systems for ML, and ML optimized for metricsbeyond predictive accuracy. To do this, we describe a new conference, SysML,that explicitly targets research at the intersection of systems and machinelearning with a program committee split evenly between experts in systems andML, and an explicit focus on topics at the intersection of the two.
 

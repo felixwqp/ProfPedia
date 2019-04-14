@@ -1,159 +1,28 @@
-EMBERS at 4 years: Experiences operating an Open Source Indicators
-  Forecasting System
+EMBERS at 4 years: Experiences operating an Open Source Indicators  Forecasting System
 
-  EMBERS is an anticipatory intelligence system forecasting population-level
-events in multiple countries of Latin America. A deployed system from 2012,
-EMBERS has been generating alerts 24x7 by ingesting a broad range of data
-sources including news, blogs, tweets, machine coded events, currency rates,
-and food prices. In this paper, we describe our experiences operating EMBERS
-continuously for nearly 4 years, with specific attention to the discoveries it
-has enabled, correct as well as missed forecasts, and lessons learnt from
-participating in a forecasting tournament including our perspectives on the
-limits of forecasting and ethical considerations.
+  EMBERS is an anticipatory intelligence system forecasting population-levelevents in multiple countries of Latin America. A deployed system from 2012,EMBERS has been generating alerts 24x7 by ingesting a broad range of datasources including news, blogs, tweets, machine coded events, currency rates,and food prices. In this paper, we describe our experiences operating EMBERScontinuously for nearly 4 years, with specific attention to the discoveries ithas enabled, correct as well as missed forecasts, and lessons learnt fromparticipating in a forecasting tournament including our perspectives on thelimits of forecasting and ethical considerations.
 
+Efficient Algorithms for Maximum Link Scheduling in Distributed  Computing Models with SINR Constraints
 
-Efficient Algorithms for Maximum Link Scheduling in Distributed
-  Computing Models with SINR Constraints
+  A fundamental problem in wireless networks is the maximum link schedulingproblem: given a set $L$ of links, compute the largest possible subset$L'\subseteq L$ of links that can be scheduled simultaneously withoutinterference. This problem is particularly challenging in the physicalinterference model based on SINR constraints (referred to as the SINR model),which has gained a lot of interest in recent years. Constant factorapproximation algorithms have been developed for this problem, but lowcomplexity distributed algorithms that give the same approximation guarantee inthe SINR model are not known. Distributed algorithms are especially challengingin this model, because of its non-locality.  In this paper, we develop a set of fast distributed algorithms in the SINRmodel, providing constant approximation for the maximum link scheduling problemunder uniform power assignment. We find that different aspects of availabletechnology, such as full/half-duplex communication, and non-adaptive/adaptivepower control, have a significant impact on the performance of the algorithm;these issues have not been explored in the context of distributed algorithms inthe SINR model before. Our algorithms' running time is $O(g(L) \log^c m)$,where $c=1,2,3$ for different problem instances, and $g(L)$ is the "linkdiversity" determined by the logarithmic scale of a communication link length.Since $g(L)$ is small and remains in a constant range in most cases, ouralgorithms serve as the first set of "sublinear" time distributed solution. Thealgorithms are randomized and crucially use physical carrier sensing indistributed communication steps.
 
-  A fundamental problem in wireless networks is the maximum link scheduling
-problem: given a set $L$ of links, compute the largest possible subset
-$L'\subseteq L$ of links that can be scheduled simultaneously without
-interference. This problem is particularly challenging in the physical
-interference model based on SINR constraints (referred to as the SINR model),
-which has gained a lot of interest in recent years. Constant factor
-approximation algorithms have been developed for this problem, but low
-complexity distributed algorithms that give the same approximation guarantee in
-the SINR model are not known. Distributed algorithms are especially challenging
-in this model, because of its non-locality.
-  In this paper, we develop a set of fast distributed algorithms in the SINR
-model, providing constant approximation for the maximum link scheduling problem
-under uniform power assignment. We find that different aspects of available
-technology, such as full/half-duplex communication, and non-adaptive/adaptive
-power control, have a significant impact on the performance of the algorithm;
-these issues have not been explored in the context of distributed algorithms in
-the SINR model before. Our algorithms' running time is $O(g(L) \log^c m)$,
-where $c=1,2,3$ for different problem instances, and $g(L)$ is the "link
-diversity" determined by the logarithmic scale of a communication link length.
-Since $g(L)$ is small and remains in a constant range in most cases, our
-algorithms serve as the first set of "sublinear" time distributed solution. The
-algorithms are randomized and crucially use physical carrier sensing in
-distributed communication steps.
+'Beating the news' with EMBERS: Forecasting Civil Unrest using Open  Source Indicators
 
+  We describe the design, implementation, and evaluation of EMBERS, anautomated, 24x7 continuous system for forecasting civil unrest across 10countries of Latin America using open source indicators such as tweets, newssources, blogs, economic indicators, and other data sources. Unlikeretrospective studies, EMBERS has been making forecasts into the future sinceNov 2012 which have been (and continue to be) evaluated by an independent T&Eteam (MITRE). Of note, EMBERS has successfully forecast the uptick and downtickof incidents during the June 2013 protests in Brazil. We outline the systemarchitecture of EMBERS, individual models that leverage specific data sources,and a fusion and suppression engine that supports trading off specificevaluation criteria. EMBERS also provides an audit trail interface that enablesthe investigation of why specific predictions were made along with the datautilized for forecasting. Through numerous evaluations, we demonstrate thesuperiority of EMBERS over baserate methods and its capability to forecastsignificant societal happenings.
+
+Approximation Algorithms for Reducing the Spectral Radius to Control  Epidemic Spread
+
+  The largest eigenvalue of the adjacency matrix of a network (referred to asthe spectral radius) is an important metric in its own right. Further, forseveral models of epidemic spread on networks (e.g., the `flu-like' SIS model),it has been shown that an epidemic dies out quickly if the spectral radius ofthe graph is below a certain threshold that depends on the model parameters.This motivates a strategy to control epidemic spread by reducing the spectralradius of the underlying network.  In this paper, we develop a suite of provable approximation algorithms forreducing the spectral radius by removing the minimum cost set of edges(modeling quarantining) or nodes (modeling vaccinations), with different timeand quality tradeoffs. Our main algorithm, \textsc{GreedyWalk}, is based on theidea of hitting closed walks of a given length, and gives an$O(\log^2{n})$-approximation, where $n$ denotes the number of nodes; it alsoperforms much better in practice compared to all prior heuristics proposed forthis problem. We further present a novel sparsification method to improve itsrunning time.  In addition, we give a new primal-dual based algorithm with an even betterapproximation guarantee ($O(\log n)$), albeit with slower running time. We alsogive lower bounds on the worst-case performance of some of the popularheuristics. Finally we demonstrate the applicability of our algorithms and theproperties of our solutions via extensive experiments on multiple synthetic andreal networks.
 
 Forecasting the Flu: Designing Social Network Sensors for Epidemics
 
-  Early detection and modeling of a contagious epidemic can provide important
-guidance about quelling the contagion, controlling its spread, or the effective
-design of countermeasures. A topic of recent interest has been to design social
-network sensors, i.e., identifying a small set of people who can be monitored
-to provide insight into the emergence of an epidemic in a larger population. We
-formally pose the problem of designing social network sensors for flu epidemics
-and identify two different objectives that could be targeted in such sensor
-design problems. Using the graph theoretic notion of dominators we develop an
-efficient and effective heuristic for forecasting epidemics at lead time. Using
-six city-scale datasets generated by extensive microscopic epidemiological
-simulations involving millions of individuals, we illustrate the practical
-applicability of our methods and show significant benefits (up to twenty-two
-days more lead time) compared to other competitors. Most importantly, we
-demonstrate the use of surrogates or proxies for policy makers for designing
-social network sensors that require from nonintrusive knowledge of people to
-more information on the relationship among people. The results show that the
-more intrusive information we obtain, the longer lead time to predict the flu
-outbreak up to nine days.
+  Early detection and modeling of a contagious epidemic can provide importantguidance about quelling the contagion, controlling its spread, or the effectivedesign of countermeasures. A topic of recent interest has been to design socialnetwork sensors, i.e., identifying a small set of people who can be monitoredto provide insight into the emergence of an epidemic in a larger population. Weformally pose the problem of designing social network sensors for flu epidemicsand identify two different objectives that could be targeted in such sensordesign problems. Using the graph theoretic notion of dominators we develop anefficient and effective heuristic for forecasting epidemics at lead time. Usingsix city-scale datasets generated by extensive microscopic epidemiologicalsimulations involving millions of individuals, we illustrate the practicalapplicability of our methods and show significant benefits (up to twenty-twodays more lead time) compared to other competitors. Most importantly, wedemonstrate the use of surrogates or proxies for policy makers for designingsocial network sensors that require from nonintrusive knowledge of people tomore information on the relationship among people. The results show that themore intrusive information we obtain, the longer lead time to predict the fluoutbreak up to nine days.
 
+High-Performance Massive Subgraph Counting using Pipelined  Adaptive-Group Communication
 
-'Beating the news' with EMBERS: Forecasting Civil Unrest using Open
-  Source Indicators
-
-  We describe the design, implementation, and evaluation of EMBERS, an
-automated, 24x7 continuous system for forecasting civil unrest across 10
-countries of Latin America using open source indicators such as tweets, news
-sources, blogs, economic indicators, and other data sources. Unlike
-retrospective studies, EMBERS has been making forecasts into the future since
-Nov 2012 which have been (and continue to be) evaluated by an independent T&E
-team (MITRE). Of note, EMBERS has successfully forecast the uptick and downtick
-of incidents during the June 2013 protests in Brazil. We outline the system
-architecture of EMBERS, individual models that leverage specific data sources,
-and a fusion and suppression engine that supports trading off specific
-evaluation criteria. EMBERS also provides an audit trail interface that enables
-the investigation of why specific predictions were made along with the data
-utilized for forecasting. Through numerous evaluations, we demonstrate the
-superiority of EMBERS over baserate methods and its capability to forecast
-significant societal happenings.
-
-
-Approximation Algorithms for Reducing the Spectral Radius to Control
-  Epidemic Spread
-
-  The largest eigenvalue of the adjacency matrix of a network (referred to as
-the spectral radius) is an important metric in its own right. Further, for
-several models of epidemic spread on networks (e.g., the `flu-like' SIS model),
-it has been shown that an epidemic dies out quickly if the spectral radius of
-the graph is below a certain threshold that depends on the model parameters.
-This motivates a strategy to control epidemic spread by reducing the spectral
-radius of the underlying network.
-  In this paper, we develop a suite of provable approximation algorithms for
-reducing the spectral radius by removing the minimum cost set of edges
-(modeling quarantining) or nodes (modeling vaccinations), with different time
-and quality tradeoffs. Our main algorithm, \textsc{GreedyWalk}, is based on the
-idea of hitting closed walks of a given length, and gives an
-$O(\log^2{n})$-approximation, where $n$ denotes the number of nodes; it also
-performs much better in practice compared to all prior heuristics proposed for
-this problem. We further present a novel sparsification method to improve its
-running time.
-  In addition, we give a new primal-dual based algorithm with an even better
-approximation guarantee ($O(\log n)$), albeit with slower running time. We also
-give lower bounds on the worst-case performance of some of the popular
-heuristics. Finally we demonstrate the applicability of our algorithms and the
-properties of our solutions via extensive experiments on multiple synthetic and
-real networks.
-
-
-High-Performance Massive Subgraph Counting using Pipelined
-  Adaptive-Group Communication
-
-  Subgraph counting aims to count the number of occurrences of a subgraph T
-(aka as a template) in a given graph G. The basic problem has found
-applications in diverse domains. The problem is known to be computationally
-challenging - the complexity grows both as a function of T and G. Recent
-applications have motivated solving such problems on massive networks with
-billions of vertices. In this chapter, we study the subgraph counting problem
-from a parallel computing perspective. We discuss efficient parallel algorithms
-for approximately resolving subgraph counting problems by using the
-color-coding technique. We then present several system-level strategies to
-substantially improve the overall performance of the algorithm in massive
-subgraph counting problems. We propose: 1) a novel pipelined Adaptive-Group
-communication pattern to improve inter-node scalability, 2) a fine-grained
-pipeline design to effectively reduce the memory space of intermediate results,
-3) partitioning neighbor lists of subgraph vertices to achieve better thread
-concurrency and workload balance. Experimentation on an Intel Xeon E5 cluster
-shows that our implementation achieves 5x speedup of performance compared to
-the state-of-the-art work while reduces the peak memory utilization by a factor
-of 2 on large templates of 12 to 15 vertices and input graphs of 2 to 5
-billions of edges.
-
+  Subgraph counting aims to count the number of occurrences of a subgraph T(aka as a template) in a given graph G. The basic problem has foundapplications in diverse domains. The problem is known to be computationallychallenging - the complexity grows both as a function of T and G. Recentapplications have motivated solving such problems on massive networks withbillions of vertices. In this chapter, we study the subgraph counting problemfrom a parallel computing perspective. We discuss efficient parallel algorithmsfor approximately resolving subgraph counting problems by using thecolor-coding technique. We then present several system-level strategies tosubstantially improve the overall performance of the algorithm in massivesubgraph counting problems. We propose: 1) a novel pipelined Adaptive-Groupcommunication pattern to improve inter-node scalability, 2) a fine-grainedpipeline design to effectively reduce the memory space of intermediate results,3) partitioning neighbor lists of subgraph vertices to achieve better threadconcurrency and workload balance. Experimentation on an Intel Xeon E5 clustershows that our implementation achieves 5x speedup of performance compared tothe state-of-the-art work while reduces the peak memory utilization by a factorof 2 on large templates of 12 to 15 vertices and input graphs of 2 to 5billions of edges.
 
 A GraphBLAS Approach for Subgraph Counting
 
-  Subgraph counting aims to count the occurrences of a subgraph template T in a
-given network G. The basic problem of computing structural properties such as
-counting triangles and other subgraphs has found applications in diverse
-domains. Recent biological, social, cybersecurity and sensor network
-applications have motivated solving such problems on massive networks with
-billions of vertices. The larger subgraph problem is known to be memory bounded
-and computationally challenging to scale; the complexity grows both as a
-function of T and G. In this paper, we study the non-induced tree subgraph
-counting problem, propose a novel layered softwarehardware co-design approach,
-and implement a shared-memory multi-threaded algorithm: 1) reducing the
-complexity of the parallel color-coding algorithm by identifying and pruning
-redundant graph traversal; 2) achieving a fully-vectorized implementation upon
-linear algebra kernels inspired by GraphBLAS, which significantly improves
-cache usage and maximizes memory bandwidth utilization. Experiments show that
-our implementation improves the overall performance over the state-of-the-art
-work by orders of magnitude and up to 660x for subgraph templates with size
-over 12 on a dual-socket Intel(R) Xeon(R) Platinum 8160 server. We believe our
-approach using GraphBLAS with optimized sparse linear algebra can be applied to
-other massive subgraph counting problems and emerging high-memory bandwidth
-hardware architectures.
-
+  Subgraph counting aims to count the occurrences of a subgraph template T in agiven network G. The basic problem of computing structural properties such ascounting triangles and other subgraphs has found applications in diversedomains. Recent biological, social, cybersecurity and sensor networkapplications have motivated solving such problems on massive networks withbillions of vertices. The larger subgraph problem is known to be memory boundedand computationally challenging to scale; the complexity grows both as afunction of T and G. In this paper, we study the non-induced tree subgraphcounting problem, propose a novel layered softwarehardware co-design approach,and implement a shared-memory multi-threaded algorithm: 1) reducing thecomplexity of the parallel color-coding algorithm by identifying and pruningredundant graph traversal; 2) achieving a fully-vectorized implementation uponlinear algebra kernels inspired by GraphBLAS, which significantly improvescache usage and maximizes memory bandwidth utilization. Experiments show thatour implementation improves the overall performance over the state-of-the-artwork by orders of magnitude and up to 660x for subgraph templates with sizeover 12 on a dual-socket Intel(R) Xeon(R) Platinum 8160 server. We believe ourapproach using GraphBLAS with optimized sparse linear algebra can be applied toother massive subgraph counting problems and emerging high-memory bandwidthhardware architectures.
 

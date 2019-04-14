@@ -1,237 +1,48 @@
 Monte Carlo Sampling Methods for Approximating Interactive POMDPs
 
-  Partially observable Markov decision processes (POMDPs) provide a principled
-framework for sequential planning in uncertain single agent settings. An
-extension of POMDPs to multiagent settings, called interactive POMDPs
-(I-POMDPs), replaces POMDP belief spaces with interactive hierarchical belief
-systems which represent an agent's belief about the physical world, about
-beliefs of other agents, and about their beliefs about others' beliefs. This
-modification makes the difficulties of obtaining solutions due to complexity of
-the belief and policy spaces even more acute. We describe a general method for
-obtaining approximate solutions of I-POMDPs based on particle filtering (PF).
-We introduce the interactive PF, which descends the levels of the interactive
-belief hierarchies and samples and propagates beliefs at each level. The
-interactive PF is able to mitigate the belief space complexity, but it does not
-address the policy space complexity. To mitigate the policy space complexity --
-sometimes also called the curse of history -- we utilize a complementary method
-based on sampling likely observations while building the look ahead
-reachability tree. While this approach does not completely address the curse of
-history, it beats back the curse's impact substantially. We provide
-experimental results and chart future work.
-
+  Partially observable Markov decision processes (POMDPs) provide a principledframework for sequential planning in uncertain single agent settings. Anextension of POMDPs to multiagent settings, called interactive POMDPs(I-POMDPs), replaces POMDP belief spaces with interactive hierarchical beliefsystems which represent an agent's belief about the physical world, aboutbeliefs of other agents, and about their beliefs about others' beliefs. Thismodification makes the difficulties of obtaining solutions due to complexity ofthe belief and policy spaces even more acute. We describe a general method forobtaining approximate solutions of I-POMDPs based on particle filtering (PF).We introduce the interactive PF, which descends the levels of the interactivebelief hierarchies and samples and propagates beliefs at each level. Theinteractive PF is able to mitigate the belief space complexity, but it does notaddress the policy space complexity. To mitigate the policy space complexity --sometimes also called the curse of history -- we utilize a complementary methodbased on sampling likely observations while building the look aheadreachability tree. While this approach does not completely address the curse ofhistory, it beats back the curse's impact substantially. We provideexperimental results and chart future work.
 
 A Framework and Method for Online Inverse Reinforcement Learning
 
-  Inverse reinforcement learning (IRL) is the problem of learning the
-preferences of an agent from the observations of its behavior on a task. While
-this problem has been well investigated, the related problem of {\em online}
-IRL---where the observations are incrementally accrued, yet the demands of the
-application often prohibit a full rerun of an IRL method---has received
-relatively less attention. We introduce the first formal framework for online
-IRL, called incremental IRL (I2RL), and a new method that advances maximum
-entropy IRL with hidden variables, to this setting. Our formal analysis shows
-that the new method has a monotonically improving performance with more
-demonstration data, as well as probabilistically bounded error, both under full
-and partial observability. Experiments in a simulated robotic application of
-penetrating a continuous patrol under occlusion shows the relatively improved
-performance and speed up of the new method and validates the utility of online
-IRL.
-
+  Inverse reinforcement learning (IRL) is the problem of learning thepreferences of an agent from the observations of its behavior on a task. Whilethis problem has been well investigated, the related problem of {\em online}IRL---where the observations are incrementally accrued, yet the demands of theapplication often prohibit a full rerun of an IRL method---has receivedrelatively less attention. We introduce the first formal framework for onlineIRL, called incremental IRL (I2RL), and a new method that advances maximumentropy IRL with hidden variables, to this setting. Our formal analysis showsthat the new method has a monotonically improving performance with moredemonstration data, as well as probabilistically bounded error, both under fulland partial observability. Experiments in a simulated robotic application ofpenetrating a continuous patrol under occlusion shows the relatively improvedperformance and speed up of the new method and validates the utility of onlineIRL.
 
 Reinforcement Learning for Heterogeneous Teams with PALO Bounds
 
-  We introduce reinforcement learning for heterogeneous teams in which rewards
-for an agent are additively factored into local costs, stimuli unique to each
-agent, and global rewards, those shared by all agents in the domain. Motivating
-domains include coordination of varied robotic platforms, which incur different
-costs for the same action, but share an overall goal. We present two templates
-for learning in this setting with factored rewards: a generalization of
-Perkins' Monte Carlo exploring starts for POMDPs to canonical MPOMDPs, with a
-single policy mapping joint observations of all agents to joint actions
-(MCES-MP); and another with each agent individually mapping joint observations
-to their own action (MCES-FMP). We use probably approximately local optimal
-(PALO) bounds to analyze sample complexity, instantiating these templates to
-PALO learning. We promote sample efficiency by including a policy space pruning
-technique, and evaluate the approaches on three domains of heterogeneous agents
-demonstrating that MCES-FMP yields improved policies in less samples compared
-to MCES-MP and a previous benchmark.
-
+  We introduce reinforcement learning for heterogeneous teams in which rewardsfor an agent are additively factored into local costs, stimuli unique to eachagent, and global rewards, those shared by all agents in the domain. Motivatingdomains include coordination of varied robotic platforms, which incur differentcosts for the same action, but share an overall goal. We present two templatesfor learning in this setting with factored rewards: a generalization ofPerkins' Monte Carlo exploring starts for POMDPs to canonical MPOMDPs, with asingle policy mapping joint observations of all agents to joint actions(MCES-MP); and another with each agent individually mapping joint observationsto their own action (MCES-FMP). We use probably approximately local optimal(PALO) bounds to analyze sample complexity, instantiating these templates toPALO learning. We promote sample efficiency by including a policy space pruningtechnique, and evaluate the approaches on three domains of heterogeneous agentsdemonstrating that MCES-FMP yields improved policies in less samples comparedto MCES-MP and a previous benchmark.
 
 Inverse Reinforcement Learning Under Noisy Observations
 
-  We consider the problem of performing inverse reinforcement learning when the
-trajectory of the expert is not perfectly observed by the learner. Instead, a
-noisy continuous-time observation of the trajectory is provided to the learner.
-This problem exhibits wide-ranging applications and the specific application we
-consider here is the scenario in which the learner seeks to penetrate a
-perimeter patrolled by a robot. The learner's field of view is limited due to
-which it cannot observe the patroller's complete trajectory. Instead, we allow
-the learner to listen to the expert's movement sound, which it can also use to
-estimate the expert's state and action using an observation model. We treat the
-expert's state and action as hidden data and present an algorithm based on
-expectation maximization and maximum entropy principle to solve the non-linear,
-non-convex problem. Related work considers discrete-time observations and an
-observation model that does not include actions. In contrast, our technique
-takes expectations over both state and action of the expert, enabling learning
-even in the presence of extreme noise and broader applications.
+  We consider the problem of performing inverse reinforcement learning when thetrajectory of the expert is not perfectly observed by the learner. Instead, anoisy continuous-time observation of the trajectory is provided to the learner.This problem exhibits wide-ranging applications and the specific application weconsider here is the scenario in which the learner seeks to penetrate aperimeter patrolled by a robot. The learner's field of view is limited due towhich it cannot observe the patroller's complete trajectory. Instead, we allowthe learner to listen to the expert's movement sound, which it can also use toestimate the expert's state and action using an observation model. We treat theexpert's state and action as hidden data and present an algorithm based onexpectation maximization and maximum entropy principle to solve the non-linear,non-convex problem. Related work considers discrete-time observations and anobservation model that does not include actions. In contrast, our techniquetakes expectations over both state and action of the expert, enabling learningeven in the presence of extreme noise and broader applications.
 
+Team Behavior in Interactive Dynamic Influence Diagrams with  Applications to Ad Hoc Teams
 
-Team Behavior in Interactive Dynamic Influence Diagrams with
-  Applications to Ad Hoc Teams
+  Planning for ad hoc teamwork is challenging because it involves agentscollaborating without any prior coordination or communication. The focus is onprincipled methods for a single agent to cooperate with others. This motivatesinvestigating the ad hoc teamwork problem in the context of individual decisionmaking frameworks. However, individual decision making in multiagent settingsfaces the task of having to reason about other agents' actions, which in turninvolves reasoning about others. An established approximation thatoperationalizes this approach is to bound the infinite nesting from below byintroducing level 0 models. We show that a consequence of the finitely-nestedmodeling is that we may not obtain optimal team solutions in cooperativesettings. We address this limitation by including models at level 0 whosesolutions involve learning. We demonstrate that the learning integrated intoplanning in the context of interactive dynamic influence diagrams facilitatesoptimal team behavior, and is applicable to ad hoc teamwork.
 
-  Planning for ad hoc teamwork is challenging because it involves agents
-collaborating without any prior coordination or communication. The focus is on
-principled methods for a single agent to cooperate with others. This motivates
-investigating the ad hoc teamwork problem in the context of individual decision
-making frameworks. However, individual decision making in multiagent settings
-faces the task of having to reason about other agents' actions, which in turn
-involves reasoning about others. An established approximation that
-operationalizes this approach is to bound the infinite nesting from below by
-introducing level 0 models. We show that a consequence of the finitely-nested
-modeling is that we may not obtain optimal team solutions in cooperative
-settings. We address this limitation by including models at level 0 whose
-solutions involve learning. We demonstrate that the learning integrated into
-planning in the context of interactive dynamic influence diagrams facilitates
-optimal team behavior, and is applicable to ad hoc teamwork.
+Individual Planning in Agent Populations: Exploiting Anonymity and  Frame-Action Hypergraphs
 
+  Interactive partially observable Markov decision processes (I-POMDP) providea formal framework for planning for a self-interested agent in multiagentsettings. An agent operating in a multiagent environment must deliberate aboutthe actions that other agents may take and the effect these actions have on theenvironment and the rewards it receives. Traditional I-POMDPs model thisdependence on the actions of other agents using joint action and model spaces.Therefore, the solution complexity grows exponentially with the number ofagents thereby complicating scalability. In this paper, we model and extendanonymity and context-specific independence -- problem structures often presentin agent populations -- for computational gain. We empirically demonstrate theefficiency from exploiting these problem structures by solving a new multiagentproblem involving more than 1,000 agents.
 
-Individual Planning in Agent Populations: Exploiting Anonymity and
-  Frame-Action Hypergraphs
+Dynamic Sum Product Networks for Tractable Inference on Sequence Data  (Extended Version)
 
-  Interactive partially observable Markov decision processes (I-POMDP) provide
-a formal framework for planning for a self-interested agent in multiagent
-settings. An agent operating in a multiagent environment must deliberate about
-the actions that other agents may take and the effect these actions have on the
-environment and the rewards it receives. Traditional I-POMDPs model this
-dependence on the actions of other agents using joint action and model spaces.
-Therefore, the solution complexity grows exponentially with the number of
-agents thereby complicating scalability. In this paper, we model and extend
-anonymity and context-specific independence -- problem structures often present
-in agent populations -- for computational gain. We empirically demonstrate the
-efficiency from exploiting these problem structures by solving a new multiagent
-problem involving more than 1,000 agents.
+  Sum-Product Networks (SPN) have recently emerged as a new class of tractableprobabilistic graphical models. Unlike Bayesian networks and Markov networkswhere inference may be exponential in the size of the network, inference inSPNs is in time linear in the size of the network. Since SPNs representdistributions over a fixed set of variables only, we propose dynamic sumproduct networks (DSPNs) as a generalization of SPNs for sequence data ofvarying length. A DSPN consists of a template network that is repeated as manytimes as needed to model data sequences of any length. We present a localsearch technique to learn the structure of the template network. In contrast todynamic Bayesian networks for which inference is generally exponential in thenumber of variables per time slice, DSPNs inherit the linear inferencecomplexity of SPNs. We demonstrate the advantages of DSPNs over DBNs and othermodels on several datasets of sequence data.
 
+Actor-Critic for Linearly-Solvable Continuous MDP with Partially Known  Dynamics
 
-Dynamic Sum Product Networks for Tractable Inference on Sequence Data
-  (Extended Version)
+  In many robotic applications, some aspects of the system dynamics can bemodeled accurately while others are difficult to obtain or model. We present anovel reinforcement learning (RL) method for continuous state and action spacesthat learns with partial knowledge of the system and without activeexploration. It solves linearly-solvable Markov decision processes (L-MDPs),which are well suited for continuous state and action spaces, based on anactor-critic architecture. Compared to previous RL methods for L-MDPs and pathintegral methods which are model based, the actor-critic learning does not needa model of the uncontrolled dynamics and, importantly, transition noise levels;however, it requires knowing the control dynamics for the problem. We evaluateour method on two synthetic test problems, and one real-world problem insimulation and using real traffic data. Our experiments demonstrate improvedlearning and policy performance.
 
-  Sum-Product Networks (SPN) have recently emerged as a new class of tractable
-probabilistic graphical models. Unlike Bayesian networks and Markov networks
-where inference may be exponential in the size of the network, inference in
-SPNs is in time linear in the size of the network. Since SPNs represent
-distributions over a fixed set of variables only, we propose dynamic sum
-product networks (DSPNs) as a generalization of SPNs for sequence data of
-varying length. A DSPN consists of a template network that is repeated as many
-times as needed to model data sequences of any length. We present a local
-search technique to learn the structure of the template network. In contrast to
-dynamic Bayesian networks for which inference is generally exponential in the
-number of variables per time slice, DSPNs inherit the linear inference
-complexity of SPNs. We demonstrate the advantages of DSPNs over DBNs and other
-models on several datasets of sequence data.
+Freeway Merging in Congested Traffic based on Multipolicy Decision  Making with Passive Actor Critic
 
+  Freeway merging in congested traffic is a significant challenge toward fullyautomated driving. Merging vehicles need to decide not only how to merge into aspot, but also where to merge. We present a method for the freeway mergingbased on multi-policy decision making with a reinforcement learning methodcalled {\em passive actor-critic} (pAC), which learns with less knowledge ofthe system and without active exploration. The method selects a merging spotcandidate by using the state value learned with pAC. We evaluate our methodusing real traffic data. Our experiments show that pAC achieves 92\% successrate to merge into a freeway, which is comparable to human decision making.
 
-Actor-Critic for Linearly-Solvable Continuous MDP with Partially Known
-  Dynamics
+A Survey of Inverse Reinforcement Learning: Challenges, Methods and  Progress
 
-  In many robotic applications, some aspects of the system dynamics can be
-modeled accurately while others are difficult to obtain or model. We present a
-novel reinforcement learning (RL) method for continuous state and action spaces
-that learns with partial knowledge of the system and without active
-exploration. It solves linearly-solvable Markov decision processes (L-MDPs),
-which are well suited for continuous state and action spaces, based on an
-actor-critic architecture. Compared to previous RL methods for L-MDPs and path
-integral methods which are model based, the actor-critic learning does not need
-a model of the uncontrolled dynamics and, importantly, transition noise levels;
-however, it requires knowing the control dynamics for the problem. We evaluate
-our method on two synthetic test problems, and one real-world problem in
-simulation and using real traffic data. Our experiments demonstrate improved
-learning and policy performance.
+  Inverse reinforcement learning is the problem of inferring the rewardfunction of an observed agent, given its policy or behavior. Researchersperceive IRL both as a problem and as a class of methods. By categoricallysurveying the current literature in IRL, this article serves as a reference forresearchers and practitioners in machine learning to understand the challengesof IRL and select the approaches best suited for the problem on hand. Thesurvey formally introduces the IRL problem along with its central challengeswhich include accurate inference, generalizability, correctness of priorknowledge, and growth in solution complexity with problem size. The articleelaborates how the current methods mitigate these challenges. We furtherdiscuss the extensions of traditional IRL methods: (i) inaccurate andincomplete perception, (ii) incomplete model, (iii) multiple rewards, and (iv)non-linear reward functions. This discussion concludes with some broad advancesin the research area and currently open research questions.
 
+From Questions to Effective Answers: On the Utility of Knowledge-Driven  Querying Systems for Life Sciences Data
 
-Freeway Merging in Congested Traffic based on Multipolicy Decision
-  Making with Passive Actor Critic
+  We compare two distinct approaches for querying data in the context of thelife sciences. The first approach utilizes conventional databases to store thedata and intuitive form-based interfaces to facilitate easy querying of thedata. These interfaces could be seen as implementing a set of "pre-canned"queries commonly used by the life science researchers that we study. The secondapproach is based on semantic Web technologies and is knowledge (model) driven.It utilizes a large OWL ontology and same datasets as before but associated asRDF instances of the ontology concepts. An intuitive interface is provided thatallows the formulation of RDF triples-based queries. Both these approaches arebeing used in parallel by a team of cell biologists in their daily researchactivities, with the objective of gradually replacing the conventional approachwith the knowledge-driven one. This provides us with a valuable opportunity tocompare and qualitatively evaluate the two approaches. We describe severalbenefits of the knowledge-driven approach in comparison to the traditional wayof accessing data, and highlight a few limitations as well. We believe that ouranalysis not only explicitly highlights the specific benefits and limitationsof semantic Web technologies in our context but also contributes towardeffective ways of translating a question in a researcher's mind into precisecomputational queries with the intent of obtaining effective answers from thedata. While researchers often assume the benefits of semantic Web technologies,we explicitly illustrate these in practice.
 
-  Freeway merging in congested traffic is a significant challenge toward fully
-automated driving. Merging vehicles need to decide not only how to merge into a
-spot, but also where to merge. We present a method for the freeway merging
-based on multi-policy decision making with a reinforcement learning method
-called {\em passive actor-critic} (pAC), which learns with less knowledge of
-the system and without active exploration. The method selects a merging spot
-candidate by using the state value learned with pAC. We evaluate our method
-using real traffic data. Our experiments show that pAC achieves 92\% success
-rate to merge into a freeway, which is comparable to human decision making.
+Exploiting Model Equivalences for Solving Interactive Dynamic Influence  Diagrams
 
-
-A Survey of Inverse Reinforcement Learning: Challenges, Methods and
-  Progress
-
-  Inverse reinforcement learning is the problem of inferring the reward
-function of an observed agent, given its policy or behavior. Researchers
-perceive IRL both as a problem and as a class of methods. By categorically
-surveying the current literature in IRL, this article serves as a reference for
-researchers and practitioners in machine learning to understand the challenges
-of IRL and select the approaches best suited for the problem on hand. The
-survey formally introduces the IRL problem along with its central challenges
-which include accurate inference, generalizability, correctness of prior
-knowledge, and growth in solution complexity with problem size. The article
-elaborates how the current methods mitigate these challenges. We further
-discuss the extensions of traditional IRL methods: (i) inaccurate and
-incomplete perception, (ii) incomplete model, (iii) multiple rewards, and (iv)
-non-linear reward functions. This discussion concludes with some broad advances
-in the research area and currently open research questions.
-
-
-From Questions to Effective Answers: On the Utility of Knowledge-Driven
-  Querying Systems for Life Sciences Data
-
-  We compare two distinct approaches for querying data in the context of the
-life sciences. The first approach utilizes conventional databases to store the
-data and intuitive form-based interfaces to facilitate easy querying of the
-data. These interfaces could be seen as implementing a set of "pre-canned"
-queries commonly used by the life science researchers that we study. The second
-approach is based on semantic Web technologies and is knowledge (model) driven.
-It utilizes a large OWL ontology and same datasets as before but associated as
-RDF instances of the ontology concepts. An intuitive interface is provided that
-allows the formulation of RDF triples-based queries. Both these approaches are
-being used in parallel by a team of cell biologists in their daily research
-activities, with the objective of gradually replacing the conventional approach
-with the knowledge-driven one. This provides us with a valuable opportunity to
-compare and qualitatively evaluate the two approaches. We describe several
-benefits of the knowledge-driven approach in comparison to the traditional way
-of accessing data, and highlight a few limitations as well. We believe that our
-analysis not only explicitly highlights the specific benefits and limitations
-of semantic Web technologies in our context but also contributes toward
-effective ways of translating a question in a researcher's mind into precise
-computational queries with the intent of obtaining effective answers from the
-data. While researchers often assume the benefits of semantic Web technologies,
-we explicitly illustrate these in practice.
-
-
-Exploiting Model Equivalences for Solving Interactive Dynamic Influence
-  Diagrams
-
-  We focus on the problem of sequential decision making in partially observable
-environments shared with other agents of uncertain types having similar or
-conflicting objectives. This problem has been previously formalized by multiple
-frameworks one of which is the interactive dynamic influence diagram (I-DID),
-which generalizes the well-known influence diagram to the multiagent setting.
-I-DIDs are graphical models and may be used to compute the policy of an agent
-given its belief over the physical state and others models, which changes as
-the agent acts and observes in the multiagent setting.
-  As we may expect, solving I-DIDs is computationally hard. This is
-predominantly due to the large space of candidate models ascribed to the other
-agents and its exponential growth over time. We present two methods for
-reducing the size of the model space and stemming its exponential growth. Both
-these methods involve aggregating individual models into equivalence classes.
-Our first method groups together behaviorally equivalent models and selects
-only those models for updating which will result in predictive behaviors that
-are distinct from others in the updated model space. The second method further
-compacts the model space by focusing on portions of the behavioral predictions.
-Specifically, we cluster actionally equivalent models that prescribe identical
-actions at a single time step. Exactly identifying the equivalences would
-require us to solve all models in the initial set. We avoid this by selectively
-solving some of the models, thereby introducing an approximation. We discuss
-the error introduced by the approximation, and empirically demonstrate the
-improved efficiency in solving I-DIDs due to the equivalences.
-
+  We focus on the problem of sequential decision making in partially observableenvironments shared with other agents of uncertain types having similar orconflicting objectives. This problem has been previously formalized by multipleframeworks one of which is the interactive dynamic influence diagram (I-DID),which generalizes the well-known influence diagram to the multiagent setting.I-DIDs are graphical models and may be used to compute the policy of an agentgiven its belief over the physical state and others models, which changes asthe agent acts and observes in the multiagent setting.  As we may expect, solving I-DIDs is computationally hard. This ispredominantly due to the large space of candidate models ascribed to the otheragents and its exponential growth over time. We present two methods forreducing the size of the model space and stemming its exponential growth. Boththese methods involve aggregating individual models into equivalence classes.Our first method groups together behaviorally equivalent models and selectsonly those models for updating which will result in predictive behaviors thatare distinct from others in the updated model space. The second method furthercompacts the model space by focusing on portions of the behavioral predictions.Specifically, we cluster actionally equivalent models that prescribe identicalactions at a single time step. Exactly identifying the equivalences wouldrequire us to solve all models in the initial set. We avoid this by selectivelysolving some of the models, thereby introducing an approximation. We discussthe error introduced by the approximation, and empirically demonstrate theimproved efficiency in solving I-DIDs due to the equivalences.
 

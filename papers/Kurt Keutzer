@@ -1,696 +1,136 @@
 Convolutional Monte Carlo Rollouts in Go
 
-  In this work, we present a MCTS-based Go-playing program which uses
-convolutional networks in all parts. Our method performs MCTS in batches,
-explores the Monte Carlo search tree using Thompson sampling and a
-convolutional network, and evaluates convnet-based rollouts on the GPU. We
-achieve strong win rates against open source Go programs and attain competitive
-results against state of the art convolutional net-based Go-playing programs.
-
+  In this work, we present a MCTS-based Go-playing program which usesconvolutional networks in all parts. Our method performs MCTS in batches,explores the Monte Carlo search tree using Thompson sampling and aconvolutional network, and evaluates convnet-based rollouts on the GPU. Weachieve strong win rates against open source Go programs and attain competitiveresults against state of the art convolutional net-based Go-playing programs.
 
 DenseNet: Implementing Efficient ConvNet Descriptor Pyramids
 
-  Convolutional Neural Networks (CNNs) can provide accurate object
-classification. They can be extended to perform object detection by iterating
-over dense or selected proposed object regions. However, the runtime of such
-detectors scales as the total number and/or area of regions to examine per
-image, and training such detectors may be prohibitively slow. However, for some
-CNN classifier topologies, it is possible to share significant work among
-overlapping regions to be classified. This paper presents DenseNet, an open
-source system that computes dense, multiscale features from the convolutional
-layers of a CNN based object classifier. Future work will involve training
-efficient object detectors with DenseNet feature descriptors.
-
+  Convolutional Neural Networks (CNNs) can provide accurate objectclassification. They can be extended to perform object detection by iteratingover dense or selected proposed object regions. However, the runtime of suchdetectors scales as the total number and/or area of regions to examine perimage, and training such detectors may be prohibitively slow. However, for someCNN classifier topologies, it is possible to share significant work amongoverlapping regions to be classified. This paper presents DenseNet, an opensource system that computes dense, multiscale features from the convolutionallayers of a CNN based object classifier. Future work will involve trainingefficient object detectors with DenseNet feature descriptors.
 
 DeepLogo: Hitting Logo Recognition with the Deep Neural Network Hammer
 
-  Recently, there has been a flurry of industrial activity around logo
-recognition, such as Ditto's service for marketers to track their brands in
-user-generated images, and LogoGrab's mobile app platform for logo recognition.
-However, relatively little academic or open-source logo recognition progress
-has been made in the last four years. Meanwhile, deep convolutional neural
-networks (DCNNs) have revolutionized a broad range of object recognition
-applications. In this work, we apply DCNNs to logo recognition. We propose
-several DCNN architectures, with which we surpass published state-of-art
-accuracy on a popular logo recognition dataset.
+  Recently, there has been a flurry of industrial activity around logorecognition, such as Ditto's service for marketers to track their brands inuser-generated images, and LogoGrab's mobile app platform for logo recognition.However, relatively little academic or open-source logo recognition progresshas been made in the last four years. Meanwhile, deep convolutional neuralnetworks (DCNNs) have revolutionized a broad range of object recognitionapplications. In this work, we apply DCNNs to logo recognition. We proposeseveral DCNN architectures, with which we surpass published state-of-artaccuracy on a popular logo recognition dataset.
 
+SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB  model size
 
-SqueezeNet: AlexNet-level accuracy with 50x fewer parameters and <0.5MB
-  model size
+  Recent research on deep neural networks has focused primarily on improvingaccuracy. For a given accuracy level, it is typically possible to identifymultiple DNN architectures that achieve that accuracy level. With equivalentaccuracy, smaller DNN architectures offer at least three advantages: (1)Smaller DNNs require less communication across servers during distributedtraining. (2) Smaller DNNs require less bandwidth to export a new model fromthe cloud to an autonomous car. (3) Smaller DNNs are more feasible to deploy onFPGAs and other hardware with limited memory. To provide all of theseadvantages, we propose a small DNN architecture called SqueezeNet. SqueezeNetachieves AlexNet-level accuracy on ImageNet with 50x fewer parameters.Additionally, with model compression techniques we are able to compressSqueezeNet to less than 0.5MB (510x smaller than AlexNet).  The SqueezeNet architecture is available for download here:https://github.com/DeepScale/SqueezeNet
 
-  Recent research on deep neural networks has focused primarily on improving
-accuracy. For a given accuracy level, it is typically possible to identify
-multiple DNN architectures that achieve that accuracy level. With equivalent
-accuracy, smaller DNN architectures offer at least three advantages: (1)
-Smaller DNNs require less communication across servers during distributed
-training. (2) Smaller DNNs require less bandwidth to export a new model from
-the cloud to an autonomous car. (3) Smaller DNNs are more feasible to deploy on
-FPGAs and other hardware with limited memory. To provide all of these
-advantages, we propose a small DNN architecture called SqueezeNet. SqueezeNet
-achieves AlexNet-level accuracy on ImageNet with 50x fewer parameters.
-Additionally, with model compression techniques we are able to compress
-SqueezeNet to less than 0.5MB (510x smaller than AlexNet).
-  The SqueezeNet architecture is available for download here:
-https://github.com/DeepScale/SqueezeNet
+Boda-RTC: Productive Generation of Portable, Efficient Code for  Convolutional Neural Networks on Mobile Computing Platforms
 
-
-Boda-RTC: Productive Generation of Portable, Efficient Code for
-  Convolutional Neural Networks on Mobile Computing Platforms
-
-  The popularity of neural networks (NNs) spans academia, industry, and popular
-culture. In particular, convolutional neural networks (CNNs) have been applied
-to many image based machine learning tasks and have yielded strong results. The
-availability of hardware/software systems for efficient training and deployment
-of large and/or deep CNN models has been, and continues to be, an important
-consideration for the field. Early systems for NN computation focused on
-leveraging existing dense linear algebra techniques and libraries. Current
-approaches use low-level machine specific programming and/or closed-source,
-purpose-built vendor libraries. In this work, we present an open source system
-that, compared to existing approaches, achieves competitive computational speed
-while achieving higher portability. We achieve this by targeting the
-vendor-neutral OpenCL platform using a code-generation approach. We argue that
-our approach allows for both: (1) the rapid development of new computational
-kernels for existing hardware targets, and (2) the rapid tuning of existing
-computational kernels for new hardware targets. Results are presented for a
-case study of targeting the Qualcomm Snapdragon 820 mobile computing platform
-for CNN deployment.
-
+  The popularity of neural networks (NNs) spans academia, industry, and popularculture. In particular, convolutional neural networks (CNNs) have been appliedto many image based machine learning tasks and have yielded strong results. Theavailability of hardware/software systems for efficient training and deploymentof large and/or deep CNN models has been, and continues to be, an importantconsideration for the field. Early systems for NN computation focused onleveraging existing dense linear algebra techniques and libraries. Currentapproaches use low-level machine specific programming and/or closed-source,purpose-built vendor libraries. In this work, we present an open source systemthat, compared to existing approaches, achieves competitive computational speedwhile achieving higher portability. We achieve this by targeting thevendor-neutral OpenCL platform using a code-generation approach. We argue thatour approach allows for both: (1) the rapid development of new computationalkernels for existing hardware targets, and (2) the rapid tuning of existingcomputational kernels for new hardware targets. Results are presented for acase study of targeting the Qualcomm Snapdragon 820 mobile computing platformfor CNN deployment.
 
 Shallow Networks for High-Accuracy Road Object-Detection
 
-  The ability to automatically detect other vehicles on the road is vital to
-the safety of partially-autonomous and fully-autonomous vehicles. Most of the
-high-accuracy techniques for this task are based on R-CNN or one of its faster
-variants. In the research community, much emphasis has been applied to using 3D
-vision or complex R-CNN variants to achieve higher accuracy. However, are there
-more straightforward modifications that could deliver higher accuracy? Yes. We
-show that increasing input image resolution (i.e. upsampling) offers up to 12
-percentage-points higher accuracy compared to an off-the-shelf baseline. We
-also find situations where earlier/shallower layers of CNN provide higher
-accuracy than later/deeper layers. We further show that shallow models and
-upsampled images yield competitive accuracy. Our findings contrast with the
-current trend towards deeper and larger models to achieve high accuracy in
-domain specific detection tasks.
+  The ability to automatically detect other vehicles on the road is vital tothe safety of partially-autonomous and fully-autonomous vehicles. Most of thehigh-accuracy techniques for this task are based on R-CNN or one of its fastervariants. In the research community, much emphasis has been applied to using 3Dvision or complex R-CNN variants to achieve higher accuracy. However, are theremore straightforward modifications that could deliver higher accuracy? Yes. Weshow that increasing input image resolution (i.e. upsampling) offers up to 12percentage-points higher accuracy compared to an off-the-shelf baseline. Wealso find situations where earlier/shallower layers of CNN provide higheraccuracy than later/deeper layers. We further show that shallow models andupsampled images yield competitive accuracy. Our findings contrast with thecurrent trend towards deeper and larger models to achieve high accuracy indomain specific detection tasks.
 
+Keynote: Small Neural Nets Are Beautiful: Enabling Embedded Systems with  Small Deep-Neural-Network Architectures
 
-Keynote: Small Neural Nets Are Beautiful: Enabling Embedded Systems with
-  Small Deep-Neural-Network Architectures
-
-  Over the last five years Deep Neural Nets have offered more accurate
-solutions to many problems in speech recognition, and computer vision, and
-these solutions have surpassed a threshold of acceptability for many
-applications. As a result, Deep Neural Networks have supplanted other
-approaches to solving problems in these areas, and enabled many new
-applications. While the design of Deep Neural Nets is still something of an art
-form, in our work we have found basic principles of design space exploration
-used to develop embedded microprocessor architectures to be highly applicable
-to the design of Deep Neural Net architectures. In particular, we have used
-these design principles to create a novel Deep Neural Net called SqueezeNet
-that requires as little as 480KB of storage for its model parameters. We have
-further integrated all these experiences to develop something of a playbook for
-creating small Deep Neural Nets for embedded systems.
-
+  Over the last five years Deep Neural Nets have offered more accuratesolutions to many problems in speech recognition, and computer vision, andthese solutions have surpassed a threshold of acceptability for manyapplications. As a result, Deep Neural Networks have supplanted otherapproaches to solving problems in these areas, and enabled many newapplications. While the design of Deep Neural Nets is still something of an artform, in our work we have found basic principles of design space explorationused to develop embedded microprocessor architectures to be highly applicableto the design of Deep Neural Net architectures. In particular, we have usedthese design principles to create a novel Deep Neural Net called SqueezeNetthat requires as little as 480KB of storage for its model parameters. We havefurther integrated all these experiences to develop something of a playbook forcreating small Deep Neural Nets for embedded systems.
 
 Regret Minimization for Partially Observable Deep Reinforcement Learning
 
-  Deep reinforcement learning algorithms that estimate state and state-action
-value functions have been shown to be effective in a variety of challenging
-domains, including learning control strategies from raw image pixels. However,
-algorithms that estimate state and state-action value functions typically
-assume a fully observed state and must compensate for partial observations by
-using finite length observation histories or recurrent networks. In this work,
-we propose a new deep reinforcement learning algorithm based on counterfactual
-regret minimization that iteratively updates an approximation to an
-advantage-like function and is robust to partially observed state. We
-demonstrate that this new algorithm can substantially outperform strong
-baseline methods on several partially observed reinforcement learning tasks:
-learning first-person 3D navigation in Doom and Minecraft, and acting in the
-presence of partially observed objects in Doom and Pong.
-
+  Deep reinforcement learning algorithms that estimate state and state-actionvalue functions have been shown to be effective in a variety of challengingdomains, including learning control strategies from raw image pixels. However,algorithms that estimate state and state-action value functions typicallyassume a fully observed state and must compensate for partial observations byusing finite length observation histories or recurrent networks. In this work,we propose a new deep reinforcement learning algorithm based on counterfactualregret minimization that iteratively updates an approximation to anadvantage-like function and is robust to partially observed state. Wedemonstrate that this new algorithm can substantially outperform strongbaseline methods on several partially observed reinforcement learning tasks:learning first-person 3D navigation in Doom and Minecraft, and acting in thepresence of partially observed objects in Doom and Pong.
 
 Shift: A Zero FLOP, Zero Parameter Alternative to Spatial Convolutions
 
-  Neural networks rely on convolutions to aggregate spatial information.
-However, spatial convolutions are expensive in terms of model size and
-computation, both of which grow quadratically with respect to kernel size. In
-this paper, we present a parameter-free, FLOP-free "shift" operation as an
-alternative to spatial convolutions. We fuse shifts and point-wise convolutions
-to construct end-to-end trainable shift-based modules, with a hyperparameter
-characterizing the tradeoff between accuracy and efficiency. To demonstrate the
-operation's efficacy, we replace ResNet's 3x3 convolutions with shift-based
-modules for improved CIFAR10 and CIFAR100 accuracy using 60% fewer parameters;
-we additionally demonstrate the operation's resilience to parameter reduction
-on ImageNet, outperforming ResNet family members. We finally show the shift
-operation's applicability across domains, achieving strong performance with
-fewer parameters on classification, face verification and style transfer.
+  Neural networks rely on convolutions to aggregate spatial information.However, spatial convolutions are expensive in terms of model size andcomputation, both of which grow quadratically with respect to kernel size. Inthis paper, we present a parameter-free, FLOP-free "shift" operation as analternative to spatial convolutions. We fuse shifts and point-wise convolutionsto construct end-to-end trainable shift-based modules, with a hyperparametercharacterizing the tradeoff between accuracy and efficiency. To demonstrate theoperation's efficacy, we replace ResNet's 3x3 convolutions with shift-basedmodules for improved CIFAR10 and CIFAR100 accuracy using 60% fewer parameters;we additionally demonstrate the operation's resilience to parameter reductionon ImageNet, outperforming ResNet family members. We finally show the shiftoperation's applicability across domains, achieving strong performance withfewer parameters on classification, face verification and style transfer.
 
+Integrated Model, Batch and Domain Parallelism in Training Neural  Networks
 
-Integrated Model, Batch and Domain Parallelism in Training Neural
-  Networks
-
-  We propose a new integrated method of exploiting model, batch and domain
-parallelism for the training of deep neural networks (DNNs) on large
-distributed-memory computers using minibatch stochastic gradient descent (SGD).
-Our goal is to find an efficient parallelization strategy for a fixed batch
-size using $P$ processes. Our method is inspired by the communication-avoiding
-algorithms in numerical linear algebra. We see $P$ processes as logically
-divided into a $P_r \times P_c$ grid where the $P_r$ dimension is implicitly
-responsible for model/domain parallelism and the $P_c$ dimension is implicitly
-responsible for batch parallelism. In practice, the integrated matrix-based
-parallel algorithm encapsulates these types of parallelism automatically. We
-analyze the communication complexity and analytically demonstrate that the
-lowest communication costs are often achieved neither with pure model nor with
-pure data parallelism. We also show how the domain parallel approach can help
-in extending the theoretical scaling limit of the typical batch parallel
-method.
-
+  We propose a new integrated method of exploiting model, batch and domainparallelism for the training of deep neural networks (DNNs) on largedistributed-memory computers using minibatch stochastic gradient descent (SGD).Our goal is to find an efficient parallelization strategy for a fixed batchsize using $P$ processes. Our method is inspired by the communication-avoidingalgorithms in numerical linear algebra. We see $P$ processes as logicallydivided into a $P_r \times P_c$ grid where the $P_r$ dimension is implicitlyresponsible for model/domain parallelism and the $P_c$ dimension is implicitlyresponsible for batch parallelism. In practice, the integrated matrix-basedparallel algorithm encapsulates these types of parallelism automatically. Weanalyze the communication complexity and analytically demonstrate that thelowest communication costs are often achieved neither with pure model nor withpure data parallelism. We also show how the domain parallel approach can helpin extending the theoretical scaling limit of the typical batch parallelmethod.
 
 Unsupervised Domain Adaptation: from Simulation Engine to the RealWorld
 
-  Large-scale labeled training datasets have enabled deep neural networks to
-excel on a wide range of benchmark vision tasks. However, in many applications
-it is prohibitively expensive or time-consuming to obtain large quantities of
-labeled data. To cope with limited labeled training data, many have attempted
-to directly apply models trained on a large-scale labeled source domain to
-another sparsely labeled target domain. Unfortunately, direct transfer across
-domains often performs poorly due to domain shift and dataset bias. Domain
-adaptation is the machine learning paradigm that aims to learn a model from a
-source domain that can perform well on a different (but related) target domain.
-In this paper, we summarize and compare the latest unsupervised domain
-adaptation methods in computer vision applications. We classify the non-deep
-approaches into sample re-weighting and intermediate subspace transformation
-categories, while the deep strategy includes discrepancy-based methods,
-adversarial generative models, adversarial discriminative models and
-reconstruction-based methods. We also discuss some potential directions.
+  Large-scale labeled training datasets have enabled deep neural networks toexcel on a wide range of benchmark vision tasks. However, in many applicationsit is prohibitively expensive or time-consuming to obtain large quantities oflabeled data. To cope with limited labeled training data, many have attemptedto directly apply models trained on a large-scale labeled source domain toanother sparsely labeled target domain. Unfortunately, direct transfer acrossdomains often performs poorly due to domain shift and dataset bias. Domainadaptation is the machine learning paradigm that aims to learn a model from asource domain that can perform well on a different (but related) target domain.In this paper, we summarize and compare the latest unsupervised domainadaptation methods in computer vision applications. We classify the non-deepapproaches into sample re-weighting and intermediate subspace transformationcategories, while the deep strategy includes discrepancy-based methods,adversarial generative models, adversarial discriminative models andreconstruction-based methods. We also discuss some potential directions.
 
+Co-Design of Deep Neural Nets and Neural Net Accelerators for Embedded  Vision Applications
 
-Co-Design of Deep Neural Nets and Neural Net Accelerators for Embedded
-  Vision Applications
-
-  Deep Learning is arguably the most rapidly evolving research area in recent
-years. As a result it is not surprising that the design of state-of-the-art
-deep neural net models proceeds without much consideration of the latest
-hardware targets, and the design of neural net accelerators proceeds without
-much consideration of the characteristics of the latest deep neural net models.
-Nevertheless, in this paper we show that there are significant improvements
-available if deep neural net models and neural net accelerators are
-co-designed.
-
+  Deep Learning is arguably the most rapidly evolving research area in recentyears. As a result it is not surprising that the design of state-of-the-artdeep neural net models proceeds without much consideration of the latesthardware targets, and the design of neural net accelerators proceeds withoutmuch consideration of the characteristics of the latest deep neural net models.Nevertheless, in this paper we show that there are significant improvementsavailable if deep neural net models and neural net accelerators areco-designed.
 
 Counterexample-Guided Data Augmentation
 
-  We present a novel framework for augmenting data sets for machine learning
-based on counterexamples. Counterexamples are misclassified examples that have
-important properties for retraining and improving the model. Key components of
-our framework include a counterexample generator, which produces data items
-that are misclassified by the model and error tables, a novel data structure
-that stores information pertaining to misclassifications. Error tables can be
-used to explain the model's vulnerabilities and are used to efficiently
-generate counterexamples for augmentation. We show the efficacy of the proposed
-framework by comparing it to classical augmentation techniques on a case study
-of object detection in autonomous driving based on deep neural networks.
+  We present a novel framework for augmenting data sets for machine learningbased on counterexamples. Counterexamples are misclassified examples that haveimportant properties for retraining and improving the model. Key components ofour framework include a counterexample generator, which produces data itemsthat are misclassified by the model and error tables, a novel data structurethat stores information pertaining to misclassifications. Error tables can beused to explain the model's vulnerabilities and are used to efficientlygenerate counterexamples for augmentation. We show the efficacy of the proposedframework by comparing it to classical augmentation techniques on a case studyof object detection in autonomous driving based on deep neural networks.
 
+Mixed Precision Quantization of ConvNets via Differentiable Neural  Architecture Search
 
-Mixed Precision Quantization of ConvNets via Differentiable Neural
-  Architecture Search
-
-  Recent work in network quantization has substantially reduced the time and
-space complexity of neural network inference, enabling their deployment on
-embedded and mobile devices with limited computational and memory resources.
-However, existing quantization methods often represent all weights and
-activations with the same precision (bit-width). In this paper, we explore a
-new dimension of the design space: quantizing different layers with different
-bit-widths. We formulate this problem as a neural architecture search problem
-and propose a novel differentiable neural architecture search (DNAS) framework
-to efficiently explore its exponential search space with gradient-based
-optimization. Experiments show we surpass the state-of-the-art compression of
-ResNet on CIFAR-10 and ImageNet. Our quantized models with 21.1x smaller model
-size or 103.9x lower computational cost can still outperform baseline quantized
-or even full precision models.
-
+  Recent work in network quantization has substantially reduced the time andspace complexity of neural network inference, enabling their deployment onembedded and mobile devices with limited computational and memory resources.However, existing quantization methods often represent all weights andactivations with the same precision (bit-width). In this paper, we explore anew dimension of the design space: quantizing different layers with differentbit-widths. We formulate this problem as a neural architecture search problemand propose a novel differentiable neural architecture search (DNAS) frameworkto efficiently explore its exponential search space with gradient-basedoptimization. Experiments show we surpass the state-of-the-art compression ofResNet on CIFAR-10 and ImageNet. Our quantized models with 21.1x smaller modelsize or 103.9x lower computational cost can still outperform baseline quantizedor even full precision models.
 
 Parameter Re-Initialization through Cyclical Batch Size Schedules
 
-  Optimal parameter initialization remains a crucial problem for neural network
-training. A poor weight initialization may take longer to train and/or converge
-to sub-optimal solutions. Here, we propose a method of weight re-initialization
-by repeated annealing and injection of noise in the training process. We
-implement this through a cyclical batch size schedule motivated by a Bayesian
-perspective of neural network training. We evaluate our methods through
-extensive experiments on tasks in language modeling, natural language
-inference, and image classification. We demonstrate the ability of our method
-to improve language modeling performance by up to 7.91 perplexity and reduce
-training iterations by up to $61\%$, in addition to its flexibility in enabling
-snapshot ensembling and use with adversarial training.
-
+  Optimal parameter initialization remains a crucial problem for neural networktraining. A poor weight initialization may take longer to train and/or convergeto sub-optimal solutions. Here, we propose a method of weight re-initializationby repeated annealing and injection of noise in the training process. Weimplement this through a cyclical batch size schedule motivated by a Bayesianperspective of neural network training. We evaluate our methods throughextensive experiments on tasks in language modeling, natural languageinference, and image classification. We demonstrate the ability of our methodto improve language modeling performance by up to 7.91 perplexity and reducetraining iterations by up to $61\%$, in addition to its flexibility in enablingsnapshot ensembling and use with adversarial training.
 
 Trust Region Based Adversarial Attack on Neural Networks
 
-  Deep Neural Networks are quite vulnerable to adversarial perturbations.
-Current state-of-the-art adversarial attack methods typically require very time
-consuming hyper-parameter tuning, or require many iterations to solve an
-optimization based adversarial attack. To address this problem, we present a
-new family of trust region based adversarial attacks, with the goal of
-computing adversarial perturbations efficiently. We propose several attacks
-based on variants of the trust region optimization method. We test the proposed
-methods on Cifar-10 and ImageNet datasets using several different models
-including AlexNet, ResNet-50, VGG-16, and DenseNet-121 models. Our methods
-achieve comparable results with the Carlini-Wagner (CW) attack, but with
-significant speed up of up to $37\times$, for the VGG-16 model on a Titan Xp
-GPU. For the case of ResNet-50 on ImageNet, we can bring down its
-classification accuracy to less than 0.1\% with at most $1.5\%$ relative
-$L_\infty$ (or $L_2$) perturbation requiring only $1.02$ seconds as compared to
-$27.04$ seconds for the CW attack. We have open sourced our method which can be
-accessed at [1].
-
+  Deep Neural Networks are quite vulnerable to adversarial perturbations.Current state-of-the-art adversarial attack methods typically require very timeconsuming hyper-parameter tuning, or require many iterations to solve anoptimization based adversarial attack. To address this problem, we present anew family of trust region based adversarial attacks, with the goal ofcomputing adversarial perturbations efficiently. We propose several attacksbased on variants of the trust region optimization method. We test the proposedmethods on Cifar-10 and ImageNet datasets using several different modelsincluding AlexNet, ResNet-50, VGG-16, and DenseNet-121 models. Our methodsachieve comparable results with the Carlini-Wagner (CW) attack, but withsignificant speed up of up to $37\times$, for the VGG-16 model on a Titan XpGPU. For the case of ResNet-50 on ImageNet, we can bring down itsclassification accuracy to less than 0.1\% with at most $1.5\%$ relative$L_\infty$ (or $L_2$) perturbation requiring only $1.02$ seconds as compared to$27.04$ seconds for the CW attack. We have open sourced our method which can beaccessed at [1].
 
 Inefficiency of K-FAC for Large Batch Size Training
 
-  In stochastic optimization, large batch training can leverage parallel
-resources to produce faster wall-clock training times per epoch. However, for
-both training loss and testing error, recent results analyzing large batch
-Stochastic Gradient Descent (SGD) have found sharp diminishing returns beyond a
-certain critical batch size. In the hopes of addressing this, the
-Kronecker-Factored Approximate Curvature (\mbox{K-FAC}) method has been
-hypothesized to allow for greater scalability to large batch sizes for
-non-convex machine learning problems, as well as greater robustness to
-variation in hyperparameters. Here, we perform a detailed empirical analysis of
-these two hypotheses, evaluating performance in terms of both wall-clock time
-and aggregate computational cost. Our main results are twofold: first, we find
-that \mbox{K-FAC} does not exhibit improved large-batch scalability behavior,
-as compared to SGD; and second, we find that \mbox{K-FAC}, in addition to
-requiring more hyperparameters to tune, suffers from the same hyperparameter
-sensitivity patterns as SGD. We discuss extensive results using residual
-networks on \mbox{CIFAR-10}, as well as more general implications of our
-findings.
+  In stochastic optimization, large batch training can leverage parallelresources to produce faster wall-clock training times per epoch. However, forboth training loss and testing error, recent results analyzing large batchStochastic Gradient Descent (SGD) have found sharp diminishing returns beyond acertain critical batch size. In the hopes of addressing this, theKronecker-Factored Approximate Curvature (\mbox{K-FAC}) method has beenhypothesized to allow for greater scalability to large batch sizes fornon-convex machine learning problems, as well as greater robustness tovariation in hyperparameters. Here, we perform a detailed empirical analysis ofthese two hypotheses, evaluating performance in terms of both wall-clock timeand aggregate computational cost. Our main results are twofold: first, we findthat \mbox{K-FAC} does not exhibit improved large-batch scalability behavior,as compared to SGD; and second, we find that \mbox{K-FAC}, in addition torequiring more hyperparameters to tune, suffers from the same hyperparametersensitivity patterns as SGD. We discuss extensive results using residualnetworks on \mbox{CIFAR-10}, as well as more general implications of ourfindings.
 
+FireCaffe: near-linear acceleration of deep neural network training on  compute clusters
 
-FireCaffe: near-linear acceleration of deep neural network training on
-  compute clusters
-
-  Long training times for high-accuracy deep neural networks (DNNs) impede
-research into new DNN architectures and slow the development of high-accuracy
-DNNs. In this paper we present FireCaffe, which successfully scales deep neural
-network training across a cluster of GPUs. We also present a number of best
-practices to aid in comparing advancements in methods for scaling and
-accelerating the training of deep neural networks. The speed and scalability of
-distributed algorithms is almost always limited by the overhead of
-communicating between servers; DNN training is not an exception to this rule.
-Therefore, the key consideration here is to reduce communication overhead
-wherever possible, while not degrading the accuracy of the DNN models that we
-train. Our approach has three key pillars. First, we select network hardware
-that achieves high bandwidth between GPU servers -- Infiniband or Cray
-interconnects are ideal for this. Second, we consider a number of communication
-algorithms, and we find that reduction trees are more efficient and scalable
-than the traditional parameter server approach. Third, we optionally increase
-the batch size to reduce the total quantity of communication during DNN
-training, and we identify hyperparameters that allow us to reproduce the
-small-batch accuracy while training with large batch sizes. When training
-GoogLeNet and Network-in-Network on ImageNet, we achieve a 47x and 39x speedup,
-respectively, when training on a cluster of 128 GPUs.
-
+  Long training times for high-accuracy deep neural networks (DNNs) impederesearch into new DNN architectures and slow the development of high-accuracyDNNs. In this paper we present FireCaffe, which successfully scales deep neuralnetwork training across a cluster of GPUs. We also present a number of bestpractices to aid in comparing advancements in methods for scaling andaccelerating the training of deep neural networks. The speed and scalability ofdistributed algorithms is almost always limited by the overhead ofcommunicating between servers; DNN training is not an exception to this rule.Therefore, the key consideration here is to reduce communication overheadwherever possible, while not degrading the accuracy of the DNN models that wetrain. Our approach has three key pillars. First, we select network hardwarethat achieves high bandwidth between GPU servers -- Infiniband or Crayinterconnects are ideal for this. Second, we consider a number of communicationalgorithms, and we find that reduction trees are more efficient and scalablethan the traditional parameter server approach. Third, we optionally increasethe batch size to reduce the total quantity of communication during DNNtraining, and we identify hyperparameters that allow us to reproduce thesmall-batch accuracy while training with large batch sizes. When trainingGoogLeNet and Network-in-Network on ImageNet, we achieve a 47x and 39x speedup,respectively, when training on a cluster of 128 GPUs.
 
 How to scale distributed deep learning?
 
-  Training time on large datasets for deep neural networks is the principal
-workflow bottleneck in a number of important applications of deep learning,
-such as object classification and detection in automatic driver assistance
-systems (ADAS). To minimize training time, the training of a deep neural
-network must be scaled beyond a single machine to as many machines as possible
-by distributing the optimization method used for training. While a number of
-approaches have been proposed for distributed stochastic gradient descent
-(SGD), at the current time synchronous approaches to distributed SGD appear to
-be showing the greatest performance at large scale. Synchronous scaling of SGD
-suffers from the need to synchronize all processors on each gradient step and
-is not resilient in the face of failing or lagging processors. In asynchronous
-approaches using parameter servers, training is slowed by contention to the
-parameter server. In this paper we compare the convergence of synchronous and
-asynchronous SGD for training a modern ResNet network architecture on the
-ImageNet classification problem. We also propose an asynchronous method,
-gossiping SGD, that aims to retain the positive features of both systems by
-replacing the all-reduce collective operation of synchronous training with a
-gossip aggregation algorithm. We find, perhaps counterintuitively, that
-asynchronous SGD, including both elastic averaging and gossiping, converges
-faster at fewer nodes (up to about 32 nodes), whereas synchronous SGD scales
-better to more nodes (up to about 100 nodes).
+  Training time on large datasets for deep neural networks is the principalworkflow bottleneck in a number of important applications of deep learning,such as object classification and detection in automatic driver assistancesystems (ADAS). To minimize training time, the training of a deep neuralnetwork must be scaled beyond a single machine to as many machines as possibleby distributing the optimization method used for training. While a number ofapproaches have been proposed for distributed stochastic gradient descent(SGD), at the current time synchronous approaches to distributed SGD appear tobe showing the greatest performance at large scale. Synchronous scaling of SGDsuffers from the need to synchronize all processors on each gradient step andis not resilient in the face of failing or lagging processors. In asynchronousapproaches using parameter servers, training is slowed by contention to theparameter server. In this paper we compare the convergence of synchronous andasynchronous SGD for training a modern ResNet network architecture on theImageNet classification problem. We also propose an asynchronous method,gossiping SGD, that aims to retain the positive features of both systems byreplacing the all-reduce collective operation of synchronous training with agossip aggregation algorithm. We find, perhaps counterintuitively, thatasynchronous SGD, including both elastic averaging and gossiping, convergesfaster at fewer nodes (up to about 32 nodes), whereas synchronous SGD scalesbetter to more nodes (up to about 100 nodes).
 
+A Metaprogramming and Autotuning Framework for Deploying Deep Learning  Applications
 
-A Metaprogramming and Autotuning Framework for Deploying Deep Learning
-  Applications
+  In recent years, deep neural networks (DNNs), have yielded strong results ona wide range of applications. Graphics Processing Units (GPUs) have been onekey enabling factor leading to the current popularity of DNNs. However, despiteincreasing hardware flexibility and software programming toolchain maturity,high efficiency GPU programming remains difficult: it suffers from highcomplexity, low productivity, and low portability. GPU vendors such as NVIDIAhave spent enormous effort to write special-purpose DNN libraries. However, onother hardware targets, especially mobile GPUs, such vendor libraries are notgenerally available. Thus, the development of portable, open, high-performance,energy-efficient GPU code for DNN operations would enable broader deployment ofDNN-based algorithms. Toward this end, this work presents a framework to enableproductive, high-efficiency GPU programming for DNN computations acrosshardware platforms and programming models. In particular, the frameworkprovides specific support for metaprogramming, autotuning, and DNN-tailoreddata types. Using our framework, we explore implementing DNN operations onthree different hardware targets: NVIDIA, AMD, and Qualcomm GPUs. On NVIDIAGPUs, we show both portability between OpenCL and CUDA as well competitiveperformance compared to the vendor library. On Qualcomm GPUs, we show that ourframework enables productive development of target-specific optimizations, andachieves reasonable absolute performance. Finally, On AMD GPUs, we show initialresults that indicate our framework can yield reasonable performance on a newplatform with minimal effort.
 
-  In recent years, deep neural networks (DNNs), have yielded strong results on
-a wide range of applications. Graphics Processing Units (GPUs) have been one
-key enabling factor leading to the current popularity of DNNs. However, despite
-increasing hardware flexibility and software programming toolchain maturity,
-high efficiency GPU programming remains difficult: it suffers from high
-complexity, low productivity, and low portability. GPU vendors such as NVIDIA
-have spent enormous effort to write special-purpose DNN libraries. However, on
-other hardware targets, especially mobile GPUs, such vendor libraries are not
-generally available. Thus, the development of portable, open, high-performance,
-energy-efficient GPU code for DNN operations would enable broader deployment of
-DNN-based algorithms. Toward this end, this work presents a framework to enable
-productive, high-efficiency GPU programming for DNN computations across
-hardware platforms and programming models. In particular, the framework
-provides specific support for metaprogramming, autotuning, and DNN-tailored
-data types. Using our framework, we explore implementing DNN operations on
-three different hardware targets: NVIDIA, AMD, and Qualcomm GPUs. On NVIDIA
-GPUs, we show both portability between OpenCL and CUDA as well competitive
-performance compared to the vendor library. On Qualcomm GPUs, we show that our
-framework enables productive development of target-specific optimizations, and
-achieves reasonable absolute performance. Finally, On AMD GPUs, we show initial
-results that indicate our framework can yield reasonable performance on a new
-platform with minimal effort.
+SqueezeDet: Unified, Small, Low Power Fully Convolutional Neural  Networks for Real-Time Object Detection for Autonomous Driving
 
+  Object detection is a crucial task for autonomous driving. In addition torequiring high accuracy to ensure safety, object detection for autonomousdriving also requires real-time inference speed to guarantee prompt vehiclecontrol, as well as small model size and energy efficiency to enable embeddedsystem deployment. In this work, we propose SqueezeDet, a fully convolutionalneural network for object detection that aims to simultaneously satisfy all ofthe above constraints. In our network we use convolutional layers not only toextract feature maps, but also as the output layer to compute bounding boxesand class probabilities. The detection pipeline of our model only contains asingle forward pass of a neural network, thus it is extremely fast. Our modelis fully-convolutional, which leads to small model size and better energyefficiency. Finally, our experiments show that our model is very accurate,achieving state-of-the-art accuracy on the KITTI benchmark.
 
-SqueezeDet: Unified, Small, Low Power Fully Convolutional Neural
-  Networks for Real-Time Object Detection for Autonomous Driving
+SqueezeSeg: Convolutional Neural Nets with Recurrent CRF for Real-Time  Road-Object Segmentation from 3D LiDAR Point Cloud
 
-  Object detection is a crucial task for autonomous driving. In addition to
-requiring high accuracy to ensure safety, object detection for autonomous
-driving also requires real-time inference speed to guarantee prompt vehicle
-control, as well as small model size and energy efficiency to enable embedded
-system deployment. In this work, we propose SqueezeDet, a fully convolutional
-neural network for object detection that aims to simultaneously satisfy all of
-the above constraints. In our network we use convolutional layers not only to
-extract feature maps, but also as the output layer to compute bounding boxes
-and class probabilities. The detection pipeline of our model only contains a
-single forward pass of a neural network, thus it is extremely fast. Our model
-is fully-convolutional, which leads to small model size and better energy
-efficiency. Finally, our experiments show that our model is very accurate,
-achieving state-of-the-art accuracy on the KITTI benchmark.
+  In this paper, we address semantic segmentation of road-objects from 3D LiDARpoint clouds. In particular, we wish to detect and categorize instances ofinterest, such as cars, pedestrians and cyclists. We formulate this problem asa point- wise classification problem, and propose an end-to-end pipeline calledSqueezeSeg based on convolutional neural networks (CNN): the CNN takes atransformed LiDAR point cloud as input and directly outputs a point-wise labelmap, which is then refined by a conditional random field (CRF) implemented as arecurrent layer. Instance-level labels are then obtained by conventionalclustering algorithms. Our CNN model is trained on LiDAR point clouds from theKITTI dataset, and our point-wise segmentation labels are derived from 3Dbounding boxes from KITTI. To obtain extra training data, we built a LiDARsimulator into Grand Theft Auto V (GTA-V), a popular video game, to synthesizelarge amounts of realistic training data. Our experiments show that SqueezeSegachieves high accuracy with astonishingly fast and stable runtime (8.7 ms perframe), highly desirable for autonomous driving applications. Furthermore,additionally training on synthesized data boosts validation accuracy onreal-world data. Our source code and synthesized data will be open-sourced.
 
+Hessian-based Analysis of Large Batch Training and Robustness to  Adversaries
 
-SqueezeSeg: Convolutional Neural Nets with Recurrent CRF for Real-Time
-  Road-Object Segmentation from 3D LiDAR Point Cloud
-
-  In this paper, we address semantic segmentation of road-objects from 3D LiDAR
-point clouds. In particular, we wish to detect and categorize instances of
-interest, such as cars, pedestrians and cyclists. We formulate this problem as
-a point- wise classification problem, and propose an end-to-end pipeline called
-SqueezeSeg based on convolutional neural networks (CNN): the CNN takes a
-transformed LiDAR point cloud as input and directly outputs a point-wise label
-map, which is then refined by a conditional random field (CRF) implemented as a
-recurrent layer. Instance-level labels are then obtained by conventional
-clustering algorithms. Our CNN model is trained on LiDAR point clouds from the
-KITTI dataset, and our point-wise segmentation labels are derived from 3D
-bounding boxes from KITTI. To obtain extra training data, we built a LiDAR
-simulator into Grand Theft Auto V (GTA-V), a popular video game, to synthesize
-large amounts of realistic training data. Our experiments show that SqueezeSeg
-achieves high accuracy with astonishingly fast and stable runtime (8.7 ms per
-frame), highly desirable for autonomous driving applications. Furthermore,
-additionally training on synthesized data boosts validation accuracy on
-real-world data. Our source code and synthesized data will be open-sourced.
-
-
-Hessian-based Analysis of Large Batch Training and Robustness to
-  Adversaries
-
-  Large batch size training of Neural Networks has been shown to incur accuracy
-loss when trained with the current methods. The exact underlying reasons for
-this are still not completely understood. Here, we study large batch size
-training through the lens of the Hessian operator and robust optimization. In
-particular, we perform a Hessian based study to analyze exactly how the
-landscape of the loss function changes when training with large batch size. We
-compute the true Hessian spectrum, without approximation, by back-propagating
-the second derivative. Extensive experiments on multiple networks show that
-saddle-points are not the cause for generalization gap of large batch size
-training, and the results consistently show that large batch converges to
-points with noticeably higher Hessian spectrum. Furthermore, we show that
-robust training allows one to favor flat areas, as points with large Hessian
-spectrum show poor robustness to adversarial perturbation. We further study
-this relationship, and provide empirical and theoretical proof that the inner
-loop for robust training is a saddle-free optimization problem \textit{almost
-everywhere}. We present detailed experiments with five different network
-architectures, including a residual network, tested on MNIST, CIFAR-10, and
-CIFAR-100 datasets. We have open sourced our method which can be accessed at
-[1].
-
+  Large batch size training of Neural Networks has been shown to incur accuracyloss when trained with the current methods. The exact underlying reasons forthis are still not completely understood. Here, we study large batch sizetraining through the lens of the Hessian operator and robust optimization. Inparticular, we perform a Hessian based study to analyze exactly how thelandscape of the loss function changes when training with large batch size. Wecompute the true Hessian spectrum, without approximation, by back-propagatingthe second derivative. Extensive experiments on multiple networks show thatsaddle-points are not the cause for generalization gap of large batch sizetraining, and the results consistently show that large batch converges topoints with noticeably higher Hessian spectrum. Furthermore, we show thatrobust training allows one to favor flat areas, as points with large Hessianspectrum show poor robustness to adversarial perturbation. We further studythis relationship, and provide empirical and theoretical proof that the innerloop for robust training is a saddle-free optimization problem \textit{almosteverywhere}. We present detailed experiments with five different networkarchitectures, including a residual network, tested on MNIST, CIFAR-10, andCIFAR-100 datasets. We have open sourced our method which can be accessed at[1].
 
 SqueezeNext: Hardware-Aware Neural Network Design
 
-  One of the main barriers for deploying neural networks on embedded systems
-has been large memory and power consumption of existing neural networks. In
-this work, we introduce SqueezeNext, a new family of neural network
-architectures whose design was guided by considering previous architectures
-such as SqueezeNet, as well as by simulation results on a neural network
-accelerator. This new network is able to match AlexNet's accuracy on the
-ImageNet benchmark with $112\times$ fewer parameters, and one of its deeper
-variants is able to achieve VGG-19 accuracy with only 4.4 Million parameters,
-($31\times$ smaller than VGG-19). SqueezeNext also achieves better top-5
-classification accuracy with $1.3\times$ fewer parameters as compared to
-MobileNet, but avoids using depthwise-separable convolutions that are
-inefficient on some mobile processor platforms. This wide range of accuracy
-gives the user the ability to make speed-accuracy tradeoffs, depending on the
-available resources on the target hardware. Using hardware simulation results
-for power and inference speed on an embedded system has guided us to design
-variations of the baseline model that are $2.59\times$/$8.26\times$ faster and
-$2.25\times$/$7.5\times$ more energy efficient as compared to
-SqueezeNet/AlexNet without any accuracy degradation.
+  One of the main barriers for deploying neural networks on embedded systemshas been large memory and power consumption of existing neural networks. Inthis work, we introduce SqueezeNext, a new family of neural networkarchitectures whose design was guided by considering previous architecturessuch as SqueezeNet, as well as by simulation results on a neural networkaccelerator. This new network is able to match AlexNet's accuracy on theImageNet benchmark with $112\times$ fewer parameters, and one of its deepervariants is able to achieve VGG-19 accuracy with only 4.4 Million parameters,($31\times$ smaller than VGG-19). SqueezeNext also achieves better top-5classification accuracy with $1.3\times$ fewer parameters as compared toMobileNet, but avoids using depthwise-separable convolutions that areinefficient on some mobile processor platforms. This wide range of accuracygives the user the ability to make speed-accuracy tradeoffs, depending on theavailable resources on the target hardware. Using hardware simulation resultsfor power and inference speed on an embedded system has guided us to designvariations of the baseline model that are $2.59\times$/$8.26\times$ faster and$2.25\times$/$7.5\times$ more energy efficient as compared toSqueezeNet/AlexNet without any accuracy degradation.
 
+A LiDAR Point Cloud Generator: from a Virtual World to Autonomous  Driving
 
-A LiDAR Point Cloud Generator: from a Virtual World to Autonomous
-  Driving
+  3D LiDAR scanners are playing an increasingly important role in autonomousdriving as they can generate depth information of the environment. However,creating large 3D LiDAR point cloud datasets with point-level labels requires asignificant amount of manual annotation. This jeopardizes the efficientdevelopment of supervised deep learning algorithms which are often data-hungry.We present a framework to rapidly create point clouds with accurate point-levellabels from a computer game. The framework supports data collection from bothauto-driving scenes and user-configured scenes. Point clouds from auto-drivingscenes can be used as training data for deep learning algorithms, while pointclouds from user-configured scenes can be used to systematically test thevulnerability of a neural network, and use the falsifying examples to make theneural network more robust through retraining. In addition, the scene imagescan be captured simultaneously in order for sensor fusion tasks, with a methodproposed to do automatic calibration between the point clouds and capturedscene images. We show a significant improvement in accuracy (+9%) in pointcloud segmentation by augmenting the training dataset with the generatedsynthesized data. Our experiments also show by testing and retraining thenetwork using point clouds from user-configured scenes, the weakness/blindspots of the neural network can be fixed.
 
-  3D LiDAR scanners are playing an increasingly important role in autonomous
-driving as they can generate depth information of the environment. However,
-creating large 3D LiDAR point cloud datasets with point-level labels requires a
-significant amount of manual annotation. This jeopardizes the efficient
-development of supervised deep learning algorithms which are often data-hungry.
-We present a framework to rapidly create point clouds with accurate point-level
-labels from a computer game. The framework supports data collection from both
-auto-driving scenes and user-configured scenes. Point clouds from auto-driving
-scenes can be used as training data for deep learning algorithms, while point
-clouds from user-configured scenes can be used to systematically test the
-vulnerability of a neural network, and use the falsifying examples to make the
-neural network more robust through retraining. In addition, the scene images
-can be captured simultaneously in order for sensor fusion tasks, with a method
-proposed to do automatic calibration between the point clouds and captured
-scene images. We show a significant improvement in accuracy (+9%) in point
-cloud segmentation by augmenting the training dataset with the generated
-synthesized data. Our experiments also show by testing and retraining the
-network using point clouds from user-configured scenes, the weakness/blind
-spots of the neural network can be fixed.
+SqueezeSegV2: Improved Model Structure and Unsupervised Domain  Adaptation for Road-Object Segmentation from a LiDAR Point Cloud
 
+  Earlier work demonstrates the promise of deep-learning-based approaches forpoint cloud segmentation; however, these approaches need to be improved to bepractically useful. To this end, we introduce a new model SqueezeSegV2 that ismore robust to dropout noise in LiDAR point clouds. With improved modelstructure, training loss, batch normalization and additional input channel,SqueezeSegV2 achieves significant accuracy improvement when trained on realdata. Training models for point cloud segmentation requires large amounts oflabeled point-cloud data, which is expensive to obtain. To sidestep the cost ofcollection and annotation, simulators such as GTA-V can be used to createunlimited amounts of labeled, synthetic data. However, due to domain shift,models trained on synthetic data often do not generalize well to the realworld. We address this problem with a domain-adaptation training pipelineconsisting of three major components: 1) learned intensity rendering, 2)geodesic correlation alignment, and 3) progressive domain calibration. Whentrained on real data, our new model exhibits segmentation accuracy improvementsof 6.0-8.6% over the original SqueezeSeg. When training our new model onsynthetic data using the proposed domain adaptation pipeline, we nearly doubletest accuracy on real-world data, from 29.0% to 57.4%. Our source code andsynthetic dataset will be open-sourced.
 
-SqueezeSegV2: Improved Model Structure and Unsupervised Domain
-  Adaptation for Road-Object Segmentation from a LiDAR Point Cloud
+Large batch size training of neural networks with adversarial training  and second-order information
 
-  Earlier work demonstrates the promise of deep-learning-based approaches for
-point cloud segmentation; however, these approaches need to be improved to be
-practically useful. To this end, we introduce a new model SqueezeSegV2 that is
-more robust to dropout noise in LiDAR point clouds. With improved model
-structure, training loss, batch normalization and additional input channel,
-SqueezeSegV2 achieves significant accuracy improvement when trained on real
-data. Training models for point cloud segmentation requires large amounts of
-labeled point-cloud data, which is expensive to obtain. To sidestep the cost of
-collection and annotation, simulators such as GTA-V can be used to create
-unlimited amounts of labeled, synthetic data. However, due to domain shift,
-models trained on synthetic data often do not generalize well to the real
-world. We address this problem with a domain-adaptation training pipeline
-consisting of three major components: 1) learned intensity rendering, 2)
-geodesic correlation alignment, and 3) progressive domain calibration. When
-trained on real data, our new model exhibits segmentation accuracy improvements
-of 6.0-8.6% over the original SqueezeSeg. When training our new model on
-synthetic data using the proposed domain adaptation pipeline, we nearly double
-test accuracy on real-world data, from 29.0% to 57.4%. Our source code and
-synthetic dataset will be open-sourced.
-
-
-Large batch size training of neural networks with adversarial training
-  and second-order information
-
-  The most straightforward method to accelerate Stochastic Gradient Descent
-(SGD) is to distribute the randomly selected batch of inputs over multiple
-processors. To keep the distributed processors fully utilized requires
-commensurately growing the batch size; however, large batch training usually
-leads to poor generalization. Existing solutions for large batch training
-either significantly degrade accuracy or require massive hyper-parameter
-tuning. To address this issue, we propose a novel large batch training method
-which combines recent results in adversarial training and second order
-information. We extensively evaluate our method on Cifar-10/100, SVHN,
-TinyImageNet, and ImageNet datasets, using multiple NNs, including residual
-networks as well as smaller networks such as SqueezeNext. Our new approach
-exceeds the performance of the existing solutions in terms of both accuracy and
-the number of SGD iterations (up to 1\% and $5\times$, respectively). We
-emphasize that this is achieved without any additional hyper-parameter tuning
-to tailor our proposed method in any of these experiments. With slight
-hyper-parameter tuning, our method can reduce the number of SGD iterations of
-ResNet18 on Cifar-10/ImageNet to $44.8\times$ and $28.8\times$, respectively.
-We have open sourced the method including tools for computing Hessian spectrum.
-
+  The most straightforward method to accelerate Stochastic Gradient Descent(SGD) is to distribute the randomly selected batch of inputs over multipleprocessors. To keep the distributed processors fully utilized requirescommensurately growing the batch size; however, large batch training usuallyleads to poor generalization. Existing solutions for large batch trainingeither significantly degrade accuracy or require massive hyper-parametertuning. To address this issue, we propose a novel large batch training methodwhich combines recent results in adversarial training and second orderinformation. We extensively evaluate our method on Cifar-10/100, SVHN,TinyImageNet, and ImageNet datasets, using multiple NNs, including residualnetworks as well as smaller networks such as SqueezeNext. Our new approachexceeds the performance of the existing solutions in terms of both accuracy andthe number of SGD iterations (up to 1\% and $5\times$, respectively). Weemphasize that this is achieved without any additional hyper-parameter tuningto tailor our proposed method in any of these experiments. With slighthyper-parameter tuning, our method can reduce the number of SGD iterations ofResNet18 on Cifar-10/ImageNet to $44.8\times$ and $28.8\times$, respectively.We have open sourced the method including tools for computing Hessian spectrum.
 
 A Novel Domain Adaptation Framework for Medical Image Segmentation
 
-  We propose a segmentation framework that uses deep neural networks and
-introduce two innovations. First, we describe a biophysics-based domain
-adaptation method. Second, we propose an automatic method to segment white and
-gray matter, and cerebrospinal fluid, in addition to tumorous tissue. Regarding
-our first innovation, we use a domain adaptation framework that combines a
-novel multispecies biophysical tumor growth model with a generative adversarial
-model to create realistic looking synthetic multimodal MR images with known
-segmentation. Regarding our second innovation, we propose an automatic approach
-to enrich available segmentation data by computing the segmentation for healthy
-tissues. This segmentation, which is done using diffeomorphic image
-registration between the BraTS training data and a set of prelabeled atlases,
-provides more information for training and reduces the class imbalance problem.
-Our overall approach is not specific to any particular neural network and can
-be used in conjunction with existing solutions. We demonstrate the performance
-improvement using a 2D U-Net for the BraTS'18 segmentation challenge. Our
-biophysics based domain adaptation achieves better results, as compared to the
-existing state-of-the-art GAN model used to create synthetic data for training.
+  We propose a segmentation framework that uses deep neural networks andintroduce two innovations. First, we describe a biophysics-based domainadaptation method. Second, we propose an automatic method to segment white andgray matter, and cerebrospinal fluid, in addition to tumorous tissue. Regardingour first innovation, we use a domain adaptation framework that combines anovel multispecies biophysical tumor growth model with a generative adversarialmodel to create realistic looking synthetic multimodal MR images with knownsegmentation. Regarding our second innovation, we propose an automatic approachto enrich available segmentation data by computing the segmentation for healthytissues. This segmentation, which is done using diffeomorphic imageregistration between the BraTS training data and a set of prelabeled atlases,provides more information for training and reduces the class imbalance problem.Our overall approach is not specific to any particular neural network and canbe used in conjunction with existing solutions. We demonstrate the performanceimprovement using a 2D U-Net for the BraTS'18 segmentation challenge. Ourbiophysics based domain adaptation achieves better results, as compared to theexisting state-of-the-art GAN model used to create synthetic data for training.
 
+FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable Neural  Architecture Search
 
-FBNet: Hardware-Aware Efficient ConvNet Design via Differentiable Neural
-  Architecture Search
-
-  Designing accurate and efficient ConvNets for mobile devices is challenging
-because the design space is combinatorially large. Due to this, previous neural
-architecture search (NAS) methods are computationally expensive. ConvNet
-architecture optimality depends on factors such as input resolution and target
-devices. However, existing approaches are too expensive for case-by-case
-redesigns. Also, previous work focuses primarily on reducing FLOPs, but FLOP
-count does not always reflect actual latency. To address these, we propose a
-differentiable neural architecture search (DNAS) framework that uses
-gradient-based methods to optimize ConvNet architectures, avoiding enumerating
-and training individual architectures separately as in previous methods.
-FBNets, a family of models discovered by DNAS surpass state-of-the-art models
-both designed manually and generated automatically. FBNet-B achieves 74.1%
-top-1 accuracy on ImageNet with 295M FLOPs and 23.1 ms latency on a Samsung S8
-phone, 2.4x smaller and 1.5x faster than MobileNetV2-1.3 with similar accuracy.
-Despite higher accuracy and lower latency than MnasNet, we estimate FBNet-B's
-search cost is 420x smaller than MnasNet's, at only 216 GPU-hours. Searched for
-different resolutions and channel sizes, FBNets achieve 1.5% to 6.4% higher
-accuracy than MobileNetV2. The smallest FBNet achieves 50.2% accuracy and 2.9
-ms latency (345 frames per second) on a Samsung S8. Over a Samsung-optimized
-FBNet, the iPhone-X-optimized model achieves a 1.4x speedup on an iPhone X.
-
+  Designing accurate and efficient ConvNets for mobile devices is challengingbecause the design space is combinatorially large. Due to this, previous neuralarchitecture search (NAS) methods are computationally expensive. ConvNetarchitecture optimality depends on factors such as input resolution and targetdevices. However, existing approaches are too expensive for case-by-caseredesigns. Also, previous work focuses primarily on reducing FLOPs, but FLOPcount does not always reflect actual latency. To address these, we propose adifferentiable neural architecture search (DNAS) framework that usesgradient-based methods to optimize ConvNet architectures, avoiding enumeratingand training individual architectures separately as in previous methods.FBNets, a family of models discovered by DNAS surpass state-of-the-art modelsboth designed manually and generated automatically. FBNet-B achieves 74.1%top-1 accuracy on ImageNet with 295M FLOPs and 23.1 ms latency on a Samsung S8phone, 2.4x smaller and 1.5x faster than MobileNetV2-1.3 with similar accuracy.Despite higher accuracy and lower latency than MnasNet, we estimate FBNet-B'ssearch cost is 420x smaller than MnasNet's, at only 216 GPU-hours. Searched fordifferent resolutions and channel sizes, FBNets achieve 1.5% to 6.4% higheraccuracy than MobileNetV2. The smallest FBNet achieves 50.2% accuracy and 2.9ms latency (345 frames per second) on a Samsung S8. Over a Samsung-optimizedFBNet, the iPhone-X-optimized model achieves a 1.4x speedup on an iPhone X.
 
 Large-Batch Training for LSTM and Beyond
 
-  Large-batch training approaches have enabled researchers to utilize
-large-scale distributed processing and greatly accelerate deep-neural net (DNN)
-training. For example, by scaling the batch size from 256 to 32K, researchers
-have been able to reduce the training time of ResNet50 on ImageNet from 29
-hours to 2.2 minutes (Ying et al., 2018). In this paper, we propose a new
-approach called linear-epoch gradual-warmup (LEGW) for better large-batch
-training. With LEGW, we are able to conduct large-batch training for both CNNs
-and RNNs with the Sqrt Scaling scheme. LEGW enables Sqrt Scaling scheme to be
-useful in practice and as a result we achieve much better results than the
-Linear Scaling learning rate scheme. For LSTM applications, we are able to
-scale the batch size by a factor of 64 without losing accuracy and without
-tuning the hyper-parameters. For CNN applications, LEGW is able to achieve the
-same accuracy even as we scale the batch size to 32K. LEGW works better than
-previous large-batch auto-tuning techniques. LEGW achieves a 5.3X average
-speedup over the baselines for four LSTM-based applications on the same
-hardware. We also provide some theoretical explanations for LEGW.
+  Large-batch training approaches have enabled researchers to utilizelarge-scale distributed processing and greatly accelerate deep-neural net (DNN)training. For example, by scaling the batch size from 256 to 32K, researchershave been able to reduce the training time of ResNet50 on ImageNet from 29hours to 2.2 minutes (Ying et al., 2018). In this paper, we propose a newapproach called linear-epoch gradual-warmup (LEGW) for better large-batchtraining. With LEGW, we are able to conduct large-batch training for both CNNsand RNNs with the Sqrt Scaling scheme. LEGW enables Sqrt Scaling scheme to beuseful in practice and as a result we achieve much better results than theLinear Scaling learning rate scheme. For LSTM applications, we are able toscale the batch size by a factor of 64 without losing accuracy and withouttuning the hyper-parameters. For CNN applications, LEGW is able to achieve thesame accuracy even as we scale the batch size to 32K. LEGW works better thanprevious large-batch auto-tuning techniques. LEGW achieves a 5.3X averagespeedup over the baselines for four LSTM-based applications on the samehardware. We also provide some theoretical explanations for LEGW.
 
+ANODE: Unconditionally Accurate Memory-Efficient Gradients for Neural  ODEs
 
-ANODE: Unconditionally Accurate Memory-Efficient Gradients for Neural
-  ODEs
-
-  Residual neural networks can be viewed as the forward Euler discretization of
-an Ordinary Differential Equation (ODE) with a unit time step. This has
-recently motivated researchers to explore other discretization approaches and
-train ODE based networks. However, an important challenge of neural ODEs is
-their prohibitive memory cost during gradient backpropogation. Recently a
-method proposed in~\verb+arXiv:1806.07366+, claimed that this memory overhead
-can be reduced from $\mathcal{O}(LN_t)$, where $N_t$ is the number of time
-steps, down to $\mathcal{O}(L)$ by solving forward ODE backwards in time, where
-$L$ is the depth of the network. However, we will show that this approach may
-lead to several problems: (i) it may be numerically unstable for ReLU/non-ReLU
-activations and general convolution operators, and (ii) the proposed
-optimize-then-discretize approach may lead to divergent training due to
-inconsistent gradients for small time step sizes. We discuss the underlying
-problems, and to address them we propose \OURS, a neural ODE framework which
-avoids the numerical instability related problems noted above. \OURS has a
-memory footprint of $\mathcal{O}(L) + \mathcal{O}(N_t)$, with the same
-computational cost as reversing ODE solve. We furthermore, discuss a memory
-efficient algorithm which can further reduce this footprint with a tradeoff of
-additional computational cost. We show results on Cifar-10/100 datasets using
-ResNet and SqueezeNext neural networks.
-
+  Residual neural networks can be viewed as the forward Euler discretization ofan Ordinary Differential Equation (ODE) with a unit time step. This hasrecently motivated researchers to explore other discretization approaches andtrain ODE based networks. However, an important challenge of neural ODEs istheir prohibitive memory cost during gradient backpropogation. Recently amethod proposed in~\verb+arXiv:1806.07366+, claimed that this memory overheadcan be reduced from $\mathcal{O}(LN_t)$, where $N_t$ is the number of timesteps, down to $\mathcal{O}(L)$ by solving forward ODE backwards in time, where$L$ is the depth of the network. However, we will show that this approach maylead to several problems: (i) it may be numerically unstable for ReLU/non-ReLUactivations and general convolution operators, and (ii) the proposedoptimize-then-discretize approach may lead to divergent training due toinconsistent gradients for small time step sizes. We discuss the underlyingproblems, and to address them we propose \OURS, a neural ODE framework whichavoids the numerical instability related problems noted above. \OURS has amemory footprint of $\mathcal{O}(L) + \mathcal{O}(N_t)$, with the samecomputational cost as reversing ODE solve. We furthermore, discuss a memoryefficient algorithm which can further reduce this footprint with a tradeoff ofadditional computational cost. We show results on Cifar-10/100 datasets usingResNet and SqueezeNext neural networks.
 
 ImageNet Training in Minutes
 
-  Finishing 90-epoch ImageNet-1k training with ResNet-50 on a NVIDIA M40 GPU
-takes 14 days. This training requires 10^18 single precision operations in
-total. On the other hand, the world's current fastest supercomputer can finish
-2 * 10^17 single precision operations per second (Dongarra et al 2017,
-https://www.top500.org/lists/2017/06/). If we can make full use of the
-supercomputer for DNN training, we should be able to finish the 90-epoch
-ResNet-50 training in one minute. However, the current bottleneck for fast DNN
-training is in the algorithm level. Specifically, the current batch size (e.g.
-512) is too small to make efficient use of many processors. For large-scale DNN
-training, we focus on using large-batch data-parallelism synchronous SGD
-without losing accuracy in the fixed epochs. The LARS algorithm (You, Gitman,
-Ginsburg, 2017, arXiv:1708.03888) enables us to scale the batch size to
-extremely large case (e.g. 32K). We finish the 100-epoch ImageNet training with
-AlexNet in 11 minutes on 1024 CPUs. About three times faster than Facebook's
-result (Goyal et al 2017, arXiv:1706.02677), we finish the 90-epoch ImageNet
-training with ResNet-50 in 20 minutes on 2048 KNLs without losing accuracy.
-State-of-the-art ImageNet training speed with ResNet-50 is 74.9% top-1 test
-accuracy in 15 minutes. We got 74.9% top-1 test accuracy in 64 epochs, which
-only needs 14 minutes. Furthermore, when we increase the batch size to above
-16K, our accuracy is much higher than Facebook's on corresponding batch sizes.
-Our source code is available upon request.
+  Finishing 90-epoch ImageNet-1k training with ResNet-50 on a NVIDIA M40 GPUtakes 14 days. This training requires 10^18 single precision operations intotal. On the other hand, the world's current fastest supercomputer can finish2 * 10^17 single precision operations per second (Dongarra et al 2017,https://www.top500.org/lists/2017/06/). If we can make full use of thesupercomputer for DNN training, we should be able to finish the 90-epochResNet-50 training in one minute. However, the current bottleneck for fast DNNtraining is in the algorithm level. Specifically, the current batch size (e.g.512) is too small to make efficient use of many processors. For large-scale DNNtraining, we focus on using large-batch data-parallelism synchronous SGDwithout losing accuracy in the fixed epochs. The LARS algorithm (You, Gitman,Ginsburg, 2017, arXiv:1708.03888) enables us to scale the batch size toextremely large case (e.g. 32K). We finish the 100-epoch ImageNet training withAlexNet in 11 minutes on 1024 CPUs. About three times faster than Facebook'sresult (Goyal et al 2017, arXiv:1706.02677), we finish the 90-epoch ImageNettraining with ResNet-50 in 20 minutes on 2048 KNLs without losing accuracy.State-of-the-art ImageNet training speed with ResNet-50 is 74.9% top-1 testaccuracy in 15 minutes. We got 74.9% top-1 test accuracy in 64 epochs, whichonly needs 14 minutes. Furthermore, when we increase the batch size to above16K, our accuracy is much higher than Facebook's on corresponding batch sizes.Our source code is available upon request.
 
+Synetgy: Algorithm-hardware Co-design for ConvNet Accelerators on  Embedded FPGAs
 
-Synetgy: Algorithm-hardware Co-design for ConvNet Accelerators on
-  Embedded FPGAs
+  Using FPGAs to accelerate ConvNets has attracted significant attention inrecent years. However, FPGA accelerator design has not leveraged the latestprogress of ConvNets. As a result, the key application characteristics such asframes-per-second (FPS) are ignored in favor of simply counting GOPs, andresults on accuracy, which is critical to application success, are often noteven reported. In this work, we adopt an algorithm-hardware co-design approachto develop a ConvNet accelerator called Synetgy and a novel ConvNet modelcalled DiracDeltaNet. Both the accelerator and ConvNet are tailored to FPGArequirements. DiracDeltaNet, as the name suggests, is a ConvNet with only 1x1convolutions while spatial convolutions are replaced by more efficient shiftoperations. DiracDeltaNet achieves competitive accuracy on ImageNet (89.0%top-5), but with 48x fewer parameters and 65x fewer OPs than VGG16. We furtherquantize DiracDeltaNet's weights to 1-bit and activations to 4-bits, with lessthan 1% accuracy loss. These quantizations exploit well the nature of FPGAhardware. In short, DiracDeltaNet's small model size, low computational OPcount, ultra-low precision and simplified operators allow us to co-design ahighly customized computing unit for an FPGA. We implement the computing unitsfor DiracDeltaNet on an Ultra96 SoC system through high-level synthesis. Ouraccelerator's final top-5 accuracy of 88.2% on ImageNet, is higher than all thepreviously reported embedded FPGA accelerators. In addition, the acceleratorreaches an inference speed of 96.5 FPS on the ImageNet classification task,surpassing prior works with similar accuracy by at least 16.9x.
 
-  Using FPGAs to accelerate ConvNets has attracted significant attention in
-recent years. However, FPGA accelerator design has not leveraged the latest
-progress of ConvNets. As a result, the key application characteristics such as
-frames-per-second (FPS) are ignored in favor of simply counting GOPs, and
-results on accuracy, which is critical to application success, are often not
-even reported. In this work, we adopt an algorithm-hardware co-design approach
-to develop a ConvNet accelerator called Synetgy and a novel ConvNet model
-called DiracDeltaNet. Both the accelerator and ConvNet are tailored to FPGA
-requirements. DiracDeltaNet, as the name suggests, is a ConvNet with only 1x1
-convolutions while spatial convolutions are replaced by more efficient shift
-operations. DiracDeltaNet achieves competitive accuracy on ImageNet (89.0%
-top-5), but with 48x fewer parameters and 65x fewer OPs than VGG16. We further
-quantize DiracDeltaNet's weights to 1-bit and activations to 4-bits, with less
-than 1% accuracy loss. These quantizations exploit well the nature of FPGA
-hardware. In short, DiracDeltaNet's small model size, low computational OP
-count, ultra-low precision and simplified operators allow us to co-design a
-highly customized computing unit for an FPGA. We implement the computing units
-for DiracDeltaNet on an Ultra96 SoC system through high-level synthesis. Our
-accelerator's final top-5 accuracy of 88.2% on ImageNet, is higher than all the
-previously reported embedded FPGA accelerators. In addition, the accelerator
-reaches an inference speed of 96.5 FPS on the ImageNet classification task,
-surpassing prior works with similar accuracy by at least 16.9x.
+Identifying the Best Machine Learning Algorithms for Brain Tumor  Segmentation, Progression Assessment, and Overall Survival Prediction in the  BRATS Challenge
 
-
-Identifying the Best Machine Learning Algorithms for Brain Tumor
-  Segmentation, Progression Assessment, and Overall Survival Prediction in the
-  BRATS Challenge
-
-  Gliomas are the most common primary brain malignancies, with different
-degrees of aggressiveness, variable prognosis and various heterogeneous
-histologic sub-regions, i.e., peritumoral edematous/invaded tissue, necrotic
-core, active and non-enhancing core. This intrinsic heterogeneity is also
-portrayed in their radio-phenotype, as their sub-regions are depicted by
-varying intensity profiles disseminated across multi-parametric magnetic
-resonance imaging (mpMRI) scans, reflecting varying biological properties.
-Their heterogeneous shape, extent, and location are some of the factors that
-make these tumors difficult to resect, and in some cases inoperable. The amount
-of resected tumor is a factor also considered in longitudinal scans, when
-evaluating the apparent tumor for potential diagnosis of progression.
-Furthermore, there is mounting evidence that accurate segmentation of the
-various tumor sub-regions can offer the basis for quantitative image analysis
-towards prediction of patient overall survival. This study assesses the
-state-of-the-art machine learning (ML) methods used for brain tumor image
-analysis in mpMRI scans, during the last seven instances of the International
-Brain Tumor Segmentation (BraTS) challenge, i.e., 2012-2018. Specifically, we
-focus on i) evaluating segmentations of the various glioma sub-regions in
-pre-operative mpMRI scans, ii) assessing potential tumor progression by virtue
-of longitudinal growth of tumor sub-regions, beyond use of the RECIST/RANO
-criteria, and iii) predicting the overall survival from pre-operative mpMRI
-scans of patients that underwent gross total resection. Finally, we investigate
-the challenge of identifying the best ML algorithms for each of these tasks,
-considering that apart from being diverse on each instance of the challenge,
-the multi-institutional mpMRI BraTS dataset has also been a continuously
-evolving/growing dataset.
-
+  Gliomas are the most common primary brain malignancies, with differentdegrees of aggressiveness, variable prognosis and various heterogeneoushistologic sub-regions, i.e., peritumoral edematous/invaded tissue, necroticcore, active and non-enhancing core. This intrinsic heterogeneity is alsoportrayed in their radio-phenotype, as their sub-regions are depicted byvarying intensity profiles disseminated across multi-parametric magneticresonance imaging (mpMRI) scans, reflecting varying biological properties.Their heterogeneous shape, extent, and location are some of the factors thatmake these tumors difficult to resect, and in some cases inoperable. The amountof resected tumor is a factor also considered in longitudinal scans, whenevaluating the apparent tumor for potential diagnosis of progression.Furthermore, there is mounting evidence that accurate segmentation of thevarious tumor sub-regions can offer the basis for quantitative image analysistowards prediction of patient overall survival. This study assesses thestate-of-the-art machine learning (ML) methods used for brain tumor imageanalysis in mpMRI scans, during the last seven instances of the InternationalBrain Tumor Segmentation (BraTS) challenge, i.e., 2012-2018. Specifically, wefocus on i) evaluating segmentations of the various glioma sub-regions inpre-operative mpMRI scans, ii) assessing potential tumor progression by virtueof longitudinal growth of tumor sub-regions, beyond use of the RECIST/RANOcriteria, and iii) predicting the overall survival from pre-operative mpMRIscans of patients that underwent gross total resection. Finally, we investigatethe challenge of identifying the best ML algorithms for each of these tasks,considering that apart from being diverse on each instance of the challenge,the multi-institutional mpMRI BraTS dataset has also been a continuouslyevolving/growing dataset.
 

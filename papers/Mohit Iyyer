@@ -1,207 +1,48 @@
-Unsupervised Latent Tree Induction with Deep Inside-Outside Recursive
-  Autoencoders
+Unsupervised Latent Tree Induction with Deep Inside-Outside Recursive  Autoencoders
 
-  We introduce deep inside-outside recursive autoencoders (DIORA), a
-fully-unsupervised method for discovering syntax that simultaneously learns
-representations for constituents within the induced tree. Our approach predicts
-each word in an input sentence conditioned on the rest of the sentence and uses
-inside-outside dynamic programming to consider all possible binary trees over
-the sentence. At test time the CKY algorithm extracts the highest scoring
-parse. DIORA achieves a new state-of-the-art F1 in unsupervised binary
-constituency parsing (unlabeled) in two benchmark datasets, WSJ and MultiNLI.
+  We introduce deep inside-outside recursive autoencoders (DIORA), afully-unsupervised method for discovering syntax that simultaneously learnsrepresentations for constituents within the induced tree. Our approach predictseach word in an input sentence conditioned on the rest of the sentence and usesinside-outside dynamic programming to consider all possible binary trees overthe sentence. At test time the CKY algorithm extracts the highest scoringparse. DIORA achieves a new state-of-the-art F1 in unsupervised binaryconstituency parsing (unlabeled) in two benchmark datasets, WSJ and MultiNLI.
 
+Answering Complicated Question Intents Expressed in Decomposed Question  Sequences
 
-Answering Complicated Question Intents Expressed in Decomposed Question
-  Sequences
+  Recent work in semantic parsing for question answering has focused on longand complicated questions, many of which would seem unnatural if asked in anormal conversation between two humans. In an effort to explore aconversational QA setting, we present a more realistic task: answeringsequences of simple but inter-related questions. We collect a dataset of 6,066question sequences that inquire about semi-structured tables from Wikipedia,with 17,553 question-answer pairs in total. Existing QA systems face two majorproblems when evaluated on our dataset: (1) handling questions that containcoreferences to previous questions or answers, and (2) matching words orphrases in a question to corresponding entries in the associated table. Weconclude by proposing strategies to handle both of these issues.
 
-  Recent work in semantic parsing for question answering has focused on long
-and complicated questions, many of which would seem unnatural if asked in a
-normal conversation between two humans. In an effort to explore a
-conversational QA setting, we present a more realistic task: answering
-sequences of simple but inter-related questions. We collect a dataset of 6,066
-question sequences that inquire about semi-structured tables from Wikipedia,
-with 17,553 question-answer pairs in total. Existing QA systems face two major
-problems when evaluated on our dataset: (1) handling questions that contain
-coreferences to previous questions or answers, and (2) matching words or
-phrases in a question to corresponding entries in the associated table. We
-conclude by proposing strategies to handle both of these issues.
+Adversarial Example Generation with Syntactically Controlled Paraphrase  Networks
 
-
-Adversarial Example Generation with Syntactically Controlled Paraphrase
-  Networks
-
-  We propose syntactically controlled paraphrase networks (SCPNs) and use them
-to generate adversarial examples. Given a sentence and a target syntactic form
-(e.g., a constituency parse), SCPNs are trained to produce a paraphrase of the
-sentence with the desired syntax. We show it is possible to create training
-data for this task by first doing backtranslation at a very large scale, and
-then using a parser to label the syntactic transformations that naturally occur
-during this process. Such data allows us to train a neural encoder-decoder
-model with extra inputs to specify the target syntax. A combination of
-automated and human evaluations show that SCPNs generate paraphrases that
-follow their target specifications without decreasing paraphrase quality when
-compared to baseline (uncontrolled) paraphrase systems. Furthermore, they are
-more capable of generating syntactically adversarial examples that both (1)
-"fool" pretrained models and (2) improve the robustness of these models to
-syntactic variation when used to augment their training data.
-
+  We propose syntactically controlled paraphrase networks (SCPNs) and use themto generate adversarial examples. Given a sentence and a target syntactic form(e.g., a constituency parse), SCPNs are trained to produce a paraphrase of thesentence with the desired syntax. We show it is possible to create trainingdata for this task by first doing backtranslation at a very large scale, andthen using a parser to label the syntactic transformations that naturally occurduring this process. Such data allows us to train a neural encoder-decodermodel with extra inputs to specify the target syntax. A combination ofautomated and human evaluations show that SCPNs generate paraphrases thatfollow their target specifications without decreasing paraphrase quality whencompared to baseline (uncontrolled) paraphrase systems. Furthermore, they aremore capable of generating syntactically adversarial examples that both (1)"fool" pretrained models and (2) improve the robustness of these models tosyntactic variation when used to augment their training data.
 
 Learning to Color from Language
 
-  Automatic colorization is the process of adding color to greyscale images. We
-condition this process on language, allowing end users to manipulate a
-colorized image by feeding in different captions. We present two different
-architectures for language-conditioned colorization, both of which produce more
-accurate and plausible colorizations than a language-agnostic version. Through
-this language-based framework, we can dramatically alter colorizations by
-manipulating descriptive color words in captions.
+  Automatic colorization is the process of adding color to greyscale images. Wecondition this process on language, allowing end users to manipulate acolorized image by feeding in different captions. We present two differentarchitectures for language-conditioned colorization, both of which produce moreaccurate and plausible colorizations than a language-agnostic version. Throughthis language-based framework, we can dramatically alter colorizations bymanipulating descriptive color words in captions.
 
+The Amazing Mysteries of the Gutter: Drawing Inferences Between Panels  in Comic Book Narratives
 
-The Amazing Mysteries of the Gutter: Drawing Inferences Between Panels
-  in Comic Book Narratives
-
-  Visual narrative is often a combination of explicit information and judicious
-omissions, relying on the viewer to supply missing details. In comics, most
-movements in time and space are hidden in the "gutters" between panels. To
-follow the story, readers logically connect panels together by inferring unseen
-actions through a process called "closure". While computers can now describe
-what is explicitly depicted in natural images, in this paper we examine whether
-they can understand the closure-driven narratives conveyed by stylized artwork
-and dialogue in comic book panels. We construct a dataset, COMICS, that
-consists of over 1.2 million panels (120 GB) paired with automatic textbox
-transcriptions. An in-depth analysis of COMICS demonstrates that neither text
-nor image alone can tell a comic book story, so a computer must understand both
-modalities to keep up with the plot. We introduce three cloze-style tasks that
-ask models to predict narrative and character-centric aspects of a panel given
-n preceding panels as context. Various deep neural architectures underperform
-human baselines on these tasks, suggesting that COMICS contains fundamental
-challenges for both vision and language.
-
+  Visual narrative is often a combination of explicit information and judiciousomissions, relying on the viewer to supply missing details. In comics, mostmovements in time and space are hidden in the "gutters" between panels. Tofollow the story, readers logically connect panels together by inferring unseenactions through a process called "closure". While computers can now describewhat is explicitly depicted in natural images, in this paper we examine whetherthey can understand the closure-driven narratives conveyed by stylized artworkand dialogue in comic book panels. We construct a dataset, COMICS, thatconsists of over 1.2 million panels (120 GB) paired with automatic textboxtranscriptions. An in-depth analysis of COMICS demonstrates that neither textnor image alone can tell a comic book story, so a computer must understand bothmodalities to keep up with the plot. We introduce three cloze-style tasks thatask models to predict narrative and character-centric aspects of a panel givenn preceding panels as context. Various deep neural architectures underperformhuman baselines on these tasks, suggesting that COMICS contains fundamentalchallenges for both vision and language.
 
 Ask Me Anything: Dynamic Memory Networks for Natural Language Processing
 
-  Most tasks in natural language processing can be cast into question answering
-(QA) problems over language input. We introduce the dynamic memory network
-(DMN), a neural network architecture which processes input sequences and
-questions, forms episodic memories, and generates relevant answers. Questions
-trigger an iterative attention process which allows the model to condition its
-attention on the inputs and the result of previous iterations. These results
-are then reasoned over in a hierarchical recurrent sequence model to generate
-answers. The DMN can be trained end-to-end and obtains state-of-the-art results
-on several types of tasks and datasets: question answering (Facebook's bAbI
-dataset), text classification for sentiment analysis (Stanford Sentiment
-Treebank) and sequence modeling for part-of-speech tagging (WSJ-PTB). The
-training for these different tasks relies exclusively on trained word vector
-representations and input-question-answer triplets.
-
+  Most tasks in natural language processing can be cast into question answering(QA) problems over language input. We introduce the dynamic memory network(DMN), a neural network architecture which processes input sequences andquestions, forms episodic memories, and generates relevant answers. Questionstrigger an iterative attention process which allows the model to condition itsattention on the inputs and the result of previous iterations. These resultsare then reasoned over in a hierarchical recurrent sequence model to generateanswers. The DMN can be trained end-to-end and obtains state-of-the-art resultson several types of tasks and datasets: question answering (Facebook's bAbIdataset), text classification for sentiment analysis (Stanford SentimentTreebank) and sequence modeling for part-of-speech tagging (WSJ-PTB). Thetraining for these different tasks relies exclusively on trained word vectorrepresentations and input-question-answer triplets.
 
 Deep contextualized word representations
 
-  We introduce a new type of deep contextualized word representation that
-models both (1) complex characteristics of word use (e.g., syntax and
-semantics), and (2) how these uses vary across linguistic contexts (i.e., to
-model polysemy). Our word vectors are learned functions of the internal states
-of a deep bidirectional language model (biLM), which is pre-trained on a large
-text corpus. We show that these representations can be easily added to existing
-models and significantly improve the state of the art across six challenging
-NLP problems, including question answering, textual entailment and sentiment
-analysis. We also present an analysis showing that exposing the deep internals
-of the pre-trained network is crucial, allowing downstream models to mix
-different types of semi-supervision signals.
-
+  We introduce a new type of deep contextualized word representation thatmodels both (1) complex characteristics of word use (e.g., syntax andsemantics), and (2) how these uses vary across linguistic contexts (i.e., tomodel polysemy). Our word vectors are learned functions of the internal statesof a deep bidirectional language model (biLM), which is pre-trained on a largetext corpus. We show that these representations can be easily added to existingmodels and significantly improve the state of the art across six challengingNLP problems, including question answering, textual entailment and sentimentanalysis. We also present an analysis showing that exposing the deep internalsof the pre-trained network is crucial, allowing downstream models to mixdifferent types of semi-supervision signals.
 
 Inducing and Embedding Senses with Scaled Gumbel Softmax
 
-  Methods for learning word sense embeddings represent a single word with
-multiple sense-specific vectors. These methods should not only produce
-interpretable sense embeddings, but should also learn how to select which sense
-to use in a given context. We propose an unsupervised model that learns sense
-embeddings using a modified Gumbel softmax function, which allows for
-differentiable discrete sense selection. Our model produces sense embeddings
-that are competitive (and sometimes state of the art) on multiple similarity
-based downstream evaluations. However, performance on these downstream
-evaluations tasks does not correlate with interpretability of sense embeddings,
-as we discover through an interpretability comparison with competing
-multi-sense embeddings. While many previous approaches perform well on
-downstream evaluations, they do not produce interpretable embeddings and learn
-duplicated sense groups; our method achieves the best of both worlds.
-
+  Methods for learning word sense embeddings represent a single word withmultiple sense-specific vectors. These methods should not only produceinterpretable sense embeddings, but should also learn how to select which senseto use in a given context. We propose an unsupervised model that learns senseembeddings using a modified Gumbel softmax function, which allows fordifferentiable discrete sense selection. Our model produces sense embeddingsthat are competitive (and sometimes state of the art) on multiple similaritybased downstream evaluations. However, performance on these downstreamevaluations tasks does not correlate with interpretability of sense embeddings,as we discover through an interpretability comparison with competingmulti-sense embeddings. While many previous approaches perform well ondownstream evaluations, they do not produce interpretable embeddings and learnduplicated sense groups; our method achieves the best of both worlds.
 
 QuAC : Question Answering in Context
 
-  We present QuAC, a dataset for Question Answering in Context that contains
-14K information-seeking QA dialogs (100K questions in total). The dialogs
-involve two crowd workers: (1) a student who poses a sequence of freeform
-questions to learn as much as possible about a hidden Wikipedia text, and (2) a
-teacher who answers the questions by providing short excerpts from the text.
-QuAC introduces challenges not found in existing machine comprehension
-datasets: its questions are often more open-ended, unanswerable, or only
-meaningful within the dialog context, as we show in a detailed qualitative
-evaluation. We also report results for a number of reference models, including
-a recently state-of-the-art reading comprehension architecture extended to
-model dialog context. Our best model underperforms humans by 20 F1, suggesting
-that there is significant room for future work on this data. Dataset, baseline,
-and leaderboard available at http://quac.ai.
+  We present QuAC, a dataset for Question Answering in Context that contains14K information-seeking QA dialogs (100K questions in total). The dialogsinvolve two crowd workers: (1) a student who poses a sequence of freeformquestions to learn as much as possible about a hidden Wikipedia text, and (2) ateacher who answers the questions by providing short excerpts from the text.QuAC introduces challenges not found in existing machine comprehensiondatasets: its questions are often more open-ended, unanswerable, or onlymeaningful within the dialog context, as we show in a detailed qualitativeevaluation. We also report results for a number of reference models, includinga recently state-of-the-art reading comprehension architecture extended tomodel dialog context. Our best model underperforms humans by 20 F1, suggestingthat there is significant room for future work on this data. Dataset, baseline,and leaderboard available at http://quac.ai.
 
+Revisiting the Importance of Encoding Logic Rules in Sentiment  Classification
 
-Revisiting the Importance of Encoding Logic Rules in Sentiment
-  Classification
-
-  We analyze the performance of different sentiment classification models on
-syntactically complex inputs like A-but-B sentences. The first contribution of
-this analysis addresses reproducible research: to meaningfully compare
-different models, their accuracies must be averaged over far more random seeds
-than what has traditionally been reported. With proper averaging in place, we
-notice that the distillation model described in arXiv:1603.06318v4 [cs.LG],
-which incorporates explicit logic rules for sentiment classification, is
-ineffective. In contrast, using contextualized ELMo embeddings
-(arXiv:1802.05365v2 [cs.CL]) instead of logic rules yields significantly better
-performance. Additionally, we provide analysis and visualizations that
-demonstrate ELMo's ability to implicitly learn logic rules. Finally, a
-crowdsourced analysis reveals how ELMo outperforms baseline models even on
-sentences with ambiguous sentiment labels.
-
+  We analyze the performance of different sentiment classification models onsyntactically complex inputs like A-but-B sentences. The first contribution ofthis analysis addresses reproducible research: to meaningfully comparedifferent models, their accuracies must be averaged over far more random seedsthan what has traditionally been reported. With proper averaging in place, wenotice that the distillation model described in arXiv:1603.06318v4 [cs.LG],which incorporates explicit logic rules for sentiment classification, isineffective. In contrast, using contextualized ELMo embeddings(arXiv:1802.05365v2 [cs.CL]) instead of logic rules yields significantly betterperformance. Additionally, we provide analysis and visualizations thatdemonstrate ELMo's ability to implicitly learn logic rules. Finally, acrowdsourced analysis reveals how ELMo outperforms baseline models even onsentences with ambiguous sentiment labels.
 
 Quizbowl: The Case for Incremental Question Answering
 
-  Quizbowl is a scholastic trivia competition that tests human knowledge and
-intelligence; additionally, it supports diverse research in question answering
-(QA). A Quizbowl question consists of multiple sentences whose clues are
-arranged by difficulty (from obscure to obvious) and uniquely identify a
-well-known entity such as those found on Wikipedia. Since players can answer
-the question at any time, an elite player (human or machine) demonstrates its
-superiority by answering correctly given as few clues as possible. We make two
-key contributions to machine learning research through Quizbowl: (1) collecting
-and curating a large factoid QA dataset and an accompanying gameplay dataset,
-and (2) developing a computational approach to playing Quizbowl that involves
-determining both what to answer and when to answer. Our Quizbowl system has
-defeated some of the best trivia players in the world over a multi-year series
-of exhibition matches. Throughout this paper, we show that collaborations with
-the vibrant Quizbowl community have contributed to the high quality of our
-dataset, led to new research directions, and doubled as an exciting way to
-engage the public with research in machine learning and natural language
-processing.
-
+  Quizbowl is a scholastic trivia competition that tests human knowledge andintelligence; additionally, it supports diverse research in question answering(QA). A Quizbowl question consists of multiple sentences whose clues arearranged by difficulty (from obscure to obvious) and uniquely identify awell-known entity such as those found on Wikipedia. Since players can answerthe question at any time, an elite player (human or machine) demonstrates itssuperiority by answering correctly given as few clues as possible. We make twokey contributions to machine learning research through Quizbowl: (1) collectingand curating a large factoid QA dataset and an accompanying gameplay dataset,and (2) developing a computational approach to playing Quizbowl that involvesdetermining both what to answer and when to answer. Our Quizbowl system hasdefeated some of the best trivia players in the world over a multi-year seriesof exhibition matches. Throughout this paper, we show that collaborations withthe vibrant Quizbowl community have contributed to the high quality of ourdataset, led to new research directions, and doubled as an exciting way toengage the public with research in machine learning and natural languageprocessing.
 
 Pathologies of Neural Models Make Interpretations Difficult
 
-  One way to interpret neural model predictions is to highlight the most
-important input features---for example, a heatmap visualization over the words
-in an input sentence. In existing interpretation methods for NLP, a word's
-importance is determined by either input perturbation---measuring the decrease
-in model confidence when that word is removed---or by the gradient with respect
-to that word. To understand the limitations of these methods, we use input
-reduction, which iteratively removes the least important word from the input.
-This exposes pathological behaviors of neural models: the remaining words
-appear nonsensical to humans and are not the ones determined as important by
-interpretation methods. As we confirm with human experiments, the reduced
-examples lack information to support the prediction of any label, but models
-still make the same predictions with high confidence. To explain these
-counterintuitive results, we draw connections to adversarial examples and
-confidence calibration: pathological behaviors reveal difficulties in
-interpreting neural models trained with maximum likelihood. To mitigate their
-deficiencies, we fine-tune the models by encouraging high entropy outputs on
-reduced examples. Fine-tuned models become more interpretable under input
-reduction without accuracy loss on regular examples.
-
+  One way to interpret neural model predictions is to highlight the mostimportant input features---for example, a heatmap visualization over the wordsin an input sentence. In existing interpretation methods for NLP, a word'simportance is determined by either input perturbation---measuring the decreasein model confidence when that word is removed---or by the gradient with respectto that word. To understand the limitations of these methods, we use inputreduction, which iteratively removes the least important word from the input.This exposes pathological behaviors of neural models: the remaining wordsappear nonsensical to humans and are not the ones determined as important byinterpretation methods. As we confirm with human experiments, the reducedexamples lack information to support the prediction of any label, but modelsstill make the same predictions with high confidence. To explain thesecounterintuitive results, we draw connections to adversarial examples andconfidence calibration: pathological behaviors reveal difficulties ininterpreting neural models trained with maximum likelihood. To mitigate theirdeficiencies, we fine-tune the models by encouraging high entropy outputs onreduced examples. Fine-tuned models become more interpretable under inputreduction without accuracy loss on regular examples.
 

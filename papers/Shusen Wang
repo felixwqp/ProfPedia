@@ -1,482 +1,92 @@
-A Scalable CUR Matrix Decomposition Algorithm: Lower Time Complexity and
-  Tighter Bound
+A Scalable CUR Matrix Decomposition Algorithm: Lower Time Complexity and  Tighter Bound
 
-  The CUR matrix decomposition is an important extension of Nystr\"{o}m
-approximation to a general matrix. It approximates any data matrix in terms of
-a small number of its columns and rows. In this paper we propose a novel
-randomized CUR algorithm with an expected relative-error bound. The proposed
-algorithm has the advantages over the existing relative-error CUR algorithms
-that it possesses tighter theoretical bound and lower time complexity, and that
-it can avoid maintaining the whole data matrix in main memory. Finally,
-experiments on several real-world datasets demonstrate significant improvement
-over the existing relative-error algorithms.
-
-
-Adjusting Leverage Scores by Row Weighting: A Practical Approach to
-  Coherent Matrix Completion
-
-  Low-rank matrix completion is an important problem with extensive real-world
-applications. When observations are uniformly sampled from the underlying
-matrix entries, existing methods all require the matrix to be incoherent. This
-paper provides the first working method for coherent matrix completion under
-the standard uniform sampling model. Our approach is based on the weighted
-nuclear norm minimization idea proposed in several recent work, and our key
-contribution is a practical method to compute the weighting matrices so that
-the leverage scores become more uniform after weighting. Under suitable
-conditions, we are able to derive theoretical results, showing the
-effectiveness of our approach. Experiments on synthetic data show that our
-approach recovers highly coherent matrices with high precision, whereas the
-standard unweighted method fails even on noise-free data.
-
-
-A Practical Guide to Randomized Matrix Computations with MATLAB
-  Implementations
-
-  Matrix operations such as matrix inversion, eigenvalue decomposition,
-singular value decomposition are ubiquitous in real-world applications.
-Unfortunately, many of these matrix operations so time and memory expensive
-that they are prohibitive when the scale of data is large. In real-world
-applications, since the data themselves are noisy, machine-precision matrix
-operations are not necessary at all, and one can sacrifice a reasonable amount
-of accuracy for computational efficiency.
-  In recent years, a bunch of randomized algorithms have been devised to make
-matrix computations more scalable. Mahoney (2011) and Woodruff (2014) have
-written excellent but very technical reviews of the randomized algorithms.
-Differently, the focus of this manuscript is on intuition, algorithm
-derivation, and implementation. This manuscript should be accessible to people
-with knowledge in elementary matrix algebra but unfamiliar with randomized
-matrix computations. The algorithms introduced in this manuscript are all
-summarized in a user-friendly way, and they can be implemented in lines of
-MATLAB code. The readers can easily follow the implementations even if they do
-not understand the maths and algorithms.
-
+  The CUR matrix decomposition is an important extension of Nystr\"{o}mapproximation to a general matrix. It approximates any data matrix in terms ofa small number of its columns and rows. In this paper we propose a novelrandomized CUR algorithm with an expected relative-error bound. The proposedalgorithm has the advantages over the existing relative-error CUR algorithmsthat it possesses tighter theoretical bound and lower time complexity, and thatit can avoid maintaining the whole data matrix in main memory. Finally,experiments on several real-world datasets demonstrate significant improvementover the existing relative-error algorithms.
 
 Sharpened Error Bounds for Random Sampling Based $\ell_2$ Regression
 
-  Given a data matrix $X \in R^{n\times d}$ and a response vector $y \in
-R^{n}$, suppose $n>d$, it costs $O(n d^2)$ time and $O(n d)$ space to solve the
-least squares regression (LSR) problem. When $n$ and $d$ are both large,
-exactly solving the LSR problem is very expensive. When $n \gg d$, one feasible
-approach to speeding up LSR is to randomly embed $y$ and all columns of $X$
-into a smaller subspace $R^c$; the induced LSR problem has the same number of
-columns but much fewer number of rows, and it can be solved in $O(c d^2)$ time
-and $O(c d)$ space.
-  We discuss in this paper two random sampling based methods for solving LSR
-more efficiently. Previous work showed that the leverage scores based sampling
-based LSR achieves $1+\epsilon$ accuracy when $c \geq O(d \epsilon^{-2} \log
-d)$. In this paper we sharpen this error bound, showing that $c = O(d \log d +
-d \epsilon^{-1})$ is enough for achieving $1+\epsilon$ accuracy. We also show
-that when $c \geq O(\mu d \epsilon^{-2} \log d)$, the uniform sampling based
-LSR attains a $2+\epsilon$ bound with positive probability.
+  Given a data matrix $X \in R^{n\times d}$ and a response vector $y \inR^{n}$, suppose $n>d$, it costs $O(n d^2)$ time and $O(n d)$ space to solve theleast squares regression (LSR) problem. When $n$ and $d$ are both large,exactly solving the LSR problem is very expensive. When $n \gg d$, one feasibleapproach to speeding up LSR is to randomly embed $y$ and all columns of $X$into a smaller subspace $R^c$; the induced LSR problem has the same number ofcolumns but much fewer number of rows, and it can be solved in $O(c d^2)$ timeand $O(c d)$ space.  We discuss in this paper two random sampling based methods for solving LSRmore efficiently. Previous work showed that the leverage scores based samplingbased LSR achieves $1+\epsilon$ accuracy when $c \geq O(d \epsilon^{-2} \logd)$. In this paper we sharpen this error bound, showing that $c = O(d \log d +d \epsilon^{-1})$ is enough for achieving $1+\epsilon$ accuracy. We also showthat when $c \geq O(\mu d \epsilon^{-2} \log d)$, the uniform sampling basedLSR attains a $2+\epsilon$ bound with positive probability.
 
+Adjusting Leverage Scores by Row Weighting: A Practical Approach to  Coherent Matrix Completion
 
-Improved Analyses of the Randomized Power Method and Block Lanczos
-  Method
+  Low-rank matrix completion is an important problem with extensive real-worldapplications. When observations are uniformly sampled from the underlyingmatrix entries, existing methods all require the matrix to be incoherent. Thispaper provides the first working method for coherent matrix completion underthe standard uniform sampling model. Our approach is based on the weightednuclear norm minimization idea proposed in several recent work, and our keycontribution is a practical method to compute the weighting matrices so thatthe leverage scores become more uniform after weighting. Under suitableconditions, we are able to derive theoretical results, showing theeffectiveness of our approach. Experiments on synthetic data show that ourapproach recovers highly coherent matrices with high precision, whereas thestandard unweighted method fails even on noise-free data.
 
-  The power method and block Lanczos method are popular numerical algorithms
-for computing the truncated singular value decomposition (SVD) and eigenvalue
-decomposition problems. Especially in the literature of randomized numerical
-linear algebra, the power method is widely applied to improve the quality of
-randomized sketching, and relative-error bounds have been well established.
-Recently, Musco & Musco (2015) proposed a block Krylov subspace method that
-fully exploits the intermediate results of the power iteration to accelerate
-convergence. They showed spectral gap-independent bounds which are stronger
-than the power method by order-of-magnitude. This paper offers novel error
-analysis techniques and significantly improves the bounds of both the
-randomized power method and the block Lanczos method. This paper also
-establishes the first gap-independent bound for the warm-start block Lanczos
-method.
+A Practical Guide to Randomized Matrix Computations with MATLAB  Implementations
 
+  Matrix operations such as matrix inversion, eigenvalue decomposition,singular value decomposition are ubiquitous in real-world applications.Unfortunately, many of these matrix operations so time and memory expensivethat they are prohibitive when the scale of data is large. In real-worldapplications, since the data themselves are noisy, machine-precision matrixoperations are not necessary at all, and one can sacrifice a reasonable amountof accuracy for computational efficiency.  In recent years, a bunch of randomized algorithms have been devised to makematrix computations more scalable. Mahoney (2011) and Woodruff (2014) havewritten excellent but very technical reviews of the randomized algorithms.Differently, the focus of this manuscript is on intuition, algorithmderivation, and implementation. This manuscript should be accessible to peoplewith knowledge in elementary matrix algebra but unfamiliar with randomizedmatrix computations. The algorithms introduced in this manuscript are allsummarized in a user-friendly way, and they can be implemented in lines ofMATLAB code. The readers can easily follow the implementations even if they donot understand the maths and algorithms.
+
+Improved Analyses of the Randomized Power Method and Block Lanczos  Method
+
+  The power method and block Lanczos method are popular numerical algorithmsfor computing the truncated singular value decomposition (SVD) and eigenvaluedecomposition problems. Especially in the literature of randomized numericallinear algebra, the power method is widely applied to improve the quality ofrandomized sketching, and relative-error bounds have been well established.Recently, Musco & Musco (2015) proposed a block Krylov subspace method thatfully exploits the intermediate results of the power iteration to accelerateconvergence. They showed spectral gap-independent bounds which are strongerthan the power method by order-of-magnitude. This paper offers novel erroranalysis techniques and significantly improves the bounds of both therandomized power method and the block Lanczos method. This paper alsoestablishes the first gap-independent bound for the warm-start block Lanczosmethod.
 
 $Q|SI\rangle$: A Quantum Programming Environment
 
-  This paper describes a quantum programming environment, named $Q|SI\rangle$.
-It is a platform embedded in the .Net language that supports quantum
-programming using a quantum extension of the $\mathbf{while}$-language. The
-framework of the platform includes a compiler of the quantum
-$\mathbf{while}$-language and a suite of tools for simulating quantum
-computation, optimizing quantum circuits, and analyzing and verifying quantum
-programs. Throughout the paper, using $Q|SI\rangle$ to simulate quantum
-behaviors on classical platforms with a combination of components is
-demonstrated. The scalable framework allows the user to program customized
-functions on the platform. The compiler works as the core of $Q|SI\rangle$
-bridging the gap from quantum hardware to quantum software. The built-in
-decomposition algorithms enable the universal quantum computation on the
-present quantum hardware.
+  This paper describes a quantum programming environment, named $Q|SI\rangle$.It is a platform embedded in the .Net language that supports quantumprogramming using a quantum extension of the $\mathbf{while}$-language. Theframework of the platform includes a compiler of the quantum$\mathbf{while}$-language and a suite of tools for simulating quantumcomputation, optimizing quantum circuits, and analyzing and verifying quantumprograms. Throughout the paper, using $Q|SI\rangle$ to simulate quantumbehaviors on classical platforms with a combination of components isdemonstrated. The scalable framework allows the user to program customizedfunctions on the platform. The compiler works as the core of $Q|SI\rangle$bridging the gap from quantum hardware to quantum software. The built-indecomposition algorithms enable the universal quantum computation on thepresent quantum hardware.
 
+Improving CUR Matrix Decomposition and the Nyström Approximation via  Adaptive Sampling
 
-Improving CUR Matrix Decomposition and the Nyström Approximation via
-  Adaptive Sampling
-
-  The CUR matrix decomposition and the Nystr\"{o}m approximation are two
-important low-rank matrix approximation techniques. The Nystr\"{o}m method
-approximates a symmetric positive semidefinite matrix in terms of a small
-number of its columns, while CUR approximates an arbitrary data matrix by a
-small number of its columns and rows. Thus, CUR decomposition can be regarded
-as an extension of the Nystr\"{o}m approximation.
-  In this paper we establish a more general error bound for the adaptive
-column/row sampling algorithm, based on which we propose more accurate CUR and
-Nystr\"{o}m algorithms with expected relative-error bounds. The proposed CUR
-and Nystr\"{o}m algorithms also have low time complexity and can avoid
-maintaining the whole data matrix in RAM. In addition, we give theoretical
-analysis for the lower error bounds of the standard Nystr\"{o}m method and the
-ensemble Nystr\"{o}m method. The main theoretical results established in this
-paper are novel, and our analysis makes no special assumption on the data
-matrices.
-
+  The CUR matrix decomposition and the Nystr\"{o}m approximation are twoimportant low-rank matrix approximation techniques. The Nystr\"{o}m methodapproximates a symmetric positive semidefinite matrix in terms of a smallnumber of its columns, while CUR approximates an arbitrary data matrix by asmall number of its columns and rows. Thus, CUR decomposition can be regardedas an extension of the Nystr\"{o}m approximation.  In this paper we establish a more general error bound for the adaptivecolumn/row sampling algorithm, based on which we propose more accurate CUR andNystr\"{o}m algorithms with expected relative-error bounds. The proposed CURand Nystr\"{o}m algorithms also have low time complexity and can avoidmaintaining the whole data matrix in RAM. In addition, we give theoreticalanalysis for the lower error bounds of the standard Nystr\"{o}m method and theensemble Nystr\"{o}m method. The main theoretical results established in thispaper are novel, and our analysis makes no special assumption on the datamatrices.
 
 Efficient Algorithms and Error Analysis for the Modified Nystrom Method
 
-  Many kernel methods suffer from high time and space complexities and are thus
-prohibitive in big-data applications. To tackle the computational challenge,
-the Nystr\"om method has been extensively used to reduce time and space
-complexities by sacrificing some accuracy. The Nystr\"om method speedups
-computation by constructing an approximation of the kernel matrix using only a
-few columns of the matrix. Recently, a variant of the Nystr\"om method called
-the modified Nystr\"om method has demonstrated significant improvement over the
-standard Nystr\"om method in approximation accuracy, both theoretically and
-empirically.
-  In this paper, we propose two algorithms that make the modified Nystr\"om
-method practical. First, we devise a simple column selection algorithm with a
-provable error bound. Our algorithm is more efficient and easier to implement
-than and nearly as accurate as the state-of-the-art algorithm. Second, with the
-selected columns at hand, we propose an algorithm that computes the
-approximation in lower time complexity than the approach in the previous work.
-Furthermore, we prove that the modified Nystr\"om method is exact under certain
-conditions, and we establish a lower error bound for the modified Nystr\"om
-method.
+  Many kernel methods suffer from high time and space complexities and are thusprohibitive in big-data applications. To tackle the computational challenge,the Nystr\"om method has been extensively used to reduce time and spacecomplexities by sacrificing some accuracy. The Nystr\"om method speedupscomputation by constructing an approximation of the kernel matrix using only afew columns of the matrix. Recently, a variant of the Nystr\"om method calledthe modified Nystr\"om method has demonstrated significant improvement over thestandard Nystr\"om method in approximation accuracy, both theoretically andempirically.  In this paper, we propose two algorithms that make the modified Nystr\"ommethod practical. First, we devise a simple column selection algorithm with aprovable error bound. Our algorithm is more efficient and easier to implementthan and nearly as accurate as the state-of-the-art algorithm. Second, with theselected columns at hand, we propose an algorithm that computes theapproximation in lower time complexity than the approach in the previous work.Furthermore, we prove that the modified Nystr\"om method is exact under certainconditions, and we establish a lower error bound for the modified Nystr\"ommethod.
 
+SPSD Matrix Approximation vis Column Selection: Theories, Algorithms,  and Extensions
 
-SPSD Matrix Approximation vis Column Selection: Theories, Algorithms,
-  and Extensions
+  Symmetric positive semidefinite (SPSD) matrix approximation is an importantproblem with applications in kernel methods. However, existing SPSD matrixapproximation methods such as the Nystr\"om method only have weak error bounds.In this paper we conduct in-depth studies of an SPSD matrix approximation modeland establish strong relative-error bounds. We call it the prototype model forit has more efficient and effective extensions, and some of its extensions havehigh scalability. Though the prototype model itself is not suitable forlarge-scale data, it is still useful to study its properties, on which theanalysis of its extensions relies.  This paper offers novel theoretical analysis, efficient algorithms, and ahighly accurate extension. First, we establish a lower error bound for theprototype model and improve the error bound of an existing column selectionalgorithm to match the lower bound. In this way, we obtain the first optimalcolumn selection algorithm for the prototype model. We also prove that theprototype model is exact under certain conditions. Second, we develop a simplecolumn selection algorithm with a provable error bound. Third, we propose aso-called spectral shifting model to make the approximation more accurate whenthe eigenvalues of the matrix decay slowly, and the improvement istheoretically quantified. The spectral shifting method can also be applied toimprove other SPSD matrix approximation models.
 
-  Symmetric positive semidefinite (SPSD) matrix approximation is an important
-problem with applications in kernel methods. However, existing SPSD matrix
-approximation methods such as the Nystr\"om method only have weak error bounds.
-In this paper we conduct in-depth studies of an SPSD matrix approximation model
-and establish strong relative-error bounds. We call it the prototype model for
-it has more efficient and effective extensions, and some of its extensions have
-high scalability. Though the prototype model itself is not suitable for
-large-scale data, it is still useful to study its properties, on which the
-analysis of its extensions relies.
-  This paper offers novel theoretical analysis, efficient algorithms, and a
-highly accurate extension. First, we establish a lower error bound for the
-prototype model and improve the error bound of an existing column selection
-algorithm to match the lower bound. In this way, we obtain the first optimal
-column selection algorithm for the prototype model. We also prove that the
-prototype model is exact under certain conditions. Second, we develop a simple
-column selection algorithm with a provable error bound. Third, we propose a
-so-called spectral shifting model to make the approximation more accurate when
-the eigenvalues of the matrix decay slowly, and the improvement is
-theoretically quantified. The spectral shifting method can also be applied to
-improve other SPSD matrix approximation models.
+Towards More Efficient SPSD Matrix Approximation and CUR Matrix  Decomposition
 
+  Symmetric positive semi-definite (SPSD) matrix approximation methods havebeen extensively used to speed up large-scale eigenvalue computation and kernellearning methods. The standard sketch based method, which we call the prototypemodel, produces relatively accurate approximations, but is inefficient on largesquare matrices. The Nystr\"om method is highly efficient, but can only achievelow accuracy. In this paper we propose a novel model that we call the {\it fastSPSD matrix approximation model}. The fast model is nearly as efficient as theNystr\"om method and as accurate as the prototype model. We show that the fastmodel can potentially solve eigenvalue problems and kernel learning problems inlinear time with respect to the matrix size $n$ to achieve $1+\epsilon$relative-error, whereas both the prototype model and the Nystr\"om method costat least quadratic time to attain comparable error bound. Empirical comparisonsamong the prototype model, the Nystr\"om method, and our fast model demonstratethe superiority of the fast model. We also contribute new understandings of theNystr\"om method. The Nystr\"om method is a special instance of our fast modeland is approximation to the prototype model. Our technique can bestraightforwardly applied to make the CUR matrix decomposition more efficientlycomputed without much affecting the accuracy.
 
-Towards More Efficient SPSD Matrix Approximation and CUR Matrix
-  Decomposition
+A Bootstrap Method for Error Estimation in Randomized Matrix  Multiplication
 
-  Symmetric positive semi-definite (SPSD) matrix approximation methods have
-been extensively used to speed up large-scale eigenvalue computation and kernel
-learning methods. The standard sketch based method, which we call the prototype
-model, produces relatively accurate approximations, but is inefficient on large
-square matrices. The Nystr\"om method is highly efficient, but can only achieve
-low accuracy. In this paper we propose a novel model that we call the {\it fast
-SPSD matrix approximation model}. The fast model is nearly as efficient as the
-Nystr\"om method and as accurate as the prototype model. We show that the fast
-model can potentially solve eigenvalue problems and kernel learning problems in
-linear time with respect to the matrix size $n$ to achieve $1+\epsilon$
-relative-error, whereas both the prototype model and the Nystr\"om method cost
-at least quadratic time to attain comparable error bound. Empirical comparisons
-among the prototype model, the Nystr\"om method, and our fast model demonstrate
-the superiority of the fast model. We also contribute new understandings of the
-Nystr\"om method. The Nystr\"om method is a special instance of our fast model
-and is approximation to the prototype model. Our technique can be
-straightforwardly applied to make the CUR matrix decomposition more efficiently
-computed without much affecting the accuracy.
+  In recent years, randomized methods for numerical linear algebra havereceived growing interest as a general approach to large-scale problems.Typically, the essential ingredient of these methods is some form of randomizeddimension reduction, which accelerates computations, but also creates randomapproximation error. In this way, the dimension reduction step encodes atradeoff between cost and accuracy. However, the exact numerical relationshipbetween cost and accuracy is typically unknown, and consequently, it may bedifficult for the user to precisely know (1) how accurate a given solution is,or (2) how much computation is needed to achieve a given level of accuracy. Inthe current paper, we study randomized matrix multiplication (sketching) as aprototype setting for addressing these general problems. As a solution, wedevelop a bootstrap method for \emph{directly estimating} the accuracy as afunction of the reduced dimension (as opposed to deriving worst-case bounds onthe accuracy in terms of the reduced dimension). From a computationalstandpoint, the proposed method does not substantially increase the cost ofstandard sketching methods, and this is made possible by an "extrapolation"technique. In addition, we provide both theoretical and empirical results todemonstrate the effectiveness of the proposed method.
 
+GIANT: Globally Improved Approximate Newton Method for Distributed  Optimization
 
-A Bootstrap Method for Error Estimation in Randomized Matrix
-  Multiplication
+  For distributed computing environment, we consider the empirical riskminimization problem and propose a distributed and communication-efficientNewton-type optimization method. At every iteration, each worker locally findsan Approximate NewTon (ANT) direction, which is sent to the main driver. Themain driver, then, averages all the ANT directions received from workers toform a {\it Globally Improved ANT} (GIANT) direction. GIANT is highlycommunication efficient and naturally exploits the trade-offs between localcomputations and global communications in that more local computations resultin fewer overall rounds of communications. Theoretically, we show that GIANTenjoys an improved convergence rate as compared with first-order methods andexisting distributed Newton-type methods. Further, and in sharp contrast withmany existing distributed Newton-type methods, as well as popular first-ordermethods, a highly advantageous practical feature of GIANT is that it onlyinvolves one tuning parameter. We conduct large-scale experiments on a computercluster and, empirically, demonstrate the superior performance of GIANT.
 
-  In recent years, randomized methods for numerical linear algebra have
-received growing interest as a general approach to large-scale problems.
-Typically, the essential ingredient of these methods is some form of randomized
-dimension reduction, which accelerates computations, but also creates random
-approximation error. In this way, the dimension reduction step encodes a
-tradeoff between cost and accuracy. However, the exact numerical relationship
-between cost and accuracy is typically unknown, and consequently, it may be
-difficult for the user to precisely know (1) how accurate a given solution is,
-or (2) how much computation is needed to achieve a given level of accuracy. In
-the current paper, we study randomized matrix multiplication (sketching) as a
-prototype setting for addressing these general problems. As a solution, we
-develop a bootstrap method for \emph{directly estimating} the accuracy as a
-function of the reduced dimension (as opposed to deriving worst-case bounds on
-the accuracy in terms of the reduced dimension). From a computational
-standpoint, the proposed method does not substantially increase the cost of
-standard sketching methods, and this is made possible by an "extrapolation"
-technique. In addition, we provide both theoretical and empirical results to
-demonstrate the effectiveness of the proposed method.
+Error Estimation for Randomized Least-Squares Algorithms via the  Bootstrap
 
+  Over the course of the past decade, a variety of randomized algorithms havebeen proposed for computing approximate least-squares (LS) solutions inlarge-scale settings. A longstanding practical issue is that, for any giveninput, the user rarely knows the actual error of an approximate solution(relative to the exact solution). Likewise, it is difficult for the user toknow precisely how much computation is needed to achieve the desired errortolerance. Consequently, the user often appeals to worst-case error bounds thattend to offer only qualitative guidance. As a more practical alternative, wepropose a bootstrap method to compute a posteriori error estimates forrandomized LS algorithms. These estimates permit the user to numerically assessthe error of a given solution, and to predict how much work is needed toimprove a "preliminary" solution. In addition, we provide theoreticalconsistency results for the method, which are the first such results in thiscontext (to the best of our knowledge). From a practical standpoint, the methodalso has considerable flexibility, insofar as it can be applied to severalpopular sketching algorithms, as well as a variety of error metrics. Moreover,the extra step of error estimation does not add much cost to an underlyingsketching algorithm. Finally, we demonstrate the effectiveness of the methodwith empirical results.
 
-GIANT: Globally Improved Approximate Newton Method for Distributed
-  Optimization
+Detection of bosonic mode as a signature of magnetic excitation in one  unit cell FeSe on SrTiO3
 
-  For distributed computing environment, we consider the empirical risk
-minimization problem and propose a distributed and communication-efficient
-Newton-type optimization method. At every iteration, each worker locally finds
-an Approximate NewTon (ANT) direction, which is sent to the main driver. The
-main driver, then, averages all the ANT directions received from workers to
-form a {\it Globally Improved ANT} (GIANT) direction. GIANT is highly
-communication efficient and naturally exploits the trade-offs between local
-computations and global communications in that more local computations result
-in fewer overall rounds of communications. Theoretically, we show that GIANT
-enjoys an improved convergence rate as compared with first-order methods and
-existing distributed Newton-type methods. Further, and in sharp contrast with
-many existing distributed Newton-type methods, as well as popular first-order
-methods, a highly advantageous practical feature of GIANT is that it only
-involves one tuning parameter. We conduct large-scale experiments on a computer
-cluster and, empirically, demonstrate the superior performance of GIANT.
+  We report an in situ scanning tunneling spectroscopy study of one-unit-cell(1-UC) FeSe film on SrTiO3(001) (STO) substrate. In quasiparticle density ofstates, bosonic excitation mode characterized by the "dip-hump" structure isdetected outside the larger superconducting gap with energy comparable withphonon and spin resonance modes in heavily electron-doped iron selenides.Statistically, the excitation mode, which is intimately correlated withsuperconductivity, shows an anticorrelation with pairing strength and yields anenergy scale upper-bounded by twice the superconducting gap coinciding with thecharacteristics of magnetic resonance in cuprates and iron-basedsuperconductors. The local response of tunneling spectra to magneticallydifferent Se defects all exhibits the induced in-gap quasiparticle boundstates, indicating an unconventional sign-reversing pairing. These resultssupport the magnetic nature of the excitation mode and possibly reveal asignature of electron-magnetic-excitation coupling in high-temperaturesuperconductivity of 1-UC FeSe/STO.
 
+Detection of a zero energy bound state induced on high temperature  superconducting one-unit-cell FeSe on SrTiO3
 
-Error Estimation for Randomized Least-Squares Algorithms via the
-  Bootstrap
+  Majorana zero modes (MZMs) that obey the non-Abelian statistics have beenintensively investigated for potential applications in topological quantumcomputing. The prevailing signal in tunneling experiments "fingerprinting" theexistence of MZM is the zero-energy bound state (ZEBS). However, nearly all ofthe previously reported ZEBSs showing signatures of the MZMs are observed indifficult-to-fabricate heterostructures and survived at very low temperatures.By using in situ scanning tunneling spectroscopy, we detect a ZEBS upon Feadatom on one-unit-cell FeSe film grown on SrTiO3(001) that exhibits thehighest transition temperature among iron-based superconductors. Theexperimental findings are partially consistent with the spectroscopiccharacteristics of the MZM, which may stimulate future MZM explorations inconnate topological superconductors and towards an applicable temperatureregime.
 
-  Over the course of the past decade, a variety of randomized algorithms have
-been proposed for computing approximate least-squares (LS) solutions in
-large-scale settings. A longstanding practical issue is that, for any given
-input, the user rarely knows the actual error of an approximate solution
-(relative to the exact solution). Likewise, it is difficult for the user to
-know precisely how much computation is needed to achieve the desired error
-tolerance. Consequently, the user often appeals to worst-case error bounds that
-tend to offer only qualitative guidance. As a more practical alternative, we
-propose a bootstrap method to compute a posteriori error estimates for
-randomized LS algorithms. These estimates permit the user to numerically assess
-the error of a given solution, and to predict how much work is needed to
-improve a "preliminary" solution. In addition, we provide theoretical
-consistency results for the method, which are the first such results in this
-context (to the best of our knowledge). From a practical standpoint, the method
-also has considerable flexibility, insofar as it can be applied to several
-popular sketching algorithms, as well as a variety of error metrics. Moreover,
-the extra step of error estimation does not add much cost to an underlying
-sketching algorithm. Finally, we demonstrate the effectiveness of the method
-with empirical results.
+Sketched Ridge Regression: Optimization Perspective, Statistical  Perspective, and Model Averaging
 
+  We address the statistical and optimization impacts of the classical sketchand Hessian sketch used to approximately solve the Matrix Ridge Regression(MRR) problem. Prior research has quantified the effects of classical sketch onthe strictly simpler least squares regression (LSR) problem. We establish thatclassical sketch has a similar effect upon the optimization properties of MRRas it does on those of LSR: namely, it recovers nearly optimal solutions. Bycontrast, Hessian sketch does not have this guarantee, instead, theapproximation error is governed by a subtle interplay between the "mass" in theresponses and the optimal objective value.  For both types of approximation, the regularization in the sketched MRRproblem results in significantly different statistical properties from those ofthe sketched LSR problem. In particular, there is a bias-variance trade-off insketched MRR that is not present in sketched LSR. We provide upper and lowerbounds on the bias and variance of sketched MRR, these bounds show thatclassical sketch significantly increases the variance, while Hessian sketchsignificantly increases the bias. Empirically, sketched MRR solutions can haverisks that are higher by an order-of-magnitude than those of the optimal MRRsolutions.  We establish theoretically and empirically that model averaging greatlydecreases the gap between the risks of the true and sketched solutions to theMRR problem. Thus, in parallel or distributed settings, sketching combined withmodel averaging is a powerful technique that quickly obtains near-optimalsolutions to the MRR problem while greatly mitigating the increased statisticalrisk incurred by sketching.
 
-Detection of bosonic mode as a signature of magnetic excitation in one
-  unit cell FeSe on SrTiO3
+Scalable Kernel K-Means Clustering with Nystrom Approximation:  Relative-Error Bounds
 
-  We report an in situ scanning tunneling spectroscopy study of one-unit-cell
-(1-UC) FeSe film on SrTiO3(001) (STO) substrate. In quasiparticle density of
-states, bosonic excitation mode characterized by the "dip-hump" structure is
-detected outside the larger superconducting gap with energy comparable with
-phonon and spin resonance modes in heavily electron-doped iron selenides.
-Statistically, the excitation mode, which is intimately correlated with
-superconductivity, shows an anticorrelation with pairing strength and yields an
-energy scale upper-bounded by twice the superconducting gap coinciding with the
-characteristics of magnetic resonance in cuprates and iron-based
-superconductors. The local response of tunneling spectra to magnetically
-different Se defects all exhibits the induced in-gap quasiparticle bound
-states, indicating an unconventional sign-reversing pairing. These results
-support the magnetic nature of the excitation mode and possibly reveal a
-signature of electron-magnetic-excitation coupling in high-temperature
-superconductivity of 1-UC FeSe/STO.
-
-
-Detection of a zero energy bound state induced on high temperature
-  superconducting one-unit-cell FeSe on SrTiO3
-
-  Majorana zero modes (MZMs) that obey the non-Abelian statistics have been
-intensively investigated for potential applications in topological quantum
-computing. The prevailing signal in tunneling experiments "fingerprinting" the
-existence of MZM is the zero-energy bound state (ZEBS). However, nearly all of
-the previously reported ZEBSs showing signatures of the MZMs are observed in
-difficult-to-fabricate heterostructures and survived at very low temperatures.
-By using in situ scanning tunneling spectroscopy, we detect a ZEBS upon Fe
-adatom on one-unit-cell FeSe film grown on SrTiO3(001) that exhibits the
-highest transition temperature among iron-based superconductors. The
-experimental findings are partially consistent with the spectroscopic
-characteristics of the MZM, which may stimulate future MZM explorations in
-connate topological superconductors and towards an applicable temperature
-regime.
-
-
-Sketched Ridge Regression: Optimization Perspective, Statistical
-  Perspective, and Model Averaging
-
-  We address the statistical and optimization impacts of the classical sketch
-and Hessian sketch used to approximately solve the Matrix Ridge Regression
-(MRR) problem. Prior research has quantified the effects of classical sketch on
-the strictly simpler least squares regression (LSR) problem. We establish that
-classical sketch has a similar effect upon the optimization properties of MRR
-as it does on those of LSR: namely, it recovers nearly optimal solutions. By
-contrast, Hessian sketch does not have this guarantee, instead, the
-approximation error is governed by a subtle interplay between the "mass" in the
-responses and the optimal objective value.
-  For both types of approximation, the regularization in the sketched MRR
-problem results in significantly different statistical properties from those of
-the sketched LSR problem. In particular, there is a bias-variance trade-off in
-sketched MRR that is not present in sketched LSR. We provide upper and lower
-bounds on the bias and variance of sketched MRR, these bounds show that
-classical sketch significantly increases the variance, while Hessian sketch
-significantly increases the bias. Empirically, sketched MRR solutions can have
-risks that are higher by an order-of-magnitude than those of the optimal MRR
-solutions.
-  We establish theoretically and empirically that model averaging greatly
-decreases the gap between the risks of the true and sketched solutions to the
-MRR problem. Thus, in parallel or distributed settings, sketching combined with
-model averaging is a powerful technique that quickly obtains near-optimal
-solutions to the MRR problem while greatly mitigating the increased statistical
-risk incurred by sketching.
-
-
-Scalable Kernel K-Means Clustering with Nystrom Approximation:
-  Relative-Error Bounds
-
-  Kernel $k$-means clustering can correctly identify and extract a far more
-varied collection of cluster structures than the linear $k$-means clustering
-algorithm. However, kernel $k$-means clustering is computationally expensive
-when the non-linear feature map is high-dimensional and there are many input
-points. Kernel approximation, e.g., the Nystr\"om method, has been applied in
-previous works to approximately solve kernel learning problems when both of the
-above conditions are present. This work analyzes the application of this
-paradigm to kernel $k$-means clustering, and shows that applying the linear
-$k$-means clustering algorithm to $\frac{k}{\epsilon} (1 + o(1))$ features
-constructed using a so-called rank-restricted Nystr\"om approximation results
-in cluster assignments that satisfy a $1 + \epsilon$ approximation ratio in
-terms of the kernel $k$-means cost function, relative to the guarantee provided
-by the same algorithm without the use of the Nystr\"om method. As part of the
-analysis, this work establishes a novel $1 + \epsilon$ relative-error trace
-norm guarantee for low-rank approximation using the rank-restricted Nystr\"om
-approximation. Empirical evaluations on the $8.1$ million instance MNIST8M
-dataset demonstrate the scalability and usefulness of kernel $k$-means
-clustering with Nystr\"om approximation. This work argues that spectral
-clustering using Nystr\"om approximation---a popular and computationally
-efficient, but theoretically unsound approach to non-linear clustering---should
-be replaced with the efficient and theoretically sound combination of kernel
-$k$-means clustering with Nystr\"om approximation. The superior performance of
-the latter approach is empirically verified.
-
+  Kernel $k$-means clustering can correctly identify and extract a far morevaried collection of cluster structures than the linear $k$-means clusteringalgorithm. However, kernel $k$-means clustering is computationally expensivewhen the non-linear feature map is high-dimensional and there are many inputpoints. Kernel approximation, e.g., the Nystr\"om method, has been applied inprevious works to approximately solve kernel learning problems when both of theabove conditions are present. This work analyzes the application of thisparadigm to kernel $k$-means clustering, and shows that applying the linear$k$-means clustering algorithm to $\frac{k}{\epsilon} (1 + o(1))$ featuresconstructed using a so-called rank-restricted Nystr\"om approximation resultsin cluster assignments that satisfy a $1 + \epsilon$ approximation ratio interms of the kernel $k$-means cost function, relative to the guarantee providedby the same algorithm without the use of the Nystr\"om method. As part of theanalysis, this work establishes a novel $1 + \epsilon$ relative-error tracenorm guarantee for low-rank approximation using the rank-restricted Nystr\"omapproximation. Empirical evaluations on the $8.1$ million instance MNIST8Mdataset demonstrate the scalability and usefulness of kernel $k$-meansclustering with Nystr\"om approximation. This work argues that spectralclustering using Nystr\"om approximation---a popular and computationallyefficient, but theoretically unsound approach to non-linear clustering---shouldbe replaced with the efficient and theoretically sound combination of kernel$k$-means clustering with Nystr\"om approximation. The superior performance ofthe latter approach is empirically verified.
 
 EP-GIG Priors and Applications in Bayesian Sparse Learning
 
-  In this paper we propose a novel framework for the construction of
-sparsity-inducing priors. In particular, we define such priors as a mixture of
-exponential power distributions with a generalized inverse Gaussian density
-(EP-GIG). EP-GIG is a variant of generalized hyperbolic distributions, and the
-special cases include Gaussian scale mixtures and Laplace scale mixtures.
-Furthermore, Laplace scale mixtures can subserve a Bayesian framework for
-sparse learning with nonconvex penalization. The densities of EP-GIG can be
-explicitly expressed. Moreover, the corresponding posterior distribution also
-follows a generalized inverse Gaussian distribution. These properties lead us
-to EM algorithms for Bayesian sparse learning. We show that these algorithms
-bear an interesting resemblance to iteratively re-weighted $\ell_2$ or $\ell_1$
-methods. In addition, we present two extensions for grouped variable selection
-and logistic regression.
-
+  In this paper we propose a novel framework for the construction ofsparsity-inducing priors. In particular, we define such priors as a mixture ofexponential power distributions with a generalized inverse Gaussian density(EP-GIG). EP-GIG is a variant of generalized hyperbolic distributions, and thespecial cases include Gaussian scale mixtures and Laplace scale mixtures.Furthermore, Laplace scale mixtures can subserve a Bayesian framework forsparse learning with nonconvex penalization. The densities of EP-GIG can beexplicitly expressed. Moreover, the corresponding posterior distribution alsofollows a generalized inverse Gaussian distribution. These properties lead usto EM algorithms for Bayesian sparse learning. We show that these algorithmsbear an interesting resemblance to iteratively re-weighted $\ell_2$ or $\ell_1$methods. In addition, we present two extensions for grouped variable selectionand logistic regression.
 
 OverSketch: Approximate Matrix Multiplication for the Cloud
 
-  We propose OverSketch, an approximate algorithm for distributed matrix
-multiplication in serverless computing. OverSketch leverages ideas from matrix
-sketching and high-performance computing to enable cost-efficient
-multiplication that is resilient to faults and straggling nodes pervasive in
-low-cost serverless architectures. We establish statistical guarantees on the
-accuracy of OverSketch and empirically validate our results by solving a
-large-scale linear program using interior-point methods and demonstrate a 34%
-reduction in compute time on AWS Lambda.
-
+  We propose OverSketch, an approximate algorithm for distributed matrixmultiplication in serverless computing. OverSketch leverages ideas from matrixsketching and high-performance computing to enable cost-efficientmultiplication that is resilient to faults and straggling nodes pervasive inlow-cost serverless architectures. We establish statistical guarantees on theaccuracy of OverSketch and empirically validate our results by solving alarge-scale linear program using interior-point methods and demonstrate a 34%reduction in compute time on AWS Lambda.
 
 Do Subsampled Newton Methods Work for High-Dimensional Data?
 
-  Subsampled Newton methods approximate Hessian matrices through subsampling
-techniques, alleviating the cost of forming Hessian matrices but using
-sufficient curvature information. However, previous results require $\Omega
-(d)$ samples to approximate Hessians, where $d$ is the dimension of data
-points, making it less practically feasible for high-dimensional data. The
-situation is deteriorated when $d$ is comparably as large as the number of data
-points $n$, which requires to take the whole dataset into account, making
-subsampling useless. This paper theoretically justifies the effectiveness of
-subsampled Newton methods on high dimensional data. Specifically, we prove only
-$\widetilde{\Theta}(d^\gamma_{\rm eff})$ samples are needed in the
-approximation of Hessian matrices, where $d^\gamma_{\rm eff}$ is the
-$\gamma$-ridge leverage and can be much smaller than $d$ as long as $n\gamma
-\gg 1$. Additionally, we extend this result so that subsampled Newton methods
-can work for high-dimensional data on both distributed optimization problems
-and non-smooth regularized problems.
+  Subsampled Newton methods approximate Hessian matrices through subsamplingtechniques, alleviating the cost of forming Hessian matrices but usingsufficient curvature information. However, previous results require $\Omega(d)$ samples to approximate Hessians, where $d$ is the dimension of datapoints, making it less practically feasible for high-dimensional data. Thesituation is deteriorated when $d$ is comparably as large as the number of datapoints $n$, which requires to take the whole dataset into account, makingsubsampling useless. This paper theoretically justifies the effectiveness ofsubsampled Newton methods on high dimensional data. Specifically, we prove only$\widetilde{\Theta}(d^\gamma_{\rm eff})$ samples are needed in theapproximation of Hessian matrices, where $d^\gamma_{\rm eff}$ is the$\gamma$-ridge leverage and can be much smaller than $d$ as long as $n\gamma\gg 1$. Additionally, we extend this result so that subsampled Newton methodscan work for high-dimensional data on both distributed optimization problemsand non-smooth regularized problems.
 
+Efficient Data-Driven Geologic Feature Detection from Pre-stack Seismic  Measurements using Randomized Machine-Learning Algorithm
 
-Efficient Data-Driven Geologic Feature Detection from Pre-stack Seismic
-  Measurements using Randomized Machine-Learning Algorithm
-
-  Conventional seismic techniques for detecting the subsurface geologic
-features are challenged by limited data coverage, computational inefficiency,
-and subjective human factors. We developed a novel data-driven geological
-feature detection approach based on pre-stack seismic measurements. Our
-detection method employs an efficient and accurate machine-learning detection
-approach to extract useful subsurface geologic features automatically.
-Specifically, our method is based on kernel ridge regression model. The
-conventional kernel ridge regression can be computationally prohibited because
-of the large volume of seismic measurements. We employ a data reduction
-technique in combination with the conventional kernel ridge regression method
-to improve the computational efficiency and reduce memory usage. In particular,
-we utilize a randomized numerical linear algebra technique, named Nystr\"om
-method, to effectively reduce the dimensionality of the feature space without
-compromising the information content required for accurate detection. We
-provide thorough computational cost analysis to show efficiency of our new
-geological feature detection methods. We further validate the performance of
-our new subsurface geologic feature detection method using synthetic surface
-seismic data for 2D acoustic and elastic velocity models. Our numerical
-examples demonstrate that our new detection method significantly improves the
-computational efficiency while maintaining comparable accuracy. Interestingly,
-we show that our method yields a speed-up ratio on the order of $\sim10^2$ to
-$\sim 10^3$ in a multi-core computational environment.
-
+  Conventional seismic techniques for detecting the subsurface geologicfeatures are challenged by limited data coverage, computational inefficiency,and subjective human factors. We developed a novel data-driven geologicalfeature detection approach based on pre-stack seismic measurements. Ourdetection method employs an efficient and accurate machine-learning detectionapproach to extract useful subsurface geologic features automatically.Specifically, our method is based on kernel ridge regression model. Theconventional kernel ridge regression can be computationally prohibited becauseof the large volume of seismic measurements. We employ a data reductiontechnique in combination with the conventional kernel ridge regression methodto improve the computational efficiency and reduce memory usage. In particular,we utilize a randomized numerical linear algebra technique, named Nystr\"ommethod, to effectively reduce the dimensionality of the feature space withoutcompromising the information content required for accurate detection. Weprovide thorough computational cost analysis to show efficiency of our newgeological feature detection methods. We further validate the performance ofour new subsurface geologic feature detection method using synthetic surfaceseismic data for 2D acoustic and elastic velocity models. Our numericalexamples demonstrate that our new detection method significantly improves thecomputational efficiency while maintaining comparable accuracy. Interestingly,we show that our method yields a speed-up ratio on the order of $\sim10^2$ to$\sim 10^3$ in a multi-core computational environment.
 
 Alchemist: An Apache Spark <=> MPI Interface
 
-  The Apache Spark framework for distributed computation is popular in the data
-analytics community due to its ease of use, but its MapReduce-style programming
-model can incur significant overheads when performing computations that do not
-map directly onto this model. One way to mitigate these costs is to off-load
-computations onto MPI codes. In recent work, we introduced Alchemist, a system
-for the analysis of large-scale data sets. Alchemist calls MPI-based libraries
-from within Spark applications, and it has minimal coding, communication, and
-memory overheads. In particular, Alchemist allows users to retain the
-productivity benefits of working within the Spark software ecosystem without
-sacrificing performance efficiency in linear algebra, machine learning, and
-other related computations.
-  In this paper, we discuss the motivation behind the development of Alchemist,
-and we provide a detailed overview its design and usage. We also demonstrate
-the efficiency of our approach on medium-to-large data sets, using some
-standard linear algebra operations, namely matrix multiplication and the
-truncated singular value decomposition of a dense matrix, and we compare the
-performance of Spark with that of Spark+Alchemist. These computations are run
-on the NERSC supercomputer Cori Phase 1, a Cray XC40.
+  The Apache Spark framework for distributed computation is popular in the dataanalytics community due to its ease of use, but its MapReduce-style programmingmodel can incur significant overheads when performing computations that do notmap directly onto this model. One way to mitigate these costs is to off-loadcomputations onto MPI codes. In recent work, we introduced Alchemist, a systemfor the analysis of large-scale data sets. Alchemist calls MPI-based librariesfrom within Spark applications, and it has minimal coding, communication, andmemory overheads. In particular, Alchemist allows users to retain theproductivity benefits of working within the Spark software ecosystem withoutsacrificing performance efficiency in linear algebra, machine learning, andother related computations.  In this paper, we discuss the motivation behind the development of Alchemist,and we provide a detailed overview its design and usage. We also demonstratethe efficiency of our approach on medium-to-large data sets, using somestandard linear algebra operations, namely matrix multiplication and thetruncated singular value decomposition of a dense matrix, and we compare theperformance of Spark with that of Spark+Alchemist. These computations are runon the NERSC supercomputer Cori Phase 1, a Cray XC40.
 
+Accelerating Large-Scale Data Analysis by Offloading to High-Performance  Computing Libraries using Alchemist
 
-Accelerating Large-Scale Data Analysis by Offloading to High-Performance
-  Computing Libraries using Alchemist
-
-  Apache Spark is a popular system aimed at the analysis of large data sets,
-but recent studies have shown that certain computations---in particular, many
-linear algebra computations that are the basis for solving common machine
-learning problems---are significantly slower in Spark than when done using
-libraries written in a high-performance computing framework such as the
-Message-Passing Interface (MPI).
-  To remedy this, we introduce Alchemist, a system designed to call MPI-based
-libraries from Apache Spark. Using Alchemist with Spark helps accelerate linear
-algebra, machine learning, and related computations, while still retaining the
-benefits of working within the Spark environment. We discuss the motivation
-behind the development of Alchemist, and we provide a brief overview of its
-design and implementation.
-  We also compare the performances of pure Spark implementations with those of
-Spark implementations that leverage MPI-based codes via Alchemist. To do so, we
-use data science case studies: a large-scale application of the conjugate
-gradient method to solve very large linear systems arising in a speech
-classification problem, where we see an improvement of an order of magnitude;
-and the truncated singular value decomposition (SVD) of a 400GB
-three-dimensional ocean temperature data set, where we see a speedup of up to
-7.9x. We also illustrate that the truncated SVD computation is easily scalable
-to terabyte-sized data by applying it to data sets of sizes up to 17.6TB.
-
+  Apache Spark is a popular system aimed at the analysis of large data sets,but recent studies have shown that certain computations---in particular, manylinear algebra computations that are the basis for solving common machinelearning problems---are significantly slower in Spark than when done usinglibraries written in a high-performance computing framework such as theMessage-Passing Interface (MPI).  To remedy this, we introduce Alchemist, a system designed to call MPI-basedlibraries from Apache Spark. Using Alchemist with Spark helps accelerate linearalgebra, machine learning, and related computations, while still retaining thebenefits of working within the Spark environment. We discuss the motivationbehind the development of Alchemist, and we provide a brief overview of itsdesign and implementation.  We also compare the performances of pure Spark implementations with those ofSpark implementations that leverage MPI-based codes via Alchemist. To do so, weuse data science case studies: a large-scale application of the conjugategradient method to solve very large linear systems arising in a speechclassification problem, where we see an improvement of an order of magnitude;and the truncated singular value decomposition (SVD) of a 400GBthree-dimensional ocean temperature data set, where we see a speedup of up to7.9x. We also illustrate that the truncated SVD computation is easily scalableto terabyte-sized data by applying it to data sets of sizes up to 17.6TB.
 

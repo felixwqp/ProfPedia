@@ -1,959 +1,200 @@
 The Traits of the Personable
 
-  Information personalization is fertile ground for application of AI
-techniques. In this article I relate personalization to the ability to capture
-partial information in an information-seeking interaction. The specific focus
-is on personalizing interactions at web sites. Using ideas from partial
-evaluation and explanation-based generalization, I present a modeling
-methodology for reasoning about personalization. This approach helps identify
-seven tiers of `personable traits' in web sites.
-
+  Information personalization is fertile ground for application of AItechniques. In this article I relate personalization to the ability to capturepartial information in an information-seeking interaction. The specific focusis on personalizing interactions at web sites. Using ideas from partialevaluation and explanation-based generalization, I present a modelingmethodology for reasoning about personalization. This approach helps identifyseven tiers of `personable traits' in web sites.
 
 When being Weak is Brave: Privacy in Recommender Systems
 
-  We explore the conflict between personalization and privacy that arises from
-the existence of weak ties. A weak tie is an unexpected connection that
-provides serendipitous recommendations. However, information about weak ties
-could be used in conjunction with other sources of data to uncover identities
-and reveal other personal information. In this article, we use a
-graph-theoretic model to study the benefit and risk from weak ties.
-
+  We explore the conflict between personalization and privacy that arises fromthe existence of weak ties. A weak tie is an unexpected connection thatprovides serendipitous recommendations. However, information about weak tiescould be used in conjunction with other sources of data to uncover identitiesand reveal other personal information. In this article, we use agraph-theoretic model to study the benefit and risk from weak ties.
 
 PIPE: Personalizing Recommendations via Partial Evaluation
 
-  It is shown that personalization of web content can be advantageously viewed
-as a form of partial evaluation --- a technique well known in the programming
-languages community. The basic idea is to model a recommendation space as a
-program, then partially evaluate this program with respect to user preferences
-(and features) to obtain specialized content. This technique supports both
-content-based and collaborative approaches, and is applicable to a range of
-applications that require automatic information integration from multiple web
-sources. The effectiveness of this methodology is illustrated by two example
-applications --- (i) personalizing content for visitors to the Blacksburg
-Electronic Village (http://www.bev.net), and (ii) locating and selecting
-scientific software on the Internet. The scalability of this technique is
-demonstrated by its ability to interface with online web ontologies that index
-thousands of web pages.
-
+  It is shown that personalization of web content can be advantageously viewedas a form of partial evaluation --- a technique well known in the programminglanguages community. The basic idea is to model a recommendation space as aprogram, then partially evaluate this program with respect to user preferences(and features) to obtain specialized content. This technique supports bothcontent-based and collaborative approaches, and is applicable to a range ofapplications that require automatic information integration from multiple websources. The effectiveness of this methodology is illustrated by two exampleapplications --- (i) personalizing content for visitors to the BlacksburgElectronic Village (http://www.bev.net), and (ii) locating and selectingscientific software on the Internet. The scalability of this technique isdemonstrated by its ability to interface with online web ontologies that indexthousands of web pages.
 
 Evaluating Recommendation Algorithms by Graph Analysis
 
-  We present a novel framework for evaluating recommendation algorithms in
-terms of the `jumps' that they make to connect people to artifacts. This
-approach emphasizes reachability via an algorithm within the implicit graph
-structure underlying a recommender dataset, and serves as a complement to
-evaluation in terms of predictive accuracy. The framework allows us to consider
-questions relating algorithmic parameters to properties of the datasets. For
-instance, given a particular algorithm `jump,' what is the average path length
-from a person to an artifact? Or, what choices of minimum ratings and jumps
-maintain a connected graph? We illustrate the approach with a common jump
-called the `hammock' using movie recommender datasets.
-
+  We present a novel framework for evaluating recommendation algorithms interms of the `jumps' that they make to connect people to artifacts. Thisapproach emphasizes reachability via an algorithm within the implicit graphstructure underlying a recommender dataset, and serves as a complement toevaluation in terms of predictive accuracy. The framework allows us to considerquestions relating algorithmic parameters to properties of the datasets. Forinstance, given a particular algorithm `jump,' what is the average path lengthfrom a person to an artifact? Or, what choices of minimum ratings and jumpsmaintain a connected graph? We illustrate the approach with a common jumpcalled the `hammock' using movie recommender datasets.
 
 The Partial Evaluation Approach to Information Personalization
 
-  Information personalization refers to the automatic adjustment of information
-content, structure, and presentation tailored to an individual user. By
-reducing information overload and customizing information access,
-personalization systems have emerged as an important segment of the Internet
-economy. This paper presents a systematic modeling methodology - PIPE
-(`Personalization is Partial Evaluation') - for personalization.
-Personalization systems are designed and implemented in PIPE by modeling an
-information-seeking interaction in a programmatic representation. The
-representation supports the description of information-seeking activities as
-partial information and their subsequent realization by partial evaluation, a
-technique for specializing programs. We describe the modeling methodology at a
-conceptual level and outline representational choices. We present two
-application case studies that use PIPE for personalizing web sites and describe
-how PIPE suggests a novel evaluation criterion for information system designs.
-Finally, we mention several fundamental implications of adopting the PIPE model
-for personalization and when it is (and is not) applicable.
-
+  Information personalization refers to the automatic adjustment of informationcontent, structure, and presentation tailored to an individual user. Byreducing information overload and customizing information access,personalization systems have emerged as an important segment of the Interneteconomy. This paper presents a systematic modeling methodology - PIPE(`Personalization is Partial Evaluation') - for personalization.Personalization systems are designed and implemented in PIPE by modeling aninformation-seeking interaction in a programmatic representation. Therepresentation supports the description of information-seeking activities aspartial information and their subsequent realization by partial evaluation, atechnique for specializing programs. We describe the modeling methodology at aconceptual level and outline representational choices. We present twoapplication case studies that use PIPE for personalizing web sites and describehow PIPE suggests a novel evaluation criterion for information system designs.Finally, we mention several fundamental implications of adopting the PIPE modelfor personalization and when it is (and is not) applicable.
 
 Mixed-Initiative Interaction = Mixed Computation
 
-  We show that partial evaluation can be usefully viewed as a programming model
-for realizing mixed-initiative functionality in interactive applications.
-Mixed-initiative interaction between two participants is one where the parties
-can take turns at any time to change and steer the flow of interaction. We
-concentrate on the facet of mixed-initiative referred to as `unsolicited
-reporting' and demonstrate how out-of-turn interactions by users can be modeled
-by `jumping ahead' to nested dialogs (via partial evaluation). Our approach
-permits the view of dialog management systems in terms of their native support
-for staging and simplifying interactions; we characterize three different
-voice-based interaction technologies using this viewpoint. In particular, we
-show that the built-in form interpretation algorithm (FIA) in the VoiceXML
-dialog management architecture is actually a (well disguised) combination of an
-interpreter and a partial evaluator.
-
+  We show that partial evaluation can be usefully viewed as a programming modelfor realizing mixed-initiative functionality in interactive applications.Mixed-initiative interaction between two participants is one where the partiescan take turns at any time to change and steer the flow of interaction. Weconcentrate on the facet of mixed-initiative referred to as `unsolicitedreporting' and demonstrate how out-of-turn interactions by users can be modeledby `jumping ahead' to nested dialogs (via partial evaluation). Our approachpermits the view of dialog management systems in terms of their native supportfor staging and simplifying interactions; we characterize three differentvoice-based interaction technologies using this viewpoint. In particular, weshow that the built-in form interpretation algorithm (FIA) in the VoiceXMLdialog management architecture is actually a (well disguised) combination of aninterpreter and a partial evaluator.
 
 Explaining Scenarios for Information Personalization
 
-  Personalization customizes information access. The PIPE ("Personalization is
-Partial Evaluation") modeling methodology represents interaction with an
-information space as a program. The program is then specialized to a user's
-known interests or information seeking activity by the technique of partial
-evaluation. In this paper, we elaborate PIPE by considering requirements
-analysis in the personalization lifecycle. We investigate the use of scenarios
-as a means of identifying and analyzing personalization requirements. As our
-first result, we show how designing a PIPE representation can be cast as a
-search within a space of PIPE models, organized along a partial order. This
-allows us to view the design of a personalization system, itself, as
-specialized interpretation of an information space. We then exploit the
-underlying equivalence of explanation-based generalization (EBG) and partial
-evaluation to realize high-level goals and needs identified in scenarios; in
-particular, we specialize (personalize) an information space based on the
-explanation of a user scenario in that information space, just as EBG
-specializes a theory based on the explanation of an example in that theory. In
-this approach, personalization becomes the transformation of information spaces
-to support the explanation of usage scenarios. An example application is
-described.
+  Personalization customizes information access. The PIPE ("Personalization isPartial Evaluation") modeling methodology represents interaction with aninformation space as a program. The program is then specialized to a user'sknown interests or information seeking activity by the technique of partialevaluation. In this paper, we elaborate PIPE by considering requirementsanalysis in the personalization lifecycle. We investigate the use of scenariosas a means of identifying and analyzing personalization requirements. As ourfirst result, we show how designing a PIPE representation can be cast as asearch within a space of PIPE models, organized along a partial order. Thisallows us to view the design of a personalization system, itself, asspecialized interpretation of an information space. We then exploit theunderlying equivalence of explanation-based generalization (EBG) and partialevaluation to realize high-level goals and needs identified in scenarios; inparticular, we specialize (personalize) an information space based on theexplanation of a user scenario in that information space, just as EBGspecializes a theory based on the explanation of an example in that theory. Inthis approach, personalization becomes the transformation of information spacesto support the explanation of usage scenarios. An example application isdescribed.
 
+BSML: A Binding Schema Markup Language for Data Interchange in Problem  Solving Environments (PSEs)
 
-BSML: A Binding Schema Markup Language for Data Interchange in Problem
-  Solving Environments (PSEs)
-
-  We describe a binding schema markup language (BSML) for describing data
-interchange between scientific codes. Such a facility is an important
-constituent of scientific problem solving environments (PSEs). BSML is designed
-to integrate with a PSE or application composition system that views model
-specification and execution as a problem of managing semistructured data. The
-data interchange problem is addressed by three techniques for processing
-semistructured data: validation, binding, and conversion. We present BSML and
-describe its application to a PSE for wireless communications system design.
-
+  We describe a binding schema markup language (BSML) for describing datainterchange between scientific codes. Such a facility is an importantconstituent of scientific problem solving environments (PSEs). BSML is designedto integrate with a PSE or application composition system that views modelspecification and execution as a problem of managing semistructured data. Thedata interchange problem is addressed by three techniques for processingsemistructured data: validation, binding, and conversion. We present BSML anddescribe its application to a PSE for wireless communications system design.
 
 Sampling Strategies for Mining in Data-Scarce Domains
 
-  Data mining has traditionally focused on the task of drawing inferences from
-large datasets. However, many scientific and engineering domains, such as fluid
-dynamics and aircraft design, are characterized by scarce data, due to the
-expense and complexity of associated experiments and simulations. In such
-data-scarce domains, it is advantageous to focus the data collection effort on
-only those regions deemed most important to support a particular data mining
-objective. This paper describes a mechanism that interleaves bottom-up data
-mining, to uncover multi-level structures in spatial data, with top-down
-sampling, to clarify difficult decisions in the mining process. The mechanism
-exploits relevant physical properties, such as continuity, correspondence, and
-locality, in a unified framework. This leads to effective mining and sampling
-decisions that are explainable in terms of domain knowledge and data
-characteristics. This approach is demonstrated in two diverse applications --
-mining pockets in spatial data, and qualitative determination of Jordan forms
-of matrices.
+  Data mining has traditionally focused on the task of drawing inferences fromlarge datasets. However, many scientific and engineering domains, such as fluiddynamics and aircraft design, are characterized by scarce data, due to theexpense and complexity of associated experiments and simulations. In suchdata-scarce domains, it is advantageous to focus the data collection effort ononly those regions deemed most important to support a particular data miningobjective. This paper describes a mechanism that interleaves bottom-up datamining, to uncover multi-level structures in spatial data, with top-downsampling, to clarify difficult decisions in the mining process. The mechanismexploits relevant physical properties, such as continuity, correspondence, andlocality, in a unified framework. This leads to effective mining and samplingdecisions that are explainable in terms of domain knowledge and datacharacteristics. This approach is demonstrated in two diverse applications --mining pockets in spatial data, and qualitative determination of Jordan formsof matrices.
 
+Weaves: A Novel Direct Code Execution Interface for Parallel High  Performance Scientific Codes
 
-Weaves: A Novel Direct Code Execution Interface for Parallel High
-  Performance Scientific Codes
-
-  Scientific codes are increasingly being used in compositional settings,
-especially problem solving environments (PSEs). Typical compositional modeling
-frameworks require significant buy-in, in the form of commitment to a
-particular style of programming (e.g., distributed object components). While
-this solution is feasible for newer generations of component-based scientific
-codes, large legacy code bases present a veritable software engineering
-nightmare. We introduce Weaves a novel framework that enables modeling,
-composition, direct code execution, performance characterization, adaptation,
-and control of unmodified high performance scientific codes. Weaves is an
-efficient generalized framework for parallel compositional modeling that is a
-proper superset of the threads and processes models of programming. In this
-paper, our focus is on the transparent code execution interface enabled by
-Weaves. We identify design constraints, their impact on implementation
-alternatives, configuration scenarios, and present results from a prototype
-implementation on Intel x86 architectures.
-
+  Scientific codes are increasingly being used in compositional settings,especially problem solving environments (PSEs). Typical compositional modelingframeworks require significant buy-in, in the form of commitment to aparticular style of programming (e.g., distributed object components). Whilethis solution is feasible for newer generations of component-based scientificcodes, large legacy code bases present a veritable software engineeringnightmare. We introduce Weaves a novel framework that enables modeling,composition, direct code execution, performance characterization, adaptation,and control of unmodified high performance scientific codes. Weaves is anefficient generalized framework for parallel compositional modeling that is aproper superset of the threads and processes models of programming. In thispaper, our focus is on the transparent code execution interface enabled byWeaves. We identify design constraints, their impact on implementationalternatives, configuration scenarios, and present results from a prototypeimplementation on Intel x86 architectures.
 
 Reinforcing Reachable Routes
 
-  This paper studies the evaluation of routing algorithms from the perspective
-of reachability routing, where the goal is to determine all paths between a
-sender and a receiver. Reachability routing is becoming relevant with the
-changing dynamics of the Internet and the emergence of low-bandwidth
-wireless/ad-hoc networks. We make the case for reinforcement learning as the
-framework of choice to realize reachability routing, within the confines of the
-current Internet infrastructure. The setting of the reinforcement learning
-problem offers several advantages, including loop resolution, multi-path
-forwarding capability, cost-sensitive routing, and minimizing state overhead,
-while maintaining the incremental spirit of current backbone routing
-algorithms. We identify research issues in reinforcement learning applied to
-the reachability routing problem to achieve a fluid and robust backbone routing
-framework. The paper is targeted toward practitioners seeking to implement a
-reachability routing algorithm.
+  This paper studies the evaluation of routing algorithms from the perspectiveof reachability routing, where the goal is to determine all paths between asender and a receiver. Reachability routing is becoming relevant with thechanging dynamics of the Internet and the emergence of low-bandwidthwireless/ad-hoc networks. We make the case for reinforcement learning as theframework of choice to realize reachability routing, within the confines of thecurrent Internet infrastructure. The setting of the reinforcement learningproblem offers several advantages, including loop resolution, multi-pathforwarding capability, cost-sensitive routing, and minimizing state overhead,while maintaining the incremental spirit of current backbone routingalgorithms. We identify research issues in reinforcement learning applied tothe reachability routing problem to achieve a fluid and robust backbone routingframework. The paper is targeted toward practitioners seeking to implement areachability routing algorithm.
 
+Using Hierarchical Data Mining to Characterize Performance of Wireless  System Configurations
 
-Using Hierarchical Data Mining to Characterize Performance of Wireless
-  System Configurations
+  This paper presents a statistical framework for assessing wireless systemsperformance using hierarchical data mining techniques. We consider WCDMA(wideband code division multiple access) systems with two-branch STTD (spacetime transmit diversity) and 1/2 rate convolutional coding (forward errorcorrection codes). Monte Carlo simulation estimates the bit error probability(BEP) of the system across a wide range of signal-to-noise ratios (SNRs). Aperformance database of simulation runs is collected over a targeted space ofsystem configurations. This database is then mined to obtain regions of theconfiguration space that exhibit acceptable average performance. The shape ofthe mined regions illustrates the joint influence of configuration parameterson system performance. The role of data mining in this application is toprovide explainable and statistically valid design conclusions. The researchissue is to define statistically meaningful aggregation of data in a mannerthat permits efficient and effective data mining algorithms. We achieve a goodcompromise between these goals and help establish the applicability of datamining for characterizing wireless systems performance.
 
-  This paper presents a statistical framework for assessing wireless systems
-performance using hierarchical data mining techniques. We consider WCDMA
-(wideband code division multiple access) systems with two-branch STTD (space
-time transmit diversity) and 1/2 rate convolutional coding (forward error
-correction codes). Monte Carlo simulation estimates the bit error probability
-(BEP) of the system across a wide range of signal-to-noise ratios (SNRs). A
-performance database of simulation runs is collected over a targeted space of
-system configurations. This database is then mined to obtain regions of the
-configuration space that exhibit acceptable average performance. The shape of
-the mined regions illustrates the joint influence of configuration parameters
-on system performance. The role of data mining in this application is to
-provide explainable and statistically valid design conclusions. The research
-issue is to define statistically meaningful aggregation of data in a manner
-that permits efficient and effective data mining algorithms. We achieve a good
-compromise between these goals and help establish the applicability of data
-mining for characterizing wireless systems performance.
+Novel Runtime Systems Support for Adaptive Compositional Modeling on the  Grid
 
-
-Novel Runtime Systems Support for Adaptive Compositional Modeling on the
-  Grid
-
-  Grid infrastructures and computing environments have progressed significantly
-in the past few years. The vision of truly seamless Grid usage relies on
-runtime systems support that is cognizant of the operational issues underlying
-grid computations and, at the same time, is flexible enough to accommodate
-diverse application scenarios. This paper addresses the twin aspects of Grid
-infrastructure and application support through a novel combination of two
-computational technologies: Weaves - a source-language independent parallel
-runtime compositional framework that operates through reverse-analysis of
-compiled object files, and runtime recommender systems that aid in dynamic
-knowledge-based application composition. Domain-specific adaptivity is
-exploited through a novel compositional system that supports runtime
-recommendation of code modules and a sophisticated checkpointing and runtime
-migration solution that can be transparently deployed over Grid
-infrastructures. A core set of "adaptivity schemas" are provided as templates
-for adaptive composition of large-scale scientific computations. Implementation
-issues, motivating application contexts, and preliminary results are described.
-
+  Grid infrastructures and computing environments have progressed significantlyin the past few years. The vision of truly seamless Grid usage relies onruntime systems support that is cognizant of the operational issues underlyinggrid computations and, at the same time, is flexible enough to accommodatediverse application scenarios. This paper addresses the twin aspects of Gridinfrastructure and application support through a novel combination of twocomputational technologies: Weaves - a source-language independent parallelruntime compositional framework that operates through reverse-analysis ofcompiled object files, and runtime recommender systems that aid in dynamicknowledge-based application composition. Domain-specific adaptivity isexploited through a novel compositional system that supports runtimerecommendation of code modules and a sophisticated checkpointing and runtimemigration solution that can be transparently deployed over Gridinfrastructures. A core set of "adaptivity schemas" are provided as templatesfor adaptive composition of large-scale scientific computations. Implementationissues, motivating application contexts, and preliminary results are described.
 
 Supporting Out-of-turn Interactions in a Multimodal Web Interface
 
-  Multimodal interfaces are becoming increasingly important with the advent of
-mobile devices, accessibility considerations, and novel software technologies
-that combine diverse interaction media. This article investigates systems
-support for web browsing in a multimodal interface. Specifically, we outline
-the design and implementation of a software framework that integrates hyperlink
-and speech modes of interaction. Instead of viewing speech as merely an
-alternative interaction medium, the framework uses it to support out-of-turn
-interaction, providing a flexibility of information access not possible with
-hyperlinks alone. This approach enables the creation of websites that adapt to
-the needs of users, yet permits the designer fine-grained control over what
-interactions to support. Design methodology, implementation details, and two
-case studies are presented.
-
+  Multimodal interfaces are becoming increasingly important with the advent ofmobile devices, accessibility considerations, and novel software technologiesthat combine diverse interaction media. This article investigates systemssupport for web browsing in a multimodal interface. Specifically, we outlinethe design and implementation of a software framework that integrates hyperlinkand speech modes of interaction. Instead of viewing speech as merely analternative interaction medium, the framework uses it to support out-of-turninteraction, providing a flexibility of information access not possible withhyperlinks alone. This approach enables the creation of websites that adapt tothe needs of users, yet permits the designer fine-grained control over whatinteractions to support. Design methodology, implementation details, and twocase studies are presented.
 
 Turning CARTwheels: An Alternating Algorithm for Mining Redescriptions
 
-  We present an unusual algorithm involving classification trees where two
-trees are grown in opposite directions so that they are matched at their
-leaves. This approach finds application in a new data mining task we formulate,
-called "redescription mining". A redescription is a shift-of-vocabulary, or a
-different way of communicating information about a given subset of data; the
-goal of redescription mining is to find subsets of data that afford multiple
-descriptions. We highlight the importance of this problem in domains such as
-bioinformatics, which exhibit an underlying richness and diversity of data
-descriptors (e.g., genes can be studied in a variety of ways). Our approach
-helps integrate multiple forms of characterizing datasets, situates the
-knowledge gained from one dataset in the context of others, and harnesses
-high-level abstractions for uncovering cryptic and subtle features of data.
-Algorithm design decisions, implementation details, and experimental results
-are presented.
+  We present an unusual algorithm involving classification trees where twotrees are grown in opposite directions so that they are matched at theirleaves. This approach finds application in a new data mining task we formulate,called "redescription mining". A redescription is a shift-of-vocabulary, or adifferent way of communicating information about a given subset of data; thegoal of redescription mining is to find subsets of data that afford multipledescriptions. We highlight the importance of this problem in domains such asbioinformatics, which exhibit an underlying richness and diversity of datadescriptors (e.g., genes can be studied in a variety of ways). Our approachhelps integrate multiple forms of characterizing datasets, situates theknowledge gained from one dataset in the context of others, and harnesseshigh-level abstractions for uncovering cryptic and subtle features of data.Algorithm design decisions, implementation details, and experimental resultsare presented.
 
+Automatically Generating Interfaces for Personalized Interaction with  Digital Libraries
 
-Automatically Generating Interfaces for Personalized Interaction with
-  Digital Libraries
-
-  We present an approach to automatically generate interfaces supporting
-personalized interaction with digital libraries; these interfaces augment the
-user-DL dialog by empowering the user to (optionally) supply out-of-turn
-information during an interaction, flatten or restructure the dialog, and
-enquire about dialog options. Interfaces generated using this approach for
-CITIDEL are described.
-
+  We present an approach to automatically generate interfaces supportingpersonalized interaction with digital libraries; these interfaces augment theuser-DL dialog by empowering the user to (optionally) supply out-of-turninformation during an interaction, flatten or restructure the dialog, andenquire about dialog options. Interfaces generated using this approach forCITIDEL are described.
 
 Flow of Information in Feed-Forward Deep Neural Networks
 
-  Feed-forward deep neural networks have been used extensively in various
-machine learning applications. Developing a precise understanding of the
-underling behavior of neural networks is crucial for their efficient
-deployment. In this paper, we use an information theoretic approach to study
-the flow of information in a neural network and to determine how entropy of
-information changes between consecutive layers. Moreover, using the Information
-Bottleneck principle, we develop a constrained optimization problem that can be
-used in the training process of a deep neural network. Furthermore, we
-determine a lower bound for the level of data representation that can be
-achieved in a deep neural network with an acceptable level of distortion.
-
+  Feed-forward deep neural networks have been used extensively in variousmachine learning applications. Developing a precise understanding of theunderling behavior of neural networks is crucial for their efficientdeployment. In this paper, we use an information theoretic approach to studythe flow of information in a neural network and to determine how entropy ofinformation changes between consecutive layers. Moreover, using the InformationBottleneck principle, we develop a constrained optimization problem that can beused in the training process of a deep neural network. Furthermore, wedetermine a lower bound for the level of data representation that can beachieved in a deep neural network with an acceptable level of distortion.
 
 `17-15' Superconductivity - Rh17S15 and Pd17Se15
 
-  The presence of strongly correlated superconductivity in Rh17S15 has been
-recently established. In this work, we compare the normal and superconducting
-parameters of a single crystal of Rh17S15 with those of a polycrystalline
-sample of Pd17Se15 which is reported here for the first time to be a
-superconductor below 2.2 K. Pd17Se15, which is iso-structural to Rh17S15 (space
-group Pm3m), has very different properties and provides for an interesting
-study in contrast with Rh17S15. We see that large unit volume of Pd17Se15 and
-the large separation of Pd-Pd atoms in its structure as compared those in a
-pure Pd metal lead to the absence of strong correlations in this compound.
-Finally, we report band structure calculations on these two compounds and
-compare the density of states with estimates from heat capacity data. Upper
-critical field, Heat capacity (down to 500 mK), Hall effect and band structure
-studies suggest that Rh17S15 is a multiband superconductor.
+  The presence of strongly correlated superconductivity in Rh17S15 has beenrecently established. In this work, we compare the normal and superconductingparameters of a single crystal of Rh17S15 with those of a polycrystallinesample of Pd17Se15 which is reported here for the first time to be asuperconductor below 2.2 K. Pd17Se15, which is iso-structural to Rh17S15 (spacegroup Pm3m), has very different properties and provides for an interestingstudy in contrast with Rh17S15. We see that large unit volume of Pd17Se15 andthe large separation of Pd-Pd atoms in its structure as compared those in apure Pd metal lead to the absence of strong correlations in this compound.Finally, we report band structure calculations on these two compounds andcompare the density of states with estimates from heat capacity data. Uppercritical field, Heat capacity (down to 500 mK), Hall effect and band structurestudies suggest that Rh17S15 is a multiband superconductor.
 
+The Expresso Microarray Experiment Management System: The Functional  Genomics of Stress Responses in Loblolly Pine
 
-The Expresso Microarray Experiment Management System: The Functional
-  Genomics of Stress Responses in Loblolly Pine
+  Conception, design, and implementation of cDNA microarray experiments presenta variety of bioinformatics challenges for biologists and computationalscientists. The multiple stages of data acquisition and analysis have motivatedthe design of Expresso, a system for microarray experiment management. Salientaspects of Expresso include support for clone replication and randomizedplacement; automatic gridding, extraction of expression data from each spot,and quality monitoring; flexible methods of combining data from individualspots into information about clones and functional categories; and the use ofinductive logic programming for higher-level data analysis and mining. Thedevelopment of Expresso is occurring in parallel with several generations ofmicroarray experiments aimed at elucidating genomic responses to drought stressin loblolly pine seedlings. The current experimental design incorporates 384pine cDNAs replicated and randomly placed in two specific microarray layouts.We describe the design of Expresso as well as results of analysis with Expressothat suggest the importance of molecular chaperones and membrane transportproteins in mechanisms conferring successful adaptation to long-term droughtstress.
 
-  Conception, design, and implementation of cDNA microarray experiments present
-a variety of bioinformatics challenges for biologists and computational
-scientists. The multiple stages of data acquisition and analysis have motivated
-the design of Expresso, a system for microarray experiment management. Salient
-aspects of Expresso include support for clone replication and randomized
-placement; automatic gridding, extraction of expression data from each spot,
-and quality monitoring; flexible methods of combining data from individual
-spots into information about clones and functional categories; and the use of
-inductive logic programming for higher-level data analysis and mining. The
-development of Expresso is occurring in parallel with several generations of
-microarray experiments aimed at elucidating genomic responses to drought stress
-in loblolly pine seedlings. The current experimental design incorporates 384
-pine cDNAs replicated and randomly placed in two specific microarray layouts.
-We describe the design of Expresso as well as results of analysis with Expresso
-that suggest the importance of molecular chaperones and membrane transport
-proteins in mechanisms conferring successful adaptation to long-term drought
-stress.
+Supression of electron correlations in the superconducting alloys of  Rh$_{17-x}$Ir$_x$S$_{15}$
 
-
-Supression of electron correlations in the superconducting alloys of
-  Rh$_{17-x}$Ir$_x$S$_{15}$
-
-  We have studied the effect of Iridium doping (Rh$_{17-x}$Ir$_{x}$S$_{15}$) in
-the Rhodium sites of the strongly correlated superconductor Rh$_{17}$S$_{15}$.
-Even at low levels of doping (x = 1 and 2) we see a drastic change in the
-superconducting properties as compared to those of the undoped system. We
-deduce that there is a reduction in the density of states at the Fermi level
-from reduced Pauli susceptibility and Sommerfeld coefficient in the doped
-samples. Moreover, the second magnetization peak in the isothermal
-magnetization scan (`fishtail') which was very prominent in the magnetization
-data of the undoped crystal is suppressed in the doped samples. The temperature
-dependence of resistivity of the doped crystals show a remarkably different
-behavior from that of the undoped crystal with the appearance of a minima at
-lower temperatures, the position of which is fairly constant at different
-fields. Our data supports the notion that Iridium, which is a bigger atom than
-Rhodium expands the lattice thereby, reduces the electron correlations that
-existed due to the interaction between closer lying Rhodium atoms in the
-undoped system.
-
+  We have studied the effect of Iridium doping (Rh$_{17-x}$Ir$_{x}$S$_{15}$) inthe Rhodium sites of the strongly correlated superconductor Rh$_{17}$S$_{15}$.Even at low levels of doping (x = 1 and 2) we see a drastic change in thesuperconducting properties as compared to those of the undoped system. Wededuce that there is a reduction in the density of states at the Fermi levelfrom reduced Pauli susceptibility and Sommerfeld coefficient in the dopedsamples. Moreover, the second magnetization peak in the isothermalmagnetization scan (`fishtail') which was very prominent in the magnetizationdata of the undoped crystal is suppressed in the doped samples. The temperaturedependence of resistivity of the doped crystals show a remarkably differentbehavior from that of the undoped crystal with the appearance of a minima atlower temperatures, the position of which is fairly constant at differentfields. Our data supports the notion that Iridium, which is a bigger atom thanRhodium expands the lattice thereby, reduces the electron correlations thatexisted due to the interaction between closer lying Rhodium atoms in theundoped system.
 
 Qualitative Analysis of Correspondence for Experimental Algorithmics
 
-  Correspondence identifies relationships among objects via similarities among
-their components; it is ubiquitous in the analysis of spatial datasets,
-including images, weather maps, and computational simulations. This paper
-develops a novel multi-level mechanism for qualitative analysis of
-correspondence. Operators leverage domain knowledge to establish
-correspondence, evaluate implications for model selection, and leverage
-identified weaknesses to focus additional data collection. The utility of the
-mechanism is demonstrated in two applications from experimental algorithmics --
-matrix spectral portrait analysis and graphical assessment of Jordan forms of
-matrices. Results show that the mechanism efficiently samples computational
-experiments and successfully uncovers high-level problem properties. It
-overcomes noise and data sparsity by leveraging domain knowledge to detect
-mutually reinforcing interpretations of spatial data.
-
+  Correspondence identifies relationships among objects via similarities amongtheir components; it is ubiquitous in the analysis of spatial datasets,including images, weather maps, and computational simulations. This paperdevelops a novel multi-level mechanism for qualitative analysis ofcorrespondence. Operators leverage domain knowledge to establishcorrespondence, evaluate implications for model selection, and leverageidentified weaknesses to focus additional data collection. The utility of themechanism is demonstrated in two applications from experimental algorithmics --matrix spectral portrait analysis and graphical assessment of Jordan forms ofmatrices. Results show that the mechanism efficiently samples computationalexperiments and successfully uncovers high-level problem properties. Itovercomes noise and data sparsity by leveraging domain knowledge to detectmutually reinforcing interpretations of spatial data.
 
 Staging Transformations for Multimodal Web Interaction Management
 
-  Multimodal interfaces are becoming increasingly ubiquitous with the advent of
-mobile devices, accessibility considerations, and novel software technologies
-that combine diverse interaction media. In addition to improving access and
-delivery capabilities, such interfaces enable flexible and personalized dialogs
-with websites, much like a conversation between humans. In this paper, we
-present a software framework for multimodal web interaction management that
-supports mixed-initiative dialogs between users and websites. A
-mixed-initiative dialog is one where the user and the website take turns
-changing the flow of interaction. The framework supports the functional
-specification and realization of such dialogs using staging transformations --
-a theory for representing and reasoning about dialogs based on partial input.
-It supports multiple interaction interfaces, and offers sessioning, caching,
-and co-ordination functions through the use of an interaction manager. Two case
-studies are presented to illustrate the promise of this approach.
+  Multimodal interfaces are becoming increasingly ubiquitous with the advent ofmobile devices, accessibility considerations, and novel software technologiesthat combine diverse interaction media. In addition to improving access anddelivery capabilities, such interfaces enable flexible and personalized dialogswith websites, much like a conversation between humans. In this paper, wepresent a software framework for multimodal web interaction management thatsupports mixed-initiative dialogs between users and websites. Amixed-initiative dialog is one where the user and the website take turnschanging the flow of interaction. The framework supports the functionalspecification and realization of such dialogs using staging transformations --a theory for representing and reasoning about dialogs based on partial input.It supports multiple interaction interfaces, and offers sessioning, caching,and co-ordination functions through the use of an interaction manager. Two casestudies are presented to illustrate the promise of this approach.
 
+Taking the Initiative with Extempore: Exploring Out-of-Turn Interactions  with Websites
 
-Taking the Initiative with Extempore: Exploring Out-of-Turn Interactions
-  with Websites
+  We present the first study to explore the use of out-of-turn interaction inwebsites. Out-of-turn interaction is a technique which empowers the user tosupply unsolicited information while browsing. This approach helps flexiblybridge any mental mismatch between the user and the website, in a mannerfundamentally different from faceted browsing and site-specific search tools.We built a user interface (Extempore) which accepts out-of-turn input via voiceor text; and employed it in a US congressional website, to determine if usersutilize out-of-turn interaction for information-finding tasks, and theirrationale for doing so. The results indicate that users are adept at discerningwhen out-of-turn interaction is necessary in a particular task, and activelyinterleaved it with browsing. However, users found cascading information acrossinformation-finding subtasks challenging. Therefore, this work not onlyimproves our understanding of out-of-turn interaction, but also suggestsfurther opportunities to enrich browsing experiences for users.
 
-  We present the first study to explore the use of out-of-turn interaction in
-websites. Out-of-turn interaction is a technique which empowers the user to
-supply unsolicited information while browsing. This approach helps flexibly
-bridge any mental mismatch between the user and the website, in a manner
-fundamentally different from faceted browsing and site-specific search tools.
-We built a user interface (Extempore) which accepts out-of-turn input via voice
-or text; and employed it in a US congressional website, to determine if users
-utilize out-of-turn interaction for information-finding tasks, and their
-rationale for doing so. The results indicate that users are adept at discerning
-when out-of-turn interaction is necessary in a particular task, and actively
-interleaved it with browsing. However, users found cascading information across
-information-finding subtasks challenging. Therefore, this work not only
-improves our understanding of out-of-turn interaction, but also suggests
-further opportunities to enrich browsing experiences for users.
+Towards Chip-on-Chip Neuroscience: Fast Mining of Frequent Episodes  Using Graphics Processors
 
-
-Towards Chip-on-Chip Neuroscience: Fast Mining of Frequent Episodes
-  Using Graphics Processors
-
-  Computational neuroscience is being revolutionized with the advent of
-multi-electrode arrays that provide real-time, dynamic, perspectives into brain
-function. Mining event streams from these chips is critical to understanding
-the firing patterns of neurons and to gaining insight into the underlying
-cellular activity. We present a GPGPU solution to mining spike trains. We focus
-on mining frequent episodes which captures coordinated events across time even
-in the presence of intervening background/"junk" events. Our algorithmic
-contributions are two-fold: MapConcatenate, a new computation-to-core mapping
-scheme, and a two-pass elimination approach to quickly find supported episodes
-from a large number of candidates. Together, they help realize a real-time
-"chip-on-chip" solution to neuroscience data mining, where one chip (the
-multi-electrode array) supplies the spike train data and another (the GPGPU)
-mines it at a scale unachievable previously. Evaluation on both synthetic and
-real datasets demonstrate the potential of our approach.
-
+  Computational neuroscience is being revolutionized with the advent ofmulti-electrode arrays that provide real-time, dynamic, perspectives into brainfunction. Mining event streams from these chips is critical to understandingthe firing patterns of neurons and to gaining insight into the underlyingcellular activity. We present a GPGPU solution to mining spike trains. We focuson mining frequent episodes which captures coordinated events across time evenin the presence of intervening background/"junk" events. Our algorithmiccontributions are two-fold: MapConcatenate, a new computation-to-core mappingscheme, and a two-pass elimination approach to quickly find supported episodesfrom a large number of candidates. Together, they help realize a real-time"chip-on-chip" solution to neuroscience data mining, where one chip (themulti-electrode array) supplies the spike train data and another (the GPGPU)mines it at a scale unachievable previously. Evaluation on both synthetic andreal datasets demonstrate the potential of our approach.
 
 Accelerator-Oriented Algorithm Transformation for Temporal Data Mining
 
-  Temporal data mining algorithms are becoming increasingly important in many
-application domains including computational neuroscience, especially the
-analysis of spike train data. While application scientists have been able to
-readily gather multi-neuronal datasets, analysis capabilities have lagged
-behind, due to both lack of powerful algorithms and inaccessibility to powerful
-hardware platforms. The advent of GPU architectures such as Nvidia's GTX 280
-offers a cost-effective option to bring these capabilities to the
-neuroscientist's desktop. Rather than port existing algorithms onto this
-architecture, we advocate the need for algorithm transformation, i.e.,
-rethinking the design of the algorithm in a way that need not necessarily
-mirror its serial implementation strictly. We present a novel implementation of
-a frequent episode discovery algorithm by revisiting "in-the-large" issues such
-as problem decomposition as well as "in-the-small" issues such as data layouts
-and memory access patterns. This is non-trivial because frequent episode
-discovery does not lend itself to GPU-friendly data-parallel mapping
-strategies. Applications to many datasets and comparisons to CPU as well as
-prior GPU implementations showcase the advantages of our approach.
-
+  Temporal data mining algorithms are becoming increasingly important in manyapplication domains including computational neuroscience, especially theanalysis of spike train data. While application scientists have been able toreadily gather multi-neuronal datasets, analysis capabilities have laggedbehind, due to both lack of powerful algorithms and inaccessibility to powerfulhardware platforms. The advent of GPU architectures such as Nvidia's GTX 280offers a cost-effective option to bring these capabilities to theneuroscientist's desktop. Rather than port existing algorithms onto thisarchitecture, we advocate the need for algorithm transformation, i.e.,rethinking the design of the algorithm in a way that need not necessarilymirror its serial implementation strictly. We present a novel implementation ofa frequent episode discovery algorithm by revisiting "in-the-large" issues suchas problem decomposition as well as "in-the-small" issues such as data layoutsand memory access patterns. This is non-trivial because frequent episodediscovery does not lend itself to GPU-friendly data-parallel mappingstrategies. Applications to many datasets and comparisons to CPU as well asprior GPU implementations showcase the advantages of our approach.
 
 Efficiently Discovering Hammock Paths from Induced Similarity Networks
 
-  Similarity networks are important abstractions in many information management
-applications such as recommender systems, corpora analysis, and medical
-informatics. For instance, by inducing similarity networks between movies rated
-similarly by users, or between documents containing common terms, and or
-between clinical trials involving the same themes, we can aim to find the
-global structure of connectivities underlying the data, and use the network as
-a basis to make connections between seemingly disparate entities. In the above
-applications, composing similarities between objects of interest finds uses in
-serendipitous recommendation, in storytelling, and in clinical diagnosis,
-respectively. We present an algorithmic framework for traversing similarity
-paths using the notion of `hammock' paths which are generalization of
-traditional paths. Our framework is exploratory in nature so that, given
-starting and ending objects of interest, it explores candidate objects for path
-following, and heuristics to admissibly estimate the potential for paths to
-lead to a desired destination. We present three diverse applications: exploring
-movie similarities in the Netflix dataset, exploring abstract similarities
-across the PubMed corpus, and exploring description similarities in a database
-of clinical trials. Experimental results demonstrate the potential of our
-approach for unstructured knowledge discovery in similarity networks.
+  Similarity networks are important abstractions in many information managementapplications such as recommender systems, corpora analysis, and medicalinformatics. For instance, by inducing similarity networks between movies ratedsimilarly by users, or between documents containing common terms, and orbetween clinical trials involving the same themes, we can aim to find theglobal structure of connectivities underlying the data, and use the network asa basis to make connections between seemingly disparate entities. In the aboveapplications, composing similarities between objects of interest finds uses inserendipitous recommendation, in storytelling, and in clinical diagnosis,respectively. We present an algorithmic framework for traversing similaritypaths using the notion of `hammock' paths which are generalization oftraditional paths. Our framework is exploratory in nature so that, givenstarting and ending objects of interest, it explores candidate objects for pathfollowing, and heuristics to admissibly estimate the potential for paths tolead to a desired destination. We present three diverse applications: exploringmovie similarities in the Netflix dataset, exploring abstract similaritiesacross the PubMed corpus, and exploring description similarities in a databaseof clinical trials. Experimental results demonstrate the potential of ourapproach for unstructured knowledge discovery in similarity networks.
 
+Streaming Algorithms for Pattern Discovery over Dynamically Changing  Event Sequences
 
-Streaming Algorithms for Pattern Discovery over Dynamically Changing
-  Event Sequences
+  Discovering frequent episodes over event sequences is an important datamining task. In many applications, events constituting the data sequence arriveas a stream, at furious rates, and recent trends (or frequent episodes) canchange and drift due to the dynamical nature of the underlying event generationprocess. The ability to detect and track such the changing sets of frequentepisodes can be valuable in many application scenarios. Current methods forfrequent episode discovery are typically multipass algorithms, making themunsuitable in the streaming context. In this paper, we propose a new streamingalgorithm for discovering frequent episodes over a window of recent events inthe stream. Our algorithm processes events as they arrive, one batch at a time,while discovering the top frequent episodes over a window consisting of severalbatches in the immediate past. We derive approximation guarantees for ouralgorithm under the condition that frequent episodes are approximatelywell-separated from infrequent ones in every batch of the window. We presentextensive experimental evaluations of our algorithm on both real and syntheticdata. We also present comparisons with baselines and adaptations of streamingalgorithms from itemset mining literature.
 
-  Discovering frequent episodes over event sequences is an important data
-mining task. In many applications, events constituting the data sequence arrive
-as a stream, at furious rates, and recent trends (or frequent episodes) can
-change and drift due to the dynamical nature of the underlying event generation
-process. The ability to detect and track such the changing sets of frequent
-episodes can be valuable in many application scenarios. Current methods for
-frequent episode discovery are typically multipass algorithms, making them
-unsuitable in the streaming context. In this paper, we propose a new streaming
-algorithm for discovering frequent episodes over a window of recent events in
-the stream. Our algorithm processes events as they arrive, one batch at a time,
-while discovering the top frequent episodes over a window consisting of several
-batches in the immediate past. We derive approximation guarantees for our
-algorithm under the condition that frequent episodes are approximately
-well-separated from infrequent ones in every batch of the window. We present
-extensive experimental evaluations of our algorithm on both real and synthetic
-data. We also present comparisons with baselines and adaptations of streaming
-algorithms from itemset mining literature.
+Interactive Discovery of Coordinated Relationship Chains with Maximum  Entropy Models
 
-
-Interactive Discovery of Coordinated Relationship Chains with Maximum
-  Entropy Models
-
-  Modern visual analytic tools promote human-in-the-loop analysis but are
-limited in their ability to direct the user toward interesting and promising
-directions of study. This problem is especially acute when the analysis task is
-exploratory in nature, e.g., the discovery of potentially coordinated
-relationships in massive text datasets. Such tasks are very common in domains
-like intelligence analysis and security forensics where the goal is to uncover
-surprising coalitions bridging multiple types of relations. We introduce new
-maximum entropy models to discover surprising chains of relationships
-leveraging count data about entity occurrences in documents. These models are
-embedded in a visual analytic system called MERCER that treats relationship
-bundles as first class objects and directs the user toward promising lines of
-inquiry. We demonstrate how user input can judiciously direct analysis toward
-valid conclusions whereas a purely algorithmic approach could be led astray.
-Experimental results on both synthetic and real datasets from the intelligence
-community are presented.
-
+  Modern visual analytic tools promote human-in-the-loop analysis but arelimited in their ability to direct the user toward interesting and promisingdirections of study. This problem is especially acute when the analysis task isexploratory in nature, e.g., the discovery of potentially coordinatedrelationships in massive text datasets. Such tasks are very common in domainslike intelligence analysis and security forensics where the goal is to uncoversurprising coalitions bridging multiple types of relations. We introduce newmaximum entropy models to discover surprising chains of relationshipsleveraging count data about entity occurrences in documents. These models areembedded in a visual analytic system called MERCER that treats relationshipbundles as first class objects and directs the user toward promising lines ofinquiry. We demonstrate how user input can judiciously direct analysis towardvalid conclusions whereas a purely algorithmic approach could be led astray.Experimental results on both synthetic and real datasets from the intelligencecommunity are presented.
 
 Interactive Storytelling over Document Collections
 
-  Storytelling algorithms aim to 'connect the dots' between disparate documents
-by linking starting and ending documents through a series of intermediate
-documents. Existing storytelling algorithms are based on notions of coherence
-and connectivity, and thus the primary way by which users can steer the story
-construction is via design of suitable similarity functions. We present an
-alternative approach to storytelling wherein the user can interactively and
-iteratively provide 'must use' constraints to preferentially support the
-construction of some stories over others. The three innovations in our approach
-are distance measures based on (inferred) topic distributions, the use of
-constraints to define sets of linear inequalities over paths, and the
-introduction of slack and surplus variables to condition the topic distribution
-to preferentially emphasize desired terms over others. We describe experimental
-results to illustrate the effectiveness of our interactive storytelling
-approach over multiple text datasets.
-
+  Storytelling algorithms aim to 'connect the dots' between disparate documentsby linking starting and ending documents through a series of intermediatedocuments. Existing storytelling algorithms are based on notions of coherenceand connectivity, and thus the primary way by which users can steer the storyconstruction is via design of suitable similarity functions. We present analternative approach to storytelling wherein the user can interactively anditeratively provide 'must use' constraints to preferentially support theconstruction of some stories over others. The three innovations in our approachare distance measures based on (inferred) topic distributions, the use ofconstraints to define sets of linear inequalities over paths, and theintroduction of slack and surplus variables to condition the topic distributionto preferentially emphasize desired terms over others. We describe experimentalresults to illustrate the effectiveness of our interactive storytellingapproach over multiple text datasets.
 
 Generating Realistic Synthetic Population Datasets
 
-  Modern studies of societal phenomena rely on the availability of large
-datasets capturing attributes and activities of synthetic, city-level,
-populations. For instance, in epidemiology, synthetic population datasets are
-necessary to study disease propagation and intervention measures before
-implementation. In social science, synthetic population datasets are needed to
-understand how policy decisions might affect preferences and behaviors of
-individuals. In public health, synthetic population datasets are necessary to
-capture diagnostic and procedural characteristics of patient records without
-violating confidentialities of individuals. To generate such datasets over a
-large set of categorical variables, we propose the use of the maximum entropy
-principle to formalize a generative model such that in a statistically
-well-founded way we can optimally utilize given prior information about the
-data, and are unbiased otherwise. An efficient inference algorithm is designed
-to estimate the maximum entropy model, and we demonstrate how our approach is
-adept at estimating underlying data distributions. We evaluate this approach
-against both simulated data and on US census datasets, and demonstrate its
-feasibility using an epidemic simulation application.
+  Modern studies of societal phenomena rely on the availability of largedatasets capturing attributes and activities of synthetic, city-level,populations. For instance, in epidemiology, synthetic population datasets arenecessary to study disease propagation and intervention measures beforeimplementation. In social science, synthetic population datasets are needed tounderstand how policy decisions might affect preferences and behaviors ofindividuals. In public health, synthetic population datasets are necessary tocapture diagnostic and procedural characteristics of patient records withoutviolating confidentialities of individuals. To generate such datasets over alarge set of categorical variables, we propose the use of the maximum entropyprinciple to formalize a generative model such that in a statisticallywell-founded way we can optimally utilize given prior information about thedata, and are unbiased otherwise. An efficient inference algorithm is designedto estimate the maximum entropy model, and we demonstrate how our approach isadept at estimating underlying data distributions. We evaluate this approachagainst both simulated data and on US census datasets, and demonstrate itsfeasibility using an epidemic simulation application.
 
+Sparse Estimation of Multivariate Poisson Log-Normal Models from Count  Data
 
-Sparse Estimation of Multivariate Poisson Log-Normal Models from Count
-  Data
+  Modeling data with multivariate count responses is a challenging problem dueto the discrete nature of the responses. Existing methods for univariate countresponses cannot be easily extended to the multivariate case since thedependency among multiple responses needs to be properly accommodated. In thispaper, we propose a multivariate Poisson log-normal regression model formultivariate data with count responses. By simultaneously estimating theregression coefficients and inverse covariance matrix over the latent variableswith an efficient Monte Carlo EM algorithm, the proposed regression model takesadvantages of association among multiple count responses to improve the modelprediction performance. Simulation studies and applications to real world dataare conducted to systematically evaluate the performance of the proposed methodin comparison with conventional methods.
 
-  Modeling data with multivariate count responses is a challenging problem due
-to the discrete nature of the responses. Existing methods for univariate count
-responses cannot be easily extended to the multivariate case since the
-dependency among multiple responses needs to be properly accommodated. In this
-paper, we propose a multivariate Poisson log-normal regression model for
-multivariate data with count responses. By simultaneously estimating the
-regression coefficients and inverse covariance matrix over the latent variables
-with an efficient Monte Carlo EM algorithm, the proposed regression model takes
-advantages of association among multiple count responses to improve the model
-prediction performance. Simulation studies and applications to real world data
-are conducted to systematically evaluate the performance of the proposed method
-in comparison with conventional methods.
+Modeling Precursors for Event Forecasting via Nested Multi-Instance  Learning
 
+  Forecasting events like civil unrest movements, disease outbreaks, financialmarket movements and government elections from open source indicators such asnews feeds and social media streams is an important and challenging problem.From the perspective of human analysts and policy makers, forecastingalgorithms need to provide supporting evidence and identify the causes relatedto the event of interest. We develop a novel multiple instance learning basedapproach that jointly tackles the problem of identifying evidence-basedprecursors and forecasts events into the future. Specifically, given acollection of streaming news articles from multiple sources we develop a nestedmultiple instance learning approach to forecast significant societal eventsacross three countries in Latin America. Our algorithm is able to identify newsarticles considered as precursors for a protest. Our empirical evaluation showsthe strengths of our proposed approaches in filtering candidate precursors,forecasting the occurrence of events with a lead time and predicting thecharacteristics of different events in comparison to several otherformulations. We demonstrate through case studies the effectiveness of ourproposed model in filtering the candidate precursors for inspection by a humananalyst.
 
-Modeling Precursors for Event Forecasting via Nested Multi-Instance
-  Learning
+Characterizing Diseases from Unstructured Text: A Vocabulary Driven  Word2vec Approach
 
-  Forecasting events like civil unrest movements, disease outbreaks, financial
-market movements and government elections from open source indicators such as
-news feeds and social media streams is an important and challenging problem.
-From the perspective of human analysts and policy makers, forecasting
-algorithms need to provide supporting evidence and identify the causes related
-to the event of interest. We develop a novel multiple instance learning based
-approach that jointly tackles the problem of identifying evidence-based
-precursors and forecasts events into the future. Specifically, given a
-collection of streaming news articles from multiple sources we develop a nested
-multiple instance learning approach to forecast significant societal events
-across three countries in Latin America. Our algorithm is able to identify news
-articles considered as precursors for a protest. Our empirical evaluation shows
-the strengths of our proposed approaches in filtering candidate precursors,
-forecasting the occurrence of events with a lead time and predicting the
-characteristics of different events in comparison to several other
-formulations. We demonstrate through case studies the effectiveness of our
-proposed model in filtering the candidate precursors for inspection by a human
-analyst.
+  Traditional disease surveillance can be augmented with a wide variety ofreal-time sources such as, news and social media. However, these sources are ingeneral unstructured and, construction of surveillance tools such astaxonomical correlations and trace mapping involves considerable humansupervision. In this paper, we motivate a disease vocabulary driven word2vecmodel (Dis2Vec) to model diseases and constituent attributes as word embeddingsfrom the HealthMap news corpus. We use these word embeddings to automaticallycreate disease taxonomies and evaluate our model against corresponding humanannotated taxonomies. We compare our model accuracies against severalstate-of-the art word2vec methods. Our results demonstrate that Dis2Vecoutperforms traditional distributed vector representations in its ability tofaithfully capture taxonomical attributes across different class of diseasessuch as endemic, emerging and rare.
 
+EMBERS at 4 years: Experiences operating an Open Source Indicators  Forecasting System
 
-Characterizing Diseases from Unstructured Text: A Vocabulary Driven
-  Word2vec Approach
-
-  Traditional disease surveillance can be augmented with a wide variety of
-real-time sources such as, news and social media. However, these sources are in
-general unstructured and, construction of surveillance tools such as
-taxonomical correlations and trace mapping involves considerable human
-supervision. In this paper, we motivate a disease vocabulary driven word2vec
-model (Dis2Vec) to model diseases and constituent attributes as word embeddings
-from the HealthMap news corpus. We use these word embeddings to automatically
-create disease taxonomies and evaluate our model against corresponding human
-annotated taxonomies. We compare our model accuracies against several
-state-of-the art word2vec methods. Our results demonstrate that Dis2Vec
-outperforms traditional distributed vector representations in its ability to
-faithfully capture taxonomical attributes across different class of diseases
-such as endemic, emerging and rare.
-
-
-EMBERS at 4 years: Experiences operating an Open Source Indicators
-  Forecasting System
-
-  EMBERS is an anticipatory intelligence system forecasting population-level
-events in multiple countries of Latin America. A deployed system from 2012,
-EMBERS has been generating alerts 24x7 by ingesting a broad range of data
-sources including news, blogs, tweets, machine coded events, currency rates,
-and food prices. In this paper, we describe our experiences operating EMBERS
-continuously for nearly 4 years, with specific attention to the discoveries it
-has enabled, correct as well as missed forecasts, and lessons learnt from
-participating in a forecasting tournament including our perspectives on the
-limits of forecasting and ethical considerations.
-
+  EMBERS is an anticipatory intelligence system forecasting population-levelevents in multiple countries of Latin America. A deployed system from 2012,EMBERS has been generating alerts 24x7 by ingesting a broad range of datasources including news, blogs, tweets, machine coded events, currency rates,and food prices. In this paper, we describe our experiences operating EMBERScontinuously for nearly 4 years, with specific attention to the discoveries ithas enabled, correct as well as missed forecasts, and lessons learnt fromparticipating in a forecasting tournament including our perspectives on thelimits of forecasting and ethical considerations.
 
 Interactive and Iterative Discovery of Entity Network Subgraphs
 
-  Graph mining to extract interesting components has been studied in various
-guises, e.g., communities, dense subgraphs, cliques. However, most existing
-works are based on notions of frequency and connectivity and do not capture
-subjective interestingness from a user's viewpoint. Furthermore, existing
-approaches to mine graphs are not interactive and cannot incorporate user
-feedbacks in any natural manner. In this paper, we address these gaps by
-proposing a graph maximum entropy model to discover surprising connected
-subgraph patterns from entity graphs. This model is embedded in an interactive
-visualization framework to enable human-in-the-loop, model-guided data
-exploration. Using case studies on real datasets, we demonstrate how
-interactions between users and the maximum entropy model lead to faster and
-explainable conclusions.
+  Graph mining to extract interesting components has been studied in variousguises, e.g., communities, dense subgraphs, cliques. However, most existingworks are based on notions of frequency and connectivity and do not capturesubjective interestingness from a user's viewpoint. Furthermore, existingapproaches to mine graphs are not interactive and cannot incorporate userfeedbacks in any natural manner. In this paper, we address these gaps byproposing a graph maximum entropy model to discover surprising connectedsubgraph patterns from entity graphs. This model is embedded in an interactivevisualization framework to enable human-in-the-loop, model-guided dataexploration. Using case studies on real datasets, we demonstrate howinteractions between users and the maximum entropy model lead to faster andexplainable conclusions.
 
+Can Self-Censorship in News Media be Detected Algorithmically? A Case  Study in Latin America
 
-Can Self-Censorship in News Media be Detected Algorithmically? A Case
-  Study in Latin America
-
-  Censorship in social media has been well studied and provides insight into
-how governments stifle freedom of expression online. Comparatively less (or no)
-attention has been paid to detecting (self) censorship in traditional media
-(e.g., news) using social media as a bellweather. We present a novel
-unsupervised approach that views social media as a sensor to detect censorship
-in news media wherein statistically significant differences between information
-published in the news media and the correlated information published in social
-media are automatically identified as candidate censored events. We develop a
-hypothesis testing framework to identify and evaluate censored clusters of
-keywords, and a new near-linear-time algorithm (called GraphDPD) to identify
-the highest scoring clusters as indicators of censorship. We outline extensive
-experiments on semi-synthetic data as well as real datasets (with Twitter and
-local news media) from Mexico and Venezuela, highlighting the capability to
-accurately detect real-world self censorship events.
-
+  Censorship in social media has been well studied and provides insight intohow governments stifle freedom of expression online. Comparatively less (or no)attention has been paid to detecting (self) censorship in traditional media(e.g., news) using social media as a bellweather. We present a novelunsupervised approach that views social media as a sensor to detect censorshipin news media wherein statistically significant differences between informationpublished in the news media and the correlated information published in socialmedia are automatically identified as candidate censored events. We develop ahypothesis testing framework to identify and evaluate censored clusters ofkeywords, and a new near-linear-time algorithm (called GraphDPD) to identifythe highest scoring clusters as indicators of censorship. We outline extensiveexperiments on semi-synthetic data as well as real datasets (with Twitter andlocal news media) from Mexico and Venezuela, highlighting the capability toaccurately detect real-world self censorship events.
 
 Distributed Representation of Subgraphs
 
-  Network embeddings have become very popular in learning effective feature
-representations of networks. Motivated by the recent successes of embeddings in
-natural language processing, researchers have tried to find network embeddings
-in order to exploit machine learning algorithms for mining tasks like node
-classification and edge prediction. However, most of the work focuses on
-finding distributed representations of nodes, which are inherently ill-suited
-to tasks such as community detection which are intuitively dependent on
-subgraphs.
-  Here, we propose sub2vec, an unsupervised scalable algorithm to learn feature
-representations of arbitrary subgraphs. We provide means to characterize
-similarties between subgraphs and provide theoretical analysis of sub2vec and
-demonstrate that it preserves the so-called local proximity. We also highlight
-the usability of sub2vec by leveraging it for network mining tasks, like
-community detection. We show that sub2vec gets significant gains over
-state-of-the-art methods and node-embedding methods. In particular, sub2vec
-offers an approach to generate a richer vocabulary of features of subgraphs to
-support representation and reasoning.
-
+  Network embeddings have become very popular in learning effective featurerepresentations of networks. Motivated by the recent successes of embeddings innatural language processing, researchers have tried to find network embeddingsin order to exploit machine learning algorithms for mining tasks like nodeclassification and edge prediction. However, most of the work focuses onfinding distributed representations of nodes, which are inherently ill-suitedto tasks such as community detection which are intuitively dependent onsubgraphs.  Here, we propose sub2vec, an unsupervised scalable algorithm to learn featurerepresentations of arbitrary subgraphs. We provide means to characterizesimilarties between subgraphs and provide theoretical analysis of sub2vec anddemonstrate that it preserves the so-called local proximity. We also highlightthe usability of sub2vec by leveraging it for network mining tasks, likecommunity detection. We show that sub2vec gets significant gains overstate-of-the-art methods and node-embedding methods. In particular, sub2vecoffers an approach to generate a richer vocabulary of features of subgraphs tosupport representation and reasoning.
 
 Crowdsourcing Cybersecurity: Cyber Attack Detection using Social Media
 
-  Social media is often viewed as a sensor into various societal events such as
-disease outbreaks, protests, and elections. We describe the use of social media
-as a crowdsourced sensor to gain insight into ongoing cyber-attacks. Our
-approach detects a broad range of cyber-attacks (e.g., distributed denial of
-service (DDOS) attacks, data breaches, and account hijacking) in an
-unsupervised manner using just a limited fixed set of seed event triggers. A
-new query expansion strategy based on convolutional kernels and dependency
-parses helps model reporting structure and aids in identifying key event
-characteristics. Through a large-scale analysis over Twitter, we demonstrate
-that our approach consistently identifies and encodes events, outperforming
-existing methods.
-
+  Social media is often viewed as a sensor into various societal events such asdisease outbreaks, protests, and elections. We describe the use of social mediaas a crowdsourced sensor to gain insight into ongoing cyber-attacks. Ourapproach detects a broad range of cyber-attacks (e.g., distributed denial ofservice (DDOS) attacks, data breaches, and account hijacking) in anunsupervised manner using just a limited fixed set of seed event triggers. Anew query expansion strategy based on convolutional kernels and dependencyparses helps model reporting structure and aids in identifying key eventcharacteristics. Through a large-scale analysis over Twitter, we demonstratethat our approach consistently identifies and encodes events, outperformingexisting methods.
 
 New methods to generate massive synthetic networks
 
-  One of the biggest needs in network science research is access to large
-realistic datasets. As data analytics methods permeate a range of diverse
-disciplines---e.g., computational epidemiology, sustainability, social media
-analytics, biology, and transportation--- network datasets that can exhibit
-characteristics encountered in each of these disciplines becomes paramount. The
-key technical issue is to be able to generate synthetic topologies with
-pre-specified, arbitrary, degree distributions. Existing methods are limited in
-their ability to faithfully reproduce macro-level characteristics of networks
-while at the same time respecting particular degree distributions. We present a
-suite of three algorithms that exploit the principle of residual degree
-attenuation to generate synthetic topologies that adhere to macro-level
-real-world characteristics. By evaluating these algorithms w.r.t. several
-real-world datasets we demonstrate their ability to faithfully reproduce
-network characteristics such as node degree, clustering coefficient, hop
-length, and k-core structure distributions.
-
+  One of the biggest needs in network science research is access to largerealistic datasets. As data analytics methods permeate a range of diversedisciplines---e.g., computational epidemiology, sustainability, social mediaanalytics, biology, and transportation--- network datasets that can exhibitcharacteristics encountered in each of these disciplines becomes paramount. Thekey technical issue is to be able to generate synthetic topologies withpre-specified, arbitrary, degree distributions. Existing methods are limited intheir ability to faithfully reproduce macro-level characteristics of networkswhile at the same time respecting particular degree distributions. We present asuite of three algorithms that exploit the principle of residual degreeattenuation to generate synthetic topologies that adhere to macro-levelreal-world characteristics. By evaluating these algorithms w.r.t. severalreal-world datasets we demonstrate their ability to faithfully reproducenetwork characteristics such as node degree, clustering coefficient, hoplength, and k-core structure distributions.
 
 Deep Transfer Reinforcement Learning for Text Summarization
 
-  Deep neural networks are data hungry models and thus face difficulties when
-attempting to train on small text datasets. Transfer learning is a potential
-solution but their effectiveness in the text domain is not as explored as in
-areas such as image analysis. In this paper, we study the problem of transfer
-learning for text summarization and discuss why existing state-of-the-art
-models fail to generalize well on other (unseen) datasets. We propose a
-reinforcement learning framework based on a self-critic policy gradient
-approach which achieves good generalization and state-of-the-art results on a
-variety of datasets. Through an extensive set of experiments, we also show the
-ability of our proposed framework to fine-tune the text summarization model
-using only a few training samples. To the best of our knowledge, this is the
-first work that studies transfer learning in text summarization and provides a
-generic solution that works well on unseen data.
-
+  Deep neural networks are data hungry models and thus face difficulties whenattempting to train on small text datasets. Transfer learning is a potentialsolution but their effectiveness in the text domain is not as explored as inareas such as image analysis. In this paper, we study the problem of transferlearning for text summarization and discuss why existing state-of-the-artmodels fail to generalize well on other (unseen) datasets. We propose areinforcement learning framework based on a self-critic policy gradientapproach which achieves good generalization and state-of-the-art results on avariety of datasets. Through an extensive set of experiments, we also show theability of our proposed framework to fine-tune the text summarization modelusing only a few training samples. To the best of our knowledge, this is thefirst work that studies transfer learning in text summarization and provides ageneric solution that works well on unseen data.
 
 A Model Based Approach to Reachability Routing
 
-  Current directions in network routing research have not kept pace with the
-latest developments in network architectures, such as peer-to-peer networks,
-sensor networks, ad-hoc wireless networks, and overlay networks. A common
-characteristic among all of these new technologies is the presence of highly
-dynamic network topologies. Currently deployed single-path routing protocols
-cannot adequately cope with this dynamism, and existing multi-path algorithms
-make trade-offs which lead to less than optimal performance on these networks.
-This drives the need for routing protocols designed with the unique
-characteristics of these networks in mind.
-  In this paper we propose the notion of reachability routing as a solution to
-the challenges posed by routing on such dynamic networks. In particular, our
-formulation of reachability routing provides cost-sensitive multi-path
-forwarding along with loop avoidance within the confines of the Internet
-Protocol (IP) architecture. This is achieved through the application of
-reinforcement learning within a probabilistic routing framework. Following an
-explanation of our design decisions and a description of the algorithm, we
-provide an evaluation of the performance of the algorithm on a variety of
-network topologies. The results show consistently superior performance compared
-to other reinforcement learning based routing algorithms.
-
+  Current directions in network routing research have not kept pace with thelatest developments in network architectures, such as peer-to-peer networks,sensor networks, ad-hoc wireless networks, and overlay networks. A commoncharacteristic among all of these new technologies is the presence of highlydynamic network topologies. Currently deployed single-path routing protocolscannot adequately cope with this dynamism, and existing multi-path algorithmsmake trade-offs which lead to less than optimal performance on these networks.This drives the need for routing protocols designed with the uniquecharacteristics of these networks in mind.  In this paper we propose the notion of reachability routing as a solution tothe challenges posed by routing on such dynamic networks. In particular, ourformulation of reachability routing provides cost-sensitive multi-pathforwarding along with loop avoidance within the confines of the InternetProtocol (IP) architecture. This is achieved through the application ofreinforcement learning within a probabilistic routing framework. Following anexplanation of our design decisions and a description of the algorithm, weprovide an evaluation of the performance of the algorithm on a variety ofnetwork topologies. The results show consistently superior performance comparedto other reinforcement learning based routing algorithms.
 
 Inferring Dynamic Bayesian Networks using Frequent Episode Mining
 
-  Motivation: Several different threads of research have been proposed for
-modeling and mining temporal data. On the one hand, approaches such as dynamic
-Bayesian networks (DBNs) provide a formal probabilistic basis to model
-relationships between time-indexed random variables but these models are
-intractable to learn in the general case. On the other, algorithms such as
-frequent episode mining are scalable to large datasets but do not exhibit the
-rigorous probabilistic interpretations that are the mainstay of the graphical
-models literature.
-  Results: We present a unification of these two seemingly diverse threads of
-research, by demonstrating how dynamic (discrete) Bayesian networks can be
-inferred from the results of frequent episode mining. This helps bridge the
-modeling emphasis of the former with the counting emphasis of the latter.
-First, we show how, under reasonable assumptions on data characteristics and on
-influences of random variables, the optimal DBN structure can be computed using
-a greedy, local, algorithm. Next, we connect the optimality of the DBN
-structure with the notion of fixed-delay episodes and their counts of distinct
-occurrences. Finally, to demonstrate the practical feasibility of our approach,
-we focus on a specific (but broadly applicable) class of networks, called
-excitatory networks, and show how the search for the optimal DBN structure can
-be conducted using just information from frequent episodes. Application on
-datasets gathered from mathematical models of spiking neurons as well as real
-neuroscience datasets are presented.
-  Availability: Algorithmic implementations, simulator codebases, and datasets
-are available from our website at http://neural-code.cs.vt.edu/dbn
-
+  Motivation: Several different threads of research have been proposed formodeling and mining temporal data. On the one hand, approaches such as dynamicBayesian networks (DBNs) provide a formal probabilistic basis to modelrelationships between time-indexed random variables but these models areintractable to learn in the general case. On the other, algorithms such asfrequent episode mining are scalable to large datasets but do not exhibit therigorous probabilistic interpretations that are the mainstay of the graphicalmodels literature.  Results: We present a unification of these two seemingly diverse threads ofresearch, by demonstrating how dynamic (discrete) Bayesian networks can beinferred from the results of frequent episode mining. This helps bridge themodeling emphasis of the former with the counting emphasis of the latter.First, we show how, under reasonable assumptions on data characteristics and oninfluences of random variables, the optimal DBN structure can be computed usinga greedy, local, algorithm. Next, we connect the optimality of the DBNstructure with the notion of fixed-delay episodes and their counts of distinctoccurrences. Finally, to demonstrate the practical feasibility of our approach,we focus on a specific (but broadly applicable) class of networks, calledexcitatory networks, and show how the search for the optimal DBN structure canbe conducted using just information from frequent episodes. Application ondatasets gathered from mathematical models of spiking neurons as well as realneuroscience datasets are presented.  Availability: Algorithmic implementations, simulator codebases, and datasetsare available from our website at http://neural-code.cs.vt.edu/dbn
 
 Recommender Systems for the Conference Paper Assignment Problem
 
-  Conference paper assignment, i.e., the task of assigning paper submissions to
-reviewers, presents multi-faceted issues for recommender systems research.
-Besides the traditional goal of predicting `who likes what?', a conference
-management system must take into account aspects such as: reviewer capacity
-constraints, adequate numbers of reviews for papers, expertise modeling,
-conflicts of interest, and an overall distribution of assignments that balances
-reviewer preferences with conference objectives. Among these, issues of
-modeling preferences and tastes in reviewing have traditionally been studied
-separately from the optimization of paper-reviewer assignment. In this paper,
-we present an integrated study of both these aspects. First, due to the paucity
-of data per reviewer or per paper (relative to other recommender systems
-applications) we show how we can integrate multiple sources of information to
-learn paper-reviewer preference models. Second, our models are evaluated not
-just in terms of prediction accuracy but in terms of the end-assignment
-quality. Using a linear programming-based assignment optimization formulation,
-we show how our approach better explores the space of unsupplied assignments to
-maximize the overall affinities of papers assigned to reviewers. We demonstrate
-our results on real reviewer preference data from the IEEE ICDM 2007
-conference.
+  Conference paper assignment, i.e., the task of assigning paper submissions toreviewers, presents multi-faceted issues for recommender systems research.Besides the traditional goal of predicting `who likes what?', a conferencemanagement system must take into account aspects such as: reviewer capacityconstraints, adequate numbers of reviews for papers, expertise modeling,conflicts of interest, and an overall distribution of assignments that balancesreviewer preferences with conference objectives. Among these, issues ofmodeling preferences and tastes in reviewing have traditionally been studiedseparately from the optimization of paper-reviewer assignment. In this paper,we present an integrated study of both these aspects. First, due to the paucityof data per reviewer or per paper (relative to other recommender systemsapplications) we show how we can integrate multiple sources of information tolearn paper-reviewer preference models. Second, our models are evaluated notjust in terms of prediction accuracy but in terms of the end-assignmentquality. Using a linear programming-based assignment optimization formulation,we show how our approach better explores the space of unsupplied assignments tomaximize the overall affinities of papers assigned to reviewers. We demonstrateour results on real reviewer preference data from the IEEE ICDM 2007conference.
 
+'Beating the news' with EMBERS: Forecasting Civil Unrest using Open  Source Indicators
+
+  We describe the design, implementation, and evaluation of EMBERS, anautomated, 24x7 continuous system for forecasting civil unrest across 10countries of Latin America using open source indicators such as tweets, newssources, blogs, economic indicators, and other data sources. Unlikeretrospective studies, EMBERS has been making forecasts into the future sinceNov 2012 which have been (and continue to be) evaluated by an independent T&Eteam (MITRE). Of note, EMBERS has successfully forecast the uptick and downtickof incidents during the June 2013 protests in Brazil. We outline the systemarchitecture of EMBERS, individual models that leverage specific data sources,and a fusion and suppression engine that supports trading off specificevaluation criteria. EMBERS also provides an audit trail interface that enablesthe investigation of why specific predictions were made along with the datautilized for forecasting. Through numerous evaluations, we demonstrate thesuperiority of EMBERS over baserate methods and its capability to forecastsignificant societal happenings.
 
 Forecasting the Flu: Designing Social Network Sensors for Epidemics
 
-  Early detection and modeling of a contagious epidemic can provide important
-guidance about quelling the contagion, controlling its spread, or the effective
-design of countermeasures. A topic of recent interest has been to design social
-network sensors, i.e., identifying a small set of people who can be monitored
-to provide insight into the emergence of an epidemic in a larger population. We
-formally pose the problem of designing social network sensors for flu epidemics
-and identify two different objectives that could be targeted in such sensor
-design problems. Using the graph theoretic notion of dominators we develop an
-efficient and effective heuristic for forecasting epidemics at lead time. Using
-six city-scale datasets generated by extensive microscopic epidemiological
-simulations involving millions of individuals, we illustrate the practical
-applicability of our methods and show significant benefits (up to twenty-two
-days more lead time) compared to other competitors. Most importantly, we
-demonstrate the use of surrogates or proxies for policy makers for designing
-social network sensors that require from nonintrusive knowledge of people to
-more information on the relationship among people. The results show that the
-more intrusive information we obtain, the longer lead time to predict the flu
-outbreak up to nine days.
-
-
-Temporal Topic Modeling to Assess Associations between News Trends and
-  Infectious Disease Outbreaks
-
-  In retrospective assessments, internet news reports have been shown to
-capture early reports of unknown infectious disease transmission prior to
-official laboratory confirmation. In general, media interest and reporting
-peaks and wanes during the course of an outbreak. In this study, we quantify
-the extent to which media interest during infectious disease outbreaks is
-indicative of trends of reported incidence. We introduce an approach that uses
-supervised temporal topic models to transform large corpora of news articles
-into temporal topic trends. The key advantages of this approach include,
-applicability to a wide range of diseases, and ability to capture disease
-dynamics - including seasonality, abrupt peaks and troughs. We evaluated the
-method using data from multiple infectious disease outbreaks reported in the
-United States of America (U.S.), China and India. We noted that temporal topic
-trends extracted from disease-related news reports successfully captured the
-dynamics of multiple outbreaks such as whooping cough in U.S. (2012), dengue
-outbreaks in India (2013) and China (2014). Our observations also suggest that
-efficient modeling of temporal topic trends using time-series regression
-techniques can estimate disease case counts with increased precision before
-official reports by health organizations.
-
+  Early detection and modeling of a contagious epidemic can provide importantguidance about quelling the contagion, controlling its spread, or the effectivedesign of countermeasures. A topic of recent interest has been to design socialnetwork sensors, i.e., identifying a small set of people who can be monitoredto provide insight into the emergence of an epidemic in a larger population. Weformally pose the problem of designing social network sensors for flu epidemicsand identify two different objectives that could be targeted in such sensordesign problems. Using the graph theoretic notion of dominators we develop anefficient and effective heuristic for forecasting epidemics at lead time. Usingsix city-scale datasets generated by extensive microscopic epidemiologicalsimulations involving millions of individuals, we illustrate the practicalapplicability of our methods and show significant benefits (up to twenty-twodays more lead time) compared to other competitors. Most importantly, wedemonstrate the use of surrogates or proxies for policy makers for designingsocial network sensors that require from nonintrusive knowledge of people tomore information on the relationship among people. The results show that themore intrusive information we obtain, the longer lead time to predict the fluoutbreak up to nine days.
 
 Hierarchical Quickest Change Detection via Surrogates
 
-  Change detection (CD) in time series data is a critical problem as it reveal
-changes in the underlying generative processes driving the time series. Despite
-having received significant attention, one important unexplored aspect is how
-to efficiently utilize additional correlated information to improve the
-detection and the understanding of changepoints. We propose hierarchical
-quickest change detection (HQCD), a framework that formalizes the process of
-incorporating additional correlated sources for early changepoint detection.
-The core ideas behind HQCD are rooted in the theory of quickest detection and
-HQCD can be regarded as its novel generalization to a hierarchical setting. The
-sources are classified into targets and surrogates, and HQCD leverages this
-structure to systematically assimilate observed data to update changepoint
-statistics across layers. The decision on actual changepoints are provided by
-minimizing the delay while still maintaining reliability bounds. In addition,
-HQCD also uncovers interesting relations between changes at targets from
-changes across surrogates. We validate HQCD for reliability and performance
-against several state-of-the-art methods for both synthetic dataset (known
-changepoints) and several real-life examples (unknown changepoints). Our
-experiments indicate that we gain significant robustness without loss of
-detection delay through HQCD. Our real-life experiments also showcase the
-usefulness of the hierarchical setting by connecting the surrogate sources
-(such as Twitter chatter) to target sources (such as Employment related
-protests that ultimately lead to major uprisings).
+  Change detection (CD) in time series data is a critical problem as it revealchanges in the underlying generative processes driving the time series. Despitehaving received significant attention, one important unexplored aspect is howto efficiently utilize additional correlated information to improve thedetection and the understanding of changepoints. We propose hierarchicalquickest change detection (HQCD), a framework that formalizes the process ofincorporating additional correlated sources for early changepoint detection.The core ideas behind HQCD are rooted in the theory of quickest detection andHQCD can be regarded as its novel generalization to a hierarchical setting. Thesources are classified into targets and surrogates, and HQCD leverages thisstructure to systematically assimilate observed data to update changepointstatistics across layers. The decision on actual changepoints are provided byminimizing the delay while still maintaining reliability bounds. In addition,HQCD also uncovers interesting relations between changes at targets fromchanges across surrogates. We validate HQCD for reliability and performanceagainst several state-of-the-art methods for both synthetic dataset (knownchangepoints) and several real-life examples (unknown changepoints). Ourexperiments indicate that we gain significant robustness without loss ofdetection delay through HQCD. Our real-life experiments also showcase theusefulness of the hierarchical setting by connecting the surrogate sources(such as Twitter chatter) to target sources (such as Employment relatedprotests that ultimately lead to major uprisings).
 
+Temporal Topic Modeling to Assess Associations between News Trends and  Infectious Disease Outbreaks
 
-'Beating the news' with EMBERS: Forecasting Civil Unrest using Open
-  Source Indicators
+  In retrospective assessments, internet news reports have been shown tocapture early reports of unknown infectious disease transmission prior toofficial laboratory confirmation. In general, media interest and reportingpeaks and wanes during the course of an outbreak. In this study, we quantifythe extent to which media interest during infectious disease outbreaks isindicative of trends of reported incidence. We introduce an approach that usessupervised temporal topic models to transform large corpora of news articlesinto temporal topic trends. The key advantages of this approach include,applicability to a wide range of diseases, and ability to capture diseasedynamics - including seasonality, abrupt peaks and troughs. We evaluated themethod using data from multiple infectious disease outbreaks reported in theUnited States of America (U.S.), China and India. We noted that temporal topictrends extracted from disease-related news reports successfully captured thedynamics of multiple outbreaks such as whooping cough in U.S. (2012), dengueoutbreaks in India (2013) and China (2014). Our observations also suggest thatefficient modeling of temporal topic trends using time-series regressiontechniques can estimate disease case counts with increased precision beforeofficial reports by health organizations.
 
-  We describe the design, implementation, and evaluation of EMBERS, an
-automated, 24x7 continuous system for forecasting civil unrest across 10
-countries of Latin America using open source indicators such as tweets, news
-sources, blogs, economic indicators, and other data sources. Unlike
-retrospective studies, EMBERS has been making forecasts into the future since
-Nov 2012 which have been (and continue to be) evaluated by an independent T&E
-team (MITRE). Of note, EMBERS has successfully forecast the uptick and downtick
-of incidents during the June 2013 protests in Brazil. We outline the system
-architecture of EMBERS, individual models that leverage specific data sources,
-and a fusion and suppression engine that supports trading off specific
-evaluation criteria. EMBERS also provides an audit trail interface that enables
-the investigation of why specific predictions were made along with the data
-utilized for forecasting. Through numerous evaluations, we demonstrate the
-superiority of EMBERS over baserate methods and its capability to forecast
-significant societal happenings.
+Guided Deep List: Automating the Generation of Epidemiological Line  Lists from Open Sources
 
-
-Guided Deep List: Automating the Generation of Epidemiological Line
-  Lists from Open Sources
-
-  Real-time monitoring and responses to emerging public health threats rely on
-the availability of timely surveillance data. During the early stages of an
-epidemic, the ready availability of line lists with detailed tabular
-information about laboratory-confirmed cases can assist epidemiologists in
-making reliable inferences and forecasts. Such inferences are crucial to
-understand the epidemiology of a specific disease early enough to stop or
-control the outbreak. However, construction of such line lists requires
-considerable human supervision and therefore, difficult to generate in
-real-time. In this paper, we motivate Guided Deep List, the first tool for
-building automated line lists (in near real-time) from open source reports of
-emerging disease outbreaks. Specifically, we focus on deriving epidemiological
-characteristics of an emerging disease and the affected population from reports
-of illness. Guided Deep List uses distributed vector representations (ala
-word2vec) to discover a set of indicators for each line list feature. This
-discovery of indicators is followed by the use of dependency parsing based
-techniques for final extraction in tabular form. We evaluate the performance of
-Guided Deep List against a human annotated line list provided by HealthMap
-corresponding to MERS outbreaks in Saudi Arabia. We demonstrate that Guided
-Deep List extracts line list features with increased accuracy compared to a
-baseline method. We further show how these automatically extracted line list
-features can be used for making epidemiological inferences, such as inferring
-demographics and symptoms-to-hospitalization period of affected individuals.
-
+  Real-time monitoring and responses to emerging public health threats rely onthe availability of timely surveillance data. During the early stages of anepidemic, the ready availability of line lists with detailed tabularinformation about laboratory-confirmed cases can assist epidemiologists inmaking reliable inferences and forecasts. Such inferences are crucial tounderstand the epidemiology of a specific disease early enough to stop orcontrol the outbreak. However, construction of such line lists requiresconsiderable human supervision and therefore, difficult to generate inreal-time. In this paper, we motivate Guided Deep List, the first tool forbuilding automated line lists (in near real-time) from open source reports ofemerging disease outbreaks. Specifically, we focus on deriving epidemiologicalcharacteristics of an emerging disease and the affected population from reportsof illness. Guided Deep List uses distributed vector representations (alaword2vec) to discover a set of indicators for each line list feature. Thisdiscovery of indicators is followed by the use of dependency parsing basedtechniques for final extraction in tabular form. We evaluate the performance ofGuided Deep List against a human annotated line list provided by HealthMapcorresponding to MERS outbreaks in Saudi Arabia. We demonstrate that GuidedDeep List extracts line list features with increased accuracy compared to abaseline method. We further show how these automatically extracted line listfeatures can be used for making epidemiological inferences, such as inferringdemographics and symptoms-to-hospitalization period of affected individuals.
 
 Distributed Representations of Signed Networks
 
-  Recent successes in word embedding and document embedding have motivated
-researchers to explore similar representations for networks and to use such
-representations for tasks such as edge prediction, node label prediction, and
-community detection. Such network embedding methods are largely focused on
-finding distributed representations for unsigned networks and are unable to
-discover embeddings that respect polarities inherent in edges. We propose
-SIGNet, a fast scalable embedding method suitable for signed networks. Our
-proposed objective function aims to carefully model the social structure
-implicit in signed networks by reinforcing the principles of social balance
-theory. Our method builds upon the traditional word2vec family of embedding
-approaches and adds a new targeted node sampling strategy to maintain
-structural balance in higher-order neighborhoods. We demonstrate the
-superiority of SIGNet over state-of-the-art methods proposed for both signed
-and unsigned networks on several real world datasets from different domains. In
-particular, SIGNet offers an approach to generate a richer vocabulary of
-features of signed networks to support representation and reasoning.
-
+  Recent successes in word embedding and document embedding have motivatedresearchers to explore similar representations for networks and to use suchrepresentations for tasks such as edge prediction, node label prediction, andcommunity detection. Such network embedding methods are largely focused onfinding distributed representations for unsigned networks and are unable todiscover embeddings that respect polarities inherent in edges. We proposeSIGNet, a fast scalable embedding method suitable for signed networks. Ourproposed objective function aims to carefully model the social structureimplicit in signed networks by reinforcing the principles of social balancetheory. Our method builds upon the traditional word2vec family of embeddingapproaches and adds a new targeted node sampling strategy to maintainstructural balance in higher-order neighborhoods. We demonstrate thesuperiority of SIGNet over state-of-the-art methods proposed for both signedand unsigned networks on several real world datasets from different domains. Inparticular, SIGNet offers an approach to generate a richer vocabulary offeatures of signed networks to support representation and reasoning.
 
 Deep Reinforcement Learning For Sequence to Sequence Models
 
-  In recent times, sequence-to-sequence (seq2seq) models have gained a lot of
-popularity and provide state-of-the-art performance in a wide variety of tasks
-such as machine translation, headline generation, text summarization, speech to
-text conversion, and image caption generation. The underlying framework for all
-these models is usually a deep neural network comprising an encoder and a
-decoder. Although simple encoder-decoder models produce competitive results,
-many researchers have proposed additional improvements over these
-sequence-to-sequence models, e.g., using an attention-based model over the
-input, pointer-generation models, and self-attention models. However, such
-seq2seq models suffer from two common problems: 1) exposure bias and 2)
-inconsistency between train/test measurement. Recently, a completely novel
-point of view has emerged in addressing these two problems in seq2seq models,
-leveraging methods from reinforcement learning (RL). In this survey, we
-consider seq2seq problems from the RL point of view and provide a formulation
-combining the power of RL methods in decision-making with sequence-to-sequence
-models that enable remembering long-term memories. We present some of the most
-recent frameworks that combine concepts from RL and deep neural networks and
-explain how these two areas could benefit from each other in solving complex
-seq2seq tasks. Our work aims to provide insights into some of the problems that
-inherently arise with current approaches and how we can address them with
-better RL models. We also provide the source code for implementing most of the
-RL models discussed in this paper to support the complex task of abstractive
-text summarization.
-
+  In recent times, sequence-to-sequence (seq2seq) models have gained a lot ofpopularity and provide state-of-the-art performance in a wide variety of taskssuch as machine translation, headline generation, text summarization, speech totext conversion, and image caption generation. The underlying framework for allthese models is usually a deep neural network comprising an encoder and adecoder. Although simple encoder-decoder models produce competitive results,many researchers have proposed additional improvements over thesesequence-to-sequence models, e.g., using an attention-based model over theinput, pointer-generation models, and self-attention models. However, suchseq2seq models suffer from two common problems: 1) exposure bias and 2)inconsistency between train/test measurement. Recently, a completely novelpoint of view has emerged in addressing these two problems in seq2seq models,leveraging methods from reinforcement learning (RL). In this survey, weconsider seq2seq problems from the RL point of view and provide a formulationcombining the power of RL methods in decision-making with sequence-to-sequencemodels that enable remembering long-term memories. We present some of the mostrecent frameworks that combine concepts from RL and deep neural networks andexplain how these two areas could benefit from each other in solving complexseq2seq tasks. Our work aims to provide insights into some of the problems thatinherently arise with current approaches and how we can address them withbetter RL models. We also provide the source code for implementing most of theRL models discussed in this paper to support the complex task of abstractivetext summarization.
 

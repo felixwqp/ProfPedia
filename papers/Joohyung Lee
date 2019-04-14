@@ -1,237 +1,60 @@
 A Probabilistic Extension of Action Language BC+
 
-  We present a probabilistic extension of action language BC+. Just like BC+ is
-defined as a high-level notation of answer set programs for describing
-transition systems, the proposed language, which we call pBC+, is defined as a
-high-level notation of LPMLN programs---a probabilistic extension of answer set
-programs. We show how probabilistic reasoning about transition systems, such as
-prediction, postdiction, and planning problems, as well as probabilistic
-diagnosis for dynamic domains, can be modeled in pBC+ and computed using an
-implementation of LPMLN.
-
+  We present a probabilistic extension of action language BC+. Just like BC+ isdefined as a high-level notation of answer set programs for describingtransition systems, the proposed language, which we call pBC+, is defined as ahigh-level notation of LPMLN programs---a probabilistic extension of answer setprograms. We show how probabilistic reasoning about transition systems, such asprediction, postdiction, and planning problems, as well as probabilisticdiagnosis for dynamic domains, can be modeled in pBC+ and computed using animplementation of LPMLN.
 
 Translating LPOD and CR-Prolog2 into Standard Answer Set Programs
 
-  Logic Programs with Ordered Disjunction (LPOD) is an extension of standard
-answer set programs to handle preference using the construct of ordered
-disjunction, and CR-Prolog2 is an extension of standard answer set programs
-with consistency restoring rules and LPOD-like ordered disjunction. We present
-reductions of each of these languages into the standard ASP language, which
-gives us an alternative way to understand the extensions in terms of the
-standard ASP language.
+  Logic Programs with Ordered Disjunction (LPOD) is an extension of standardanswer set programs to handle preference using the construct of ordereddisjunction, and CR-Prolog2 is an extension of standard answer set programswith consistency restoring rules and LPOD-like ordered disjunction. We presentreductions of each of these languages into the standard ASP language, whichgives us an alternative way to understand the extensions in terms of thestandard ASP language.
 
+Elaboration Tolerant Representation of Markov Decision Process via  Decision-Theoretic Extension of Probabilistic Action Language pBC+
 
-Elaboration Tolerant Representation of Markov Decision Process via
-  Decision-Theoretic Extension of Probabilistic Action Language pBC+
-
-  We extend probabilistic action language pBC+ with the notion of utility as in
-decision theory. The semantics of the extended pBC+ can be defined as a
-shorthand notation for a decision-theoretic extension of the probabilistic
-answer set programming language LPMLN. Alternatively, the semantics of pBC+ can
-also be defined in terms of Markov Decision Process (MDP), which in turn allows
-for representing MDP in a succinct and elaboration tolerant way as well as to
-leverage an MDP solver to compute pBC+. The idea led to the design of the
-system pbcplus2mdp, which can find an optimal policy of a pBC+ action
-description using an MDP solver.
-
+  We extend probabilistic action language pBC+ with the notion of utility as indecision theory. The semantics of the extended pBC+ can be defined as ashorthand notation for a decision-theoretic extension of the probabilisticanswer set programming language LPMLN. Alternatively, the semantics of pBC+ canalso be defined in terms of Markov Decision Process (MDP), which in turn allowsfor representing MDP in a succinct and elaboration tolerant way as well as toleverage an MDP solver to compute pBC+. The idea led to the design of thesystem pbcplus2mdp, which can find an optimal policy of a pBC+ actiondescription using an MDP solver.
 
 On Elementary Loops of Logic Programs
 
-  Using the notion of an elementary loop, Gebser and Schaub refined the theorem
-on loop formulas due to Lin and Zhao by considering loop formulas of elementary
-loops only. In this article, we reformulate their definition of an elementary
-loop, extend it to disjunctive programs, and study several properties of
-elementary loops, including how maximal elementary loops are related to minimal
-unfounded sets. The results provide useful insights into the stable model
-semantics in terms of elementary loops. For a nondisjunctive program, using a
-graph-theoretic characterization of an elementary loop, we show that the
-problem of recognizing an elementary loop is tractable. On the other hand, we
-show that the corresponding problem is {\sf coNP}-complete for a disjunctive
-program. Based on the notion of an elementary loop, we present the class of
-Head-Elementary-loop-Free (HEF) programs, which strictly generalizes the class
-of Head-Cycle-Free (HCF) programs due to Ben-Eliyahu and Dechter. Like an HCF
-program, an HEF program can be turned into an equivalent nondisjunctive program
-in polynomial time by shifting head atoms into the body.
-
+  Using the notion of an elementary loop, Gebser and Schaub refined the theoremon loop formulas due to Lin and Zhao by considering loop formulas of elementaryloops only. In this article, we reformulate their definition of an elementaryloop, extend it to disjunctive programs, and study several properties ofelementary loops, including how maximal elementary loops are related to minimalunfounded sets. The results provide useful insights into the stable modelsemantics in terms of elementary loops. For a nondisjunctive program, using agraph-theoretic characterization of an elementary loop, we show that theproblem of recognizing an elementary loop is tractable. On the other hand, weshow that the corresponding problem is {\sf coNP}-complete for a disjunctiveprogram. Based on the notion of an elementary loop, we present the class ofHead-Elementary-loop-Free (HEF) programs, which strictly generalizes the classof Head-Cycle-Free (HCF) programs due to Ben-Eliyahu and Dechter. Like an HCFprogram, an HEF program can be turned into an equivalent nondisjunctive programin polynomial time by shifting head atoms into the body.
 
 Module Theorem for The General Theory of Stable Models
 
-  The module theorem by Janhunen et al. demonstrates how to provide a modular
-structure in answer set programming, where each module has a well-defined
-input/output interface which can be used to establish the compositionality of
-answer sets. The theorem is useful in the analysis of answer set programs, and
-is a basis of incremental grounding and reactive answer set programming. We
-extend the module theorem to the general theory of stable models by Ferraris et
-al. The generalization applies to non-ground logic programs allowing useful
-constructs in answer set programming, such as choice rules, the count
-aggregate, and nested expressions. Our extension is based on relating the
-module theorem to the symmetric splitting theorem by Ferraris et al. Based on
-this result, we reformulate and extend the theory of incremental answer set
-computation to a more general class of programs.
-
+  The module theorem by Janhunen et al. demonstrates how to provide a modularstructure in answer set programming, where each module has a well-definedinput/output interface which can be used to establish the compositionality ofanswer sets. The theorem is useful in the analysis of answer set programs, andis a basis of incremental grounding and reactive answer set programming. Weextend the module theorem to the general theory of stable models by Ferraris etal. The generalization applies to non-ground logic programs allowing usefulconstructs in answer set programming, such as choice rules, the countaggregate, and nested expressions. Our extension is based on relating themodule theorem to the symmetric splitting theorem by Ferraris et al. Based onthis result, we reformulate and extend the theory of incremental answer setcomputation to a more general class of programs.
 
 First-Order Stable Model Semantics and First-Order Loop Formulas
 
-  Lin and Zhaos theorem on loop formulas states that in the propositional case
-the stable model semantics of a logic program can be completely characterized
-by propositional loop formulas, but this result does not fully carry over to
-the first-order case. We investigate the precise relationship between the
-first-order stable model semantics and first-order loop formulas, and study
-conditions under which the former can be represented by the latter. In order to
-facilitate the comparison, we extend the definition of a first-order loop
-formula which was limited to a nondisjunctive program, to a disjunctive program
-and to an arbitrary first-order theory. Based on the studied relationship we
-extend the syntax of a logic program with explicit quantifiers, which allows us
-to do reasoning involving non-Herbrand stable models using first-order
-reasoners. Such programs can be viewed as a special class of first-order
-theories under the stable model semantics, which yields more succinct loop
-formulas than the general language due to their restricted syntax.
+  Lin and Zhaos theorem on loop formulas states that in the propositional casethe stable model semantics of a logic program can be completely characterizedby propositional loop formulas, but this result does not fully carry over tothe first-order case. We investigate the precise relationship between thefirst-order stable model semantics and first-order loop formulas, and studyconditions under which the former can be represented by the latter. In order tofacilitate the comparison, we extend the definition of a first-order loopformula which was limited to a nondisjunctive program, to a disjunctive programand to an arbitrary first-order theory. Based on the studied relationship weextend the syntax of a logic program with explicit quantifiers, which allows usto do reasoning involving non-Herbrand stable models using first-orderreasoners. Such programs can be viewed as a special class of first-ordertheories under the stable model semantics, which yields more succinct loopformulas than the general language due to their restricted syntax.
 
+Reformulating the Situation Calculus and the Event Calculus in the  General Theory of Stable Models and in Answer Set Programming
 
-Reformulating the Situation Calculus and the Event Calculus in the
-  General Theory of Stable Models and in Answer Set Programming
+  Circumscription and logic programs under the stable model semantics are twowell-known nonmonotonic formalisms. The former has served as a basis ofclassical logic based action formalisms, such as the situation calculus, theevent calculus and temporal action logics; the latter has served as a basis ofa family of action languages, such as language A and several of itsdescendants. Based on the discovery that circumscription and the stable modelsemantics coincide on a class of canonical formulas, we reformulate thesituation calculus and the event calculus in the general theory of stablemodels. We also present a translation that turns the reformulations furtherinto answer set programs, so that efficient answer set solvers can be appliedto compute the situation calculus and the event calculus.
 
-  Circumscription and logic programs under the stable model semantics are two
-well-known nonmonotonic formalisms. The former has served as a basis of
-classical logic based action formalisms, such as the situation calculus, the
-event calculus and temporal action logics; the latter has served as a basis of
-a family of action languages, such as language A and several of its
-descendants. Based on the discovery that circumscription and the stable model
-semantics coincide on a class of canonical formulas, we reformulate the
-situation calculus and the event calculus in the general theory of stable
-models. We also present a translation that turns the reformulations further
-into answer set programs, so that efficient answer set solvers can be applied
-to compute the situation calculus and the event calculus.
+On the Semantic Relationship between Probabilistic Soft Logic and Markov  Logic
 
-
-On the Semantic Relationship between Probabilistic Soft Logic and Markov
-  Logic
-
-  Markov Logic Networks (MLN) and Probabilistic Soft Logic (PSL) are widely
-applied formalisms in Statistical Relational Learning, an emerging area in
-Artificial Intelligence that is concerned with combining logical and
-statistical AI. Despite their resemblance, the relationship has not been
-formally stated. In this paper, we describe the precise semantic relationship
-between them from a logical perspective. This is facilitated by first extending
-fuzzy logic to allow weights, which can be also viewed as a generalization of
-PSL, and then relate that generalization to MLN. We observe that the
-relationship between PSL and MLN is analogous to the known relationship between
-fuzzy logic and Boolean logic, and furthermore the weight scheme of PSL is
-essentially a generalization of the weight scheme of MLN for the many-valued
-setting.
-
+  Markov Logic Networks (MLN) and Probabilistic Soft Logic (PSL) are widelyapplied formalisms in Statistical Relational Learning, an emerging area inArtificial Intelligence that is concerned with combining logical andstatistical AI. Despite their resemblance, the relationship has not beenformally stated. In this paper, we describe the precise semantic relationshipbetween them from a logical perspective. This is facilitated by first extendingfuzzy logic to allow weights, which can be also viewed as a generalization ofPSL, and then relate that generalization to MLN. We observe that therelationship between PSL and MLN is analogous to the known relationship betweenfuzzy logic and Boolean logic, and furthermore the weight scheme of PSL isessentially a generalization of the weight scheme of MLN for the many-valuedsetting.
 
 Computing LPMLN Using ASP and MLN Solvers
 
-  LPMLN is a recent addition to probabilistic logic programming languages. Its
-main idea is to overcome the rigid nature of the stable model semantics by
-assigning a weight to each rule in a way similar to Markov Logic is defined. We
-present two implementations of LPMLN, $\text{LPMLN2ASP}$ and
-$\text{LPMLN2MLN}$. System $\text{LPMLN2ASP}$ translates LPMLN programs into
-the input language of answer set solver $\text{CLINGO}$, and using weak
-constraints and stable model enumeration, it can compute most probable stable
-models as well as exact conditional and marginal probabilities. System
-$\text{LPMLN2MLN}$ translates LPMLN programs into the input language of Markov
-Logic solvers, such as $\text{ALCHEMY}$, $\text{TUFFY}$, and $\text{ROCKIT}$,
-and allows for performing approximate probabilistic inference on LPMLN
-programs. We also demonstrate the usefulness of the LPMLN systems for computing
-other languages, such as ProbLog and Pearl's Causal Models, that are shown to
-be translatable into LPMLN. (Under consideration for acceptance in TPLP)
-
+  LPMLN is a recent addition to probabilistic logic programming languages. Itsmain idea is to overcome the rigid nature of the stable model semantics byassigning a weight to each rule in a way similar to Markov Logic is defined. Wepresent two implementations of LPMLN, $\text{LPMLN2ASP}$ and$\text{LPMLN2MLN}$. System $\text{LPMLN2ASP}$ translates LPMLN programs intothe input language of answer set solver $\text{CLINGO}$, and using weakconstraints and stable model enumeration, it can compute most probable stablemodels as well as exact conditional and marginal probabilities. System$\text{LPMLN2MLN}$ translates LPMLN programs into the input language of MarkovLogic solvers, such as $\text{ALCHEMY}$, $\text{TUFFY}$, and $\text{ROCKIT}$,and allows for performing approximate probabilistic inference on LPMLNprograms. We also demonstrate the usefulness of the LPMLN systems for computingother languages, such as ProbLog and Pearl's Causal Models, that are shown tobe translatable into LPMLN. (Under consideration for acceptance in TPLP)
 
 Weight Learning in a Probabilistic Extension of Answer Set Programs
 
-  LPMLN is a probabilistic extension of answer set programs with the weight
-scheme derived from that of Markov Logic. Previous work has shown how inference
-in LPMLN can be achieved. In this paper, we present the concept of weight
-learning in LPMLN and learning algorithms for LPMLN derived from those for
-Markov Logic. We also present a prototype implementation that uses answer set
-solvers for learning as well as some example domains that illustrate distinct
-features of LPMLN learning. Learning in LPMLN is in accordance with the stable
-model semantics, thereby it learns parameters for probabilistic extensions of
-knowledge-rich domains where answer set programming has shown to be useful but
-limited to the deterministic case, such as reachability analysis and reasoning
-about actions in dynamic domains. We also apply the method to learn the
-parameters for probabilistic abductive reasoning about actions.
-
+  LPMLN is a probabilistic extension of answer set programs with the weightscheme derived from that of Markov Logic. Previous work has shown how inferencein LPMLN can be achieved. In this paper, we present the concept of weightlearning in LPMLN and learning algorithms for LPMLN derived from those forMarkov Logic. We also present a prototype implementation that uses answer setsolvers for learning as well as some example domains that illustrate distinctfeatures of LPMLN learning. Learning in LPMLN is in accordance with the stablemodel semantics, thereby it learns parameters for probabilistic extensions ofknowledge-rich domains where answer set programming has shown to be useful butlimited to the deterministic case, such as reachability analysis and reasoningabout actions in dynamic domains. We also apply the method to learn theparameters for probabilistic abductive reasoning about actions.
 
 Representing First-Order Causal Theories by Logic Programs
 
-  Nonmonotonic causal logic, introduced by Norman McCain and Hudson Turner,
-became a basis for the semantics of several expressive action languages.
-McCain's embedding of definite propositional causal theories into logic
-programming paved the way to the use of answer set solvers for answering
-queries about actions described in such languages. In this paper we extend this
-embedding to nondefinite theories and to first-order causal logic.
+  Nonmonotonic causal logic, introduced by Norman McCain and Hudson Turner,became a basis for the semantics of several expressive action languages.McCain's embedding of definite propositional causal theories into logicprogramming paved the way to the use of answer set solvers for answeringqueries about actions described in such languages. In this paper we extend thisembedding to nondefinite theories and to first-order causal logic.
 
+Two New Definitions of Stable Models of Logic Programs with Generalized  Quantifiers
 
-Two New Definitions of Stable Models of Logic Programs with Generalized
-  Quantifiers
-
-  We present alternative definitions of the first-order stable model semantics
-and its extension to incorporate generalized quantifiers by referring to the
-familiar notion of a reduct instead of referring to the SM operator in the
-original definitions. Also, we extend the FLP stable model semantics to allow
-generalized quantifiers by referring to an operator that is similar to the
-$\sm$ operator. For a reasonable syntactic class of logic programs, we show
-that the two stable model semantics of generalized quantifiers are
-interchangeable.
-
+  We present alternative definitions of the first-order stable model semanticsand its extension to incorporate generalized quantifiers by referring to thefamiliar notion of a reduct instead of referring to the SM operator in theoriginal definitions. Also, we extend the FLP stable model semantics to allowgeneralized quantifiers by referring to an operator that is similar to the$\sm$ operator. For a reasonable syntactic class of logic programs, we showthat the two stable model semantics of generalized quantifiers areinterchangeable.
 
 Representing Hybrid Automata by Action Language Modulo Theories
 
-  Both hybrid automata and action languages are formalisms for describing the
-evolution of dynamic systems. This paper establishes a formal relationship
-between them. We show how to succinctly represent hybrid automata in an action
-language which in turn is defined as a high-level notation for answer set
-programming modulo theories (ASPMT) --- an extension of answer set programs to
-the first-order level similar to the way satisfiability modulo theories (SMT)
-extends propositional satisfiability (SAT). We first show how to represent
-linear hybrid automata with convex invariants by an action language modulo
-theories. A further translation into SMT allows for computing them using SMT
-solvers that support arithmetic over reals. Next, we extend the representation
-to the general class of non-linear hybrid automata allowing even non-convex
-invariants. We represent them by an action language modulo ODE (Ordinary
-Differential Equations), which can be compiled into satisfiability modulo ODE.
-We developed a prototype system cplus2aspmt based on these translations, which
-allows for a succinct representation of hybrid transition systems that can be
-computed effectively by the state-of-the-art SMT solver dReal.
+  Both hybrid automata and action languages are formalisms for describing theevolution of dynamic systems. This paper establishes a formal relationshipbetween them. We show how to succinctly represent hybrid automata in an actionlanguage which in turn is defined as a high-level notation for answer setprogramming modulo theories (ASPMT) --- an extension of answer set programs tothe first-order level similar to the way satisfiability modulo theories (SMT)extends propositional satisfiability (SAT). We first show how to representlinear hybrid automata with convex invariants by an action language modulotheories. A further translation into SMT allows for computing them using SMTsolvers that support arithmetic over reals. Next, we extend the representationto the general class of non-linear hybrid automata allowing even non-convexinvariants. We represent them by an action language modulo ODE (OrdinaryDifferential Equations), which can be compiled into satisfiability modulo ODE.We developed a prototype system cplus2aspmt based on these translations, whichallows for a succinct representation of hybrid transition systems that can becomputed effectively by the state-of-the-art SMT solver dReal.
 
+Multi-Task Learning with a Fully Convolutional Network for Rectum and  Rectal Cancer Segmentation
 
-Multi-Task Learning with a Fully Convolutional Network for Rectum and
-  Rectal Cancer Segmentation
-
-  In a rectal cancer treatment planning, the location of rectum and rectal
-cancer plays an important role. The aim of this study is to propose a fully
-automatic method to segment both rectum and rectal cancer with axial
-T2-weighted magnetic resonance images. We present a fully convolutional network
-for multi-task learning to segment both rectum and rectal cancer. Moreover, we
-propose an assessment method based on bias-variance decomposition to visualize
-and measure the regional model robustness of a segmentation network. In
-addition, we suggest a novel augmentation method which can improve the
-segmentation performance and reduce the training time. Our proposed method not
-only is computationally efficient due to its fully convolutional nature but
-also outperforms the current state-of-the-art in rectal cancer segmentation. It
-also shows high accuracy in rectum segmentation, for which no previous studies
-exist. We conclude that rectum information benefits the training of rectal
-cancer segmentation model, especially concerning model variance.
-
+  In a rectal cancer treatment planning, the location of rectum and rectalcancer plays an important role. The aim of this study is to propose a fullyautomatic method to segment both rectum and rectal cancer with axialT2-weighted magnetic resonance images. We present a fully convolutional networkfor multi-task learning to segment both rectum and rectal cancer. Moreover, wepropose an assessment method based on bias-variance decomposition to visualizeand measure the regional model robustness of a segmentation network. Inaddition, we suggest a novel augmentation method which can improve thesegmentation performance and reduce the training time. Our proposed method notonly is computationally efficient due to its fully convolutional nature butalso outperforms the current state-of-the-art in rectal cancer segmentation. Italso shows high accuracy in rectum segmentation, for which no previous studiesexist. We conclude that rectum information benefits the training of rectalcancer segmentation model, especially concerning model variance.
 
 A Functional View of Strong Negation in Answer Set Programming
 
-  The distinction between strong negation and default negation has been useful
-in answer set programming. We present an alternative account of strong
-negation, which lets us view strong negation in terms of the functional stable
-model semantics by Bartholomew and Lee. More specifically, we show that, under
-complete interpretations, minimizing both positive and negative literals in the
-traditional answer set semantics is essentially the same as ensuring the
-uniqueness of Boolean function values under the functional stable model
-semantics. The same account lets us view Lifschitz's two-valued logic programs
-as a special case of the functional stable model semantics. In addition, we
-show how non-Boolean intensional functions can be eliminated in favor of
-Boolean intensional functions, and furthermore can be represented using strong
-negation, which provides a way to compute the functional stable model semantics
-using existing ASP solvers. We also note that similar results hold with the
-functional stable model semantics by Cabalar.
-
+  The distinction between strong negation and default negation has been usefulin answer set programming. We present an alternative account of strongnegation, which lets us view strong negation in terms of the functional stablemodel semantics by Bartholomew and Lee. More specifically, we show that, undercomplete interpretations, minimizing both positive and negative literals in thetraditional answer set semantics is essentially the same as ensuring theuniqueness of Boolean function values under the functional stable modelsemantics. The same account lets us view Lifschitz's two-valued logic programsas a special case of the functional stable model semantics. In addition, weshow how non-Boolean intensional functions can be eliminated in favor ofBoolean intensional functions, and furthermore can be represented using strongnegation, which provides a way to compute the functional stable model semanticsusing existing ASP solvers. We also note that similar results hold with thefunctional stable model semantics by Cabalar.
 

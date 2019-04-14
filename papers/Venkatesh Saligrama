@@ -1,935 +1,200 @@
-Deterministic Designs with Deterministic Guarantees: Toeplitz Compressed
-  Sensing Matrices, Sequence Designs and System Identification
+Deterministic Designs with Deterministic Guarantees: Toeplitz Compressed  Sensing Matrices, Sequence Designs and System Identification
 
-  In this paper we present a new family of discrete sequences having "random
-like" uniformly decaying auto-correlation properties. The new class of infinite
-length sequences are higher order chirps constructed using irrational numbers.
-Exploiting results from the theory of continued fractions and diophantine
-approximations, we show that the class of sequences so formed has the property
-that the worst-case auto-correlation coefficients for every finite length
-sequence decays at a polynomial rate. These sequences display doppler immunity
-as well. We also show that Toeplitz matrices formed from such sequences satisfy
-restricted-isometry-property (RIP), a concept that has played a central role
-recently in Compressed Sensing applications. Compressed sensing has
-conventionally dealt with sensing matrices with arbitrary components.
-Nevertheless, such arbitrary sensing matrices are not appropriate for linear
-system identification and one must employ Toeplitz structured sensing matrices.
-Linear system identification plays a central role in a wide variety of
-applications such as channel estimation for multipath wireless systems as well
-as control system applications. Toeplitz matrices are also desirable on account
-of their filtering structure, which allows for fast implementation together
-with reduced storage requirements.
+  In this paper we present a new family of discrete sequences having "randomlike" uniformly decaying auto-correlation properties. The new class of infinitelength sequences are higher order chirps constructed using irrational numbers.Exploiting results from the theory of continued fractions and diophantineapproximations, we show that the class of sequences so formed has the propertythat the worst-case auto-correlation coefficients for every finite lengthsequence decays at a polynomial rate. These sequences display doppler immunityas well. We also show that Toeplitz matrices formed from such sequences satisfyrestricted-isometry-property (RIP), a concept that has played a central rolerecently in Compressed Sensing applications. Compressed sensing hasconventionally dealt with sensing matrices with arbitrary components.Nevertheless, such arbitrary sensing matrices are not appropriate for linearsystem identification and one must employ Toeplitz structured sensing matrices.Linear system identification plays a central role in a wide variety ofapplications such as channel estimation for multipath wireless systems as wellas control system applications. Toeplitz matrices are also desirable on accountof their filtering structure, which allows for fast implementation togetherwith reduced storage requirements.
 
+RAPID: Rapidly Accelerated Proximal Gradient Algorithms for Convex  Minimization
 
-RAPID: Rapidly Accelerated Proximal Gradient Algorithms for Convex
-  Minimization
-
-  In this paper, we propose a new algorithm to speed-up the convergence of
-accelerated proximal gradient (APG) methods. In order to minimize a convex
-function $f(\mathbf{x})$, our algorithm introduces a simple line search step
-after each proximal gradient step in APG so that a biconvex function
-$f(\theta\mathbf{x})$ is minimized over scalar variable $\theta>0$ while fixing
-variable $\mathbf{x}$. We propose two new ways of constructing the auxiliary
-variables in APG based on the intermediate solutions of the proximal gradient
-and the line search steps. We prove that at arbitrary iteration step $t
-(t\geq1)$, our algorithm can achieve a smaller upper-bound for the gap between
-the current and optimal objective values than those in the traditional APG
-methods such as FISTA, making it converge faster in practice. In fact, our
-algorithm can be potentially applied to many important convex optimization
-problems, such as sparse linear regression and kernel SVMs. Our experimental
-results clearly demonstrate that our algorithm converges faster than APG in all
-of the applications above, even comparable to some sophisticated solvers.
-
-
-Learning Minimum Volume Sets and Anomaly Detectors from KNN Graphs
-
-  We propose a non-parametric anomaly detection algorithm for high dimensional
-data. We first rank scores derived from nearest neighbor graphs on $n$-point
-nominal training data. We then train limited complexity models to imitate these
-scores based on the max-margin learning-to-rank framework. A test-point is
-declared as an anomaly at $\alpha$-false alarm level if the predicted score is
-in the $\alpha$-percentile. The resulting anomaly detector is shown to be
-asymptotically optimal in that for any false alarm rate $\alpha$, its decision
-region converges to the $\alpha$-percentile minimum volume level set of the
-unknown underlying density. In addition, we test both the statistical
-performance and computational efficiency of our algorithm on a number of
-synthetic and real-data experiments. Our results demonstrate the superiority of
-our algorithm over existing $K$-NN based anomaly detection algorithms, with
-significant computational savings.
-
+  In this paper, we propose a new algorithm to speed-up the convergence ofaccelerated proximal gradient (APG) methods. In order to minimize a convexfunction $f(\mathbf{x})$, our algorithm introduces a simple line search stepafter each proximal gradient step in APG so that a biconvex function$f(\theta\mathbf{x})$ is minimized over scalar variable $\theta>0$ while fixingvariable $\mathbf{x}$. We propose two new ways of constructing the auxiliaryvariables in APG based on the intermediate solutions of the proximal gradientand the line search steps. We prove that at arbitrary iteration step $t(t\geq1)$, our algorithm can achieve a smaller upper-bound for the gap betweenthe current and optimal objective values than those in the traditional APGmethods such as FISTA, making it converge faster in practice. In fact, ouralgorithm can be potentially applied to many important convex optimizationproblems, such as sparse linear regression and kernel SVMs. Our experimentalresults clearly demonstrate that our algorithm converges faster than APG in allof the applications above, even comparable to some sophisticated solvers.
 
 Learning Efficient Anomaly Detectors from $K$-NN Graphs
 
-  We propose a non-parametric anomaly detection algorithm for high dimensional
-data. We score each datapoint by its average $K$-NN distance, and rank them
-accordingly. We then train limited complexity models to imitate these scores
-based on the max-margin learning-to-rank framework. A test-point is declared as
-an anomaly at $\alpha$-false alarm level if the predicted score is in the
-$\alpha$-percentile. The resulting anomaly detector is shown to be
-asymptotically optimal in that for any false alarm rate $\alpha$, its decision
-region converges to the $\alpha$-percentile minimum volume level set of the
-unknown underlying density. In addition, we test both the statistical
-performance and computational efficiency of our algorithm on a number of
-synthetic and real-data experiments. Our results demonstrate the superiority of
-our algorithm over existing $K$-NN based anomaly detection algorithms, with
-significant computational savings.
+  We propose a non-parametric anomaly detection algorithm for high dimensionaldata. We score each datapoint by its average $K$-NN distance, and rank themaccordingly. We then train limited complexity models to imitate these scoresbased on the max-margin learning-to-rank framework. A test-point is declared asan anomaly at $\alpha$-false alarm level if the predicted score is in the$\alpha$-percentile. The resulting anomaly detector is shown to beasymptotically optimal in that for any false alarm rate $\alpha$, its decisionregion converges to the $\alpha$-percentile minimum volume level set of theunknown underlying density. In addition, we test both the statisticalperformance and computational efficiency of our algorithm on a number ofsynthetic and real-data experiments. Our results demonstrate the superiority ofour algorithm over existing $K$-NN based anomaly detection algorithms, withsignificant computational savings.
 
+Learning Minimum Volume Sets and Anomaly Detectors from KNN Graphs
+
+  We propose a non-parametric anomaly detection algorithm for high dimensionaldata. We first rank scores derived from nearest neighbor graphs on $n$-pointnominal training data. We then train limited complexity models to imitate thesescores based on the max-margin learning-to-rank framework. A test-point isdeclared as an anomaly at $\alpha$-false alarm level if the predicted score isin the $\alpha$-percentile. The resulting anomaly detector is shown to beasymptotically optimal in that for any false alarm rate $\alpha$, its decisionregion converges to the $\alpha$-percentile minimum volume level set of theunknown underlying density. In addition, we test both the statisticalperformance and computational efficiency of our algorithm on a number ofsynthetic and real-data experiments. Our results demonstrate the superiority ofour algorithm over existing $K$-NN based anomaly detection algorithms, withsignificant computational savings.
 
 Sequential Learning without Feedback
 
-  In many security and healthcare systems a sequence of features/sensors/tests
-are used for detection and diagnosis. Each test outputs a prediction of the
-latent state, and carries with it inherent costs. Our objective is to {\it
-learn} strategies for selecting tests to optimize accuracy \& costs.
-Unfortunately it is often impossible to acquire in-situ ground truth
-annotations and we are left with the problem of unsupervised sensor selection
-(USS). We pose USS as a version of stochastic partial monitoring problem with
-an {\it unusual} reward structure (even noisy annotations are unavailable).
-Unsurprisingly no learner can achieve sublinear regret without further
-assumptions. To this end we propose the notion of weak-dominance. This is a
-condition on the joint probability distribution of test outputs and latent
-state and says that whenever a test is accurate on an example, a later test in
-the sequence is likely to be accurate as well. We empirically verify that weak
-dominance holds on real datasets and prove that it is a maximal condition for
-achieving sublinear regret. We reduce USS to a special case of multi-armed
-bandit problem with side information and develop polynomial time algorithms
-that achieve sublinear regret.
-
+  In many security and healthcare systems a sequence of features/sensors/testsare used for detection and diagnosis. Each test outputs a prediction of thelatent state, and carries with it inherent costs. Our objective is to {\itlearn} strategies for selecting tests to optimize accuracy \& costs.Unfortunately it is often impossible to acquire in-situ ground truthannotations and we are left with the problem of unsupervised sensor selection(USS). We pose USS as a version of stochastic partial monitoring problem withan {\it unusual} reward structure (even noisy annotations are unavailable).Unsurprisingly no learner can achieve sublinear regret without furtherassumptions. To this end we propose the notion of weak-dominance. This is acondition on the joint probability distribution of test outputs and latentstate and says that whenever a test is accurate on an example, a later test inthe sequence is likely to be accurate as well. We empirically verify that weakdominance holds on real datasets and prove that it is a maximal condition forachieving sublinear regret. We reduce USS to a special case of multi-armedbandit problem with side information and develop polynomial time algorithmsthat achieve sublinear regret.
 
 Crowdsourcing with Sparsely Interacting Workers
 
-  We consider estimation of worker skills from worker-task interaction data
-(with unknown labels) for the single-coin crowd-sourcing binary classification
-model in symmetric noise. We define the (worker) interaction graph whose nodes
-are workers and an edge between two nodes indicates whether or not the two
-workers participated in a common task. We show that skills are asymptotically
-identifiable if and only if an appropriate limiting version of the interaction
-graph is irreducible and has odd-cycles. We then formulate a weighted rank-one
-optimization problem to estimate skills based on observations on an
-irreducible, aperiodic interaction graph. We propose a gradient descent scheme
-and show that for such interaction graphs estimates converge asymptotically to
-the global minimum. We characterize noise robustness of the gradient scheme in
-terms of spectral properties of signless Laplacians of the interaction graph.
-We then demonstrate that a plug-in estimator based on the estimated skills
-achieves state-of-art performance on a number of real-world datasets. Our
-results have implications for rank-one matrix completion problem in that
-gradient descent can provably recover $W \times W$ rank-one matrices based on
-$W+1$ off-diagonal observations of a connected graph with a single odd-cycle.
+  We consider estimation of worker skills from worker-task interaction data(with unknown labels) for the single-coin crowd-sourcing binary classificationmodel in symmetric noise. We define the (worker) interaction graph whose nodesare workers and an edge between two nodes indicates whether or not the twoworkers participated in a common task. We show that skills are asymptoticallyidentifiable if and only if an appropriate limiting version of the interactiongraph is irreducible and has odd-cycles. We then formulate a weighted rank-oneoptimization problem to estimate skills based on observations on anirreducible, aperiodic interaction graph. We propose a gradient descent schemeand show that for such interaction graphs estimates converge asymptotically tothe global minimum. We characterize noise robustness of the gradient scheme interms of spectral properties of signless Laplacians of the interaction graph.We then demonstrate that a plug-in estimator based on the estimated skillsachieves state-of-art performance on a number of real-world datasets. Ourresults have implications for rank-one matrix completion problem in thatgradient descent can provably recover $W \times W$ rank-one matrices based on$W+1$ off-diagonal observations of a connected graph with a single odd-cycle.
 
+On the Non-Existence of Unbiased Estimators in Constrained Estimation  Problems
 
-On the Non-Existence of Unbiased Estimators in Constrained Estimation
-  Problems
-
-  We address the problem of existence of unbiased constrained parameter
-estimators. We show that if the constrained set of parameters is compact and
-the hypothesized distributions are absolutely continuous with respect to one
-another, then there exists no unbiased estimator. Weaker conditions for the
-absence of unbiased constrained estimators are also specified. We provide
-several examples which demonstrate the utility of these conditions.
-
+  We address the problem of existence of unbiased constrained parameterestimators. We show that if the constrained set of parameters is compact andthe hypothesized distributions are absolutely continuous with respect to oneanother, then there exists no unbiased estimator. Weaker conditions for theabsence of unbiased constrained estimators are also specified. We provideseveral examples which demonstrate the utility of these conditions.
 
 Comments on the proof of adaptive submodular function minimization
 
-  We point out an issue with Theorem 5 appearing in "Group-based active query
-selection for rapid diagnosis in time-critical situations". Theorem 5 bounds
-the expected number of queries for a greedy algorithm to identify the class of
-an item within a constant factor of optimal. The Theorem is based on
-correctness of a result on minimization of adaptive submodular functions. We
-present an example that shows that a critical step in Theorem A.11 of "Adaptive
-Submodularity: Theory and Applications in Active Learning and Stochastic
-Optimization" is incorrect.
-
+  We point out an issue with Theorem 5 appearing in "Group-based active queryselection for rapid diagnosis in time-critical situations". Theorem 5 boundsthe expected number of queries for a greedy algorithm to identify the class ofan item within a constant factor of optimal. The Theorem is based oncorrectness of a result on minimization of adaptive submodular functions. Wepresent an example that shows that a critical step in Theorem A.11 of "AdaptiveSubmodularity: Theory and Applications in Active Learning and StochasticOptimization" is incorrect.
 
 A Token Based Algorithm to Distributed Computation in Sensor Networks
 
-  We consider distributed algorithms for data aggregation and function
-computation in sensor networks. The algorithms perform pairwise computations
-along edges of an underlying communication graph. A token is associated with
-each sensor node, which acts as a transmission permit. Nodes with active tokens
-have transmission permits; they generate messages at a constant rate and send
-each message to a randomly selected neighbor. By using different strategies to
-control the transmission permits we can obtain tradeoffs between message and
-time complexity. Gossip corresponds to the case when all nodes have permits all
-the time. We study algorithms where permits are revoked after transmission and
-restored upon reception. Examples of such algorithms include Simple-Random
-Walk(SRW), Coalescent-Random-Walk(CRW) and Controlled Flooding(CFLD) and their
-hybrid variants. SRW has a single node permit, which is passed on in the
-network. CRW, initially initially has a permit for each node but these permits
-are revoked gradually. The final result for SRW and CRW resides at a single(or
-few) random node(s) making a direct comparison with GOSSIP difficult. A hybrid
-two-phase algorithm switching from CRW to CFLD at a suitable pre-determined
-time can be employed to achieve consensus. We show that such hybrid variants
-achieve significant gains in both message and time complexity. The per-node
-message complexity for n-node graphs, such as 2D mesh, torii, and Random
-geometric graphs, scales as $O(polylog(n))$ and the corresponding time
-complexity scales as O(n). The reduced per-node message complexity leads to
-reduced energy utilization in sensor networks.
+  We consider distributed algorithms for data aggregation and functioncomputation in sensor networks. The algorithms perform pairwise computationsalong edges of an underlying communication graph. A token is associated witheach sensor node, which acts as a transmission permit. Nodes with active tokenshave transmission permits; they generate messages at a constant rate and sendeach message to a randomly selected neighbor. By using different strategies tocontrol the transmission permits we can obtain tradeoffs between message andtime complexity. Gossip corresponds to the case when all nodes have permits allthe time. We study algorithms where permits are revoked after transmission andrestored upon reception. Examples of such algorithms include Simple-RandomWalk(SRW), Coalescent-Random-Walk(CRW) and Controlled Flooding(CFLD) and theirhybrid variants. SRW has a single node permit, which is passed on in thenetwork. CRW, initially initially has a permit for each node but these permitsare revoked gradually. The final result for SRW and CRW resides at a single(orfew) random node(s) making a direct comparison with GOSSIP difficult. A hybridtwo-phase algorithm switching from CRW to CFLD at a suitable pre-determinedtime can be employed to achieve consensus. We show that such hybrid variantsachieve significant gains in both message and time complexity. The per-nodemessage complexity for n-node graphs, such as 2D mesh, torii, and Randomgeometric graphs, scales as $O(polylog(n))$ and the corresponding timecomplexity scales as O(n). The reduced per-node message complexity leads toreduced energy utilization in sensor networks.
 
+Distributed Detection in Sensor Networks with Limited Range Multi-Modal  Sensors
 
-Distributed Detection in Sensor Networks with Limited Range Multi-Modal
-  Sensors
+  We consider a multi-object detection problem over a sensor network (SNET)with limited range multi-modal sensors. Limited range sensing environmentarises in a sensing field prone to signal attenuation and path losses. Thegeneral problem complements the widely considered decentralized detectionproblem where all sensors observe the same object. In this paper we develop adistributed detection approach based on recent development of the falsediscovery rate (FDR) and the associated BH test procedure. The BH procedure isbased on rank ordering of scalar test statistics. We first develop scalar teststatistics for multidimensional data to handle multi-modal sensor observationsand establish its optimality in terms of the BH procedure. We then propose adistributed algorithm in the ideal case of infinite attenuation foridentification of sensors that are in the immediate vicinity of an object. Wedemonstrate communication message scalability to large SNETs by showing thatthe upper bound on the communication message complexity scales linearly withthe number of sensors that are in the vicinity of objects and is independent ofthe total number of sensors in the SNET. This brings forth an importantprinciple for evaluating the performance of an SNET, namely, the need forscalability of communications and performance with respect to the number ofobjects or events in an SNET irrespective of the network size. We then accountfor finite attenuation by modeling sensor observations as corrupted byuncertain interference arising from distant objects and developing robustextensions to our idealized distributed scheme. The robustness propertiesensure that both the error performance and communication message complexitydegrade gracefully with interference.
 
-  We consider a multi-object detection problem over a sensor network (SNET)
-with limited range multi-modal sensors. Limited range sensing environment
-arises in a sensing field prone to signal attenuation and path losses. The
-general problem complements the widely considered decentralized detection
-problem where all sensors observe the same object. In this paper we develop a
-distributed detection approach based on recent development of the false
-discovery rate (FDR) and the associated BH test procedure. The BH procedure is
-based on rank ordering of scalar test statistics. We first develop scalar test
-statistics for multidimensional data to handle multi-modal sensor observations
-and establish its optimality in terms of the BH procedure. We then propose a
-distributed algorithm in the ideal case of infinite attenuation for
-identification of sensors that are in the immediate vicinity of an object. We
-demonstrate communication message scalability to large SNETs by showing that
-the upper bound on the communication message complexity scales linearly with
-the number of sensors that are in the vicinity of objects and is independent of
-the total number of sensors in the SNET. This brings forth an important
-principle for evaluating the performance of an SNET, namely, the need for
-scalability of communications and performance with respect to the number of
-objects or events in an SNET irrespective of the network size. We then account
-for finite attenuation by modeling sensor observations as corrupted by
-uncertain interference arising from distant objects and developing robust
-extensions to our idealized distributed scheme. The robustness properties
-ensure that both the error performance and communication message complexity
-degrade gracefully with interference.
+Thresholded Basis Pursuit: An LP Algorithm for Achieving Optimal Support  Recovery for Sparse and Approximately Sparse Signals from Noisy Random  Measurements
 
-
-Thresholded Basis Pursuit: An LP Algorithm for Achieving Optimal Support
-  Recovery for Sparse and Approximately Sparse Signals from Noisy Random
-  Measurements
-
-  In this paper we present a linear programming solution for sign pattern
-recovery of a sparse signal from noisy random projections of the signal. We
-consider two types of noise models, input noise, where noise enters before the
-random projection; and output noise, where noise enters after the random
-projection. Sign pattern recovery involves the estimation of sign pattern of a
-sparse signal. Our idea is to pretend that no noise exists and solve the
-noiseless $\ell_1$ problem, namely, $\min \|\beta\|_1 ~ s.t. ~ y=G \beta$ and
-quantizing the resulting solution. We show that the quantized solution
-perfectly reconstructs the sign pattern of a sufficiently sparse signal.
-Specifically, we show that the sign pattern of an arbitrary k-sparse,
-n-dimensional signal $x$ can be recovered with $SNR=\Omega(\log n)$ and
-measurements scaling as $m= \Omega(k \log{n/k})$ for all sparsity levels $k$
-satisfying $0< k \leq \alpha n$, where $\alpha$ is a sufficiently small
-positive constant. Surprisingly, this bound matches the optimal
-\emph{Max-Likelihood} performance bounds in terms of $SNR$, required number of
-measurements, and admissible sparsity level in an order-wise sense. In contrast
-to our results, previous results based on LASSO and Max-Correlation techniques
-either assume significantly larger $SNR$, sublinear sparsity levels or
-restrictive assumptions on signal sets. Our proof technique is based on noisy
-perturbation of the noiseless $\ell_1$ problem, in that, we estimate the
-maximum admissible noise level before sign pattern recovery fails.
-
+  In this paper we present a linear programming solution for sign patternrecovery of a sparse signal from noisy random projections of the signal. Weconsider two types of noise models, input noise, where noise enters before therandom projection; and output noise, where noise enters after the randomprojection. Sign pattern recovery involves the estimation of sign pattern of asparse signal. Our idea is to pretend that no noise exists and solve thenoiseless $\ell_1$ problem, namely, $\min \|\beta\|_1 ~ s.t. ~ y=G \beta$ andquantizing the resulting solution. We show that the quantized solutionperfectly reconstructs the sign pattern of a sufficiently sparse signal.Specifically, we show that the sign pattern of an arbitrary k-sparse,n-dimensional signal $x$ can be recovered with $SNR=\Omega(\log n)$ andmeasurements scaling as $m= \Omega(k \log{n/k})$ for all sparsity levels $k$satisfying $0< k \leq \alpha n$, where $\alpha$ is a sufficiently smallpositive constant. Surprisingly, this bound matches the optimal\emph{Max-Likelihood} performance bounds in terms of $SNR$, required number ofmeasurements, and admissible sparsity level in an order-wise sense. In contrastto our results, previous results based on LASSO and Max-Correlation techniqueseither assume significantly larger $SNR$, sublinear sparsity levels orrestrictive assumptions on signal sets. Our proof technique is based on noisyperturbation of the noiseless $\ell_1$ problem, in that, we estimate themaximum admissible noise level before sign pattern recovery fails.
 
 Compressed Blind De-convolution
 
-  Suppose the signal x is realized by driving a k-sparse signal u through an
-arbitrary unknown stable discrete-linear time invariant system H. These types
-of processes arise naturally in Reflection Seismology. In this paper we are
-interested in several problems: (a) Blind-Deconvolution: Can we recover both
-the filter $H$ and the sparse signal $u$ from noisy measurements? (b)
-Compressive Sensing: Is x compressible in the conventional sense of compressed
-sensing? Namely, can x, u and H be reconstructed from a sparse set of
-measurements. We develop novel L1 minimization methods to solve both cases and
-establish sufficient conditions for exact recovery for the case when the
-unknown system H is auto-regressive (i.e. all pole) of a known order. In the
-compressed sensing/sampling setting it turns out that both H and x can be
-reconstructed from O(k log(n)) measurements under certain technical conditions
-on the support structure of u. Our main idea is to pass x through a linear time
-invariant system G and collect O(k log(n)) sequential measurements. The filter
-G is chosen suitably, namely, its associated Toeplitz matrix satisfies the RIP
-property. We develop a novel LP optimization algorithm and show that both the
-unknown filter H and the sparse input u can be reliably estimated.
-
+  Suppose the signal x is realized by driving a k-sparse signal u through anarbitrary unknown stable discrete-linear time invariant system H. These typesof processes arise naturally in Reflection Seismology. In this paper we areinterested in several problems: (a) Blind-Deconvolution: Can we recover boththe filter $H$ and the sparse signal $u$ from noisy measurements? (b)Compressive Sensing: Is x compressible in the conventional sense of compressedsensing? Namely, can x, u and H be reconstructed from a sparse set ofmeasurements. We develop novel L1 minimization methods to solve both cases andestablish sufficient conditions for exact recovery for the case when theunknown system H is auto-regressive (i.e. all pole) of a known order. In thecompressed sensing/sampling setting it turns out that both H and x can bereconstructed from O(k log(n)) measurements under certain technical conditionson the support structure of u. Our main idea is to pass x through a linear timeinvariant system G and collect O(k log(n)) sequential measurements. The filterG is chosen suitably, namely, its associated Toeplitz matrix satisfies the RIPproperty. We develop a novel LP optimization algorithm and show that both theunknown filter H and the sparse input u can be reliably estimated.
 
 Behavior Subtraction
 
-  Background subtraction has been a driving engine for many computer vision and
-video analytics tasks. Although its many variants exist, they all share the
-underlying assumption that photometric scene properties are either static or
-exhibit temporal stationarity. While this works in some applications, the model
-fails when one is interested in discovering {\it changes in scene dynamics}
-rather than those in a static background; detection of unusual pedestrian and
-motor traffic patterns is but one example. We propose a new model and
-computational framework that address this failure by considering stationary
-scene dynamics as a ``background'' with which observed scene dynamics are
-compared. Central to our approach is the concept of an {\it event}, that we
-define as short-term scene dynamics captured over a time window at a specific
-spatial location in the camera field of view. We compute events by
-time-aggregating motion labels, obtained by background subtraction, as well as
-object descriptors (e.g., object size). Subsequently, we characterize events
-probabilistically, but use a low-memory, low-complexity surrogates in practical
-implementation. Using these surrogates amounts to {\it behavior subtraction}, a
-new algorithm with some surprising properties. As demonstrated here, behavior
-subtraction is an effective tool in anomaly detection and localization. It is
-resilient to spurious background motion, such as one due to camera jitter, and
-is content-blind, i.e., it works equally well on humans, cars, animals, and
-other objects in both uncluttered and highly-cluttered scenes. Clearly,
-treating video as a collection of events rather than colored pixels opens new
-possibilities for video analytics.
-
+  Background subtraction has been a driving engine for many computer vision andvideo analytics tasks. Although its many variants exist, they all share theunderlying assumption that photometric scene properties are either static orexhibit temporal stationarity. While this works in some applications, the modelfails when one is interested in discovering {\it changes in scene dynamics}rather than those in a static background; detection of unusual pedestrian andmotor traffic patterns is but one example. We propose a new model andcomputational framework that address this failure by considering stationaryscene dynamics as a ``background'' with which observed scene dynamics arecompared. Central to our approach is the concept of an {\it event}, that wedefine as short-term scene dynamics captured over a time window at a specificspatial location in the camera field of view. We compute events bytime-aggregating motion labels, obtained by background subtraction, as well asobject descriptors (e.g., object size). Subsequently, we characterize eventsprobabilistically, but use a low-memory, low-complexity surrogates in practicalimplementation. Using these surrogates amounts to {\it behavior subtraction}, anew algorithm with some surprising properties. As demonstrated here, behaviorsubtraction is an effective tool in anomaly detection and localization. It isresilient to spurious background motion, such as one due to camera jitter, andis content-blind, i.e., it works equally well on humans, cars, animals, andother objects in both uncluttered and highly-cluttered scenes. Clearly,treating video as a collection of events rather than colored pixels opens newpossibilities for video analytics.
 
 Boolean Compressed Sensing and Noisy Group Testing
 
-  The fundamental task of group testing is to recover a small distinguished
-subset of items from a large population while efficiently reducing the total
-number of tests (measurements). The key contribution of this paper is in
-adopting a new information-theoretic perspective on group testing problems. We
-formulate the group testing problem as a channel coding/decoding problem and
-derive a single-letter characterization for the total number of tests used to
-identify the defective set. Although the focus of this paper is primarily on
-group testing, our main result is generally applicable to other compressive
-sensing models.
-  The single letter characterization is shown to be order-wise tight for many
-interesting noisy group testing scenarios. Specifically, we consider an
-additive Bernoulli($q$) noise model where we show that, for $N$ items and $K$
-defectives, the number of tests $T$ is $O(\frac{K\log N}{1-q})$ for arbitrarily
-small average error probability and $O(\frac{K^2\log N}{1-q})$ for a worst case
-error criterion. We also consider dilution effects whereby a defective item in
-a positive pool might get diluted with probability $u$ and potentially missed.
-In this case, it is shown that $T$ is $O(\frac{K\log N}{(1-u)^2})$ and
-$O(\frac{K^2\log N}{(1-u)^2})$ for the average and the worst case error
-criteria, respectively. Furthermore, our bounds allow us to verify existing
-known bounds for noiseless group testing including the deterministic noise-free
-case and approximate reconstruction with bounded distortion. Our proof of
-achievability is based on random coding and the analysis of a Maximum
-Likelihood Detector, and our information theoretic lower bound is based on
-Fano's inequality.
-
+  The fundamental task of group testing is to recover a small distinguishedsubset of items from a large population while efficiently reducing the totalnumber of tests (measurements). The key contribution of this paper is inadopting a new information-theoretic perspective on group testing problems. Weformulate the group testing problem as a channel coding/decoding problem andderive a single-letter characterization for the total number of tests used toidentify the defective set. Although the focus of this paper is primarily ongroup testing, our main result is generally applicable to other compressivesensing models.  The single letter characterization is shown to be order-wise tight for manyinteresting noisy group testing scenarios. Specifically, we consider anadditive Bernoulli($q$) noise model where we show that, for $N$ items and $K$defectives, the number of tests $T$ is $O(\frac{K\log N}{1-q})$ for arbitrarilysmall average error probability and $O(\frac{K^2\log N}{1-q})$ for a worst caseerror criterion. We also consider dilution effects whereby a defective item ina positive pool might get diluted with probability $u$ and potentially missed.In this case, it is shown that $T$ is $O(\frac{K\log N}{(1-u)^2})$ and$O(\frac{K^2\log N}{(1-u)^2})$ for the average and the worst case errorcriteria, respectively. Furthermore, our bounds allow us to verify existingknown bounds for noiseless group testing including the deterministic noise-freecase and approximate reconstruction with bounded distortion. Our proof ofachievability is based on random coding and the analysis of a MaximumLikelihood Detector, and our information theoretic lower bound is based onFano's inequality.
 
 Testing Changes in Communities for the Stochastic Block Model
 
-  We introduce the problems of goodness-of-fit and two-sample testing of the
-latent community structure in a 2-community, symmetric, stochastic block model
-(SBM), in the regime where recovery of the structure is difficult. The latter
-problem may be described as follows: let $x,y$ be two latent community
-partitions. Given graphs $G,H$ drawn according to SBMs with partitions $x,y$,
-respectively, we wish to test the hypothesis $x = y$ against $d(x,y) \ge s,$
-for a given Hamming distortion parameter $s \ll n$. Prior work showed that
-`partial' recovery of these partitions up to distortion $s$ with vanishing
-error probability requires that the signal-to-noise ratio $(\mathrm{SNR})$ is
-$\gtrsim C \log (n/s).$ We prove by constructing simple schemes that if $s \gg
-\sqrt{n \log n},$ then these testing problems can be solved even if
-$\mathrm{SNR} = O(1).$ For $s = o(\sqrt{n}),$ and constant order degrees, we
-show via an information-theoretic lower bound that both testing problems
-require $\mathrm{SNR} = \Omega(\log(n)),$ and thus at this scale the na\"{i}ve
-scheme of learning the communities and comparing them is minimax optimal up to
-constant factors. These results are augmented by simulations of goodness-of-fit
-and two-sample testing for standard SBMs as well as for Gaussian Markov random
-fields with underlying SBM structure.
+  We introduce the problems of goodness-of-fit and two-sample testing of thelatent community structure in a 2-community, symmetric, stochastic block model(SBM), in the regime where recovery of the structure is difficult. The latterproblem may be described as follows: let $x,y$ be two latent communitypartitions. Given graphs $G,H$ drawn according to SBMs with partitions $x,y$,respectively, we wish to test the hypothesis $x = y$ against $d(x,y) \ge s,$for a given Hamming distortion parameter $s \ll n$. Prior work showed that`partial' recovery of these partitions up to distortion $s$ with vanishingerror probability requires that the signal-to-noise ratio $(\mathrm{SNR})$ is$\gtrsim C \log (n/s).$ We prove by constructing simple schemes that if $s \gg\sqrt{n \log n},$ then these testing problems can be solved even if$\mathrm{SNR} = O(1).$ For $s = o(\sqrt{n}),$ and constant order degrees, weshow via an information-theoretic lower bound that both testing problemsrequire $\mathrm{SNR} = \Omega(\log(n)),$ and thus at this scale the na\"{i}vescheme of learning the communities and comparing them is minimax optimal up toconstant factors. These results are augmented by simulations of goodness-of-fitand two-sample testing for standard SBMs as well as for Gaussian Markov randomfields with underlying SBM structure.
 
+Wireless ad-hoc networks: Strategies and Scaling laws for the fixed SNR  regime
 
-Wireless ad-hoc networks: Strategies and Scaling laws for the fixed SNR
-  regime
-
-  This paper deals with throughput scaling laws for random ad-hoc wireless
-networks in a rich scattering environment. We develop schemes to optimize the
-ratio, $\rho(n)$ of achievable network sum capacity to the sum of the
-point-to-point capacities of source-destinations pairs operating in isolation.
-For fixed SNR networks, i.e., where the worst case SNR over the
-source-destination pairs is fixed independent of $n$, we show that
-collaborative strategies yield a scaling law of $\rho(n) = {\cal
-O}(\frac{1}{n^{1/3}})$ in contrast to multi-hop strategies which yield a
-scaling law of $\rho(n) = {\cal O}(\frac{1}{\sqrt{n}})$. While, networks where
-worst case SNR goes to zero, do not preclude the possibility of collaboration,
-multi-hop strategies achieve optimal throughput. The plausible reason is that
-the gains due to collaboration cannot offset the effect of vanishing receive
-SNR. This suggests that for fixed SNR networks, a network designer should look
-for network protocols that exploit collaboration. The fact that most current
-networks operate in a fixed SNR interference limited environment provides
-further motivation for considering this regime.
-
+  This paper deals with throughput scaling laws for random ad-hoc wirelessnetworks in a rich scattering environment. We develop schemes to optimize theratio, $\rho(n)$ of achievable network sum capacity to the sum of thepoint-to-point capacities of source-destinations pairs operating in isolation.For fixed SNR networks, i.e., where the worst case SNR over thesource-destination pairs is fixed independent of $n$, we show thatcollaborative strategies yield a scaling law of $\rho(n) = {\calO}(\frac{1}{n^{1/3}})$ in contrast to multi-hop strategies which yield ascaling law of $\rho(n) = {\cal O}(\frac{1}{\sqrt{n}})$. While, networks whereworst case SNR goes to zero, do not preclude the possibility of collaboration,multi-hop strategies achieve optimal throughput. The plausible reason is thatthe gains due to collaboration cannot offset the effect of vanishing receiveSNR. This suggests that for fixed SNR networks, a network designer should lookfor network protocols that exploit collaboration. The fact that most currentnetworks operate in a fixed SNR interference limited environment providesfurther motivation for considering this regime.
 
 Anomaly Detection with Score functions based on Nearest Neighbor Graphs
 
-  We propose a novel non-parametric adaptive anomaly detection algorithm for
-high dimensional data based on score functions derived from nearest neighbor
-graphs on $n$-point nominal data. Anomalies are declared whenever the score of
-a test sample falls below $\alpha$, which is supposed to be the desired false
-alarm level. The resulting anomaly detector is shown to be asymptotically
-optimal in that it is uniformly most powerful for the specified false alarm
-level, $\alpha$, for the case when the anomaly density is a mixture of the
-nominal and a known density. Our algorithm is computationally efficient, being
-linear in dimension and quadratic in data size. It does not require choosing
-complicated tuning parameters or function approximation classes and it can
-adapt to local structure such as local change in dimensionality. We demonstrate
-the algorithm on both artificial and real data sets in high dimensional feature
-spaces.
+  We propose a novel non-parametric adaptive anomaly detection algorithm forhigh dimensional data based on score functions derived from nearest neighborgraphs on $n$-point nominal data. Anomalies are declared whenever the score ofa test sample falls below $\alpha$, which is supposed to be the desired falsealarm level. The resulting anomaly detector is shown to be asymptoticallyoptimal in that it is uniformly most powerful for the specified false alarmlevel, $\alpha$, for the case when the anomaly density is a mixture of thenominal and a known density. Our algorithm is computationally efficient, beinglinear in dimension and quadratic in data size. It does not require choosingcomplicated tuning parameters or function approximation classes and it canadapt to local structure such as local change in dimensionality. We demonstratethe algorithm on both artificial and real data sets in high dimensional featurespaces.
 
+Non-adaptive probabilistic group testing with noisy measurements:  Near-optimal bounds with efficient algorithms
 
-Non-adaptive probabilistic group testing with noisy measurements:
-  Near-optimal bounds with efficient algorithms
-
-  We consider the problem of detecting a small subset of defective items from a
-large set via non-adaptive "random pooling" group tests. We consider both the
-case when the measurements are noiseless, and the case when the measurements
-are noisy (the outcome of each group test may be independently faulty with
-probability q). Order-optimal results for these scenarios are known in the
-literature. We give information-theoretic lower bounds on the query complexity
-of these problems, and provide corresponding computationally efficient
-algorithms that match the lower bounds up to a constant factor. To the best of
-our knowledge this work is the first to explicitly estimate such a constant
-that characterizes the gap between the upper and lower bounds for these
-problems.
-
-
-Graph-based Learning with Unbalanced Clusters
-
-  Graph construction is a crucial step in spectral clustering (SC) and
-graph-based semi-supervised learning (SSL). Spectral methods applied on
-standard graphs such as full-RBF, $\epsilon$-graphs and $k$-NN graphs can lead
-to poor performance in the presence of proximal and unbalanced data. This is
-because spectral methods based on minimizing RatioCut or normalized cut on
-these graphs tend to put more importance on balancing cluster sizes over
-reducing cut values. We propose a novel graph construction technique and show
-that the RatioCut solution on this new graph is able to handle proximal and
-unbalanced data. Our method is based on adaptively modulating the neighborhood
-degrees in a $k$-NN graph, which tends to sparsify neighborhoods in low density
-regions. Our method adapts to data with varying levels of unbalancedness and
-can be naturally used for small cluster detection. We justify our ideas through
-limit cut analysis. Unsupervised and semi-supervised experiments on synthetic
-and real data sets demonstrate the superiority of our method.
-
-
-Spectral Clustering with Unbalanced Data
-
-  Spectral clustering (SC) and graph-based semi-supervised learning (SSL)
-algorithms are sensitive to how graphs are constructed from data. In particular
-if the data has proximal and unbalanced clusters these algorithms can lead to
-poor performance on well-known graphs such as $k$-NN, full-RBF,
-$\epsilon$-graphs. This is because the objectives such as Ratio-Cut (RCut) or
-normalized cut (NCut) attempt to tradeoff cut values with cluster sizes, which
-are not tailored to unbalanced data. We propose a novel graph partitioning
-framework, which parameterizes a family of graphs by adaptively modulating node
-degrees in a $k$-NN graph. We then propose a model selection scheme to choose
-sizable clusters which are separated by smallest cut values. Our framework is
-able to adapt to varying levels of unbalancedness of data and can be naturally
-used for small cluster detection. We theoretically justify our ideas through
-limit cut analysis. Unsupervised and semi-supervised experiments on synthetic
-and real data sets demonstrate the superiority of our method.
-
-
-Topic Discovery through Data Dependent and Random Projections
-
-  We present algorithms for topic modeling based on the geometry of
-cross-document word-frequency patterns. This perspective gains significance
-under the so called separability condition. This is a condition on existence of
-novel-words that are unique to each topic. We present a suite of highly
-efficient algorithms based on data-dependent and random projections of
-word-frequency patterns to identify novel words and associated topics. We will
-also discuss the statistical guarantees of the data-dependent projections
-method based on two mild assumptions on the prior density of topic document
-matrix. Our key insight here is that the maximum and minimum values of
-cross-document frequency patterns projected along any direction are associated
-with novel words. While our sample complexity bounds for topic recovery are
-similar to the state-of-art, the computational complexity of our random
-projection scheme scales linearly with the number of documents and the number
-of words per document. We present several experiments on synthetic and
-real-world datasets to demonstrate qualitative and quantitative merits of our
-scheme.
-
-
-Near-Optimal Stochastic Threshold Group Testing
-
-  We formulate and analyze a stochastic threshold group testing problem
-motivated by biological applications. Here a set of $n$ items contains a subset
-of $d \ll n$ defective items. Subsets (pools) of the $n$ items are tested --
-the test outcomes are negative, positive, or stochastic (negative or positive
-with certain probabilities that might depend on the number of defectives being
-tested in the pool), depending on whether the number of defective items in the
-pool being tested are fewer than the {\it lower threshold} $l$, greater than
-the {\it upper threshold} $u$, or in between. The goal of a {\it stochastic
-threshold group testing} scheme is to identify the set of $d$ defective items
-via a "small" number of such tests. In the regime that $l = o(d)$ we present
-schemes that are computationally feasible to design and implement, and require
-near-optimal number of tests (significantly improving on existing schemes). Our
-schemes are robust to a variety of models for probabilistic threshold group
-testing.
-
-
-Necessary and Sufficient Conditions for Novel Word Detection in
-  Separable Topic Models
-
-  The simplicial condition and other stronger conditions that imply it have
-recently played a central role in developing polynomial time algorithms with
-provable asymptotic consistency and sample complexity guarantees for topic
-estimation in separable topic models. Of these algorithms, those that rely
-solely on the simplicial condition are impractical while the practical ones
-need stronger conditions. In this paper, we demonstrate, for the first time,
-that the simplicial condition is a fundamental, algorithm-independent,
-information-theoretic necessary condition for consistent separable topic
-estimation. Furthermore, under solely the simplicial condition, we present a
-practical quadratic-complexity algorithm based on random projections which
-consistently detects all novel words of all topics using only up to
-second-order empirical word moments. This algorithm is amenable to distributed
-implementation making it attractive for 'big-data' scenarios involving a
-network of large distributed databases.
-
+  We consider the problem of detecting a small subset of defective items from alarge set via non-adaptive "random pooling" group tests. We consider both thecase when the measurements are noiseless, and the case when the measurementsare noisy (the outcome of each group test may be independently faulty withprobability q). Order-optimal results for these scenarios are known in theliterature. We give information-theoretic lower bounds on the query complexityof these problems, and provide corresponding computationally efficientalgorithms that match the lower bounds up to a constant factor. To the best ofour knowledge this work is the first to explicitly estimate such a constantthat characterizes the gap between the upper and lower bounds for theseproblems.
 
 Structural Similarity and Distance in Learning
 
-  We propose a novel method of introducing structure into existing machine
-learning techniques by developing structure-based similarity and distance
-measures. To learn structural information, low-dimensional structure of the
-data is captured by solving a non-linear, low-rank representation problem. We
-show that this low-rank representation can be kernelized, has a closed-form
-solution, allows for separation of independent manifolds, and is robust to
-noise. From this representation, similarity between observations based on
-non-linear structure is computed and can be incorporated into existing feature
-transformations, dimensionality reduction techniques, and machine learning
-methods. Experimental results on both synthetic and real data sets show
-performance improvements for clustering, and anomaly detection through the use
-of structural similarity.
-
-
-A New Geometric Approach to Latent Topic Modeling and Discovery
-
-  A new geometrically-motivated algorithm for nonnegative matrix factorization
-is developed and applied to the discovery of latent "topics" for text and image
-"document" corpora. The algorithm is based on robustly finding and clustering
-extreme points of empirical cross-document word-frequencies that correspond to
-novel "words" unique to each topic. In contrast to related approaches that are
-based on solving non-convex optimization problems using suboptimal
-approximations, locally-optimal methods, or heuristics, the new algorithm is
-convex, has polynomial complexity, and has competitive qualitative and
-quantitative performance compared to the current state-of-the-art approaches on
-synthetic and real-world datasets.
-
-
-A Rank-SVM Approach to Anomaly Detection
-
-  We propose a novel non-parametric adaptive anomaly detection algorithm for
-high dimensional data based on rank-SVM. Data points are first ranked based on
-scores derived from nearest neighbor graphs on n-point nominal data. We then
-train a rank-SVM using this ranked data. A test-point is declared as an anomaly
-at alpha-false alarm level if the predicted score is in the alpha-percentile.
-The resulting anomaly detector is shown to be asymptotically optimal and
-adaptive in that for any false alarm rate alpha, its decision region converges
-to the alpha-percentile level set of the unknown underlying density. In
-addition we illustrate through a number of synthetic and real-data experiments
-both the statistical performance and computational efficiency of our anomaly
-detector.
-
-
-A Novel Visual Word Co-occurrence Model for Person Re-identification
-
-  Person re-identification aims to maintain the identity of an individual in
-diverse locations through different non-overlapping camera views. The problem
-is fundamentally challenging due to appearance variations resulting from
-differing poses, illumination and configurations of camera views. To deal with
-these difficulties, we propose a novel visual word co-occurrence model. We
-first map each pixel of an image to a visual word using a codebook, which is
-learned in an unsupervised manner. The appearance transformation between camera
-views is encoded by a co-occurrence matrix of visual word joint distributions
-in probe and gallery images. Our appearance model naturally accounts for
-spatial similarities and variations caused by pose, illumination &
-configuration change across camera views. Linear SVMs are then trained as
-classifiers using these co-occurrence descriptors. On the VIPeR and CUHK Campus
-benchmark datasets, our method achieves 83.86% and 85.49% at rank-15 on the
-Cumulative Match Characteristic (CMC) curves, and beats the state-of-the-art
-results by 10.44% and 22.27%.
-
-
-A Topic Modeling Approach to Ranking
-
-  We propose a topic modeling approach to the prediction of preferences in
-pairwise comparisons. We develop a new generative model for pairwise
-comparisons that accounts for multiple shared latent rankings that are
-prevalent in a population of users. This new model also captures inconsistent
-user behavior in a natural way. We show how the estimation of latent rankings
-in the new generative model can be formally reduced to the estimation of topics
-in a statistically equivalent topic modeling problem. We leverage recent
-advances in the topic modeling literature to develop an algorithm that can
-learn shared latent rankings with provable consistency as well as sample and
-computational complexity guarantees. We demonstrate that the new approach is
-empirically competitive with the current state-of-the-art approaches in
-predicting preferences on some semi-synthetic and real world datasets.
-
-
-Learning Mixed Membership Mallows Models from Pairwise Comparisons
-
-  We propose a novel parameterized family of Mixed Membership Mallows Models
-(M4) to account for variability in pairwise comparisons generated by a
-heterogeneous population of noisy and inconsistent users. M4 models individual
-preferences as a user-specific probabilistic mixture of shared latent Mallows
-components. Our key algorithmic insight for estimation is to establish a
-statistical connection between M4 and topic models by viewing pairwise
-comparisons as words, and users as documents. This key insight leads us to
-explore Mallows components with a separable structure and leverage recent
-advances in separable topic discovery. While separability appears to be overly
-restrictive, we nevertheless show that it is an inevitable outcome of a
-relatively small number of latent Mallows components in a world of large number
-of items. We then develop an algorithm based on robust extreme-point
-identification of convex polygons to learn the reference rankings, and is
-provably consistent with polynomial sample complexity guarantees. We
-demonstrate that our new model is empirically competitive with the current
-state-of-the-art approaches in predicting real-world preferences.
-
-
-PRISM: Person Re-Identification via Structured Matching
-
-  Person re-identification (re-id), an emerging problem in visual surveillance,
-deals with maintaining entities of individuals whilst they traverse various
-locations surveilled by a camera network. From a visual perspective re-id is
-challenging due to significant changes in visual appearance of individuals in
-cameras with different pose, illumination and calibration. Globally the
-challenge arises from the need to maintain structurally consistent matches
-among all the individual entities across different camera views. We propose
-PRISM, a structured matching method to jointly account for these challenges. We
-view the global problem as a weighted graph matching problem and estimate edge
-weights by learning to predict them based on the co-occurrences of visual
-patterns in the training examples. These co-occurrence based scores in turn
-account for appearance changes by inferring likely and unlikely visual
-co-occurrences appearing in training instances. We implement PRISM on single
-shot and multi-shot scenarios. PRISM uniformly outperforms state-of-the-art in
-terms of matching rate while being computationally efficient.
-
-
-Resource Constrained Structured Prediction
-
-  We study the problem of structured prediction under test-time budget
-constraints. We propose a novel approach applicable to a wide range of
-structured prediction problems in computer vision and natural language
-processing. Our approach seeks to adaptively generate computationally costly
-features during test-time in order to reduce the computational cost of
-prediction while maintaining prediction performance. We show that training the
-adaptive feature generation system can be reduced to a series of structured
-learning problems, resulting in efficient training using existing structured
-learning algorithms. This framework provides theoretical justification for
-several existing heuristic approaches found in literature. We evaluate our
-proposed adaptive system on two structured prediction tasks, optical character
-recognition (OCR) and dependency parsing and show strong performance in
-reduction of the feature costs without degrading accuracy.
-
-
-Pruning Random Forests for Prediction on a Budget
-
-  We propose to prune a random forest (RF) for resource-constrained prediction.
-We first construct a RF and then prune it to optimize expected feature cost &
-accuracy. We pose pruning RFs as a novel 0-1 integer program with linear
-constraints that encourages feature re-use. We establish total unimodularity of
-the constraint set to prove that the corresponding LP relaxation solves the
-original integer program. We then exploit connections to combinatorial
-optimization and develop an efficient primal-dual algorithm, scalable to large
-datasets. In contrast to our bottom-up approach, which benefits from good RF
-initialization, conventional methods are top-down acquiring features based on
-their utility value and is generally intractable, requiring heuristics.
-Empirically, our pruning algorithm outperforms existing state-of-the-art
-resource-constrained algorithms.
-
-
-Quantifying and Reducing Stereotypes in Word Embeddings
-
-  Machine learning algorithms are optimized to model statistical properties of
-the training data. If the input data reflects stereotypes and biases of the
-broader society, then the output of the learning algorithm also captures these
-stereotypes. In this paper, we initiate the study of gender stereotypes in {\em
-word embedding}, a popular framework to represent text data. As their use
-becomes increasingly common, applications can inadvertently amplify unwanted
-stereotypes. We show across multiple datasets that the embeddings contain
-significant gender stereotypes, especially with regard to professions. We
-created a novel gender analogy task and combined it with crowdsourcing to
-systematically quantify the gender bias in a given embedding. We developed an
-efficient algorithm that reduces gender stereotype using just a handful of
-training examples while preserving the useful geometric properties of the
-embedding. We evaluated our algorithm on several metrics. While we focus on
-male/female stereotypes, our framework may be applicable to other types of
-embedding biases.
-
-
-Sparse Recovery with Linear and Nonlinear Observations: Dependent and
-  Noisy Data
-
-  We formulate sparse support recovery as a salient set identification problem
-and use information-theoretic analyses to characterize the recovery performance
-and sample complexity. We consider a very general model where we are not
-restricted to linear models or specific distributions. We state non-asymptotic
-bounds on recovery probability and a tight mutual information formula for
-sample complexity. We evaluate our bounds for applications such as sparse
-linear regression and explicitly characterize effects of correlation or noisy
-features on recovery performance. We show improvements upon previous work and
-identify gaps between the performance of recovery algorithms and fundamental
-information.
-
-
-Zero-Shot Learning via Joint Latent Similarity Embedding
-
-  Zero-shot recognition (ZSR) deals with the problem of predicting class labels
-for target domain instances based on source domain side information (e.g.
-attributes) of unseen classes. We formulate ZSR as a binary prediction problem.
-Our resulting classifier is class-independent. It takes an arbitrary pair of
-source and target domain instances as input and predicts whether or not they
-come from the same class, i.e. whether there is a match. We model the posterior
-probability of a match since it is a sufficient statistic and propose a latent
-probabilistic model in this context. We develop a joint discriminative learning
-framework based on dictionary learning to jointly learn the parameters of our
-model for both domains, which ultimately leads to our class-independent
-classifier. Many of the existing embedding methods can be viewed as special
-cases of our probabilistic model. On ZSR our method shows 4.90\% improvement
-over the state-of-the-art in accuracy averaged across four benchmark datasets.
-We also adapt ZSR method for zero-shot retrieval and show 22.45\% improvement
-accordingly in mean average precision (mAP).
-
-
-Efficient Training of Very Deep Neural Networks for Supervised Hashing
-
-  In this paper, we propose training very deep neural networks (DNNs) for
-supervised learning of hash codes. Existing methods in this context train
-relatively "shallow" networks limited by the issues arising in back propagation
-(e.e. vanishing gradients) as well as computational efficiency. We propose a
-novel and efficient training algorithm inspired by alternating direction method
-of multipliers (ADMM) that overcomes some of these limitations. Our method
-decomposes the training process into independent layer-wise local updates
-through auxiliary variables. Empirically we observe that our training algorithm
-always converges and its computational complexity is linearly proportional to
-the number of edges in the networks. Empirically we manage to train DNNs with
-64 hidden layers and 1024 nodes per layer for supervised hashing in about 3
-hours using a single GPU. Our proposed very deep supervised hashing (VDSH)
-method significantly outperforms the state-of-the-art on several benchmark
-datasets.
-
-
-Optimally Pruning Decision Tree Ensembles With Feature Cost
-
-  We consider the problem of learning decision rules for prediction with
-feature budget constraint. In particular, we are interested in pruning an
-ensemble of decision trees to reduce expected feature cost while maintaining
-high prediction accuracy for any test example. We propose a novel 0-1 integer
-program formulation for ensemble pruning. Our pruning formulation is general -
-it takes any ensemble of decision trees as input. By explicitly accounting for
-feature-sharing across trees together with accuracy/cost trade-off, our method
-is able to significantly reduce feature cost by pruning subtrees that introduce
-more loss in terms of feature cost than benefit in terms of prediction accuracy
-gain. Theoretically, we prove that a linear programming relaxation produces the
-exact solution of the original integer program. This allows us to use efficient
-convex optimization tools to obtain an optimally pruned ensemble for any given
-budget. Empirically, we see that our pruning algorithm significantly improves
-the performance of the state of the art ensemble method BudgetRF.
-
-
-Field of Groves: An Energy-Efficient Random Forest
-
-  Machine Learning (ML) algorithms, like Convolutional Neural Networks (CNN),
-Support Vector Machines (SVM), etc. have become widespread and can achieve high
-statistical performance. However their accuracy decreases significantly in
-energy-constrained mobile and embedded systems space, where all computations
-need to be completed under a tight energy budget. In this work, we present a
-field of groves (FoG) implementation of random forests (RF) that achieves an
-accuracy comparable to CNNs and SVMs under tight energy budgets. Evaluation of
-the FoG shows that at comparable accuracy it consumes ~1.48x, ~24x, ~2.5x, and
-~34.7x lower energy per classification compared to conventional RF, SVM_RBF ,
-MLP, and CNN, respectively. FoG is ~6.5x less energy efficient than SVM_LR, but
-achieves 18% higher accuracy on average across all considered datasets.
-
-
-Dynamic Model Selection for Prediction Under a Budget
-
-  We present a dynamic model selection approach for resource-constrained
-prediction. Given an input instance at test-time, a gating function identifies
-a prediction model for the input among a collection of models. Our objective is
-to minimize overall average cost without sacrificing accuracy. We learn gating
-and prediction models on fully labeled training data by means of a bottom-up
-strategy. Our novel bottom-up method is a recursive scheme whereby a
-high-accuracy complex model is first trained. Then a low-complexity gating and
-prediction model are subsequently learnt to adaptively approximate the
-high-accuracy model in regions where low-cost models are capable of making
-highly accurate predictions. We pose an empirical loss minimization problem
-with cost constraints to jointly train gating and prediction models. On a
-number of benchmark datasets our method outperforms state-of-the-art achieving
-higher accuracy for the same cost.
-
+  We propose a novel method of introducing structure into existing machinelearning techniques by developing structure-based similarity and distancemeasures. To learn structural information, low-dimensional structure of thedata is captured by solving a non-linear, low-rank representation problem. Weshow that this low-rank representation can be kernelized, has a closed-formsolution, allows for separation of independent manifolds, and is robust tonoise. From this representation, similarity between observations based onnon-linear structure is computed and can be incorporated into existing featuretransformations, dimensionality reduction techniques, and machine learningmethods. Experimental results on both synthetic and real data sets showperformance improvements for clustering, and anomaly detection through the useof structural similarity.
 
 Graph Construction for Learning with Unbalanced Data
 
-  Unbalanced data arises in many learning tasks such as clustering of
-multi-class data, hierarchical divisive clustering and semisupervised learning.
-Graph-based approaches are popular tools for these problems. Graph construction
-is an important aspect of graph-based learning. We show that graph-based
-algorithms can fail for unbalanced data for many popular graphs such as k-NN,
-\epsilon-neighborhood and full-RBF graphs. We propose a novel graph
-construction technique that encodes global statistical information into node
-degrees through a ranking scheme. The rank of a data sample is an estimate of
-its p-value and is proportional to the total number of data samples with
-smaller density. This ranking scheme serves as a surrogate for density; can be
-reliably estimated; and indicates whether a data sample is close to
-valleys/modes. This rank-modulated degree(RMD) scheme is able to significantly
-sparsify the graph near valleys and provides an adaptive way to cope with
-unbalanced data. We then theoretically justify our method through limit cut
-analysis. Unsupervised and semi-supervised experiments on synthetic and real
-data sets demonstrate the superiority of our method.
+  Unbalanced data arises in many learning tasks such as clustering ofmulti-class data, hierarchical divisive clustering and semisupervised learning.Graph-based approaches are popular tools for these problems. Graph constructionis an important aspect of graph-based learning. We show that graph-basedalgorithms can fail for unbalanced data for many popular graphs such as k-NN,\epsilon-neighborhood and full-RBF graphs. We propose a novel graphconstruction technique that encodes global statistical information into nodedegrees through a ranking scheme. The rank of a data sample is an estimate ofits p-value and is proportional to the total number of data samples withsmaller density. This ranking scheme serves as a surrogate for density; can bereliably estimated; and indicates whether a data sample is close tovalleys/modes. This rank-modulated degree(RMD) scheme is able to significantlysparsify the graph near valleys and provides an adaptive way to cope withunbalanced data. We then theoretically justify our method through limit cutanalysis. Unsupervised and semi-supervised experiments on synthetic and realdata sets demonstrate the superiority of our method.
 
+Graph-based Learning with Unbalanced Clusters
+
+  Graph construction is a crucial step in spectral clustering (SC) andgraph-based semi-supervised learning (SSL). Spectral methods applied onstandard graphs such as full-RBF, $\epsilon$-graphs and $k$-NN graphs can leadto poor performance in the presence of proximal and unbalanced data. This isbecause spectral methods based on minimizing RatioCut or normalized cut onthese graphs tend to put more importance on balancing cluster sizes overreducing cut values. We propose a novel graph construction technique and showthat the RatioCut solution on this new graph is able to handle proximal andunbalanced data. Our method is based on adaptively modulating the neighborhooddegrees in a $k$-NN graph, which tends to sparsify neighborhoods in low densityregions. Our method adapts to data with varying levels of unbalancedness andcan be naturally used for small cluster detection. We justify our ideas throughlimit cut analysis. Unsupervised and semi-supervised experiments on syntheticand real data sets demonstrate the superiority of our method.
+
+A New Geometric Approach to Latent Topic Modeling and Discovery
+
+  A new geometrically-motivated algorithm for nonnegative matrix factorizationis developed and applied to the discovery of latent "topics" for text and image"document" corpora. The algorithm is based on robustly finding and clusteringextreme points of empirical cross-document word-frequencies that correspond tonovel "words" unique to each topic. In contrast to related approaches that arebased on solving non-convex optimization problems using suboptimalapproximations, locally-optimal methods, or heuristics, the new algorithm isconvex, has polynomial complexity, and has competitive qualitative andquantitative performance compared to the current state-of-the-art approaches onsynthetic and real-world datasets.
+
+Spectral Clustering with Unbalanced Data
+
+  Spectral clustering (SC) and graph-based semi-supervised learning (SSL)algorithms are sensitive to how graphs are constructed from data. In particularif the data has proximal and unbalanced clusters these algorithms can lead topoor performance on well-known graphs such as $k$-NN, full-RBF,$\epsilon$-graphs. This is because the objectives such as Ratio-Cut (RCut) ornormalized cut (NCut) attempt to tradeoff cut values with cluster sizes, whichare not tailored to unbalanced data. We propose a novel graph partitioningframework, which parameterizes a family of graphs by adaptively modulating nodedegrees in a $k$-NN graph. We then propose a model selection scheme to choosesizable clusters which are separated by smallest cut values. Our framework isable to adapt to varying levels of unbalancedness of data and can be naturallyused for small cluster detection. We theoretically justify our ideas throughlimit cut analysis. Unsupervised and semi-supervised experiments on syntheticand real data sets demonstrate the superiority of our method.
+
+Topic Discovery through Data Dependent and Random Projections
+
+  We present algorithms for topic modeling based on the geometry ofcross-document word-frequency patterns. This perspective gains significanceunder the so called separability condition. This is a condition on existence ofnovel-words that are unique to each topic. We present a suite of highlyefficient algorithms based on data-dependent and random projections ofword-frequency patterns to identify novel words and associated topics. We willalso discuss the statistical guarantees of the data-dependent projectionsmethod based on two mild assumptions on the prior density of topic documentmatrix. Our key insight here is that the maximum and minimum values ofcross-document frequency patterns projected along any direction are associatedwith novel words. While our sample complexity bounds for topic recovery aresimilar to the state-of-art, the computational complexity of our randomprojection scheme scales linearly with the number of documents and the numberof words per document. We present several experiments on synthetic andreal-world datasets to demonstrate qualitative and quantitative merits of ourscheme.
+
+Near-Optimal Stochastic Threshold Group Testing
+
+  We formulate and analyze a stochastic threshold group testing problemmotivated by biological applications. Here a set of $n$ items contains a subsetof $d \ll n$ defective items. Subsets (pools) of the $n$ items are tested --the test outcomes are negative, positive, or stochastic (negative or positivewith certain probabilities that might depend on the number of defectives beingtested in the pool), depending on whether the number of defective items in thepool being tested are fewer than the {\it lower threshold} $l$, greater thanthe {\it upper threshold} $u$, or in between. The goal of a {\it stochasticthreshold group testing} scheme is to identify the set of $d$ defective itemsvia a "small" number of such tests. In the regime that $l = o(d)$ we presentschemes that are computationally feasible to design and implement, and requirenear-optimal number of tests (significantly improving on existing schemes). Ourschemes are robust to a variety of models for probabilistic threshold grouptesting.
 
 Spectral Clustering with Imbalanced Data
 
-  Spectral clustering is sensitive to how graphs are constructed from data
-particularly when proximal and imbalanced clusters are present. We show that
-Ratio-Cut (RCut) or normalized cut (NCut) objectives are not tailored to
-imbalanced data since they tend to emphasize cut sizes over cut values. We
-propose a graph partitioning problem that seeks minimum cut partitions under
-minimum size constraints on partitions to deal with imbalanced data. Our
-approach parameterizes a family of graphs, by adaptively modulating node
-degrees on a fixed node set, to yield a set of parameter dependent cuts
-reflecting varying levels of imbalance. The solution to our problem is then
-obtained by optimizing over these parameters. We present rigorous limit cut
-analysis results to justify our approach. We demonstrate the superiority of our
-method through unsupervised and semi-supervised experiments on synthetic and
-real data sets.
+  Spectral clustering is sensitive to how graphs are constructed from dataparticularly when proximal and imbalanced clusters are present. We show thatRatio-Cut (RCut) or normalized cut (NCut) objectives are not tailored toimbalanced data since they tend to emphasize cut sizes over cut values. Wepropose a graph partitioning problem that seeks minimum cut partitions underminimum size constraints on partitions to deal with imbalanced data. Ourapproach parameterizes a family of graphs, by adaptively modulating nodedegrees on a fixed node set, to yield a set of parameter dependent cutsreflecting varying levels of imbalance. The solution to our problem is thenobtained by optimizing over these parameters. We present rigorous limit cutanalysis results to justify our approach. We demonstrate the superiority of ourmethod through unsupervised and semi-supervised experiments on synthetic andreal data sets.
 
+Necessary and Sufficient Conditions for Novel Word Detection in  Separable Topic Models
+
+  The simplicial condition and other stronger conditions that imply it haverecently played a central role in developing polynomial time algorithms withprovable asymptotic consistency and sample complexity guarantees for topicestimation in separable topic models. Of these algorithms, those that relysolely on the simplicial condition are impractical while the practical onesneed stronger conditions. In this paper, we demonstrate, for the first time,that the simplicial condition is a fundamental, algorithm-independent,information-theoretic necessary condition for consistent separable topicestimation. Furthermore, under solely the simplicial condition, we present apractical quadratic-complexity algorithm based on random projections whichconsistently detects all novel words of all topics using only up tosecond-order empirical word moments. This algorithm is amenable to distributedimplementation making it attractive for 'big-data' scenarios involving anetwork of large distributed databases.
 
 Sensing-Aware Kernel SVM
 
-  We propose a novel approach for designing kernels for support vector machines
-(SVMs) when the class label is linked to the observation through a latent state
-and the likelihood function of the observation given the state (the sensing
-model) is available. We show that the Bayes-optimum decision boundary is a
-hyperplane under a mapping defined by the likelihood function. Combining this
-with the maximum margin principle yields kernels for SVMs that leverage
-knowledge of the sensing model in an optimal way. We derive the optimum kernel
-for the bag-of-words (BoWs) sensing model and demonstrate its superior
-performance over other kernels in document and image classification tasks.
-These results indicate that such optimum sensing-aware kernel SVMs can match
-the performance of rather sophisticated state-of-the-art approaches.
-
+  We propose a novel approach for designing kernels for support vector machines(SVMs) when the class label is linked to the observation through a latent stateand the likelihood function of the observation given the state (the sensingmodel) is available. We show that the Bayes-optimum decision boundary is ahyperplane under a mapping defined by the likelihood function. Combining thiswith the maximum margin principle yields kernels for SVMs that leverageknowledge of the sensing model in an optimal way. We derive the optimum kernelfor the bag-of-words (BoWs) sensing model and demonstrate its superiorperformance over other kernels in document and image classification tasks.These results indicate that such optimum sensing-aware kernel SVMs can matchthe performance of rather sophisticated state-of-the-art approaches.
 
 Information-Theoretic Bounds for Adaptive Sparse Recovery
 
-  We derive an information-theoretic lower bound for sample complexity in
-sparse recovery problems where inputs can be chosen sequentially and
-adaptively. This lower bound is in terms of a simple mutual information
-expression and unifies many different linear and nonlinear observation models.
-Using this formula we derive bounds for adaptive compressive sensing (CS),
-group testing and 1-bit CS problems. We show that adaptivity cannot decrease
-sample complexity in group testing, 1-bit CS and CS with linear sparsity. In
-contrast, we show there might be mild performance gains for CS in the sublinear
-regime. Our unified analysis also allows characterization of gains due to
-adaptivity from a wider perspective on sparse problems.
+  We derive an information-theoretic lower bound for sample complexity insparse recovery problems where inputs can be chosen sequentially andadaptively. This lower bound is in terms of a simple mutual informationexpression and unifies many different linear and nonlinear observation models.Using this formula we derive bounds for adaptive compressive sensing (CS),group testing and 1-bit CS problems. We show that adaptivity cannot decreasesample complexity in group testing, 1-bit CS and CS with linear sparsity. Incontrast, we show there might be mild performance gains for CS in the sublinearregime. Our unified analysis also allows characterization of gains due toadaptivity from a wider perspective on sparse problems.
 
+Sparse Recovery with Linear and Nonlinear Observations: Dependent and  Noisy Data
+
+  We formulate sparse support recovery as a salient set identification problemand use information-theoretic analyses to characterize the recovery performanceand sample complexity. We consider a very general model where we are notrestricted to linear models or specific distributions. We state non-asymptoticbounds on recovery probability and a tight mutual information formula forsample complexity. We evaluate our bounds for applications such as sparselinear regression and explicitly characterize effects of correlation or noisyfeatures on recovery performance. We show improvements upon previous work andidentify gaps between the performance of recovery algorithms and fundamentalinformation.
+
+A Rank-SVM Approach to Anomaly Detection
+
+  We propose a novel non-parametric adaptive anomaly detection algorithm forhigh dimensional data based on rank-SVM. Data points are first ranked based onscores derived from nearest neighbor graphs on n-point nominal data. We thentrain a rank-SVM using this ranked data. A test-point is declared as an anomalyat alpha-false alarm level if the predicted score is in the alpha-percentile.The resulting anomaly detector is shown to be asymptotically optimal andadaptive in that for any false alarm rate alpha, its decision region convergesto the alpha-percentile level set of the unknown underlying density. Inaddition we illustrate through a number of synthetic and real-data experimentsboth the statistical performance and computational efficiency of our anomalydetector.
+
+PRISM: Person Re-Identification via Structured Matching
+
+  Person re-identification (re-id), an emerging problem in visual surveillance,deals with maintaining entities of individuals whilst they traverse variouslocations surveilled by a camera network. From a visual perspective re-id ischallenging due to significant changes in visual appearance of individuals incameras with different pose, illumination and calibration. Globally thechallenge arises from the need to maintain structurally consistent matchesamong all the individual entities across different camera views. We proposePRISM, a structured matching method to jointly account for these challenges. Weview the global problem as a weighted graph matching problem and estimate edgeweights by learning to predict them based on the co-occurrences of visualpatterns in the training examples. These co-occurrence based scores in turnaccount for appearance changes by inferring likely and unlikely visualco-occurrences appearing in training instances. We implement PRISM on singleshot and multi-shot scenarios. PRISM uniformly outperforms state-of-the-art interms of matching rate while being computationally efficient.
+
+A Novel Visual Word Co-occurrence Model for Person Re-identification
+
+  Person re-identification aims to maintain the identity of an individual indiverse locations through different non-overlapping camera views. The problemis fundamentally challenging due to appearance variations resulting fromdiffering poses, illumination and configurations of camera views. To deal withthese difficulties, we propose a novel visual word co-occurrence model. Wefirst map each pixel of an image to a visual word using a codebook, which islearned in an unsupervised manner. The appearance transformation between cameraviews is encoded by a co-occurrence matrix of visual word joint distributionsin probe and gallery images. Our appearance model naturally accounts forspatial similarities and variations caused by pose, illumination &configuration change across camera views. Linear SVMs are then trained asclassifiers using these co-occurrence descriptors. On the VIPeR and CUHK Campusbenchmark datasets, our method achieves 83.86% and 85.49% at rank-15 on theCumulative Match Characteristic (CMC) curves, and beats the state-of-the-artresults by 10.44% and 22.27%.
 
 Efficient Minimax Signal Detection on Graphs
 
-  Several problems such as network intrusion, community detection, and disease
-outbreak can be described by observations attributed to nodes or edges of a
-graph. In these applications presence of intrusion, community or disease
-outbreak is characterized by novel observations on some unknown connected
-subgraph. These problems can be formulated in terms of optimization of suitable
-objectives on connected subgraphs, a problem which is generally computationally
-difficult. We overcome the combinatorics of connectivity by embedding connected
-subgraphs into linear matrix inequalities (LMI). Computationally efficient
-tests are then realized by optimizing convex objective functions subject to
-these LMI constraints. We prove, by means of a novel Euclidean embedding
-argument, that our tests are minimax optimal for exponential family of
-distributions on 1-D and 2-D lattices. We show that internal conductance of the
-connected subgraph family plays a fundamental role in characterizing
-detectability.
+  Several problems such as network intrusion, community detection, and diseaseoutbreak can be described by observations attributed to nodes or edges of agraph. In these applications presence of intrusion, community or diseaseoutbreak is characterized by novel observations on some unknown connectedsubgraph. These problems can be formulated in terms of optimization of suitableobjectives on connected subgraphs, a problem which is generally computationallydifficult. We overcome the combinatorics of connectivity by embedding connectedsubgraphs into linear matrix inequalities (LMI). Computationally efficienttests are then realized by optimizing convex objective functions subject tothese LMI constraints. We prove, by means of a novel Euclidean embeddingargument, that our tests are minimax optimal for exponential family ofdistributions on 1-D and 2-D lattices. We show that internal conductance of theconnected subgraph family plays a fundamental role in characterizingdetectability.
 
+A Topic Modeling Approach to Ranking
+
+  We propose a topic modeling approach to the prediction of preferences inpairwise comparisons. We develop a new generative model for pairwisecomparisons that accounts for multiple shared latent rankings that areprevalent in a population of users. This new model also captures inconsistentuser behavior in a natural way. We show how the estimation of latent rankingsin the new generative model can be formally reduced to the estimation of topicsin a statistically equivalent topic modeling problem. We leverage recentadvances in the topic modeling literature to develop an algorithm that canlearn shared latent rankings with provable consistency as well as sample andcomputational complexity guarantees. We demonstrate that the new approach isempirically competitive with the current state-of-the-art approaches inpredicting preferences on some semi-synthetic and real world datasets.
 
 Max-Cost Discrete Function Evaluation Problem under a Budget
 
-  We propose novel methods for max-cost Discrete Function Evaluation Problem
-(DFEP) under budget constraints. We are motivated by applications such as
-clinical diagnosis where a patient is subjected to a sequence of (possibly
-expensive) tests before a decision is made. Our goal is to develop strategies
-for minimizing max-costs. The problem is known to be NP hard and greedy methods
-based on specialized impurity functions have been proposed. We develop a broad
-class of \emph{admissible} impurity functions that admit monomials, classes of
-polynomials, and hinge-loss functions that allow for flexible impurity design
-with provably optimal approximation bounds. This flexibility is important for
-datasets when max-cost can be overly sensitive to "outliers." Outliers bias
-max-cost to a few examples that require a large number of tests for
-classification. We design admissible functions that allow for accuracy-cost
-trade-off and result in $O(\log n)$ guarantees of the optimal cost among trees
-with corresponding classification accuracy levels.
-
+  We propose novel methods for max-cost Discrete Function Evaluation Problem(DFEP) under budget constraints. We are motivated by applications such asclinical diagnosis where a patient is subjected to a sequence of (possiblyexpensive) tests before a decision is made. Our goal is to develop strategiesfor minimizing max-costs. The problem is known to be NP hard and greedy methodsbased on specialized impurity functions have been proposed. We develop a broadclass of \emph{admissible} impurity functions that admit monomials, classes ofpolynomials, and hinge-loss functions that allow for flexible impurity designwith provably optimal approximation bounds. This flexibility is important fordatasets when max-cost can be overly sensitive to "outliers." Outliers biasmax-cost to a few examples that require a large number of tests forclassification. We design admissible functions that allow for accuracy-costtrade-off and result in $O(\log n)$ guarantees of the optimal cost among treeswith corresponding classification accuracy levels.
 
 Minimax Optimal Sparse Signal Recovery with Poisson Statistics
 
-  We are motivated by problems that arise in a number of applications such as
-Online Marketing and Explosives detection, where the observations are usually
-modeled using Poisson statistics. We model each observation as a Poisson random
-variable whose mean is a sparse linear superposition of known patterns. Unlike
-many conventional problems observations here are not identically distributed
-since they are associated with different sensing modalities. We analyze the
-performance of a Maximum Likelihood (ML) decoder, which for our Poisson setting
-involves a non-linear optimization but yet is computationally tractable. We
-derive fundamental sample complexity bounds for sparse recovery when the
-measurements are contaminated with Poisson noise. In contrast to the
-least-squares linear regression setting with Gaussian noise, we observe that in
-addition to sparsity, the scale of the parameters also fundamentally impacts
-$\ell_2$ error in the Poisson setting. We show tightness of our upper bounds
-both theoretically and experimentally. In particular, we derive a minimax
-matching lower bound on the mean-squared error and show that our constrained ML
-decoder is minimax optimal for this regime.
-
+  We are motivated by problems that arise in a number of applications such asOnline Marketing and Explosives detection, where the observations are usuallymodeled using Poisson statistics. We model each observation as a Poisson randomvariable whose mean is a sparse linear superposition of known patterns. Unlikemany conventional problems observations here are not identically distributedsince they are associated with different sensing modalities. We analyze theperformance of a Maximum Likelihood (ML) decoder, which for our Poisson settinginvolves a non-linear optimization but yet is computationally tractable. Wederive fundamental sample complexity bounds for sparse recovery when themeasurements are contaminated with Poisson noise. In contrast to theleast-squares linear regression setting with Gaussian noise, we observe that inaddition to sparsity, the scale of the parameters also fundamentally impacts$\ell_2$ error in the Poisson setting. We show tightness of our upper boundsboth theoretically and experimentally. In particular, we derive a minimaxmatching lower bound on the mean-squared error and show that our constrained MLdecoder is minimax optimal for this regime.
 
 Feature-Budgeted Random Forest
 
-  We seek decision rules for prediction-time cost reduction, where complete
-data is available for training, but during prediction-time, each feature can
-only be acquired for an additional cost. We propose a novel random forest
-algorithm to minimize prediction error for a user-specified {\it average}
-feature acquisition budget. While random forests yield strong generalization
-performance, they do not explicitly account for feature costs and furthermore
-require low correlation among trees, which amplifies costs. Our random forest
-grows trees with low acquisition cost and high strength based on greedy minimax
-cost-weighted-impurity splits. Theoretically, we establish near-optimal
-acquisition cost guarantees for our algorithm. Empirically, on a number of
-benchmark datasets we demonstrate superior accuracy-cost curves against
-state-of-the-art prediction-time algorithms.
+  We seek decision rules for prediction-time cost reduction, where completedata is available for training, but during prediction-time, each feature canonly be acquired for an additional cost. We propose a novel random forestalgorithm to minimize prediction error for a user-specified {\it average}feature acquisition budget. While random forests yield strong generalizationperformance, they do not explicitly account for feature costs and furthermorerequire low correlation among trees, which amplifies costs. Our random forestgrows trees with low acquisition cost and high strength based on greedy minimaxcost-weighted-impurity splits. Theoretically, we establish near-optimalacquisition cost guarantees for our algorithm. Empirically, on a number ofbenchmark datasets we demonstrate superior accuracy-cost curves againststate-of-the-art prediction-time algorithms.
 
+Learning Mixed Membership Mallows Models from Pairwise Comparisons
+
+  We propose a novel parameterized family of Mixed Membership Mallows Models(M4) to account for variability in pairwise comparisons generated by aheterogeneous population of noisy and inconsistent users. M4 models individualpreferences as a user-specific probabilistic mixture of shared latent Mallowscomponents. Our key algorithmic insight for estimation is to establish astatistical connection between M4 and topic models by viewing pairwisecomparisons as words, and users as documents. This key insight leads us toexplore Mallows components with a separable structure and leverage recentadvances in separable topic discovery. While separability appears to be overlyrestrictive, we nevertheless show that it is an inevitable outcome of arelatively small number of latent Mallows components in a world of large numberof items. We then develop an algorithm based on robust extreme-pointidentification of convex polygons to learn the reference rankings, and isprovably consistent with polynomial sample complexity guarantees. Wedemonstrate that our new model is empirically competitive with the currentstate-of-the-art approaches in predicting real-world preferences.
 
 Cheap Bandits
 
-  We consider stochastic sequential learning problems where the learner can
-observe the \textit{average reward of several actions}. Such a setting is
-interesting in many applications involving monitoring and surveillance, where
-the set of the actions to observe represent some (geographical) area. The
-importance of this setting is that in these applications, it is actually
-\textit{cheaper} to observe average reward of a group of actions rather than
-the reward of a single action. We show that when the reward is \textit{smooth}
-over a given graph representing the neighboring actions, we can maximize the
-cumulative reward of learning while \textit{minimizing the sensing cost}. In
-this paper we propose CheapUCB, an algorithm that matches the regret guarantees
-of the known algorithms for this setting and at the same time guarantees a
-linear cost again over them. As a by-product of our analysis, we establish a
-$\Omega(\sqrt{dT})$ lower bound on the cumulative regret of spectral bandits
-for a class of graphs with effective dimension $d$.
+  We consider stochastic sequential learning problems where the learner canobserve the \textit{average reward of several actions}. Such a setting isinteresting in many applications involving monitoring and surveillance, wherethe set of the actions to observe represent some (geographical) area. Theimportance of this setting is that in these applications, it is actually\textit{cheaper} to observe average reward of a group of actions rather thanthe reward of a single action. We show that when the reward is \textit{smooth}over a given graph representing the neighboring actions, we can maximize thecumulative reward of learning while \textit{minimizing the sensing cost}. Inthis paper we propose CheapUCB, an algorithm that matches the regret guaranteesof the known algorithms for this setting and at the same time guarantees alinear cost again over them. As a by-product of our analysis, we establish a$\Omega(\sqrt{dT})$ lower bound on the cumulative regret of spectral banditsfor a class of graphs with effective dimension $d$.
 
+Necessary and Sufficient Conditions and a Provably Efficient Algorithm  for Separable Topic Discovery
 
-Necessary and Sufficient Conditions and a Provably Efficient Algorithm
-  for Separable Topic Discovery
-
-  We develop necessary and sufficient conditions and a novel provably
-consistent and efficient algorithm for discovering topics (latent factors) from
-observations (documents) that are realized from a probabilistic mixture of
-shared latent factors that have certain properties. Our focus is on the class
-of topic models in which each shared latent factor contains a novel word that
-is unique to that factor, a property that has come to be known as separability.
-Our algorithm is based on the key insight that the novel words correspond to
-the extreme points of the convex hull formed by the row-vectors of a suitably
-normalized word co-occurrence matrix. We leverage this geometric insight to
-establish polynomial computation and sample complexity bounds based on a few
-isotropic random projections of the rows of the normalized word co-occurrence
-matrix. Our proposed random-projections-based algorithm is naturally amenable
-to an efficient distributed implementation and is attractive for modern
-web-scale distributed data mining applications.
-
+  We develop necessary and sufficient conditions and a novel provablyconsistent and efficient algorithm for discovering topics (latent factors) fromobservations (documents) that are realized from a probabilistic mixture ofshared latent factors that have certain properties. Our focus is on the classof topic models in which each shared latent factor contains a novel word thatis unique to that factor, a property that has come to be known as separability.Our algorithm is based on the key insight that the novel words correspond tothe extreme points of the convex hull formed by the row-vectors of a suitablynormalized word co-occurrence matrix. We leverage this geometric insight toestablish polynomial computation and sample complexity bounds based on a fewisotropic random projections of the rows of the normalized word co-occurrencematrix. Our proposed random-projections-based algorithm is naturally amenableto an efficient distributed implementation and is attractive for modernweb-scale distributed data mining applications.
 
 Sensor Selection by Linear Programming
 
-  We learn sensor trees from training data to minimize sensor acquisition costs
-during test time. Our system adaptively selects sensors at each stage if
-necessary to make a confident classification. We pose the problem as empirical
-risk minimization over the choice of trees and node decision rules. We
-decompose the problem, which is known to be intractable, into combinatorial
-(tree structures) and continuous parts (node decision rules) and propose to
-solve them separately. Using training data we greedily solve for the
-combinatorial tree structures and for the continuous part, which is a
-non-convex multilinear objective function, we derive convex surrogate loss
-functions that are piecewise linear. The resulting problem can be cast as a
-linear program and has the advantage of guaranteed convergence, global
-optimality, repeatability and computational efficiency. We show that our
-proposed approach outperforms the state-of-art on a number of benchmark
-datasets.
+  We learn sensor trees from training data to minimize sensor acquisition costsduring test time. Our system adaptively selects sensors at each stage ifnecessary to make a confident classification. We pose the problem as empiricalrisk minimization over the choice of trees and node decision rules. Wedecompose the problem, which is known to be intractable, into combinatorial(tree structures) and continuous parts (node decision rules) and propose tosolve them separately. Using training data we greedily solve for thecombinatorial tree structures and for the continuous part, which is anon-convex multilinear objective function, we derive convex surrogate lossfunctions that are piecewise linear. The resulting problem can be cast as alinear program and has the advantage of guaranteed convergence, globaloptimality, repeatability and computational efficiency. We show that ourproposed approach outperforms the state-of-art on a number of benchmarkdatasets.
 
+Zero-Shot Learning via Semantic Similarity Embedding
+
+  In this paper we consider a version of the zero-shot learning problem whereseen class source and target domain data are provided. The goal duringtest-time is to accurately predict the class label of an unseen target domaininstance based on revealed source domain side information (\eg attributes) forunseen classes. Our method is based on viewing each source or target data as amixture of seen class proportions and we postulate that the mixture patternshave to be similar if the two instances belong to the same unseen class. Thisperspective leads us to learning source/target embedding functions that map anarbitrary source/target domain data into a same semantic space where similaritycan be readily measured. We develop a max-margin framework to learn thesesimilarity functions and jointly optimize parameters by means of crossvalidation. Our test results are compelling, leading to significant improvementin terms of accuracy on most benchmark datasets for zero-shot recognition.
+
+Group Membership Prediction
+
+  The group membership prediction (GMP) problem involves predicting whether ornot a collection of instances share a certain semantic property. For instance,in kinship verification given a collection of images, the goal is to predictwhether or not they share a {\it familial} relationship. In this context wepropose a novel probability model and introduce latent {\em view-specific} and{\em view-shared} random variables to jointly account for the view-specificappearance and cross-view similarities among data instances. Our model positsthat data from each view is independent conditioned on the shared variables.This postulate leads to a parametric probability model that decomposes groupmembership likelihood into a tensor product of data-independent parameters anddata-dependent factors. We propose learning the data-independent parameters ina discriminative way with bilinear classifiers, and test our predictionalgorithm on challenging visual recognition tasks such as multi-camera personre-identification and kinship verification. On most benchmark datasets, ourmethod can significantly outperform the current state-of-the-art.
+
+Efficient Learning by Directed Acyclic Graph For Resource Constrained  Prediction
+
+  We study the problem of reducing test-time acquisition costs inclassification systems. Our goal is to learn decision rules that adaptivelyselect sensors for each example as necessary to make a confident prediction. Wemodel our system as a directed acyclic graph (DAG) where internal nodescorrespond to sensor subsets and decision functions at each node choose whetherto acquire a new sensor or classify using the available measurements. Thisproblem can be naturally posed as an empirical risk minimization over trainingdata. Rather than jointly optimizing such a highly coupled and non-convexproblem over all decision nodes, we propose an efficient algorithm motivated bydynamic programming. We learn node policies in the DAG by reducing the globalobjective to a series of cost sensitive learning problems. Our approach iscomputationally efficient and has proven guarantees of convergence to theoptimal system for a fixed architecture. In addition, we present an extensionto map other budgeted learning problems with large number of sensors to our DAGarchitecture and demonstrate empirical performance exceeding state-of-the-artalgorithms for data composed of both few and many sensors.
+
+Zero-Shot Learning via Joint Latent Similarity Embedding
+
+  Zero-shot recognition (ZSR) deals with the problem of predicting class labelsfor target domain instances based on source domain side information (e.g.attributes) of unseen classes. We formulate ZSR as a binary prediction problem.Our resulting classifier is class-independent. It takes an arbitrary pair ofsource and target domain instances as input and predicts whether or not theycome from the same class, i.e. whether there is a match. We model the posteriorprobability of a match since it is a sufficient statistic and propose a latentprobabilistic model in this context. We develop a joint discriminative learningframework based on dictionary learning to jointly learn the parameters of ourmodel for both domains, which ultimately leads to our class-independentclassifier. Many of the existing embedding methods can be viewed as specialcases of our probabilistic model. On ZSR our method shows 4.90\% improvementover the state-of-the-art in accuracy averaged across four benchmark datasets.We also adapt ZSR method for zero-shot retrieval and show 22.45\% improvementaccordingly in mean average precision (mAP).
+
+Efficient Training of Very Deep Neural Networks for Supervised Hashing
+
+  In this paper, we propose training very deep neural networks (DNNs) forsupervised learning of hash codes. Existing methods in this context trainrelatively "shallow" networks limited by the issues arising in back propagation(e.e. vanishing gradients) as well as computational efficiency. We propose anovel and efficient training algorithm inspired by alternating direction methodof multipliers (ADMM) that overcomes some of these limitations. Our methoddecomposes the training process into independent layer-wise local updatesthrough auxiliary variables. Empirically we observe that our training algorithmalways converges and its computational complexity is linearly proportional tothe number of edges in the networks. Empirically we manage to train DNNs with64 hidden layers and 1024 nodes per layer for supervised hashing in about 3hours using a single GPU. Our proposed very deep supervised hashing (VDSH)method significantly outperforms the state-of-the-art on several benchmarkdatasets.
+
+Optimally Pruning Decision Tree Ensembles With Feature Cost
+
+  We consider the problem of learning decision rules for prediction withfeature budget constraint. In particular, we are interested in pruning anensemble of decision trees to reduce expected feature cost while maintaininghigh prediction accuracy for any test example. We propose a novel 0-1 integerprogram formulation for ensemble pruning. Our pruning formulation is general -it takes any ensemble of decision trees as input. By explicitly accounting forfeature-sharing across trees together with accuracy/cost trade-off, our methodis able to significantly reduce feature cost by pruning subtrees that introducemore loss in terms of feature cost than benefit in terms of prediction accuracygain. Theoretically, we prove that a linear programming relaxation produces theexact solution of the original integer program. This allows us to use efficientconvex optimization tools to obtain an optimally pruned ensemble for any givenbudget. Empirically, we see that our pruning algorithm significantly improvesthe performance of the state of the art ensemble method BudgetRF.
+
+Resource Constrained Structured Prediction
+
+  We study the problem of structured prediction under test-time budgetconstraints. We propose a novel approach applicable to a wide range ofstructured prediction problems in computer vision and natural languageprocessing. Our approach seeks to adaptively generate computationally costlyfeatures during test-time in order to reduce the computational cost ofprediction while maintaining prediction performance. We show that training theadaptive feature generation system can be reduced to a series of structuredlearning problems, resulting in efficient training using existing structuredlearning algorithms. This framework provides theoretical justification forseveral existing heuristic approaches found in literature. We evaluate ourproposed adaptive system on two structured prediction tasks, optical characterrecognition (OCR) and dependency parsing and show strong performance inreduction of the feature costs without degrading accuracy.
+
+Pruning Random Forests for Prediction on a Budget
+
+  We propose to prune a random forest (RF) for resource-constrained prediction.We first construct a RF and then prune it to optimize expected feature cost &accuracy. We pose pruning RFs as a novel 0-1 integer program with linearconstraints that encourages feature re-use. We establish total unimodularity ofthe constraint set to prove that the corresponding LP relaxation solves theoriginal integer program. We then exploit connections to combinatorialoptimization and develop an efficient primal-dual algorithm, scalable to largedatasets. In contrast to our bottom-up approach, which benefits from good RFinitialization, conventional methods are top-down acquiring features based ontheir utility value and is generally intractable, requiring heuristics.Empirically, our pruning algorithm outperforms existing state-of-the-artresource-constrained algorithms.
 

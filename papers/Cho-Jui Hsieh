@@ -1,72 +1,12 @@
-Sparse Inverse Covariance Matrix Estimation Using Quadratic
-  Approximation
+Sparse Inverse Covariance Matrix Estimation Using Quadratic  Approximation
 
-  The L1-regularized Gaussian maximum likelihood estimator (MLE) has been shown
-to have strong statistical guarantees in recovering a sparse inverse covariance
-matrix, or alternatively the underlying graph structure of a Gaussian Markov
-Random Field, from very limited samples. We propose a novel algorithm for
-solving the resulting optimization problem which is a regularized
-log-determinant program. In contrast to recent state-of-the-art methods that
-largely use first order gradient information, our algorithm is based on
-Newton's method and employs a quadratic approximation, but with some
-modifications that leverage the structure of the sparse Gaussian MLE problem.
-We show that our method is superlinearly convergent, and present experimental
-results using synthetic and real-world application data that demonstrate the
-considerable improvements in performance of our method when compared to other
-state-of-the-art methods.
-
+  The L1-regularized Gaussian maximum likelihood estimator (MLE) has been shownto have strong statistical guarantees in recovering a sparse inverse covariancematrix, or alternatively the underlying graph structure of a Gaussian MarkovRandom Field, from very limited samples. We propose a novel algorithm forsolving the resulting optimization problem which is a regularizedlog-determinant program. In contrast to recent state-of-the-art methods thatlargely use first order gradient information, our algorithm is based onNewton's method and employs a quadratic approximation, but with somemodifications that leverage the structure of the sparse Gaussian MLE problem.We show that our method is superlinearly convergent, and present experimentalresults using synthetic and real-world application data that demonstrate theconsiderable improvements in performance of our method when compared to otherstate-of-the-art methods.
 
 A Divide-and-Conquer Solver for Kernel Support Vector Machines
 
-  The kernel support vector machine (SVM) is one of the most widely used
-classification methods; however, the amount of computation required becomes the
-bottleneck when facing millions of samples. In this paper, we propose and
-analyze a novel divide-and-conquer solver for kernel SVMs (DC-SVM). In the
-division step, we partition the kernel SVM problem into smaller subproblems by
-clustering the data, so that each subproblem can be solved independently and
-efficiently. We show theoretically that the support vectors identified by the
-subproblem solution are likely to be support vectors of the entire kernel SVM
-problem, provided that the problem is partitioned appropriately by kernel
-clustering. In the conquer step, the local solutions from the subproblems are
-used to initialize a global coordinate descent solver, which converges quickly
-as suggested by our analysis. By extending this idea, we develop a multilevel
-Divide-and-Conquer SVM algorithm with adaptive clustering and early prediction
-strategy, which outperforms state-of-the-art methods in terms of training
-speed, testing accuracy, and memory usage. As an example, on the covtype
-dataset with half-a-million samples, DC-SVM is 7 times faster than LIBSVM in
-obtaining the exact SVM solution (to within $10^{-6}$ relative error) which
-achieves 96.15% prediction accuracy. Moreover, with our proposed early
-prediction strategy, DC-SVM achieves about 96% accuracy in only 12 minutes,
-which is more than 100 times faster than LIBSVM.
-
+  The kernel support vector machine (SVM) is one of the most widely usedclassification methods; however, the amount of computation required becomes thebottleneck when facing millions of samples. In this paper, we propose andanalyze a novel divide-and-conquer solver for kernel SVMs (DC-SVM). In thedivision step, we partition the kernel SVM problem into smaller subproblems byclustering the data, so that each subproblem can be solved independently andefficiently. We show theoretically that the support vectors identified by thesubproblem solution are likely to be support vectors of the entire kernel SVMproblem, provided that the problem is partitioned appropriately by kernelclustering. In the conquer step, the local solutions from the subproblems areused to initialize a global coordinate descent solver, which converges quicklyas suggested by our analysis. By extending this idea, we develop a multilevelDivide-and-Conquer SVM algorithm with adaptive clustering and early predictionstrategy, which outperforms state-of-the-art methods in terms of trainingspeed, testing accuracy, and memory usage. As an example, on the covtypedataset with half-a-million samples, DC-SVM is 7 times faster than LIBSVM inobtaining the exact SVM solution (to within $10^{-6}$ relative error) whichachieves 96.15% prediction accuracy. Moreover, with our proposed earlyprediction strategy, DC-SVM achieves about 96% accuracy in only 12 minutes,which is more than 100 times faster than LIBSVM.
 
 PU Learning for Matrix Completion
 
-  In this paper, we consider the matrix completion problem when the
-observations are one-bit measurements of some underlying matrix M, and in
-particular the observed samples consist only of ones and no zeros. This problem
-is motivated by modern applications such as recommender systems and social
-networks where only "likes" or "friendships" are observed. The problem of
-learning from only positive and unlabeled examples, called PU
-(positive-unlabeled) learning, has been studied in the context of binary
-classification. We consider the PU matrix completion problem, where an
-underlying real-valued matrix M is first quantized to generate one-bit
-observations and then a subset of positive entries is revealed. Under the
-assumption that M has bounded nuclear norm, we provide recovery guarantees for
-two different observation models: 1) M parameterizes a distribution that
-generates a binary matrix, 2) M is thresholded to obtain a binary matrix. For
-the first case, we propose a "shifted matrix completion" method that recovers M
-using only a subset of indices corresponding to ones, while for the second
-case, we propose a "biased matrix completion" method that recovers the
-(thresholded) binary matrix. Both methods yield strong error bounds --- if M is
-n by n, the Frobenius error is bounded as O(1/((1-rho)n), where 1-rho denotes
-the fraction of ones observed. This implies a sample complexity of O(n\log n)
-ones to achieve a small error, when M is dense and n is large. We extend our
-methods and guarantees to the inductive matrix completion problem, where rows
-and columns of M have associated features. We provide efficient and scalable
-optimization procedures for both the methods and demonstrate the effectiveness
-of the proposed methods for link prediction (on real-world networks consisting
-of over 2 million nodes and 90 million links) and semi-supervised clustering
-tasks.
-
+  In this paper, we consider the matrix completion problem when theobservations are one-bit measurements of some underlying matrix M, and inparticular the observed samples consist only of ones and no zeros. This problemis motivated by modern applications such as recommender systems and socialnetworks where only "likes" or "friendships" are observed. The problem oflearning from only positive and unlabeled examples, called PU(positive-unlabeled) learning, has been studied in the context of binaryclassification. We consider the PU matrix completion problem, where anunderlying real-valued matrix M is first quantized to generate one-bitobservations and then a subset of positive entries is revealed. Under theassumption that M has bounded nuclear norm, we provide recovery guarantees fortwo different observation models: 1) M parameterizes a distribution thatgenerates a binary matrix, 2) M is thresholded to obtain a binary matrix. Forthe first case, we propose a "shifted matrix completion" method that recovers Musing only a subset of indices corresponding to ones, while for the secondcase, we propose a "biased matrix completion" method that recovers the(thresholded) binary matrix. Both methods yield strong error bounds --- if M isn by n, the Frobenius error is bounded as O(1/((1-rho)n), where 1-rho denotesthe fraction of ones observed. This implies a sample complexity of O(n\log n)ones to achieve a small error, when M is dense and n is large. We extend ourmethods and guarantees to the inductive matrix completion problem, where rowsand columns of M have associated features. We provide efficient and scalableoptimization procedures for both the methods and demonstrate the effectivenessof the proposed methods for link prediction (on real-world networks consistingof over 2 million nodes and 90 million links) and semi-supervised clusteringtasks.
 

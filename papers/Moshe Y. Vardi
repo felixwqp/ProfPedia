@@ -1,742 +1,156 @@
 Proceedings of the 4th International Workshop on Strategic Reasoning
 
-  This volume contains the proceedings of the Fourth International Workshop on
-Strategic Reasoning (SR 2016), held in New York City (USA), July 10, 2016. The
-workshop consisted of 2 keynote talks and 9 contributed presentations on themes
-of logic, verification, games and equilibria.
-  More information about the Strategic Workshop series is available at
-http://www.strategicreasoning.net/
-
+  This volume contains the proceedings of the Fourth International Workshop onStrategic Reasoning (SR 2016), held in New York City (USA), July 10, 2016. Theworkshop consisted of 2 keynote talks and 9 contributed presentations on themesof logic, verification, games and equilibria.  More information about the Strategic Workshop series is available athttp://www.strategicreasoning.net/
 
 The Complexity of Synthesis from Probabilistic Components
 
-  The synthesis problem asks for the automatic construction of a system from
-its specification. In the traditional setting, the system is "constructed from
-scratch" rather than composed from reusable components. However, this is rare
-in practice, and almost every non-trivial software system relies heavily on the
-use of libraries of reusable components. Recently, Lustig and Vardi introduced
-dataflow and controlflow synthesis from libraries of reusable components. They
-proved that dataflow synthesis is undecidable, while controlflow synthesis is
-decidable. The problem of controlflow synthesis from libraries of probabilistic
-components was considered by Nain, Lustig and Vardi, and was shown to be
-decidable for qualitative analysis (that asks that the specification be
-satisfied with probability 1). Our main contributions for controlflow synthesis
-from probabilistic components are to establish better complexity bounds for the
-qualitative analysis problem, and to show that the more general quantitative
-problem is undecidable. For the qualitative analysis, we show that the problem
-(i) is EXPTIME-complete when the specification is given as a deterministic
-parity word automaton, improving the previously known 2EXPTIME upper bound; and
-(ii) belongs to UP $\cap$ coUP and is parity-games hard, when the specification
-is given directly as a parity condition on the components, improving the
-previously known EXPTIME upper bound.
-
+  The synthesis problem asks for the automatic construction of a system fromits specification. In the traditional setting, the system is "constructed fromscratch" rather than composed from reusable components. However, this is rarein practice, and almost every non-trivial software system relies heavily on theuse of libraries of reusable components. Recently, Lustig and Vardi introduceddataflow and controlflow synthesis from libraries of reusable components. Theyproved that dataflow synthesis is undecidable, while controlflow synthesis isdecidable. The problem of controlflow synthesis from libraries of probabilisticcomponents was considered by Nain, Lustig and Vardi, and was shown to bedecidable for qualitative analysis (that asks that the specification besatisfied with probability 1). Our main contributions for controlflow synthesisfrom probabilistic components are to establish better complexity bounds for thequalitative analysis problem, and to show that the more general quantitativeproblem is undecidable. For the qualitative analysis, we show that the problem(i) is EXPTIME-complete when the specification is given as a deterministicparity word automaton, improving the previously known 2EXPTIME upper bound; and(ii) belongs to UP $\cap$ coUP and is parity-games hard, when the specificationis given directly as a parity condition on the components, improving thepreviously known EXPTIME upper bound.
 
 SAT-based Explicit LTLf Satisfiability Checking
 
-  We present here a SAT-based framework for LTLf (Linear Temporal Logic on
-Finite Traces) satisfiability checking. We use propositional SAT-solving
-techniques to construct a transition system for the input LTLf formula;
-satisfiability checking is then reduced to a path-search problem over this
-transition system. Furthermore, we introduce CDLSC (Conflict-Driven LTLf
-Satisfiability Checking), a novel algorithm that leverages information produced
-by propositional SAT solvers from both satisfiability and unsatisfiability
-results. Experimental evaluations show that CDLSC outperforms all other
-existing approaches for LTLf satisfiability checking, by demonstrating an
-approximate four-fold speedup compared to the second-best solver.
+  We present here a SAT-based framework for LTLf (Linear Temporal Logic onFinite Traces) satisfiability checking. We use propositional SAT-solvingtechniques to construct a transition system for the input LTLf formula;satisfiability checking is then reduced to a path-search problem over thistransition system. Furthermore, we introduce CDLSC (Conflict-Driven LTLfSatisfiability Checking), a novel algorithm that leverages information producedby propositional SAT solvers from both satisfiability and unsatisfiabilityresults. Experimental evaluations show that CDLSC outperforms all otherexisting approaches for LTLf satisfiability checking, by demonstrating anapproximate four-fold speedup compared to the second-best solver.
 
+A Continuous-Discontinuous Second-Order Transition in the Satisfiability  of Random Horn-SAT Formulas
 
-A Continuous-Discontinuous Second-Order Transition in the Satisfiability
-  of Random Horn-SAT Formulas
-
-  We compute the probability of satisfiability of a class of random Horn-SAT
-formulae, motivated by a connection with the nonemptiness problem of finite
-tree automata. In particular, when the maximum clause length is 3, this model
-displays a curve in its parameter space along which the probability of
-satisfiability is discontinuous, ending in a second-order phase transition
-where it becomes continuous. This is the first case in which a phase transition
-of this type has been rigorously established for a random constraint
-satisfaction problem.
-
+  We compute the probability of satisfiability of a class of random Horn-SATformulae, motivated by a connection with the nonemptiness problem of finitetree automata. In particular, when the maximum clause length is 3, this modeldisplays a curve in its parameter space along which the probability ofsatisfiability is discontinuous, ending in a second-order phase transitionwhere it becomes continuous. This is the first case in which a phase transitionof this type has been rigorously established for a random constraintsatisfaction problem.
 
 Polsat: A Portfolio LTL Satisfiability Solver
 
-  In this paper we present a portfolio LTL-satisfiability solver, called
-Polsat. To achieve fast satisfiability checking for LTL formulas, the tool
-integrates four representative LTL solvers: pltl, TRP++, NuSMV, and Aalta. The
-idea of Polsat is to run the component solvers in parallel to get best overall
-performance; once one of the solvers terminates, it stops all other solvers.
-Remarkably, the Polsat solver utilizes the power of modern multi-core compute
-clusters. The empirical experiments show that Polsat takes advantages of it.
-Further, Polsat is also a testing plat- form for all LTL solvers.
-
+  In this paper we present a portfolio LTL-satisfiability solver, calledPolsat. To achieve fast satisfiability checking for LTL formulas, the toolintegrates four representative LTL solvers: pltl, TRP++, NuSMV, and Aalta. Theidea of Polsat is to run the component solvers in parallel to get best overallperformance; once one of the solvers terminates, it stops all other solvers.Remarkably, the Polsat solver utilizes the power of modern multi-core computeclusters. The empirical experiments show that Polsat takes advantages of it.Further, Polsat is also a testing plat- form for all LTL solvers.
 
 Balancing Scalability and Uniformity in SAT Witness Generator
 
-  Constrained-random simulation is the predominant approach used in the
-industry for functional verification of complex digital designs. The
-effectiveness of this approach depends on two key factors: the quality of
-constraints used to generate test vectors, and the randomness of solutions
-generated from a given set of constraints. In this paper, we focus on the
-second problem, and present an algorithm that significantly improves the
-state-of-the-art of (almost-)uniform generation of solutions of large Boolean
-constraints. Our algorithm provides strong theoretical guarantees on the
-uniformity of generated solutions and scales to problems involving hundreds of
-thousands of variables.
-
+  Constrained-random simulation is the predominant approach used in theindustry for functional verification of complex digital designs. Theeffectiveness of this approach depends on two key factors: the quality ofconstraints used to generate test vectors, and the randomness of solutionsgenerated from a given set of constraints. In this paper, we focus on thesecond problem, and present an algorithm that significantly improves thestate-of-the-art of (almost-)uniform generation of solutions of large Booleanconstraints. Our algorithm provides strong theoretical guarantees on theuniformity of generated solutions and scales to problems involving hundreds ofthousands of variables.
 
 A Decidable Fragment of Strategy Logic
 
-  Strategy Logic (SL, for short) has been recently introduced by Mogavero,
-Murano, and Vardi as a useful formalism for reasoning explicitly about
-strategies, as first-order objects, in multi-agent concurrent games. This logic
-turns to be very powerful, subsuming all major previously studied modal logics
-for strategic reasoning, including ATL, ATL*, and the like. Unfortunately, due
-to its expressiveness, SL has a non-elementarily decidable model-checking
-problem and a highly undecidable satisfiability problem, specifically,
-$\Sigma_{1}^{1}$-Hard. In order to obtain a decidable sublogic, we introduce
-and study here One-Goal Strategy Logic (SL[1G], for short). This logic is a
-syntactic fragment of SL, strictly subsuming ATL*, which encompasses formulas
-in prenex normal form having a single temporal goal at a time, for every
-strategy quantification of agents. SL[1G] is known to have an elementarily
-decidable model-checking problem. Here we prove that, unlike SL, it has the
-bounded tree-model property and its satisfiability problem is decidable in
-2ExpTime, thus not harder than the one for ATL*.
-
+  Strategy Logic (SL, for short) has been recently introduced by Mogavero,Murano, and Vardi as a useful formalism for reasoning explicitly aboutstrategies, as first-order objects, in multi-agent concurrent games. This logicturns to be very powerful, subsuming all major previously studied modal logicsfor strategic reasoning, including ATL, ATL*, and the like. Unfortunately, dueto its expressiveness, SL has a non-elementarily decidable model-checkingproblem and a highly undecidable satisfiability problem, specifically,$\Sigma_{1}^{1}$-Hard. In order to obtain a decidable sublogic, we introduceand study here One-Goal Strategy Logic (SL[1G], for short). This logic is asyntactic fragment of SL, strictly subsuming ATL*, which encompasses formulasin prenex normal form having a single temporal goal at a time, for everystrategy quantification of agents. SL[1G] is known to have an elementarilydecidable model-checking problem. Here we prove that, unlike SL, it has thebounded tree-model property and its satisfiability problem is decidable in2ExpTime, thus not harder than the one for ATL*.
 
 Synthesis from Probabilistic Components
 
-  Synthesis is the automatic construction of a system from its specification.
-In classical synthesis algorithms, it is always assumed that the system is
-"constructed from scratch" rather than composed from reusable components. This,
-of course, rarely happens in real life, where almost every non-trivial
-commercial software system relies heavily on using libraries of reusable
-components. Furthermore, other contexts, such as web-service orchestration, can
-be modeled as synthesis of a system from a library of components. Recently,
-Lustig and Vardi introduced dataflow and control-flow synthesis from libraries
-of reusable components. They proved that dataflow synthesis is undecidable,
-while control-flow synthesis is decidable. In this work, we consider the
-problem of control-flow synthesis from libraries of probabilistic components .
-We show that this more general problem is also decidable.
-
+  Synthesis is the automatic construction of a system from its specification.In classical synthesis algorithms, it is always assumed that the system is"constructed from scratch" rather than composed from reusable components. This,of course, rarely happens in real life, where almost every non-trivialcommercial software system relies heavily on using libraries of reusablecomponents. Furthermore, other contexts, such as web-service orchestration, canbe modeled as synthesis of a system from a library of components. Recently,Lustig and Vardi introduced dataflow and control-flow synthesis from librariesof reusable components. They proved that dataflow synthesis is undecidable,while control-flow synthesis is decidable. In this work, we consider theproblem of control-flow synthesis from libraries of probabilistic components .We show that this more general problem is also decidable.
 
 Reasoning about Strategies: on the Satisfiability Problem
 
-  Strategy Logic (SL, for short) has been introduced by Mogavero, Murano, and
-Vardi as a useful formalism for reasoning explicitly about strategies, as
-first-order objects, in multi-agent concurrent games. This logic turns out to
-be very powerful, subsuming all major previously studied modal logics for
-strategic reasoning, including ATL, ATL*, and the like. Unfortunately, due to
-its high expressiveness, SL has a non-elementarily decidable model-checking
-problem and the satisfiability question is undecidable, specifically Sigma_1^1.
-  In order to obtain a decidable sublogic, we introduce and study here One-Goal
-Strategy Logic (SL[1G], for short). This is a syntactic fragment of SL,
-strictly subsuming ATL*, which encompasses formulas in prenex normal form
-having a single temporal goal at a time, for every strategy quantification of
-agents. We prove that, unlike SL, SL[1G] has the bounded tree-model property
-and its satisfiability problem is decidable in 2ExpTime, thus not harder than
-the one for ATL*.
-
+  Strategy Logic (SL, for short) has been introduced by Mogavero, Murano, andVardi as a useful formalism for reasoning explicitly about strategies, asfirst-order objects, in multi-agent concurrent games. This logic turns out tobe very powerful, subsuming all major previously studied modal logics forstrategic reasoning, including ATL, ATL*, and the like. Unfortunately, due toits high expressiveness, SL has a non-elementarily decidable model-checkingproblem and the satisfiability question is undecidable, specifically Sigma_1^1.  In order to obtain a decidable sublogic, we introduce and study here One-GoalStrategy Logic (SL[1G], for short). This is a syntactic fragment of SL,strictly subsuming ATL*, which encompasses formulas in prenex normal formhaving a single temporal goal at a time, for every strategy quantification ofagents. We prove that, unlike SL, SL[1G] has the bounded tree-model propertyand its satisfiability problem is decidable in 2ExpTime, thus not harder thanthe one for ATL*.
 
 Complete Axiomatizations for Reasoning About Knowledge and Time
 
-  Sound and complete axiomatizations are provided for a number of different
-logics involving modalities for knowledge and time. These logics arise from
-different choices for various parameters. All the logics considered involve the
-discrete time linear temporal logic operators `next' and `until' and an
-operator for the knowledge of each of a number of agents. Both the single agent
-and multiple agent cases are studied: in some instances of the latter there is
-also an operator for the common knowledge of the group of all agents. Four
-different semantic properties of agents are considered: whether they have a
-unique initial state, whether they operate synchronously, whether they have
-perfect recall, and whether they learn. The property of no learning is
-essentially dual to perfect recall. Not all settings of these parameters lead
-to recursively axiomatizable logics, but sound and complete axiomatizations are
-presented for all the ones that do.
-
+  Sound and complete axiomatizations are provided for a number of differentlogics involving modalities for knowledge and time. These logics arise fromdifferent choices for various parameters. All the logics considered involve thediscrete time linear temporal logic operators `next' and `until' and anoperator for the knowledge of each of a number of agents. Both the single agentand multiple agent cases are studied: in some instances of the latter there isalso an operator for the common knowledge of the group of all agents. Fourdifferent semantic properties of agents are considered: whether they have aunique initial state, whether they operate synchronously, whether they haveperfect recall, and whether they learn. The property of no learning isessentially dual to perfect recall. Not all settings of these parameters leadto recursively axiomatizable logics, but sound and complete axiomatizations arepresented for all the ones that do.
 
 Unifying Büchi Complementation Constructions
 
-  Complementation of B\"uchi automata, required for checking automata
-containment, is of major theoretical and practical interest in formal
-verification. We consider two recent approaches to complementation. The first
-is the rank-based approach of Kupferman and Vardi, which operates over a DAG
-that embodies all runs of the automaton. This approach is based on the
-observation that the vertices of this DAG can be ranked in a certain way,
-termed an odd ranking, iff all runs are rejecting. The second is the
-slice-based approach of K\"ahler and Wilke. This approach tracks levels of
-"split trees" - run trees in which only essential information about the history
-of each run is maintained. While the slice-based construction is conceptually
-simple, the complementing automata it generates are exponentially larger than
-those of the recent rank-based construction of Schewe, and it suffers from the
-difficulty of symbolically encoding levels of split trees. In this work we
-reformulate the slice-based approach in terms of run DAGs and preorders over
-states. In doing so, we begin to draw parallels between the rank-based and
-slice-based approaches. Through deeper analysis of the slice-based approach, we
-strongly restrict the nondeterminism it generates. We are then able to employ
-the slice-based approach to provide a new odd ranking, called a retrospective
-ranking, that is different from the one provided by Kupferman and Vardi. This
-new ranking allows us to construct a deterministic-in-the-limit rank-based
-automaton with a highly restricted transition function. Further, by phrasing
-the slice-based approach in terms of ranks, our approach affords a simple
-symbolic encoding and achieves the tight bound of Schewe's construction
-
-
-Proceedings 1st International Workshop on Strategic Reasoning
-
-  This volume contains the proceedings of the 1st International Workshop on
-Strategic Reasoning 2013 (SR 2013), held in Rome (Italy), March 1617, 2013. The
-SR workshop aims to bring together researchers, possibly with different
-backgrounds, working on various aspects of strategic reasoning in computer
-science, both from a theoretical and a practical point of view. This year SR
-has hosted four outstanding invited talks by Krishnendu Chatterjee, Alessio R.
-Lomuscio, Jean-Francois Raskin, and Michael Wooldridge. Moreover, the program
-committee selected 13 papers among the 23 contributions submitted. Almost all
-of them have been revised by three reviews and the contributions have been
-selected according to quality and relevance to the topics of the workshop.
-
-
-A Scalable and Nearly Uniform Generator of SAT Witnesses
-
-  Functional verification constitutes one of the most challenging tasks in the
-development of modern hardware systems, and simulation-based verification
-techniques dominate the functional verification landscape. A dominant paradigm
-in simulation-based verification is directed random testing, where a model of
-the system is simulated with a set of random test stimuli that are uniformly or
-near-uniformly distributed over the space of all stimuli satisfying a given set
-of constraints. Uniform or near-uniform generation of solutions for large
-constraint sets is therefore a problem of theoretical and practical interest.
-For Boolean constraints, prior work offered heuristic approaches with no
-guarantee of performance, and theoretical approaches with proven guarantees,
-but poor performance in practice. We offer here a new approach with theoretical
-performance guarantees and demonstrate its practical utility on large
-constraint sets.
-
+  Complementation of B\"uchi automata, required for checking automatacontainment, is of major theoretical and practical interest in formalverification. We consider two recent approaches to complementation. The firstis the rank-based approach of Kupferman and Vardi, which operates over a DAGthat embodies all runs of the automaton. This approach is based on theobservation that the vertices of this DAG can be ranked in a certain way,termed an odd ranking, iff all runs are rejecting. The second is theslice-based approach of K\"ahler and Wilke. This approach tracks levels of"split trees" - run trees in which only essential information about the historyof each run is maintained. While the slice-based construction is conceptuallysimple, the complementing automata it generates are exponentially larger thanthose of the recent rank-based construction of Schewe, and it suffers from thedifficulty of symbolically encoding levels of split trees. In this work wereformulate the slice-based approach in terms of run DAGs and preorders overstates. In doing so, we begin to draw parallels between the rank-based andslice-based approaches. Through deeper analysis of the slice-based approach, westrongly restrict the nondeterminism it generates. We are then able to employthe slice-based approach to provide a new odd ranking, called a retrospectiveranking, that is different from the one provided by Kupferman and Vardi. Thisnew ranking allows us to construct a deterministic-in-the-limit rank-basedautomaton with a highly restricted transition function. Further, by phrasingthe slice-based approach in terms of ranks, our approach affords a simplesymbolic encoding and achieves the tight bound of Schewe's construction
 
 View Synthesis from Schema Mappings
 
-  In data management, and in particular in data integration, data exchange,
-query optimization, and data privacy, the notion of view plays a central role.
-In several contexts, such as data integration, data mashups, and data
-warehousing, the need arises of designing views starting from a set of known
-correspondences between queries over different schemas. In this paper we deal
-with the issue of automating such a design process. We call this novel problem
-"view synthesis from schema mappings": given a set of schema mappings, each
-relating a query over a source schema to a query over a target schema,
-automatically synthesize for each source a view over the target schema in such
-a way that for each mapping, the query over the source is a rewriting of the
-query over the target wrt the synthesized views. We study view synthesis from
-schema mappings both in the relational setting, where queries and views are
-(unions of) conjunctive queries, and in the semistructured data setting, where
-queries and views are (two-way) regular path queries, as well as unions of
-conjunctions thereof. We provide techniques and complexity upper bounds for
-each of these cases.
+  In data management, and in particular in data integration, data exchange,query optimization, and data privacy, the notion of view plays a central role.In several contexts, such as data integration, data mashups, and datawarehousing, the need arises of designing views starting from a set of knowncorrespondences between queries over different schemas. In this paper we dealwith the issue of automating such a design process. We call this novel problem"view synthesis from schema mappings": given a set of schema mappings, eachrelating a query over a source schema to a query over a target schema,automatically synthesize for each source a view over the target schema in sucha way that for each mapping, the query over the source is a rewriting of thequery over the target wrt the synthesized views. We study view synthesis fromschema mappings both in the relational setting, where queries and views are(unions of) conjunctive queries, and in the semistructured data setting, wherequeries and views are (two-way) regular path queries, as well as unions ofconjunctions thereof. We provide techniques and complexity upper bounds foreach of these cases.
 
+Proceedings 1st International Workshop on Strategic Reasoning
+
+  This volume contains the proceedings of the 1st International Workshop onStrategic Reasoning 2013 (SR 2013), held in Rome (Italy), March 1617, 2013. TheSR workshop aims to bring together researchers, possibly with differentbackgrounds, working on various aspects of strategic reasoning in computerscience, both from a theoretical and a practical point of view. This year SRhas hosted four outstanding invited talks by Krishnendu Chatterjee, Alessio R.Lomuscio, Jean-Francois Raskin, and Michael Wooldridge. Moreover, the programcommittee selected 13 papers among the 23 contributions submitted. Almost allof them have been revised by three reviews and the contributions have beenselected according to quality and relevance to the topics of the workshop.
+
+A Scalable and Nearly Uniform Generator of SAT Witnesses
+
+  Functional verification constitutes one of the most challenging tasks in thedevelopment of modern hardware systems, and simulation-based verificationtechniques dominate the functional verification landscape. A dominant paradigmin simulation-based verification is directed random testing, where a model ofthe system is simulated with a set of random test stimuli that are uniformly ornear-uniformly distributed over the space of all stimuli satisfying a given setof constraints. Uniform or near-uniform generation of solutions for largeconstraint sets is therefore a problem of theoretical and practical interest.For Boolean constraints, prior work offered heuristic approaches with noguarantee of performance, and theoretical approaches with proven guarantees,but poor performance in practice. We offer here a new approach with theoreticalperformance guarantees and demonstrate its practical utility on largeconstraint sets.
 
 Synthesis from Knowledge-Based Specifications
 
-  In program synthesis, we transform a specification into a program that is
-guaranteed to satisfy the specification. In synthesis of reactive systems, the
-environment in which the program operates may behave nondeterministically,
-e.g., by generating different sequences of inputs in different runs of the
-system. To satisfy the specification, the program needs to act so that the
-specification holds in every computation generated by its interaction with the
-environment. Often, the program cannot observe all attributes of its
-environment. In this case, we should transform a specification into a program
-whose behavior depends only on the observable history of the computation. This
-is called synthesis with incomplete information. In such a setting, it is
-desirable to have a knowledge-based specification, which can refer to the
-uncertainty the program has about the environment's behavior. In this work we
-solve the problem of synthesis with incomplete information with respect to
-specifications in the logic of knowledge and time. We show that the problem has
-the same worst-case complexity as synthesis with complete information.
+  In program synthesis, we transform a specification into a program that isguaranteed to satisfy the specification. In synthesis of reactive systems, theenvironment in which the program operates may behave nondeterministically,e.g., by generating different sequences of inputs in different runs of thesystem. To satisfy the specification, the program needs to act so that thespecification holds in every computation generated by its interaction with theenvironment. Often, the program cannot observe all attributes of itsenvironment. In this case, we should transform a specification into a programwhose behavior depends only on the observable history of the computation. Thisis called synthesis with incomplete information. In such a setting, it isdesirable to have a knowledge-based specification, which can refer to theuncertainty the program has about the environment's behavior. In this work wesolve the problem of synthesis with incomplete information with respect tospecifications in the logic of knowledge and time. We show that the problem hasthe same worst-case complexity as synthesis with complete information.
 
+The Complexity of Partial-observation Stochastic Parity Games With  Finite-memory Strategies
 
-The Complexity of Partial-observation Stochastic Parity Games With
-  Finite-memory Strategies
-
-  We consider two-player partial-observation stochastic games on finite-state
-graphs where player 1 has partial observation and player 2 has perfect
-observation. The winning condition we study are \omega-regular conditions
-specified as parity objectives. The qualitative-analysis problem given a
-partial-observation stochastic game and a parity objective asks whether there
-is a strategy to ensure that the objective is satisfied with probability~1
-(resp. positive probability). These qualtitative-analysis problems are known to
-be undecidable. However in many applications the relevant question is the
-existence of finite-memory strategies, and the qualitative-analysis problems
-under finite-memory strategies was recently shown to be decidable in 2EXPTIME.
-We improve the complexity and show that the qualitative-analysis problems for
-partial-observation stochastic parity games under finite-memory strategies are
-EXPTIME-complete; and also establish optimal (exponential) memory bounds for
-finite-memory strategies required for qualitative analysis.
-
+  We consider two-player partial-observation stochastic games on finite-stategraphs where player 1 has partial observation and player 2 has perfectobservation. The winning condition we study are \omega-regular conditionsspecified as parity objectives. The qualitative-analysis problem given apartial-observation stochastic game and a parity objective asks whether thereis a strategy to ensure that the objective is satisfied with probability~1(resp. positive probability). These qualtitative-analysis problems are known tobe undecidable. However in many applications the relevant question is theexistence of finite-memory strategies, and the qualitative-analysis problemsunder finite-memory strategies was recently shown to be decidable in 2EXPTIME.We improve the complexity and show that the qualitative-analysis problems forpartial-observation stochastic parity games under finite-memory strategies areEXPTIME-complete; and also establish optimal (exponential) memory bounds forfinite-memory strategies required for qualitative analysis.
 
 The Complexity of Integer Bound Propagation
 
-  Bound propagation is an important Artificial Intelligence technique used in
-Constraint Programming tools to deal with numerical constraints. It is
-typically embedded within a search procedure ("branch and prune") and used at
-every node of the search tree to narrow down the search space, so it is
-critical that it be fast. The procedure invokes constraint propagators until a
-common fixpoint is reached, but the known algorithms for this have a
-pseudo-polynomial worst-case time complexity: they are fast indeed when the
-variables have a small numerical range, but they have the well-known problem of
-being prohibitively slow when these ranges are large. An important question is
-therefore whether strongly-polynomial algorithms exist that compute the common
-bound consistent fixpoint of a set of constraints. This paper answers this
-question. In particular we show that this fixpoint computation is in fact
-NP-complete, even when restricted to binary linear constraints.
-
+  Bound propagation is an important Artificial Intelligence technique used inConstraint Programming tools to deal with numerical constraints. It istypically embedded within a search procedure ("branch and prune") and used atevery node of the search tree to narrow down the search space, so it iscritical that it be fast. The procedure invokes constraint propagators until acommon fixpoint is reached, but the known algorithms for this have apseudo-polynomial worst-case time complexity: they are fast indeed when thevariables have a small numerical range, but they have the well-known problem ofbeing prohibitively slow when these ranges are large. An important question istherefore whether strongly-polynomial algorithms exist that compute the commonbound consistent fixpoint of a set of constraints. This paper answers thisquestion. In particular we show that this fixpoint computation is in factNP-complete, even when restricted to binary linear constraints.
 
 Fast LTL Satisfiability Checking by SAT Solvers
 
-  Satisfiability checking for Linear Temporal Logic (LTL) is a fundamental step
-in checking for possible errors in LTL assertions. Extant LTL satisfiability
-checkers use a variety of different search procedures. With the sole exception
-of LTL satisfiability checking based on bounded model checking, which does not
-provide a complete decision procedure, LTL satisfiability checkers have not
-taken advantage of the remarkable progress over the past 20 years in Boolean
-satisfiability solving. In this paper, we propose a new LTL
-satisfiability-checking framework that is accelerated using a Boolean SAT
-solver. Our approach is based on the variant of the \emph{obligation-set
-method}, which we proposed in earlier work. We describe here heuristics that
-allow the use of a Boolean SAT solver to analyze the obligations for a given
-LTL formula. The experimental evaluation indicates that the new approach
-provides a a significant performance advantage.
-
-
-Proceedings 2nd International Workshop on Strategic Reasoning
-
-  This volume contains the proceedings of the 2nd International Workshop on
-Strategic Reasoning 2014 (SR 2014), held in Grenoble (France), April 5-6, 2014.
-The SR workshop aims to bring together researchers, possibly with different
-backgrounds, working on various aspects of strategic reasoning in computer
-science, both from a theoretical and a practical point of view. This year SR
-has hosted four invited talks by Thomas A. Henzinger, Wiebe van der Hoek,
-Alessio R. Lomuscio, and Wolfgang Thomas. Moreover, the workshop has hosted 14
-contributed talks, all selected among the full contributions submitted, which
-have been deeply evaluated, by four reviewers, according to their quality and
-relevance.
-
-
-Distribution-Aware Sampling and Weighted Model Counting for SAT
-
-  Given a CNF formula and a weight for each assignment of values to variables,
-two natural problems are weighted model counting and distribution-aware
-sampling of satisfying assignments. Both problems have a wide variety of
-important applications. Due to the inherent complexity of the exact versions of
-the problems, interest has focused on solving them approximately. Prior work in
-this area scaled only to small problems in practice, or failed to provide
-strong theoretical guarantees, or employed a computationally-expensive maximum
-a posteriori probability (MAP) oracle that assumes prior knowledge of a
-factored representation of the weight distribution. We present a novel approach
-that works with a black-box oracle for weights of assignments and requires only
-an {\NP}-oracle (in practice, a SAT-solver) to solve both the counting and
-sampling problems. Our approach works under mild assumptions on the
-distribution of weights of satisfying assignments, provides strong theoretical
-guarantees, and scales to problems involving several thousand variables. We
-also show that the assumptions can be significantly relaxed while improving
-computational efficiency if a factored representation of the weights is known.
-
+  Satisfiability checking for Linear Temporal Logic (LTL) is a fundamental stepin checking for possible errors in LTL assertions. Extant LTL satisfiabilitycheckers use a variety of different search procedures. With the sole exceptionof LTL satisfiability checking based on bounded model checking, which does notprovide a complete decision procedure, LTL satisfiability checkers have nottaken advantage of the remarkable progress over the past 20 years in Booleansatisfiability solving. In this paper, we propose a new LTLsatisfiability-checking framework that is accelerated using a Boolean SATsolver. Our approach is based on the variant of the \emph{obligation-setmethod}, which we proposed in earlier work. We describe here heuristics thatallow the use of a Boolean SAT solver to analyze the obligations for a givenLTL formula. The experimental evaluation indicates that the new approachprovides a a significant performance advantage.
 
 LTLf satisfiability checking
 
-  We consider here Linear Temporal Logic (LTL) formulas interpreted over
-\emph{finite} traces. We denote this logic by LTLf. The existing approach for
-LTLf satisfiability checking is based on a reduction to standard LTL
-satisfiability checking. We describe here a novel direct approach to LTLf
-satisfiability checking, where we take advantage of the difference in the
-semantics between LTL and LTLf. While LTL satisfiability checking requires
-finding a \emph{fair cycle} in an appropriate transition system, here we need
-to search only for a finite trace. This enables us to introduce specialized
-heuristics, where we also exploit recent progress in Boolean SAT solving. We
-have implemented our approach in a prototype tool and experiments show that our
-approach outperforms existing approaches.
+  We consider here Linear Temporal Logic (LTL) formulas interpreted over\emph{finite} traces. We denote this logic by LTLf. The existing approach forLTLf satisfiability checking is based on a reduction to standard LTLsatisfiability checking. We describe here a novel direct approach to LTLfsatisfiability checking, where we take advantage of the difference in thesemantics between LTL and LTLf. While LTL satisfiability checking requiresfinding a \emph{fair cycle} in an appropriate transition system, here we needto search only for a finite trace. This enables us to introduce specializedheuristics, where we also exploit recent progress in Boolean SAT solving. Wehave implemented our approach in a prototype tool and experiments show that ourapproach outperforms existing approaches.
 
+Proceedings 2nd International Workshop on Strategic Reasoning
 
-Approximate Probabilistic Inference via Word-Level Counting
+  This volume contains the proceedings of the 2nd International Workshop onStrategic Reasoning 2014 (SR 2014), held in Grenoble (France), April 5-6, 2014.The SR workshop aims to bring together researchers, possibly with differentbackgrounds, working on various aspects of strategic reasoning in computerscience, both from a theoretical and a practical point of view. This year SRhas hosted four invited talks by Thomas A. Henzinger, Wiebe van der Hoek,Alessio R. Lomuscio, and Wolfgang Thomas. Moreover, the workshop has hosted 14contributed talks, all selected among the full contributions submitted, whichhave been deeply evaluated, by four reviewers, according to their quality andrelevance.
 
-  Hashing-based model counting has emerged as a promising approach for
-large-scale probabilistic inference on graphical models. A key component of
-these techniques is the use of xor-based 2-universal hash functions that
-operate over Boolean domains. Many counting problems arising in probabilistic
-inference are, however, naturally encoded over finite discrete domains.
-Techniques based on bit-level (or Boolean) hash functions require these
-problems to be propositionalized, making it impossible to leverage the
-remarkable progress made in SMT (Satisfiability Modulo Theory) solvers that can
-reason directly over words (or bit-vectors). In this work, we present the first
-approximate model counter that uses word-level hashing functions, and can
-directly leverage the power of sophisticated SMT solvers. Empirical evaluation
-over an extensive suite of benchmarks demonstrates the promise of the approach.
+Distribution-Aware Sampling and Weighted Model Counting for SAT
 
+  Given a CNF formula and a weight for each assignment of values to variables,two natural problems are weighted model counting and distribution-awaresampling of satisfying assignments. Both problems have a wide variety ofimportant applications. Due to the inherent complexity of the exact versions ofthe problems, interest has focused on solving them approximately. Prior work inthis area scaled only to small problems in practice, or failed to providestrong theoretical guarantees, or employed a computationally-expensive maximuma posteriori probability (MAP) oracle that assumes prior knowledge of afactored representation of the weight distribution. We present a novel approachthat works with a black-box oracle for weights of assignments and requires onlyan {\NP}-oracle (in practice, a SAT-solver) to solve both the counting andsampling problems. Our approach works under mild assumptions on thedistribution of weights of satisfying assignments, provides strong theoreticalguarantees, and scales to problems involving several thousand variables. Wealso show that the assumptions can be significantly relaxed while improvingcomputational efficiency if a factored representation of the weights is known.
 
 Fixpoint Node Selection Query Languages for Trees
 
-  The study of node selection query languages for (finite) trees has been a
-major topic in the recent research on query languages for Web documents. On one
-hand, there has been an extensive study of XPath and its various extensions. On
-the other hand, query languages based on classical logics, such as first-order
-logic (FO) or Monadic Second-Order Logic (MSO), have been considered. Results
-in this area typically relate an XPath-based language to a classical logic.
-What has yet to emerge is an XPath-related language that is as expressive as
-MSO, and at the same time enjoys the computational properties of XPath, which
-are linear time query evaluation and exponential time query-containment test.
-In this paper we propose muXPath, which is the alternation-free fragment of
-XPath extended with fixpoint operators. Using two-way alternating automata, we
-show that this language does combine desired expressiveness and computational
-properties, placing it as an attractive candidate for the definite
-node-selection query language for trees.
+  The study of node selection query languages for (finite) trees has been amajor topic in the recent research on query languages for Web documents. On onehand, there has been an extensive study of XPath and its various extensions. Onthe other hand, query languages based on classical logics, such as first-orderlogic (FO) or Monadic Second-Order Logic (MSO), have been considered. Resultsin this area typically relate an XPath-based language to a classical logic.What has yet to emerge is an XPath-related language that is as expressive asMSO, and at the same time enjoys the computational properties of XPath, whichare linear time query evaluation and exponential time query-containment test.In this paper we propose muXPath, which is the alternation-free fragment ofXPath extended with fixpoint operators. Using two-way alternating automata, weshow that this language does combine desired expressiveness and computationalproperties, placing it as an attractive candidate for the definitenode-selection query language for trees.
 
+Approximate Probabilistic Inference via Word-Level Counting
+
+  Hashing-based model counting has emerged as a promising approach forlarge-scale probabilistic inference on graphical models. A key component ofthese techniques is the use of xor-based 2-universal hash functions thatoperate over Boolean domains. Many counting problems arising in probabilisticinference are, however, naturally encoded over finite discrete domains.Techniques based on bit-level (or Boolean) hash functions require theseproblems to be propositionalized, making it impossible to leverage theremarkable progress made in SMT (Satisfiability Modulo Theory) solvers that canreason directly over words (or bit-vectors). In this work, we present the firstapproximate model counter that uses word-level hashing functions, and candirectly leverage the power of sophisticated SMT solvers. Empirical evaluationover an extensive suite of benchmarks demonstrates the promise of the approach.
 
 Combining the $k$-CNF and XOR Phase-Transitions
 
-  The runtime performance of modern SAT solvers on random $k$-CNF formulas is
-deeply connected with the 'phase-transition' phenomenon seen empirically in the
-satisfiability of random $k$-CNF formulas. Recent universal hashing-based
-approaches to sampling and counting crucially depend on the runtime performance
-of SAT solvers on formulas expressed as the conjunction of both $k$-CNF and XOR
-constraints (known as $k$-CNF-XOR formulas), but the behavior of random
-$k$-CNF-XOR formulas is unexplored in prior work. In this paper, we present the
-first study of the satisfiability of random $k$-CNF-XOR formulas. We show
-empirical evidence of a surprising phase-transition that follows a linear
-trade-off between $k$-CNF and XOR constraints. Furthermore, we prove that a
-phase-transition for $k$-CNF-XOR formulas exists for $k = 2$ and (when the
-number of $k$-CNF constraints is small) for $k > 2$.
-
+  The runtime performance of modern SAT solvers on random $k$-CNF formulas isdeeply connected with the 'phase-transition' phenomenon seen empirically in thesatisfiability of random $k$-CNF formulas. Recent universal hashing-basedapproaches to sampling and counting crucially depend on the runtime performanceof SAT solvers on formulas expressed as the conjunction of both $k$-CNF and XORconstraints (known as $k$-CNF-XOR formulas), but the behavior of random$k$-CNF-XOR formulas is unexplored in prior work. In this paper, we present thefirst study of the satisfiability of random $k$-CNF-XOR formulas. We showempirical evidence of a surprising phase-transition that follows a lineartrade-off between $k$-CNF and XOR constraints. Furthermore, we prove that aphase-transition for $k$-CNF-XOR formulas exists for $k = 2$ and (when thenumber of $k$-CNF constraints is small) for $k > 2$.
 
 Symbolic LTLf Synthesis
 
-  LTLf synthesis is the process of finding a strategy that satisfies a linear
-temporal specification over finite traces. An existing solution to this problem
-relies on a reduction to a DFA game. In this paper, we propose a symbolic
-framework for LTLf synthesis based on this technique, by performing the
-computation over a representation of the DFA as a boolean formula rather than
-as an explicit graph. This approach enables strategy generation by utilizing
-the mechanism of boolean synthesis. We implement this symbolic synthesis method
-in a tool called Syft, and demonstrate by experiments on scalable benchmarks
-that the symbolic approach scales better than the explicit one.
-
+  LTLf synthesis is the process of finding a strategy that satisfies a lineartemporal specification over finite traces. An existing solution to this problemrelies on a reduction to a DFA game. In this paper, we propose a symbolicframework for LTLf synthesis based on this technique, by performing thecomputation over a representation of the DFA as a boolean formula rather thanas an explicit graph. This approach enables strategy generation by utilizingthe mechanism of boolean synthesis. We implement this symbolic synthesis methodin a tool called Syft, and demonstrate by experiments on scalable benchmarksthat the symbolic approach scales better than the explicit one.
 
 The Hard Problems Are Almost Everywhere For Random CNF-XOR Formulas
 
-  Recent universal-hashing based approaches to sampling and counting crucially
-depend on the runtime performance of SAT solvers on formulas expressed as the
-conjunction of both CNF constraints and variable-width XOR constraints (known
-as CNF-XOR formulas). In this paper, we present the first study of the runtime
-behavior of SAT solvers equipped with XOR-reasoning techniques on random
-CNF-XOR formulas. We empirically demonstrate that a state-of-the-art SAT solver
-scales exponentially on random CNF-XOR formulas across a wide range of
-XOR-clause densities, peaking around the empirical phase-transition location.
-On the theoretical front, we prove that the solution space of a random CNF-XOR
-formula 'shatters' at all nonzero XOR-clause densities into well-separated
-components, similar to the behavior seen in random CNF formulas known to be
-difficult for many SAT algorithms.
-
+  Recent universal-hashing based approaches to sampling and counting cruciallydepend on the runtime performance of SAT solvers on formulas expressed as theconjunction of both CNF constraints and variable-width XOR constraints (knownas CNF-XOR formulas). In this paper, we present the first study of the runtimebehavior of SAT solvers equipped with XOR-reasoning techniques on randomCNF-XOR formulas. We empirically demonstrate that a state-of-the-art SAT solverscales exponentially on random CNF-XOR formulas across a wide range ofXOR-clause densities, peaking around the empirical phase-transition location.On the theoretical front, we prove that the solution space of a random CNF-XORformula 'shatters' at all nonzero XOR-clause densities into well-separatedcomponents, similar to the behavior seen in random CNF formulas known to bedifficult for many SAT algorithms.
 
 Functional Synthesis via Input-Output Separation
 
-  Boolean functional synthesis is the process of constructing a Boolean
-function from a Boolean specification that relates input and output variables.
-Despite significant recent developments in synthesis algorithms, Boolean
-functional synthesis remains a challenging problem even when state-of-the-art
-methods are used for decomposing the specification. In this work we bring a
-fresh decomposition approach, orthogonal to existing methods, that explores the
-decomposition of the specification into separate input and output components.
-We make use of an input-output decomposition of a given specification described
-as a CNF formula, by alternatingly analyzing the separate input and output
-components. We exploit well-defined properties of these components to
-ultimately synthesize a solution for the entire specification. We first provide
-a theoretical result that, for input components with specific structures,
-synthesis for CNF formulas via this framework can be performed more efficiently
-than in the general case. We then show by experimental evaluations that our
-algorithm performs well also in practice on instances which are challenging for
-existing state-of-the-art tools, serving as a good complement to modern
-synthesis techniques.
-
+  Boolean functional synthesis is the process of constructing a Booleanfunction from a Boolean specification that relates input and output variables.Despite significant recent developments in synthesis algorithms, Booleanfunctional synthesis remains a challenging problem even when state-of-the-artmethods are used for decomposing the specification. In this work we bring afresh decomposition approach, orthogonal to existing methods, that explores thedecomposition of the specification into separate input and output components.We make use of an input-output decomposition of a given specification describedas a CNF formula, by alternatingly analyzing the separate input and outputcomponents. We exploit well-defined properties of these components toultimately synthesize a solution for the entire specification. We first providea theoretical result that, for input components with specific structures,synthesis for CNF formulas via this framework can be performed more efficientlythan in the general case. We then show by experimental evaluations that ouralgorithm performs well also in practice on instances which are challenging forexisting state-of-the-art tools, serving as a good complement to modernsynthesis techniques.
 
 The Complexity of Enriched Mu-Calculi
 
-  The fully enriched &mu;-calculus is the extension of the propositional
-&mu;-calculus with inverse programs, graded modalities, and nominals. While
-satisfiability in several expressive fragments of the fully enriched
-&mu;-calculus is known to be decidable and ExpTime-complete, it has recently
-been proved that the full calculus is undecidable. In this paper, we study the
-fragments of the fully enriched &mu;-calculus that are obtained by dropping at
-least one of the additional constructs. We show that, in all fragments obtained
-in this way, satisfiability is decidable and ExpTime-complete. Thus, we
-identify a family of decidable logics that are maximal (and incomparable) in
-expressive power. Our results are obtained by introducing two new automata
-models, showing that their emptiness problems are ExpTime-complete, and then
-reducing satisfiability in the relevant logics to these problems. The automata
-models we introduce are two-way graded alternating parity automata over
-infinite trees (2GAPTs) and fully enriched automata (FEAs) over infinite
-forests. The former are a common generalization of two incomparable automata
-models from the literature. The latter extend alternating automata in a similar
-way as the fully enriched &mu;-calculus extends the standard &mu;-calculus.
-
-
-A Scalable Approximate Model Counter
-
-  Propositional model counting} (#SAT), i.e., counting the number of satisfying
-assignments of a propositional formula, is a problem of significant theoretical
-and practical interest. Due to the inherent complexity of the problem,
-approximate model counting, which counts the number of satisfying assignments
-to within given tolerance and confidence level, was proposed as a practical
-alternative to exact model counting. Yet, approximate model counting has been
-studied essentially only theoretically. The only reported implementation of
-approximate model counting, due to Karp and Luby, worked only for DNF formulas.
-A few existing tools for CNF formulas are bounding model counters; they can
-handle realistic problem sizes, but fall short of providing counts within given
-tolerance and confidence, and, thus, are not approximate model counters.
-  We present here a novel algorithm, as well as a reference implementation,
-that is the first scalable approximate model counter for CNF formulas. The
-algorithm works by issuing a polynomial number of calls to a SAT solver. Our
-tool, ApproxMC, scales to formulas with tens of thousands of variables. Careful
-experimental comparisons show that ApproxMC reports, with high confidence,
-bounds that are close to the exact count, and also succeeds in reporting bounds
-with small tolerance and high confidence in cases that are too large for
-computing exact model counts.
-
+  The fully enriched &mu;-calculus is the extension of the propositional&mu;-calculus with inverse programs, graded modalities, and nominals. Whilesatisfiability in several expressive fragments of the fully enriched&mu;-calculus is known to be decidable and ExpTime-complete, it has recentlybeen proved that the full calculus is undecidable. In this paper, we study thefragments of the fully enriched &mu;-calculus that are obtained by dropping atleast one of the additional constructs. We show that, in all fragments obtainedin this way, satisfiability is decidable and ExpTime-complete. Thus, weidentify a family of decidable logics that are maximal (and incomparable) inexpressive power. Our results are obtained by introducing two new automatamodels, showing that their emptiness problems are ExpTime-complete, and thenreducing satisfiability in the relevant logics to these problems. The automatamodels we introduce are two-way graded alternating parity automata overinfinite trees (2GAPTs) and fully enriched automata (FEAs) over infiniteforests. The former are a common generalization of two incomparable automatamodels from the literature. The latter extend alternating automata in a similarway as the fully enriched &mu;-calculus extends the standard &mu;-calculus.
 
 Büchi Complementation and Size-Change Termination
 
-  We compare tools for complementing nondeterministic B\"uchi automata with a
-recent termination-analysis algorithm. Complementation of B\"uchi automata is a
-key step in program verification. Early constructions using a Ramsey-based
-argument have been supplanted by rank-based constructions with exponentially
-better bounds. In 2001 Lee et al. presented the size-change termination (SCT)
-problem, along with both a reduction to B\"uchi automata and a Ramsey-based
-algorithm. The Ramsey-based algorithm was presented as a more practical
-alternative to the automata-theoretic approach, but strongly resembles the
-initial complementation constructions for B\"uchi automata. We prove that the
-SCT algorithm is a specialized realization of the Ramsey-based complementation
-construction. To do so, we extend the Ramsey-based complementation construction
-to provide a containment-testing algorithm. Surprisingly, empirical analysis
-suggests that despite the massive gap in worst-case complexity, Ramsey-based
-approaches are superior over the domain of SCT problems. Upon further analysis
-we discover an interesting property of the problem space that both explains
-this result and provides a chance to improve rank-based tools. With these
-improvements, we show that theoretical gains in efficiency of the rank-based
-approach are mirrored in empirical performance.
+  We compare tools for complementing nondeterministic B\"uchi automata with arecent termination-analysis algorithm. Complementation of B\"uchi automata is akey step in program verification. Early constructions using a Ramsey-basedargument have been supplanted by rank-based constructions with exponentiallybetter bounds. In 2001 Lee et al. presented the size-change termination (SCT)problem, along with both a reduction to B\"uchi automata and a Ramsey-basedalgorithm. The Ramsey-based algorithm was presented as a more practicalalternative to the automata-theoretic approach, but strongly resembles theinitial complementation constructions for B\"uchi automata. We prove that theSCT algorithm is a specialized realization of the Ramsey-based complementationconstruction. To do so, we extend the Ramsey-based complementation constructionto provide a containment-testing algorithm. Surprisingly, empirical analysissuggests that despite the massive gap in worst-case complexity, Ramsey-basedapproaches are superior over the domain of SCT problems. Upon further analysiswe discover an interesting property of the problem space that both explainsthis result and provides a chance to improve rank-based tools. With theseimprovements, we show that theoretical gains in efficiency of the rank-basedapproach are mirrored in empirical performance.
 
+A Scalable Approximate Model Counter
 
-Profile Trees for Büchi Word Automata, with Application to
-  Determinization
+  Propositional model counting} (#SAT), i.e., counting the number of satisfyingassignments of a propositional formula, is a problem of significant theoreticaland practical interest. Due to the inherent complexity of the problem,approximate model counting, which counts the number of satisfying assignmentsto within given tolerance and confidence level, was proposed as a practicalalternative to exact model counting. Yet, approximate model counting has beenstudied essentially only theoretically. The only reported implementation ofapproximate model counting, due to Karp and Luby, worked only for DNF formulas.A few existing tools for CNF formulas are bounding model counters; they canhandle realistic problem sizes, but fall short of providing counts within giventolerance and confidence, and, thus, are not approximate model counters.  We present here a novel algorithm, as well as a reference implementation,that is the first scalable approximate model counter for CNF formulas. Thealgorithm works by issuing a polynomial number of calls to a SAT solver. Ourtool, ApproxMC, scales to formulas with tens of thousands of variables. Carefulexperimental comparisons show that ApproxMC reports, with high confidence,bounds that are close to the exact count, and also succeeds in reporting boundswith small tolerance and high confidence in cases that are too large forcomputing exact model counts.
 
-  The determinization of Buchi automata is a celebrated problem, with
-applications in synthesis, probabilistic verification, and multi-agent systems.
-Since the 1960s, there has been a steady progress of constructions: by
-McNaughton, Safra, Piterman, Schewe, and others. Despite the proliferation of
-solutions, they are all essentially ad-hoc constructions, with little theory
-behind them other than proofs of correctness. Since Safra, all optimal
-constructions employ trees as states of the deterministic automaton, and
-transitions between states are defined operationally over these trees. The
-operational nature of these constructions complicates understanding,
-implementing, and reasoning about them, and should be contrasted with
-complementation, where a solid theory in terms of automata run DAGs underlies
-modern constructions.
-  In 2010, we described a profile-based approach to Buchi complementation,
-where a profile is simply the history of visits to accepting states. We
-developed a structural theory of profiles and used it to describe a
-complementation construction that is deterministic in the limit. Here we extend
-the theory of profiles to prove that every run DAG contains a profile tree with
-at most a finite number of infinite branches. We then show that this property
-provides a theoretical grounding for a new determinization construction where
-macrostates are doubly preordered sets of states. In contrast to extant
-determinization constructions, transitions in the new construction are
-described declaratively rather than operationally.
+Profile Trees for Büchi Word Automata, with Application to  Determinization
 
+  The determinization of Buchi automata is a celebrated problem, withapplications in synthesis, probabilistic verification, and multi-agent systems.Since the 1960s, there has been a steady progress of constructions: byMcNaughton, Safra, Piterman, Schewe, and others. Despite the proliferation ofsolutions, they are all essentially ad-hoc constructions, with little theorybehind them other than proofs of correctness. Since Safra, all optimalconstructions employ trees as states of the deterministic automaton, andtransitions between states are defined operationally over these trees. Theoperational nature of these constructions complicates understanding,implementing, and reasoning about them, and should be contrasted withcomplementation, where a solid theory in terms of automata run DAGs underliesmodern constructions.  In 2010, we described a profile-based approach to Buchi complementation,where a profile is simply the history of visits to accepting states. Wedeveloped a structural theory of profiles and used it to describe acomplementation construction that is deterministic in the limit. Here we extendthe theory of profiles to prove that every run DAG contains a profile tree withat most a finite number of infinite branches. We then show that this propertyprovides a theoretical grounding for a new determinization construction wheremacrostates are doubly preordered sets of states. In contrast to extantdeterminization constructions, transitions in the new construction aredescribed declaratively rather than operationally.
 
 State of Büchi Complementation
 
-  Complementation of B\"uchi automata has been studied for over five decades
-since the formalism was introduced in 1960. Known complementation constructions
-can be classified into Ramsey-based, determinization-based, rank-based, and
-slice-based approaches. Regarding the performance of these approaches, there
-have been several complexity analyses but very few experimental results. What
-especially lacks is a comparative experiment on all of the four approaches to
-see how they perform in practice. In this paper, we review the four approaches,
-propose several optimization heuristics, and perform comparative
-experimentation on four representative constructions that are considered the
-most efficient in each approach. The experimental results show that (1) the
-determinization-based Safra-Piterman construction outperforms the other three
-in producing smaller complements and finishing more tasks in the allocated time
-and (2) the proposed heuristics substantially improve the Safra-Piterman and
-the slice-based constructions.
-
+  Complementation of B\"uchi automata has been studied for over five decadessince the formalism was introduced in 1960. Known complementation constructionscan be classified into Ramsey-based, determinization-based, rank-based, andslice-based approaches. Regarding the performance of these approaches, therehave been several complexity analyses but very few experimental results. Whatespecially lacks is a comparative experiment on all of the four approaches tosee how they perform in practice. In this paper, we review the four approaches,propose several optimization heuristics, and perform comparativeexperimentation on four representative constructions that are considered themost efficient in each approach. The experimental results show that (1) thedeterminization-based Safra-Piterman construction outperforms the other threein producing smaller complements and finishing more tasks in the allocated timeand (2) the proposed heuristics substantially improve the Safra-Piterman andthe slice-based constructions.
 
 A Symbolic Approach to Safety LTL Synthesis
 
-  Temporal synthesis is the automated design of a system that interacts with an
-environment, using the declarative specification of the system's behavior. A
-popular language for providing such a specification is Linear Temporal Logic,
-or LTL. LTL synthesis in the general case has remained, however, a hard problem
-to solve in practice. Because of this, many works have focused on developing
-synthesis procedures for specific fragments of LTL, with an easier synthesis
-problem. In this work, we focus on Safety LTL, defined here to be the
-Until-free fragment of LTL in Negation Normal Form~(NNF), and shown to express
-a fragment of safe LTL formulas. The intrinsic motivation for this fragment is
-the observation that in many cases it is not enough to say that something
-"good" will eventually happen, we need to say by when it will happen. We show
-here that Safety LTL synthesis is significantly simpler algorithmically than
-LTL synthesis. We exploit this simplicity in two ways, first by describing an
-explicit approach based on a reduction to Horn-SAT, which can be solved in
-linear time in the size of the game graph, and then through an efficient
-symbolic construction, allowing a BDD-based symbolic approach which
-significantly outperforms extant LTL-synthesis tools.
-
+  Temporal synthesis is the automated design of a system that interacts with anenvironment, using the declarative specification of the system's behavior. Apopular language for providing such a specification is Linear Temporal Logic,or LTL. LTL synthesis in the general case has remained, however, a hard problemto solve in practice. Because of this, many works have focused on developingsynthesis procedures for specific fragments of LTL, with an easier synthesisproblem. In this work, we focus on Safety LTL, defined here to be theUntil-free fragment of LTL in Negation Normal Form~(NNF), and shown to expressa fragment of safe LTL formulas. The intrinsic motivation for this fragment isthe observation that in many cases it is not enough to say that something"good" will eventually happen, we need to say by when it will happen. We showhere that Safety LTL synthesis is significantly simpler algorithmically thanLTL synthesis. We exploit this simplicity in two ways, first by describing anexplicit approach based on a reduction to Horn-SAT, which can be solved inlinear time in the size of the game graph, and then through an efficientsymbolic construction, allowing a BDD-based symbolic approach whichsignificantly outperforms extant LTL-synthesis tools.
 
 On Hashing-Based Approaches to Approximate DNF-Counting
 
-  Propositional model counting is a fundamental problem in artificial
-intelligence with a wide variety of applications, such as probabilistic
-inference, decision making under uncertainty, and probabilistic databases.
-Consequently, the problem is of theoretical as well as practical interest. When
-the constraints are expressed as DNF formulas, Monte Carlo-based techniques
-have been shown to provide a fully polynomial randomized approximation scheme
-(FPRAS). For CNF constraints, hashing-based approximation techniques have been
-demonstrated to be highly successful. Furthermore, it was shown that
-hashing-based techniques also yield an FPRAS for DNF counting without usage of
-Monte Carlo sampling. Our analysis, however, shows that the proposed
-hashing-based approach to DNF counting provides poor time complexity compared
-to the Monte Carlo-based DNF counting techniques. Given the success of
-hashing-based techniques for CNF constraints, it is natural to ask: Can
-hashing-based techniques provide an efficient FPRAS for DNF counting? In this
-paper, we provide a positive answer to this question. To this end, we introduce
-two novel algorithmic techniques: \emph{Symbolic Hashing} and \emph{Stochastic
-Cell Counting}, along with a new hash family of \emph{Row-Echelon hash
-functions}. These innovations allow us to design a hashing-based FPRAS for DNF
-counting of similar complexity (up to polylog factors) as that of prior works.
-Furthermore, we expect these techniques to have potential applications beyond
-DNF counting.
-
+  Propositional model counting is a fundamental problem in artificialintelligence with a wide variety of applications, such as probabilisticinference, decision making under uncertainty, and probabilistic databases.Consequently, the problem is of theoretical as well as practical interest. Whenthe constraints are expressed as DNF formulas, Monte Carlo-based techniqueshave been shown to provide a fully polynomial randomized approximation scheme(FPRAS). For CNF constraints, hashing-based approximation techniques have beendemonstrated to be highly successful. Furthermore, it was shown thathashing-based techniques also yield an FPRAS for DNF counting without usage ofMonte Carlo sampling. Our analysis, however, shows that the proposedhashing-based approach to DNF counting provides poor time complexity comparedto the Monte Carlo-based DNF counting techniques. Given the success ofhashing-based techniques for CNF constraints, it is natural to ask: Canhashing-based techniques provide an efficient FPRAS for DNF counting? In thispaper, we provide a positive answer to this question. To this end, we introducetwo novel algorithmic techniques: \emph{Symbolic Hashing} and \emph{StochasticCell Counting}, along with a new hash family of \emph{Row-Echelon hashfunctions}. These innovations allow us to design a hashing-based FPRAS for DNFcounting of similar complexity (up to polylog factors) as that of prior works.Furthermore, we expect these techniques to have potential applications beyondDNF counting.
 
 Comparator automata in quantitative verification
 
-  The notion of comparison between system runs is fundamental in formal
-verification. This concept is implicitly present in the verification of
-qualitative systems, and is more pronounced in the verification of quantitative
-systems. In this work, we identify a novel mode of comparison in quantitative
-systems: the online comparison of the aggregate values of two sequences of
-quantitative weights. This notion is embodied by {\em comparator automata}
-({\em comparators}, in short), a new class of automata that read two infinite
-sequences of weights synchronously and relate their aggregate values.
-  We show that {aggregate functions} that can be represented with B\"uchi
-automaton result in comparators that are finite-state and accept by the B\"uchi
-condition as well. Such {\em $\omega$-regular comparators} further lead to
-generic algorithms for a number of well-studied problems, including the
-quantitative inclusion and winning strategies in quantitative graph games with
-incomplete information, as well as related non-decision problems, such as
-obtaining a finite representation of all counterexamples in the quantitative
-inclusion problem.
-  We study comparators for two aggregate functions: discounted-sum and
-limit-average. We prove that the discounted-sum comparator is $\omega$-regular
-iff the discount-factor is an integer. Not every aggregate function, however,
-has an $\omega$-regular comparator. Specifically, we show that the language of
-sequence-pairs for which limit-average aggregates exist is neither
-$\omega$-regular nor $\omega$-context-free. Given this result, we introduce the
-notion of {\em prefix-average} as a relaxation of limit-average aggregation,
-and show that it admits $\omega$-context-free comparators.
-
+  The notion of comparison between system runs is fundamental in formalverification. This concept is implicitly present in the verification ofqualitative systems, and is more pronounced in the verification of quantitativesystems. In this work, we identify a novel mode of comparison in quantitativesystems: the online comparison of the aggregate values of two sequences ofquantitative weights. This notion is embodied by {\em comparator automata}({\em comparators}, in short), a new class of automata that read two infinitesequences of weights synchronously and relate their aggregate values.  We show that {aggregate functions} that can be represented with B\"uchiautomaton result in comparators that are finite-state and accept by the B\"uchicondition as well. Such {\em $\omega$-regular comparators} further lead togeneric algorithms for a number of well-studied problems, including thequantitative inclusion and winning strategies in quantitative graph games withincomplete information, as well as related non-decision problems, such asobtaining a finite representation of all counterexamples in the quantitativeinclusion problem.  We study comparators for two aggregate functions: discounted-sum andlimit-average. We prove that the discounted-sum comparator is $\omega$-regulariff the discount-factor is an integer. Not every aggregate function, however,has an $\omega$-regular comparator. Specifically, we show that the language ofsequence-pairs for which limit-average aggregates exist is neither$\omega$-regular nor $\omega$-context-free. Given this result, we introduce thenotion of {\em prefix-average} as a relaxation of limit-average aggregation,and show that it admits $\omega$-context-free comparators.
 
 First-Order vs. Second-Order Encodings for LTLf-to-Automata Translation
 
-  Translating formulas of Linear Temporal Logic (LTL) over finite traces, or
-LTLf, to symbolic Deterministic Finite Automata (DFA) plays an important role
-not only in LTLf synthesis, but also in synthesis for Safety LTL formulas. The
-translation is enabled by using MONA, a powerful tool for symbolic, BDD-based,
-DFA construction from logic specifications. Recent works used a first-order
-encoding of LTLf formulas to translate LTLf to First Order Logic (FOL), which
-is then fed to MONA to get the symbolic DFA. This encoding was shown to perform
-well, but other encodings have not been studied. Specifically, the natural
-question of whether second-order encoding, which has significantly simpler
-quantificational structure, can outperform first-order encoding remained open.
-  In this paper we address this challenge and study second-order encodings for
-LTLf formulas. We first introduce a specific MSO encoding that captures the
-semantics of LTLf in a natural way and prove its correctness. We then explore
-is a Compact MSO encoding, which benefits from automata-theoretic minimization,
-thus suggesting a possible practical advantage. To that end, we propose a
-formalization of symbolic DFA in second-order logic, thus developing a novel
-connection between BDDs and MSO. We then show by empirical evaluations that the
-first-order encoding does perform better than both second-order encodings. The
-conclusion is that first-order encoding is a better choice than second-order
-encoding in LTLf-to-Automata translation.
-
+  Translating formulas of Linear Temporal Logic (LTL) over finite traces, orLTLf, to symbolic Deterministic Finite Automata (DFA) plays an important rolenot only in LTLf synthesis, but also in synthesis for Safety LTL formulas. Thetranslation is enabled by using MONA, a powerful tool for symbolic, BDD-based,DFA construction from logic specifications. Recent works used a first-orderencoding of LTLf formulas to translate LTLf to First Order Logic (FOL), whichis then fed to MONA to get the symbolic DFA. This encoding was shown to performwell, but other encodings have not been studied. Specifically, the naturalquestion of whether second-order encoding, which has significantly simplerquantificational structure, can outperform first-order encoding remained open.  In this paper we address this challenge and study second-order encodings forLTLf formulas. We first introduce a specific MSO encoding that captures thesemantics of LTLf in a natural way and prove its correctness. We then exploreis a Compact MSO encoding, which benefits from automata-theoretic minimization,thus suggesting a possible practical advantage. To that end, we propose aformalization of symbolic DFA in second-order logic, thus developing a novelconnection between BDDs and MSO. We then show by empirical evaluations that thefirst-order encoding does perform better than both second-order encodings. Theconclusion is that first-order encoding is a better choice than second-orderencoding in LTLf-to-Automata translation.
 
 Sequential Relational Decomposition
 
-  The concept of decomposition in computer science and engineering is
-considered a fundamental component of computational thinking and is prevalent
-in design of algorithms, software construction, hardware design, and more. We
-propose a simple and natural formalization of sequential decomposition, in
-which a task is decomposed into two sequential sub-tasks, with the first
-sub-task to be executed out before the second sub-task is executed. These tasks
-are specified by means of input/output relations. We define and study
-decomposition problems, which is to decide whether a given specification can be
-sequentially decomposed. Our main result is that decomposition itself is a
-difficult computational problem. More specifically, we study decomposition
-problems in three settings: where the input task is specified explicitly, by
-means of Boolean circuits, and by means of automatic relations. We show that in
-the first setting decomposition is NP-complete, in the second setting it is
-NEXPTIME-complete, and in the third setting there is evidence to suggest that
-it is undecidable. Our results indicate that the intuitive idea of
-decomposition as a system-design approach requires further investigation. In
-particular, we show that adding human to the loop by asking for a decomposition
-hint lowers the complexity of decomposition problems considerably.
-
+  The concept of decomposition in computer science and engineering isconsidered a fundamental component of computational thinking and is prevalentin design of algorithms, software construction, hardware design, and more. Wepropose a simple and natural formalization of sequential decomposition, inwhich a task is decomposed into two sequential sub-tasks, with the firstsub-task to be executed out before the second sub-task is executed. These tasksare specified by means of input/output relations. We define and studydecomposition problems, which is to decide whether a given specification can besequentially decomposed. Our main result is that decomposition itself is adifficult computational problem. More specifically, we study decompositionproblems in three settings: where the input task is specified explicitly, bymeans of Boolean circuits, and by means of automatic relations. We show that inthe first setting decomposition is NP-complete, in the second setting it isNEXPTIME-complete, and in the third setting there is evidence to suggest thatit is undecidable. Our results indicate that the intuitive idea ofdecomposition as a system-design approach requires further investigation. Inparticular, we show that adding human to the loop by asking for a decompositionhint lowers the complexity of decomposition problems considerably.
 
 Multi-Objective Model Checking of Markov Decision Processes
 
-  We study and provide efficient algorithms for multi-objective model checking
-problems for Markov Decision Processes (MDPs). Given an MDP, M, and given
-multiple linear-time (\omega -regular or LTL) properties \varphi\_i, and
-probabilities r\_i \epsilon [0,1], i=1,...,k, we ask whether there exists a
-strategy \sigma for the controller such that, for all i, the probability that a
-trajectory of M controlled by \sigma satisfies \varphi\_i is at least r\_i. We
-provide an algorithm that decides whether there exists such a strategy and if
-so produces it, and which runs in time polynomial in the size of the MDP. Such
-a strategy may require the use of both randomization and memory. We also
-consider more general multi-objective \omega -regular queries, which we
-motivate with an application to assume-guarantee compositional reasoning for
-probabilistic systems.
-  Note that there can be trade-offs between different properties: satisfying
-property \varphi\_1 with high probability may necessitate satisfying \varphi\_2
-with low probability. Viewing this as a multi-objective optimization problem,
-we want information about the "trade-off curve" or Pareto curve for maximizing
-the probabilities of different properties. We show that one can compute an
-approximate Pareto curve with respect to a set of \omega -regular properties in
-time polynomial in the size of the MDP.
-  Our quantitative upper bounds use LP methods. We also study qualitative
-multi-objective model checking problems, and we show that these can be analysed
-by purely graph-theoretic methods, even though the strategies may still require
-both randomization and memory.
-
+  We study and provide efficient algorithms for multi-objective model checkingproblems for Markov Decision Processes (MDPs). Given an MDP, M, and givenmultiple linear-time (\omega -regular or LTL) properties \varphi\_i, andprobabilities r\_i \epsilon [0,1], i=1,...,k, we ask whether there exists astrategy \sigma for the controller such that, for all i, the probability that atrajectory of M controlled by \sigma satisfies \varphi\_i is at least r\_i. Weprovide an algorithm that decides whether there exists such a strategy and ifso produces it, and which runs in time polynomial in the size of the MDP. Sucha strategy may require the use of both randomization and memory. We alsoconsider more general multi-objective \omega -regular queries, which wemotivate with an application to assume-guarantee compositional reasoning forprobabilistic systems.  Note that there can be trade-offs between different properties: satisfyingproperty \varphi\_1 with high probability may necessitate satisfying \varphi\_2with low probability. Viewing this as a multi-objective optimization problem,we want information about the "trade-off curve" or Pareto curve for maximizingthe probabilities of different properties. We show that one can compute anapproximate Pareto curve with respect to a set of \omega -regular properties intime polynomial in the size of the MDP.  Our quantitative upper bounds use LP methods. We also study qualitativemulti-objective model checking problems, and we show that these can be analysedby purely graph-theoretic methods, even though the strategies may still requireboth randomization and memory.
 
 Reasoning About Strategies: On the Model-Checking Problem
 
-  In open systems verification, to formally check for reliability, one needs an
-appropriate formalism to model the interaction between agents and express the
-correctness of the system no matter how the environment behaves. An important
-contribution in this context is given by modal logics for strategic ability, in
-the setting of multi-agent games, such as ATL, ATL\star, and the like.
-Recently, Chatterjee, Henzinger, and Piterman introduced Strategy Logic, which
-we denote here by CHP-SL, with the aim of getting a powerful framework for
-reasoning explicitly about strategies. CHP-SL is obtained by using first-order
-quantifications over strategies and has been investigated in the very specific
-setting of two-agents turned-based games, where a non-elementary model-checking
-algorithm has been provided. While CHP-SL is a very expressive logic, we claim
-that it does not fully capture the strategic aspects of multi-agent systems. In
-this paper, we introduce and study a more general strategy logic, denoted SL,
-for reasoning about strategies in multi-agent concurrent games. We prove that
-SL includes CHP-SL, while maintaining a decidable model-checking problem. In
-particular, the algorithm we propose is computationally not harder than the
-best one known for CHP-SL. Moreover, we prove that such a problem for SL is
-NonElementarySpace-hard. This negative result has spurred us to investigate
-here syntactic fragments of SL, strictly subsuming ATL\star, with the hope of
-obtaining an elementary model-checking problem. Among the others, we study the
-sublogics SL[NG], SL[BG], and SL[1G]. They encompass formulas in a special
-prenex normal form having, respectively, nested temporal goals, Boolean
-combinations of goals and, a single goal at a time. About these logics, we
-prove that the model-checking problem for SL[1G] is 2ExpTime-complete, thus not
-harder than the one for ATL\star.
-
+  In open systems verification, to formally check for reliability, one needs anappropriate formalism to model the interaction between agents and express thecorrectness of the system no matter how the environment behaves. An importantcontribution in this context is given by modal logics for strategic ability, inthe setting of multi-agent games, such as ATL, ATL\star, and the like.Recently, Chatterjee, Henzinger, and Piterman introduced Strategy Logic, whichwe denote here by CHP-SL, with the aim of getting a powerful framework forreasoning explicitly about strategies. CHP-SL is obtained by using first-orderquantifications over strategies and has been investigated in the very specificsetting of two-agents turned-based games, where a non-elementary model-checkingalgorithm has been provided. While CHP-SL is a very expressive logic, we claimthat it does not fully capture the strategic aspects of multi-agent systems. Inthis paper, we introduce and study a more general strategy logic, denoted SL,for reasoning about strategies in multi-agent concurrent games. We prove thatSL includes CHP-SL, while maintaining a decidable model-checking problem. Inparticular, the algorithm we propose is computationally not harder than thebest one known for CHP-SL. Moreover, we prove that such a problem for SL isNonElementarySpace-hard. This negative result has spurred us to investigatehere syntactic fragments of SL, strictly subsuming ATL\star, with the hope ofobtaining an elementary model-checking problem. Among the others, we study thesublogics SL[NG], SL[BG], and SL[1G]. They encompass formulas in a specialprenex normal form having, respectively, nested temporal goals, Booleancombinations of goals and, a single goal at a time. About these logics, weprove that the model-checking problem for SL[1G] is 2ExpTime-complete, thus notharder than the one for ATL\star.
 

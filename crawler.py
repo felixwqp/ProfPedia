@@ -38,10 +38,12 @@ def crawl_arxiv(professor):
         dest_url = "papers/"+professor
         with open(dest_url, "w") as f:
             for i in range(1, len(titles)):
-                f.write(titles[i].text)
+                new_title = re.sub(r'\n', '', titles[i].text)
+                f.write(new_title)
                 f.write("\n")
                 f.write("\n")
-                f.write(summaries[i-1].text)
+                new_summary = re.sub(r'\n', '', summaries[i-1].text)
+                f.write(new_summary)
                 f.write("\n")
                 f.write("\n")
     except:
@@ -66,5 +68,9 @@ if not os.path.exists("papers"):
 for prof_name in prof_name_list:
     crawl_arxiv(prof_name)
     time.sleep(0.1)
+
+
+
+
 
 

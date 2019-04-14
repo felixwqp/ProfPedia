@@ -1,622 +1,136 @@
 Product Kernel Interpolation for Scalable Gaussian Processes
 
-  Recent work shows that inference for Gaussian processes can be performed
-efficiently using iterative methods that rely only on matrix-vector
-multiplications (MVMs). Structured Kernel Interpolation (SKI) exploits these
-techniques by deriving approximate kernels with very fast MVMs. Unfortunately,
-such strategies suffer badly from the curse of dimensionality. We develop a new
-technique for MVM based learning that exploits product kernel structure. We
-demonstrate that this technique is broadly applicable, resulting in linear
-rather than exponential runtime with dimension for SKI, as well as
-state-of-the-art asymptotic complexity for multi-task GPs.
-
+  Recent work shows that inference for Gaussian processes can be performedefficiently using iterative methods that rely only on matrix-vectormultiplications (MVMs). Structured Kernel Interpolation (SKI) exploits thesetechniques by deriving approximate kernels with very fast MVMs. Unfortunately,such strategies suffer badly from the curse of dimensionality. We develop a newtechnique for MVM based learning that exploits product kernel structure. Wedemonstrate that this technique is broadly applicable, resulting in linearrather than exponential runtime with dimension for SKI, as well asstate-of-the-art asymptotic complexity for multi-task GPs.
 
 FastFusionNet: New State-of-the-Art for DAWNBench SQuAD
 
-  In this technical report, we introduce FastFusionNet, an efficient variant of
-FusionNet [12]. FusionNet is a high performing reading comprehension
-architecture, which was designed primarily for maximum retrieval accuracy with
-less regard towards computational requirements. For FastFusionNets we remove
-the expensive CoVe layers [21] and substitute the BiLSTMs with far more
-efficient SRU layers [19]. The resulting architecture obtains state-of-the-art
-results on DAWNBench [5] while achieving the lowest training and inference time
-on SQuAD [25] to-date. The code is available at
-https://github.com/felixgwu/FastFusionNet.
-
+  In this technical report, we introduce FastFusionNet, an efficient variant ofFusionNet [12]. FusionNet is a high performing reading comprehensionarchitecture, which was designed primarily for maximum retrieval accuracy withless regard towards computational requirements. For FastFusionNets we removethe expensive CoVe layers [21] and substitute the BiLSTMs with far moreefficient SRU layers [19]. The resulting architecture obtains state-of-the-artresults on DAWNBench [5] while achieving the lowest training and inference timeon SQuAD [25] to-date. The code is available athttps://github.com/felixgwu/FastFusionNet.
 
 Rapid Feature Learning with Stacked Linear Denoisers
 
-  We investigate unsupervised pre-training of deep architectures as feature
-generators for "shallow" classifiers. Stacked Denoising Autoencoders (SdA),
-when used as feature pre-processing tools for SVM classification, can lead to
-significant improvements in accuracy - however, at the price of a substantial
-increase in computational cost. In this paper we create a simple algorithm
-which mimics the layer by layer training of SdAs. However, in contrast to SdAs,
-our algorithm requires no training through gradient descent as the parameters
-can be computed in closed-form. It can be implemented in less than 20 lines of
-MATLABTMand reduces the computation time from several hours to mere seconds. We
-show that our feature transformation reliably improves the results of SVM
-classification significantly on all our data sets - often outperforming SdAs
-and even deep neural networks in three out of four deep learning benchmarks.
-
-
-Cost-Sensitive Tree of Classifiers
-
-  Recently, machine learning algorithms have successfully entered large-scale
-real-world industrial applications (e.g. search engines and email spam
-filters). Here, the CPU cost during test time must be budgeted and accounted
-for. In this paper, we address the challenge of balancing the test-time cost
-and the classifier accuracy in a principled fashion. The test-time cost of a
-classifier is often dominated by the computation required for feature
-extraction-which can vary drastically across eatures. We decrease this
-extraction time by constructing a tree of classifiers, through which test
-inputs traverse along individual paths. Each path extracts different features
-and is optimized for a specific sub-partition of the input space. By only
-computing features for inputs that benefit from them the most, our cost
-sensitive tree of classifiers can match the high accuracies of the current
-state-of-the-art at a small fraction of the computational cost.
-
+  We investigate unsupervised pre-training of deep architectures as featuregenerators for "shallow" classifiers. Stacked Denoising Autoencoders (SdA),when used as feature pre-processing tools for SVM classification, can lead tosignificant improvements in accuracy - however, at the price of a substantialincrease in computational cost. In this paper we create a simple algorithmwhich mimics the layer by layer training of SdAs. However, in contrast to SdAs,our algorithm requires no training through gradient descent as the parameterscan be computed in closed-form. It can be implemented in less than 20 lines ofMATLABTMand reduces the computation time from several hours to mere seconds. Weshow that our feature transformation reliably improves the results of SVMclassification significantly on all our data sets - often outperforming SdAsand even deep neural networks in three out of four deep learning benchmarks.
 
 Distance Metric Learning for Kernel Machines
 
-  Recent work in metric learning has significantly improved the
-state-of-the-art in k-nearest neighbor classification. Support vector machines
-(SVM), particularly with RBF kernels, are amongst the most popular
-classification algorithms that uses distance metrics to compare examples. This
-paper provides an empirical analysis of the efficacy of three of the most
-popular Mahalanobis metric learning algorithms as pre-processing for SVM
-training. We show that none of these algorithms generate metrics that lead to
-particularly satisfying improvements for SVM-RBF classification. As a remedy we
-introduce support vector metric learning (SVML), a novel algorithm that
-seamlessly combines the learning of a Mahalanobis metric with the training of
-the RBF-SVM parameters. We demonstrate the capabilities of SVML on nine
-benchmark data sets of varying sizes and difficulties. In our study, SVML
-outperforms all alternative state-of-the-art metric learning algorithms in
-terms of accuracy and establishes itself as a serious alternative to the
-standard Euclidean metric with model selection by cross validation.
+  Recent work in metric learning has significantly improved thestate-of-the-art in k-nearest neighbor classification. Support vector machines(SVM), particularly with RBF kernels, are amongst the most popularclassification algorithms that uses distance metrics to compare examples. Thispaper provides an empirical analysis of the efficacy of three of the mostpopular Mahalanobis metric learning algorithms as pre-processing for SVMtraining. We show that none of these algorithms generate metrics that lead toparticularly satisfying improvements for SVM-RBF classification. As a remedy weintroduce support vector metric learning (SVML), a novel algorithm thatseamlessly combines the learning of a Mahalanobis metric with the training ofthe RBF-SVM parameters. We demonstrate the capabilities of SVML on ninebenchmark data sets of varying sizes and difficulties. In our study, SVMLoutperforms all alternative state-of-the-art metric learning algorithms interms of accuracy and establishes itself as a serious alternative to thestandard Euclidean metric with model selection by cross validation.
 
+Cost-Sensitive Tree of Classifiers
+
+  Recently, machine learning algorithms have successfully entered large-scalereal-world industrial applications (e.g. search engines and email spamfilters). Here, the CPU cost during test time must be budgeted and accountedfor. In this paper, we address the challenge of balancing the test-time costand the classifier accuracy in a principled fashion. The test-time cost of aclassifier is often dominated by the computation required for featureextraction-which can vary drastically across eatures. We decrease thisextraction time by constructing a tree of classifiers, through which testinputs traverse along individual paths. Each path extracts different featuresand is optimized for a specific sub-partition of the input space. By onlycomputing features for inputs that benefit from them the most, our costsensitive tree of classifiers can match the high accuracies of the currentstate-of-the-art at a small fraction of the computational cost.
 
 An alternative text representation to TF-IDF and Bag-of-Words
 
-  In text mining, information retrieval, and machine learning, text documents
-are commonly represented through variants of sparse Bag of Words (sBoW) vectors
-(e.g. TF-IDF). Although simple and intuitive, sBoW style representations suffer
-from their inherent over-sparsity and fail to capture word-level synonymy and
-polysemy. Especially when labeled data is limited (e.g. in document
-classification), or the text documents are short (e.g. emails or abstracts),
-many features are rarely observed within the training corpus. This leads to
-overfitting and reduced generalization accuracy. In this paper we propose Dense
-Cohort of Terms (dCoT), an unsupervised algorithm to learn improved sBoW
-document features. dCoT explicitly models absent words by removing and
-reconstructing random sub-sets of words in the unlabeled corpus. With this
-approach, dCoT learns to reconstruct frequent words from co-occurring
-infrequent words and maps the high dimensional sparse sBoW vectors into a
-low-dimensional dense representation. We show that the feature removal can be
-marginalized out and that the reconstruction can be solved for in closed-form.
-We demonstrate empirically, on several benchmark datasets, that dCoT features
-significantly improve the classification accuracy across several document
-classification tasks.
-
+  In text mining, information retrieval, and machine learning, text documentsare commonly represented through variants of sparse Bag of Words (sBoW) vectors(e.g. TF-IDF). Although simple and intuitive, sBoW style representations sufferfrom their inherent over-sparsity and fail to capture word-level synonymy andpolysemy. Especially when labeled data is limited (e.g. in documentclassification), or the text documents are short (e.g. emails or abstracts),many features are rarely observed within the training corpus. This leads tooverfitting and reduced generalization accuracy. In this paper we propose DenseCohort of Terms (dCoT), an unsupervised algorithm to learn improved sBoWdocument features. dCoT explicitly models absent words by removing andreconstructing random sub-sets of words in the unlabeled corpus. With thisapproach, dCoT learns to reconstruct frequent words from co-occurringinfrequent words and maps the high dimensional sparse sBoW vectors into alow-dimensional dense representation. We show that the feature removal can bemarginalized out and that the reconstruction can be solved for in closed-form.We demonstrate empirically, on several benchmark datasets, that dCoT featuressignificantly improve the classification accuracy across several documentclassification tasks.
 
 Parallel Support Vector Machines in Practice
 
-  In this paper, we evaluate the performance of various parallel optimization
-methods for Kernel Support Vector Machines on multicore CPUs and GPUs. In
-particular, we provide the first comparison of algorithms with explicit and
-implicit parallelization. Most existing parallel implementations for multi-core
-or GPU architectures are based on explicit parallelization of Sequential
-Minimal Optimization (SMO)---the programmers identified parallelizable
-components and hand-parallelized them, specifically tuned for a particular
-architecture. We compare these approaches with each other and with implicitly
-parallelized algorithms---where the algorithm is expressed such that most of
-the work is done within few iterations with large dense linear algebra
-operations. These can be computed with highly-optimized libraries, that are
-carefully parallelized for a large variety of parallel platforms. We highlight
-the advantages and disadvantages of both approaches and compare them on various
-benchmark data sets. We find an approximate implicitly parallel algorithm which
-is surprisingly efficient, permits a much simpler implementation, and leads to
-unprecedented speedups in SVM training.
-
+  In this paper, we evaluate the performance of various parallel optimizationmethods for Kernel Support Vector Machines on multicore CPUs and GPUs. Inparticular, we provide the first comparison of algorithms with explicit andimplicit parallelization. Most existing parallel implementations for multi-coreor GPU architectures are based on explicit parallelization of SequentialMinimal Optimization (SMO)---the programmers identified parallelizablecomponents and hand-parallelized them, specifically tuned for a particulararchitecture. We compare these approaches with each other and with implicitlyparallelized algorithms---where the algorithm is expressed such that most ofthe work is done within few iterations with large dense linear algebraoperations. These can be computed with highly-optimized libraries, that arecarefully parallelized for a large variety of parallel platforms. We highlightthe advantages and disadvantages of both approaches and compare them on variousbenchmark data sets. We find an approximate implicitly parallel algorithm whichis surprisingly efficient, permits a much simpler implementation, and leads tounprecedented speedups in SVM training.
 
 Image Data Compression for Covariance and Histogram Descriptors
 
-  Covariance and histogram image descriptors provide an effective way to
-capture information about images. Both excel when used in combination with
-special purpose distance metrics. For covariance descriptors these metrics
-measure the distance along the non-Euclidean Riemannian manifold of symmetric
-positive definite matrices. For histogram descriptors the Earth Mover's
-distance measures the optimal transport between two histograms. Although more
-precise, these distance metrics are very expensive to compute, making them
-impractical in many applications, even for data sets of only a few thousand
-examples. In this paper we present two methods to compress the size of
-covariance and histogram datasets with only marginal increases in test error
-for k-nearest neighbor classification. Specifically, we show that we can reduce
-data sets to 16% and in some cases as little as 2% of their original size,
-while approximately matching the test error of kNN classification on the full
-training set. In fact, because the compressed set is learned in a supervised
-fashion, it sometimes even outperforms the full data set, while requiring only
-a fraction of the space and drastically reducing test-time computation.
-
-
-Compressing Neural Networks with the Hashing Trick
-
-  As deep nets are increasingly used in applications suited for mobile devices,
-a fundamental dilemma becomes apparent: the trend in deep learning is to grow
-models to absorb ever-increasing data set sizes; however mobile devices are
-designed with very little memory and cannot store such large models. We present
-a novel network architecture, HashedNets, that exploits inherent redundancy in
-neural networks to achieve drastic reductions in model sizes. HashedNets uses a
-low-cost hash function to randomly group connection weights into hash buckets,
-and all connections within the same hash bucket share a single parameter value.
-These parameters are tuned to adjust to the HashedNets weight sharing
-architecture with standard backprop during training. Our hashing procedure
-introduces no additional memory overhead, and we demonstrate on several
-benchmark data sets that HashedNets shrink the storage requirements of neural
-networks substantially while mostly preserving generalization performance.
-
-
-Private Causal Inference
-
-  Causal inference deals with identifying which random variables "cause" or
-control other random variables. Recent advances on the topic of causal
-inference based on tools from statistical estimation and machine learning have
-resulted in practical algorithms for causal inference. Causal inference has the
-potential to have significant impact on medical research, prevention and
-control of diseases, and identifying factors that impact economic changes to
-name just a few. However, these promising applications for causal inference are
-often ones that involve sensitive or personal data of users that need to be
-kept private (e.g., medical records, personal finances, etc). Therefore, there
-is a need for the development of causal inference methods that preserve data
-privacy. We study the problem of inferring causality using the current, popular
-causal inference framework, the additive noise model (ANM) while simultaneously
-ensuring privacy of the users. Our framework provides differential privacy
-guarantees for a variety of ANM variants. We run extensive experiments, and
-demonstrate that our techniques are practical and easy to implement.
-
-
-Snapshot Ensembles: Train 1, get M for free
-
-  Ensembles of neural networks are known to be much more robust and accurate
-than individual networks. However, training multiple deep networks for model
-averaging is computationally expensive. In this paper, we propose a method to
-obtain the seemingly contradictory goal of ensembling multiple neural networks
-at no additional training cost. We achieve this goal by training a single
-neural network, converging to several local minima along its optimization path
-and saving the model parameters. To obtain repeated rapid convergence, we
-leverage recent work on cyclic learning rate schedules. The resulting
-technique, which we refer to as Snapshot Ensembling, is simple, yet
-surprisingly effective. We show in a series of experiments that our approach is
-compatible with diverse network architectures and learning tasks. It
-consistently yields lower error rates than state-of-the-art single models at no
-additional training cost, and compares favorably with traditional network
-ensembles. On CIFAR-10 and CIFAR-100 our DenseNet Snapshot Ensembles obtain
-error rates of 3.4% and 17.4% respectively.
-
+  Covariance and histogram image descriptors provide an effective way tocapture information about images. Both excel when used in combination withspecial purpose distance metrics. For covariance descriptors these metricsmeasure the distance along the non-Euclidean Riemannian manifold of symmetricpositive definite matrices. For histogram descriptors the Earth Mover'sdistance measures the optimal transport between two histograms. Although moreprecise, these distance metrics are very expensive to compute, making themimpractical in many applications, even for data sets of only a few thousandexamples. In this paper we present two methods to compress the size ofcovariance and histogram datasets with only marginal increases in test errorfor k-nearest neighbor classification. Specifically, we show that we can reducedata sets to 16% and in some cases as little as 2% of their original size,while approximately matching the test error of kNN classification on the fulltraining set. In fact, because the compressed set is learned in a supervisedfashion, it sometimes even outperforms the full data set, while requiring onlya fraction of the space and drastically reducing test-time computation.
 
 Differentially Private Bayesian Optimization
 
-  Bayesian optimization is a powerful tool for fine-tuning the hyper-parameters
-of a wide variety of machine learning models. The success of machine learning
-has led practitioners in diverse real-world settings to learn classifiers for
-practical problems. As machine learning becomes commonplace, Bayesian
-optimization becomes an attractive method for practitioners to automate the
-process of classifier hyper-parameter tuning. A key observation is that the
-data used for tuning models in these settings is often sensitive. Certain data
-such as genetic predisposition, personal email statistics, and car accident
-history, if not properly private, may be at risk of being inferred from
-Bayesian optimization outputs. To address this, we introduce methods for
-releasing the best hyper-parameters and classifier accuracy privately.
-Leveraging the strong theoretical guarantees of differential privacy and known
-Bayesian optimization convergence bounds, we prove that under a GP assumption
-these private quantities are also near-optimal. Finally, even if this
-assumption is not satisfied, we can use different smoothness guarantees to
-protect privacy.
-
+  Bayesian optimization is a powerful tool for fine-tuning the hyper-parametersof a wide variety of machine learning models. The success of machine learninghas led practitioners in diverse real-world settings to learn classifiers forpractical problems. As machine learning becomes commonplace, Bayesianoptimization becomes an attractive method for practitioners to automate theprocess of classifier hyper-parameter tuning. A key observation is that thedata used for tuning models in these settings is often sensitive. Certain datasuch as genetic predisposition, personal email statistics, and car accidenthistory, if not properly private, may be at risk of being inferred fromBayesian optimization outputs. To address this, we introduce methods forreleasing the best hyper-parameters and classifier accuracy privately.Leveraging the strong theoretical guarantees of differential privacy and knownBayesian optimization convergence bounds, we prove that under a GP assumptionthese private quantities are also near-optimal. Finally, even if thisassumption is not satisfied, we can use different smoothness guarantees toprotect privacy.
 
 Compressed Support Vector Machines
 
-  Support vector machines (SVM) can classify data sets along highly non-linear
-decision boundaries because of the kernel-trick. This expressiveness comes at a
-price: During test-time, the SVM classifier needs to compute the kernel
-inner-product between a test sample and all support vectors. With large
-training data sets, the time required for this computation can be substantial.
-In this paper, we introduce a post-processing algorithm, which compresses the
-learned SVM model by reducing and optimizing support vectors. We evaluate our
-algorithm on several medium-scaled real-world data sets, demonstrating that it
-maintains high test accuracy while reducing the test-time evaluation cost by
-several orders of magnitude---in some cases from hours to seconds. It is fair
-to say that most of the work in this paper was previously been invented by
-Burges and Sch\"olkopf almost 20 years ago. For most of the time during which
-we conducted this research, we were unaware of this prior work. However, in the
-past two decades, computing power has increased drastically, and we can
-therefore provide empirical insights that were not possible in their original
-paper.
+  Support vector machines (SVM) can classify data sets along highly non-lineardecision boundaries because of the kernel-trick. This expressiveness comes at aprice: During test-time, the SVM classifier needs to compute the kernelinner-product between a test sample and all support vectors. With largetraining data sets, the time required for this computation can be substantial.In this paper, we introduce a post-processing algorithm, which compresses thelearned SVM model by reducing and optimizing support vectors. We evaluate ouralgorithm on several medium-scaled real-world data sets, demonstrating that itmaintains high test accuracy while reducing the test-time evaluation cost byseveral orders of magnitude---in some cases from hours to seconds. It is fairto say that most of the work in this paper was previously been invented byBurges and Sch\"olkopf almost 20 years ago. For most of the time during whichwe conducted this research, we were unaware of this prior work. However, in thepast two decades, computing power has increased drastically, and we cantherefore provide empirical insights that were not possible in their originalpaper.
 
+Compressing Neural Networks with the Hashing Trick
+
+  As deep nets are increasingly used in applications suited for mobile devices,a fundamental dilemma becomes apparent: the trend in deep learning is to growmodels to absorb ever-increasing data set sizes; however mobile devices aredesigned with very little memory and cannot store such large models. We presenta novel network architecture, HashedNets, that exploits inherent redundancy inneural networks to achieve drastic reductions in model sizes. HashedNets uses alow-cost hash function to randomly group connection weights into hash buckets,and all connections within the same hash bucket share a single parameter value.These parameters are tuned to adjust to the HashedNets weight sharingarchitecture with standard backprop during training. Our hashing procedureintroduces no additional memory overhead, and we demonstrate on severalbenchmark data sets that HashedNets shrink the storage requirements of neuralnetworks substantially while mostly preserving generalization performance.
 
 Compressing Convolutional Neural Networks
 
-  Convolutional neural networks (CNN) are increasingly used in many areas of
-computer vision. They are particularly attractive because of their ability to
-"absorb" great quantities of labeled data through millions of parameters.
-However, as model sizes increase, so do the storage and memory requirements of
-the classifiers. We present a novel network architecture, Frequency-Sensitive
-Hashed Nets (FreshNets), which exploits inherent redundancy in both
-convolutional layers and fully-connected layers of a deep learning model,
-leading to dramatic savings in memory and storage consumption. Based on the key
-observation that the weights of learned convolutional filters are typically
-smooth and low-frequency, we first convert filter weights to the frequency
-domain with a discrete cosine transform (DCT) and use a low-cost hash function
-to randomly group frequency parameters into hash buckets. All parameters
-assigned the same hash bucket share a single value learned with standard
-back-propagation. To further reduce model size we allocate fewer hash buckets
-to high-frequency components, which are generally less important. We evaluate
-FreshNets on eight data sets, and show that it leads to drastically better
-compressed performance than several relevant baselines.
+  Convolutional neural networks (CNN) are increasingly used in many areas ofcomputer vision. They are particularly attractive because of their ability to"absorb" great quantities of labeled data through millions of parameters.However, as model sizes increase, so do the storage and memory requirements ofthe classifiers. We present a novel network architecture, Frequency-SensitiveHashed Nets (FreshNets), which exploits inherent redundancy in bothconvolutional layers and fully-connected layers of a deep learning model,leading to dramatic savings in memory and storage consumption. Based on the keyobservation that the weights of learned convolutional filters are typicallysmooth and low-frequency, we first convert filter weights to the frequencydomain with a discrete cosine transform (DCT) and use a low-cost hash functionto randomly group frequency parameters into hash buckets. All parametersassigned the same hash bucket share a single value learned with standardback-propagation. To further reduce model size we allocate fewer hash bucketsto high-frequency components, which are generally less important. We evaluateFreshNets on eight data sets, and show that it leads to drastically bettercompressed performance than several relevant baselines.
 
+Private Causal Inference
+
+  Causal inference deals with identifying which random variables "cause" orcontrol other random variables. Recent advances on the topic of causalinference based on tools from statistical estimation and machine learning haveresulted in practical algorithms for causal inference. Causal inference has thepotential to have significant impact on medical research, prevention andcontrol of diseases, and identifying factors that impact economic changes toname just a few. However, these promising applications for causal inference areoften ones that involve sensitive or personal data of users that need to bekept private (e.g., medical records, personal finances, etc). Therefore, thereis a need for the development of causal inference methods that preserve dataprivacy. We study the problem of inferring causality using the current, popularcausal inference framework, the additive noise model (ANM) while simultaneouslyensuring privacy of the users. Our framework provides differential privacyguarantees for a variety of ANM variants. We run extensive experiments, anddemonstrate that our techniques are practical and easy to implement.
+
+Snapshot Ensembles: Train 1, get M for free
+
+  Ensembles of neural networks are known to be much more robust and accuratethan individual networks. However, training multiple deep networks for modelaveraging is computationally expensive. In this paper, we propose a method toobtain the seemingly contradictory goal of ensembling multiple neural networksat no additional training cost. We achieve this goal by training a singleneural network, converging to several local minima along its optimization pathand saving the model parameters. To obtain repeated rapid convergence, weleverage recent work on cyclic learning rate schedules. The resultingtechnique, which we refer to as Snapshot Ensembling, is simple, yetsurprisingly effective. We show in a series of experiments that our approach iscompatible with diverse network architectures and learning tasks. Itconsistently yields lower error rates than state-of-the-art single models at noadditional training cost, and compares favorably with traditional networkensembles. On CIFAR-10 and CIFAR-100 our DenseNet Snapshot Ensembles obtainerror rates of 3.4% and 17.4% respectively.
 
 On Calibration of Modern Neural Networks
 
-  Confidence calibration -- the problem of predicting probability estimates
-representative of the true correctness likelihood -- is important for
-classification models in many applications. We discover that modern neural
-networks, unlike those from a decade ago, are poorly calibrated. Through
-extensive experiments, we observe that depth, width, weight decay, and Batch
-Normalization are important factors influencing calibration. We evaluate the
-performance of various post-processing calibration methods on state-of-the-art
-architectures with image and document classification datasets. Our analysis and
-experiments not only offer insights into neural network learning, but also
-provide a simple and straightforward recipe for practical settings: on most
-datasets, temperature scaling -- a single-parameter variant of Platt Scaling --
-is surprisingly effective at calibrating predictions.
-
+  Confidence calibration -- the problem of predicting probability estimatesrepresentative of the true correctness likelihood -- is important forclassification models in many applications. We discover that modern neuralnetworks, unlike those from a decade ago, are poorly calibrated. Throughextensive experiments, we observe that depth, width, weight decay, and BatchNormalization are important factors influencing calibration. We evaluate theperformance of various post-processing calibration methods on state-of-the-artarchitectures with image and document classification datasets. Our analysis andexperiments not only offer insights into neural network learning, but alsoprovide a simple and straightforward recipe for practical settings: on mostdatasets, temperature scaling -- a single-parameter variant of Platt Scaling --is surprisingly effective at calibrating predictions.
 
 Memory-Efficient Implementation of DenseNets
 
-  The DenseNet architecture is highly computationally efficient as a result of
-feature reuse. However, a naive DenseNet implementation can require a
-significant amount of GPU memory: If not properly managed, pre-activation batch
-normalization and contiguous convolution operations can produce feature maps
-that grow quadratically with network depth. In this technical report, we
-introduce strategies to reduce the memory consumption of DenseNets during
-training. By strategically using shared memory allocations, we reduce the
-memory cost for storing feature maps from quadratic to linear. Without the GPU
-memory bottleneck, it is now possible to train extremely deep DenseNets.
-Networks with 14M parameters can be trained on a single GPU, up from 4M. A
-264-layer DenseNet (73M parameters), which previously would have been
-infeasible to train, can now be trained on a single workstation with 8 NVIDIA
-Tesla M40 GPUs. On the ImageNet ILSVRC classification dataset, this large
-DenseNet obtains a state-of-the-art single-crop top-1 error of 20.26%.
-
+  The DenseNet architecture is highly computationally efficient as a result offeature reuse. However, a naive DenseNet implementation can require asignificant amount of GPU memory: If not properly managed, pre-activation batchnormalization and contiguous convolution operations can produce feature mapsthat grow quadratically with network depth. In this technical report, weintroduce strategies to reduce the memory consumption of DenseNets duringtraining. By strategically using shared memory allocations, we reduce thememory cost for storing feature maps from quadratic to linear. Without the GPUmemory bottleneck, it is now possible to train extremely deep DenseNets.Networks with 14M parameters can be trained on a single GPU, up from 4M. A264-layer DenseNet (73M parameters), which previously would have beeninfeasible to train, can now be trained on a single workstation with 8 NVIDIATesla M40 GPUs. On the ImageNet ILSVRC classification dataset, this largeDenseNet obtains a state-of-the-art single-crop top-1 error of 20.26%.
 
 On Fairness and Calibration
 
-  The machine learning community has become increasingly concerned with the
-potential for bias and discrimination in predictive models. This has motivated
-a growing line of work on what it means for a classification procedure to be
-"fair." In this paper, we investigate the tension between minimizing error
-disparity across different population groups while maintaining calibrated
-probability estimates. We show that calibration is compatible only with a
-single error constraint (i.e. equal false-negatives rates across groups), and
-show that any algorithm that satisfies this relaxation is no better than
-randomizing a percentage of predictions for an existing classifier. These
-unsettling findings, which extend and generalize existing results, are
-empirically confirmed on several datasets.
-
+  The machine learning community has become increasingly concerned with thepotential for bias and discrimination in predictive models. This has motivateda growing line of work on what it means for a classification procedure to be"fair." In this paper, we investigate the tension between minimizing errordisparity across different population groups while maintaining calibratedprobability estimates. We show that calibration is compatible only with asingle error constraint (i.e. equal false-negatives rates across groups), andshow that any algorithm that satisfies this relaxation is no better thanrandomizing a percentage of predictions for an existing classifier. Theseunsettling findings, which extend and generalize existing results, areempirically confirmed on several datasets.
 
 CondenseNet: An Efficient DenseNet using Learned Group Convolutions
 
-  Deep neural networks are increasingly used on mobile devices, where
-computational resources are limited. In this paper we develop CondenseNet, a
-novel network architecture with unprecedented efficiency. It combines dense
-connectivity with a novel module called learned group convolution. The dense
-connectivity facilitates feature re-use in the network, whereas learned group
-convolutions remove connections between layers for which this feature re-use is
-superfluous. At test time, our model can be implemented using standard group
-convolutions, allowing for efficient computation in practice. Our experiments
-show that CondenseNets are far more efficient than state-of-the-art compact
-convolutional networks such as MobileNets and ShuffleNets.
-
+  Deep neural networks are increasingly used on mobile devices, wherecomputational resources are limited. In this paper we develop CondenseNet, anovel network architecture with unprecedented efficiency. It combines denseconnectivity with a novel module called learned group convolution. The denseconnectivity facilitates feature re-use in the network, whereas learned groupconvolutions remove connections between layers for which this feature re-use issuperfluous. At test time, our model can be implemented using standard groupconvolutions, allowing for efficient computation in practice. Our experimentsshow that CondenseNets are far more efficient than state-of-the-art compactconvolutional networks such as MobileNets and ShuffleNets.
 
 Constant-Time Predictive Distributions for Gaussian Processes
 
-  One of the most compelling features of Gaussian process (GP) regression is
-its ability to provide well-calibrated posterior distributions. Recent advances
-in inducing point methods have sped up GP marginal likelihood and posterior
-mean computations, leaving posterior covariance estimation and sampling as the
-remaining computational bottlenecks. In this paper we address these
-shortcomings by using the Lanczos algorithm to rapidly approximate the
-predictive covariance matrix. Our approach, which we refer to as LOVE (LanczOs
-Variance Estimates), substantially improves time and space complexity. In our
-experiments, LOVE computes covariances up to 2,000 times faster and draws
-samples 18,000 times faster than existing methods, all without sacrificing
-accuracy.
-
+  One of the most compelling features of Gaussian process (GP) regression isits ability to provide well-calibrated posterior distributions. Recent advancesin inducing point methods have sped up GP marginal likelihood and posteriormean computations, leaving posterior covariance estimation and sampling as theremaining computational bottlenecks. In this paper we address theseshortcomings by using the Lanczos algorithm to rapidly approximate thepredictive covariance matrix. Our approach, which we refer to as LOVE (LanczOsVariance Estimates), substantially improves time and space complexity. In ourexperiments, LOVE computes covariances up to 2,000 times faster and drawssamples 18,000 times faster than existing methods, all without sacrificingaccuracy.
 
 Low Frequency Adversarial Perturbation
 
-  Recently, machine learning security has received significant attention. Many
-computer vision and speech recognition systems have been compromised by
-adversarially but imperceptibly perturbed input. To identify potential
-perturbations, attackers search the high dimensional input space to find
-directions in which the model lacks robustness. The exponential number of such
-directions makes the existence of these adversarial perturbations likely, but
-also creates significant challenges in the black-box setting: First, in the
-absence of gradient information the search problem becomes expensive, resulting
-in high query complexity. Second, the constructed perturbations are typically
-high-frequency in nature and can be successfully defended against through
-denoising transformations. In this paper we propose to restrict the search for
-adversarial images to a low frequency domain. This approach is compatible with
-existing white-box and black-box attacks, and has remarkable benefits in the
-latter setting. In particular, we achieve state-of-the-art black-box query
-efficiency and improve over prior work by an order of magnitude. Further, we
-can circumvent image transformation defenses even when both the model and the
-defense strategy are unknown. Finally, we demonstrate the efficacy of this
-technique by fooling the Google Cloud Vision platform with an unprecedented low
-number of model queries.
+  Recently, machine learning security has received significant attention. Manycomputer vision and speech recognition systems have been compromised byadversarially but imperceptibly perturbed input. To identify potentialperturbations, attackers search the high dimensional input space to finddirections in which the model lacks robustness. The exponential number of suchdirections makes the existence of these adversarial perturbations likely, butalso creates significant challenges in the black-box setting: First, in theabsence of gradient information the search problem becomes expensive, resultingin high query complexity. Second, the constructed perturbations are typicallyhigh-frequency in nature and can be successfully defended against throughdenoising transformations. In this paper we propose to restrict the search foradversarial images to a low frequency domain. This approach is compatible withexisting white-box and black-box attacks, and has remarkable benefits in thelatter setting. In particular, we achieve state-of-the-art black-box queryefficiency and improve over prior work by an order of magnitude. Further, wecan circumvent image transformation defenses even when both the model and thedefense strategy are unknown. Finally, we demonstrate the efficacy of thistechnique by fooling the Google Cloud Vision platform with an unprecedented lownumber of model queries.
 
+GPyTorch: Blackbox Matrix-Matrix Gaussian Process Inference with GPU  Acceleration
 
-GPyTorch: Blackbox Matrix-Matrix Gaussian Process Inference with GPU
-  Acceleration
+  Despite advances in scalable models, the inference tools used for Gaussianprocesses (GPs) have yet to fully capitalize on developments in computinghardware. We present an efficient and general approach to GP inference based onBlackbox Matrix-Matrix multiplication (BBMM). BBMM inference uses a modifiedbatched version of the conjugate gradients algorithm to derive all terms fortraining and inference in a single call. BBMM reduces the asymptotic complexityof exact GP inference from $O(n^3)$ to $O(n^2)$. Adapting this algorithm toscalable approximations and complex GP models simply requires a routine forefficient matrix-matrix multiplication with the kernel and its derivative. Inaddition, BBMM uses a specialized preconditioner to substantially speed upconvergence. In experiments we show that BBMM effectively uses GPU hardware todramatically accelerate both exact GP inference and scalable approximations.Additionally, we provide GPyTorch, a software platform for scalable GPinference via BBMM, built on PyTorch.
 
-  Despite advances in scalable models, the inference tools used for Gaussian
-processes (GPs) have yet to fully capitalize on developments in computing
-hardware. We present an efficient and general approach to GP inference based on
-Blackbox Matrix-Matrix multiplication (BBMM). BBMM inference uses a modified
-batched version of the conjugate gradients algorithm to derive all terms for
-training and inference in a single call. BBMM reduces the asymptotic complexity
-of exact GP inference from $O(n^3)$ to $O(n^2)$. Adapting this algorithm to
-scalable approximations and complex GP models simply requires a routine for
-efficient matrix-matrix multiplication with the kernel and its derivative. In
-addition, BBMM uses a specialized preconditioner to substantially speed up
-convergence. In experiments we show that BBMM effectively uses GPU hardware to
-dramatically accelerate both exact GP inference and scalable approximations.
-Additionally, we provide GPyTorch, a software platform for scalable GP
-inference via BBMM, built on PyTorch.
+Deep Person Re-identification for Probabilistic Data Association in  Multiple Pedestrian Tracking
 
-
-Deep Person Re-identification for Probabilistic Data Association in
-  Multiple Pedestrian Tracking
-
-  We present a data association method for vision-based multiple pedestrian
-tracking, using deep convolutional features to distinguish between different
-people based on their appearances. These re-identification (re-ID) features are
-learned such that they are invariant to transformations such as rotation,
-translation, and changes in the background, allowing consistent identification
-of a pedestrian moving through a scene. We incorporate re-ID features into a
-general data association likelihood model for multiple person tracking,
-experimentally validate this model by using it to perform tracking in two
-evaluation video sequences, and examine the performance improvements gained as
-compared to several baseline approaches. Our results demonstrate that using
-deep person re-ID for data association greatly improves tracking robustness to
-challenges such as occlusions and path crossings.
-
+  We present a data association method for vision-based multiple pedestriantracking, using deep convolutional features to distinguish between differentpeople based on their appearances. These re-identification (re-ID) features arelearned such that they are invariant to transformations such as rotation,translation, and changes in the background, allowing consistent identificationof a pedestrian moving through a scene. We incorporate re-ID features into ageneral data association likelihood model for multiple person tracking,experimentally validate this model by using it to perform tracking in twoevaluation video sequences, and examine the performance improvements gained ascompared to several baseline approaches. Our results demonstrate that usingdeep person re-ID for data association greatly improves tracking robustness tochallenges such as occlusions and path crossings.
 
 Anytime Stereo Image Depth Estimation on Mobile Devices
 
-  Many applications of stereo depth estimation in robotics require the
-generation of accurate disparity maps in real time under significant
-computational constraints. Current state-of-the-art algorithms force a choice
-between either generating accurate mappings at a slow pace, or quickly
-generating inaccurate ones, and additionally these methods typically require
-far too many parameters to be usable on power- or memory-constrained devices.
-Motivated by these shortcomings, we propose a novel approach for disparity
-prediction in the anytime setting. In contrast to prior work, our end-to-end
-learned approach can trade off computation and accuracy at inference time.
-Depth estimation is performed in stages, during which the model can be queried
-at any time to output its current best estimate. Our final model can process
-1242$ \times $375 resolution images within a range of 10-35 FPS on an NVIDIA
-Jetson TX2 module with only marginal increases in error -- using two orders of
-magnitude fewer parameters than the most competitive baseline. The source code
-is available at https://github.com/mileyan/AnyNet .
-
+  Many applications of stereo depth estimation in robotics require thegeneration of accurate disparity maps in real time under significantcomputational constraints. Current state-of-the-art algorithms force a choicebetween either generating accurate mappings at a slow pace, or quicklygenerating inaccurate ones, and additionally these methods typically requirefar too many parameters to be usable on power- or memory-constrained devices.Motivated by these shortcomings, we propose a novel approach for disparityprediction in the anytime setting. In contrast to prior work, our end-to-endlearned approach can trade off computation and accuracy at inference time.Depth estimation is performed in stages, during which the model can be queriedat any time to output its current best estimate. Our final model can process1242$ \times $375 resolution images within a range of 10-35 FPS on an NVIDIAJetson TX2 module with only marginal increases in error -- using two orders ofmagnitude fewer parameters than the most competitive baseline. The source codeis available at https://github.com/mileyan/AnyNet .
 
 Gradient Boosted Feature Selection
 
-  A feature selection algorithm should ideally satisfy four conditions:
-reliably extract relevant features; be able to identify non-linear feature
-interactions; scale linearly with the number of features and dimensions; allow
-the incorporation of known sparsity structure. In this work we propose a novel
-feature selection algorithm, Gradient Boosted Feature Selection (GBFS), which
-satisfies all four of these requirements. The algorithm is flexible, scalable,
-and surprisingly straight-forward to implement as it is based on a modification
-of Gradient Boosted Trees. We evaluate GBFS on several real world data sets and
-show that it matches or out-performs other state of the art feature selection
-algorithms. Yet it scales to larger data set sizes and naturally allows for
-domain-specific side information.
-
+  A feature selection algorithm should ideally satisfy four conditions:reliably extract relevant features; be able to identify non-linear featureinteractions; scale linearly with the number of features and dimensions; allowthe incorporation of known sparsity structure. In this work we propose a novelfeature selection algorithm, Gradient Boosted Feature Selection (GBFS), whichsatisfies all four of these requirements. The algorithm is flexible, scalable,and surprisingly straight-forward to implement as it is based on a modificationof Gradient Boosted Trees. We evaluate GBFS on several real world data sets andshow that it matches or out-performs other state of the art feature selectionalgorithms. Yet it scales to larger data set sizes and naturally allows fordomain-specific side information.
 
 Gradient Regularized Budgeted Boosting
 
-  As machine learning transitions increasingly towards real world applications
-controlling the test-time cost of algorithms becomes more and more crucial.
-Recent work, such as the Greedy Miser and Speedboost, incorporate test-time
-budget constraints into the training procedure and learn classifiers that
-provably stay within budget (in expectation). However, so far, these algorithms
-are limited to the supervised learning scenario where sufficient amounts of
-labeled data are available. In this paper we investigate the common scenario
-where labeled data is scarce but unlabeled data is available in abundance. We
-propose an algorithm that leverages the unlabeled data (through Laplace
-smoothing) and learns classifiers with budget constraints. Our model, based on
-gradient boosted regression trees (GBRT), is, to our knowledge, the first
-algorithm for semi-supervised budgeted learning.
-
+  As machine learning transitions increasingly towards real world applicationscontrolling the test-time cost of algorithms becomes more and more crucial.Recent work, such as the Greedy Miser and Speedboost, incorporate test-timebudget constraints into the training procedure and learn classifiers thatprovably stay within budget (in expectation). However, so far, these algorithmsare limited to the supervised learning scenario where sufficient amounts oflabeled data are available. In this paper we investigate the common scenariowhere labeled data is scarce but unlabeled data is available in abundance. Wepropose an algorithm that leverages the unlabeled data (through Laplacesmoothing) and learns classifiers with budget constraints. Our model, based ongradient boosted regression trees (GBRT), is, to our knowledge, the firstalgorithm for semi-supervised budgeted learning.
 
 Simplifying Graph Convolutional Networks
 
-  Graph Convolutional Networks (GCNs) and their variants have experienced
-significant attention and have become the de facto methods for learning graph
-representations. GCNs derive inspiration primarily from recent deep learning
-approaches, and as a result, may inherit unnecessary complexity and redundant
-computation. In this paper, we reduce this excess complexity through
-successively removing nonlinearities and collapsing weight matrices between
-consecutive layers. We theoretically analyze the resulting linear model and
-show that it corresponds to a fixed low-pass filter followed by a linear
-classifier. Notably, our experimental evaluation demonstrates that these
-simplifications do not negatively impact accuracy in many downstream
-applications. Moreover, the resulting model scales to larger datasets, is
-naturally interpretable, and yields up to two orders of magnitude speedup over
-FastGCN.
-
+  Graph Convolutional Networks (GCNs) and their variants have experiencedsignificant attention and have become the de facto methods for learning graphrepresentations. GCNs derive inspiration primarily from recent deep learningapproaches, and as a result, may inherit unnecessary complexity and redundantcomputation. In this paper, we reduce this excess complexity throughsuccessively removing nonlinearities and collapsing weight matrices betweenconsecutive layers. We theoretically analyze the resulting linear model andshow that it corresponds to a fixed low-pass filter followed by a linearclassifier. Notably, our experimental evaluation demonstrates that thesesimplifications do not negatively impact accuracy in many downstreamapplications. Moreover, the resulting model scales to larger datasets, isnaturally interpretable, and yields up to two orders of magnitude speedup overFastGCN.
 
 Exact Gaussian Processes on a Million Data Points
 
-  Gaussian processes (GPs) are flexible models with state-of-the-art
-performance on many impactful applications. However, computational constraints
-with standard inference procedures have limited exact GPs to problems with
-fewer than about ten thousand training points, necessitating approximations for
-larger datasets. In this paper, we develop a scalable approach for exact GPs
-that leverages multi-GPU parallelization and methods like linear conjugate
-gradients, accessing the kernel matrix only through matrix multiplication. By
-partitioning and distributing kernel matrix multiplies, we demonstrate that an
-exact GP can be trained on over a million points in 3 days using 8 GPUs and can
-compute predictive means and variances in under a second using 1 GPU at test
-time. Moreover, we perform the first-ever comparison of exact GPs against
-state-of-the-art scalable approximations on large-scale regression datasets
-with $10^4-10^6$ data points, showing dramatic performance improvements.
+  Gaussian processes (GPs) are flexible models with state-of-the-artperformance on many impactful applications. However, computational constraintswith standard inference procedures have limited exact GPs to problems withfewer than about ten thousand training points, necessitating approximations forlarger datasets. In this paper, we develop a scalable approach for exact GPsthat leverages multi-GPU parallelization and methods like linear conjugategradients, accessing the kernel matrix only through matrix multiplication. Bypartitioning and distributing kernel matrix multiplies, we demonstrate that anexact GP can be trained on over a million points in 3 days using 8 GPUs and cancompute predictive means and variances in under a second using 1 GPU at testtime. Moreover, we perform the first-ever comparison of exact GPs againststate-of-the-art scalable approximations on large-scale regression datasetswith $10^4-10^6$ data points, showing dramatic performance improvements.
 
+A Reduction of the Elastic Net to Support Vector Machines with an  Application to GPU Computing
 
-A Reduction of the Elastic Net to Support Vector Machines with an
-  Application to GPU Computing
-
-  The past years have witnessed many dedicated open-source projects that built
-and maintain implementations of Support Vector Machines (SVM), parallelized for
-GPU, multi-core CPUs and distributed systems. Up to this point, no comparable
-effort has been made to parallelize the Elastic Net, despite its popularity in
-many high impact applications, including genetics, neuroscience and systems
-biology. The first contribution in this paper is of theoretical nature. We
-establish a tight link between two seemingly different algorithms and prove
-that Elastic Net regression can be reduced to SVM with squared hinge loss
-classification. Our second contribution is to derive a practical algorithm
-based on this reduction. The reduction enables us to utilize prior efforts in
-speeding up and parallelizing SVMs to obtain a highly optimized and parallel
-solver for the Elastic Net and Lasso. With a simple wrapper, consisting of only
-11 lines of MATLAB code, we obtain an Elastic Net implementation that naturally
-utilizes GPU and multi-core CPUs. We demonstrate on twelve real world data
-sets, that our algorithm yields identical results as the popular (and highly
-optimized) glmnet implementation but is one or several orders of magnitude
-faster.
-
+  The past years have witnessed many dedicated open-source projects that builtand maintain implementations of Support Vector Machines (SVM), parallelized forGPU, multi-core CPUs and distributed systems. Up to this point, no comparableeffort has been made to parallelize the Elastic Net, despite its popularity inmany high impact applications, including genetics, neuroscience and systemsbiology. The first contribution in this paper is of theoretical nature. Weestablish a tight link between two seemingly different algorithms and provethat Elastic Net regression can be reduced to SVM with squared hinge lossclassification. Our second contribution is to derive a practical algorithmbased on this reduction. The reduction enables us to utilize prior efforts inspeeding up and parallelizing SVMs to obtain a highly optimized and parallelsolver for the Elastic Net and Lasso. With a simple wrapper, consisting of only11 lines of MATLAB code, we obtain an Elastic Net implementation that naturallyutilizes GPU and multi-core CPUs. We demonstrate on twelve real world datasets, that our algorithm yields identical results as the popular (and highlyoptimized) glmnet implementation but is one or several orders of magnitudefaster.
 
 Deep Manifold Traversal: Changing Labels with Convolutional Features
 
-  Many tasks in computer vision can be cast as a "label changing" problem,
-where the goal is to make a semantic change to the appearance of an image or
-some subject in an image in order to alter the class membership. Although
-successful task-specific methods have been developed for some label changing
-applications, to date no general purpose method exists. Motivated by this we
-propose deep manifold traversal, a method that addresses the problem in its
-most general form: it first approximates the manifold of natural images then
-morphs a test image along a traversal path away from a source class and towards
-a target class while staying near the manifold throughout. The resulting
-algorithm is surprisingly effective and versatile. It is completely data
-driven, requiring only an example set of images from the desired source and
-target domains. We demonstrate deep manifold traversal on highly diverse label
-changing tasks: changing an individual's appearance (age and hair color),
-changing the season of an outdoor image, and transforming a city skyline
-towards nighttime.
-
+  Many tasks in computer vision can be cast as a "label changing" problem,where the goal is to make a semantic change to the appearance of an image orsome subject in an image in order to alter the class membership. Althoughsuccessful task-specific methods have been developed for some label changingapplications, to date no general purpose method exists. Motivated by this wepropose deep manifold traversal, a method that addresses the problem in itsmost general form: it first approximates the manifold of natural images thenmorphs a test image along a traversal path away from a source class and towardsa target class while staying near the manifold throughout. The resultingalgorithm is surprisingly effective and versatile. It is completely datadriven, requiring only an example set of images from the desired source andtarget domains. We demonstrate deep manifold traversal on highly diverse labelchanging tasks: changing an individual's appearance (age and hair color),changing the season of an outdoor image, and transforming a city skylinetowards nighttime.
 
 Densely Connected Convolutional Networks
 
-  Recent work has shown that convolutional networks can be substantially
-deeper, more accurate, and efficient to train if they contain shorter
-connections between layers close to the input and those close to the output. In
-this paper, we embrace this observation and introduce the Dense Convolutional
-Network (DenseNet), which connects each layer to every other layer in a
-feed-forward fashion. Whereas traditional convolutional networks with L layers
-have L connections - one between each layer and its subsequent layer - our
-network has L(L+1)/2 direct connections. For each layer, the feature-maps of
-all preceding layers are used as inputs, and its own feature-maps are used as
-inputs into all subsequent layers. DenseNets have several compelling
-advantages: they alleviate the vanishing-gradient problem, strengthen feature
-propagation, encourage feature reuse, and substantially reduce the number of
-parameters. We evaluate our proposed architecture on four highly competitive
-object recognition benchmark tasks (CIFAR-10, CIFAR-100, SVHN, and ImageNet).
-DenseNets obtain significant improvements over the state-of-the-art on most of
-them, whilst requiring less computation to achieve high performance. Code and
-pre-trained models are available at https://github.com/liuzhuang13/DenseNet .
-
+  Recent work has shown that convolutional networks can be substantiallydeeper, more accurate, and efficient to train if they contain shorterconnections between layers close to the input and those close to the output. Inthis paper, we embrace this observation and introduce the Dense ConvolutionalNetwork (DenseNet), which connects each layer to every other layer in afeed-forward fashion. Whereas traditional convolutional networks with L layershave L connections - one between each layer and its subsequent layer - ournetwork has L(L+1)/2 direct connections. For each layer, the feature-maps ofall preceding layers are used as inputs, and its own feature-maps are used asinputs into all subsequent layers. DenseNets have several compellingadvantages: they alleviate the vanishing-gradient problem, strengthen featurepropagation, encourage feature reuse, and substantially reduce the number ofparameters. We evaluate our proposed architecture on four highly competitiveobject recognition benchmark tasks (CIFAR-10, CIFAR-100, SVHN, and ImageNet).DenseNets obtain significant improvements over the state-of-the-art on most ofthem, whilst requiring less computation to achieve high performance. Code andpre-trained models are available at https://github.com/liuzhuang13/DenseNet .
 
 Multi-Scale Dense Networks for Resource Efficient Image Classification
 
-  In this paper we investigate image classification with computational resource
-limits at test time. Two such settings are: 1. anytime classification, where
-the network's prediction for a test example is progressively updated,
-facilitating the output of a prediction at any time; and 2. budgeted batch
-classification, where a fixed amount of computation is available to classify a
-set of examples that can be spent unevenly across "easier" and "harder" inputs.
-In contrast to most prior work, such as the popular Viola and Jones algorithm,
-our approach is based on convolutional neural networks. We train multiple
-classifiers with varying resource demands, which we adaptively apply during
-test time. To maximally re-use computation between the classifiers, we
-incorporate them as early-exits into a single deep convolutional neural network
-and inter-connect them with dense connectivity. To facilitate high quality
-classification early on, we use a two-dimensional multi-scale network
-architecture that maintains coarse and fine level features all-throughout the
-network. Experiments on three image-classification tasks demonstrate that our
-framework substantially improves the existing state-of-the-art in both
-settings.
-
+  In this paper we investigate image classification with computational resourcelimits at test time. Two such settings are: 1. anytime classification, wherethe network's prediction for a test example is progressively updated,facilitating the output of a prediction at any time; and 2. budgeted batchclassification, where a fixed amount of computation is available to classify aset of examples that can be spent unevenly across "easier" and "harder" inputs.In contrast to most prior work, such as the popular Viola and Jones algorithm,our approach is based on convolutional neural networks. We train multipleclassifiers with varying resource demands, which we adaptively apply duringtest time. To maximally re-use computation between the classifiers, weincorporate them as early-exits into a single deep convolutional neural networkand inter-connect them with dense connectivity. To facilitate high qualityclassification early on, we use a two-dimensional multi-scale networkarchitecture that maintains coarse and fine level features all-throughout thenetwork. Experiments on three image-classification tasks demonstrate that ourframework substantially improves the existing state-of-the-art in bothsettings.
 
 Resource Aware Person Re-identification across Multiple Resolutions
 
-  Not all people are equally easy to identify: color statistics might be enough
-for some cases while others might require careful reasoning about high- and
-low-level details. However, prevailing person re-identification(re-ID) methods
-use one-size-fits-all high-level embeddings from deep convolutional networks
-for all cases. This might limit their accuracy on difficult examples or makes
-them needlessly expensive for the easy ones. To remedy this, we present a new
-person re-ID model that combines effective embeddings built on multiple
-convolutional network layers, trained with deep-supervision. On traditional
-re-ID benchmarks, our method improves substantially over the previous
-state-of-the-art results on all five datasets that we evaluate on. We then
-propose two new formulations of the person re-ID problem under
-resource-constraints, and show how our model can be used to effectively trade
-off accuracy and computation in the presence of resource constraints. Code and
-pre-trained models are available at https://github.com/mileyan/DARENet.
-
+  Not all people are equally easy to identify: color statistics might be enoughfor some cases while others might require careful reasoning about high- andlow-level details. However, prevailing person re-identification(re-ID) methodsuse one-size-fits-all high-level embeddings from deep convolutional networksfor all cases. This might limit their accuracy on difficult examples or makesthem needlessly expensive for the easy ones. To remedy this, we present a newperson re-ID model that combines effective embeddings built on multipleconvolutional network layers, trained with deep-supervision. On traditionalre-ID benchmarks, our method improves substantially over the previousstate-of-the-art results on all five datasets that we evaluate on. We thenpropose two new formulations of the person re-ID problem underresource-constraints, and show how our model can be used to effectively tradeoff accuracy and computation in the presence of resource constraints. Code andpre-trained models are available at https://github.com/mileyan/DARENet.
 
 Understanding Batch Normalization
 
-  Batch normalization (BN) is a technique to normalize activations in
-intermediate layers of deep neural networks. Its tendency to improve accuracy
-and speed up training have established BN as a favorite technique in deep
-learning. Yet, despite its enormous success, there remains little consensus on
-the exact reason and mechanism behind these improvements. In this paper we take
-a step towards a better understanding of BN, following an empirical approach.
-We conduct several experiments, and show that BN primarily enables training
-with larger learning rates, which is the cause for faster convergence and
-better generalization. For networks without BN we demonstrate how large
-gradient updates can result in diverging loss and activations growing
-uncontrollably with network depth, which limits possible learning rates. BN
-avoids this problem by constantly correcting activations to be zero-mean and of
-unit standard deviation, which enables larger gradient steps, yields faster
-convergence and may help bypass sharp local minima. We further show various
-ways in which gradients and activations of deep unnormalized networks are
-ill-behaved. We contrast our results against recent findings in random matrix
-theory, shedding new light on classical initialization schemes and their
-consequences.
+  Batch normalization (BN) is a technique to normalize activations inintermediate layers of deep neural networks. Its tendency to improve accuracyand speed up training have established BN as a favorite technique in deeplearning. Yet, despite its enormous success, there remains little consensus onthe exact reason and mechanism behind these improvements. In this paper we takea step towards a better understanding of BN, following an empirical approach.We conduct several experiments, and show that BN primarily enables trainingwith larger learning rates, which is the cause for faster convergence andbetter generalization. For networks without BN we demonstrate how largegradient updates can result in diverging loss and activations growinguncontrollably with network depth, which limits possible learning rates. BNavoids this problem by constantly correcting activations to be zero-mean and ofunit standard deviation, which enables larger gradient steps, yields fasterconvergence and may help bypass sharp local minima. We further show variousways in which gradients and activations of deep unnormalized networks areill-behaved. We contrast our results against recent findings in random matrixtheory, shedding new light on classical initialization schemes and theirconsequences.
 
+Pseudo-LiDAR from Visual Depth Estimation: Bridging the Gap in 3D Object  Detection for Autonomous Driving
 
-Pseudo-LiDAR from Visual Depth Estimation: Bridging the Gap in 3D Object
-  Detection for Autonomous Driving
-
-  3D object detection is an essential task in autonomous driving. Recent
-techniques excel with highly accurate detection rates, provided the 3D input
-data is obtained from precise but expensive LiDAR technology. Approaches based
-on cheaper monocular or stereo imagery data have, until now, resulted in
-drastically lower accuracies --- a gap that is commonly attributed to poor
-image-based depth estimation. However, in this paper we argue that data
-representation (rather than its quality) accounts for the majority of the
-difference. Taking the inner workings of convolutional neural networks into
-consideration, we propose to convert image-based depth maps to pseudo-LiDAR
-representations --- essentially mimicking LiDAR signal. With this
-representation we can apply different existing LiDAR-based detection
-algorithms. On the popular KITTI benchmark, our approach achieves impressive
-improvements over the existing state-of-the-art in image-based performance ---
-raising the detection accuracy of objects within 30m range from the previous
-state-of-the-art of 22% to an unprecedented 74%. At the time of submission our
-algorithm holds the highest entry on the KITTI 3D object detection leaderboard
-for stereo image based approaches.
-
+  3D object detection is an essential task in autonomous driving. Recenttechniques excel with highly accurate detection rates, provided the 3D inputdata is obtained from precise but expensive LiDAR technology. Approaches basedon cheaper monocular or stereo imagery data have, until now, resulted indrastically lower accuracies --- a gap that is commonly attributed to poorimage-based depth estimation. However, in this paper we argue that datarepresentation (rather than its quality) accounts for the majority of thedifference. Taking the inner workings of convolutional neural networks intoconsideration, we propose to convert image-based depth maps to pseudo-LiDARrepresentations --- essentially mimicking LiDAR signal. With thisrepresentation we can apply different existing LiDAR-based detectionalgorithms. On the popular KITTI benchmark, our approach achieves impressiveimprovements over the existing state-of-the-art in image-based performance ---raising the detection accuracy of objects within 30m range from the previousstate-of-the-art of 22% to an unprecedented 74%. At the time of submission ouralgorithm holds the highest entry on the KITTI 3D object detection leaderboardfor stereo image based approaches.
 

@@ -1,267 +1,64 @@
-Approximate Dynamic Programming By Minimizing Distributionally Robust
-  Bounds
+Approximate Dynamic Programming By Minimizing Distributionally Robust  Bounds
 
-  Approximate dynamic programming is a popular method for solving large Markov
-decision processes. This paper describes a new class of approximate dynamic
-programming (ADP) methods- distributionally robust ADP-that address the curse
-of dimensionality by minimizing a pessimistic bound on the policy loss. This
-approach turns ADP into an optimization problem, for which we derive new
-mathematical program formulations and analyze its properties. DRADP improves on
-the theoretical guarantees of existing ADP methods-it guarantees convergence
-and L1 norm based error bounds. The empirical evaluation of DRADP shows that
-the theoretical guarantees translate well into good performance on benchmark
-problems.
+  Approximate dynamic programming is a popular method for solving large Markovdecision processes. This paper describes a new class of approximate dynamicprogramming (ADP) methods- distributionally robust ADP-that address the curseof dimensionality by minimizing a pessimistic bound on the policy loss. Thisapproach turns ADP into an optimization problem, for which we derive newmathematical program formulations and analyze its properties. DRADP improves onthe theoretical guarantees of existing ADP methods-it guarantees convergenceand L1 norm based error bounds. The empirical evaluation of DRADP shows thatthe theoretical guarantees translate well into good performance on benchmarkproblems.
 
+An Approximate Solution Method for Large Risk-Averse Markov Decision  Processes
 
-An Approximate Solution Method for Large Risk-Averse Markov Decision
-  Processes
-
-  Stochastic domains often involve risk-averse decision makers. While recent
-work has focused on how to model risk in Markov decision processes using risk
-measures, it has not addressed the problem of solving large risk-averse
-formulations. In this paper, we propose and analyze a new method for solving
-large risk-averse MDPs with hybrid continuous-discrete state spaces and
-continuous action spaces. The proposed method iteratively improves a bound on
-the value function using a linearity structure of the MDP. We demonstrate the
-utility and properties of the method on a portfolio optimization problem.
-
+  Stochastic domains often involve risk-averse decision makers. While recentwork has focused on how to model risk in Markov decision processes using riskmeasures, it has not addressed the problem of solving large risk-averseformulations. In this paper, we propose and analyze a new method for solvinglarge risk-averse MDPs with hybrid continuous-discrete state spaces andcontinuous action spaces. The proposed method iteratively improves a bound onthe value function using a linearity structure of the MDP. We demonstrate theutility and properties of the method on a portfolio optimization problem.
 
 Global Optimization for Value Function Approximation
 
-  Existing value function approximation methods have been successfully used in
-many applications, but they often lack useful a priori error bounds. We propose
-a new approximate bilinear programming formulation of value function
-approximation, which employs global optimization. The formulation provides
-strong a priori guarantees on both robust and expected policy loss by
-minimizing specific norms of the Bellman residual. Solving a bilinear program
-optimally is NP-hard, but this is unavoidable because the Bellman-residual
-minimization itself is NP-hard. We describe and analyze both optimal and
-approximate algorithms for solving bilinear programs. The analysis shows that
-this algorithm offers a convergent generalization of approximate policy
-iteration. We also briefly analyze the behavior of bilinear programming
-algorithms under incomplete samples. Finally, we demonstrate that the proposed
-approach can consistently minimize the Bellman residual on simple benchmark
-problems.
+  Existing value function approximation methods have been successfully used inmany applications, but they often lack useful a priori error bounds. We proposea new approximate bilinear programming formulation of value functionapproximation, which employs global optimization. The formulation providesstrong a priori guarantees on both robust and expected policy loss byminimizing specific norms of the Bellman residual. Solving a bilinear programoptimally is NP-hard, but this is unavoidable because the Bellman-residualminimization itself is NP-hard. We describe and analyze both optimal andapproximate algorithms for solving bilinear programs. The analysis shows thatthis algorithm offers a convergent generalization of approximate policyiteration. We also briefly analyze the behavior of bilinear programmingalgorithms under incomplete samples. Finally, we demonstrate that the proposedapproach can consistently minimize the Bellman residual on simple benchmarkproblems.
 
+Solution Methods for Constrained Markov Decision Process with Continuous  Probability Modulation
+
+  We propose solution methods for previously-unsolved constrained MDPs in whichactions can continuously modify the transition probabilities within someacceptable sets. While many methods have been proposed to solve regular MDPswith large state sets, there are few practical approaches for solvingconstrained MDPs with large action sets. In particular, we show that thecontinuous action sets can be replaced by their extreme points when the rewardsare linear in the modulation. We also develop a tractable optimizationformulation for concave reward functions and, surprisingly, also extend it tonon- concave reward functions by using their concave envelopes. We evaluate theeffectiveness of the approach on the problem of managing delinquencies in aportfolio of loans.
 
 A Bilinear Programming Approach for Multiagent Planning
 
-  Multiagent planning and coordination problems are common and known to be
-computationally hard. We show that a wide range of two-agent problems can be
-formulated as bilinear programs. We present a successive approximation
-algorithm that significantly outperforms the coverage set algorithm, which is
-the state-of-the-art method for this class of multiagent problems. Because the
-algorithm is formulated for bilinear programs, it is more general and simpler
-to implement. The new algorithm can be terminated at any time and-unlike the
-coverage set algorithm-it facilitates the derivation of a useful online
-performance bound. It is also much more efficient, on average reducing the
-computation time of the optimal solution by about four orders of magnitude.
-Finally, we introduce an automatic dimensionality reduction method that
-improves the effectiveness of the algorithm, extending its applicability to new
-domains and providing a new way to analyze a subclass of bilinear programs.
-
-
-Solution Methods for Constrained Markov Decision Process with Continuous
-  Probability Modulation
-
-  We propose solution methods for previously-unsolved constrained MDPs in which
-actions can continuously modify the transition probabilities within some
-acceptable sets. While many methods have been proposed to solve regular MDPs
-with large state sets, there are few practical approaches for solving
-constrained MDPs with large action sets. In particular, we show that the
-continuous action sets can be replaced by their extreme points when the rewards
-are linear in the modulation. We also develop a tractable optimization
-formulation for concave reward functions and, surprisingly, also extend it to
-non- concave reward functions by using their concave envelopes. We evaluate the
-effectiveness of the approach on the problem of managing delinquencies in a
-portfolio of loans.
-
+  Multiagent planning and coordination problems are common and known to becomputationally hard. We show that a wide range of two-agent problems can beformulated as bilinear programs. We present a successive approximationalgorithm that significantly outperforms the coverage set algorithm, which isthe state-of-the-art method for this class of multiagent problems. Because thealgorithm is formulated for bilinear programs, it is more general and simplerto implement. The new algorithm can be terminated at any time and-unlike thecoverage set algorithm-it facilitates the derivation of a useful onlineperformance bound. It is also much more efficient, on average reducing thecomputation time of the optimal solution by about four orders of magnitude.Finally, we introduce an automatic dimensionality reduction method thatimproves the effectiveness of the algorithm, extending its applicability to newdomains and providing a new way to analyze a subclass of bilinear programs.
 
 Robust Partially-Compressed Least-Squares
 
-  Randomized matrix compression techniques, such as the Johnson-Lindenstrauss
-transform, have emerged as an effective and practical way for solving
-large-scale problems efficiently. With a focus on computational efficiency,
-however, forsaking solutions quality and accuracy becomes the trade-off. In
-this paper, we investigate compressed least-squares problems and propose new
-models and algorithms that address the issue of error and noise introduced by
-compression. While maintaining computational efficiency, our models provide
-robust solutions that are more accurate--relative to solutions of uncompressed
-least-squares--than those of classical compressed variants. We introduce tools
-from robust optimization together with a form of partial compression to improve
-the error-time trade-offs of compressed least-squares solvers. We develop an
-efficient solution algorithm for our Robust Partially-Compressed (RPC) model
-based on a reduction to a one-dimensional search. We also derive the first
-approximation error bounds for Partially-Compressed least-squares solutions.
-Empirical results comparing numerous alternatives suggest that robust and
-partially compressed solutions are effectively insulated against aggressive
-randomized transforms.
-
+  Randomized matrix compression techniques, such as the Johnson-Lindenstrausstransform, have emerged as an effective and practical way for solvinglarge-scale problems efficiently. With a focus on computational efficiency,however, forsaking solutions quality and accuracy becomes the trade-off. Inthis paper, we investigate compressed least-squares problems and propose newmodels and algorithms that address the issue of error and noise introduced bycompression. While maintaining computational efficiency, our models providerobust solutions that are more accurate--relative to solutions of uncompressedleast-squares--than those of classical compressed variants. We introduce toolsfrom robust optimization together with a form of partial compression to improvethe error-time trade-offs of compressed least-squares solvers. We develop anefficient solution algorithm for our Robust Partially-Compressed (RPC) modelbased on a reduction to a one-dimensional search. We also derive the firstapproximation error bounds for Partially-Compressed least-squares solutions.Empirical results comparing numerous alternatives suggest that robust andpartially compressed solutions are effectively insulated against aggressiverandomized transforms.
 
 Safe Policy Improvement by Minimizing Robust Baseline Regret
 
-  An important problem in sequential decision-making under uncertainty is to
-use limited data to compute a safe policy, i.e., a policy that is guaranteed to
-perform at least as well as a given baseline strategy. In this paper, we
-develop and analyze a new model-based approach to compute a safe policy when we
-have access to an inaccurate dynamics model of the system with known accuracy
-guarantees. Our proposed robust method uses this (inaccurate) model to directly
-minimize the (negative) regret w.r.t. the baseline policy. Contrary to the
-existing approaches, minimizing the regret allows one to improve the baseline
-policy in states with accurate dynamics and seamlessly fall back to the
-baseline policy, otherwise. We show that our formulation is NP-hard and propose
-an approximate algorithm. Our empirical results on several domains show that
-even this relatively simple approximate algorithm can significantly outperform
-standard approaches.
-
+  An important problem in sequential decision-making under uncertainty is touse limited data to compute a safe policy, i.e., a policy that is guaranteed toperform at least as well as a given baseline strategy. In this paper, wedevelop and analyze a new model-based approach to compute a safe policy when wehave access to an inaccurate dynamics model of the system with known accuracyguarantees. Our proposed robust method uses this (inaccurate) model to directlyminimize the (negative) regret w.r.t. the baseline policy. Contrary to theexisting approaches, minimizing the regret allows one to improve the baselinepolicy in states with accurate dynamics and seamlessly fall back to thebaseline policy, otherwise. We show that our formulation is NP-hard and proposean approximate algorithm. Our empirical results on several domains show thateven this relatively simple approximate algorithm can significantly outperformstandard approaches.
 
 Beyond Confidence Regions: Tight Bayesian Ambiguity Sets for Robust MDPs
 
-  Robust MDPs (RMDPs) can be used to compute policies with provable worst-case
-guarantees in reinforcement learning. The quality and robustness of an RMDP
-solution are determined by the ambiguity set---the set of plausible transition
-probabilities---which is usually constructed as a multi-dimensional confidence
-region. Existing methods construct ambiguity sets as confidence regions using
-concentration inequalities which leads to overly conservative solutions. This
-paper proposes a new paradigm that can achieve better solutions with the same
-robustness guarantees without using confidence regions as ambiguity sets. To
-incorporate prior knowledge, our algorithms optimize the size and position of
-ambiguity sets using Bayesian inference. Our theoretical analysis shows the
-safety of the proposed method, and the empirical results demonstrate its
-practical promise.
-
-
-Building an Interpretable Recommender via Loss-Preserving Transformation
-
-  We propose a method for building an interpretable recommender system for
-personalizing online content and promotions. Historical data available for the
-system consists of customer features, provided content (promotions), and user
-responses. Unlike in a standard multi-class classification setting,
-misclassification costs depend on both recommended actions and customers. Our
-method transforms such a data set to a new set which can be used with standard
-interpretable multi-class classification algorithms. The transformation has the
-desirable property that minimizing the standard misclassification penalty in
-this new space is equivalent to minimizing the custom cost function.
-
+  Robust MDPs (RMDPs) can be used to compute policies with provable worst-caseguarantees in reinforcement learning. The quality and robustness of an RMDPsolution are determined by the ambiguity set---the set of plausible transitionprobabilities---which is usually constructed as a multi-dimensional confidenceregion. Existing methods construct ambiguity sets as confidence regions usingconcentration inequalities which leads to overly conservative solutions. Thispaper proposes a new paradigm that can achieve better solutions with the samerobustness guarantees without using confidence regions as ambiguity sets. Toincorporate prior knowledge, our algorithms optimize the size and position ofambiguity sets using Bayesian inference. Our theoretical analysis shows thesafety of the proposed method, and the empirical results demonstrate itspractical promise.
 
 Robust Policy Optimization with Baseline Guarantees
 
-  Our goal is to compute a policy that guarantees improved return over a
-baseline policy even when the available MDP model is inaccurate. The inaccurate
-model may be constructed, for example, by system identification techniques when
-the true model is inaccessible. When the modeling error is large, the standard
-solution to the constructed model has no performance guarantees with respect to
-the true model. In this paper we develop algorithms that provide such
-performance guarantees and show a trade-off between their complexity and
-conservatism. Our novel model-based safe policy search algorithms leverage
-recent advances in robust optimization techniques. Furthermore we illustrate
-the effectiveness of these algorithms using a numerical example.
+  Our goal is to compute a policy that guarantees improved return over abaseline policy even when the available MDP model is inaccurate. The inaccuratemodel may be constructed, for example, by system identification techniques whenthe true model is inaccessible. When the modeling error is large, the standardsolution to the constructed model has no performance guarantees with respect tothe true model. In this paper we develop algorithms that provide suchperformance guarantees and show a trade-off between their complexity andconservatism. Our novel model-based safe policy search algorithms leveragerecent advances in robust optimization techniques. Furthermore we illustratethe effectiveness of these algorithms using a numerical example.
 
+Building an Interpretable Recommender via Loss-Preserving Transformation
+
+  We propose a method for building an interpretable recommender system forpersonalizing online content and promotions. Historical data available for thesystem consists of customer features, provided content (promotions), and userresponses. Unlike in a standard multi-class classification setting,misclassification costs depend on both recommended actions and customers. Ourmethod transforms such a data set to a new set which can be used with standardinterpretable multi-class classification algorithms. The transformation has thedesirable property that minimizing the standard misclassification penalty inthis new space is equivalent to minimizing the custom cost function.
 
 Interpretable Reinforcement Learning with Ensemble Methods
 
-  We propose to use boosted regression trees as a way to compute
-human-interpretable solutions to reinforcement learning problems. Boosting
-combines several regression trees to improve their accuracy without
-significantly reducing their inherent interpretability. Prior work has focused
-independently on reinforcement learning and on interpretable machine learning,
-but there has been little progress in interpretable reinforcement learning. Our
-experimental results show that boosted regression trees compute solutions that
-are both interpretable and match the quality of leading reinforcement learning
-methods.
-
+  We propose to use boosted regression trees as a way to computehuman-interpretable solutions to reinforcement learning problems. Boostingcombines several regression trees to improve their accuracy withoutsignificantly reducing their inherent interpretability. Prior work has focusedindependently on reinforcement learning and on interpretable machine learning,but there has been little progress in interpretable reinforcement learning. Ourexperimental results show that boosted regression trees compute solutions thatare both interpretable and match the quality of leading reinforcement learningmethods.
 
 Tight Approximations of Dynamic Risk Measures
 
-  This paper compares two different frameworks recently introduced in the
-literature for measuring risk in a multi-period setting. The first corresponds
-to applying a single coherent risk measure to the cumulative future costs,
-while the second involves applying a composition of one-step coherent risk
-mappings. We summarize the relative strengths of the two methods, characterize
-several necessary and sufficient conditions under which one of the measurements
-always dominates the other, and introduce a metric to quantify how close the
-two risk measures are.
-  Using this notion, we address the question of how tightly a given coherent
-measure can be approximated by lower or upper-bounding compositional measures.
-We exhibit an interesting asymmetry between the two cases: the tightest
-possible upper-bound can be exactly characterized, and corresponds to a popular
-construction in the literature, while the tightest-possible lower bound is not
-readily available. We show that testing domination and computing the
-approximation factors is generally NP-hard, even when the risk measures in
-question are comonotonic and law-invariant. However, we characterize conditions
-and discuss several examples where polynomial-time algorithms are possible. One
-such case is the well-known Conditional Value-at-Risk measure, which is further
-explored in our companion paper [Huang, Iancu, Petrik and Subramanian, "Static
-and Dynamic Conditional Value at Risk" (2012)]. Our theoretical and algorithmic
-constructions exploit interesting connections between the study of risk
-measures and the theory of submodularity and combinatorial optimization, which
-may be of independent interest.
+  This paper compares two different frameworks recently introduced in theliterature for measuring risk in a multi-period setting. The first correspondsto applying a single coherent risk measure to the cumulative future costs,while the second involves applying a composition of one-step coherent riskmappings. We summarize the relative strengths of the two methods, characterizeseveral necessary and sufficient conditions under which one of the measurementsalways dominates the other, and introduce a metric to quantify how close thetwo risk measures are.  Using this notion, we address the question of how tightly a given coherentmeasure can be approximated by lower or upper-bounding compositional measures.We exhibit an interesting asymmetry between the two cases: the tightestpossible upper-bound can be exactly characterized, and corresponds to a popularconstruction in the literature, while the tightest-possible lower bound is notreadily available. We show that testing domination and computing theapproximation factors is generally NP-hard, even when the risk measures inquestion are comonotonic and law-invariant. However, we characterize conditionsand discuss several examples where polynomial-time algorithms are possible. Onesuch case is the well-known Conditional Value-at-Risk measure, which is furtherexplored in our companion paper [Huang, Iancu, Petrik and Subramanian, "Staticand Dynamic Conditional Value at Risk" (2012)]. Our theoretical and algorithmicconstructions exploit interesting connections between the study of riskmeasures and the theory of submodularity and combinatorial optimization, whichmay be of independent interest.
 
+Feature Selection Using Regularization in Approximate Linear Programs  for Markov Decision Processes
 
-Feature Selection Using Regularization in Approximate Linear Programs
-  for Markov Decision Processes
-
-  Approximate dynamic programming has been used successfully in a large variety
-of domains, but it relies on a small set of provided approximation features to
-calculate solutions reliably. Large and rich sets of features can cause
-existing algorithms to overfit because of a limited number of samples. We
-address this shortcoming using $L_1$ regularization in approximate linear
-programming. Because the proposed method can automatically select the
-appropriate richness of features, its performance does not degrade with an
-increasing number of features. These results rely on new and stronger sampling
-bounds for regularized approximate linear programs. We also propose a
-computationally efficient homotopy method. The empirical evaluation of the
-approach shows that the proposed method performs well on simple MDPs and
-standard benchmark problems.
-
+  Approximate dynamic programming has been used successfully in a large varietyof domains, but it relies on a small set of provided approximation features tocalculate solutions reliably. Large and rich sets of features can causeexisting algorithms to overfit because of a limited number of samples. Weaddress this shortcoming using $L_1$ regularization in approximate linearprogramming. Because the proposed method can automatically select theappropriate richness of features, its performance does not degrade with anincreasing number of features. These results rely on new and stronger samplingbounds for regularized approximate linear programs. We also propose acomputationally efficient homotopy method. The empirical evaluation of theapproach shows that the proposed method performs well on simple MDPs andstandard benchmark problems.
 
 Value Directed Exploration in Multi-Armed Bandits with Structured Priors
 
-  Multi-armed bandits are a quintessential machine learning problem requiring
-the balancing of exploration and exploitation. While there has been progress in
-developing algorithms with strong theoretical guarantees, there has been less
-focus on practical near-optimal finite-time performance. In this paper, we
-propose an algorithm for Bayesian multi-armed bandits that utilizes
-value-function-driven online planning techniques. Building on previous work on
-UCB and Gittins index, we introduce linearly-separable value functions that
-take both the expected return and the benefit of exploration into consideration
-to perform n-step lookahead. The algorithm enjoys a sub-linear performance
-guarantee and we present simulation results that confirm its strength in
-problems with structured priors. The simplicity and generality of our approach
-makes it a strong candidate for analyzing more complex multi-armed bandit
-problems.
+  Multi-armed bandits are a quintessential machine learning problem requiringthe balancing of exploration and exploitation. While there has been progress indeveloping algorithms with strong theoretical guarantees, there has been lessfocus on practical near-optimal finite-time performance. In this paper, wepropose an algorithm for Bayesian multi-armed bandits that utilizesvalue-function-driven online planning techniques. Building on previous work onUCB and Gittins index, we introduce linearly-separable value functions thattake both the expected return and the benefit of exploration into considerationto perform n-step lookahead. The algorithm enjoys a sub-linear performanceguarantee and we present simulation results that confirm its strength inproblems with structured priors. The simplicity and generality of our approachmakes it a strong candidate for analyzing more complex multi-armed banditproblems.
 
+A Practical Method for Solving Contextual Bandit Problems Using Decision  Trees
 
-A Practical Method for Solving Contextual Bandit Problems Using Decision
-  Trees
-
-  Many efficient algorithms with strong theoretical guarantees have been
-proposed for the contextual multi-armed bandit problem. However, applying these
-algorithms in practice can be difficult because they require domain expertise
-to build appropriate features and to tune their parameters. We propose a new
-method for the contextual bandit problem that is simple, practical, and can be
-applied with little or no domain expertise. Our algorithm relies on decision
-trees to model the context-reward relationship. Decision trees are
-non-parametric, interpretable, and work well without hand-crafted features. To
-guide the exploration-exploitation trade-off, we use a bootstrapping approach
-which abstracts Thompson sampling to non-Bayesian settings. We also discuss
-several computational heuristics and demonstrate the performance of our method
-on several datasets.
-
+  Many efficient algorithms with strong theoretical guarantees have beenproposed for the contextual multi-armed bandit problem. However, applying thesealgorithms in practice can be difficult because they require domain expertiseto build appropriate features and to tune their parameters. We propose a newmethod for the contextual bandit problem that is simple, practical, and can beapplied with little or no domain expertise. Our algorithm relies on decisiontrees to model the context-reward relationship. Decision trees arenon-parametric, interpretable, and work well without hand-crafted features. Toguide the exploration-exploitation trade-off, we use a bootstrapping approachwhich abstracts Thompson sampling to non-Bayesian settings. We also discussseveral computational heuristics and demonstrate the performance of our methodon several datasets.
 
 Tight Bayesian Ambiguity Sets for Robust MDPs
 
-  Robustness is important for sequential decision making in a stochastic
-dynamic environment with uncertain probabilistic parameters. We address the
-problem of using robust MDPs (RMDPs) to compute policies with provable
-worst-case guarantees in reinforcement learning. The quality and robustness of
-an RMDP solution is determined by its ambiguity set. Existing methods construct
-ambiguity sets that lead to impractically conservative solutions. In this
-paper, we propose RSVF, which achieves less conservative solutions with the
-same worst-case guarantees by 1) leveraging a Bayesian prior, 2) optimizing the
-size and location of the ambiguity set, and, most importantly, 3) relaxing the
-requirement that the set is a confidence interval. Our theoretical analysis
-shows the safety of RSVF, and the empirical results demonstrate its practical
-promise.
-
+  Robustness is important for sequential decision making in a stochasticdynamic environment with uncertain probabilistic parameters. We address theproblem of using robust MDPs (RMDPs) to compute policies with provableworst-case guarantees in reinforcement learning. The quality and robustness ofan RMDP solution is determined by its ambiguity set. Existing methods constructambiguity sets that lead to impractically conservative solutions. In thispaper, we propose RSVF, which achieves less conservative solutions with thesame worst-case guarantees by 1) leveraging a Bayesian prior, 2) optimizing thesize and location of the ambiguity set, and, most importantly, 3) relaxing therequirement that the set is a confidence interval. Our theoretical analysisshows the safety of RSVF, and the empirical results demonstrate its practicalpromise.
 

@@ -1,192 +1,52 @@
-Learning Graphical Model Parameters with Approximate Marginal Inference
-
-  Likelihood based-learning of graphical models faces challenges of
-computational-complexity and robustness to model mis-specification. This paper
-studies methods that fit parameters directly to maximize a measure of the
-accuracy of predicted marginals, taking into account both model and inference
-approximations at training time. Experiments on imaging problems suggest
-marginalization-based learning performs better than likelihood-based
-approximations on difficult problems where the model being fit is approximate
-in nature.
-
-
 Learning Convex Inference of Marginals
 
-  Graphical models trained using maximum likelihood are a common tool for
-probabilistic inference of marginal distributions. However, this approach
-suffers difficulties when either the inference process or the model is
-approximate. In this paper, the inference process is first defined to be the
-minimization of a convex function, inspired by free energy approximations.
-Learning is then done directly in terms of the performance of the inference
-process at univariate marginal prediction. The main novelty is that this is a
-direct minimization of emperical risk, where the risk measures the accuracy of
-predicted marginals.
+  Graphical models trained using maximum likelihood are a common tool forprobabilistic inference of marginal distributions. However, this approachsuffers difficulties when either the inference process or the model isapproximate. In this paper, the inference process is first defined to be theminimization of a convex function, inspired by free energy approximations.Learning is then done directly in terms of the performance of the inferenceprocess at univariate marginal prediction. The main novelty is that this is adirect minimization of emperical risk, where the risk measures the accuracy ofpredicted marginals.
 
+Learning Graphical Model Parameters with Approximate Marginal Inference
+
+  Likelihood based-learning of graphical models faces challenges ofcomputational-complexity and robustness to model mis-specification. This paperstudies methods that fit parameters directly to maximize a measure of theaccuracy of predicted marginals, taking into account both model and inferenceapproximations at training time. Experiments on imaging problems suggestmarginalization-based learning performs better than likelihood-basedapproximations on difficult problems where the model being fit is approximatein nature.
 
 Projecting Ising Model Parameters for Fast Mixing
 
-  Inference in general Ising models is difficult, due to high treewidth making
-tree-based algorithms intractable. Moreover, when interactions are strong,
-Gibbs sampling may take exponential time to converge to the stationary
-distribution. We present an algorithm to project Ising model parameters onto a
-parameter set that is guaranteed to be fast mixing, under several divergences.
-We find that Gibbs sampling using the projected parameters is more accurate
-than with the original parameters when interaction strengths are strong and
-when limited time is available for sampling.
-
+  Inference in general Ising models is difficult, due to high treewidth makingtree-based algorithms intractable. Moreover, when interactions are strong,Gibbs sampling may take exponential time to converge to the stationarydistribution. We present an algorithm to project Ising model parameters onto aparameter set that is guaranteed to be fast mixing, under several divergences.We find that Gibbs sampling using the projected parameters is more accuratethan with the original parameters when interaction strengths are strong andwhen limited time is available for sampling.
 
 Structured Learning via Logistic Regression
 
-  A successful approach to structured learning is to write the learning
-objective as a joint function of linear parameters and inference messages, and
-iterate between updates to each. This paper observes that if the inference
-problem is "smoothed" through the addition of entropy terms, for fixed
-messages, the learning objective reduces to a traditional (non-structured)
-logistic regression problem with respect to parameters. In these logistic
-regression problems, each training example has a bias term determined by the
-current set of messages. Based on this insight, the structured energy function
-can be extended from linear factors to any function class where an "oracle"
-exists to minimize a logistic loss.
-
+  A successful approach to structured learning is to write the learningobjective as a joint function of linear parameters and inference messages, anditerate between updates to each. This paper observes that if the inferenceproblem is "smoothed" through the addition of entropy terms, for fixedmessages, the learning objective reduces to a traditional (non-structured)logistic regression problem with respect to parameters. In these logisticregression problems, each training example has a bias term determined by thecurrent set of messages. Based on this insight, the structured energy functioncan be extended from linear factors to any function class where an "oracle"exists to minimize a logistic loss.
 
 Importance Weighting and Variational Inference
 
-  Recent work used importance sampling ideas for better variational bounds on
-likelihoods. We clarify the applicability of these ideas to pure probabilistic
-inference, by showing the resulting Importance Weighted Variational Inference
-(IWVI) technique is an instance of augmented variational inference, thus
-identifying the looseness in previous work. Experiments confirm IWVI's
-practicality for probabilistic inference. As a second contribution, we
-investigate inference with elliptical distributions, which improves accuracy in
-low dimensions, and convergence in high dimensions.
-
+  Recent work used importance sampling ideas for better variational bounds onlikelihoods. We clarify the applicability of these ideas to pure probabilisticinference, by showing the resulting Importance Weighted Variational Inference(IWVI) technique is an instance of augmented variational inference, thusidentifying the looseness in previous work. Experiments confirm IWVI'spracticality for probabilistic inference. As a second contribution, weinvestigate inference with elliptical distributions, which improves accuracy inlow dimensions, and convergence in high dimensions.
 
 Provable Smoothness Guarantees for Black-Box Variational Inference
 
-  Black-box variational inference tries to approximate a complex target
-distribution though a gradient-based optimization of the parameters of a
-simpler distribution. Provable convergence guarantees require structural
-properties of the objective. This paper shows that for location-scale family
-approximations, if the target is M-Lipschitz smooth, then so is the objective,
-if the entropy is excluded. The key proof idea is to describe gradients in a
-certain inner-product space, thus permitting use of Bessel's inequality. This
-result gives insight into how to parameterize distributions, gives bounds the
-location of the optimal parameters, and is a key ingredient for convergence
-guarantees.
-
+  Black-box variational inference tries to approximate a complex targetdistribution though a gradient-based optimization of the parameters of asimpler distribution. Provable convergence guarantees require structuralproperties of the objective. This paper shows that for location-scale familyapproximations, if the target is M-Lipschitz smooth, then so is the objective,if the entropy is excluded. The key proof idea is to describe gradients in acertain inner-product space, thus permitting use of Bessel's inequality. Thisresult gives insight into how to parameterize distributions, gives bounds thelocation of the optimal parameters, and is a key ingredient for convergenceguarantees.
 
 Projecting Markov Random Field Parameters for Fast Mixing
 
-  Markov chain Monte Carlo (MCMC) algorithms are simple and extremely powerful
-techniques to sample from almost arbitrary distributions. The flaw in practice
-is that it can take a large and/or unknown amount of time to converge to the
-stationary distribution. This paper gives sufficient conditions to guarantee
-that univariate Gibbs sampling on Markov Random Fields (MRFs) will be fast
-mixing, in a precise sense. Further, an algorithm is given to project onto this
-set of fast-mixing parameters in the Euclidean norm. Following recent work, we
-give an example use of this to project in various divergence measures,
-comparing univariate marginals obtained by sampling after projection to common
-variational methods and Gibbs sampling on the original parameters.
+  Markov chain Monte Carlo (MCMC) algorithms are simple and extremely powerfultechniques to sample from almost arbitrary distributions. The flaw in practiceis that it can take a large and/or unknown amount of time to converge to thestationary distribution. This paper gives sufficient conditions to guaranteethat univariate Gibbs sampling on Markov Random Fields (MRFs) will be fastmixing, in a precise sense. Further, an algorithm is given to project onto thisset of fast-mixing parameters in the Euclidean norm. Following recent work, wegive an example use of this to project in various divergence measures,comparing univariate marginals obtained by sampling after projection to commonvariational methods and Gibbs sampling on the original parameters.
 
+Maximum Likelihood Learning With Arbitrary Treewidth via Fast-Mixing  Parameter Sets
 
-Maximum Likelihood Learning With Arbitrary Treewidth via Fast-Mixing
-  Parameter Sets
+  Inference is typically intractable in high-treewidth undirected graphicalmodels, making maximum likelihood learning a challenge. One way to overcomethis is to restrict parameters to a tractable set, most typically the set oftree-structured parameters. This paper explores an alternative notion of atractable set, namely a set of "fast-mixing parameters" where Markov chainMonte Carlo (MCMC) inference can be guaranteed to quickly converge to thestationary distribution. While it is common in practice to approximate thelikelihood gradient using samples obtained from MCMC, such procedures lacktheoretical guarantees. This paper proves that for any exponential family withbounded sufficient statistics, (not just graphical models) when parameters areconstrained to a fast-mixing set, gradient descent with gradients approximatedby sampling will approximate the maximum likelihood solution inside the setwith high-probability. When unregularized, to find a solution epsilon-accuratein log-likelihood requires a total amount of effort cubic in 1/epsilon,disregarding logarithmic factors. When ridge-regularized, strong convexityallows a solution epsilon-accurate in parameter distance with effort quadraticin 1/epsilon. Both of these provide of a fully-polynomial time randomizedapproximation scheme.
 
-  Inference is typically intractable in high-treewidth undirected graphical
-models, making maximum likelihood learning a challenge. One way to overcome
-this is to restrict parameters to a tractable set, most typically the set of
-tree-structured parameters. This paper explores an alternative notion of a
-tractable set, namely a set of "fast-mixing parameters" where Markov chain
-Monte Carlo (MCMC) inference can be guaranteed to quickly converge to the
-stationary distribution. While it is common in practice to approximate the
-likelihood gradient using samples obtained from MCMC, such procedures lack
-theoretical guarantees. This paper proves that for any exponential family with
-bounded sufficient statistics, (not just graphical models) when parameters are
-constrained to a fast-mixing set, gradient descent with gradients approximated
-by sampling will approximate the maximum likelihood solution inside the set
-with high-probability. When unregularized, to find a solution epsilon-accurate
-in log-likelihood requires a total amount of effort cubic in 1/epsilon,
-disregarding logarithmic factors. When ridge-regularized, strong convexity
-allows a solution epsilon-accurate in parameter distance with effort quadratic
-in 1/epsilon. Both of these provide of a fully-polynomial time randomized
-approximation scheme.
+A Divergence Bound for Hybrids of MCMC and Variational Inference and an  Application to Langevin Dynamics and SGVI
 
+  Two popular classes of methods for approximate inference are Markov chainMonte Carlo (MCMC) and variational inference. MCMC tends to be accurate if runfor a long enough time, while variational inference tends to give betterapproximations at shorter time horizons. However, the amount of time needed forMCMC to exceed the performance of variational methods can be quite high,motivating more fine-grained tradeoffs. This paper derives a distribution overvariational parameters, designed to minimize a bound on the divergence betweenthe resulting marginal distribution and the target, and gives an example of howto sample from this distribution in a way that interpolates between thebehavior of existing methods based on Langevin dynamics and stochastic gradientvariational inference (SGVI).
 
-A Divergence Bound for Hybrids of MCMC and Variational Inference and an
-  Application to Langevin Dynamics and SGVI
+Finito: A Faster, Permutable Incremental Gradient Method for Big Data  Problems
 
-  Two popular classes of methods for approximate inference are Markov chain
-Monte Carlo (MCMC) and variational inference. MCMC tends to be accurate if run
-for a long enough time, while variational inference tends to give better
-approximations at shorter time horizons. However, the amount of time needed for
-MCMC to exceed the performance of variational methods can be quite high,
-motivating more fine-grained tradeoffs. This paper derives a distribution over
-variational parameters, designed to minimize a bound on the divergence between
-the resulting marginal distribution and the target, and gives an example of how
-to sample from this distribution in a way that interpolates between the
-behavior of existing methods based on Langevin dynamics and stochastic gradient
-variational inference (SGVI).
-
-
-Finito: A Faster, Permutable Incremental Gradient Method for Big Data
-  Problems
-
-  Recent advances in optimization theory have shown that smooth strongly convex
-finite sums can be minimized faster than by treating them as a black box
-"batch" problem. In this work we introduce a new method in this class with a
-theoretical convergence rate four times faster than existing methods, for sums
-with sufficiently many terms. This method is also amendable to a sampling
-without replacement scheme that in practice gives further speed-ups. We give
-empirical results showing state of the art performance.
-
+  Recent advances in optimization theory have shown that smooth strongly convexfinite sums can be minimized faster than by treating them as a black box"batch" problem. In this work we introduce a new method in this class with atheoretical convergence rate four times faster than existing methods, for sumswith sufficiently many terms. This method is also amendable to a samplingwithout replacement scheme that in practice gives further speed-ups. We giveempirical results showing state of the art performance.
 
 Clamping Improves TRW and Mean Field Approximations
 
-  We examine the effect of clamping variables for approximate inference in
-undirected graphical models with pairwise relationships and discrete variables.
-For any number of variable labels, we demonstrate that clamping and summing
-approximate sub-partition functions can lead only to a decrease in the
-partition function estimate for TRW, and an increase for the naive mean field
-method, in each case guaranteeing an improvement in the approximation and
-bound. We next focus on binary variables, add the Bethe approximation to
-consideration and examine ways to choose good variables to clamp, introducing
-new methods. We show the importance of identifying highly frustrated cycles,
-and of checking the singleton entropy of a variable. We explore the value of
-our methods by empirical analysis and draw lessons to guide practitioners.
+  We examine the effect of clamping variables for approximate inference inundirected graphical models with pairwise relationships and discrete variables.For any number of variable labels, we demonstrate that clamping and summingapproximate sub-partition functions can lead only to a decrease in thepartition function estimate for TRW, and an increase for the naive mean fieldmethod, in each case guaranteeing an improvement in the approximation andbound. We next focus on binary variables, add the Bethe approximation toconsideration and examine ways to choose good variables to clamp, introducingnew methods. We show the importance of identifying highly frustrated cycles,and of checking the singleton entropy of a variable. We explore the value ofour methods by empirical analysis and draw lessons to guide practitioners.
 
+Conditional Inference in Pre-trained Variational Autoencoders via  Cross-coding
 
-Conditional Inference in Pre-trained Variational Autoencoders via
-  Cross-coding
-
-  Variational Autoencoders (VAEs) are a popular generative model, but one in
-which conditional inference can be challenging. If the decomposition into query
-and evidence variables is fixed, conditional VAEs provide an attractive
-solution. To support arbitrary queries, one is generally reduced to Markov
-Chain Monte Carlo sampling methods that can suffer from long mixing times. In
-this paper, we propose an idea we term cross-coding to approximate the
-distribution over the latent variables after conditioning on an evidence
-assignment to some subset of the variables. This allows generating query
-samples without retraining the full VAE. We experimentally evaluate three
-variations of cross-coding showing that (i) they can be quickly optimized for
-different decompositions of evidence and query and (ii) they quantitatively and
-qualitatively outperform Hamiltonian Monte Carlo.
-
+  Variational Autoencoders (VAEs) are a popular generative model, but one inwhich conditional inference can be challenging. If the decomposition into queryand evidence variables is fixed, conditional VAEs provide an attractivesolution. To support arbitrary queries, one is generally reduced to MarkovChain Monte Carlo sampling methods that can suffer from long mixing times. Inthis paper, we propose an idea we term cross-coding to approximate thedistribution over the latent variables after conditioning on an evidenceassignment to some subset of the variables. This allows generating querysamples without retraining the full VAE. We experimentally evaluate threevariations of cross-coding showing that (i) they can be quickly optimized fordifferent decompositions of evidence and query and (ii) they quantitatively andqualitatively outperform Hamiltonian Monte Carlo.
 
 Using Large Ensembles of Control Variates for Variational Inference
 
-  Variational inference is increasingly being addressed with stochastic
-optimization. In this setting, the gradient's variance plays a crucial role in
-the optimization procedure, since high variance gradients lead to poor
-convergence. A popular approach used to reduce gradient's variance involves the
-use of control variates. Despite the good results obtained, control variates
-developed for variational inference are typically looked at in isolation. In
-this paper we clarify the large number of control variates that are available
-by giving a systematic view of how they are derived. We also present a Bayesian
-risk minimization framework in which the quality of a procedure for combining
-control variates is quantified by its effect on optimization convergence rates,
-which leads to a very simple combination rule. Results show that combining a
-large number of control variates this way significantly improves the
-convergence of inference over using the typical gradient estimators or a
-reduced number of control variates.
-
+  Variational inference is increasingly being addressed with stochasticoptimization. In this setting, the gradient's variance plays a crucial role inthe optimization procedure, since high variance gradients lead to poorconvergence. A popular approach used to reduce gradient's variance involves theuse of control variates. Despite the good results obtained, control variatesdeveloped for variational inference are typically looked at in isolation. Inthis paper we clarify the large number of control variates that are availableby giving a systematic view of how they are derived. We also present a Bayesianrisk minimization framework in which the quality of a procedure for combiningcontrol variates is quantified by its effect on optimization convergence rates,which leads to a very simple combination rule. Results show that combining alarge number of control variates this way significantly improves theconvergence of inference over using the typical gradient estimators or areduced number of control variates.
 

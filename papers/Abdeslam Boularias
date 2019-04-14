@@ -1,258 +1,48 @@
 Efficient Model Identification for Tensegrity Locomotion
 
-  This paper aims to identify in a practical manner unknown physical
-parameters, such as mechanical models of actuated robot links, which are
-critical in dynamical robotic tasks. Key features include the use of an
-off-the-shelf physics engine and the Bayesian optimization framework. The task
-being considered is locomotion with a high-dimensional, compliant Tensegrity
-robot. A key insight, in this case, is the need to project the model
-identification challenge into an appropriate lower dimensional space for
-efficiency. Comparisons with alternatives indicate that the proposed method can
-identify the parameters more accurately within the given time budget, which
-also results in more precise locomotion control.
-
+  This paper aims to identify in a practical manner unknown physicalparameters, such as mechanical models of actuated robot links, which arecritical in dynamical robotic tasks. Key features include the use of anoff-the-shelf physics engine and the Bayesian optimization framework. The taskbeing considered is locomotion with a high-dimensional, compliant Tensegrityrobot. A key insight, in this case, is the need to project the modelidentification challenge into an appropriate lower dimensional space forefficiency. Comparisons with alternatives indicate that the proposed method canidentify the parameters more accurately within the given time budget, whichalso results in more precise locomotion control.
 
 Hilbert Space Embeddings of POMDPs
 
-  A nonparametric approach for policy learning for POMDPs is proposed. The
-approach represents distributions over the states, observations, and actions as
-embeddings in feature spaces, which are reproducing kernel Hilbert spaces.
-Distributions over states given the observations are obtained by applying the
-kernel Bayes' rule to these distribution embeddings. Policies and value
-functions are defined on the feature space over states, which leads to a
-feature space expression for the Bellman equation. Value iteration may then be
-used to estimate the optimal value function and associated policy. Experimental
-results confirm that the correct policy is learned using the feature space
-representation.
+  A nonparametric approach for policy learning for POMDPs is proposed. Theapproach represents distributions over the states, observations, and actions asembeddings in feature spaces, which are reproducing kernel Hilbert spaces.Distributions over states given the observations are obtained by applying thekernel Bayes' rule to these distribution embeddings. Policies and valuefunctions are defined on the feature space over states, which leads to afeature space expression for the Bellman equation. Value iteration may then beused to estimate the optimal value function and associated policy. Experimentalresults confirm that the correct policy is learned using the feature spacerepresentation.
 
+Information-theoretic Model Identification and Policy Search using  Physics Engines with Application to Robotic Manipulation
 
-Information-theoretic Model Identification and Policy Search using
-  Physics Engines with Application to Robotic Manipulation
-
-  We consider the problem of a robot learning the mechanical properties of
-objects through physical interaction with the object, and introduce a
-practical, data-efficient approach for identifying the motion models of these
-objects. The proposed method utilizes a physics engine, where the robot seeks
-to identify the inertial and friction parameters of the object by simulating
-its motion under different values of the parameters and identifying those that
-result in a simulation which matches the observed real motions. The problem is
-solved in a Bayesian optimization framework. The same framework is used for
-both identifying the model of an object online and searching for a policy that
-would minimize a given cost function according to the identified model.
-Experimental results both in simulation and using a real robot indicate that
-the proposed method outperforms state-of-the-art model-free reinforcement
-learning approaches.
-
+  We consider the problem of a robot learning the mechanical properties ofobjects through physical interaction with the object, and introduce apractical, data-efficient approach for identifying the motion models of theseobjects. The proposed method utilizes a physics engine, where the robot seeksto identify the inertial and friction parameters of the object by simulatingits motion under different values of the parameters and identifying those thatresult in a simulation which matches the observed real motions. The problem issolved in a Bayesian optimization framework. The same framework is used forboth identifying the model of an object online and searching for a policy thatwould minimize a given cost function according to the identified model.Experimental results both in simulation and using a real robot indicate thatthe proposed method outperforms state-of-the-art model-free reinforcementlearning approaches.
 
 Robust 6D Object Pose Estimation with Stochastic Congruent Sets
 
-  Object pose estimation is frequently achieved by first segmenting an RGB
-image and then, given depth data, registering the corresponding point cloud
-segment against the object's 3D model. Despite the progress due to CNNs,
-semantic segmentation output can be noisy, especially when the CNN is only
-trained on synthetic data. This causes registration methods to fail in
-estimating a good object pose. This work proposes a novel stochastic
-optimization process that treats the segmentation output of CNNs as a
-confidence probability. The algorithm, called Stochastic Congruent Sets
-(StoCS), samples pointsets on the point cloud according to the soft
-segmentation distribution and so as to agree with the object's known geometry.
-The pointsets are then matched to congruent sets on the 3D object model to
-generate pose estimates. StoCS is shown to be robust on an APC dataset, despite
-the fact the CNN is trained only on synthetic data. In the YCB dataset, StoCS
-outperforms a recent network for 6D pose estimation and alternative pointset
-matching techniques.
+  Object pose estimation is frequently achieved by first segmenting an RGBimage and then, given depth data, registering the corresponding point cloudsegment against the object's 3D model. Despite the progress due to CNNs,semantic segmentation output can be noisy, especially when the CNN is onlytrained on synthetic data. This causes registration methods to fail inestimating a good object pose. This work proposes a novel stochasticoptimization process that treats the segmentation output of CNNs as aconfidence probability. The algorithm, called Stochastic Congruent Sets(StoCS), samples pointsets on the point cloud according to the softsegmentation distribution and so as to agree with the object's known geometry.The pointsets are then matched to congruent sets on the 3D object model togenerate pose estimates. StoCS is shown to be robust on an APC dataset, despitethe fact the CNN is trained only on synthetic data. In the YCB dataset, StoCSoutperforms a recent network for 6D pose estimation and alternative pointsetmatching techniques.
 
+Task-Relevant Object Discovery and Categorization for Playing  First-person Shooter Games
 
-Task-Relevant Object Discovery and Categorization for Playing
-  First-person Shooter Games
+  We consider the problem of learning to play first-person shooter (FPS) videogames using raw screen images as observations and keyboard inputs as actions.The high-dimensionality of the observations in this type of applications leadsto prohibitive needs of training data for model-free methods, such as the deepQ-network (DQN), and its recurrent variant DRQN. Thus, recent works focused onlearning low-dimensional representations that may reduce the need for data.This paper presents a new and efficient method for learning suchrepresentations. Salient segments of consecutive frames are detected from theiroptical flow, and clustered based on their feature descriptors. The clusterstypically correspond to different discovered categories of objects. Segmentsdetected in new frames are then classified based on their nearest clusters.Because only a few categories are relevant to a given task, the importance of acategory is defined as the correlation between its occurrence and the agent'sperformance. The result is encoded as a vector indicating objects that are inthe frame and their locations, and used as a side input to DRQN. Experiments onthe game Doom provide a good evidence for the benefit of this approach.
 
-  We consider the problem of learning to play first-person shooter (FPS) video
-games using raw screen images as observations and keyboard inputs as actions.
-The high-dimensionality of the observations in this type of applications leads
-to prohibitive needs of training data for model-free methods, such as the deep
-Q-network (DQN), and its recurrent variant DRQN. Thus, recent works focused on
-learning low-dimensional representations that may reduce the need for data.
-This paper presents a new and efficient method for learning such
-representations. Salient segments of consecutive frames are detected from their
-optical flow, and clustered based on their feature descriptors. The clusters
-typically correspond to different discovered categories of objects. Segments
-detected in new frames are then classified based on their nearest clusters.
-Because only a few categories are relevant to a given task, the importance of a
-category is defined as the correlation between its occurrence and the agent's
-performance. The result is encoded as a vector indicating objects that are in
-the frame and their locations, and used as a side input to DRQN. Experiments on
-the game Doom provide a good evidence for the benefit of this approach.
+Inferring 3D Shapes of Unknown Rigid Objects in Clutter through Inverse  Physics Reasoning
 
+  We present a probabilistic approach for building, on the fly, 3-D models ofunknown objects while being manipulated by a robot. We specifically considermanipulation tasks in piles of clutter that contain previously unseen objects.Most manipulation algorithms for performing such tasks require known geometricmodels of the objects in order to grasp or rearrange them robustly. One of thenovel aspects of this work is the utilization of a physics engine for verifyinghypothesized geometries in simulation. The evidence provided by physicssimulations is used in a probabilistic framework that accounts for the factthat mechanical properties of the objects are uncertain. We present anefficient algorithm for inferring occluded parts of objects based on theirobserved motions and mutual interactions. Experiments using a robot show thatthis approach is efficient for constructing physically realistic 3-D models,which can be useful for manipulation planning. Experiments also show that theproposed approach significantly outperforms alternative approaches in terms ofshape accuracy.
 
-Inferring 3D Shapes of Unknown Rigid Objects in Clutter through Inverse
-  Physics Reasoning
+A Self-supervised Learning System for Object Detection using Physics  Simulation and Multi-view Pose Estimation
 
-  We present a probabilistic approach for building, on the fly, 3-D models of
-unknown objects while being manipulated by a robot. We specifically consider
-manipulation tasks in piles of clutter that contain previously unseen objects.
-Most manipulation algorithms for performing such tasks require known geometric
-models of the objects in order to grasp or rearrange them robustly. One of the
-novel aspects of this work is the utilization of a physics engine for verifying
-hypothesized geometries in simulation. The evidence provided by physics
-simulations is used in a probabilistic framework that accounts for the fact
-that mechanical properties of the objects are uncertain. We present an
-efficient algorithm for inferring occluded parts of objects based on their
-observed motions and mutual interactions. Experiments using a robot show that
-this approach is efficient for constructing physically realistic 3-D models,
-which can be useful for manipulation planning. Experiments also show that the
-proposed approach significantly outperforms alternative approaches in terms of
-shape accuracy.
+  Progress has been achieved recently in object detection given advancements indeep learning. Nevertheless, such tools typically require a large amount oftraining data and significant manual effort to label objects. This limits theirapplicability in robotics, where solutions must scale to a large number ofobjects and variety of conditions. This work proposes an autonomous process fortraining a Convolutional Neural Network (CNN) for object detection and poseestimation in robotic setups. The focus is on detecting objects placed incluttered, tight environments, such as a shelf with multiple objects. Inparticular, given access to 3D object models, several aspects of theenvironment are physically simulated. The models are placed in physicallyrealistic poses with respect to their environment to generate a labeledsynthetic dataset. To further improve object detection, the network self-trainsover real images that are labeled using a robust multi-view pose estimationprocess. The proposed training process is evaluated on several existingdatasets and on a dataset collected for this paper with a Motoman robotic arm.Results show that the proposed approach outperforms popular training processesrelying on synthetic - but not physically realistic - data and manualannotation. The key contributions are the incorporation of physical reasoningin the synthetic data generation process and the automation of the annotationprocess over real images.
 
+Fast Model Identification via Physics Engines for Data-Efficient Policy  Search
 
-A Self-supervised Learning System for Object Detection using Physics
-  Simulation and Multi-view Pose Estimation
+  This paper presents a method for identifying mechanical parameters of robotsor objects, such as their mass and friction coefficients. Key features are theuse of off-the-shelf physics engines and the adaptation of a Bayesianoptimization technique towards minimizing the number of real-world experimentsneeded for model-based reinforcement learning. The proposed frameworkreproduces in a physics engine experiments performed on a real robot andoptimizes the model's mechanical parameters so as to match real-worldtrajectories. The optimized model is then used for learning a policy insimulation, before real-world deployment. It is well understood, however, thatit is hard to exactly reproduce real trajectories in simulation. Moreover, anear-optimal policy can be frequently found with an imperfect model. Therefore,this work proposes a strategy for identifying a model that is just good enoughto approximate the value of a locally optimal policy with a certain confidence,instead of wasting effort on identifying the most accurate model. Evaluations,performed both in simulation and on a real robotic manipulation task, indicatethat the proposed strategy results in an overall time-efficient, integratedmodel identification and learning solution, which significantly improves thedata-efficiency of existing policy search algorithms.
 
-  Progress has been achieved recently in object detection given advancements in
-deep learning. Nevertheless, such tools typically require a large amount of
-training data and significant manual effort to label objects. This limits their
-applicability in robotics, where solutions must scale to a large number of
-objects and variety of conditions. This work proposes an autonomous process for
-training a Convolutional Neural Network (CNN) for object detection and pose
-estimation in robotic setups. The focus is on detecting objects placed in
-cluttered, tight environments, such as a shelf with multiple objects. In
-particular, given access to 3D object models, several aspects of the
-environment are physically simulated. The models are placed in physically
-realistic poses with respect to their environment to generate a labeled
-synthetic dataset. To further improve object detection, the network self-trains
-over real images that are labeled using a robust multi-view pose estimation
-process. The proposed training process is evaluated on several existing
-datasets and on a dataset collected for this paper with a Motoman robotic arm.
-Results show that the proposed approach outperforms popular training processes
-relying on synthetic - but not physically realistic - data and manual
-annotation. The key contributions are the incorporation of physical reasoning
-in the synthetic data generation process and the automation of the annotation
-process over real images.
+Learning Object Localization and 6D Pose Estimation from Simulation and  Weakly Labeled Real Images
 
-
-Fast Model Identification via Physics Engines for Data-Efficient Policy
-  Search
-
-  This paper presents a method for identifying mechanical parameters of robots
-or objects, such as their mass and friction coefficients. Key features are the
-use of off-the-shelf physics engines and the adaptation of a Bayesian
-optimization technique towards minimizing the number of real-world experiments
-needed for model-based reinforcement learning. The proposed framework
-reproduces in a physics engine experiments performed on a real robot and
-optimizes the model's mechanical parameters so as to match real-world
-trajectories. The optimized model is then used for learning a policy in
-simulation, before real-world deployment. It is well understood, however, that
-it is hard to exactly reproduce real trajectories in simulation. Moreover, a
-near-optimal policy can be frequently found with an imperfect model. Therefore,
-this work proposes a strategy for identifying a model that is just good enough
-to approximate the value of a locally optimal policy with a certain confidence,
-instead of wasting effort on identifying the most accurate model. Evaluations,
-performed both in simulation and on a real robotic manipulation task, indicate
-that the proposed strategy results in an overall time-efficient, integrated
-model identification and learning solution, which significantly improves the
-data-efficiency of existing policy search algorithms.
-
-
-Learning Object Localization and 6D Pose Estimation from Simulation and
-  Weakly Labeled Real Images
-
-  This work proposes a process for efficiently training a point-wise object
-detector that enables localizing objects and computing their 6D poses in
-cluttered and occluded scenes. Accurate pose estimation is typically a
-requirement for robust robotic grasping and manipulation of objects placed in
-cluttered, tight environments, such as a shelf with multiple objects. To
-minimize the human labor required for annotation, the proposed object detector
-is first trained in simulation by using automatically annotated synthetic
-images. We then show that the performance of the detector can be substantially
-improved by using a small set of weakly annotated real images, where a human
-provides only a list of objects present in each image without indicating the
-location of the objects. To close the gap between real and synthetic images, we
-adopt a domain adaptation approach through adversarial training. The detector
-resulting from this training process can be used to localize objects by using
-its per-object activation maps. In this work, we use the activation maps to
-guide the search of 6D poses of objects. Our proposed approach is evaluated on
-several publicly available datasets for pose estimation. We also evaluated our
-model on classification and localization in unsupervised and semi-supervised
-settings. The results clearly indicate that this approach could provide an
-efficient way toward fully automating the training process of computer vision
-models used in robotics.
-
+  This work proposes a process for efficiently training a point-wise objectdetector that enables localizing objects and computing their 6D poses incluttered and occluded scenes. Accurate pose estimation is typically arequirement for robust robotic grasping and manipulation of objects placed incluttered, tight environments, such as a shelf with multiple objects. Tominimize the human labor required for annotation, the proposed object detectoris first trained in simulation by using automatically annotated syntheticimages. We then show that the performance of the detector can be substantiallyimproved by using a small set of weakly annotated real images, where a humanprovides only a list of objects present in each image without indicating thelocation of the objects. To close the gap between real and synthetic images, weadopt a domain adaptation approach through adversarial training. The detectorresulting from this training process can be used to localize objects by usingits per-object activation maps. In this work, we use the activation maps toguide the search of 6D poses of objects. Our proposed approach is evaluated onseveral publicly available datasets for pose estimation. We also evaluated ourmodel on classification and localization in unsupervised and semi-supervisedsettings. The results clearly indicate that this approach could provide anefficient way toward fully automating the training process of computer visionmodels used in robotics.
 
 Towards Robust Product Packing with a Minimalistic End-Effector
 
-  Advances in sensor technologies, object detection algorithms, planning
-frameworks and hardware designs have motivated the deployment of robots in
-warehouse automation. A variety of such applications, like order fulfillment or
-packing tasks, require picking objects from unstructured piles and carefully
-arranging them in bins or containers. Desirable solutions need to be low-cost,
-easily deployable and controllable, making minimalistic hardware choices
-desirable. The challenge in designing an effective solution to this problem
-relates to appropriately integrating multiple components, so as to achieve a
-robust pipeline that minimizes failure conditions. The current work proposes a
-complete pipeline for solving such packing tasks, given access only to RGB-D
-data and a single robot arm with a vacuum-based end-effector, which is also
-used as a pushing finger. To achieve the desired level of robustness, three key
-manipulation primitives are identified, which take advantage of the environment
-and simple operations to successfully pack multiple cubic objects. The overall
-approach is demonstrated to be robust to execution and perception errors. The
-impact of each manipulation primitive is evaluated by considering different
-versions of the proposed pipeline, which incrementally introduce reasoning
-about object poses and corrective manipulation actions.
+  Advances in sensor technologies, object detection algorithms, planningframeworks and hardware designs have motivated the deployment of robots inwarehouse automation. A variety of such applications, like order fulfillment orpacking tasks, require picking objects from unstructured piles and carefullyarranging them in bins or containers. Desirable solutions need to be low-cost,easily deployable and controllable, making minimalistic hardware choicesdesirable. The challenge in designing an effective solution to this problemrelates to appropriately integrating multiple components, so as to achieve arobust pipeline that minimizes failure conditions. The current work proposes acomplete pipeline for solving such packing tasks, given access only to RGB-Ddata and a single robot arm with a vacuum-based end-effector, which is alsoused as a pushing finger. To achieve the desired level of robustness, three keymanipulation primitives are identified, which take advantage of the environmentand simple operations to successfully pack multiple cubic objects. The overallapproach is demonstrated to be robust to execution and perception errors. Theimpact of each manipulation primitive is evaluated by considering differentversions of the proposed pipeline, which incrementally introduce reasoningabout object poses and corrective manipulation actions.
 
+Improving 6D Pose Estimation of Objects in Clutter via Physics-aware  Monte Carlo Tree Search
 
-Improving 6D Pose Estimation of Objects in Clutter via Physics-aware
-  Monte Carlo Tree Search
+  This work proposes a process for efficiently searching over combinations ofindividual object 6D pose hypotheses in cluttered scenes, especially in casesinvolving occlusions and objects resting on each other. The initial set ofcandidate object poses is generated from state-of-the-art object detection andglobal point cloud registration techniques. The best-scored pose per object byusing these techniques may not be accurate due to overlaps and occlusions.Nevertheless, experimental indications provided in this work show that objectposes with lower ranks may be closer to the real poses than ones with highranks according to registration techniques. This motivates a globaloptimization process for improving these poses by taking into accountscene-level physical interactions between objects. It also implies that theCartesian product of candidate poses for interacting objects must be searchedso as to identify the best scene-level hypothesis. To perform the searchefficiently, the candidate poses for each object are clustered so as to reducetheir number but still keep a sufficient diversity. Then, searching over thecombinations of candidate object poses is performed through a Monte Carlo TreeSearch (MCTS) process that uses the similarity between the observed depth imageof the scene and a rendering of the scene given the hypothesized pose as ascore that guides the search procedure. MCTS handles in a principled way thetradeoff between fine-tuning the most promising poses and exploring new ones,by using the Upper Confidence Bound (UCB) technique. Experimental resultsindicate that this process is able to quickly identify in cluttered scenesphysically-consistent object poses that are significantly closer to groundtruth compared to poses found by point cloud registration methods.
 
-  This work proposes a process for efficiently searching over combinations of
-individual object 6D pose hypotheses in cluttered scenes, especially in cases
-involving occlusions and objects resting on each other. The initial set of
-candidate object poses is generated from state-of-the-art object detection and
-global point cloud registration techniques. The best-scored pose per object by
-using these techniques may not be accurate due to overlaps and occlusions.
-Nevertheless, experimental indications provided in this work show that object
-poses with lower ranks may be closer to the real poses than ones with high
-ranks according to registration techniques. This motivates a global
-optimization process for improving these poses by taking into account
-scene-level physical interactions between objects. It also implies that the
-Cartesian product of candidate poses for interacting objects must be searched
-so as to identify the best scene-level hypothesis. To perform the search
-efficiently, the candidate poses for each object are clustered so as to reduce
-their number but still keep a sufficient diversity. Then, searching over the
-combinations of candidate object poses is performed through a Monte Carlo Tree
-Search (MCTS) process that uses the similarity between the observed depth image
-of the scene and a rendering of the scene given the hypothesized pose as a
-score that guides the search procedure. MCTS handles in a principled way the
-tradeoff between fine-tuning the most promising poses and exploring new ones,
-by using the Upper Confidence Bound (UCB) technique. Experimental results
-indicate that this process is able to quickly identify in cluttered scenes
-physically-consistent object poses that are significantly closer to ground
-truth compared to poses found by point cloud registration methods.
+Physics-based Scene-level Reasoning for Object Pose Estimation in  Clutter
 
-
-Physics-based Scene-level Reasoning for Object Pose Estimation in
-  Clutter
-
-  This paper focuses on vision-based pose estimation for multiple rigid objects
-placed in clutter, especially in cases involving occlusions and objects resting
-on each other. Progress has been achieved recently in object recognition given
-advancements in deep learning. Nevertheless, such tools typically require a
-large amount of training data and significant manual effort to label objects.
-This limits their applicability in robotics, where solutions must scale to a
-large number of objects and variety of conditions. Moreover, the combinatorial
-nature of the scenes that could arise from the placement of multiple objects is
-hard to capture in the training dataset. Thus, the learned models might not
-produce the desired level of precision required for tasks, such as robotic
-manipulation. This work proposes an autonomous process for pose estimation that
-spans from data generation to scene-level reasoning and self-learning. In
-particular, the proposed framework first generates a labeled dataset for
-training a Convolutional Neural Network (CNN) for object detection in clutter.
-These detections are used to guide a scene-level optimization process, which
-considers the interactions between the different objects present in the clutter
-to output pose estimates of high precision. Furthermore, confident estimates
-are used to label online real images from multiple views and re-train the
-process in a self-learning pipeline. Experimental results indicate that this
-process is quickly able to identify in cluttered scenes physically-consistent
-object poses that are more precise than the ones found by reasoning over
-individual instances of objects. Furthermore, the quality of pose estimates
-increases over time given the self-learning process.
-
+  This paper focuses on vision-based pose estimation for multiple rigid objectsplaced in clutter, especially in cases involving occlusions and objects restingon each other. Progress has been achieved recently in object recognition givenadvancements in deep learning. Nevertheless, such tools typically require alarge amount of training data and significant manual effort to label objects.This limits their applicability in robotics, where solutions must scale to alarge number of objects and variety of conditions. Moreover, the combinatorialnature of the scenes that could arise from the placement of multiple objects ishard to capture in the training dataset. Thus, the learned models might notproduce the desired level of precision required for tasks, such as roboticmanipulation. This work proposes an autonomous process for pose estimation thatspans from data generation to scene-level reasoning and self-learning. Inparticular, the proposed framework first generates a labeled dataset fortraining a Convolutional Neural Network (CNN) for object detection in clutter.These detections are used to guide a scene-level optimization process, whichconsiders the interactions between the different objects present in the clutterto output pose estimates of high precision. Furthermore, confident estimatesare used to label online real images from multiple views and re-train theprocess in a self-learning pipeline. Experimental results indicate that thisprocess is quickly able to identify in cluttered scenes physically-consistentobject poses that are more precise than the ones found by reasoning overindividual instances of objects. Furthermore, the quality of pose estimatesincreases over time given the self-learning process.
 

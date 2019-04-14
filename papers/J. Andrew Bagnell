@@ -1,777 +1,168 @@
-Deeply AggreVaTeD: Differentiable Imitation Learning for Sequential
-  Prediction
+Deeply AggreVaTeD: Differentiable Imitation Learning for Sequential  Prediction
 
-  Researchers have demonstrated state-of-the-art performance in sequential
-decision making problems (e.g., robotics control, sequential prediction) with
-deep neural network models. One often has access to near-optimal oracles that
-achieve good performance on the task during training. We demonstrate that
-AggreVaTeD --- a policy gradient extension of the Imitation Learning (IL)
-approach of (Ross & Bagnell, 2014) --- can leverage such an oracle to achieve
-faster and better solutions with less training data than a less-informed
-Reinforcement Learning (RL) technique. Using both feedforward and recurrent
-neural network predictors, we present stochastic gradient procedures on a
-sequential prediction task, dependency-parsing from raw image data, as well as
-on various high dimensional robotics control problems. We also provide a
-comprehensive theoretical study of IL that demonstrates we can expect up to
-exponentially lower sample complexity for learning with AggreVaTeD than with RL
-algorithms, which backs our empirical findings. Our results and theory indicate
-that the proposed approach can achieve superior performance with respect to the
-oracle when the demonstrator is sub-optimal.
-
+  Researchers have demonstrated state-of-the-art performance in sequentialdecision making problems (e.g., robotics control, sequential prediction) withdeep neural network models. One often has access to near-optimal oracles thatachieve good performance on the task during training. We demonstrate thatAggreVaTeD --- a policy gradient extension of the Imitation Learning (IL)approach of (Ross & Bagnell, 2014) --- can leverage such an oracle to achievefaster and better solutions with less training data than a less-informedReinforcement Learning (RL) technique. Using both feedforward and recurrentneural network predictors, we present stochastic gradient procedures on asequential prediction task, dependency-parsing from raw image data, as well ason various high dimensional robotics control problems. We also provide acomprehensive theoretical study of IL that demonstrates we can expect up toexponentially lower sample complexity for learning with AggreVaTeD than with RLalgorithms, which backs our empirical findings. Our results and theory indicatethat the proposed approach can achieve superior performance with respect to theoracle when the demonstrator is sub-optimal.
 
 SpeedMachines: Anytime Structured Prediction
 
-  Structured prediction plays a central role in machine learning applications
-from computational biology to computer vision. These models require
-significantly more computation than unstructured models, and, in many
-applications, algorithms may need to make predictions within a computational
-budget or in an anytime fashion. In this work we propose an anytime technique
-for learning structured prediction that, at training time, incorporates both
-structural elements and feature computation trade-offs that affect test-time
-inference. We apply our technique to the challenging problem of scene
-understanding in computer vision and demonstrate efficient and anytime
-predictions that gradually improve towards state-of-the-art classification
-performance as the allotted time increases.
-
+  Structured prediction plays a central role in machine learning applicationsfrom computational biology to computer vision. These models requiresignificantly more computation than unstructured models, and, in manyapplications, algorithms may need to make predictions within a computationalbudget or in an anytime fashion. In this work we propose an anytime techniquefor learning structured prediction that, at training time, incorporates bothstructural elements and feature computation trade-offs that affect test-timeinference. We apply our technique to the challenging problem of sceneunderstanding in computer vision and demonstrate efficient and anytimepredictions that gradually improve towards state-of-the-art classificationperformance as the allotted time increases.
 
 A Unified View of Large-scale Zero-sum Equilibrium Computation
 
-  The task of computing approximate Nash equilibria in large zero-sum
-extensive-form games has received a tremendous amount of attention due mainly
-to the Annual Computer Poker Competition. Immediately after its inception, two
-competing and seemingly different approaches emerged---one an application of
-no-regret online learning, the other a sophisticated gradient method applied to
-a convex-concave saddle-point formulation. Since then, both approaches have
-grown in relative isolation with advancements on one side not effecting the
-other. In this paper, we rectify this by dissecting and, in a sense, unify the
-two views.
+  The task of computing approximate Nash equilibria in large zero-sumextensive-form games has received a tremendous amount of attention due mainlyto the Annual Computer Poker Competition. Immediately after its inception, twocompeting and seemingly different approaches emerged---one an application ofno-regret online learning, the other a sophisticated gradient method applied toa convex-concave saddle-point formulation. Since then, both approaches havegrown in relative isolation with advancements on one side not effecting theother. In this paper, we rectify this by dissecting and, in a sense, unify thetwo views.
 
+A Reduction of Imitation Learning and Structured Prediction to No-Regret  Online Learning
 
-A Reduction of Imitation Learning and Structured Prediction to No-Regret
-  Online Learning
-
-  Sequential prediction problems such as imitation learning, where future
-observations depend on previous predictions (actions), violate the common
-i.i.d. assumptions made in statistical learning. This leads to poor performance
-in theory and often in practice. Some recent approaches provide stronger
-guarantees in this setting, but remain somewhat unsatisfactory as they train
-either non-stationary or stochastic policies and require a large number of
-iterations. In this paper, we propose a new iterative algorithm, which trains a
-stationary deterministic policy, that can be seen as a no regret algorithm in
-an online learning setting. We show that any such no regret algorithm, combined
-with additional reduction assumptions, must find a policy with good performance
-under the distribution of observations it induces in such sequential settings.
-We demonstrate that this new approach outperforms previous approaches on two
-challenging imitation learning problems and a benchmark sequence labeling
-problem.
-
+  Sequential prediction problems such as imitation learning, where futureobservations depend on previous predictions (actions), violate the commoni.i.d. assumptions made in statistical learning. This leads to poor performancein theory and often in practice. Some recent approaches provide strongerguarantees in this setting, but remain somewhat unsatisfactory as they traineither non-stationary or stochastic policies and require a large number ofiterations. In this paper, we propose a new iterative algorithm, which trains astationary deterministic policy, that can be seen as a no regret algorithm inan online learning setting. We show that any such no regret algorithm, combinedwith additional reduction assumptions, must find a policy with good performanceunder the distribution of observations it induces in such sequential settings.We demonstrate that this new approach outperforms previous approaches on twochallenging imitation learning problems and a benchmark sequence labelingproblem.
 
 Dual Policy Iteration
 
-  Recently, a novel class of Approximate Policy Iteration (API) algorithms have
-demonstrated impressive practical performance (e.g., ExIt from [2],
-AlphaGo-Zero from [27]). This new family of algorithms maintains, and
-alternately optimizes, two policies: a fast, reactive policy (e.g., a deep
-neural network) deployed at test time, and a slow, non-reactive policy (e.g.,
-Tree Search), that can plan multiple steps ahead. The reactive policy is
-updated under supervision from the non-reactive policy, while the non-reactive
-policy is improved with guidance from the reactive policy. In this work we
-study this Dual Policy Iteration (DPI) strategy in an alternating optimization
-framework and provide a convergence analysis that extends existing API theory.
-We also develop a special instance of this framework which reduces the update
-of non-reactive policies to model-based optimal control using learned local
-models, and provides a theoretically sound way of unifying model-free and
-model-based RL approaches with unknown dynamics. We demonstrate the efficacy of
-our approach on various continuous control Markov Decision Processes.
-
+  Recently, a novel class of Approximate Policy Iteration (API) algorithms havedemonstrated impressive practical performance (e.g., ExIt from [2],AlphaGo-Zero from [27]). This new family of algorithms maintains, andalternately optimizes, two policies: a fast, reactive policy (e.g., a deepneural network) deployed at test time, and a slow, non-reactive policy (e.g.,Tree Search), that can plan multiple steps ahead. The reactive policy isupdated under supervision from the non-reactive policy, while the non-reactivepolicy is improved with guidance from the reactive policy. In this work westudy this Dual Policy Iteration (DPI) strategy in an alternating optimizationframework and provide a convergence analysis that extends existing API theory.We also develop a special instance of this framework which reduces the updateof non-reactive policies to model-based optimal control using learned localmodels, and provides a theoretically sound way of unifying model-free andmodel-based RL approaches with unknown dynamics. We demonstrate the efficacy ofour approach on various continuous control Markov Decision Processes.
 
 Computational Rationalization: The Inverse Equilibrium Problem
 
-  Modeling the purposeful behavior of imperfect agents from a small number of
-observations is a challenging task. When restricted to the single-agent
-decision-theoretic setting, inverse optimal control techniques assume that
-observed behavior is an approximately optimal solution to an unknown decision
-problem. These techniques learn a utility function that explains the example
-behavior and can then be used to accurately predict or imitate future behavior
-in similar observed or unobserved situations.
-  In this work, we consider similar tasks in competitive and cooperative
-multi-agent domains. Here, unlike single-agent settings, a player cannot
-myopically maximize its reward --- it must speculate on how the other agents
-may act to influence the game's outcome. Employing the game-theoretic notion of
-regret and the principle of maximum entropy, we introduce a technique for
-predicting and generalizing behavior, as well as recovering a reward function
-in these domains.
-
+  Modeling the purposeful behavior of imperfect agents from a small number ofobservations is a challenging task. When restricted to the single-agentdecision-theoretic setting, inverse optimal control techniques assume thatobserved behavior is an approximately optimal solution to an unknown decisionproblem. These techniques learn a utility function that explains the examplebehavior and can then be used to accurately predict or imitate future behaviorin similar observed or unobserved situations.  In this work, we consider similar tasks in competitive and cooperativemulti-agent domains. Here, unlike single-agent settings, a player cannotmyopically maximize its reward --- it must speculate on how the other agentsmay act to influence the game's outcome. Employing the game-theoretic notion ofregret and the principle of maximum entropy, we introduce a technique forpredicting and generalizing behavior, as well as recovering a reward functionin these domains.
 
 Generalized Boosting Algorithms for Convex Optimization
 
-  Boosting is a popular way to derive powerful learners from simpler hypothesis
-classes. Following previous work (Mason et al., 1999; Friedman, 2000) on
-general boosting frameworks, we analyze gradient-based descent algorithms for
-boosting with respect to any convex objective and introduce a new measure of
-weak learner performance into this setting which generalizes existing work. We
-present the weak to strong learning guarantees for the existing gradient
-boosting work for strongly-smooth, strongly-convex objectives under this new
-measure of performance, and also demonstrate that this work fails for
-non-smooth objectives. To address this issue, we present new algorithms which
-extend this boosting approach to arbitrary convex loss functions and give
-corresponding weak to strong convergence results. In addition, we demonstrate
-experimental results that support our analysis and demonstrate the need for the
-new algorithms we present.
-
+  Boosting is a popular way to derive powerful learners from simpler hypothesisclasses. Following previous work (Mason et al., 1999; Friedman, 2000) ongeneral boosting frameworks, we analyze gradient-based descent algorithms forboosting with respect to any convex objective and introduce a new measure ofweak learner performance into this setting which generalizes existing work. Wepresent the weak to strong learning guarantees for the existing gradientboosting work for strongly-smooth, strongly-convex objectives under this newmeasure of performance, and also demonstrate that this work fails fornon-smooth objectives. To address this issue, we present new algorithms whichextend this boosting approach to arbitrary convex loss functions and givecorresponding weak to strong convergence results. In addition, we demonstrateexperimental results that support our analysis and demonstrate the need for thenew algorithms we present.
 
 Predicting Contextual Sequences via Submodular Function Maximization
 
-  Sequence optimization, where the items in a list are ordered to maximize some
-reward has many applications such as web advertisement placement, search, and
-control libraries in robotics. Previous work in sequence optimization produces
-a static ordering that does not take any features of the item or context of the
-problem into account. In this work, we propose a general approach to order the
-items within the sequence based on the context (e.g., perceptual information,
-environment description, and goals). We take a simple, efficient,
-reduction-based approach where the choice and order of the items is established
-by repeatedly learning simple classifiers or regressors for each "slot" in the
-sequence. Our approach leverages recent work on submodular function
-maximization to provide a formal regret reduction from submodular sequence
-optimization to simple cost-sensitive prediction. We apply our contextual
-sequence prediction algorithm to optimize control libraries and demonstrate
-results on two robotics problems: manipulator trajectory prediction and mobile
-robot path planning.
-
-
-Convex Coding
-
-  Inspired by recent work on convex formulations of clustering (Lashkari &
-Golland, 2008; Nowozin & Bakir, 2008) we investigate a new formulation of the
-Sparse Coding Problem (Olshausen & Field, 1997). In sparse coding we attempt to
-simultaneously represent a sequence of data-vectors sparsely (i.e. sparse
-approximation (Tropp et al., 2006)) in terms of a 'code' defined by a set of
-basis elements, while also finding a code that enables such an approximation.
-As existing alternating optimization procedures for sparse coding are
-theoretically prone to severe local minima problems, we propose a convex
-relaxation of the sparse coding problem and derive a boosting-style algorithm,
-that (Nowozin & Bakir, 2008) serves as a convex 'master problem' which calls a
-(potentially non-convex) sub-problem to identify the next code element to add.
-Finally, we demonstrate the properties of our boosted coding algorithm on an
-image denoising task.
-
-
-Learning Monocular Reactive UAV Control in Cluttered Natural
-  Environments
-
-  Autonomous navigation for large Unmanned Aerial Vehicles (UAVs) is fairly
-straight-forward, as expensive sensors and monitoring devices can be employed.
-In contrast, obstacle avoidance remains a challenging task for Micro Aerial
-Vehicles (MAVs) which operate at low altitude in cluttered environments. Unlike
-large vehicles, MAVs can only carry very light sensors, such as cameras, making
-autonomous navigation through obstacles much more challenging. In this paper,
-we describe a system that navigates a small quadrotor helicopter autonomously
-at low altitude through natural forest environments. Using only a single cheap
-camera to perceive the environment, we are able to maintain a constant velocity
-of up to 1.5m/s. Given a small set of human pilot demonstrations, we use recent
-state-of-the-art imitation learning techniques to train a controller that can
-avoid trees by adapting the MAVs heading. We demonstrate the performance of our
-system in a more controlled environment indoors, and in real natural forest
-environments outdoors.
-
-
-Computational Rationalization: The Inverse Equilibrium Problem
-
-  Modeling the purposeful behavior of imperfect agents from a small number of
-observations is a challenging task. When restricted to the single-agent
-decision-theoretic setting, inverse optimal control techniques assume that
-observed behavior is an approximately optimal solution to an unknown decision
-problem. These techniques learn a utility function that explains the example
-behavior and can then be used to accurately predict or imitate future behavior
-in similar observed or unobserved situations.
-  In this work, we consider similar tasks in competitive and cooperative
-multi-agent domains. Here, unlike single-agent settings, a player cannot
-myopically maximize its reward; it must speculate on how the other agents may
-act to influence the game's outcome. Employing the game-theoretic notion of
-regret and the principle of maximum entropy, we introduce a technique for
-predicting and generalizing behavior.
-
-
-Knapsack Constrained Contextual Submodular List Prediction with
-  Application to Multi-document Summarization
-
-  We study the problem of predicting a set or list of options under knapsack
-constraint. The quality of such lists are evaluated by a submodular reward
-function that measures both quality and diversity. Similar to DAgger (Ross et
-al., 2010), by a reduction to online learning, we show how to adapt two
-sequence prediction models to imitate greedy maximization under knapsack
-constraint problems: CONSEQOPT (Dey et al., 2012) and SCP (Ross et al., 2013).
-Experiments on extractive multi-document summarization show that our approach
-outperforms existing state-of-the-art methods.
-
+  Sequence optimization, where the items in a list are ordered to maximize somereward has many applications such as web advertisement placement, search, andcontrol libraries in robotics. Previous work in sequence optimization producesa static ordering that does not take any features of the item or context of theproblem into account. In this work, we propose a general approach to order theitems within the sequence based on the context (e.g., perceptual information,environment description, and goals). We take a simple, efficient,reduction-based approach where the choice and order of the items is establishedby repeatedly learning simple classifiers or regressors for each "slot" in thesequence. Our approach leverages recent work on submodular functionmaximization to provide a formal regret reduction from submodular sequenceoptimization to simple cost-sensitive prediction. We apply our contextualsequence prediction algorithm to optimize control libraries and demonstrateresults on two robotics problems: manipulator trajectory prediction and mobilerobot path planning.
 
 Agnostic System Identification for Model-Based Reinforcement Learning
 
-  A fundamental problem in control is to learn a model of a system from
-observations that is useful for controller synthesis. To provide good
-performance guarantees, existing methods must assume that the real system is in
-the class of models considered during learning. We present an iterative method
-with strong guarantees even in the agnostic case where the system is not in the
-class. In particular, we show that any no-regret online learning algorithm can
-be used to obtain a near-optimal policy, provided some model achieves low
-training error and access to a good exploration distribution. Our approach
-applies to both discrete and continuous domains. We demonstrate its efficacy
-and scalability on a challenging helicopter domain from the literature.
+  A fundamental problem in control is to learn a model of a system fromobservations that is useful for controller synthesis. To provide goodperformance guarantees, existing methods must assume that the real system is inthe class of models considered during learning. We present an iterative methodwith strong guarantees even in the agnostic case where the system is not in theclass. In particular, we show that any no-regret online learning algorithm canbe used to obtain a near-optimal policy, provided some model achieves lowtraining error and access to a good exploration distribution. Our approachapplies to both discrete and continuous domains. We demonstrate its efficacyand scalability on a challenging helicopter domain from the literature.
 
+Convex Coding
+
+  Inspired by recent work on convex formulations of clustering (Lashkari &Golland, 2008; Nowozin & Bakir, 2008) we investigate a new formulation of theSparse Coding Problem (Olshausen & Field, 1997). In sparse coding we attempt tosimultaneously represent a sequence of data-vectors sparsely (i.e. sparseapproximation (Tropp et al., 2006)) in terms of a 'code' defined by a set ofbasis elements, while also finding a code that enables such an approximation.As existing alternating optimization procedures for sparse coding aretheoretically prone to severe local minima problems, we propose a convexrelaxation of the sparse coding problem and derive a boosting-style algorithm,that (Nowozin & Bakir, 2008) serves as a convex 'master problem' which calls a(potentially non-convex) sub-problem to identify the next code element to add.Finally, we demonstrate the properties of our boosted coding algorithm on animage denoising task.
+
+Learning Selectively Conditioned Forest Structures with Applications to  DBNs and Classification
+
+  Dealing with uncertainty in Bayesian Network structures using maximum aposteriori (MAP) estimation or Bayesian Model Averaging (BMA) is oftenintractable due to the superexponential number of possible directed, acyclicgraphs. When the prior is decomposable, two classes of graphs where efficientlearning can take place are tree structures, and fixed-orderings with limitedin-degree. We show how MAP estimates and BMA for selectively conditionedforests (SCF), a combination of these two classes, can be computed efficientlyfor ordered sets of variables. We apply SCFs to temporal data to learn DynamicBayesian Networks having an intra-timestep forest and inter-timestep limitedin-degree structure, improving model accuracy over DBNs without the combinationof structures. We also apply SCFs to Bayes Net classification to learnselective forest augmented Naive Bayes classifiers. We argue that the built-infeature selection of selective augmented Bayes classifiers makes thempreferable to similar non-selective classifiers based on empirical evidence.
 
 Efficient Touch Based Localization through Submodularity
 
-  Many robotic systems deal with uncertainty by performing a sequence of
-information gathering actions. In this work, we focus on the problem of
-efficiently constructing such a sequence by drawing an explicit connection to
-submodularity. Ideally, we would like a method that finds the optimal sequence,
-taking the minimum amount of time while providing sufficient information.
-Finding this sequence, however, is generally intractable. As a result, many
-well-established methods select actions greedily. Surprisingly, this often
-performs well. Our work first explains this high performance -- we note a
-commonly used metric, reduction of Shannon entropy, is submodular under certain
-assumptions, rendering the greedy solution comparable to the optimal plan in
-the offline setting. However, reacting online to observations can increase
-performance. Recently developed notions of adaptive submodularity provide
-guarantees for a greedy algorithm in this online setting. In this work, we
-develop new methods based on adaptive submodularity for selecting a sequence of
-information gathering actions online. In addition to providing guarantees, we
-can capitalize on submodularity to attain additional computational speedups. We
-demonstrate the effectiveness of these methods in simulation and on a robot.
+  Many robotic systems deal with uncertainty by performing a sequence ofinformation gathering actions. In this work, we focus on the problem ofefficiently constructing such a sequence by drawing an explicit connection tosubmodularity. Ideally, we would like a method that finds the optimal sequence,taking the minimum amount of time while providing sufficient information.Finding this sequence, however, is generally intractable. As a result, manywell-established methods select actions greedily. Surprisingly, this oftenperforms well. Our work first explains this high performance -- we note acommonly used metric, reduction of Shannon entropy, is submodular under certainassumptions, rendering the greedy solution comparable to the optimal plan inthe offline setting. However, reacting online to observations can increaseperformance. Recently developed notions of adaptive submodularity provideguarantees for a greedy algorithm in this online setting. In this work, wedevelop new methods based on adaptive submodularity for selecting a sequence ofinformation gathering actions online. In addition to providing guarantees, wecan capitalize on submodularity to attain additional computational speedups. Wedemonstrate the effectiveness of these methods in simulation and on a robot.
 
+Learning Monocular Reactive UAV Control in Cluttered Natural  Environments
 
-Visual Chunking: A List Prediction Framework for Region-Based Object
-  Detection
-
-  We consider detecting objects in an image by iteratively selecting from a set
-of arbitrarily shaped candidate regions. Our generic approach, which we term
-visual chunking, reasons about the locations of multiple object instances in an
-image while expressively describing object boundaries. We design an
-optimization criterion for measuring the performance of a list of such
-detections as a natural extension to a common per-instance metric. We present
-an efficient algorithm with provable performance for building a high-quality
-list of detections from any candidate set of region-based proposals. We also
-develop a simple class-specific algorithm to generate a candidate region
-instance in near-linear time in the number of low-level superpixels that
-outperforms other region generating methods. In order to make predictions on
-novel images at testing time without access to ground truth, we develop
-learning approaches to emulate these algorithms' behaviors. We demonstrate that
-our new approach outperforms sophisticated baselines on benchmark datasets.
-
-
-Reinforcement and Imitation Learning via Interactive No-Regret Learning
-
-  Recent work has demonstrated that problems-- particularly imitation learning
-and structured prediction-- where a learner's predictions influence the
-input-distribution it is tested on can be naturally addressed by an interactive
-approach and analyzed using no-regret online learning. These approaches to
-imitation learning, however, neither require nor benefit from information about
-the cost of actions. We extend existing results in two directions: first, we
-develop an interactive imitation learning approach that leverages cost
-information; second, we extend the technique to address reinforcement learning.
-The results provide theoretical support to the commonly observed successes of
-online approximate policy iteration. Our approach suggests a broad new family
-of algorithms and provides a unifying view of existing techniques for imitation
-and reinforcement learning.
-
-
-Learning to Filter with Predictive State Inference Machines
-
-  Latent state space models are a fundamental and widely used tool for modeling
-dynamical systems. However, they are difficult to learn from data and learned
-models often lack performance guarantees on inference tasks such as filtering
-and prediction. In this work, we present the PREDICTIVE STATE INFERENCE MACHINE
-(PSIM), a data-driven method that considers the inference procedure on a
-dynamical system as a composition of predictors. The key idea is that rather
-than first learning a latent state space model, and then using the learned
-model for inference, PSIM directly learns predictors for inference in
-predictive state space. We provide theoretical guarantees for inference, in
-both realizable and agnostic settings, and showcase practical performance on a
-variety of simulated and real world robotics benchmarks.
-
-
-A Convex Polynomial Force-Motion Model for Planar Sliding:
-  Identification and Application
-
-  We propose a polynomial force-motion model for planar sliding. The set of
-generalized friction loads is the 1-sublevel set of a polynomial whose gradient
-directions correspond to generalized velocities. Additionally, the polynomial
-is confined to be convex even-degree homogeneous in order to obey the maximum
-work inequality, symmetry, shape invariance in scale, and fast invertibility.
-We present a simple and statistically-efficient model identification procedure
-using a sum-of-squares convex relaxation. Simulation and robotic experiments
-validate the accuracy and efficiency of our approach. We also show practical
-applications of our model including stable pushing of objects and free sliding
-dynamic simulations.
-
-
-Learning Selectively Conditioned Forest Structures with Applications to
-  DBNs and Classification
-
-  Dealing with uncertainty in Bayesian Network structures using maximum a
-posteriori (MAP) estimation or Bayesian Model Averaging (BMA) is often
-intractable due to the superexponential number of possible directed, acyclic
-graphs. When the prior is decomposable, two classes of graphs where efficient
-learning can take place are tree structures, and fixed-orderings with limited
-in-degree. We show how MAP estimates and BMA for selectively conditioned
-forests (SCF), a combination of these two classes, can be computed efficiently
-for ordered sets of variables. We apply SCFs to temporal data to learn Dynamic
-Bayesian Networks having an intra-timestep forest and inter-timestep limited
-in-degree structure, improving model accuracy over DBNs without the combination
-of structures. We also apply SCFs to Bayes Net classification to learn
-selective forest augmented Naive Bayes classifiers. We argue that the built-in
-feature selection of selective augmented Bayes classifiers makes them
-preferable to similar non-selective classifiers based on empirical evidence.
-
-
-Shared Autonomy via Hindsight Optimization
-
-  In shared autonomy, user input and robot autonomy are combined to control a
-robot to achieve a goal. Often, the robot does not know a priori which goal the
-user wants to achieve, and must both predict the user's intended goal, and
-assist in achieving that goal. We formulate the problem of shared autonomy as a
-Partially Observable Markov Decision Process with uncertainty over the user's
-goal. We utilize maximum entropy inverse optimal control to estimate a
-distribution over the user's goal based on the history of inputs. Ideally, the
-robot assists the user by solving for an action which minimizes the expected
-cost-to-go for the (unknown) goal. As solving the POMDP to select the optimal
-action is intractable, we use hindsight optimization to approximate the
-solution. In a user study, we compare our method to a standard
-predict-then-blend approach. We find that our method enables users to
-accomplish tasks more quickly while utilizing less input. However, when asked
-to rate each system, users were mixed in their assessment, citing a tradeoff
-between maintaining control authority and accomplishing tasks quickly.
-
+  Autonomous navigation for large Unmanned Aerial Vehicles (UAVs) is fairlystraight-forward, as expensive sensors and monitoring devices can be employed.In contrast, obstacle avoidance remains a challenging task for Micro AerialVehicles (MAVs) which operate at low altitude in cluttered environments. Unlikelarge vehicles, MAVs can only carry very light sensors, such as cameras, makingautonomous navigation through obstacles much more challenging. In this paper,we describe a system that navigates a small quadrotor helicopter autonomouslyat low altitude through natural forest environments. Using only a single cheapcamera to perceive the environment, we are able to maintain a constant velocityof up to 1.5m/s. Given a small set of human pilot demonstrations, we use recentstate-of-the-art imitation learning techniques to train a controller that canavoid trees by adapting the MAVs heading. We demonstrate the performance of oursystem in a more controlled environment indoors, and in real natural forestenvironments outdoors.
 
 Learning Policies for Contextual Submodular Prediction
 
-  Many prediction domains, such as ad placement, recommendation, trajectory
-prediction, and document summarization, require predicting a set or list of
-options. Such lists are often evaluated using submodular reward functions that
-measure both quality and diversity. We propose a simple, efficient, and
-provably near-optimal approach to optimizing such prediction problems based on
-no-regret learning. Our method leverages a surprising result from online
-submodular optimization: a single no-regret online learner can compete with an
-optimal sequence of predictions. Compared to previous work, which either learn
-a sequence of classifiers or rely on stronger assumptions such as
-realizability, we ensure both data-efficiency as well as performance guarantees
-in the fully agnostic setting. Experiments validate the efficiency and
-applicability of the approach on a wide range of problems including manipulator
-trajectory optimization, news recommendation and document summarization.
+  Many prediction domains, such as ad placement, recommendation, trajectoryprediction, and document summarization, require predicting a set or list ofoptions. Such lists are often evaluated using submodular reward functions thatmeasure both quality and diversity. We propose a simple, efficient, andprovably near-optimal approach to optimizing such prediction problems based onno-regret learning. Our method leverages a surprising result from onlinesubmodular optimization: a single no-regret online learner can compete with anoptimal sequence of predictions. Compared to previous work, which either learna sequence of classifiers or rely on stronger assumptions such asrealizability, we ensure both data-efficiency as well as performance guaranteesin the fully agnostic setting. Experiments validate the efficiency andapplicability of the approach on a wide range of problems including manipulatortrajectory optimization, news recommendation and document summarization.
 
+Computational Rationalization: The Inverse Equilibrium Problem
+
+  Modeling the purposeful behavior of imperfect agents from a small number ofobservations is a challenging task. When restricted to the single-agentdecision-theoretic setting, inverse optimal control techniques assume thatobserved behavior is an approximately optimal solution to an unknown decisionproblem. These techniques learn a utility function that explains the examplebehavior and can then be used to accurately predict or imitate future behaviorin similar observed or unobserved situations.  In this work, we consider similar tasks in competitive and cooperativemulti-agent domains. Here, unlike single-agent settings, a player cannotmyopically maximize its reward; it must speculate on how the other agents mayact to influence the game's outcome. Employing the game-theoretic notion ofregret and the principle of maximum entropy, we introduce a technique forpredicting and generalizing behavior.
+
+Knapsack Constrained Contextual Submodular List Prediction with  Application to Multi-document Summarization
+
+  We study the problem of predicting a set or list of options under knapsackconstraint. The quality of such lists are evaluated by a submodular rewardfunction that measures both quality and diversity. Similar to DAgger (Ross etal., 2010), by a reduction to online learning, we show how to adapt twosequence prediction models to imitate greedy maximization under knapsackconstraint problems: CONSEQOPT (Dey et al., 2012) and SCP (Ross et al., 2013).Experiments on extractive multi-document summarization show that our approachoutperforms existing state-of-the-art methods.
 
 Near Optimal Bayesian Active Learning for Decision Making
 
-  How should we gather information to make effective decisions? We address
-Bayesian active learning and experimental design problems, where we
-sequentially select tests to reduce uncertainty about a set of hypotheses.
-Instead of minimizing uncertainty per se, we consider a set of overlapping
-decision regions of these hypotheses. Our goal is to drive uncertainty into a
-single decision region as quickly as possible.
-  We identify necessary and sufficient conditions for correctly identifying a
-decision region that contains all hypotheses consistent with observations. We
-develop a novel Hyperedge Cutting (HEC) algorithm for this problem, and prove
-that is competitive with the intractable optimal policy. Our efficient
-implementation of the algorithm relies on computing subsets of the complete
-homogeneous symmetric polynomials. Finally, we demonstrate its effectiveness on
-two practical applications: approximate comparison-based learning and active
-localization using a robot manipulator.
+  How should we gather information to make effective decisions? We addressBayesian active learning and experimental design problems, where wesequentially select tests to reduce uncertainty about a set of hypotheses.Instead of minimizing uncertainty per se, we consider a set of overlappingdecision regions of these hypotheses. Our goal is to drive uncertainty into asingle decision region as quickly as possible.  We identify necessary and sufficient conditions for correctly identifying adecision region that contains all hypotheses consistent with observations. Wedevelop a novel Hyperedge Cutting (HEC) algorithm for this problem, and provethat is competitive with the intractable optimal policy. Our efficientimplementation of the algorithm relies on computing subsets of the completehomogeneous symmetric polynomials. Finally, we demonstrate its effectiveness ontwo practical applications: approximate comparison-based learning and activelocalization using a robot manipulator.
 
+Reinforcement and Imitation Learning via Interactive No-Regret Learning
+
+  Recent work has demonstrated that problems-- particularly imitation learningand structured prediction-- where a learner's predictions influence theinput-distribution it is tested on can be naturally addressed by an interactiveapproach and analyzed using no-regret online learning. These approaches toimitation learning, however, neither require nor benefit from information aboutthe cost of actions. We extend existing results in two directions: first, wedevelop an interactive imitation learning approach that leverages costinformation; second, we extend the technique to address reinforcement learning.The results provide theoretical support to the commonly observed successes ofonline approximate policy iteration. Our approach suggests a broad new familyof algorithms and provides a unifying view of existing techniques for imitationand reinforcement learning.
+
+Visual Chunking: A List Prediction Framework for Region-Based Object  Detection
+
+  We consider detecting objects in an image by iteratively selecting from a setof arbitrarily shaped candidate regions. Our generic approach, which we termvisual chunking, reasons about the locations of multiple object instances in animage while expressively describing object boundaries. We design anoptimization criterion for measuring the performance of a list of suchdetections as a natural extension to a common per-instance metric. We presentan efficient algorithm with provable performance for building a high-qualitylist of detections from any candidate set of region-based proposals. We alsodevelop a simple class-specific algorithm to generate a candidate regioninstance in near-linear time in the number of low-level superpixels thatoutperforms other region generating methods. In order to make predictions onnovel images at testing time without access to ground truth, we developlearning approaches to emulate these algorithms' behaviors. We demonstrate thatour new approach outperforms sophisticated baselines on benchmark datasets.
 
 Vision and Learning for Deliberative Monocular Cluttered Flight
 
-  Cameras provide a rich source of information while being passive, cheap and
-lightweight for small and medium Unmanned Aerial Vehicles (UAVs). In this work
-we present the first implementation of receding horizon control, which is
-widely used in ground vehicles, with monocular vision as the only sensing mode
-for autonomous UAV flight in dense clutter. We make it feasible on UAVs via a
-number of contributions: novel coupling of perception and control via relevant
-and diverse, multiple interpretations of the scene around the robot, leveraging
-recent advances in machine learning to showcase anytime budgeted cost-sensitive
-feature selection, and fast non-linear regression for monocular depth
-prediction. We empirically demonstrate the efficacy of our novel pipeline via
-real world experiments of more than 2 kms through dense trees with a quadrotor
-built from off-the-shelf parts. Moreover our pipeline is designed to combine
-information from other modalities like stereo and lidar as well if available.
-
+  Cameras provide a rich source of information while being passive, cheap andlightweight for small and medium Unmanned Aerial Vehicles (UAVs). In this workwe present the first implementation of receding horizon control, which iswidely used in ground vehicles, with monocular vision as the only sensing modefor autonomous UAV flight in dense clutter. We make it feasible on UAVs via anumber of contributions: novel coupling of perception and control via relevantand diverse, multiple interpretations of the scene around the robot, leveragingrecent advances in machine learning to showcase anytime budgeted cost-sensitivefeature selection, and fast non-linear regression for monocular depthprediction. We empirically demonstrate the efficacy of our novel pipeline viareal world experiments of more than 2 kms through dense trees with a quadrotorbuilt from off-the-shelf parts. Moreover our pipeline is designed to combineinformation from other modalities like stereo and lidar as well if available.
 
 Solving Games with Functional Regret Estimation
 
-  We propose a novel online learning method for minimizing regret in large
-extensive-form games. The approach learns a function approximator online to
-estimate the regret for choosing a particular action. A no-regret algorithm
-uses these estimates in place of the true regrets to define a sequence of
-policies.
-  We prove the approach sound by providing a bound relating the quality of the
-function approximation and regret of the algorithm. A corollary being that the
-method is guaranteed to converge to a Nash equilibrium in self-play so long as
-the regrets are ultimately realizable by the function approximator. Our
-technique can be understood as a principled generalization of existing work on
-abstraction in large games; in our work, both the abstraction as well as the
-equilibrium are learned during self-play. We demonstrate empirically the method
-achieves higher quality strategies than state-of-the-art abstraction techniques
-given the same resources.
+  We propose a novel online learning method for minimizing regret in largeextensive-form games. The approach learns a function approximator online toestimate the regret for choosing a particular action. A no-regret algorithmuses these estimates in place of the true regrets to define a sequence ofpolicies.  We prove the approach sound by providing a bound relating the quality of thefunction approximation and regret of the algorithm. A corollary being that themethod is guaranteed to converge to a Nash equilibrium in self-play so long asthe regrets are ultimately realizable by the function approximator. Ourtechnique can be understood as a principled generalization of existing work onabstraction in large games; in our work, both the abstraction as well as theequilibrium are learned during self-play. We demonstrate empirically the methodachieves higher quality strategies than state-of-the-art abstraction techniquesgiven the same resources.
 
+Shared Autonomy via Hindsight Optimization
+
+  In shared autonomy, user input and robot autonomy are combined to control arobot to achieve a goal. Often, the robot does not know a priori which goal theuser wants to achieve, and must both predict the user's intended goal, andassist in achieving that goal. We formulate the problem of shared autonomy as aPartially Observable Markov Decision Process with uncertainty over the user'sgoal. We utilize maximum entropy inverse optimal control to estimate adistribution over the user's goal based on the history of inputs. Ideally, therobot assists the user by solving for an action which minimizes the expectedcost-to-go for the (unknown) goal. As solving the POMDP to select the optimalaction is intractable, we use hindsight optimization to approximate thesolution. In a user study, we compare our method to a standardpredict-then-blend approach. We find that our method enables users toaccomplish tasks more quickly while utilizing less input. However, when askedto rate each system, users were mixed in their assessment, citing a tradeoffbetween maintaining control authority and accomplishing tasks quickly.
+
+Learning to Filter with Predictive State Inference Machines
+
+  Latent state space models are a fundamental and widely used tool for modelingdynamical systems. However, they are difficult to learn from data and learnedmodels often lack performance guarantees on inference tasks such as filteringand prediction. In this work, we present the PREDICTIVE STATE INFERENCE MACHINE(PSIM), a data-driven method that considers the inference procedure on adynamical system as a composition of predictors. The key idea is that ratherthan first learning a latent state space model, and then using the learnedmodel for inference, PSIM directly learns predictors for inference inpredictive state space. We provide theoretical guarantees for inference, inboth realizable and agnostic settings, and showcase practical performance on avariety of simulated and real world robotics benchmarks.
+
+A Convex Polynomial Force-Motion Model for Planar Sliding:  Identification and Application
+
+  We propose a polynomial force-motion model for planar sliding. The set ofgeneralized friction loads is the 1-sublevel set of a polynomial whose gradientdirections correspond to generalized velocities. Additionally, the polynomialis confined to be convex even-degree homogeneous in order to obey the maximumwork inequality, symmetry, shape invariance in scale, and fast invertibility.We present a simple and statistically-efficient model identification procedureusing a sum-of-squares convex relaxation. Simulation and robotic experimentsvalidate the accuracy and efficiency of our approach. We also show practicalapplications of our model including stable pushing of objects and free slidingdynamic simulations.
 
 Robust Monocular Flight in Cluttered Outdoor Environments
 
-  Recently, there have been numerous advances in the development of
-biologically inspired lightweight Micro Aerial Vehicles (MAVs). While
-autonomous navigation is fairly straight-forward for large UAVs as expensive
-sensors and monitoring devices can be employed, robust methods for obstacle
-avoidance remains a challenging task for MAVs which operate at low altitude in
-cluttered unstructured environments. Due to payload and power constraints, it
-is necessary for such systems to have autonomous navigation and flight
-capabilities using mostly passive sensors such as cameras. In this paper, we
-describe a robust system that enables autonomous navigation of small agile
-quad-rotors at low altitude through natural forest environments. We present a
-direct depth estimation approach that is capable of producing accurate,
-semi-dense depth-maps in real time. Furthermore, a novel wind-resistant control
-scheme is presented that enables stable way-point tracking even in the presence
-of strong winds. We demonstrate the performance of our system through extensive
-experiments on real images and field tests in a cluttered outdoor environment.
-
+  Recently, there have been numerous advances in the development ofbiologically inspired lightweight Micro Aerial Vehicles (MAVs). Whileautonomous navigation is fairly straight-forward for large UAVs as expensivesensors and monitoring devices can be employed, robust methods for obstacleavoidance remains a challenging task for MAVs which operate at low altitude incluttered unstructured environments. Due to payload and power constraints, itis necessary for such systems to have autonomous navigation and flightcapabilities using mostly passive sensors such as cameras. In this paper, wedescribe a robust system that enables autonomous navigation of small agilequad-rotors at low altitude through natural forest environments. We present adirect depth estimation approach that is capable of producing accurate,semi-dense depth-maps in real time. Furthermore, a novel wind-resistant controlscheme is presented that enables stable way-point tracking even in the presenceof strong winds. We demonstrate the performance of our system through extensiveexperiments on real images and field tests in a cluttered outdoor environment.
 
 Introspective Perception: Learning to Predict Failures in Vision Systems
 
-  As robots aspire for long-term autonomous operations in complex dynamic
-environments, the ability to reliably take mission-critical decisions in
-ambiguous situations becomes critical. This motivates the need to build systems
-that have situational awareness to assess how qualified they are at that moment
-to make a decision. We call this self-evaluating capability as introspection.
-In this paper, we take a small step in this direction and propose a generic
-framework for introspective behavior in perception systems. Our goal is to
-learn a model to reliably predict failures in a given system, with respect to a
-task, directly from input sensor data. We present this in the context of
-vision-based autonomous MAV flight in outdoor natural environments, and show
-that it effectively handles uncertain situations.
-
+  As robots aspire for long-term autonomous operations in complex dynamicenvironments, the ability to reliably take mission-critical decisions inambiguous situations becomes critical. This motivates the need to build systemsthat have situational awareness to assess how qualified they are at that momentto make a decision. We call this self-evaluating capability as introspection.In this paper, we take a small step in this direction and propose a genericframework for introspective behavior in perception systems. Our goal is tolearn a model to reliably predict failures in a given system, with respect to atask, directly from input sensor data. We present this in the context ofvision-based autonomous MAV flight in outdoor natural environments, and showthat it effectively handles uncertain situations.
 
 Learning Transferable Policies for Monocular Reactive MAV Control
 
-  The ability to transfer knowledge gained in previous tasks into new contexts
-is one of the most important mechanisms of human learning. Despite this,
-adapting autonomous behavior to be reused in partially similar settings is
-still an open problem in current robotics research. In this paper, we take a
-small step in this direction and propose a generic framework for learning
-transferable motion policies. Our goal is to solve a learning problem in a
-target domain by utilizing the training data in a different but related source
-domain. We present this in the context of an autonomous MAV flight using
-monocular reactive control, and demonstrate the efficacy of our proposed
-approach through extensive real-world flight experiments in outdoor cluttered
-environments.
-
+  The ability to transfer knowledge gained in previous tasks into new contextsis one of the most important mechanisms of human learning. Despite this,adapting autonomous behavior to be reused in partially similar settings isstill an open problem in current robotics research. In this paper, we take asmall step in this direction and propose a generic framework for learningtransferable motion policies. Our goal is to solve a learning problem in atarget domain by utilizing the training data in a different but related sourcedomain. We present this in the context of an autonomous MAV flight usingmonocular reactive control, and demonstrate the efficacy of our proposedapproach through extensive real-world flight experiments in outdoor clutteredenvironments.
 
 A Discriminative Framework for Anomaly Detection in Large Videos
 
-  We address an anomaly detection setting in which training sequences are
-unavailable and anomalies are scored independently of temporal ordering.
-Current algorithms in anomaly detection are based on the classical density
-estimation approach of learning high-dimensional models and finding
-low-probability events. These algorithms are sensitive to the order in which
-anomalies appear and require either training data or early context assumptions
-that do not hold for longer, more complex videos. By defining anomalies as
-examples that can be distinguished from other examples in the same video, our
-definition inspires a shift in approaches from classical density estimation to
-simple discriminative learning. Our contributions include a novel framework for
-anomaly detection that is (1) independent of temporal ordering of anomalies,
-and (2) unsupervised, requiring no separate training sequences. We show that
-our algorithm can achieve state-of-the-art results even when we adjust the
-setting by removing training sequences from standard datasets.
-
+  We address an anomaly detection setting in which training sequences areunavailable and anomalies are scored independently of temporal ordering.Current algorithms in anomaly detection are based on the classical densityestimation approach of learning high-dimensional models and findinglow-probability events. These algorithms are sensitive to the order in whichanomalies appear and require either training data or early context assumptionsthat do not hold for longer, more complex videos. By defining anomalies asexamples that can be distinguished from other examples in the same video, ourdefinition inspires a shift in approaches from classical density estimation tosimple discriminative learning. Our contributions include a novel framework foranomaly detection that is (1) independent of temporal ordering of anomalies,and (2) unsupervised, requiring no separate training sequences. We show thatour algorithm can achieve state-of-the-art results even when we adjust thesetting by removing training sequences from standard datasets.
 
 Gradient Boosting on Stochastic Data Streams
 
-  Boosting is a popular ensemble algorithm that generates more powerful
-learners by linearly combining base models from a simpler hypothesis class. In
-this work, we investigate the problem of adapting batch gradient boosting for
-minimizing convex loss functions to online setting where the loss at each
-iteration is i.i.d sampled from an unknown distribution. To generalize from
-batch to online, we first introduce the definition of online weak learning edge
-with which for strongly convex and smooth loss functions, we present an
-algorithm, Streaming Gradient Boosting (SGB) with exponential shrinkage
-guarantees in the number of weak learners. We further present an adaptation of
-SGB to optimize non-smooth loss functions, for which we derive a O(ln N/N)
-convergence rate. We also show that our analysis can extend to adversarial
-online learning setting under a stronger assumption that the online weak
-learning edge will hold in adversarial setting. We finally demonstrate
-experimental results showing that in practice our algorithms can achieve
-competitive results as classic gradient boosting while using less computation.
+  Boosting is a popular ensemble algorithm that generates more powerfullearners by linearly combining base models from a simpler hypothesis class. Inthis work, we investigate the problem of adapting batch gradient boosting forminimizing convex loss functions to online setting where the loss at eachiteration is i.i.d sampled from an unknown distribution. To generalize frombatch to online, we first introduce the definition of online weak learning edgewith which for strongly convex and smooth loss functions, we present analgorithm, Streaming Gradient Boosting (SGB) with exponential shrinkageguarantees in the number of weak learners. We further present an adaptation ofSGB to optimize non-smooth loss functions, for which we derive a O(ln N/N)convergence rate. We also show that our analysis can extend to adversarialonline learning setting under a stronger assumption that the online weaklearning edge will hold in adversarial setting. We finally demonstrateexperimental results showing that in practice our algorithms can achievecompetitive results as classic gradient boosting while using less computation.
 
+A Fast Stochastic Contact Model for Planar Pushing and Grasping: Theory  and Experimental Validation
 
-A Fast Stochastic Contact Model for Planar Pushing and Grasping: Theory
-  and Experimental Validation
-
-  Based on the convex force-motion polynomial model for quasi-static sliding,
-we derive the kinematic contact model to determine the contact modes and
-instantaneous object motion on a supporting surface given a position controlled
-manipulator. The inherently stochastic object-to-surface friction distribution
-is modelled by sampling physically consistent parameters from appropriate
-distributions, with only one parameter to control the amount of noise. Thanks
-to the high fidelity and smoothness of convex polynomial models, the mechanics
-of patch contact is captured while being computationally efficient without mode
-selection at support points. The motion equations for both single and multiple
-frictional contacts are given. Simulation based on the model is validated with
-robotic pushing and grasping experiments.
-
+  Based on the convex force-motion polynomial model for quasi-static sliding,we derive the kinematic contact model to determine the contact modes andinstantaneous object motion on a supporting surface given a position controlledmanipulator. The inherently stochastic object-to-surface friction distributionis modelled by sampling physically consistent parameters from appropriatedistributions, with only one parameter to control the amount of noise. Thanksto the high fidelity and smoothness of convex polynomial models, the mechanicsof patch contact is captured while being computationally efficient without modeselection at support points. The motion equations for both single and multiplefrictional contacts are given. Simulation based on the model is validated withrobotic pushing and grasping experiments.
 
 Shared Autonomy via Hindsight Optimization for Teleoperation and Teaming
 
-  In shared autonomy, a user and autonomous system work together to achieve
-shared goals. To collaborate effectively, the autonomous system must know the
-user's goal. As such, most prior works follow a predict-then-act model, first
-predicting the user's goal with high confidence, then assisting given that
-goal. Unfortunately, confidently predicting the user's goal may not be possible
-until they have nearly achieved it, causing predict-then-act methods to provide
-little assistance. However, the system can often provide useful assistance even
-when confidence for any single goal is low (e.g. move towards multiple goals).
-In this work, we formalize this insight by modelling shared autonomy as a
-Partially Observable Markov Decision Process (POMDP), providing assistance that
-minimizes the expected cost-to-go with an unknown goal. As solving this POMDP
-optimally is intractable, we use hindsight optimization to approximate. We
-apply our framework to both shared-control teleoperation and human-robot
-teaming. Compared to predict-then-act methods, our method achieves goals
-faster, requires less user input, decreases user idling time, and results in
-fewer user-robot collisions.
+  In shared autonomy, a user and autonomous system work together to achieveshared goals. To collaborate effectively, the autonomous system must know theuser's goal. As such, most prior works follow a predict-then-act model, firstpredicting the user's goal with high confidence, then assisting given thatgoal. Unfortunately, confidently predicting the user's goal may not be possibleuntil they have nearly achieved it, causing predict-then-act methods to providelittle assistance. However, the system can often provide useful assistance evenwhen confidence for any single goal is low (e.g. move towards multiple goals).In this work, we formalize this insight by modelling shared autonomy as aPartially Observable Markov Decision Process (POMDP), providing assistance thatminimizes the expected cost-to-go with an unknown goal. As solving this POMDPoptimally is intractable, we use hindsight optimization to approximate. Weapply our framework to both shared-control teleoperation and human-robotteaming. Compared to predict-then-act methods, our method achieves goalsfaster, requires less user input, decreases user idling time, and results infewer user-robot collisions.
 
+Learning Anytime Predictions in Neural Networks via Adaptive Loss  Balancing
 
-Learning Anytime Predictions in Neural Networks via Adaptive Loss
-  Balancing
-
-  This work considers the trade-off between accuracy and test-time
-computational cost of deep neural networks (DNNs) via \emph{anytime}
-predictions from auxiliary predictions. Specifically, we optimize auxiliary
-losses jointly in an \emph{adaptive} weighted sum, where the weights are
-inversely proportional to average of each loss. Intuitively, this balances the
-losses to have the same scale. We demonstrate theoretical considerations that
-motivate this approach from multiple viewpoints, including connecting it to
-optimizing the geometric mean of the expectation of each loss, an objective
-that ignores the scale of losses. Experimentally, the adaptive weights induce
-more competitive anytime predictions on multiple recognition data-sets and
-models than non-adaptive approaches including weighing all losses equally. In
-particular, anytime neural networks (ANNs) can achieve the same accuracy faster
-using adaptive weights on a small network than using static constant weights on
-a large one. For problems with high performance saturation, we also show a
-sequence of exponentially deepening ANNscan achieve near-optimal anytime
-results at any budget, at the cost of a const fraction of extra computation.
-
+  This work considers the trade-off between accuracy and test-timecomputational cost of deep neural networks (DNNs) via \emph{anytime}predictions from auxiliary predictions. Specifically, we optimize auxiliarylosses jointly in an \emph{adaptive} weighted sum, where the weights areinversely proportional to average of each loss. Intuitively, this balances thelosses to have the same scale. We demonstrate theoretical considerations thatmotivate this approach from multiple viewpoints, including connecting it tooptimizing the geometric mean of the expectation of each loss, an objectivethat ignores the scale of losses. Experimentally, the adaptive weights inducemore competitive anytime predictions on multiple recognition data-sets andmodels than non-adaptive approaches including weighing all losses equally. Inparticular, anytime neural networks (ANNs) can achieve the same accuracy fasterusing adaptive weights on a small network than using static constant weights ona large one. For problems with high performance saturation, we also show asequence of exponentially deepening ANNscan achieve near-optimal anytimeresults at any budget, at the cost of a const fraction of extra computation.
 
 Log-DenseNet: How to Sparsify a DenseNet
 
-  Skip connections are increasingly utilized by deep neural networks to improve
-accuracy and cost-efficiency. In particular, the recent DenseNet is efficient
-in computation and parameters, and achieves state-of-the-art predictions by
-directly connecting each feature layer to all previous ones. However,
-DenseNet's extreme connectivity pattern may hinder its scalability to high
-depths, and in applications like fully convolutional networks, full DenseNet
-connections are prohibitively expensive. This work first experimentally shows
-that one key advantage of skip connections is to have short distances among
-feature layers during backpropagation. Specifically, using a fixed number of
-skip connections, the connection patterns with shorter backpropagation distance
-among layers have more accurate predictions. Following this insight, we propose
-a connection template, Log-DenseNet, which, in comparison to DenseNet, only
-slightly increases the backpropagation distances among layers from 1 to ($1 +
-\log_2 L$), but uses only $L\log_2 L$ total connections instead of $O(L^2)$.
-Hence, Log-DenseNets are easier than DenseNets to implement and to scale. We
-demonstrate the effectiveness of our design principle by showing better
-performance than DenseNets on tabula rasa semantic segmentation, and
-competitive results on visual recognition.
+  Skip connections are increasingly utilized by deep neural networks to improveaccuracy and cost-efficiency. In particular, the recent DenseNet is efficientin computation and parameters, and achieves state-of-the-art predictions bydirectly connecting each feature layer to all previous ones. However,DenseNet's extreme connectivity pattern may hinder its scalability to highdepths, and in applications like fully convolutional networks, full DenseNetconnections are prohibitively expensive. This work first experimentally showsthat one key advantage of skip connections is to have short distances amongfeature layers during backpropagation. Specifically, using a fixed number ofskip connections, the connection patterns with shorter backpropagation distanceamong layers have more accurate predictions. Following this insight, we proposea connection template, Log-DenseNet, which, in comparison to DenseNet, onlyslightly increases the backpropagation distances among layers from 1 to ($1 +\log_2 L$), but uses only $L\log_2 L$ total connections instead of $O(L^2)$.Hence, Log-DenseNets are easier than DenseNets to implement and to scale. Wedemonstrate the effectiveness of our design principle by showing betterperformance than DenseNets on tabula rasa semantic segmentation, andcompetitive results on visual recognition.
 
+Truncated Horizon Policy Search: Combining Reinforcement Learning &  Imitation Learning
 
-Truncated Horizon Policy Search: Combining Reinforcement Learning &
-  Imitation Learning
-
-  In this paper, we propose to combine imitation and reinforcement learning via
-the idea of reward shaping using an oracle. We study the effectiveness of the
-near-optimal cost-to-go oracle on the planning horizon and demonstrate that the
-cost-to-go oracle shortens the learner's planning horizon as function of its
-accuracy: a globally optimal oracle can shorten the planning horizon to one,
-leading to a one-step greedy Markov Decision Process which is much easier to
-optimize, while an oracle that is far away from the optimality requires
-planning over a longer horizon to achieve near-optimal performance. Hence our
-new insight bridges the gap and interpolates between imitation learning and
-reinforcement learning. Motivated by the above mentioned insights, we propose
-Truncated HORizon Policy Search (THOR), a method that focuses on searching for
-policies that maximize the total reshaped reward over a finite planning horizon
-when the oracle is sub-optimal. We experimentally demonstrate that a
-gradient-based implementation of THOR can achieve superior performance compared
-to RL baselines and IL baselines even when the oracle is sub-optimal.
-
+  In this paper, we propose to combine imitation and reinforcement learning viathe idea of reward shaping using an oracle. We study the effectiveness of thenear-optimal cost-to-go oracle on the planning horizon and demonstrate that thecost-to-go oracle shortens the learner's planning horizon as function of itsaccuracy: a globally optimal oracle can shorten the planning horizon to one,leading to a one-step greedy Markov Decision Process which is much easier tooptimize, while an oracle that is far away from the optimality requiresplanning over a longer horizon to achieve near-optimal performance. Hence ournew insight bridges the gap and interpolates between imitation learning andreinforcement learning. Motivated by the above mentioned insights, we proposeTruncated HORizon Policy Search (THOR), a method that focuses on searching forpolicies that maximize the total reshaped reward over a finite planning horizonwhen the oracle is sub-optimal. We experimentally demonstrate that agradient-based implementation of THOR can achieve superior performance comparedto RL baselines and IL baselines even when the oracle is sub-optimal.
 
 An Algorithmic Perspective on Imitation Learning
 
-  As robots and other intelligent agents move from simple environments and
-problems to more complex, unstructured settings, manually programming their
-behavior has become increasingly challenging and expensive. Often, it is easier
-for a teacher to demonstrate a desired behavior rather than attempt to manually
-engineer it. This process of learning from demonstrations, and the study of
-algorithms to do so, is called imitation learning. This work provides an
-introduction to imitation learning. It covers the underlying assumptions,
-approaches, and how they relate; the rich set of algorithms developed to tackle
-the problem; and advice on effective tools and implementation.
-  We intend this paper to serve two audiences. First, we want to familiarize
-machine learning experts with the challenges of imitation learning,
-particularly those arising in robotics, and the interesting theoretical and
-practical distinctions between it and more familiar frameworks like statistical
-supervised learning theory and reinforcement learning. Second, we want to give
-roboticists and experts in applied artificial intelligence a broader
-appreciation for the frameworks and tools available for imitation learning.
+  As robots and other intelligent agents move from simple environments andproblems to more complex, unstructured settings, manually programming theirbehavior has become increasingly challenging and expensive. Often, it is easierfor a teacher to demonstrate a desired behavior rather than attempt to manuallyengineer it. This process of learning from demonstrations, and the study ofalgorithms to do so, is called imitation learning. This work provides anintroduction to imitation learning. It covers the underlying assumptions,approaches, and how they relate; the rich set of algorithms developed to tacklethe problem; and advice on effective tools and implementation.  We intend this paper to serve two audiences. First, we want to familiarizemachine learning experts with the challenges of imitation learning,particularly those arising in robotics, and the interesting theoretical andpractical distinctions between it and more familiar frameworks like statisticalsupervised learning theory and reinforcement learning. Second, we want to giveroboticists and experts in applied artificial intelligence a broaderappreciation for the frameworks and tools available for imitation learning.
 
+Contrasting Exploration in Parameter and Action Space: A Zeroth-Order  Optimization Perspective
 
-Contrasting Exploration in Parameter and Action Space: A Zeroth-Order
-  Optimization Perspective
+  Black-box optimizers that explore in parameter space have often been shown tooutperform more sophisticated action space exploration methods developedspecifically for the reinforcement learning problem. We examine these black-boxmethods closely to identify situations in which they are worse than actionspace exploration methods and those in which they are superior. Through simpletheoretical analyses, we prove that complexity of exploration in parameterspace depends on the dimensionality of parameter space, while complexity ofexploration in action space depends on both the dimensionality of action spaceand horizon length. This is also demonstrated empirically by comparing simpleexploration methods on several model problems, including Contextual Bandit,Linear Regression and Reinforcement Learning in continuous control.
 
-  Black-box optimizers that explore in parameter space have often been shown to
-outperform more sophisticated action space exploration methods developed
-specifically for the reinforcement learning problem. We examine these black-box
-methods closely to identify situations in which they are worse than action
-space exploration methods and those in which they are superior. Through simple
-theoretical analyses, we prove that complexity of exploration in parameter
-space depends on the dimensionality of parameter space, while complexity of
-exploration in action space depends on both the dimensionality of action space
-and horizon length. This is also demonstrated empirically by comparing simple
-exploration methods on several model problems, including Contextual Bandit,
-Linear Regression and Reinforcement Learning in continuous control.
+Learning with Scope, with Application to Information Extraction and  Classification
 
-
-Learning with Scope, with Application to Information Extraction and
-  Classification
-
-  In probabilistic approaches to classification and information extraction, one
-typically builds a statistical model of words under the assumption that future
-data will exhibit the same regularities as the training data. In many data
-sets, however, there are scope-limited features whose predictive power is only
-applicable to a certain subset of the data. For example, in information
-extraction from web pages, word formatting may be indicative of extraction
-category in different ways on different web pages. The difficulty with using
-such features is capturing and exploiting the new regularities encountered in
-previously unseen data. In this paper, we propose a hierarchical probabilistic
-model that uses both local/scope-limited features, such as word formatting, and
-global features, such as word content. The local regularities are modeled as an
-unobserved random parameter which is drawn once for each local data set. This
-random parameter is estimated during the inference process and then used to
-perform classification with both the local and global features--- a procedure
-which is akin to automatically retuning the classifier to the local
-regularities on each newly encountered web page. Exact inference is intractable
-and we present approximations via point estimates and variational methods.
-Empirical results on large collections of web data demonstrate that this method
-significantly improves performance from traditional models of global features
-alone.
-
+  In probabilistic approaches to classification and information extraction, onetypically builds a statistical model of words under the assumption that futuredata will exhibit the same regularities as the training data. In many datasets, however, there are scope-limited features whose predictive power is onlyapplicable to a certain subset of the data. For example, in informationextraction from web pages, word formatting may be indicative of extractioncategory in different ways on different web pages. The difficulty with usingsuch features is capturing and exploiting the new regularities encountered inpreviously unseen data. In this paper, we propose a hierarchical probabilisticmodel that uses both local/scope-limited features, such as word formatting, andglobal features, such as word content. The local regularities are modeled as anunobserved random parameter which is drawn once for each local data set. Thisrandom parameter is estimated during the inference process and then used toperform classification with both the local and global features--- a procedurewhich is akin to automatically retuning the classifier to the localregularities on each newly encountered web page. Exact inference is intractableand we present approximations via point estimates and variational methods.Empirical results on large collections of web data demonstrate that this methodsignificantly improves performance from traditional models of global featuresalone.
 
 Autonomy Infused Teleoperation with Application to BCI Manipulation
 
-  Robot teleoperation systems face a common set of challenges including
-latency, low-dimensional user commands, and asymmetric control inputs. User
-control with Brain-Computer Interfaces (BCIs) exacerbates these problems
-through especially noisy and erratic low-dimensional motion commands due to the
-difficulty in decoding neural activity. We introduce a general framework to
-address these challenges through a combination of computer vision, user intent
-inference, and arbitration between the human input and autonomous control
-schemes. Adjustable levels of assistance allow the system to balance the
-operator's capabilities and feelings of comfort and control while compensating
-for a task's difficulty. We present experimental results demonstrating
-significant performance improvement using the shared-control assistance
-framework on adapted rehabilitation benchmarks with two subjects implanted with
-intracortical brain-computer interfaces controlling a seven degree-of-freedom
-robotic manipulator as a prosthetic. Our results further indicate that shared
-assistance mitigates perceived user difficulty and even enables successful
-performance on previously infeasible tasks. We showcase the extensibility of
-our architecture with applications to quality-of-life tasks such as opening a
-door, pouring liquids from containers, and manipulation with novel objects in
-densely cluttered environments.
-
+  Robot teleoperation systems face a common set of challenges includinglatency, low-dimensional user commands, and asymmetric control inputs. Usercontrol with Brain-Computer Interfaces (BCIs) exacerbates these problemsthrough especially noisy and erratic low-dimensional motion commands due to thedifficulty in decoding neural activity. We introduce a general framework toaddress these challenges through a combination of computer vision, user intentinference, and arbitration between the human input and autonomous controlschemes. Adjustable levels of assistance allow the system to balance theoperator's capabilities and feelings of comfort and control while compensatingfor a task's difficulty. We present experimental results demonstratingsignificant performance improvement using the shared-control assistanceframework on adapted rehabilitation benchmarks with two subjects implanted withintracortical brain-computer interfaces controlling a seven degree-of-freedomrobotic manipulator as a prosthetic. Our results further indicate that sharedassistance mitigates perceived user difficulty and even enables successfulperformance on previously infeasible tasks. We showcase the extensibility ofour architecture with applications to quality-of-life tasks such as opening adoor, pouring liquids from containers, and manipulation with novel objects indensely cluttered environments.
 
 Stability Conditions for Online Learnability
 
-  Stability is a general notion that quantifies the sensitivity of a learning
-algorithm's output to small change in the training dataset (e.g. deletion or
-replacement of a single training sample). Such conditions have recently been
-shown to be more powerful to characterize learnability in the general learning
-setting under i.i.d. samples where uniform convergence is not necessary for
-learnability, but where stability is both sufficient and necessary for
-learnability. We here show that similar stability conditions are also
-sufficient for online learnability, i.e. whether there exists a learning
-algorithm such that under any sequence of examples (potentially chosen
-adversarially) produces a sequence of hypotheses that has no regret in the
-limit with respect to the best hypothesis in hindsight. We introduce online
-stability, a stability condition related to uniform-leave-one-out stability in
-the batch setting, that is sufficient for online learnability. In particular we
-show that popular classes of online learners, namely algorithms that fall in
-the category of Follow-the-(Regularized)-Leader, Mirror Descent, gradient-based
-methods and randomized algorithms like Weighted Majority and Hedge, are
-guaranteed to have no regret if they have such online stability property. We
-provide examples that suggest the existence of an algorithm with such stability
-condition might in fact be necessary for online learnability. For the more
-restricted binary classification setting, we establish that such stability
-condition is in fact both sufficient and necessary. We also show that for a
-large class of online learnable problems in the general learning setting,
-namely those with a notion of sub-exponential covering, no-regret online
-algorithms that have such stability condition exists.
-
+  Stability is a general notion that quantifies the sensitivity of a learningalgorithm's output to small change in the training dataset (e.g. deletion orreplacement of a single training sample). Such conditions have recently beenshown to be more powerful to characterize learnability in the general learningsetting under i.i.d. samples where uniform convergence is not necessary forlearnability, but where stability is both sufficient and necessary forlearnability. We here show that similar stability conditions are alsosufficient for online learnability, i.e. whether there exists a learningalgorithm such that under any sequence of examples (potentially chosenadversarially) produces a sequence of hypotheses that has no regret in thelimit with respect to the best hypothesis in hindsight. We introduce onlinestability, a stability condition related to uniform-leave-one-out stability inthe batch setting, that is sufficient for online learnability. In particular weshow that popular classes of online learners, namely algorithms that fall inthe category of Follow-the-(Regularized)-Leader, Mirror Descent, gradient-basedmethods and randomized algorithms like Weighted Majority and Hedge, areguaranteed to have no regret if they have such online stability property. Weprovide examples that suggest the existence of an algorithm with such stabilitycondition might in fact be necessary for online learnability. For the morerestricted binary classification setting, we establish that such stabilitycondition is in fact both sufficient and necessary. We also show that for alarge class of online learnable problems in the general learning setting,namely those with a notion of sub-exponential covering, no-regret onlinealgorithms that have such stability condition exists.
 
 Efficient Feature Group Sequencing for Anytime Linear Prediction
 
-  We consider \textit{anytime} linear prediction in the common machine learning
-setting, where features are in groups that have costs. We achieve anytime (or
-interruptible) predictions by sequencing the computation of feature groups and
-reporting results using the computed features at interruption. We extend
-Orthogonal Matching Pursuit (OMP) and Forward Regression (FR) to learn the
-sequencing greedily under this group setting with costs. We theoretically
-guarantee that our algorithms achieve near-optimal linear predictions at each
-budget when a feature group is chosen. With a novel analysis of OMP, we improve
-its theoretical bound to the same strength as that of FR. In addition, we
-develop a novel algorithm that consumes cost $4B$ to approximate the optimal
-performance of \textit{any} cost $B$, and prove that with cost less than $4B$,
-such an approximation is impossible. To our knowledge, these are the first
-anytime bounds at \textit{all} budgets. We test our algorithms on two
-real-world data-sets and evaluate them in terms of anytime linear prediction
-performance against cost-weighted Group Lasso and alternative greedy
-algorithms.
+  We consider \textit{anytime} linear prediction in the common machine learningsetting, where features are in groups that have costs. We achieve anytime (orinterruptible) predictions by sequencing the computation of feature groups andreporting results using the computed features at interruption. We extendOrthogonal Matching Pursuit (OMP) and Forward Regression (FR) to learn thesequencing greedily under this group setting with costs. We theoreticallyguarantee that our algorithms achieve near-optimal linear predictions at eachbudget when a feature group is chosen. With a novel analysis of OMP, we improveits theoretical bound to the same strength as that of FR. In addition, wedevelop a novel algorithm that consumes cost $4B$ to approximate the optimalperformance of \textit{any} cost $B$, and prove that with cost less than $4B$,such an approximation is impossible. To our knowledge, these are the firstanytime bounds at \textit{all} budgets. We test our algorithms on tworeal-world data-sets and evaluate them in terms of anytime linear predictionperformance against cost-weighted Group Lasso and alternative greedyalgorithms.
 
+Ignoring Distractors in the Absence of Labels: Optimal Linear Projection  to Remove False Positives During Anomaly Detection
 
-Ignoring Distractors in the Absence of Labels: Optimal Linear Projection
-  to Remove False Positives During Anomaly Detection
-
-  In the anomaly detection setting, the native feature embedding can be a
-crucial source of bias. We present a technique, Feature Omission using Context
-in Unsupervised Settings (FOCUS) to learn a feature mapping that is invariant
-to changes exemplified in training sets while retaining as much descriptive
-power as possible. While this method could apply to many unsupervised settings,
-we focus on applications in anomaly detection, where little task-labeled data
-is available. Our algorithm requires only non-anomalous sets of data, and does
-not require that the contexts in the training sets match the context of the
-test set. By maximizing within-set variance and minimizing between-set
-variance, we are able to identify and remove distracting features while
-retaining fidelity to the descriptiveness needed at test time. In the linear
-case, our formulation reduces to a generalized eigenvalue problem that can be
-solved quickly and applied to test sets outside the context of the training
-sets. This technique allows us to align technical definitions of anomaly
-detection with human definitions through appropriate mappings of the feature
-space. We demonstrate that this method is able to remove uninformative parts of
-the feature space for the anomaly detection setting.
-
+  In the anomaly detection setting, the native feature embedding can be acrucial source of bias. We present a technique, Feature Omission using Contextin Unsupervised Settings (FOCUS) to learn a feature mapping that is invariantto changes exemplified in training sets while retaining as much descriptivepower as possible. While this method could apply to many unsupervised settings,we focus on applications in anomaly detection, where little task-labeled datais available. Our algorithm requires only non-anomalous sets of data, and doesnot require that the contexts in the training sets match the context of thetest set. By maximizing within-set variance and minimizing between-setvariance, we are able to identify and remove distracting features whileretaining fidelity to the descriptiveness needed at test time. In the linearcase, our formulation reduces to a generalized eigenvalue problem that can besolved quickly and applied to test sets outside the context of the trainingsets. This technique allows us to align technical definitions of anomalydetection with human definitions through appropriate mappings of the featurespace. We demonstrate that this method is able to remove uninformative parts ofthe feature space for the anomaly detection setting.
 
 Predictive-State Decoders: Encoding the Future into Recurrent Networks
 
-  Recurrent neural networks (RNNs) are a vital modeling technique that rely on
-internal states learned indirectly by optimization of a supervised,
-unsupervised, or reinforcement training loss. RNNs are used to model dynamic
-processes that are characterized by underlying latent states whose form is
-often unknown, precluding its analytic representation inside an RNN. In the
-Predictive-State Representation (PSR) literature, latent state processes are
-modeled by an internal state representation that directly models the
-distribution of future observations, and most recent work in this area has
-relied on explicitly representing and targeting sufficient statistics of this
-probability distribution. We seek to combine the advantages of RNNs and PSRs by
-augmenting existing state-of-the-art recurrent neural networks with
-Predictive-State Decoders (PSDs), which add supervision to the network's
-internal state representation to target predicting future observations.
-Predictive-State Decoders are simple to implement and easily incorporated into
-existing training pipelines via additional loss regularization. We demonstrate
-the effectiveness of PSDs with experimental results in three different domains:
-probabilistic filtering, Imitation Learning, and Reinforcement Learning. In
-each, our method improves statistical performance of state-of-the-art recurrent
-baselines and does so with fewer iterations and less data.
-
+  Recurrent neural networks (RNNs) are a vital modeling technique that rely oninternal states learned indirectly by optimization of a supervised,unsupervised, or reinforcement training loss. RNNs are used to model dynamicprocesses that are characterized by underlying latent states whose form isoften unknown, precluding its analytic representation inside an RNN. In thePredictive-State Representation (PSR) literature, latent state processes aremodeled by an internal state representation that directly models thedistribution of future observations, and most recent work in this area hasrelied on explicitly representing and targeting sufficient statistics of thisprobability distribution. We seek to combine the advantages of RNNs and PSRs byaugmenting existing state-of-the-art recurrent neural networks withPredictive-State Decoders (PSDs), which add supervision to the network'sinternal state representation to target predicting future observations.Predictive-State Decoders are simple to implement and easily incorporated intoexisting training pipelines via additional loss regularization. We demonstratethe effectiveness of PSDs with experimental results in three different domains:probabilistic filtering, Imitation Learning, and Reinforcement Learning. Ineach, our method improves statistical performance of state-of-the-art recurrentbaselines and does so with fewer iterations and less data.
 

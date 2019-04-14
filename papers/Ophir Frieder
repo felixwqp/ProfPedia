@@ -1,38 +1,8 @@
 Characterizing Question Facets for Complex Answer Retrieval
 
-  Complex answer retrieval (CAR) is the process of retrieving answers to
-questions that have multifaceted or nuanced answers. In this work, we present
-two novel approaches for CAR based on the observation that question facets can
-vary in utility: from structural (facets that can apply to many similar topics,
-such as 'History') to topical (facets that are specific to the question's
-topic, such as the 'Westward expansion' of the United States). We first explore
-a way to incorporate facet utility into ranking models during query term score
-combination. We then explore a general approach to reform the structure of
-ranking models to aid in learning of facet utility in the query-document term
-matching phase. When we use our techniques with a leading neural ranker on the
-TREC CAR dataset, our methods rank first in the 2017 TREC CAR benchmark, and
-yield up to 26% higher performance than the next best method.
-
+  Complex answer retrieval (CAR) is the process of retrieving answers toquestions that have multifaceted or nuanced answers. In this work, we presenttwo novel approaches for CAR based on the observation that question facets canvary in utility: from structural (facets that can apply to many similar topics,such as 'History') to topical (facets that are specific to the question'stopic, such as the 'Westward expansion' of the United States). We first explorea way to incorporate facet utility into ranking models during query term scorecombination. We then explore a general approach to reform the structure ofranking models to aid in learning of facet utility in the query-document termmatching phase. When we use our techniques with a leading neural ranker on theTREC CAR dataset, our methods rank first in the 2017 TREC CAR benchmark, andyield up to 26% higher performance than the next best method.
 
 Overcoming low-utility facets for complex answer retrieval
 
-  Many questions cannot be answered simply; their answers must include numerous
-nuanced details and additional context. Complex Answer Retrieval (CAR) is the
-retrieval of answers to such questions. In their simplest form, these questions
-are constructed from a topic entity (e.g., `cheese') and a facet (e.g., `health
-effects'). While topic matching has been thoroughly explored, we observe that
-some facets use general language that is unlikely to appear verbatim in
-answers. We call these low-utility facets. In this work, we present an approach
-to CAR that identifies and addresses low-utility facets. We propose two
-estimators of facet utility. These include exploiting the hierarchical
-structure of CAR queries and using facet frequency information from training
-data. To improve the retrieval performance on low-utility headings, we also
-include entity similarity scores using knowledge graph embeddings. We apply our
-approaches to a leading neural ranking technique, and evaluate using the TREC
-CAR dataset. We find that our approach perform significantly better than the
-unmodified neural ranker and other leading CAR techniques. We also provide a
-detailed analysis of our results, and verify that low-utility facets are indeed
-more difficult to match, and that our approach improves the performance for
-these difficult queries.
-
+  Many questions cannot be answered simply; their answers must include numerousnuanced details and additional context. Complex Answer Retrieval (CAR) is theretrieval of answers to such questions. In their simplest form, these questionsare constructed from a topic entity (e.g., `cheese') and a facet (e.g., `healtheffects'). While topic matching has been thoroughly explored, we observe thatsome facets use general language that is unlikely to appear verbatim inanswers. We call these low-utility facets. In this work, we present an approachto CAR that identifies and addresses low-utility facets. We propose twoestimators of facet utility. These include exploiting the hierarchicalstructure of CAR queries and using facet frequency information from trainingdata. To improve the retrieval performance on low-utility headings, we alsoinclude entity similarity scores using knowledge graph embeddings. We apply ourapproaches to a leading neural ranking technique, and evaluate using the TRECCAR dataset. We find that our approach perform significantly better than theunmodified neural ranker and other leading CAR techniques. We also provide adetailed analysis of our results, and verify that low-utility facets are indeedmore difficult to match, and that our approach improves the performance forthese difficult queries.
 

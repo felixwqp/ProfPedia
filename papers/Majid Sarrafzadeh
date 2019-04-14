@@ -1,129 +1,24 @@
 ECG Heartbeat Classification: A Deep Transferable Representation
 
-  Electrocardiogram (ECG) can be reliably used as a measure to monitor the
-functionality of the cardiovascular system. Recently, there has been a great
-attention towards accurate categorization of heartbeats. While there are many
-commonalities between different ECG conditions, the focus of most studies has
-been classifying a set of conditions on a dataset annotated for that task
-rather than learning and employing a transferable knowledge between different
-tasks. In this paper, we propose a method based on deep convolutional neural
-networks for the classification of heartbeats which is able to accurately
-classify five different arrhythmias in accordance with the AAMI EC57 standard.
-Furthermore, we suggest a method for transferring the knowledge acquired on
-this task to the myocardial infarction (MI) classification task. We evaluated
-the proposed method on PhysionNet's MIT-BIH and PTB Diagnostics datasets.
-According to the results, the suggested method is able to make predictions with
-the average accuracies of 93.4% and 95.9% on arrhythmia classification and MI
-classification, respectively.
-
+  Electrocardiogram (ECG) can be reliably used as a measure to monitor thefunctionality of the cardiovascular system. Recently, there has been a greatattention towards accurate categorization of heartbeats. While there are manycommonalities between different ECG conditions, the focus of most studies hasbeen classifying a set of conditions on a dataset annotated for that taskrather than learning and employing a transferable knowledge between differenttasks. In this paper, we propose a method based on deep convolutional neuralnetworks for the classification of heartbeats which is able to accuratelyclassify five different arrhythmias in accordance with the AAMI EC57 standard.Furthermore, we suggest a method for transferring the knowledge acquired onthis task to the myocardial infarction (MI) classification task. We evaluatedthe proposed method on PhysionNet's MIT-BIH and PTB Diagnostics datasets.According to the results, the suggested method is able to make predictions withthe average accuracies of 93.4% and 95.9% on arrhythmia classification and MIclassification, respectively.
 
 Dynamic Feature Acquisition Using Denoising Autoencoders
 
-  In real-world scenarios, different features have different acquisition costs
-at test-time which necessitates cost-aware methods to optimize the cost and
-performance trade-off. This paper introduces a novel and scalable approach for
-cost-aware feature acquisition at test-time. The method incrementally asks for
-features based on the available context that are known feature values. The
-proposed method is based on sensitivity analysis in neural networks and density
-estimation using denoising autoencoders with binary representation layers. In
-the proposed architecture, a denoising autoencoder is used to handle unknown
-features (i.e., features that are yet to be acquired), and the sensitivity of
-predictions with respect to each unknown feature is used as a context-dependent
-measure of informativeness. We evaluated the proposed method on eight different
-real-world datasets as well as one synthesized dataset and compared its
-performance with several other approaches in the literature. According to the
-results, the suggested method is capable of efficiently acquiring features at
-test-time in a cost- and context-aware fashion.
+  In real-world scenarios, different features have different acquisition costsat test-time which necessitates cost-aware methods to optimize the cost andperformance trade-off. This paper introduces a novel and scalable approach forcost-aware feature acquisition at test-time. The method incrementally asks forfeatures based on the available context that are known feature values. Theproposed method is based on sensitivity analysis in neural networks and densityestimation using denoising autoencoders with binary representation layers. Inthe proposed architecture, a denoising autoencoder is used to handle unknownfeatures (i.e., features that are yet to be acquired), and the sensitivity ofpredictions with respect to each unknown feature is used as a context-dependentmeasure of informativeness. We evaluated the proposed method on eight differentreal-world datasets as well as one synthesized dataset and compared itsperformance with several other approaches in the literature. According to theresults, the suggested method is capable of efficiently acquiring features attest-time in a cost- and context-aware fashion.
 
+Opportunistic Learning: Budgeted Cost-Sensitive Learning from Data  Streams
 
-Opportunistic Learning: Budgeted Cost-Sensitive Learning from Data
-  Streams
-
-  In many real-world learning scenarios, features are only acquirable at a cost
-constrained under a budget. In this paper, we propose a novel approach for
-cost-sensitive feature acquisition at the prediction-time. The suggested method
-acquires features incrementally based on a context-aware feature-value
-function. We formulate the problem in the reinforcement learning paradigm, and
-introduce a reward function based on the utility of each feature. Specifically,
-MC dropout sampling is used to measure expected variations of the model
-uncertainty which is used as a feature-value function. Furthermore, we suggest
-sharing representations between the class predictor and value function
-estimator networks. The suggested approach is completely online and is readily
-applicable to stream learning setups. The solution is evaluated on three
-different datasets including the well-known MNIST dataset as a benchmark as
-well as two cost-sensitive datasets: Yahoo Learning to Rank and a dataset in
-the medical domain for diabetes classification. According to the results, the
-proposed method is able to efficiently acquire features and make accurate
-predictions.
-
+  In many real-world learning scenarios, features are only acquirable at a costconstrained under a budget. In this paper, we propose a novel approach forcost-sensitive feature acquisition at the prediction-time. The suggested methodacquires features incrementally based on a context-aware feature-valuefunction. We formulate the problem in the reinforcement learning paradigm, andintroduce a reward function based on the utility of each feature. Specifically,MC dropout sampling is used to measure expected variations of the modeluncertainty which is used as a feature-value function. Furthermore, we suggestsharing representations between the class predictor and value functionestimator networks. The suggested approach is completely online and is readilyapplicable to stream learning setups. The solution is evaluated on threedifferent datasets including the well-known MNIST dataset as a benchmark aswell as two cost-sensitive datasets: Yahoo Learning to Rank and a dataset inthe medical domain for diabetes classification. According to the results, theproposed method is able to efficiently acquire features and make accuratepredictions.
 
 Unsupervised Prediction of Negative Health Events Ahead of Time
 
-  The emergence of continuous health monitoring and the availability of an
-enormous amount of time series data has provided a great opportunity for the
-advancement of personal health tracking. In recent years, unsupervised learning
-methods have drawn special attention of researchers to tackle the sparse
-annotation of health data and real-time detection of anomalies has been a
-central problem of interest. However, one problem that has not been well
-addressed before is the early prediction of forthcoming negative health events.
-Early signs of an event can introduce subtle and gradual changes in the health
-signal prior to its onset, detection of which can be invaluable in effective
-prevention. In this study, we first demonstrate our observations on the
-shortcoming of widely adopted anomaly detection methods in uncovering the
-changes prior to a negative health event. We then propose a framework which
-relies on online clustering of signal segment representations which are
-automatically learned by a specially designed LSTM auto-encoder. We show the
-effectiveness of our approach by predicting Bradycardia events in infants using
-MIT-PICS dataset 1.3 minutes ahead of time with 68\% AUC score on average,
-using no label supervision. Results of our study can indicate the viability of
-our approach in the early detection of health events in other applications as
-well.
-
+  The emergence of continuous health monitoring and the availability of anenormous amount of time series data has provided a great opportunity for theadvancement of personal health tracking. In recent years, unsupervised learningmethods have drawn special attention of researchers to tackle the sparseannotation of health data and real-time detection of anomalies has been acentral problem of interest. However, one problem that has not been welladdressed before is the early prediction of forthcoming negative health events.Early signs of an event can introduce subtle and gradual changes in the healthsignal prior to its onset, detection of which can be invaluable in effectiveprevention. In this study, we first demonstrate our observations on theshortcoming of widely adopted anomaly detection methods in uncovering thechanges prior to a negative health event. We then propose a framework whichrelies on online clustering of signal segment representations which areautomatically learned by a specially designed LSTM auto-encoder. We show theeffectiveness of our approach by predicting Bradycardia events in infants usingMIT-PICS dataset 1.3 minutes ahead of time with 68\% AUC score on average,using no label supervision. Results of our study can indicate the viability ofour approach in the early detection of health events in other applications aswell.
 
 Nutrition and Health Data for Cost-Sensitive Learning
 
-  Traditionally, machine learning algorithms have been focused on modeling
-dynamics of a certain dataset at hand for which all features are available for
-free. However, there are many concerns such as monetary data collection costs,
-patient discomfort in medical procedures, and privacy impacts of data
-collection that require careful consideration in any health analytics system.
-An efficient solution would only acquire a subset of features based on the
-value it provides whilst considering acquisition costs. Moreover, datasets that
-provide feature costs are very limited, especially in healthcare. In this
-paper, we provide a health dataset as well as a method for assigning feature
-costs based on the total level of inconvenience asking for each feature
-entails. Furthermore, based on the suggested dataset, we provide a comparison
-of recent and state-of-the-art approaches to cost-sensitive feature acquisition
-and learning. Specifically, we analyze the performance of major
-sensitivity-based and reinforcement learning based methods in the literature on
-three different problems in the health domain, including diabetes, heart
-disease, and hypertension classification.
-
+  Traditionally, machine learning algorithms have been focused on modelingdynamics of a certain dataset at hand for which all features are available forfree. However, there are many concerns such as monetary data collection costs,patient discomfort in medical procedures, and privacy impacts of datacollection that require careful consideration in any health analytics system.An efficient solution would only acquire a subset of features based on thevalue it provides whilst considering acquisition costs. Moreover, datasets thatprovide feature costs are very limited, especially in healthcare. In thispaper, we provide a health dataset as well as a method for assigning featurecosts based on the total level of inconvenience asking for each featureentails. Furthermore, based on the suggested dataset, we provide a comparisonof recent and state-of-the-art approaches to cost-sensitive feature acquisitionand learning. Specifically, we analyze the performance of majorsensitivity-based and reinforcement learning based methods in the literature onthree different problems in the health domain, including diabetes, heartdisease, and hypertension classification.
 
 HeteroMed: Heterogeneous Information Network for Medical Diagnosis
 
-  With the recent availability of Electronic Health Records (EHR) and great
-opportunities they offer for advancing medical informatics, there has been
-growing interest in mining EHR for improving quality of care. Disease diagnosis
-due to its sensitive nature, huge costs of error, and complexity has become an
-increasingly important focus of research in past years. Existing studies model
-EHR by capturing co-occurrence of clinical events to learn their latent
-embeddings. However, relations among clinical events carry various semantics
-and contribute differently to disease diagnosis which gives precedence to a
-more advanced modeling of heterogeneous data types and relations in EHR data
-than existing solutions. To address these issues, we represent how
-high-dimensional EHR data and its rich relationships can be suitably translated
-into HeteroMed, a heterogeneous information network for robust medical
-diagnosis. Our modeling approach allows for straightforward handling of missing
-values and heterogeneity of data. HeteroMed exploits metapaths to capture
-higher level and semantically important relations contributing to disease
-diagnosis. Furthermore, it employs a joint embedding framework to tailor
-clinical event representations to the disease diagnosis goal. To the best of
-our knowledge, this is the first study to use Heterogeneous Information Network
-for modeling clinical data and disease diagnosis. Experimental results of our
-study show superior performance of HeteroMed compared to prior methods in
-prediction of exact diagnosis codes and general disease cohorts. Moreover,
-HeteroMed outperforms baseline models in capturing similarities of clinical
-events which are examined qualitatively through case studies.
-
+  With the recent availability of Electronic Health Records (EHR) and greatopportunities they offer for advancing medical informatics, there has beengrowing interest in mining EHR for improving quality of care. Disease diagnosisdue to its sensitive nature, huge costs of error, and complexity has become anincreasingly important focus of research in past years. Existing studies modelEHR by capturing co-occurrence of clinical events to learn their latentembeddings. However, relations among clinical events carry various semanticsand contribute differently to disease diagnosis which gives precedence to amore advanced modeling of heterogeneous data types and relations in EHR datathan existing solutions. To address these issues, we represent howhigh-dimensional EHR data and its rich relationships can be suitably translatedinto HeteroMed, a heterogeneous information network for robust medicaldiagnosis. Our modeling approach allows for straightforward handling of missingvalues and heterogeneity of data. HeteroMed exploits metapaths to capturehigher level and semantically important relations contributing to diseasediagnosis. Furthermore, it employs a joint embedding framework to tailorclinical event representations to the disease diagnosis goal. To the best ofour knowledge, this is the first study to use Heterogeneous Information Networkfor modeling clinical data and disease diagnosis. Experimental results of ourstudy show superior performance of HeteroMed compared to prior methods inprediction of exact diagnosis codes and general disease cohorts. Moreover,HeteroMed outperforms baseline models in capturing similarities of clinicalevents which are examined qualitatively through case studies.
 

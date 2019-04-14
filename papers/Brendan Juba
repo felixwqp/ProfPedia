@@ -1,200 +1,44 @@
 On Learning Finite-State Quantum Sources
 
-  We examine the complexity of learning the distributions produced by
-finite-state quantum sources. We show how prior techniques for learning hidden
-Markov models can be adapted to the quantum generator model to find that the
-analogous state of affairs holds: information-theoretically, a polynomial
-number of samples suffice to approximately identify the distribution, but
-computationally, the problem is as hard as learning parities with noise, a
-notorious open question in computational learning theory.
-
+  We examine the complexity of learning the distributions produced byfinite-state quantum sources. We show how prior techniques for learning hiddenMarkov models can be adapted to the quantum generator model to find that theanalogous state of affairs holds: information-theoretically, a polynomialnumber of samples suffice to approximately identify the distribution, butcomputationally, the problem is as hard as learning parities with noise, anotorious open question in computational learning theory.
 
 The Price of Uncertain Priors in Source Coding
 
-  We consider the problem of one-way communication when the recipient does not
-know exactly the distribution that the messages are drawn from, but has a
-"prior" distribution that is known to be close to the source distribution, a
-problem first considered by Juba et al. We consider the question of how much
-longer the messages need to be in order to cope with the uncertainty about the
-receiver's prior and the source distribution, respectively, as compared to the
-standard source coding problem. We consider two variants of this uncertain
-priors problem: the original setting of Juba et al. in which the receiver is
-required to correctly recover the message with probability 1, and a setting
-introduced by Haramaty and Sudan, in which the receiver is permitted to fail
-with some probability $\epsilon$. In both settings, we obtain lower bounds that
-are tight up to logarithmically smaller terms. In the latter setting, we
-furthermore present a variant of the coding scheme of Juba et al. with an
-overhead of $\log\alpha+\log 1/\epsilon+1$ bits, thus also establishing the
-nearly tight upper bound.
-
+  We consider the problem of one-way communication when the recipient does notknow exactly the distribution that the messages are drawn from, but has a"prior" distribution that is known to be close to the source distribution, aproblem first considered by Juba et al. We consider the question of how muchlonger the messages need to be in order to cope with the uncertainty about thereceiver's prior and the source distribution, respectively, as compared to thestandard source coding problem. We consider two variants of this uncertainpriors problem: the original setting of Juba et al. in which the receiver isrequired to correctly recover the message with probability 1, and a settingintroduced by Haramaty and Sudan, in which the receiver is permitted to failwith some probability $\epsilon$. In both settings, we obtain lower bounds thatare tight up to logarithmically smaller terms. In the latter setting, wefurthermore present a variant of the coding scheme of Juba et al. with anoverhead of $\log\alpha+\log 1/\epsilon+1$ bits, thus also establishing thenearly tight upper bound.
 
 Learning implicitly in reasoning in PAC-Semantics
 
-  We consider the problem of answering queries about formulas of propositional
-logic based on background knowledge partially represented explicitly as other
-formulas, and partially represented as partially obscured examples
-independently drawn from a fixed probability distribution, where the queries
-are answered with respect to a weaker semantics than usual -- PAC-Semantics,
-introduced by Valiant (2000) -- that is defined using the distribution of
-examples. We describe a fairly general, efficient reduction to limited versions
-of the decision problem for a proof system (e.g., bounded space treelike
-resolution, bounded degree polynomial calculus, etc.) from corresponding
-versions of the reasoning problem where some of the background knowledge is not
-explicitly given as formulas, only learnable from the examples. Crucially, we
-do not generate an explicit representation of the knowledge extracted from the
-examples, and so the "learning" of the background knowledge is only done
-implicitly. As a consequence, this approach can utilize formulas as background
-knowledge that are not perfectly valid over the distribution---essentially the
-analogue of agnostic learning here.
-
+  We consider the problem of answering queries about formulas of propositionallogic based on background knowledge partially represented explicitly as otherformulas, and partially represented as partially obscured examplesindependently drawn from a fixed probability distribution, where the queriesare answered with respect to a weaker semantics than usual -- PAC-Semantics,introduced by Valiant (2000) -- that is defined using the distribution ofexamples. We describe a fairly general, efficient reduction to limited versionsof the decision problem for a proof system (e.g., bounded space treelikeresolution, bounded degree polynomial calculus, etc.) from correspondingversions of the reasoning problem where some of the background knowledge is notexplicitly given as formulas, only learnable from the examples. Crucially, wedo not generate an explicit representation of the knowledge extracted from theexamples, and so the "learning" of the background knowledge is only doneimplicitly. As a consequence, this approach can utilize formulas as backgroundknowledge that are not perfectly valid over the distribution---essentially theanalogue of agnostic learning here.
 
 Conditional Sparse Linear Regression
 
-  Machine learning and statistics typically focus on building models that
-capture the vast majority of the data, possibly ignoring a small subset of data
-as "noise" or "outliers." By contrast, here we consider the problem of jointly
-identifying a significant (but perhaps small) segment of a population in which
-there is a highly sparse linear regression fit, together with the coefficients
-for the linear fit. We contend that such tasks are of interest both because the
-models themselves may be able to achieve better predictions in such special
-cases, but also because they may aid our understanding of the data. We give
-algorithms for such problems under the sup norm, when this unknown segment of
-the population is described by a k-DNF condition and the regression fit is
-s-sparse for constant k and s. For the variants of this problem when the
-regression fit is not so sparse or using expected error, we also give a
-preliminary algorithm and highlight the question as a challenge for future
-work.
-
+  Machine learning and statistics typically focus on building models thatcapture the vast majority of the data, possibly ignoring a small subset of dataas "noise" or "outliers." By contrast, here we consider the problem of jointlyidentifying a significant (but perhaps small) segment of a population in whichthere is a highly sparse linear regression fit, together with the coefficientsfor the linear fit. We contend that such tasks are of interest both because themodels themselves may be able to achieve better predictions in such specialcases, but also because they may aid our understanding of the data. We givealgorithms for such problems under the sup norm, when this unknown segment ofthe population is described by a k-DNF condition and the regression fit iss-sparse for constant k and s. For the variants of this problem when theregression fit is not so sparse or using expected error, we also give apreliminary algorithm and highlight the question as a challenge for futurework.
 
 Conditional Linear Regression
 
-  Work in machine learning and statistics commonly focuses on building models
-that capture the vast majority of data, possibly ignoring a segment of the
-population as outliers. However, there does not often exist a good model on the
-whole dataset, so we seek to find a small subset where there exists a useful
-model. We are interested in finding a linear rule capable of achieving more
-accurate predictions for just a segment of the population. We give an efficient
-algorithm with theoretical analysis for the conditional linear regression task,
-which is the joint task of identifying a significant segment of the population,
-described by a k-DNF, along with its linear regression fit.
+  Work in machine learning and statistics commonly focuses on building modelsthat capture the vast majority of data, possibly ignoring a segment of thepopulation as outliers. However, there does not often exist a good model on thewhole dataset, so we seek to find a small subset where there exists a usefulmodel. We are interested in finding a linear rule capable of achieving moreaccurate predictions for just a segment of the population. We give an efficientalgorithm with theoretical analysis for the conditional linear regression task,which is the joint task of identifying a significant segment of the population,described by a k-DNF, along with its linear regression fit.
 
+Polynomial-time probabilistic reasoning with partial observations via  implicit learning in probability logics
 
-Polynomial-time probabilistic reasoning with partial observations via
-  implicit learning in probability logics
-
-  Standard approaches to probabilistic reasoning require that one possesses an
-explicit model of the distribution in question. But, the empirical learning of
-models of probability distributions from partial observations is a problem for
-which efficient algorithms are generally not known. In this work we consider
-the use of bounded-degree fragments of the "sum-of-squares" logic as a
-probability logic. Prior work has shown that we can decide refutability for
-such fragments in polynomial-time. We propose to use such fragments to answer
-queries about whether a given probability distribution satisfies a given system
-of constraints and bounds on expected values. We show that in answering such
-queries, such constraints and bounds can be implicitly learned from partial
-observations in polynomial-time as well. It is known that this logic is capable
-of deriving many bounds that are useful in probabilistic analysis. We show here
-that it furthermore captures useful polynomial-time fragments of resolution.
-Thus, these fragments are also quite expressive.
-
+  Standard approaches to probabilistic reasoning require that one possesses anexplicit model of the distribution in question. But, the empirical learning ofmodels of probability distributions from partial observations is a problem forwhich efficient algorithms are generally not known. In this work we considerthe use of bounded-degree fragments of the "sum-of-squares" logic as aprobability logic. Prior work has shown that we can decide refutability forsuch fragments in polynomial-time. We propose to use such fragments to answerqueries about whether a given probability distribution satisfies a given systemof constraints and bounds on expected values. We show that in answering suchqueries, such constraints and bounds can be implicitly learned from partialobservations in polynomial-time as well. It is known that this logic is capableof deriving many bounds that are useful in probabilistic analysis. We show herethat it furthermore captures useful polynomial-time fragments of resolution.Thus, these fragments are also quite expressive.
 
 Optimal Data Acquisition for Statistical Estimation
 
-  We consider a data analyst's problem of purchasing data from strategic agents
-to compute an unbiased estimate of a statistic of interest. Agents incur
-private costs to reveal their data and the costs can be arbitrarily correlated
-with their data. Once revealed, data are verifiable. This paper focuses on
-linear unbiased estimators. We design an individually rational and incentive
-compatible mechanism that optimizes the worst-case mean-squared error of the
-estimation, where the worst-case is over the unknown correlation between costs
-and data, subject to a budget constraint in expectation. We characterize the
-form of the optimal mechanism in closed-form. We further extend our results to
-acquiring data for estimating a parameter in regression analysis, where private
-costs can correlate with the values of the dependent variable but not with the
-values of the independent variables.
-
+  We consider a data analyst's problem of purchasing data from strategic agentsto compute an unbiased estimate of a statistic of interest. Agents incurprivate costs to reveal their data and the costs can be arbitrarily correlatedwith their data. Once revealed, data are verifiable. This paper focuses onlinear unbiased estimators. We design an individually rational and incentivecompatible mechanism that optimizes the worst-case mean-squared error of theestimation, where the worst-case is over the unknown correlation between costsand data, subject to a budget constraint in expectation. We characterize theform of the optimal mechanism in closed-form. We further extend our results toacquiring data for estimating a parameter in regression analysis, where privatecosts can correlate with the values of the dependent variable but not with thevalues of the independent variables.
 
 Learning Abduction under Partial Observability
 
-  Juba recently proposed a formulation of learning abductive reasoning from
-examples, in which both the relative plausibility of various explanations, as
-well as which explanations are valid, are learned directly from data. The main
-shortcoming of this formulation of the task is that it assumes access to
-full-information (i.e., fully specified) examples; relatedly, it offers no role
-for declarative background knowledge, as such knowledge is rendered redundant
-in the abduction task by complete information. In this work, we extend the
-formulation to utilize such partially specified examples, along with
-declarative background knowledge about the missing data. We show that it is
-possible to use implicitly learned rules together with the explicitly given
-declarative knowledge to support hypotheses in the course of abduction. We
-observe that when a small explanation exists, it is possible to obtain a
-much-improved guarantee in the challenging exception-tolerant setting. Such
-small, human-understandable explanations are of particular interest for
-potential applications of the task.
-
+  Juba recently proposed a formulation of learning abductive reasoning fromexamples, in which both the relative plausibility of various explanations, aswell as which explanations are valid, are learned directly from data. The mainshortcoming of this formulation of the task is that it assumes access tofull-information (i.e., fully specified) examples; relatedly, it offers no rolefor declarative background knowledge, as such knowledge is rendered redundantin the abduction task by complete information. In this work, we extend theformulation to utilize such partially specified examples, along withdeclarative background knowledge about the missing data. We show that it ispossible to use implicitly learned rules together with the explicitly givendeclarative knowledge to support hypotheses in the course of abduction. Weobserve that when a small explanation exists, it is possible to obtain amuch-improved guarantee in the challenging exception-tolerant setting. Suchsmall, human-understandable explanations are of particular interest forpotential applications of the task.
 
 PAC Quasi-automatizability of Resolution over Restricted Distributions
 
-  We consider principled alternatives to unsupervised learning in data mining
-by situating the learning task in the context of the subsequent analysis task.
-Specifically, we consider a query-answering (hypothesis-testing) task: In the
-combined task, we decide whether an input query formula is satisfied over a
-background distribution by using input examples directly, rather than invoking
-a two-stage process in which (i) rules over the distribution are learned by an
-unsupervised learning algorithm and (ii) a reasoning algorithm decides whether
-or not the query formula follows from the learned rules. In a previous work
-(2013), we observed that the learning task could satisfy numerous desirable
-criteria in this combined context -- effectively matching what could be
-achieved by agnostic learning of CNFs from partial information -- that are not
-known to be achievable directly. In this work, we show that likewise, there are
-reasoning tasks that are achievable in such a combined context that are not
-known to be achievable directly (and indeed, have been seriously conjectured to
-be impossible, cf. (Alekhnovich and Razborov, 2008)). Namely, we test for a
-resolution proof of the query formula of a given size in quasipolynomial time
-(that is, "quasi-automatizing" resolution). The learning setting we consider is
-a partial-information, restricted-distribution setting that generalizes
-learning parities over the uniform distribution from partial information,
-another task that is known not to be achievable directly in various models (cf.
-(Ben-David and Dichterman, 1998) and (Michael, 2010)).
-
+  We consider principled alternatives to unsupervised learning in data miningby situating the learning task in the context of the subsequent analysis task.Specifically, we consider a query-answering (hypothesis-testing) task: In thecombined task, we decide whether an input query formula is satisfied over abackground distribution by using input examples directly, rather than invokinga two-stage process in which (i) rules over the distribution are learned by anunsupervised learning algorithm and (ii) a reasoning algorithm decides whetheror not the query formula follows from the learned rules. In a previous work(2013), we observed that the learning task could satisfy numerous desirablecriteria in this combined context -- effectively matching what could beachieved by agnostic learning of CNFs from partial information -- that are notknown to be achievable directly. In this work, we show that likewise, there arereasoning tasks that are achievable in such a combined context that are notknown to be achievable directly (and indeed, have been seriously conjectured tobe impossible, cf. (Alekhnovich and Razborov, 2008)). Namely, we test for aresolution proof of the query formula of a given size in quasipolynomial time(that is, "quasi-automatizing" resolution). The learning setting we consider isa partial-information, restricted-distribution setting that generalizeslearning parities over the uniform distribution from partial information,another task that is known not to be achievable directly in various models (cf.(Ben-David and Dichterman, 1998) and (Michael, 2010)).
 
 Conditional Sparse $\ell_p$-norm Regression With Optimal Probability
 
-  We consider the following conditional linear regression problem: the task is
-to identify both (i) a $k$-DNF condition $c$ and (ii) a linear rule $f$ such
-that the probability of $c$ is (approximately) at least some given bound $\mu$,
-and $f$ minimizes the $\ell_p$ loss of predicting the target $z$ in the
-distribution of examples conditioned on $c$. Thus, the task is to identify a
-portion of the distribution on which a linear rule can provide a good fit.
-Algorithms for this task are useful in cases where simple, learnable rules only
-accurately model portions of the distribution. The prior state-of-the-art for
-such algorithms could only guarantee finding a condition of probability
-$\Omega(\mu/n^k)$ when a condition of probability $\mu$ exists, and achieved an
-$O(n^k)$-approximation to the target loss, where $n$ is the number of Boolean
-attributes. Here, we give efficient algorithms for solving this task with a
-condition $c$ that nearly matches the probability of the ideal condition, while
-also improving the approximation to the target loss. We also give an algorithm
-for finding a $k$-DNF reference class for prediction at a given query point,
-that obtains a sparse regression fit that has loss within $O(n^k)$ of optimal
-among all sparse regression parameters and sufficiently large $k$-DNF reference
-classes containing the query point.
+  We consider the following conditional linear regression problem: the task isto identify both (i) a $k$-DNF condition $c$ and (ii) a linear rule $f$ suchthat the probability of $c$ is (approximately) at least some given bound $\mu$,and $f$ minimizes the $\ell_p$ loss of predicting the target $z$ in thedistribution of examples conditioned on $c$. Thus, the task is to identify aportion of the distribution on which a linear rule can provide a good fit.Algorithms for this task are useful in cases where simple, learnable rules onlyaccurately model portions of the distribution. The prior state-of-the-art forsuch algorithms could only guarantee finding a condition of probability$\Omega(\mu/n^k)$ when a condition of probability $\mu$ exists, and achieved an$O(n^k)$-approximation to the target loss, where $n$ is the number of Booleanattributes. Here, we give efficient algorithms for solving this task with acondition $c$ that nearly matches the probability of the ideal condition, whilealso improving the approximation to the target loss. We also give an algorithmfor finding a $k$-DNF reference class for prediction at a given query point,that obtains a sparse regression fit that has loss within $O(n^k)$ of optimalamong all sparse regression parameters and sufficiently large $k$-DNF referenceclasses containing the query point.
 
+Efficient, Safe, and Probably Approximately Complete Learning of Action  Models
 
-Efficient, Safe, and Probably Approximately Complete Learning of Action
-  Models
-
-  In this paper we explore the theoretical boundaries of planning in a setting
-where no model of the agent's actions is given. Instead of an action model, a
-set of successfully executed plans are given and the task is to generate a plan
-that is safe, i.e., guaranteed to achieve the goal without failing. To this
-end, we show how to learn a conservative model of the world in which actions
-are guaranteed to be applicable. This conservative model is then given to an
-off-the-shelf classical planner, resulting in a plan that is guaranteed to
-achieve the goal. However, this reduction from a model-free planning to a
-model-based planning is not complete: in some cases a plan will not be found
-even when such exists. We analyze the relation between the number of observed
-plans and the likelihood that our conservative approach will indeed fail to
-solve a solvable problem. Our analysis show that the number of trajectories
-needed scales gracefully.
-
+  In this paper we explore the theoretical boundaries of planning in a settingwhere no model of the agent's actions is given. Instead of an action model, aset of successfully executed plans are given and the task is to generate a planthat is safe, i.e., guaranteed to achieve the goal without failing. To thisend, we show how to learn a conservative model of the world in which actionsare guaranteed to be applicable. This conservative model is then given to anoff-the-shelf classical planner, resulting in a plan that is guaranteed toachieve the goal. However, this reduction from a model-free planning to amodel-based planning is not complete: in some cases a plan will not be foundeven when such exists. We analyze the relation between the number of observedplans and the likelihood that our conservative approach will indeed fail tosolve a solvable problem. Our analysis show that the number of trajectoriesneeded scales gracefully.
 

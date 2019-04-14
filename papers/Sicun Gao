@@ -1,243 +1,60 @@
 Quantifier Elimination over Finite Fields Using Gröbner Bases
 
-  We give an algebraic quantifier elimination algorithm for the first-order
-theory over any given finite field using Gr\"obner basis methods. The algorithm
-relies on the strong Nullstellensatz and properties of elimination ideals over
-finite fields. We analyze the theoretical complexity of the algorithm and show
-its application in the formal analysis of a biological controller model.
-
-
-Satisfiability Modulo ODEs
-
-  We study SMT problems over the reals containing ordinary differential
-equations. They are important for formal verification of realistic hybrid
-systems and embedded software. We develop delta-complete algorithms for SMT
-formulas that are purely existentially quantified, as well as exists-forall
-formulas whose universal quantification is restricted to the time variables. We
-demonstrate scalability of the algorithms, as implemented in our open-source
-solver dReal, on SMT benchmarks with several hundred nonlinear ODEs and
-variables.
-
-
-Delta-Complete Analysis for Bounded Reachability of Hybrid Systems
-
-  We present the framework of delta-complete analysis for bounded reachability
-problems of general hybrid systems. We perform bounded reachability checking
-through solving delta-decision problems over the reals. The techniques take
-into account of robustness properties of the systems under numerical
-perturbations. We prove that the verification problems become much more
-mathematically tractable in this new framework. Our implementation of the
-techniques, an open-source tool dReach, scales well on several highly nonlinear
-hybrid system models that arise in biomedical and robotics applications.
-
-
-Proof Generation from Delta-Decisions
-
-  We show how to generate and validate logical proofs of unsatisfiability from
-delta-complete decision procedures that rely on error-prone numerical
-algorithms. Solving this problem is important for ensuring correctness of the
-decision procedures. At the same time, it is a new approach for automated
-theorem proving over real numbers. We design a first-order calculus, and
-transform the computational steps of constraint solving into logic proofs,
-which are then validated using proof-checking algorithms. As an application, we
-demonstrate how proofs generated from our solver can establish many nonlinear
-lemmas in the the formal proof of the Kepler Conjecture.
-
+  We give an algebraic quantifier elimination algorithm for the first-ordertheory over any given finite field using Gr\"obner basis methods. The algorithmrelies on the strong Nullstellensatz and properties of elimination ideals overfinite fields. We analyze the theoretical complexity of the algorithm and showits application in the formal analysis of a biological controller model.
 
 Delta-Decidability over the Reals
 
-  Given any collection F of computable functions over the reals, we show that
-there exists an algorithm that, given any L_F-sentence \varphi containing only
-bounded quantifiers, and any positive rational number \delta, decides either
-"\varphi is true", or "a \delta-strengthening of \varphi is false". Under mild
-assumptions, for a C-computable signature F, the \delta-decision problem for
-bounded \Sigma_k-sentences in L_F resides in (\Sigma_k^P)^C. The results stand
-in sharp contrast to the well-known undecidability results, and serve as a
-theoretical basis for the use of numerical methods in decision procedures for
-nonlinear first-order theories over the reals.
+  Given any collection F of computable functions over the reals, we show thatthere exists an algorithm that, given any L_F-sentence \varphi containing onlybounded quantifiers, and any positive rational number \delta, decides either"\varphi is true", or "a \delta-strengthening of \varphi is false". Under mildassumptions, for a C-computable signature F, the \delta-decision problem forbounded \Sigma_k-sentences in L_F resides in (\Sigma_k^P)^C. The results standin sharp contrast to the well-known undecidability results, and serve as atheoretical basis for the use of numerical methods in decision procedures fornonlinear first-order theories over the reals.
 
+Satisfiability Modulo ODEs
+
+  We study SMT problems over the reals containing ordinary differentialequations. They are important for formal verification of realistic hybridsystems and embedded software. We develop delta-complete algorithms for SMTformulas that are purely existentially quantified, as well as exists-forallformulas whose universal quantification is restricted to the time variables. Wedemonstrate scalability of the algorithms, as implemented in our open-sourcesolver dReal, on SMT benchmarks with several hundred nonlinear ODEs andvariables.
+
+Delta-Complete Analysis for Bounded Reachability of Hybrid Systems
+
+  We present the framework of delta-complete analysis for bounded reachabilityproblems of general hybrid systems. We perform bounded reachability checkingthrough solving delta-decision problems over the reals. The techniques takeinto account of robustness properties of the systems under numericalperturbations. We prove that the verification problems become much moremathematically tractable in this new framework. Our implementation of thetechniques, an open-source tool dReach, scales well on several highly nonlinearhybrid system models that arise in biomedical and robotics applications.
+
+Proof Generation from Delta-Decisions
+
+  We show how to generate and validate logical proofs of unsatisfiability fromdelta-complete decision procedures that rely on error-prone numericalalgorithms. Solving this problem is important for ensuring correctness of thedecision procedures. At the same time, it is a new approach for automatedtheorem proving over real numbers. We design a first-order calculus, andtransform the computational steps of constraint solving into logic proofs,which are then validated using proof-checking algorithms. As an application, wedemonstrate how proofs generated from our solver can establish many nonlinearlemmas in the the formal proof of the Kepler Conjecture.
 
 Revisiting the Complexity of Stability of Continuous and Hybrid Systems
 
-  We develop a framework to give upper bounds on the "practical" computational
-complexity of stability problems for a wide range of nonlinear continuous and
-hybrid systems. To do so, we describe stability properties of dynamical systems
-using first-order formulas over the real numbers, and reduce stability problems
-to the delta-decision problems of these formulas. The framework allows us to
-obtain a precise characterization of the complexity of different notions of
-stability for nonlinear continuous and hybrid systems. We prove that bounded
-versions of the stability problems are generally decidable, and give upper
-bounds on their complexity. The unbounded versions are generally undecidable,
-for which we give upper bounds on their degrees of unsolvability.
-
+  We develop a framework to give upper bounds on the "practical" computationalcomplexity of stability problems for a wide range of nonlinear continuous andhybrid systems. To do so, we describe stability properties of dynamical systemsusing first-order formulas over the real numbers, and reduce stability problemsto the delta-decision problems of these formulas. The framework allows us toobtain a precise characterization of the complexity of different notions ofstability for nonlinear continuous and hybrid systems. We prove that boundedversions of the stability problems are generally decidable, and give upperbounds on their complexity. The unbounded versions are generally undecidable,for which we give upper bounds on their degrees of unsolvability.
 
 Descriptive Control Theory: A Proposal
 
-  Logic is playing an increasingly important role in the engineering of
-real-time, hybrid, and cyber-physical systems, but mostly in the form of
-posterior verification and high-level analysis. The core methodology in the
-design of real-world systems consists mainly of control theory and numerical
-analysis, and has remained mostly free of logic and formal approaches. As a
-result, besides facing extreme difficulty in guaranteeing the reliability of
-these systems, engineers are also missing out the computational power of
-logic-based methods that has greatly advanced in the past decades. To change
-this situation, we need a logical and computational foundation for control
-theory. The name "descriptive control theory" emphasizes the overarching theme
-of using logic to express, analyze, and solve problems in control theory. If
-the program is successfully carried out, logical approaches will significantly
-extend existing engineering methods towards a unified methodology for handling
-nonlinear and hybrid systems, and bring design automation and reliability to an
-unprecedented level in the broad field of engineering.
-
+  Logic is playing an increasingly important role in the engineering ofreal-time, hybrid, and cyber-physical systems, but mostly in the form ofposterior verification and high-level analysis. The core methodology in thedesign of real-world systems consists mainly of control theory and numericalanalysis, and has remained mostly free of logic and formal approaches. As aresult, besides facing extreme difficulty in guaranteeing the reliability ofthese systems, engineers are also missing out the computational power oflogic-based methods that has greatly advanced in the past decades. To changethis situation, we need a logical and computational foundation for controltheory. The name "descriptive control theory" emphasizes the overarching themeof using logic to express, analyze, and solve problems in control theory. Ifthe program is successfully carried out, logical approaches will significantlyextend existing engineering methods towards a unified methodology for handlingnonlinear and hybrid systems, and bring design automation and reliability to anunprecedented level in the broad field of engineering.
 
 REAS: Combining Numerical Optimization with SAT Solving
 
-  In this paper, we present ReaS, a technique that combines numerical
-optimization with SAT solving to synthesize unknowns in a program that involves
-discrete and floating point computation. ReaS makes the program end-to-end
-differentiable by smoothing any Boolean expression that introduces
-discontinuity such as conditionals and relaxing the Boolean unknowns so that
-numerical optimization can be performed. On top of this, ReaS uses a SAT solver
-to help the numerical search overcome local solutions by incrementally fixing
-values to the Boolean expressions. We evaluated the approach on 5 case studies
-involving hybrid systems and show that ReaS can synthesize programs that could
-not be solved by previous SMT approaches.
-
+  In this paper, we present ReaS, a technique that combines numericaloptimization with SAT solving to synthesize unknowns in a program that involvesdiscrete and floating point computation. ReaS makes the program end-to-enddifferentiable by smoothing any Boolean expression that introducesdiscontinuity such as conditionals and relaxing the Boolean unknowns so thatnumerical optimization can be performed. On top of this, ReaS uses a SAT solverto help the numerical search overcome local solutions by incrementally fixingvalues to the Boolean expressions. We evaluated the approach on 5 case studiesinvolving hybrid systems and show that ReaS can synthesize programs that couldnot be solved by previous SMT approaches.
 
 Delta-Decision Procedures for Exists-Forall Problems over the Reals
 
-  Solving nonlinear SMT problems over real numbers has wide applications in
-robotics and AI. While significant progress is made in solving quantifier-free
-SMT formulas in the domain, quantified formulas have been much less
-investigated. We propose the first delta-complete algorithm for solving
-satisfiability of nonlinear SMT over real numbers with universal quantification
-and a wide range of nonlinear functions. Our methods combine ideas from
-counterexample-guided synthesis, interval constraint propagation, and local
-optimization. In particular, we show how special care is required in handling
-the interleaving of numerical and symbolic reasoning to ensure
-delta-completeness. In experiments, we show that the proposed algorithms can
-handle many new problems beyond the reach of existing SMT solvers.
-
+  Solving nonlinear SMT problems over real numbers has wide applications inrobotics and AI. While significant progress is made in solving quantifier-freeSMT formulas in the domain, quantified formulas have been much lessinvestigated. We propose the first delta-complete algorithm for solvingsatisfiability of nonlinear SMT over real numbers with universal quantificationand a wide range of nonlinear functions. Our methods combine ideas fromcounterexample-guided synthesis, interval constraint propagation, and localoptimization. In particular, we show how special care is required in handlingthe interleaving of numerical and symbolic reasoning to ensuredelta-completeness. In experiments, we show that the proposed algorithms canhandle many new problems beyond the reach of existing SMT solvers.
 
 Delta-Complete Decision Procedures for Satisfiability over the Reals
 
-  We introduce the notion of "\delta-complete decision procedures" for solving
-SMT problems over the real numbers, with the aim of handling a wide range of
-nonlinear functions including transcendental functions and solutions of
-Lipschitz-continuous ODEs. Given an SMT problem \varphi and a positive rational
-number \delta, a \delta-complete decision procedure determines either that
-\varphi is unsatisfiable, or that the "\delta-weakening" of \varphi is
-satisfiable. Here, the \delta-weakening of \varphi is a variant of \varphi that
-allows \delta-bounded numerical perturbations on \varphi. We prove the
-existence of \delta-complete decision procedures for bounded SMT over reals
-with functions mentioned above. For functions in Type 2 complexity class C,
-under mild assumptions, the bounded \delta-SMT problem is in NP^C.
-\delta-Complete decision procedures can exploit scalable numerical methods for
-handling nonlinearity, and we propose to use this notion as an ideal
-requirement for numerically-driven decision procedures. As a concrete example,
-we formally analyze the DPLL<ICP> framework, which integrates Interval
-Constraint Propagation (ICP) in DPLL(T), and establish necessary and sufficient
-conditions for its \delta-completeness. We discuss practical applications of
-\delta-complete decision procedures for correctness-critical applications
-including formal verification and theorem proving.
-
-
-Towards Personalized Prostate Cancer Therapy Using Delta-Reachability
-  Analysis
-
-  Recent clinical studies suggest that the efficacy of hormone therapy for
-prostate cancer depends on the characteristics of individual patients. In this
-paper, we develop a computational framework for identifying patient-specific
-androgen ablation therapy schedules for postponing the potential cancer
-relapse. We model the population dynamics of heterogeneous prostate cancer
-cells in response to androgen suppression as a nonlinear hybrid automaton. We
-estimate personalized kinetic parameters to characterize patients and employ
-$\delta$-reachability analysis to predict patient-specific therapeutic
-strategies. The results show that our methods are promising and may lead to a
-prognostic tool for personalized cancer therapy.
-
+  We introduce the notion of "\delta-complete decision procedures" for solvingSMT problems over the real numbers, with the aim of handling a wide range ofnonlinear functions including transcendental functions and solutions ofLipschitz-continuous ODEs. Given an SMT problem \varphi and a positive rationalnumber \delta, a \delta-complete decision procedure determines either that\varphi is unsatisfiable, or that the "\delta-weakening" of \varphi issatisfiable. Here, the \delta-weakening of \varphi is a variant of \varphi thatallows \delta-bounded numerical perturbations on \varphi. We prove theexistence of \delta-complete decision procedures for bounded SMT over realswith functions mentioned above. For functions in Type 2 complexity class C,under mild assumptions, the bounded \delta-SMT problem is in NP^C.\delta-Complete decision procedures can exploit scalable numerical methods forhandling nonlinearity, and we propose to use this notion as an idealrequirement for numerically-driven decision procedures. As a concrete example,we formally analyze the DPLL<ICP> framework, which integrates IntervalConstraint Propagation (ICP) in DPLL(T), and establish necessary and sufficientconditions for its \delta-completeness. We discuss practical applications of\delta-complete decision procedures for correctness-critical applicationsincluding formal verification and theorem proving.
 
 Parameter Synthesis for Cardiac Cell Hybrid Models Using Delta-Decisions
 
-  A central problem in systems biology is to identify parameter values such
-that a biological model satisfies some behavioral constraints (\eg, time
-series). In this paper we focus on parameter synthesis for hybrid
-(continuous/discrete) models, as many biological systems can possess multiple
-operational modes with specific continuous dynamics in each mode. These
-biological systems are naturally modeled as hybrid automata, most often with
-nonlinear continuous dynamics. However, hybrid automata are notoriously hard to
-analyze --- even simple reachability for hybrid systems with linear
-differential dynamics is an undecidable problem. In this paper we present a
-parameter synthesis framework based on $\delta$-complete decision procedures
-that sidesteps undecidability. We demonstrate our method on two highly
-nonlinear hybrid models of the cardiac cell action potential. The results show
-that our parameter synthesis framework is convenient and efficient, and it
-enabled us to select a suitable model to study and identify crucial parameter
-ranges related to cardiac disorders.
+  A central problem in systems biology is to identify parameter values suchthat a biological model satisfies some behavioral constraints (\eg, timeseries). In this paper we focus on parameter synthesis for hybrid(continuous/discrete) models, as many biological systems can possess multipleoperational modes with specific continuous dynamics in each mode. Thesebiological systems are naturally modeled as hybrid automata, most often withnonlinear continuous dynamics. However, hybrid automata are notoriously hard toanalyze --- even simple reachability for hybrid systems with lineardifferential dynamics is an undecidable problem. In this paper we present aparameter synthesis framework based on $\delta$-complete decision proceduresthat sidesteps undecidability. We demonstrate our method on two highlynonlinear hybrid models of the cardiac cell action potential. The results showthat our parameter synthesis framework is convenient and efficient, and itenabled us to select a suitable model to study and identify crucial parameterranges related to cardiac disorders.
 
+Towards Personalized Prostate Cancer Therapy Using Delta-Reachability  Analysis
+
+  Recent clinical studies suggest that the efficacy of hormone therapy forprostate cancer depends on the characteristics of individual patients. In thispaper, we develop a computational framework for identifying patient-specificandrogen ablation therapy schedules for postponing the potential cancerrelapse. We model the population dynamics of heterogeneous prostate cancercells in response to androgen suppression as a nonlinear hybrid automaton. Weestimate personalized kinetic parameters to characterize patients and employ$\delta$-reachability analysis to predict patient-specific therapeuticstrategies. The results show that our methods are promising and may lead to aprognostic tool for personalized cancer therapy.
 
 Tight Continuous-Time Reachtubes for Lagrangian Reachability
 
-  We introduce continuous Lagrangian reachability (CLRT), a new algorithm for
-the computation of a tight and continuous-time reachtube for the solution flows
-of a nonlinear, time-variant dynamical system. CLRT employs finite strain
-theory to determine the deformation of the solution set from time $t_i$ to time
-$t_{i+1}$. We have developed simple explicit analytic formulas for the optimal
-metric for this deformation; this is superior to prior work, which used
-semi-definite programming. CLRT also uses infinitesimal strain theory to derive
-an optimal time increment $h_i$ between $t_i$ and $t_{i+1}$, nonlinear
-optimization to minimally bloat (i.e., using a minimal radius) the state set at
-time $t_i$ such that it includes all the states of the solution flow in the
-interval $[t_i,t_{i+1}]$. We use $\delta$-satisfiability to ensure the
-correctness of the bloating. Our results on a series of benchmarks show that
-CLRT performs favorably compared to state-of-the-art tools such as CAPD in
-terms of the continuous reachtube volumes they compute.
-
+  We introduce continuous Lagrangian reachability (CLRT), a new algorithm forthe computation of a tight and continuous-time reachtube for the solution flowsof a nonlinear, time-variant dynamical system. CLRT employs finite straintheory to determine the deformation of the solution set from time $t_i$ to time$t_{i+1}$. We have developed simple explicit analytic formulas for the optimalmetric for this deformation; this is superior to prior work, which usedsemi-definite programming. CLRT also uses infinitesimal strain theory to derivean optimal time increment $h_i$ between $t_i$ and $t_{i+1}$, nonlinearoptimization to minimally bloat (i.e., using a minimal radius) the state set attime $t_i$ such that it includes all the states of the solution flow in theinterval $[t_i,t_{i+1}]$. We use $\delta$-satisfiability to ensure thecorrectness of the bloating. Our results on a series of benchmarks show thatCLRT performs favorably compared to state-of-the-art tools such as CAPD interms of the continuous reachtube volumes they compute.
 
 SReach: A Bounded Model Checker for Stochastic Hybrid Systems
 
-  In this paper we describe a new tool, SReach, which solves probabilistic
-bounded reachability problems for two classes of stochastic hybrid systems. The
-first one is (nonlinear) hybrid automata with parametric uncertainty. The
-second one is probabilistic hybrid automata with additional randomness for both
-transition probabilities and variable resets. Standard approaches to
-reachability problems for linear hybrid systems require numerical solutions for
-large optimization problems, and become infeasible for systems involving both
-nonlinear dynamics over the reals and stochasticity. Our approach encodes
-stochastic information by using random variables, and combines the randomized
-sampling, a $\delta$-complete decision procedure, and statistical tests. SReach
-utilizes the $\delta$-complete decision procedure to solve reachability
-problems in a sound manner, i.e., it always decides correctly if, for a given
-assignment to all random variables, the system actually reaches the unsafe
-region. The statistical tests adapted guarantee arbitrary small error bounds
-between probabilities estimated by SReach and real ones. Compared to standard
-simulation-based methods, our approach supports non-deterministic branching,
-increases the coverage of simulation, and avoids the zero-crossing problem. We
-demonstrate our method's feasibility by applying SReach to three representative
-biological models and to additional benchmarks for nonlinear hybrid systems
-with multiple probabilistic system parameters.
+  In this paper we describe a new tool, SReach, which solves probabilisticbounded reachability problems for two classes of stochastic hybrid systems. Thefirst one is (nonlinear) hybrid automata with parametric uncertainty. Thesecond one is probabilistic hybrid automata with additional randomness for bothtransition probabilities and variable resets. Standard approaches toreachability problems for linear hybrid systems require numerical solutions forlarge optimization problems, and become infeasible for systems involving bothnonlinear dynamics over the reals and stochasticity. Our approach encodesstochastic information by using random variables, and combines the randomizedsampling, a $\delta$-complete decision procedure, and statistical tests. SReachutilizes the $\delta$-complete decision procedure to solve reachabilityproblems in a sound manner, i.e., it always decides correctly if, for a givenassignment to all random variables, the system actually reaches the unsaferegion. The statistical tests adapted guarantee arbitrary small error boundsbetween probabilities estimated by SReach and real ones. Compared to standardsimulation-based methods, our approach supports non-deterministic branching,increases the coverage of simulation, and avoids the zero-crossing problem. Wedemonstrate our method's feasibility by applying SReach to three representativebiological models and to additional benchmarks for nonlinear hybrid systemswith multiple probabilistic system parameters.
 
+How to pick the domain randomization parameters for sim-to-real transfer  of reinforcement learning policies?
 
-How to pick the domain randomization parameters for sim-to-real transfer
-  of reinforcement learning policies?
-
-  Recently, reinforcement learning (RL) algorithms have demonstrated remarkable
-success in learning complicated behaviors from minimally processed input.
-However, most of this success is limited to simulation. While there are
-promising successes in applying RL algorithms directly on real systems, their
-performance on more complex systems remains bottle-necked by the relative data
-inefficiency of RL algorithms. Domain randomization is a promising direction of
-research that has demonstrated impressive results using RL algorithms to
-control real robots. At a high level, domain randomization works by training a
-policy on a distribution of environmental conditions in simulation. If the
-environments are diverse enough, then the policy trained on this distribution
-will plausibly generalize to the real world. A human-specified design choice in
-domain randomization is the form and parameters of the distribution of
-simulated environments. It is unclear how to the best pick the form and
-parameters of this distribution and prior work uses hand-tuned distributions.
-This extended abstract demonstrates that the choice of the distribution plays a
-major role in the performance of the trained policies in the real world and
-that the parameter of this distribution can be optimized to maximize the
-performance of the trained policies in the real world
-
+  Recently, reinforcement learning (RL) algorithms have demonstrated remarkablesuccess in learning complicated behaviors from minimally processed input.However, most of this success is limited to simulation. While there arepromising successes in applying RL algorithms directly on real systems, theirperformance on more complex systems remains bottle-necked by the relative datainefficiency of RL algorithms. Domain randomization is a promising direction ofresearch that has demonstrated impressive results using RL algorithms tocontrol real robots. At a high level, domain randomization works by training apolicy on a distribution of environmental conditions in simulation. If theenvironments are diverse enough, then the policy trained on this distributionwill plausibly generalize to the real world. A human-specified design choice indomain randomization is the form and parameters of the distribution ofsimulated environments. It is unclear how to the best pick the form andparameters of this distribution and prior work uses hand-tuned distributions.This extended abstract demonstrates that the choice of the distribution plays amajor role in the performance of the trained policies in the real world andthat the parameter of this distribution can be optimized to maximize theperformance of the trained policies in the real world
 

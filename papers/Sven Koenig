@@ -2,338 +2,79 @@ AI Buzzwords Explained: Multi-Agent Path Finding (MAPF)
 
   Explanation of the hot topic "multi-agent path finding".
 
+Blue Sky Ideas in Artificial Intelligence Education from the EAAI 2017  New and Future AI Educator Program
 
-Blue Sky Ideas in Artificial Intelligence Education from the EAAI 2017
-  New and Future AI Educator Program
+  The 7th Symposium on Educational Advances in Artificial Intelligence(EAAI'17, co-chaired by Sven Koenig and Eric Eaton) launched the EAAI New andFuture AI Educator Program to support the training of early-career universityfaculty, secondary school faculty, and future educators (PhD candidates orpostdocs who intend a career in academia). As part of the program, awardeeswere asked to address one of the following "blue sky" questions:  * How could/should Artificial Intelligence (AI) courses incorporate ethicsinto the curriculum?  * How could we teach AI topics at an early undergraduate or a secondaryschool level?  * AI has the potential for broad impact to numerous disciplines. How could wemake AI education more interdisciplinary, specifically to benefitnon-engineering fields?  This paper is a collection of their responses, intended to help motivatediscussion around these issues in AI education.
 
-  The 7th Symposium on Educational Advances in Artificial Intelligence
-(EAAI'17, co-chaired by Sven Koenig and Eric Eaton) launched the EAAI New and
-Future AI Educator Program to support the training of early-career university
-faculty, secondary school faculty, and future educators (PhD candidates or
-postdocs who intend a career in academia). As part of the program, awardees
-were asked to address one of the following "blue sky" questions:
-  * How could/should Artificial Intelligence (AI) courses incorporate ethics
-into the curriculum?
-  * How could we teach AI topics at an early undergraduate or a secondary
-school level?
-  * AI has the potential for broad impact to numerous disciplines. How could we
-make AI education more interdisciplinary, specifically to benefit
-non-engineering fields?
-  This paper is a collection of their responses, intended to help motivate
-discussion around these issues in AI education.
+Overview: Generalizations of Multi-Agent Path Finding to Real-World  Scenarios
 
+  Multi-agent path finding (MAPF) is well-studied in artificial intelligence,robotics, theoretical computer science and operations research. We discussissues that arise when generalizing MAPF methods to real-world scenarios andfour research directions that address them. We emphasize the importance ofaddressing these issues as opposed to developing faster methods for thestandard formulation of the MAPF problem.
 
-Overview: Generalizations of Multi-Agent Path Finding to Real-World
-  Scenarios
+Feasibility Study: Moving Non-Homogeneous Teams in Congested Video Game  Environments
 
-  Multi-agent path finding (MAPF) is well-studied in artificial intelligence,
-robotics, theoretical computer science and operations research. We discuss
-issues that arise when generalizing MAPF methods to real-world scenarios and
-four research directions that address them. We emphasize the importance of
-addressing these issues as opposed to developing faster methods for the
-standard formulation of the MAPF problem.
-
-
-Feasibility Study: Moving Non-Homogeneous Teams in Congested Video Game
-  Environments
-
-  Multi-agent path finding (MAPF) is a well-studied problem in artificial
-intelligence, where one needs to find collision-free paths for agents with
-given start and goal locations. In video games, agents of different types often
-form teams. In this paper, we demonstrate the usefulness of MAPF algorithms
-from artificial intelligence for moving such non-homogeneous teams in congested
-video game environments.
-
+  Multi-agent path finding (MAPF) is a well-studied problem in artificialintelligence, where one needs to find collision-free paths for agents withgiven start and goal locations. In video games, agents of different types oftenform teams. In this paper, we demonstrate the usefulness of MAPF algorithmsfrom artificial intelligence for moving such non-homogeneous teams in congestedvideo game environments.
 
 Multi-Agent Path Finding with Deadlines: Preliminary Results
 
-  We formalize the problem of multi-agent path finding with deadlines
-(MAPF-DL). The objective is to maximize the number of agents that can reach
-their given goal vertices from their given start vertices within a given
-deadline, without colliding with each other. We first show that the MAPF-DL
-problem is NP-hard to solve optimally. We then present an optimal MAPF-DL
-algorithm based on a reduction of the MAPF-DL problem to a flow problem and a
-subsequent compact integer linear programming formulation of the resulting
-reduced abstracted multi-commodity flow network.
-
+  We formalize the problem of multi-agent path finding with deadlines(MAPF-DL). The objective is to maximize the number of agents that can reachtheir given goal vertices from their given start vertices within a givendeadline, without colliding with each other. We first show that the MAPF-DLproblem is NP-hard to solve optimally. We then present an optimal MAPF-DLalgorithm based on a reduction of the MAPF-DL problem to a flow problem and asubsequent compact integer linear programming formulation of the resultingreduced abstracted multi-commodity flow network.
 
 Searching with Consistent Prioritization for Multi-Agent Path Finding
 
-  We study prioritized planning for Multi-Agent Path Finding (MAPF). Existing
-prioritized MAPF algorithms depend on rule-of-thumb heuristics and random
-assignment to determine a fixed total priority ordering of all agents a priori.
-We instead explore the space of all possible partial priority orderings as part
-of a novel systematic and conflict-driven combinatorial search framework. In a
-variety of empirical comparisons, we demonstrate state-of-the-art solution
-qualities and success rates, often with similar runtimes to existing
-algorithms. We also develop new theoretical results that explore the
-limitations of prioritized planning, in terms of completeness and optimality,
-for the first time.
+  We study prioritized planning for Multi-Agent Path Finding (MAPF). Existingprioritized MAPF algorithms depend on rule-of-thumb heuristics and randomassignment to determine a fixed total priority ordering of all agents a priori.We instead explore the space of all possible partial priority orderings as partof a novel systematic and conflict-driven combinatorial search framework. In avariety of empirical comparisons, we demonstrate state-of-the-art solutionqualities and success rates, often with similar runtimes to existingalgorithms. We also develop new theoretical results that explore thelimitations of prioritized planning, in terms of completeness and optimality,for the first time.
 
+Existence and Finiteness Conditions for Risk-Sensitive Planning: Results  and Conjectures
 
-Existence and Finiteness Conditions for Risk-Sensitive Planning: Results
-  and Conjectures
-
-  Decision-theoretic planning with risk-sensitive planning objectives is
-important for building autonomous agents or decision-support systems for
-real-world applications. However, this line of research has been largely
-ignored in the artificial intelligence and operations research communities
-since planning with risk-sensitive planning objectives is more complicated than
-planning with risk-neutral planning objectives. To remedy this situation, we
-derive conditions that guarantee that the optimal expected utilities of the
-total plan-execution reward exist and are finite for fully observable Markov
-decision process models with non-linear utility functions. In case of Markov
-decision process models with both positive and negative rewards, most of our
-results hold for stationary policies only, but we conjecture that they can be
-generalized to non stationary policies.
-
-
-Path Planning with Kinematic Constraints for Robot Groups
-
-  Path planning for multiple robots is well studied in the AI and robotics
-communities. For a given discretized environment, robots need to find
-collision-free paths to a set of specified goal locations. Robots can be fully
-anonymous, non-anonymous, or organized in groups. Although powerful solvers for
-this abstract problem exist, they make simplifying assumptions by ignoring
-kinematic constraints, making it difficult to use the resulting plans on actual
-robots. In this paper, we present a solution which takes kinematic constraints,
-such as maximum velocities, into account, while guaranteeing a user-specified
-minimum safety distance between robots. We demonstrate our approach in
-simulation and on real robots in 2D and 3D environments.
-
+  Decision-theoretic planning with risk-sensitive planning objectives isimportant for building autonomous agents or decision-support systems forreal-world applications. However, this line of research has been largelyignored in the artificial intelligence and operations research communitiessince planning with risk-sensitive planning objectives is more complicated thanplanning with risk-neutral planning objectives. To remedy this situation, wederive conditions that guarantee that the optimal expected utilities of thetotal plan-execution reward exist and are finite for fully observable Markovdecision process models with non-linear utility functions. In case of Markovdecision process models with both positive and negative rewards, most of ourresults hold for stationary policies only, but we conjecture that they can begeneralized to non stationary policies.
 
 Multi-Agent Path Finding with Delay Probabilities
 
-  Several recently developed Multi-Agent Path Finding (MAPF) solvers scale to
-large MAPF instances by searching for MAPF plans on 2 levels: The high-level
-search resolves collisions between agents, and the low-level search plans paths
-for single agents under the constraints imposed by the high-level search. We
-make the following contributions to solve the MAPF problem with imperfect plan
-execution with small average makespans: First, we formalize the MAPF Problem
-with Delay Probabilities (MAPF-DP), define valid MAPF-DP plans and propose the
-use of robust plan-execution policies for valid MAPF-DP plans to control how
-each agent proceeds along its path. Second, we discuss 2 classes of
-decentralized robust plan-execution policies (called Fully Synchronized
-Policies and Minimal Communication Policies) that prevent collisions during
-plan execution for valid MAPF-DP plans. Third, we present a 2-level MAPF-DP
-solver (called Approximate Minimization in Expectation) that generates valid
-MAPF-DP plans.
-
+  Several recently developed Multi-Agent Path Finding (MAPF) solvers scale tolarge MAPF instances by searching for MAPF plans on 2 levels: The high-levelsearch resolves collisions between agents, and the low-level search plans pathsfor single agents under the constraints imposed by the high-level search. Wemake the following contributions to solve the MAPF problem with imperfect planexecution with small average makespans: First, we formalize the MAPF Problemwith Delay Probabilities (MAPF-DP), define valid MAPF-DP plans and propose theuse of robust plan-execution policies for valid MAPF-DP plans to control howeach agent proceeds along its path. Second, we discuss 2 classes ofdecentralized robust plan-execution policies (called Fully SynchronizedPolicies and Minimal Communication Policies) that prevent collisions duringplan execution for valid MAPF-DP plans. Third, we present a 2-level MAPF-DPsolver (called Approximate Minimization in Expectation) that generates validMAPF-DP plans.
 
 Ethical Considerations in Artificial Intelligence Courses
 
-  The recent surge in interest in ethics in artificial intelligence may leave
-many educators wondering how to address moral, ethical, and philosophical
-issues in their AI courses. As instructors we want to develop curriculum that
-not only prepares students to be artificial intelligence practitioners, but
-also to understand the moral, ethical, and philosophical impacts that
-artificial intelligence will have on society. In this article we provide
-practical case studies and links to resources for use by AI educators. We also
-provide concrete suggestions on how to integrate AI ethics into a general
-artificial intelligence course and how to teach a stand-alone artificial
-intelligence ethics course.
+  The recent surge in interest in ethics in artificial intelligence may leavemany educators wondering how to address moral, ethical, and philosophicalissues in their AI courses. As instructors we want to develop curriculum thatnot only prepares students to be artificial intelligence practitioners, butalso to understand the moral, ethical, and philosophical impacts thatartificial intelligence will have on society. In this article we providepractical case studies and links to resources for use by AI educators. We alsoprovide concrete suggestions on how to integrate AI ethics into a generalartificial intelligence course and how to teach a stand-alone artificialintelligence ethics course.
 
+Path Planning with Kinematic Constraints for Robot Groups
+
+  Path planning for multiple robots is well studied in the AI and roboticscommunities. For a given discretized environment, robots need to findcollision-free paths to a set of specified goal locations. Robots can be fullyanonymous, non-anonymous, or organized in groups. Although powerful solvers forthis abstract problem exist, they make simplifying assumptions by ignoringkinematic constraints, making it difficult to use the resulting plans on actualrobots. In this paper, we present a solution which takes kinematic constraints,such as maximum velocities, into account, while guaranteeing a user-specifiedminimum safety distance between robots. We demonstrate our approach insimulation and on real robots in 2D and 3D environments.
 
 The FastMap Algorithm for Shortest Path Computations
 
-  We present a new preprocessing algorithm for embedding the nodes of a given
-edge-weighted undirected graph into a Euclidean space. The Euclidean distance
-between any two nodes in this space approximates the length of the shortest
-path between them in the given graph. Later, at runtime, a shortest path
-between any two nodes can be computed with A* search using the Euclidean
-distances as heuristic. Our preprocessing algorithm, called FastMap, is
-inspired by the data mining algorithm of the same name and runs in near-linear
-time. Hence, FastMap is orders of magnitude faster than competing approaches
-that produce a Euclidean embedding using Semidefinite Programming. FastMap also
-produces admissible and consistent heuristics and therefore guarantees the
-generation of shortest paths. Moreover, FastMap applies to general undirected
-graphs for which many traditional heuristics, such as the Manhattan Distance
-heuristic, are not well defined. Empirically, we demonstrate that A* search
-using the FastMap heuristic is competitive with A* search using other
-state-of-the-art heuristics, such as the Differential heuristic.
-
+  We present a new preprocessing algorithm for embedding the nodes of a givenedge-weighted undirected graph into a Euclidean space. The Euclidean distancebetween any two nodes in this space approximates the length of the shortestpath between them in the given graph. Later, at runtime, a shortest pathbetween any two nodes can be computed with A* search using the Euclideandistances as heuristic. Our preprocessing algorithm, called FastMap, isinspired by the data mining algorithm of the same name and runs in near-lineartime. Hence, FastMap is orders of magnitude faster than competing approachesthat produce a Euclidean embedding using Semidefinite Programming. FastMap alsoproduces admissible and consistent heuristics and therefore guarantees thegeneration of shortest paths. Moreover, FastMap applies to general undirectedgraphs for which many traditional heuristics, such as the Manhattan Distanceheuristic, are not well defined. Empirically, we demonstrate that A* searchusing the FastMap heuristic is competitive with A* search using otherstate-of-the-art heuristics, such as the Differential heuristic.
 
 Rapid Randomized Restarts for Multi-Agent Path Finding Solvers
 
-  Multi-Agent Path Finding (MAPF) is an NP-hard problem well studied in
-artificial intelligence and robotics. It has many real-world applications for
-which existing MAPF solvers use various heuristics. However, these solvers are
-deterministic and perform poorly on "hard" instances typically characterized by
-many agents interfering with each other in a small region. In this paper, we
-enhance MAPF solvers with randomization and observe that they exhibit
-heavy-tailed distributions of runtimes on hard instances. This leads us to
-develop simple rapid randomized restart (RRR) strategies with the intuition
-that, given a hard instance, multiple short runs have a better chance of
-solving it compared to one long run. We validate this intuition through
-experiments and show that our RRR strategies indeed boost the performance of
-state-of-the-art MAPF solvers such as iECBS and M*.
+  Multi-Agent Path Finding (MAPF) is an NP-hard problem well studied inartificial intelligence and robotics. It has many real-world applications forwhich existing MAPF solvers use various heuristics. However, these solvers aredeterministic and perform poorly on "hard" instances typically characterized bymany agents interfering with each other in a small region. In this paper, weenhance MAPF solvers with randomization and observe that they exhibitheavy-tailed distributions of runtimes on hard instances. This leads us todevelop simple rapid randomized restart (RRR) strategies with the intuitionthat, given a hard instance, multiple short runs have a better chance ofsolving it compared to one long run. We validate this intuition throughexperiments and show that our RRR strategies indeed boost the performance ofstate-of-the-art MAPF solvers such as iECBS and M*.
 
+Overview: A Hierarchical Framework for Plan Generation and Execution in  Multi-Robot Systems
 
-Overview: A Hierarchical Framework for Plan Generation and Execution in
-  Multi-Robot Systems
-
-  The authors present an overview of a hierarchical framework for coordinating
-task- and motion-level operations in multirobot systems. Their framework is
-based on the idea of using simple temporal networks to simultaneously reason
-about precedence/causal constraints required for task-level coordination and
-simple temporal constraints required to take some kinematic constraints of
-robots into account. In the plan-generation phase, the framework provides a
-computationally scalable method for generating plans that achieve high-level
-tasks for groups of robots and take some of their kinematic constraints into
-account. In the plan-execution phase, the framework provides a method for
-absorbing an imperfect plan execution to avoid time-consuming re-planning in
-many cases. The authors use the multirobot path-planning problem as a case
-study to present the key ideas behind their framework for the long-term
-autonomy of multirobot systems.
-
+  The authors present an overview of a hierarchical framework for coordinatingtask- and motion-level operations in multirobot systems. Their framework isbased on the idea of using simple temporal networks to simultaneously reasonabout precedence/causal constraints required for task-level coordination andsimple temporal constraints required to take some kinematic constraints ofrobots into account. In the plan-generation phase, the framework provides acomputationally scalable method for generating plans that achieve high-leveltasks for groups of robots and take some of their kinematic constraints intoaccount. In the plan-execution phase, the framework provides a method forabsorbing an imperfect plan execution to avoid time-consuming re-planning inmany cases. The authors use the multirobot path-planning problem as a casestudy to present the key ideas behind their framework for the long-termautonomy of multirobot systems.
 
 Multi-Agent Path Finding with Deadlines
 
-  We formalize Multi-Agent Path Finding with Deadlines (MAPF-DL). The objective
-is to maximize the number of agents that can reach their given goal vertices
-from their given start vertices within the deadline, without colliding with
-each other. We first show that MAPF-DL is NP-hard to solve optimally. We then
-present two classes of optimal algorithms, one based on a reduction of MAPF-DL
-to a flow problem and a subsequent compact integer linear programming
-formulation of the resulting reduced abstracted multi-commodity flow network
-and the other one based on novel combinatorial search algorithms. Our empirical
-results demonstrate that these MAPF-DL solvers scale well and each one
-dominates the other ones in different scenarios.
-
+  We formalize Multi-Agent Path Finding with Deadlines (MAPF-DL). The objectiveis to maximize the number of agents that can reach their given goal verticesfrom their given start vertices within the deadline, without colliding witheach other. We first show that MAPF-DL is NP-hard to solve optimally. We thenpresent two classes of optimal algorithms, one based on a reduction of MAPF-DLto a flow problem and a subsequent compact integer linear programmingformulation of the resulting reduced abstracted multi-commodity flow networkand the other one based on novel combinatorial search algorithms. Our empiricalresults demonstrate that these MAPF-DL solvers scale well and each onedominates the other ones in different scenarios.
 
 BnB-ADOPT: An Asynchronous Branch-and-Bound DCOP Algorithm
 
-  Distributed constraint optimization (DCOP) problems are a popular way of
-formulating and solving agent-coordination problems. A DCOP problem is a
-problem where several agents coordinate their values such that the sum of the
-resulting constraint costs is minimal. It is often desirable to solve DCOP
-problems with memory-bounded and asynchronous algorithms. We introduce
-Branch-and-Bound ADOPT (BnB-ADOPT), a memory-bounded asynchronous DCOP search
-algorithm that uses the message-passing and communication framework of ADOPT
-(Modi, Shen, Tambe, and Yokoo, 2005), a well known memory-bounded asynchronous
-DCOP search algorithm, but changes the search strategy of ADOPT from best-first
-search to depth-first branch-and-bound search. Our experimental results show
-that BnB-ADOPT finds cost-minimal solutions up to one order of magnitude faster
-than ADOPT for a variety of large DCOP problems and is as fast as NCBB, a
-memory-bounded synchronous DCOP search algorithm, for most of these DCOP
-problems. Additionally, it is often desirable to find bounded-error solutions
-for DCOP problems within a reasonable amount of time since finding cost-minimal
-solutions is NP-hard. The existing bounded-error approximation mechanism allows
-users only to specify an absolute error bound on the solution cost but a
-relative error bound is often more intuitive. Thus, we present two new
-bounded-error approximation mechanisms that allow for relative error bounds and
-implement them on top of BnB-ADOPT.
-
+  Distributed constraint optimization (DCOP) problems are a popular way offormulating and solving agent-coordination problems. A DCOP problem is aproblem where several agents coordinate their values such that the sum of theresulting constraint costs is minimal. It is often desirable to solve DCOPproblems with memory-bounded and asynchronous algorithms. We introduceBranch-and-Bound ADOPT (BnB-ADOPT), a memory-bounded asynchronous DCOP searchalgorithm that uses the message-passing and communication framework of ADOPT(Modi, Shen, Tambe, and Yokoo, 2005), a well known memory-bounded asynchronousDCOP search algorithm, but changes the search strategy of ADOPT from best-firstsearch to depth-first branch-and-bound search. Our experimental results showthat BnB-ADOPT finds cost-minimal solutions up to one order of magnitude fasterthan ADOPT for a variety of large DCOP problems and is as fast as NCBB, amemory-bounded synchronous DCOP search algorithm, for most of these DCOPproblems. Additionally, it is often desirable to find bounded-error solutionsfor DCOP problems within a reasonable amount of time since finding cost-minimalsolutions is NP-hard. The existing bounded-error approximation mechanism allowsusers only to specify an absolute error bound on the solution cost but arelative error bound is often more intuitive. Thus, we present two newbounded-error approximation mechanisms that allow for relative error bounds andimplement them on top of BnB-ADOPT.
 
 Theta*: Any-Angle Path Planning on Grids
 
-  Grids with blocked and unblocked cells are often used to represent terrain in
-robotics and video games. However, paths formed by grid edges can be longer
-than true shortest paths in the terrain since their headings are artificially
-constrained. We present two new correct and complete any-angle path-planning
-algorithms that avoid this shortcoming. Basic Theta* and Angle-Propagation
-Theta* are both variants of A* that propagate information along grid edges
-without constraining paths to grid edges. Basic Theta* is simple to understand
-and implement, fast and finds short paths. However, it is not guaranteed to
-find true shortest paths. Angle-Propagation Theta* achieves a better worst-case
-complexity per vertex expansion than Basic Theta* by propagating angle ranges
-when it expands vertices, but is more complex, not as fast and finds slightly
-longer paths. We refer to Basic Theta* and Angle-Propagation Theta*
-collectively as Theta*. Theta* has unique properties, which we analyze in
-detail. We show experimentally that it finds shorter paths than both A* with
-post-smoothed paths and Field D* (the only other version of A* we know of that
-propagates information along grid edges without constraining paths to grid
-edges) with a runtime comparable to that of A* on grids. Finally, we extend
-Theta* to grids that contain unblocked cells with non-uniform traversal costs
-and introduce variants of Theta* which provide different tradeoffs between path
-length and runtime.
-
+  Grids with blocked and unblocked cells are often used to represent terrain inrobotics and video games. However, paths formed by grid edges can be longerthan true shortest paths in the terrain since their headings are artificiallyconstrained. We present two new correct and complete any-angle path-planningalgorithms that avoid this shortcoming. Basic Theta* and Angle-PropagationTheta* are both variants of A* that propagate information along grid edgeswithout constraining paths to grid edges. Basic Theta* is simple to understandand implement, fast and finds short paths. However, it is not guaranteed tofind true shortest paths. Angle-Propagation Theta* achieves a better worst-casecomplexity per vertex expansion than Basic Theta* by propagating angle rangeswhen it expands vertices, but is more complex, not as fast and finds slightlylonger paths. We refer to Basic Theta* and Angle-Propagation Theta*collectively as Theta*. Theta* has unique properties, which we analyze indetail. We show experimentally that it finds shorter paths than both A* withpost-smoothed paths and Field D* (the only other version of A* we know of thatpropagates information along grid edges without constraining paths to gridedges) with a runtime comparable to that of A* on grids. Finally, we extendTheta* to grids that contain unblocked cells with non-uniform traversal costsand introduce variants of Theta* which provide different tradeoffs between pathlength and runtime.
 
 Optimal Target Assignment and Path Finding for Teams of Agents
 
-  We study the TAPF (combined target-assignment and path-finding) problem for
-teams of agents in known terrain, which generalizes both the anonymous and
-non-anonymous multi-agent path-finding problems. Each of the teams is given the
-same number of targets as there are agents in the team. Each agent has to move
-to exactly one target given to its team such that all targets are visited. The
-TAPF problem is to first assign agents to targets and then plan collision-free
-paths for the agents to their targets in a way such that the makespan is
-minimized. We present the CBM (Conflict-Based Min-Cost-Flow) algorithm, a
-hierarchical algorithm that solves TAPF instances optimally by combining ideas
-from anonymous and non-anonymous multi-agent path-finding algorithms. On the
-low level, CBM uses a min-cost max-flow algorithm on a time-expanded network to
-assign all agents in a single team to targets and plan their paths. On the high
-level, CBM uses conflict-based search to resolve collisions among agents in
-different teams. Theoretically, we prove that CBM is correct, complete and
-optimal. Experimentally, we show the scalability of CBM to TAPF instances with
-dozens of teams and hundreds of agents and adapt it to a simulated warehouse
-system.
-
+  We study the TAPF (combined target-assignment and path-finding) problem forteams of agents in known terrain, which generalizes both the anonymous andnon-anonymous multi-agent path-finding problems. Each of the teams is given thesame number of targets as there are agents in the team. Each agent has to moveto exactly one target given to its team such that all targets are visited. TheTAPF problem is to first assign agents to targets and then plan collision-freepaths for the agents to their targets in a way such that the makespan isminimized. We present the CBM (Conflict-Based Min-Cost-Flow) algorithm, ahierarchical algorithm that solves TAPF instances optimally by combining ideasfrom anonymous and non-anonymous multi-agent path-finding algorithms. On thelow level, CBM uses a min-cost max-flow algorithm on a time-expanded network toassign all agents in a single team to targets and plan their paths. On the highlevel, CBM uses conflict-based search to resolve collisions among agents indifferent teams. Theoretically, we prove that CBM is correct, complete andoptimal. Experimentally, we show the scalability of CBM to TAPF instances withdozens of teams and hundreds of agents and adapt it to a simulated warehousesystem.
 
 Lifelong Multi-Agent Path Finding for Online Pickup and Delivery Tasks
 
-  The multi-agent path-finding (MAPF) problem has recently received a lot of
-attention. However, it does not capture important characteristics of many
-real-world domains, such as automated warehouses, where agents are constantly
-engaged with new tasks. In this paper, we therefore study a lifelong version of
-the MAPF problem, called the multi-agent pickup and delivery (MAPD) problem. In
-the MAPD problem, agents have to attend to a stream of delivery tasks in an
-online setting. One agent has to be assigned to each delivery task. This agent
-has to first move to a given pickup location and then to a given delivery
-location while avoiding collisions with other agents. We present two decoupled
-MAPD algorithms, Token Passing (TP) and Token Passing with Task Swaps (TPTS).
-Theoretically, we show that they solve all well-formed MAPD instances, a
-realistic subclass of MAPD instances. Experimentally, we compare them against a
-centralized strawman MAPD algorithm without this guarantee in a simulated
-warehouse system. TP can easily be extended to a fully distributed MAPD
-algorithm and is the best choice when real-time computation is of primary
-concern since it remains efficient for MAPD instances with hundreds of agents
-and tasks. TPTS requires limited communication among agents and balances well
-between TP and the centralized MAPD algorithm.
+  The multi-agent path-finding (MAPF) problem has recently received a lot ofattention. However, it does not capture important characteristics of manyreal-world domains, such as automated warehouses, where agents are constantlyengaged with new tasks. In this paper, we therefore study a lifelong version ofthe MAPF problem, called the multi-agent pickup and delivery (MAPD) problem. Inthe MAPD problem, agents have to attend to a stream of delivery tasks in anonline setting. One agent has to be assigned to each delivery task. This agenthas to first move to a given pickup location and then to a given deliverylocation while avoiding collisions with other agents. We present two decoupledMAPD algorithms, Token Passing (TP) and Token Passing with Task Swaps (TPTS).Theoretically, we show that they solve all well-formed MAPD instances, arealistic subclass of MAPD instances. Experimentally, we compare them against acentralized strawman MAPD algorithm without this guarantee in a simulatedwarehouse system. TP can easily be extended to a fully distributed MAPDalgorithm and is the best choice when real-time computation is of primaryconcern since it remains efficient for MAPD instances with hundreds of agentsand tasks. TPTS requires limited communication among agents and balances wellbetween TP and the centralized MAPD algorithm.
 
+Lifelong Path Planning with Kinematic Constraints for Multi-Agent Pickup  and Delivery
 
-Lifelong Path Planning with Kinematic Constraints for Multi-Agent Pickup
-  and Delivery
-
-  The Multi-Agent Pickup and Delivery (MAPD) problem models applications where
-a large number of agents attend to a stream of incoming pickup-and-delivery
-tasks. Token Passing (TP) is a recent MAPD algorithm that is efficient and
-effective. We make TP even more efficient and effective by using a novel
-combinatorial search algorithm, called Safe Interval Path Planning with
-Reservation Table (SIPPwRT), for single-agent path planning. SIPPwRT uses an
-advanced data structure that allows for fast updates and lookups of the current
-paths of all agents in an online setting. The resulting MAPD algorithm
-TP-SIPPwRT takes kinematic constraints of real robots into account directly
-during planning, computes continuous agent movements with given velocities that
-work on non-holonomic robots rather than discrete agent movements with uniform
-velocity, and is complete for well-formed MAPD instances. We demonstrate its
-benefits for automated warehouses using both an agent simulator and a standard
-robot simulator. For example, we demonstrate that it can compute paths for
-hundreds of agents and thousands of tasks in seconds and is more efficient and
-effective than existing MAPD algorithms that use a post-processing step to
-adapt their paths to continuous agent movements with given velocities.
-
+  The Multi-Agent Pickup and Delivery (MAPD) problem models applications wherea large number of agents attend to a stream of incoming pickup-and-deliverytasks. Token Passing (TP) is a recent MAPD algorithm that is efficient andeffective. We make TP even more efficient and effective by using a novelcombinatorial search algorithm, called Safe Interval Path Planning withReservation Table (SIPPwRT), for single-agent path planning. SIPPwRT uses anadvanced data structure that allows for fast updates and lookups of the currentpaths of all agents in an online setting. The resulting MAPD algorithmTP-SIPPwRT takes kinematic constraints of real robots into account directlyduring planning, computes continuous agent movements with given velocities thatwork on non-holonomic robots rather than discrete agent movements with uniformvelocity, and is complete for well-formed MAPD instances. We demonstrate itsbenefits for automated warehouses using both an agent simulator and a standardrobot simulator. For example, we demonstrate that it can compute paths forhundreds of agents and thousands of tasks in seconds and is more efficient andeffective than existing MAPD algorithms that use a post-processing step toadapt their paths to continuous agent movements with given velocities.
 
 PRIMAL: Pathfinding via Reinforcement and Imitation Multi-Agent Learning
 
-  Multi-agent path finding (MAPF) is an essential component of many
-large-scale, real-world robot deployments, from aerial swarms to warehouse
-automation. However, despite the community's continued efforts, most
-state-of-the-art MAPF planners still rely on centralized planning and scale
-poorly past a few hundred agents. Such planning approaches are maladapted to
-real-world deployments, where noise and uncertainty often require paths be
-recomputed online, which is impossible when planning times are in seconds to
-minutes. We present PRIMAL, a novel framework for MAPF that combines
-reinforcement and imitation learning to teach fully-decentralized policies,
-where agents reactively plan paths online in a partially-observable world while
-exhibiting implicit coordination. This framework extends our previous work on
-distributed learning of collaborative policies by introducing demonstrations of
-an expert MAPF planner during training, as well as careful reward shaping and
-environment sampling. Once learned, the resulting policy can be copied onto any
-number of agents and naturally scales to different team sizes and world
-dimensions. We present results on randomized worlds with up to 1024 agents and
-compare success rates against state-of-the-art MAPF planners. Finally, we
-experimentally validate the learned policies in a hybrid simulation of a
-factory mockup, involving both real-world and simulated robots.
-
+  Multi-agent path finding (MAPF) is an essential component of manylarge-scale, real-world robot deployments, from aerial swarms to warehouseautomation. However, despite the community's continued efforts, moststate-of-the-art MAPF planners still rely on centralized planning and scalepoorly past a few hundred agents. Such planning approaches are maladapted toreal-world deployments, where noise and uncertainty often require paths berecomputed online, which is impossible when planning times are in seconds tominutes. We present PRIMAL, a novel framework for MAPF that combinesreinforcement and imitation learning to teach fully-decentralized policies,where agents reactively plan paths online in a partially-observable world whileexhibiting implicit coordination. This framework extends our previous work ondistributed learning of collaborative policies by introducing demonstrations ofan expert MAPF planner during training, as well as careful reward shaping andenvironment sampling. Once learned, the resulting policy can be copied onto anynumber of agents and naturally scales to different team sizes and worlddimensions. We present results on randomized worlds with up to 1024 agents andcompare success rates against state-of-the-art MAPF planners. Finally, weexperimentally validate the learned policies in a hybrid simulation of afactory mockup, involving both real-world and simulated robots.
 

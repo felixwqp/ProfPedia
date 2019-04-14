@@ -1,47 +1,12 @@
 In the Maze of Data Languages
 
-  In data languages the positions of strings and trees carry a label from a
-finite alphabet and a data value from an infinite alphabet. Extensions of
-automata and logics over finite alphabets have been defined to recognize data
-languages, both in the string and tree cases. In this paper we describe and
-compare the complexity and expressiveness of such models to understand which
-ones are better candidates as regular models.
-
+  In data languages the positions of strings and trees carry a label from afinite alphabet and a data value from an infinite alphabet. Extensions ofautomata and logics over finite alphabets have been defined to recognize datalanguages, both in the string and tree cases. In this paper we describe andcompare the complexity and expressiveness of such models to understand whichones are better candidates as regular models.
 
 A Symbolic Decision Procedure for Symbolic Alternating Finite Automata
 
-  We introduce Symbolic Alternating Finite Automata (s-AFA) as an expressive,
-succinct, and decidable model for describing sets of finite sequences over
-arbitrary alphabets. Boolean operations over s-AFAs have linear complexity,
-which is in sharp contrast with the quadratic cost of intersection and union
-for non-alternating symbolic automata. Due to this succinctness, emptiness and
-equivalence checking are PSpace-hard.
-  We introduce an algorithm for checking the equivalence of two s-AFAs based on
-bisimulation up to congruence. This algorithm allows us to exploit the power of
-SAT and SMT solvers to efficiently search the state space of the s-AFAs. We
-evaluate our decision procedure on two verification and security applications:
-1) checking satisfiability of linear temporal logic formulas over finite
-traces, and 2) checking equivalence of Boolean combinations of regular
-expressions. Our experiments show that our technique often outperforms existing
-techniques and it can be beneficial in both such applications.
-
+  We introduce Symbolic Alternating Finite Automata (s-AFA) as an expressive,succinct, and decidable model for describing sets of finite sequences overarbitrary alphabets. Boolean operations over s-AFAs have linear complexity,which is in sharp contrast with the quadratic cost of intersection and unionfor non-alternating symbolic automata. Due to this succinctness, emptiness andequivalence checking are PSpace-hard.  We introduce an algorithm for checking the equivalence of two s-AFAs based onbisimulation up to congruence. This algorithm allows us to exploit the power ofSAT and SMT solvers to efficiently search the state space of the s-AFAs. Weevaluate our decision procedure on two verification and security applications:1) checking satisfiability of linear temporal logic formulas over finitetraces, and 2) checking equivalence of Boolean combinations of regularexpressions. Our experiments show that our technique often outperforms existingtechniques and it can be beneficial in both such applications.
 
 Streaming Tree Transducers
 
-  Theory of tree transducers provides a foundation for understanding
-expressiveness and complexity of analysis problems for specification languages
-for transforming hierarchically structured data such as XML documents. We
-introduce streaming tree transducers as an analyzable, executable, and
-expressive model for transforming unranked ordered trees in a single pass.
-Given a linear encoding of the input tree, the transducer makes a single
-left-to-right pass through the input, and computes the output in linear time
-using a finite-state control, a visibly pushdown stack, and a finite number of
-variables that store output chunks that can be combined using the operations of
-string-concatenation and tree-insertion. We prove that the expressiveness of
-the model coincides with transductions definable using monadic second-order
-logic (MSO). Existing models of tree transducers either cannot implement all
-MSO-definable transformations, or require regular look ahead that prohibits
-single-pass implementation. We show a variety of analysis problems such as
-type-checking and checking functional equivalence are solvable for our model.
-
+  Theory of tree transducers provides a foundation for understandingexpressiveness and complexity of analysis problems for specification languagesfor transforming hierarchically structured data such as XML documents. Weintroduce streaming tree transducers as an analyzable, executable, andexpressive model for transforming unranked ordered trees in a single pass.Given a linear encoding of the input tree, the transducer makes a singleleft-to-right pass through the input, and computes the output in linear timeusing a finite-state control, a visibly pushdown stack, and a finite number ofvariables that store output chunks that can be combined using the operations ofstring-concatenation and tree-insertion. We prove that the expressiveness ofthe model coincides with transductions definable using monadic second-orderlogic (MSO). Existing models of tree transducers either cannot implement allMSO-definable transformations, or require regular look ahead that prohibitssingle-pass implementation. We show a variety of analysis problems such astype-checking and checking functional equivalence are solvable for our model.
 
