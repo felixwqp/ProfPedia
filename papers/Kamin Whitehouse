@@ -1,96 +1,16 @@
 Sensor-Type Classification in Buildings
 
-  Many sensors/meters are deployed in commercial buildings to monitor and
-optimize their performance. However, because sensor metadata is inconsistent
-across buildings, software-based solutions are tightly coupled to the sensor
-metadata conventions (i.e. schemas and naming) for each building. Running the
-same software across buildings requires significant integration effort.
-  Metadata normalization is critical for scaling the deployment process and
-allows us to decouple building-specific conventions from the code written for
-building applications. It also allows us to deal with missing metadata. One
-important aspect of normalization is to differentiate sensors by the typeof
-phenomena being observed. In this paper, we propose a general, simple, yet
-effective classification scheme to differentiate sensors in buildings by type.
-We perform ensemble learning on data collected from over 2000 sensor streams in
-two buildings. Our approach is able to achieve more than 92% accuracy for
-classification within buildings and more than 82% accuracy for across
-buildings. We also introduce a method for identifying potential misclassified
-streams. This is important because it allows us to identify opportunities to
-attain more input from experts -- input that could help improve classification
-accuracy when ground truth is unavailable. We show that by adjusting a
-threshold value we are able to identify at least 30% of the misclassified
-instances.
-
+  Many sensors/meters are deployed in commercial buildings to monitor andoptimize their performance. However, because sensor metadata is inconsistentacross buildings, software-based solutions are tightly coupled to the sensormetadata conventions (i.e. schemas and naming) for each building. Running thesame software across buildings requires significant integration effort.  Metadata normalization is critical for scaling the deployment process andallows us to decouple building-specific conventions from the code written forbuilding applications. It also allows us to deal with missing metadata. Oneimportant aspect of normalization is to differentiate sensors by the typeofphenomena being observed. In this paper, we propose a general, simple, yeteffective classification scheme to differentiate sensors in buildings by type.We perform ensemble learning on data collected from over 2000 sensor streams intwo buildings. Our approach is able to achieve more than 92% accuracy forclassification within buildings and more than 82% accuracy for acrossbuildings. We also introduce a method for identifying potential misclassifiedstreams. This is important because it allows us to identify opportunities toattain more input from experts -- input that could help improve classificationaccuracy when ground truth is unavailable. We show that by adjusting athreshold value we are able to identify at least 30% of the misclassifiedinstances.
 
 How good is good enough? Re-evaluating the bar for energy disaggregation
 
-  Since the early 1980s, the research community has developed ever more
-sophisticated algorithms for the problem of energy disaggregation, but despite
-decades of research, there is still a dearth of applications with demonstrated
-value. In this work, we explore a question that is highly pertinent to this
-research community: how good does energy disaggregation need to be in order to
-infer characteristics of a household? We present novel techniques that use
-unsupervised energy disaggregation to predict both household occupancy and
-static properties of the household such as size of the home and number of
-occupants. Results show that basic disaggregation approaches performs up to 30%
-better at occupancy estimation than using aggregate power data alone, and are
-up to 10% better at estimating static household characteristics. These results
-show that even rudimentary energy disaggregation techniques are sufficient for
-improved inference of household characteristics. To conclude, we re-evaluate
-the bar set by the community for energy disaggregation accuracy and try to
-answer the question "how good is good enough?"
+  Since the early 1980s, the research community has developed ever moresophisticated algorithms for the problem of energy disaggregation, but despitedecades of research, there is still a dearth of applications with demonstratedvalue. In this work, we explore a question that is highly pertinent to thisresearch community: how good does energy disaggregation need to be in order toinfer characteristics of a household? We present novel techniques that useunsupervised energy disaggregation to predict both household occupancy andstatic properties of the household such as size of the home and number ofoccupants. Results show that basic disaggregation approaches performs up to 30%better at occupancy estimation than using aggregate power data alone, and areup to 10% better at estimating static household characteristics. These resultsshow that even rudimentary energy disaggregation techniques are sufficient forimproved inference of household characteristics. To conclude, we re-evaluatethe bar set by the community for energy disaggregation accuracy and try toanswer the question "how good is good enough?"
 
+Poster Abstract: Bits and Watts: Improving energy disaggregation  performance using power line communication modems
 
-Poster Abstract: Bits and Watts: Improving energy disaggregation
-  performance using power line communication modems
+  Non-intrusive load monitoring (NILM) or energy disaggregation, aims todisaggregate a household's electricity consumption into constituent appliances.More than three decades of work in NILM has resulted in the development ofseveral novel algorithmic approaches. However, despite these advancements, twocore challenges still exist: i) disaggregating low power consumption appliancesand ii) distinguishing between multiple instances of similar appliances. Thesechallenges are becoming increasingly important due to an increasing number ofappliances and increased usage of electronics in homes. Previous approacheshave attempted to solve these problems using expensive hardware involving highsampling rates better suited to laboratory settings, or using additional numberof sensors, limiting the ease of deployment. In this work, we explore usingcommercial-off-the-shelf (COTS) power line communication (PLC) modems as aninexpensive and easy to deploy alternative solution to these problems. We usethe reduction in bandwidth between two PLC modems, caused due to the change inPLC modulation scheme when different appliances are operated as a signature foran appliance. Since the noise generated in the powerline is dependent both ontype and location of an appliance, we believe that our technique based on PLCmodems can be a promising addition for solving NILM.
 
-  Non-intrusive load monitoring (NILM) or energy disaggregation, aims to
-disaggregate a household's electricity consumption into constituent appliances.
-More than three decades of work in NILM has resulted in the development of
-several novel algorithmic approaches. However, despite these advancements, two
-core challenges still exist: i) disaggregating low power consumption appliances
-and ii) distinguishing between multiple instances of similar appliances. These
-challenges are becoming increasingly important due to an increasing number of
-appliances and increased usage of electronics in homes. Previous approaches
-have attempted to solve these problems using expensive hardware involving high
-sampling rates better suited to laboratory settings, or using additional number
-of sensors, limiting the ease of deployment. In this work, we explore using
-commercial-off-the-shelf (COTS) power line communication (PLC) modems as an
-inexpensive and easy to deploy alternative solution to these problems. We use
-the reduction in bandwidth between two PLC modems, caused due to the change in
-PLC modulation scheme when different appliances are operated as a signature for
-an appliance. Since the noise generated in the powerline is dependent both on
-type and location of an appliance, we believe that our technique based on PLC
-modems can be a promising addition for solving NILM.
+Neighbourhood NILM: A Big-data Approach to Household Energy  Disaggregation
 
-
-Neighbourhood NILM: A Big-data Approach to Household Energy
-  Disaggregation
-
-  In this paper, we investigate whether "big-data" is more valuable than
-"precise" data for the problem of energy disaggregation: the process of
-breaking down aggregate energy usage on a per-appliance basis. Existing
-techniques for disaggregation rely on energy metering at a resolution of 1
-minute or higher, but most power meters today only provide a reading once per
-month, and at most once every 15 minutes. In this paper, we propose a new
-technique called Neighbourhood NILM that leverages data from 'neighbouring'
-homes to disaggregate energy given only a single energy reading per month. The
-key intuition behind our approach is that 'similar' homes have 'similar' energy
-consumption on a per-appliance basis. Neighbourhood NILM matches every home
-with a set of 'neighbours' that have direct submetering infrastructure, i.e.
-power meters on individual circuits or loads. Many such homes already exist.
-Then, it estimates the appliance-level energy consumption of the target home to
-be the average of its K neighbours. We evaluate this approach using 25 homes
-and results show that our approach gives comparable or better disaggregation in
-comparison to state-of-the-art accuracy reported in the literature that depend
-on manual model training, high frequency power metering, or both. Results show
-that Neighbourhood NILM can achieve 83% and 79% accuracy disaggregating fridge
-and heating/cooling loads, compared to 74% and 73% for a technique called FHMM.
-Furthermore, it achieves up to 64% accuracy on washing machine, dryer,
-dishwasher, and lighting loads, which is higher than previously reported
-results. Many existing techniques are not able to disaggregate these loads at
-all. These results indicate a potentially substantial advantage to installing
-submetering infrastructure in a select few homes rather than installing new
-high-frequency smart metering infrastructure in all homes.
-
+  In this paper, we investigate whether "big-data" is more valuable than"precise" data for the problem of energy disaggregation: the process ofbreaking down aggregate energy usage on a per-appliance basis. Existingtechniques for disaggregation rely on energy metering at a resolution of 1minute or higher, but most power meters today only provide a reading once permonth, and at most once every 15 minutes. In this paper, we propose a newtechnique called Neighbourhood NILM that leverages data from 'neighbouring'homes to disaggregate energy given only a single energy reading per month. Thekey intuition behind our approach is that 'similar' homes have 'similar' energyconsumption on a per-appliance basis. Neighbourhood NILM matches every homewith a set of 'neighbours' that have direct submetering infrastructure, i.e.power meters on individual circuits or loads. Many such homes already exist.Then, it estimates the appliance-level energy consumption of the target home tobe the average of its K neighbours. We evaluate this approach using 25 homesand results show that our approach gives comparable or better disaggregation incomparison to state-of-the-art accuracy reported in the literature that dependon manual model training, high frequency power metering, or both. Results showthat Neighbourhood NILM can achieve 83% and 79% accuracy disaggregating fridgeand heating/cooling loads, compared to 74% and 73% for a technique called FHMM.Furthermore, it achieves up to 64% accuracy on washing machine, dryer,dishwasher, and lighting loads, which is higher than previously reportedresults. Many existing techniques are not able to disaggregate these loads atall. These results indicate a potentially substantial advantage to installingsubmetering infrastructure in a select few homes rather than installing newhigh-frequency smart metering infrastructure in all homes.
 

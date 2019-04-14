@@ -1,392 +1,76 @@
 Optimal Upper and Lower Bounds for Boolean Expressions by Dissociation
 
-  This paper develops upper and lower bounds for the probability of Boolean
-expressions by treating multiple occurrences of variables as independent and
-assigning them new individual probabilities. Our technique generalizes and
-extends the underlying idea of a number of recent approaches which are
-varyingly called node splitting, variable renaming, variable splitting, or
-dissociation for probabilistic databases. We prove that the probabilities we
-assign to new variables are the best possible in some sense.
-
+  This paper develops upper and lower bounds for the probability of Booleanexpressions by treating multiple occurrences of variables as independent andassigning them new individual probabilities. Our technique generalizes andextends the underlying idea of a number of recent approaches which arevaryingly called node splitting, variable renaming, variable splitting, ordissociation for probabilistic databases. We prove that the probabilities weassign to new variables are the best possible in some sense.
 
 Rules of Thumb for Information Acquisition from Large and Redundant Data
 
-  We develop an abstract model of information acquisition from redundant data.
-We assume a random sampling process from data which provide information with
-bias and are interested in the fraction of information we expect to learn as
-function of (i) the sampled fraction (recall) and (ii) varying bias of
-information (redundancy distributions). We develop two rules of thumb with
-varying robustness. We first show that, when information bias follows a Zipf
-distribution, the 80-20 rule or Pareto principle does surprisingly not hold,
-and we rather expect to learn less than 40% of the information when randomly
-sampling 20% of the overall data. We then analytically prove that for large
-data sets, randomized sampling from power-law distributions leads to "truncated
-distributions" with the same power-law exponent. This second rule is very
-robust and also holds for distributions that deviate substantially from a
-strict power law. We further give one particular family of powerlaw functions
-that remain completely invariant under sampling. Finally, we validate our model
-with two large Web data sets: link distributions to domains and tag
-distributions on delicious.com.
-
+  We develop an abstract model of information acquisition from redundant data.We assume a random sampling process from data which provide information withbias and are interested in the fraction of information we expect to learn asfunction of (i) the sampled fraction (recall) and (ii) varying bias ofinformation (redundancy distributions). We develop two rules of thumb withvarying robustness. We first show that, when information bias follows a Zipfdistribution, the 80-20 rule or Pareto principle does surprisingly not hold,and we rather expect to learn less than 40% of the information when randomlysampling 20% of the overall data. We then analytically prove that for largedata sets, randomized sampling from power-law distributions leads to "truncateddistributions" with the same power-law exponent. This second rule is veryrobust and also holds for distributions that deviate substantially from astrict power law. We further give one particular family of powerlaw functionsthat remain completely invariant under sampling. Finally, we validate our modelwith two large Web data sets: link distributions to domains and tagdistributions on delicious.com.
 
 Default-all is dangerous!
 
-  We show that the default-all propagation scheme for database annotations is
-dangerous. Dangerous here means that it can propagate annotations to the query
-output which are semantically irrelevant to the query the user asked. This is
-the result of considering all relationally equivalent queries and returning the
-union of their where-provenance in an attempt to define a propagation scheme
-that is insensitive to query rewriting. We propose an alternative
-query-rewrite-insensitive (QRI) where-provenance called minimum propagation. It
-is analogous to the minimum witness basis for why-provenance, straight-forward
-to evaluate, and returns all relevant and only relevant annotations.
-
+  We show that the default-all propagation scheme for database annotations isdangerous. Dangerous here means that it can propagate annotations to the queryoutput which are semantically irrelevant to the query the user asked. This isthe result of considering all relationally equivalent queries and returning theunion of their where-provenance in an attempt to define a propagation schemethat is insensitive to query rewriting. We propose an alternativequery-rewrite-insensitive (QRI) where-provenance called minimum propagation. Itis analogous to the minimum witness basis for why-provenance, straight-forwardto evaluate, and returns all relevant and only relevant annotations.
 
 Oblivious Bounds on the Probability of Boolean Functions
 
-  This paper develops upper and lower bounds for the probability of Boolean
-functions by treating multiple occurrences of variables as independent and
-assigning them new individual probabilities. We call this approach dissociation
-and give an exact characterization of optimal oblivious bounds, i.e. when the
-new probabilities are chosen independent of the probabilities of all other
-variables. Our motivation comes from the weighted model counting problem (or,
-equivalently, the problem of computing the probability of a Boolean function),
-which is #P-hard in general. By performing several dissociations, one can
-transform a Boolean formula whose probability is difficult to compute, into one
-whose probability is easy to compute, and which is guaranteed to provide an
-upper or lower bound on the probability of the original formula by choosing
-appropriate probabilities for the dissociated variables. Our new bounds shed
-light on the connection between previous relaxation-based and model-based
-approximations and unify them as concrete choices in a larger design space. We
-also show how our theory allows a standard relational database management
-system (DBMS) to both upper and lower bound hard probabilistic queries in
-guaranteed polynomial time.
-
+  This paper develops upper and lower bounds for the probability of Booleanfunctions by treating multiple occurrences of variables as independent andassigning them new individual probabilities. We call this approach dissociationand give an exact characterization of optimal oblivious bounds, i.e. when thenew probabilities are chosen independent of the probabilities of all othervariables. Our motivation comes from the weighted model counting problem (or,equivalently, the problem of computing the probability of a Boolean function),which is #P-hard in general. By performing several dissociations, one cantransform a Boolean formula whose probability is difficult to compute, into onewhose probability is easy to compute, and which is guaranteed to provide anupper or lower bound on the probability of the original formula by choosingappropriate probabilities for the dissociated variables. Our new bounds shedlight on the connection between previous relaxation-based and model-basedapproximations and unify them as concrete choices in a larger design space. Wealso show how our theory allows a standard relational database managementsystem (DBMS) to both upper and lower bound hard probabilistic queries inguaranteed polynomial time.
 
 Approximate Lifted Inference with Probabilistic Databases
 
-  This paper proposes a new approach for approximate evaluation of #P-hard
-queries with probabilistic databases. In our approach, every query is evaluated
-entirely in the database engine by evaluating a fixed number of query plans,
-each providing an upper bound on the true probability, then taking their
-minimum. We provide an algorithm that takes into account important schema
-information to enumerate only the minimal necessary plans among all possible
-plans. Importantly, this algorithm is a strict generalization of all known
-results of PTIME self-join-free conjunctive queries: A query is safe if and
-only if our algorithm returns one single plan. We also apply three relational
-query optimization techniques to evaluate all minimal safe plans very fast. We
-give a detailed experimental evaluation of our approach and, in the process,
-provide a new way of thinking about the value of probabilistic methods over
-non-probabilistic methods for ranking query answers.
-
+  This paper proposes a new approach for approximate evaluation of #P-hardqueries with probabilistic databases. In our approach, every query is evaluatedentirely in the database engine by evaluating a fixed number of query plans,each providing an upper bound on the true probability, then taking theirminimum. We provide an algorithm that takes into account important schemainformation to enumerate only the minimal necessary plans among all possibleplans. Importantly, this algorithm is a strict generalization of all knownresults of PTIME self-join-free conjunctive queries: A query is safe if andonly if our algorithm returns one single plan. We also apply three relationalquery optimization techniques to evaluate all minimal safe plans very fast. Wegive a detailed experimental evaluation of our approach and, in the process,provide a new way of thinking about the value of probabilistic methods overnon-probabilistic methods for ranking query answers.
 
 Semi-Supervised Learning with Heterophily
 
-  We derive a family of linear inference algorithms that generalize existing
-graph-based label propagation algorithms by allowing them to propagate
-generalized assumptions about "attraction" or "compatibility" between classes
-of neighboring nodes (in particular those that involve heterophily between
-nodes where "opposites attract"). We thus call this formulation Semi-Supervised
-Learning with Heterophily (SSLH) and show how it generalizes and improves upon
-a recently proposed approach called Linearized Belief Propagation (LinBP).
-Importantly, our framework allows us to reduce the problem of estimating the
-relative compatibility between nodes from partially labeled graph to a simple
-optimization problem. The result is a very fast algorithm that -- despite its
-simplicity -- is surprisingly effective: we can classify unlabeled nodes within
-the same graph in the same time as LinBP but with a superior accuracy and
-despite our algorithm not knowing the compatibilities.
-
+  We derive a family of linear inference algorithms that generalize existinggraph-based label propagation algorithms by allowing them to propagategeneralized assumptions about "attraction" or "compatibility" between classesof neighboring nodes (in particular those that involve heterophily betweennodes where "opposites attract"). We thus call this formulation Semi-SupervisedLearning with Heterophily (SSLH) and show how it generalizes and improves upona recently proposed approach called Linearized Belief Propagation (LinBP).Importantly, our framework allows us to reduce the problem of estimating therelative compatibility between nodes from partially labeled graph to a simpleoptimization problem. The result is a very fast algorithm that -- despite itssimplicity -- is surprisingly effective: we can classify unlabeled nodes withinthe same graph in the same time as LinBP but with a superior accuracy anddespite our algorithm not knowing the compatibilities.
 
 The Linearization of Belief Propagation on Pairwise Markov Networks
 
-  Belief Propagation (BP) is a widely used approximation for exact
-probabilistic inference in graphical models, such as Markov Random Fields
-(MRFs). In graphs with cycles, however, no exact convergence guarantees for BP
-are known, in general. For the case when all edges in the MRF carry the same
-symmetric, doubly stochastic potential, recent works have proposed to
-approximate BP by linearizing the update equations around default values, which
-was shown to work well for the problem of node classification. The present
-paper generalizes all prior work and derives an approach that approximates
-loopy BP on any pairwise MRF with the problem of solving a linear equation
-system. This approach combines exact convergence guarantees and a fast matrix
-implementation with the ability to model heterogenous networks. Experiments on
-synthetic graphs with planted edge potentials show that the linearization has
-comparable labeling accuracy as BP for graphs with weak potentials, while
-speeding-up inference by orders of magnitude.
-
+  Belief Propagation (BP) is a widely used approximation for exactprobabilistic inference in graphical models, such as Markov Random Fields(MRFs). In graphs with cycles, however, no exact convergence guarantees for BPare known, in general. For the case when all edges in the MRF carry the samesymmetric, doubly stochastic potential, recent works have proposed toapproximate BP by linearizing the update equations around default values, whichwas shown to work well for the problem of node classification. The presentpaper generalizes all prior work and derives an approach that approximatesloopy BP on any pairwise MRF with the problem of solving a linear equationsystem. This approach combines exact convergence guarantees and a fast matriximplementation with the ability to model heterogenous networks. Experiments onsynthetic graphs with planted edge potentials show that the linearization hascomparable labeling accuracy as BP for graphs with weak potentials, whilespeeding-up inference by orders of magnitude.
 
 A General Framework for Anytime Approximation in Probabilistic Databases
 
-  Anytime approximation algorithms that compute the probabilities of queries
-over probabilistic databases can be of great use to statistical learning tasks.
-Those approaches have been based so far on either (i) sampling or (ii)
-branch-and-bound with model-based bounds. We present here a more general
-branch-and-bound framework that extends the possible bounds by using
-'dissociation', which yields tighter bounds.
-
+  Anytime approximation algorithms that compute the probabilities of queriesover probabilistic databases can be of great use to statistical learning tasks.Those approaches have been based so far on either (i) sampling or (ii)branch-and-bound with model-based bounds. We present here a more generalbranch-and-bound framework that extends the possible bounds by using'dissociation', which yields tighter bounds.
 
 Believe It or Not: Adding Belief Annotations to Databases
 
-  We propose a database model that allows users to annotate data with belief
-statements. Our motivation comes from scientific database applications where a
-community of users is working together to assemble, revise, and curate a shared
-data repository. As the community accumulates knowledge and the database
-content evolves over time, it may contain conflicting information and members
-can disagree on the information it should store. For example, Alice may believe
-that a tuple should be in the database, whereas Bob disagrees. He may also
-insert the reason why he thinks Alice believes the tuple should be in the
-database, and explain what he thinks the correct tuple should be instead.
-  We propose a formal model for Belief Databases that interprets users'
-annotations as belief statements. These annotations can refer both to the base
-data and to other annotations. We give a formal semantics based on a fragment
-of multi-agent epistemic logic and define a query language over belief
-databases. We then prove a key technical result, stating that every belief
-database can be encoded as a canonical Kripke structure. We use this structure
-to describe a relational representation of belief databases, and give an
-algorithm for translating queries over the belief database into standard
-relational queries. Finally, we report early experimental results with our
-prototype implementation on synthetic data.
-
+  We propose a database model that allows users to annotate data with beliefstatements. Our motivation comes from scientific database applications where acommunity of users is working together to assemble, revise, and curate a shareddata repository. As the community accumulates knowledge and the databasecontent evolves over time, it may contain conflicting information and memberscan disagree on the information it should store. For example, Alice may believethat a tuple should be in the database, whereas Bob disagrees. He may alsoinsert the reason why he thinks Alice believes the tuple should be in thedatabase, and explain what he thinks the correct tuple should be instead.  We propose a formal model for Belief Databases that interprets users'annotations as belief statements. These annotations can refer both to the basedata and to other annotations. We give a formal semantics based on a fragmentof multi-agent epistemic logic and define a query language over beliefdatabases. We then prove a key technical result, stating that every beliefdatabase can be encoded as a canonical Kripke structure. We use this structureto describe a relational representation of belief databases, and give analgorithm for translating queries over the belief database into standardrelational queries. Finally, we report early experimental results with ourprototype implementation on synthetic data.
 
 Why so? or Why no? Functional Causality for Explaining Query Answers
 
-  In this paper, we propose causality as a unified framework to explain query
-answers and non-answers, thus generalizing and extending several previously
-proposed approaches of provenance and missing query result explanations.
-  We develop our framework starting from the well-studied definition of actual
-causes by Halpern and Pearl. After identifying some undesirable characteristics
-of the original definition, we propose functional causes as a refined
-definition of causality with several desirable properties. These properties
-allow us to apply our notion of causality in a database context and apply it
-uniformly to define the causes of query results and their individual
-contributions in several ways: (i) we can model both provenance as well as
-non-answers, (ii) we can define explanations as either data in the input
-relations or relational operations in a query plan, and (iii) we can give
-graded degrees of responsibility to individual causes, thus allowing us to rank
-causes. In particular, our approach allows us to explain contributions to
-relational aggregate functions and to rank causes according to their respective
-responsibilities. We give complexity results and describe polynomial algorithms
-for evaluating causality in tractable cases. Throughout the paper, we
-illustrate the applicability of our framework with several examples.
-  Overall, we develop in this paper the theoretical foundations of causality
-theory in a database context.
-
+  In this paper, we propose causality as a unified framework to explain queryanswers and non-answers, thus generalizing and extending several previouslyproposed approaches of provenance and missing query result explanations.  We develop our framework starting from the well-studied definition of actualcauses by Halpern and Pearl. After identifying some undesirable characteristicsof the original definition, we propose functional causes as a refineddefinition of causality with several desirable properties. These propertiesallow us to apply our notion of causality in a database context and apply ituniformly to define the causes of query results and their individualcontributions in several ways: (i) we can model both provenance as well asnon-answers, (ii) we can define explanations as either data in the inputrelations or relational operations in a query plan, and (iii) we can givegraded degrees of responsibility to individual causes, thus allowing us to rankcauses. In particular, our approach allows us to explain contributions torelational aggregate functions and to rank causes according to their respectiveresponsibilities. We give complexity results and describe polynomial algorithmsfor evaluating causality in tractable cases. Throughout the paper, weillustrate the applicability of our framework with several examples.  Overall, we develop in this paper the theoretical foundations of causalitytheory in a database context.
 
 Data Conflict Resolution Using Trust Mappings
 
-  In massively collaborative projects such as scientific or community
-databases, users often need to agree or disagree on the content of individual
-data items. On the other hand, trust relationships often exist between users,
-allowing them to accept or reject other users' beliefs by default. As those
-trust relationships become complex, however, it becomes difficult to define and
-compute a consistent snapshot of the conflicting information. Previous
-solutions to a related problem, the update reconciliation problem, are
-dependent on the order in which the updates are processed and, therefore, do
-not guarantee a globally consistent snapshot. This paper proposes the first
-principled solution to the automatic conflict resolution problem in a community
-database. Our semantics is based on the certain tuples of all stable models of
-a logic program. While evaluating stable models in general is well known to be
-hard, even for very simple logic programs, we show that the conflict resolution
-problem admits a PTIME solution. To the best of our knowledge, ours is the
-first PTIME algorithm that allows conflict resolution in a principled way. We
-further discuss extensions to negative beliefs and prove that some of these
-extensions are hard. This work is done in the context of the BeliefDB project
-at the University of Washington, which focuses on the efficient management of
-conflicts in community databases.
+  In massively collaborative projects such as scientific or communitydatabases, users often need to agree or disagree on the content of individualdata items. On the other hand, trust relationships often exist between users,allowing them to accept or reject other users' beliefs by default. As thosetrust relationships become complex, however, it becomes difficult to define andcompute a consistent snapshot of the conflicting information. Previoussolutions to a related problem, the update reconciliation problem, aredependent on the order in which the updates are processed and, therefore, donot guarantee a globally consistent snapshot. This paper proposes the firstprincipled solution to the automatic conflict resolution problem in a communitydatabase. Our semantics is based on the certain tuples of all stable models ofa logic program. While evaluating stable models in general is well known to behard, even for very simple logic programs, we show that the conflict resolutionproblem admits a PTIME solution. To the best of our knowledge, ours is thefirst PTIME algorithm that allows conflict resolution in a principled way. Wefurther discuss extensions to negative beliefs and prove that some of theseextensions are hard. This work is done in the context of the BeliefDB projectat the University of Washington, which focuses on the efficient management ofconflicts in community databases.
 
+Dissociation and Propagation for Approximate Lifted Inference with  Standard Relational Database Management Systems
 
-Dissociation and Propagation for Approximate Lifted Inference with
-  Standard Relational Database Management Systems
-
-  Probabilistic inference over large data sets is a challenging data management
-problem since exact inference is generally #P-hard and is most often solved
-approximately with sampling-based methods today. This paper proposes an
-alternative approach for approximate evaluation of conjunctive queries with
-standard relational databases: In our approach, every query is evaluated
-entirely in the database engine by evaluating a fixed number of query plans,
-each providing an upper bound on the true probability, then taking their
-minimum. We provide an algorithm that takes into account important schema
-information to enumerate only the minimal necessary plans among all possible
-plans. Importantly, this algorithm is a strict generalization of all known
-PTIME self-join-free conjunctive queries: A query is in PTIME if and only if
-our algorithm returns one single plan. Furthermore, our approach is a
-generalization of a family of efficient ranking methods from graphs to
-hypergraphs. We also adapt three relational query optimization techniques to
-evaluate all necessary plans very fast. We give a detailed experimental
-evaluation of our approach and, in the process, provide a new way of thinking
-about the value of probabilistic methods over non-probabilistic methods for
-ranking query answers. We also note that the techniques developed in this paper
-apply immediately to lifted inference from statistical relational models since
-lifted inference corresponds to PTIME plans in probabilistic databases.
-
+  Probabilistic inference over large data sets is a challenging data managementproblem since exact inference is generally #P-hard and is most often solvedapproximately with sampling-based methods today. This paper proposes analternative approach for approximate evaluation of conjunctive queries withstandard relational databases: In our approach, every query is evaluatedentirely in the database engine by evaluating a fixed number of query plans,each providing an upper bound on the true probability, then taking theirminimum. We provide an algorithm that takes into account important schemainformation to enumerate only the minimal necessary plans among all possibleplans. Importantly, this algorithm is a strict generalization of all knownPTIME self-join-free conjunctive queries: A query is in PTIME if and only ifour algorithm returns one single plan. Furthermore, our approach is ageneralization of a family of efficient ranking methods from graphs tohypergraphs. We also adapt three relational query optimization techniques toevaluate all necessary plans very fast. We give a detailed experimentalevaluation of our approach and, in the process, provide a new way of thinkingabout the value of probabilistic methods over non-probabilistic methods forranking query answers. We also note that the techniques developed in this paperapply immediately to lifted inference from statistical relational models sincelifted inference corresponds to PTIME plans in probabilistic databases.
 
 Linearized and Single-Pass Belief Propagation
 
-  How can we tell when accounts are fake or real in a social network? And how
-can we tell which accounts belong to liberal, conservative or centrist users?
-Often, we can answer such questions and label nodes in a network based on the
-labels of their neighbors and appropriate assumptions of homophily ("birds of a
-feather flock together") or heterophily ("opposites attract"). One of the most
-widely used methods for this kind of inference is Belief Propagation (BP) which
-iteratively propagates the information from a few nodes with explicit labels
-throughout a network until convergence. One main problem with BP, however, is
-that there are no known exact guarantees of convergence in graphs with loops.
-  This paper introduces Linearized Belief Propagation (LinBP), a linearization
-of BP that allows a closed-form solution via intuitive matrix equations and,
-thus, comes with convergence guarantees. It handles homophily, heterophily, and
-more general cases that arise in multi-class settings. Plus, it allows a
-compact implementation in SQL. The paper also introduces Single-pass Belief
-Propagation (SBP), a "localized" version of LinBP that propagates information
-across every edge at most once and for which the final class assignments depend
-only on the nearest labeled neighbors. In addition, SBP allows fast incremental
-updates in dynamic networks. Our runtime experiments show that LinBP and SBP
-are orders of magnitude faster than standard
-
+  How can we tell when accounts are fake or real in a social network? And howcan we tell which accounts belong to liberal, conservative or centrist users?Often, we can answer such questions and label nodes in a network based on thelabels of their neighbors and appropriate assumptions of homophily ("birds of afeather flock together") or heterophily ("opposites attract"). One of the mostwidely used methods for this kind of inference is Belief Propagation (BP) whichiteratively propagates the information from a few nodes with explicit labelsthroughout a network until convergence. One main problem with BP, however, isthat there are no known exact guarantees of convergence in graphs with loops.  This paper introduces Linearized Belief Propagation (LinBP), a linearizationof BP that allows a closed-form solution via intuitive matrix equations and,thus, comes with convergence guarantees. It handles homophily, heterophily, andmore general cases that arise in multi-class settings. Plus, it allows acompact implementation in SQL. The paper also introduces Single-pass BeliefPropagation (SBP), a "localized" version of LinBP that propagates informationacross every edge at most once and for which the final class assignments dependonly on the nearest labeled neighbors. In addition, SBP allows fast incrementalupdates in dynamic networks. Our runtime experiments show that LinBP and SBPare orders of magnitude faster than standard
 
 A Case for A Collaborative Query Management System
 
-  Over the past 40 years, database management systems (DBMSs) have evolved to
-provide a sophisticated variety of data management capabilities. At the same
-time, tools for managing queries over the data have remained relatively
-primitive. One reason for this is that queries are typically issued through
-applications. They are thus debugged once and re-used repeatedly. This mode of
-interaction, however, is changing. As scientists (and others) store and share
-increasingly large volumes of data in data centers, they need the ability to
-analyze the data by issuing exploratory queries. In this paper, we argue that,
-in these new settings, data management systems must provide powerful query
-management capabilities, from query browsing to automatic query
-recommendations. We first discuss the requirements for a collaborative query
-management system. We outline an early system architecture and discuss the many
-research challenges associated with building such an engine.
+  Over the past 40 years, database management systems (DBMSs) have evolved toprovide a sophisticated variety of data management capabilities. At the sametime, tools for managing queries over the data have remained relativelyprimitive. One reason for this is that queries are typically issued throughapplications. They are thus debugged once and re-used repeatedly. This mode ofinteraction, however, is changing. As scientists (and others) store and shareincreasingly large volumes of data in data centers, they need the ability toanalyze the data by issuing exploratory queries. In this paper, we argue that,in these new settings, data management systems must provide powerful querymanagement capabilities, from query browsing to automatic queryrecommendations. We first discuss the requirements for a collaborative querymanagement system. We outline an early system architecture and discuss the manyresearch challenges associated with building such an engine.
 
+The Complexity of Causality and Responsibility for Query Answers and  non-Answers
 
-The Complexity of Causality and Responsibility for Query Answers and
-  non-Answers
+  An answer to a query has a well-defined lineage expression (alternativelycalled how-provenance) that explains how the answer was derived. Recent workhas also shown how to compute the lineage of a non-answer to a query. However,the cause of an answer or non-answer is a more subtle notion and consists, ingeneral, of only a fragment of the lineage. In this paper, we adapt Halpern,Pearl, and Chockler's recent definitions of causality and responsibility todefine the causes of answers and non-answers to queries, and their degree ofresponsibility. Responsibility captures the notion of degree of causality andserves to rank potentially many causes by their relative contributions to theeffect. Then, we study the complexity of computing causes and responsibilitiesfor conjunctive queries. It is known that computing causes is NP-complete ingeneral. Our first main result shows that all causes to conjunctive queries canbe computed by a relational query which may involve negation. Thus, causalitycan be computed in PTIME, and very efficiently so. Next, we study computingresponsibility. Here, we prove that the complexity depends on the conjunctivequery and demonstrate a dichotomy between PTIME and NP-complete cases. For thePTIME cases, we give a non-trivial algorithm, consisting of a reduction to themax-flow computation problem. Finally, we prove that, even when it is in PTIME,responsibility is complete for LOGSPACE, implying that, unlike causality, itcannot be computed by a relational query.
 
-  An answer to a query has a well-defined lineage expression (alternatively
-called how-provenance) that explains how the answer was derived. Recent work
-has also shown how to compute the lineage of a non-answer to a query. However,
-the cause of an answer or non-answer is a more subtle notion and consists, in
-general, of only a fragment of the lineage. In this paper, we adapt Halpern,
-Pearl, and Chockler's recent definitions of causality and responsibility to
-define the causes of answers and non-answers to queries, and their degree of
-responsibility. Responsibility captures the notion of degree of causality and
-serves to rank potentially many causes by their relative contributions to the
-effect. Then, we study the complexity of computing causes and responsibilities
-for conjunctive queries. It is known that computing causes is NP-complete in
-general. Our first main result shows that all causes to conjunctive queries can
-be computed by a relational query which may involve negation. Thus, causality
-can be computed in PTIME, and very efficiently so. Next, we study computing
-responsibility. Here, we prove that the complexity depends on the conjunctive
-query and demonstrate a dichotomy between PTIME and NP-complete cases. For the
-PTIME cases, we give a non-trivial algorithm, consisting of a reduction to the
-max-flow computation problem. Finally, we prove that, even when it is in PTIME,
-responsibility is complete for LOGSPACE, implying that, unlike causality, it
-cannot be computed by a relational query.
+A Characterization of the Complexity of Resilience and Responsibility  for Self-join-free Conjunctive Queries
 
+  Several research thrusts in the area of data management have focused onunderstanding how changes in the data affect the output of a view or standingquery. Example applications are explaining query results, propagating updatesthrough views, and anonymizing datasets. These applications usually rely onunderstanding how interventions in a database impact the output of a query. Animportant aspect of this analysis is the problem of deleting a minimum numberof tuples from the input tables to make a given Boolean query false. We referto this problem as "the resilience of a query" and show its connections to thewell-studied problems of deletion propagation and causal responsibility. Inthis paper, we study the complexity of resilience for self-join-freeconjunctive queries, and also make several contributions to previous knownresults for the problems of deletion propagation with source side-effects andcausal responsibility: (1) We define the notion of resilience and provide acomplete dichotomy for the class of self-join-free conjunctive queries witharbitrary functional dependencies; this dichotomy also extends and generalizesprevious tractability results on deletion propagation with source side-effects.(2) We formalize the connection between resilience and causal responsibility,and show that resilience has a larger class of tractable queries thanresponsibility. (3) We identify a mistake in a previous dichotomy for theproblem of causal responsibility and offer a revised characterization based onnew, simpler, and more intuitive notions. (4) Finally, we extend the dichotomyfor causal responsibility in two ways: (a) we treat cases where the inputtables contain functional dependencies, and (b) we compute responsibility for aset of tuples specified via wildcards.
 
 Fault-Tolerant Entity Resolution with the Crowd
 
-  In recent years, crowdsourcing is increasingly applied as a means to enhance
-data quality. Although the crowd generates insightful information especially
-for complex problems such as entity resolution (ER), the output quality of
-crowd workers is often noisy. That is, workers may unintentionally generate
-false or contradicting data even for simple tasks. The challenge that we
-address in this paper is how to minimize the cost for task requesters while
-maximizing ER result quality under the assumption of unreliable input from the
-crowd. For that purpose, we first establish how to deduce a consistent ER
-solution from noisy worker answers as part of the data interpretation problem.
-We then focus on the next-crowdsource problem which is to find the next task
-that maximizes the information gain of the ER result for the minimal additional
-cost. We compare our robust data interpretation strategies to alternative
-state-of-the-art approaches that do not incorporate the notion of
-fault-tolerance, i.e., the robustness to noise. In our experimental evaluation
-we show that our approaches yield a quality improvement of at least 20% for two
-real-world datasets. Furthermore, we examine task-to-worker assignment
-strategies as well as task parallelization techniques in terms of their cost
-and quality trade-offs in this paper. Based on both synthetic and crowdsourced
-datasets, we then draw conclusions on how to minimize cost while maintaining
-high quality ER results.
+  In recent years, crowdsourcing is increasingly applied as a means to enhancedata quality. Although the crowd generates insightful information especiallyfor complex problems such as entity resolution (ER), the output quality ofcrowd workers is often noisy. That is, workers may unintentionally generatefalse or contradicting data even for simple tasks. The challenge that weaddress in this paper is how to minimize the cost for task requesters whilemaximizing ER result quality under the assumption of unreliable input from thecrowd. For that purpose, we first establish how to deduce a consistent ERsolution from noisy worker answers as part of the data interpretation problem.We then focus on the next-crowdsource problem which is to find the next taskthat maximizes the information gain of the ER result for the minimal additionalcost. We compare our robust data interpretation strategies to alternativestate-of-the-art approaches that do not incorporate the notion offault-tolerance, i.e., the robustness to noise. In our experimental evaluationwe show that our approaches yield a quality improvement of at least 20% for tworeal-world datasets. Furthermore, we examine task-to-worker assignmentstrategies as well as task parallelization techniques in terms of their costand quality trade-offs in this paper. Based on both synthetic and crowdsourceddatasets, we then draw conclusions on how to minimize cost while maintaininghigh quality ER results.
 
+Algorithms for Automatic Ranking of Participants and Tasks in an  Anonymized Contest
 
-A Characterization of the Complexity of Resilience and Responsibility
-  for Self-join-free Conjunctive Queries
-
-  Several research thrusts in the area of data management have focused on
-understanding how changes in the data affect the output of a view or standing
-query. Example applications are explaining query results, propagating updates
-through views, and anonymizing datasets. These applications usually rely on
-understanding how interventions in a database impact the output of a query. An
-important aspect of this analysis is the problem of deleting a minimum number
-of tuples from the input tables to make a given Boolean query false. We refer
-to this problem as "the resilience of a query" and show its connections to the
-well-studied problems of deletion propagation and causal responsibility. In
-this paper, we study the complexity of resilience for self-join-free
-conjunctive queries, and also make several contributions to previous known
-results for the problems of deletion propagation with source side-effects and
-causal responsibility: (1) We define the notion of resilience and provide a
-complete dichotomy for the class of self-join-free conjunctive queries with
-arbitrary functional dependencies; this dichotomy also extends and generalizes
-previous tractability results on deletion propagation with source side-effects.
-(2) We formalize the connection between resilience and causal responsibility,
-and show that resilience has a larger class of tractable queries than
-responsibility. (3) We identify a mistake in a previous dichotomy for the
-problem of causal responsibility and offer a revised characterization based on
-new, simpler, and more intuitive notions. (4) Finally, we extend the dichotomy
-for causal responsibility in two ways: (a) we treat cases where the input
-tables contain functional dependencies, and (b) we compute responsibility for a
-set of tuples specified via wildcards.
-
-
-Algorithms for Automatic Ranking of Participants and Tasks in an
-  Anonymized Contest
-
-  We introduce a new set of problems based on the Chain Editing problem. In our
-version of Chain Editing, we are given a set of anonymous participants and a
-set of undisclosed tasks that every participant attempts. For each
-participant-task pair, we know whether the participant has succeeded at the
-task or not. We assume that participants vary in their ability to solve tasks,
-and that tasks vary in their difficulty to be solved. In an ideal world,
-stronger participants should succeed at a superset of tasks that weaker
-participants succeed at. Similarly, easier tasks should be completed
-successfully by a superset of participants who succeed at harder tasks. In
-reality, it can happen that a stronger participant fails at a task that a
-weaker participants succeeds at. Our goal is to find a perfect nesting of the
-participant-task relations by flipping a minimum number of participant-task
-relations, implying such a "nearest perfect ordering" to be the one that is
-closest to the truth of participant strengths and task difficulties. Many
-variants of the problem are known to be NP-hard.
-  We propose six natural $k$-near versions of the Chain Editing problem and
-classify their complexity. The input to a $k$-near Chain Editing problem
-includes an initial ordering of the participants (or tasks) that we are
-required to respect by moving each participant (or task) at most $k$ positions
-from the initial ordering. We obtain surprising results on the complexity of
-the six $k$-near problems: Five of the problems are polynomial-time solvable
-using dynamic programming, but one of them is NP-hard.
-
+  We introduce a new set of problems based on the Chain Editing problem. In ourversion of Chain Editing, we are given a set of anonymous participants and aset of undisclosed tasks that every participant attempts. For eachparticipant-task pair, we know whether the participant has succeeded at thetask or not. We assume that participants vary in their ability to solve tasks,and that tasks vary in their difficulty to be solved. In an ideal world,stronger participants should succeed at a superset of tasks that weakerparticipants succeed at. Similarly, easier tasks should be completedsuccessfully by a superset of participants who succeed at harder tasks. Inreality, it can happen that a stronger participant fails at a task that aweaker participants succeeds at. Our goal is to find a perfect nesting of theparticipant-task relations by flipping a minimum number of participant-taskrelations, implying such a "nearest perfect ordering" to be the one that isclosest to the truth of participant strengths and task difficulties. Manyvariants of the problem are known to be NP-hard.  We propose six natural $k$-near versions of the Chain Editing problem andclassify their complexity. The input to a $k$-near Chain Editing problemincludes an initial ordering of the participants (or tasks) that we arerequired to respect by moving each participant (or task) at most $k$ positionsfrom the initial ordering. We obtain surprising results on the complexity ofthe six $k$-near problems: Five of the problems are polynomial-time solvableusing dynamic programming, but one of them is NP-hard.
 
 Any-k: Anytime Top-k Tree Pattern Retrieval in Labeled Graphs
 
-  Many problems in areas as diverse as recommendation systems, social network
-analysis, semantic search, and distributed root cause analysis can be modeled
-as pattern search on labeled graphs (also called "heterogeneous information
-networks" or HINs). Given a large graph and a query pattern with node and edge
-label constraints, a fundamental challenge is to nd the top-k matches ac-
-cording to a ranking function over edge and node weights. For users, it is di
-cult to select value k . We therefore propose the novel notion of an any-k
-ranking algorithm: for a given time budget, re- turn as many of the top-ranked
-results as possible. Then, given additional time, produce the next lower-ranked
-results quickly as well. It can be stopped anytime, but may have to continues
-until all results are returned. This paper focuses on acyclic patterns over
-arbitrary labeled graphs. We are interested in practical algorithms that
-effectively exploit (1) properties of heterogeneous networks, in particular
-selective constraints on labels, and (2) that the users often explore only a
-fraction of the top-ranked results. Our solution, KARPET, carefully integrates
-aggressive pruning that leverages the acyclic nature of the query, and
-incremental guided search. It enables us to prove strong non-trivial time and
-space guarantees, which is generally considered very hard for this type of
-graph search problem. Through experimental studies we show that KARPET achieves
-running times in the order of milliseconds for tree patterns on large networks
-with millions of nodes and edges.
-
+  Many problems in areas as diverse as recommendation systems, social networkanalysis, semantic search, and distributed root cause analysis can be modeledas pattern search on labeled graphs (also called "heterogeneous informationnetworks" or HINs). Given a large graph and a query pattern with node and edgelabel constraints, a fundamental challenge is to nd the top-k matches ac-cording to a ranking function over edge and node weights. For users, it is dicult to select value k . We therefore propose the novel notion of an any-kranking algorithm: for a given time budget, re- turn as many of the top-rankedresults as possible. Then, given additional time, produce the next lower-rankedresults quickly as well. It can be stopped anytime, but may have to continuesuntil all results are returned. This paper focuses on acyclic patterns overarbitrary labeled graphs. We are interested in practical algorithms thateffectively exploit (1) properties of heterogeneous networks, in particularselective constraints on labels, and (2) that the users often explore only afraction of the top-ranked results. Our solution, KARPET, carefully integratesaggressive pruning that leverages the acyclic nature of the query, andincremental guided search. It enables us to prove strong non-trivial time andspace guarantees, which is generally considered very hard for this type ofgraph search problem. Through experimental studies we show that KARPET achievesrunning times in the order of milliseconds for tree patterns on large networkswith millions of nodes and edges.
 

@@ -1,739 +1,184 @@
 Simpler but More Accurate Semantic Dependency Parsing
 
-  While syntactic dependency annotations concentrate on the surface or
-functional structure of a sentence, semantic dependency annotations aim to
-capture between-word relationships that are more closely related to the meaning
-of a sentence, using graph-structured representations. We extend the LSTM-based
-syntactic parser of Dozat and Manning (2017) to train on and generate these
-graph structures. The resulting system on its own achieves state-of-the-art
-performance, beating the previous, substantially more complex state-of-the-art
-system by 0.6% labeled F1. Adding linguistically richer input representations
-pushes the margin even higher, allowing us to beat it by 1.9% labeled F1.
-
+  While syntactic dependency annotations concentrate on the surface orfunctional structure of a sentence, semantic dependency annotations aim tocapture between-word relationships that are more closely related to the meaningof a sentence, using graph-structured representations. We extend the LSTM-basedsyntactic parser of Dozat and Manning (2017) to train on and generate thesegraph structures. The resulting system on its own achieves state-of-the-artperformance, beating the previous, substantially more complex state-of-the-artsystem by 0.6% labeled F1. Adding linguistically richer input representationspushes the margin even higher, allowing us to beat it by 1.9% labeled F1.
 
 Probabilistic Parsing Using Left Corner Language Models
 
-  We introduce a novel parser based on a probabilistic version of a left-corner
-parser. The left-corner strategy is attractive because rule probabilities can
-be conditioned on both top-down goals and bottom-up derivations. We develop the
-underlying theory and explain how a grammar can be induced from analyzed data.
-We show that the left-corner approach provides an advantage over simple
-top-down probabilistic context-free grammars in parsing the Wall Street Journal
-using a grammar induced from the Penn Treebank. We also conclude that the Penn
-Treebank provides a fairly weak testbed due to the flatness of its bracketings
-and to the obvious overgeneration and undergeneration of its induced grammar.
-
+  We introduce a novel parser based on a probabilistic version of a left-cornerparser. The left-corner strategy is attractive because rule probabilities canbe conditioned on both top-down goals and bottom-up derivations. We develop theunderlying theory and explain how a grammar can be induced from analyzed data.We show that the left-corner approach provides an advantage over simpletop-down probabilistic context-free grammars in parsing the Wall Street Journalusing a grammar induced from the Penn Treebank. We also conclude that the PennTreebank provides a fairly weak testbed due to the flatness of its bracketingsand to the obvious overgeneration and undergeneration of its induced grammar.
 
 Robust Logistic Regression using Shift Parameters (Long Version)
 
-  Annotation errors can significantly hurt classifier performance, yet datasets
-are only growing noisier with the increased use of Amazon Mechanical Turk and
-techniques like distant supervision that automatically generate labels. In this
-paper, we present a robust extension of logistic regression that incorporates
-the possibility of mislabelling directly into the objective. Our model can be
-trained through nearly the same means as logistic regression, and retains its
-efficiency on high-dimensional datasets. Through named entity recognition
-experiments, we demonstrate that our approach can provide a significant
-improvement over the standard model when annotation errors are present.
-
+  Annotation errors can significantly hurt classifier performance, yet datasetsare only growing noisier with the increased use of Amazon Mechanical Turk andtechniques like distant supervision that automatically generate labels. In thispaper, we present a robust extension of logistic regression that incorporatesthe possibility of mislabelling directly into the objective. Our model can betrained through nearly the same means as logistic regression, and retains itsefficiency on high-dimensional datasets. Through named entity recognitionexperiments, we demonstrate that our approach can provide a significantimprovement over the standard model when annotation errors are present.
 
 Relaxations for inference in restricted Boltzmann machines
 
-  We propose a relaxation-based approximate inference algorithm that samples
-near-MAP configurations of a binary pairwise Markov random field. We experiment
-on MAP inference tasks in several restricted Boltzmann machines. We also use
-our underlying sampler to estimate the log-partition function of restricted
-Boltzmann machines and compare against other sampling-based methods.
-
+  We propose a relaxation-based approximate inference algorithm that samplesnear-MAP configurations of a binary pairwise Markov random field. We experimenton MAP inference tasks in several restricted Boltzmann machines. We also useour underlying sampler to estimate the log-partition function of restrictedBoltzmann machines and compare against other sampling-based methods.
 
 Deep Reinforcement Learning for Mention-Ranking Coreference Models
 
-  Coreference resolution systems are typically trained with heuristic loss
-functions that require careful tuning. In this paper we instead apply
-reinforcement learning to directly optimize a neural mention-ranking model for
-coreference evaluation metrics. We experiment with two approaches: the
-REINFORCE policy gradient algorithm and a reward-rescaled max-margin objective.
-We find the latter to be more effective, resulting in significant improvements
-over the current state-of-the-art on the English and Chinese portions of the
-CoNLL 2012 Shared Task.
-
+  Coreference resolution systems are typically trained with heuristic lossfunctions that require careful tuning. In this paper we instead applyreinforcement learning to directly optimize a neural mention-ranking model forcoreference evaluation metrics. We experiment with two approaches: theREINFORCE policy gradient algorithm and a reward-rescaled max-margin objective.We find the latter to be more effective, resulting in significant improvementsover the current state-of-the-art on the English and Chinese portions of theCoNLL 2012 Shared Task.
 
 Arc-swift: A Novel Transition System for Dependency Parsing
 
-  Transition-based dependency parsers often need sequences of local shift and
-reduce operations to produce certain attachments. Correct individual decisions
-hence require global information about the sentence context and mistakes cause
-error propagation. This paper proposes a novel transition system, arc-swift,
-that enables direct attachments between tokens farther apart with a single
-transition. This allows the parser to leverage lexical information more
-directly in transition decisions. Hence, arc-swift can achieve significantly
-better performance with a very small beam size. Our parsers reduce error by
-3.7--7.6% relative to those using existing transition systems on the Penn
-Treebank dependency parsing task and English Universal Dependencies.
-
-
-Learning Distributed Word Representations for Natural Logic Reasoning
-
-  Natural logic offers a powerful relational conception of meaning that is a
-natural counterpart to distributed semantic representations, which have proven
-valuable in a wide range of sophisticated language tasks. However, it remains
-an open question whether it is possible to train distributed representations to
-support the rich, diverse logical reasoning captured by natural logic. We
-address this question using two neural network-based models for learning
-embeddings: plain neural networks and neural tensor networks. Our experiments
-evaluate the models' ability to learn the basic algebra of natural logic
-relations from simulated data and from the WordNet noun graph. The overall
-positive results are promising for the future of learned distributed
-representations in the applied modeling of logical semantics.
-
-
-Text to 3D Scene Generation with Rich Lexical Grounding
-
-  The ability to map descriptions of scenes to 3D geometric representations has
-many applications in areas such as art, education, and robotics. However, prior
-work on the text to 3D scene generation task has used manually specified object
-categories and language that identifies them. We introduce a dataset of 3D
-scenes annotated with natural language descriptions and learn from this data
-how to ground textual descriptions to physical objects. Our method successfully
-grounds a variety of lexical terms to concrete referents, and we show
-quantitatively that our method improves 3D scene generation over previous work
-using purely rule-based methods. We evaluate the fidelity and plausibility of
-3D scenes generated with our grounding approach through human judgments. To
-ease evaluation on this task, we also introduce an automated metric that
-strongly correlates with human judgments.
-
+  Transition-based dependency parsers often need sequences of local shift andreduce operations to produce certain attachments. Correct individual decisionshence require global information about the sentence context and mistakes causeerror propagation. This paper proposes a novel transition system, arc-swift,that enables direct attachments between tokens farther apart with a singletransition. This allows the parser to leverage lexical information moredirectly in transition decisions. Hence, arc-swift can achieve significantlybetter performance with a very small beam size. Our parsers reduce error by3.7--7.6% relative to those using existing transition systems on the PennTreebank dependency parsing task and English Universal Dependencies.
 
 Recursive Neural Networks Can Learn Logical Semantics
 
-  Tree-structured recursive neural networks (TreeRNNs) for sentence meaning
-have been successful for many applications, but it remains an open question
-whether the fixed-length representations that they learn can support tasks as
-demanding as logical deduction. We pursue this question by evaluating whether
-two such models---plain TreeRNNs and tree-structured neural tensor networks
-(TreeRNTNs)---can correctly learn to identify logical relationships such as
-entailment and contradiction using these representations. In our first set of
-experiments, we generate artificial data from a logical grammar and use it to
-evaluate the models' ability to learn to handle basic relational reasoning,
-recursive structures, and quantification. We then evaluate the models on the
-more natural SICK challenge data. Both models perform competitively on the SICK
-data and generalize well in all three experiments on simulated data, suggesting
-that they can learn suitable representations for logical inference in natural
-language.
+  Tree-structured recursive neural networks (TreeRNNs) for sentence meaninghave been successful for many applications, but it remains an open questionwhether the fixed-length representations that they learn can support tasks asdemanding as logical deduction. We pursue this question by evaluating whethertwo such models---plain TreeRNNs and tree-structured neural tensor networks(TreeRNTNs)---can correctly learn to identify logical relationships such asentailment and contradiction using these representations. In our first set ofexperiments, we generate artificial data from a logical grammar and use it toevaluate the models' ability to learn to handle basic relational reasoning,recursive structures, and quantification. We then evaluate the models on themore natural SICK challenge data. Both models perform competitively on the SICKdata and generalize well in all three experiments on simulated data, suggestingthat they can learn suitable representations for logical inference in naturallanguage.
 
+Learning Distributed Word Representations for Natural Logic Reasoning
 
-A Fast Unified Model for Parsing and Sentence Understanding
+  Natural logic offers a powerful relational conception of meaning that is anatural counterpart to distributed semantic representations, which have provenvaluable in a wide range of sophisticated language tasks. However, it remainsan open question whether it is possible to train distributed representations tosupport the rich, diverse logical reasoning captured by natural logic. Weaddress this question using two neural network-based models for learningembeddings: plain neural networks and neural tensor networks. Our experimentsevaluate the models' ability to learn the basic algebra of natural logicrelations from simulated data and from the WordNet noun graph. The overallpositive results are promising for the future of learned distributedrepresentations in the applied modeling of logical semantics.
 
-  Tree-structured neural networks exploit valuable syntactic parse information
-as they interpret the meanings of sentences. However, they suffer from two key
-technical problems that make them slow and unwieldy for large-scale NLP tasks:
-they usually operate on parsed sentences and they do not directly support
-batched computation. We address these issues by introducing the Stack-augmented
-Parser-Interpreter Neural Network (SPINN), which combines parsing and
-interpretation within a single tree-sequence hybrid model by integrating
-tree-structured sentence interpretation into the linear sequential structure of
-a shift-reduce parser. Our model supports batched computation for a speedup of
-up to 25 times over other tree-structured models, and its integrated parser can
-operate on unparsed data with little loss in accuracy. We evaluate it on the
-Stanford NLI entailment task and show that it significantly outperforms other
-sentence-encoding models.
+Text to 3D Scene Generation with Rich Lexical Grounding
 
+  The ability to map descriptions of scenes to 3D geometric representations hasmany applications in areas such as art, education, and robotics. However, priorwork on the text to 3D scene generation task has used manually specified objectcategories and language that identifies them. We introduce a dataset of 3Dscenes annotated with natural language descriptions and learn from this datahow to ground textual descriptions to physical objects. Our method successfullygrounds a variety of lexical terms to concrete referents, and we showquantitatively that our method improves 3D scene generation over previous workusing purely rule-based methods. We evaluate the fidelity and plausibility of3D scenes generated with our grounding approach through human judgments. Toease evaluation on this task, we also introduce an automated metric thatstrongly correlates with human judgments.
 
-Tree-structured composition in neural networks without tree-structured
-  architectures
+Tree-structured composition in neural networks without tree-structured  architectures
 
-  Tree-structured neural networks encode a particular tree geometry for a
-sentence in the network design. However, these models have at best only
-slightly outperformed simpler sequence-based models. We hypothesize that neural
-sequence models like LSTMs are in fact able to discover and implicitly use
-recursive compositional structure, at least for tasks with clear cues to that
-structure in the data. We demonstrate this possibility using an artificial data
-task for which recursive compositional structure is crucial, and find an
-LSTM-based sequence model can indeed learn to exploit the underlying tree
-structure. However, its performance consistently lags behind that of tree
-models, even on large training sets, suggesting that tree-structured models are
-more effective at exploiting recursive structure.
-
+  Tree-structured neural networks encode a particular tree geometry for asentence in the network design. However, these models have at best onlyslightly outperformed simpler sequence-based models. We hypothesize that neuralsequence models like LSTMs are in fact able to discover and implicitly userecursive compositional structure, at least for tasks with clear cues to thatstructure in the data. We demonstrate this possibility using an artificial datatask for which recursive compositional structure is crucial, and find anLSTM-based sequence model can indeed learn to exploit the underlying treestructure. However, its performance consistently lags behind that of treemodels, even on large training sets, suggesting that tree-structured models aremore effective at exploiting recursive structure.
 
 A large annotated corpus for learning natural language inference
 
-  Understanding entailment and contradiction is fundamental to understanding
-natural language, and inference about entailment and contradiction is a
-valuable testing ground for the development of semantic representations.
-However, machine learning research in this area has been dramatically limited
-by the lack of large-scale resources. To address this, we introduce the
-Stanford Natural Language Inference corpus, a new, freely available collection
-of labeled sentence pairs, written by humans doing a novel grounded task based
-on image captioning. At 570K pairs, it is two orders of magnitude larger than
-all other resources of its type. This increase in scale allows lexicalized
-classifiers to outperform some sophisticated existing entailment models, and it
-allows a neural network-based model to perform competitively on natural
-language inference benchmarks for the first time.
+  Understanding entailment and contradiction is fundamental to understandingnatural language, and inference about entailment and contradiction is avaluable testing ground for the development of semantic representations.However, machine learning research in this area has been dramatically limitedby the lack of large-scale resources. To address this, we introduce theStanford Natural Language Inference corpus, a new, freely available collectionof labeled sentence pairs, written by humans doing a novel grounded task basedon image captioning. At 570K pairs, it is two orders of magnitude larger thanall other resources of its type. This increase in scale allows lexicalizedclassifiers to outperform some sophisticated existing entailment models, and itallows a neural network-based model to perform competitively on naturallanguage inference benchmarks for the first time.
 
+A Fast Unified Model for Parsing and Sentence Understanding
 
-Beat note stabilization of mode-locked lasers for quantum information
-  processing
+  Tree-structured neural networks exploit valuable syntactic parse informationas they interpret the meanings of sentences. However, they suffer from two keytechnical problems that make them slow and unwieldy for large-scale NLP tasks:they usually operate on parsed sentences and they do not directly supportbatched computation. We address these issues by introducing the Stack-augmentedParser-Interpreter Neural Network (SPINN), which combines parsing andinterpretation within a single tree-sequence hybrid model by integratingtree-structured sentence interpretation into the linear sequential structure ofa shift-reduce parser. Our model supports batched computation for a speedup ofup to 25 times over other tree-structured models, and its integrated parser canoperate on unparsed data with little loss in accuracy. We evaluate it on theStanford NLI entailment task and show that it significantly outperforms othersentence-encoding models.
 
-  We stabilize a chosen radiofrequency beat note between two optical fields
-derived from the same mode-locked laser pulse train, in order to coherently
-manipulate quantum information. This scheme does not require access or active
-stabilization of the laser repetition rate. We implement and characterize this
-external lock, in the context of two-photon stimulated Raman transitions
-between the hyperfine ground states of trapped 171-Yb+ quantum bits.
+Beat note stabilization of mode-locked lasers for quantum information  processing
 
+  We stabilize a chosen radiofrequency beat note between two optical fieldsderived from the same mode-locked laser pulse train, in order to coherentlymanipulate quantum information. This scheme does not require access or activestabilization of the laser repetition rate. We implement and characterize thisexternal lock, in the context of two-photon stimulated Raman transitionsbetween the hyperfine ground states of trapped 171-Yb+ quantum bits.
 
 Assembling Actor-based Mind-Maps from Text Stream
 
-  For human beings, the processing of text streams of unknown size leads
-generally to problems because e.g. noise must be selected out, information be
-tested for its relevance or redundancy, and linguistic phenomenon like
-ambiguity or the resolution of pronouns be advanced. Putting this into
-simulation by using an artificial mind-map is a challenge, which offers the
-gate for a wide field of applications like automatic text summarization or
-punctual retrieval. In this work we present a framework that is a first step
-towards an automatic intellect. It aims at assembling a mind-map based on
-incoming text streams and on a subject-verb-object strategy, having the verb as
-an interconnection between the adjacent nouns. The mind-map's performance is
-enriched by a pronoun resolution engine that bases on the work of D. Klein, and
-C. D. Manning.
+  For human beings, the processing of text streams of unknown size leadsgenerally to problems because e.g. noise must be selected out, information betested for its relevance or redundancy, and linguistic phenomenon likeambiguity or the resolution of pronouns be advanced. Putting this intosimulation by using an artificial mind-map is a challenge, which offers thegate for a wide field of applications like automatic text summarization orpunctual retrieval. In this work we present a framework that is a first steptowards an automatic intellect. It aims at assembling a mind-map based onincoming text streams and on a subject-verb-object strategy, having the verb asan interconnection between the adjacent nouns. The mind-map's performance isenriched by a pronoun resolution engine that bases on the work of D. Klein, andC. D. Manning.
 
+Learning New Facts From Knowledge Bases With Neural Tensor Networks and  Semantic Word Vectors
 
-Cross-lingual Pseudo-Projected Expectation Regularization for Weakly
-  Supervised Learning
-
-  We consider a multilingual weakly supervised learning scenario where
-knowledge from annotated corpora in a resource-rich language is transferred via
-bitext to guide the learning in other languages. Past approaches project labels
-across bitext and use them as features or gold labels for training. We propose
-a new method that projects model expectations rather than labels, which
-facilities transfer of model uncertainty across language boundaries. We encode
-expectations as constraints and train a discriminative CRF model using
-Generalized Expectation Criteria (Mann and McCallum, 2010). Evaluated on
-standard Chinese-English and German-English NER datasets, our method
-demonstrates F1 scores of 64% and 60% when no labeled data is used. Attaining
-the same accuracy with supervised CRFs requires 12k and 1.5k labeled sentences.
-Furthermore, when combined with labeled examples, our method yields significant
-improvements over state-of-the-art supervised methods, achieving best reported
-numbers to date on Chinese OntoNotes and German CoNLL-03 datasets.
-
-
-Learning New Facts From Knowledge Bases With Neural Tensor Networks and
-  Semantic Word Vectors
-
-  Knowledge bases provide applications with the benefit of easily accessible,
-systematic relational knowledge but often suffer in practice from their
-incompleteness and lack of knowledge of new entities and relations. Much work
-has focused on building or extending them by finding patterns in large
-unannotated text corpora. In contrast, here we mainly aim to complete a
-knowledge base by predicting additional true relationships between entities,
-based on generalizations that can be discerned in the given knowledgebase. We
-introduce a neural tensor network (NTN) model which predicts new relationship
-entries that can be added to the database. This model can be improved by
-initializing entity representations with word vectors learned in an
-unsupervised fashion from text, and when doing this, existing relations can
-even be queried for entities that were not present in the database. Our model
-generalizes and outperforms existing models for this problem, and can classify
-unseen relationships in WordNet with an accuracy of 75.8%.
-
+  Knowledge bases provide applications with the benefit of easily accessible,systematic relational knowledge but often suffer in practice from theirincompleteness and lack of knowledge of new entities and relations. Much workhas focused on building or extending them by finding patterns in largeunannotated text corpora. In contrast, here we mainly aim to complete aknowledge base by predicting additional true relationships between entities,based on generalizations that can be discerned in the given knowledgebase. Weintroduce a neural tensor network (NTN) model which predicts new relationshipentries that can be added to the database. This model can be improved byinitializing entity representations with word vectors learned in anunsupervised fashion from text, and when doing this, existing relations caneven be queried for entities that were not present in the database. Our modelgeneralizes and outperforms existing models for this problem, and can classifyunseen relationships in WordNet with an accuracy of 75.8%.
 
 Zero-Shot Learning Through Cross-Modal Transfer
 
-  This work introduces a model that can recognize objects in images even if no
-training data is available for the objects. The only necessary knowledge about
-the unseen categories comes from unsupervised large text corpora. In our
-zero-shot framework distributional information in language can be seen as
-spanning a semantic basis for understanding what objects look like. Most
-previous zero-shot learning models can only differentiate between unseen
-classes. In contrast, our model can both obtain state of the art performance on
-classes that have thousands of training images and obtain reasonable
-performance on unseen classes. This is achieved by first using outlier
-detection in the semantic space and then two separate recognition models.
-Furthermore, our model does not require any manually defined semantic features
-for either words or images.
+  This work introduces a model that can recognize objects in images even if notraining data is available for the objects. The only necessary knowledge aboutthe unseen categories comes from unsupervised large text corpora. In ourzero-shot framework distributional information in language can be seen asspanning a semantic basis for understanding what objects look like. Mostprevious zero-shot learning models can only differentiate between unseenclasses. In contrast, our model can both obtain state of the art performance onclasses that have thousands of training images and obtain reasonableperformance on unseen classes. This is achieved by first using outlierdetection in the semantic space and then two separate recognition models.Furthermore, our model does not require any manually defined semantic featuresfor either words or images.
 
+Cross-lingual Pseudo-Projected Expectation Regularization for Weakly  Supervised Learning
 
-Improving Coreference Resolution by Learning Entity-Level Distributed
-  Representations
+  We consider a multilingual weakly supervised learning scenario whereknowledge from annotated corpora in a resource-rich language is transferred viabitext to guide the learning in other languages. Past approaches project labelsacross bitext and use them as features or gold labels for training. We proposea new method that projects model expectations rather than labels, whichfacilities transfer of model uncertainty across language boundaries. We encodeexpectations as constraints and train a discriminative CRF model usingGeneralized Expectation Criteria (Mann and McCallum, 2010). Evaluated onstandard Chinese-English and German-English NER datasets, our methoddemonstrates F1 scores of 64% and 60% when no labeled data is used. Attainingthe same accuracy with supervised CRFs requires 12k and 1.5k labeled sentences.Furthermore, when combined with labeled examples, our method yields significantimprovements over state-of-the-art supervised methods, achieving best reportednumbers to date on Chinese OntoNotes and German CoNLL-03 datasets.
 
-  A long-standing challenge in coreference resolution has been the
-incorporation of entity-level information - features defined over clusters of
-mentions instead of mention pairs. We present a neural network based
-coreference system that produces high-dimensional vector representations for
-pairs of coreference clusters. Using these representations, our system learns
-when combining clusters is desirable. We train the system with a
-learning-to-search algorithm that teaches it which local decisions (cluster
-merges) will lead to a high-scoring final coreference partition. The system
-substantially outperforms the current state-of-the-art on the English and
-Chinese portions of the CoNLL 2012 Shared Task dataset despite using few
-hand-engineered features.
+Improved Semantic Representations From Tree-Structured Long Short-Term  Memory Networks
 
-
-Learning Language Games through Interaction
-
-  We introduce a new language learning setting relevant to building adaptive
-natural language interfaces. It is inspired by Wittgenstein's language games: a
-human wishes to accomplish some task (e.g., achieving a certain configuration
-of blocks), but can only communicate with a computer, who performs the actual
-actions (e.g., removing all red blocks). The computer initially knows nothing
-about language and therefore must learn it from scratch through interaction,
-while the human adapts to the computer's capabilities. We created a game in a
-blocks world and collected interactions from 100 people playing it. First, we
-analyze the humans' strategies, showing that using compositionality and
-avoiding synonyms correlates positively with task performance. Second, we
-compare computer strategies, showing how to quickly learn a semantic parsing
-model from scratch, and that modeling pragmatics further accelerates learning
-for successful players.
-
-
-A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task
-
-  Enabling a computer to understand a document so that it can answer
-comprehension questions is a central, yet unsolved goal of NLP. A key factor
-impeding its solution by machine learned systems is the limited availability of
-human-annotated data. Hermann et al. (2015) seek to solve this problem by
-creating over a million training examples by pairing CNN and Daily Mail news
-articles with their summarized bullet points, and show that a neural network
-can then be trained to give good performance on this task. In this paper, we
-conduct a thorough examination of this new reading comprehension task. Our
-primary aim is to understand what depth of language understanding is required
-to do well on this task. We approach this from one side by doing a careful
-hand-analysis of a small subset of the problems and from the other by showing
-that simple, carefully designed systems can obtain accuracies of 73.6% and
-76.6% on these two datasets, exceeding current state-of-the-art results by
-7-10% and approaching what we believe is the ceiling for performance on this
-task.
-
-
-Compression of Neural Machine Translation Models via Pruning
-
-  Neural Machine Translation (NMT), like many other deep learning domains,
-typically suffers from over-parameterization, resulting in large storage sizes.
-This paper examines three simple magnitude-based pruning schemes to compress
-NMT models, namely class-blind, class-uniform, and class-distribution, which
-differ in terms of how pruning thresholds are computed for the different
-classes of weights in the NMT architecture. We demonstrate the efficacy of
-weight pruning as a compression technique for a state-of-the-art NMT system. We
-show that an NMT model with over 200 million parameters can be pruned by 40%
-with very little performance loss as measured on the WMT'14 English-German
-translation task. This sheds light on the distribution of redundancy in the NMT
-architecture. Our main result is that with retraining, we can recover and even
-surpass the original performance with an 80%-pruned model.
-
-
-Improved Semantic Representations From Tree-Structured Long Short-Term
-  Memory Networks
-
-  Because of their superior ability to preserve sequence information over time,
-Long Short-Term Memory (LSTM) networks, a type of recurrent neural network with
-a more complex computational unit, have obtained strong results on a variety of
-sequence modeling tasks. The only underlying LSTM structure that has been
-explored so far is a linear chain. However, natural language exhibits syntactic
-properties that would naturally combine words to phrases. We introduce the
-Tree-LSTM, a generalization of LSTMs to tree-structured network topologies.
-Tree-LSTMs outperform all existing systems and strong LSTM baselines on two
-tasks: predicting the semantic relatedness of two sentences (SemEval 2014, Task
-1) and sentiment classification (Stanford Sentiment Treebank).
-
-
-Evaluating the word-expert approach for Named-Entity Disambiguation
-
-  Named Entity Disambiguation (NED) is the task of linking a named-entity
-mention to an instance in a knowledge-base, typically Wikipedia. This task is
-closely related to word-sense disambiguation (WSD), where the supervised
-word-expert approach has prevailed. In this work we present the results of the
-word-expert approach to NED, where one classifier is built for each target
-entity mention string. The resources necessary to build the system, a
-dictionary and a set of training instances, have been automatically derived
-from Wikipedia. We provide empirical evidence of the value of this approach, as
-well as a study of the differences between WSD and NED, including ambiguity and
-synonymy statistics.
-
-
-Get To The Point: Summarization with Pointer-Generator Networks
-
-  Neural sequence-to-sequence models have provided a viable new approach for
-abstractive text summarization (meaning they are not restricted to simply
-selecting and rearranging passages from the original text). However, these
-models have two shortcomings: they are liable to reproduce factual details
-inaccurately, and they tend to repeat themselves. In this work we propose a
-novel architecture that augments the standard sequence-to-sequence attentional
-model in two orthogonal ways. First, we use a hybrid pointer-generator network
-that can copy words from the source text via pointing, which aids accurate
-reproduction of information, while retaining the ability to produce novel words
-through the generator. Second, we use coverage to keep track of what has been
-summarized, which discourages repetition. We apply our model to the CNN / Daily
-Mail summarization task, outperforming the current abstractive state-of-the-art
-by at least 2 ROUGE points.
-
+  Because of their superior ability to preserve sequence information over time,Long Short-Term Memory (LSTM) networks, a type of recurrent neural network witha more complex computational unit, have obtained strong results on a variety ofsequence modeling tasks. The only underlying LSTM structure that has beenexplored so far is a linear chain. However, natural language exhibits syntacticproperties that would naturally combine words to phrases. We introduce theTree-LSTM, a generalization of LSTMs to tree-structured network topologies.Tree-LSTMs outperform all existing systems and strong LSTM baselines on twotasks: predicting the semantic relatedness of two sentences (SemEval 2014, Task1) and sentiment classification (Stanford Sentiment Treebank).
 
 Effective Approaches to Attention-based Neural Machine Translation
 
-  An attentional mechanism has lately been used to improve neural machine
-translation (NMT) by selectively focusing on parts of the source sentence
-during translation. However, there has been little work exploring useful
-architectures for attention-based NMT. This paper examines two simple and
-effective classes of attentional mechanism: a global approach which always
-attends to all source words and a local one that only looks at a subset of
-source words at a time. We demonstrate the effectiveness of both approaches
-over the WMT translation tasks between English and German in both directions.
-With local attention, we achieve a significant gain of 5.0 BLEU points over
-non-attentional systems which already incorporate known techniques such as
-dropout. Our ensemble model using different attention architectures has
-established a new state-of-the-art result in the WMT'15 English to German
-translation task with 25.9 BLEU points, an improvement of 1.0 BLEU points over
-the existing best system backed by NMT and an n-gram reranker.
+  An attentional mechanism has lately been used to improve neural machinetranslation (NMT) by selectively focusing on parts of the source sentenceduring translation. However, there has been little work exploring usefularchitectures for attention-based NMT. This paper examines two simple andeffective classes of attentional mechanism: a global approach which alwaysattends to all source words and a local one that only looks at a subset ofsource words at a time. We demonstrate the effectiveness of both approachesover the WMT translation tasks between English and German in both directions.With local attention, we achieve a significant gain of 5.0 BLEU points overnon-attentional systems which already incorporate known techniques such asdropout. Our ensemble model using different attention architectures hasestablished a new state-of-the-art result in the WMT'15 English to Germantranslation task with 25.9 BLEU points, an improvement of 1.0 BLEU points overthe existing best system backed by NMT and an n-gram reranker.
 
+Evaluating the word-expert approach for Named-Entity Disambiguation
+
+  Named Entity Disambiguation (NED) is the task of linking a named-entitymention to an instance in a knowledge-base, typically Wikipedia. This task isclosely related to word-sense disambiguation (WSD), where the supervisedword-expert approach has prevailed. In this work we present the results of theword-expert approach to NED, where one classifier is built for each targetentity mention string. The resources necessary to build the system, adictionary and a set of training instances, have been automatically derivedfrom Wikipedia. We provide empirical evidence of the value of this approach, aswell as a study of the differences between WSD and NED, including ambiguity andsynonymy statistics.
+
+Improving Coreference Resolution by Learning Entity-Level Distributed  Representations
+
+  A long-standing challenge in coreference resolution has been theincorporation of entity-level information - features defined over clusters ofmentions instead of mention pairs. We present a neural network basedcoreference system that produces high-dimensional vector representations forpairs of coreference clusters. Using these representations, our system learnswhen combining clusters is desirable. We train the system with alearning-to-search algorithm that teaches it which local decisions (clustermerges) will lead to a high-scoring final coreference partition. The systemsubstantially outperforms the current state-of-the-art on the English andChinese portions of the CoNLL 2012 Shared Task dataset despite using fewhand-engineered features.
+
+Learning Language Games through Interaction
+
+  We introduce a new language learning setting relevant to building adaptivenatural language interfaces. It is inspired by Wittgenstein's language games: ahuman wishes to accomplish some task (e.g., achieving a certain configurationof blocks), but can only communicate with a computer, who performs the actualactions (e.g., removing all red blocks). The computer initially knows nothingabout language and therefore must learn it from scratch through interaction,while the human adapts to the computer's capabilities. We created a game in ablocks world and collected interactions from 100 people playing it. First, weanalyze the humans' strategies, showing that using compositionality andavoiding synonyms correlates positively with task performance. Second, wecompare computer strategies, showing how to quickly learn a semantic parsingmodel from scratch, and that modeling pragmatics further accelerates learningfor successful players.
+
+A Thorough Examination of the CNN/Daily Mail Reading Comprehension Task
+
+  Enabling a computer to understand a document so that it can answercomprehension questions is a central, yet unsolved goal of NLP. A key factorimpeding its solution by machine learned systems is the limited availability ofhuman-annotated data. Hermann et al. (2015) seek to solve this problem bycreating over a million training examples by pairing CNN and Daily Mail newsarticles with their summarized bullet points, and show that a neural networkcan then be trained to give good performance on this task. In this paper, weconduct a thorough examination of this new reading comprehension task. Ourprimary aim is to understand what depth of language understanding is requiredto do well on this task. We approach this from one side by doing a carefulhand-analysis of a small subset of the problems and from the other by showingthat simple, carefully designed systems can obtain accuracies of 73.6% and76.6% on these two datasets, exceeding current state-of-the-art results by7-10% and approaching what we believe is the ceiling for performance on thistask.
+
+Compression of Neural Machine Translation Models via Pruning
+
+  Neural Machine Translation (NMT), like many other deep learning domains,typically suffers from over-parameterization, resulting in large storage sizes.This paper examines three simple magnitude-based pruning schemes to compressNMT models, namely class-blind, class-uniform, and class-distribution, whichdiffer in terms of how pruning thresholds are computed for the differentclasses of weights in the NMT architecture. We demonstrate the efficacy ofweight pruning as a compression technique for a state-of-the-art NMT system. Weshow that an NMT model with over 200 million parameters can be pruned by 40%with very little performance loss as measured on the WMT'14 English-Germantranslation task. This sheds light on the distribution of redundancy in the NMTarchitecture. Our main result is that with retraining, we can recover and evensurpass the original performance with an 80%-pruned model.
 
 Deep Biaffine Attention for Neural Dependency Parsing
 
-  This paper builds off recent work from Kiperwasser & Goldberg (2016) using
-neural attention in a simple graph-based dependency parser. We use a larger but
-more thoroughly regularized parser than other recent BiLSTM-based approaches,
-with biaffine classifiers to predict arcs and labels. Our parser gets state of
-the art or near state of the art performance on standard treebanks for six
-different languages, achieving 95.7% UAS and 94.1% LAS on the most popular
-English PTB dataset. This makes it the highest-performing graph-based parser on
-this benchmark---outperforming Kiperwasser Goldberg (2016) by 1.8% and
-2.2%---and comparable to the highest performing transition-based parser
-(Kuncoro et al., 2016), which achieves 95.8% UAS and 94.6% LAS. We also show
-which hyperparameter choices had a significant effect on parsing accuracy,
-allowing us to achieve large gains over other graph-based approaches.
+  This paper builds off recent work from Kiperwasser & Goldberg (2016) usingneural attention in a simple graph-based dependency parser. We use a larger butmore thoroughly regularized parser than other recent BiLSTM-based approaches,with biaffine classifiers to predict arcs and labels. Our parser gets state ofthe art or near state of the art performance on standard treebanks for sixdifferent languages, achieving 95.7% UAS and 94.1% LAS on the most popularEnglish PTB dataset. This makes it the highest-performing graph-based parser onthis benchmark---outperforming Kiperwasser Goldberg (2016) by 1.8% and2.2%---and comparable to the highest performing transition-based parser(Kuncoro et al., 2016), which achieves 95.8% UAS and 94.6% LAS. We also showwhich hyperparameter choices had a significant effect on parsing accuracy,allowing us to achieve large gains over other graph-based approaches.
 
+A Copy-Augmented Sequence-to-Sequence Architecture Gives Good  Performance on Task-Oriented Dialogue
 
-A Copy-Augmented Sequence-to-Sequence Architecture Gives Good
-  Performance on Task-Oriented Dialogue
-
-  Task-oriented dialogue focuses on conversational agents that participate in
-user-initiated dialogues on domain-specific topics. In contrast to chatbots,
-which simply seek to sustain open-ended meaningful discourse, existing
-task-oriented agents usually explicitly model user intent and belief states.
-This paper examines bypassing such an explicit representation by depending on a
-latent neural embedding of state and learning selective attention to dialogue
-history together with copying to incorporate relevant prior context. We
-complement recent work by showing the effectiveness of simple
-sequence-to-sequence neural architectures with a copy mechanism. Our model
-outperforms more complex memory-augmented models by 7% in per-response
-generation and is on par with the current state-of-the-art on DSTC2.
-
+  Task-oriented dialogue focuses on conversational agents that participate inuser-initiated dialogues on domain-specific topics. In contrast to chatbots,which simply seek to sustain open-ended meaningful discourse, existingtask-oriented agents usually explicitly model user intent and belief states.This paper examines bypassing such an explicit representation by depending on alatent neural embedding of state and learning selective attention to dialoguehistory together with copying to incorporate relevant prior context. Wecomplement recent work by showing the effectiveness of simplesequence-to-sequence neural architectures with a copy mechanism. Our modeloutperforms more complex memory-augmented models by 7% in per-responsegeneration and is on par with the current state-of-the-art on DSTC2.
 
 SceneSeer: 3D Scene Design with Natural Language
 
-  Designing 3D scenes is currently a creative task that requires significant
-expertise and effort in using complex 3D design interfaces. This effortful
-design process starts in stark contrast to the easiness with which people can
-use language to describe real and imaginary environments. We present SceneSeer:
-an interactive text to 3D scene generation system that allows a user to design
-3D scenes using natural language. A user provides input text from which we
-extract explicit constraints on the objects that should appear in the scene.
-Given these explicit constraints, the system then uses a spatial knowledge base
-learned from an existing database of 3D scenes and 3D object models to infer an
-arrangement of the objects forming a natural scene matching the input
-description. Using textual commands the user can then iteratively refine the
-created scene by adding, removing, replacing, and manipulating objects. We
-evaluate the quality of 3D scenes generated by SceneSeer in a perceptual
-evaluation experiment where we compare against manually designed scenes and
-simpler baselines for 3D scene generation. We demonstrate how the generated
-scenes can be iteratively refined through simple natural language commands.
+  Designing 3D scenes is currently a creative task that requires significantexpertise and effort in using complex 3D design interfaces. This effortfuldesign process starts in stark contrast to the easiness with which people canuse language to describe real and imaginary environments. We present SceneSeer:an interactive text to 3D scene generation system that allows a user to design3D scenes using natural language. A user provides input text from which weextract explicit constraints on the objects that should appear in the scene.Given these explicit constraints, the system then uses a spatial knowledge baselearned from an existing database of 3D scenes and 3D object models to infer anarrangement of the objects forming a natural scene matching the inputdescription. Using textual commands the user can then iteratively refine thecreated scene by adding, removing, replacing, and manipulating objects. Weevaluate the quality of 3D scenes generated by SceneSeer in a perceptualevaluation experiment where we compare against manually designed scenes andsimpler baselines for 3D scene generation. We demonstrate how the generatedscenes can be iteratively refined through simple natural language commands.
 
+Get To The Point: Summarization with Pointer-Generator Networks
+
+  Neural sequence-to-sequence models have provided a viable new approach forabstractive text summarization (meaning they are not restricted to simplyselecting and rearranging passages from the original text). However, thesemodels have two shortcomings: they are liable to reproduce factual detailsinaccurately, and they tend to repeat themselves. In this work we propose anovel architecture that augments the standard sequence-to-sequence attentionalmodel in two orthogonal ways. First, we use a hybrid pointer-generator networkthat can copy words from the source text via pointing, which aids accuratereproduction of information, while retaining the ability to produce novel wordsthrough the generator. Second, we use coverage to keep track of what has beensummarized, which discourages repetition. We apply our model to the CNN / DailyMail summarization task, outperforming the current abstractive state-of-the-artby at least 2 ROUGE points.
 
 Key-Value Retrieval Networks for Task-Oriented Dialogue
 
-  Neural task-oriented dialogue systems often struggle to smoothly interface
-with a knowledge base. In this work, we seek to address this problem by
-proposing a new neural dialogue agent that is able to effectively sustain
-grounded, multi-domain discourse through a novel key-value retrieval mechanism.
-The model is end-to-end differentiable and does not need to explicitly model
-dialogue state or belief trackers. We also release a new dataset of 3,031
-dialogues that are grounded through underlying knowledge bases and span three
-distinct tasks in the in-car personal assistant space: calendar scheduling,
-weather information retrieval, and point-of-interest navigation. Our
-architecture is simultaneously trained on data from all domains and
-significantly outperforms a competitive rule-based system and other existing
-neural dialogue architectures on the provided domains according to both
-automatic and human evaluation metrics.
-
+  Neural task-oriented dialogue systems often struggle to smoothly interfacewith a knowledge base. In this work, we seek to address this problem byproposing a new neural dialogue agent that is able to effectively sustaingrounded, multi-domain discourse through a novel key-value retrieval mechanism.The model is end-to-end differentiable and does not need to explicitly modeldialogue state or belief trackers. We also release a new dataset of 3,031dialogues that are grounded through underlying knowledge bases and span threedistinct tasks in the in-car personal assistant space: calendar scheduling,weather information retrieval, and point-of-interest navigation. Ourarchitecture is simultaneously trained on data from all domains andsignificantly outperforms a competitive rule-based system and other existingneural dialogue architectures on the provided domains according to bothautomatic and human evaluation metrics.
 
 Compositional Attention Networks for Machine Reasoning
 
-  We present the MAC network, a novel fully differentiable neural network
-architecture, designed to facilitate explicit and expressive reasoning. MAC
-moves away from monolithic black-box neural architectures towards a design that
-encourages both transparency and versatility. The model approaches problems by
-decomposing them into a series of attention-based reasoning steps, each
-performed by a novel recurrent Memory, Attention, and Composition (MAC) cell
-that maintains a separation between control and memory. By stringing the cells
-together and imposing structural constraints that regulate their interaction,
-MAC effectively learns to perform iterative reasoning processes that are
-directly inferred from the data in an end-to-end approach. We demonstrate the
-model's strength, robustness and interpretability on the challenging CLEVR
-dataset for visual reasoning, achieving a new state-of-the-art 98.9% accuracy,
-halving the error rate of the previous best model. More importantly, we show
-that the model is computationally-efficient and data-efficient, in particular
-requiring 5x less data than existing models to achieve strong results.
-
+  We present the MAC network, a novel fully differentiable neural networkarchitecture, designed to facilitate explicit and expressive reasoning. MACmoves away from monolithic black-box neural architectures towards a design thatencourages both transparency and versatility. The model approaches problems bydecomposing them into a series of attention-based reasoning steps, eachperformed by a novel recurrent Memory, Attention, and Composition (MAC) cellthat maintains a separation between control and memory. By stringing the cellstogether and imposing structural constraints that regulate their interaction,MAC effectively learns to perform iterative reasoning processes that aredirectly inferred from the data in an end-to-end approach. We demonstrate themodel's strength, robustness and interpretability on the challenging CLEVRdataset for visual reasoning, achieving a new state-of-the-art 98.9% accuracy,halving the error rate of the previous best model. More importantly, we showthat the model is computationally-efficient and data-efficient, in particularrequiring 5x less data than existing models to achieve strong results.
 
 Sentences with Gapping: Parsing and Reconstructing Elided Predicates
 
-  Sentences with gapping, such as Paul likes coffee and Mary tea, lack an overt
-predicate to indicate the relation between two or more arguments. Surface
-syntax representations of such sentences are often produced poorly by parsers,
-and even if correct, not well suited to downstream natural language
-understanding tasks such as relation extraction that are typically designed to
-extract information from sentences with canonical clause structure. In this
-paper, we present two methods for parsing to a Universal Dependencies graph
-representation that explicitly encodes the elided material with additional
-nodes and edges. We find that both methods can reconstruct elided material from
-dependency trees with high accuracy when the parser correctly predicts the
-existence of a gap. We further demonstrate that one of our methods can be
-applied to other languages based on a case study on Swedish.
-
+  Sentences with gapping, such as Paul likes coffee and Mary tea, lack an overtpredicate to indicate the relation between two or more arguments. Surfacesyntax representations of such sentences are often produced poorly by parsers,and even if correct, not well suited to downstream natural languageunderstanding tasks such as relation extraction that are typically designed toextract information from sentences with canonical clause structure. In thispaper, we present two methods for parsing to a Universal Dependencies graphrepresentation that explicitly encodes the elided material with additionalnodes and edges. We find that both methods can reconstruct elided material fromdependency trees with high accuracy when the parser correctly predicts theexistence of a gap. We further demonstrate that one of our methods can beapplied to other languages based on a case study on Swedish.
 
 CoQA: A Conversational Question Answering Challenge
 
-  Humans gather information by engaging in conversations involving a series of
-interconnected questions and answers. For machines to assist in information
-gathering, it is therefore essential to enable them to answer conversational
-questions. We introduce CoQA, a novel dataset for building Conversational
-Question Answering systems. Our dataset contains 127k questions with answers,
-obtained from 8k conversations about text passages from seven diverse domains.
-The questions are conversational, and the answers are free-form text with their
-corresponding evidence highlighted in the passage. We analyze CoQA in depth and
-show that conversational questions have challenging phenomena not present in
-existing reading comprehension datasets, e.g., coreference and pragmatic
-reasoning. We evaluate strong conversational and reading comprehension models
-on CoQA. The best system obtains an F1 score of 65.4%, which is 23.4 points
-behind human performance (88.8%), indicating there is ample room for
-improvement. We launch CoQA as a challenge to the community at
-http://stanfordnlp.github.io/coqa/
+  Humans gather information by engaging in conversations involving a series ofinterconnected questions and answers. For machines to assist in informationgathering, it is therefore essential to enable them to answer conversationalquestions. We introduce CoQA, a novel dataset for building ConversationalQuestion Answering systems. Our dataset contains 127k questions with answers,obtained from 8k conversations about text passages from seven diverse domains.The questions are conversational, and the answers are free-form text with theircorresponding evidence highlighted in the passage. We analyze CoQA in depth andshow that conversational questions have challenging phenomena not present inexisting reading comprehension datasets, e.g., coreference and pragmaticreasoning. We evaluate strong conversational and reading comprehension modelson CoQA. The best system obtains an F1 score of 65.4%, which is 23.4 pointsbehind human performance (88.8%), indicating there is ample room forimprovement. We launch CoQA as a challenge to the community athttp://stanfordnlp.github.io/coqa/
 
+Textual Analogy Parsing: What's Shared and What's Compared among  Analogous Facts
 
-Textual Analogy Parsing: What's Shared and What's Compared among
-  Analogous Facts
-
-  To understand a sentence like "whereas only 10% of White Americans live at or
-below the poverty line, 28% of African Americans do" it is important not only
-to identify individual facts, e.g., poverty rates of distinct demographic
-groups, but also the higher-order relations between them, e.g., the disparity
-between them. In this paper, we propose the task of Textual Analogy Parsing
-(TAP) to model this higher-order meaning. The output of TAP is a frame-style
-meaning representation which explicitly specifies what is shared (e.g., poverty
-rates) and what is compared (e.g., White Americans vs. African Americans, 10%
-vs. 28%) between its component facts. Such a meaning representation can enable
-new applications that rely on discourse understanding such as automated chart
-generation from quantitative text. We present a new dataset for TAP, baselines,
-and a model that successfully uses an ILP to enforce the structural constraints
-of the problem.
-
+  To understand a sentence like "whereas only 10% of White Americans live at orbelow the poverty line, 28% of African Americans do" it is important not onlyto identify individual facts, e.g., poverty rates of distinct demographicgroups, but also the higher-order relations between them, e.g., the disparitybetween them. In this paper, we propose the task of Textual Analogy Parsing(TAP) to model this higher-order meaning. The output of TAP is a frame-stylemeaning representation which explicitly specifies what is shared (e.g., povertyrates) and what is compared (e.g., White Americans vs. African Americans, 10%vs. 28%) between its component facts. Such a meaning representation can enablenew applications that rely on discourse understanding such as automated chartgeneration from quantitative text. We present a new dataset for TAP, baselines,and a model that successfully uses an ILP to enforce the structural constraintsof the problem.
 
 Learning to Summarize Radiology Findings
 
-  The Impression section of a radiology report summarizes crucial radiology
-findings in natural language and plays a central role in communicating these
-findings to physicians. However, the process of generating impressions by
-summarizing findings is time-consuming for radiologists and prone to errors. We
-propose to automate the generation of radiology impressions with neural
-sequence-to-sequence learning. We further propose a customized neural model for
-this task which learns to encode the study background information and use this
-information to guide the decoding process. On a large dataset of radiology
-reports collected from actual hospital studies, our model outperforms existing
-non-neural and neural baselines under the ROUGE metrics. In a blind experiment,
-a board-certified radiologist indicated that 67% of sampled system summaries
-are at least as good as the corresponding human-written summaries, suggesting
-significant clinical validity. To our knowledge our work represents the first
-attempt in this direction.
-
+  The Impression section of a radiology report summarizes crucial radiologyfindings in natural language and plays a central role in communicating thesefindings to physicians. However, the process of generating impressions bysummarizing findings is time-consuming for radiologists and prone to errors. Wepropose to automate the generation of radiology impressions with neuralsequence-to-sequence learning. We further propose a customized neural model forthis task which learns to encode the study background information and use thisinformation to guide the decoding process. On a large dataset of radiologyreports collected from actual hospital studies, our model outperforms existingnon-neural and neural baselines under the ROUGE metrics. In a blind experiment,a board-certified radiologist indicated that 67% of sampled system summariesare at least as good as the corresponding human-written summaries, suggestingsignificant clinical validity. To our knowledge our work represents the firstattempt in this direction.
 
 Semi-Supervised Sequence Modeling with Cross-View Training
 
-  Unsupervised representation learning algorithms such as word2vec and ELMo
-improve the accuracy of many supervised NLP models, mainly because they can
-take advantage of large amounts of unlabeled text. However, the supervised
-models only learn from task-specific labeled data during the main training
-phase. We therefore propose Cross-View Training (CVT), a semi-supervised
-learning algorithm that improves the representations of a Bi-LSTM sentence
-encoder using a mix of labeled and unlabeled data. On labeled examples,
-standard supervised learning is used. On unlabeled examples, CVT teaches
-auxiliary prediction modules that see restricted views of the input (e.g., only
-part of a sentence) to match the predictions of the full model seeing the whole
-input. Since the auxiliary modules and the full model share intermediate
-representations, this in turn improves the full model. Moreover, we show that
-CVT is particularly effective when combined with multi-task learning. We
-evaluate CVT on five sequence tagging tasks, machine translation, and
-dependency parsing, achieving state-of-the-art results.
+  Unsupervised representation learning algorithms such as word2vec and ELMoimprove the accuracy of many supervised NLP models, mainly because they cantake advantage of large amounts of unlabeled text. However, the supervisedmodels only learn from task-specific labeled data during the main trainingphase. We therefore propose Cross-View Training (CVT), a semi-supervisedlearning algorithm that improves the representations of a Bi-LSTM sentenceencoder using a mix of labeled and unlabeled data. On labeled examples,standard supervised learning is used. On unlabeled examples, CVT teachesauxiliary prediction modules that see restricted views of the input (e.g., onlypart of a sentence) to match the predictions of the full model seeing the wholeinput. Since the auxiliary modules and the full model share intermediaterepresentations, this in turn improves the full model. Moreover, we show thatCVT is particularly effective when combined with multi-task learning. Weevaluate CVT on five sequence tagging tasks, machine translation, anddependency parsing, achieving state-of-the-art results.
 
+HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question  Answering
 
-HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question
-  Answering
+  Existing question answering (QA) datasets fail to train QA systems to performcomplex reasoning and provide explanations for answers. We introduce HotpotQA,a new dataset with 113k Wikipedia-based question-answer pairs with four keyfeatures: (1) the questions require finding and reasoning over multiplesupporting documents to answer; (2) the questions are diverse and notconstrained to any pre-existing knowledge bases or knowledge schemas; (3) weprovide sentence-level supporting facts required for reasoning, allowing QAsystems to reason with strong supervision and explain the predictions; (4) weoffer a new type of factoid comparison questions to test QA systems' ability toextract relevant facts and perform necessary comparison. We show that HotpotQAis challenging for the latest QA systems, and the supporting facts enablemodels to improve performance and make explainable predictions.
 
-  Existing question answering (QA) datasets fail to train QA systems to perform
-complex reasoning and provide explanations for answers. We introduce HotpotQA,
-a new dataset with 113k Wikipedia-based question-answer pairs with four key
-features: (1) the questions require finding and reasoning over multiple
-supporting documents to answer; (2) the questions are diverse and not
-constrained to any pre-existing knowledge bases or knowledge schemas; (3) we
-provide sentence-level supporting facts required for reasoning, allowing QA
-systems to reason with strong supervision and explain the predictions; (4) we
-offer a new type of factoid comparison questions to test QA systems' ability to
-extract relevant facts and perform necessary comparison. We show that HotpotQA
-is challenging for the latest QA systems, and the supporting facts enable
-models to improve performance and make explainable predictions.
+Graph Convolution over Pruned Dependency Trees Improves Relation  Extraction
 
-
-Graph Convolution over Pruned Dependency Trees Improves Relation
-  Extraction
-
-  Dependency trees help relation extraction models capture long-range relations
-between words. However, existing dependency-based models either neglect crucial
-information (e.g., negation) by pruning the dependency trees too aggressively,
-or are computationally inefficient because it is difficult to parallelize over
-different tree structures. We propose an extension of graph convolutional
-networks that is tailored for relation extraction, which pools information over
-arbitrary dependency structures efficiently in parallel. To incorporate
-relevant information while maximally removing irrelevant content, we further
-apply a novel pruning strategy to the input trees by keeping words immediately
-around the shortest path between the two entities among which a relation might
-hold. The resulting model achieves state-of-the-art performance on the
-large-scale TACRED dataset, outperforming existing sequence and
-dependency-based neural models. We also show through detailed analysis that
-this model has complementary strengths to sequence models, and combining them
-further improves the state of the art.
-
+  Dependency trees help relation extraction models capture long-range relationsbetween words. However, existing dependency-based models either neglect crucialinformation (e.g., negation) by pruning the dependency trees too aggressively,or are computationally inefficient because it is difficult to parallelize overdifferent tree structures. We propose an extension of graph convolutionalnetworks that is tailored for relation extraction, which pools information overarbitrary dependency structures efficiently in parallel. To incorporaterelevant information while maximally removing irrelevant content, we furtherapply a novel pruning strategy to the input trees by keeping words immediatelyaround the shortest path between the two entities among which a relation mighthold. The resulting model achieves state-of-the-art performance on thelarge-scale TACRED dataset, outperforming existing sequence anddependency-based neural models. We also show through detailed analysis thatthis model has complementary strengths to sequence models, and combining themfurther improves the state of the art.
 
 Universal Dependency Parsing from Scratch
 
-  This paper describes Stanford's system at the CoNLL 2018 UD Shared Task. We
-introduce a complete neural pipeline system that takes raw text as input, and
-performs all tasks required by the shared task, ranging from tokenization and
-sentence segmentation, to POS tagging and dependency parsing. Our single system
-submission achieved very competitive performance on big treebanks. Moreover,
-after fixing an unfortunate bug, our corrected system would have placed the
-2nd, 1st, and 3rd on the official evaluation metrics LAS,MLAS, and BLEX, and
-would have outperformed all submission systems on low-resource treebank
-categories on all metrics by a large margin. We further show the effectiveness
-of different model components through extensive ablation studies.
+  This paper describes Stanford's system at the CoNLL 2018 UD Shared Task. Weintroduce a complete neural pipeline system that takes raw text as input, andperforms all tasks required by the shared task, ranging from tokenization andsentence segmentation, to POS tagging and dependency parsing. Our single systemsubmission achieved very competitive performance on big treebanks. Moreover,after fixing an unfortunate bug, our corrected system would have placed the2nd, 1st, and 3rd on the official evaluation metrics LAS,MLAS, and BLEX, andwould have outperformed all submission systems on low-resource treebankcategories on all metrics by a large margin. We further show the effectivenessof different model components through extensive ablation studies.
 
+GQA: A New Dataset for Real-World Visual Reasoning and Compositional  Question Answering
 
-GQA: A New Dataset for Real-World Visual Reasoning and Compositional
-  Question Answering
+  We introduce GQA, a new dataset for real-world visual reasoning andcompositional question answering, seeking to address key shortcomings ofprevious VQA datasets. We have developed a strong and robust question enginethat leverages scene graph structures to create 22M diverse reasoningquestions, all come with functional programs that represent their semantics. Weuse the programs to gain tight control over the answer distribution and presenta new tunable smoothing technique to mitigate question biases. Accompanying thedataset is a suite of new metrics that evaluate essential qualities such asconsistency, grounding and plausibility. An extensive analysis is performed forbaselines as well as state-of-the-art models, providing fine-grained resultsfor different question types and topologies. Whereas a blind LSTM obtains mere42.1%, and strong VQA models achieve 54.1%, human performance tops at 89.3%,offering ample opportunity for new research to explore. We strongly hope GQAwill provide an enabling resource for the next generation of models withenhanced robustness, improved consistency, and deeper semantic understandingfor images and language.
 
-  We introduce GQA, a new dataset for real-world visual reasoning and
-compositional question answering, seeking to address key shortcomings of
-previous VQA datasets. We have developed a strong and robust question engine
-that leverages scene graph structures to create 22M diverse reasoning
-questions, all come with functional programs that represent their semantics. We
-use the programs to gain tight control over the answer distribution and present
-a new tunable smoothing technique to mitigate question biases. Accompanying the
-dataset is a suite of new metrics that evaluate essential qualities such as
-consistency, grounding and plausibility. An extensive analysis is performed for
-baselines as well as state-of-the-art models, providing fine-grained results
-for different question types and topologies. Whereas a blind LSTM obtains mere
-42.1%, and strong VQA models achieve 54.1%, human performance tops at 89.3%,
-offering ample opportunity for new research to explore. We strongly hope GQA
-will provide an enabling resource for the next generation of models with
-enhanced robustness, improved consistency, and deeper semantic understanding
-for images and language.
+Achieving Open Vocabulary Neural Machine Translation with Hybrid  Word-Character Models
 
+  Nearly all previous work on neural machine translation (NMT) has used quiterestricted vocabularies, perhaps with a subsequent method to patch in unknownwords. This paper presents a novel word-character solution to achieving openvocabulary NMT. We build hybrid systems that translate mostly at the word leveland consult the character components for rare words. Our character-levelrecurrent neural networks compute source word representations and recoverunknown target words when needed. The twofold advantage of such a hybridapproach is that it is much faster and easier to train than character-basedones; at the same time, it never produces unknown words as in the case ofword-based models. On the WMT'15 English to Czech translation task, this hybridapproach offers an addition boost of +2.1-11.4 BLEU points over models thatalready handle unknown words. Our best system achieves a new state-of-the-artresult with 20.7 BLEU score. We demonstrate that our character models cansuccessfully learn to not only generate well-formed words for Czech, ahighly-inflected language with a very complex vocabulary, but also buildcorrect representations for English source words.
 
-Achieving Open Vocabulary Neural Machine Translation with Hybrid
-  Word-Character Models
+Probing New Physics Models of Neutrinoless Double Beta Decay with  SuperNEMO
 
-  Nearly all previous work on neural machine translation (NMT) has used quite
-restricted vocabularies, perhaps with a subsequent method to patch in unknown
-words. This paper presents a novel word-character solution to achieving open
-vocabulary NMT. We build hybrid systems that translate mostly at the word level
-and consult the character components for rare words. Our character-level
-recurrent neural networks compute source word representations and recover
-unknown target words when needed. The twofold advantage of such a hybrid
-approach is that it is much faster and easier to train than character-based
-ones; at the same time, it never produces unknown words as in the case of
-word-based models. On the WMT'15 English to Czech translation task, this hybrid
-approach offers an addition boost of +2.1-11.4 BLEU points over models that
-already handle unknown words. Our best system achieves a new state-of-the-art
-result with 20.7 BLEU score. We demonstrate that our character models can
-successfully learn to not only generate well-formed words for Czech, a
-highly-inflected language with a very complex vocabulary, but also build
-correct representations for English source words.
-
-
-Probing New Physics Models of Neutrinoless Double Beta Decay with
-  SuperNEMO
-
-  The possibility to probe new physics scenarios of light Majorana neutrino
-exchange and right-handed currents at the planned next generation neutrinoless
-double beta decay experiment SuperNEMO is discussed. Its ability to study
-different isotopes and track the outgoing electrons provides the means to
-discriminate different underlying mechanisms for the neutrinoless double beta
-decay by measuring the decay half-life and the electron angular and energy
-distributions.
-
+  The possibility to probe new physics scenarios of light Majorana neutrinoexchange and right-handed currents at the planned next generation neutrinolessdouble beta decay experiment SuperNEMO is discussed. Its ability to studydifferent isotopes and track the outgoing electrons provides the means todiscriminate different underlying mechanisms for the neutrinoless double betadecay by measuring the decay half-life and the electron angular and energydistributions.
 
 Dark Sectors 2016 Workshop: Community Report
 
-  This report, based on the Dark Sectors workshop at SLAC in April 2016,
-summarizes the scientific importance of searches for dark sector dark matter
-and forces at masses beneath the weak-scale, the status of this broad
-international field, the important milestones motivating future exploration,
-and promising experimental opportunities to reach these milestones over the
-next 5-10 years.
-
+  This report, based on the Dark Sectors workshop at SLAC in April 2016,summarizes the scientific importance of searches for dark sector dark matterand forces at masses beneath the weak-scale, the status of this broadinternational field, the important milestones motivating future exploration,and promising experimental opportunities to reach these milestones over thenext 5-10 years.
 
 US Cosmic Visions: New Ideas in Dark Matter 2017: Community Report
 
-  This white paper summarizes the workshop "U.S. Cosmic Visions: New Ideas in
-Dark Matter" held at University of Maryland on March 23-25, 2017.
-
-
-Angular analysis of the $B^{0}\rightarrow K^{*0}μ^{+}μ^{-}$ decay
-  using $3\,\mbox{fb}^{-1}$ of integrated luminosity
-
-  An angular analysis of the $B^{0}\rightarrow K^{*0}(\rightarrow
-K^{+}\pi^{-})\mu^{+}\mu^{-}$ decay is presented. The dataset corresponds to an
-integrated luminosity of $3.0\,{\mbox{fb}^{-1}}$ of $pp$ collision data
-collected at the LHCb experiment. The complete angular information from the
-decay is used to determine $C\!P$-averaged observables and $C\!P$ asymmetries,
-taking account of possible contamination from decays with the $K^{+}\pi^{-}$
-system in an S-wave configuration. The angular observables and their
-correlations are reported in bins of $q^2$, the invariant mass squared of the
-dimuon system. The observables are determined both from an unbinned maximum
-likelihood fit and by using the principal moments of the angular distribution.
-In addition, by fitting for $q^2$-dependent decay amplitudes in the region
-$1.1<q^{2}<6.0\mathrm{\,Ge\kern -0.1em V}^{2}/c^{4}$, the zero-crossing points
-of several angular observables are computed. A global fit is performed to the
-complete set of $C\!P$-averaged observables obtained from the maximum
-likelihood fit. This fit indicates differences with predictions based on the
-Standard Model at the level of 3.4 standard deviations. These differences could
-be explained by contributions from physics beyond the Standard Model, or by an
-unexpectedly large hadronic effect that is not accounted for in the Standard
-Model predictions.
-
+  This white paper summarizes the workshop "U.S. Cosmic Visions: New Ideas inDark Matter" held at University of Maryland on March 23-25, 2017.
 
 Measurement of $CP$ violation in $B^0 \rightarrow J/ψK^0_S$ decays
 
-  Measurements are presented of the $CP$ violation observables $S$ and $C$ in
-the decays of $B^0$ and $\overline{B}{}^0$ mesons to the $J/\psi K^0_S$ final
-state. The data sample corresponds to an integrated luminosity of
-$3.0\,\text{fb}^{-1}$ collected with the LHCb experiment in proton-proton
-collisions at center-of-mass energies of $7$ and $8\,\text{TeV}$. The analysis
-of the time evolution of $41500$ $B^0$ and $\overline{B}{}^0$ decays yields $S
-= 0.731 \pm 0.035 \, \text{(stat)} \pm 0.020 \,\text{(syst)}$ and $C = -0.038
-\pm 0.032 \, \text{(stat)} \pm 0.005\,\text{(syst)}$. In the Standard Model,
-$S$ equals $\sin(2\beta)$ to a good level of precision. The values are
-consistent with the current world averages and with the Standard Model
-expectations.
+  Measurements are presented of the $CP$ violation observables $S$ and $C$ inthe decays of $B^0$ and $\overline{B}{}^0$ mesons to the $J/\psi K^0_S$ finalstate. The data sample corresponds to an integrated luminosity of$3.0\,\text{fb}^{-1}$ collected with the LHCb experiment in proton-protoncollisions at center-of-mass energies of $7$ and $8\,\text{TeV}$. The analysisof the time evolution of $41500$ $B^0$ and $\overline{B}{}^0$ decays yields $S= 0.731 \pm 0.035 \, \text{(stat)} \pm 0.020 \,\text{(syst)}$ and $C = -0.038\pm 0.032 \, \text{(stat)} \pm 0.005\,\text{(syst)}$. In the Standard Model,$S$ equals $\sin(2\beta)$ to a good level of precision. The values areconsistent with the current world averages and with the Standard Modelexpectations.
 
+Angular analysis of the $B^{0}\rightarrow K^{*0}μ^{+}μ^{-}$ decay  using $3\,\mbox{fb}^{-1}$ of integrated luminosity
 
-Observation of the rare $B^0_s\toμ^+μ^-$ decay from the combined
-  analysis of CMS and LHCb data
+  An angular analysis of the $B^{0}\rightarrow K^{*0}(\rightarrowK^{+}\pi^{-})\mu^{+}\mu^{-}$ decay is presented. The dataset corresponds to anintegrated luminosity of $3.0\,{\mbox{fb}^{-1}}$ of $pp$ collision datacollected at the LHCb experiment. The complete angular information from thedecay is used to determine $C\!P$-averaged observables and $C\!P$ asymmetries,taking account of possible contamination from decays with the $K^{+}\pi^{-}$system in an S-wave configuration. The angular observables and theircorrelations are reported in bins of $q^2$, the invariant mass squared of thedimuon system. The observables are determined both from an unbinned maximumlikelihood fit and by using the principal moments of the angular distribution.In addition, by fitting for $q^2$-dependent decay amplitudes in the region$1.1<q^{2}<6.0\mathrm{\,Ge\kern -0.1em V}^{2}/c^{4}$, the zero-crossing pointsof several angular observables are computed. A global fit is performed to thecomplete set of $C\!P$-averaged observables obtained from the maximumlikelihood fit. This fit indicates differences with predictions based on theStandard Model at the level of 3.4 standard deviations. These differences couldbe explained by contributions from physics beyond the Standard Model, or by anunexpectedly large hadronic effect that is not accounted for in the StandardModel predictions.
 
-  A joint measurement is presented of the branching fractions
-$B^0_s\to\mu^+\mu^-$ and $B^0\to\mu^+\mu^-$ in proton-proton collisions at the
-LHC by the CMS and LHCb experiments. The data samples were collected in 2011 at
-a centre-of-mass energy of 7 TeV, and in 2012 at 8 TeV. The combined analysis
-produces the first observation of the $B^0_s\to\mu^+\mu^-$ decay, with a
-statistical significance exceeding six standard deviations, and the best
-measurement of its branching fraction so far. Furthermore, evidence for the
-$B^0\to\mu^+\mu^-$ decay is obtained with a statistical significance of three
-standard deviations. The branching fraction measurements are statistically
-compatible with SM predictions and impose stringent constraints on several
-theories beyond the SM.
+Observation of the rare $B^0_s\toμ^+μ^-$ decay from the combined  analysis of CMS and LHCb data
 
+  A joint measurement is presented of the branching fractions$B^0_s\to\mu^+\mu^-$ and $B^0\to\mu^+\mu^-$ in proton-proton collisions at theLHC by the CMS and LHCb experiments. The data samples were collected in 2011 ata centre-of-mass energy of 7 TeV, and in 2012 at 8 TeV. The combined analysisproduces the first observation of the $B^0_s\to\mu^+\mu^-$ decay, with astatistical significance exceeding six standard deviations, and the bestmeasurement of its branching fraction so far. Furthermore, evidence for the$B^0\to\mu^+\mu^-$ decay is obtained with a statistical significance of threestandard deviations. The branching fraction measurements are statisticallycompatible with SM predictions and impose stringent constraints on severaltheories beyond the SM.
 

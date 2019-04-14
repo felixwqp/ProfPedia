@@ -1,102 +1,24 @@
-Application of Statistical Relational Learning to Hybrid Recommendation
-  Systems
+Application of Statistical Relational Learning to Hybrid Recommendation  Systems
 
-  Recommendation systems usually involve exploiting the relations among known
-features and content that describe items (content-based filtering) or the
-overlap of similar users who interacted with or rated the target item
-(collaborative filtering). To combine these two filtering approaches, current
-model-based hybrid recommendation systems typically require extensive feature
-engineering to construct a user profile. Statistical Relational Learning (SRL)
-provides a straightforward way to combine the two approaches. However, due to
-the large scale of the data used in real world recommendation systems, little
-research exists on applying SRL models to hybrid recommendation systems, and
-essentially none of that research has been applied on real big-data-scale
-systems. In this paper, we proposed a way to adapt the state-of-the-art in SRL
-learning approaches to construct a real hybrid recommendation system.
-Furthermore, in order to satisfy a common requirement in recommendation systems
-(i.e. that false positives are more undesirable and therefore penalized more
-harshly than false negatives), our approach can also allow tuning the trade-off
-between the precision and recall of the system in a principled way. Our
-experimental results demonstrate the efficiency of our proposed approach as
-well as its improved performance on recommendation precision.
-
+  Recommendation systems usually involve exploiting the relations among knownfeatures and content that describe items (content-based filtering) or theoverlap of similar users who interacted with or rated the target item(collaborative filtering). To combine these two filtering approaches, currentmodel-based hybrid recommendation systems typically require extensive featureengineering to construct a user profile. Statistical Relational Learning (SRL)provides a straightforward way to combine the two approaches. However, due tothe large scale of the data used in real world recommendation systems, littleresearch exists on applying SRL models to hybrid recommendation systems, andessentially none of that research has been applied on real big-data-scalesystems. In this paper, we proposed a way to adapt the state-of-the-art in SRLlearning approaches to construct a real hybrid recommendation system.Furthermore, in order to satisfy a common requirement in recommendation systems(i.e. that false positives are more undesirable and therefore penalized moreharshly than false negatives), our approach can also allow tuning the trade-offbetween the precision and recall of the system in a principled way. Ourexperimental results demonstrate the efficiency of our proposed approach aswell as its improved performance on recommendation precision.
 
 Counting Belief Propagation
 
-  A major benefit of graphical models is that most knowledge is captured in the
-model structure. Many models, however, produce inference problems with a lot of
-symmetries not reflected in the graphical structure and hence not exploitable
-by efficient inference techniques such as belief propagation (BP). In this
-paper, we present a new and simple BP algorithm, called counting BP, that
-exploits such additional symmetries. Starting from a given factor graph,
-counting BP first constructs a compressed factor graph of clusternodes and
-clusterfactors, corresponding to sets of nodes and factors that are
-indistinguishable given the evidence. Then it runs a modified BP algorithm on
-the compressed graph that is equivalent to running BP on the original factor
-graph. Our experiments show that counting BP is applicable to a variety of
-important AI tasks such as (dynamic) relational models and boolean model
-counting, and that significant efficiency gains are obtainable, often by orders
-of magnitude.
-
+  A major benefit of graphical models is that most knowledge is captured in themodel structure. Many models, however, produce inference problems with a lot ofsymmetries not reflected in the graphical structure and hence not exploitableby efficient inference techniques such as belief propagation (BP). In thispaper, we present a new and simple BP algorithm, called counting BP, thatexploits such additional symmetries. Starting from a given factor graph,counting BP first constructs a compressed factor graph of clusternodes andclusterfactors, corresponding to sets of nodes and factors that areindistinguishable given the evidence. Then it runs a modified BP algorithm onthe compressed graph that is equivalent to running BP on the original factorgraph. Our experiments show that counting BP is applicable to a variety ofimportant AI tasks such as (dynamic) relational models and boolean modelcounting, and that significant efficiency gains are obtainable, often by ordersof magnitude.
 
 Learning Relational Dependency Networks for Relation Extraction
 
-  We consider the task of KBP slot filling -- extracting relation information
-from newswire documents for knowledge base construction. We present our
-pipeline, which employs Relational Dependency Networks (RDNs) to learn
-linguistic patterns for relation extraction. Additionally, we demonstrate how
-several components such as weak supervision, word2vec features, joint learning
-and the use of human advice, can be incorporated in this relational framework.
-We evaluate the different components in the benchmark KBP 2015 task and show
-that RDNs effectively model a diverse set of features and perform competitively
-with current state-of-the-art relation extraction.
-
+  We consider the task of KBP slot filling -- extracting relation informationfrom newswire documents for knowledge base construction. We present ourpipeline, which employs Relational Dependency Networks (RDNs) to learnlinguistic patterns for relation extraction. Additionally, we demonstrate howseveral components such as weak supervision, word2vec features, joint learningand the use of human advice, can be incorporated in this relational framework.We evaluate the different components in the benchmark KBP 2015 task and showthat RDNs effectively model a diverse set of features and perform competitivelywith current state-of-the-art relation extraction.
 
 Sum-Product Networks for Hybrid Domains
 
-  While all kinds of mixed data -from personal data, over panel and scientific
-data, to public and commercial data- are collected and stored, building
-probabilistic graphical models for these hybrid domains becomes more difficult.
-Users spend significant amounts of time in identifying the parametric form of
-the random variables (Gaussian, Poisson, Logit, etc.) involved and learning the
-mixed models. To make this difficult task easier, we propose the first
-trainable probabilistic deep architecture for hybrid domains that features
-tractable queries. It is based on Sum-Product Networks (SPNs) with piecewise
-polynomial leave distributions together with novel nonparametric decomposition
-and conditioning steps using the Hirschfeld-Gebelein-R\'enyi Maximum
-Correlation Coefficient. This relieves the user from deciding a-priori the
-parametric form of the random variables but is still expressive enough to
-effectively approximate any continuous distribution and permits efficient
-learning and inference. Our empirical evidence shows that the architecture,
-called Mixed SPNs, can indeed capture complex distributions across a wide range
-of hybrid domains.
-
+  While all kinds of mixed data -from personal data, over panel and scientificdata, to public and commercial data- are collected and stored, buildingprobabilistic graphical models for these hybrid domains becomes more difficult.Users spend significant amounts of time in identifying the parametric form ofthe random variables (Gaussian, Poisson, Logit, etc.) involved and learning themixed models. To make this difficult task easier, we propose the firsttrainable probabilistic deep architecture for hybrid domains that featurestractable queries. It is based on Sum-Product Networks (SPNs) with piecewisepolynomial leave distributions together with novel nonparametric decompositionand conditioning steps using the Hirschfeld-Gebelein-R\'enyi MaximumCorrelation Coefficient. This relieves the user from deciding a-priori theparametric form of the random variables but is still expressive enough toeffectively approximate any continuous distribution and permits efficientlearning and inference. Our empirical evidence shows that the architecture,called Mixed SPNs, can indeed capture complex distributions across a wide rangeof hybrid domains.
 
 Preference-Guided Planning: An Active Elicitation Approach
 
-  Planning with preferences has been employed extensively to quickly generate
-high-quality plans. However, it may be difficult for the human expert to supply
-this information without knowledge of the reasoning employed by the planner and
-the distribution of planning problems. We consider the problem of actively
-eliciting preferences from a human expert during the planning process.
-Specifically, we study this problem in the context of the Hierarchical Task
-Network (HTN) planning framework as it allows easy interaction with the human.
-Our experimental results on several diverse planning domains show that the
-preferences gathered using the proposed approach improve the quality and speed
-of the planner, while reducing the burden on the human expert.
+  Planning with preferences has been employed extensively to quickly generatehigh-quality plans. However, it may be difficult for the human expert to supplythis information without knowledge of the reasoning employed by the planner andthe distribution of planning problems. We consider the problem of activelyeliciting preferences from a human expert during the planning process.Specifically, we study this problem in the context of the Hierarchical TaskNetwork (HTN) planning framework as it allows easy interaction with the human.Our experimental results on several diverse planning domains show that thepreferences gathered using the proposed approach improve the quality and speedof the planner, while reducing the burden on the human expert.
 
+Structure Learning for Relational Logistic Regression: An Ensemble  Approach
 
-Structure Learning for Relational Logistic Regression: An Ensemble
-  Approach
-
-  We consider the problem of learning Relational Logistic Regression (RLR).
-Unlike standard logistic regression, the features of RLRs are first-order
-formulae with associated weight vectors instead of scalar weights. We turn the
-problem of learning RLR to learning these vector-weighted formulae and develop
-a learning algorithm based on the recently successful functional-gradient
-boosting methods for probabilistic logic models. We derive the functional
-gradients and show how weights can be learned simultaneously in an efficient
-manner. Our empirical evaluation on standard and novel data sets demonstrates
-the superiority of our approach over other methods for learning RLR.
-
+  We consider the problem of learning Relational Logistic Regression (RLR).Unlike standard logistic regression, the features of RLRs are first-orderformulae with associated weight vectors instead of scalar weights. We turn theproblem of learning RLR to learning these vector-weighted formulae and developa learning algorithm based on the recently successful functional-gradientboosting methods for probabilistic logic models. We derive the functionalgradients and show how weights can be learned simultaneously in an efficientmanner. Our empirical evaluation on standard and novel data sets demonstratesthe superiority of our approach over other methods for learning RLR.
 

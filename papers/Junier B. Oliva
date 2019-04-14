@@ -1,156 +1,36 @@
 The Statistical Recurrent Unit
 
-  Sophisticated gated recurrent neural network architectures like LSTMs and
-GRUs have been shown to be highly effective in a myriad of applications. We
-develop an un-gated unit, the statistical recurrent unit (SRU), that is able to
-learn long term dependencies in data by only keeping moving averages of
-statistics. The SRU's architecture is simple, un-gated, and contains a
-comparable number of parameters to LSTMs; yet, SRUs perform favorably to more
-sophisticated LSTM and GRU alternatives, often outperforming one or both in
-various tasks. We show the efficacy of SRUs as compared to LSTMs and GRUs in an
-unbiased manner by optimizing respective architectures' hyperparameters in a
-Bayesian optimization scheme for both synthetic and real-world tasks.
-
+  Sophisticated gated recurrent neural network architectures like LSTMs andGRUs have been shown to be highly effective in a myriad of applications. Wedevelop an un-gated unit, the statistical recurrent unit (SRU), that is able tolearn long term dependencies in data by only keeping moving averages ofstatistics. The SRU's architecture is simple, un-gated, and contains acomparable number of parameters to LSTMs; yet, SRUs perform favorably to moresophisticated LSTM and GRU alternatives, often outperforming one or both invarious tasks. We show the efficacy of SRUs as compared to LSTMs and GRUs in anunbiased manner by optimizing respective architectures' hyperparameters in aBayesian optimization scheme for both synthetic and real-world tasks.
 
 FuSSO: Functional Shrinkage and Selection Operator
 
-  We present the FuSSO, a functional analogue to the LASSO, that efficiently
-finds a sparse set of functional input covariates to regress a real-valued
-response against. The FuSSO does so in a semi-parametric fashion, making no
-parametric assumptions about the nature of input functional covariates and
-assuming a linear form to the mapping of functional covariates to the response.
-We provide a statistical backing for use of the FuSSO via proof of asymptotic
-sparsistency under various conditions. Furthermore, we observe good results on
-both synthetic and real-world data.
-
+  We present the FuSSO, a functional analogue to the LASSO, that efficientlyfinds a sparse set of functional input covariates to regress a real-valuedresponse against. The FuSSO does so in a semi-parametric fashion, making noparametric assumptions about the nature of input functional covariates andassuming a linear form to the mapping of functional covariates to the response.We provide a statistical backing for use of the FuSSO via proof of asymptoticsparsistency under various conditions. Furthermore, we observe good results onboth synthetic and real-world data.
 
 Fast Distribution To Real Regression
 
-  We study the problem of distribution to real-value regression, where one aims
-to regress a mapping $f$ that takes in a distribution input covariate $P\in
-\mathcal{I}$ (for a non-parametric family of distributions $\mathcal{I}$) and
-outputs a real-valued response $Y=f(P) + \epsilon$. This setting was recently
-studied, and a "Kernel-Kernel" estimator was introduced and shown to have a
-polynomial rate of convergence. However, evaluating a new prediction with the
-Kernel-Kernel estimator scales as $\Omega(N)$. This causes the difficult
-situation where a large amount of data may be necessary for a low estimation
-risk, but the computation cost of estimation becomes infeasible when the
-data-set is too large. To this end, we propose the Double-Basis estimator,
-which looks to alleviate this big data problem in two ways: first, the
-Double-Basis estimator is shown to have a computation complexity that is
-independent of the number of of instances $N$ when evaluating new predictions
-after training; secondly, the Double-Basis estimator is shown to have a fast
-rate of convergence for a general class of mappings $f\in\mathcal{F}$.
-
+  We study the problem of distribution to real-value regression, where one aimsto regress a mapping $f$ that takes in a distribution input covariate $P\in\mathcal{I}$ (for a non-parametric family of distributions $\mathcal{I}$) andoutputs a real-valued response $Y=f(P) + \epsilon$. This setting was recentlystudied, and a "Kernel-Kernel" estimator was introduced and shown to have apolynomial rate of convergence. However, evaluating a new prediction with theKernel-Kernel estimator scales as $\Omega(N)$. This causes the difficultsituation where a large amount of data may be necessary for a low estimationrisk, but the computation cost of estimation becomes infeasible when thedata-set is too large. To this end, we propose the Double-Basis estimator,which looks to alleviate this big data problem in two ways: first, theDouble-Basis estimator is shown to have a computation complexity that isindependent of the number of of instances $N$ when evaluating new predictionsafter training; secondly, the Double-Basis estimator is shown to have a fastrate of convergence for a general class of mappings $f\in\mathcal{F}$.
 
 Deep Mean Maps
 
-  The use of distributions and high-level features from deep architecture has
-become commonplace in modern computer vision. Both of these methodologies have
-separately achieved a great deal of success in many computer vision tasks.
-However, there has been little work attempting to leverage the power of these
-to methodologies jointly. To this end, this paper presents the Deep Mean Maps
-(DMMs) framework, a novel family of methods to non-parametrically represent
-distributions of features in convolutional neural network models.
-  DMMs are able to both classify images using the distribution of top-level
-features, and to tune the top-level features for performing this task. We show
-how to implement DMMs using a special mean map layer composed of typical CNN
-operations, making both forward and backward propagation simple.
-  We illustrate the efficacy of DMMs at analyzing distributional patterns in
-image data in a synthetic data experiment. We also show that we extending
-existing deep architectures with DMMs improves the performance of existing CNNs
-on several challenging real-world datasets.
-
+  The use of distributions and high-level features from deep architecture hasbecome commonplace in modern computer vision. Both of these methodologies haveseparately achieved a great deal of success in many computer vision tasks.However, there has been little work attempting to leverage the power of theseto methodologies jointly. To this end, this paper presents the Deep Mean Maps(DMMs) framework, a novel family of methods to non-parametrically representdistributions of features in convolutional neural network models.  DMMs are able to both classify images using the distribution of top-levelfeatures, and to tune the top-level features for performing this task. We showhow to implement DMMs using a special mean map layer composed of typical CNNoperations, making both forward and backward propagation simple.  We illustrate the efficacy of DMMs at analyzing distributional patterns inimage data in a synthetic data experiment. We also show that we extendingexisting deep architectures with DMMs improves the performance of existing CNNson several challenging real-world datasets.
 
 Recurrent Estimation of Distributions
 
-  This paper presents the recurrent estimation of distributions (RED) for
-modeling real-valued data in a semiparametric fashion. RED models make two
-novel uses of recurrent neural networks (RNNs) for density estimation of
-general real-valued data. First, RNNs are used to transform input covariates
-into a latent space to better capture conditional dependencies in inputs.
-After, an RNN is used to compute the conditional distributions of the latent
-covariates. The resulting model is efficient to train, compute, and sample
-from, whilst producing normalized pdfs. The effectiveness of RED is shown via
-several real-world data experiments. Our results show that RED models achieve a
-lower held-out negative log-likelihood than other neural network approaches
-across multiple dataset sizes and dimensionalities. Further context of the
-efficacy of RED is provided by considering anomaly detection tasks, where we
-also observe better performance over alternative models.
-
+  This paper presents the recurrent estimation of distributions (RED) formodeling real-valued data in a semiparametric fashion. RED models make twonovel uses of recurrent neural networks (RNNs) for density estimation ofgeneral real-valued data. First, RNNs are used to transform input covariatesinto a latent space to better capture conditional dependencies in inputs.After, an RNN is used to compute the conditional distributions of the latentcovariates. The resulting model is efficient to train, compute, and samplefrom, whilst producing normalized pdfs. The effectiveness of RED is shown viaseveral real-world data experiments. Our results show that RED models achieve alower held-out negative log-likelihood than other neural network approachesacross multiple dataset sizes and dimensionalities. Further context of theefficacy of RED is provided by considering anomaly detection tasks, where wealso observe better performance over alternative models.
 
 Linear-time Learning on Distributions with Approximate Kernel Embeddings
 
-  Many interesting machine learning problems are best posed by considering
-instances that are distributions, or sample sets drawn from distributions.
-Previous work devoted to machine learning tasks with distributional inputs has
-done so through pairwise kernel evaluations between pdfs (or sample sets).
-While such an approach is fine for smaller datasets, the computation of an $N
-\times N$ Gram matrix is prohibitive in large datasets. Recent scalable
-estimators that work over pdfs have done so only with kernels that use
-Euclidean metrics, like the $L_2$ distance. However, there are a myriad of
-other useful metrics available, such as total variation, Hellinger distance,
-and the Jensen-Shannon divergence. This work develops the first random features
-for pdfs whose dot product approximates kernels using these non-Euclidean
-metrics, allowing estimators using such kernels to scale to large datasets by
-working in a primal space, without computing large Gram matrices. We provide an
-analysis of the approximation error in using our proposed random features and
-show empirically the quality of our approximation both in estimating a Gram
-matrix and in solving learning tasks in real-world and synthetic data.
-
+  Many interesting machine learning problems are best posed by consideringinstances that are distributions, or sample sets drawn from distributions.Previous work devoted to machine learning tasks with distributional inputs hasdone so through pairwise kernel evaluations between pdfs (or sample sets).While such an approach is fine for smaller datasets, the computation of an $N\times N$ Gram matrix is prohibitive in large datasets. Recent scalableestimators that work over pdfs have done so only with kernels that useEuclidean metrics, like the $L_2$ distance. However, there are a myriad ofother useful metrics available, such as total variation, Hellinger distance,and the Jensen-Shannon divergence. This work develops the first random featuresfor pdfs whose dot product approximates kernels using these non-Euclideanmetrics, allowing estimators using such kernels to scale to large datasets byworking in a primal space, without computing large Gram matrices. We provide ananalysis of the approximation error in using our proposed random features andshow empirically the quality of our approximation both in estimating a Grammatrix and in solving learning tasks in real-world and synthetic data.
 
 Transformation Autoregressive Networks
 
-  The fundamental task of general density estimation $p(x)$ has been of keen
-interest to machine learning. In this work, we attempt to systematically
-characterize methods for density estimation. Broadly speaking, most of the
-existing methods can be categorized into either using: \textit{a})
-autoregressive models to estimate the conditional factors of the chain rule,
-$p(x_{i}\, |\, x_{i-1}, \ldots)$; or \textit{b}) non-linear transformations of
-variables of a simple base distribution. Based on the study of the
-characteristics of these categories, we propose multiple novel methods for each
-category. For example we proposed RNN based transformations to model
-non-Markovian dependencies. Further, through a comprehensive study over both
-real world and synthetic data, we show for that jointly leveraging
-transformations of variables and autoregressive conditional models, results in
-a considerable improvement in performance. We illustrate the use of our models
-in outlier detection and image modeling. Finally we introduce a novel data
-driven framework for learning a family of distributions.
-
+  The fundamental task of general density estimation $p(x)$ has been of keeninterest to machine learning. In this work, we attempt to systematicallycharacterize methods for density estimation. Broadly speaking, most of theexisting methods can be categorized into either using: \textit{a})autoregressive models to estimate the conditional factors of the chain rule,$p(x_{i}\, |\, x_{i-1}, \ldots)$; or \textit{b}) non-linear transformations ofvariables of a simple base distribution. Based on the study of thecharacteristics of these categories, we propose multiple novel methods for eachcategory. For example we proposed RNN based transformations to modelnon-Markovian dependencies. Further, through a comprehensive study over bothreal world and synthetic data, we show for that jointly leveragingtransformations of variables and autoregressive conditional models, results ina considerable improvement in performance. We illustrate the use of our modelsin outlier detection and image modeling. Finally we introduce a novel datadriven framework for learning a family of distributions.
 
 Meta-Curvature
 
-  We propose to learn curvature information for better generalization and fast
-model adaptation, called meta-curvature. Based on the model-agnostic
-meta-learner (MAML), we learn to transform the gradients in the inner
-optimization such that the transformed gradients achieve better generalization
-performance to a new task. For training large scale neural networks, we
-decompose the curvature matrix into smaller matrices and capture the
-dependencies of the model's parameters with a series of tensor products. We
-demonstrate the effects of our proposed method on both few-shot image
-classification and few-shot reinforcement learning tasks. Experimental results
-show consistent improvements on classification tasks and promising results on
-reinforcement learning tasks. Furthermore, we observe faster convergence rates
-of the meta-training process. Finally, we present an analysis that explains
-better generalization performance with the meta-trained curvature.
-
+  We propose to learn curvature information for better generalization and fastmodel adaptation, called meta-curvature. Based on the model-agnosticmeta-learner (MAML), we learn to transform the gradients in the inneroptimization such that the transformed gradients achieve better generalizationperformance to a new task. For training large scale neural networks, wedecompose the curvature matrix into smaller matrices and capture thedependencies of the model's parameters with a series of tensor products. Wedemonstrate the effects of our proposed method on both few-shot imageclassification and few-shot reinforcement learning tasks. Experimental resultsshow consistent improvements on classification tasks and promising results onreinforcement learning tasks. Furthermore, we observe faster convergence ratesof the meta-training process. Finally, we present an analysis that explainsbetter generalization performance with the meta-trained curvature.
 
 Multi-fidelity Gaussian Process Bandit Optimisation
 
-  In many scientific and engineering applications, we are tasked with the
-maximisation of an expensive to evaluate black box function $f$. Traditional
-settings for this problem assume just the availability of this single function.
-However, in many cases, cheap approximations to $f$ may be obtainable. For
-example, the expensive real world behaviour of a robot can be approximated by a
-cheap computer simulation. We can use these approximations to eliminate low
-function value regions cheaply and use the expensive evaluations of $f$ in a
-small but promising region and speedily identify the optimum. We formalise this
-task as a \emph{multi-fidelity} bandit problem where the target function and
-its approximations are sampled from a Gaussian process. We develop MF-GP-UCB, a
-novel method based on upper confidence bound techniques. In our theoretical
-analysis we demonstrate that it exhibits precisely the above behaviour, and
-achieves better regret than strategies which ignore multi-fidelity information.
-Empirically, MF-GP-UCB outperforms such naive strategies and other
-multi-fidelity methods on several synthetic and real experiments.
-
+  In many scientific and engineering applications, we are tasked with themaximisation of an expensive to evaluate black box function $f$. Traditionalsettings for this problem assume just the availability of this single function.However, in many cases, cheap approximations to $f$ may be obtainable. Forexample, the expensive real world behaviour of a robot can be approximated by acheap computer simulation. We can use these approximations to eliminate lowfunction value regions cheaply and use the expensive evaluations of $f$ in asmall but promising region and speedily identify the optimum. We formalise thistask as a \emph{multi-fidelity} bandit problem where the target function andits approximations are sampled from a Gaussian process. We develop MF-GP-UCB, anovel method based on upper confidence bound techniques. In our theoreticalanalysis we demonstrate that it exhibits precisely the above behaviour, andachieves better regret than strategies which ignore multi-fidelity information.Empirically, MF-GP-UCB outperforms such naive strategies and othermulti-fidelity methods on several synthetic and real experiments.
 

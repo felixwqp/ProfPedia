@@ -1,395 +1,68 @@
-Learning across scales - A multiscale method for Convolution Neural
-  Networks
+Learning across scales - A multiscale method for Convolution Neural  Networks
 
-  In this work we establish the relation between optimal control and training
-deep Convolution Neural Networks (CNNs). We show that the forward propagation
-in CNNs can be interpreted as a time-dependent nonlinear differential equation
-and learning as controlling the parameters of the differential equation such
-that the network approximates the data-label relation for given training data.
-Using this continuous interpretation we derive two new methods to scale CNNs
-with respect to two different dimensions. The first class of multiscale methods
-connects low-resolution and high-resolution data through prolongation and
-restriction of CNN parameters. We demonstrate that this enables classifying
-high-resolution images using CNNs trained with low-resolution images and vice
-versa and warm-starting the learning process. The second class of multiscale
-methods connects shallow and deep networks and leads to new training strategies
-that gradually increase the depths of the CNN while re-using parameters for
-initializations.
-
+  In this work we establish the relation between optimal control and trainingdeep Convolution Neural Networks (CNNs). We show that the forward propagationin CNNs can be interpreted as a time-dependent nonlinear differential equationand learning as controlling the parameters of the differential equation suchthat the network approximates the data-label relation for given training data.Using this continuous interpretation we derive two new methods to scale CNNswith respect to two different dimensions. The first class of multiscale methodsconnects low-resolution and high-resolution data through prolongation andrestriction of CNN parameters. We demonstrate that this enables classifyinghigh-resolution images using CNNs trained with low-resolution images and viceversa and warm-starting the learning process. The second class of multiscalemethods connects shallow and deep networks and leads to new training strategiesthat gradually increase the depths of the CNN while re-using parameters forinitializations.
 
 Stable Architectures for Deep Neural Networks
 
-  Deep neural networks have become invaluable tools for supervised machine
-learning, e.g., classification of text or images. While often offering superior
-results over traditional techniques and successfully expressing complicated
-patterns in data, deep architectures are known to be challenging to design and
-train such that they generalize well to new data. Important issues with deep
-architectures are numerical instabilities in derivative-based learning
-algorithms commonly called exploding or vanishing gradients. In this paper we
-propose new forward propagation techniques inspired by systems of Ordinary
-Differential Equations (ODE) that overcome this challenge and lead to
-well-posed learning problems for arbitrarily deep networks.
-  The backbone of our approach is our interpretation of deep learning as a
-parameter estimation problem of nonlinear dynamical systems. Given this
-formulation, we analyze stability and well-posedness of deep learning and use
-this new understanding to develop new network architectures. We relate the
-exploding and vanishing gradient phenomenon to the stability of the discrete
-ODE and present several strategies for stabilizing deep learning for very deep
-networks. While our new architectures restrict the solution space, several
-numerical experiments show their competitiveness with state-of-the-art
-networks.
-
+  Deep neural networks have become invaluable tools for supervised machinelearning, e.g., classification of text or images. While often offering superiorresults over traditional techniques and successfully expressing complicatedpatterns in data, deep architectures are known to be challenging to design andtrain such that they generalize well to new data. Important issues with deeparchitectures are numerical instabilities in derivative-based learningalgorithms commonly called exploding or vanishing gradients. In this paper wepropose new forward propagation techniques inspired by systems of OrdinaryDifferential Equations (ODE) that overcome this challenge and lead towell-posed learning problems for arbitrarily deep networks.  The backbone of our approach is our interpretation of deep learning as aparameter estimation problem of nonlinear dynamical systems. Given thisformulation, we analyze stability and well-posedness of deep learning and usethis new understanding to develop new network architectures. We relate theexploding and vanishing gradient phenomenon to the stability of the discreteODE and present several strategies for stabilizing deep learning for very deepnetworks. While our new architectures restrict the solution space, severalnumerical experiments show their competitiveness with state-of-the-artnetworks.
 
 Optimal Experimental Design for Constrained Inverse Problems
 
-  In this paper, we address the challenging problem of optimal experimental
-design (OED) of constrained inverse problems. We consider two OED formulations
-that allow reducing the experimental costs by minimizing the number of
-measurements. The first formulation assumes a fine discretization of the design
-parameter space and uses sparsity promoting regularization to obtain an
-efficient design. The second formulation parameterizes the design and seeks
-optimal placement for these measurements by solving a small-dimensional
-optimization problem. We consider both problems in a Bayes risk as well as an
-empirical Bayes risk minimization framework. For the unconstrained inverse
-state problem, we exploit the closed form solution for the inner problem to
-efficiently compute derivatives for the outer OED problem. The empirical
-formulation does not require an explicit solution of the inverse problem and
-therefore allows to integrate constraints efficiently. A key contribution is an
-efficient optimization method for solving the resulting, typically
-high-dimensional, bilevel optimization problem using derivative-based methods.
-To overcome the lack of non-differentiability in active set methods for
-inequality constraints problems, we use a relaxed interior point method. To
-address the growing computational complexity of empirical Bayes OED, we
-parallelize the computation over the training models. Numerical examples and
-illustrations from tomographic reconstruction, for various data sets and under
-different constraints, demonstrate the impact of constraints on the optimal
-design and highlight the importance of OED for constrained problems.
-
+  In this paper, we address the challenging problem of optimal experimentaldesign (OED) of constrained inverse problems. We consider two OED formulationsthat allow reducing the experimental costs by minimizing the number ofmeasurements. The first formulation assumes a fine discretization of the designparameter space and uses sparsity promoting regularization to obtain anefficient design. The second formulation parameterizes the design and seeksoptimal placement for these measurements by solving a small-dimensionaloptimization problem. We consider both problems in a Bayes risk as well as anempirical Bayes risk minimization framework. For the unconstrained inversestate problem, we exploit the closed form solution for the inner problem toefficiently compute derivatives for the outer OED problem. The empiricalformulation does not require an explicit solution of the inverse problem andtherefore allows to integrate constraints efficiently. A key contribution is anefficient optimization method for solving the resulting, typicallyhigh-dimensional, bilevel optimization problem using derivative-based methods.To overcome the lack of non-differentiability in active set methods forinequality constraints problems, we use a relaxed interior point method. Toaddress the growing computational complexity of empirical Bayes OED, weparallelize the computation over the training models. Numerical examples andillustrations from tomographic reconstruction, for various data sets and underdifferent constraints, demonstrate the impact of constraints on the optimaldesign and highlight the importance of OED for constrained problems.
 
 Deep Neural Networks Motivated by Partial Differential Equations
 
-  Partial differential equations (PDEs) are indispensable for modeling many
-physical phenomena and also commonly used for solving image processing tasks.
-In the latter area, PDE-based approaches interpret image data as
-discretizations of multivariate functions and the output of image processing
-algorithms as solutions to certain PDEs. Posing image processing problems in
-the infinite dimensional setting provides powerful tools for their analysis and
-solution. Over the last few decades, the reinterpretation of classical image
-processing problems through the PDE lens has been creating multiple celebrated
-approaches that benefit a vast area of tasks including image segmentation,
-denoising, registration, and reconstruction.
-  In this paper, we establish a new PDE-interpretation of a class of deep
-convolutional neural networks (CNN) that are commonly used to learn from
-speech, image, and video data. Our interpretation includes convolution residual
-neural networks (ResNet), which are among the most promising approaches for
-tasks such as image classification having improved the state-of-the-art
-performance in prestigious benchmark challenges. Despite their recent
-successes, deep ResNets still face some critical challenges associated with
-their design, immense computational costs and memory requirements, and lack of
-understanding of their reasoning.
-  Guided by well-established PDE theory, we derive three new ResNet
-architectures that fall into two new classes: parabolic and hyperbolic CNNs. We
-demonstrate how PDE theory can provide new insights and algorithms for deep
-learning and demonstrate the competitiveness of three new CNN architectures
-using numerical experiments.
+  Partial differential equations (PDEs) are indispensable for modeling manyphysical phenomena and also commonly used for solving image processing tasks.In the latter area, PDE-based approaches interpret image data asdiscretizations of multivariate functions and the output of image processingalgorithms as solutions to certain PDEs. Posing image processing problems inthe infinite dimensional setting provides powerful tools for their analysis andsolution. Over the last few decades, the reinterpretation of classical imageprocessing problems through the PDE lens has been creating multiple celebratedapproaches that benefit a vast area of tasks including image segmentation,denoising, registration, and reconstruction.  In this paper, we establish a new PDE-interpretation of a class of deepconvolutional neural networks (CNN) that are commonly used to learn fromspeech, image, and video data. Our interpretation includes convolution residualneural networks (ResNet), which are among the most promising approaches fortasks such as image classification having improved the state-of-the-artperformance in prestigious benchmark challenges. Despite their recentsuccesses, deep ResNets still face some critical challenges associated withtheir design, immense computational costs and memory requirements, and lack ofunderstanding of their reasoning.  Guided by well-established PDE theory, we derive three new ResNetarchitectures that fall into two new classes: parabolic and hyperbolic CNNs. Wedemonstrate how PDE theory can provide new insights and algorithms for deeplearning and demonstrate the competitiveness of three new CNN architecturesusing numerical experiments.
 
+Never look back - A modified EnKF method and its application to the  training of neural networks without back propagation
 
-Never look back - A modified EnKF method and its application to the
-  training of neural networks without back propagation
+  In this work, we present a new derivative-free optimization method andinvestigate its use for training neural networks. Our method is motivated bythe Ensemble Kalman Filter (EnKF), which has been used successfully for solvingoptimization problems that involve large-scale, highly nonlinear dynamicalsystems. A key benefit of the EnKF method is that it requires only theevaluation of the forward propagation but not its derivatives. Hence, in thecontext of neural networks, it alleviates the need for back propagation andreduces the memory consumption dramatically. However, the method is not a pure"black-box" global optimization heuristic as it efficiently utilizes thestructure of typical learning problems. Promising first results of the EnKF fortraining deep neural networks have been presented recently by Kovachki andStuart. We propose an important modification of the EnKF that enables us toprove convergence of our method to the minimizer of a strongly convex function.Our method also bears similarity with implicit filtering and we demonstrate itspotential for minimizing highly oscillatory functions using a simple example.Further, we provide numerical examples that demonstrate the potential of ourmethod for training deep neural networks.
 
-  In this work, we present a new derivative-free optimization method and
-investigate its use for training neural networks. Our method is motivated by
-the Ensemble Kalman Filter (EnKF), which has been used successfully for solving
-optimization problems that involve large-scale, highly nonlinear dynamical
-systems. A key benefit of the EnKF method is that it requires only the
-evaluation of the forward propagation but not its derivatives. Hence, in the
-context of neural networks, it alleviates the need for back propagation and
-reduces the memory consumption dramatically. However, the method is not a pure
-"black-box" global optimization heuristic as it efficiently utilizes the
-structure of typical learning problems. Promising first results of the EnKF for
-training deep neural networks have been presented recently by Kovachki and
-Stuart. We propose an important modification of the EnKF that enables us to
-prove convergence of our method to the minimizer of a strongly convex function.
-Our method also bears similarity with implicit filtering and we demonstrate its
-potential for minimizing highly oscillatory functions using a simple example.
-Further, we provide numerical examples that demonstrate the potential of our
-method for training deep neural networks.
+A Lagrangian Gauss-Newton-Krylov Solver for Mass- and  Intensity-Preserving Diffeomorphic Image Registration
 
-
-A Lagrangian Gauss-Newton-Krylov Solver for Mass- and
-  Intensity-Preserving Diffeomorphic Image Registration
-
-  We present an efficient solver for diffeomorphic image registration problems
-in the framework of Large Deformations Diffeomorphic Metric Mappings (LDDMM).
-We use an optimal control formulation, in which the velocity field of a
-hyperbolic PDE needs to be found such that the distance between the final state
-of the system (the transformed/transported template image) and the observation
-(the reference image) is minimized. Our solver supports both stationary and
-non-stationary (i.e., transient or time-dependent) velocity fields. As
-transformation models, we consider both the transport equation (assuming
-intensities are preserved during the deformation) and the continuity equation
-(assuming mass-preservation).
-  We consider the reduced form of the optimal control problem and solve the
-resulting unconstrained optimization problem using a discretize-then-optimize
-approach. A key contribution is the elimination of the PDE constraint using a
-Lagrangian hyperbolic PDE solver. Lagrangian methods rely on the concept of
-characteristic curves that we approximate here using a fourth-order Runge-Kutta
-method. We also present an efficient algorithm for computing the derivatives of
-final state of the system with respect to the velocity field. This allows us to
-use fast Gauss-Newton based methods. We present quickly converging iterative
-linear solvers using spectral preconditioners that render the overall
-optimization efficient and scalable. Our method is embedded into the image
-registration framework FAIR and, thus, supports the most commonly used
-similarity measures and regularization functionals. We demonstrate the
-potential of our new approach using several synthetic and real world test
-problems with up to 14.7 million degrees of freedom.
-
+  We present an efficient solver for diffeomorphic image registration problemsin the framework of Large Deformations Diffeomorphic Metric Mappings (LDDMM).We use an optimal control formulation, in which the velocity field of ahyperbolic PDE needs to be found such that the distance between the final stateof the system (the transformed/transported template image) and the observation(the reference image) is minimized. Our solver supports both stationary andnon-stationary (i.e., transient or time-dependent) velocity fields. Astransformation models, we consider both the transport equation (assumingintensities are preserved during the deformation) and the continuity equation(assuming mass-preservation).  We consider the reduced form of the optimal control problem and solve theresulting unconstrained optimization problem using a discretize-then-optimizeapproach. A key contribution is the elimination of the PDE constraint using aLagrangian hyperbolic PDE solver. Lagrangian methods rely on the concept ofcharacteristic curves that we approximate here using a fourth-order Runge-Kuttamethod. We also present an efficient algorithm for computing the derivatives offinal state of the system with respect to the velocity field. This allows us touse fast Gauss-Newton based methods. We present quickly converging iterativelinear solvers using spectral preconditioners that render the overalloptimization efficient and scalable. Our method is embedded into the imageregistration framework FAIR and, thus, supports the most commonly usedsimilarity measures and regularization functionals. We demonstrate thepotential of our new approach using several synthetic and real world testproblems with up to 14.7 million degrees of freedom.
 
 jInv -- a flexible Julia package for PDE parameter estimation
 
-  Estimating parameters of Partial Differential Equations (PDEs) from noisy and
-indirect measurements often requires solving ill-posed inverse problems. These
-so called parameter estimation or inverse medium problems arise in a variety of
-applications such as geophysical, medical imaging, and nondestructive testing.
-Their solution is computationally intense since the underlying PDEs need to be
-solved numerous times until the reconstruction of the parameters is
-sufficiently accurate. Typically, the computational demand grows significantly
-when more measurements are available, which poses severe challenges to
-inversion algorithms as measurement devices become more powerful.
-  In this paper we present jInv, a flexible framework and open source software
-that provides parallel algorithms for solving parameter estimation problems
-with many measurements. Being written in the expressive programming language
-Julia, jInv is portable, easy to understand and extend, cross-platform tested,
-and well-documented. It provides novel parallelization schemes that exploit the
-inherent structure of many parameter estimation problems and can be used to
-solve multiphysics inversion problems as is demonstrated using numerical
-experiments motivated by geophysical imaging.
-
+  Estimating parameters of Partial Differential Equations (PDEs) from noisy andindirect measurements often requires solving ill-posed inverse problems. Theseso called parameter estimation or inverse medium problems arise in a variety ofapplications such as geophysical, medical imaging, and nondestructive testing.Their solution is computationally intense since the underlying PDEs need to besolved numerous times until the reconstruction of the parameters issufficiently accurate. Typically, the computational demand grows significantlywhen more measurements are available, which poses severe challenges toinversion algorithms as measurement devices become more powerful.  In this paper we present jInv, a flexible framework and open source softwarethat provides parallel algorithms for solving parameter estimation problemswith many measurements. Being written in the expressive programming languageJulia, jInv is portable, easy to understand and extend, cross-platform tested,and well-documented. It provides novel parallelization schemes that exploit theinherent structure of many parameter estimation problems and can be used tosolve multiphysics inversion problems as is demonstrated using numericalexperiments motivated by geophysical imaging.
 
 Reversible Architectures for Arbitrarily Deep Residual Neural Networks
 
-  Recently, deep residual networks have been successfully applied in many
-computer vision and natural language processing tasks, pushing the
-state-of-the-art performance with deeper and wider architectures. In this work,
-we interpret deep residual networks as ordinary differential equations (ODEs),
-which have long been studied in mathematics and physics with rich theoretical
-and empirical success. From this interpretation, we develop a theoretical
-framework on stability and reversibility of deep neural networks, and derive
-three reversible neural network architectures that can go arbitrarily deep in
-theory. The reversibility property allows a memory-efficient implementation,
-which does not need to store the activations for most hidden layers. Together
-with the stability of our architectures, this enables training deeper networks
-using only modest computational resources. We provide both theoretical analyses
-and empirical results. Experimental results demonstrate the efficacy of our
-architectures against several strong baselines on CIFAR-10, CIFAR-100 and
-STL-10 with superior or on-par state-of-the-art performance. Furthermore, we
-show our architectures yield superior results when trained using fewer training
-data.
+  Recently, deep residual networks have been successfully applied in manycomputer vision and natural language processing tasks, pushing thestate-of-the-art performance with deeper and wider architectures. In this work,we interpret deep residual networks as ordinary differential equations (ODEs),which have long been studied in mathematics and physics with rich theoreticaland empirical success. From this interpretation, we develop a theoreticalframework on stability and reversibility of deep neural networks, and derivethree reversible neural network architectures that can go arbitrarily deep intheory. The reversibility property allows a memory-efficient implementation,which does not need to store the activations for most hidden layers. Togetherwith the stability of our architectures, this enables training deeper networksusing only modest computational resources. We provide both theoretical analysesand empirical results. Experimental results demonstrate the efficacy of ourarchitectures against several strong baselines on CIFAR-10, CIFAR-100 andSTL-10 with superior or on-par state-of-the-art performance. Furthermore, weshow our architectures yield superior results when trained using fewer trainingdata.
 
+An Uncertainty-Weighted Asynchronous ADMM Method for Parallel PDE  Parameter Estimation
 
-An Uncertainty-Weighted Asynchronous ADMM Method for Parallel PDE
-  Parameter Estimation
-
-  We consider a global variable consensus ADMM algorithm for solving
-large-scale PDE parameter estimation problems asynchronously and in parallel.
-To this end, we partition the data and distribute the resulting subproblems
-among the available workers. Since each subproblem can be associated with
-different forward models and right-hand-sides, this provides ample options for
-tailoring the method to different applications including multi-source and
-multi-physics PDE parameter estimation problems. We also consider an
-asynchronous variant of consensus ADMM to reduce communication and latency.
-  Our key contribution is a novel weighting scheme that empirically increases
-the progress made in early iterations of the consensus ADMM scheme and is
-attractive when using a large number of subproblems. This makes consensus ADMM
-competitive for solving PDE parameter estimation, which incurs immense costs
-per iteration. The weights in our scheme are related to the uncertainty
-associated with the solutions of each subproblem. We exemplarily show that the
-weighting scheme combined with the asynchronous implementation improves the
-time-to-solution for a 3D single-physics and multiphysics PDE parameter
-estimation problems.
-
+  We consider a global variable consensus ADMM algorithm for solvinglarge-scale PDE parameter estimation problems asynchronously and in parallel.To this end, we partition the data and distribute the resulting subproblemsamong the available workers. Since each subproblem can be associated withdifferent forward models and right-hand-sides, this provides ample options fortailoring the method to different applications including multi-source andmulti-physics PDE parameter estimation problems. We also consider anasynchronous variant of consensus ADMM to reduce communication and latency.  Our key contribution is a novel weighting scheme that empirically increasesthe progress made in early iterations of the consensus ADMM scheme and isattractive when using a large number of subproblems. This makes consensus ADMMcompetitive for solving PDE parameter estimation, which incurs immense costsper iteration. The weights in our scheme are related to the uncertaintyassociated with the solutions of each subproblem. We exemplarily show that theweighting scheme combined with the asynchronous implementation improves thetime-to-solution for a 3D single-physics and multiphysics PDE parameterestimation problems.
 
 Gauss-Newton Optimization for Phase Recovery from the Bispectrum
 
-  Phase recovery from the bispectrum is a central problem in speckle
-interferometry which can be posed as an optimization problem minimizing a
-weighted nonlinear least-squares objective function. We look at two different
-formulations of the phase recovery problem from the literature, both of which
-can be minimized with respect to either the recovered phase or the recovered
-image. Previously, strategies for solving these formulations have been limited
-to first-order optimization methods such as gradient descent or quasi-Newton
-methods. This paper explores Gauss-Newton optimization schemes for the problem
-of phase recovery from the bispectrum. We implement efficient Gauss-Newton
-optimization schemes for the all formulations. For the two of these
-formulations which optimize with respect to the recovered image, we also extend
-to projected Gauss-Newton to enforce element-wise lower and upper bounds on
-pixel intensities of the recovered image. We show that our efficient
-Gauss-Newton schemes result in better image reconstructions with no or limited
-additional computational cost compared to previously implemented first-order
-optimization schemes for phase recovery from the bispectrum. MATLAB
-implementations of all methods and simulations are made publicly available in
-the BiBox repository on Github.
-
+  Phase recovery from the bispectrum is a central problem in speckleinterferometry which can be posed as an optimization problem minimizing aweighted nonlinear least-squares objective function. We look at two differentformulations of the phase recovery problem from the literature, both of whichcan be minimized with respect to either the recovered phase or the recoveredimage. Previously, strategies for solving these formulations have been limitedto first-order optimization methods such as gradient descent or quasi-Newtonmethods. This paper explores Gauss-Newton optimization schemes for the problemof phase recovery from the bispectrum. We implement efficient Gauss-Newtonoptimization schemes for the all formulations. For the two of theseformulations which optimize with respect to the recovered image, we also extendto projected Gauss-Newton to enforce element-wise lower and upper bounds onpixel intensities of the recovered image. We show that our efficientGauss-Newton schemes result in better image reconstructions with no or limitedadditional computational cost compared to previously implemented first-orderoptimization schemes for phase recovery from the bispectrum. MATLABimplementations of all methods and simulations are made publicly available inthe BiBox repository on Github.
 
 Large-Scale Classification using Multinomial Regression and ADMM
 
-  We present a novel method for learning the weights in multinomial logistic
-regression based on the alternating direction method of multipliers (ADMM). In
-each iteration, our algorithm decomposes the training into three steps; a
-linear least-squares problem for the weights, a global variable update
-involving a separable cross-entropy loss function, and a trivial dual variable
-update The least-squares problem can be factorized in the off-line phase, and
-the separability in the global variable update allows for efficient
-parallelization, leading to faster convergence. We compare our method with
-stochastic gradient descent for linear classification as well as for transfer
-learning and show that the proposed ADMM-Softmax leads to improved
-generalization and convergence.
-
+  We present a novel method for learning the weights in multinomial logisticregression based on the alternating direction method of multipliers (ADMM). Ineach iteration, our algorithm decomposes the training into three steps; alinear least-squares problem for the weights, a global variable updateinvolving a separable cross-entropy loss function, and a trivial dual variableupdate The least-squares problem can be factorized in the off-line phase, andthe separability in the global variable update allows for efficientparallelization, leading to faster convergence. We compare our method withstochastic gradient descent for linear classification as well as for transferlearning and show that the proposed ADMM-Softmax leads to improvedgeneralization and convergence.
 
 IMEXnet: A Forward Stable Deep Neural Network
 
-  Deep convolutional neural networks have revolutionized many machine learning
-and computer vision tasks. Despite their enormous success, remaining key
-challenges limit their wider use. Pressing challenges include improving the
-network's robustness to perturbations of the input images and simplifying the
-design of architectures that generalize. Another problem relates to the limited
-"field of view" of convolution operators, which means that very deep networks
-are required to model nonlocal relations in high-resolution image data. We
-introduce the IMEXnet that addresses these challenges by adapting semi-implicit
-methods for partial differential equations. Compared to similar explicit
-networks such as the residual networks (ResNets) our network is more stable.
-This stability has been recently shown to reduce the sensitivity to small
-changes in the input features and improve generalization. The implicit step
-connects all pixels in the images and therefore addresses the field of view
-problem, while being comparable to standard convolutions in terms of the number
-of parameters and computational complexity. We also present a new dataset for
-semantic segmentation and demonstrate the effectiveness of our architecture
-using the NYU depth dataset.
+  Deep convolutional neural networks have revolutionized many machine learningand computer vision tasks. Despite their enormous success, remaining keychallenges limit their wider use. Pressing challenges include improving thenetwork's robustness to perturbations of the input images and simplifying thedesign of architectures that generalize. Another problem relates to the limited"field of view" of convolution operators, which means that very deep networksare required to model nonlocal relations in high-resolution image data. Weintroduce the IMEXnet that addresses these challenges by adapting semi-implicitmethods for partial differential equations. Compared to similar explicitnetworks such as the residual networks (ResNets) our network is more stable.This stability has been recently shown to reduce the sensitivity to smallchanges in the input features and improve generalization. The implicit stepconnects all pixels in the images and therefore addresses the field of viewproblem, while being comparable to standard convolutions in terms of the numberof parameters and computational complexity. We also present a new dataset forsemantic segmentation and demonstrate the effectiveness of our architectureusing the NYU depth dataset.
 
+Efficient Numerical Optimization For Susceptibility Artifact Correction  Of EPI-MRI
 
-Efficient Numerical Optimization For Susceptibility Artifact Correction
-  Of EPI-MRI
+  We present two efficient numerical methods for susceptibility artifactcorrection applicable in Echo Planar Imaging (EPI), an ultra fast MagneticResonance Imaging (MRI) technique widely used in clinical applications. Bothmethods address a major practical drawback of EPI, the so-called susceptibilityartifacts, which consist of geometrical transformations and intensitymodulations. We consider a tailored variational image registration problem thatis based on a physical distortion model and aims at minimizing the distance oftwo oppositely distorted images subject to invertibility constraints. We followa discretize-then-optimize approach and present a novel face-staggereddiscretization yielding a separable structure in the discretized distancefunction and the invertibility constraints. The presence of a smoothnessregularizer renders the overall optimization problem non-separable, but wepresent two optimization schemes that exploit the partial separability. First,we derive a block-Jacobi preconditioner to be used in a Gauss-Newton-PCGmethod. Second, we consider a splitting of the separable and non-separable partand solve the resulting problem using the Alternating Direction Method ofMultipliers (ADMM). We provide a detailed convergence proof for ADMM for thisnon-convex optimization problem. Both schemes are of essentially linearcomplexity and are suitable for parallel computing. A considerable advantage ofthe proposed schemes over established methods is the reduced time-to-solution.In our numerical experiment using high-resolution 3D imaging data, our parallelimplementation of the ADMM method solves a 3D problem with more than 5 milliondegrees of freedom in less than 50 seconds on a standard laptop, which is aconsiderable improvement over existing methods.
 
-  We present two efficient numerical methods for susceptibility artifact
-correction applicable in Echo Planar Imaging (EPI), an ultra fast Magnetic
-Resonance Imaging (MRI) technique widely used in clinical applications. Both
-methods address a major practical drawback of EPI, the so-called susceptibility
-artifacts, which consist of geometrical transformations and intensity
-modulations. We consider a tailored variational image registration problem that
-is based on a physical distortion model and aims at minimizing the distance of
-two oppositely distorted images subject to invertibility constraints. We follow
-a discretize-then-optimize approach and present a novel face-staggered
-discretization yielding a separable structure in the discretized distance
-function and the invertibility constraints. The presence of a smoothness
-regularizer renders the overall optimization problem non-separable, but we
-present two optimization schemes that exploit the partial separability. First,
-we derive a block-Jacobi preconditioner to be used in a Gauss-Newton-PCG
-method. Second, we consider a splitting of the separable and non-separable part
-and solve the resulting problem using the Alternating Direction Method of
-Multipliers (ADMM). We provide a detailed convergence proof for ADMM for this
-non-convex optimization problem. Both schemes are of essentially linear
-complexity and are suitable for parallel computing. A considerable advantage of
-the proposed schemes over established methods is the reduced time-to-solution.
-In our numerical experiment using high-resolution 3D imaging data, our parallel
-implementation of the ADMM method solves a 3D problem with more than 5 million
-degrees of freedom in less than 50 seconds on a standard laptop, which is a
-considerable improvement over existing methods.
+LAP: a Linearize and Project Method for Solving Inverse Problems with  Coupled Variables
 
+  Many inverse problems involve two or more sets of variables that representdifferent physical quantities but are tightly coupled with each other. Forexample, image super-resolution requires joint estimation of the image andmotion parameters from noisy measurements. Exploiting this structure is key forefficiently solving these large-scale optimization problems, which are oftenill-conditioned.  In this paper, we present a new method called Linearize And Project (LAP)that offers a flexible framework for solving inverse problems with coupledvariables. LAP is most promising for cases when the subproblem corresponding toone of the variables is considerably easier to solve than the other. LAP isbased on a Gauss-Newton method, and thus after linearizing the residual, iteliminates one block of variables through projection. Due to the linearization,this block can be chosen freely. Further, LAP supports direct, iterative, andhybrid regularization as well as constraints. Therefore LAP is attractive,e.g., for ill-posed imaging problems. These traits differentiate LAP fromcommon alternatives for this type of problem such as variable projection(VarPro) and block coordinate descent (BCD). Our numerical experiments comparethe performance of LAP to BCD and VarPro using three coupled problems whoseforward operators are linear with respect to one block and nonlinear for theother set of variables.
 
-LAP: a Linearize and Project Method for Solving Inverse Problems with
-  Coupled Variables
+A Multiscale Method for Model Order Reduction in PDE Parameter  Estimation
 
-  Many inverse problems involve two or more sets of variables that represent
-different physical quantities but are tightly coupled with each other. For
-example, image super-resolution requires joint estimation of the image and
-motion parameters from noisy measurements. Exploiting this structure is key for
-efficiently solving these large-scale optimization problems, which are often
-ill-conditioned.
-  In this paper, we present a new method called Linearize And Project (LAP)
-that offers a flexible framework for solving inverse problems with coupled
-variables. LAP is most promising for cases when the subproblem corresponding to
-one of the variables is considerably easier to solve than the other. LAP is
-based on a Gauss-Newton method, and thus after linearizing the residual, it
-eliminates one block of variables through projection. Due to the linearization,
-this block can be chosen freely. Further, LAP supports direct, iterative, and
-hybrid regularization as well as constraints. Therefore LAP is attractive,
-e.g., for ill-posed imaging problems. These traits differentiate LAP from
-common alternatives for this type of problem such as variable projection
-(VarPro) and block coordinate descent (BCD). Our numerical experiments compare
-the performance of LAP to BCD and VarPro using three coupled problems whose
-forward operators are linear with respect to one block and nonlinear for the
-other set of variables.
+  Estimating parameters of Partial Differential Equations (PDEs) is of interestin a number of applications such as geophysical and medical imaging. Parameterestimation is commonly phrased as a PDE-constrained optimization problem thatcan be solved iteratively using gradient-based optimization. A computationalbottleneck in such approaches is that the underlying PDEs needs to be solvednumerous times before the model is reconstructed with sufficient accuracy. Oneway to reduce this computational burden is by using Model Order Reduction (MOR)techniques such as the Multiscale Finite Volume Method (MSFV).  In this paper, we apply MSFV for solving high-dimensional parameterestimation problems. Given a finite volume discretization of the PDE on a finemesh, the MSFV method reduces the problem size by computing aparameter-dependent projection onto a nested coarse mesh. A novelty in our workis the integration of MSFV into a PDE-constrained optimization framework, whichupdates the reduced space in each iteration. We also present a computationallytractable way of differentiating the MOR solution that acknowledges the changeof basis. As we demonstrate in our numerical experiments, our method leads tocomputational savings particularly for large-scale parameter estimationproblems and can benefit from parallelization.
 
+A Bayesian framework for molecular strain identification from mixed  diagnostic samples
 
-A Multiscale Method for Model Order Reduction in PDE Parameter
-  Estimation
-
-  Estimating parameters of Partial Differential Equations (PDEs) is of interest
-in a number of applications such as geophysical and medical imaging. Parameter
-estimation is commonly phrased as a PDE-constrained optimization problem that
-can be solved iteratively using gradient-based optimization. A computational
-bottleneck in such approaches is that the underlying PDEs needs to be solved
-numerous times before the model is reconstructed with sufficient accuracy. One
-way to reduce this computational burden is by using Model Order Reduction (MOR)
-techniques such as the Multiscale Finite Volume Method (MSFV).
-  In this paper, we apply MSFV for solving high-dimensional parameter
-estimation problems. Given a finite volume discretization of the PDE on a fine
-mesh, the MSFV method reduces the problem size by computing a
-parameter-dependent projection onto a nested coarse mesh. A novelty in our work
-is the integration of MSFV into a PDE-constrained optimization framework, which
-updates the reduced space in each iteration. We also present a computationally
-tractable way of differentiating the MOR solution that acknowledges the change
-of basis. As we demonstrate in our numerical experiments, our method leads to
-computational savings particularly for large-scale parameter estimation
-problems and can benefit from parallelization.
-
-
-A Bayesian framework for molecular strain identification from mixed
-  diagnostic samples
-
-  We provide a mathematical formulation and develop a computational framework
-for identifying multiple strains of microorganisms from mixed samples of DNA.
-Our method is applicable in public health domains where efficient
-identification of pathogens is paramount, e.g., for the monitoring of disease
-outbreaks. We formulate strain identification as an inverse problem that aims
-at simultaneously estimating a binary matrix (encoding presence or absence of
-mutations in each strain) and a real-valued vector (representing the mixture of
-strains) such that their product is approximately equal to the measured data
-vector. The problem at hand has a similar structure to blind deconvolution,
-except for the presence of binary constraints, which we enforce in our
-approach. Following a Bayesian approach, we derive a posterior density. We
-present two computational methods for solving the non-convex maximum a
-posteriori estimation problem. The first one is a local optimization method
-that is made efficient and scalable by decoupling the problem into smaller
-independent subproblems, whereas the second one yields a global minimizer by
-converting the problem into a convex mixed-integer quadratic programming
-problem. The decoupling approach also provides an efficient way to integrate
-over the posterior. This provides useful information about the ambiguity of the
-underdetermined problem and, thus, the uncertainty associated with numerical
-solutions. We evaluate the potential and limitations of our framework in silico
-using synthetic and experimental data with available ground truths.
-
+  We provide a mathematical formulation and develop a computational frameworkfor identifying multiple strains of microorganisms from mixed samples of DNA.Our method is applicable in public health domains where efficientidentification of pathogens is paramount, e.g., for the monitoring of diseaseoutbreaks. We formulate strain identification as an inverse problem that aimsat simultaneously estimating a binary matrix (encoding presence or absence ofmutations in each strain) and a real-valued vector (representing the mixture ofstrains) such that their product is approximately equal to the measured datavector. The problem at hand has a similar structure to blind deconvolution,except for the presence of binary constraints, which we enforce in ourapproach. Following a Bayesian approach, we derive a posterior density. Wepresent two computational methods for solving the non-convex maximum aposteriori estimation problem. The first one is a local optimization methodthat is made efficient and scalable by decoupling the problem into smallerindependent subproblems, whereas the second one yields a global minimizer byconverting the problem into a convex mixed-integer quadratic programmingproblem. The decoupling approach also provides an efficient way to integrateover the posterior. This provides useful information about the ambiguity of theunderdetermined problem and, thus, the uncertainty associated with numericalsolutions. We evaluate the potential and limitations of our framework in silicousing synthetic and experimental data with available ground truths.
 
 Low-Cost Parameterizations of Deep Convolutional Neural Networks
 
-  Convolutional Neural Networks (CNNs) filter the input data using a series of
-spatial convolution operators with compactly supported stencils and point-wise
-nonlinearities. Commonly, the convolution operators couple features from all
-channels. For wide networks, this leads to immense computational cost in the
-training of and prediction with CNNs. In this paper, we present novel ways to
-parameterize the convolution more efficiently, aiming to decrease the number of
-parameters in CNNs and their computational complexity. We propose new
-architectures that use a sparser coupling between the channels and thereby
-reduce both the number of trainable weights and the computational cost of the
-CNN. Our architectures arise as new types of residual neural network (ResNet)
-that can be seen as discretizations of a Partial Differential Equations (PDEs)
-and thus have predictable theoretical properties. Our first architecture
-involves a convolution operator with a special sparsity structure, and is
-applicable to a large class of CNNs. Next, we present an architecture that can
-be seen as a discretization of a diffusion reaction PDE, and use it with three
-different convolution operators. We outline in our experiments that the
-proposed architectures, although considerably reducing the number of trainable
-weights, yield comparable accuracy to existing CNNs that are fully coupled in
-the channel dimension.
-
+  Convolutional Neural Networks (CNNs) filter the input data using a series ofspatial convolution operators with compactly supported stencils and point-wisenonlinearities. Commonly, the convolution operators couple features from allchannels. For wide networks, this leads to immense computational cost in thetraining of and prediction with CNNs. In this paper, we present novel ways toparameterize the convolution more efficiently, aiming to decrease the number ofparameters in CNNs and their computational complexity. We propose newarchitectures that use a sparser coupling between the channels and therebyreduce both the number of trainable weights and the computational cost of theCNN. Our architectures arise as new types of residual neural network (ResNet)that can be seen as discretizations of a Partial Differential Equations (PDEs)and thus have predictable theoretical properties. Our first architectureinvolves a convolution operator with a special sparsity structure, and isapplicable to a large class of CNNs. Next, we present an architecture that canbe seen as a discretization of a diffusion reaction PDE, and use it with threedifferent convolution operators. We outline in our experiments that theproposed architectures, although considerably reducing the number of trainableweights, yield comparable accuracy to existing CNNs that are fully coupled inthe channel dimension.
 

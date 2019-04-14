@@ -1,821 +1,200 @@
 Generalizing and Hybridizing Count-based and Neural Language Models
 
-  Language models (LMs) are statistical models that calculate probabilities
-over sequences of words or other discrete symbols. Currently two major
-paradigms for language modeling exist: count-based n-gram models, which have
-advantages of scalability and test-time speed, and neural LMs, which often
-achieve superior modeling performance. We demonstrate how both varieties of
-models can be unified in a single modeling framework that defines a set of
-probability distributions over the vocabulary of words, and then dynamically
-calculates mixture weights over these distributions. This formulation allows us
-to create novel hybrid models that combine the desirable features of
-count-based and neural LMs, and experiments demonstrate the advantages of these
-approaches.
+  Language models (LMs) are statistical models that calculate probabilitiesover sequences of words or other discrete symbols. Currently two majorparadigms for language modeling exist: count-based n-gram models, which haveadvantages of scalability and test-time speed, and neural LMs, which oftenachieve superior modeling performance. We demonstrate how both varieties ofmodels can be unified in a single modeling framework that defines a set ofprobability distributions over the vocabulary of words, and then dynamicallycalculates mixture weights over these distributions. This formulation allows usto create novel hybrid models that combine the desirable features ofcount-based and neural LMs, and experiments demonstrate the advantages of theseapproaches.
 
+Lexicons and Minimum Risk Training for Neural Machine Translation:  NAIST-CMU at WAT2016
 
-Lexicons and Minimum Risk Training for Neural Machine Translation:
-  NAIST-CMU at WAT2016
-
-  This year, the Nara Institute of Science and Technology (NAIST)/Carnegie
-Mellon University (CMU) submission to the Japanese-English translation track of
-the 2016 Workshop on Asian Translation was based on attentional neural machine
-translation (NMT) models. In addition to the standard NMT model, we make a
-number of improvements, most notably the use of discrete translation lexicons
-to improve probability estimates, and the use of minimum risk training to
-optimize the MT system for BLEU score. As a result, our system achieved the
-highest translation evaluation scores for the task.
-
+  This year, the Nara Institute of Science and Technology (NAIST)/CarnegieMellon University (CMU) submission to the Japanese-English translation track ofthe 2016 Workshop on Asian Translation was based on attentional neural machinetranslation (NMT) models. In addition to the standard NMT model, we make anumber of improvements, most notably the use of discrete translation lexiconsto improve probability estimates, and the use of minimum risk training tooptimize the MT system for BLEU score. As a result, our system achieved thehighest translation evaluation scores for the task.
 
 Rapid Adaptation of Neural Machine Translation to New Languages
 
-  This paper examines the problem of adapting neural machine translation
-systems to new, low-resourced languages (LRLs) as effectively and rapidly as
-possible. We propose methods based on starting with massively multilingual
-"seed models", which can be trained ahead-of-time, and then continuing training
-on data related to the LRL. We contrast a number of strategies, leading to a
-novel, simple, yet effective method of "similar-language regularization", where
-we jointly train on both a LRL of interest and a similar high-resourced
-language to prevent over-fitting to small LRL data. Experiments demonstrate
-that massively multilingual models, even without any explicit adaptation, are
-surprisingly effective, achieving BLEU scores of up to 15.5 with no data from
-the LRL, and that the proposed similar-language regularization method improves
-over other adaptation methods by 1.7 BLEU points average over 4 LRL settings.
-Code to reproduce experiments at https://github.com/neubig/rapid-adaptation
-
+  This paper examines the problem of adapting neural machine translationsystems to new, low-resourced languages (LRLs) as effectively and rapidly aspossible. We propose methods based on starting with massively multilingual"seed models", which can be trained ahead-of-time, and then continuing trainingon data related to the LRL. We contrast a number of strategies, leading to anovel, simple, yet effective method of "similar-language regularization", wherewe jointly train on both a LRL of interest and a similar high-resourcedlanguage to prevent over-fitting to small LRL data. Experiments demonstratethat massively multilingual models, even without any explicit adaptation, aresurprisingly effective, achieving BLEU scores of up to 15.5 with no data fromthe LRL, and that the proposed similar-language regularization method improvesover other adaptation methods by 1.7 BLEU points average over 4 LRL settings.Code to reproduce experiments at https://github.com/neubig/rapid-adaptation
 
 The ARIEL-CMU Systems for LoReHLT18
 
-  This paper describes the ARIEL-CMU submissions to the Low Resource Human
-Language Technologies (LoReHLT) 2018 evaluations for the tasks Machine
-Translation (MT), Entity Discovery and Linking (EDL), and detection of
-Situation Frames in Text and Speech (SF Text and Speech).
+  This paper describes the ARIEL-CMU submissions to the Low Resource HumanLanguage Technologies (LoReHLT) 2018 evaluations for the tasks MachineTranslation (MT), Entity Discovery and Linking (EDL), and detection ofSituation Frames in Text and Speech (SF Text and Speech).
 
+Neural Reranking Improves Subjective Quality of Machine Translation:  NAIST at WAT2015
 
-Neural Reranking Improves Subjective Quality of Machine Translation:
-  NAIST at WAT2015
-
-  This year, the Nara Institute of Science and Technology (NAIST)'s submission
-to the 2015 Workshop on Asian Translation was based on syntax-based statistical
-machine translation, with the addition of a reranking component using neural
-attentional machine translation models. Experiments re-confirmed results from
-previous work stating that neural MT reranking provides a large gain in
-objective evaluation measures such as BLEU, and also confirmed for the first
-time that these results also carry over to manual evaluation. We further
-perform a detailed analysis of reasons for this increase, finding that the main
-contributions of the neural models lie in improvement of the grammatical
-correctness of the output, as opposed to improvements in lexical choice of
-content words.
-
+  This year, the Nara Institute of Science and Technology (NAIST)'s submissionto the 2015 Workshop on Asian Translation was based on syntax-based statisticalmachine translation, with the addition of a reranking component using neuralattentional machine translation models. Experiments re-confirmed results fromprevious work stating that neural MT reranking provides a large gain inobjective evaluation measures such as BLEU, and also confirmed for the firsttime that these results also carry over to manual evaluation. We furtherperform a detailed analysis of reasons for this increase, finding that the maincontributions of the neural models lie in improvement of the grammaticalcorrectness of the output, as opposed to improvements in lexical choice ofcontent words.
 
 Neural Machine Translation and Sequence-to-sequence Models: A Tutorial
 
-  This tutorial introduces a new and powerful set of techniques variously
-called "neural machine translation" or "neural sequence-to-sequence models".
-These techniques have been used in a number of tasks regarding the handling of
-human language, and can be a powerful tool in the toolbox of anyone who wants
-to model sequential data of some sort. The tutorial assumes that the reader
-knows the basics of math and programming, but does not assume any particular
-experience with neural networks or natural language processing. It attempts to
-explain the intuition behind the various methods covered, then delves into them
-with enough mathematical detail to understand them concretely, and culiminates
-with a suggestion for an implementation exercise, where readers can test that
-they understood the content in practice.
-
+  This tutorial introduces a new and powerful set of techniques variouslycalled "neural machine translation" or "neural sequence-to-sequence models".These techniques have been used in a number of tasks regarding the handling ofhuman language, and can be a powerful tool in the toolbox of anyone who wantsto model sequential data of some sort. The tutorial assumes that the readerknows the basics of math and programming, but does not assume any particularexperience with neural networks or natural language processing. It attempts toexplain the intuition behind the various methods covered, then delves into themwith enough mathematical detail to understand them concretely, and culiminateswith a suggestion for an implementation exercise, where readers can test thatthey understood the content in practice.
 
 On-the-fly Operation Batching in Dynamic Computation Graphs
 
-  Dynamic neural network toolkits such as PyTorch, DyNet, and Chainer offer
-more flexibility for implementing models that cope with data of varying
-dimensions and structure, relative to toolkits that operate on statically
-declared computations (e.g., TensorFlow, CNTK, and Theano). However, existing
-toolkits - both static and dynamic - require that the developer organize the
-computations into the batches necessary for exploiting high-performance
-algorithms and hardware. This batching task is generally difficult, but it
-becomes a major hurdle as architectures become complex. In this paper, we
-present an algorithm, and its implementation in the DyNet toolkit, for
-automatically batching operations. Developers simply write minibatch
-computations as aggregations of single instance computations, and the batching
-algorithm seamlessly executes them, on the fly, using computationally efficient
-batched operations. On a variety of tasks, we obtain throughput similar to that
-obtained with manual batches, as well as comparable speedups over
-single-instance learning on architectures that are impractical to batch
-manually.
-
+  Dynamic neural network toolkits such as PyTorch, DyNet, and Chainer offermore flexibility for implementing models that cope with data of varyingdimensions and structure, relative to toolkits that operate on staticallydeclared computations (e.g., TensorFlow, CNTK, and Theano). However, existingtoolkits - both static and dynamic - require that the developer organize thecomputations into the batches necessary for exploiting high-performancealgorithms and hardware. This batching task is generally difficult, but itbecomes a major hurdle as architectures become complex. In this paper, wepresent an algorithm, and its implementation in the DyNet toolkit, forautomatically batching operations. Developers simply write minibatchcomputations as aggregations of single instance computations, and the batchingalgorithm seamlessly executes them, on the fly, using computationally efficientbatched operations. On a variety of tasks, we obtain throughput similar to thatobtained with manual batches, as well as comparable speedups oversingle-instance learning on architectures that are impractical to batchmanually.
 
 Stronger Baselines for Trustable Results in Neural Machine Translation
 
-  Interest in neural machine translation has grown rapidly as its effectiveness
-has been demonstrated across language and data scenarios. New research
-regularly introduces architectural and algorithmic improvements that lead to
-significant gains over "vanilla" NMT implementations. However, these new
-techniques are rarely evaluated in the context of previously published
-techniques, specifically those that are widely used in state-of-theart
-production and shared-task systems. As a result, it is often difficult to
-determine whether improvements from research will carry over to systems
-deployed for real-world use. In this work, we recommend three specific methods
-that are relatively easy to implement and result in much stronger experimental
-systems. Beyond reporting significantly higher BLEU scores, we conduct an
-in-depth analysis of where improvements originate and what inherent weaknesses
-of basic NMT models are being addressed. We then compare the relative gains
-afforded by several other techniques proposed in the literature when starting
-with vanilla systems versus our stronger baselines, showing that experimental
-conclusions may change depending on the baseline chosen. This indicates that
-choosing a strong baseline is crucial for reporting reliable experimental
-results.
-
+  Interest in neural machine translation has grown rapidly as its effectivenesshas been demonstrated across language and data scenarios. New researchregularly introduces architectural and algorithmic improvements that lead tosignificant gains over "vanilla" NMT implementations. However, these newtechniques are rarely evaluated in the context of previously publishedtechniques, specifically those that are widely used in state-of-theartproduction and shared-task systems. As a result, it is often difficult todetermine whether improvements from research will carry over to systemsdeployed for real-world use. In this work, we recommend three specific methodsthat are relatively easy to implement and result in much stronger experimentalsystems. Beyond reporting significantly higher BLEU scores, we conduct anin-depth analysis of where improvements originate and what inherent weaknessesof basic NMT models are being addressed. We then compare the relative gainsafforded by several other techniques proposed in the literature when startingwith vanilla systems versus our stronger baselines, showing that experimentalconclusions may change depending on the baseline chosen. This indicates thatchoosing a strong baseline is crucial for reporting reliable experimentalresults.
 
 XNMT: The eXtensible Neural Machine Translation Toolkit
 
-  This paper describes XNMT, the eXtensible Neural Machine Translation toolkit.
-XNMT distin- guishes itself from other open-source NMT toolkits by its focus on
-modular code design, with the purpose of enabling fast iteration in research
-and replicable, reliable results. In this paper we describe the design of XNMT
-and its experiment configuration system, and demonstrate its utility on the
-tasks of machine translation, speech recognition, and multi-tasked machine
-translation/parsing. XNMT is available open-source at
-https://github.com/neulab/xnmt
+  This paper describes XNMT, the eXtensible Neural Machine Translation toolkit.XNMT distin- guishes itself from other open-source NMT toolkits by its focus onmodular code design, with the purpose of enabling fast iteration in researchand replicable, reliable results. In this paper we describe the design of XNMTand its experiment configuration system, and demonstrate its utility on thetasks of machine translation, speech recognition, and multi-tasked machinetranslation/parsing. XNMT is available open-source athttps://github.com/neulab/xnmt
 
+Findings of the Second Workshop on Neural Machine Translation and  Generation
 
-Findings of the Second Workshop on Neural Machine Translation and
-  Generation
+  This document describes the findings of the Second Workshop on Neural MachineTranslation and Generation, held in concert with the annual conference of theAssociation for Computational Linguistics (ACL 2018). First, we summarize theresearch trends of papers presented in the proceedings, and note that there isparticular interest in linguistic structure, domain adaptation, dataaugmentation, handling inadequate resources, and analysis of models. Second, wedescribe the results of the workshop's shared task on efficient neural machinetranslation, where participants were tasked with creating MT systems that areboth accurate and efficient.
 
-  This document describes the findings of the Second Workshop on Neural Machine
-Translation and Generation, held in concert with the annual conference of the
-Association for Computational Linguistics (ACL 2018). First, we summarize the
-research trends of papers presented in the proceedings, and note that there is
-particular interest in linguistic structure, domain adaptation, data
-augmentation, handling inadequate resources, and analysis of models. Second, we
-describe the results of the workshop's shared task on efficient neural machine
-translation, where participants were tasked with creating MT systems that are
-both accurate and efficient.
+compare-mt: A Tool for Holistic Comparison of Language Generation  Systems
 
+  In this paper, we describe compare-mt, a tool for holistic analysis andcomparison of the results of systems for language generation tasks such asmachine translation. The main goal of the tool is to give the user a high-leveland coherent view of the salient differences between systems that can then beused to guide further analysis or system improvement. It implements a number oftools to do so, such as analysis of accuracy of generation of particular typesof words, bucketed histograms of sentence accuracies or counts based on salientcharacteristics, and extraction of characteristic $n$-grams for each system. Italso has a number of advanced features such as use of linguistic labels, sourceside data, or comparison of log likelihoods for probabilistic models, and alsoaims to be easily extensible by users to new types of analysis. The code isavailable at https://github.com/neulab/compare-mt
 
-compare-mt: A Tool for Holistic Comparison of Language Generation
-  Systems
+Morphological Inflection Generation Using Character Sequence to Sequence  Learning
 
-  In this paper, we describe compare-mt, a tool for holistic analysis and
-comparison of the results of systems for language generation tasks such as
-machine translation. The main goal of the tool is to give the user a high-level
-and coherent view of the salient differences between systems that can then be
-used to guide further analysis or system improvement. It implements a number of
-tools to do so, such as analysis of accuracy of generation of particular types
-of words, bucketed histograms of sentence accuracies or counts based on salient
-characteristics, and extraction of characteristic $n$-grams for each system. It
-also has a number of advanced features such as use of linguistic labels, source
-side data, or comparison of log likelihoods for probabilistic models, and also
-aims to be easily extensible by users to new types of analysis. The code is
-available at https://github.com/neulab/compare-mt
-
-
-Morphological Inflection Generation Using Character Sequence to Sequence
-  Learning
-
-  Morphological inflection generation is the task of generating the inflected
-form of a given lemma corresponding to a particular linguistic transformation.
-We model the problem of inflection generation as a character sequence to
-sequence learning problem and present a variant of the neural encoder-decoder
-model for solving it. Our model is language independent and can be trained in
-both supervised and semi-supervised settings. We evaluate our system on seven
-datasets of morphologically rich languages and achieve either better or
-comparable results to existing state-of-the-art models of inflection
-generation.
-
-
-A Syntactic Neural Model for General-Purpose Code Generation
-
-  We consider the problem of parsing natural language descriptions into source
-code written in a general-purpose programming language like Python. Existing
-data-driven methods treat this problem as a language generation task without
-considering the underlying syntax of the target programming language. Informed
-by previous work in semantic parsing, in this paper we propose a novel neural
-architecture powered by a grammar model to explicitly capture the target syntax
-as prior knowledge. Experiments find this an effective way to scale up to
-generation of complex programs from natural language descriptions, achieving
-state-of-the-art results that well outperform previous code generation and
-semantic parsing approaches.
-
+  Morphological inflection generation is the task of generating the inflectedform of a given lemma corresponding to a particular linguistic transformation.We model the problem of inflection generation as a character sequence tosequence learning problem and present a variant of the neural encoder-decodermodel for solving it. Our model is language independent and can be trained inboth supervised and semi-supervised settings. We evaluate our system on sevendatasets of morphologically rich languages and achieve either better orcomparable results to existing state-of-the-art models of inflectiongeneration.
 
 Controlling Output Length in Neural Encoder-Decoders
 
-  Neural encoder-decoder models have shown great success in many sequence
-generation tasks. However, previous work has not investigated situations in
-which we would like to control the length of encoder-decoder outputs. This
-capability is crucial for applications such as text summarization, in which we
-have to generate concise summaries with a desired length. In this paper, we
-propose methods for controlling the output sequence length for neural
-encoder-decoder models: two decoding-based methods and two learning-based
-methods. Results show that our learning-based methods have the capability to
-control length without degrading summary quality in a summarization task.
+  Neural encoder-decoder models have shown great success in many sequencegeneration tasks. However, previous work has not investigated situations inwhich we would like to control the length of encoder-decoder outputs. Thiscapability is crucial for applications such as text summarization, in which wehave to generate concise summaries with a desired length. In this paper, wepropose methods for controlling the output sequence length for neuralencoder-decoder models: two decoding-based methods and two learning-basedmethods. Results show that our learning-based methods have the capability tocontrol length without degrading summary quality in a summarization task.
 
+A Syntactic Neural Model for General-Purpose Code Generation
+
+  We consider the problem of parsing natural language descriptions into sourcecode written in a general-purpose programming language like Python. Existingdata-driven methods treat this problem as a language generation task withoutconsidering the underlying syntax of the target programming language. Informedby previous work in semantic parsing, in this paper we propose a novel neuralarchitecture powered by a grammar model to explicitly capture the target syntaxas prior knowledge. Experiments find this an effective way to scale up togeneration of complex programs from natural language descriptions, achievingstate-of-the-art results that well outperform previous code generation andsemantic parsing approaches.
 
 Neural Lattice Language Models
 
-  In this work, we propose a new language modeling paradigm that has the
-ability to perform both prediction and moderation of information flow at
-multiple granularities: neural lattice language models. These models construct
-a lattice of possible paths through a sentence and marginalize across this
-lattice to calculate sequence probabilities or optimize parameters. This
-approach allows us to seamlessly incorporate linguistic intuitions - including
-polysemy and existence of multi-word lexical items - into our language model.
-Experiments on multiple language modeling tasks show that English neural
-lattice language models that utilize polysemous embeddings are able to improve
-perplexity by 9.95% relative to a word-level baseline, and that a Chinese model
-that handles multi-character tokens is able to improve perplexity by 20.94%
-relative to a character-level baseline.
-
+  In this work, we propose a new language modeling paradigm that has theability to perform both prediction and moderation of information flow atmultiple granularities: neural lattice language models. These models constructa lattice of possible paths through a sentence and marginalize across thislattice to calculate sequence probabilities or optimize parameters. Thisapproach allows us to seamlessly incorporate linguistic intuitions - includingpolysemy and existence of multi-word lexical items - into our language model.Experiments on multiple language modeling tasks show that English neurallattice language models that utilize polysemous embeddings are able to improveperplexity by 9.95% relative to a word-level baseline, and that a Chinese modelthat handles multi-character tokens is able to improve perplexity by 20.94%relative to a character-level baseline.
 
 Automatic Estimation of Simultaneous Interpreter Performance
 
-  Simultaneous interpretation, translation of the spoken word in real-time, is
-both highly challenging and physically demanding. Methods to predict
-interpreter confidence and the adequacy of the interpreted message have a
-number of potential applications, such as in computer-assisted interpretation
-interfaces or pedagogical tools. We propose the task of predicting simultaneous
-interpreter performance by building on existing methodology for quality
-estimation (QE) of machine translation output. In experiments over five
-settings in three language pairs, we extend a QE pipeline to estimate
-interpreter performance (as approximated by the METEOR evaluation metric) and
-propose novel features reflecting interpretation strategy and evaluation
-measures that further improve prediction accuracy.
-
+  Simultaneous interpretation, translation of the spoken word in real-time, isboth highly challenging and physically demanding. Methods to predictinterpreter confidence and the adequacy of the interpreted message have anumber of potential applications, such as in computer-assisted interpretationinterfaces or pedagogical tools. We propose the task of predicting simultaneousinterpreter performance by building on existing methodology for qualityestimation (QE) of machine translation output. In experiments over fivesettings in three language pairs, we extend a QE pipeline to estimateinterpreter performance (as approximated by the METEOR evaluation metric) andpropose novel features reflecting interpretation strategy and evaluationmeasures that further improve prediction accuracy.
 
 Learning to Represent Edits
 
-  We introduce the problem of learning distributed representations of edits. By
-combining a "neural editor" with an "edit encoder", our models learn to
-represent the salient information of an edit and can be used to apply edits to
-new inputs. We experiment on natural language and source code edit data. Our
-evaluation yields promising results that suggest that our neural network models
-learn to capture the structure and semantics of edits. We hope that this
-interesting task and data source will inspire other researchers to work further
-on this problem.
-
+  We introduce the problem of learning distributed representations of edits. Bycombining a "neural editor" with an "edit encoder", our models learn torepresent the salient information of an edit and can be used to apply edits tonew inputs. We experiment on natural language and source code edit data. Ourevaluation yields promising results that suggest that our neural network modelslearn to capture the structure and semantics of edits. We hope that thisinteresting task and data source will inspire other researchers to work furtheron this problem.
 
 Improving Robustness of Machine Translation with Synthetic Noise
 
-  Modern Machine Translation (MT) systems perform consistently well on clean,
-in-domain text. However most human generated text, particularly in the realm of
-social media, is full of typos, slang, dialect, idiolect and other noise which
-can have a disastrous impact on the accuracy of output translation. In this
-paper we leverage the Machine Translation of Noisy Text (MTNT) dataset to
-enhance the robustness of MT systems by emulating naturally occurring noise in
-otherwise clean data. Synthesizing noise in this manner we are ultimately able
-to make a vanilla MT system resilient to naturally occurring noise and
-partially mitigate loss in accuracy resulting therefrom.
-
+  Modern Machine Translation (MT) systems perform consistently well on clean,in-domain text. However most human generated text, particularly in the realm ofsocial media, is full of typos, slang, dialect, idiolect and other noise whichcan have a disastrous impact on the accuracy of output translation. In thispaper we leverage the Machine Translation of Noisy Text (MTNT) dataset toenhance the robustness of MT systems by emulating naturally occurring noise inotherwise clean data. Synthesizing noise in this manner we are ultimately ableto make a vanilla MT system resilient to naturally occurring noise andpartially mitigate loss in accuracy resulting therefrom.
 
 DyNet: The Dynamic Neural Network Toolkit
 
-  We describe DyNet, a toolkit for implementing neural network models based on
-dynamic declaration of network structure. In the static declaration strategy
-that is used in toolkits like Theano, CNTK, and TensorFlow, the user first
-defines a computation graph (a symbolic representation of the computation), and
-then examples are fed into an engine that executes this computation and
-computes its derivatives. In DyNet's dynamic declaration strategy, computation
-graph construction is mostly transparent, being implicitly constructed by
-executing procedural code that computes the network outputs, and the user is
-free to use different network structures for each input. Dynamic declaration
-thus facilitates the implementation of more complicated network architectures,
-and DyNet is specifically designed to allow users to implement their models in
-a way that is idiomatic in their preferred programming language (C++ or
-Python). One challenge with dynamic declaration is that because the symbolic
-computation graph is defined anew for every training example, its construction
-must have low overhead. To achieve this, DyNet has an optimized C++ backend and
-lightweight graph representation. Experiments show that DyNet's speeds are
-faster than or comparable with static declaration toolkits, and significantly
-faster than Chainer, another dynamic declaration toolkit. DyNet is released
-open-source under the Apache 2.0 license and available at
-http://github.com/clab/dynet.
+  We describe DyNet, a toolkit for implementing neural network models based ondynamic declaration of network structure. In the static declaration strategythat is used in toolkits like Theano, CNTK, and TensorFlow, the user firstdefines a computation graph (a symbolic representation of the computation), andthen examples are fed into an engine that executes this computation andcomputes its derivatives. In DyNet's dynamic declaration strategy, computationgraph construction is mostly transparent, being implicitly constructed byexecuting procedural code that computes the network outputs, and the user isfree to use different network structures for each input. Dynamic declarationthus facilitates the implementation of more complicated network architectures,and DyNet is specifically designed to allow users to implement their models ina way that is idiomatic in their preferred programming language (C++ orPython). One challenge with dynamic declaration is that because the symboliccomputation graph is defined anew for every training example, its constructionmust have low overhead. To achieve this, DyNet has an optimized C++ backend andlightweight graph representation. Experiments show that DyNet's speeds arefaster than or comparable with static declaration toolkits, and significantlyfaster than Chainer, another dynamic declaration toolkit. DyNet is releasedopen-source under the Apache 2.0 license and available athttp://github.com/clab/dynet.
 
+Incorporating Discrete Translation Lexicons into Neural Machine  Translation
 
-Incorporating Discrete Translation Lexicons into Neural Machine
-  Translation
-
-  Neural machine translation (NMT) often makes mistakes in translating
-low-frequency content words that are essential to understanding the meaning of
-the sentence. We propose a method to alleviate this problem by augmenting NMT
-systems with discrete translation lexicons that efficiently encode translations
-of these low-frequency words. We describe a method to calculate the lexicon
-probability of the next word in the translation candidate by using the
-attention vector of the NMT model to select which source word lexical
-probabilities the model should focus on. We test two methods to combine this
-probability with the standard NMT probability: (1) using it as a bias, and (2)
-linear interpolation. Experiments on two corpora show an improvement of 2.0-2.3
-BLEU and 0.13-0.44 NIST score, and faster convergence time.
-
-
-Neural Lattice-to-Sequence Models for Uncertain Inputs
-
-  The input to a neural sequence-to-sequence model is often determined by an
-up-stream system, e.g. a word segmenter, part of speech tagger, or speech
-recognizer. These up-stream models are potentially error-prone. Representing
-inputs through word lattices allows making this uncertainty explicit by
-capturing alternative sequences and their posterior probabilities in a compact
-form. In this work, we extend the TreeLSTM (Tai et al., 2015) into a
-LatticeLSTM that is able to consume word lattices, and can be used as encoder
-in an attentional encoder-decoder model. We integrate lattice posterior scores
-into this architecture by extending the TreeLSTM's child-sum and forget gates
-and introducing a bias term into the attention mechanism. We experiment with
-speech translation lattices and report consistent improvements over baselines
-that translate either the 1-best hypothesis or the lattice without posterior
-scores.
-
-
-Multi-space Variational Encoder-Decoders for Semi-supervised Labeled
-  Sequence Transduction
-
-  Labeled sequence transduction is a task of transforming one sequence into
-another sequence that satisfies desiderata specified by a set of labels. In
-this paper we propose multi-space variational encoder-decoders, a new model for
-labeled sequence transduction with semi-supervised learning. The generative
-model can use neural networks to handle both discrete and continuous latent
-variables to exploit various features of data. Experiments show that our model
-provides not only a powerful supervised framework but also can effectively take
-advantage of the unlabeled data. On the SIGMORPHON morphological inflection
-benchmark, our model outperforms single-model state-of-art results by a large
-margin for the majority of languages.
-
-
-Learning Character-level Compositionality with Visual Features
-
-  Previous work has modeled the compositionality of words by creating
-character-level models of meaning, reducing problems of sparsity for rare
-words. However, in many writing systems compositionality has an effect even on
-the character-level: the meaning of a character is derived by the sum of its
-parts. In this paper, we model this effect by creating embeddings for
-characters based on their visual characteristics, creating an image for the
-character and running it through a convolutional neural network to produce a
-visual character embedding. Experiments on a text classification task
-demonstrate that such model allows for better processing of instances with rare
-characters in languages such as Chinese, Japanese, and Korean. Additionally,
-qualitative analyses demonstrate that our proposed model learns to focus on the
-parts of characters that carry semantic content, resulting in embeddings that
-are coherent in visual space.
-
-
-Neural Machine Translation via Binary Code Prediction
-
-  In this paper, we propose a new method for calculating the output layer in
-neural machine translation systems. The method is based on predicting a binary
-code for each word and can reduce computation time/memory requirements of the
-output layer to be logarithmic in vocabulary size in the best case. In
-addition, we also introduce two advanced approaches to improve the robustness
-of the proposed model: using error-correcting codes and combining softmax and
-binary codes. Experiments on two English-Japanese bidirectional translation
-tasks show proposed models achieve BLEU scores that approach the softmax, while
-reducing memory usage to the order of less than 1/10 and improving decoding
-speed on CPUs by x5 to x10.
-
+  Neural machine translation (NMT) often makes mistakes in translatinglow-frequency content words that are essential to understanding the meaning ofthe sentence. We propose a method to alleviate this problem by augmenting NMTsystems with discrete translation lexicons that efficiently encode translationsof these low-frequency words. We describe a method to calculate the lexiconprobability of the next word in the translation candidate by using theattention vector of the NMT model to select which source word lexicalprobabilities the model should focus on. We test two methods to combine thisprobability with the standard NMT probability: (1) using it as a bias, and (2)linear interpolation. Experiments on two corpora show an improvement of 2.0-2.3BLEU and 0.13-0.44 NIST score, and faster convergence time.
 
 Learning to Translate in Real-time with Neural Machine Translation
 
-  Translating in real-time, a.k.a. simultaneous translation, outputs
-translation words before the input sentence ends, which is a challenging
-problem for conventional machine translation methods. We propose a neural
-machine translation (NMT) framework for simultaneous translation in which an
-agent learns to make decisions on when to translate from the interaction with a
-pre-trained NMT environment. To trade off quality and delay, we extensively
-explore various targets for delay and design a method for beam-search
-applicable in the simultaneous MT setting. Experiments against state-of-the-art
-baselines on two language pairs demonstrate the efficacy of the proposed
-framework both quantitatively and qualitatively.
+  Translating in real-time, a.k.a. simultaneous translation, outputstranslation words before the input sentence ends, which is a challengingproblem for conventional machine translation methods. We propose a neuralmachine translation (NMT) framework for simultaneous translation in which anagent learns to make decisions on when to translate from the interaction with apre-trained NMT environment. To trade off quality and delay, we extensivelyexplore various targets for delay and design a method for beam-searchapplicable in the simultaneous MT setting. Experiments against state-of-the-artbaselines on two language pairs demonstrate the efficacy of the proposedframework both quantitatively and qualitatively.
 
+Eve: A Gradient Based Optimization Method with Locally and Globally  Adaptive Learning Rates
 
-Eve: A Gradient Based Optimization Method with Locally and Globally
-  Adaptive Learning Rates
-
-  Adaptive gradient methods for stochastic optimization adjust the learning
-rate for each parameter locally. However, there is also a global learning rate
-which must be tuned in order to get the best performance. In this paper, we
-present a new algorithm that adapts the learning rate locally for each
-parameter separately, and also globally for all parameters together.
-Specifically, we modify Adam, a popular method for training deep learning
-models, with a coefficient that captures properties of the objective function.
-Empirically, we show that our method, which we call Eve, outperforms Adam and
-other popular methods in training deep neural networks, like convolutional
-neural networks for image classification, and recurrent neural networks for
-language tasks.
-
+  Adaptive gradient methods for stochastic optimization adjust the learningrate for each parameter locally. However, there is also a global learning ratewhich must be tuned in order to get the best performance. In this paper, wepresent a new algorithm that adapts the learning rate locally for eachparameter separately, and also globally for all parameters together.Specifically, we modify Adam, a popular method for training deep learningmodels, with a coefficient that captures properties of the objective function.Empirically, we show that our method, which we call Eve, outperforms Adam andother popular methods in training deep neural networks, like convolutionalneural networks for image classification, and recurrent neural networks forlanguage tasks.
 
 What Do Recurrent Neural Network Grammars Learn About Syntax?
 
-  Recurrent neural network grammars (RNNG) are a recently proposed
-probabilistic generative modeling family for natural language. They show
-state-of-the-art language modeling and parsing performance. We investigate what
-information they learn, from a linguistic perspective, through various
-ablations to the model and the data, and by augmenting the model with an
-attention mechanism (GA-RNNG) to enable closer inspection. We find that
-explicit modeling of composition is crucial for achieving the best performance.
-Through the attention mechanism, we find that headedness plays a central role
-in phrasal representation (with the model's latent attention largely agreeing
-with predictions made by hand-crafted head rules, albeit with some important
-differences). By training grammars without nonterminal labels, we find that
-phrasal representations depend minimally on nonterminals, providing support for
-the endocentricity hypothesis.
+  Recurrent neural network grammars (RNNG) are a recently proposedprobabilistic generative modeling family for natural language. They showstate-of-the-art language modeling and parsing performance. We investigate whatinformation they learn, from a linguistic perspective, through variousablations to the model and the data, and by augmenting the model with anattention mechanism (GA-RNNG) to enable closer inspection. We find thatexplicit modeling of composition is crucial for achieving the best performance.Through the attention mechanism, we find that headedness plays a central rolein phrasal representation (with the model's latent attention largely agreeingwith predictions made by hand-crafted head rules, albeit with some importantdifferences). By training grammars without nonterminal labels, we find thatphrasal representations depend minimally on nonterminals, providing support forthe endocentricity hypothesis.
 
+Neural Lattice-to-Sequence Models for Uncertain Inputs
+
+  The input to a neural sequence-to-sequence model is often determined by anup-stream system, e.g. a word segmenter, part of speech tagger, or speechrecognizer. These up-stream models are potentially error-prone. Representinginputs through word lattices allows making this uncertainty explicit bycapturing alternative sequences and their posterior probabilities in a compactform. In this work, we extend the TreeLSTM (Tai et al., 2015) into aLatticeLSTM that is able to consume word lattices, and can be used as encoderin an attentional encoder-decoder model. We integrate lattice posterior scoresinto this architecture by extending the TreeLSTM's child-sum and forget gatesand introducing a bias term into the attention mechanism. We experiment withspeech translation lattices and report consistent improvements over baselinesthat translate either the 1-best hypothesis or the lattice without posteriorscores.
+
+Multi-space Variational Encoder-Decoders for Semi-supervised Labeled  Sequence Transduction
+
+  Labeled sequence transduction is a task of transforming one sequence intoanother sequence that satisfies desiderata specified by a set of labels. Inthis paper we propose multi-space variational encoder-decoders, a new model forlabeled sequence transduction with semi-supervised learning. The generativemodel can use neural networks to handle both discrete and continuous latentvariables to exploit various features of data. Experiments show that our modelprovides not only a powerful supervised framework but also can effectively takeadvantage of the unlabeled data. On the SIGMORPHON morphological inflectionbenchmark, our model outperforms single-model state-of-art results by a largemargin for the majority of languages.
+
+Learning Character-level Compositionality with Visual Features
+
+  Previous work has modeled the compositionality of words by creatingcharacter-level models of meaning, reducing problems of sparsity for rarewords. However, in many writing systems compositionality has an effect even onthe character-level: the meaning of a character is derived by the sum of itsparts. In this paper, we model this effect by creating embeddings forcharacters based on their visual characteristics, creating an image for thecharacter and running it through a convolutional neural network to produce avisual character embedding. Experiments on a text classification taskdemonstrate that such model allows for better processing of instances with rarecharacters in languages such as Chinese, Japanese, and Korean. Additionally,qualitative analyses demonstrate that our proposed model learns to focus on theparts of characters that carry semantic content, resulting in embeddings thatare coherent in visual space.
+
+Neural Machine Translation via Binary Code Prediction
+
+  In this paper, we propose a new method for calculating the output layer inneural machine translation systems. The method is based on predicting a binarycode for each word and can reduce computation time/memory requirements of theoutput layer to be logarithmic in vocabulary size in the best case. Inaddition, we also introduce two advanced approaches to improve the robustnessof the proposed model: using error-correcting codes and combining softmax andbinary codes. Experiments on two English-Japanese bidirectional translationtasks show proposed models achieve BLEU scores that approach the softmax, whilereducing memory usage to the order of less than 1/10 and improving decodingspeed on CPUs by x5 to x10.
 
 Controllable Invariance through Adversarial Feature Learning
 
-  Learning meaningful representations that maintain the content necessary for a
-particular task while filtering away detrimental variations is a problem of
-great interest in machine learning. In this paper, we tackle the problem of
-learning representations invariant to a specific factor or trait of data. The
-representation learning process is formulated as an adversarial minimax game.
-We analyze the optimal equilibrium of such a game and find that it amounts to
-maximizing the uncertainty of inferring the detrimental factor given the
-representation while maximizing the certainty of making task-specific
-predictions. On three benchmark tasks, namely fair and bias-free
-classification, language-independent generation, and lighting-independent image
-classification, we show that the proposed framework induces an invariant
-representation, and leads to better generalization evidenced by the improved
-performance.
+  Learning meaningful representations that maintain the content necessary for aparticular task while filtering away detrimental variations is a problem ofgreat interest in machine learning. In this paper, we tackle the problem oflearning representations invariant to a specific factor or trait of data. Therepresentation learning process is formulated as an adversarial minimax game.We analyze the optimal equilibrium of such a game and find that it amounts tomaximizing the uncertainty of inferring the detrimental factor given therepresentation while maximizing the certainty of making task-specificpredictions. On three benchmark tasks, namely fair and bias-freeclassification, language-independent generation, and lighting-independent imageclassification, we show that the proposed framework induces an invariantrepresentation, and leads to better generalization evidenced by the improvedperformance.
 
+An Empirical Study of Mini-Batch Creation Strategies for Neural Machine  Translation
 
-An Empirical Study of Mini-Batch Creation Strategies for Neural Machine
-  Translation
-
-  Training of neural machine translation (NMT) models usually uses mini-batches
-for efficiency purposes. During the mini-batched training process, it is
-necessary to pad shorter sentences in a mini-batch to be equal in length to the
-longest sentence therein for efficient computation. Previous work has noted
-that sorting the corpus based on the sentence length before making mini-batches
-reduces the amount of padding and increases the processing speed. However,
-despite the fact that mini-batch creation is an essential step in NMT training,
-widely used NMT toolkits implement disparate strategies for doing so, which
-have not been empirically validated or compared. This work investigates
-mini-batch creation strategies with experiments over two different datasets.
-Our results suggest that the choice of a mini-batch creation strategy has a
-large effect on NMT training and some length-based sorting strategies do not
-always work well compared with simple shuffling.
-
+  Training of neural machine translation (NMT) models usually uses mini-batchesfor efficiency purposes. During the mini-batched training process, it isnecessary to pad shorter sentences in a mini-batch to be equal in length to thelongest sentence therein for efficient computation. Previous work has notedthat sorting the corpus based on the sentence length before making mini-batchesreduces the amount of padding and increases the processing speed. However,despite the fact that mini-batch creation is an essential step in NMT training,widely used NMT toolkits implement disparate strategies for doing so, whichhave not been empirically validated or compared. This work investigatesmini-batch creation strategies with experiments over two different datasets.Our results suggest that the choice of a mini-batch creation strategy has alarge effect on NMT training and some length-based sorting strategies do notalways work well compared with simple shuffling.
 
 CharManteau: Character Embedding Models For Portmanteau Creation
 
-  Portmanteaus are a word formation phenomenon where two words are combined to
-form a new word. We propose character-level neural sequence-to-sequence (S2S)
-methods for the task of portmanteau generation that are end-to-end-trainable,
-language independent, and do not explicitly use additional phonetic
-information. We propose a noisy-channel-style model, which allows for the
-incorporation of unsupervised word lists, improving performance over a standard
-source-to-target model. This model is made possible by an exhaustive candidate
-generation strategy specifically enabled by the features of the portmanteau
-task. Experiments find our approach superior to a state-of-the-art FST-based
-baseline with respect to ground truth accuracy and human evaluation.
-
+  Portmanteaus are a word formation phenomenon where two words are combined toform a new word. We propose character-level neural sequence-to-sequence (S2S)methods for the task of portmanteau generation that are end-to-end-trainable,language independent, and do not explicitly use additional phoneticinformation. We propose a noisy-channel-style model, which allows for theincorporation of unsupervised word lists, improving performance over a standardsource-to-target model. This model is made possible by an exhaustive candidategeneration strategy specifically enabled by the features of the portmanteautask. Experiments find our approach superior to a state-of-the-art FST-basedbaseline with respect to ground truth accuracy and human evaluation.
 
 Learning Language Representations for Typology Prediction
 
-  One central mystery of neural NLP is what neural models "know" about their
-subject matter. When a neural machine translation system learns to translate
-from one language to another, does it learn the syntax or semantics of the
-languages? Can this knowledge be extracted from the system to fill holes in
-human scientific knowledge? Existing typological databases contain relatively
-full feature specifications for only a few hundred languages. Exploiting the
-existence of parallel texts in more than a thousand languages, we build a
-massive many-to-one neural machine translation (NMT) system from 1017 languages
-into English, and use this to predict information missing from typological
-databases. Experiments show that the proposed method is able to infer not only
-syntactic, but also phonological and phonetic inventory features, and improves
-over a baseline that has access to information about the languages' geographic
-and phylogenetic neighbors.
-
+  One central mystery of neural NLP is what neural models "know" about theirsubject matter. When a neural machine translation system learns to translatefrom one language to another, does it learn the syntax or semantics of thelanguages? Can this knowledge be extracted from the system to fill holes inhuman scientific knowledge? Existing typological databases contain relativelyfull feature specifications for only a few hundred languages. Exploiting theexistence of parallel texts in more than a thousand languages, we build amassive many-to-one neural machine translation (NMT) system from 1017 languagesinto English, and use this to predict information missing from typologicaldatabases. Experiments show that the proposed method is able to infer not onlysyntactic, but also phonological and phonetic inventory features, and improvesover a baseline that has access to information about the languages' geographicand phylogenetic neighbors.
 
 Handling Homographs in Neural Machine Translation
 
-  Homographs, words with different meanings but the same surface form, have
-long caused difficulty for machine translation systems, as it is difficult to
-select the correct translation based on the context. However, with the advent
-of neural machine translation (NMT) systems, which can theoretically take into
-account global sentential context, one may hypothesize that this problem has
-been alleviated. In this paper, we first provide empirical evidence that
-existing NMT systems in fact still have significant problems in properly
-translating ambiguous words. We then proceed to describe methods, inspired by
-the word sense disambiguation literature, that model the context of the input
-word with context-aware word embeddings that help to differentiate the word
-sense be- fore feeding it into the encoder. Experiments on three language pairs
-demonstrate that such models improve the performance of NMT systems both in
-terms of BLEU score and in the accuracy of translating homographs.
-
+  Homographs, words with different meanings but the same surface form, havelong caused difficulty for machine translation systems, as it is difficult toselect the correct translation based on the context. However, with the adventof neural machine translation (NMT) systems, which can theoretically take intoaccount global sentential context, one may hypothesize that this problem hasbeen alleviated. In this paper, we first provide empirical evidence thatexisting NMT systems in fact still have significant problems in properlytranslating ambiguous words. We then proceed to describe methods, inspired bythe word sense disambiguation literature, that model the context of the inputword with context-aware word embeddings that help to differentiate the wordsense be- fore feeding it into the encoder. Experiments on three language pairsdemonstrate that such models improve the performance of NMT systems both interms of BLEU score and in the accuracy of translating homographs.
 
 Transcribing Against Time
 
-  We investigate the problem of manually correcting errors from an automatic
-speech transcript in a cost-sensitive fashion. This is done by specifying a
-fixed time budget, and then automatically choosing location and size of
-segments for correction such that the number of corrected errors is maximized.
-The core components, as suggested by previous research [1], are a utility model
-that estimates the number of errors in a particular segment, and a cost model
-that estimates annotation effort for the segment. In this work we propose a
-dynamic updating framework that allows for the training of cost models during
-the ongoing transcription process. This removes the need for transcriber
-enrollment prior to the actual transcription, and improves correction
-efficiency by allowing highly transcriber-adaptive cost modeling. We first
-confirm and analyze the improvements afforded by this method in a simulated
-study. We then conduct a realistic user study, observing efficiency
-improvements of 15% relative on average, and 42% for the participants who
-deviated most strongly from our initial, transcriber-agnostic cost model.
-Moreover, we find that our updating framework can capture dynamically changing
-factors, such as transcriber fatigue and topic familiarity, which we observe to
-have a large influence on the transcriber's working behavior.
+  We investigate the problem of manually correcting errors from an automaticspeech transcript in a cost-sensitive fashion. This is done by specifying afixed time budget, and then automatically choosing location and size ofsegments for correction such that the number of corrected errors is maximized.The core components, as suggested by previous research [1], are a utility modelthat estimates the number of errors in a particular segment, and a cost modelthat estimates annotation effort for the segment. In this work we propose adynamic updating framework that allows for the training of cost models duringthe ongoing transcription process. This removes the need for transcriberenrollment prior to the actual transcription, and improves correctionefficiency by allowing highly transcriber-adaptive cost modeling. We firstconfirm and analyze the improvements afforded by this method in a simulatedstudy. We then conduct a realistic user study, observing efficiencyimprovements of 15% relative on average, and 42% for the participants whodeviated most strongly from our initial, transcriber-agnostic cost model.Moreover, we find that our updating framework can capture dynamically changingfactors, such as transcriber fatigue and topic familiarity, which we observe tohave a large influence on the transcriber's working behavior.
 
+Improving Neural Machine Translation through Phrase-based Forced  Decoding
 
-Improving Neural Machine Translation through Phrase-based Forced
-  Decoding
+  Compared to traditional statistical machine translation (SMT), neural machinetranslation (NMT) often sacrifices adequacy for the sake of fluency. We proposea method to combine the advantages of traditional SMT and NMT by exploiting anexisting phrase-based SMT model to compute the phrase-based decoding cost foran NMT output and then using this cost to rerank the n-best NMT outputs. Themain challenge in implementing this approach is that NMT outputs may not be inthe search space of the standard phrase-based decoding algorithm, because thesearch space of phrase-based SMT is limited by the phrase-based translationrule table. We propose a soft forced decoding algorithm, which can alwayssuccessfully find a decoding path for any NMT output. We show that using theforced decoding cost to rerank the NMT outputs can successfully improvetranslation quality on four different language pairs.
 
-  Compared to traditional statistical machine translation (SMT), neural machine
-translation (NMT) often sacrifices adequacy for the sake of fluency. We propose
-a method to combine the advantages of traditional SMT and NMT by exploiting an
-existing phrase-based SMT model to compute the phrase-based decoding cost for
-an NMT output and then using this cost to rerank the n-best NMT outputs. The
-main challenge in implementing this approach is that NMT outputs may not be in
-the search space of the standard phrase-based decoding algorithm, because the
-search space of phrase-based SMT is limited by the phrase-based translation
-rule table. We propose a soft forced decoding algorithm, which can always
-successfully find a decoding path for any NMT output. We show that using the
-forced decoding cost to rerank the NMT outputs can successfully improve
-translation quality on four different language pairs.
+Linguistic unit discovery from multi-modal inputs in unwritten  languages: Summary of the "Speaking Rosetta" JSALT 2017 Workshop
 
-
-Linguistic unit discovery from multi-modal inputs in unwritten
-  languages: Summary of the "Speaking Rosetta" JSALT 2017 Workshop
-
-  We summarize the accomplishments of a multi-disciplinary workshop exploring
-the computational and scientific issues surrounding the discovery of linguistic
-units (subwords and words) in a language without orthography. We study the
-replacement of orthographic transcriptions by images and/or translated text in
-a well-resourced language to help unsupervised discovery from raw speech.
-
+  We summarize the accomplishments of a multi-disciplinary workshop exploringthe computational and scientific issues surrounding the discovery of linguisticunits (subwords and words) in a language without orthography. We study thereplacement of orthographic transcriptions by images and/or translated text ina well-resourced language to help unsupervised discovery from raw speech.
 
 Self-Attentional Acoustic Models
 
-  Self-attention is a method of encoding sequences of vectors by relating these
-vectors to each-other based on pairwise similarities. These models have
-recently shown promising results for modeling discrete sequences, but they are
-non-trivial to apply to acoustic modeling due to computational and modeling
-issues. In this paper, we apply self-attention to acoustic modeling, proposing
-several improvements to mitigate these issues: First, self-attention memory
-grows quadratically in the sequence length, which we address through a
-downsampling technique. Second, we find that previous approaches to incorporate
-position information into the model are unsuitable and explore other
-representations and hybrid models to this end. Third, to stress the importance
-of local context in the acoustic signal, we propose a Gaussian biasing approach
-that allows explicit control over the context range. Experiments find that our
-model approaches a strong baseline based on LSTMs with network-in-network
-connections while being much faster to compute. Besides speed, we find that
-interpretability is a strength of self-attentional acoustic models, and
-demonstrate that self-attention heads learn a linguistically plausible division
-of labor.
-
+  Self-attention is a method of encoding sequences of vectors by relating thesevectors to each-other based on pairwise similarities. These models haverecently shown promising results for modeling discrete sequences, but they arenon-trivial to apply to acoustic modeling due to computational and modelingissues. In this paper, we apply self-attention to acoustic modeling, proposingseveral improvements to mitigate these issues: First, self-attention memorygrows quadratically in the sequence length, which we address through adownsampling technique. Second, we find that previous approaches to incorporateposition information into the model are unsuitable and explore otherrepresentations and hybrid models to this end. Third, to stress the importanceof local context in the acoustic signal, we propose a Gaussian biasing approachthat allows explicit control over the context range. Experiments find that ourmodel approaches a strong baseline based on LSTMs with network-in-networkconnections while being much faster to compute. Besides speed, we find thatinterpretability is a strength of self-attentional acoustic models, anddemonstrate that self-attention heads learn a linguistically plausible divisionof labor.
 
 Attentive Interaction Model: Modeling Changes in View in Argumentation
 
-  We present a neural architecture for modeling argumentative dialogue that
-explicitly models the interplay between an Opinion Holder's (OH's) reasoning
-and a challenger's argument, with the goal of predicting if the argument
-successfully changes the OH's view. The model has two components: (1)
-vulnerable region detection, an attention model that identifies parts of the
-OH's reasoning that are amenable to change, and (2) interaction encoding, which
-identifies the relationship between the content of the OH's reasoning and that
-of the challenger's argument. Based on evaluation on discussions from the
-Change My View forum on Reddit, the two components work together to predict an
-OH's change in view, outperforming several baselines. A posthoc analysis
-suggests that sentences picked out by the attention model are addressed more
-frequently by successful arguments than by unsuccessful ones.
-
+  We present a neural architecture for modeling argumentative dialogue thatexplicitly models the interplay between an Opinion Holder's (OH's) reasoningand a challenger's argument, with the goal of predicting if the argumentsuccessfully changes the OH's view. The model has two components: (1)vulnerable region detection, an attention model that identifies parts of theOH's reasoning that are amenable to change, and (2) interaction encoding, whichidentifies the relationship between the content of the OH's reasoning and thatof the challenger's argument. Based on evaluation on discussions from theChange My View forum on Reddit, the two components work together to predict anOH's change in view, outperforming several baselines. A posthoc analysissuggests that sentences picked out by the attention model are addressed morefrequently by successful arguments than by unsuccessful ones.
 
 Guiding Neural Machine Translation with Retrieved Translation Pieces
 
-  One of the difficulties of neural machine translation (NMT) is the recall and
-appropriate translation of low-frequency words or phrases. In this paper, we
-propose a simple, fast, and effective method for recalling previously seen
-translation examples and incorporating them into the NMT decoding process.
-Specifically, for an input sentence, we use a search engine to retrieve
-sentence pairs whose source sides are similar with the input sentence, and then
-collect $n$-grams that are both in the retrieved target sentences and aligned
-with words that match in the source sentences, which we call "translation
-pieces". We compute pseudo-probabilities for each retrieved sentence based on
-similarities between the input sentence and the retrieved source sentences, and
-use these to weight the retrieved translation pieces. Finally, an existing NMT
-model is used to translate the input sentence, with an additional bonus given
-to outputs that contain the collected translation pieces. We show our method
-improves NMT translation results up to 6 BLEU points on three narrow domain
-translation tasks where repetitiveness of the target sentences is particularly
-salient. It also causes little increase in the translation time, and compares
-favorably to another alternative retrieval-based method with respect to
-accuracy, speed, and simplicity of implementation.
+  One of the difficulties of neural machine translation (NMT) is the recall andappropriate translation of low-frequency words or phrases. In this paper, wepropose a simple, fast, and effective method for recalling previously seentranslation examples and incorporating them into the NMT decoding process.Specifically, for an input sentence, we use a search engine to retrievesentence pairs whose source sides are similar with the input sentence, and thencollect $n$-grams that are both in the retrieved target sentences and alignedwith words that match in the source sentences, which we call "translationpieces". We compute pseudo-probabilities for each retrieved sentence based onsimilarities between the input sentence and the retrieved source sentences, anduse these to weight the retrieved translation pieces. Finally, an existing NMTmodel is used to translate the input sentence, with an additional bonus givento outputs that contain the collected translation pieces. We show our methodimproves NMT translation results up to 6 BLEU points on three narrow domaintranslation tasks where repetitiveness of the target sentences is particularlysalient. It also causes little increase in the translation time, and comparesfavorably to another alternative retrieval-based method with respect toaccuracy, speed, and simplicity of implementation.
 
+When and Why are Pre-trained Word Embeddings Useful for Neural Machine  Translation?
 
-When and Why are Pre-trained Word Embeddings Useful for Neural Machine
-  Translation?
-
-  The performance of Neural Machine Translation (NMT) systems often suffers in
-low-resource scenarios where sufficiently large-scale parallel corpora cannot
-be obtained. Pre-trained word embeddings have proven to be invaluable for
-improving performance in natural language analysis tasks, which often suffer
-from paucity of data. However, their utility for NMT has not been extensively
-explored. In this work, we perform five sets of experiments that analyze when
-we can expect pre-trained word embeddings to help in NMT tasks. We show that
-such embeddings can be surprisingly effective in some cases -- providing gains
-of up to 20 BLEU points in the most favorable setting.
-
+  The performance of Neural Machine Translation (NMT) systems often suffers inlow-resource scenarios where sufficiently large-scale parallel corpora cannotbe obtained. Pre-trained word embeddings have proven to be invaluable forimproving performance in natural language analysis tasks, which often sufferfrom paucity of data. However, their utility for NMT has not been extensivelyexplored. In this work, we perform five sets of experiments that analyze whenwe can expect pre-trained word embeddings to help in NMT tasks. We show thatsuch embeddings can be surprisingly effective in some cases -- providing gainsof up to 20 BLEU points in the most favorable setting.
 
 Stack-Pointer Networks for Dependency Parsing
 
-  We introduce a novel architecture for dependency parsing: \emph{stack-pointer
-networks} (\textbf{\textsc{StackPtr}}). Combining pointer
-networks~\citep{vinyals2015pointer} with an internal stack, the proposed model
-first reads and encodes the whole sentence, then builds the dependency tree
-top-down (from root-to-leaf) in a depth-first fashion. The stack tracks the
-status of the depth-first search and the pointer networks select one child for
-the word at the top of the stack at each step. The \textsc{StackPtr} parser
-benefits from the information of the whole sentence and all previously derived
-subtree structures, and removes the left-to-right restriction in classical
-transition-based parsers. Yet, the number of steps for building any (including
-non-projective) parse tree is linear in the length of the sentence just as
-other transition-based parsers, yielding an efficient decoding algorithm with
-$O(n^2)$ time complexity. We evaluate our model on 29 treebanks spanning 20
-languages and different dependency annotation schemas, and achieve
-state-of-the-art performance on 21 of them.
-
+  We introduce a novel architecture for dependency parsing: \emph{stack-pointernetworks} (\textbf{\textsc{StackPtr}}). Combining pointernetworks~\citep{vinyals2015pointer} with an internal stack, the proposed modelfirst reads and encodes the whole sentence, then builds the dependency treetop-down (from root-to-leaf) in a depth-first fashion. The stack tracks thestatus of the depth-first search and the pointer networks select one child forthe word at the top of the stack at each step. The \textsc{StackPtr} parserbenefits from the information of the whole sentence and all previously derivedsubtree structures, and removes the left-to-right restriction in classicaltransition-based parsers. Yet, the number of steps for building any (includingnon-projective) parse tree is linear in the length of the sentence just asother transition-based parsers, yielding an efficient decoding algorithm with$O(n^2)$ time complexity. We evaluate our model on 29 treebanks spanning 20languages and different dependency annotation schemas, and achievestate-of-the-art performance on 21 of them.
 
 Extreme Adaptation for Personalized Neural Machine Translation
 
-  Every person speaks or writes their own flavor of their native language,
-influenced by a number of factors: the content they tend to talk about, their
-gender, their social status, or their geographical origin.
-  When attempting to perform Machine Translation (MT), these variations have a
-significant effect on how the system should perform translation, but this is
-not captured well by standard one-size-fits-all models.
-  In this paper, we propose a simple and parameter-efficient adaptation
-technique that only requires adapting the bias of the output softmax to each
-particular user of the MT system, either directly or through a factored
-approximation.
-  Experiments on TED talks in three languages demonstrate improvements in
-translation accuracy, and better reflection of speaker traits in the target
-text.
-
+  Every person speaks or writes their own flavor of their native language,influenced by a number of factors: the content they tend to talk about, theirgender, their social status, or their geographical origin.  When attempting to perform Machine Translation (MT), these variations have asignificant effect on how the system should perform translation, but this isnot captured well by standard one-size-fits-all models.  In this paper, we propose a simple and parameter-efficient adaptationtechnique that only requires adapting the bias of the output softmax to eachparticular user of the MT system, either directly or through a factoredapproximation.  Experiments on TED talks in three languages demonstrate improvements intranslation accuracy, and better reflection of speaker traits in the targettext.
 
 Neural Factor Graph Models for Cross-lingual Morphological Tagging
 
-  Morphological analysis involves predicting the syntactic traits of a word
-(e.g. {POS: Noun, Case: Acc, Gender: Fem}). Previous work in morphological
-tagging improves performance for low-resource languages (LRLs) through
-cross-lingual training with a high-resource language (HRL) from the same
-family, but is limited by the strict, often false, assumption that tag sets
-exactly overlap between the HRL and LRL. In this paper we propose a method for
-cross-lingual morphological tagging that aims to improve information sharing
-between languages by relaxing this assumption. The proposed model uses
-factorial conditional random fields with neural network potentials, making it
-possible to (1) utilize the expressive power of neural network representations
-to smooth over superficial differences in the surface forms, (2) model pairwise
-and transitive relationships between tags, and (3) accurately generate tag sets
-that are unseen or rare in the training data. Experiments on four languages
-from the Universal Dependencies Treebank demonstrate superior tagging
-accuracies over existing cross-lingual approaches.
-
+  Morphological analysis involves predicting the syntactic traits of a word(e.g. {POS: Noun, Case: Acc, Gender: Fem}). Previous work in morphologicaltagging improves performance for low-resource languages (LRLs) throughcross-lingual training with a high-resource language (HRL) from the samefamily, but is limited by the strict, often false, assumption that tag setsexactly overlap between the HRL and LRL. In this paper we propose a method forcross-lingual morphological tagging that aims to improve information sharingbetween languages by relaxing this assumption. The proposed model usesfactorial conditional random fields with neural network potentials, making itpossible to (1) utilize the expressive power of neural network representationsto smooth over superficial differences in the surface forms, (2) model pairwiseand transitive relationships between tags, and (3) accurately generate tag setsthat are unseen or rare in the training data. Experiments on four languagesfrom the Universal Dependencies Treebank demonstrate superior taggingaccuracies over existing cross-lingual approaches.
 
 Stress Test Evaluation for Natural Language Inference
 
-  Natural language inference (NLI) is the task of determining if a natural
-language hypothesis can be inferred from a given premise in a justifiable
-manner. NLI was proposed as a benchmark task for natural language
-understanding. Existing models perform well at standard datasets for NLI,
-achieving impressive results across different genres of text. However, the
-extent to which these models understand the semantic content of sentences is
-unclear. In this work, we propose an evaluation methodology consisting of
-automatically constructed "stress tests" that allow us to examine whether
-systems have the ability to make real inferential decisions. Our evaluation of
-six sentence-encoder models on these stress tests reveals strengths and
-weaknesses of these models with respect to challenging linguistic phenomena,
-and suggests important directions for future work in this area.
-
+  Natural language inference (NLI) is the task of determining if a naturallanguage hypothesis can be inferred from a given premise in a justifiablemanner. NLI was proposed as a benchmark task for natural languageunderstanding. Existing models perform well at standard datasets for NLI,achieving impressive results across different genres of text. However, theextent to which these models understand the semantic content of sentences isunclear. In this work, we propose an evaluation methodology consisting ofautomatically constructed "stress tests" that allow us to examine whethersystems have the ability to make real inferential decisions. Our evaluation ofsix sentence-encoder models on these stress tests reveals strengths andweaknesses of these models with respect to challenging linguistic phenomena,and suggests important directions for future work in this area.
 
 Multi-Source Neural Machine Translation with Missing Data
 
-  Multi-source translation is an approach to exploit multiple inputs (e.g. in
-two different languages) to increase translation accuracy. In this paper, we
-examine approaches for multi-source neural machine translation (NMT) using an
-incomplete multilingual corpus in which some translations are missing. In
-practice, many multilingual corpora are not complete due to the difficulty to
-provide translations in all of the relevant languages (for example, in TED
-talks, most English talks only have subtitles for a small portion of the
-languages that TED supports). Existing studies on multi-source translation did
-not explicitly handle such situations. This study focuses on the use of
-incomplete multilingual corpora in multi-encoder NMT and mixture of NMT experts
-and examines a very simple implementation where missing source translations are
-replaced by a special symbol <NULL>. These methods allow us to use incomplete
-corpora both at training time and test time. In experiments with real
-incomplete multilingual corpora of TED Talks, the multi-source NMT with the
-<NULL> tokens achieved higher translation accuracies measured by BLEU than
-those by any one-to-one NMT systems.
+  Multi-source translation is an approach to exploit multiple inputs (e.g. intwo different languages) to increase translation accuracy. In this paper, weexamine approaches for multi-source neural machine translation (NMT) using anincomplete multilingual corpus in which some translations are missing. Inpractice, many multilingual corpora are not complete due to the difficulty toprovide translations in all of the relevant languages (for example, in TEDtalks, most English talks only have subtitles for a small portion of thelanguages that TED supports). Existing studies on multi-source translation didnot explicitly handle such situations. This study focuses on the use ofincomplete multilingual corpora in multi-encoder NMT and mixture of NMT expertsand examines a very simple implementation where missing source translations arereplaced by a special symbol <NULL>. These methods allow us to use incompletecorpora both at training time and test time. In experiments with realincomplete multilingual corpora of TED Talks, the multi-source NMT with the<NULL> tokens achieved higher translation accuracies measured by BLEU thanthose by any one-to-one NMT systems.
 
+StructVAE: Tree-structured Latent Variable Models for Semi-supervised  Semantic Parsing
 
-StructVAE: Tree-structured Latent Variable Models for Semi-supervised
-  Semantic Parsing
+  Semantic parsing is the task of transducing natural language (NL) utterancesinto formal meaning representations (MRs), commonly represented as treestructures. Annotating NL utterances with their corresponding MRs is expensiveand time-consuming, and thus the limited availability of labeled data oftenbecomes the bottleneck of data-driven, supervised models. We introduceStructVAE, a variational auto-encoding model for semisupervised semanticparsing, which learns both from limited amounts of parallel data, andreadily-available unlabeled NL utterances. StructVAE models latent MRs notobserved in the unlabeled data as tree-structured latent variables. Experimentson semantic parsing on the ATIS domain and Python code generation show thatwith extra unlabeled data, StructVAE outperforms strong supervised models.
 
-  Semantic parsing is the task of transducing natural language (NL) utterances
-into formal meaning representations (MRs), commonly represented as tree
-structures. Annotating NL utterances with their corresponding MRs is expensive
-and time-consuming, and thus the limited availability of labeled data often
-becomes the bottleneck of data-driven, supervised models. We introduce
-StructVAE, a variational auto-encoding model for semisupervised semantic
-parsing, which learns both from limited amounts of parallel data, and
-readily-available unlabeled NL utterances. StructVAE models latent MRs not
-observed in the unlabeled data as tree-structured latent variables. Experiments
-on semantic parsing on the ATIS domain and Python code generation show that
-with extra unlabeled data, StructVAE outperforms strong supervised models.
+SwitchOut: an Efficient Data Augmentation Algorithm for Neural Machine  Translation
 
-
-SwitchOut: an Efficient Data Augmentation Algorithm for Neural Machine
-  Translation
-
-  In this work, we examine methods for data augmentation for text-based tasks
-such as neural machine translation (NMT). We formulate the design of a data
-augmentation policy with desirable properties as an optimization problem, and
-derive a generic analytic solution. This solution not only subsumes some
-existing augmentation schemes, but also leads to an extremely simple data
-augmentation strategy for NMT: randomly replacing words in both the source
-sentence and the target sentence with other random words from their
-corresponding vocabularies. We name this method SwitchOut. Experiments on three
-translation datasets of different scales show that SwitchOut yields consistent
-improvements of about 0.5 BLEU, achieving better or comparable performances to
-strong alternatives such as word dropout (Sennrich et al., 2016a). Code to
-implement this method is included in the appendix.
-
+  In this work, we examine methods for data augmentation for text-based taskssuch as neural machine translation (NMT). We formulate the design of a dataaugmentation policy with desirable properties as an optimization problem, andderive a generic analytic solution. This solution not only subsumes someexisting augmentation schemes, but also leads to an extremely simple dataaugmentation strategy for NMT: randomly replacing words in both the sourcesentence and the target sentence with other random words from theircorresponding vocabularies. We name this method SwitchOut. Experiments on threetranslation datasets of different scales show that SwitchOut yields consistentimprovements of about 0.5 BLEU, achieving better or comparable performances tostrong alternatives such as word dropout (Sennrich et al., 2016a). Code toimplement this method is included in the appendix.
 
 Contextual Parameter Generation for Universal Neural Machine Translation
 
-  We propose a simple modification to existing neural machine translation (NMT)
-models that enables using a single universal model to translate between
-multiple languages while allowing for language specific parameterization, and
-that can also be used for domain adaptation. Our approach requires no changes
-to the model architecture of a standard NMT system, but instead introduces a
-new component, the contextual parameter generator (CPG), that generates the
-parameters of the system (e.g., weights in a neural network). This parameter
-generator accepts source and target language embeddings as input, and generates
-the parameters for the encoder and the decoder, respectively. The rest of the
-model remains unchanged and is shared across all languages. We show how this
-simple modification enables the system to use monolingual data for training and
-also perform zero-shot translation. We further show it is able to surpass
-state-of-the-art performance for both the IWSLT-15 and IWSLT-17 datasets and
-that the learned language embeddings are able to uncover interesting
-relationships between languages.
+  We propose a simple modification to existing neural machine translation (NMT)models that enables using a single universal model to translate betweenmultiple languages while allowing for language specific parameterization, andthat can also be used for domain adaptation. Our approach requires no changesto the model architecture of a standard NMT system, but instead introduces anew component, the contextual parameter generator (CPG), that generates theparameters of the system (e.g., weights in a neural network). This parametergenerator accepts source and target language embeddings as input, and generatesthe parameters for the encoder and the decoder, respectively. The rest of themodel remains unchanged and is shared across all languages. We show how thissimple modification enables the system to use monolingual data for training andalso perform zero-shot translation. We further show it is able to surpassstate-of-the-art performance for both the IWSLT-15 and IWSLT-17 datasets andthat the learned language embeddings are able to uncover interestingrelationships between languages.
 
+Unsupervised Learning of Syntactic Structure with Invertible Neural  Projections
 
-Unsupervised Learning of Syntactic Structure with Invertible Neural
-  Projections
-
-  Unsupervised learning of syntactic structure is typically performed using
-generative models with discrete latent variables and multinomial parameters. In
-most cases, these models have not leveraged continuous word representations. In
-this work, we propose a novel generative model that jointly learns discrete
-syntactic structure and continuous word representations in an unsupervised
-fashion by cascading an invertible neural network with a structured generative
-prior. We show that the invertibility condition allows for efficient exact
-inference and marginal likelihood computation in our model so long as the prior
-is well-behaved. In experiments we instantiate our approach with both Markov
-and tree-structured priors, evaluating on two tasks: part-of-speech (POS)
-induction, and unsupervised dependency parsing without gold POS annotation. On
-the Penn Treebank, our Markov-structured model surpasses state-of-the-art
-results on POS induction. Similarly, we find that our tree-structured model
-achieves state-of-the-art performance on unsupervised dependency parsing for
-the difficult training condition where neither gold POS annotation nor
-punctuation-based constraints are available.
-
+  Unsupervised learning of syntactic structure is typically performed usinggenerative models with discrete latent variables and multinomial parameters. Inmost cases, these models have not leveraged continuous word representations. Inthis work, we propose a novel generative model that jointly learns discretesyntactic structure and continuous word representations in an unsupervisedfashion by cascading an invertible neural network with a structured generativeprior. We show that the invertibility condition allows for efficient exactinference and marginal likelihood computation in our model so long as the prioris well-behaved. In experiments we instantiate our approach with both Markovand tree-structured priors, evaluating on two tasks: part-of-speech (POS)induction, and unsupervised dependency parsing without gold POS annotation. Onthe Penn Treebank, our Markov-structured model surpasses state-of-the-artresults on POS induction. Similarly, we find that our tree-structured modelachieves state-of-the-art performance on unsupervised dependency parsing forthe difficult training condition where neither gold POS annotation norpunctuation-based constraints are available.
 
 A Tree-based Decoder for Neural Machine Translation
 
-  Recent advances in Neural Machine Translation (NMT) show that adding
-syntactic information to NMT systems can improve the quality of their
-translations. Most existing work utilizes some specific types of
-linguistically-inspired tree structures, like constituency and dependency parse
-trees. This is often done via a standard RNN decoder that operates on a
-linearized target tree structure. However, it is an open question of what
-specific linguistic formalism, if any, is the best structural representation
-for NMT. In this paper, we (1) propose an NMT model that can naturally generate
-the topology of an arbitrary tree structure on the target side, and (2)
-experiment with various target tree structures. Our experiments show the
-surprising result that our model delivers the best improvements with balanced
-binary trees constructed without any linguistic knowledge; this model
-outperforms standard seq2seq models by up to 2.1 BLEU points, and other methods
-for incorporating target-side syntax by up to 0.7 BLEU.
+  Recent advances in Neural Machine Translation (NMT) show that addingsyntactic information to NMT systems can improve the quality of theirtranslations. Most existing work utilizes some specific types oflinguistically-inspired tree structures, like constituency and dependency parsetrees. This is often done via a standard RNN decoder that operates on alinearized target tree structure. However, it is an open question of whatspecific linguistic formalism, if any, is the best structural representationfor NMT. In this paper, we (1) propose an NMT model that can naturally generatethe topology of an arbitrary tree structure on the target side, and (2)experiment with various target tree structures. Our experiments show thesurprising result that our model delivers the best improvements with balancedbinary trees constructed without any linguistic knowledge; this modeloutperforms standard seq2seq models by up to 2.1 BLEU points, and other methodsfor incorporating target-side syntax by up to 0.7 BLEU.
 
+Adapting Word Embeddings to New Languages with Morphological and  Phonological Subword Representations
 
-Adapting Word Embeddings to New Languages with Morphological and
-  Phonological Subword Representations
-
-  Much work in Natural Language Processing (NLP) has been for resource-rich
-languages, making generalization to new, less-resourced languages challenging.
-We present two approaches for improving generalization to low-resourced
-languages by adapting continuous word representations using linguistically
-motivated subword units: phonemes, morphemes and graphemes. Our method requires
-neither parallel corpora nor bilingual dictionaries and provides a significant
-gain in performance over previous methods relying on these resources. We
-demonstrate the effectiveness of our approaches on Named Entity Recognition for
-four languages, namely Uyghur, Turkish, Bengali and Hindi, of which Uyghur and
-Bengali are low resource languages, and also perform experiments on Machine
-Translation. Exploiting subwords with transfer learning gives us a boost of
-+15.2 NER F1 for Uyghur and +9.7 F1 for Bengali. We also show improvements in
-the monolingual setting where we achieve (avg.) +3 F1 and (avg.) +1.35 BLEU.
-
+  Much work in Natural Language Processing (NLP) has been for resource-richlanguages, making generalization to new, less-resourced languages challenging.We present two approaches for improving generalization to low-resourcedlanguages by adapting continuous word representations using linguisticallymotivated subword units: phonemes, morphemes and graphemes. Our method requiresneither parallel corpora nor bilingual dictionaries and provides a significantgain in performance over previous methods relying on these resources. Wedemonstrate the effectiveness of our approaches on Named Entity Recognition forfour languages, namely Uyghur, Turkish, Bengali and Hindi, of which Uyghur andBengali are low resource languages, and also perform experiments on MachineTranslation. Exploiting subwords with transfer learning gives us a boost of+15.2 NER F1 for Uyghur and +9.7 F1 for Bengali. We also show improvements inthe monolingual setting where we achieve (avg.) +3 F1 and (avg.) +1.35 BLEU.
 

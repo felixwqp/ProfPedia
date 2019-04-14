@@ -1,397 +1,68 @@
 Contribution Games in Social Networks
 
-  We consider network contribution games, where each agent in a social network
-has a budget of effort that he can contribute to different collaborative
-projects or relationships. Depending on the contribution of the involved agents
-a relationship will flourish or drown, and to measure the success we use a
-reward function for each relationship. Every agent is trying to maximize the
-reward from all relationships that it is involved in. We consider pairwise
-equilibria of this game, and characterize the existence, computational
-complexity, and quality of equilibrium based on the types of reward functions
-involved. For example, when all reward functions are concave, we prove that the
-price of anarchy is at most 2. For convex functions the same only holds under
-some special but very natural conditions. A special focus of the paper are
-minimum effort games, where the reward of a relationship depends only on the
-minimum effort of any of the participants. Finally, we show tight bounds for
-approximate equilibria and convergence of dynamics in these games.
-
+  We consider network contribution games, where each agent in a social networkhas a budget of effort that he can contribute to different collaborativeprojects or relationships. Depending on the contribution of the involved agentsa relationship will flourish or drown, and to measure the success we use areward function for each relationship. Every agent is trying to maximize thereward from all relationships that it is involved in. We consider pairwiseequilibria of this game, and characterize the existence, computationalcomplexity, and quality of equilibrium based on the types of reward functionsinvolved. For example, when all reward functions are concave, we prove that theprice of anarchy is at most 2. For convex functions the same only holds undersome special but very natural conditions. A special focus of the paper areminimum effort games, where the reward of a relationship depends only on theminimum effort of any of the participants. Finally, we show tight bounds forapproximate equilibria and convergence of dynamics in these games.
 
 Randomized Social Choice Functions Under Metric Preferences
 
-  We determine the quality of randomized social choice mechanisms in a setting
-in which the agents have metric preferences: every agent has a cost for each
-alternative, and these costs form a metric. We assume that these costs are
-unknown to the mechanisms (and possibly even to the agents themselves), which
-means we cannot simply select the optimal alternative, i.e. the alternative
-that minimizes the total agent cost (or median agent cost). However, we do
-assume that the agents know their ordinal preferences that are induced by the
-metric space. We examine randomized social choice functions that require only
-this ordinal information and select an alternative that is good in expectation
-with respect to the costs from the metric. To quantify how good a randomized
-social choice function is, we bound the distortion, which is the worst-case
-ratio between expected cost of the alternative selected and the cost of the
-optimal alternative. We provide new distortion bounds for a variety of
-randomized mechanisms, for both general metrics and for important special
-cases. Our results show a sizable improvement in distortion over deterministic
-mechanisms.
+  We determine the quality of randomized social choice mechanisms in a settingin which the agents have metric preferences: every agent has a cost for eachalternative, and these costs form a metric. We assume that these costs areunknown to the mechanisms (and possibly even to the agents themselves), whichmeans we cannot simply select the optimal alternative, i.e. the alternativethat minimizes the total agent cost (or median agent cost). However, we doassume that the agents know their ordinal preferences that are induced by themetric space. We examine randomized social choice functions that require onlythis ordinal information and select an alternative that is good in expectationwith respect to the costs from the metric. To quantify how good a randomizedsocial choice function is, we bound the distortion, which is the worst-caseratio between expected cost of the alternative selected and the cost of theoptimal alternative. We provide new distortion bounds for a variety ofrandomized mechanisms, for both general metrics and for important specialcases. Our results show a sizable improvement in distortion over deterministicmechanisms.
 
+Friendship, Altruism, and Reward Sharing in Stable Matching and  Contribution Games
 
-Friendship, Altruism, and Reward Sharing in Stable Matching and
-  Contribution Games
-
-  We study stable matching problems in networks where players are embedded in a
-social context, and may incorporate friendship relations or altruism into their
-decisions. Each player is a node in a social network and strives to form a good
-match with a neighboring player. We consider the existence, computation, and
-inefficiency of stable matchings from which no pair of players wants to
-deviate. When the benefits from a match are the same for both players, we show
-that incorporating the well-being of other players into their matching
-decisions significantly decreases the price of stability, while the price of
-anarchy remains unaffected. Furthermore, a good stable matching achieving the
-price of stability bound always exists and can be reached in polynomial time.
-We extend these results to more general matching rewards, when players matched
-to each other may receive different utilities from the match. For this more
-general case, we show that incorporating social context (i.e., "caring about
-your friends") can make an even larger difference, and greatly reduce the price
-of anarchy. We show a variety of existence results, and present upper and lower
-bounds on the prices of anarchy and stability for various matching utility
-structures. Finally, we extend most of our results to network contribution
-games, in which players can decide how much effort to contribute to each
-incident edge, instead of simply choosing a single node to match with.
-
+  We study stable matching problems in networks where players are embedded in asocial context, and may incorporate friendship relations or altruism into theirdecisions. Each player is a node in a social network and strives to form a goodmatch with a neighboring player. We consider the existence, computation, andinefficiency of stable matchings from which no pair of players wants todeviate. When the benefits from a match are the same for both players, we showthat incorporating the well-being of other players into their matchingdecisions significantly decreases the price of stability, while the price ofanarchy remains unaffected. Furthermore, a good stable matching achieving theprice of stability bound always exists and can be reached in polynomial time.We extend these results to more general matching rewards, when players matchedto each other may receive different utilities from the match. For this moregeneral case, we show that incorporating social context (i.e., "caring aboutyour friends") can make an even larger difference, and greatly reduce the priceof anarchy. We show a variety of existence results, and present upper and lowerbounds on the prices of anarchy and stability for various matching utilitystructures. Finally, we extend most of our results to network contributiongames, in which players can decide how much effort to contribute to eachincident edge, instead of simply choosing a single node to match with.
 
 Envy-Free Pricing in Large Markets: Approximating Revenue and Welfare
 
-  We study the classic setting of envy-free pricing, in which a single seller
-chooses prices for its many items, with the goal of maximizing revenue once the
-items are allocated. Despite the large body of work addressing such settings,
-most versions of this problem have resisted good approximation factors for
-maximizing revenue; this is true even for the classic unit-demand case. In this
-paper we study envy-free pricing with unit-demand buyers, but unlike previous
-work we focus on large markets: ones in which the demand of each buyer is
-infinitesimally small compared to the size of the overall market. We assume
-that the buyer valuations for the items they desire have a nice (although
-reasonable) structure, i.e., that the aggregate buyer demand has a monotone
-hazard rate and that the values of every buyer type come from the same support.
-  For such large markets, our main contribution is a 1.88 approximation
-algorithm for maximizing revenue, showing that good pricing schemes can be
-computed when the number of buyers is large. We also give a (e,2)-bicriteria
-algorithm that simultaneously approximates both maximum revenue and welfare,
-thus showing that it is possible to obtain both good revenue and welfare at the
-same time. We further generalize our results by relaxing some of our
-assumptions, and quantify the necessary tradeoffs between revenue and welfare
-in our setting. Our results are the first known approximations for large
-markets, and crucially rely on new lower bounds which we prove for the
-revenue-maximizing prices.
+  We study the classic setting of envy-free pricing, in which a single sellerchooses prices for its many items, with the goal of maximizing revenue once theitems are allocated. Despite the large body of work addressing such settings,most versions of this problem have resisted good approximation factors formaximizing revenue; this is true even for the classic unit-demand case. In thispaper we study envy-free pricing with unit-demand buyers, but unlike previouswork we focus on large markets: ones in which the demand of each buyer isinfinitesimally small compared to the size of the overall market. We assumethat the buyer valuations for the items they desire have a nice (althoughreasonable) structure, i.e., that the aggregate buyer demand has a monotonehazard rate and that the values of every buyer type come from the same support.  For such large markets, our main contribution is a 1.88 approximationalgorithm for maximizing revenue, showing that good pricing schemes can becomputed when the number of buyers is large. We also give a (e,2)-bicriteriaalgorithm that simultaneously approximates both maximum revenue and welfare,thus showing that it is possible to obtain both good revenue and welfare at thesame time. We further generalize our results by relaxing some of ourassumptions, and quantify the necessary tradeoffs between revenue and welfarein our setting. Our results are the first known approximations for largemarkets, and crucially rely on new lower bounds which we prove for therevenue-maximizing prices.
 
+Price Doubling and Item Halving: Robust Revenue Guarantees for Item  Pricing
 
-Price Doubling and Item Halving: Robust Revenue Guarantees for Item
-  Pricing
-
-  We study approximation algorithms for revenue maximization based on static
-item pricing, where a seller chooses prices for various goods in the market,
-and then the buyers purchase utility-maximizing bundles at these given prices.
-We formulate two somewhat general techniques for designing good pricing
-algorithms for this setting: Price Doubling and Item Halving. Using these
-techniques, we unify many of the existing results in the item pricing
-literature under a common framework, as well as provide several new item
-pricing algorithms for approximating both revenue and social welfare. More
-specifically, for a variety of settings with item pricing, we show that it is
-possible to deterministically obtain a log-approximation for revenue and a
-constant-approximation for social welfare simultaneously: thus one need not
-sacrifice revenue if the goal is to still have decent welfare guarantees. %In
-addition, we provide a new black-box reduction from revenue to welfare based on
-item pricing, which immediately gives us new revenue-approximation algorithms
-(e.g., for gross substitutes valuations).
-  The main technical contribution of this paper is a $O((\log m + \log
-k)^2)$-approximation algorithm for revenue maximization based on the Item
-Halving technique, for settings where buyers have XoS valuations, where $m$ is
-the number of goods and $k$ is the average supply. Surprisingly, ours is the
-first known item pricing algorithm with polylogarithmic approximations for such
-general classes of valuations, and partially resolves an important open
-question from the algorithmic pricing literature about the existence of item
-pricing algorithms with logarithmic factors for general valuations. We also use
-the Item Halving framework to form envy-free item pricing mechanisms for the
-popular setting of multi-unit markets, providing a log-approximation to revenue
-in this case.
-
+  We study approximation algorithms for revenue maximization based on staticitem pricing, where a seller chooses prices for various goods in the market,and then the buyers purchase utility-maximizing bundles at these given prices.We formulate two somewhat general techniques for designing good pricingalgorithms for this setting: Price Doubling and Item Halving. Using thesetechniques, we unify many of the existing results in the item pricingliterature under a common framework, as well as provide several new itempricing algorithms for approximating both revenue and social welfare. Morespecifically, for a variety of settings with item pricing, we show that it ispossible to deterministically obtain a log-approximation for revenue and aconstant-approximation for social welfare simultaneously: thus one need notsacrifice revenue if the goal is to still have decent welfare guarantees. %Inaddition, we provide a new black-box reduction from revenue to welfare based onitem pricing, which immediately gives us new revenue-approximation algorithms(e.g., for gross substitutes valuations).  The main technical contribution of this paper is a $O((\log m + \logk)^2)$-approximation algorithm for revenue maximization based on the ItemHalving technique, for settings where buyers have XoS valuations, where $m$ isthe number of goods and $k$ is the average supply. Surprisingly, ours is thefirst known item pricing algorithm with polylogarithmic approximations for suchgeneral classes of valuations, and partially resolves an important openquestion from the algorithmic pricing literature about the existence of itempricing algorithms with logarithmic factors for general valuations. We also usethe Item Halving framework to form envy-free item pricing mechanisms for thepopular setting of multi-unit markets, providing a log-approximation to revenuein this case.
 
 A Stackelberg Strategy for Routing Flow over Time
 
-  Routing games are used to to understand the impact of individual users'
-decisions on network efficiency. Most prior work on routing games uses a
-simplified model of network flow where all flow exists simultaneously, and
-users care about either their maximum delay or their total delay. Both of these
-measures are surrogates for measuring how long it takes to get all of a user's
-traffic through the network. We attempt a more direct study of how competition
-affects network efficiency by examining routing games in a flow over time
-model. We give an efficiently computable Stackelberg strategy for this model
-and show that the competitive equilibrium under this strategy is no worse than
-a small constant times the optimal, for two natural measures of optimality.
+  Routing games are used to to understand the impact of individual users'decisions on network efficiency. Most prior work on routing games uses asimplified model of network flow where all flow exists simultaneously, andusers care about either their maximum delay or their total delay. Both of thesemeasures are surrogates for measuring how long it takes to get all of a user'straffic through the network. We attempt a more direct study of how competitionaffects network efficiency by examining routing games in a flow over timemodel. We give an efficiently computable Stackelberg strategy for this modeland show that the competitive equilibrium under this strategy is no worse thana small constant times the optimal, for two natural measures of optimality.
 
+Seeding Influential Nodes in Non-Submodular Models of Information  Diffusion
 
-Seeding Influential Nodes in Non-Submodular Models of Information
-  Diffusion
+  We consider the model of information diffusion in social networks from\cite{Hui2010a} which incorporates trust (weighted links) between actors, andallows actors to actively participate in the spreading process, specificallythrough the ability to query friends for additional information. This modelcaptures how social agents transmit and act upon information more realisticallyas compared to the simpler threshold and cascade models. However, it is moredifficult to analyze, in particular with respect to seeding strategies. Wepresent efficient, scalable algorithms for determining good seed sets --initial nodes to inject with the information. Our general approach is to reduceour model to a class of simpler models for which provably good sets can beconstructed. By tuning this class of simpler models, we obtain a good seed setfor the original more complex model. We call this the \emph{projected greedyapproach} because you `project' your model onto a class of simpler models wherea greedy seed set selection is near-optimal. We demonstrate the effectivenessof our seeding strategy on synthetic graphs as well as a realistic San Diegoevacuation network constructed during the 2007 fires.
 
-  We consider the model of information diffusion in social networks from
-\cite{Hui2010a} which incorporates trust (weighted links) between actors, and
-allows actors to actively participate in the spreading process, specifically
-through the ability to query friends for additional information. This model
-captures how social agents transmit and act upon information more realistically
-as compared to the simpler threshold and cascade models. However, it is more
-difficult to analyze, in particular with respect to seeding strategies. We
-present efficient, scalable algorithms for determining good seed sets --
-initial nodes to inject with the information. Our general approach is to reduce
-our model to a class of simpler models for which provably good sets can be
-constructed. By tuning this class of simpler models, we obtain a good seed set
-for the original more complex model. We call this the \emph{projected greedy
-approach} because you `project' your model onto a class of simpler models where
-a greedy seed set selection is near-optimal. We demonstrate the effectiveness
-of our seeding strategy on synthetic graphs as well as a realistic San Diego
-evacuation network constructed during the 2007 fires.
+Assignment Games with Conflicts: Price of Total Anarchy and Convergence  Results via Semi-Smoothness
 
-
-Assignment Games with Conflicts: Price of Total Anarchy and Convergence
-  Results via Semi-Smoothness
-
-  We study assignment games in which jobs select machines, and in which certain
-pairs of jobs may conflict, which is to say they may incur an additional cost
-when they are both assigned to the same machine, beyond that associated with
-the increase in load. Questions regarding such interactions apply beyond
-allocating jobs to machines: when people in a social network choose to align
-themselves with a group or party, they typically do so based upon not only the
-inherent quality of that group, but also who amongst their friends (or enemies)
-choose that group as well. We show how semi-smoothness, a recently introduced
-generalization of smoothness, is necessary to find tight or near-tight bounds
-on the price of total anarchy, and thus on the quality of correlated and Nash
-equilibria, for several natural job-assignment games with interacting jobs. For
-most cases, our bounds on the price of total anarchy are either exactly 2 or
-approach 2. We also prove new convergence results implied by semi-smoothness
-for our games. Finally we consider coalitional deviations, and prove results
-about the existence and quality of Strong equilibrium.
-
+  We study assignment games in which jobs select machines, and in which certainpairs of jobs may conflict, which is to say they may incur an additional costwhen they are both assigned to the same machine, beyond that associated withthe increase in load. Questions regarding such interactions apply beyondallocating jobs to machines: when people in a social network choose to alignthemselves with a group or party, they typically do so based upon not only theinherent quality of that group, but also who amongst their friends (or enemies)choose that group as well. We show how semi-smoothness, a recently introducedgeneralization of smoothness, is necessary to find tight or near-tight boundson the price of total anarchy, and thus on the quality of correlated and Nashequilibria, for several natural job-assignment games with interacting jobs. Formost cases, our bounds on the price of total anarchy are either exactly 2 orapproach 2. We also prove new convergence results implied by semi-smoothnessfor our games. Finally we consider coalitional deviations, and prove resultsabout the existence and quality of Strong equilibrium.
 
 Pricing to Maximize Revenue and Welfare Simultaneously in Large Markets
 
-  We study large markets with a single seller which can produce many types of
-goods, and many multi-minded buyers. The seller chooses posted prices for its
-many items, and the buyers purchase bundles to maximize their utility. For this
-setting, we consider the following questions: What fraction of the optimum
-social welfare does a revenue maximizing solution achieve? Are there pricing
-mechanisms which achieve both good revenue and good welfare simultaneously? To
-address these questions, we give efficient pricing schemes which are guaranteed
-to result in both good revenue and welfare, as long as the buyer valuations for
-the goods they desire have a nice (although reasonable) structure, e.g., that
-the aggregate buyer demand has a monotone hazard rate or is not too convex. We
-also show that our pricing schemes have implications for any pricing which
-achieves high revenue: specifically that even if the seller cares only about
-revenue, they can still ensure that their prices result in good social welfare
-without sacrificing profit. Our results holds for general multi-minded buyers
-in large markets; we also provide improved guarantees for the important special
-case of unit-demand buyers.
+  We study large markets with a single seller which can produce many types ofgoods, and many multi-minded buyers. The seller chooses posted prices for itsmany items, and the buyers purchase bundles to maximize their utility. For thissetting, we consider the following questions: What fraction of the optimumsocial welfare does a revenue maximizing solution achieve? Are there pricingmechanisms which achieve both good revenue and good welfare simultaneously? Toaddress these questions, we give efficient pricing schemes which are guaranteedto result in both good revenue and welfare, as long as the buyer valuations forthe goods they desire have a nice (although reasonable) structure, e.g., thatthe aggregate buyer demand has a monotone hazard rate or is not too convex. Wealso show that our pricing schemes have implications for any pricing whichachieves high revenue: specifically that even if the seller cares only aboutrevenue, they can still ensure that their prices result in good social welfarewithout sacrificing profit. Our results holds for general multi-minded buyersin large markets; we also provide improved guarantees for the important specialcase of unit-demand buyers.
 
+Tradeoffs Between Information and Ordinal Approximation for Bipartite  Matching
 
-Tradeoffs Between Information and Ordinal Approximation for Bipartite
-  Matching
-
-  We study ordinal approximation algorithms for maximum-weight bipartite
-matchings. Such algorithms only know the ordinal preferences of the
-agents/nodes in the graph for their preferred matches, but must compete with
-fully omniscient algorithms which know the true numerical edge weights
-(utilities). %instead of only their relative orderings. Ordinal approximation
-is all about being able to produce good results with only limited information.
-Because of this, one important question is how much better the algorithms can
-be as the amount of information increases. To address this question for forming
-high-utility matchings between agents in $\mathcal{X}$ and $\mathcal{Y}$, we
-consider three ordinal information types: when we know the preference order of
-only nodes in $\mathcal{X}$ for nodes in $\mathcal{Y}$, when we know the
-preferences of both $\mathcal{X}$ and $\mathcal{Y}$, and when we know the total
-order of the edge weights in the entire graph, although not the weights
-themselves. We also consider settings where only the top preferences of the
-agents are known to us, instead of their full preference orderings. We design
-new ordinal approximation algorithms for each of these settings, and quantify
-how well such algorithms perform as the amount of information given to them
-increases.
-
+  We study ordinal approximation algorithms for maximum-weight bipartitematchings. Such algorithms only know the ordinal preferences of theagents/nodes in the graph for their preferred matches, but must compete withfully omniscient algorithms which know the true numerical edge weights(utilities). %instead of only their relative orderings. Ordinal approximationis all about being able to produce good results with only limited information.Because of this, one important question is how much better the algorithms canbe as the amount of information increases. To address this question for forminghigh-utility matchings between agents in $\mathcal{X}$ and $\mathcal{Y}$, weconsider three ordinal information types: when we know the preference order ofonly nodes in $\mathcal{X}$ for nodes in $\mathcal{Y}$, when we know thepreferences of both $\mathcal{X}$ and $\mathcal{Y}$, and when we know the totalorder of the edge weights in the entire graph, although not the weightsthemselves. We also consider settings where only the top preferences of theagents are known to us, instead of their full preference orderings. We designnew ordinal approximation algorithms for each of these settings, and quantifyhow well such algorithms perform as the amount of information given to themincreases.
 
 Approximate Equilibrium and Incentivizing Social Coordination
 
-  We study techniques to incentivize self-interested agents to form socially
-desirable solutions in scenarios where they benefit from mutual coordination.
-Towards this end, we consider coordination games where agents have different
-intrinsic preferences but they stand to gain if others choose the same strategy
-as them. For non-trivial versions of our game, stable solutions like Nash
-Equilibrium may not exist, or may be socially inefficient even when they do
-exist. This motivates us to focus on designing efficient algorithms to compute
-(almost) stable solutions like Approximate Equilibrium that can be realized if
-agents are provided some additional incentives. Our results apply in many
-settings like adoption of new products, project selection, and group formation,
-where a central authority can direct agents towards a strategy but agents may
-defect if they have better alternatives. We show that for any given instance,
-we can either compute a high quality approximate equilibrium or a near-optimal
-solution that can be stabilized by providing small payments to some players. We
-then generalize our model to encompass situations where player relationships
-may exhibit complementarities and present an algorithm to compute an
-Approximate Equilibrium whose stability factor is linear in the degree of
-complementarity. Our results imply that a little influence is necessary in
-order to ensure that selfish players coordinate and form socially efficient
-solutions.
-
-
-Blind, Greedy, and Random: Ordinal Approximation Algorithms for Matching
-  and Clustering
-
-  We study Matching and other related problems in a partial information setting
-where the agents' utilities for being matched to other agents are hidden and
-the mechanism only has access to ordinal preference information. Our model is
-motivated by the fact that in many settings, agents cannot express the
-numerical values of their utility for different outcomes, but are still able to
-rank the outcomes in their order of preference. Specifically, we study problems
-where the ground truth exists in the form of a weighted graph, and look to
-design algorithms that approximate the true optimum matching using only the
-preference orderings for each agent (induced by the hidden weights) as input.
-If no restrictions are placed on the weights, then one cannot hope to do better
-than the simple greedy algorithm, which yields a half optimal matching. Perhaps
-surprisingly, we show that by imposing a little structure on the weights, we
-can improve upon the trivial algorithm significantly: we design a
-1.6-approximation algorithm for instances where the hidden weights obey the
-metric inequality. Using our algorithms for matching as a black-box, we also
-design new approximation algorithms for other closely related problems: these
-include a a 3.2-approximation for the problem of clustering agents into equal
-sized partitions, a 4-approximation algorithm for Densest k-subgraph, and a
-2.14-approximation algorithm for Max TSP. These results are the first
-non-trivial ordinal approximation algorithms for such problems, and indicate
-that we can design robust algorithms even when we are agnostic to the precise
-agent utilities.
-
+  We study techniques to incentivize self-interested agents to form sociallydesirable solutions in scenarios where they benefit from mutual coordination.Towards this end, we consider coordination games where agents have differentintrinsic preferences but they stand to gain if others choose the same strategyas them. For non-trivial versions of our game, stable solutions like NashEquilibrium may not exist, or may be socially inefficient even when they doexist. This motivates us to focus on designing efficient algorithms to compute(almost) stable solutions like Approximate Equilibrium that can be realized ifagents are provided some additional incentives. Our results apply in manysettings like adoption of new products, project selection, and group formation,where a central authority can direct agents towards a strategy but agents maydefect if they have better alternatives. We show that for any given instance,we can either compute a high quality approximate equilibrium or a near-optimalsolution that can be stabilized by providing small payments to some players. Wethen generalize our model to encompass situations where player relationshipsmay exhibit complementarities and present an algorithm to compute anApproximate Equilibrium whose stability factor is linear in the degree ofcomplementarity. Our results imply that a little influence is necessary inorder to ensure that selfish players coordinate and form socially efficientsolutions.
 
 Computing Stable Coalitions: Approximation Algorithms for Reward Sharing
 
-  Consider a setting where selfish agents are to be assigned to coalitions or
-projects from a fixed set P. Each project k is characterized by a valuation
-function; v_k(S) is the value generated by a set S of agents working on project
-k. We study the following classic problem in this setting: "how should the
-agents divide the value that they collectively create?". One traditional
-approach in cooperative game theory is to study core stability with the
-implicit assumption that there are infinite copies of one project, and agents
-can partition themselves into any number of coalitions. In contrast, we
-consider a model with a finite number of non-identical projects; this makes
-computing both high-welfare solutions and core payments highly non-trivial.
-  The main contribution of this paper is a black-box mechanism that reduces the
-problem of computing a near-optimal core stable solution to the purely
-algorithmic problem of welfare maximization; we apply this to compute an
-approximately core stable solution that extracts one-fourth of the optimal
-social welfare for the class of subadditive valuations. We also show much
-stronger results for several popular sub-classes: anonymous, fractionally
-subadditive, and submodular valuations, as well as provide new approximation
-algorithms for welfare maximization with anonymous functions. Finally, we
-establish a connection between our setting and the well-studied simultaneous
-auctions with item bidding; we adapt our results to compute approximate pure
-Nash equilibria for these auctions.
+  Consider a setting where selfish agents are to be assigned to coalitions orprojects from a fixed set P. Each project k is characterized by a valuationfunction; v_k(S) is the value generated by a set S of agents working on projectk. We study the following classic problem in this setting: "how should theagents divide the value that they collectively create?". One traditionalapproach in cooperative game theory is to study core stability with theimplicit assumption that there are infinite copies of one project, and agentscan partition themselves into any number of coalitions. In contrast, weconsider a model with a finite number of non-identical projects; this makescomputing both high-welfare solutions and core payments highly non-trivial.  The main contribution of this paper is a black-box mechanism that reduces theproblem of computing a near-optimal core stable solution to the purelyalgorithmic problem of welfare maximization; we apply this to compute anapproximately core stable solution that extracts one-fourth of the optimalsocial welfare for the class of subadditive valuations. We also show muchstronger results for several popular sub-classes: anonymous, fractionallysubadditive, and submodular valuations, as well as provide new approximationalgorithms for welfare maximization with anonymous functions. Finally, weestablish a connection between our setting and the well-studied simultaneousauctions with item bidding; we adapt our results to compute approximate pureNash equilibria for these auctions.
 
+Blind, Greedy, and Random: Ordinal Approximation Algorithms for Matching  and Clustering
+
+  We study Matching and other related problems in a partial information settingwhere the agents' utilities for being matched to other agents are hidden andthe mechanism only has access to ordinal preference information. Our model ismotivated by the fact that in many settings, agents cannot express thenumerical values of their utility for different outcomes, but are still able torank the outcomes in their order of preference. Specifically, we study problemswhere the ground truth exists in the form of a weighted graph, and look todesign algorithms that approximate the true optimum matching using only thepreference orderings for each agent (induced by the hidden weights) as input.If no restrictions are placed on the weights, then one cannot hope to do betterthan the simple greedy algorithm, which yields a half optimal matching. Perhapssurprisingly, we show that by imposing a little structure on the weights, wecan improve upon the trivial algorithm significantly: we design a1.6-approximation algorithm for instances where the hidden weights obey themetric inequality. Using our algorithms for matching as a black-box, we alsodesign new approximation algorithms for other closely related problems: theseinclude a a 3.2-approximation for the problem of clustering agents into equalsized partitions, a 4-approximation algorithm for Densest k-subgraph, and a2.14-approximation algorithm for Max TSP. These results are the firstnon-trivial ordinal approximation algorithms for such problems, and indicatethat we can design robust algorithms even when we are agnostic to the preciseagent utilities.
 
 Truthful Mechanisms for Matching and Clustering in an Ordinal World
 
-  We study truthful mechanisms for matching and related problems in a partial
-information setting, where the agents' true utilities are hidden, and the
-algorithm only has access to ordinal preference information. Our model is
-motivated by the fact that in many settings, agents cannot express the
-numerical values of their utility for different outcomes, but are still able to
-rank the outcomes in their order of preference. Specifically, we study problems
-where the ground truth exists in the form of a weighted graph of agent
-utilities, but the algorithm can only elicit the agents' private information in
-the form of a preference ordering for each agent induced by the underlying
-weights. Against this backdrop, we design truthful algorithms to approximate
-the true optimum solution with respect to the hidden weights. Our techniques
-yield universally truthful algorithms for a number of graph problems: a
-1.76-approximation algorithm for Max-Weight Matching, 2-approximation algorithm
-for Max k-matching, a 6-approximation algorithm for Densest k-subgraph, and a
-2-approximation algorithm for Max Traveling Salesman as long as the hidden
-weights constitute a metric. We also provide improved approximation algorithms
-for such problems when the agents are not able to lie about their preferences.
-Our results are the first non-trivial truthful approximation algorithms for
-these problems, and indicate that in many situations, we can design robust
-algorithms even when the agents may lie and only provide ordinal information
-instead of precise utilities.
+  We study truthful mechanisms for matching and related problems in a partialinformation setting, where the agents' true utilities are hidden, and thealgorithm only has access to ordinal preference information. Our model ismotivated by the fact that in many settings, agents cannot express thenumerical values of their utility for different outcomes, but are still able torank the outcomes in their order of preference. Specifically, we study problemswhere the ground truth exists in the form of a weighted graph of agentutilities, but the algorithm can only elicit the agents' private information inthe form of a preference ordering for each agent induced by the underlyingweights. Against this backdrop, we design truthful algorithms to approximatethe true optimum solution with respect to the hidden weights. Our techniquesyield universally truthful algorithms for a number of graph problems: a1.76-approximation algorithm for Max-Weight Matching, 2-approximation algorithmfor Max k-matching, a 6-approximation algorithm for Densest k-subgraph, and a2-approximation algorithm for Max Traveling Salesman as long as the hiddenweights constitute a metric. We also provide improved approximation algorithmsfor such problems when the agents are not able to lie about their preferences.Our results are the first non-trivial truthful approximation algorithms forthese problems, and indicate that in many situations, we can design robustalgorithms even when the agents may lie and only provide ordinal informationinstead of precise utilities.
 
+Utilitarians Without Utilities: Maximizing Social Welfare for Graph  Problems using only Ordinal Preferences - Full Version
 
-Utilitarians Without Utilities: Maximizing Social Welfare for Graph
-  Problems using only Ordinal Preferences - Full Version
+  We consider ordinal approximation algorithms for a broad class of utilitymaximization problems for multi-agent systems. In these problems, agents haveutilities for connecting to each other, and the goal is to compute amaximum-utility solution subject to a set of constraints. We represent these asa class of graph optimization problems, including matching, spanning treeproblems, TSP, maximum weight planar subgraph, and many others. We study theseproblems in the ordinal setting: latent numerical utilities exist, but we onlyhave access to ordinal preference information, i.e., every agent specifies anordering over the other agents by preference. We prove that for the large classof graph problems we identify, ordinal information is enough to computesolutions which are close to optimal, thus demonstrating there is no need toknow the underlying numerical utilities. For example, for problems in thisclass with bounded degree $b$ a simple ordinal greedy algorithm always producesa ($b+1$)-approximation; we also quantify how the quality of ordinalapproximation depends on the sparsity of the resulting graphs. In particular,our results imply that ordinal information is enough to obtain a2-approximation for Maximum Spanning Tree; a 4-approximation for Max WeightPlanar Subgraph; a 2-approximation for Max-TSP; and a 2-approximation forvarious Matching problems.
 
-  We consider ordinal approximation algorithms for a broad class of utility
-maximization problems for multi-agent systems. In these problems, agents have
-utilities for connecting to each other, and the goal is to compute a
-maximum-utility solution subject to a set of constraints. We represent these as
-a class of graph optimization problems, including matching, spanning tree
-problems, TSP, maximum weight planar subgraph, and many others. We study these
-problems in the ordinal setting: latent numerical utilities exist, but we only
-have access to ordinal preference information, i.e., every agent specifies an
-ordering over the other agents by preference. We prove that for the large class
-of graph problems we identify, ordinal information is enough to compute
-solutions which are close to optimal, thus demonstrating there is no need to
-know the underlying numerical utilities. For example, for problems in this
-class with bounded degree $b$ a simple ordinal greedy algorithm always produces
-a ($b+1$)-approximation; we also quantify how the quality of ordinal
-approximation depends on the sparsity of the resulting graphs. In particular,
-our results imply that ordinal information is enough to obtain a
-2-approximation for Maximum Spanning Tree; a 4-approximation for Max Weight
-Planar Subgraph; a 2-approximation for Max-TSP; and a 2-approximation for
-various Matching problems.
+Ordinal Approximation for Social Choice, Matching, and Facility Location  Problems given Candidate Positions
 
+  In this work we consider general facility location and social choiceproblems, in which sets of agents $\mathcal{A}$ and facilities $\mathcal{F}$are located in a metric space, and our goal is to assign agents to facilities(as well as choose which facilities to open) in order to optimize the socialcost. We form new algorithms to do this in the presence of only {\em ordinalinformation}, i.e., when the true costs or distances from the agents to thefacilities are {\em unknown}, and only the ordinal preferences of the agentsfor the facilities are available. The main difference between our work andprevious work in this area is that while we assume that only ordinalinformation about agent preferences in known, we know the exact locations ofthe possible facilities $\mathcal{F}$. Due to this extra information about thefacilities, we are able to form powerful algorithms which have small {\emdistortion}, i.e., perform almost as well as omniscient algorithms but use onlyordinal information about agent preferences. For example, we present naturalsocial choice mechanisms for choosing a single facility to open with distortionof at most 3 for minimizing both the total and the median social cost; thisfactor is provably the best possible. We analyze many general problemsincluding matching, $k$-center, and $k$-median, and present black-boxreductions from omniscient approximation algorithms with approximation factor$\beta$ to ordinal algorithms with approximation factor $1+2\beta$; doing thisgives new ordinal algorithms for many important problems, and establishes atoolkit for analyzing such problems in the future.
 
-Ordinal Approximation for Social Choice, Matching, and Facility Location
-  Problems given Candidate Positions
+Price Competition in Networked Markets: How do monopolies impact social  welfare?
 
-  In this work we consider general facility location and social choice
-problems, in which sets of agents $\mathcal{A}$ and facilities $\mathcal{F}$
-are located in a metric space, and our goal is to assign agents to facilities
-(as well as choose which facilities to open) in order to optimize the social
-cost. We form new algorithms to do this in the presence of only {\em ordinal
-information}, i.e., when the true costs or distances from the agents to the
-facilities are {\em unknown}, and only the ordinal preferences of the agents
-for the facilities are available. The main difference between our work and
-previous work in this area is that while we assume that only ordinal
-information about agent preferences in known, we know the exact locations of
-the possible facilities $\mathcal{F}$. Due to this extra information about the
-facilities, we are able to form powerful algorithms which have small {\em
-distortion}, i.e., perform almost as well as omniscient algorithms but use only
-ordinal information about agent preferences. For example, we present natural
-social choice mechanisms for choosing a single facility to open with distortion
-of at most 3 for minimizing both the total and the median social cost; this
-factor is provably the best possible. We analyze many general problems
-including matching, $k$-center, and $k$-median, and present black-box
-reductions from omniscient approximation algorithms with approximation factor
-$\beta$ to ordinal algorithms with approximation factor $1+2\beta$; doing this
-gives new ordinal algorithms for many important problems, and establishes a
-toolkit for analyzing such problems in the future.
-
-
-Price Competition in Networked Markets: How do monopolies impact social
-  welfare?
-
-  We study the efficiency of allocations in large markets with a network
-structure where every seller owns an edge in a graph and every buyer desires a
-path connecting some nodes. While it is known that stable allocations in such
-settings can be very inefficient, the exact properties of equilibria in markets
-with multiple sellers are not fully understood even in single-source
-single-sink networks. In this work, we show that for a large class of natural
-buyer demand functions, we are guaranteed the existence of an equilibrium with
-several desirable properties. The crucial insight that we gain into the
-equilibrium structure allows us to obtain tight bounds on efficiency in terms
-of the various parameters governing the market, especially the number of
-monopolies M. All of our efficiency results extend to markets without the
-network structure.
-  While it is known that monopolies can cause large inefficiencies in general,
-our main results for single-source single-sink networks indicate that for
-several natural demand functions the efficiency only drops linearly with M. For
-example, for concave demand we prove that the efficiency loss is at most a
-factor 1+M/2 from the optimum, for demand with monotone hazard rate it is at
-most 1+M, and for polynomial demand the efficiency decreases logarithmically
-with M. In contrast to previous work that showed that monopolies may adversely
-affect welfare, our main contribution is showing that monopolies may not be as
-`evil' as they are made out to be; the loss in efficiency is bounded in many
-natural markets. Finally, we consider more general, multiple-source networks
-and show that in the absence of monopolies, mild assumptions on the network
-topology guarantee an equilibrium that maximizes social welfare.
-
+  We study the efficiency of allocations in large markets with a networkstructure where every seller owns an edge in a graph and every buyer desires apath connecting some nodes. While it is known that stable allocations in suchsettings can be very inefficient, the exact properties of equilibria in marketswith multiple sellers are not fully understood even in single-sourcesingle-sink networks. In this work, we show that for a large class of naturalbuyer demand functions, we are guaranteed the existence of an equilibrium withseveral desirable properties. The crucial insight that we gain into theequilibrium structure allows us to obtain tight bounds on efficiency in termsof the various parameters governing the market, especially the number ofmonopolies M. All of our efficiency results extend to markets without thenetwork structure.  While it is known that monopolies can cause large inefficiencies in general,our main results for single-source single-sink networks indicate that forseveral natural demand functions the efficiency only drops linearly with M. Forexample, for concave demand we prove that the efficiency loss is at most afactor 1+M/2 from the optimum, for demand with monotone hazard rate it is atmost 1+M, and for polynomial demand the efficiency decreases logarithmicallywith M. In contrast to previous work that showed that monopolies may adverselyaffect welfare, our main contribution is showing that monopolies may not be as`evil' as they are made out to be; the loss in efficiency is bounded in manynatural markets. Finally, we consider more general, multiple-source networksand show that in the absence of monopolies, mild assumptions on the networktopology guarantee an equilibrium that maximizes social welfare.
 

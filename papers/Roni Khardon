@@ -1,270 +1,52 @@
 Stochastic Planning and Lifted Inference
 
-  Lifted probabilistic inference (Poole, 2003) and symbolic dynamic programming
-for lifted stochastic planning (Boutilier et al, 2001) were introduced around
-the same time as algorithmic efforts to use abstraction in stochastic systems.
-Over the years, these ideas evolved into two distinct lines of research, each
-supported by a rich literature. Lifted probabilistic inference focused on
-efficient arithmetic operations on template-based graphical models under a
-finite domain assumption while symbolic dynamic programming focused on
-supporting sequential decision-making in rich quantified logical action models
-and on open domain reasoning. Given their common motivation but different focal
-points, both lines of research have yielded highly complementary innovations.
-In this chapter, we aim to help close the gap between these two research areas
-by providing an overview of lifted stochastic planning from the perspective of
-probabilistic inference, showing strong connections to other chapters in this
-book. This also allows us to define Generalized Lifted Inference as a paradigm
-that unifies these areas and elucidates open problems for future research that
-can benefit both lifted inference and stochastic planning.
-
+  Lifted probabilistic inference (Poole, 2003) and symbolic dynamic programmingfor lifted stochastic planning (Boutilier et al, 2001) were introduced aroundthe same time as algorithmic efforts to use abstraction in stochastic systems.Over the years, these ideas evolved into two distinct lines of research, eachsupported by a rich literature. Lifted probabilistic inference focused onefficient arithmetic operations on template-based graphical models under afinite domain assumption while symbolic dynamic programming focused onsupporting sequential decision-making in rich quantified logical action modelsand on open domain reasoning. Given their common motivation but different focalpoints, both lines of research have yielded highly complementary innovations.In this chapter, we aim to help close the gap between these two research areasby providing an overview of lifted stochastic planning from the perspective ofprobabilistic inference, showing strong connections to other chapters in thisbook. This also allows us to define Generalized Lifted Inference as a paradigmthat unifies these areas and elucidates open problems for future research thatcan benefit both lifted inference and stochastic planning.
 
 Solving Relational MDPs with Exogenous Events and Additive Rewards
 
-  We formalize a simple but natural subclass of service domains for relational
-planning problems with object-centered, independent exogenous events and
-additive rewards capturing, for example, problems in inventory control.
-Focusing on this subclass, we present a new symbolic planning algorithm which
-is the first algorithm that has explicit performance guarantees for relational
-MDPs with exogenous events. In particular, under some technical conditions, our
-planning algorithm provides a monotonic lower bound on the optimal value
-function. To support this algorithm we present novel evaluation and reduction
-techniques for generalized first order decision diagrams, a knowledge
-representation for real-valued functions over relational world states. Our
-planning algorithm uses a set of focus states, which serves as a training set,
-to simplify and approximate the symbolic solution, and can thus be seen to
-perform learning for planning. A preliminary experimental evaluation
-demonstrates the validity of our approach.
-
+  We formalize a simple but natural subclass of service domains for relationalplanning problems with object-centered, independent exogenous events andadditive rewards capturing, for example, problems in inventory control.Focusing on this subclass, we present a new symbolic planning algorithm whichis the first algorithm that has explicit performance guarantees for relationalMDPs with exogenous events. In particular, under some technical conditions, ourplanning algorithm provides a monotonic lower bound on the optimal valuefunction. To support this algorithm we present novel evaluation and reductiontechniques for generalized first order decision diagrams, a knowledgerepresentation for real-valued functions over relational world states. Ourplanning algorithm uses a set of focus states, which serves as a training set,to simplify and approximate the symbolic solution, and can thus be seen toperform learning for planning. A preliminary experimental evaluationdemonstrates the validity of our approach.
 
 The Complexity of Reasoning with FODD and GFODD
 
-  Recent work introduced Generalized First Order Decision Diagrams (GFODD) as a
-knowledge representation that is useful in mechanizing decision theoretic
-planning in relational domains. GFODDs generalize function-free first order
-logic and include numerical values and numerical generalizations of existential
-and universal quantification. Previous work presented heuristic inference
-algorithms for GFODDs and implemented these heuristics in systems for decision
-theoretic planning. In this paper, we study the complexity of the computational
-problems addressed by such implementations. In particular, we study the
-evaluation problem, the satisfiability problem, and the equivalence problem for
-GFODDs under the assumption that the size of the intended model is given with
-the problem, a restriction that guarantees decidability. Our results provide a
-complete characterization placing these problems within the polynomial
-hierarchy. The same characterization applies to the corresponding restriction
-of problems in first order logic, giving an interesting new avenue for
-efficient inference when the number of objects is bounded. Our results show
-that for $\Sigma_k$ formulas, and for corresponding GFODDs, evaluation and
-satisfiability are $\Sigma_k^p$ complete, and equivalence is $\Pi_{k+1}^p$
-complete. For $\Pi_k$ formulas evaluation is $\Pi_k^p$ complete, satisfiability
-is one level higher and is $\Sigma_{k+1}^p$ complete, and equivalence is
-$\Pi_{k+1}^p$ complete.
-
-
-Nonparametric Bayesian Mixed-effect Model: a Sparse Gaussian Process
-  Approach
-
-  Multi-task learning models using Gaussian processes (GP) have been developed
-and successfully applied in various applications. The main difficulty with this
-approach is the computational cost of inference using the union of examples
-from all tasks. Therefore sparse solutions, that avoid using the entire data
-directly and instead use a set of informative "representatives" are desirable.
-The paper investigates this problem for the grouped mixed-effect GP model where
-each individual response is given by a fixed-effect, taken from one of a set of
-unknown groups, plus a random individual effect function that captures
-variations among individuals. Such models have been widely used in previous
-work but no sparse solutions have been developed. The paper presents the first
-sparse solution for such problems, showing how the sparse approximation can be
-obtained by maximizing a variational lower bound on the marginal likelihood,
-generalizing ideas from single-task Gaussian processes to handle the
-mixed-effect model as well as grouping. Experiments using artificial and real
-data validate the approach showing that it can recover the performance of
-inference with the full sample, that it outperforms baseline methods, and that
-it outperforms state of the art sparse solutions for other multi-task GP
-formulations.
-
-
-Online Learning with Pairwise Loss Functions
-
-  Efficient online learning with pairwise loss functions is a crucial component
-in building large-scale learning system that maximizes the area under the
-Receiver Operator Characteristic (ROC) curve. In this paper we investigate the
-generalization performance of online learning algorithms with pairwise loss
-functions. We show that the existing proof techniques for generalization bounds
-of online algorithms with a univariate loss can not be directly applied to
-pairwise losses. In this paper, we derive the first result providing
-data-dependent bounds for the average risk of the sequence of hypotheses
-generated by an arbitrary online learner in terms of an easily computable
-statistic, and show how to extract a low risk hypothesis from the sequence. We
-demonstrate the generality of our results by applying it to two important
-problems in machine learning. First, we analyze two online algorithms for
-bipartite ranking; one being a natural extension of the perceptron algorithm
-and the other using online convex optimization. Secondly, we provide an
-analysis for the risk bound for an online algorithm for supervised metric
-learning.
-
-
-Probabilistic Relational Planning with First Order Decision Diagrams
-
-  Dynamic programming algorithms have been successfully applied to
-propositional stochastic planning problems by using compact representations, in
-particular algebraic decision diagrams, to capture domain dynamics and value
-functions. Work on symbolic dynamic programming lifted these ideas to first
-order logic using several representation schemes. Recent work introduced a
-first order variant of decision diagrams (FODD) and developed a value iteration
-algorithm for this representation. This paper develops several improvements to
-the FODD algorithm that make the approach practical. These include, new
-reduction operators that decrease the size of the representation, several
-speedup techniques, and techniques for value approximation. Incorporating
-these, the paper presents a planning system, FODD-Planner, for solving
-relational stochastic planning problems. The system is evaluated on several
-domains, including problems from the recent international planning competition,
-and shows competitive performance with top ranking systems. This is the first
-demonstration of feasibility of this approach and it shows that abstraction
-through compact representation is a promising approach to stochastic planning.
-
+  Recent work introduced Generalized First Order Decision Diagrams (GFODD) as aknowledge representation that is useful in mechanizing decision theoreticplanning in relational domains. GFODDs generalize function-free first orderlogic and include numerical values and numerical generalizations of existentialand universal quantification. Previous work presented heuristic inferencealgorithms for GFODDs and implemented these heuristics in systems for decisiontheoretic planning. In this paper, we study the complexity of the computationalproblems addressed by such implementations. In particular, we study theevaluation problem, the satisfiability problem, and the equivalence problem forGFODDs under the assumption that the size of the intended model is given withthe problem, a restriction that guarantees decidability. Our results provide acomplete characterization placing these problems within the polynomialhierarchy. The same characterization applies to the corresponding restrictionof problems in first order logic, giving an interesting new avenue forefficient inference when the number of objects is bounded. Our results showthat for $\Sigma_k$ formulas, and for corresponding GFODDs, evaluation andsatisfiability are $\Sigma_k^p$ complete, and equivalence is $\Pi_{k+1}^p$complete. For $\Pi_k$ formulas evaluation is $\Pi_k^p$ complete, satisfiabilityis one level higher and is $\Sigma_{k+1}^p$ complete, and equivalence is$\Pi_{k+1}^p$ complete.
 
 First Order Decision Diagrams for Relational MDPs
 
-  Markov decision processes capture sequential decision making under
-uncertainty, where an agent must choose actions so as to optimize long term
-reward. The paper studies efficient reasoning mechanisms for Relational Markov
-Decision Processes (RMDP) where world states have an internal relational
-structure that can be naturally described in terms of objects and relations
-among them. Two contributions are presented. First, the paper develops First
-Order Decision Diagrams (FODD), a new compact representation for functions over
-relational structures, together with a set of operators to combine FODDs, and
-novel reduction techniques to keep the representation small. Second, the paper
-shows how FODDs can be used to develop solutions for RMDPs, where reasoning is
-performed at the abstract level and the resulting optimal policy is independent
-of domain size (number of objects) or instantiation. In particular, a variant
-of the value iteration algorithm is developed by using special operations over
-FODDs, and the algorithm is shown to converge to the optimal policy.
-
+  Markov decision processes capture sequential decision making underuncertainty, where an agent must choose actions so as to optimize long termreward. The paper studies efficient reasoning mechanisms for Relational MarkovDecision Processes (RMDP) where world states have an internal relationalstructure that can be naturally described in terms of objects and relationsamong them. Two contributions are presented. First, the paper develops FirstOrder Decision Diagrams (FODD), a new compact representation for functions overrelational structures, together with a set of operators to combine FODDs, andnovel reduction techniques to keep the representation small. Second, the papershows how FODDs can be used to develop solutions for RMDPs, where reasoning isperformed at the abstract level and the resulting optimal policy is independentof domain size (number of objects) or instantiation. In particular, a variantof the value iteration algorithm is developed by using special operations overFODDs, and the algorithm is shown to converge to the optimal policy.
 
 Policy Iteration for Relational MDPs
 
-  Relational Markov Decision Processes are a useful abstraction for complex
-reinforcement learning problems and stochastic planning problems. Recent work
-developed representation schemes and algorithms for planning in such problems
-using the value iteration algorithm. However, exact versions of more complex
-algorithms, including policy iteration, have not been developed or analyzed.
-The paper investigates this potential and makes several contributions. First we
-observe two anomalies for relational representations showing that the value of
-some policies is not well defined or cannot be calculated for restricted
-representation schemes used in the literature. On the other hand, we develop a
-variant of policy iteration that can get around these anomalies. The algorithm
-includes an aspect of policy improvement in the process of policy evaluation
-and thus differs from the original algorithm. We show that despite this
-difference the algorithm converges to the optimal policy.
+  Relational Markov Decision Processes are a useful abstraction for complexreinforcement learning problems and stochastic planning problems. Recent workdeveloped representation schemes and algorithms for planning in such problemsusing the value iteration algorithm. However, exact versions of more complexalgorithms, including policy iteration, have not been developed or analyzed.The paper investigates this potential and makes several contributions. First weobserve two anomalies for relational representations showing that the value ofsome policies is not well defined or cannot be calculated for restrictedrepresentation schemes used in the literature. On the other hand, we develop avariant of policy iteration that can get around these anomalies. The algorithmincludes an aspect of policy improvement in the process of policy evaluationand thus differs from the original algorithm. We show that despite thisdifference the algorithm converges to the optimal policy.
 
+Nonparametric Bayesian Mixed-effect Model: a Sparse Gaussian Process  Approach
+
+  Multi-task learning models using Gaussian processes (GP) have been developedand successfully applied in various applications. The main difficulty with thisapproach is the computational cost of inference using the union of examplesfrom all tasks. Therefore sparse solutions, that avoid using the entire datadirectly and instead use a set of informative "representatives" are desirable.The paper investigates this problem for the grouped mixed-effect GP model whereeach individual response is given by a fixed-effect, taken from one of a set ofunknown groups, plus a random individual effect function that capturesvariations among individuals. Such models have been widely used in previouswork but no sparse solutions have been developed. The paper presents the firstsparse solution for such problems, showing how the sparse approximation can beobtained by maximizing a variational lower bound on the marginal likelihood,generalizing ideas from single-task Gaussian processes to handle themixed-effect model as well as grouping. Experiments using artificial and realdata validate the approach showing that it can recover the performance ofinference with the full sample, that it outperforms baseline methods, and thatit outperforms state of the art sparse solutions for other multi-task GPformulations.
+
+Online Learning with Pairwise Loss Functions
+
+  Efficient online learning with pairwise loss functions is a crucial componentin building large-scale learning system that maximizes the area under theReceiver Operator Characteristic (ROC) curve. In this paper we investigate thegeneralization performance of online learning algorithms with pairwise lossfunctions. We show that the existing proof techniques for generalization boundsof online algorithms with a univariate loss can not be directly applied topairwise losses. In this paper, we derive the first result providingdata-dependent bounds for the average risk of the sequence of hypothesesgenerated by an arbitrary online learner in terms of an easily computablestatistic, and show how to extract a low risk hypothesis from the sequence. Wedemonstrate the generality of our results by applying it to two importantproblems in machine learning. First, we analyze two online algorithms forbipartite ranking; one being a natural extension of the perceptron algorithmand the other using online convex optimization. Secondly, we provide ananalysis for the risk bound for an online algorithm for supervised metriclearning.
+
+Probabilistic Relational Planning with First Order Decision Diagrams
+
+  Dynamic programming algorithms have been successfully applied topropositional stochastic planning problems by using compact representations, inparticular algebraic decision diagrams, to capture domain dynamics and valuefunctions. Work on symbolic dynamic programming lifted these ideas to firstorder logic using several representation schemes. Recent work introduced afirst order variant of decision diagrams (FODD) and developed a value iterationalgorithm for this representation. This paper develops several improvements tothe FODD algorithm that make the approach practical. These include, newreduction operators that decrease the size of the representation, severalspeedup techniques, and techniques for value approximation. Incorporatingthese, the paper presents a planning system, FODD-Planner, for solvingrelational stochastic planning problems. The system is evaluated on severaldomains, including problems from the recent international planning competition,and shows competitive performance with top ranking systems. This is the firstdemonstration of feasibility of this approach and it shows that abstractionthrough compact representation is a promising approach to stochastic planning.
 
 Monte Carlo Structured SVI for Two-Level Non-Conjugate Models
 
-  The stochastic variational inference (SVI) paradigm, which combines
-variational inference, natural gradients, and stochastic updates, was recently
-proposed for large-scale data analysis in conjugate Bayesian models and
-demonstrated to be effective in several problems. This paper studies a family
-of Bayesian latent variable models with two levels of hidden variables but
-without any conjugacy requirements, making several contributions in this
-context. The first is observing that SVI, with an improved structured
-variational approximation, is applicable under more general conditions than
-previously thought with the only requirement being that the approximating
-variational distribution be in the same family as the prior. The resulting
-approach, Monte Carlo Structured SVI (MC-SSVI), significantly extends the scope
-of SVI, enabling large-scale learning in non-conjugate models. For models with
-latent Gaussian variables we propose a hybrid algorithm, using both standard
-and natural gradients, which is shown to improve stability and convergence.
-Applications in mixed effects models, sparse Gaussian processes, probabilistic
-matrix factorization and correlated topic models demonstrate the generality of
-the approach and the advantages of the proposed algorithms.
+  The stochastic variational inference (SVI) paradigm, which combinesvariational inference, natural gradients, and stochastic updates, was recentlyproposed for large-scale data analysis in conjugate Bayesian models anddemonstrated to be effective in several problems. This paper studies a familyof Bayesian latent variable models with two levels of hidden variables butwithout any conjugacy requirements, making several contributions in thiscontext. The first is observing that SVI, with an improved structuredvariational approximation, is applicable under more general conditions thanpreviously thought with the only requirement being that the approximatingvariational distribution be in the same family as the prior. The resultingapproach, Monte Carlo Structured SVI (MC-SSVI), significantly extends the scopeof SVI, enabling large-scale learning in non-conjugate models. For models withlatent Gaussian variables we propose a hybrid algorithm, using both standardand natural gradients, which is shown to improve stability and convergence.Applications in mixed effects models, sparse Gaussian processes, probabilisticmatrix factorization and correlated topic models demonstrate the generality ofthe approach and the advantages of the proposed algorithms.
 
+QSO Selection Algorithm Using Time Variability and Machine Learning:  Selection of 1,620 QSO Candidates from MACHO LMC Database
 
-QSO Selection Algorithm Using Time Variability and Machine Learning:
-  Selection of 1,620 QSO Candidates from MACHO LMC Database
+  We present a new QSO selection algorithm using a Support Vector Machine(SVM), a supervised classification method, on a set of extracted times seriesfeatures including period, amplitude, color, and autocorrelation value. Wetrain a model that separates QSOs from variable stars, non-variable stars andmicrolensing events using 58 known QSOs, 1,629 variable stars and 4,288non-variables using the MAssive Compact Halo Object (MACHO) database as atraining set. To estimate the efficiency and the accuracy of the model, weperform a cross-validation test using the training set. The test shows that themodel correctly identifies ~80% of known QSOs with a 25% false positive rate.The majority of the false positives are Be stars.  We applied the trained model to the MACHO Large Magellanic Cloud (LMC)dataset, which consists of 40 million lightcurves, and found 1,620 QSOcandidates. During the selection none of the 33,242 known MACHO variables weremisclassified as QSO candidates. In order to estimate the true false positiverate, we crossmatched the candidates with astronomical catalogs including theSpitzer Surveying the Agents of a Galaxy's Evolution (SAGE) LMC catalog and afew X-ray catalogs. The results further suggest that the majority of thecandidates, more than 70%, are QSOs.
 
-  We present a new QSO selection algorithm using a Support Vector Machine
-(SVM), a supervised classification method, on a set of extracted times series
-features including period, amplitude, color, and autocorrelation value. We
-train a model that separates QSOs from variable stars, non-variable stars and
-microlensing events using 58 known QSOs, 1,629 variable stars and 4,288
-non-variables using the MAssive Compact Halo Object (MACHO) database as a
-training set. To estimate the efficiency and the accuracy of the model, we
-perform a cross-validation test using the training set. The test shows that the
-model correctly identifies ~80% of known QSOs with a 25% false positive rate.
-The majority of the false positives are Be stars.
-  We applied the trained model to the MACHO Large Magellanic Cloud (LMC)
-dataset, which consists of 40 million lightcurves, and found 1,620 QSO
-candidates. During the selection none of the 33,242 known MACHO variables were
-misclassified as QSO candidates. In order to estimate the true false positive
-rate, we crossmatched the candidates with astronomical catalogs including the
-Spitzer Surveying the Agents of a Galaxy's Evolution (SAGE) LMC catalog and a
-few X-ray catalogs. The results further suggest that the majority of the
-candidates, more than 70%, are QSOs.
+A Refined QSO Selection Method Using Diagnostics Tests: 663 QSO  Candidates in the LMC
 
-
-A Refined QSO Selection Method Using Diagnostics Tests: 663 QSO
-  Candidates in the LMC
-
-  We present 663 QSO candidates in the Large Magellanic Cloud (LMC) selected
-using multiple diagnostics. We started with a set of 2,566 QSO candidates from
-our previous work selected using time variability of the MACHO LMC lightcurves.
-We then obtained additional information for the candidates by crossmatching
-them with the Spitzer SAGE, the MACHO UBVI, the 2MASS, the Chandra and the XMM
-catalogs. Using this information, we specified six diagnostic features based on
-mid-IR colors, photometric redshifts using SED template fitting, and X-ray
-luminosities in order to further discriminate high confidence QSO candidates in
-the absence of spectra information. We then trained a one-class SVM (Support
-Vector Machine) model using the diagnostics features of the confirmed 58 MACHO
-QSOs. We applied the trained model to the original candidates and finally
-selected 663 high confidence QSO candidates. Furthermore, we crossmatched these
-663 QSO candidates with the newly confirmed 144 QSOs and 275 non-QSOs in the
-LMC fields. On the basis of the counterpart analysis, we found that the false
-positive rate is less than 1%.
-
-
-Infinite Shift-invariant Grouped Multi-task Learning for Gaussian
-  Processes
-
-  Multi-task learning leverages shared information among data sets to improve
-the learning performance of individual tasks. The paper applies this framework
-for data where each task is a phase-shifted periodic time series. In
-particular, we develop a novel Bayesian nonparametric model capturing a mixture
-of Gaussian processes where each task is a sum of a group-specific function and
-a component capturing individual variation, in addition to each task being
-phase shifted. We develop an efficient \textsc{em} algorithm to learn the
-parameters of the model. As a special case we obtain the Gaussian mixture model
-and \textsc{em} algorithm for phased-shifted periodic time series. Furthermore,
-we extend the proposed model by using a Dirichlet Process prior and thereby
-leading to an infinite mixture model that is capable of doing automatic model
-selection. A Variational Bayesian approach is developed for inference in this
-model. Experiments in regression, classification and class discovery
-demonstrate the performance of the proposed models using both synthetic data
-and real-world time series data from astrophysics. Our methods are particularly
-useful when the time series are sparsely and non-synchronously sampled.
-
+  We present 663 QSO candidates in the Large Magellanic Cloud (LMC) selectedusing multiple diagnostics. We started with a set of 2,566 QSO candidates fromour previous work selected using time variability of the MACHO LMC lightcurves.We then obtained additional information for the candidates by crossmatchingthem with the Spitzer SAGE, the MACHO UBVI, the 2MASS, the Chandra and the XMMcatalogs. Using this information, we specified six diagnostic features based onmid-IR colors, photometric redshifts using SED template fitting, and X-rayluminosities in order to further discriminate high confidence QSO candidates inthe absence of spectra information. We then trained a one-class SVM (SupportVector Machine) model using the diagnostics features of the confirmed 58 MACHOQSOs. We applied the trained model to the original candidates and finallyselected 663 high confidence QSO candidates. Furthermore, we crossmatched these663 QSO candidates with the newly confirmed 144 QSOs and 275 non-QSOs in theLMC fields. On the basis of the counterpart analysis, we found that the falsepositive rate is less than 1%.
 
 Nonparametric Bayesian Estimation of Periodic Functions
 
-  Many real world problems exhibit patterns that have periodic behavior. For
-example, in astrophysics, periodic variable stars play a pivotal role in
-understanding our universe. An important step when analyzing data from such
-processes is the problem of identifying the period: estimating the period of a
-periodic function based on noisy observations made at irregularly spaced time
-points. This problem is still a difficult challenge despite extensive study in
-different disciplines. The paper makes several contributions toward solving
-this problem. First, we present a nonparametric Bayesian model for period
-finding, based on Gaussian Processes (GP), that does not make strong
-assumptions on the shape of the periodic function. As our experiments
-demonstrate, the new model leads to significantly better results in period
-estimation when the target function is non-sinusoidal. Second, we develop a new
-algorithm for parameter optimization for GP which is useful when the likelihood
-function is very sensitive to the setting of the hyper-parameters with numerous
-local minima, as in the case of period estimation. The algorithm combines
-gradient optimization with grid search and incorporates several mechanisms to
-overcome the high complexity of inference with GP. Third, we develop a novel
-approach for using domain knowledge, in the form of a probabilistic generative
-model, and incorporate it into the period estimation algorithm. Experimental
-results on astrophysics data validate our approach showing significant
-improvement over the state of the art in this domain.
+  Many real world problems exhibit patterns that have periodic behavior. Forexample, in astrophysics, periodic variable stars play a pivotal role inunderstanding our universe. An important step when analyzing data from suchprocesses is the problem of identifying the period: estimating the period of aperiodic function based on noisy observations made at irregularly spaced timepoints. This problem is still a difficult challenge despite extensive study indifferent disciplines. The paper makes several contributions toward solvingthis problem. First, we present a nonparametric Bayesian model for periodfinding, based on Gaussian Processes (GP), that does not make strongassumptions on the shape of the periodic function. As our experimentsdemonstrate, the new model leads to significantly better results in periodestimation when the target function is non-sinusoidal. Second, we develop a newalgorithm for parameter optimization for GP which is useful when the likelihoodfunction is very sensitive to the setting of the hyper-parameters with numerouslocal minima, as in the case of period estimation. The algorithm combinesgradient optimization with grid search and incorporates several mechanisms toovercome the high complexity of inference with GP. Third, we develop a novelapproach for using domain knowledge, in the form of a probabilistic generativemodel, and incorporate it into the period estimation algorithm. Experimentalresults on astrophysics data validate our approach showing significantimprovement over the state of the art in this domain.
 
+Infinite Shift-invariant Grouped Multi-task Learning for Gaussian  Processes
+
+  Multi-task learning leverages shared information among data sets to improvethe learning performance of individual tasks. The paper applies this frameworkfor data where each task is a phase-shifted periodic time series. Inparticular, we develop a novel Bayesian nonparametric model capturing a mixtureof Gaussian processes where each task is a sum of a group-specific function anda component capturing individual variation, in addition to each task beingphase shifted. We develop an efficient \textsc{em} algorithm to learn theparameters of the model. As a special case we obtain the Gaussian mixture modeland \textsc{em} algorithm for phased-shifted periodic time series. Furthermore,we extend the proposed model by using a Dirichlet Process prior and therebyleading to an infinite mixture model that is capable of doing automatic modelselection. A Variational Bayesian approach is developed for inference in thismodel. Experiments in regression, classification and class discoverydemonstrate the performance of the proposed models using both synthetic dataand real-world time series data from astrophysics. Our methods are particularlyuseful when the time series are sparsely and non-synchronously sampled.
 

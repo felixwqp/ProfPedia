@@ -1,111 +1,24 @@
 Comlex Syntax: Building a Computational Lexicon
 
-  We describe the design of Comlex Syntax, a computational lexicon providing
-detailed syntactic information for approximately 38,000 English headwords. We
-consider the types of errors which arise in creating such a lexicon, and how
-such errors can be measured and controlled.
-
+  We describe the design of Comlex Syntax, a computational lexicon providingdetailed syntactic information for approximately 38,000 English headwords. Weconsider the types of errors which arise in creating such a lexicon, and howsuch errors can be measured and controlled.
 
 Jointly Embedding Relations and Mentions for Knowledge Population
 
-  This paper contributes a joint embedding model for predicting relations
-between a pair of entities in the scenario of relation inference. It differs
-from most stand-alone approaches which separately operate on either knowledge
-bases or free texts. The proposed model simultaneously learns low-dimensional
-vector representations for both triplets in knowledge repositories and the
-mentions of relations in free texts, so that we can leverage the evidence both
-resources to make more accurate predictions. We use NELL to evaluate the
-performance of our approach, compared with cutting-edge methods. Results of
-extensive experiments show that our model achieves significant improvement on
-relation extraction.
-
+  This paper contributes a joint embedding model for predicting relationsbetween a pair of entities in the scenario of relation inference. It differsfrom most stand-alone approaches which separately operate on either knowledgebases or free texts. The proposed model simultaneously learns low-dimensionalvector representations for both triplets in knowledge repositories and thementions of relations in free texts, so that we can leverage the evidence bothresources to make more accurate predictions. We use NELL to evaluate theperformance of our approach, compared with cutting-edge methods. Results ofextensive experiments show that our model achieves significant improvement onrelation extraction.
 
 Probabilistic Belief Embedding for Knowledge Base Completion
 
-  This paper contributes a novel embedding model which measures the probability
-of each belief $\langle h,r,t,m\rangle$ in a large-scale knowledge repository
-via simultaneously learning distributed representations for entities ($h$ and
-$t$), relations ($r$), and the words in relation mentions ($m$). It facilitates
-knowledge completion by means of simple vector operations to discover new
-beliefs. Given an imperfect belief, we can not only infer the missing entities,
-predict the unknown relations, but also tell the plausibility of the belief,
-just leveraging the learnt embeddings of remaining evidences. To demonstrate
-the scalability and the effectiveness of our model, we conduct experiments on
-several large-scale repositories which contain millions of beliefs from
-WordNet, Freebase and NELL, and compare it with other cutting-edge approaches
-via competing the performances assessed by the tasks of entity inference,
-relation prediction and triplet classification with respective metrics.
-Extensive experimental results show that the proposed model outperforms the
-state-of-the-arts with significant improvements.
+  This paper contributes a novel embedding model which measures the probabilityof each belief $\langle h,r,t,m\rangle$ in a large-scale knowledge repositoryvia simultaneously learning distributed representations for entities ($h$ and$t$), relations ($r$), and the words in relation mentions ($m$). It facilitatesknowledge completion by means of simple vector operations to discover newbeliefs. Given an imperfect belief, we can not only infer the missing entities,predict the unknown relations, but also tell the plausibility of the belief,just leveraging the learnt embeddings of remaining evidences. To demonstratethe scalability and the effectiveness of our model, we conduct experiments onseveral large-scale repositories which contain millions of beliefs fromWordNet, Freebase and NELL, and compare it with other cutting-edge approachesvia competing the performances assessed by the tasks of entity inference,relation prediction and triplet classification with respective metrics.Extensive experimental results show that the proposed model outperforms thestate-of-the-arts with significant improvements.
 
+Combining Neural Networks and Log-linear Models to Improve Relation  Extraction
 
-Combining Neural Networks and Log-linear Models to Improve Relation
-  Extraction
-
-  The last decade has witnessed the success of the traditional feature-based
-method on exploiting the discrete structures such as words or lexical patterns
-to extract relations from text. Recently, convolutional and recurrent neural
-networks has provided very effective mechanisms to capture the hidden
-structures within sentences via continuous representations, thereby
-significantly advancing the performance of relation extraction. The advantage
-of convolutional neural networks is their capacity to generalize the
-consecutive k-grams in the sentences while recurrent neural networks are
-effective to encode long ranges of sentence context. This paper proposes to
-combine the traditional feature-based method, the convolutional and recurrent
-neural networks to simultaneously benefit from their advantages. Our systematic
-evaluation of different network architectures and combination methods
-demonstrates the effectiveness of this approach and results in the
-state-of-the-art performance on the ACE 2005 and SemEval dataset.
-
+  The last decade has witnessed the success of the traditional feature-basedmethod on exploiting the discrete structures such as words or lexical patternsto extract relations from text. Recently, convolutional and recurrent neuralnetworks has provided very effective mechanisms to capture the hiddenstructures within sentences via continuous representations, therebysignificantly advancing the performance of relation extraction. The advantageof convolutional neural networks is their capacity to generalize theconsecutive k-grams in the sentences while recurrent neural networks areeffective to encode long ranges of sentence context. This paper proposes tocombine the traditional feature-based method, the convolutional and recurrentneural networks to simultaneously benefit from their advantages. Our systematicevaluation of different network architectures and combination methodsdemonstrates the effectiveness of this approach and results in thestate-of-the-art performance on the ACE 2005 and SemEval dataset.
 
 Large Margin Nearest Neighbor Embedding for Knowledge Representation
 
-  Traditional way of storing facts in triplets ({\it head\_entity, relation,
-tail\_entity}), abbreviated as ({\it h, r, t}), makes the knowledge intuitively
-displayed and easily acquired by mankind, but hardly computed or even reasoned
-by AI machines. Inspired by the success in applying {\it Distributed
-Representations} to AI-related fields, recent studies expect to represent each
-entity and relation with a unique low-dimensional embedding, which is different
-from the symbolic and atomic framework of displaying knowledge in triplets. In
-this way, the knowledge computing and reasoning can be essentially facilitated
-by means of a simple {\it vector calculation}, i.e. ${\bf h} + {\bf r} \approx
-{\bf t}$. We thus contribute an effective model to learn better embeddings
-satisfying the formula by pulling the positive tail entities ${\bf t^{+}}$ to
-get together and close to {\bf h} + {\bf r} ({\it Nearest Neighbor}), and
-simultaneously pushing the negatives ${\bf t^{-}}$ away from the positives
-${\bf t^{+}}$ via keeping a {\it Large Margin}. We also design a corresponding
-learning algorithm to efficiently find the optimal solution based on {\it
-Stochastic Gradient Descent} in iterative fashion. Quantitative experiments
-illustrate that our approach can achieve the state-of-the-art performance,
-compared with several latest methods on some benchmark datasets for two
-classical applications, i.e. {\it Link prediction} and {\it Triplet
-classification}. Moreover, we analyze the parameter complexities among all the
-evaluated models, and analytical results indicate that our model needs fewer
-computational resources on outperforming the other methods.
-
+  Traditional way of storing facts in triplets ({\it head\_entity, relation,tail\_entity}), abbreviated as ({\it h, r, t}), makes the knowledge intuitivelydisplayed and easily acquired by mankind, but hardly computed or even reasonedby AI machines. Inspired by the success in applying {\it DistributedRepresentations} to AI-related fields, recent studies expect to represent eachentity and relation with a unique low-dimensional embedding, which is differentfrom the symbolic and atomic framework of displaying knowledge in triplets. Inthis way, the knowledge computing and reasoning can be essentially facilitatedby means of a simple {\it vector calculation}, i.e. ${\bf h} + {\bf r} \approx{\bf t}$. We thus contribute an effective model to learn better embeddingssatisfying the formula by pulling the positive tail entities ${\bf t^{+}}$ toget together and close to {\bf h} + {\bf r} ({\it Nearest Neighbor}), andsimultaneously pushing the negatives ${\bf t^{-}}$ away from the positives${\bf t^{+}}$ via keeping a {\it Large Margin}. We also design a correspondinglearning algorithm to efficiently find the optimal solution based on {\itStochastic Gradient Descent} in iterative fashion. Quantitative experimentsillustrate that our approach can achieve the state-of-the-art performance,compared with several latest methods on some benchmark datasets for twoclassical applications, i.e. {\it Link prediction} and {\it Tripletclassification}. Moreover, we analyze the parameter complexities among all theevaluated models, and analytical results indicate that our model needs fewercomputational resources on outperforming the other methods.
 
 Parallel Knowledge Embedding with MapReduce on a Multi-core Processor
 
-  This article firstly attempts to explore parallel algorithms of learning
-distributed representations for both entities and relations in large-scale
-knowledge repositories with {\it MapReduce} programming model on a multi-core
-processor. We accelerate the training progress of a canonical knowledge
-embedding method, i.e. {\it translating embedding} ({\bf TransE}) model, by
-dividing a whole knowledge repository into several balanced subsets, and
-feeding each subset into an individual core where local embeddings can
-concurrently run updating during the {\it Map} phase. However, it usually
-suffers from inconsistent low-dimensional vector representations of the same
-key, which are collected from different {\it Map} workers, and further leads to
-conflicts when conducting {\it Reduce} to merge the various vectors associated
-with the same key. Therefore, we try several strategies to acquire the merged
-embeddings which may not only retain the performance of {\it entity inference},
-{\it relation prediction}, and even {\it triplet classification} evaluated by
-the single-thread {\bf TransE} on several well-known knowledge bases such as
-Freebase and NELL, but also scale up the learning speed along with the number
-of cores within a processor. So far, the empirical studies show that we could
-achieve comparable results as the single-thread {\bf TransE} performs by the
-{\it stochastic gradient descend} (SGD) algorithm, as well as increase the
-training speed multiple times via adapting the {\it batch gradient descend}
-(BGD) algorithm for {\it MapReduce} paradigm.
-
+  This article firstly attempts to explore parallel algorithms of learningdistributed representations for both entities and relations in large-scaleknowledge repositories with {\it MapReduce} programming model on a multi-coreprocessor. We accelerate the training progress of a canonical knowledgeembedding method, i.e. {\it translating embedding} ({\bf TransE}) model, bydividing a whole knowledge repository into several balanced subsets, andfeeding each subset into an individual core where local embeddings canconcurrently run updating during the {\it Map} phase. However, it usuallysuffers from inconsistent low-dimensional vector representations of the samekey, which are collected from different {\it Map} workers, and further leads toconflicts when conducting {\it Reduce} to merge the various vectors associatedwith the same key. Therefore, we try several strategies to acquire the mergedembeddings which may not only retain the performance of {\it entity inference},{\it relation prediction}, and even {\it triplet classification} evaluated bythe single-thread {\bf TransE} on several well-known knowledge bases such asFreebase and NELL, but also scale up the learning speed along with the numberof cores within a processor. So far, the empirical studies show that we couldachieve comparable results as the single-thread {\bf TransE} performs by the{\it stochastic gradient descend} (SGD) algorithm, as well as increase thetraining speed multiple times via adapting the {\it batch gradient descend}(BGD) algorithm for {\it MapReduce} paradigm.
 

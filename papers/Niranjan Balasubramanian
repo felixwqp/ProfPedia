@@ -1,176 +1,36 @@
 MobiRNN: Efficient Recurrent Neural Network Execution on Mobile GPU
 
-  In this paper, we explore optimizations to run Recurrent Neural Network (RNN)
-models locally on mobile devices. RNN models are widely used for Natural
-Language Processing, Machine Translation, and other tasks. However, existing
-mobile applications that use RNN models do so on the cloud. To address privacy
-and efficiency concerns, we show how RNN models can be run locally on mobile
-devices. Existing work on porting deep learning models to mobile devices focus
-on Convolution Neural Networks (CNNs) and cannot be applied directly to RNN
-models. In response, we present MobiRNN, a mobile-specific optimization
-framework that implements GPU offloading specifically for mobile GPUs.
-Evaluations using an RNN model for activity recognition shows that MobiRNN does
-significantly decrease the latency of running RNN models on phones.
-
+  In this paper, we explore optimizations to run Recurrent Neural Network (RNN)models locally on mobile devices. RNN models are widely used for NaturalLanguage Processing, Machine Translation, and other tasks. However, existingmobile applications that use RNN models do so on the cloud. To address privacyand efficiency concerns, we show how RNN models can be run locally on mobiledevices. Existing work on porting deep learning models to mobile devices focuson Convolution Neural Networks (CNNs) and cannot be applied directly to RNNmodels. In response, we present MobiRNN, a mobile-specific optimizationframework that implements GPU offloading specifically for mobile GPUs.Evaluations using an RNN model for activity recognition shows that MobiRNN doessignificantly decrease the latency of running RNN models on phones.
 
 Event Representations with Tensor-based Compositions
 
-  Robust and flexible event representations are important to many core areas in
-language understanding. Scripts were proposed early on as a way of representing
-sequences of events for such understanding, and has recently attracted renewed
-attention. However, obtaining effective representations for modeling
-script-like event sequences is challenging. It requires representations that
-can capture event-level and scenario-level semantics. We propose a new
-tensor-based composition method for creating event representations. The method
-captures more subtle semantic interactions between an event and its entities
-and yields representations that are effective at multiple event-related tasks.
-With the continuous representations, we also devise a simple schema generation
-method which produces better schemas compared to a prior discrete
-representation based method. Our analysis shows that the tensors capture
-distinct usages of a predicate even when there are only subtle differences in
-their surface realizations.
+  Robust and flexible event representations are important to many core areas inlanguage understanding. Scripts were proposed early on as a way of representingsequences of events for such understanding, and has recently attracted renewedattention. However, obtaining effective representations for modelingscript-like event sequences is challenging. It requires representations thatcan capture event-level and scenario-level semantics. We propose a newtensor-based composition method for creating event representations. The methodcaptures more subtle semantic interactions between an event and its entitiesand yields representations that are effective at multiple event-related tasks.With the continuous representations, we also devise a simple schema generationmethod which produces better schemas compared to a prior discreterepresentation based method. Our analysis shows that the tensors capturedistinct usages of a predicate even when there are only subtle differences intheir surface realizations.
 
+Controlling Decoding for More Abstractive Summaries with Copy-Based  Networks
 
-Controlling Decoding for More Abstractive Summaries with Copy-Based
-  Networks
+  Attention-based neural abstractive summarization systems equipped with copymechanisms have shown promising results. Despite this success, it has beennoticed that such a system generates a summary by mostly, if not entirely,copying over phrases, sentences, and sometimes multiple consecutive sentencesfrom an input paragraph, effectively performing extractive summarization. Inthis paper, we verify this behavior using the latest neural abstractivesummarization system - a pointer-generator network. We propose a simplebaseline method that allows us to control the amount of copying withoutretraining. Experiments indicate that the method provides a strong baseline forabstractive systems looking to obtain high ROUGE scores while minimizingoverlap with the source article, substantially reducing the n-gram overlap withthe original article while keeping within 2 points of the original model'sROUGE score.
 
-  Attention-based neural abstractive summarization systems equipped with copy
-mechanisms have shown promising results. Despite this success, it has been
-noticed that such a system generates a summary by mostly, if not entirely,
-copying over phrases, sentences, and sometimes multiple consecutive sentences
-from an input paragraph, effectively performing extractive summarization. In
-this paper, we verify this behavior using the latest neural abstractive
-summarization system - a pointer-generator network. We propose a simple
-baseline method that allows us to control the amount of copying without
-retraining. Experiments indicate that the method provides a strong baseline for
-abstractive systems looking to obtain high ROUGE scores while minimizing
-overlap with the source article, substantially reducing the n-gram overlap with
-the original article while keeping within 2 points of the original model's
-ROUGE score.
+The Fine Line between Linguistic Generalization and Failure in  Seq2Seq-Attention Models
 
-
-The Fine Line between Linguistic Generalization and Failure in
-  Seq2Seq-Attention Models
-
-  Seq2Seq based neural architectures have become the go-to architecture to
-apply to sequence to sequence language tasks. Despite their excellent
-performance on these tasks, recent work has noted that these models usually do
-not fully capture the linguistic structure required to generalize beyond the
-dense sections of the data distribution \cite{ettinger2017towards}, and as
-such, are likely to fail on samples from the tail end of the distribution (such
-as inputs that are noisy \citep{belkinovnmtbreak} or of different lengths
-\citep{bentivoglinmtlength}). In this paper, we look at a model's ability to
-generalize on a simple symbol rewriting task with a clearly defined structure.
-We find that the model's ability to generalize this structure beyond the
-training distribution depends greatly on the chosen random seed, even when
-performance on the standard test set remains the same. This suggests that a
-model's ability to capture generalizable structure is highly sensitive.
-Moreover, this sensitivity may not be apparent when evaluating it on standard
-test sets.
-
+  Seq2Seq based neural architectures have become the go-to architecture toapply to sequence to sequence language tasks. Despite their excellentperformance on these tasks, recent work has noted that these models usually donot fully capture the linguistic structure required to generalize beyond thedense sections of the data distribution \cite{ettinger2017towards}, and assuch, are likely to fail on samples from the tail end of the distribution (suchas inputs that are noisy \citep{belkinovnmtbreak} or of different lengths\citep{bentivoglinmtlength}). In this paper, we look at a model's ability togeneralize on a simple symbol rewriting task with a clearly defined structure.We find that the model's ability to generalize this structure beyond thetraining distribution depends greatly on the chosen random seed, even whenperformance on the standard test set remains the same. This suggests that amodel's ability to capture generalizable structure is highly sensitive.Moreover, this sensitivity may not be apparent when evaluating it on standardtest sets.
 
 Fake Sentence Detection as a Training Task for Sentence Encoding
 
-  Sentence encoders are typically trained on language modeling tasks with large
-unlabeled datasets. While these encoders achieve state-of-the-art results on
-many sentence-level tasks, they are difficult to train with long training
-cycles. We introduce fake sentence detection as a new training task for
-learning sentence encoders. We automatically generate fake sentences by
-corrupting original sentences from a source collection and train the encoders
-to produce representations that are effective at detecting fake sentences. This
-binary classification task turns to be quite efficient for training sentence
-encoders. We compare a basic BiLSTM encoder trained on this task with a strong
-sentence encoding models (Skipthought and FastSent) trained on a language
-modeling task. We find that the BiLSTM trains much faster on fake sentence
-detection (20 hours instead of weeks) using smaller amounts of data (1M instead
-of 64M sentences). Further analysis shows the learned representations capture
-many syntactic and semantic properties expected from good sentence
-representations.
+  Sentence encoders are typically trained on language modeling tasks with largeunlabeled datasets. While these encoders achieve state-of-the-art results onmany sentence-level tasks, they are difficult to train with long trainingcycles. We introduce fake sentence detection as a new training task forlearning sentence encoders. We automatically generate fake sentences bycorrupting original sentences from a source collection and train the encodersto produce representations that are effective at detecting fake sentences. Thisbinary classification task turns to be quite efficient for training sentenceencoders. We compare a basic BiLSTM encoder trained on this task with a strongsentence encoding models (Skipthought and FastSent) trained on a languagemodeling task. We find that the BiLSTM trains much faster on fake sentencedetection (20 hours instead of weeks) using smaller amounts of data (1M insteadof 64M sentences). Further analysis shows the learned representations capturemany syntactic and semantic properties expected from good sentencerepresentations.
 
+Residualized Factor Adaptation for Community Social Media Prediction  Tasks
 
-Residualized Factor Adaptation for Community Social Media Prediction
-  Tasks
-
-  Predictive models over social media language have shown promise in capturing
-community outcomes, but approaches thus far largely neglect the
-socio-demographic context (e.g. age, education rates, race) of the community
-from which the language originates. For example, it may be inaccurate to assume
-people in Mobile, Alabama, where the population is relatively older, will use
-words the same way as those from San Francisco, where the median age is younger
-with a higher rate of college education. In this paper, we present residualized
-factor adaptation, a novel approach to community prediction tasks which both
-(a) effectively integrates community attributes, as well as (b) adapts
-linguistic features to community attributes (factors). We use eleven
-demographic and socioeconomic attributes, and evaluate our approach over five
-different community-level predictive tasks, spanning health (heart disease
-mortality, percent fair/poor health), psychology (life satisfaction), and
-economics (percent housing price increase, foreclosure rate). Our evaluation
-shows that residualized factor adaptation significantly improves 4 out of 5
-community-level outcome predictions over prior state-of-the-art for
-incorporating socio-demographic contexts.
-
+  Predictive models over social media language have shown promise in capturingcommunity outcomes, but approaches thus far largely neglect thesocio-demographic context (e.g. age, education rates, race) of the communityfrom which the language originates. For example, it may be inaccurate to assumepeople in Mobile, Alabama, where the population is relatively older, will usewords the same way as those from San Francisco, where the median age is youngerwith a higher rate of college education. In this paper, we present residualizedfactor adaptation, a novel approach to community prediction tasks which both(a) effectively integrates community attributes, as well as (b) adaptslinguistic features to community attributes (factors). We use elevendemographic and socioeconomic attributes, and evaluate our approach over fivedifferent community-level predictive tasks, spanning health (heart diseasemortality, percent fair/poor health), psychology (life satisfaction), andeconomics (percent housing price increase, foreclosure rate). Our evaluationshows that residualized factor adaptation significantly improves 4 out of 5community-level outcome predictions over prior state-of-the-art forincorporating socio-demographic contexts.
 
 Hierarchical Quantized Representations for Script Generation
 
-  Scripts define knowledge about how everyday scenarios (such as going to a
-restaurant) are expected to unfold. One of the challenges to learning scripts
-is the hierarchical nature of the knowledge. For example, a suspect arrested
-might plead innocent or guilty, and a very different track of events is then
-expected to happen. To capture this type of information, we propose an
-autoencoder model with a latent space defined by a hierarchy of categorical
-variables. We utilize a recently proposed vector quantization based approach,
-which allows continuous embeddings to be associated with each latent variable
-value. This permits the decoder to softly decide what portions of the latent
-hierarchy to condition on by attending over the value embeddings for a given
-setting. Our model effectively encodes and generates scripts, outperforming a
-recent language modeling-based method on several standard tasks, and allowing
-the autoencoder model to achieve substantially lower perplexity scores compared
-to the previous language modeling-based method.
-
+  Scripts define knowledge about how everyday scenarios (such as going to arestaurant) are expected to unfold. One of the challenges to learning scriptsis the hierarchical nature of the knowledge. For example, a suspect arrestedmight plead innocent or guilty, and a very different track of events is thenexpected to happen. To capture this type of information, we propose anautoencoder model with a latent space defined by a hierarchy of categoricalvariables. We utilize a recently proposed vector quantization based approach,which allows continuous embeddings to be associated with each latent variablevalue. This permits the decoder to softly decide what portions of the latenthierarchy to condition on by attending over the value embeddings for a givensetting. Our model effectively encodes and generates scripts, outperforming arecent language modeling-based method on several standard tasks, and allowingthe autoencoder model to achieve substantially lower perplexity scores comparedto the previous language modeling-based method.
 
 Markov Logic Networks for Natural Language Question Answering
 
-  Our goal is to answer elementary-level science questions using knowledge
-extracted automatically from science textbooks, expressed in a subset of
-first-order logic. Given the incomplete and noisy nature of these automatically
-extracted rules, Markov Logic Networks (MLNs) seem a natural model to use, but
-the exact way of leveraging MLNs is by no means obvious. We investigate three
-ways of applying MLNs to our task. In the first, we simply use the extracted
-science rules directly as MLN clauses. Unlike typical MLN applications, our
-domain has long and complex rules, leading to an unmanageable number of
-groundings. We exploit the structure present in hard constraints to improve
-tractability, but the formulation remains ineffective. In the second approach,
-we instead interpret science rules as describing prototypical entities, thus
-mapping rules directly to grounded MLN assertions, whose constants are then
-clustered using existing entity resolution methods. This drastically simplifies
-the network, but still suffers from brittleness. Finally, our third approach,
-called Praline, uses MLNs to align the lexical elements as well as define and
-control how inference should be performed in this task. Our experiments,
-demonstrating a 15\% accuracy boost and a 10x reduction in runtime, suggest
-that the flexibility and different inference semantics of Praline are a better
-fit for the natural language question answering task.
-
+  Our goal is to answer elementary-level science questions using knowledgeextracted automatically from science textbooks, expressed in a subset offirst-order logic. Given the incomplete and noisy nature of these automaticallyextracted rules, Markov Logic Networks (MLNs) seem a natural model to use, butthe exact way of leveraging MLNs is by no means obvious. We investigate threeways of applying MLNs to our task. In the first, we simply use the extractedscience rules directly as MLN clauses. Unlike typical MLN applications, ourdomain has long and complex rules, leading to an unmanageable number ofgroundings. We exploit the structure present in hard constraints to improvetractability, but the formulation remains ineffective. In the second approach,we instead interpret science rules as describing prototypical entities, thusmapping rules directly to grounded MLN assertions, whose constants are thenclustered using existing entity resolution methods. This drastically simplifiesthe network, but still suffers from brittleness. Finally, our third approach,called Praline, uses MLNs to align the lexical elements as well as define andcontrol how inference should be performed in this task. Our experiments,demonstrating a 15\% accuracy boost and a 10x reduction in runtime, suggestthat the flexibility and different inference semantics of Praline are a betterfit for the natural language question answering task.
 
 PoMo: Generating Entity-Specific Post-Modifiers in Context
 
-  We introduce entity post-modifier generation as an instance of a
-collaborative writing task. Given a sentence about a target entity, the task is
-to automatically generate a post-modifier phrase that provides contextually
-relevant information about the entity. For example, for the sentence, "Barack
-Obama, _______, supported the #MeToo movement.", the phrase "a father of two
-girls" is a contextually relevant post-modifier. To this end, we build PoMo, a
-post-modifier dataset created automatically from news articles reflecting a
-journalistic need for incorporating entity information that is relevant to a
-particular news event. PoMo consists of more than 231K sentences with
-post-modifiers and associated facts extracted from Wikidata for around 57K
-unique entities. We use crowdsourcing to show that modeling contextual
-relevance is necessary for accurate post-modifier generation. We adapt a number
-of existing generation approaches as baselines for this dataset. Our results
-show there is large room for improvement in terms of both identifying relevant
-facts to include (knowing which claims are relevant gives a >20% improvement in
-BLEU score), and generating appropriate post-modifier text for the context
-(providing relevant claims is not sufficient for accurate generation). We
-conduct an error analysis that suggests promising directions for future
-research.
-
+  We introduce entity post-modifier generation as an instance of acollaborative writing task. Given a sentence about a target entity, the task isto automatically generate a post-modifier phrase that provides contextuallyrelevant information about the entity. For example, for the sentence, "BarackObama, _______, supported the #MeToo movement.", the phrase "a father of twogirls" is a contextually relevant post-modifier. To this end, we build PoMo, apost-modifier dataset created automatically from news articles reflecting ajournalistic need for incorporating entity information that is relevant to aparticular news event. PoMo consists of more than 231K sentences withpost-modifiers and associated facts extracted from Wikidata for around 57Kunique entities. We use crowdsourcing to show that modeling contextualrelevance is necessary for accurate post-modifier generation. We adapt a numberof existing generation approaches as baselines for this dataset. Our resultsshow there is large room for improvement in terms of both identifying relevantfacts to include (knowing which claims are relevant gives a >20% improvement inBLEU score), and generating appropriate post-modifier text for the context(providing relevant claims is not sufficient for accurate generation). Weconduct an error analysis that suggests promising directions for futureresearch.
 

@@ -1,459 +1,76 @@
 Balls and Funnels: Energy Efficient Group-to-Group Anycasts
 
-  We introduce group-to-group anycast (g2g-anycast), a network design problem
-of substantial practical importance and considerable generality. Given a
-collection of groups and requirements for directed connectivity from source
-groups to destination groups, the solution network must contain, for each
-requirement, an omni-directional down-link broadcast, centered at any node of
-the source group, called the ball; the ball must contain some node from the
-destination group in the requirement and all such destination nodes in the ball
-must aggregate into a tree directed towards the source, called the funnel-tree.
-The solution network is a collection of balls along with the funnel-trees they
-contain. g2g-anycast models DBS (Digital Broadcast Satellite), Cable TV systems
-and drone swarms. It generalizes several well known network design problems
-including minimum energy unicast, multicast, broadcast, Steiner-tree,
-Steiner-forest and Group-Steiner tree. Our main achievement is an $O(\log^4 n)$
-approximation, counterbalanced by an $\log^{(2-\epsilon)}n$ hardness of
-approximation, for general weights. Given the applicability to wireless
-communication, we present a scalable and easily implemented $O(\log n)$
-approximation algorithm, Cover-and-Grow for fixed-dimensional Euclidean space
-with path-loss exponent at least 2.
+  We introduce group-to-group anycast (g2g-anycast), a network design problemof substantial practical importance and considerable generality. Given acollection of groups and requirements for directed connectivity from sourcegroups to destination groups, the solution network must contain, for eachrequirement, an omni-directional down-link broadcast, centered at any node ofthe source group, called the ball; the ball must contain some node from thedestination group in the requirement and all such destination nodes in the ballmust aggregate into a tree directed towards the source, called the funnel-tree.The solution network is a collection of balls along with the funnel-trees theycontain. g2g-anycast models DBS (Digital Broadcast Satellite), Cable TV systemsand drone swarms. It generalizes several well known network design problemsincluding minimum energy unicast, multicast, broadcast, Steiner-tree,Steiner-forest and Group-Steiner tree. Our main achievement is an $O(\log^4 n)$approximation, counterbalanced by an $\log^{(2-\epsilon)}n$ hardness ofapproximation, for general weights. Given the applicability to wirelesscommunication, we present a scalable and easily implemented $O(\log n)$approximation algorithm, Cover-and-Grow for fixed-dimensional Euclidean spacewith path-loss exponent at least 2.
 
+Worst-Case Performance Analysis of Some Approximation Algorithms for  Minimizing Makespan and Flow-Time
 
-Secure and scalable match: overcoming the universal circuit bottleneck
-  using group programs
+  In 1976, Coffman and Sethi conjectured that a natural extension of LPT listscheduling to the bicriteria scheduling problem of minimizing makespan overflowtime optimal schedules, called LD algorithm, has a simple worst-caseperformance bound: (5m-2)/(4m-1), where m is the number of machines. We studystructure of potential minimal counterexamples to this conjecture and provethat the conjecture holds for the cases (i) n > 5m, (ii) m = 2, (iii) m = 3,and (iv) m greater than or equal to 4, n less than or equal to 3m, where n isthe number of jobs. We further conclude that to verify the conjecture, itsuffices to analyze the following case: for every m greater than or equal to 4,n is either equal to 4m or 5m.
 
-  Confidential Content-Based Publish/Subscribe (C-CBPS) is an interaction
-(pub/sub) model that allows parties to exchange data while still protecting
-their security and privacy interests. In this paper we advance the state of the
-art in C-CBPS by showing how all predicate circuits in NC1 (logarithmic-depth,
-bounded fan-in) can be securely computed by a broker while guaranteeing perfect
-information-theoretic security. Previous work could handle only strictly
-shallower circuits (e.g. those with depth O(\sqrt{\lg n}) [SYY99, V76]. We
-present three protocols -- UGP-Match, FSGP-Match and OFSGP-Match -- all three
-are based on (2-decomposable randomized encodings of) group programs and handle
-circuits in NC1. UGP-Match is conceptually simple and has a clean proof of
-correctness but it is inefficient and impractical. FSGP-Match uses a "fixed
-structure" trick to achieve efficiency and scalability. And, finally,
-OFSGP-Match uses hand-optimized group programs to wring greater efficiencies.
-We complete our investigation with an experimental evaluation of a prototype
-implementation.
+Secure and scalable match: overcoming the universal circuit bottleneck  using group programs
 
-
-Worst-Case Performance Analysis of Some Approximation Algorithms for
-  Minimizing Makespan and Flow-Time
-
-  In 1976, Coffman and Sethi conjectured that a natural extension of LPT list
-scheduling to the bicriteria scheduling problem of minimizing makespan over
-flowtime optimal schedules, called LD algorithm, has a simple worst-case
-performance bound: (5m-2)/(4m-1), where m is the number of machines. We study
-structure of potential minimal counterexamples to this conjecture and prove
-that the conjecture holds for the cases (i) n > 5m, (ii) m = 2, (iii) m = 3,
-and (iv) m greater than or equal to 4, n less than or equal to 3m, where n is
-the number of jobs. We further conclude that to verify the conjecture, it
-suffices to analyze the following case: for every m greater than or equal to 4,
-n is either equal to 4m or 5m.
-
+  Confidential Content-Based Publish/Subscribe (C-CBPS) is an interaction(pub/sub) model that allows parties to exchange data while still protectingtheir security and privacy interests. In this paper we advance the state of theart in C-CBPS by showing how all predicate circuits in NC1 (logarithmic-depth,bounded fan-in) can be securely computed by a broker while guaranteeing perfectinformation-theoretic security. Previous work could handle only strictlyshallower circuits (e.g. those with depth O(\sqrt{\lg n}) [SYY99, V76]. Wepresent three protocols -- UGP-Match, FSGP-Match and OFSGP-Match -- all threeare based on (2-decomposable randomized encodings of) group programs and handlecircuits in NC1. UGP-Match is conceptually simple and has a clean proof ofcorrectness but it is inefficient and impractical. FSGP-Match uses a "fixedstructure" trick to achieve efficiency and scalability. And, finally,OFSGP-Match uses hand-optimized group programs to wring greater efficiencies.We complete our investigation with an experimental evaluation of a prototypeimplementation.
 
 Spanning trees short or small
 
-  We study the problem of finding small trees. Classical network design
-problems are considered with the additional constraint that only a specified
-number $k$ of nodes are required to be connected in the solution. A
-prototypical example is the $k$MST problem in which we require a tree of
-minimum weight spanning at least $k$ nodes in an edge-weighted graph. We show
-that the $k$MST problem is NP-hard even for points in the Euclidean plane. We
-provide approximation algorithms with performance ratio $2\sqrt{k}$ for the
-general edge-weighted case and $O(k^{1/4})$ for the case of points in the
-plane. Polynomial-time exact solutions are also presented for the class of
-decomposable graphs which includes trees, series-parallel graphs, and bounded
-bandwidth graphs, and for points on the boundary of a convex region in the
-Euclidean plane. We also investigate the problem of finding short trees, and
-more generally, that of finding networks with minimum diameter. A simple
-technique is used to provide a polynomial-time solution for finding $k$-trees
-of minimum diameter. We identify easy and hard problems arising in finding
-short networks using a framework due to T. C. Hu.
-
+  We study the problem of finding small trees. Classical network designproblems are considered with the additional constraint that only a specifiednumber $k$ of nodes are required to be connected in the solution. Aprototypical example is the $k$MST problem in which we require a tree ofminimum weight spanning at least $k$ nodes in an edge-weighted graph. We showthat the $k$MST problem is NP-hard even for points in the Euclidean plane. Weprovide approximation algorithms with performance ratio $2\sqrt{k}$ for thegeneral edge-weighted case and $O(k^{1/4})$ for the case of points in theplane. Polynomial-time exact solutions are also presented for the class ofdecomposable graphs which includes trees, series-parallel graphs, and boundedbandwidth graphs, and for points on the boundary of a convex region in theEuclidean plane. We also investigate the problem of finding short trees, andmore generally, that of finding networks with minimum diameter. A simpletechnique is used to provide a polynomial-time solution for finding $k$-treesof minimum diameter. We identify easy and hard problems arising in findingshort networks using a framework due to T. C. Hu.
 
 Bicriteria Network Design Problems
 
-  We study a general class of bicriteria network design problems. A generic
-problem in this class is as follows: Given an undirected graph and two
-minimization objectives (under different cost functions), with a budget
-specified on the first, find a <subgraph \from a given subgraph-class that
-minimizes the second objective subject to the budget on the first. We consider
-three different criteria - the total edge cost, the diameter and the maximum
-degree of the network. Here, we present the first polynomial-time approximation
-algorithms for a large class of bicriteria network design problems for the
-above mentioned criteria. The following general types of results are presented.
-  First, we develop a framework for bicriteria problems and their
-approximations. Second, when the two criteria are the same %(note that the cost
-functions continue to be different) we present a ``black box'' parametric
-search technique. This black box takes in as input an (approximation) algorithm
-for the unicriterion situation and generates an approximation algorithm for the
-bicriteria case with only a constant factor loss in the performance guarantee.
-Third, when the two criteria are the diameter and the total edge costs we use a
-cluster-based approach to devise a approximation algorithms --- the solutions
-output violate both the criteria by a logarithmic factor. Finally, for the
-class of treewidth-bounded graphs, we provide pseudopolynomial-time algorithms
-for a number of bicriteria problems using dynamic programming. We show how
-these pseudopolynomial-time algorithms can be converted to fully
-polynomial-time approximation schemes using a scaling technique.
-
-
-Approximation Ratio of LD Algorithm for Multi-Processor Scheduling and
-  the Coffman-Sethi Conjecture
-
-  Coffman and Sethi proposed a heuristic algorithm, called LD, for
-multi-processor scheduling, to minimize makespan over flowtime-optimal
-schedules. LD algorithm is a natural extension of a very well-known list
-scheduling algorithm, Longest Processing Time (LPT) list scheduling, to our
-bicriteria scheduling problem. Moreover, in 1976, Coffman and Sethi conjectured
-that LD algorithm has precisely the following worst-case performance bound:
-$\frac{5}{4} - \frac{3}{4(4m-1)}$, where m is the number of machines. In this
-paper, utilizing some recent work by the authors and Huang, from 2013, which
-exposed some very strong combinatorial properties of various presumed minimal
-counterexamples to the conjecture, we provide a proof of this conjecture. The
-problem and the LD algorithm have connections to other fundamental problems
-(such as the assembly line-balancing problem) and to other algorithms.
-
+  We study a general class of bicriteria network design problems. A genericproblem in this class is as follows: Given an undirected graph and twominimization objectives (under different cost functions), with a budgetspecified on the first, find a <subgraph \from a given subgraph-class thatminimizes the second objective subject to the budget on the first. We considerthree different criteria - the total edge cost, the diameter and the maximumdegree of the network. Here, we present the first polynomial-time approximationalgorithms for a large class of bicriteria network design problems for theabove mentioned criteria. The following general types of results are presented.  First, we develop a framework for bicriteria problems and theirapproximations. Second, when the two criteria are the same %(note that the costfunctions continue to be different) we present a ``black box'' parametricsearch technique. This black box takes in as input an (approximation) algorithmfor the unicriterion situation and generates an approximation algorithm for thebicriteria case with only a constant factor loss in the performance guarantee.Third, when the two criteria are the diameter and the total edge costs we use acluster-based approach to devise a approximation algorithms --- the solutionsoutput violate both the criteria by a logarithmic factor. Finally, for theclass of treewidth-bounded graphs, we provide pseudopolynomial-time algorithmsfor a number of bicriteria problems using dynamic programming. We show howthese pseudopolynomial-time algorithms can be converted to fullypolynomial-time approximation schemes using a scaling technique.
 
 Controlling Sub-nm Gaps in Plasmonic Dimers using Graphene
 
-  Graphene is used as the thinnest possible spacer between gold nanoparticles
-and a gold substrate. This creates a robust, repeatable, and stable
-sub-nanometre gap for massive plasmonic field enhancements. White light
-spectroscopy of single 80 nm gold nanoparticles reveals plasmonic coupling
-between the particle and its image within the gold substrate. While for a
-single graphene layer, spectral doublets from coupled dimer modes are observed
-shifted into the near infra-red, these disappear for increasing numbers of
-layers. These doublets arise from plasmonic charge transfer, allowing the
-direct optical measurement of out-of-plane conductivity in such layered
-systems. Gating the graphene can thus directly produce plasmon tuning.
+  Graphene is used as the thinnest possible spacer between gold nanoparticlesand a gold substrate. This creates a robust, repeatable, and stablesub-nanometre gap for massive plasmonic field enhancements. White lightspectroscopy of single 80 nm gold nanoparticles reveals plasmonic couplingbetween the particle and its image within the gold substrate. While for asingle graphene layer, spectral doublets from coupled dimer modes are observedshifted into the near infra-red, these disappear for increasing numbers oflayers. These doublets arise from plasmonic charge transfer, allowing thedirect optical measurement of out-of-plane conductivity in such layeredsystems. Gating the graphene can thus directly produce plasmon tuning.
 
+Approximation Ratio of LD Algorithm for Multi-Processor Scheduling and  the Coffman-Sethi Conjecture
+
+  Coffman and Sethi proposed a heuristic algorithm, called LD, formulti-processor scheduling, to minimize makespan over flowtime-optimalschedules. LD algorithm is a natural extension of a very well-known listscheduling algorithm, Longest Processing Time (LPT) list scheduling, to ourbicriteria scheduling problem. Moreover, in 1976, Coffman and Sethi conjecturedthat LD algorithm has precisely the following worst-case performance bound:$\frac{5}{4} - \frac{3}{4(4m-1)}$, where m is the number of machines. In thispaper, utilizing some recent work by the authors and Huang, from 2013, whichexposed some very strong combinatorial properties of various presumed minimalcounterexamples to the conjecture, we provide a proof of this conjecture. Theproblem and the LD algorithm have connections to other fundamental problems(such as the assembly line-balancing problem) and to other algorithms.
 
 Reducibility Among Fractional Stability Problems
 
-  In this paper, we resolve the computational complexity of a number of
-outstanding open problems with practical applications. Here is the list of
-problems we show to be PPAD-complete, along with the domains of practical
-significance: Fractional Stable Paths Problem (FSPP) [21] - Internet routing;
-Core of Balanced Games [41] - Economics and Game theory; Scarf's Lemma [41] -
-Combinatorics; Hypergraph Matching [1]- Social Choice and Preference Systems;
-Fractional Bounded Budget Connection Games (FBBC) [30] - Social networks; and
-Strong Fractional Kernel [2]- Graph Theory. In fact, we show that no fully
-polynomial-time approximation schemes exist (unless PPAD is in FP).
-  This paper is entirely a series of reductions that build in nontrivial ways
-on the framework established in previous work. In the course of deriving these
-reductions, we created two new concepts - preference games and personalized
-equilibria. The entire set of new reductions can be presented as a lattice with
-the above problems sandwiched between preference games (at the "easy" end) and
-personalized equilibria (at the "hard" end). Our completeness results extend to
-natural approximate versions of most of these problems. On a technical note, we
-wish to highlight our novel "continuous-to-discrete" reduction from exact
-personalized equilibria to approximate personalized equilibria using a linear
-program augmented with an exponential number of "min" constraints of a specific
-form. In addition to enhancing our repertoire of PPAD-complete problems, we
-expect the concepts and techniques in this paper to find future use in
-algorithmic game theory.
-
+  In this paper, we resolve the computational complexity of a number ofoutstanding open problems with practical applications. Here is the list ofproblems we show to be PPAD-complete, along with the domains of practicalsignificance: Fractional Stable Paths Problem (FSPP) [21] - Internet routing;Core of Balanced Games [41] - Economics and Game theory; Scarf's Lemma [41] -Combinatorics; Hypergraph Matching [1]- Social Choice and Preference Systems;Fractional Bounded Budget Connection Games (FBBC) [30] - Social networks; andStrong Fractional Kernel [2]- Graph Theory. In fact, we show that no fullypolynomial-time approximation schemes exist (unless PPAD is in FP).  This paper is entirely a series of reductions that build in nontrivial wayson the framework established in previous work. In the course of deriving thesereductions, we created two new concepts - preference games and personalizedequilibria. The entire set of new reductions can be presented as a lattice withthe above problems sandwiched between preference games (at the "easy" end) andpersonalized equilibria (at the "hard" end). Our completeness results extend tonatural approximate versions of most of these problems. On a technical note, wewish to highlight our novel "continuous-to-discrete" reduction from exactpersonalized equilibria to approximate personalized equilibria using a linearprogram augmented with an exponential number of "min" constraints of a specificform. In addition to enhancing our repertoire of PPAD-complete problems, weexpect the concepts and techniques in this paper to find future use inalgorithmic game theory.
 
 Scheduler Vulnerabilities and Attacks in Cloud Computing
 
-  In hardware virtualization a hypervisor provides multiple Virtual Machines
-(VMs) on a single physical system, each executing a separate operating system
-instance. The hypervisor schedules execution of these VMs much as the scheduler
-in an operating system does, balancing factors such as fairness and I/O
-performance. As in an operating system, the scheduler may be vulnerable to
-malicious behavior on the part of users seeking to deny service to others or
-maximize their own resource usage.
-  Recently, publically available cloud computing services such as Amazon EC2
-have used virtualization to provide customers with virtual machines running on
-the provider's hardware, typically charging by wall clock time rather than
-resources consumed. Under this business model, manipulation of the scheduler
-may allow theft of service at the expense of other customers, rather than
-merely reallocating resources within the same administrative domain.
-  We describe a flaw in the Xen scheduler allowing virtual machines to consume
-almost all CPU time, in preference to other users, and demonstrate kernel-based
-and user-space versions of the attack. We show results demonstrating the
-vulnerability in the lab, consuming as much as 98% of CPU time regardless of
-fair share, as well as on Amazon EC2, where Xen modifications protect other
-users but still allow theft of service. In case of EC2, following the
-responsible disclosure model, we have reported this vulnerability to Amazon;
-they have since implemented a fix that we have tested and verified (See
-Appendix B). We provide a novel analysis of the necessary conditions for such
-attacks, and describe scheduler modifications to eliminate the vulnerability.
-  We present experimental results demonstrating the effectiveness of these
-defenses while imposing negligible overhead.
-
+  In hardware virtualization a hypervisor provides multiple Virtual Machines(VMs) on a single physical system, each executing a separate operating systeminstance. The hypervisor schedules execution of these VMs much as the schedulerin an operating system does, balancing factors such as fairness and I/Operformance. As in an operating system, the scheduler may be vulnerable tomalicious behavior on the part of users seeking to deny service to others ormaximize their own resource usage.  Recently, publically available cloud computing services such as Amazon EC2have used virtualization to provide customers with virtual machines running onthe provider's hardware, typically charging by wall clock time rather thanresources consumed. Under this business model, manipulation of the schedulermay allow theft of service at the expense of other customers, rather thanmerely reallocating resources within the same administrative domain.  We describe a flaw in the Xen scheduler allowing virtual machines to consumealmost all CPU time, in preference to other users, and demonstrate kernel-basedand user-space versions of the attack. We show results demonstrating thevulnerability in the lab, consuming as much as 98% of CPU time regardless offair share, as well as on Amazon EC2, where Xen modifications protect otherusers but still allow theft of service. In case of EC2, following theresponsible disclosure model, we have reported this vulnerability to Amazon;they have since implemented a fix that we have tested and verified (SeeAppendix B). We provide a novel analysis of the necessary conditions for suchattacks, and describe scheduler modifications to eliminate the vulnerability.  We present experimental results demonstrating the effectiveness of thesedefenses while imposing negligible overhead.
 
 WebCloud: Recruiting web browsers for content distribution
 
-  We are at the beginning of a shift in how content is created and exchanged
-over the web. While content was previously created primarily by a small set of
-entities, today, individual users -- empowered by devices like digital cameras
-and services like online social networks -- are creating content that
-represents a significant fraction of Internet traffic. As a result, content
-today is increasingly generated and exchanged at the edge of the network.
-Unfortunately, the existing techniques and infrastructure that are still used
-to serve this content, such as centralized content distribution networks, are
-ill-suited for these new patterns of content exchange. In this paper, we take a
-first step towards addressing this situation by introducing WebCloud, a content
-distribution system for online social networking sites that works by re-
-purposing web browsers to help serve content. In other words, when a user
-browses content, WebCloud tries to fetch it from one of that user's friend's
-browsers, instead of from the social networking site. The result is a more
-direct exchange of content ; essentially, WebCloud leverages the spatial and
-temporal locality of interest between social network users. Because WebCloud is
-built using techniques already present in many web browsers, it can be applied
-today to many social networking sites. We demonstrate the practicality of
-WebCloud with microbenchmarks, simulations, and a prototype deployment.
-
+  We are at the beginning of a shift in how content is created and exchangedover the web. While content was previously created primarily by a small set ofentities, today, individual users -- empowered by devices like digital camerasand services like online social networks -- are creating content thatrepresents a significant fraction of Internet traffic. As a result, contenttoday is increasingly generated and exchanged at the edge of the network.Unfortunately, the existing techniques and infrastructure that are still usedto serve this content, such as centralized content distribution networks, areill-suited for these new patterns of content exchange. In this paper, we take afirst step towards addressing this situation by introducing WebCloud, a contentdistribution system for online social networking sites that works by re-purposing web browsers to help serve content. In other words, when a userbrowses content, WebCloud tries to fetch it from one of that user's friend'sbrowsers, instead of from the social networking site. The result is a moredirect exchange of content ; essentially, WebCloud leverages the spatial andtemporal locality of interest between social network users. Because WebCloud isbuilt using techniques already present in many web browsers, it can be appliedtoday to many social networking sites. We demonstrate the practicality ofWebCloud with microbenchmarks, simulations, and a prototype deployment.
 
 Chiron: A Robust Recommendation System with Graph Regularizer
 
-  Recommendation systems have been widely used by commercial service providers
-for giving suggestions to users. Collaborative filtering (CF) systems, one of
-the most popular recommendation systems, utilize the history of behaviors of
-the aggregate user-base to provide individual recommendations and are effective
-when almost all users faithfully express their opinions. However, they are
-vulnerable to malicious users biasing their inputs in order to change the
-overall ratings of a specific group of items. CF systems largely fall into two
-categories - neighborhood-based and (matrix) factorization-based - and the
-presence of adversarial input can influence recommendations in both categories,
-leading to instabilities in estimation and prediction. Although the robustness
-of different collaborative filtering algorithms has been extensively studied,
-designing an efficient system that is immune to manipulation remains a
-significant challenge. In this work we propose a novel "hybrid" recommendation
-system with an adaptive graph-based user/item similarity-regularization -
-"Chiron". Chiron ties the performance benefits of dimensionality reduction
-(through factorization) with the advantage of neighborhood clustering (through
-regularization). We demonstrate, using extensive comparative experiments, that
-Chiron is resistant to manipulation by large and lethal attacks.
-
+  Recommendation systems have been widely used by commercial service providersfor giving suggestions to users. Collaborative filtering (CF) systems, one ofthe most popular recommendation systems, utilize the history of behaviors ofthe aggregate user-base to provide individual recommendations and are effectivewhen almost all users faithfully express their opinions. However, they arevulnerable to malicious users biasing their inputs in order to change theoverall ratings of a specific group of items. CF systems largely fall into twocategories - neighborhood-based and (matrix) factorization-based - and thepresence of adversarial input can influence recommendations in both categories,leading to instabilities in estimation and prediction. Although the robustnessof different collaborative filtering algorithms has been extensively studied,designing an efficient system that is immune to manipulation remains asignificant challenge. In this work we propose a novel "hybrid" recommendationsystem with an adaptive graph-based user/item similarity-regularization -"Chiron". Chiron ties the performance benefits of dimensionality reduction(through factorization) with the advantage of neighborhood clustering (throughregularization). We demonstrate, using extensive comparative experiments, thatChiron is resistant to manipulation by large and lethal attacks.
 
 Skyline Identification in Multi-Armed Bandits
 
-  We introduce a variant of the classical PAC multi-armed bandit problem. There
-is an ordered set of $n$ arms $A[1],\dots,A[n]$, each with some stochastic
-reward drawn from some unknown bounded distribution. The goal is to identify
-the $skyline$ of the set $A$, consisting of all arms $A[i]$ such that $A[i]$
-has larger expected reward than all lower-numbered arms $A[1],\dots,A[i-1]$. We
-define a natural notion of an $\varepsilon$-approximate skyline and prove
-matching upper and lower bounds for identifying an $\varepsilon$-skyline.
-Specifically, we show that in order to identify an $\varepsilon$-skyline from
-among $n$ arms with probability $1-\delta$, $$
-\Theta\bigg(\frac{n}{\varepsilon^2} \cdot \min\bigg\{
-\log\bigg(\frac{1}{\varepsilon \delta}\bigg), \log\bigg(\frac{n}{\delta}\bigg)
-\bigg\} \bigg) $$ samples are necessary and sufficient. When $\varepsilon \gg
-1/n$, our results improve over the naive algorithm, which draws enough samples
-to approximate the expected reward of every arm; the algorithm of (Auer et al.,
-AISTATS'16) for Pareto-optimal arm identification is likewise superseded. Our
-results show that the sample complexity of the skyline problem lies strictly in
-between that of best arm identification (Even-Dar et al., COLT'02) and that of
-approximating the expected reward of every arm.
-
+  We introduce a variant of the classical PAC multi-armed bandit problem. Thereis an ordered set of $n$ arms $A[1],\dots,A[n]$, each with some stochasticreward drawn from some unknown bounded distribution. The goal is to identifythe $skyline$ of the set $A$, consisting of all arms $A[i]$ such that $A[i]$has larger expected reward than all lower-numbered arms $A[1],\dots,A[i-1]$. Wedefine a natural notion of an $\varepsilon$-approximate skyline and provematching upper and lower bounds for identifying an $\varepsilon$-skyline.Specifically, we show that in order to identify an $\varepsilon$-skyline fromamong $n$ arms with probability $1-\delta$, $$\Theta\bigg(\frac{n}{\varepsilon^2} \cdot \min\bigg\{\log\bigg(\frac{1}{\varepsilon \delta}\bigg), \log\bigg(\frac{n}{\delta}\bigg)\bigg\} \bigg) $$ samples are necessary and sufficient. When $\varepsilon \gg1/n$, our results improve over the naive algorithm, which draws enough samplesto approximate the expected reward of every arm; the algorithm of (Auer et al.,AISTATS'16) for Pareto-optimal arm identification is likewise superseded. Ourresults show that the sample complexity of the skyline problem lies strictly inbetween that of best arm identification (Even-Dar et al., COLT'02) and that ofapproximating the expected reward of every arm.
 
 Plane Gossip: Approximating rumor spread in planar graphs
 
-  We study the design of schedules for multi-commodity multicast; we are given
-an undirected graph $G$ and a collection of source destination pairs, and the
-goal is to schedule a minimum-length sequence of matchings that connects every
-source with its respective destination. Multi-commodity multicast models a
-classic information dissemination problem in networks where the primary
-communication constraint is the number of connections that a node can make, not
-link bandwidth.
-  Multi-commodity multicast is closely related to the problem of finding a
-subgraph, $H$, of optimal poise, where the poise is defined as the sum of the
-maximum degree of $H$ and the maximum distance between any source-destination
-pair in $H$. We first show that the minimum poise subgraph for single-commodity
-multicast can be approximated to within a factor of $O(\log k)$ with respect to
-the value of a natural LP relaxation in an instance with $k$ terminals. This is
-the first upper bound on the integrality gap of the natural LP. Using this
-poise result and shortest-path separators in planar graphs, we obtain a
-$O(\log^3 k\log n/(\log\log n))$-approximation for multi-commodity multicast
-for planar graphs.
-  We also study the minimum-time radio gossip problem in planar graphs where a
-message from each node must be transmitted to all other nodes under a model
-where nodes can broadcast to all neighbors in a single step but only nodes with
-a single broadcasting neighbor get a message. We give an $O(\log^2
-n)$-approximation for radio gossip in planar graphs breaking previous barriers.
-This is the first bound for radio gossip that does not rely on the maximum
-degree of the graph.
-  Finally, we show that our techniques for planar graphs extend to graphs with
-excluded minors. We establish polylogarithmic-approximation algorithms for both
-multi-commodity multicast and radio gossip problems in minor-free graphs.
-
+  We study the design of schedules for multi-commodity multicast; we are givenan undirected graph $G$ and a collection of source destination pairs, and thegoal is to schedule a minimum-length sequence of matchings that connects everysource with its respective destination. Multi-commodity multicast models aclassic information dissemination problem in networks where the primarycommunication constraint is the number of connections that a node can make, notlink bandwidth.  Multi-commodity multicast is closely related to the problem of finding asubgraph, $H$, of optimal poise, where the poise is defined as the sum of themaximum degree of $H$ and the maximum distance between any source-destinationpair in $H$. We first show that the minimum poise subgraph for single-commoditymulticast can be approximated to within a factor of $O(\log k)$ with respect tothe value of a natural LP relaxation in an instance with $k$ terminals. This isthe first upper bound on the integrality gap of the natural LP. Using thispoise result and shortest-path separators in planar graphs, we obtain a$O(\log^3 k\log n/(\log\log n))$-approximation for multi-commodity multicastfor planar graphs.  We also study the minimum-time radio gossip problem in planar graphs where amessage from each node must be transmitted to all other nodes under a modelwhere nodes can broadcast to all neighbors in a single step but only nodes witha single broadcasting neighbor get a message. We give an $O(\log^2n)$-approximation for radio gossip in planar graphs breaking previous barriers.This is the first bound for radio gossip that does not rely on the maximumdegree of the graph.  Finally, we show that our techniques for planar graphs extend to graphs withexcluded minors. We establish polylogarithmic-approximation algorithms for bothmulti-commodity multicast and radio gossip problems in minor-free graphs.
 
 A bounded-degree network formation game
 
-  Motivated by applications in peer-to-peer and overlay networks we define and
-study the \emph{Bounded Degree Network Formation} (BDNF) game. In an
-$(n,k)$-BDNF game, we are given $n$ nodes, a bound $k$ on the out-degree of
-each node, and a weight $w_{vu}$ for each ordered pair $(v,u)$ representing the
-traffic rate from node $v$ to node $u$. Each node $v$ uses up to $k$ directed
-links to connect to other nodes with an objective to minimize its average
-distance, using weights $w_{vu}$, to all other destinations. We study the
-existence of pure Nash equilibria for $(n,k)$-BDNF games. We show that if the
-weights are arbitrary, then a pure Nash wiring may not exist. Furthermore, it
-is NP-hard to determine whether a pure Nash wiring exists for a given
-$(n,k)$-BDNF instance. A major focus of this paper is on uniform $(n,k)$-BDNF
-games, in which all weights are 1. We describe how to construct a pure Nash
-equilibrium wiring given any $n$ and $k$, and establish that in all pure Nash
-wirings the cost of individual nodes cannot differ by more than a factor of
-nearly 2, whereas the diameter cannot exceed $O(\sqrt{n \log_k n})$. We also
-analyze best-response walks on the configuration space defined by the uniform
-game, and show that starting from any initial configuration, strong
-connectivity is reached within $\Theta(n^2)$ rounds. Convergence to a pure Nash
-equilibrium, however, is not guaranteed. We present simulation results that
-suggest that loop-free best-response walks always exist, but may not be
-polynomially bounded. We also study a special family of \emph{regular} wirings,
-the class of Abelian Cayley graphs, in which all nodes imitate the same wiring
-pattern, and show that if $n$ is sufficiently large no such regular wiring can
-be a pure Nash equilibrium.
+  Motivated by applications in peer-to-peer and overlay networks we define andstudy the \emph{Bounded Degree Network Formation} (BDNF) game. In an$(n,k)$-BDNF game, we are given $n$ nodes, a bound $k$ on the out-degree ofeach node, and a weight $w_{vu}$ for each ordered pair $(v,u)$ representing thetraffic rate from node $v$ to node $u$. Each node $v$ uses up to $k$ directedlinks to connect to other nodes with an objective to minimize its averagedistance, using weights $w_{vu}$, to all other destinations. We study theexistence of pure Nash equilibria for $(n,k)$-BDNF games. We show that if theweights are arbitrary, then a pure Nash wiring may not exist. Furthermore, itis NP-hard to determine whether a pure Nash wiring exists for a given$(n,k)$-BDNF instance. A major focus of this paper is on uniform $(n,k)$-BDNFgames, in which all weights are 1. We describe how to construct a pure Nashequilibrium wiring given any $n$ and $k$, and establish that in all pure Nashwirings the cost of individual nodes cannot differ by more than a factor ofnearly 2, whereas the diameter cannot exceed $O(\sqrt{n \log_k n})$. We alsoanalyze best-response walks on the configuration space defined by the uniformgame, and show that starting from any initial configuration, strongconnectivity is reached within $\Theta(n^2)$ rounds. Convergence to a pure Nashequilibrium, however, is not guaranteed. We present simulation results thatsuggest that loop-free best-response walks always exist, but may not bepolynomially bounded. We also study a special family of \emph{regular} wirings,the class of Abelian Cayley graphs, in which all nodes imitate the same wiringpattern, and show that if $n$ is sufficiently large no such regular wiring canbe a pure Nash equilibrium.
 
+Bounded Budget Connection (BBC) Games or How to make friends and  influence people, on a budget
 
-Bounded Budget Connection (BBC) Games or How to make friends and
-  influence people, on a budget
+  Motivated by applications in social networks, peer-to-peer and overlaynetworks, we define and study the Bounded Budget Connection (BBC) game - wehave a collection of n players or nodes each of whom has a budget forpurchasing links; each link has a cost as well as a length and each node has aset of preference weights for each of the remaining nodes; the objective ofeach node is to use its budget to buy a set of outgoing links so as to minimizeits sum of preference-weighted distances to the remaining nodes.  We study the structural and complexity-theoretic properties of pure Nashequilibria in BBC games. We show that determining the existence of a pure Nashequilibrium in general BBC games is NP-hard. However, in a natural variant,fractional BBC games - where it is permitted to buy fractions of links - a pureNash equilibrium always exists. A major focus is the study of (n,k)-uniform BBCgames - those in which all link costs, link lengths and preference weights areequal (to 1) and all budgets are equal (to k). We show that a pure Nashequilibrium or stable graph exists for all (n,k)-uniform BBC games and that allstable graphs are essentially fair (i.e. all nodes have similar costs). Weprovide an explicit construction of a family of stable graphs that spans thespectrum from minimum total social cost to maximum total social cost. We alsostudy a special family of regular graphs in which all nodes imitate the "same"buying pattern, and show that if n is sufficiently large no such regular graphcan be a pure Nash equilibrium. We analyze best-response walks on theconfiguration defined by the uniform game. Lastly, we extend our results to thecase where each node seeks to minimize its maximum distance to the other nodes.
 
-  Motivated by applications in social networks, peer-to-peer and overlay
-networks, we define and study the Bounded Budget Connection (BBC) game - we
-have a collection of n players or nodes each of whom has a budget for
-purchasing links; each link has a cost as well as a length and each node has a
-set of preference weights for each of the remaining nodes; the objective of
-each node is to use its budget to buy a set of outgoing links so as to minimize
-its sum of preference-weighted distances to the remaining nodes.
-  We study the structural and complexity-theoretic properties of pure Nash
-equilibria in BBC games. We show that determining the existence of a pure Nash
-equilibrium in general BBC games is NP-hard. However, in a natural variant,
-fractional BBC games - where it is permitted to buy fractions of links - a pure
-Nash equilibrium always exists. A major focus is the study of (n,k)-uniform BBC
-games - those in which all link costs, link lengths and preference weights are
-equal (to 1) and all budgets are equal (to k). We show that a pure Nash
-equilibrium or stable graph exists for all (n,k)-uniform BBC games and that all
-stable graphs are essentially fair (i.e. all nodes have similar costs). We
-provide an explicit construction of a family of stable graphs that spans the
-spectrum from minimum total social cost to maximum total social cost. We also
-study a special family of regular graphs in which all nodes imitate the "same"
-buying pattern, and show that if n is sufficiently large no such regular graph
-can be a pure Nash equilibrium. We analyze best-response walks on the
-configuration defined by the uniform game. Lastly, we extend our results to the
-case where each node seeks to minimize its maximum distance to the other nodes.
+Preference Games and Personalized Equilibria, with Applications to  Fractional BGP
 
-
-Preference Games and Personalized Equilibria, with Applications to
-  Fractional BGP
-
-  We study the complexity of computing equilibria in two classes of network
-games based on flows - fractional BGP (Border Gateway Protocol) games and
-fractional BBC (Bounded Budget Connection) games. BGP is the glue that holds
-the Internet together and hence its stability, i.e. the equilibria of
-fractional BGP games (Haxell, Wilfong), is a matter of practical importance.
-BBC games (Laoutaris et al) follow in the tradition of the large body of work
-on network formation games and capture a variety of applications ranging from
-social networks and overlay networks to peer-to-peer networks.
-  The central result of this paper is that there are no fully polynomial-time
-approximation schemes (unless PPAD is in FP) for computing equilibria in both
-fractional BGP games and fractional BBC games. We obtain this result by proving
-the hardness for a new and surprisingly simple game, the fractional preference
-game, which is reducible to both fractional BGP and BBC games.
-  We define a new flow-based notion of equilibrium for matrix games --
-personalized equilibria -- generalizing both fractional BBC and fractional BGP
-games. We prove not just the existence, but the existence of rational
-personalized equilibria for all matrix games, which implies the existence of
-rational equilibria for fractional BGP and BBC games. In particular, this
-provides an alternative proof and strengthening of the main result in [Haxell,
-Wilfong]. For k-player matrix games, where k = 2, we provide a combinatorial
-characterization leading to a polynomial-time algorithm for computing all
-personalized equilibria. For k >= 5, we prove that personalized equilibria are
-PPAD-hard to approximate in fully polynomial time. We believe that the concept
-of personalized equilibria has potential for real-world significance.
-
+  We study the complexity of computing equilibria in two classes of networkgames based on flows - fractional BGP (Border Gateway Protocol) games andfractional BBC (Bounded Budget Connection) games. BGP is the glue that holdsthe Internet together and hence its stability, i.e. the equilibria offractional BGP games (Haxell, Wilfong), is a matter of practical importance.BBC games (Laoutaris et al) follow in the tradition of the large body of workon network formation games and capture a variety of applications ranging fromsocial networks and overlay networks to peer-to-peer networks.  The central result of this paper is that there are no fully polynomial-timeapproximation schemes (unless PPAD is in FP) for computing equilibria in bothfractional BGP games and fractional BBC games. We obtain this result by provingthe hardness for a new and surprisingly simple game, the fractional preferencegame, which is reducible to both fractional BGP and BBC games.  We define a new flow-based notion of equilibrium for matrix games --personalized equilibria -- generalizing both fractional BBC and fractional BGPgames. We prove not just the existence, but the existence of rationalpersonalized equilibria for all matrix games, which implies the existence ofrational equilibria for fractional BGP and BBC games. In particular, thisprovides an alternative proof and strengthening of the main result in [Haxell,Wilfong]. For k-player matrix games, where k = 2, we provide a combinatorialcharacterization leading to a polynomial-time algorithm for computing allpersonalized equilibria. For k >= 5, we prove that personalized equilibria arePPAD-hard to approximate in fully polynomial time. We believe that the conceptof personalized equilibria has potential for real-world significance.
 
 Capacitated Caching Games
 
-  Motivated by P2P networks and content delivery applications, we study
-Capacitated Selfish Replication (CSR) games, which involve nodes on a network
-making strategic choices regarding the content to replicate in their caches.
-Selfish Replication games were introduced in [Chun et al, PODC2004}, who
-analyzed the uncapacitated case leaving the capacitated version as an open
-direction.
-  In this work, we study pure Nash equilibria of CSR games with an emphasis on
-hierarchical networks. Our main result is an exact polynomial-time algorithm
-for finding a Nash Equilibrium in any hierarchical network using a new
-technique which we term "fictional players". We show that this technique
-extends to a general framework of natural preference orders, orders that are
-entirely arbitrary except for two natural constraints - "Nearer is better" and
-"Independence of irrelevant alternatives".
-  Using our axiomatic framework, we next study CSR games on arbitrary networks
-and delineate the boundary between intractability and effective computability
-in terms of the network structure, object preferences, and the total number of
-objects. We also show the existence of equilibria for general undirected
-networks when either object preferences are binary or there are two objects.
-For general CSR games, however, we show that it is NP-hard to determine whether
-equilibria exist. We also show that the existence of equilibria in strongly
-connected networks with two objects and binary object preferences can be
-determined in polynomial time via a reduction to the well-studied even-cycle
-problem. Finally, we introduce a fractional version of CSR games (F-SCR) with
-application to content distribution using erasure codes. We show that while
-every F-CSR game instance possesses an equilibrium, finding an equilibrium in
-an F-CSR game is PPAD-complete.
-
+  Motivated by P2P networks and content delivery applications, we studyCapacitated Selfish Replication (CSR) games, which involve nodes on a networkmaking strategic choices regarding the content to replicate in their caches.Selfish Replication games were introduced in [Chun et al, PODC2004}, whoanalyzed the uncapacitated case leaving the capacitated version as an opendirection.  In this work, we study pure Nash equilibria of CSR games with an emphasis onhierarchical networks. Our main result is an exact polynomial-time algorithmfor finding a Nash Equilibrium in any hierarchical network using a newtechnique which we term "fictional players". We show that this techniqueextends to a general framework of natural preference orders, orders that areentirely arbitrary except for two natural constraints - "Nearer is better" and"Independence of irrelevant alternatives".  Using our axiomatic framework, we next study CSR games on arbitrary networksand delineate the boundary between intractability and effective computabilityin terms of the network structure, object preferences, and the total number ofobjects. We also show the existence of equilibria for general undirectednetworks when either object preferences are binary or there are two objects.For general CSR games, however, we show that it is NP-hard to determine whetherequilibria exist. We also show that the existence of equilibria in stronglyconnected networks with two objects and binary object preferences can bedetermined in polynomial time via a reduction to the well-studied even-cycleproblem. Finally, we introduce a fractional version of CSR games (F-SCR) withapplication to content distribution using erasure codes. We show that whileevery F-CSR game instance possesses an equilibrium, finding an equilibrium inan F-CSR game is PPAD-complete.
 
 Deterministic Blind Rendezvous in Cognitive Radio Networks
 
-  Blind rendezvous is a fundamental problem in cognitive radio networks. The
-problem involves a collection of agents (radios) that wish to discover each
-other in the blind setting where there is no shared infrastructure and they
-initially have no knowledge of each other. Time is divided into discrete slots;
-spectrum is divided into discrete channels, $\{1,2,..., n\}$. Each agent may
-access a single channel in a single time slot and we say that two agents
-rendezvous when they access the same channel in the same time slot. The model
-is asymmetric: each agent $A_i$ may only use a particular subset $S_i$ of the
-channels and different agents may have access to different subsets of channels.
-The goal is to design deterministic channel hopping schedules for each agent so
-as to guarantee rendezvous between any pair of agents with overlapping channel
-sets.
-  Two independent sets of authors, Shin et al. and Lin et al., gave the first
-constructions guaranteeing asynchronous blind rendezvous in $O(n^2)$ and
-$O(n^3)$ time, respectively. We present a substantially improved construction
-guaranteeing that any two agents, $A_i$, $A_j$, will rendezvous in $O(|S_i|
-|S_j| \log\log n)$ time. Our results are the first that achieve nontrivial
-dependence on $|S_i|$, the size of the set of available channels. This allows
-us, for example, to save roughly a quadratic factor over the best previous
-results in the important case when channel subsets have constant size. We also
-achieve the best possible bound of $O(1)$ time for the symmetric situation;
-previous works could do no better than $O(n)$. Using the probabilistic method
-and Ramsey theory we provide evidence in support of our suspicion that our
-construction is asymptotically optimal for small size channel subsets: we show
-both a $c |S_i||S_j|$ lower bound and a $c \log\log n$ lower bound when $|S_i|,
-|S_j| \leq n/2$.
-
+  Blind rendezvous is a fundamental problem in cognitive radio networks. Theproblem involves a collection of agents (radios) that wish to discover eachother in the blind setting where there is no shared infrastructure and theyinitially have no knowledge of each other. Time is divided into discrete slots;spectrum is divided into discrete channels, $\{1,2,..., n\}$. Each agent mayaccess a single channel in a single time slot and we say that two agentsrendezvous when they access the same channel in the same time slot. The modelis asymmetric: each agent $A_i$ may only use a particular subset $S_i$ of thechannels and different agents may have access to different subsets of channels.The goal is to design deterministic channel hopping schedules for each agent soas to guarantee rendezvous between any pair of agents with overlapping channelsets.  Two independent sets of authors, Shin et al. and Lin et al., gave the firstconstructions guaranteeing asynchronous blind rendezvous in $O(n^2)$ and$O(n^3)$ time, respectively. We present a substantially improved constructionguaranteeing that any two agents, $A_i$, $A_j$, will rendezvous in $O(|S_i||S_j| \log\log n)$ time. Our results are the first that achieve nontrivialdependence on $|S_i|$, the size of the set of available channels. This allowsus, for example, to save roughly a quadratic factor over the best previousresults in the important case when channel subsets have constant size. We alsoachieve the best possible bound of $O(1)$ time for the symmetric situation;previous works could do no better than $O(n)$. Using the probabilistic methodand Ramsey theory we provide evidence in support of our suspicion that ourconstruction is asymptotically optimal for small size channel subsets: we showboth a $c |S_i||S_j|$ lower bound and a $c \log\log n$ lower bound when $|S_i|,|S_j| \leq n/2$.
 
 On The Network You Keep: Analyzing Persons of Interest using Cliqster
 
-  Our goal is to determine the structural differences between different
-categories of networks and to use these differences to predict the network
-category. Existing work on this topic has looked at social networks such as
-Facebook, Twitter, co-author networks etc. We, instead, focus on a novel data
-set that we have assembled from a variety of sources, including law-enforcement
-agencies, financial institutions, commercial database providers and other
-similar organizations. The data set comprises networks of "persons of interest"
-with each network belonging to different categories such as suspected
-terrorists, convicted individuals etc. We demonstrate that such "anti-social"
-networks are qualitatively different from the usual social networks and that
-new techniques are required to identify and learn features of such networks for
-the purposes of prediction and classification.
-  We propose Cliqster, a new generative Bernoulli process-based model for
-unweighted networks. The generating probabilities are the result of a
-decomposition which reflects a network's community structure. Using a maximum
-likelihood solution for the network inference leads to a least-squares problem.
-By solving this problem, we are able to present an efficient algorithm for
-transforming the network to a new space which is both concise and
-discriminative. This new space preserves the identity of the network as much as
-possible. Our algorithm is interpretable and intuitive. Finally, by comparing
-our research against the baseline method (SVD) and against a state-of-the-art
-Graphlet algorithm, we show the strength of our algorithm in discriminating
-between different categories of networks.
-
+  Our goal is to determine the structural differences between differentcategories of networks and to use these differences to predict the networkcategory. Existing work on this topic has looked at social networks such asFacebook, Twitter, co-author networks etc. We, instead, focus on a novel dataset that we have assembled from a variety of sources, including law-enforcementagencies, financial institutions, commercial database providers and othersimilar organizations. The data set comprises networks of "persons of interest"with each network belonging to different categories such as suspectedterrorists, convicted individuals etc. We demonstrate that such "anti-social"networks are qualitatively different from the usual social networks and thatnew techniques are required to identify and learn features of such networks forthe purposes of prediction and classification.  We propose Cliqster, a new generative Bernoulli process-based model forunweighted networks. The generating probabilities are the result of adecomposition which reflects a network's community structure. Using a maximumlikelihood solution for the network inference leads to a least-squares problem.By solving this problem, we are able to present an efficient algorithm fortransforming the network to a new space which is both concise anddiscriminative. This new space preserves the identity of the network as much aspossible. Our algorithm is interpretable and intuitive. Finally, by comparingour research against the baseline method (SVD) and against a state-of-the-artGraphlet algorithm, we show the strength of our algorithm in discriminatingbetween different categories of networks.
 

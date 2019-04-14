@@ -1,181 +1,36 @@
 Estimation for Quadrotors
 
-  This document describes standard approaches for filtering and estimation for
-quadrotors, created for the Udacity Flying Cars course. We assume previous
-knowledge of probability and some knowledge of linear algebra. We do not assume
-previous knowledge of Kalman filters or Bayes filters. This document derives an
-EKF for various models of drones in 1D, 2D, and 3D. We use the EKF and notation
-as defined in Thrun et al. [13]. We also give pseudocode for the Bayes filter,
-the EKF, and the Unscented Kalman filter [14]. The motivation behind this
-document is the lack of a step-by-step EKF tutorial that provides the
-derivations for a quadrotor helicopter. The goal of estimation is to infer the
-drone's state (pose, velocity, acceleration, and biases) from its sensor values
-and control inputs. This problem is challenging because sensors are noisy.
-Additionally, because of weight and cost issues, many drones have limited
-on-board computation so we want to estimate these values as quickly as
-possible. The standard method for performing this method is the Extended Kalman
-filter, a nonlinear extension of the Kalman filter which linearizes a nonlinear
-transition and measurement model around the current state. However the
-Unscented Kalman filter is better in almost every respect: simpler to
-implement, more accurate to estimate, and comparable runtimes.
+  This document describes standard approaches for filtering and estimation forquadrotors, created for the Udacity Flying Cars course. We assume previousknowledge of probability and some knowledge of linear algebra. We do not assumeprevious knowledge of Kalman filters or Bayes filters. This document derives anEKF for various models of drones in 1D, 2D, and 3D. We use the EKF and notationas defined in Thrun et al. [13]. We also give pseudocode for the Bayes filter,the EKF, and the Unscented Kalman filter [14]. The motivation behind thisdocument is the lack of a step-by-step EKF tutorial that provides thederivations for a quadrotor helicopter. The goal of estimation is to infer thedrone's state (pose, velocity, acceleration, and biases) from its sensor valuesand control inputs. This problem is challenging because sensors are noisy.Additionally, because of weight and cost issues, many drones have limitedon-board computation so we want to estimate these values as quickly aspossible. The standard method for performing this method is the Extended Kalmanfilter, a nonlinear extension of the Kalman filter which linearizes a nonlineartransition and measurement model around the current state. However theUnscented Kalman filter is better in almost every respect: simpler toimplement, more accurate to estimate, and comparable runtimes.
 
+Advantages and Limitations of using Successor Features for Transfer in  Reinforcement Learning
 
-Advantages and Limitations of using Successor Features for Transfer in
-  Reinforcement Learning
+  One question central to Reinforcement Learning is how to learn a featurerepresentation that supports algorithm scaling and re-use of learnedinformation from different tasks. Successor Features approach this problem bylearning a feature representation that satisfies a temporal constraint. Wepresent an implementation of an approach that decouples the featurerepresentation from the reward function, making it suitable for transferringknowledge between domains. We then assess the advantages and limitations ofusing Successor Features for transfer.
 
-  One question central to Reinforcement Learning is how to learn a feature
-representation that supports algorithm scaling and re-use of learned
-information from different tasks. Successor Features approach this problem by
-learning a feature representation that satisfies a temporal constraint. We
-present an implementation of an approach that decouples the feature
-representation from the reward function, making it suitable for transferring
-knowledge between domains. We then assess the advantages and limitations of
-using Successor Features for transfer.
+A Tale of Two DRAGGNs: A Hybrid Approach for Interpreting  Action-Oriented and Goal-Oriented Instructions
 
+  Robots operating alongside humans in diverse, stochastic environments must beable to accurately interpret natural language commands. These instructionsoften fall into one of two categories: those that specify a goal condition ortarget state, and those that specify explicit actions, or how to perform agiven task. Recent approaches have used reward functions as a semanticrepresentation of goal-based commands, which allows for the use of astate-of-the-art planner to find a policy for the given task. However, thesereward functions cannot be directly used to represent action-oriented commands.We introduce a new hybrid approach, the Deep Recurrent Action-Goal GroundingNetwork (DRAGGN), for task grounding and execution that handles naturallanguage from either category as input, and generalizes to unseen environments.Our robot-simulation results demonstrate that a system successfullyinterpreting both goal-oriented and action-oriented task specifications bringsus closer to robust natural language understanding for human-robot interaction.
 
-A Tale of Two DRAGGNs: A Hybrid Approach for Interpreting
-  Action-Oriented and Goal-Oriented Instructions
+Communicating Robot Arm Motion Intent Through Mixed Reality Head-mounted  Displays
 
-  Robots operating alongside humans in diverse, stochastic environments must be
-able to accurately interpret natural language commands. These instructions
-often fall into one of two categories: those that specify a goal condition or
-target state, and those that specify explicit actions, or how to perform a
-given task. Recent approaches have used reward functions as a semantic
-representation of goal-based commands, which allows for the use of a
-state-of-the-art planner to find a policy for the given task. However, these
-reward functions cannot be directly used to represent action-oriented commands.
-We introduce a new hybrid approach, the Deep Recurrent Action-Goal Grounding
-Network (DRAGGN), for task grounding and execution that handles natural
-language from either category as input, and generalizes to unseen environments.
-Our robot-simulation results demonstrate that a system successfully
-interpreting both goal-oriented and action-oriented task specifications brings
-us closer to robust natural language understanding for human-robot interaction.
-
-
-Communicating Robot Arm Motion Intent Through Mixed Reality Head-mounted
-  Displays
-
-  Efficient motion intent communication is necessary for safe and collaborative
-work environments with collocated humans and robots. Humans efficiently
-communicate their motion intent to other humans through gestures, gaze, and
-social cues. However, robots often have difficulty efficiently communicating
-their motion intent to humans via these methods. Many existing methods for
-robot motion intent communication rely on 2D displays, which require the human
-to continually pause their work and check a visualization. We propose a mixed
-reality head-mounted display visualization of the proposed robot motion over
-the wearer's real-world view of the robot and its environment. To evaluate the
-effectiveness of this system against a 2D display visualization and against no
-visualization, we asked 32 participants to labeled different robot arm motions
-as either colliding or non-colliding with blocks on a table. We found a 16%
-increase in accuracy with a 62% decrease in the time it took to complete the
-task compared to the next best system. This demonstrates that a mixed-reality
-HMD allows a human to more quickly and accurately tell where the robot is going
-to move than the compared baselines.
-
+  Efficient motion intent communication is necessary for safe and collaborativework environments with collocated humans and robots. Humans efficientlycommunicate their motion intent to other humans through gestures, gaze, andsocial cues. However, robots often have difficulty efficiently communicatingtheir motion intent to humans via these methods. Many existing methods forrobot motion intent communication rely on 2D displays, which require the humanto continually pause their work and check a visualization. We propose a mixedreality head-mounted display visualization of the proposed robot motion overthe wearer's real-world view of the robot and its environment. To evaluate theeffectiveness of this system against a 2D display visualization and against novisualization, we asked 32 participants to labeled different robot arm motionsas either colliding or non-colliding with blocks on a table. We found a 16%increase in accuracy with a 62% decrease in the time it took to complete thetask compared to the next best system. This demonstrates that a mixed-realityHMD allows a human to more quickly and accurately tell where the robot is goingto move than the compared baselines.
 
 Deep Abstract Q-Networks
 
-  We examine the problem of learning and planning on high-dimensional domains
-with long horizons and sparse rewards. Recent approaches have shown great
-successes in many Atari 2600 domains. However, domains with long horizons and
-sparse rewards, such as Montezuma's Revenge and Venture, remain challenging for
-existing methods. Methods using abstraction (Dietterich 2000; Sutton, Precup,
-and Singh 1999) have shown to be useful in tackling long-horizon problems. We
-combine recent techniques of deep reinforcement learning with existing
-model-based approaches using an expert-provided state abstraction. We construct
-toy domains that elucidate the problem of long horizons, sparse rewards and
-high-dimensional inputs, and show that our algorithm significantly outperforms
-previous methods on these domains. Our abstraction-based approach outperforms
-Deep Q-Networks (Mnih et al. 2015) on Montezuma's Revenge and Venture, and
-exhibits backtracking behavior that is absent from previous methods.
-
+  We examine the problem of learning and planning on high-dimensional domainswith long horizons and sparse rewards. Recent approaches have shown greatsuccesses in many Atari 2600 domains. However, domains with long horizons andsparse rewards, such as Montezuma's Revenge and Venture, remain challenging forexisting methods. Methods using abstraction (Dietterich 2000; Sutton, Precup,and Singh 1999) have shown to be useful in tackling long-horizon problems. Wecombine recent techniques of deep reinforcement learning with existingmodel-based approaches using an expert-provided state abstraction. We constructtoy domains that elucidate the problem of long horizons, sparse rewards andhigh-dimensional inputs, and show that our algorithm significantly outperformsprevious methods on these domains. Our abstraction-based approach outperformsDeep Q-Networks (Mnih et al. 2015) on Montezuma's Revenge and Venture, andexhibits backtracking behavior that is absent from previous methods.
 
 Implementing the Deep Q-Network
 
-  The Deep Q-Network proposed by Mnih et al. [2015] has become a benchmark and
-building point for much deep reinforcement learning research. However,
-replicating results for complex systems is often challenging since original
-scientific publications are not always able to describe in detail every
-important parameter setting and software engineering solution. In this paper,
-we present results from our work reproducing the results of the DQN paper. We
-highlight key areas in the implementation that were not covered in great detail
-in the original paper to make it easier for researchers to replicate these
-results, including termination conditions and gradient descent algorithms.
-Finally, we discuss methods for improving the computational performance and
-provide our own implementation that is designed to work with a range of
-domains, and not just the original Arcade Learning Environment [Bellemare et
-al., 2013].
-
+  The Deep Q-Network proposed by Mnih et al. [2015] has become a benchmark andbuilding point for much deep reinforcement learning research. However,replicating results for complex systems is often challenging since originalscientific publications are not always able to describe in detail everyimportant parameter setting and software engineering solution. In this paper,we present results from our work reproducing the results of the DQN paper. Wehighlight key areas in the implementation that were not covered in great detailin the original paper to make it easier for researchers to replicate theseresults, including termination conditions and gradient descent algorithms.Finally, we discuss methods for improving the computational performance andprovide our own implementation that is designed to work with a range ofdomains, and not just the original Arcade Learning Environment [Bellemare etal., 2013].
 
 Scanning the Internet for ROS: A View of Security in Robotics Research
 
-  Because robots can directly perceive and affect the physical world, security
-issues take on particular importance. In this paper, we describe the results of
-our work on scanning the entire IPv4 address space of the Internet for
-instances of the Robot Operating System (ROS), a widely used robotics platform
-for research. Our results identified that a number of hosts supporting ROS are
-exposed to the public Internet, thereby allowing anyone to access robotic
-sensors and actuators. As a proof of concept, and with consent, we were able to
-read image sensor information and move the robot of a research group in a US
-university. This paper gives an overview of our findings, including the
-geographic distribution of publicly-accessible platforms, the sorts of sensor
-and actuator data that is available, as well as the different kinds of robots
-and sensors that our scan uncovered. Additionally, we offer recommendations on
-best practices to mitigate these security issues in the future.
+  Because robots can directly perceive and affect the physical world, securityissues take on particular importance. In this paper, we describe the results ofour work on scanning the entire IPv4 address space of the Internet forinstances of the Robot Operating System (ROS), a widely used robotics platformfor research. Our results identified that a number of hosts supporting ROS areexposed to the public Internet, thereby allowing anyone to access roboticsensors and actuators. As a proof of concept, and with consent, we were able toread image sensor information and move the robot of a research group in a USuniversity. This paper gives an overview of our findings, including thegeographic distribution of publicly-accessible platforms, the sorts of sensorand actuator data that is available, as well as the different kinds of robotsand sensors that our scan uncovered. Additionally, we offer recommendations onbest practices to mitigate these security issues in the future.
 
+Accurately and Efficiently Interpreting Human-Robot Instructions of  Varying Granularities
 
-Accurately and Efficiently Interpreting Human-Robot Instructions of
-  Varying Granularities
+  Humans can ground natural language commands to tasks at both abstract andfine-grained levels of specificity. For instance, a human forklift operator canbe instructed to perform a high-level action, like "grab a pallet" or alow-level action like "tilt back a little bit." While robots are also capableof grounding language commands to tasks, previous methods implicitly assumethat all commands and tasks reside at a single, fixed level of abstraction.Additionally, methods that do not use multiple levels of abstraction encounterinefficient planning and execution times as they solve tasks at a single levelof abstraction with large, intractable state-action spaces closely resemblingreal world complexity. In this work, by grounding commands to all the tasks orsubtasks available in a hierarchical planning framework, we arrive at a modelcapable of interpreting language at multiple levels of specificity ranging fromcoarse to more granular. We show that the accuracy of the grounding procedureis improved when simultaneously inferring the degree of abstraction in languageused to communicate the task. Leveraging hierarchy also improves efficiency:our proposed approach enables a robot to respond to a command within one secondon 90% of our tasks, while baselines take over twenty seconds on half thetasks. Finally, we demonstrate that a real, physical robot can ground commandsat multiple levels of abstraction allowing it to efficiently plan differentsubtasks within the same planning hierarchy.
 
-  Humans can ground natural language commands to tasks at both abstract and
-fine-grained levels of specificity. For instance, a human forklift operator can
-be instructed to perform a high-level action, like "grab a pallet" or a
-low-level action like "tilt back a little bit." While robots are also capable
-of grounding language commands to tasks, previous methods implicitly assume
-that all commands and tasks reside at a single, fixed level of abstraction.
-Additionally, methods that do not use multiple levels of abstraction encounter
-inefficient planning and execution times as they solve tasks at a single level
-of abstraction with large, intractable state-action spaces closely resembling
-real world complexity. In this work, by grounding commands to all the tasks or
-subtasks available in a hierarchical planning framework, we arrive at a model
-capable of interpreting language at multiple levels of specificity ranging from
-coarse to more granular. We show that the accuracy of the grounding procedure
-is improved when simultaneously inferring the degree of abstraction in language
-used to communicate the task. Leveraging hierarchy also improves efficiency:
-our proposed approach enables a robot to respond to a command within one second
-on 90% of our tasks, while baselines take over twenty seconds on half the
-tasks. Finally, we demonstrate that a real, physical robot can ground commands
-at multiple levels of abstraction allowing it to efficiently plan different
-subtasks within the same planning hierarchy.
+Generalized Grounding Graphs: A Probabilistic Framework for  Understanding Grounded Commands
 
-
-Generalized Grounding Graphs: A Probabilistic Framework for
-  Understanding Grounded Commands
-
-  Many task domains require robots to interpret and act upon natural language
-commands which are given by people and which refer to the robot's physical
-surroundings. Such interpretation is known variously as the symbol grounding
-problem, grounded semantics and grounded language acquisition. This problem is
-challenging because people employ diverse vocabulary and grammar, and because
-robots have substantial uncertainty about the nature and contents of their
-surroundings, making it difficult to associate the constitutive language
-elements (principally noun phrases and spatial relations) of the command text
-to elements of those surroundings. Symbolic models capture linguistic structure
-but have not scaled successfully to handle the diverse language produced by
-untrained users. Existing statistical approaches can better handle diversity,
-but have not to date modeled complex linguistic structure, limiting achievable
-accuracy. Recent hybrid approaches have addressed limitations in scaling and
-complexity, but have not effectively associated linguistic and perceptual
-features. Our framework, called Generalized Grounding Graphs (G^3), addresses
-these issues by defining a probabilistic graphical model dynamically according
-to the linguistic parse structure of a natural language command. This approach
-scales effectively, handles linguistic diversity, and enables the system to
-associate parts of a command with the specific objects, places, and events in
-the external world to which they refer. We show that robots can learn word
-meanings and use those learned meanings to robustly follow natural language
-commands produced by untrained users. We demonstrate our approach for both
-mobility commands and mobile manipulation commands involving a variety of
-semi-autonomous robotic platforms, including a wheelchair, a micro-air vehicle,
-a forklift, and the Willow Garage PR2.
-
+  Many task domains require robots to interpret and act upon natural languagecommands which are given by people and which refer to the robot's physicalsurroundings. Such interpretation is known variously as the symbol groundingproblem, grounded semantics and grounded language acquisition. This problem ischallenging because people employ diverse vocabulary and grammar, and becauserobots have substantial uncertainty about the nature and contents of theirsurroundings, making it difficult to associate the constitutive languageelements (principally noun phrases and spatial relations) of the command textto elements of those surroundings. Symbolic models capture linguistic structurebut have not scaled successfully to handle the diverse language produced byuntrained users. Existing statistical approaches can better handle diversity,but have not to date modeled complex linguistic structure, limiting achievableaccuracy. Recent hybrid approaches have addressed limitations in scaling andcomplexity, but have not effectively associated linguistic and perceptualfeatures. Our framework, called Generalized Grounding Graphs (G^3), addressesthese issues by defining a probabilistic graphical model dynamically accordingto the linguistic parse structure of a natural language command. This approachscales effectively, handles linguistic diversity, and enables the system toassociate parts of a command with the specific objects, places, and events inthe external world to which they refer. We show that robots can learn wordmeanings and use those learned meanings to robustly follow natural languagecommands produced by untrained users. We demonstrate our approach for bothmobility commands and mobile manipulation commands involving a variety ofsemi-autonomous robotic platforms, including a wheelchair, a micro-air vehicle,a forklift, and the Willow Garage PR2.
 

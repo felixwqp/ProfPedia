@@ -1,688 +1,144 @@
 SpeedMachines: Anytime Structured Prediction
 
-  Structured prediction plays a central role in machine learning applications
-from computational biology to computer vision. These models require
-significantly more computation than unstructured models, and, in many
-applications, algorithms may need to make predictions within a computational
-budget or in an anytime fashion. In this work we propose an anytime technique
-for learning structured prediction that, at training time, incorporates both
-structural elements and feature computation trade-offs that affect test-time
-inference. We apply our technique to the challenging problem of scene
-understanding in computer vision and demonstrate efficient and anytime
-predictions that gradually improve towards state-of-the-art classification
-performance as the allotted time increases.
-
+  Structured prediction plays a central role in machine learning applicationsfrom computational biology to computer vision. These models requiresignificantly more computation than unstructured models, and, in manyapplications, algorithms may need to make predictions within a computationalbudget or in an anytime fashion. In this work we propose an anytime techniquefor learning structured prediction that, at training time, incorporates bothstructural elements and feature computation trade-offs that affect test-timeinference. We apply our technique to the challenging problem of sceneunderstanding in computer vision and demonstrate efficient and anytimepredictions that gradually improve towards state-of-the-art classificationperformance as the allotted time increases.
 
 Direct Fitting of Gaussian Mixture Models
 
-  When fitting Gaussian Mixture Models to 3D geometry, the model is typically
-fit to point clouds, even when the shapes were obtained as 3D meshes. Here we
-present a formulation for fitting Gaussian Mixture Models (GMMs) directly to
-geometric objects, using the triangles of triangular mesh instead of using
-points sampled from its surface. We demonstrate that this modification enables
-fitting higher-quality GMMs under a wider range of initialization conditions.
-Additionally, models obtained from this fitting method are shown to produce an
-improvement in 3D registration for both meshes and RGB-D frames.
-
+  When fitting Gaussian Mixture Models to 3D geometry, the model is typicallyfit to point clouds, even when the shapes were obtained as 3D meshes. Here wepresent a formulation for fitting Gaussian Mixture Models (GMMs) directly togeometric objects, using the triangles of triangular mesh instead of usingpoints sampled from its surface. We demonstrate that this modification enablesfitting higher-quality GMMs under a wider range of initialization conditions.Additionally, models obtained from this fitting method are shown to produce animprovement in 3D registration for both meshes and RGB-D frames.
 
 Predicting Contextual Sequences via Submodular Function Maximization
 
-  Sequence optimization, where the items in a list are ordered to maximize some
-reward has many applications such as web advertisement placement, search, and
-control libraries in robotics. Previous work in sequence optimization produces
-a static ordering that does not take any features of the item or context of the
-problem into account. In this work, we propose a general approach to order the
-items within the sequence based on the context (e.g., perceptual information,
-environment description, and goals). We take a simple, efficient,
-reduction-based approach where the choice and order of the items is established
-by repeatedly learning simple classifiers or regressors for each "slot" in the
-sequence. Our approach leverages recent work on submodular function
-maximization to provide a formal regret reduction from submodular sequence
-optimization to simple cost-sensitive prediction. We apply our contextual
-sequence prediction algorithm to optimize control libraries and demonstrate
-results on two robotics problems: manipulator trajectory prediction and mobile
-robot path planning.
-
-
-Learning Monocular Reactive UAV Control in Cluttered Natural
-  Environments
-
-  Autonomous navigation for large Unmanned Aerial Vehicles (UAVs) is fairly
-straight-forward, as expensive sensors and monitoring devices can be employed.
-In contrast, obstacle avoidance remains a challenging task for Micro Aerial
-Vehicles (MAVs) which operate at low altitude in cluttered environments. Unlike
-large vehicles, MAVs can only carry very light sensors, such as cameras, making
-autonomous navigation through obstacles much more challenging. In this paper,
-we describe a system that navigates a small quadrotor helicopter autonomously
-at low altitude through natural forest environments. Using only a single cheap
-camera to perceive the environment, we are able to maintain a constant velocity
-of up to 1.5m/s. Given a small set of human pilot demonstrations, we use recent
-state-of-the-art imitation learning techniques to train a controller that can
-avoid trees by adapting the MAVs heading. We demonstrate the performance of our
-system in a more controlled environment indoors, and in real natural forest
-environments outdoors.
-
-
-Visual Chunking: A List Prediction Framework for Region-Based Object
-  Detection
-
-  We consider detecting objects in an image by iteratively selecting from a set
-of arbitrarily shaped candidate regions. Our generic approach, which we term
-visual chunking, reasons about the locations of multiple object instances in an
-image while expressively describing object boundaries. We design an
-optimization criterion for measuring the performance of a list of such
-detections as a natural extension to a common per-instance metric. We present
-an efficient algorithm with provable performance for building a high-quality
-list of detections from any candidate set of region-based proposals. We also
-develop a simple class-specific algorithm to generate a candidate region
-instance in near-linear time in the number of low-level superpixels that
-outperforms other region generating methods. In order to make predictions on
-novel images at testing time without access to ground truth, we develop
-learning approaches to emulate these algorithms' behaviors. We demonstrate that
-our new approach outperforms sophisticated baselines on benchmark datasets.
-
-
-Dense Optical Flow Prediction from a Static Image
-
-  Given a scene, what is going to move, and in what direction will it move?
-Such a question could be considered a non-semantic form of action prediction.
-In this work, we present a convolutional neural network (CNN) based approach
-for motion prediction. Given a static image, this CNN predicts the future
-motion of each and every pixel in the image in terms of optical flow. Our CNN
-model leverages the data in tens of thousands of realistic videos to train our
-model. Our method relies on absolutely no human labeling and is able to predict
-motion based on the context of the scene. Because our CNN model makes no
-assumptions about the underlying scene, it can predict future optical flow on a
-diverse set of scenarios. We outperform all previous approaches by large
-margins.
-
-
-Watch and Learn: Semi-Supervised Learning of Object Detectors from
-  Videos
-
-  We present a semi-supervised approach that localizes multiple unknown object
-instances in long videos. We start with a handful of labeled boxes and
-iteratively learn and label hundreds of thousands of object instances. We
-propose criteria for reliable object detection and tracking for constraining
-the semi-supervised learning process and minimizing semantic drift. Our
-approach does not assume exhaustive labeling of each object instance in any
-single frame, or any explicit annotation of negative data. Working in such a
-generic setting allow us to tackle multiple object instances in video, many of
-which are static. In contrast, existing approaches either do not consider
-multiple object instances per video, or rely heavily on the motion of the
-objects present. The experiments demonstrate the effectiveness of our approach
-by evaluating the automatically labeled data on a variety of metrics like
-quality, coverage (recall), diversity, and relevance to training an object
-detector.
-
-
-An Uncertain Future: Forecasting from Static Images using Variational
-  Autoencoders
-
-  In a given scene, humans can often easily predict a set of immediate future
-events that might happen. However, generalized pixel-level anticipation in
-computer vision systems is difficult because machine learning struggles with
-the ambiguity inherent in predicting the future. In this paper, we focus on
-predicting the dense trajectory of pixels in a scene, specifically what will
-move in the scene, where it will travel, and how it will deform over the course
-of one second. We propose a conditional variational autoencoder as a solution
-to this problem. In this framework, direct inference from the image shapes the
-distribution of possible trajectories, while latent variables encode any
-necessary information that is not available in the image. We show that our
-method is able to successfully predict events in a wide variety of scenes and
-can produce multiple different predictions when the future is ambiguous. Our
-algorithm is trained on thousands of diverse, realistic videos and requires
-absolutely no human labeling. In addition to non-semantic action prediction, we
-find that our method learns a representation that is applicable to semantic
-vision tasks.
-
+  Sequence optimization, where the items in a list are ordered to maximize somereward has many applications such as web advertisement placement, search, andcontrol libraries in robotics. Previous work in sequence optimization producesa static ordering that does not take any features of the item or context of theproblem into account. In this work, we propose a general approach to order theitems within the sequence based on the context (e.g., perceptual information,environment description, and goals). We take a simple, efficient,reduction-based approach where the choice and order of the items is establishedby repeatedly learning simple classifiers or regressors for each "slot" in thesequence. Our approach leverages recent work on submodular functionmaximization to provide a formal regret reduction from submodular sequenceoptimization to simple cost-sensitive prediction. We apply our contextualsequence prediction algorithm to optimize control libraries and demonstrateresults on two robotics problems: manipulator trajectory prediction and mobilerobot path planning.
 
 How important are Deformable Parts in the Deformable Parts Model?
 
-  The main stated contribution of the Deformable Parts Model (DPM) detector of
-Felzenszwalb et al. (over the Histogram-of-Oriented-Gradients approach of Dalal
-and Triggs) is the use of deformable parts. A secondary contribution is the
-latent discriminative learning. Tertiary is the use of multiple components. A
-common belief in the vision community (including ours, before this study) is
-that their ordering of contributions reflects the performance of detector in
-practice. However, what we have experimentally found is that the ordering of
-importance might actually be the reverse. First, we show that by increasing the
-number of components, and switching the initialization step from their
-aspect-ratio, left-right flipping heuristics to appearance-based clustering,
-considerable improvement in performance is obtained. But more intriguingly, we
-show that with these new components, the part deformations can now be
-completely switched off, yet obtaining results that are almost on par with the
-original DPM detector. Finally, we also show initial results for using multiple
-components on a different problem -- scene classification, suggesting that this
-idea might have wider applications in addition to object detection.
+  The main stated contribution of the Deformable Parts Model (DPM) detector ofFelzenszwalb et al. (over the Histogram-of-Oriented-Gradients approach of Dalaland Triggs) is the use of deformable parts. A secondary contribution is thelatent discriminative learning. Tertiary is the use of multiple components. Acommon belief in the vision community (including ours, before this study) isthat their ordering of contributions reflects the performance of detector inpractice. However, what we have experimentally found is that the ordering ofimportance might actually be the reverse. First, we show that by increasing thenumber of components, and switching the initialization step from theiraspect-ratio, left-right flipping heuristics to appearance-based clustering,considerable improvement in performance is obtained. But more intriguingly, weshow that with these new components, the part deformations can now becompletely switched off, yet obtaining results that are almost on par with theoriginal DPM detector. Finally, we also show initial results for using multiplecomponents on a different problem -- scene classification, suggesting that thisidea might have wider applications in addition to object detection.
 
+Learning Monocular Reactive UAV Control in Cluttered Natural  Environments
 
-Learning to Extract Motion from Videos in Convolutional Neural Networks
+  Autonomous navigation for large Unmanned Aerial Vehicles (UAVs) is fairlystraight-forward, as expensive sensors and monitoring devices can be employed.In contrast, obstacle avoidance remains a challenging task for Micro AerialVehicles (MAVs) which operate at low altitude in cluttered environments. Unlikelarge vehicles, MAVs can only carry very light sensors, such as cameras, makingautonomous navigation through obstacles much more challenging. In this paper,we describe a system that navigates a small quadrotor helicopter autonomouslyat low altitude through natural forest environments. Using only a single cheapcamera to perceive the environment, we are able to maintain a constant velocityof up to 1.5m/s. Given a small set of human pilot demonstrations, we use recentstate-of-the-art imitation learning techniques to train a controller that canavoid trees by adapting the MAVs heading. We demonstrate the performance of oursystem in a more controlled environment indoors, and in real natural forestenvironments outdoors.
 
-  This paper shows how to extract dense optical flow from videos with a
-convolutional neural network (CNN). The proposed model constitutes a potential
-building block for deeper architectures to allow using motion without resorting
-to an external algorithm, \eg for recognition in videos. We derive our network
-architecture from signal processing principles to provide desired invariances
-to image contrast, phase and texture. We constrain weights within the network
-to enforce strict rotation invariance and substantially reduce the number of
-parameters to learn. We demonstrate end-to-end training on only 8 sequences of
-the Middlebury dataset, orders of magnitude less than competing CNN-based
-motion estimation methods, and obtain comparable performance to classical
-methods on the Middlebury benchmark. Importantly, our method outputs a
-distributed representation of motion that allows representing multiple,
-transparent motions, and dynamic textures. Our contributions on network design
-and rotation invariance offer insights nonspecific to motion estimation.
+Visual Chunking: A List Prediction Framework for Region-Based Object  Detection
 
-
-Shuffle and Learn: Unsupervised Learning using Temporal Order
-  Verification
-
-  In this paper, we present an approach for learning a visual representation
-from the raw spatiotemporal signals in videos. Our representation is learned
-without supervision from semantic labels. We formulate our method as an
-unsupervised sequential verification task, i.e., we determine whether a
-sequence of frames from a video is in the correct temporal order. With this
-simple task and no semantic labels, we learn a powerful visual representation
-using a Convolutional Neural Network (CNN). The representation contains
-complementary information to that learned from supervised image datasets like
-ImageNet. Qualitative results show that our method captures information that is
-temporally varying, such as human pose. When used as pre-training for action
-recognition, our method gives significant gains over learning without external
-data on benchmark datasets like UCF101 and HMDB51. To demonstrate its
-sensitivity to human pose, we show results for pose estimation on the FLIC and
-MPII datasets that are competitive, or better than approaches using
-significantly more supervision. Our method can be combined with supervised
-representations to provide an additional boost in accuracy.
-
+  We consider detecting objects in an image by iteratively selecting from a setof arbitrarily shaped candidate regions. Our generic approach, which we termvisual chunking, reasons about the locations of multiple object instances in animage while expressively describing object boundaries. We design anoptimization criterion for measuring the performance of a list of suchdetections as a natural extension to a common per-instance metric. We presentan efficient algorithm with provable performance for building a high-qualitylist of detections from any candidate set of region-based proposals. We alsodevelop a simple class-specific algorithm to generate a candidate regioninstance in near-linear time in the number of low-level superpixels thatoutperforms other region generating methods. In order to make predictions onnovel images at testing time without access to ground truth, we developlearning approaches to emulate these algorithms' behaviors. We demonstrate thatour new approach outperforms sophisticated baselines on benchmark datasets.
 
 Vision and Learning for Deliberative Monocular Cluttered Flight
 
-  Cameras provide a rich source of information while being passive, cheap and
-lightweight for small and medium Unmanned Aerial Vehicles (UAVs). In this work
-we present the first implementation of receding horizon control, which is
-widely used in ground vehicles, with monocular vision as the only sensing mode
-for autonomous UAV flight in dense clutter. We make it feasible on UAVs via a
-number of contributions: novel coupling of perception and control via relevant
-and diverse, multiple interpretations of the scene around the robot, leveraging
-recent advances in machine learning to showcase anytime budgeted cost-sensitive
-feature selection, and fast non-linear regression for monocular depth
-prediction. We empirically demonstrate the efficacy of our novel pipeline via
-real world experiments of more than 2 kms through dense trees with a quadrotor
-built from off-the-shelf parts. Moreover our pipeline is designed to combine
-information from other modalities like stereo and lidar as well if available.
+  Cameras provide a rich source of information while being passive, cheap andlightweight for small and medium Unmanned Aerial Vehicles (UAVs). In this workwe present the first implementation of receding horizon control, which iswidely used in ground vehicles, with monocular vision as the only sensing modefor autonomous UAV flight in dense clutter. We make it feasible on UAVs via anumber of contributions: novel coupling of perception and control via relevantand diverse, multiple interpretations of the scene around the robot, leveragingrecent advances in machine learning to showcase anytime budgeted cost-sensitivefeature selection, and fast non-linear regression for monocular depthprediction. We empirically demonstrate the efficacy of our novel pipeline viareal world experiments of more than 2 kms through dense trees with a quadrotorbuilt from off-the-shelf parts. Moreover our pipeline is designed to combineinformation from other modalities like stereo and lidar as well if available.
 
+Dense Optical Flow Prediction from a Static Image
+
+  Given a scene, what is going to move, and in what direction will it move?Such a question could be considered a non-semantic form of action prediction.In this work, we present a convolutional neural network (CNN) based approachfor motion prediction. Given a static image, this CNN predicts the futuremotion of each and every pixel in the image in terms of optical flow. Our CNNmodel leverages the data in tens of thousands of realistic videos to train ourmodel. Our method relies on absolutely no human labeling and is able to predictmotion based on the context of the scene. Because our CNN model makes noassumptions about the underlying scene, it can predict future optical flow on adiverse set of scenarios. We outperform all previous approaches by largemargins.
+
+Watch and Learn: Semi-Supervised Learning of Object Detectors from  Videos
+
+  We present a semi-supervised approach that localizes multiple unknown objectinstances in long videos. We start with a handful of labeled boxes anditeratively learn and label hundreds of thousands of object instances. Wepropose criteria for reliable object detection and tracking for constrainingthe semi-supervised learning process and minimizing semantic drift. Ourapproach does not assume exhaustive labeling of each object instance in anysingle frame, or any explicit annotation of negative data. Working in such ageneric setting allow us to tackle multiple object instances in video, many ofwhich are static. In contrast, existing approaches either do not considermultiple object instances per video, or rely heavily on the motion of theobjects present. The experiments demonstrate the effectiveness of our approachby evaluating the automatically labeled data on a variety of metrics likequality, coverage (recall), diversity, and relevance to training an objectdetector.
+
+Learning to Extract Motion from Videos in Convolutional Neural Networks
+
+  This paper shows how to extract dense optical flow from videos with aconvolutional neural network (CNN). The proposed model constitutes a potentialbuilding block for deeper architectures to allow using motion without resortingto an external algorithm, \eg for recognition in videos. We derive our networkarchitecture from signal processing principles to provide desired invariancesto image contrast, phase and texture. We constrain weights within the networkto enforce strict rotation invariance and substantially reduce the number ofparameters to learn. We demonstrate end-to-end training on only 8 sequences ofthe Middlebury dataset, orders of magnitude less than competing CNN-basedmotion estimation methods, and obtain comparable performance to classicalmethods on the Middlebury benchmark. Importantly, our method outputs adistributed representation of motion that allows representing multiple,transparent motions, and dynamic textures. Our contributions on network designand rotation invariance offer insights nonspecific to motion estimation.
+
+Shuffle and Learn: Unsupervised Learning using Temporal Order  Verification
+
+  In this paper, we present an approach for learning a visual representationfrom the raw spatiotemporal signals in videos. Our representation is learnedwithout supervision from semantic labels. We formulate our method as anunsupervised sequential verification task, i.e., we determine whether asequence of frames from a video is in the correct temporal order. With thissimple task and no semantic labels, we learn a powerful visual representationusing a Convolutional Neural Network (CNN). The representation containscomplementary information to that learned from supervised image datasets likeImageNet. Qualitative results show that our method captures information that istemporally varying, such as human pose. When used as pre-training for actionrecognition, our method gives significant gains over learning without externaldata on benchmark datasets like UCF101 and HMDB51. To demonstrate itssensitivity to human pose, we show results for pose estimation on the FLIC andMPII datasets that are competitive, or better than approaches usingsignificantly more supervision. Our method can be combined with supervisedrepresentations to provide an additional boost in accuracy.
 
 Cross-stitch Networks for Multi-task Learning
 
-  Multi-task learning in Convolutional Networks has displayed remarkable
-success in the field of recognition. This success can be largely attributed to
-learning shared representations from multiple supervisory tasks. However,
-existing multi-task approaches rely on enumerating multiple network
-architectures specific to the tasks at hand, that do not generalize. In this
-paper, we propose a principled approach to learn shared representations in
-ConvNets using multi-task learning. Specifically, we propose a new sharing
-unit: "cross-stitch" unit. These units combine the activations from multiple
-networks and can be trained end-to-end. A network with cross-stitch units can
-learn an optimal combination of shared and task-specific representations. Our
-proposed method generalizes across multiple tasks and shows dramatically
-improved performance over baseline methods for categories with few training
-examples.
-
+  Multi-task learning in Convolutional Networks has displayed remarkablesuccess in the field of recognition. This success can be largely attributed tolearning shared representations from multiple supervisory tasks. However,existing multi-task approaches rely on enumerating multiple networkarchitectures specific to the tasks at hand, that do not generalize. In thispaper, we propose a principled approach to learn shared representations inConvNets using multi-task learning. Specifically, we propose a new sharingunit: "cross-stitch" unit. These units combine the activations from multiplenetworks and can be trained end-to-end. A network with cross-stitch units canlearn an optimal combination of shared and task-specific representations. Ourproposed method generalizes across multiple tasks and shows dramaticallyimproved performance over baseline methods for categories with few trainingexamples.
 
 Robust Monocular Flight in Cluttered Outdoor Environments
 
-  Recently, there have been numerous advances in the development of
-biologically inspired lightweight Micro Aerial Vehicles (MAVs). While
-autonomous navigation is fairly straight-forward for large UAVs as expensive
-sensors and monitoring devices can be employed, robust methods for obstacle
-avoidance remains a challenging task for MAVs which operate at low altitude in
-cluttered unstructured environments. Due to payload and power constraints, it
-is necessary for such systems to have autonomous navigation and flight
-capabilities using mostly passive sensors such as cameras. In this paper, we
-describe a robust system that enables autonomous navigation of small agile
-quad-rotors at low altitude through natural forest environments. We present a
-direct depth estimation approach that is capable of producing accurate,
-semi-dense depth-maps in real time. Furthermore, a novel wind-resistant control
-scheme is presented that enables stable way-point tracking even in the presence
-of strong winds. We demonstrate the performance of our system through extensive
-experiments on real images and field tests in a cluttered outdoor environment.
+  Recently, there have been numerous advances in the development ofbiologically inspired lightweight Micro Aerial Vehicles (MAVs). Whileautonomous navigation is fairly straight-forward for large UAVs as expensivesensors and monitoring devices can be employed, robust methods for obstacleavoidance remains a challenging task for MAVs which operate at low altitude incluttered unstructured environments. Due to payload and power constraints, itis necessary for such systems to have autonomous navigation and flightcapabilities using mostly passive sensors such as cameras. In this paper, wedescribe a robust system that enables autonomous navigation of small agilequad-rotors at low altitude through natural forest environments. We present adirect depth estimation approach that is capable of producing accurate,semi-dense depth-maps in real time. Furthermore, a novel wind-resistant controlscheme is presented that enables stable way-point tracking even in the presenceof strong winds. We demonstrate the performance of our system through extensiveexperiments on real images and field tests in a cluttered outdoor environment.
 
+An Uncertain Future: Forecasting from Static Images using Variational  Autoencoders
+
+  In a given scene, humans can often easily predict a set of immediate futureevents that might happen. However, generalized pixel-level anticipation incomputer vision systems is difficult because machine learning struggles withthe ambiguity inherent in predicting the future. In this paper, we focus onpredicting the dense trajectory of pixels in a scene, specifically what willmove in the scene, where it will travel, and how it will deform over the courseof one second. We propose a conditional variational autoencoder as a solutionto this problem. In this framework, direct inference from the image shapes thedistribution of possible trajectories, while latent variables encode anynecessary information that is not available in the image. We show that ourmethod is able to successfully predict events in a wide variety of scenes andcan produce multiple different predictions when the future is ambiguous. Ouralgorithm is trained on thousands of diverse, realistic videos and requiresabsolutely no human labeling. In addition to non-semantic action prediction, wefind that our method learns a representation that is applicable to semanticvision tasks.
 
 Introspective Perception: Learning to Predict Failures in Vision Systems
 
-  As robots aspire for long-term autonomous operations in complex dynamic
-environments, the ability to reliably take mission-critical decisions in
-ambiguous situations becomes critical. This motivates the need to build systems
-that have situational awareness to assess how qualified they are at that moment
-to make a decision. We call this self-evaluating capability as introspection.
-In this paper, we take a small step in this direction and propose a generic
-framework for introspective behavior in perception systems. Our goal is to
-learn a model to reliably predict failures in a given system, with respect to a
-task, directly from input sensor data. We present this in the context of
-vision-based autonomous MAV flight in outdoor natural environments, and show
-that it effectively handles uncertain situations.
-
+  As robots aspire for long-term autonomous operations in complex dynamicenvironments, the ability to reliably take mission-critical decisions inambiguous situations becomes critical. This motivates the need to build systemsthat have situational awareness to assess how qualified they are at that momentto make a decision. We call this self-evaluating capability as introspection.In this paper, we take a small step in this direction and propose a genericframework for introspective behavior in perception systems. Our goal is tolearn a model to reliably predict failures in a given system, with respect to atask, directly from input sensor data. We present this in the context ofvision-based autonomous MAV flight in outdoor natural environments, and showthat it effectively handles uncertain situations.
 
 Learning Transferable Policies for Monocular Reactive MAV Control
 
-  The ability to transfer knowledge gained in previous tasks into new contexts
-is one of the most important mechanisms of human learning. Despite this,
-adapting autonomous behavior to be reused in partially similar settings is
-still an open problem in current robotics research. In this paper, we take a
-small step in this direction and propose a generic framework for learning
-transferable motion policies. Our goal is to solve a learning problem in a
-target domain by utilizing the training data in a different but related source
-domain. We present this in the context of an autonomous MAV flight using
-monocular reactive control, and demonstrate the efficacy of our proposed
-approach through extensive real-world flight experiments in outdoor cluttered
-environments.
-
+  The ability to transfer knowledge gained in previous tasks into new contextsis one of the most important mechanisms of human learning. Despite this,adapting autonomous behavior to be reused in partially similar settings isstill an open problem in current robotics research. In this paper, we take asmall step in this direction and propose a generic framework for learningtransferable motion policies. Our goal is to solve a learning problem in atarget domain by utilizing the training data in a different but related sourcedomain. We present this in the context of an autonomous MAV flight usingmonocular reactive control, and demonstrate the efficacy of our proposedapproach through extensive real-world flight experiments in outdoor clutteredenvironments.
 
 A Discriminative Framework for Anomaly Detection in Large Videos
 
-  We address an anomaly detection setting in which training sequences are
-unavailable and anomalies are scored independently of temporal ordering.
-Current algorithms in anomaly detection are based on the classical density
-estimation approach of learning high-dimensional models and finding
-low-probability events. These algorithms are sensitive to the order in which
-anomalies appear and require either training data or early context assumptions
-that do not hold for longer, more complex videos. By defining anomalies as
-examples that can be distinguished from other examples in the same video, our
-definition inspires a shift in approaches from classical density estimation to
-simple discriminative learning. Our contributions include a novel framework for
-anomaly detection that is (1) independent of temporal ordering of anomalies,
-and (2) unsupervised, requiring no separate training sequences. We show that
-our algorithm can achieve state-of-the-art results even when we adjust the
-setting by removing training sequences from standard datasets.
-
+  We address an anomaly detection setting in which training sequences areunavailable and anomalies are scored independently of temporal ordering.Current algorithms in anomaly detection are based on the classical densityestimation approach of learning high-dimensional models and findinglow-probability events. These algorithms are sensitive to the order in whichanomalies appear and require either training data or early context assumptionsthat do not hold for longer, more complex videos. By defining anomalies asexamples that can be distinguished from other examples in the same video, ourdefinition inspires a shift in approaches from classical density estimation tosimple discriminative learning. Our contributions include a novel framework foranomaly detection that is (1) independent of temporal ordering of anomalies,and (2) unsupervised, requiring no separate training sequences. We show thatour algorithm can achieve state-of-the-art results even when we adjust thesetting by removing training sequences from standard datasets.
 
 General models for rational cameras and the case of two-slit projections
 
-  The rational camera model recently introduced in [19] provides a general
-methodology for studying abstract nonlinear imaging systems and their
-multi-view geometry. This paper builds on this framework to study "physical
-realizations" of rational cameras. More precisely, we give an explicit account
-of the mapping between between physical visual rays and image points (missing
-in the original description), which allows us to give simple analytical
-expressions for direct and inverse projections. We also consider "primitive"
-camera models, that are orbits under the action of various projective
-transformations, and lead to a general notion of intrinsic parameters. The
-methodology is general, but it is illustrated concretely by an in-depth study
-of two-slit cameras, that we model using pairs of linear projections. This
-simple analytical form allows us to describe models for the corresponding
-primitive cameras, to introduce intrinsic parameters with a clear geometric
-meaning, and to define an epipolar tensor characterizing two-view
-correspondences. In turn, this leads to new algorithms for structure from
-motion and self-calibration.
-
+  The rational camera model recently introduced in [19] provides a generalmethodology for studying abstract nonlinear imaging systems and theirmulti-view geometry. This paper builds on this framework to study "physicalrealizations" of rational cameras. More precisely, we give an explicit accountof the mapping between between physical visual rays and image points (missingin the original description), which allows us to give simple analyticalexpressions for direct and inverse projections. We also consider "primitive"camera models, that are orbits under the action of various projectivetransformations, and lead to a general notion of intrinsic parameters. Themethodology is general, but it is illustrated concretely by an in-depth studyof two-slit cameras, that we model using pairs of linear projections. Thissimple analytical form allows us to describe models for the correspondingprimitive cameras, to introduce intrinsic parameters with a clear geometricmeaning, and to define an epipolar tensor characterizing two-viewcorrespondences. In turn, this leads to new algorithms for structure frommotion and self-calibration.
 
 Gradient Boosting on Stochastic Data Streams
 
-  Boosting is a popular ensemble algorithm that generates more powerful
-learners by linearly combining base models from a simpler hypothesis class. In
-this work, we investigate the problem of adapting batch gradient boosting for
-minimizing convex loss functions to online setting where the loss at each
-iteration is i.i.d sampled from an unknown distribution. To generalize from
-batch to online, we first introduce the definition of online weak learning edge
-with which for strongly convex and smooth loss functions, we present an
-algorithm, Streaming Gradient Boosting (SGB) with exponential shrinkage
-guarantees in the number of weak learners. We further present an adaptation of
-SGB to optimize non-smooth loss functions, for which we derive a O(ln N/N)
-convergence rate. We also show that our analysis can extend to adversarial
-online learning setting under a stronger assumption that the online weak
-learning edge will hold in adversarial setting. We finally demonstrate
-experimental results showing that in practice our algorithms can achieve
-competitive results as classic gradient boosting while using less computation.
-
+  Boosting is a popular ensemble algorithm that generates more powerfullearners by linearly combining base models from a simpler hypothesis class. Inthis work, we investigate the problem of adapting batch gradient boosting forminimizing convex loss functions to online setting where the loss at eachiteration is i.i.d sampled from an unknown distribution. To generalize frombatch to online, we first introduce the definition of online weak learning edgewith which for strongly convex and smooth loss functions, we present analgorithm, Streaming Gradient Boosting (SGB) with exponential shrinkageguarantees in the number of weak learners. We further present an adaptation ofSGB to optimize non-smooth loss functions, for which we derive a O(ln N/N)convergence rate. We also show that our analysis can extend to adversarialonline learning setting under a stronger assumption that the online weaklearning edge will hold in adversarial setting. We finally demonstrateexperimental results showing that in practice our algorithms can achievecompetitive results as classic gradient boosting while using less computation.
 
 The Pose Knows: Video Forecasting by Generating Pose Futures
 
-  Current approaches in video forecasting attempt to generate videos directly
-in pixel space using Generative Adversarial Networks (GANs) or Variational
-Autoencoders (VAEs). However, since these approaches try to model all the
-structure and scene dynamics at once, in unconstrained settings they often
-generate uninterpretable results. Our insight is to model the forecasting
-problem at a higher level of abstraction. Specifically, we exploit human pose
-detectors as a free source of supervision and break the video forecasting
-problem into two discrete steps. First we explicitly model the high level
-structure of active objects in the scene---humans---and use a VAE to model the
-possible future movements of humans in the pose space. We then use the future
-poses generated as conditional information to a GAN to predict the future
-frames of the video in pixel space. By using the structured space of pose as an
-intermediate representation, we sidestep the problems that GANs have in
-generating video pixels directly. We show through quantitative and qualitative
-evaluation that our method outperforms state-of-the-art methods for video
-prediction.
-
+  Current approaches in video forecasting attempt to generate videos directlyin pixel space using Generative Adversarial Networks (GANs) or VariationalAutoencoders (VAEs). However, since these approaches try to model all thestructure and scene dynamics at once, in unconstrained settings they oftengenerate uninterpretable results. Our insight is to model the forecastingproblem at a higher level of abstraction. Specifically, we exploit human posedetectors as a free source of supervision and break the video forecastingproblem into two discrete steps. First we explicitly model the high levelstructure of active objects in the scene---humans---and use a VAE to model thepossible future movements of humans in the pose space. We then use the futureposes generated as conditional information to a GAN to predict the futureframes of the video in pixel space. By using the structured space of pose as anintermediate representation, we sidestep the problems that GANs have ingenerating video pixels directly. We show through quantitative and qualitativeevaluation that our method outperforms state-of-the-art methods for videoprediction.
 
 Cut, Paste and Learn: Surprisingly Easy Synthesis for Instance Detection
 
-  A major impediment in rapidly deploying object detection models for instance
-detection is the lack of large annotated datasets. For example, finding a large
-labeled dataset containing instances in a particular kitchen is unlikely. Each
-new environment with new instances requires expensive data collection and
-annotation. In this paper, we propose a simple approach to generate large
-annotated instance datasets with minimal effort. Our key insight is that
-ensuring only patch-level realism provides enough training signal for current
-object detector models. We automatically `cut' object instances and `paste'
-them on random backgrounds. A naive way to do this results in pixel artifacts
-which result in poor performance for trained models. We show how to make
-detectors ignore these artifacts during training and generate data that gives
-competitive performance on real data. Our method outperforms existing synthesis
-approaches and when combined with real images improves relative performance by
-more than 21% on benchmark datasets. In a cross-domain setting, our synthetic
-data combined with just 10% real data outperforms models trained on all real
-data.
+  A major impediment in rapidly deploying object detection models for instancedetection is the lack of large annotated datasets. For example, finding a largelabeled dataset containing instances in a particular kitchen is unlikely. Eachnew environment with new instances requires expensive data collection andannotation. In this paper, we propose a simple approach to generate largeannotated instance datasets with minimal effort. Our key insight is thatensuring only patch-level realism provides enough training signal for currentobject detector models. We automatically `cut' object instances and `paste'them on random backgrounds. A naive way to do this results in pixel artifactswhich result in poor performance for trained models. We show how to makedetectors ignore these artifacts during training and generate data that givescompetitive performance on real data. Our method outperforms existing synthesisapproaches and when combined with real images improves relative performance bymore than 21% on benchmark datasets. In a cross-domain setting, our syntheticdata combined with just 10% real data outperforms models trained on all realdata.
 
+Learning Anytime Predictions in Neural Networks via Adaptive Loss  Balancing
 
-Learning Anytime Predictions in Neural Networks via Adaptive Loss
-  Balancing
-
-  This work considers the trade-off between accuracy and test-time
-computational cost of deep neural networks (DNNs) via \emph{anytime}
-predictions from auxiliary predictions. Specifically, we optimize auxiliary
-losses jointly in an \emph{adaptive} weighted sum, where the weights are
-inversely proportional to average of each loss. Intuitively, this balances the
-losses to have the same scale. We demonstrate theoretical considerations that
-motivate this approach from multiple viewpoints, including connecting it to
-optimizing the geometric mean of the expectation of each loss, an objective
-that ignores the scale of losses. Experimentally, the adaptive weights induce
-more competitive anytime predictions on multiple recognition data-sets and
-models than non-adaptive approaches including weighing all losses equally. In
-particular, anytime neural networks (ANNs) can achieve the same accuracy faster
-using adaptive weights on a small network than using static constant weights on
-a large one. For problems with high performance saturation, we also show a
-sequence of exponentially deepening ANNscan achieve near-optimal anytime
-results at any budget, at the cost of a const fraction of extra computation.
-
+  This work considers the trade-off between accuracy and test-timecomputational cost of deep neural networks (DNNs) via \emph{anytime}predictions from auxiliary predictions. Specifically, we optimize auxiliarylosses jointly in an \emph{adaptive} weighted sum, where the weights areinversely proportional to average of each loss. Intuitively, this balances thelosses to have the same scale. We demonstrate theoretical considerations thatmotivate this approach from multiple viewpoints, including connecting it tooptimizing the geometric mean of the expectation of each loss, an objectivethat ignores the scale of losses. Experimentally, the adaptive weights inducemore competitive anytime predictions on multiple recognition data-sets andmodels than non-adaptive approaches including weighing all losses equally. Inparticular, anytime neural networks (ANNs) can achieve the same accuracy fasterusing adaptive weights on a small network than using static constant weights ona large one. For problems with high performance saturation, we also show asequence of exponentially deepening ANNscan achieve near-optimal anytimeresults at any budget, at the cost of a const fraction of extra computation.
 
 Log-DenseNet: How to Sparsify a DenseNet
 
-  Skip connections are increasingly utilized by deep neural networks to improve
-accuracy and cost-efficiency. In particular, the recent DenseNet is efficient
-in computation and parameters, and achieves state-of-the-art predictions by
-directly connecting each feature layer to all previous ones. However,
-DenseNet's extreme connectivity pattern may hinder its scalability to high
-depths, and in applications like fully convolutional networks, full DenseNet
-connections are prohibitively expensive. This work first experimentally shows
-that one key advantage of skip connections is to have short distances among
-feature layers during backpropagation. Specifically, using a fixed number of
-skip connections, the connection patterns with shorter backpropagation distance
-among layers have more accurate predictions. Following this insight, we propose
-a connection template, Log-DenseNet, which, in comparison to DenseNet, only
-slightly increases the backpropagation distances among layers from 1 to ($1 +
-\log_2 L$), but uses only $L\log_2 L$ total connections instead of $O(L^2)$.
-Hence, Log-DenseNets are easier than DenseNets to implement and to scale. We
-demonstrate the effectiveness of our design principle by showing better
-performance than DenseNets on tabula rasa semantic segmentation, and
-competitive results on visual recognition.
-
+  Skip connections are increasingly utilized by deep neural networks to improveaccuracy and cost-efficiency. In particular, the recent DenseNet is efficientin computation and parameters, and achieves state-of-the-art predictions bydirectly connecting each feature layer to all previous ones. However,DenseNet's extreme connectivity pattern may hinder its scalability to highdepths, and in applications like fully convolutional networks, full DenseNetconnections are prohibitively expensive. This work first experimentally showsthat one key advantage of skip connections is to have short distances amongfeature layers during backpropagation. Specifically, using a fixed number ofskip connections, the connection patterns with shorter backpropagation distanceamong layers have more accurate predictions. Following this insight, we proposea connection template, Log-DenseNet, which, in comparison to DenseNet, onlyslightly increases the backpropagation distances among layers from 1 to ($1 +\log_2 L$), but uses only $L\log_2 L$ total connections instead of $O(L^2)$.Hence, Log-DenseNets are easier than DenseNets to implement and to scale. Wedemonstrate the effectiveness of our design principle by showing betterperformance than DenseNets on tabula rasa semantic segmentation, andcompetitive results on visual recognition.
 
 Learning by Asking Questions
 
-  We introduce an interactive learning framework for the development and
-testing of intelligent visual systems, called learning-by-asking (LBA). We
-explore LBA in context of the Visual Question Answering (VQA) task. LBA differs
-from standard VQA training in that most questions are not observed during
-training time, and the learner must ask questions it wants answers to. Thus,
-LBA more closely mimics natural learning and has the potential to be more
-data-efficient than the traditional VQA setting. We present a model that
-performs LBA on the CLEVR dataset, and show that it automatically discovers an
-easy-to-hard curriculum when learning interactively from an oracle. Our LBA
-generated data consistently matches or outperforms the CLEVR train data and is
-more sample efficient. We also show that our model asks questions that
-generalize to state-of-the-art VQA models and to novel test time distributions.
-
+  We introduce an interactive learning framework for the development andtesting of intelligent visual systems, called learning-by-asking (LBA). Weexplore LBA in context of the Visual Question Answering (VQA) task. LBA differsfrom standard VQA training in that most questions are not observed duringtraining time, and the learner must ask questions it wants answers to. Thus,LBA more closely mimics natural learning and has the potential to be moredata-efficient than the traditional VQA setting. We present a model thatperforms LBA on the CLEVR dataset, and show that it automatically discovers aneasy-to-hard curriculum when learning interactively from an oracle. Our LBAgenerated data consistently matches or outperforms the CLEVR train data and ismore sample efficient. We also show that our model asks questions thatgeneralize to state-of-the-art VQA models and to novel test time distributions.
 
 Low-Shot Learning from Imaginary Data
 
-  Humans can quickly learn new visual concepts, perhaps because they can easily
-visualize or imagine what novel objects look like from different views.
-Incorporating this ability to hallucinate novel instances of new concepts might
-help machine vision systems perform better low-shot learning, i.e., learning
-concepts from few examples. We present a novel approach to low-shot learning
-that uses this idea. Our approach builds on recent progress in meta-learning
-("learning to learn") by combining a meta-learner with a "hallucinator" that
-produces additional training examples, and optimizing both models jointly. Our
-hallucinator can be incorporated into a variety of meta-learners and provides
-significant gains: up to a 6 point boost in classification accuracy when only a
-single training example is available, yielding state-of-the-art performance on
-the challenging ImageNet low-shot classification benchmark.
-
+  Humans can quickly learn new visual concepts, perhaps because they can easilyvisualize or imagine what novel objects look like from different views.Incorporating this ability to hallucinate novel instances of new concepts mighthelp machine vision systems perform better low-shot learning, i.e., learningconcepts from few examples. We present a novel approach to low-shot learningthat uses this idea. Our approach builds on recent progress in meta-learning("learning to learn") by combining a meta-learner with a "hallucinator" thatproduces additional training examples, and optimizing both models jointly. Ourhallucinator can be incorporated into a variety of meta-learners and providessignificant gains: up to a 6 point boost in classification accuracy when only asingle training example is available, yielding state-of-the-art performance onthe challenging ImageNet low-shot classification benchmark.
 
 PCN: Point Completion Network
 
-  Shape completion, the problem of estimating the complete geometry of objects
-from partial observations, lies at the core of many vision and robotics
-applications. In this work, we propose Point Completion Network (PCN), a novel
-learning-based approach for shape completion. Unlike existing shape completion
-methods, PCN directly operates on raw point clouds without any structural
-assumption (e.g. symmetry) or annotation (e.g. semantic class) about the
-underlying shape. It features a decoder design that enables the generation of
-fine-grained completions while maintaining a small number of parameters. Our
-experiments show that PCN produces dense, complete point clouds with realistic
-structures in the missing regions on inputs with various levels of
-incompleteness and noise, including cars from LiDAR scans in the KITTI dataset.
+  Shape completion, the problem of estimating the complete geometry of objectsfrom partial observations, lies at the core of many vision and roboticsapplications. In this work, we propose Point Completion Network (PCN), a novellearning-based approach for shape completion. Unlike existing shape completionmethods, PCN directly operates on raw point clouds without any structuralassumption (e.g. symmetry) or annotation (e.g. semantic class) about theunderlying shape. It features a decoder design that enables the generation offine-grained completions while maintaining a small number of parameters. Ourexperiments show that PCN produces dense, complete point clouds with realisticstructures in the missing regions on inputs with various levels ofincompleteness and noise, including cars from LiDAR scans in the KITTI dataset.
 
+Adaptive Semantic Segmentation with a Strategic Curriculum of Proxy  Labels
 
-Adaptive Semantic Segmentation with a Strategic Curriculum of Proxy
-  Labels
-
-  Training deep networks for semantic segmentation requires annotation of large
-amounts of data, which can be time-consuming and expensive. Unfortunately,
-these trained networks still generalize poorly when tested in domains not
-consistent with the training data. In this paper, we show that by carefully
-presenting a mixture of labeled source domain and proxy-labeled target domain
-data to a network, we can achieve state-of-the-art unsupervised domain
-adaptation results. With our design, the network progressively learns features
-specific to the target domain using annotation from only the source domain. We
-generate proxy labels for the target domain using the network's own
-predictions. Our architecture then allows selective mining of easy samples from
-this set of proxy labels, and hard samples from the annotated source domain. We
-conduct a series of experiments with the GTA5, Cityscapes and BDD100k datasets
-on synthetic-to-real domain adaptation and geographic domain adaptation,
-showing the advantages of our method over baselines and existing approaches.
-
+  Training deep networks for semantic segmentation requires annotation of largeamounts of data, which can be time-consuming and expensive. Unfortunately,these trained networks still generalize poorly when tested in domains notconsistent with the training data. In this paper, we show that by carefullypresenting a mixture of labeled source domain and proxy-labeled target domaindata to a network, we can achieve state-of-the-art unsupervised domainadaptation results. With our design, the network progressively learns featuresspecific to the target domain using annotation from only the source domain. Wegenerate proxy labels for the target domain using the network's ownpredictions. Our architecture then allows selective mining of easy samples fromthis set of proxy labels, and hard samples from the annotated source domain. Weconduct a series of experiments with the GTA5, Cityscapes and BDD100k datasetson synthetic-to-real domain adaptation and geographic domain adaptation,showing the advantages of our method over baselines and existing approaches.
 
 Iterative Transformer Network for 3D Point Cloud
 
-  3D point cloud is an efficient and flexible representation of 3D structures.
-Recently, neural networks operating on point clouds have shown superior
-performance on tasks such as shape classification and part segmentation.
-However, performance on these tasks are evaluated using complete, aligned
-shapes, while real world 3D data are partial and unaligned. A key challenge in
-learning from unaligned point cloud data is how to attain invariance or
-equivariance with respect to geometric transformations. To address this
-challenge, we propose a novel transformer network that operates on 3D point
-clouds, named Iterative Transformer Network (IT-Net). Different from existing
-transformer networks, IT-Net predicts a 3D rigid transformation using an
-iterative refinement scheme inspired by classical image and point cloud
-alignment algorithms. We demonstrate that models using IT-Net achieves superior
-performance over baselines on the classification and segmentation of partial,
-unaligned 3D shapes. Further, we provide an analysis on the efficacy of the
-iterative refinement scheme on estimating accurate object poses from partial
-observations.
-
+  3D point cloud is an efficient and flexible representation of 3D structures.Recently, neural networks operating on point clouds have shown superiorperformance on tasks such as shape classification and part segmentation.However, performance on these tasks are evaluated using complete, alignedshapes, while real world 3D data are partial and unaligned. A key challenge inlearning from unaligned point cloud data is how to attain invariance orequivariance with respect to geometric transformations. To address thischallenge, we propose a novel transformer network that operates on 3D pointclouds, named Iterative Transformer Network (IT-Net). Different from existingtransformer networks, IT-Net predicts a 3D rigid transformation using aniterative refinement scheme inspired by classical image and point cloudalignment algorithms. We demonstrate that models using IT-Net achieves superiorperformance over baselines on the classification and segmentation of partial,unaligned 3D shapes. Further, we provide an analysis on the efficacy of theiterative refinement scheme on estimating accurate object poses from partialobservations.
 
 A Structured Model For Action Detection
 
-  A dominant paradigm for learning-based approaches in computer vision is
-training generic models, such as ResNet for image recognition, or I3D for video
-understanding, on large datasets and allowing them to discover the optimal
-representation for the problem at hand. While this is an obviously attractive
-approach, it is not applicable in all scenarios. We claim that action detection
-is one such challenging problem - the models that need to be trained are large,
-and labeled data is expensive to obtain. To address this limitation, we propose
-to incorporate domain knowledge into the structure of the model, simplifying
-optimization. In particular, we augment a standard I3D network with a tracking
-module to aggregate long term motion patterns, and use a graph convolutional
-network to reason about interactions between actors and objects. Evaluated on
-the challenging AVA dataset, the proposed approach improves over the I3D
-baseline by 5.5% mAP and over the state-of-the-art by 4.8% mAP.
-
+  A dominant paradigm for learning-based approaches in computer vision istraining generic models, such as ResNet for image recognition, or I3D for videounderstanding, on large datasets and allowing them to discover the optimalrepresentation for the problem at hand. While this is an obviously attractiveapproach, it is not applicable in all scenarios. We claim that action detectionis one such challenging problem - the models that need to be trained are large,and labeled data is expensive to obtain. To address this limitation, we proposeto incorporate domain knowledge into the structure of the model, simplifyingoptimization. In particular, we augment a standard I3D network with a trackingmodule to aggregate long term motion patterns, and use a graph convolutionalnetwork to reason about interactions between actors and objects. Evaluated onthe challenging AVA dataset, the proposed approach improves over the I3Dbaseline by 5.5% mAP and over the state-of-the-art by 4.8% mAP.
 
 Learning Compositional Representations for Few-Shot Recognition
 
-  One of the key limitations of modern deep learning approaches lies in the
-amount of data required to train them. Humans, on the other hand, can learn to
-recognize novel categories from just a few examples. Instrumental to this rapid
-learning ability is the compositional structure of concept representations in
-the human brain --- something that deep learning models are lacking. In this
-work we make a step towards bridging this gap between human and machine
-learning by introducing a simple regularization technique that allows the
-learned representation to be decomposable into parts. Our method uses
-category-level attribute annotations to disentangle the feature space of a
-network into subspaces corresponding to the attributes. Theses attribute can be
-both purely visual, like object parts, as well as more abstract, like openness
-or symmetry. We demonstrate the value of compositional representations on three
-datasets: CUB-200-2011, SUN397, and ImageNet, and show that they require fewer
-examples to learn classifiers for novel categories.
-
+  One of the key limitations of modern deep learning approaches lies in theamount of data required to train them. Humans, on the other hand, can learn torecognize novel categories from just a few examples. Instrumental to this rapidlearning ability is the compositional structure of concept representations inthe human brain --- something that deep learning models are lacking. In thiswork we make a step towards bridging this gap between human and machinelearning by introducing a simple regularization technique that allows thelearned representation to be decomposable into parts. Our method usescategory-level attribute annotations to disentangle the feature space of anetwork into subspaces corresponding to the attributes. Theses attribute can beboth purely visual, like object parts, as well as more abstract, like opennessor symmetry. We demonstrate the value of compositional representations on threedatasets: CUB-200-2011, SUN397, and ImageNet, and show that they require fewerexamples to learn classifiers for novel categories.
 
 Efficient Feature Group Sequencing for Anytime Linear Prediction
 
-  We consider \textit{anytime} linear prediction in the common machine learning
-setting, where features are in groups that have costs. We achieve anytime (or
-interruptible) predictions by sequencing the computation of feature groups and
-reporting results using the computed features at interruption. We extend
-Orthogonal Matching Pursuit (OMP) and Forward Regression (FR) to learn the
-sequencing greedily under this group setting with costs. We theoretically
-guarantee that our algorithms achieve near-optimal linear predictions at each
-budget when a feature group is chosen. With a novel analysis of OMP, we improve
-its theoretical bound to the same strength as that of FR. In addition, we
-develop a novel algorithm that consumes cost $4B$ to approximate the optimal
-performance of \textit{any} cost $B$, and prove that with cost less than $4B$,
-such an approximation is impossible. To our knowledge, these are the first
-anytime bounds at \textit{all} budgets. We test our algorithms on two
-real-world data-sets and evaluate them in terms of anytime linear prediction
-performance against cost-weighted Group Lasso and alternative greedy
-algorithms.
-
+  We consider \textit{anytime} linear prediction in the common machine learningsetting, where features are in groups that have costs. We achieve anytime (orinterruptible) predictions by sequencing the computation of feature groups andreporting results using the computed features at interruption. We extendOrthogonal Matching Pursuit (OMP) and Forward Regression (FR) to learn thesequencing greedily under this group setting with costs. We theoreticallyguarantee that our algorithms achieve near-optimal linear predictions at eachbudget when a feature group is chosen. With a novel analysis of OMP, we improveits theoretical bound to the same strength as that of FR. In addition, wedevelop a novel algorithm that consumes cost $4B$ to approximate the optimalperformance of \textit{any} cost $B$, and prove that with cost less than $4B$,such an approximation is impossible. To our knowledge, these are the firstanytime bounds at \textit{all} budgets. We test our algorithms on tworeal-world data-sets and evaluate them in terms of anytime linear predictionperformance against cost-weighted Group Lasso and alternative greedyalgorithms.
 
 Autonomy Infused Teleoperation with Application to BCI Manipulation
 
-  Robot teleoperation systems face a common set of challenges including
-latency, low-dimensional user commands, and asymmetric control inputs. User
-control with Brain-Computer Interfaces (BCIs) exacerbates these problems
-through especially noisy and erratic low-dimensional motion commands due to the
-difficulty in decoding neural activity. We introduce a general framework to
-address these challenges through a combination of computer vision, user intent
-inference, and arbitration between the human input and autonomous control
-schemes. Adjustable levels of assistance allow the system to balance the
-operator's capabilities and feelings of comfort and control while compensating
-for a task's difficulty. We present experimental results demonstrating
-significant performance improvement using the shared-control assistance
-framework on adapted rehabilitation benchmarks with two subjects implanted with
-intracortical brain-computer interfaces controlling a seven degree-of-freedom
-robotic manipulator as a prosthetic. Our results further indicate that shared
-assistance mitigates perceived user difficulty and even enables successful
-performance on previously infeasible tasks. We showcase the extensibility of
-our architecture with applications to quality-of-life tasks such as opening a
-door, pouring liquids from containers, and manipulation with novel objects in
-densely cluttered environments.
-
+  Robot teleoperation systems face a common set of challenges includinglatency, low-dimensional user commands, and asymmetric control inputs. Usercontrol with Brain-Computer Interfaces (BCIs) exacerbates these problemsthrough especially noisy and erratic low-dimensional motion commands due to thedifficulty in decoding neural activity. We introduce a general framework toaddress these challenges through a combination of computer vision, user intentinference, and arbitration between the human input and autonomous controlschemes. Adjustable levels of assistance allow the system to balance theoperator's capabilities and feelings of comfort and control while compensatingfor a task's difficulty. We present experimental results demonstratingsignificant performance improvement using the shared-control assistanceframework on adapted rehabilitation benchmarks with two subjects implanted withintracortical brain-computer interfaces controlling a seven degree-of-freedomrobotic manipulator as a prosthetic. Our results further indicate that sharedassistance mitigates perceived user difficulty and even enables successfulperformance on previously infeasible tasks. We showcase the extensibility ofour architecture with applications to quality-of-life tasks such as opening adoor, pouring liquids from containers, and manipulation with novel objects indensely cluttered environments.
 
 Contextual Visual Similarity
 
-  Measuring visual similarity is critical for image understanding. But what
-makes two images similar? Most existing work on visual similarity assumes that
-images are similar because they contain the same object instance or category.
-However, the reason why images are similar is much more complex. For example,
-from the perspective of category, a black dog image is similar to a white dog
-image. However, in terms of color, a black dog image is more similar to a black
-horse image than the white dog image. This example serves to illustrate that
-visual similarity is ambiguous but can be made precise when given an explicit
-contextual perspective. Based on this observation, we propose the concept of
-contextual visual similarity. To be concrete, we examine the concept of
-contextual visual similarity in the application domain of image search. Instead
-of providing only a single image for image similarity search (\eg, Google image
-search), we require three images. Given a query image, a second positive image
-and a third negative image, dissimilar to the first two images, we define a
-contextualized similarity search criteria. In particular, we learn feature
-weights over all the feature dimensions of each image such that the distance
-between the query image and the positive image is small and their distances to
-the negative image are large after reweighting their features. The learned
-feature weights encode the contextualized visual similarity specified by the
-user and can be used for attribute specific image search. We also show the
-usefulness of our contextualized similarity weighting scheme for different
-tasks, such as answering visual analogy questions and unsupervised attribute
-discovery.
+  Measuring visual similarity is critical for image understanding. But whatmakes two images similar? Most existing work on visual similarity assumes thatimages are similar because they contain the same object instance or category.However, the reason why images are similar is much more complex. For example,from the perspective of category, a black dog image is similar to a white dogimage. However, in terms of color, a black dog image is more similar to a blackhorse image than the white dog image. This example serves to illustrate thatvisual similarity is ambiguous but can be made precise when given an explicitcontextual perspective. Based on this observation, we propose the concept ofcontextual visual similarity. To be concrete, we examine the concept ofcontextual visual similarity in the application domain of image search. Insteadof providing only a single image for image similarity search (\eg, Google imagesearch), we require three images. Given a query image, a second positive imageand a third negative image, dissimilar to the first two images, we define acontextualized similarity search criteria. In particular, we learn featureweights over all the feature dimensions of each image such that the distancebetween the query image and the positive image is small and their distances tothe negative image are large after reweighting their features. The learnedfeature weights encode the contextualized visual similarity specified by theuser and can be used for attribute specific image search. We also show theusefulness of our contextualized similarity weighting scheme for differenttasks, such as answering visual analogy questions and unsupervised attributediscovery.
 
+Ignoring Distractors in the Absence of Labels: Optimal Linear Projection  to Remove False Positives During Anomaly Detection
 
-Ignoring Distractors in the Absence of Labels: Optimal Linear Projection
-  to Remove False Positives During Anomaly Detection
-
-  In the anomaly detection setting, the native feature embedding can be a
-crucial source of bias. We present a technique, Feature Omission using Context
-in Unsupervised Settings (FOCUS) to learn a feature mapping that is invariant
-to changes exemplified in training sets while retaining as much descriptive
-power as possible. While this method could apply to many unsupervised settings,
-we focus on applications in anomaly detection, where little task-labeled data
-is available. Our algorithm requires only non-anomalous sets of data, and does
-not require that the contexts in the training sets match the context of the
-test set. By maximizing within-set variance and minimizing between-set
-variance, we are able to identify and remove distracting features while
-retaining fidelity to the descriptiveness needed at test time. In the linear
-case, our formulation reduces to a generalized eigenvalue problem that can be
-solved quickly and applied to test sets outside the context of the training
-sets. This technique allows us to align technical definitions of anomaly
-detection with human definitions through appropriate mappings of the feature
-space. We demonstrate that this method is able to remove uninformative parts of
-the feature space for the anomaly detection setting.
-
+  In the anomaly detection setting, the native feature embedding can be acrucial source of bias. We present a technique, Feature Omission using Contextin Unsupervised Settings (FOCUS) to learn a feature mapping that is invariantto changes exemplified in training sets while retaining as much descriptivepower as possible. While this method could apply to many unsupervised settings,we focus on applications in anomaly detection, where little task-labeled datais available. Our algorithm requires only non-anomalous sets of data, and doesnot require that the contexts in the training sets match the context of thetest set. By maximizing within-set variance and minimizing between-setvariance, we are able to identify and remove distracting features whileretaining fidelity to the descriptiveness needed at test time. In the linearcase, our formulation reduces to a generalized eigenvalue problem that can besolved quickly and applied to test sets outside the context of the trainingsets. This technique allows us to align technical definitions of anomalydetection with human definitions through appropriate mappings of the featurespace. We demonstrate that this method is able to remove uninformative parts ofthe feature space for the anomaly detection setting.
 
 Predictive-State Decoders: Encoding the Future into Recurrent Networks
 
-  Recurrent neural networks (RNNs) are a vital modeling technique that rely on
-internal states learned indirectly by optimization of a supervised,
-unsupervised, or reinforcement training loss. RNNs are used to model dynamic
-processes that are characterized by underlying latent states whose form is
-often unknown, precluding its analytic representation inside an RNN. In the
-Predictive-State Representation (PSR) literature, latent state processes are
-modeled by an internal state representation that directly models the
-distribution of future observations, and most recent work in this area has
-relied on explicitly representing and targeting sufficient statistics of this
-probability distribution. We seek to combine the advantages of RNNs and PSRs by
-augmenting existing state-of-the-art recurrent neural networks with
-Predictive-State Decoders (PSDs), which add supervision to the network's
-internal state representation to target predicting future observations.
-Predictive-State Decoders are simple to implement and easily incorporated into
-existing training pipelines via additional loss regularization. We demonstrate
-the effectiveness of PSDs with experimental results in three different domains:
-probabilistic filtering, Imitation Learning, and Reinforcement Learning. In
-each, our method improves statistical performance of state-of-the-art recurrent
-baselines and does so with fewer iterations and less data.
-
+  Recurrent neural networks (RNNs) are a vital modeling technique that rely oninternal states learned indirectly by optimization of a supervised,unsupervised, or reinforcement training loss. RNNs are used to model dynamicprocesses that are characterized by underlying latent states whose form isoften unknown, precluding its analytic representation inside an RNN. In thePredictive-State Representation (PSR) literature, latent state processes aremodeled by an internal state representation that directly models thedistribution of future observations, and most recent work in this area hasrelied on explicitly representing and targeting sufficient statistics of thisprobability distribution. We seek to combine the advantages of RNNs and PSRs byaugmenting existing state-of-the-art recurrent neural networks withPredictive-State Decoders (PSDs), which add supervision to the network'sinternal state representation to target predicting future observations.Predictive-State Decoders are simple to implement and easily incorporated intoexisting training pipelines via additional loss regularization. We demonstratethe effectiveness of PSDs with experimental results in three different domains:probabilistic filtering, Imitation Learning, and Reinforcement Learning. Ineach, our method improves statistical performance of state-of-the-art recurrentbaselines and does so with fewer iterations and less data.
 
 The Future of Computing Research: Industry-Academic Collaborations
 
-  IT-driven innovation is an enormous factor in the worldwide economic
-leadership of the United States. It is larger than finance, construction, or
-transportation, and it employs nearly 6% of the US workforce. The top three
-companies, as measured by market capitalization, are IT companies - Apple,
-Google (now Alphabet), and Microsoft. Facebook, a relatively recent entry in
-the top 10 list by market capitalization has surpassed Walmart, the nation's
-largest retailer, and the largest employer in the world. The net income of just
-the top three exceeds $80 billion - roughly 100 times the total budget of the
-NSF CISE directorate which funds 87% of computing research. In short, the
-direct return on federal research investments in IT research has been
-enormously profitable to the nation.
-  The IT industry ecosystem is also evolving. The time from conception to
-market of successful products has been cut from years to months. Product life
-cycles are increasingly a year or less. This change has pressured companies to
-focus industrial R&D on a pipeline or portfolio of technologies that bring
-immediate, or almost immediate, value to the companies. To defeat the
-competition and stay ahead of the pack, a company must devote resources to
-realizing gains that are shorter term, and must remain agile to respond quickly
-to market changes driven by new technologies, new startups, evolving user
-experience expectations, and the continuous consumer demand for new and
-exciting products.
-  Amidst this landscape, the Computing Community Consortium convened a
-round-table of industry and academic participants to better understand the
-landscape of industry-academic interaction, and to discuss possible actions
-that might be taken to enhance those interactions. We close with some
-recommendations for actions that could expand the lively conversation we
-experienced at the round-table to a national scale.
-
+  IT-driven innovation is an enormous factor in the worldwide economicleadership of the United States. It is larger than finance, construction, ortransportation, and it employs nearly 6% of the US workforce. The top threecompanies, as measured by market capitalization, are IT companies - Apple,Google (now Alphabet), and Microsoft. Facebook, a relatively recent entry inthe top 10 list by market capitalization has surpassed Walmart, the nation'slargest retailer, and the largest employer in the world. The net income of justthe top three exceeds $80 billion - roughly 100 times the total budget of theNSF CISE directorate which funds 87% of computing research. In short, thedirect return on federal research investments in IT research has beenenormously profitable to the nation.  The IT industry ecosystem is also evolving. The time from conception tomarket of successful products has been cut from years to months. Product lifecycles are increasingly a year or less. This change has pressured companies tofocus industrial R&D on a pipeline or portfolio of technologies that bringimmediate, or almost immediate, value to the companies. To defeat thecompetition and stay ahead of the pack, a company must devote resources torealizing gains that are shorter term, and must remain agile to respond quicklyto market changes driven by new technologies, new startups, evolving userexperience expectations, and the continuous consumer demand for new andexciting products.  Amidst this landscape, the Computing Community Consortium convened around-table of industry and academic participants to better understand thelandscape of industry-academic interaction, and to discuss possible actionsthat might be taken to enhance those interactions. We close with somerecommendations for actions that could expand the lively conversation weexperienced at the round-table to a national scale.
 

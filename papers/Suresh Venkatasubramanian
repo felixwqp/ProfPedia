@@ -1,782 +1,148 @@
 The Graphics Card as a Streaming Computer
 
-  Massive data sets have radically changed our understanding of how to design
-efficient algorithms; the streaming paradigm, whether it in terms of number of
-passes of an external memory algorithm, or the single pass and limited memory
-of a stream algorithm, appears to be the dominant method for coping with large
-data.
-  A very different kind of massive computation has had the same effect at the
-level of the CPU. The most prominent example is that of the computations
-performed by a graphics card. The operations themselves are very simple, and
-require very little memory, but require the ability to perform many
-computations extremely fast and in parallel to whatever degree possible. What
-has resulted is a stream processor that is highly optimized for stream
-computations. An intriguing side effect of this is the growing use of a
-graphics card as a general purpose stream processing engine. In an
-ever-increasing array of applications, researchers are discovering that
-performing a computation on a graphics card is far faster than performing it on
-a CPU, and so are using a GPU as a stream co-processor.
-
+  Massive data sets have radically changed our understanding of how to designefficient algorithms; the streaming paradigm, whether it in terms of number ofpasses of an external memory algorithm, or the single pass and limited memoryof a stream algorithm, appears to be the dominant method for coping with largedata.  A very different kind of massive computation has had the same effect at thelevel of the CPU. The most prominent example is that of the computationsperformed by a graphics card. The operations themselves are very simple, andrequire very little memory, but require the ability to perform manycomputations extremely fast and in parallel to whatever degree possible. Whathas resulted is a stream processor that is highly optimized for streamcomputations. An intriguing side effect of this is the growing use of agraphics card as a general purpose stream processing engine. In anever-increasing array of applications, researchers are discovering thatperforming a computation on a graphics card is far faster than performing it ona CPU, and so are using a GPU as a stream co-processor.
 
 A Unified Algorithmic Framework for Multi-Dimensional Scaling
 
-  In this paper, we propose a unified algorithmic framework for solving many
-known variants of \mds. Our algorithm is a simple iterative scheme with
-guaranteed convergence, and is \emph{modular}; by changing the internals of a
-single subroutine in the algorithm, we can switch cost functions and target
-spaces easily. In addition to the formal guarantees of convergence, our
-algorithms are accurate; in most cases, they converge to better quality
-solutions than existing methods, in comparable time. We expect that this
-framework will be useful for a number of \mds variants that have not yet been
-studied.
-  Our framework extends to embedding high-dimensional points lying on a sphere
-to points on a lower dimensional sphere, preserving geodesic distances. As a
-compliment to this result, we also extend the Johnson-Lindenstrauss Lemma to
-this spherical setting, where projecting to a random $O((1/\eps^2) \log
-n)$-dimensional sphere causes $\eps$-distortion.
-
+  In this paper, we propose a unified algorithmic framework for solving manyknown variants of \mds. Our algorithm is a simple iterative scheme withguaranteed convergence, and is \emph{modular}; by changing the internals of asingle subroutine in the algorithm, we can switch cost functions and targetspaces easily. In addition to the formal guarantees of convergence, ouralgorithms are accurate; in most cases, they converge to better qualitysolutions than existing methods, in comparable time. We expect that thisframework will be useful for a number of \mds variants that have not yet beenstudied.  Our framework extends to embedding high-dimensional points lying on a sphereto points on a lower dimensional sphere, preserving geodesic distances. As acompliment to this result, we also extend the Johnson-Lindenstrauss Lemma tothis spherical setting, where projecting to a random $O((1/\eps^2) \logn)$-dimensional sphere causes $\eps$-distortion.
 
 On the (im)possibility of fairness
 
-  What does it mean for an algorithm to be fair? Different papers use different
-notions of algorithmic fairness, and although these appear internally
-consistent, they also seem mutually incompatible. We present a mathematical
-setting in which the distinctions in previous papers can be made formal. In
-addition to characterizing the spaces of inputs (the "observed" space) and
-outputs (the "decision" space), we introduce the notion of a construct space: a
-space that captures unobservable, but meaningful variables for the prediction.
-  We show that in order to prove desirable properties of the entire
-decision-making process, different mechanisms for fairness require different
-assumptions about the nature of the mapping from construct space to decision
-space. The results in this paper imply that future treatments of algorithmic
-fairness should more explicitly state assumptions about the relationship
-between constructs and observations.
-
+  What does it mean for an algorithm to be fair? Different papers use differentnotions of algorithmic fairness, and although these appear internallyconsistent, they also seem mutually incompatible. We present a mathematicalsetting in which the distinctions in previous papers can be made formal. Inaddition to characterizing the spaces of inputs (the "observed" space) andoutputs (the "decision" space), we introduce the notion of a construct space: aspace that captures unobservable, but meaningful variables for the prediction.  We show that in order to prove desirable properties of the entiredecision-making process, different mechanisms for fairness require differentassumptions about the nature of the mapping from construct space to decisionspace. The results in this paper imply that future treatments of algorithmicfairness should more explicitly state assumptions about the relationshipbetween constructs and observations.
 
 Fair Pipelines
 
-  This work facilitates ensuring fairness of machine learning in the real world
-by decoupling fairness considerations in compound decisions. In particular,
-this work studies how fairness propagates through a compound decision-making
-processes, which we call a pipeline. Prior work in algorithmic fairness only
-focuses on fairness with respect to one decision. However, many decision-making
-processes require more than one decision. For instance, hiring is at least a
-two stage model: deciding who to interview from the applicant pool and then
-deciding who to hire from the interview pool. Perhaps surprisingly, we show
-that the composition of fair components may not guarantee a fair pipeline under
-a $(1+\varepsilon)$-equal opportunity definition of fair. However, we identify
-circumstances that do provide that guarantee. We also propose numerous
-directions for future work on more general compound machine learning decisions.
-
+  This work facilitates ensuring fairness of machine learning in the real worldby decoupling fairness considerations in compound decisions. In particular,this work studies how fairness propagates through a compound decision-makingprocesses, which we call a pipeline. Prior work in algorithmic fairness onlyfocuses on fairness with respect to one decision. However, many decision-makingprocesses require more than one decision. For instance, hiring is at least atwo stage model: deciding who to interview from the applicant pool and thendeciding who to hire from the interview pool. Perhaps surprisingly, we showthat the composition of fair components may not guarantee a fair pipeline undera $(1+\varepsilon)$-equal opportunity definition of fair. However, we identifycircumstances that do provide that guarantee. We also propose numerousdirections for future work on more general compound machine learning decisions.
 
 A Gentle Introduction to the Kernel Distance
 
-  This document reviews the definition of the kernel distance, providing a
-gentle introduction tailored to a reader with background in theoretical
-computer science, but limited exposure to technology more common to machine
-learning, functional analysis and geometric measure theory. The key aspect of
-the kernel distance developed here is its interpretation as an L_2 distance
-between probability measures or various shapes (e.g. point sets, curves,
-surfaces) embedded in a vector space (specifically an RKHS). This structure
-enables several elegant and efficient solutions to data analysis problems. We
-conclude with a glimpse into the mathematical underpinnings of this measure,
-highlighting its recent independent evolution in two separate fields.
-
+  This document reviews the definition of the kernel distance, providing agentle introduction tailored to a reader with background in theoreticalcomputer science, but limited exposure to technology more common to machinelearning, functional analysis and geometric measure theory. The key aspect ofthe kernel distance developed here is its interpretation as an L_2 distancebetween probability measures or various shapes (e.g. point sets, curves,surfaces) embedded in a vector space (specifically an RKHS). This structureenables several elegant and efficient solutions to data analysis problems. Weconclude with a glimpse into the mathematical underpinnings of this measure,highlighting its recent independent evolution in two separate fields.
 
 Generating a Diverse Set of High-Quality Clusterings
 
-  We provide a new framework for generating multiple good quality partitions
-(clusterings) of a single data set. Our approach decomposes this problem into
-two components, generating many high-quality partitions, and then grouping
-these partitions to obtain k representatives. The decomposition makes the
-approach extremely modular and allows us to optimize various criteria that
-control the choice of representative partitions.
+  We provide a new framework for generating multiple good quality partitions(clusterings) of a single data set. Our approach decomposes this problem intotwo components, generating many high-quality partitions, and then groupingthese partitions to obtain k representatives. The decomposition makes theapproach extremely modular and allows us to optimize various criteria thatcontrol the choice of representative partitions.
 
+Fairness in representation: quantifying stereotyping as a  representational harm
 
-Fairness in representation: quantifying stereotyping as a
-  representational harm
-
-  While harms of allocation have been increasingly studied as part of the
-subfield of algorithmic fairness, harms of representation have received
-considerably less attention. In this paper, we formalize two notions of
-stereotyping and show how they manifest in later allocative harms within the
-machine learning pipeline. We also propose mitigation strategies and
-demonstrate their effectiveness on synthetic datasets.
-
+  While harms of allocation have been increasingly studied as part of thesubfield of algorithmic fairness, harms of representation have receivedconsiderably less attention. In this paper, we formalize two notions ofstereotyping and show how they manifest in later allocative harms within themachine learning pipeline. We also propose mitigation strategies anddemonstrate their effectiveness on synthetic datasets.
 
 Pattern Matching for sets of segments
 
-  In this paper we present algorithms for a number of problems in geometric
-pattern matching where the input consist of a collections of segments in the
-plane. Our work consists of two main parts. In the first, we address problems
-and measures that relate to collections of orthogonal line segments in the
-plane. Such collections arise naturally from problems in mapping buildings and
-robot exploration.
-  We propose a new measure of segment similarity called a \emph{coverage
-measure}, and present efficient algorithms for maximising this measure between
-sets of axis-parallel segments under translations. Our algorithms run in time
-$O(n^3\polylog n)$ in the general case, and run in time $O(n^2\polylog n)$ for
-the case when all segments are horizontal. In addition, we show that when
-restricted to translations that are only vertical, the Hausdorff distance
-between two sets of horizontal segments can be computed in time roughly
-$O(n^{3/2}{\sl polylog}n)$. These algorithms form significant improvements over
-the general algorithm of Chew et al. that takes time $O(n^4 \log^2 n)$. In the
-second part of this paper we address the problem of matching polygonal chains.
-We study the well known \Frd, and present the first algorithm for computing the
-\Frd under general translations. Our methods also yield algorithms for
-computing a generalization of the \Fr distance, and we also present a simple
-approximation algorithm for the \Frd that runs in time $O(n^2\polylog n)$.
-
+  In this paper we present algorithms for a number of problems in geometricpattern matching where the input consist of a collections of segments in theplane. Our work consists of two main parts. In the first, we address problemsand measures that relate to collections of orthogonal line segments in theplane. Such collections arise naturally from problems in mapping buildings androbot exploration.  We propose a new measure of segment similarity called a \emph{coveragemeasure}, and present efficient algorithms for maximising this measure betweensets of axis-parallel segments under translations. Our algorithms run in time$O(n^3\polylog n)$ in the general case, and run in time $O(n^2\polylog n)$ forthe case when all segments are horizontal. In addition, we show that whenrestricted to translations that are only vertical, the Hausdorff distancebetween two sets of horizontal segments can be computed in time roughly$O(n^{3/2}{\sl polylog}n)$. These algorithms form significant improvements overthe general algorithm of Chew et al. that takes time $O(n^4 \log^2 n)$. In thesecond part of this paper we address the problem of matching polygonal chains.We study the well known \Frd, and present the first algorithm for computing the\Frd under general translations. Our methods also yield algorithms forcomputing a generalization of the \Fr distance, and we also present a simpleapproximation algorithm for the \Frd that runs in time $O(n^2\polylog n)$.
 
 Certifying and removing disparate impact
 
-  What does it mean for an algorithm to be biased? In U.S. law, unintentional
-bias is encoded via disparate impact, which occurs when a selection process has
-widely different outcomes for different groups, even as it appears to be
-neutral. This legal determination hinges on a definition of a protected class
-(ethnicity, gender, religious practice) and an explicit description of the
-process.
-  When the process is implemented using computers, determining disparate impact
-(and hence bias) is harder. It might not be possible to disclose the process.
-In addition, even if the process is open, it might be hard to elucidate in a
-legal setting how the algorithm makes its decisions. Instead of requiring
-access to the algorithm, we propose making inferences based on the data the
-algorithm uses.
-  We make four contributions to this problem. First, we link the legal notion
-of disparate impact to a measure of classification accuracy that while known,
-has received relatively little attention. Second, we propose a test for
-disparate impact based on analyzing the information leakage of the protected
-class from the other data attributes. Third, we describe methods by which data
-might be made unbiased. Finally, we present empirical evidence supporting the
-effectiveness of our test for disparate impact and our approach for both
-masking bias and preserving relevant information in the data. Interestingly,
-our approach resembles some actual selection practices that have recently
-received legal scrutiny.
-
+  What does it mean for an algorithm to be biased? In U.S. law, unintentionalbias is encoded via disparate impact, which occurs when a selection process haswidely different outcomes for different groups, even as it appears to beneutral. This legal determination hinges on a definition of a protected class(ethnicity, gender, religious practice) and an explicit description of theprocess.  When the process is implemented using computers, determining disparate impact(and hence bias) is harder. It might not be possible to disclose the process.In addition, even if the process is open, it might be hard to elucidate in alegal setting how the algorithm makes its decisions. Instead of requiringaccess to the algorithm, we propose making inferences based on the data thealgorithm uses.  We make four contributions to this problem. First, we link the legal notionof disparate impact to a measure of classification accuracy that while known,has received relatively little attention. Second, we propose a test fordisparate impact based on analyzing the information leakage of the protectedclass from the other data attributes. Third, we describe methods by which datamight be made unbiased. Finally, we present empirical evidence supporting theeffectiveness of our test for disparate impact and our approach for bothmasking bias and preserving relevant information in the data. Interestingly,our approach resembles some actual selection practices that have recentlyreceived legal scrutiny.
 
 A Group Theoretic Perspective on Unsupervised Deep Learning
 
-  Why does Deep Learning work? What representations does it capture? How do
-higher-order representations emerge? We study these questions from the
-perspective of group theory, thereby opening a new approach towards a theory of
-Deep learning.
-  One factor behind the recent resurgence of the subject is a key algorithmic
-step called {\em pretraining}: first search for a good generative model for the
-input samples, and repeat the process one layer at a time. We show deeper
-implications of this simple principle, by establishing a connection with the
-interplay of orbits and stabilizers of group actions. Although the neural
-networks themselves may not form groups, we show the existence of {\em shadow}
-groups whose elements serve as close approximations.
-  Over the shadow groups, the pre-training step, originally introduced as a
-mechanism to better initialize a network, becomes equivalent to a search for
-features with minimal orbits. Intuitively, these features are in a way the {\em
-simplest}. Which explains why a deep learning network learns simple features
-first. Next, we show how the same principle, when repeated in the deeper
-layers, can capture higher order representations, and why representation
-complexity increases as the layers get deeper.
-
+  Why does Deep Learning work? What representations does it capture? How dohigher-order representations emerge? We study these questions from theperspective of group theory, thereby opening a new approach towards a theory ofDeep learning.  One factor behind the recent resurgence of the subject is a key algorithmicstep called {\em pretraining}: first search for a good generative model for theinput samples, and repeat the process one layer at a time. We show deeperimplications of this simple principle, by establishing a connection with theinterplay of orbits and stabilizers of group actions. Although the neuralnetworks themselves may not form groups, we show the existence of {\em shadow}groups whose elements serve as close approximations.  Over the shadow groups, the pre-training step, originally introduced as amechanism to better initialize a network, becomes equivalent to a search forfeatures with minimal orbits. Intuitively, these features are in a way the {\emsimplest}. Which explains why a deep learning network learns simple featuresfirst. Next, we show how the same principle, when repeated in the deeperlayers, can capture higher order representations, and why representationcomplexity increases as the layers get deeper.
 
 Auditing Black-box Models for Indirect Influence
 
-  Data-trained predictive models see widespread use, but for the most part they
-are used as black boxes which output a prediction or score. It is therefore
-hard to acquire a deeper understanding of model behavior, and in particular how
-different features influence the model prediction. This is important when
-interpreting the behavior of complex models, or asserting that certain
-problematic attributes (like race or gender) are not unduly influencing
-decisions.
-  In this paper, we present a technique for auditing black-box models, which
-lets us study the extent to which existing models take advantage of particular
-features in the dataset, without knowing how the models work. Our work focuses
-on the problem of indirect influence: how some features might indirectly
-influence outcomes via other, related features. As a result, we can find
-attribute influences even in cases where, upon further direct examination of
-the model, the attribute is not referred to by the model at all.
-  Our approach does not require the black-box model to be retrained. This is
-important if (for example) the model is only accessible via an API, and
-contrasts our work with other methods that investigate feature influence like
-feature selection. We present experimental evidence for the effectiveness of
-our procedure using a variety of publicly available datasets and models. We
-also validate our procedure using techniques from interpretable learning and
-feature selection, as well as against other black-box auditing procedures.
-
+  Data-trained predictive models see widespread use, but for the most part theyare used as black boxes which output a prediction or score. It is thereforehard to acquire a deeper understanding of model behavior, and in particular howdifferent features influence the model prediction. This is important wheninterpreting the behavior of complex models, or asserting that certainproblematic attributes (like race or gender) are not unduly influencingdecisions.  In this paper, we present a technique for auditing black-box models, whichlets us study the extent to which existing models take advantage of particularfeatures in the dataset, without knowing how the models work. Our work focuseson the problem of indirect influence: how some features might indirectlyinfluence outcomes via other, related features. As a result, we can findattribute influences even in cases where, upon further direct examination ofthe model, the attribute is not referred to by the model at all.  Our approach does not require the black-box model to be retrained. This isimportant if (for example) the model is only accessible via an API, andcontrasts our work with other methods that investigate feature influence likefeature selection. We present experimental evidence for the effectiveness ofour procedure using a variety of publicly available datasets and models. Wealso validate our procedure using techniques from interpretable learning andfeature selection, as well as against other black-box auditing procedures.
 
 Runaway Feedback Loops in Predictive Policing
 
-  Predictive policing systems are increasingly used to determine how to
-allocate police across a city in order to best prevent crime. Discovered crime
-data (e.g., arrest counts) are used to help update the model, and the process
-is repeated. Such systems have been empirically shown to be susceptible to
-runaway feedback loops, where police are repeatedly sent back to the same
-neighborhoods regardless of the true crime rate.
-  In response, we develop a mathematical model of predictive policing that
-proves why this feedback loop occurs, show empirically that this model exhibits
-such problems, and demonstrate how to change the inputs to a predictive
-policing system (in a black-box manner) so the runaway feedback loop does not
-occur, allowing the true crime rate to be learned. Our results are
-quantitative: we can establish a link (in our model) between the degree to
-which runaway feedback causes problems and the disparity in crime rates between
-areas. Moreover, we can also demonstrate the way in which \emph{reported}
-incidents of crime (those reported by residents) and \emph{discovered}
-incidents of crime (i.e. those directly observed by police officers dispatched
-as a result of the predictive policing algorithm) interact: in brief, while
-reported incidents can attenuate the degree of runaway feedback, they cannot
-entirely remove it without the interventions we suggest.
-
+  Predictive policing systems are increasingly used to determine how toallocate police across a city in order to best prevent crime. Discovered crimedata (e.g., arrest counts) are used to help update the model, and the processis repeated. Such systems have been empirically shown to be susceptible torunaway feedback loops, where police are repeatedly sent back to the sameneighborhoods regardless of the true crime rate.  In response, we develop a mathematical model of predictive policing thatproves why this feedback loop occurs, show empirically that this model exhibitssuch problems, and demonstrate how to change the inputs to a predictivepolicing system (in a black-box manner) so the runaway feedback loop does notoccur, allowing the true crime rate to be learned. Our results arequantitative: we can establish a link (in our model) between the degree towhich runaway feedback causes problems and the disparity in crime rates betweenareas. Moreover, we can also demonstrate the way in which \emph{reported}incidents of crime (those reported by residents) and \emph{discovered}incidents of crime (i.e. those directly observed by police officers dispatchedas a result of the predictive policing algorithm) interact: in brief, whilereported incidents can attenuate the degree of runaway feedback, they cannotentirely remove it without the interventions we suggest.
 
 Rectangular Layouts and Contact Graphs
 
-  Contact graphs of isothetic rectangles unify many concepts from applications
-including VLSI and architectural design, computational geometry, and GIS.
-Minimizing the area of their corresponding {\em rectangular layouts} is a key
-problem. We study the area-optimization problem and show that it is NP-hard to
-find a minimum-area rectangular layout of a given contact graph. We present
-O(n)-time algorithms that construct $O(n^2)$-area rectangular layouts for
-general contact graphs and $O(n\log n)$-area rectangular layouts for trees.
-(For trees, this is an $O(\log n)$-approximation algorithm.) We also present an
-infinite family of graphs (rsp., trees) that require $\Omega(n^2)$ (rsp.,
-$\Omega(n\log n)$) area.
-  We derive these results by presenting a new characterization of graphs that
-admit rectangular layouts using the related concept of {\em rectangular duals}.
-A corollary to our results relates the class of graphs that admit rectangular
-layouts to {\em rectangle of influence drawings}.
-
+  Contact graphs of isothetic rectangles unify many concepts from applicationsincluding VLSI and architectural design, computational geometry, and GIS.Minimizing the area of their corresponding {\em rectangular layouts} is a keyproblem. We study the area-optimization problem and show that it is NP-hard tofind a minimum-area rectangular layout of a given contact graph. We presentO(n)-time algorithms that construct $O(n^2)$-area rectangular layouts forgeneral contact graphs and $O(n\log n)$-area rectangular layouts for trees.(For trees, this is an $O(\log n)$-approximation algorithm.) We also present aninfinite family of graphs (rsp., trees) that require $\Omega(n^2)$ (rsp.,$\Omega(n\log n)$) area.  We derive these results by presenting a new characterization of graphs thatadmit rectangular layouts using the related concept of {\em rectangular duals}.A corollary to our results relates the class of graphs that admit rectangularlayouts to {\em rectangle of influence drawings}.
 
 Spatially-Aware Comparison and Consensus for Clusterings
 
-  This paper proposes a new distance metric between clusterings that
-incorporates information about the spatial distribution of points and clusters.
-Our approach builds on the idea of a Hilbert space-based representation of
-clusters as a combination of the representations of their constituent points.
-We use this representation and the underlying metric to design a
-spatially-aware consensus clustering procedure. This consensus procedure is
-implemented via a novel reduction to Euclidean clustering, and is both simple
-and efficient. All of our results apply to both soft and hard clusterings. We
-accompany these algorithms with a detailed experimental evaluation that
-demonstrates the efficiency and quality of our techniques.
+  This paper proposes a new distance metric between clusterings thatincorporates information about the spatial distribution of points and clusters.Our approach builds on the idea of a Hilbert space-based representation ofclusters as a combination of the representations of their constituent points.We use this representation and the underlying metric to design aspatially-aware consensus clustering procedure. This consensus procedure isimplemented via a novel reduction to Euclidean clustering, and is both simpleand efficient. All of our results apply to both soft and hard clusterings. Weaccompany these algorithms with a detailed experimental evaluation thatdemonstrates the efficiency and quality of our techniques.
 
+Approximate Bregman near neighbors in sublinear time: Beyond the  triangle inequality
 
-Approximate Bregman near neighbors in sublinear time: Beyond the
-  triangle inequality
-
-  In this paper we present the first provable approximate nearest-neighbor
-(ANN) algorithms for Bregman divergences. Our first algorithm processes queries
-in O(log^d n) time using O(n log^d n) space and only uses general properties of
-the underlying distance function (which includes Bregman divergences as a
-special case). The second algorithm processes queries in O(log n) time using
-O(n) space and exploits structural constants associated specifically with
-Bregman divergences. An interesting feature of our algorithms is that they
-extend the ring-tree + quad-tree paradigm for ANN searching beyond Euclidean
-distances and metrics of bounded doubling dimension to distances that might not
-even be symmetric or satisfy a triangle inequality.
-
+  In this paper we present the first provable approximate nearest-neighbor(ANN) algorithms for Bregman divergences. Our first algorithm processes queriesin O(log^d n) time using O(n log^d n) space and only uses general properties ofthe underlying distance function (which includes Bregman divergences as aspecial case). The second algorithm processes queries in O(log n) time usingO(n) space and exploits structural constants associated specifically withBregman divergences. An interesting feature of our algorithms is that theyextend the ring-tree + quad-tree paradigm for ANN searching beyond Euclideandistances and metrics of bounded doubling dimension to distances that might noteven be symmetric or satisfy a triangle inequality.
 
 Protocols for Learning Classifiers on Distributed Data
 
-  We consider the problem of learning classifiers for labeled data that has
-been distributed across several nodes. Our goal is to find a single classifier,
-with small approximation error, across all datasets while minimizing the
-communication between nodes. This setting models real-world communication
-bottlenecks in the processing of massive distributed datasets. We present
-several very general sampling-based solutions as well as some two-way protocols
-which have a provable exponential speed-up over any one-way protocol. We focus
-on core problems for noiseless data distributed across two or more nodes. The
-techniques we introduce are reminiscent of active learning, but rather than
-actively probing labels, nodes actively communicate with each other, each node
-simultaneously learning the important data from another node.
-
-
-Streaming Verification of Graph Properties
-
-  Streaming interactive proofs (SIPs) are a framework for outsourced
-computation. A computationally limited streaming client (the verifier) hands
-over a large data set to an untrusted server (the prover) in the cloud and the
-two parties run a protocol to confirm the correctness of result with high
-probability. SIPs are particularly interesting for problems that are hard to
-solve (or even approximate) well in a streaming setting. The most notable of
-these problems is finding maximum matchings, which has received intense
-interest in recent years but has strong lower bounds even for constant factor
-approximations.
-  In this paper, we present efficient streaming interactive proofs that can
-verify maximum matchings exactly. Our results cover all flavors of matchings
-(bipartite/non-bipartite and weighted). In addition, we also present streaming
-verifiers for approximate metric TSP. In particular, these are the first
-efficient results for weighted matchings and for metric TSP in any streaming
-verification model.
-
+  We consider the problem of learning classifiers for labeled data that hasbeen distributed across several nodes. Our goal is to find a single classifier,with small approximation error, across all datasets while minimizing thecommunication between nodes. This setting models real-world communicationbottlenecks in the processing of massive distributed datasets. We presentseveral very general sampling-based solutions as well as some two-way protocolswhich have a provable exponential speed-up over any one-way protocol. We focuson core problems for noiseless data distributed across two or more nodes. Thetechniques we introduce are reminiscent of active learning, but rather thanactively probing labels, nodes actively communicate with each other, each nodesimultaneously learning the important data from another node.
 
 A Geometric Algorithm for Scalable Multiple Kernel Learning
 
-  We present a geometric formulation of the Multiple Kernel Learning (MKL)
-problem. To do so, we reinterpret the problem of learning kernel weights as
-searching for a kernel that maximizes the minimum (kernel) distance between two
-convex polytopes. This interpretation combined with novel structural insights
-from our geometric formulation allows us to reduce the MKL problem to a simple
-optimization routine that yields provable convergence as well as quality
-guarantees. As a result our method scales efficiently to much larger data sets
-than most prior methods can handle. Empirical evaluation on eleven datasets
-shows that we are significantly faster and even compare favorably with a
-uniform unweighted combination of kernels.
-
-
-A Unified View of Localized Kernel Learning
-
-  Multiple Kernel Learning, or MKL, extends (kernelized) SVM by attempting to
-learn not only a classifier/regressor but also the best kernel for the training
-task, usually from a combination of existing kernel functions. Most MKL methods
-seek the combined kernel that performs best over every training example,
-sacrificing performance in some areas to seek a global optimum. Localized
-kernel learning (LKL) overcomes this limitation by allowing the training
-algorithm to match a component kernel to the examples that can exploit it best.
-Several approaches to the localized kernel learning problem have been explored
-in the last several years. We unify many of these approaches under one simple
-system and design a new algorithm with improved performance. We also develop
-enhanced versions of existing algorithms, with an eye on scalability and
-performance.
-
+  We present a geometric formulation of the Multiple Kernel Learning (MKL)problem. To do so, we reinterpret the problem of learning kernel weights assearching for a kernel that maximizes the minimum (kernel) distance between twoconvex polytopes. This interpretation combined with novel structural insightsfrom our geometric formulation allows us to reduce the MKL problem to a simpleoptimization routine that yields provable convergence as well as qualityguarantees. As a result our method scales efficiently to much larger data setsthan most prior methods can handle. Empirical evaluation on eleven datasetsshows that we are significantly faster and even compare favorably with auniform unweighted combination of kernels.
 
 Streaming Verification in Data Analysis
 
-  Streaming interactive proofs (SIPs) are a framework to reason about
-outsourced computation, where a data owner (the verifier) outsources a
-computation to the cloud (the prover), but wishes to verify the correctness of
-the solution provided by the cloud service. In this paper we present streaming
-interactive proofs for problems in data analysis. We present protocols for
-clustering and shape fitting problems, as well as an improved protocol for
-rectangular matrix multiplication. The latter can in turn be used to verify $k$
-eigenvectors of a (streamed) $n \times n$ matrix. In general our solutions use
-polylogarithmic rounds of communication and polylogarithmic total communication
-and verifier space. For special cases (when optimality certificates can be
-verified easily), we present constant round protocols with similar costs. For
-rectangular matrix multiplication and eigenvector verification, our protocols
-work in the more restricted annotated data streaming model, and use sublinear
-(but not polylogarithmic) communication.
+  Streaming interactive proofs (SIPs) are a framework to reason aboutoutsourced computation, where a data owner (the verifier) outsources acomputation to the cloud (the prover), but wishes to verify the correctness ofthe solution provided by the cloud service. In this paper we present streaminginteractive proofs for problems in data analysis. We present protocols forclustering and shape fitting problems, as well as an improved protocol forrectangular matrix multiplication. The latter can in turn be used to verify $k$eigenvectors of a (streamed) $n \times n$ matrix. In general our solutions usepolylogarithmic rounds of communication and polylogarithmic total communicationand verifier space. For special cases (when optimality certificates can beverified easily), we present constant round protocols with similar costs. Forrectangular matrix multiplication and eigenvector verification, our protocolswork in the more restricted annotated data streaming model, and use sublinear(but not polylogarithmic) communication.
 
+Streaming Verification of Graph Properties
 
-A comparative study of fairness-enhancing interventions in machine
-  learning
+  Streaming interactive proofs (SIPs) are a framework for outsourcedcomputation. A computationally limited streaming client (the verifier) handsover a large data set to an untrusted server (the prover) in the cloud and thetwo parties run a protocol to confirm the correctness of result with highprobability. SIPs are particularly interesting for problems that are hard tosolve (or even approximate) well in a streaming setting. The most notable ofthese problems is finding maximum matchings, which has received intenseinterest in recent years but has strong lower bounds even for constant factorapproximations.  In this paper, we present efficient streaming interactive proofs that canverify maximum matchings exactly. Our results cover all flavors of matchings(bipartite/non-bipartite and weighted). In addition, we also present streamingverifiers for approximate metric TSP. In particular, these are the firstefficient results for weighted matchings and for metric TSP in any streamingverification model.
 
-  Computers are increasingly used to make decisions that have significant
-impact in people's lives. Often, these predictions can affect different
-population subgroups disproportionately. As a result, the issue of fairness has
-received much recent interest, and a number of fairness-enhanced classifiers
-and predictors have appeared in the literature. This paper seeks to study the
-following questions: how do these different techniques fundamentally compare to
-one another, and what accounts for the differences? Specifically, we seek to
-bring attention to many under-appreciated aspects of such fairness-enhancing
-interventions. Concretely, we present the results of an open benchmark we have
-developed that lets us compare a number of different algorithms under a variety
-of fairness measures, and a large number of existing datasets. We find that
-although different algorithms tend to prefer specific formulations of fairness
-preservations, many of these measures strongly correlate with one another. In
-addition, we find that fairness-preserving algorithms tend to be sensitive to
-fluctuations in dataset composition (simulated in our benchmark by varying
-training-test splits), indicating that fairness interventions might be more
-brittle than previously thought.
+A Unified View of Localized Kernel Learning
 
+  Multiple Kernel Learning, or MKL, extends (kernelized) SVM by attempting tolearn not only a classifier/regressor but also the best kernel for the trainingtask, usually from a combination of existing kernel functions. Most MKL methodsseek the combined kernel that performs best over every training example,sacrificing performance in some areas to seek a global optimum. Localizedkernel learning (LKL) overcomes this limitation by allowing the trainingalgorithm to match a component kernel to the examples that can exploit it best.Several approaches to the localized kernel learning problem have been exploredin the last several years. We unify many of these approaches under one simplesystem and design a new algorithm with improved performance. We also developenhanced versions of existing algorithms, with an eye on scalability andperformance.
+
+A comparative study of fairness-enhancing interventions in machine  learning
+
+  Computers are increasingly used to make decisions that have significantimpact in people's lives. Often, these predictions can affect differentpopulation subgroups disproportionately. As a result, the issue of fairness hasreceived much recent interest, and a number of fairness-enhanced classifiersand predictors have appeared in the literature. This paper seeks to study thefollowing questions: how do these different techniques fundamentally compare toone another, and what accounts for the differences? Specifically, we seek tobring attention to many under-appreciated aspects of such fairness-enhancinginterventions. Concretely, we present the results of an open benchmark we havedeveloped that lets us compare a number of different algorithms under a varietyof fairness measures, and a large number of existing datasets. We find thatalthough different algorithms tend to prefer specific formulations of fairnesspreservations, many of these measures strongly correlate with one another. Inaddition, we find that fairness-preserving algorithms tend to be sensitive tofluctuations in dataset composition (simulated in our benchmark by varyingtraining-test splits), indicating that fairness interventions might be morebrittle than previously thought.
 
 Sublinear Algorithms for MAXCUT and Correlation Clustering
 
-  We study sublinear algorithms for two fundamental graph problems, MAXCUT and
-correlation clustering. Our focus is on constructing core-sets as well as
-developing streaming algorithms for these problems. Constant space algorithms
-are known for dense graphs for these problems, while $\Omega(n)$ lower bounds
-exist (in the streaming setting) for sparse graphs.
-  Our goal in this paper is to bridge the gap between these extremes. Our first
-result is to construct core-sets of size $\tilde{O}(n^{1-\delta})$ for both the
-problems, on graphs with average degree $n^{\delta}$ (for any $\delta >0$).
-This turns out to be optimal, under the exponential time hypothesis (ETH). Our
-core-set analysis is based on studying random-induced sub-problems of
-optimization problems. To the best of our knowledge, all the known results in
-our parameter range rely crucially on near-regularity assumptions. We avoid
-these by using a biased sampling approach, which we analyze using recent
-results on concentration of quadratic functions. We then show that our
-construction yields a 2-pass streaming $(1+\epsilon)$-approximation for both
-problems; the algorithm uses $\tilde{O}(n^{1-\delta})$ space, for graphs of
-average degree $n^\delta$.
+  We study sublinear algorithms for two fundamental graph problems, MAXCUT andcorrelation clustering. Our focus is on constructing core-sets as well asdeveloping streaming algorithms for these problems. Constant space algorithmsare known for dense graphs for these problems, while $\Omega(n)$ lower boundsexist (in the streaming setting) for sparse graphs.  Our goal in this paper is to bridge the gap between these extremes. Our firstresult is to construct core-sets of size $\tilde{O}(n^{1-\delta})$ for both theproblems, on graphs with average degree $n^{\delta}$ (for any $\delta >0$).This turns out to be optimal, under the exponential time hypothesis (ETH). Ourcore-set analysis is based on studying random-induced sub-problems ofoptimization problems. To the best of our knowledge, all the known results inour parameter range rely crucially on near-regularity assumptions. We avoidthese by using a biased sampling approach, which we analyze using recentresults on concentration of quadratic functions. We then show that ourconstruction yields a 2-pass streaming $(1+\epsilon)$-approximation for bothproblems; the algorithm uses $\tilde{O}(n^{1-\delta})$ space, for graphs ofaverage degree $n^\delta$.
 
+Streaming and Sublinear Approximation of Entropy and Information  Distances
 
-Streaming and Sublinear Approximation of Entropy and Information
-  Distances
-
-  In many problems in data mining and machine learning, data items that need to
-be clustered or classified are not points in a high-dimensional space, but are
-distributions (points on a high dimensional simplex). For distributions,
-natural measures of distance are not the $\ell_p$ norms and variants, but
-information-theoretic measures like the Kullback-Leibler distance, the
-Hellinger distance, and others. Efficient estimation of these distances is a
-key component in algorithms for manipulating distributions. Thus, sublinear
-resource constraints, either in time (property testing) or space (streaming)
-are crucial.
-  We start by resolving two open questions regarding property testing of
-distributions. Firstly, we show a tight bound for estimating bounded, symmetric
-f-divergences between distributions in a general property testing (sublinear
-time) framework (the so-called combined oracle model). This yields optimal
-algorithms for estimating such well known distances as the Jensen-Shannon
-divergence and the Hellinger distance. Secondly, we close a $(\log n)/H$ gap
-between upper and lower bounds for estimating entropy $H$ in this model. In a
-stream setting (sublinear space), we give the first algorithm for estimating
-the entropy of a distribution. Our algorithm runs in polylogarithmic space and
-yields an asymptotic constant factor approximation scheme. We also provide
-other results along the space/time/approximation tradeoff curve.
-
+  In many problems in data mining and machine learning, data items that need tobe clustered or classified are not points in a high-dimensional space, but aredistributions (points on a high dimensional simplex). For distributions,natural measures of distance are not the $\ell_p$ norms and variants, butinformation-theoretic measures like the Kullback-Leibler distance, theHellinger distance, and others. Efficient estimation of these distances is akey component in algorithms for manipulating distributions. Thus, sublinearresource constraints, either in time (property testing) or space (streaming)are crucial.  We start by resolving two open questions regarding property testing ofdistributions. Firstly, we show a tight bound for estimating bounded, symmetricf-divergences between distributions in a general property testing (sublineartime) framework (the so-called combined oracle model). This yields optimalalgorithms for estimating such well known distances as the Jensen-Shannondivergence and the Hellinger distance. Secondly, we close a $(\log n)/H$ gapbetween upper and lower bounds for estimating entropy $H$ in this model. In astream setting (sublinear space), we give the first algorithm for estimatingthe entropy of a distribution. Our algorithm runs in polylogarithmic space andyields an asymptotic constant factor approximation scheme. We also provideother results along the space/time/approximation tradeoff curve.
 
 The Hunting of the Bump: On Maximizing Statistical Discrepancy
 
-  Anomaly detection has important applications in biosurveilance and
-environmental monitoring. When comparing measured data to data drawn from a
-baseline distribution, merely, finding clusters in the measured data may not
-actually represent true anomalies. These clusters may likely be the clusters of
-the baseline distribution. Hence, a discrepancy function is often used to
-examine how different measured data is to baseline data within a region. An
-anomalous region is thus defined to be one with high discrepancy.
-  In this paper, we present algorithms for maximizing statistical discrepancy
-functions over the space of axis-parallel rectangles. We give provable
-approximation guarantees, both additive and relative, and our methods apply to
-any convex discrepancy function. Our algorithms work by connecting statistical
-discrepancy to combinatorial discrepancy; roughly speaking, we show that in
-order to maximize a convex discrepancy function over a class of shapes, one
-needs only maximize a linear discrepancy function over the same set of shapes.
-  We derive general discrepancy functions for data generated from a one-
-parameter exponential family. This generalizes the widely-used Kulldorff scan
-statistic for data from a Poisson distribution. We present an algorithm running
-in $O(\smash[tb]{\frac{1}{\epsilon} n^2 \log^2 n})$ that computes the maximum
-discrepancy rectangle to within additive error $\epsilon$, for the Kulldorff
-scan statistic. Similar results hold for relative error and for discrepancy
-functions for data coming from Gaussian, Bernoulli, and gamma distributions.
-Prior to our work, the best known algorithms were exact and ran in time
-$\smash[t]{O(n^4)}$.
-
+  Anomaly detection has important applications in biosurveilance andenvironmental monitoring. When comparing measured data to data drawn from abaseline distribution, merely, finding clusters in the measured data may notactually represent true anomalies. These clusters may likely be the clusters ofthe baseline distribution. Hence, a discrepancy function is often used toexamine how different measured data is to baseline data within a region. Ananomalous region is thus defined to be one with high discrepancy.  In this paper, we present algorithms for maximizing statistical discrepancyfunctions over the space of axis-parallel rectangles. We give provableapproximation guarantees, both additive and relative, and our methods apply toany convex discrepancy function. Our algorithms work by connecting statisticaldiscrepancy to combinatorial discrepancy; roughly speaking, we show that inorder to maximize a convex discrepancy function over a class of shapes, oneneeds only maximize a linear discrepancy function over the same set of shapes.  We derive general discrepancy functions for data generated from a one-parameter exponential family. This generalizes the widely-used Kulldorff scanstatistic for data from a Poisson distribution. We present an algorithm runningin $O(\smash[tb]{\frac{1}{\epsilon} n^2 \log^2 n})$ that computes the maximumdiscrepancy rectangle to within additive error $\epsilon$, for the Kulldorffscan statistic. Similar results hold for relative error and for discrepancyfunctions for data coming from Gaussian, Bernoulli, and gamma distributions.Prior to our work, the best known algorithms were exact and ran in time$\smash[t]{O(n^4)}$.
 
 Restricted Strip Covering and the Sensor Cover Problem
 
-  Given a set of objects with durations (jobs) that cover a base region, can we
-schedule the jobs to maximize the duration the original region remains covered?
-We call this problem the sensor cover problem. This problem arises in the
-context of covering a region with sensors. For example, suppose you wish to
-monitor activity along a fence by sensors placed at various fixed locations.
-Each sensor has a range and limited battery life. The problem is to schedule
-when to turn on the sensors so that the fence is fully monitored for as long as
-possible. This one dimensional problem involves intervals on the real line.
-Associating a duration to each yields a set of rectangles in space and time,
-each specified by a pair of fixed horizontal endpoints and a height. The
-objective is to assign a position to each rectangle to maximize the height at
-which the spanning interval is fully covered. We call this one dimensional
-problem restricted strip covering. If we replace the covering constraint by a
-packing constraint, the problem is identical to dynamic storage allocation, a
-scheduling problem that is a restricted case of the strip packing problem. We
-show that the restricted strip covering problem is NP-hard and present an O(log
-log n)-approximation algorithm. We present better approximations or exact
-algorithms for some special cases. For the uniform-duration case of restricted
-strip covering we give a polynomial-time, exact algorithm but prove that the
-uniform-duration case for higher-dimensional regions is NP-hard. Finally, we
-consider regions that are arbitrary sets, and we present an O(log
-n)-approximation algorithm.
-
+  Given a set of objects with durations (jobs) that cover a base region, can weschedule the jobs to maximize the duration the original region remains covered?We call this problem the sensor cover problem. This problem arises in thecontext of covering a region with sensors. For example, suppose you wish tomonitor activity along a fence by sensors placed at various fixed locations.Each sensor has a range and limited battery life. The problem is to schedulewhen to turn on the sensors so that the fence is fully monitored for as long aspossible. This one dimensional problem involves intervals on the real line.Associating a duration to each yields a set of rectangles in space and time,each specified by a pair of fixed horizontal endpoints and a height. Theobjective is to assign a position to each rectangle to maximize the height atwhich the spanning interval is fully covered. We call this one dimensionalproblem restricted strip covering. If we replace the covering constraint by apacking constraint, the problem is identical to dynamic storage allocation, ascheduling problem that is a restricted case of the strip packing problem. Weshow that the restricted strip covering problem is NP-hard and present an O(loglog n)-approximation algorithm. We present better approximations or exactalgorithms for some special cases. For the uniform-duration case of restrictedstrip covering we give a polynomial-time, exact algorithm but prove that theuniform-duration case for higher-dimensional regions is NP-hard. Finally, weconsider regions that are arbitrary sets, and we present an O(logn)-approximation algorithm.
 
 Streamed Learning: One-Pass SVMs
 
-  We present a streaming model for large-scale classification (in the context
-of $\ell_2$-SVM) by leveraging connections between learning and computational
-geometry. The streaming model imposes the constraint that only a single pass
-over the data is allowed. The $\ell_2$-SVM is known to have an equivalent
-formulation in terms of the minimum enclosing ball (MEB) problem, and an
-efficient algorithm based on the idea of \emph{core sets} exists (Core Vector
-Machine, CVM). CVM learns a $(1+\varepsilon)$-approximate MEB for a set of
-points and yields an approximate solution to corresponding SVM instance.
-However CVM works in batch mode requiring multiple passes over the data. This
-paper presents a single-pass SVM which is based on the minimum enclosing ball
-of streaming data. We show that the MEB updates for the streaming case can be
-easily adapted to learn the SVM weight vector in a way similar to using online
-stochastic gradient updates. Our algorithm performs polylogarithmic computation
-at each example, and requires very small and constant storage. Experimental
-results show that, even in such restrictive settings, we can learn efficiently
-in just one pass and get accuracies comparable to other state-of-the-art SVM
-solvers (batch and online). We also give an analysis of the algorithm, and
-discuss some open issues and possible extensions.
-
+  We present a streaming model for large-scale classification (in the contextof $\ell_2$-SVM) by leveraging connections between learning and computationalgeometry. The streaming model imposes the constraint that only a single passover the data is allowed. The $\ell_2$-SVM is known to have an equivalentformulation in terms of the minimum enclosing ball (MEB) problem, and anefficient algorithm based on the idea of \emph{core sets} exists (Core VectorMachine, CVM). CVM learns a $(1+\varepsilon)$-approximate MEB for a set ofpoints and yields an approximate solution to corresponding SVM instance.However CVM works in batch mode requiring multiple passes over the data. Thispaper presents a single-pass SVM which is based on the minimum enclosing ballof streaming data. We show that the MEB updates for the streaming case can beeasily adapted to learn the SVM weight vector in a way similar to using onlinestochastic gradient updates. Our algorithm performs polylogarithmic computationat each example, and requires very small and constant storage. Experimentalresults show that, even in such restrictive settings, we can learn efficientlyin just one pass and get accuracies comparable to other state-of-the-art SVMsolvers (batch and online). We also give an analysis of the algorithm, anddiscuss some open issues and possible extensions.
 
 Computing Hulls And Centerpoints In Positive Definite Space
 
-  In this paper, we present algorithms for computing approximate hulls and
-centerpoints for collections of matrices in positive definite space. There are
-many applications where the data under consideration, rather than being points
-in a Euclidean space, are positive definite (p.d.) matrices. These applications
-include diffusion tensor imaging in the brain, elasticity analysis in
-mechanical engineering, and the theory of kernel maps in machine learning. Our
-work centers around the notion of a horoball: the limit of a ball fixed at one
-point whose radius goes to infinity. Horoballs possess many (though not all) of
-the properties of halfspaces; in particular, they lack a strong separation
-theorem where two horoballs can completely partition the space. In spite of
-this, we show that we can compute an approximate "horoball hull" that strictly
-contains the actual convex hull. This approximate hull also preserves geodesic
-extents, which is a result of independent value: an immediate corollary is that
-we can approximately solve problems like the diameter and width in positive
-definite space. We also use horoballs to show existence of and compute
-approximate robust centerpoints in positive definite space, via the
-horoball-equivalent of the notion of depth.
-
-
-Multiple Target Tracking with RF Sensor Networks
-
-  RF sensor networks are wireless networks that can localize and track people
-(or targets) without needing them to carry or wear any electronic device. They
-use the change in the received signal strength (RSS) of the links due to the
-movements of people to infer their locations. In this paper, we consider
-real-time multiple target tracking with RF sensor networks. We perform radio
-tomographic imaging (RTI), which generates images of the change in the
-propagation field, as if they were frames of a video. Our RTI method uses RSS
-measurements on multiple frequency channels on each link, combining them with a
-fade level-based weighted average. We describe methods to adapt machine vision
-methods to the peculiarities of RTI to enable real time multiple target
-tracking. Several tests are performed in an open environment, a one-bedroom
-apartment, and a cluttered office environment. The results demonstrate that the
-system is capable of accurately tracking in real-time up to 4 targets in
-cluttered indoor environments, even when their trajectories intersect multiple
-times, without mis-estimating the number of targets found in the monitored
-area. The highest average tracking error measured in the tests is 0.45 m with
-two targets, 0.46 m with three targets, and 0.55 m with four targets.
-
-
-Why does Deep Learning work? - A perspective from Group Theory
-
-  Why does Deep Learning work? What representations does it capture? How do
-higher-order representations emerge? We study these questions from the
-perspective of group theory, thereby opening a new approach towards a theory of
-Deep learning.
-  One factor behind the recent resurgence of the subject is a key algorithmic
-step called pre-training: first search for a good generative model for the
-input samples, and repeat the process one layer at a time. We show deeper
-implications of this simple principle, by establishing a connection with the
-interplay of orbits and stabilizers of group actions. Although the neural
-networks themselves may not form groups, we show the existence of {\em shadow}
-groups whose elements serve as close approximations.
-  Over the shadow groups, the pre-training step, originally introduced as a
-mechanism to better initialize a network, becomes equivalent to a search for
-features with minimal orbits. Intuitively, these features are in a way the {\em
-simplest}. Which explains why a deep learning network learns simple features
-first. Next, we show how the same principle, when repeated in the deeper
-layers, can capture higher order representations, and why representation
-complexity increases as the layers get deeper.
-
+  In this paper, we present algorithms for computing approximate hulls andcenterpoints for collections of matrices in positive definite space. There aremany applications where the data under consideration, rather than being pointsin a Euclidean space, are positive definite (p.d.) matrices. These applicationsinclude diffusion tensor imaging in the brain, elasticity analysis inmechanical engineering, and the theory of kernel maps in machine learning. Ourwork centers around the notion of a horoball: the limit of a ball fixed at onepoint whose radius goes to infinity. Horoballs possess many (though not all) ofthe properties of halfspaces; in particular, they lack a strong separationtheorem where two horoballs can completely partition the space. In spite ofthis, we show that we can compute an approximate "horoball hull" that strictlycontains the actual convex hull. This approximate hull also preserves geodesicextents, which is a result of independent value: an immediate corollary is thatwe can approximately solve problems like the diameter and width in positivedefinite space. We also use horoballs to show existence of and computeapproximate robust centerpoints in positive definite space, via thehoroball-equivalent of the notion of depth.
 
 Efficient Protocols for Distributed Classification and Optimization
 
-  In distributed learning, the goal is to perform a learning task over data
-distributed across multiple nodes with minimal (expensive) communication. Prior
-work (Daume III et al., 2012) proposes a general model that bounds the
-communication required for learning classifiers while allowing for $\eps$
-training error on linearly separable data adversarially distributed across
-nodes.
-  In this work, we develop key improvements and extensions to this basic model.
-Our first result is a two-party multiplicative-weight-update based protocol
-that uses $O(d^2 \log{1/\eps})$ words of communication to classify distributed
-data in arbitrary dimension $d$, $\eps$-optimally. This readily extends to
-classification over $k$ nodes with $O(kd^2 \log{1/\eps})$ words of
-communication. Our proposed protocol is simple to implement and is considerably
-more efficient than baselines compared, as demonstrated by our empirical
-results.
-  In addition, we illustrate general algorithm design paradigms for doing
-efficient learning over distributed data. We show how to solve
-fixed-dimensional and high dimensional linear programming efficiently in a
-distributed setting where constraints may be distributed across nodes. Since
-many learning problems can be viewed as convex optimization problems where
-constraints are generated by individual points, this models many typical
-distributed learning scenarios. Our techniques make use of a novel connection
-from multipass streaming, as well as adapting the multiplicative-weight-update
-framework more generally to a distributed setting. As a consequence, our
-methods extend to the wide range of problems solvable using these techniques.
+  In distributed learning, the goal is to perform a learning task over datadistributed across multiple nodes with minimal (expensive) communication. Priorwork (Daume III et al., 2012) proposes a general model that bounds thecommunication required for learning classifiers while allowing for $\eps$training error on linearly separable data adversarially distributed acrossnodes.  In this work, we develop key improvements and extensions to this basic model.Our first result is a two-party multiplicative-weight-update based protocolthat uses $O(d^2 \log{1/\eps})$ words of communication to classify distributeddata in arbitrary dimension $d$, $\eps$-optimally. This readily extends toclassification over $k$ nodes with $O(kd^2 \log{1/\eps})$ words ofcommunication. Our proposed protocol is simple to implement and is considerablymore efficient than baselines compared, as demonstrated by our empiricalresults.  In addition, we illustrate general algorithm design paradigms for doingefficient learning over distributed data. We show how to solvefixed-dimensional and high dimensional linear programming efficiently in adistributed setting where constraints may be distributed across nodes. Sincemany learning problems can be viewed as convex optimization problems whereconstraints are generated by individual points, this models many typicaldistributed learning scenarios. Our techniques make use of a novel connectionfrom multipass streaming, as well as adapting the multiplicative-weight-updateframework more generally to a distributed setting. As a consequence, ourmethods extend to the wide range of problems solvable using these techniques.
 
+Multiple Target Tracking with RF Sensor Networks
 
-Sketching, Embedding, and Dimensionality Reduction for Information
-  Spaces
-
-  Information distances like the Hellinger distance and the Jensen-Shannon
-divergence have deep roots in information theory and machine learning. They are
-used extensively in data analysis especially when the objects being compared
-are high dimensional empirical probability distributions built from data.
-However, we lack common tools needed to actually use information distances in
-applications efficiently and at scale with any kind of provable guarantees. We
-can't sketch these distances easily, or embed them in better behaved spaces, or
-even reduce the dimensionality of the space while maintaining the probability
-structure of the data.
-  In this paper, we build these tools for information distances---both for the
-Hellinger distance and Jensen--Shannon divergence, as well as related measures,
-like the $\chi^2$ divergence. We first show that they can be sketched
-efficiently (i.e. up to multiplicative error in sublinear space) in the
-aggregate streaming model. This result is exponentially stronger than known
-upper bounds for sketching these distances in the strict turnstile streaming
-model. Second, we show a finite dimensionality embedding result for the
-Jensen-Shannon and $\chi^2$ divergences that preserves pair wise distances.
-Finally we prove a dimensionality reduction result for the Hellinger,
-Jensen--Shannon, and $\chi^2$ divergences that preserves the information
-geometry of the distributions (specifically, by retaining the simplex structure
-of the space). While our second result above already implies that these
-divergences can be explicitly embedded in Euclidean space, retaining the
-simplex structure is important because it allows us to continue doing inference
-in the reduced space. In essence, we preserve not just the distance structure
-but the underlying geometry of the space.
-
+  RF sensor networks are wireless networks that can localize and track people(or targets) without needing them to carry or wear any electronic device. Theyuse the change in the received signal strength (RSS) of the links due to themovements of people to infer their locations. In this paper, we considerreal-time multiple target tracking with RF sensor networks. We perform radiotomographic imaging (RTI), which generates images of the change in thepropagation field, as if they were frames of a video. Our RTI method uses RSSmeasurements on multiple frequency channels on each link, combining them with afade level-based weighted average. We describe methods to adapt machine visionmethods to the peculiarities of RTI to enable real time multiple targettracking. Several tests are performed in an open environment, a one-bedroomapartment, and a cluttered office environment. The results demonstrate that thesystem is capable of accurately tracking in real-time up to 4 targets incluttered indoor environments, even when their trajectories intersect multipletimes, without mis-estimating the number of targets found in the monitoredarea. The highest average tracking error measured in the tests is 0.45 m withtwo targets, 0.46 m with three targets, and 0.55 m with four targets.
 
 Power to the Points: Validating Data Memberships in Clusterings
 
-  A clustering is an implicit assignment of labels of points, based on
-proximity to other points. It is these labels that are then used for downstream
-analysis (either focusing on individual clusters, or identifying
-representatives of clusters and so on). Thus, in order to trust a clustering as
-a first step in exploratory data analysis, we must trust the labels assigned to
-individual data. Without supervision, how can we validate this assignment? In
-this paper, we present a method to attach affinity scores to the implicit
-labels of individual points in a clustering. The affinity scores capture the
-confidence level of the cluster that claims to "own" the point. This method is
-very general: it can be used with clusterings derived from Euclidean data,
-kernelized data, or even data derived from information spaces. It smoothly
-incorporates importance functions on clusters, allowing us to eight different
-clusters differently. It is also efficient: assigning an affinity score to a
-point depends only polynomially on the number of clusters and is independent of
-the number of points in the data. The dimensionality of the underlying space
-only appears in preprocessing. We demonstrate the value of our approach with an
-experimental study that illustrates the use of these scores in different data
-analysis tasks, as well as the efficiency and flexibility of the method. We
-also demonstrate useful visualizations of these scores; these might prove
-useful within an interactive analytics framework.
+  A clustering is an implicit assignment of labels of points, based onproximity to other points. It is these labels that are then used for downstreamanalysis (either focusing on individual clusters, or identifyingrepresentatives of clusters and so on). Thus, in order to trust a clustering asa first step in exploratory data analysis, we must trust the labels assigned toindividual data. Without supervision, how can we validate this assignment? Inthis paper, we present a method to attach affinity scores to the implicitlabels of individual points in a clustering. The affinity scores capture theconfidence level of the cluster that claims to "own" the point. This method isvery general: it can be used with clusterings derived from Euclidean data,kernelized data, or even data derived from information spaces. It smoothlyincorporates importance functions on clusters, allowing us to eight differentclusters differently. It is also efficient: assigning an affinity score to apoint depends only polynomially on the number of clusters and is independent ofthe number of points in the data. The dimensionality of the underlying spaceonly appears in preprocessing. We demonstrate the value of our approach with anexperimental study that illustrates the use of these scores in different dataanalysis tasks, as well as the efficiency and flexibility of the method. Wealso demonstrate useful visualizations of these scores; these might proveuseful within an interactive analytics framework.
 
+Why does Deep Learning work? - A perspective from Group Theory
+
+  Why does Deep Learning work? What representations does it capture? How dohigher-order representations emerge? We study these questions from theperspective of group theory, thereby opening a new approach towards a theory ofDeep learning.  One factor behind the recent resurgence of the subject is a key algorithmicstep called pre-training: first search for a good generative model for theinput samples, and repeat the process one layer at a time. We show deeperimplications of this simple principle, by establishing a connection with theinterplay of orbits and stabilizers of group actions. Although the neuralnetworks themselves may not form groups, we show the existence of {\em shadow}groups whose elements serve as close approximations.  Over the shadow groups, the pre-training step, originally introduced as amechanism to better initialize a network, becomes equivalent to a search forfeatures with minimal orbits. Intuitively, these features are in a way the {\emsimplest}. Which explains why a deep learning network learns simple featuresfirst. Next, we show how the same principle, when repeated in the deeperlayers, can capture higher order representations, and why representationcomplexity increases as the layers get deeper.
+
+Sketching, Embedding, and Dimensionality Reduction for Information  Spaces
+
+  Information distances like the Hellinger distance and the Jensen-Shannondivergence have deep roots in information theory and machine learning. They areused extensively in data analysis especially when the objects being comparedare high dimensional empirical probability distributions built from data.However, we lack common tools needed to actually use information distances inapplications efficiently and at scale with any kind of provable guarantees. Wecan't sketch these distances easily, or embed them in better behaved spaces, oreven reduce the dimensionality of the space while maintaining the probabilitystructure of the data.  In this paper, we build these tools for information distances---both for theHellinger distance and Jensen--Shannon divergence, as well as related measures,like the $\chi^2$ divergence. We first show that they can be sketchedefficiently (i.e. up to multiplicative error in sublinear space) in theaggregate streaming model. This result is exponentially stronger than knownupper bounds for sketching these distances in the strict turnstile streamingmodel. Second, we show a finite dimensionality embedding result for theJensen-Shannon and $\chi^2$ divergences that preserves pair wise distances.Finally we prove a dimensionality reduction result for the Hellinger,Jensen--Shannon, and $\chi^2$ divergences that preserves the informationgeometry of the distributions (specifically, by retaining the simplex structureof the space). While our second result above already implies that thesedivergences can be explicitly embedded in Euclidean space, retaining thesimplex structure is important because it allows us to continue doing inferencein the reduced space. In essence, we preserve not just the distance structurebut the underlying geometry of the space.
 
 Gaps in Information Access in Social Networks
 
-  The study of influence maximization in social networks has largely ignored
-disparate effects these algorithms might have on the individuals contained in
-the social network. Individuals may place a high value on receiving
-information, e.g. job openings or advertisements for loans. While
-well-connected individuals at the center of the network are likely to receive
-the information that is being distributed through the network, poorly connected
-individuals are systematically less likely to receive the information,
-producing a gap in access to the information between individuals. In this work,
-we study how best to spread information in a social network while minimizing
-this access gap. We propose to use the maximin social welfare function as an
-objective function, where we maximize the minimum probability of receiving the
-information under an intervention. We prove that in this setting this welfare
-function constrains the access gap whereas maximizing the expected number of
-nodes reached does not. We also investigate the difficulties of using the
-maximin, and present hardness results and analysis for standard greedy
-strategies. Finally, we investigate practical ways of optimizing for the
-maximin, and give empirical evidence that a simple greedy-based strategy works
-well in practice.
-
+  The study of influence maximization in social networks has largely ignoreddisparate effects these algorithms might have on the individuals contained inthe social network. Individuals may place a high value on receivinginformation, e.g. job openings or advertisements for loans. Whilewell-connected individuals at the center of the network are likely to receivethe information that is being distributed through the network, poorly connectedindividuals are systematically less likely to receive the information,producing a gap in access to the information between individuals. In this work,we study how best to spread information in a social network while minimizingthis access gap. We propose to use the maximin social welfare function as anobjective function, where we maximize the minimum probability of receiving theinformation under an intervention. We prove that in this setting this welfarefunction constrains the access gap whereas maximizing the expected number ofnodes reached does not. We also investigate the difficulties of using themaximin, and present hardness results and analysis for standard greedystrategies. Finally, we investigate practical ways of optimizing for themaximin, and give empirical evidence that a simple greedy-based strategy workswell in practice.
 
 Comparing Distributions and Shapes using the Kernel Distance
 
-  Starting with a similarity function between objects, it is possible to define
-a distance metric on pairs of objects, and more generally on probability
-distributions over them. These distance metrics have a deep basis in functional
-analysis, measure theory and geometric measure theory, and have a rich
-structure that includes an isometric embedding into a (possibly infinite
-dimensional) Hilbert space. They have recently been applied to numerous
-problems in machine learning and shape analysis.
-  In this paper, we provide the first algorithmic analysis of these distance
-metrics. Our main contributions are as follows: (i) We present fast
-approximation algorithms for computing the kernel distance between two point
-sets P and Q that runs in near-linear time in the size of (P cup Q) (note that
-an explicit calculation would take quadratic time). (ii) We present
-polynomial-time algorithms for approximately minimizing the kernel distance
-under rigid transformation; they run in time O(n + poly(1/epsilon, log n)).
-(iii) We provide several general techniques for reducing complex objects to
-convenient sparse representations (specifically to point sets or sets of points
-sets) which approximately preserve the kernel distance. In particular, this
-allows us to reduce problems of computing the kernel distance between various
-types of objects such as curves, surfaces, and distributions to computing the
-kernel distance between point sets. These take advantage of the reproducing
-kernel Hilbert space and a new relation linking binary range spaces to
-continuous range spaces with bounded fat-shattering dimension.
-
-
-Rethinking Abstractions for Big Data: Why, Where, How, and What
-
-  Big data refers to large and complex data sets that, under existing
-approaches, exceed the capacity and capability of current compute platforms,
-systems software, analytical tools and human understanding. Numerous lessons on
-the scalability of big data can already be found in asymptotic analysis of
-algorithms and from the high-performance computing (HPC) and applications
-communities. However, scale is only one aspect of current big data trends;
-fundamentally, current and emerging problems in big data are a result of
-unprecedented complexity--in the structure of the data and how to analyze it,
-in dealing with unreliability and redundancy, in addressing the human factors
-of comprehending complex data sets, in formulating meaningful analyses, and in
-managing the dense, power-hungry data centers that house big data.
-  The computer science solution to complexity is finding the right
-abstractions, those that hide as much triviality as possible while revealing
-the essence of the problem that is being addressed. The "big data challenge"
-has disrupted computer science by stressing to the very limits the familiar
-abstractions which define the relevant subfields in data analysis, data
-management and the underlying parallel systems. As a result, not enough of
-these challenges are revealed by isolating abstractions in a traditional
-software stack or standard algorithmic and analytical techniques, and attempts
-to address complexity either oversimplify or require low-level management of
-details. The authors believe that the abstractions for big data need to be
-rethought, and this reorganization needs to evolve and be sustained through
-continued cross-disciplinary collaboration.
-
-
-A directed isoperimetric inequality with application to Bregman near
-  neighbor lower bounds
-
-  Bregman divergences $D_\phi$ are a class of divergences parametrized by a
-convex function $\phi$ and include well known distance functions like
-$\ell_2^2$ and the Kullback-Leibler divergence. There has been extensive
-research on algorithms for problems like clustering and near neighbor search
-with respect to Bregman divergences, in all cases, the algorithms depend not
-just on the data size $n$ and dimensionality $d$, but also on a structure
-constant $\mu \ge 1$ that depends solely on $\phi$ and can grow without bound
-independently.
-  In this paper, we provide the first evidence that this dependence on $\mu$
-might be intrinsic. We focus on the problem of approximate near neighbor search
-for Bregman divergences. We show that under the cell probe model, any
-non-adaptive data structure (like locality-sensitive hashing) for
-$c$-approximate near-neighbor search that admits $r$ probes must use space
-$\Omega(n^{1 + \frac{\mu}{c r}})$. In contrast, for LSH under $\ell_1$ the best
-bound is $\Omega(n^{1+\frac{1}{cr}})$.
-  Our new tool is a directed variant of the standard boolean noise operator. We
-show that a generalization of the Bonami-Beckner hypercontractivity inequality
-exists "in expectation" or upon restriction to certain subsets of the Hamming
-cube, and that this is sufficient to prove the desired isoperimetric inequality
-that we use in our data structure lower bound.
-  We also present a structural result reducing the Hamming cube to a Bregman
-cube. This structure allows us to obtain lower bounds for problems under
-Bregman divergences from their $\ell_1$ analog. In particular, we get a
-(weaker) lower bound for approximate near neighbor search of the form
-$\Omega(n^{1 + \frac{1}{cr}})$ for an $r$-query non-adaptive data structure,
-and new cell probe lower bounds for a number of other near neighbor questions
-in Bregman space.
-
+  Starting with a similarity function between objects, it is possible to definea distance metric on pairs of objects, and more generally on probabilitydistributions over them. These distance metrics have a deep basis in functionalanalysis, measure theory and geometric measure theory, and have a richstructure that includes an isometric embedding into a (possibly infinitedimensional) Hilbert space. They have recently been applied to numerousproblems in machine learning and shape analysis.  In this paper, we provide the first algorithmic analysis of these distancemetrics. Our main contributions are as follows: (i) We present fastapproximation algorithms for computing the kernel distance between two pointsets P and Q that runs in near-linear time in the size of (P cup Q) (note thatan explicit calculation would take quadratic time). (ii) We presentpolynomial-time algorithms for approximately minimizing the kernel distanceunder rigid transformation; they run in time O(n + poly(1/epsilon, log n)).(iii) We provide several general techniques for reducing complex objects toconvenient sparse representations (specifically to point sets or sets of pointssets) which approximately preserve the kernel distance. In particular, thisallows us to reduce problems of computing the kernel distance between varioustypes of objects such as curves, surfaces, and distributions to computing thekernel distance between point sets. These take advantage of the reproducingkernel Hilbert space and a new relation linking binary range spaces tocontinuous range spaces with bounded fat-shattering dimension.
 
 Approximation Analysis of Influence Spread in Social Networks
 
-  In the context of influence propagation in a social graph, we can identify
-three orthogonal dimensions - the number of seed nodes activated at the
-beginning (known as budget), the expected number of activated nodes at the end
-of the propagation (known as expected spread or coverage), and the time taken
-for the propagation. We can constrain one or two of these and try to optimize
-the third. In their seminal paper, Kempe et al. constrained the budget, left
-time unconstrained, and maximized the coverage: this problem is known as
-Influence Maximization.
-  In this paper, we study alternative optimization problems which are naturally
-motivated by resource and time constraints on viral marketing campaigns. In the
-first problem, termed Minimum Target Set Selection (or MINTSS for short), a
-coverage threshold n is given and the task is to find the minimum size seed set
-such that by activating it, at least n nodes are eventually activated in the
-expected sense. In the second problem, termed MINTIME, a coverage threshold n
-and a budget threshold k are given, and the task is to find a seed set of size
-at most k such that by activating it, at least n nodes are activated, in the
-minimum possible time. Both these problems are NP-hard, which motivates our
-interest in their approximation.
-  For MINTSS, we develop a simple greedy algorithm and show that it provides a
-bicriteria approximation. We also establish a generic hardness result
-suggesting that improving it is likely to be hard. For MINTIME, we show that
-even bicriteria and tricriteria approximations are hard under several
-conditions. However, if we allow the budget to be boosted by a logarithmic
-factor and allow the coverage to fall short, then the problem can be solved
-exactly in PTIME.
-  Finally, we show the value of the approximation algorithms, by comparing them
-against various heuristics.
+  In the context of influence propagation in a social graph, we can identifythree orthogonal dimensions - the number of seed nodes activated at thebeginning (known as budget), the expected number of activated nodes at the endof the propagation (known as expected spread or coverage), and the time takenfor the propagation. We can constrain one or two of these and try to optimizethe third. In their seminal paper, Kempe et al. constrained the budget, lefttime unconstrained, and maximized the coverage: this problem is known asInfluence Maximization.  In this paper, we study alternative optimization problems which are naturallymotivated by resource and time constraints on viral marketing campaigns. In thefirst problem, termed Minimum Target Set Selection (or MINTSS for short), acoverage threshold n is given and the task is to find the minimum size seed setsuch that by activating it, at least n nodes are eventually activated in theexpected sense. In the second problem, termed MINTIME, a coverage threshold nand a budget threshold k are given, and the task is to find a seed set of sizeat most k such that by activating it, at least n nodes are activated, in theminimum possible time. Both these problems are NP-hard, which motivates ourinterest in their approximation.  For MINTSS, we develop a simple greedy algorithm and show that it provides abicriteria approximation. We also establish a generic hardness resultsuggesting that improving it is likely to be hard. For MINTIME, we show thateven bicriteria and tricriteria approximations are hard under severalconditions. However, if we allow the budget to be boosted by a logarithmicfactor and allow the coverage to fall short, then the problem can be solvedexactly in PTIME.  Finally, we show the value of the approximation algorithms, by comparing themagainst various heuristics.
 
+Rethinking Abstractions for Big Data: Why, Where, How, and What
+
+  Big data refers to large and complex data sets that, under existingapproaches, exceed the capacity and capability of current compute platforms,systems software, analytical tools and human understanding. Numerous lessons onthe scalability of big data can already be found in asymptotic analysis ofalgorithms and from the high-performance computing (HPC) and applicationscommunities. However, scale is only one aspect of current big data trends;fundamentally, current and emerging problems in big data are a result ofunprecedented complexity--in the structure of the data and how to analyze it,in dealing with unreliability and redundancy, in addressing the human factorsof comprehending complex data sets, in formulating meaningful analyses, and inmanaging the dense, power-hungry data centers that house big data.  The computer science solution to complexity is finding the rightabstractions, those that hide as much triviality as possible while revealingthe essence of the problem that is being addressed. The "big data challenge"has disrupted computer science by stressing to the very limits the familiarabstractions which define the relevant subfields in data analysis, datamanagement and the underlying parallel systems. As a result, not enough ofthese challenges are revealed by isolating abstractions in a traditionalsoftware stack or standard algorithmic and analytical techniques, and attemptsto address complexity either oversimplify or require low-level management ofdetails. The authors believe that the abstractions for big data need to berethought, and this reorganization needs to evolve and be sustained throughcontinued cross-disciplinary collaboration.
+
+A directed isoperimetric inequality with application to Bregman near  neighbor lower bounds
+
+  Bregman divergences $D_\phi$ are a class of divergences parametrized by aconvex function $\phi$ and include well known distance functions like$\ell_2^2$ and the Kullback-Leibler divergence. There has been extensiveresearch on algorithms for problems like clustering and near neighbor searchwith respect to Bregman divergences, in all cases, the algorithms depend notjust on the data size $n$ and dimensionality $d$, but also on a structureconstant $\mu \ge 1$ that depends solely on $\phi$ and can grow without boundindependently.  In this paper, we provide the first evidence that this dependence on $\mu$might be intrinsic. We focus on the problem of approximate near neighbor searchfor Bregman divergences. We show that under the cell probe model, anynon-adaptive data structure (like locality-sensitive hashing) for$c$-approximate near-neighbor search that admits $r$ probes must use space$\Omega(n^{1 + \frac{\mu}{c r}})$. In contrast, for LSH under $\ell_1$ the bestbound is $\Omega(n^{1+\frac{1}{cr}})$.  Our new tool is a directed variant of the standard boolean noise operator. Weshow that a generalization of the Bonami-Beckner hypercontractivity inequalityexists "in expectation" or upon restriction to certain subsets of the Hammingcube, and that this is sufficient to prove the desired isoperimetric inequalitythat we use in our data structure lower bound.  We also present a structural result reducing the Hamming cube to a Bregmancube. This structure allows us to obtain lower bounds for problems underBregman divergences from their $\ell_1$ analog. In particular, we get a(weaker) lower bound for approximate near neighbor search of the form$\Omega(n^{1 + \frac{1}{cr}})$ for an $r$-query non-adaptive data structure,and new cell probe lower bounds for a number of other near neighbor questionsin Bregman space.
 

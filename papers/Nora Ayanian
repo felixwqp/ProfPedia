@@ -1,163 +1,36 @@
-Overview: Generalizations of Multi-Agent Path Finding to Real-World
-  Scenarios
+Overview: Generalizations of Multi-Agent Path Finding to Real-World  Scenarios
 
-  Multi-agent path finding (MAPF) is well-studied in artificial intelligence,
-robotics, theoretical computer science and operations research. We discuss
-issues that arise when generalizing MAPF methods to real-world scenarios and
-four research directions that address them. We emphasize the importance of
-addressing these issues as opposed to developing faster methods for the
-standard formulation of the MAPF problem.
-
-
-Downwash-Aware Trajectory Planning for Large Quadrotor Teams
-
-  We describe a method for formation-change trajectory planning for large
-quadrotor teams in obstacle-rich environments. Our method decomposes the
-planning problem into two stages: a discrete planner operating on a graph
-representation of the workspace, and a continuous refinement that converts the
-non-smooth graph plan into a set of C^k-continuous trajectories, locally
-optimizing an integral-squared-derivative cost. We account for the downwash
-effect, allowing safe flight in dense formations. We demonstrate the
-computational efficiency in simulation with up to 200 robots and the physical
-plausibility with an experiment with 32 nano-quadrotors. Our approach can
-compute safe and smooth trajectories for hundreds of quadrotors in dense
-environments with obstacles in a few minutes.
-
-
-Path Planning with Kinematic Constraints for Robot Groups
-
-  Path planning for multiple robots is well studied in the AI and robotics
-communities. For a given discretized environment, robots need to find
-collision-free paths to a set of specified goal locations. Robots can be fully
-anonymous, non-anonymous, or organized in groups. Although powerful solvers for
-this abstract problem exist, they make simplifying assumptions by ignoring
-kinematic constraints, making it difficult to use the resulting plans on actual
-robots. In this paper, we present a solution which takes kinematic constraints,
-such as maximum velocities, into account, while guaranteeing a user-specified
-minimum safety distance between robots. We demonstrate our approach in
-simulation and on real robots in 2D and 3D environments.
-
+  Multi-agent path finding (MAPF) is well-studied in artificial intelligence,robotics, theoretical computer science and operations research. We discussissues that arise when generalizing MAPF methods to real-world scenarios andfour research directions that address them. We emphasize the importance ofaddressing these issues as opposed to developing faster methods for thestandard formulation of the MAPF problem.
 
 Multiplayer Games for Learning Multirobot Coordination Algorithms
 
-  Humans have an impressive ability to solve complex coordination problems in a
-fully distributed manner. This ability, if learned as a set of distributed
-multirobot coordination strategies, can enable programming large groups of
-robots to collaborate towards complex coordination objectives in a way similar
-to humans. Such strategies would offer robustness, adaptability,
-fault-tolerance, and, importantly, distributed decision-making. To that end, we
-have designed a networked gaming platform to investigate human group behavior,
-specifically in solving complex collaborative coordinated tasks. Through this
-platform, we are able to limit the communication, sensing, and actuation
-capabilities provided to the players. With the aim of learning coordination
-algorithms for robots in mind, we define these capabilities to mimic those of a
-simple ground robot.
+  Humans have an impressive ability to solve complex coordination problems in afully distributed manner. This ability, if learned as a set of distributedmultirobot coordination strategies, can enable programming large groups ofrobots to collaborate towards complex coordination objectives in a way similarto humans. Such strategies would offer robustness, adaptability,fault-tolerance, and, importantly, distributed decision-making. To that end, wehave designed a networked gaming platform to investigate human group behavior,specifically in solving complex collaborative coordinated tasks. Through thisplatform, we are able to limit the communication, sensing, and actuationcapabilities provided to the players. With the aim of learning coordinationalgorithms for robots in mind, we define these capabilities to mimic those of asimple ground robot.
 
+Downwash-Aware Trajectory Planning for Large Quadrotor Teams
 
-Overview: A Hierarchical Framework for Plan Generation and Execution in
-  Multi-Robot Systems
+  We describe a method for formation-change trajectory planning for largequadrotor teams in obstacle-rich environments. Our method decomposes theplanning problem into two stages: a discrete planner operating on a graphrepresentation of the workspace, and a continuous refinement that converts thenon-smooth graph plan into a set of C^k-continuous trajectories, locallyoptimizing an integral-squared-derivative cost. We account for the downwasheffect, allowing safe flight in dense formations. We demonstrate thecomputational efficiency in simulation with up to 200 robots and the physicalplausibility with an experiment with 32 nano-quadrotors. Our approach cancompute safe and smooth trajectories for hundreds of quadrotors in denseenvironments with obstacles in a few minutes.
 
-  The authors present an overview of a hierarchical framework for coordinating
-task- and motion-level operations in multirobot systems. Their framework is
-based on the idea of using simple temporal networks to simultaneously reason
-about precedence/causal constraints required for task-level coordination and
-simple temporal constraints required to take some kinematic constraints of
-robots into account. In the plan-generation phase, the framework provides a
-computationally scalable method for generating plans that achieve high-level
-tasks for groups of robots and take some of their kinematic constraints into
-account. In the plan-execution phase, the framework provides a method for
-absorbing an imperfect plan execution to avoid time-consuming re-planning in
-many cases. The authors use the multirobot path-planning problem as a case
-study to present the key ideas behind their framework for the long-term
-autonomy of multirobot systems.
+Path Planning with Kinematic Constraints for Robot Groups
 
+  Path planning for multiple robots is well studied in the AI and roboticscommunities. For a given discretized environment, robots need to findcollision-free paths to a set of specified goal locations. Robots can be fullyanonymous, non-anonymous, or organized in groups. Although powerful solvers forthis abstract problem exist, they make simplifying assumptions by ignoringkinematic constraints, making it difficult to use the resulting plans on actualrobots. In this paper, we present a solution which takes kinematic constraints,such as maximum velocities, into account, while guaranteeing a user-specifiedminimum safety distance between robots. We demonstrate our approach insimulation and on real robots in 2D and 3D environments.
 
-Sim-to-(Multi)-Real: Transfer of Low-Level Robust Control Policies to
-  Multiple Quadrotors
+Overview: A Hierarchical Framework for Plan Generation and Execution in  Multi-Robot Systems
 
-  Quadrotor stabilizing controllers often require careful, model-specific
-tuning for safe operation. We use reinforcement learning to train policies in
-simulation that transfer remarkably well to multiple different physical
-quadrotors. Our policies are low-level, i.e., we map the rotorcrafts' state
-directly to the motor outputs. The trained control policies are very robust to
-external disturbances and can withstand harsh initial conditions such as
-throws. We show how different training methodologies (change of the cost
-function, modeling of noise, use of domain randomization) might affect flight
-performance. To the best of our knowledge, this is the first work that
-demonstrates that a simple neural network can learn a robust stabilizing
-low-level quadrotor controller without the use of a stabilizing PD controller;
-as well as the first work that analyses the transfer capability of a single
-policy to multiple quadrotors.
+  The authors present an overview of a hierarchical framework for coordinatingtask- and motion-level operations in multirobot systems. Their framework isbased on the idea of using simple temporal networks to simultaneously reasonabout precedence/causal constraints required for task-level coordination andsimple temporal constraints required to take some kinematic constraints ofrobots into account. In the plan-generation phase, the framework provides acomputationally scalable method for generating plans that achieve high-leveltasks for groups of robots and take some of their kinematic constraints intoaccount. In the plan-execution phase, the framework provides a method forabsorbing an imperfect plan execution to avoid time-consuming re-planning inmany cases. The authors use the multirobot path-planning problem as a casestudy to present the key ideas behind their framework for the long-termautonomy of multirobot systems.
 
+Sim-to-(Multi)-Real: Transfer of Low-Level Robust Control Policies to  Multiple Quadrotors
 
-ROMANO: A Novel Overlay Lightweight Communication Protocol for Unified
-  Control and Sensing of a Network of Robots
+  Quadrotor stabilizing controllers often require careful, model-specifictuning for safe operation. We use reinforcement learning to train policies insimulation that transfer remarkably well to multiple different physicalquadrotors. Our policies are low-level, i.e., we map the rotorcrafts' statedirectly to the motor outputs. The trained control policies are very robust toexternal disturbances and can withstand harsh initial conditions such asthrows. We show how different training methodologies (change of the costfunction, modeling of noise, use of domain randomization) might affect flightperformance. To the best of our knowledge, this is the first work thatdemonstrates that a simple neural network can learn a robust stabilizinglow-level quadrotor controller without the use of a stabilizing PD controller;as well as the first work that analyses the transfer capability of a singlepolicy to multiple quadrotors.
 
-  We present the Robotic Overlay coMmunicAtioN prOtocol (ROMANO), a
-lightweight, application layer overlay communication protocol for a unified
-sensing and control abstraction of a network of heterogeneous robots mainly
-consisting of low power, low-compute-capable robots. ROMANO is built to work in
-conjunction with the well-known MQ Telemetry Transport for Sensor Nodes
-(MQTT-SN) protocol, a lightweight publish-subscribe communication protocol for
-the Internet of Things and makes use its concept of "topics" to designate the
-addition and deletion of communication endpoints by changing the subscriptions
-of topics at each device. We also develop a portable implementation of ROMANO
-for low power IEEE 802.15.4 (Zigbee) radios and deployed it on a small testbed
-of commercially available, low-power, and low-compute-capable robots called
-Pololu 3pi robots. Based on a thorough analysis of the protocol on the real
-testbed, as a measure of throughput, we demonstrate that ROMANO can guarantee
-more than a $99.5\%$ message delivery ratio for a message generation rate up to
-200 messages per second. The single hop delays in ROMANO are as low as 20ms
-with linear dependency on the number of robots connected. These delay numbers
-concur with typical delays in 802.15.4 networks and suggest that ROMANO does
-not introduce additional delays. Lastly, we implement four different
-multi-robot applications to demonstrate the scalability, adaptability, ease of
-integration, and reliability of ROMANO.
+ROMANO: A Novel Overlay Lightweight Communication Protocol for Unified  Control and Sensing of a Network of Robots
 
+  We present the Robotic Overlay coMmunicAtioN prOtocol (ROMANO), alightweight, application layer overlay communication protocol for a unifiedsensing and control abstraction of a network of heterogeneous robots mainlyconsisting of low power, low-compute-capable robots. ROMANO is built to work inconjunction with the well-known MQ Telemetry Transport for Sensor Nodes(MQTT-SN) protocol, a lightweight publish-subscribe communication protocol forthe Internet of Things and makes use its concept of "topics" to designate theaddition and deletion of communication endpoints by changing the subscriptionsof topics at each device. We also develop a portable implementation of ROMANOfor low power IEEE 802.15.4 (Zigbee) radios and deployed it on a small testbedof commercially available, low-power, and low-compute-capable robots calledPololu 3pi robots. Based on a thorough analysis of the protocol on the realtestbed, as a measure of throughput, we demonstrate that ROMANO can guaranteemore than a $99.5\%$ message delivery ratio for a message generation rate up to200 messages per second. The single hop delays in ROMANO are as low as 20mswith linear dependency on the number of robots connected. These delay numbersconcur with typical delays in 802.15.4 networks and suggest that ROMANO doesnot introduce additional delays. Lastly, we implement four differentmulti-robot applications to demonstrate the scalability, adaptability, ease ofintegration, and reliability of ROMANO.
 
-Persistent Monitoring of Stochastic Spatio-temporal Phenomena with a
-  Small Team of Robots
+Persistent Monitoring of Stochastic Spatio-temporal Phenomena with a  Small Team of Robots
 
-  This paper presents a solution for persistent monitoring of real-world
-stochastic phenomena, where the underlying covariance structure changes sharply
-across time, using a small number of mobile robot sensors. We propose an
-adaptive solution for the problem where stochastic real-world dynamics are
-modeled as a Gaussian Process (GP). The belief on the underlying covariance
-structure is learned from recently observed dynamics as a Gaussian Mixture (GM)
-in the low-dimensional hyper-parameters space of the GP and adapted across time
-using Sequential Monte Carlo methods. Each robot samples a belief point from
-the GM and locally optimizes a set of informative regions by greedy
-maximization of the submodular entropy function. The key contributions of this
-paper are threefold: adapting the belief on the covariance using Markov Chain
-Monte Carlo (MCMC) sampling such that particles survive even under sharp
-covariance changes across time; exploiting the belief to transform the problem
-of entropy maximization into a decentralized one; and developing an
-approximation algorithm to maximize entropy on a set of informative regions in
-the continuous space. We illustrate the application of the proposed solution
-through extensive simulations using an artificial dataset and multiple real
-datasets from fixed sensor deployments, and compare it to three competing
-state-of-the-art approaches.
+  This paper presents a solution for persistent monitoring of real-worldstochastic phenomena, where the underlying covariance structure changes sharplyacross time, using a small number of mobile robot sensors. We propose anadaptive solution for the problem where stochastic real-world dynamics aremodeled as a Gaussian Process (GP). The belief on the underlying covariancestructure is learned from recently observed dynamics as a Gaussian Mixture (GM)in the low-dimensional hyper-parameters space of the GP and adapted across timeusing Sequential Monte Carlo methods. Each robot samples a belief point fromthe GM and locally optimizes a set of informative regions by greedymaximization of the submodular entropy function. The key contributions of thispaper are threefold: adapting the belief on the covariance using Markov ChainMonte Carlo (MCMC) sampling such that particles survive even under sharpcovariance changes across time; exploiting the belief to transform the problemof entropy maximization into a decentralized one; and developing anapproximation algorithm to maximize entropy on a set of informative regions inthe continuous space. We illustrate the application of the proposed solutionthrough extensive simulations using an artificial dataset and multiple realdatasets from fixed sensor deployments, and compare it to three competingstate-of-the-art approaches.
 
+Lifelong Path Planning with Kinematic Constraints for Multi-Agent Pickup  and Delivery
 
-Lifelong Path Planning with Kinematic Constraints for Multi-Agent Pickup
-  and Delivery
-
-  The Multi-Agent Pickup and Delivery (MAPD) problem models applications where
-a large number of agents attend to a stream of incoming pickup-and-delivery
-tasks. Token Passing (TP) is a recent MAPD algorithm that is efficient and
-effective. We make TP even more efficient and effective by using a novel
-combinatorial search algorithm, called Safe Interval Path Planning with
-Reservation Table (SIPPwRT), for single-agent path planning. SIPPwRT uses an
-advanced data structure that allows for fast updates and lookups of the current
-paths of all agents in an online setting. The resulting MAPD algorithm
-TP-SIPPwRT takes kinematic constraints of real robots into account directly
-during planning, computes continuous agent movements with given velocities that
-work on non-holonomic robots rather than discrete agent movements with uniform
-velocity, and is complete for well-formed MAPD instances. We demonstrate its
-benefits for automated warehouses using both an agent simulator and a standard
-robot simulator. For example, we demonstrate that it can compute paths for
-hundreds of agents and thousands of tasks in seconds and is more efficient and
-effective than existing MAPD algorithms that use a post-processing step to
-adapt their paths to continuous agent movements with given velocities.
-
+  The Multi-Agent Pickup and Delivery (MAPD) problem models applications wherea large number of agents attend to a stream of incoming pickup-and-deliverytasks. Token Passing (TP) is a recent MAPD algorithm that is efficient andeffective. We make TP even more efficient and effective by using a novelcombinatorial search algorithm, called Safe Interval Path Planning withReservation Table (SIPPwRT), for single-agent path planning. SIPPwRT uses anadvanced data structure that allows for fast updates and lookups of the currentpaths of all agents in an online setting. The resulting MAPD algorithmTP-SIPPwRT takes kinematic constraints of real robots into account directlyduring planning, computes continuous agent movements with given velocities thatwork on non-holonomic robots rather than discrete agent movements with uniformvelocity, and is complete for well-formed MAPD instances. We demonstrate itsbenefits for automated warehouses using both an agent simulator and a standardrobot simulator. For example, we demonstrate that it can compute paths forhundreds of agents and thousands of tasks in seconds and is more efficient andeffective than existing MAPD algorithms that use a post-processing step toadapt their paths to continuous agent movements with given velocities.
 

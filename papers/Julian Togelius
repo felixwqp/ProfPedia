@@ -1,625 +1,152 @@
 Evolving controllers for simulated car racing
 
-  This paper describes the evolution of controllers for racing a simulated
-radio-controlled car around a track, modelled on a real physical track. Five
-different controller architectures were compared, based on neural networks,
-force fields and action sequences. The controllers use either egocentric (first
-person), Newtonian (third person) or no information about the state of the car
-(open-loop controller). The only controller that was able to evolve good racing
-behaviour was based on a neural network acting on egocentric inputs.
-
+  This paper describes the evolution of controllers for racing a simulatedradio-controlled car around a track, modelled on a real physical track. Fivedifferent controller architectures were compared, based on neural networks,force fields and action sequences. The controllers use either egocentric (firstperson), Newtonian (third person) or no information about the state of the car(open-loop controller). The only controller that was able to evolve good racingbehaviour was based on a neural network acting on egocentric inputs.
 
 AAAI-2019 Workshop on Games and Simulations for Artificial Intelligence
 
-  This volume represents the accepted submissions from the AAAI-2019 Workshop
-on Games and Simulations for Artificial Intelligence held on January 29, 2019
-in Honolulu, Hawaii, USA. https://www.gamesim.ai
-
+  This volume represents the accepted submissions from the AAAI-2019 Workshopon Games and Simulations for Artificial Intelligence held on January 29, 2019in Honolulu, Hawaii, USA. https://www.gamesim.ai
 
 Evolution of a Subsumption Architecture Neurocontroller
 
-  An approach to robotics called layered evolution and merging features from
-the subsumption architecture into evolutionary robotics is presented, and its
-advantages are discussed. This approach is used to construct a layered
-controller for a simulated robot that learns which light source to approach in
-an environment with obstacles. The evolvability and performance of layered
-evolution on this task is compared to (standard) monolithic evolution,
-incremental and modularised evolution. To corroborate the hypothesis that a
-layered controller performs at least as well as an integrated one, the evolved
-layers are merged back into a single network. On the grounds of the test
-results, it is argued that layered evolution provides a superior approach for
-many tasks, and it is suggested that this approach may be the key to scaling up
-evolutionary robotics.
-
+  An approach to robotics called layered evolution and merging features fromthe subsumption architecture into evolutionary robotics is presented, and itsadvantages are discussed. This approach is used to construct a layeredcontroller for a simulated robot that learns which light source to approach inan environment with obstacles. The evolvability and performance of layeredevolution on this task is compared to (standard) monolithic evolution,incremental and modularised evolution. To corroborate the hypothesis that alayered controller performs at least as well as an integrated one, the evolvedlayers are merged back into a single network. On the grounds of the testresults, it is argued that layered evolution provides a superior approach formany tasks, and it is suggested that this approach may be the key to scaling upevolutionary robotics.
 
 Active Player Modelling
 
-  We argue for the use of active learning methods for player modelling. In
-active learning, the learning algorithm chooses where to sample the search
-space so as to optimise learning progress. We hypothesise that player modelling
-based on active learning could result in vastly more efficient learning, but
-will require big changes in how data is collected. Some example active player
-modelling scenarios are described. A particular form of active learning is also
-equivalent to an influential formalisation of (human and machine) curiosity,
-and games with active learning could therefore be seen as being curious about
-the player. We further hypothesise that this form of curiosity is symmetric,
-and therefore that games that explore their players based on the principles of
-active learning will turn out to select game configurations that are
-interesting to the player that is being explored.
-
+  We argue for the use of active learning methods for player modelling. Inactive learning, the learning algorithm chooses where to sample the searchspace so as to optimise learning progress. We hypothesise that player modellingbased on active learning could result in vastly more efficient learning, butwill require big changes in how data is collected. Some example active playermodelling scenarios are described. A particular form of active learning is alsoequivalent to an influential formalisation of (human and machine) curiosity,and games with active learning could therefore be seen as being curious aboutthe player. We further hypothesise that this form of curiosity is symmetric,and therefore that games that explore their players based on the principles ofactive learning will turn out to select game configurations that areinteresting to the player that is being explored.
 
 AI Researchers, Video Games Are Your Friends!
 
-  If you are an artificial intelligence researcher, you should look to video
-games as ideal testbeds for the work you do. If you are a video game developer,
-you should look to AI for the technology that makes completely new types of
-games possible. This chapter lays out the case for both of these propositions.
-It asks the question "what can video games do for AI", and discusses how in
-particular general video game playing is the ideal testbed for artificial
-general intelligence research. It then asks the question "what can AI do for
-video games", and lays out a vision for what video games might look like if we
-had significantly more advanced AI at our disposal. The chapter is based on my
-keynote at IJCCI 2015, and is written in an attempt to be accessible to a broad
-audience.
-
+  If you are an artificial intelligence researcher, you should look to videogames as ideal testbeds for the work you do. If you are a video game developer,you should look to AI for the technology that makes completely new types ofgames possible. This chapter lays out the case for both of these propositions.It asks the question "what can video games do for AI", and discusses how inparticular general video game playing is the ideal testbed for artificialgeneral intelligence research. It then asks the question "what can AI do forvideo games", and lays out a vision for what video games might look like if wehad significantly more advanced AI at our disposal. The chapter is based on mykeynote at IJCCI 2015, and is written in an attempt to be accessible to a broadaudience.
 
 Neuroevolution in Games: State of the Art and Open Challenges
 
-  This paper surveys research on applying neuroevolution (NE) to games. In
-neuroevolution, artificial neural networks are trained through evolutionary
-algorithms, taking inspiration from the way biological brains evolved. We
-analyse the application of NE in games along five different axes, which are the
-role NE is chosen to play in a game, the different types of neural networks
-used, the way these networks are evolved, how the fitness is determined and
-what type of input the network receives. The article also highlights important
-open research challenges in the field.
-
+  This paper surveys research on applying neuroevolution (NE) to games. Inneuroevolution, artificial neural networks are trained through evolutionaryalgorithms, taking inspiration from the way biological brains evolved. Weanalyse the application of NE in games along five different axes, which are therole NE is chosen to play in a game, the different types of neural networksused, the way these networks are evolved, how the fitness is determined andwhat type of input the network receives. The article also highlights importantopen research challenges in the field.
 
 Autoencoder-augmented Neuroevolution for Visual Doom Playing
 
-  Neuroevolution has proven effective at many reinforcement learning tasks, but
-does not seem to scale well to high-dimensional controller representations,
-which are needed for tasks where the input is raw pixel data. We propose a
-novel method where we train an autoencoder to create a comparatively
-low-dimensional representation of the environment observation, and then use
-CMA-ES to train neural network controllers acting on this input data. As the
-behavior of the agent changes the nature of the input data, the autoencoder
-training progresses throughout evolution. We test this method in the VizDoom
-environment built on the classic FPS Doom, where it performs well on a
-health-pack gathering task.
-
+  Neuroevolution has proven effective at many reinforcement learning tasks, butdoes not seem to scale well to high-dimensional controller representations,which are needed for tasks where the input is raw pixel data. We propose anovel method where we train an autoencoder to create a comparativelylow-dimensional representation of the environment observation, and then useCMA-ES to train neural network controllers acting on this input data. As thebehavior of the agent changes the nature of the input data, the autoencodertraining progresses throughout evolution. We test this method in the VizDoomenvironment built on the classic FPS Doom, where it performs well on ahealth-pack gathering task.
 
 Deep Learning for Video Game Playing
 
-  In this article, we review recent Deep Learning advances in the context of
-how they have been applied to play different types of video games such as
-first-person shooters, arcade games, and real-time strategy games. We analyze
-the unique requirements that different game genres pose to a deep learning
-system and highlight important open challenges in the context of applying these
-machine learning methods to video games, such as general game playing, dealing
-with extremely large decision spaces and sparse rewards.
-
+  In this article, we review recent Deep Learning advances in the context ofhow they have been applied to play different types of video games such asfirst-person shooters, arcade games, and real-time strategy games. We analyzethe unique requirements that different game genres pose to a deep learningsystem and highlight important open challenges in the context of applying thesemachine learning methods to video games, such as general game playing, dealingwith extremely large decision spaces and sparse rewards.
 
 "Press Space to Fire": Automatic Video Game Tutorial Generation
 
-  We propose the problem of tutorial generation for games, i.e. to generate
-tutorials which can teach players to play games, as an AI problem. This problem
-can be approached in several ways, including generating natural language
-descriptions of game rules, generating instructive game levels, and generating
-demonstrations of how to play a game using agents that play in a human-like
-manner. We further argue that the General Video Game AI framework provides a
-useful testbed for addressing this problem.
-
+  We propose the problem of tutorial generation for games, i.e. to generatetutorials which can teach players to play games, as an AI problem. This problemcan be approached in several ways, including generating natural languagedescriptions of game rules, generating instructive game levels, and generatingdemonstrations of how to play a game using agents that play in a human-likemanner. We further argue that the General Video Game AI framework provides auseful testbed for addressing this problem.
 
 Pommerman: A Multi-Agent Playground
 
-  We present Pommerman, a multi-agent environment based on the classic console
-game Bomberman. Pommerman consists of a set of scenarios, each having at least
-four players and containing both cooperative and competitive aspects. We
-believe that success in Pommerman will require a diverse set of tools and
-methods, including planning, opponent/teammate modeling, game theory, and
-communication, and consequently can serve well as a multi-agent benchmark. To
-date, we have already hosted one competition, and our next one will be featured
-in the NIPS 2018 competition track.
-
+  We present Pommerman, a multi-agent environment based on the classic consolegame Bomberman. Pommerman consists of a set of scenarios, each having at leastfour players and containing both cooperative and competitive aspects. Webelieve that success in Pommerman will require a diverse set of tools andmethods, including planning, opponent/teammate modeling, game theory, andcommunication, and consequently can serve well as a multi-agent benchmark. Todate, we have already hosted one competition, and our next one will be featuredin the NIPS 2018 competition track.
 
 Towards Game-based Metrics for Computational Co-creativity
 
-  We propose the following question: what game-like interactive system would
-provide a good environment for measuring the impact and success of a
-co-creative, cooperative agent? Creativity is often formulated in terms of
-novelty, value, surprise and interestingness. We review how these concepts are
-measured in current computational intelligence research and provide a mapping
-from modern electronic and tabletop games to open research problems in
-mixed-initiative systems and computational co-creativity. We propose
-application scenarios for future research, and a number of metrics under which
-the performance of cooperative agents in these environments will be evaluated.
-
-
-The Case for a Mixed-Initiative Collaborative Neuroevolution Approach
-
-  It is clear that the current attempts at using algorithms to create
-artificial neural networks have had mixed success at best when it comes to
-creating large networks and/or complex behavior. This should not be unexpected,
-as creating an artificial brain is essentially a design problem. Human design
-ingenuity still surpasses computational design for most tasks in most domains,
-including architecture, game design, and authoring literary fiction. This leads
-us to ask which the best way is to combine human and machine design capacities
-when it comes to designing artificial brains. Both of them have their strengths
-and weaknesses; for example, humans are much too slow to manually specify
-thousands of neurons, let alone the billions of neurons that go into a human
-brain, but on the other hand they can rely on a vast repository of common-sense
-understanding and design heuristics that can help them perform a much better
-guided search in design space than an algorithm. Therefore, in this paper we
-argue for a mixed-initiative approach for collaborative online brain building
-and present first results towards this goal.
-
+  We propose the following question: what game-like interactive system wouldprovide a good environment for measuring the impact and success of aco-creative, cooperative agent? Creativity is often formulated in terms ofnovelty, value, surprise and interestingness. We review how these concepts aremeasured in current computational intelligence research and provide a mappingfrom modern electronic and tabletop games to open research problems inmixed-initiative systems and computational co-creativity. We proposeapplication scenarios for future research, and a number of metrics under whichthe performance of cooperative agents in these environments will be evaluated.
 
 Measuring Intelligence through Games
 
-  Artificial general intelligence (AGI) refers to research aimed at tackling
-the full problem of artificial intelligence, that is, create truly intelligent
-agents. This sets it apart from most AI research which aims at solving
-relatively narrow domains, such as character recognition, motion planning, or
-increasing player satisfaction in games. But how do we know when an agent is
-truly intelligent? A common point of reference in the AGI community is Legg and
-Hutter's formal definition of universal intelligence, which has the appeal of
-simplicity and generality but is unfortunately incomputable. Games of various
-kinds are commonly used as benchmarks for "narrow" AI research, as they are
-considered to have many important properties. We argue that many of these
-properties carry over to the testing of general intelligence as well. We then
-sketch how such testing could practically be carried out. The central part of
-this sketch is an extension of universal intelligence to deal with finite time,
-and the use of sampling of the space of games expressed in a suitably biased
-game description language.
+  Artificial general intelligence (AGI) refers to research aimed at tacklingthe full problem of artificial intelligence, that is, create truly intelligentagents. This sets it apart from most AI research which aims at solvingrelatively narrow domains, such as character recognition, motion planning, orincreasing player satisfaction in games. But how do we know when an agent istruly intelligent? A common point of reference in the AGI community is Legg andHutter's formal definition of universal intelligence, which has the appeal ofsimplicity and generality but is unfortunately incomputable. Games of variouskinds are commonly used as benchmarks for "narrow" AI research, as they areconsidered to have many important properties. We argue that many of theseproperties carry over to the testing of general intelligence as well. We thensketch how such testing could practically be carried out. The central part ofthis sketch is an extension of universal intelligence to deal with finite time,and the use of sampling of the space of games expressed in a suitably biasedgame description language.
 
+The Case for a Mixed-Initiative Collaborative Neuroevolution Approach
+
+  It is clear that the current attempts at using algorithms to createartificial neural networks have had mixed success at best when it comes tocreating large networks and/or complex behavior. This should not be unexpected,as creating an artificial brain is essentially a design problem. Human designingenuity still surpasses computational design for most tasks in most domains,including architecture, game design, and authoring literary fiction. This leadsus to ask which the best way is to combine human and machine design capacitieswhen it comes to designing artificial brains. Both of them have their strengthsand weaknesses; for example, humans are much too slow to manually specifythousands of neurons, let alone the billions of neurons that go into a humanbrain, but on the other hand they can rely on a vast repository of common-senseunderstanding and design heuristics that can help them perform a much betterguided search in design space than an algorithm. Therefore, in this paper weargue for a mixed-initiative approach for collaborative online brain buildingand present first results towards this goal.
 
 DeepTingle
 
-  DeepTingle is a text prediction and classification system trained on the
-collected works of the renowned fantastic gay erotica author Chuck Tingle.
-Whereas the writing assistance tools you use everyday (in the form of
-predictive text, translation, grammar checking and so on) are trained on
-generic, purportedly "neutral" datasets, DeepTingle is trained on a very
-specific, internally consistent but externally arguably eccentric dataset. This
-allows us to foreground and confront the norms embedded in data-driven
-creativity and productivity assistance tools. As such tools effectively
-function as extensions of our cognition into technology, it is important to
-identify the norms they embed within themselves and, by extension, us.
-DeepTingle is realized as a web application based on LSTM networks and the
-GloVe word embedding, implemented in JavaScript with Keras-JS.
-
+  DeepTingle is a text prediction and classification system trained on thecollected works of the renowned fantastic gay erotica author Chuck Tingle.Whereas the writing assistance tools you use everyday (in the form ofpredictive text, translation, grammar checking and so on) are trained ongeneric, purportedly "neutral" datasets, DeepTingle is trained on a veryspecific, internally consistent but externally arguably eccentric dataset. Thisallows us to foreground and confront the norms embedded in data-drivencreativity and productivity assistance tools. As such tools effectivelyfunction as extensions of our cognition into technology, it is important toidentify the norms they embed within themselves and, by extension, us.DeepTingle is realized as a web application based on LSTM networks and theGloVe word embedding, implemented in JavaScript with Keras-JS.
 
 Deep Interactive Evolution
 
-  This paper describes an approach that combines generative adversarial
-networks (GANs) with interactive evolutionary computation (IEC). While GANs can
-be trained to produce lifelike images, they are normally sampled randomly from
-the learned distribution, providing limited control over the resulting output.
-On the other hand, interactive evolution has shown promise in creating various
-artifacts such as images, music and 3D objects, but traditionally relies on a
-hand-designed evolvable representation of the target domain. The main insight
-in this paper is that a GAN trained on a specific target domain can act as a
-compact and robust genotype-to-phenotype mapping (i.e. most produced phenotypes
-do resemble valid domain artifacts). Once such a GAN is trained, the latent
-vector given as input to the GAN's generator network can be put under
-evolutionary control, allowing controllable and high-quality image generation.
-In this paper, we demonstrate the advantage of this novel approach through a
-user study in which participants were able to evolve images that strongly
-resemble specific target images.
-
+  This paper describes an approach that combines generative adversarialnetworks (GANs) with interactive evolutionary computation (IEC). While GANs canbe trained to produce lifelike images, they are normally sampled randomly fromthe learned distribution, providing limited control over the resulting output.On the other hand, interactive evolution has shown promise in creating variousartifacts such as images, music and 3D objects, but traditionally relies on ahand-designed evolvable representation of the target domain. The main insightin this paper is that a GAN trained on a specific target domain can act as acompact and robust genotype-to-phenotype mapping (i.e. most produced phenotypesdo resemble valid domain artifacts). Once such a GAN is trained, the latentvector given as input to the GAN's generator network can be put underevolutionary control, allowing controllable and high-quality image generation.In this paper, we demonstrate the advantage of this novel approach through auser study in which participants were able to evolve images that stronglyresemble specific target images.
 
 Deceptive Games
 
-  Deceptive games are games where the reward structure or other aspects of the
-game are designed to lead the agent away from a globally optimal policy. While
-many games are already deceptive to some extent, we designed a series of games
-in the Video Game Description Language (VGDL) implementing specific types of
-deception, classified by the cognitive biases they exploit. VGDL games can be
-run in the General Video Game Artificial Intelligence (GVGAI) Framework, making
-it possible to test a variety of existing AI agents that have been submitted to
-the GVGAI Competition on these deceptive games. Our results show that all
-tested agents are vulnerable to several kinds of deception, but that different
-agents have different weaknesses. This suggests that we can use deception to
-understand the capabilities of a game-playing algorithm, and game-playing
-algorithms to characterize the deception displayed by a game.
-
+  Deceptive games are games where the reward structure or other aspects of thegame are designed to lead the agent away from a globally optimal policy. Whilemany games are already deceptive to some extent, we designed a series of gamesin the Video Game Description Language (VGDL) implementing specific types ofdeception, classified by the cognitive biases they exploit. VGDL games can berun in the General Video Game Artificial Intelligence (GVGAI) Framework, makingit possible to test a variety of existing AI agents that have been submitted tothe GVGAI Competition on these deceptive games. Our results show that alltested agents are vulnerable to several kinds of deception, but that differentagents have different weaknesses. This suggests that we can use deception tounderstand the capabilities of a game-playing algorithm, and game-playingalgorithms to characterize the deception displayed by a game.
 
 Who Killed Albert Einstein? From Open Data to Murder Mystery Games
 
-  This paper presents a framework for generating adventure games from open
-data. Focusing on the murder mystery type of adventure games, the generator is
-able to transform open data from Wikipedia articles, OpenStreetMap and images
-from Wikimedia Commons into WikiMysteries. Every WikiMystery game revolves
-around the murder of a person with a Wikipedia article and populates the game
-with suspects who must be arrested by the player if guilty of the murder or
-absolved if innocent. Starting from only one person as the victim, an extensive
-generative pipeline finds suspects, their alibis, and paths connecting them
-from open data, transforms open data into cities, buildings, non-player
-characters, locks and keys and dialog options. The paper describes in detail
-each generative step, provides a specific playthrough of one WikiMystery where
-Albert Einstein is murdered, and evaluates the outcomes of games generated for
-the 100 most influential people of the 20th century.
+  This paper presents a framework for generating adventure games from opendata. Focusing on the murder mystery type of adventure games, the generator isable to transform open data from Wikipedia articles, OpenStreetMap and imagesfrom Wikimedia Commons into WikiMysteries. Every WikiMystery game revolvesaround the murder of a person with a Wikipedia article and populates the gamewith suspects who must be arrested by the player if guilty of the murder orabsolved if innocent. Starting from only one person as the victim, an extensivegenerative pipeline finds suspects, their alibis, and paths connecting themfrom open data, transforms open data into cities, buildings, non-playercharacters, locks and keys and dialog options. The paper describes in detaileach generative step, provides a specific playthrough of one WikiMystery whereAlbert Einstein is murdered, and evaluates the outcomes of games generated forthe 100 most influential people of the 20th century.
 
+Automated Playtesting with Procedural Personas through MCTS with Evolved  Heuristics
 
-Automated Playtesting with Procedural Personas through MCTS with Evolved
-  Heuristics
+  This paper describes a method for generative player modeling and itsapplication to the automatic testing of game content using archetypal playermodels called procedural personas. Theoretically grounded in psychologicaldecision theory, procedural personas are implemented using a variation of MonteCarlo Tree Search (MCTS) where the node selection criteria are developed usingevolutionary computation, replacing the standard UCB1 criterion of MCTS. Usingthese personas we demonstrate how generative player models can be applied to avaried corpus of game levels and demonstrate how different play styles can beenacted in each level. In short, we use artificially intelligent personas toconstruct synthetic playtesters. The proposed approach could be used as a toolfor automatic play testing when human feedback is not readily available or whenquick visualization of potential interactions is necessary. Possibleapplications include interactive tools during game development or proceduralcontent generation systems where many evaluations must be conducted within ashort time span.
 
-  This paper describes a method for generative player modeling and its
-application to the automatic testing of game content using archetypal player
-models called procedural personas. Theoretically grounded in psychological
-decision theory, procedural personas are implemented using a variation of Monte
-Carlo Tree Search (MCTS) where the node selection criteria are developed using
-evolutionary computation, replacing the standard UCB1 criterion of MCTS. Using
-these personas we demonstrate how generative player models can be applied to a
-varied corpus of game levels and demonstrate how different play styles can be
-enacted in each level. In short, we use artificially intelligent personas to
-construct synthetic playtesters. The proposed approach could be used as a tool
-for automatic play testing when human feedback is not readily available or when
-quick visualization of potential interactions is necessary. Possible
-applications include interactive tools during game development or procedural
-content generation systems where many evaluations must be conducted within a
-short time span.
+General Video Game AI: a Multi-Track Framework for Evaluating Agents,  Games and Content Generation Algorithms
 
-
-General Video Game AI: a Multi-Track Framework for Evaluating Agents,
-  Games and Content Generation Algorithms
-
-  General Video Game Playing (GVGP) aims at designing an agent that is capable
-of playing multiple video games with no human intervention. In 2014, The
-General Video Game AI (GVGAI) competition framework was created and released
-with the purpose of providing researchers a common open-source and easy to use
-platform for testing their AI methods with potentially infinity of games
-created using Video Game Description Language (VGDL). The framework has been
-expanded into several tracks during the last few years to meet the demand of
-different research directions. The agents are required either to play multiple
-unknown games with or without access to game simulations, or to design new game
-levels or rules. This survey paper presents the VGDL, the GVGAI framework,
-existing tracks, and reviews the wide use of GVGAI framework in research,
-education and competitions five years after its birth. A future plan of
-framework improvements is also described.
-
+  General Video Game Playing (GVGP) aims at designing an agent that is capableof playing multiple video games with no human intervention. In 2014, TheGeneral Video Game AI (GVGAI) competition framework was created and releasedwith the purpose of providing researchers a common open-source and easy to useplatform for testing their AI methods with potentially infinity of gamescreated using Video Game Description Language (VGDL). The framework has beenexpanded into several tracks during the last few years to meet the demand ofdifferent research directions. The agents are required either to play multipleunknown games with or without access to game simulations, or to design new gamelevels or rules. This survey paper presents the VGDL, the GVGAI framework,existing tracks, and reviews the wide use of GVGAI framework in research,education and competitions five years after its birth. A future plan offramework improvements is also described.
 
 Generative Design in Minecraft (GDMC), Settlement Generation Competition
 
-  This paper introduces the settlement generation competition for Minecraft,
-the first part of the Generative Design in Minecraft challenge. The settlement
-generation competition is about creating Artificial Intelligence (AI) agents
-that can produce functional, aesthetically appealing and believable settlements
-adapted to a given Minecraft map - ideally at a level that can compete with
-human created designs. The aim of the competition is to advance procedural
-content generation for games, especially in overcoming the challenges of
-adaptive and holistic PCG. The paper introduces the technical details of the
-challenge, but mostly focuses on what challenges this competition provides and
-why they are scientifically relevant.
-
+  This paper introduces the settlement generation competition for Minecraft,the first part of the Generative Design in Minecraft challenge. The settlementgeneration competition is about creating Artificial Intelligence (AI) agentsthat can produce functional, aesthetically appealing and believable settlementsadapted to a given Minecraft map - ideally at a level that can compete withhuman created designs. The aim of the competition is to advance proceduralcontent generation for games, especially in overcoming the challenges ofadaptive and holistic PCG. The paper introduces the technical details of thechallenge, but mostly focuses on what challenges this competition provides andwhy they are scientifically relevant.
 
 Data-driven Design: A Case for Maximalist Game Design
 
-  Maximalism in art refers to drawing on and combining multiple different
-sources for art creation, embracing the resulting collisions and heterogeneity.
-This paper discusses the use of maximalism in game design and particularly in
-data games, which are games that are generated partly based on open data. Using
-Data Adventures, a series of generators that create adventure games from data
-sources such as Wikipedia and OpenStreetMap, as a lens we explore several
-tradeoffs and issues in maximalist game design. This includes the tension
-between transformation and fidelity, between decorative and functional content,
-and legal and ethical issues resulting from this type of generativity. This
-paper sketches out the design space of maximalist data-driven games, a design
-space that is mostly unexplored.
+  Maximalism in art refers to drawing on and combining multiple differentsources for art creation, embracing the resulting collisions and heterogeneity.This paper discusses the use of maximalism in game design and particularly indata games, which are games that are generated partly based on open data. UsingData Adventures, a series of generators that create adventure games from datasources such as Wikipedia and OpenStreetMap, as a lens we explore severaltradeoffs and issues in maximalist game design. This includes the tensionbetween transformation and fidelity, between decorative and functional content,and legal and ethical issues resulting from this type of generativity. Thispaper sketches out the design space of maximalist data-driven games, a designspace that is mostly unexplored.
 
+New And Surprising Ways to Be Mean. Adversarial NPCs with Coupled  Empowerment Minimisation
 
-New And Surprising Ways to Be Mean. Adversarial NPCs with Coupled
-  Empowerment Minimisation
-
-  Creating Non-Player Characters (NPCs) that can react robustly to unforeseen
-player behaviour or novel game content is difficult and time-consuming. This
-hinders the design of believable characters, and the inclusion of NPCs in games
-that rely heavily on procedural content generation. We have previously
-addressed this challenge by means of empowerment, a model of intrinsic
-motivation, and demonstrated how a coupled empowerment maximisation (CEM)
-policy can yield generic, companion-like behaviour. In this paper, we extend
-the CEM framework with a minimisation policy to give rise to adversarial
-behaviour. We conduct a qualitative, exploratory study in a dungeon-crawler
-game, demonstrating that CEM can exploit the affordances of different content
-facets in adaptive adversarial behaviour without modifications to the policy.
-Changes to the level design, underlying mechanics and our character's actions
-do not threaten our NPC's robustness, but yield new and surprising ways to be
-mean.
-
+  Creating Non-Player Characters (NPCs) that can react robustly to unforeseenplayer behaviour or novel game content is difficult and time-consuming. Thishinders the design of believable characters, and the inclusion of NPCs in gamesthat rely heavily on procedural content generation. We have previouslyaddressed this challenge by means of empowerment, a model of intrinsicmotivation, and demonstrated how a coupled empowerment maximisation (CEM)policy can yield generic, companion-like behaviour. In this paper, we extendthe CEM framework with a minimisation policy to give rise to adversarialbehaviour. We conduct a qualitative, exploratory study in a dungeon-crawlergame, demonstrating that CEM can exploit the affordances of different contentfacets in adaptive adversarial behaviour without modifications to the policy.Changes to the level design, underlying mechanics and our character's actionsdo not threaten our NPC's robustness, but yield new and surprising ways to bemean.
 
 Deep Reinforcement Learning for General Video Game AI
 
-  The General Video Game AI (GVGAI) competition and its associated software
-framework provides a way of benchmarking AI algorithms on a large number of
-games written in a domain-specific description language. While the competition
-has seen plenty of interest, it has so far focused on online planning,
-providing a forward model that allows the use of algorithms such as Monte Carlo
-Tree Search.
-  In this paper, we describe how we interface GVGAI to the OpenAI Gym
-environment, a widely used way of connecting agents to reinforcement learning
-problems. Using this interface, we characterize how widely used implementations
-of several deep reinforcement learning algorithms fare on a number of GVGAI
-games. We further analyze the results to provide a first indication of the
-relative difficulty of these games relative to each other, and relative to
-those in the Arcade Learning Environment under similar conditions.
-
+  The General Video Game AI (GVGAI) competition and its associated softwareframework provides a way of benchmarking AI algorithms on a large number ofgames written in a domain-specific description language. While the competitionhas seen plenty of interest, it has so far focused on online planning,providing a forward model that allows the use of algorithms such as Monte CarloTree Search.  In this paper, we describe how we interface GVGAI to the OpenAI Gymenvironment, a widely used way of connecting agents to reinforcement learningproblems. Using this interface, we characterize how widely used implementationsof several deep reinforcement learning algorithms fare on a number of GVGAIgames. We further analyze the results to provide a first indication of therelative difficulty of these games relative to each other, and relative tothose in the Arcade Learning Environment under similar conditions.
 
 Talakat: Bullet Hell Generation through Constrained Map-Elites
 
-  We describe a search-based approach to generating new levels for bullet hell
-games, which are action games characterized by and requiring avoidance of a
-very large amount of projectiles. Levels are represented using a
-domain-specific description language, and search in the space defined by this
-language is performed by a novel variant of the Map-Elites algorithm which
-incorporates a feasible- infeasible approach to constraint satisfaction.
-Simulation-based evaluation is used to gauge the fitness of levels, using an
-agent based on best-first search. The performance of the agent can be tuned
-according to the two dimensions of strategy and dexterity, making it possible
-to search for level configurations that require a specific combination of both.
-As far as we know, this paper describes the first generator for this game
-genre, and includes several algorithmic innovations.
-
+  We describe a search-based approach to generating new levels for bullet hellgames, which are action games characterized by and requiring avoidance of avery large amount of projectiles. Levels are represented using adomain-specific description language, and search in the space defined by thislanguage is performed by a novel variant of the Map-Elites algorithm whichincorporates a feasible- infeasible approach to constraint satisfaction.Simulation-based evaluation is used to gauge the fitness of levels, using anagent based on best-first search. The performance of the agent can be tunedaccording to the two dimensions of strategy and dexterity, making it possibleto search for level configurations that require a specific combination of both.As far as we know, this paper describes the first generator for this gamegenre, and includes several algorithmic innovations.
 
 AtDelfi: Automatically Designing Legible, Full Instructions For Games
 
-  This paper introduces a fully automatic method for generating video game
-tutorials. The AtDELFI system (AuTomatically DEsigning Legible, Full
-Instructions for games) was created to investigate procedural generation of
-instructions that teach players how to play video games. We present a
-representation of game rules and mechanics using a graph system as well as a
-tutorial generation method that uses said graph representation. We demonstrate
-the concept by testing it on games within the General Video Game Artificial
-Intelligence (GVG-AI) framework; the paper discusses tutorials generated for
-eight different games. Our findings suggest that a graph representation scheme
-works well for simple arcade style games such as Space Invaders and Pacman, but
-it appears that tutorials for more complex games might require higher-level
-understanding of the game than just single mechanics.
-
+  This paper introduces a fully automatic method for generating video gametutorials. The AtDELFI system (AuTomatically DEsigning Legible, FullInstructions for games) was created to investigate procedural generation ofinstructions that teach players how to play video games. We present arepresentation of game rules and mechanics using a graph system as well as atutorial generation method that uses said graph representation. We demonstratethe concept by testing it on games within the General Video Game ArtificialIntelligence (GVG-AI) framework; the paper discusses tutorials generated foreight different games. Our findings suggest that a graph representation schemeworks well for simple arcade style games such as Space Invaders and Pacman, butit appears that tutorials for more complex games might require higher-levelunderstanding of the game than just single mechanics.
 
 Generating Levels That Teach Mechanics
 
-  The automatic generation of game tutorials is a challenging AI problem. While
-it is possible to generate annotations and instructions that explain to the
-player how the game is played, this paper focuses on generating a gameplay
-experience that introduces the player to a game mechanic. It evolves small
-levels for the Mario AI Framework that can only be beaten by an agent that
-knows how to perform specific actions in the game. It uses variations of a
-perfect A* agent that are limited in various ways, such as not being able to
-jump high or see enemies, to test how failing to do certain actions can stop
-the player from beating the level.
+  The automatic generation of game tutorials is a challenging AI problem. Whileit is possible to generate annotations and instructions that explain to theplayer how the game is played, this paper focuses on generating a gameplayexperience that introduces the player to a game mechanic. It evolves smalllevels for the Mario AI Framework that can only be beaten by an agent thatknows how to perform specific actions in the game. It uses variations of aperfect A* agent that are limited in various ways, such as not being able tojump high or see enemies, to test how failing to do certain actions can stopthe player from beating the level.
 
+A Continuous Information Gain Measure to Find the Most Discriminatory  Problems for AI Benchmarking
 
-A Continuous Information Gain Measure to Find the Most Discriminatory
-  Problems for AI Benchmarking
-
-  This paper introduces an information-theoretic method for selecting a small
-subset of problems which gives us the most information about a group of
-problem-solving algorithms. This method was tested on the games in the General
-Video Game AI (GVGAI) framework, allowing us to identify a smaller set of games
-that still gives a large amount of information about the game-playing agents.
-This approach can be used to make agent testing more efficient in the future.
-We can achieve almost as good discriminatory accuracy when testing on only a
-handful of games as when testing on more than a hundred games, something which
-is often computationally infeasible. Furthermore, this method can be extended
-to study the dimensions of effective variance in game design between these
-games, allowing us to identify which games differentiate between agents in the
-most complementary ways. As a side effect of this investigation, we provide an
-up-to-date comparison on agent performance for all GVGAI games, and an analysis
-of correlations between scores and win-rates across both games and agents.
-
+  This paper introduces an information-theoretic method for selecting a smallsubset of problems which gives us the most information about a group ofproblem-solving algorithms. This method was tested on the games in the GeneralVideo Game AI (GVGAI) framework, allowing us to identify a smaller set of gamesthat still gives a large amount of information about the game-playing agents.This approach can be used to make agent testing more efficient in the future.We can achieve almost as good discriminatory accuracy when testing on only ahandful of games as when testing on more than a hundred games, something whichis often computationally infeasible. Furthermore, this method can be extendedto study the dimensions of effective variance in game design between thesegames, allowing us to identify which games differentiate between agents in themost complementary ways. As a side effect of this investigation, we provide anup-to-date comparison on agent performance for all GVGAI games, and an analysisof correlations between scores and win-rates across both games and agents.
 
 Evolving Agents for the Hanabi 2018 CIG Competition
 
-  Hanabi is a cooperative card game with hidden information that has won
-important awards in the industry and received some recent academic attention. A
-two-track competition of agents for the game will take place in the 2018 CIG
-conference. In this paper, we develop a genetic algorithm that builds
-rule-based agents by determining the best sequence of rules from a fixed rule
-set to use as strategy. In three separate experiments, we remove human
-assumptions regarding the ordering of rules, add new, more expressive rules to
-the rule set and independently evolve agents specialized at specific game
-sizes. As result, we achieve scores superior to previously published research
-for the mirror and mixed evaluation of agents.
-
+  Hanabi is a cooperative card game with hidden information that has wonimportant awards in the industry and received some recent academic attention. Atwo-track competition of agents for the game will take place in the 2018 CIGconference. In this paper, we develop a genetic algorithm that buildsrule-based agents by determining the best sequence of rules from a fixed ruleset to use as strategy. In three separate experiments, we remove humanassumptions regarding the ordering of rules, add new, more expressive rules tothe rule set and independently evolve agents specialized at specific gamesizes. As result, we achieve scores superior to previously published researchfor the mirror and mixed evaluation of agents.
 
 DATA Agent
 
-  This paper introduces DATA Agent, a system which creates murder mystery
-adventures from open data. In the game, the player takes on the role of a
-detective tasked with finding the culprit of a murder. All characters, places,
-and items in DATA Agent games are generated using open data as source content.
-The paper discusses the general game design and user interface of DATA Agent,
-and provides details on the generative algorithms which transform linked data
-into different game objects. Findings from a user study with 30 participants
-playing through two games of DATA Agent show that the game is easy and fun to
-play, and that the mysteries it generates are straightforward to solve.
-
+  This paper introduces DATA Agent, a system which creates murder mysteryadventures from open data. In the game, the player takes on the role of adetective tasked with finding the culprit of a murder. All characters, places,and items in DATA Agent games are generated using open data as source content.The paper discusses the general game design and user interface of DATA Agent,and provides details on the generative algorithms which transform linked datainto different game objects. Findings from a user study with 30 participantsplaying through two games of DATA Agent show that the game is easy and fun toplay, and that the mysteries it generates are straightforward to solve.
 
 AlphaStar: An Evolutionary Computation Perspective
 
-  In January 2019, DeepMind revealed AlphaStar to the world-the first
-artificial intelligence (AI) system to beat a professional player at the game
-of StarCraft II-representing a milestone in the progress of AI. AlphaStar draws
-on many areas of AI research, including deep learning, reinforcement learning,
-game theory, and evolutionary computation (EC). In this paper we analyze
-AlphaStar primarily through the lens of EC, presenting a new look at the system
-and relating it to many concepts in the field. We highlight some of its most
-interesting aspects-the use of Lamarckian evolution, competitive co-evolution,
-and quality diversity. In doing so, we hope to provide a bridge between the
-wider EC community and one of the most significant AI systems developed in
-recent times.
+  In January 2019, DeepMind revealed AlphaStar to the world-the firstartificial intelligence (AI) system to beat a professional player at the gameof StarCraft II-representing a milestone in the progress of AI. AlphaStar drawson many areas of AI research, including deep learning, reinforcement learning,game theory, and evolutionary computation (EC). In this paper we analyzeAlphaStar primarily through the lens of EC, presenting a new look at the systemand relating it to many concepts in the field. We highlight some of its mostinteresting aspects-the use of Lamarckian evolution, competitive co-evolution,and quality diversity. In doing so, we hope to provide a bridge between thewider EC community and one of the most significant AI systems developed inrecent times.
 
+Leveling the Playing Field -- Fairness in AI Versus Human Game  Benchmarks
 
-Leveling the Playing Field -- Fairness in AI Versus Human Game
-  Benchmarks
-
-  From the beginning if the history of AI, there has been interest in games as
-a platform of research. As the field developed, human-level competence in
-complex games became a target researchers worked to reach. Only relatively
-recently has this target been finally met for traditional tabletop games such
-as Backgammon, Chess and Go. Current research focus has shifted to electronic
-games, which provide unique challenges. As is often the case with AI research,
-these results are liable to be exaggerated or misrepresented by either authors
-or third parties. The extent to which these games benchmark consist of fair
-competition between human and AI is also a matter of debate. In this work, we
-review the statements made by authors and third parties in the general media
-and academic circle about these game benchmark results and discuss factors that
-can impact the perception of fairness in the contest between humans and
-machines
-
+  From the beginning if the history of AI, there has been interest in games asa platform of research. As the field developed, human-level competence incomplex games became a target researchers worked to reach. Only relativelyrecently has this target been finally met for traditional tabletop games suchas Backgammon, Chess and Go. Current research focus has shifted to electronicgames, which provide unique challenges. As is often the case with AI research,these results are liable to be exaggerated or misrepresented by either authorsor third parties. The extent to which these games benchmark consist of faircompetition between human and AI is also a matter of debate. In this work, wereview the statements made by authors and third parties in the general mediaand academic circle about these game benchmark results and discuss factors thatcan impact the perception of fairness in the contest between humans andmachines
 
 Tree Search vs Optimization Approaches for Map Generation
 
-  Search-based procedural content generation uses stochastic global
-optimization algorithms to search spaces of game content. However, it has been
-found that tree search can be competitive with evolution on certain
-optimization problems. We investigate the applicability of several tree search
-methods to map generation and compare them systematically with several
-optimization algorithms, including evolutionary algorithms. For purposes of
-comparison, we use a simplified map generation problem where only passable and
-impassable tiles exist, three different map representations, and a set of
-objectives that are representative of those commonly found in actual level
-generation problem. While the results suggest that evolutionary algorithms
-produce good maps faster, several tree search methods can perform very well
-given sufficient time, and there are interesting differences in the character
-of the generated maps depending on the algorithm chosen, even for the same
-representation and objective.
-
+  Search-based procedural content generation uses stochastic globaloptimization algorithms to search spaces of game content. However, it has beenfound that tree search can be competitive with evolution on certainoptimization problems. We investigate the applicability of several tree searchmethods to map generation and compare them systematically with severaloptimization algorithms, including evolutionary algorithms. For purposes ofcomparison, we use a simplified map generation problem where only passable andimpassable tiles exist, three different map representations, and a set ofobjectives that are representative of those commonly found in actual levelgeneration problem. While the results suggest that evolutionary algorithmsproduce good maps faster, several tree search methods can perform very wellgiven sufficient time, and there are interesting differences in the characterof the generated maps depending on the algorithm chosen, even for the samerepresentation and objective.
 
 Procedural Content Generation via Machine Learning (PCGML)
 
-  This survey explores Procedural Content Generation via Machine Learning
-(PCGML), defined as the generation of game content using machine learning
-models trained on existing content. As the importance of PCG for game
-development increases, researchers explore new avenues for generating
-high-quality content with or without human involvement; this paper addresses
-the relatively new paradigm of using machine learning (in contrast with
-search-based, solver-based, and constructive methods). We focus on what is most
-often considered functional game content such as platformer levels, game maps,
-interactive fiction stories, and cards in collectible card games, as opposed to
-cosmetic content such as sprites and sound effects. In addition to using PCG
-for autonomous generation, co-creativity, mixed-initiative design, and
-compression, PCGML is suited for repair, critique, and content analysis because
-of its focus on modeling existing content. We discuss various data sources and
-representations that affect the resulting generated content. Multiple PCGML
-methods are covered, including neural networks, long short-term memory (LSTM)
-networks, autoencoders, and deep convolutional networks; Markov models,
-$n$-grams, and multi-dimensional Markov chains; clustering; and matrix
-factorization. Finally, we discuss open problems in the application of PCGML,
-including learning from small datasets, lack of training data, multi-layered
-learning, style-transfer, parameter tuning, and PCG as a game mechanic.
-
+  This survey explores Procedural Content Generation via Machine Learning(PCGML), defined as the generation of game content using machine learningmodels trained on existing content. As the importance of PCG for gamedevelopment increases, researchers explore new avenues for generatinghigh-quality content with or without human involvement; this paper addressesthe relatively new paradigm of using machine learning (in contrast withsearch-based, solver-based, and constructive methods). We focus on what is mostoften considered functional game content such as platformer levels, game maps,interactive fiction stories, and cards in collectible card games, as opposed tocosmetic content such as sprites and sound effects. In addition to using PCGfor autonomous generation, co-creativity, mixed-initiative design, andcompression, PCGML is suited for repair, critique, and content analysis becauseof its focus on modeling existing content. We discuss various data sources andrepresentations that affect the resulting generated content. Multiple PCGMLmethods are covered, including neural networks, long short-term memory (LSTM)networks, autoencoders, and deep convolutional networks; Markov models,$n$-grams, and multi-dimensional Markov chains; clustering; and matrixfactorization. Finally, we discuss open problems in the application of PCGML,including learning from small datasets, lack of training data, multi-layeredlearning, style-transfer, parameter tuning, and PCG as a game mechanic.
 
 Evolving Game Skill-Depth using General Video Game AI Agents
 
-  Most games have, or can be generalised to have, a number of parameters that
-may be varied in order to provide instances of games that lead to very
-different player experiences. The space of possible parameter settings can be
-seen as a search space, and we can therefore use a Random Mutation Hill
-Climbing algorithm or other search methods to find the parameter settings that
-induce the best games. One of the hardest parts of this approach is defining a
-suitable fitness function. In this paper we explore the possibility of using
-one of a growing set of General Video Game AI agents to perform automatic
-play-testing. This enables a very general approach to game evaluation based on
-estimating the skill-depth of a game. Agent-based play-testing is
-computationally expensive, so we compare two simple but efficient optimisation
-algorithms: the Random Mutation Hill-Climber and the Multi-Armed Bandit Random
-Mutation Hill-Climber. For the test game we use a space-battle game in order to
-provide a suitable balance between simulation speed and potential skill-depth.
-Results show that both algorithms are able to rapidly evolve game versions with
-significant skill-depth, but that choosing a suitable resampling number is
-essential in order to combat the effects of noise.
+  Most games have, or can be generalised to have, a number of parameters thatmay be varied in order to provide instances of games that lead to verydifferent player experiences. The space of possible parameter settings can beseen as a search space, and we can therefore use a Random Mutation HillClimbing algorithm or other search methods to find the parameter settings thatinduce the best games. One of the hardest parts of this approach is defining asuitable fitness function. In this paper we explore the possibility of usingone of a growing set of General Video Game AI agents to perform automaticplay-testing. This enables a very general approach to game evaluation based onestimating the skill-depth of a game. Agent-based play-testing iscomputationally expensive, so we compare two simple but efficient optimisationalgorithms: the Random Mutation Hill-Climber and the Multi-Armed Bandit RandomMutation Hill-Climber. For the test game we use a space-battle game in order toprovide a suitable balance between simulation speed and potential skill-depth.Results show that both algorithms are able to rapidly evolve game versions withsignificant skill-depth, but that choosing a suitable resampling number isessential in order to combat the effects of noise.
 
+DeepMasterPrints: Generating MasterPrints for Dictionary Attacks via  Latent Variable Evolution
 
-DeepMasterPrints: Generating MasterPrints for Dictionary Attacks via
-  Latent Variable Evolution
-
-  Recent research has demonstrated the vulnerability of fingerprint recognition
-systems to dictionary attacks based on MasterPrints. MasterPrints are real or
-synthetic fingerprints that can fortuitously match with a large number of
-fingerprints thereby undermining the security afforded by fingerprint systems.
-Previous work by Roy et al. generated synthetic MasterPrints at the
-feature-level. In this work we generate complete image-level MasterPrints known
-as DeepMasterPrints, whose attack accuracy is found to be much superior than
-that of previous methods. The proposed method, referred to as Latent Variable
-Evolution, is based on training a Generative Adversarial Network on a set of
-real fingerprint images. Stochastic search in the form of the Covariance Matrix
-Adaptation Evolution Strategy is then used to search for latent input variables
-to the generator network that can maximize the number of impostor matches as
-assessed by a fingerprint recognizer. Experiments convey the efficacy of the
-proposed method in generating DeepMasterPrints. The underlying method is likely
-to have broad applications in fingerprint security as well as fingerprint
-synthesis.
-
+  Recent research has demonstrated the vulnerability of fingerprint recognitionsystems to dictionary attacks based on MasterPrints. MasterPrints are real orsynthetic fingerprints that can fortuitously match with a large number offingerprints thereby undermining the security afforded by fingerprint systems.Previous work by Roy et al. generated synthetic MasterPrints at thefeature-level. In this work we generate complete image-level MasterPrints knownas DeepMasterPrints, whose attack accuracy is found to be much superior thanthat of previous methods. The proposed method, referred to as Latent VariableEvolution, is based on training a Generative Adversarial Network on a set ofreal fingerprint images. Stochastic search in the form of the Covariance MatrixAdaptation Evolution Strategy is then used to search for latent input variablesto the generator network that can maximize the number of impostor matches asassessed by a fingerprint recognizer. Experiments convey the efficacy of theproposed method in generating DeepMasterPrints. The underlying method is likelyto have broad applications in fingerprint security as well as fingerprintsynthesis.
 
 Playing Atari with Six Neurons
 
-  Deep reinforcement learning, applied to vision-based problems like Atari
-games, maps pixels directly to actions; internally, the deep neural network
-bears the responsibility of both extracting useful information and making
-decisions based on it. By separating the image processing from decision-making,
-one could better understand the complexity of each task, as well as potentially
-find smaller policy representations that are easier for humans to understand
-and may generalize better. To this end, we propose a new method for learning
-policies and compact state representations separately but simultaneously for
-policy approximation in reinforcement learning. State representations are
-generated by an encoder based on two novel algorithms: Increasing Dictionary
-Vector Quantization makes the encoder capable of growing its dictionary size
-over time, to address new observations as they appear in an open-ended
-online-learning context; Direct Residuals Sparse Coding encodes observations by
-disregarding reconstruction error minimization, and aiming instead for highest
-information inclusion. The encoder autonomously selects observations online to
-train on, in order to maximize code sparsity. As the dictionary size increases,
-the encoder produces increasingly larger inputs for the neural network: this is
-addressed by a variation of the Exponential Natural Evolution Strategies
-algorithm which adapts its probability distribution dimensionality along the
-run. We test our system on a selection of Atari games using tiny neural
-networks of only 6 to 18 neurons (depending on the game's controls). These are
-still capable of achieving results comparable---and occasionally superior---to
-state-of-the-art techniques which use two orders of magnitude more neurons.
+  Deep reinforcement learning, applied to vision-based problems like Atarigames, maps pixels directly to actions; internally, the deep neural networkbears the responsibility of both extracting useful information and makingdecisions based on it. By separating the image processing from decision-making,one could better understand the complexity of each task, as well as potentiallyfind smaller policy representations that are easier for humans to understandand may generalize better. To this end, we propose a new method for learningpolicies and compact state representations separately but simultaneously forpolicy approximation in reinforcement learning. State representations aregenerated by an encoder based on two novel algorithms: Increasing DictionaryVector Quantization makes the encoder capable of growing its dictionary sizeover time, to address new observations as they appear in an open-endedonline-learning context; Direct Residuals Sparse Coding encodes observations bydisregarding reconstruction error minimization, and aiming instead for highestinformation inclusion. The encoder autonomously selects observations online totrain on, in order to maximize code sparsity. As the dictionary size increases,the encoder produces increasingly larger inputs for the neural network: this isaddressed by a variation of the Exponential Natural Evolution Strategiesalgorithm which adapts its probability distribution dimensionality along therun. We test our system on a selection of Atari games using tiny neuralnetworks of only 6 to 18 neurons (depending on the game's controls). These arestill capable of achieving results comparable---and occasionally superior---tostate-of-the-art techniques which use two orders of magnitude more neurons.
 
+Illuminating Generalization in Deep Reinforcement Learning through  Procedural Level Generation
 
-Illuminating Generalization in Deep Reinforcement Learning through
-  Procedural Level Generation
+  Deep reinforcement learning (RL) has shown impressive results in a variety ofdomains, learning directly from high-dimensional sensory streams. However, whenneural networks are trained in a fixed environment, such as a single level in avideo game, they will usually overfit and fail to generalize to new levels.When RL models overfit, even slight modifications to the environment can resultin poor agent performance. This paper explores how procedurally generatedlevels during training can increase generality. We show that for some gamesprocedural level generation enables generalization to new levels within thesame distribution. Additionally, it is possible to achieve better performancewith less data by manipulating the difficulty of the levels in response to theperformance of the agent. The generality of the learned behaviors is alsoevaluated on a set of human-designed levels. The results suggest that theability to generalize to human-designed levels highly depends on the design ofthe level generators. We apply dimensionality reduction and clusteringtechniques to visualize the generators' distributions of levels and analyze towhat degree they can produce levels similar to those designed by a human.
 
-  Deep reinforcement learning (RL) has shown impressive results in a variety of
-domains, learning directly from high-dimensional sensory streams. However, when
-neural networks are trained in a fixed environment, such as a single level in a
-video game, they will usually overfit and fail to generalize to new levels.
-When RL models overfit, even slight modifications to the environment can result
-in poor agent performance. This paper explores how procedurally generated
-levels during training can increase generality. We show that for some games
-procedural level generation enables generalization to new levels within the
-same distribution. Additionally, it is possible to achieve better performance
-with less data by manipulating the difficulty of the levels in response to the
-performance of the agent. The generality of the learned behaviors is also
-evaluated on a set of human-designed levels. The results suggest that the
-ability to generalize to human-designed levels highly depends on the design of
-the level generators. We apply dimensionality reduction and clustering
-techniques to visualize the generators' distributions of levels and analyze to
-what degree they can produce levels similar to those designed by a human.
+Obstacle Tower: A Generalization Challenge in Vision, Control, and  Planning
 
-
-Obstacle Tower: A Generalization Challenge in Vision, Control, and
-  Planning
-
-  The rapid pace of research in Deep Reinforcement Learning has been driven by
-the presence of fast and challenging simulation environments. These
-environments often take the form of games; with tasks ranging from simple board
-games, to classic home console games, to modern strategy games. We propose a
-new benchmark called Obstacle Tower: a high visual fidelity, 3D, 3rd person,
-procedurally generated game environment. An agent in the Obstacle Tower must
-learn to solve both low-level control and high-level planning problems in
-tandem while learning from pixels and a sparse reward signal. Unlike other
-similar benchmarks such as the ALE, evaluation of agent performance in Obstacle
-Tower is based on an agent's ability to perform well on unseen instances of the
-environment. In this paper we outline the environment and provide a set of
-initial baseline results produced by current state-of-the-art Deep RL methods
-as well as human players. In all cases these algorithms fail to produce agents
-capable of performing anywhere near human level on a set of evaluations
-designed to test both memorization and generalization ability. As such, we
-believe that the Obstacle Tower has the potential to serve as a helpful Deep RL
-benchmark now and into the future.
-
+  The rapid pace of research in Deep Reinforcement Learning has been driven bythe presence of fast and challenging simulation environments. Theseenvironments often take the form of games; with tasks ranging from simple boardgames, to classic home console games, to modern strategy games. We propose anew benchmark called Obstacle Tower: a high visual fidelity, 3D, 3rd person,procedurally generated game environment. An agent in the Obstacle Tower mustlearn to solve both low-level control and high-level planning problems intandem while learning from pixels and a sparse reward signal. Unlike othersimilar benchmarks such as the ALE, evaluation of agent performance in ObstacleTower is based on an agent's ability to perform well on unseen instances of theenvironment. In this paper we outline the environment and provide a set ofinitial baseline results produced by current state-of-the-art Deep RL methodsas well as human players. In all cases these algorithms fail to produce agentscapable of performing anywhere near human level on a set of evaluationsdesigned to test both memorization and generalization ability. As such, webelieve that the Obstacle Tower has the potential to serve as a helpful Deep RLbenchmark now and into the future.
 

@@ -1,88 +1,20 @@
 Compositional Invariant Generation via Linear Recurrence Analysis
 
-  This paper presents a new method for automatically generating numerical
-invariants for imperative programs. Given a program, our procedure computes a
-binary input/output relation on program states which over-approximates the
-behaviour of the program. It is compositional in the sense that it operates by
-decomposing the program into parts, computing an abstract meaning of each part,
-and then composing the meanings. Our method for approximating loop behaviour is
-based on first approximating the meaning of the loop body, extracting
-recurrence relations from that approximation, and then using the closed forms
-to approximate the loop. Our experiments demonstrate that on verification
-tasks, our method is competitive with leading invariant generation and
-verification tools.
-
+  This paper presents a new method for automatically generating numericalinvariants for imperative programs. Given a program, our procedure computes abinary input/output relation on program states which over-approximates thebehaviour of the program. It is compositional in the sense that it operates bydecomposing the program into parts, computing an abstract meaning of each part,and then composing the meanings. Our method for approximating loop behaviour isbased on first approximating the meaning of the loop body, extractingrecurrence relations from that approximation, and then using the closed formsto approximate the loop. Our experiments demonstrate that on verificationtasks, our method is competitive with leading invariant generation andverification tools.
 
 An Algebraic Framework for Compositional Program Analysis
 
-  The purpose of a program analysis is to compute an abstract meaning for a
-program which approximates its dynamic behaviour. A compositional program
-analysis accomplishes this task with a divide-and-conquer strategy: the meaning
-of a program is computed by dividing it into sub-programs, computing their
-meaning, and then combining the results. Compositional program analyses are
-desirable because they can yield scalable (and easily parallelizable) program
-analyses.
-  This paper presents algebraic framework for designing, implementing, and
-proving the correctness of compositional program analyses. A program analysis
-in our framework defined by an algebraic structure equipped with sequencing,
-choice, and iteration operations. From the analysis design perspective, a
-particularly interesting consequence of this is that the meaning of a loop is
-computed by applying the iteration operator to the loop body. This style of
-compositional loop analysis can yield interesting ways of computing loop
-invariants that cannot be defined iteratively. We identify a class of
-algorithms, the so-called path-expression algorithms [Tarjan1981,Scholz2007],
-which can be used to efficiently implement analyses in our framework. Lastly,
-we develop a theory for proving the correctness of an analysis by establishing
-an approximation relationship between an algebra defining a concrete semantics
-and an algebra defining an analysis.
-
+  The purpose of a program analysis is to compute an abstract meaning for aprogram which approximates its dynamic behaviour. A compositional programanalysis accomplishes this task with a divide-and-conquer strategy: the meaningof a program is computed by dividing it into sub-programs, computing theirmeaning, and then combining the results. Compositional program analyses aredesirable because they can yield scalable (and easily parallelizable) programanalyses.  This paper presents algebraic framework for designing, implementing, andproving the correctness of compositional program analyses. A program analysisin our framework defined by an algebraic structure equipped with sequencing,choice, and iteration operations. From the analysis design perspective, aparticularly interesting consequence of this is that the meaning of a loop iscomputed by applying the iteration operator to the loop body. This style ofcompositional loop analysis can yield interesting ways of computing loopinvariants that cannot be defined iteratively. We identify a class ofalgorithms, the so-called path-expression algorithms [Tarjan1981,Scholz2007],which can be used to efficiently implement analyses in our framework. Lastly,we develop a theory for proving the correctness of an analysis by establishingan approximation relationship between an algebra defining a concrete semanticsand an algebra defining an analysis.
 
 Proving Liveness of Parameterized Programs
 
-  Correctness of multi-threaded programs typically requires that they satisfy
-liveness properties. For example, a program may require that no thread is
-starved of a shared resource, or that all threads eventually agree on a single
-value. This paper presents a method for proving that such liveness properties
-hold. Two particular challenges addressed in this work are that (1) the
-correctness argument may rely on global behaviour of the system (e.g., the
-correctness argument may require that all threads collectively progress towards
-"the good thing" rather than one thread progressing while the others do not
-interfere), and (2) such programs are often designed to be executed by any
-number of threads, and the desired liveness properties must hold regardless of
-the number of threads that are active in the program.
-
+  Correctness of multi-threaded programs typically requires that they satisfyliveness properties. For example, a program may require that no thread isstarved of a shared resource, or that all threads eventually agree on a singlevalue. This paper presents a method for proving that such liveness propertieshold. Two particular challenges addressed in this work are that (1) thecorrectness argument may rely on global behaviour of the system (e.g., thecorrectness argument may require that all threads collectively progress towards"the good thing" rather than one thread progressing while the others do notinterfere), and (2) such programs are often designed to be executed by anynumber of threads, and the desired liveness properties must hold regardless ofthe number of threads that are active in the program.
 
 Spatial Interpolants
 
-  We propose Splinter, a new technique for proving properties of
-heap-manipulating programs that marries (1) a new separation logic-based
-analysis for heap reasoning with (2) an interpolation-based technique for
-refining heap-shape invariants with data invariants. Splinter is property
-directed, precise, and produces counterexample traces when a property does not
-hold. Using the novel notion of spatial interpolants modulo theories, Splinter
-can infer complex invariants over general recursive predicates, e.g., of the
-form all elements in a linked list are even or a binary tree is sorted.
-Furthermore, we treat interpolation as a black box, which gives us the freedom
-to encode data manipulation in any suitable theory for a given program (e.g.,
-bit vectors, arrays, or linear arithmetic), so that our technique immediately
-benefits from any future advances in SMT solving and interpolation.
-
+  We propose Splinter, a new technique for proving properties ofheap-manipulating programs that marries (1) a new separation logic-basedanalysis for heap reasoning with (2) an interpolation-based technique forrefining heap-shape invariants with data invariants. Splinter is propertydirected, precise, and produces counterexample traces when a property does nothold. Using the novel notion of spatial interpolants modulo theories, Splintercan infer complex invariants over general recursive predicates, e.g., of theform all elements in a linked list are even or a binary tree is sorted.Furthermore, we treat interpolation as a black box, which gives us the freedomto encode data manipulation in any suitable theory for a given program (e.g.,bit vectors, arrays, or linear arithmetic), so that our technique immediatelybenefits from any future advances in SMT solving and interpolation.
 
 A Symbolic Decision Procedure for Symbolic Alternating Finite Automata
 
-  We introduce Symbolic Alternating Finite Automata (s-AFA) as an expressive,
-succinct, and decidable model for describing sets of finite sequences over
-arbitrary alphabets. Boolean operations over s-AFAs have linear complexity,
-which is in sharp contrast with the quadratic cost of intersection and union
-for non-alternating symbolic automata. Due to this succinctness, emptiness and
-equivalence checking are PSpace-hard.
-  We introduce an algorithm for checking the equivalence of two s-AFAs based on
-bisimulation up to congruence. This algorithm allows us to exploit the power of
-SAT and SMT solvers to efficiently search the state space of the s-AFAs. We
-evaluate our decision procedure on two verification and security applications:
-1) checking satisfiability of linear temporal logic formulas over finite
-traces, and 2) checking equivalence of Boolean combinations of regular
-expressions. Our experiments show that our technique often outperforms existing
-techniques and it can be beneficial in both such applications.
-
+  We introduce Symbolic Alternating Finite Automata (s-AFA) as an expressive,succinct, and decidable model for describing sets of finite sequences overarbitrary alphabets. Boolean operations over s-AFAs have linear complexity,which is in sharp contrast with the quadratic cost of intersection and unionfor non-alternating symbolic automata. Due to this succinctness, emptiness andequivalence checking are PSpace-hard.  We introduce an algorithm for checking the equivalence of two s-AFAs based onbisimulation up to congruence. This algorithm allows us to exploit the power ofSAT and SMT solvers to efficiently search the state space of the s-AFAs. Weevaluate our decision procedure on two verification and security applications:1) checking satisfiability of linear temporal logic formulas over finitetraces, and 2) checking equivalence of Boolean combinations of regularexpressions. Our experiments show that our technique often outperforms existingtechniques and it can be beneficial in both such applications.
 

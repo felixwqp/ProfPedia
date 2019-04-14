@@ -1,230 +1,68 @@
 Fages' Theorem and Answer Set Programming
 
-  We generalize a theorem by Francois Fages that describes the relationship
-between the completion semantics and the answer set semantics for logic
-programs with negation as failure. The study of this relationship is important
-in connection with the emergence of answer set programming. Whenever the two
-semantics are equivalent, answer sets can be computed by a satisfiability
-solver, and the use of answer set solvers such as smodels and dlv is
-unnecessary. A logic programming representation of the blocks world due to
-Ilkka Niemelae is discussed as an example.
-
+  We generalize a theorem by Francois Fages that describes the relationshipbetween the completion semantics and the answer set semantics for logicprograms with negation as failure. The study of this relationship is importantin connection with the emergence of answer set programming. Whenever the twosemantics are equivalent, answer sets can be computed by a satisfiabilitysolver, and the use of answer set solvers such as smodels and dlv isunnecessary. A logic programming representation of the blocks world due toIlkka Niemelae is discussed as an example.
 
 Achievements in Answer Set Programming (Preliminary Report)
 
-  This paper describes an approach to the methodology of answer set programming
-(ASP) that can facilitate the design of encodings that are easy to understand
-and provably correct. Under this approach, after appending a rule or a small
-group of rules to the emerging program we include a comment that states what
-has been "achieved" so far. This strategy allows us to set out our
-understanding of the design of the program by describing the roles of small
-parts of the program in a mathematically precise way.
-
+  This paper describes an approach to the methodology of answer set programming(ASP) that can facilitate the design of encodings that are easy to understandand provably correct. Under this approach, after appending a rule or a smallgroup of rules to the emerging program we include a comment that states whathas been "achieved" so far. This strategy allows us to set out ourunderstanding of the design of the program by describing the roles of smallparts of the program in a mathematically precise way.
 
 Weight Constraints as Nested Expressions
 
-  We compare two recent extensions of the answer set (stable model) semantics
-of logic programs. One of them, due to Lifschitz, Tang and Turner, allows the
-bodies and heads of rules to contain nested expressions. The other, due to
-Niemela and Simons, uses weight constraints. We show that there is a simple,
-modular translation from the language of weight constraints into the language
-of nested expressions that preserves the program's answer sets. Nested
-expressions can be eliminated from the result of this translation in favor of
-additional atoms. The translation makes it possible to compute answer sets for
-some programs with weight constraints using satisfiability solvers, and to
-prove the strong equivalence of programs with weight constraints using the
-logic of here-and there.
-
+  We compare two recent extensions of the answer set (stable model) semanticsof logic programs. One of them, due to Lifschitz, Tang and Turner, allows thebodies and heads of rules to contain nested expressions. The other, due toNiemela and Simons, uses weight constraints. We show that there is a simple,modular translation from the language of weight constraints into the languageof nested expressions that preserves the program's answer sets. Nestedexpressions can be eliminated from the result of this translation in favor ofadditional atoms. The translation makes it possible to compute answer sets forsome programs with weight constraints using satisfiability solvers, and toprove the strong equivalence of programs with weight constraints using thelogic of here-and there.
 
 Tight Logic Programs
 
-  This note is about the relationship between two theories of negation as
-failure -- one based on program completion, the other based on stable models,
-or answer sets. Francois Fages showed that if a logic program satisfies a
-certain syntactic condition, which is now called ``tightness,'' then its stable
-models can be characterized as the models of its completion. We extend the
-definition of tightness and Fages' theorem to programs with nested expressions
-in the bodies of rules, and study tight logic programs containing the
-definition of the transitive closure of a predicate.
-
+  This note is about the relationship between two theories of negation asfailure -- one based on program completion, the other based on stable models,or answer sets. Francois Fages showed that if a logic program satisfies acertain syntactic condition, which is now called ``tightness,'' then its stablemodels can be characterized as the models of its completion. We extend thedefinition of tightness and Fages' theorem to programs with nested expressionsin the bodies of rules, and study tight logic programs containing thedefinition of the transitive closure of a predicate.
 
 Temporal Phylogenetic Networks and Logic Programming
 
-  The concept of a temporal phylogenetic network is a mathematical model of
-evolution of a family of natural languages. It takes into account the fact that
-languages can trade their characteristics with each other when linguistic
-communities are in contact, and also that a contact is only possible when the
-languages are spoken at the same time. We show how computational methods of
-answer set programming and constraint logic programming can be used to generate
-plausible conjectures about contacts between prehistoric linguistic
-communities, and illustrate our approach by applying it to the evolutionary
-history of Indo-European languages.
-  To appear in Theory and Practice of Logic Programming (TPLP).
-
+  The concept of a temporal phylogenetic network is a mathematical model ofevolution of a family of natural languages. It takes into account the fact thatlanguages can trade their characteristics with each other when linguisticcommunities are in contact, and also that a contact is only possible when thelanguages are spoken at the same time. We show how computational methods ofanswer set programming and constraint logic programming can be used to generateplausible conjectures about contacts between prehistoric linguisticcommunities, and illustrate our approach by applying it to the evolutionaryhistory of Indo-European languages.  To appear in Theory and Practice of Logic Programming (TPLP).
 
 Representing First-Order Causal Theories by Logic Programs
 
-  Nonmonotonic causal logic, introduced by Norman McCain and Hudson Turner,
-became a basis for the semantics of several expressive action languages.
-McCain's embedding of definite propositional causal theories into logic
-programming paved the way to the use of answer set solvers for answering
-queries about actions described in such languages. In this paper we extend this
-embedding to nondefinite theories and to first-order causal logic.
-
+  Nonmonotonic causal logic, introduced by Norman McCain and Hudson Turner,became a basis for the semantics of several expressive action languages.McCain's embedding of definite propositional causal theories into logicprogramming paved the way to the use of answer set solvers for answeringqueries about actions described in such languages. In this paper we extend thisembedding to nondefinite theories and to first-order causal logic.
 
 Relational Theories with Null Values and Non-Herbrand Stable Models
 
-  Generalized relational theories with null values in the sense of Reiter are
-first-order theories that provide a semantics for relational databases with
-incomplete information. In this paper we show that any such theory can be
-turned into an equivalent logic program, so that models of the theory can be
-generated using computational methods of answer set programming. As a step
-towards this goal, we develop a general method for calculating stable models
-under the domain closure assumption but without the unique name assumption.
-
+  Generalized relational theories with null values in the sense of Reiter arefirst-order theories that provide a semantics for relational databases withincomplete information. In this paper we show that any such theory can beturned into an equivalent logic program, so that models of the theory can begenerated using computational methods of answer set programming. As a steptowards this goal, we develop a general method for calculating stable modelsunder the domain closure assumption but without the unique name assumption.
 
 Lloyd-Topor Completion and General Stable Models
 
-  We investigate the relationship between the generalization of program
-completion defined in 1984 by Lloyd and Topor and the generalization of the
-stable model semantics introduced recently by Ferraris et al. The main theorem
-can be used to characterize, in some cases, the general stable models of a
-logic program by a first-order formula. The proof uses Truszczynski's stable
-model semantics of infinitary propositional formulas.
-
+  We investigate the relationship between the generalization of programcompletion defined in 1984 by Lloyd and Topor and the generalization of thestable model semantics introduced recently by Ferraris et al. The main theoremcan be used to characterize, in some cases, the general stable models of alogic program by a first-order formula. The proof uses Truszczynski's stablemodel semantics of infinitary propositional formulas.
 
 On Equivalence of Infinitary Formulas under the Stable Model Semantics
 
-  Propositional formulas that are equivalent in intuitionistic logic, or in its
-extension known as the logic of here-and-there, have the same stable models. We
-extend this theorem to propositional formulas with infinitely long conjunctions
-and disjunctions and show how to apply this generalization to proving
-properties of aggregates in answer set programming. To appear in Theory and
-Practice of Logic Programming (TPLP).
-
+  Propositional formulas that are equivalent in intuitionistic logic, or in itsextension known as the logic of here-and-there, have the same stable models. Weextend this theorem to propositional formulas with infinitely long conjunctionsand disjunctions and show how to apply this generalization to provingproperties of aggregates in answer set programming. To appear in Theory andPractice of Logic Programming (TPLP).
 
 Abstract Gringo
 
-  This paper defines the syntax and semantics of the input language of the ASP
-grounder GRINGO. The definition covers several constructs that were not
-discussed in earlier work on the semantics of that language, including
-intervals, pools, division of integers, aggregates with non-numeric values, and
-lparse-style aggregate expressions. The definition is abstract in the sense
-that it disregards some details related to representing programs by strings of
-ASCII characters. It serves as a specification for GRINGO from Version 4.5 on.
-
+  This paper defines the syntax and semantics of the input language of the ASPgrounder GRINGO. The definition covers several constructs that were notdiscussed in earlier work on the semantics of that language, includingintervals, pools, division of integers, aggregates with non-numeric values, andlparse-style aggregate expressions. The definition is abstract in the sensethat it disregards some details related to representing programs by strings ofASCII characters. It serves as a specification for GRINGO from Version 4.5 on.
 
 Stable Models for Infinitary Formulas with Extensional Atoms
 
-  The definition of stable models for propositional formulas with infinite
-conjunctions and disjunctions can be used to describe the semantics of answer
-set programming languages. In this note, we enhance that definition by
-introducing a distinction between intensional and extensional atoms. The
-symmetric splitting theorem for first-order formulas is then extended to
-infinitary formulas and used to reason about infinitary definitions. This note
-is under consideration for publication in Theory and Practice of Logic
-Programming.
-
+  The definition of stable models for propositional formulas with infiniteconjunctions and disjunctions can be used to describe the semantics of answerset programming languages. In this note, we enhance that definition byintroducing a distinction between intensional and extensional atoms. Thesymmetric splitting theorem for first-order formulas is then extended toinfinitary formulas and used to reason about infinitary definitions. This noteis under consideration for publication in Theory and Practice of LogicProgramming.
 
 Almost-minimal nonuniform lattices of higher rank
 
-  If Gamma is a nonuniform, irreducible lattice in a semisimple Lie group whose
-real rank is greater than 1, we show Gamma contains a subgroup that is
-isomorphic to a nonuniform, irreducible lattice in either SL(3,R), SL(3,C), or
-a direct product SL(2,R)^m x SL(2,C)^n$, with m + n > 1. (In geometric terms,
-this can be interpreted as a statement about the existence of totally geodesic
-subspaces of finite-volume, noncompact, locally symmetric spaces of higher
-rank.) Another formulation of the result states that if G is any isotropic,
-almost simple algebraic group over Q (the rational numbers), such that the real
-rank of G is greater than 1, then G contains an isotropic, almost simple
-Q-subgroup H, such that H is quasisplit, and the real rank of H is greater than
-1.
-
+  If Gamma is a nonuniform, irreducible lattice in a semisimple Lie group whosereal rank is greater than 1, we show Gamma contains a subgroup that isisomorphic to a nonuniform, irreducible lattice in either SL(3,R), SL(3,C), ora direct product SL(2,R)^m x SL(2,C)^n$, with m + n > 1. (In geometric terms,this can be interpreted as a statement about the existence of totally geodesicsubspaces of finite-volume, noncompact, locally symmetric spaces of higherrank.) Another formulation of the result states that if G is any isotropic,almost simple algebraic group over Q (the rational numbers), such that the realrank of G is greater than 1, then G contains an isotropic, almost simpleQ-subgroup H, such that H is quasisplit, and the real rank of H is greater than1.
 
 On the Semantics of Gringo
 
-  Input languages of answer set solvers are based on the mathematically simple
-concept of a stable model. But many useful constructs available in these
-languages, including local variables, conditional literals, and aggregates,
-cannot be easily explained in terms of stable models in the sense of the
-original definition of this concept and its straightforward generalizations.
-Manuals written by designers of answer set solvers usually explain such
-constructs using examples and informal comments that appeal to the user's
-intuition, without references to any precise semantics. We propose to approach
-the problem of defining the semantics of gringo programs by translating them
-into the language of infinitary propositional formulas. This semantics allows
-us to study equivalent transformations of gringo programs using natural
-deduction in infinitary propositional logic.
-
+  Input languages of answer set solvers are based on the mathematically simpleconcept of a stable model. But many useful constructs available in theselanguages, including local variables, conditional literals, and aggregates,cannot be easily explained in terms of stable models in the sense of theoriginal definition of this concept and its straightforward generalizations.Manuals written by designers of answer set solvers usually explain suchconstructs using examples and informal comments that appeal to the user'sintuition, without references to any precise semantics. We propose to approachthe problem of defining the semantics of gringo programs by translating theminto the language of infinitary propositional formulas. This semantics allowsus to study equivalent transformations of gringo programs using naturaldeduction in infinitary propositional logic.
 
 Proving Infinitary Formulas
 
-  The infinitary propositional logic of here-and-there is important for the
-theory of answer set programming in view of its relation to strongly equivalent
-transformations of logic programs. We know a formal system axiomatizing this
-logic exists, but a proof in that system may include infinitely many formulas.
-In this note we describe a relationship between the validity of infinitary
-formulas in the logic of here-and-there and the provability of formulas in some
-finite deductive systems. This relationship allows us to use finite proofs to
-justify the validity of infinitary formulas. This note is under consideration
-for publication in Theory and Practice of Logic Programming.
-
+  The infinitary propositional logic of here-and-there is important for thetheory of answer set programming in view of its relation to strongly equivalenttransformations of logic programs. We know a formal system axiomatizing thislogic exists, but a proof in that system may include infinitely many formulas.In this note we describe a relationship between the validity of infinitaryformulas in the logic of here-and-there and the provability of formulas in somefinite deductive systems. This relationship allows us to use finite proofs tojustify the validity of infinitary formulas. This note is under considerationfor publication in Theory and Practice of Logic Programming.
 
 Program Completionin the Input Language of GRINGO
 
-  We argue that turning a logic program into a set of completed definitions can
-be sometimes thought of as the "reverse engineering" process of generating a
-set of conditions that could serve as a specification for it. Accordingly, it
-may be useful to define completion for a large class of ASP programs and to
-automate the process of generating and simplifying completion formulas.
-Examining the output produced by this kind of software may help programmers to
-see more clearly what their program does, and to what degree its behavior
-conforms with their expectations. As a step toward this goal, we propose here a
-definition of program completion for a large class of programs in the input
-language of the ASP grounder GRINGO, and study its properties. This note is
-under consideration for publication in Theory and Practice of Logic
-Programming.
+  We argue that turning a logic program into a set of completed definitions canbe sometimes thought of as the "reverse engineering" process of generating aset of conditions that could serve as a specification for it. Accordingly, itmay be useful to define completion for a large class of ASP programs and toautomate the process of generating and simplifying completion formulas.Examining the output produced by this kind of software may help programmers tosee more clearly what their program does, and to what degree its behaviorconforms with their expectations. As a step toward this goal, we propose here adefinition of program completion for a large class of programs in the inputlanguage of the ASP grounder GRINGO, and study its properties. This note isunder consideration for publication in Theory and Practice of LogicProgramming.
 
+anthem: Transforming gringo Programs into First-Order Theories  (Preliminary Report)
 
-anthem: Transforming gringo Programs into First-Order Theories
-  (Preliminary Report)
+  In a recent paper by Harrison et al., the concept of program completion isextended to a large class of programs in the input language of the ASP groundergringo. We would like to automate the process of generating and simplifyingcompletion formulas for programs in that language, because examining the outputproduced by this kind of software may help programmers to see more clearly whattheir program does and to what degree its set of stable models conforms withtheir intentions. If a formal specification for the program is available, thenit may be possible to use this software, in combination with automatedreasoning tools, to verify that the program is correct. This note is apreliminary report on a project motivated by this idea.
 
-  In a recent paper by Harrison et al., the concept of program completion is
-extended to a large class of programs in the input language of the ASP grounder
-gringo. We would like to automate the process of generating and simplifying
-completion formulas for programs in that language, because examining the output
-produced by this kind of software may help programmers to see more clearly what
-their program does and to what degree its set of stable models conforms with
-their intentions. If a formal specification for the program is available, then
-it may be possible to use this software, in combination with automated
-reasoning tools, to verify that the program is correct. This note is a
-preliminary report on a project motivated by this idea.
+Proceedings of the 8th International Workshop on Non-Monotonic  Reasoning, NMR'2000
 
-
-Proceedings of the 8th International Workshop on Non-Monotonic
-  Reasoning, NMR'2000
-
-  The papers gathered in this collection were presented at the 8th
-International Workshop on Nonmonotonic Reasoning, NMR2000. The series was
-started by John McCarthy in 1978. The first international NMR workshop was held
-at Mohonk Mountain House, New Paltz, New York in June, 1984, and was organized
-by Ray Reiter and Bonnie Webber.
-  In the last 10 years the area of nonmonotonic reasoning has seen a number of
-important developments. Significant theoretical advances were made in the
-understanding of general abstract principles underlying nonmonotonicity. Key
-results on the expressibility and computational complexity of nonmonotonic
-logics were established. The role of nonmonotonic reasoning in belief revision,
-abduction, reasoning about action, planing and uncertainty was further
-clarified. Several successful NMR systems were built and used in applications
-such as planning, scheduling, logic programming and constraint satisfaction.
-  The papers in the proceedings reflect these recent advances in the field.
-They are grouped into sections corresponding to special sessions as they were
-held at the workshop:
-  1. General NMR track
-  2. Abductive reasonig
-  3. Belief revision: theory and practice
-  4. Representing action and planning
-  5. Systems descriptions and demonstrations
-  6. Uncertainty frameworks in NMR
-
+  The papers gathered in this collection were presented at the 8thInternational Workshop on Nonmonotonic Reasoning, NMR2000. The series wasstarted by John McCarthy in 1978. The first international NMR workshop was heldat Mohonk Mountain House, New Paltz, New York in June, 1984, and was organizedby Ray Reiter and Bonnie Webber.  In the last 10 years the area of nonmonotonic reasoning has seen a number ofimportant developments. Significant theoretical advances were made in theunderstanding of general abstract principles underlying nonmonotonicity. Keyresults on the expressibility and computational complexity of nonmonotoniclogics were established. The role of nonmonotonic reasoning in belief revision,abduction, reasoning about action, planing and uncertainty was furtherclarified. Several successful NMR systems were built and used in applicationssuch as planning, scheduling, logic programming and constraint satisfaction.  The papers in the proceedings reflect these recent advances in the field.They are grouped into sections corresponding to special sessions as they wereheld at the workshop:  1. General NMR track  2. Abductive reasonig  3. Belief revision: theory and practice  4. Representing action and planning  5. Systems descriptions and demonstrations  6. Uncertainty frameworks in NMR
 

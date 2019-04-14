@@ -1,379 +1,72 @@
-Trading-Off Cost of Deployment Versus Accuracy in Learning Predictive
-  Models
+Trading-Off Cost of Deployment Versus Accuracy in Learning Predictive  Models
 
-  Predictive models are finding an increasing number of applications in many
-industries. As a result, a practical means for trading-off the cost of
-deploying a model versus its effectiveness is needed. Our work is motivated by
-risk prediction problems in healthcare. Cost-structures in domains such as
-healthcare are quite complex, posing a significant challenge to existing
-approaches. We propose a novel framework for designing cost-sensitive
-structured regularizers that is suitable for problems with complex cost
-dependencies. We draw upon a surprising connection to boolean circuits. In
-particular, we represent the problem costs as a multi-layer boolean circuit,
-and then use properties of boolean circuits to define an extended feature
-vector and a group regularizer that exactly captures the underlying cost
-structure. The resulting regularizer may then be combined with a fidelity
-function to perform model prediction, for example. For the challenging
-real-world application of risk prediction for sepsis in intensive care units,
-the use of our regularizer leads to models that are in harmony with the
-underlying cost structure and thus provide an excellent prediction accuracy
-versus cost tradeoff.
-
+  Predictive models are finding an increasing number of applications in manyindustries. As a result, a practical means for trading-off the cost ofdeploying a model versus its effectiveness is needed. Our work is motivated byrisk prediction problems in healthcare. Cost-structures in domains such ashealthcare are quite complex, posing a significant challenge to existingapproaches. We propose a novel framework for designing cost-sensitivestructured regularizers that is suitable for problems with complex costdependencies. We draw upon a surprising connection to boolean circuits. Inparticular, we represent the problem costs as a multi-layer boolean circuit,and then use properties of boolean circuits to define an extended featurevector and a group regularizer that exactly captures the underlying coststructure. The resulting regularizer may then be combined with a fidelityfunction to perform model prediction, for example. For the challengingreal-world application of risk prediction for sepsis in intensive care units,the use of our regularizer leads to models that are in harmony with theunderlying cost structure and thus provide an excellent prediction accuracyversus cost tradeoff.
 
 Discretizing Logged Interaction Data Biases Learning for Decision-Making
 
-  Time series data that are not measured at regular intervals are commonly
-discretized as a preprocessing step. For example, data about customer arrival
-times might be simplified by summing the number of arrivals within hourly
-intervals, which produces a discrete-time time series that is easier to model.
-In this abstract, we show that discretization introduces a bias that affects
-models trained for decision-making. We refer to this phenomenon as
-discretization bias, and show that we can avoid it by using continuous-time
-models instead.
-
+  Time series data that are not measured at regular intervals are commonlydiscretized as a preprocessing step. For example, data about customer arrivaltimes might be simplified by summing the number of arrivals within hourlyintervals, which produces a discrete-time time series that is easier to model.In this abstract, we show that discretization introduces a bias that affectsmodels trained for decision-making. We refer to this phenomenon asdiscretization bias, and show that we can avoid it by using continuous-timemodels instead.
 
 Reasoning at the Right Time Granularity
 
-  Most real-world dynamic systems are composed of different components that
-often evolve at very different rates. In traditional temporal graphical models,
-such as dynamic Bayesian networks, time is modeled at a fixed granularity,
-generally selected based on the rate at which the fastest component evolves.
-Inference must then be performed at this fastest granularity, potentially at
-significant computational cost. Continuous Time Bayesian Networks (CTBNs) avoid
-time-slicing in the representation by modeling the system as evolving
-continuously over time. The expectation-propagation (EP) inference algorithm of
-Nodelman et al. (2005) can then vary the inference granularity over time, but
-the granularity is uniform across all parts of the system, and must be selected
-in advance. In this paper, we provide a new EP algorithm that utilizes a
-general cluster graph architecture where clusters contain distributions that
-can overlap in both space (set of variables) and time. This architecture allows
-different parts of the system to be modeled at very different time
-granularities, according to their current rate of evolution. We also provide an
-information-theoretic criterion for dynamically re-partitioning the clusters
-during inference to tune the level of approximation to the current rate of
-evolution. This avoids the need to hand-select the appropriate granularity, and
-allows the granularity to adapt as information is transmitted across the
-network. We present experiments demonstrating that this approach can result in
-significant computational savings.
+  Most real-world dynamic systems are composed of different components thatoften evolve at very different rates. In traditional temporal graphical models,such as dynamic Bayesian networks, time is modeled at a fixed granularity,generally selected based on the rate at which the fastest component evolves.Inference must then be performed at this fastest granularity, potentially atsignificant computational cost. Continuous Time Bayesian Networks (CTBNs) avoidtime-slicing in the representation by modeling the system as evolvingcontinuously over time. The expectation-propagation (EP) inference algorithm ofNodelman et al. (2005) can then vary the inference granularity over time, butthe granularity is uniform across all parts of the system, and must be selectedin advance. In this paper, we provide a new EP algorithm that utilizes ageneral cluster graph architecture where clusters contain distributions thatcan overlap in both space (set of variables) and time. This architecture allowsdifferent parts of the system to be modeled at very different timegranularities, according to their current rate of evolution. We also provide aninformation-theoretic criterion for dynamically re-partitioning the clustersduring inference to tune the level of approximation to the current rate ofevolution. This avoids the need to hand-select the appropriate granularity, andallows the granularity to adapt as information is transmitted across thenetwork. We present experiments demonstrating that this approach can result insignificant computational savings.
 
+Discovering shared and individual latent structure in multiple time  series
 
-Deformable Distributed Multiple Detector Fusion for Multi-Person
-  Tracking
+  This paper proposes a nonparametric Bayesian method for exploratory dataanalysis and feature construction in continuous time series. Our method focuseson understanding shared features in a set of time series that exhibitsignificant individual variability. Our method builds on the framework oflatent Diricihlet allocation (LDA) and its extension to hierarchical Dirichletprocesses, which allows us to characterize each series as switching betweenlatent ``topics'', where each topic is characterized as a distribution over``words'' that specify the series dynamics. However, unlike standardapplications of LDA, we discover the words as we learn the model. We apply thismodel to the task of tracking the physiological signals of premature infants;our model obtains clinically significant insights as well as useful featuresfor supervised learning tasks.
 
-  This paper addresses fully automated multi-person tracking in complex
-environments with challenging occlusion and extensive pose variations. Our
-solution combines multiple detectors for a set of different regions of interest
-(e.g., full-body and head) for multi-person tracking. The use of multiple
-detectors leads to fewer miss detections as it is able to exploit the
-complementary strengths of the individual detectors. While the number of false
-positives may increase with the increased number of bounding boxes detected
-from multiple detectors, we propose to group the detection outputs by bounding
-box location and depth information. For robustness to significant pose
-variations, deformable spatial relationship between detectors are learnt in our
-multi-person tracking system. On RGBD data from a live Intensive Care Unit
-(ICU), we show that the proposed method significantly improves multi-person
-tracking performance over state-of-the-art methods.
+Deformable Distributed Multiple Detector Fusion for Multi-Person  Tracking
 
+  This paper addresses fully automated multi-person tracking in complexenvironments with challenging occlusion and extensive pose variations. Oursolution combines multiple detectors for a set of different regions of interest(e.g., full-body and head) for multi-person tracking. The use of multipledetectors leads to fewer miss detections as it is able to exploit thecomplementary strengths of the individual detectors. While the number of falsepositives may increase with the increased number of bounding boxes detectedfrom multiple detectors, we propose to group the detection outputs by boundingbox location and depth information. For robustness to significant posevariations, deformable spatial relationship between detectors are learnt in ourmulti-person tracking system. On RGBD data from a live Intensive Care Unit(ICU), we show that the proposed method significantly improves multi-persontracking performance over state-of-the-art methods.
 
-Discovering shared and individual latent structure in multiple time
-  series
+A Framework for Individualizing Predictions of Disease Trajectories by  Exploiting Multi-Resolution Structure
 
-  This paper proposes a nonparametric Bayesian method for exploratory data
-analysis and feature construction in continuous time series. Our method focuses
-on understanding shared features in a set of time series that exhibit
-significant individual variability. Our method builds on the framework of
-latent Diricihlet allocation (LDA) and its extension to hierarchical Dirichlet
-processes, which allows us to characterize each series as switching between
-latent ``topics'', where each topic is characterized as a distribution over
-``words'' that specify the series dynamics. However, unlike standard
-applications of LDA, we discover the words as we learn the model. We apply this
-model to the task of tracking the physiological signals of premature infants;
-our model obtains clinically significant insights as well as useful features
-for supervised learning tasks.
+  For many complex diseases, there is a wide variety of ways in which anindividual can manifest the disease. The challenge of personalized medicine isto develop tools that can accurately predict the trajectory of an individual'sdisease, which can in turn enable clinicians to optimize treatments. Werepresent an individual's disease trajectory as a continuous-valuedcontinuous-time function describing the severity of the disease over time. Wepropose a hierarchical latent variable model that individualizes predictions ofdisease trajectories. This model shares statistical strength acrossobservations at different resolutions--the population, subpopulation and theindividual level. We describe an algorithm for learning population andsubpopulation parameters offline, and an online procedure for dynamicallylearning individual-specific parameters. Finally, we validate our model on thetask of predicting the course of interstitial lung disease, a leading cause ofdeath among patients with the autoimmune disease scleroderma. We compare ourapproach against state-of-the-art and demonstrate significant improvements inpredictive accuracy.
 
+A Bayesian Nonparametric Approach for Estimating Individualized  Treatment-Response Curves
 
-A Framework for Individualizing Predictions of Disease Trajectories by
-  Exploiting Multi-Resolution Structure
-
-  For many complex diseases, there is a wide variety of ways in which an
-individual can manifest the disease. The challenge of personalized medicine is
-to develop tools that can accurately predict the trajectory of an individual's
-disease, which can in turn enable clinicians to optimize treatments. We
-represent an individual's disease trajectory as a continuous-valued
-continuous-time function describing the severity of the disease over time. We
-propose a hierarchical latent variable model that individualizes predictions of
-disease trajectories. This model shares statistical strength across
-observations at different resolutions--the population, subpopulation and the
-individual level. We describe an algorithm for learning population and
-subpopulation parameters offline, and an online procedure for dynamically
-learning individual-specific parameters. Finally, we validate our model on the
-task of predicting the course of interstitial lung disease, a leading cause of
-death among patients with the autoimmune disease scleroderma. We compare our
-approach against state-of-the-art and demonstrate significant improvements in
-predictive accuracy.
-
-
-Treatment-Response Models for Counterfactual Reasoning with
-  Continuous-time, Continuous-valued Interventions
-
-  Treatment effects can be estimated from observational data as the difference
-in potential outcomes. In this paper, we address the challenge of estimating
-the potential outcome when treatment-dose levels can vary continuously over
-time. Further, the outcome variable may not be measured at a regular frequency.
-Our proposed solution represents the treatment response curves using linear
-time-invariant dynamical systems---this provides a flexible means for modeling
-response over time to highly variable dose curves. Moreover, for multivariate
-data, the proposed method: uncovers shared structure in treatment response and
-the baseline across multiple markers; and, flexibly models challenging
-correlation structure both across and within signals over time. For this, we
-build upon the framework of multiple-output Gaussian Processes. On simulated
-and a challenging clinical dataset, we show significant gains in accuracy over
-state-of-the-art models.
-
-
-A Bayesian Nonparametric Approach for Estimating Individualized
-  Treatment-Response Curves
-
-  We study the problem of estimating the continuous response over time to
-interventions using observational time series---a retrospective dataset where
-the policy by which the data are generated is unknown to the learner. We are
-motivated by applications where response varies by individuals and therefore,
-estimating responses at the individual-level is valuable for personalizing
-decision-making. We refer to this as the problem of estimating individualized
-treatment response (ITR) curves. In statistics, G-computation formula (Robins,
-1986) has been commonly used for estimating treatment responses from
-observational data containing sequential treatment assignments. However, past
-studies have focused predominantly on obtaining point-in-time estimates at the
-population level. We leverage the G-computation formula and develop a novel
-Bayesian nonparametric (BNP) method that can flexibly model functional data and
-provide posterior inference over the treatment response curves at both the
-individual and population level. On a challenging dataset containing time
-series from patients admitted to a hospital, we estimate responses to
-treatments used in managing kidney function and show that the resulting fits
-are more accurate than alternative approaches. Accurate methods for obtaining
-ITRs from observational data can dramatically accelerate the pace at which
-personalized treatment plans become possible.
-
+  We study the problem of estimating the continuous response over time tointerventions using observational time series---a retrospective dataset wherethe policy by which the data are generated is unknown to the learner. We aremotivated by applications where response varies by individuals and therefore,estimating responses at the individual-level is valuable for personalizingdecision-making. We refer to this as the problem of estimating individualizedtreatment response (ITR) curves. In statistics, G-computation formula (Robins,1986) has been commonly used for estimating treatment responses fromobservational data containing sequential treatment assignments. However, paststudies have focused predominantly on obtaining point-in-time estimates at thepopulation level. We leverage the G-computation formula and develop a novelBayesian nonparametric (BNP) method that can flexibly model functional data andprovide posterior inference over the treatment response curves at both theindividual and population level. On a challenging dataset containing timeseries from patients admitted to a hospital, we estimate responses totreatments used in managing kidney function and show that the resulting fitsare more accurate than alternative approaches. Accurate methods for obtainingITRs from observational data can dramatically accelerate the pace at whichpersonalized treatment plans become possible.
 
 Reliable Decision Support using Counterfactual Models
 
-  Decision-makers are faced with the challenge of estimating what is likely to
-happen when they take an action. For instance, if I choose not to treat this
-patient, are they likely to die? Practitioners commonly use supervised learning
-algorithms to fit predictive models that help decision-makers reason about
-likely future outcomes, but we show that this approach is unreliable, and
-sometimes even dangerous. The key issue is that supervised learning algorithms
-are highly sensitive to the policy used to choose actions in the training data,
-which causes the model to capture relationships that do not generalize. We
-propose using a different learning objective that predicts counterfactuals
-instead of predicting outcomes under an existing action policy as in supervised
-learning. To support decision-making in temporal settings, we introduce the
-Counterfactual Gaussian Process (CGP) to predict the counterfactual future
-progression of continuous-time trajectories under sequences of future actions.
-We demonstrate the benefits of the CGP on two important decision-support tasks:
-risk prediction and "what if?" reasoning for individualized treatment planning.
+  Decision-makers are faced with the challenge of estimating what is likely tohappen when they take an action. For instance, if I choose not to treat thispatient, are they likely to die? Practitioners commonly use supervised learningalgorithms to fit predictive models that help decision-makers reason aboutlikely future outcomes, but we show that this approach is unreliable, andsometimes even dangerous. The key issue is that supervised learning algorithmsare highly sensitive to the policy used to choose actions in the training data,which causes the model to capture relationships that do not generalize. Wepropose using a different learning objective that predicts counterfactualsinstead of predicting outcomes under an existing action policy as in supervisedlearning. To support decision-making in temporal settings, we introduce theCounterfactual Gaussian Process (CGP) to predict the counterfactual futureprogression of continuous-time trajectories under sequences of future actions.We demonstrate the benefits of the CGP on two important decision-support tasks:risk prediction and "what if?" reasoning for individualized treatment planning.
 
+Treatment-Response Models for Counterfactual Reasoning with  Continuous-time, Continuous-valued Interventions
 
-Counterfactual Normalization: Proactively Addressing Dataset Shift and
-  Improving Reliability Using Causal Mechanisms
+  Treatment effects can be estimated from observational data as the differencein potential outcomes. In this paper, we address the challenge of estimatingthe potential outcome when treatment-dose levels can vary continuously overtime. Further, the outcome variable may not be measured at a regular frequency.Our proposed solution represents the treatment response curves using lineartime-invariant dynamical systems---this provides a flexible means for modelingresponse over time to highly variable dose curves. Moreover, for multivariatedata, the proposed method: uncovers shared structure in treatment response andthe baseline across multiple markers; and, flexibly models challengingcorrelation structure both across and within signals over time. For this, webuild upon the framework of multiple-output Gaussian Processes. On simulatedand a challenging clinical dataset, we show significant gains in accuracy overstate-of-the-art models.
 
-  Predictive models can fail to generalize from training to deployment
-environments because of dataset shift, posing a threat to model reliability and
-the safety of downstream decisions made in practice. Instead of using samples
-from the target distribution to reactively correct dataset shift, we use
-graphical knowledge of the causal mechanisms relating variables in a prediction
-problem to proactively remove relationships that do not generalize across
-environments, even when these relationships may depend on unobserved variables
-(violations of the "no unobserved confounders" assumption). To accomplish this,
-we identify variables with unstable paths of statistical influence and remove
-them from the model. We also augment the causal graph with latent
-counterfactual variables that isolate unstable paths of statistical influence,
-allowing us to retain stable paths that would otherwise be removed. Our
-experiments demonstrate that models that remove vulnerable variables and use
-estimates of the latent variables transfer better, often outperforming in the
-target domain despite some accuracy loss in the training domain.
+Counterfactual Normalization: Proactively Addressing Dataset Shift and  Improving Reliability Using Causal Mechanisms
 
+  Predictive models can fail to generalize from training to deploymentenvironments because of dataset shift, posing a threat to model reliability andthe safety of downstream decisions made in practice. Instead of using samplesfrom the target distribution to reactively correct dataset shift, we usegraphical knowledge of the causal mechanisms relating variables in a predictionproblem to proactively remove relationships that do not generalize acrossenvironments, even when these relationships may depend on unobserved variables(violations of the "no unobserved confounders" assumption). To accomplish this,we identify variables with unstable paths of statistical influence and removethem from the model. We also augment the causal graph with latentcounterfactual variables that isolate unstable paths of statistical influence,allowing us to retain stable paths that would otherwise be removed. Ourexperiments demonstrate that models that remove vulnerable variables and useestimates of the latent variables transfer better, often outperforming in thetarget domain despite some accuracy loss in the training domain.
 
-Preventing Failures Due to Dataset Shift: Learning Predictive Models
-  That Transport
+Preventing Failures Due to Dataset Shift: Learning Predictive Models  That Transport
 
-  Classical supervised learning produces unreliable models when training and
-target distributions differ, with most existing solutions requiring samples
-from the target domain. We propose a proactive approach which learns a
-relationship in the training domain that will generalize to the target domain
-by incorporating prior knowledge of aspects of the data generating process that
-are expected to differ as expressed in a causal selection diagram.
-Specifically, we remove variables generated by unstable mechanisms from the
-joint factorization to yield the Surgery Estimator---an interventional
-distribution that is invariant to the differences across environments. We prove
-that the surgery estimator finds stable relationships in strictly more
-scenarios than previous approaches which only consider conditional
-relationships, and demonstrate this in simulated experiments. We also evaluate
-on real world data for which the true causal diagram is unknown, performing
-competitively against entirely data-driven approaches.
+  Classical supervised learning produces unreliable models when training andtarget distributions differ, with most existing solutions requiring samplesfrom the target domain. We propose a proactive approach which learns arelationship in the training domain that will generalize to the target domainby incorporating prior knowledge of aspects of the data generating process thatare expected to differ as expressed in a causal selection diagram.Specifically, we remove variables generated by unstable mechanisms from thejoint factorization to yield the Surgery Estimator---an interventionaldistribution that is invariant to the differences across environments. We provethat the surgery estimator finds stable relationships in strictly morescenarios than previous approaches which only consider conditionalrelationships, and demonstrate this in simulated experiments. We also evaluateon real world data for which the true causal diagram is unknown, performingcompetitively against entirely data-driven approaches.
 
+Can You Trust This Prediction? Auditing Pointwise Reliability After  Learning
 
-Can You Trust This Prediction? Auditing Pointwise Reliability After
-  Learning
-
-  To use machine learning in high stakes applications (e.g. medicine), we need
-tools for building confidence in the system and evaluating whether it is
-reliable. Methods to improve model reliability often require new learning
-algorithms (e.g. using Bayesian inference to obtain uncertainty estimates). An
-alternative is to audit a model after it is trained. In this paper, we describe
-resampling uncertainty estimation (RUE), an algorithm to audit the pointwise
-reliability of predictions. Intuitively, RUE estimates the amount that a
-prediction would change if the model had been fit on different training data.
-The algorithm uses the gradient and Hessian of the model's loss function to
-create an ensemble of predictions. Experimentally, we show that RUE more
-effectively detects inaccurate predictions than existing tools for auditing
-reliability subsequent to training. We also show that RUE can create predictive
-distributions that are competitive with state-of-the-art methods like Monte
-Carlo dropout, probabilistic backpropagation, and deep ensembles, but does not
-depend on specific algorithms at train-time like these methods do.
-
+  To use machine learning in high stakes applications (e.g. medicine), we needtools for building confidence in the system and evaluating whether it isreliable. Methods to improve model reliability often require new learningalgorithms (e.g. using Bayesian inference to obtain uncertainty estimates). Analternative is to audit a model after it is trained. In this paper, we describeresampling uncertainty estimation (RUE), an algorithm to audit the pointwisereliability of predictions. Intuitively, RUE estimates the amount that aprediction would change if the model had been fit on different training data.The algorithm uses the gradient and Hessian of the model's loss function tocreate an ensemble of predictions. Experimentally, we show that RUE moreeffectively detects inaccurate predictions than existing tools for auditingreliability subsequent to training. We also show that RUE can create predictivedistributions that are competitive with state-of-the-art methods like MonteCarlo dropout, probabilistic backpropagation, and deep ensembles, but does notdepend on specific algorithms at train-time like these methods do.
 
 Artificial Intelligence for Social Good
 
-  The Computing Community Consortium (CCC), along with the White House Office
-of Science and Technology Policy (OSTP), and the Association for the
-Advancement of Artificial Intelligence (AAAI), co-sponsored a public workshop
-on Artificial Intelligence for Social Good on June 7th, 2016 in Washington, DC.
-This was one of five workshops that OSTP co-sponsored and held around the
-country to spur public dialogue on artificial intelligence, machine learning,
-and to identify challenges and opportunities related to AI. In the AI for
-Social Good workshop, the successful deployments and the potential use of AI in
-various topics that are essential for social good were discussed, including but
-not limited to urban computing, health, environmental sustainability, and
-public welfare. This report highlights each of these as well as a number of
-crosscutting issues.
+  The Computing Community Consortium (CCC), along with the White House Officeof Science and Technology Policy (OSTP), and the Association for theAdvancement of Artificial Intelligence (AAAI), co-sponsored a public workshopon Artificial Intelligence for Social Good on June 7th, 2016 in Washington, DC.This was one of five workshops that OSTP co-sponsored and held around thecountry to spur public dialogue on artificial intelligence, machine learning,and to identify challenges and opportunities related to AI. In the AI forSocial Good workshop, the successful deployments and the potential use of AI invarious topics that are essential for social good were discussed, including butnot limited to urban computing, health, environmental sustainability, andpublic welfare. This report highlights each of these as well as a number ofcrosscutting issues.
 
+High Frequency Remote Monitoring of Parkinson's Disease via Smartphone:  Platform Overview and Medication Response Detection
 
-High Frequency Remote Monitoring of Parkinson's Disease via Smartphone:
-  Platform Overview and Medication Response Detection
-
-  Objective: The aim of this study is to develop a smartphone-based
-high-frequency remote monitoring platform, assess its feasibility for remote
-monitoring of symptoms in Parkinson's disease, and demonstrate the value of
-data collected using the platform by detecting dopaminergic medication
-response. Methods: We have developed HopkinsPD, a novel smartphone-based
-monitoring platform, which measures symptoms actively (i.e. data are collected
-when a suite of tests is initiated by the individual at specific times during
-the day), and passively (i.e. data are collected continuously in the
-background). After data collection, we extract features to assess measures of
-five key behaviors related to PD symptoms -- voice, balance, gait, dexterity,
-and reaction time. A random forest classifier is used to discriminate
-measurements taken after a dose of medication (treatment) versus before the
-medication dose (baseline). Results: A worldwide study for remote PD monitoring
-was established using HopkinsPD in July, 2014. This study used entirely remote,
-online recruitment and installation, demonstrating highly cost-effective
-scalability. In six months, 226 individuals (121 PD and 105 controls)
-contributed over 46,000 hours of passive monitoring data and approximately
-8,000 instances of structured tests of voice, balance, gait, reaction, and
-dexterity. To the best of our knowledge, this is the first study to have
-collected data at such a scale for remote PD monitoring. Moreover, we
-demonstrate the initial ability to discriminate treatment from baseline with
-71.0(+-0.4)% accuracy, which suggests medication response can be monitored
-remotely via smartphone-based measures.
-
+  Objective: The aim of this study is to develop a smartphone-basedhigh-frequency remote monitoring platform, assess its feasibility for remotemonitoring of symptoms in Parkinson's disease, and demonstrate the value ofdata collected using the platform by detecting dopaminergic medicationresponse. Methods: We have developed HopkinsPD, a novel smartphone-basedmonitoring platform, which measures symptoms actively (i.e. data are collectedwhen a suite of tests is initiated by the individual at specific times duringthe day), and passively (i.e. data are collected continuously in thebackground). After data collection, we extract features to assess measures offive key behaviors related to PD symptoms -- voice, balance, gait, dexterity,and reaction time. A random forest classifier is used to discriminatemeasurements taken after a dose of medication (treatment) versus before themedication dose (baseline). Results: A worldwide study for remote PD monitoringwas established using HopkinsPD in July, 2014. This study used entirely remote,online recruitment and installation, demonstrating highly cost-effectivescalability. In six months, 226 individuals (121 PD and 105 controls)contributed over 46,000 hours of passive monitoring data and approximately8,000 instances of structured tests of voice, balance, gait, reaction, anddexterity. To the best of our knowledge, this is the first study to havecollected data at such a scale for remote PD monitoring. Moreover, wedemonstrate the initial ability to discriminate treatment from baseline with71.0(+-0.4)% accuracy, which suggests medication response can be monitoredremotely via smartphone-based measures.
 
 Scalable Joint Models for Reliable Uncertainty-Aware Event Prediction
 
-  Missing data and noisy observations pose significant challenges for reliably
-predicting events from irregularly sampled multivariate time series
-(longitudinal) data. Imputation methods, which are typically used for
-completing the data prior to event prediction, lack a principled mechanism to
-account for the uncertainty due to missingness. Alternatively, state-of-the-art
-joint modeling techniques can be used for jointly modeling the longitudinal and
-event data and compute event probabilities conditioned on the longitudinal
-observations. These approaches, however, make strong parametric assumptions and
-do not easily scale to multivariate signals with many observations. Our
-proposed approach consists of several key innovations. First, we develop a
-flexible and scalable joint model based upon sparse multiple-output Gaussian
-processes. Unlike state-of-the-art joint models, the proposed model can explain
-highly challenging structure including non-Gaussian noise while scaling to
-large data. Second, we derive an optimal policy for predicting events using the
-distribution of the event occurrence estimated by the joint model. The derived
-policy trades-off the cost of a delayed detection versus incorrect assessments
-and abstains from making decisions when the estimated event probability does
-not satisfy the derived confidence criteria. Experiments on a large dataset
-show that the proposed framework significantly outperforms state-of-the-art
-techniques in event prediction.
+  Missing data and noisy observations pose significant challenges for reliablypredicting events from irregularly sampled multivariate time series(longitudinal) data. Imputation methods, which are typically used forcompleting the data prior to event prediction, lack a principled mechanism toaccount for the uncertainty due to missingness. Alternatively, state-of-the-artjoint modeling techniques can be used for jointly modeling the longitudinal andevent data and compute event probabilities conditioned on the longitudinalobservations. These approaches, however, make strong parametric assumptions anddo not easily scale to multivariate signals with many observations. Ourproposed approach consists of several key innovations. First, we develop aflexible and scalable joint model based upon sparse multiple-output Gaussianprocesses. Unlike state-of-the-art joint models, the proposed model can explainhighly challenging structure including non-Gaussian noise while scaling tolarge data. Second, we derive an optimal policy for predicting events using thedistribution of the event occurrence estimated by the joint model. The derivedpolicy trades-off the cost of a delayed detection versus incorrect assessmentsand abstains from making decisions when the estimated event probability doesnot satisfy the derived confidence criteria. Experiments on a large datasetshow that the proposed framework significantly outperforms state-of-the-arttechniques in event prediction.
 
+Learning Models from Data with Measurement Error: Tackling  Underreporting
 
-Learning Models from Data with Measurement Error: Tackling
-  Underreporting
-
-  Measurement error in observational datasets can lead to systematic bias in
-inferences based on these datasets. As studies based on observational data are
-increasingly used to inform decisions with real-world impact, it is critical
-that we develop a robust set of techniques for analyzing and adjusting for
-these biases. In this paper we present a method for estimating the distribution
-of an outcome given a binary exposure that is subject to underreporting. Our
-method is based on a missing data view of the measurement error problem, where
-the true exposure is treated as a latent variable that is marginalized out of a
-joint model. We prove three different conditions under which the outcome
-distribution can still be identified from data containing only error-prone
-observations of the exposure. We demonstrate this method on synthetic data and
-analyze its sensitivity to near violations of the identifiability conditions.
-Finally, we use this method to estimate the effects of maternal smoking and
-opioid use during pregnancy on childhood obesity, two import problems from
-public health. Using the proposed method, we estimate these effects using only
-subject-reported drug use data and substantially refine the range of estimates
-generated by a sensitivity analysis-based approach. Further, the estimates
-produced by our method are consistent with existing literature on both the
-effects of maternal smoking and the rate at which subjects underreport smoking.
-
+  Measurement error in observational datasets can lead to systematic bias ininferences based on these datasets. As studies based on observational data areincreasingly used to inform decisions with real-world impact, it is criticalthat we develop a robust set of techniques for analyzing and adjusting forthese biases. In this paper we present a method for estimating the distributionof an outcome given a binary exposure that is subject to underreporting. Ourmethod is based on a missing data view of the measurement error problem, wherethe true exposure is treated as a latent variable that is marginalized out of ajoint model. We prove three different conditions under which the outcomedistribution can still be identified from data containing only error-proneobservations of the exposure. We demonstrate this method on synthetic data andanalyze its sensitivity to near violations of the identifiability conditions.Finally, we use this method to estimate the effects of maternal smoking andopioid use during pregnancy on childhood obesity, two import problems frompublic health. Using the proposed method, we estimate these effects using onlysubject-reported drug use data and substantially refine the range of estimatesgenerated by a sensitivity analysis-based approach. Further, the estimatesproduced by our method are consistent with existing literature on both theeffects of maternal smoking and the rate at which subjects underreport smoking.
 
 Active Learning for Decision-Making from Imbalanced Observational Data
 
-  Machine learning can help personalized decision support by learning models to
-predict individual treatment effects (ITE). This work studies the reliability
-of prediction-based decision-making in a task of deciding which action $a$ to
-take for a target unit after observing its covariates $\tilde{x}$ and predicted
-outcomes $\hat{p}(\tilde{y} \mid \tilde{x}, a)$. An example case is
-personalized medicine and the decision of which treatment to give to a patient.
-A common problem when learning these models from observational data is
-imbalance, that is, difference in treated/control covariate distributions,
-which is known to increase the upper bound of the expected ITE estimation
-error. We propose to assess the decision-making reliability by estimating the
-ITE model's Type S error rate, which is the probability of the model inferring
-the sign of the treatment effect wrong. Furthermore, we use the estimated
-reliability as a criterion for active learning, in order to collect new
-(possibly expensive) observations, instead of making a forced choice based on
-unreliable predictions. We demonstrate the effectiveness of this
-decision-making aware active learning in two decision-making tasks: in
-simulated data with binary outcomes and in a medical dataset with synthetic and
-continuous treatment outcomes.
+  Machine learning can help personalized decision support by learning models topredict individual treatment effects (ITE). This work studies the reliabilityof prediction-based decision-making in a task of deciding which action $a$ totake for a target unit after observing its covariates $\tilde{x}$ and predictedoutcomes $\hat{p}(\tilde{y} \mid \tilde{x}, a)$. An example case ispersonalized medicine and the decision of which treatment to give to a patient.A common problem when learning these models from observational data isimbalance, that is, difference in treated/control covariate distributions,which is known to increase the upper bound of the expected ITE estimationerror. We propose to assess the decision-making reliability by estimating theITE model's Type S error rate, which is the probability of the model inferringthe sign of the treatment effect wrong. Furthermore, we use the estimatedreliability as a criterion for active learning, in order to collect new(possibly expensive) observations, instead of making a forced choice based onunreliable predictions. We demonstrate the effectiveness of thisdecision-making aware active learning in two decision-making tasks: insimulated data with binary outcomes and in a medical dataset with synthetic andcontinuous treatment outcomes.
 
+Learning (Predictive) Risk Scores in the Presence of Censoring due to  Interventions
 
-Learning (Predictive) Risk Scores in the Presence of Censoring due to
-  Interventions
-
-  A large and diverse set of measurements are regularly collected during a
-patient's hospital stay to monitor their health status. Tools for integrating
-these measurements into severity scores, that accurately track changes in
-illness severity, can improve clinicians ability to provide timely
-interventions. Existing approaches for creating such scores either 1) rely on
-experts to fully specify the severity score, or 2) train a predictive score,
-using supervised learning, by regressing against a surrogate marker of severity
-such as the presence of downstream adverse events. The first approach does not
-extend to diseases where an accurate score cannot be elicited from experts. The
-second approach often produces scores that suffer from bias due to
-treatment-related censoring (Paxton, 2013). We propose a novel ranking based
-framework for disease severity score learning (DSSL). DSSL exploits the
-following key observation: while it is challenging for experts to quantify the
-disease severity at any given time, it is often easy to compare the disease
-severity at two different times. Extending existing ranking algorithms, DSSL
-learns a function that maps a vector of patient's measurements to a scalar
-severity score such that the resulting score is temporally smooth and
-consistent with the expert's ranking of pairs of disease states. We apply DSSL
-to the problem of learning a sepsis severity score using a large, real-world
-dataset. The learned scores significantly outperform state-of-the-art clinical
-scores in ranking patient states by severity and in early detection of future
-adverse events. We also show that the learned disease severity trajectories are
-consistent with clinical expectations of disease evolution. Further, using
-simulated datasets, we show that DSSL exhibits better generalization
-performance to changes in treatment patterns compared to the above approaches.
-
+  A large and diverse set of measurements are regularly collected during apatient's hospital stay to monitor their health status. Tools for integratingthese measurements into severity scores, that accurately track changes inillness severity, can improve clinicians ability to provide timelyinterventions. Existing approaches for creating such scores either 1) rely onexperts to fully specify the severity score, or 2) train a predictive score,using supervised learning, by regressing against a surrogate marker of severitysuch as the presence of downstream adverse events. The first approach does notextend to diseases where an accurate score cannot be elicited from experts. Thesecond approach often produces scores that suffer from bias due totreatment-related censoring (Paxton, 2013). We propose a novel ranking basedframework for disease severity score learning (DSSL). DSSL exploits thefollowing key observation: while it is challenging for experts to quantify thedisease severity at any given time, it is often easy to compare the diseaseseverity at two different times. Extending existing ranking algorithms, DSSLlearns a function that maps a vector of patient's measurements to a scalarseverity score such that the resulting score is temporally smooth andconsistent with the expert's ranking of pairs of disease states. We apply DSSLto the problem of learning a sepsis severity score using a large, real-worlddataset. The learned scores significantly outperform state-of-the-art clinicalscores in ranking patient states by severity and in early detection of futureadverse events. We also show that the learned disease severity trajectories areconsistent with clinical expectations of disease evolution. Further, usingsimulated datasets, we show that DSSL exhibits better generalizationperformance to changes in treatment patterns compared to the above approaches.
 

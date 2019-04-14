@@ -1,1060 +1,200 @@
 On the impact of pull request decisions on future contributions
 
-  The pull-based development process has become prevalent on platforms such as
-GitHub as a form of distributed software development. Potential contributors
-can create and submit a set of changes to a software project through pull
-requests. These changes can be accepted, discussed or rejected by the
-maintainers of the software project, and can influence further contribution
-proposals. As such, it is important to examine the practices that encourage
-contributors to a project to submit pull requests. Specifically, we consider
-the impact of prior pull requests on the acceptance or rejection of subsequent
-pull requests. We also consider the potential effect of rejecting or ignoring
-pull requests on further contributions. In this preliminary research, we study
-three large projects on \textsf{GitHub}, using pull request data obtained
-through the \textsf{GitHub} API, and we perform empirical analyses to
-investigate the above questions. Our results show that continued contribution
-to a project is correlated with higher pull request acceptance rates and that
-pull request rejections lead to fewer future contributions.
-
+  The pull-based development process has become prevalent on platforms such asGitHub as a form of distributed software development. Potential contributorscan create and submit a set of changes to a software project through pullrequests. These changes can be accepted, discussed or rejected by themaintainers of the software project, and can influence further contributionproposals. As such, it is important to examine the practices that encouragecontributors to a project to submit pull requests. Specifically, we considerthe impact of prior pull requests on the acceptance or rejection of subsequentpull requests. We also consider the potential effect of rejecting or ignoringpull requests on further contributions. In this preliminary research, we studythree large projects on \textsf{GitHub}, using pull request data obtainedthrough the \textsf{GitHub} API, and we perform empirical analyses toinvestigate the above questions. Our results show that continued contributionto a project is correlated with higher pull request acceptance rates and thatpull request rejections lead to fewer future contributions.
 
 An Insight into the Pull Requests of GitHub
 
-  Given the increasing number of unsuccessful pull requests in GitHub projects,
-insights into the success and failure of these requests are essential for the
-developers. In this paper, we provide a comparative study between successful
-and unsuccessful pull requests made to 78 GitHub base projects by 20,142
-developers from 103,192 forked projects. In the study, we analyze pull request
-discussion texts, project specific information (e.g., domain, maturity), and
-developer specific information (e.g., experience) in order to report useful
-insights, and use them to contrast between successful and unsuccessful pull
-requests. We believe our study will help developers overcome the issues with
-pull requests in GitHub, and project administrators with informed decision
-making.
-
+  Given the increasing number of unsuccessful pull requests in GitHub projects,insights into the success and failure of these requests are essential for thedevelopers. In this paper, we provide a comparative study between successfuland unsuccessful pull requests made to 78 GitHub base projects by 20,142developers from 103,192 forked projects. In the study, we analyze pull requestdiscussion texts, project specific information (e.g., domain, maturity), anddeveloper specific information (e.g., experience) in order to report usefulinsights, and use them to contrast between successful and unsuccessful pullrequests. We believe our study will help developers overcome the issues withpull requests in GitHub, and project administrators with informed decisionmaking.
 
 Rumor Spreading with Bounded In-Degree
 
-  In the classic gossip-based model of communication for disseminating
-information in a network, in each time unit, every node $u$ is allowed to
-contact a single random neighbor $v$. If $u$ knows the data (rumor) to be
-disseminated, it disperses it to $v$ (known as PUSH) and if it does not, it
-requests it from $v$ (known as PULL). While in the classic gossip model, each
-node is only allowed to contact a single neighbor in each time unit, each node
-can possibly be contacted by many neighboring nodes.
-  In the present paper, we consider a restricted model where at each node only
-one incoming request can be served. As long as only a single piece of
-information needs to be disseminated, this does not make a difference for push
-requests. It however has a significant effect on pull requests. In the paper,
-we therefore concentrate on this weaker pull version, which we call 'restricted
-pull'.
-  We distinguish two versions of the restricted pull protocol depending on
-whether the request to be served among a set of pull requests at a given node
-is chosen adversarially or uniformly at random. As a first result, we prove an
-exponential separation between the two variants. We show that there are
-instances where if an adversary picks the request to be served, the restricted
-pull protocol requires a polynomial number of rounds whereas if the winning
-request is chosen uniformly at random, the restricted pull protocol only
-requires a polylogarithmic number of rounds to inform the whole network.
-Further, as the main technical contribution, we show that if the request to be
-served is chosen randomly, the slowdown of using restricted pull versus using
-the classic pull protocol can w.h.p. be upper bounded by $O(\Delta / \delta
-\log n)$, where $\Delta$ and $\delta$ are the largest and smallest degree of
-the network.
+  In the classic gossip-based model of communication for disseminatinginformation in a network, in each time unit, every node $u$ is allowed tocontact a single random neighbor $v$. If $u$ knows the data (rumor) to bedisseminated, it disperses it to $v$ (known as PUSH) and if it does not, itrequests it from $v$ (known as PULL). While in the classic gossip model, eachnode is only allowed to contact a single neighbor in each time unit, each nodecan possibly be contacted by many neighboring nodes.  In the present paper, we consider a restricted model where at each node onlyone incoming request can be served. As long as only a single piece ofinformation needs to be disseminated, this does not make a difference for pushrequests. It however has a significant effect on pull requests. In the paper,we therefore concentrate on this weaker pull version, which we call 'restrictedpull'.  We distinguish two versions of the restricted pull protocol depending onwhether the request to be served among a set of pull requests at a given nodeis chosen adversarially or uniformly at random. As a first result, we prove anexponential separation between the two variants. We show that there areinstances where if an adversary picks the request to be served, the restrictedpull protocol requires a polynomial number of rounds whereas if the winningrequest is chosen uniformly at random, the restricted pull protocol onlyrequires a polylogarithmic number of rounds to inform the whole network.Further, as the main technical contribution, we show that if the request to beserved is chosen randomly, the slowdown of using restricted pull versus usingthe classic pull protocol can w.h.p. be upper bounded by $O(\Delta / \delta\log n)$, where $\Delta$ and $\delta$ are the largest and smallest degree ofthe network.
 
+Replication Can Improve Prior Results: A GitHub Study of Pull Request  Acceptance
 
-Replication Can Improve Prior Results: A GitHub Study of Pull Request
-  Acceptance
-
-  Crowdsourcing and data mining can be used to effectively reduce the effort
-associated with the partial replication and enhancement of qualitative studies.
-  For example, in a primary study, other researchers explored factors
-influencing the fate of GitHub pull requests using an extensive qualitative
-analysis of 20 pull requests. Guided by their findings, we mapped some of their
-qualitative insights onto quantitative questions. To determine how well their
-findings generalize, we collected much more data (170 additional pull requests
-from 142 GitHub projects). Using crowdsourcing, that data was augmented with
-subjective qualitative human opinions about how pull requests extended the
-original issue. The crowd's answers were then combined with quantitative
-features and, using data mining, used to build a predictor for whether code
-would be merged. That predictor was far more accurate that one built from the
-primary study's qualitative factors (F1=90 vs 68\%), illustrating the value of
-a mixed-methods approach and replication to improve prior results.
-  To test the generality of this approach, the next step in future work is to
-conduct other studies that extend qualitative studies with crowdsourcing and
-data mining.
-
+  Crowdsourcing and data mining can be used to effectively reduce the effortassociated with the partial replication and enhancement of qualitative studies.  For example, in a primary study, other researchers explored factorsinfluencing the fate of GitHub pull requests using an extensive qualitativeanalysis of 20 pull requests. Guided by their findings, we mapped some of theirqualitative insights onto quantitative questions. To determine how well theirfindings generalize, we collected much more data (170 additional pull requestsfrom 142 GitHub projects). Using crowdsourcing, that data was augmented withsubjective qualitative human opinions about how pull requests extended theoriginal issue. The crowd's answers were then combined with quantitativefeatures and, using data mining, used to build a predictor for whether codewould be merged. That predictor was far more accurate that one built from theprimary study's qualitative factors (F1=90 vs 68\%), illustrating the value ofa mixed-methods approach and replication to improve prior results.  To test the generality of this approach, the next step in future work is toconduct other studies that extend qualitative studies with crowdsourcing anddata mining.
 
 Does Technical Debt Lead to the Rejection of Pull Requests?
 
-  Technical Debt is a term used to classify non-optimal solutions during
-software development. These solutions cause several maintenance problems and
-hence they should be avoided or at least documented. Although there are a
-considered number of studies that focus on the identification of Technical
-Debt, we focus on the identification of Technical Debt in pull requests.
-Specifically, we conduct an investigation to reveal the different types of
-Technical Debt that can lead to the rejection of pull requests. From the
-analysis of 1,722 pull requests, we classify Technical Debt in seven categories
-namely design, documentation, test, build, project convention, performance, or
-security debt. Our results indicate that the most common category of Technical
-Debt is design with 39.34%, followed by test with 23.70% and project convention
-with 15.64%. We also note that the type of Technical Debt influences on the
-size of push request discussions, e.g., security and project convention debts
-instigate more discussion than the other types.
+  Technical Debt is a term used to classify non-optimal solutions duringsoftware development. These solutions cause several maintenance problems andhence they should be avoided or at least documented. Although there are aconsidered number of studies that focus on the identification of TechnicalDebt, we focus on the identification of Technical Debt in pull requests.Specifically, we conduct an investigation to reveal the different types ofTechnical Debt that can lead to the rejection of pull requests. From theanalysis of 1,722 pull requests, we classify Technical Debt in seven categoriesnamely design, documentation, test, build, project convention, performance, orsecurity debt. Our results indicate that the most common category of TechnicalDebt is design with 39.34%, followed by test with 23.70% and project conventionwith 15.64%. We also note that the type of Technical Debt influences on thesize of push request discussions, e.g., security and project convention debtsinstigate more discussion than the other types.
 
+Replicating and Scaling up Qualitative Analysis using Crowdsourcing: A  Github-based Case Study
 
-Replicating and Scaling up Qualitative Analysis using Crowdsourcing: A
-  Github-based Case Study
+  Due to the difficulties in replicating and scaling up qualitative studies,such studies are rarely verified. Accordingly, in this paper, we leverage theadvantages of crowdsourcing (low costs, fast speed, scalable workforce) toreplicate and scale-up one state-of-the-art qualitative study. That qualitativestudy explored 20 GitHub pull requests to learn factors that influence the fateof pull requests with respect to approval and merging.  As a secondary study, using crowdsourcing at a cost of $200, we studied 250pull requests from 142 GitHub projects. The prior qualitative findings aremapped into questions for crowds workers. Their answers were converted intobinary features to build a predictor which predicts whether code would bemerged with median F1 scores of 68%. For the same large group of pull requests,the median F1 scores could achieve 90% by a predictor built with additionalfeatures defined by prior quantitative results.  Based on this case study, we conclude that there is much benefit in combiningdifferent kinds of research methods. While qualitative insights are very usefulfor finding novel insights, they can be hard to scale or replicate. That said,they can guide and define the goals of scalable secondary studies that use(e.g.) crowdsourcing+data mining. On the other hand, while data mining methodsare reproducible and scalable to large data sets, their results may bespectacularly wrong since they lack contextual information. That said, they canbe used to test the stability and external validity, of the insights gainedfrom a qualitative analysis.
 
-  Due to the difficulties in replicating and scaling up qualitative studies,
-such studies are rarely verified. Accordingly, in this paper, we leverage the
-advantages of crowdsourcing (low costs, fast speed, scalable workforce) to
-replicate and scale-up one state-of-the-art qualitative study. That qualitative
-study explored 20 GitHub pull requests to learn factors that influence the fate
-of pull requests with respect to approval and merging.
-  As a secondary study, using crowdsourcing at a cost of $200, we studied 250
-pull requests from 142 GitHub projects. The prior qualitative findings are
-mapped into questions for crowds workers. Their answers were converted into
-binary features to build a predictor which predicts whether code would be
-merged with median F1 scores of 68%. For the same large group of pull requests,
-the median F1 scores could achieve 90% by a predictor built with additional
-features defined by prior quantitative results.
-  Based on this case study, we conclude that there is much benefit in combining
-different kinds of research methods. While qualitative insights are very useful
-for finding novel insights, they can be hard to scale or replicate. That said,
-they can guide and define the goals of scalable secondary studies that use
-(e.g.) crowdsourcing+data mining. On the other hand, while data mining methods
-are reproducible and scalable to large data sets, their results may be
-spectacularly wrong since they lack contextual information. That said, they can
-be used to test the stability and external validity, of the insights gained
-from a qualitative analysis.
+Modeling and Performance Analysis of Pull-Based Live Streaming Schemes  in Peer-to-Peer Network
 
+  Recent years mesh-based Peer-to-Peer live streaming has become a promisingway for service providers to offer high-quality live video streaming service toInternet users. In this paper, we make a detailed study on modeling andperformance analysis of the pull-based P2P streaming systems. We establish theanalytical framework for the pull-based streaming schemes in P2P network, giveaccurate models of the chunk selection and peer selection strategies, andorganize them into three categories, i.e., the chunk first scheme, the peerfirst scheme and the epidemic scheme. Through numerical performance evaluation,the impacts of some important parameters, such as size of neighbor set, replynumber, buffer size and so on are investigated. For the peer first and chunkfirst scheme, we show that the pull-based schemes do not perform as well as thepush-based schemes when peers are limited to reply only one request in eachtime slot. When the reply number increases, the pull-based streaming schemeswill reach close to optimal playout probability. As to the pull-based epidemicscheme, we find it has unexpected poor performance, which is significantlydifferent from the push-based epidemic scheme. Therefore we propose a simple,efficient and easily deployed push-pull scheme which can significantly improvethe playout probability.
 
-Modeling and Performance Analysis of Pull-Based Live Streaming Schemes
-  in Peer-to-Peer Network
+CORRECT: Code Reviewer Recommendation at GitHub for Vendasta  Technologies
 
-  Recent years mesh-based Peer-to-Peer live streaming has become a promising
-way for service providers to offer high-quality live video streaming service to
-Internet users. In this paper, we make a detailed study on modeling and
-performance analysis of the pull-based P2P streaming systems. We establish the
-analytical framework for the pull-based streaming schemes in P2P network, give
-accurate models of the chunk selection and peer selection strategies, and
-organize them into three categories, i.e., the chunk first scheme, the peer
-first scheme and the epidemic scheme. Through numerical performance evaluation,
-the impacts of some important parameters, such as size of neighbor set, reply
-number, buffer size and so on are investigated. For the peer first and chunk
-first scheme, we show that the pull-based schemes do not perform as well as the
-push-based schemes when peers are limited to reply only one request in each
-time slot. When the reply number increases, the pull-based streaming schemes
-will reach close to optimal playout probability. As to the pull-based epidemic
-scheme, we find it has unexpected poor performance, which is significantly
-different from the push-based epidemic scheme. Therefore we propose a simple,
-efficient and easily deployed push-pull scheme which can significantly improve
-the playout probability.
+  Peer code review locates common coding standard violations and simple logicalerrors in the early phases of software development, and thus, reduces overallcost. Unfortunately, at GitHub, identifying an appropriate code reviewer for apull request is challenging given that reliable information for revieweridentification is often not readily available. In this paper, we propose a codereviewer recommendation tool--CORRECT--that considers not only the relevantcross-project work experience (e.g., external library experience) of adeveloper but also her experience in certain specialized technologies (e.g.,Google App Engine) associated with a pull request for determining her expertiseas a potential code reviewer. We design our tool using client-serverarchitecture, and then package the solution as a Google Chrome plug-in. Oncethe developer initiates a new pull request at GitHub, our tool automaticallyanalyzes the request, mines two relevant histories, and then returns a rankedlist of appropriate code reviewers for the request within the browser'scontext.  Demo: https://www.youtube.com/watch?v=rXU1wTD6QQ0
 
+Pull-Based Data Broadcast with Dependencies: Be Fair to Users, not to  Items
 
-CORRECT: Code Reviewer Recommendation at GitHub for Vendasta
-  Technologies
-
-  Peer code review locates common coding standard violations and simple logical
-errors in the early phases of software development, and thus, reduces overall
-cost. Unfortunately, at GitHub, identifying an appropriate code reviewer for a
-pull request is challenging given that reliable information for reviewer
-identification is often not readily available. In this paper, we propose a code
-reviewer recommendation tool--CORRECT--that considers not only the relevant
-cross-project work experience (e.g., external library experience) of a
-developer but also her experience in certain specialized technologies (e.g.,
-Google App Engine) associated with a pull request for determining her expertise
-as a potential code reviewer. We design our tool using client-server
-architecture, and then package the solution as a Google Chrome plug-in. Once
-the developer initiates a new pull request at GitHub, our tool automatically
-analyzes the request, mines two relevant histories, and then returns a ranked
-list of appropriate code reviewers for the request within the browser's
-context.
-  Demo: https://www.youtube.com/watch?v=rXU1wTD6QQ0
-
-
-Pull-Based Data Broadcast with Dependencies: Be Fair to Users, not to
-  Items
-
-  Broadcasting is known to be an efficient means of disseminating data in
-wireless communication environments (such as Satellite, mobile phone
-networks,...). It has been recently observed that the average service time of
-broadcast systems can be considerably improved by taking into consideration
-existing correlations between requests. We study a pull-based data broadcast
-system where users request possibly overlapping sets of items; a request is
-served when all its requested items are downloaded. We aim at minimizing the
-average user perceived latency, i.e. the average flow time of the requests. We
-first show that any algorithm that ignores the dependencies can yield arbitrary
-bad performances with respect to the optimum even if it is given arbitrary
-extra resources. We then design a $(4+\epsilon)$-speed
-$O(1+1/\epsilon^2)$-competitive algorithm for this setting that consists in 1)
-splitting evenly the bandwidth among each requested set and in 2) broadcasting
-arbitrarily the items still missing in each set into the bandwidth the set has
-received. Our algorithm presents several interesting features: it is simple to
-implement, non-clairvoyant, fair to users so that no user may starve for a long
-period of time, and guarantees good performances in presence of correlations
-between user requests (without any change in the broadcast protocol). We also
-present a $ (4+\epsilon)$-speed $O(1+1/\epsilon^3)$-competitive algorithm which
-broadcasts at most one item at any given time and preempts each item broadcast
-at most once on average. As a side result of our analysis, we design a
-competitive algorithm for a particular setting of non-clairvoyant job
-scheduling with dependencies, which might be of independent interest.
-
+  Broadcasting is known to be an efficient means of disseminating data inwireless communication environments (such as Satellite, mobile phonenetworks,...). It has been recently observed that the average service time ofbroadcast systems can be considerably improved by taking into considerationexisting correlations between requests. We study a pull-based data broadcastsystem where users request possibly overlapping sets of items; a request isserved when all its requested items are downloaded. We aim at minimizing theaverage user perceived latency, i.e. the average flow time of the requests. Wefirst show that any algorithm that ignores the dependencies can yield arbitrarybad performances with respect to the optimum even if it is given arbitraryextra resources. We then design a $(4+\epsilon)$-speed$O(1+1/\epsilon^2)$-competitive algorithm for this setting that consists in 1)splitting evenly the bandwidth among each requested set and in 2) broadcastingarbitrarily the items still missing in each set into the bandwidth the set hasreceived. Our algorithm presents several interesting features: it is simple toimplement, non-clairvoyant, fair to users so that no user may starve for a longperiod of time, and guarantees good performances in presence of correlationsbetween user requests (without any change in the broadcast protocol). We alsopresent a $ (4+\epsilon)$-speed $O(1+1/\epsilon^3)$-competitive algorithm whichbroadcasts at most one item at any given time and preempts each item broadcastat most once on average. As a side result of our analysis, we design acompetitive algorithm for a particular setting of non-clairvoyant jobscheduling with dependencies, which might be of independent interest.
 
 A Comparison of Push and Pull Techniques for Ajax
 
-  Ajax applications are designed to have high user interactivity and low
-user-perceived latency. Real-time dynamic web data such as news headlines,
-stock tickers, and auction updates need to be propagated to the users as soon
-as possible. However, Ajax still suffers from the limitations of the Web's
-request/response architecture which prevents servers from pushing real-time
-dynamic web data. Such applications usually use a pull style to obtain the
-latest updates, where the client actively requests the changes based on a
-predefined interval. It is possible to overcome this limitation by adopting a
-push style of interaction where the server broadcasts data when a change occurs
-on the server side. Both these options have their own trade-offs. This paper
-explores the fundamental limits of browser-based applications and analyzes push
-solutions for Ajax technology. It also shows the results of an empirical study
-comparing push and pull.
-
+  Ajax applications are designed to have high user interactivity and lowuser-perceived latency. Real-time dynamic web data such as news headlines,stock tickers, and auction updates need to be propagated to the users as soonas possible. However, Ajax still suffers from the limitations of the Web'srequest/response architecture which prevents servers from pushing real-timedynamic web data. Such applications usually use a pull style to obtain thelatest updates, where the client actively requests the changes based on apredefined interval. It is possible to overcome this limitation by adopting apush style of interaction where the server broadcasts data when a change occurson the server side. Both these options have their own trade-offs. This paperexplores the fundamental limits of browser-based applications and analyzes pushsolutions for Ajax technology. It also shows the results of an empirical studycomparing push and pull.
 
 Randomized Rumor Spreading in Ad Hoc Networks with Buffers
 
-  The randomized rumor spreading problem generates a big interest in the area
-of distributed algorithms due to its simplicity, robustness and wide range of
-applications. The two most popular communication paradigms used for spreading
-the rumor are Push and Pull algorithms. The former protocol allows nodes to
-send the rumor to a randomly selected neighbor at each step, while the latter
-is based on sending a request and downloading the rumor from a randomly
-selected neighbor, provided the neighbor has it. Previous analysis of these
-protocols assumed that every node could process all such push/pull operations
-within a single step, which could be unrealistic in practical situations.
-Therefore we propose a new framework for analysis rumor spreading accommodating
-buffers, in which a node can process only one push/pull message or push request
-at a time. We develop upper and lower bounds for randomized rumor spreading
-time in the new framework, and compare the results with analogous in the old
-framework without buffers.
-
+  The randomized rumor spreading problem generates a big interest in the areaof distributed algorithms due to its simplicity, robustness and wide range ofapplications. The two most popular communication paradigms used for spreadingthe rumor are Push and Pull algorithms. The former protocol allows nodes tosend the rumor to a randomly selected neighbor at each step, while the latteris based on sending a request and downloading the rumor from a randomlyselected neighbor, provided the neighbor has it. Previous analysis of theseprotocols assumed that every node could process all such push/pull operationswithin a single step, which could be unrealistic in practical situations.Therefore we propose a new framework for analysis rumor spreading accommodatingbuffers, in which a node can process only one push/pull message or push requestat a time. We develop upper and lower bounds for randomized rumor spreadingtime in the new framework, and compare the results with analogous in the oldframework without buffers.
 
 Pull-based Bloom Filter-based Routing for Information-Centric Networks
 
-  In Named Data Networking (NDN), there is a need for routing protocols to
-populate Forwarding Information Base (FIB) tables so that the Interest messages
-can be forwarded. To populate FIBs, clients and routers require some routing
-information. One method to obtain this information is that network nodes
-exchange routing information by each node advertising the available content
-objects. Bloom Filter-based Routing approaches like BFR [1], use Bloom Filters
-(BFs) to advertise all provided content objects, which consumes valuable
-bandwidth and storage resources. This strategy is inefficient as clients
-request only a small number of the provided content objects and they do not
-need the content advertisement information for all provided content objects. In
-this paper, we propose a novel routing algorithm for NDN called pull-based BFR
-in which servers only advertise the demanded file names. We compare the
-performance of pull-based BFR with original BFR and with a flooding-assisted
-routing protocol. Our experimental evaluations show that pull-based BFR
-outperforms original BFR in terms of communication overhead needed for content
-advertisements, average roundtrip delay, memory resources needed for storing
-content advertisements at clients and routers, and the impact of false positive
-reports on routing. The comparisons also show that pull-based BFR outperforms
-flooding-assisted routing in terms of average round-trip delay.
+  In Named Data Networking (NDN), there is a need for routing protocols topopulate Forwarding Information Base (FIB) tables so that the Interest messagescan be forwarded. To populate FIBs, clients and routers require some routinginformation. One method to obtain this information is that network nodesexchange routing information by each node advertising the available contentobjects. Bloom Filter-based Routing approaches like BFR [1], use Bloom Filters(BFs) to advertise all provided content objects, which consumes valuablebandwidth and storage resources. This strategy is inefficient as clientsrequest only a small number of the provided content objects and they do notneed the content advertisement information for all provided content objects. Inthis paper, we propose a novel routing algorithm for NDN called pull-based BFRin which servers only advertise the demanded file names. We compare theperformance of pull-based BFR with original BFR and with a flooding-assistedrouting protocol. Our experimental evaluations show that pull-based BFRoutperforms original BFR in terms of communication overhead needed for contentadvertisements, average roundtrip delay, memory resources needed for storingcontent advertisements at clients and routers, and the impact of false positivereports on routing. The comparisons also show that pull-based BFR outperformsflooding-assisted routing in terms of average round-trip delay.
 
+CORRECT: Code Reviewer Recommendation in GitHub Based on Cross-Project  and Technology Experience
 
-CORRECT: Code Reviewer Recommendation in GitHub Based on Cross-Project
-  and Technology Experience
-
-  Peer code review locates common coding rule violations and simple logical
-errors in the early phases of software development, and thus reduces overall
-cost. However, in GitHub, identifying an appropriate code reviewer for a pull
-request is a non-trivial task given that reliable information for reviewer
-identification is often not readily available. In this paper, we propose a code
-reviewer recommendation technique that considers not only the relevant
-cross-project work history (e.g., external library experience) but also the
-experience of a developer in certain specialized technologies associated with a
-pull request for determining her expertise as a potential code reviewer. We
-first motivate our technique using an exploratory study with 10 commercial
-projects and 10 associated libraries external to those projects. Experiments
-using 17,115 pull requests from 10 commercial projects and six open source
-projects show that our technique provides 85%--92% recommendation accuracy,
-about 86% precision and 79%--81% recall in code reviewer recommendation, which
-are highly promising. Comparison with the state-of-the-art technique also
-validates the empirical findings and the superiority of our recommendation
-technique.
-
+  Peer code review locates common coding rule violations and simple logicalerrors in the early phases of software development, and thus reduces overallcost. However, in GitHub, identifying an appropriate code reviewer for a pullrequest is a non-trivial task given that reliable information for revieweridentification is often not readily available. In this paper, we propose a codereviewer recommendation technique that considers not only the relevantcross-project work history (e.g., external library experience) but also theexperience of a developer in certain specialized technologies associated with apull request for determining her expertise as a potential code reviewer. Wefirst motivate our technique using an exploratory study with 10 commercialprojects and 10 associated libraries external to those projects. Experimentsusing 17,115 pull requests from 10 commercial projects and six open sourceprojects show that our technique provides 85%--92% recommendation accuracy,about 86% precision and 79%--81% recall in code reviewer recommendation, whichare highly promising. Comparison with the state-of-the-art technique alsovalidates the empirical findings and the superiority of our recommendationtechnique.
 
 On Learning Meaningful Code Changes via Neural Machine Translation
 
-  Recent years have seen the rise of Deep Learning (DL) techniques applied to
-source code. Researchers have exploited DL to automate several development and
-maintenance tasks, such as writing commit messages, generating comments and
-detecting vulnerabilities among others. One of the long lasting dreams of
-applying DL to source code is the possibility to automate non-trivial coding
-activities. While some steps in this direction have been taken (e.g., learning
-how to fix bugs), there is still a glaring lack of empirical evidence on the
-types of code changes that can be learned and automatically applied by DL. Our
-goal is to make this first important step by quantitatively and qualitatively
-investigating the ability of a Neural Machine Translation (NMT) model to learn
-how to automatically apply code changes implemented by developers during pull
-requests. We train and experiment with the NMT model on a set of 236k pairs of
-code components before and after the implementation of the changes provided in
-the pull requests. We show that, when applied in a narrow enough context (i.e.,
-small/medium-sized pairs of methods before/after the pull request changes), NMT
-can automatically replicate the changes implemented by developers during pull
-requests in up to 36% of the cases. Moreover, our qualitative analysis shows
-that the model is capable of learning and replicating a wide variety of
-meaningful code changes, especially refactorings and bug-fixing activities. Our
-results pave the way for novel research in the area of DL on code, such as the
-automatic learning and applications of refactoring.
-
+  Recent years have seen the rise of Deep Learning (DL) techniques applied tosource code. Researchers have exploited DL to automate several development andmaintenance tasks, such as writing commit messages, generating comments anddetecting vulnerabilities among others. One of the long lasting dreams ofapplying DL to source code is the possibility to automate non-trivial codingactivities. While some steps in this direction have been taken (e.g., learninghow to fix bugs), there is still a glaring lack of empirical evidence on thetypes of code changes that can be learned and automatically applied by DL. Ourgoal is to make this first important step by quantitatively and qualitativelyinvestigating the ability of a Neural Machine Translation (NMT) model to learnhow to automatically apply code changes implemented by developers during pullrequests. We train and experiment with the NMT model on a set of 236k pairs ofcode components before and after the implementation of the changes provided inthe pull requests. We show that, when applied in a narrow enough context (i.e.,small/medium-sized pairs of methods before/after the pull request changes), NMTcan automatically replicate the changes implemented by developers during pullrequests in up to 36% of the cases. Moreover, our qualitative analysis showsthat the model is capable of learning and replicating a wide variety ofmeaningful code changes, especially refactorings and bug-fixing activities. Ourresults pave the way for novel research in the area of DL on code, such as theautomatic learning and applications of refactoring.
 
 Push vs. Pull in Web-Based Network Management
 
-  In this paper, we show how Web technologies can be used effectively to (i)
-address some of the deficiencies of traditional IP network management
-platforms, and (ii) render these expensive platforms redundant. We build on the
-concept of embedded management application, proposed by Wellens and Auerbach,
-and present two models of network management application designs that rely on
-Web technologies. First, the pull model is based on the request/response
-paradigm. It is typically used to perform data polling. Several commercial
-management platforms already use Web technologies that rely on this model to
-provide for ad hoc management; we demonstrate how to extend this to regular
-management. Second, the push model is a novel approach which relies on the
-publish/subscribe/distribute paradigm. It is better suited to regular
-management than the pull model, and allows administrators to conserve network
-bandwidth as well as CPU time on the management station. It can be seen as a
-generalization of the paradigm commonly used for notification delivery.
-Finally, we introduce the concept of the collapsed network management platform,
-where these two models coexist.
+  In this paper, we show how Web technologies can be used effectively to (i)address some of the deficiencies of traditional IP network managementplatforms, and (ii) render these expensive platforms redundant. We build on theconcept of embedded management application, proposed by Wellens and Auerbach,and present two models of network management application designs that rely onWeb technologies. First, the pull model is based on the request/responseparadigm. It is typically used to perform data polling. Several commercialmanagement platforms already use Web technologies that rely on this model toprovide for ad hoc management; we demonstrate how to extend this to regularmanagement. Second, the push model is a novel approach which relies on thepublish/subscribe/distribute paradigm. It is better suited to regularmanagement than the pull model, and allows administrators to conserve networkbandwidth as well as CPU time on the management station. It can be seen as ageneralization of the paradigm commonly used for notification delivery.Finally, we introduce the concept of the collapsed network management platform,where these two models coexist.
 
+On the Optimal Scheduling in Pull-based Real-Time P2P Streaming Systems:  Layered and Non-Layered Streaming
 
-On the Optimal Scheduling in Pull-based Real-Time P2P Streaming Systems:
-  Layered and Non-Layered Streaming
-
-  During the last decade, we witnessed a rapid growth in deployment of
-pull-based P2P streaming applications. In these applications, each node selects
-some other nodes as its neighbors and requests streaming data from them. This
-scheme allows eliminating data redundancy and recovering from data loss, but it
-pushes the complexity to the receiver node side. In this paper, we
-theoretically study the scheduling problem in Pull-based P2P video streaming
-and we model it as an assignment problem. Then, we propose AsSched, new
-scheduling algorithm for layered streaming, in order to optimize the throughput
-and the delivery ratio of the system. In second time, we derive an optimal
-algorithm (NAsSched) for non layered streaming. The results of simulations show
-that our algorithms significantly outperform classic scheduling strategies
-especially in stern bandwidth constraints.
-
+  During the last decade, we witnessed a rapid growth in deployment ofpull-based P2P streaming applications. In these applications, each node selectssome other nodes as its neighbors and requests streaming data from them. Thisscheme allows eliminating data redundancy and recovering from data loss, but itpushes the complexity to the receiver node side. In this paper, wetheoretically study the scheduling problem in Pull-based P2P video streamingand we model it as an assignment problem. Then, we propose AsSched, newscheduling algorithm for layered streaming, in order to optimize the throughputand the delivery ratio of the system. In second time, we derive an optimalalgorithm (NAsSched) for non layered streaming. The results of simulations showthat our algorithms significantly outperform classic scheduling strategiesespecially in stern bandwidth constraints.
 
 Query Driven Visualization of Astronomical Catalogs
 
-  Interactive visualization of astronomical catalogs requires novel techniques
-due to the huge volumes and complex structure of the data produced by existing
-and upcoming astronomical surveys. The creation as well as the disclosure of
-the catalogs can be handled by data pulling mechanisms. These prevent
-unnecessary processing and facilitate data sharing by having users request the
-desired end products.
-  In this work we present query driven visualization as a logical continuation
-of data pulling. Scientists can request catalogs in a declarative way and set
-process parameters directly from within the visualization. This results in
-profound interoperation between software with a high level of abstraction.
-  New messages for the Simple Application Messaging Protocol are proposed to
-achieve this abstraction. Support for these messages are implemented in the
-Astro-WISE information system and in a set of demonstrational applications.
-
+  Interactive visualization of astronomical catalogs requires novel techniquesdue to the huge volumes and complex structure of the data produced by existingand upcoming astronomical surveys. The creation as well as the disclosure ofthe catalogs can be handled by data pulling mechanisms. These preventunnecessary processing and facilitate data sharing by having users request thedesired end products.  In this work we present query driven visualization as a logical continuationof data pulling. Scientists can request catalogs in a declarative way and setprocess parameters directly from within the visualization. This results inprofound interoperation between software with a high level of abstraction.  New messages for the Simple Application Messaging Protocol are proposed toachieve this abstraction. Support for these messages are implemented in theAstro-WISE information system and in a set of demonstrational applications.
 
 Topic-based Integrator Matching for Pull Request
 
-  Pull Request (PR) is the main method for code contributions from the external
-contributors in GitHub. PR review is an essential part of open source software
-developments to maintain the quality of software. Matching a new PR for an
-appropriate integrator will make the PR reviewing more effective. However, PR
-and integrator matching are now organized manually in GitHub. To make this
-process more efficient, we propose a Topic-based Integrator Matching Algorithm
-(TIMA) to predict highly relevant collaborators(the core developers) as the
-integrator to incoming PRs . TIMA takes full advantage of the textual semantics
-of PRs. To define the relationships between topics and collaborators, TIMA
-builds a relation matrix about topic and collaborators. According to the
-relevance between topics and collaborators, TIMA matches the suitable
-collaborators as the PR integrator.
-
+  Pull Request (PR) is the main method for code contributions from the externalcontributors in GitHub. PR review is an essential part of open source softwaredevelopments to maintain the quality of software. Matching a new PR for anappropriate integrator will make the PR reviewing more effective. However, PRand integrator matching are now organized manually in GitHub. To make thisprocess more efficient, we propose a Topic-based Integrator Matching Algorithm(TIMA) to predict highly relevant collaborators(the core developers) as theintegrator to incoming PRs . TIMA takes full advantage of the textual semanticsof PRs. To define the relationships between topics and collaborators, TIMAbuilds a relation matrix about topic and collaborators. According to therelevance between topics and collaborators, TIMA matches the suitablecollaborators as the PR integrator.
 
 A Large-Scale Study on Source Code Reviewer Recommendation
 
-  Context: Software code reviews are an important part of the development
-process, leading to better software quality and reduced overall costs. However,
-finding appropriate code reviewers is a complex and time-consuming task. Goals:
-In this paper, we propose a large-scale study to compare performance of two
-main source code reviewer recommendation algorithms (RevFinder and a Naive
-Bayes-based approach) in identifying the best code reviewers for opened pull
-requests. Method: We mined data from Github and Gerrit repositories, building a
-large dataset of 51 projects, with more than 293K pull requests analyzed, 180K
-owners and 157K reviewers. Results: Based on the large analysis, we can state
-that i) no model can be generalized as best for all projects, ii) the usage of
-a different repository (Gerrit, GitHub) can have impact on the the
-recommendation results, iii) exploiting sub-projects information available in
-Gerrit can improve the recommendation results.
+  Context: Software code reviews are an important part of the developmentprocess, leading to better software quality and reduced overall costs. However,finding appropriate code reviewers is a complex and time-consuming task. Goals:In this paper, we propose a large-scale study to compare performance of twomain source code reviewer recommendation algorithms (RevFinder and a NaiveBayes-based approach) in identifying the best code reviewers for opened pullrequests. Method: We mined data from Github and Gerrit repositories, building alarge dataset of 51 projects, with more than 293K pull requests analyzed, 180Kowners and 157K reviewers. Results: Based on the large analysis, we can statethat i) no model can be generalized as best for all projects, ii) the usage ofa different repository (Gerrit, GitHub) can have impact on the therecommendation results, iii) exploiting sub-projects information available inGerrit can improve the recommendation results.
 
+The Power of Waiting for More than One Response in Minimizing the  Age-of-Information
 
-The Power of Waiting for More than One Response in Minimizing the
-  Age-of-Information
+  The Age-of-Information (AoI) has recently been proposed as an importantmetric for investigating the timeliness performance in information-updatesystems. Prior studies on AoI optimization often consider a Push model, whichis concerned about when and how to "push" (i.e., generate and transmit) theupdated information to the user. In stark contrast, in this paper we introducea new Pull model, which is more relevant for certain applications (such as thereal-time stock quotes service), where a user sends requests to the servers toproactively "pull" the information of interest. Moreover, we propose to employrequest replication to reduce the AoI. Interestingly, we find that under thisnew Pull model, replication schemes capture a novel tradeoff between differentlevels of information freshness and different response times across theservers, which can be exploited to minimize the expected AoI at the user'sside. Specifically, assuming Poisson updating process at the servers andexponentially distributed response time, we derive a closedform formula forcomputing the expected AoI and obtain the optimal number of responses to waitfor to minimize the expected AoI. Finally, we conduct numerical simulations toelucidate our theoretical results. Our findings show that waiting for more thanone response can significantly reduce the AoI in most scenarios.
 
-  The Age-of-Information (AoI) has recently been proposed as an important
-metric for investigating the timeliness performance in information-update
-systems. Prior studies on AoI optimization often consider a Push model, which
-is concerned about when and how to "push" (i.e., generate and transmit) the
-updated information to the user. In stark contrast, in this paper we introduce
-a new Pull model, which is more relevant for certain applications (such as the
-real-time stock quotes service), where a user sends requests to the servers to
-proactively "pull" the information of interest. Moreover, we propose to employ
-request replication to reduce the AoI. Interestingly, we find that under this
-new Pull model, replication schemes capture a novel tradeoff between different
-levels of information freshness and different response times across the
-servers, which can be exploited to minimize the expected AoI at the user's
-side. Specifically, assuming Poisson updating process at the servers and
-exponentially distributed response time, we derive a closedform formula for
-computing the expected AoI and obtain the optimal number of responses to wait
-for to minimize the expected AoI. Finally, we conduct numerical simulations to
-elucidate our theoretical results. Our findings show that waiting for more than
-one response can significantly reduce the AoI in most scenarios.
+Initial and Eventual Software Quality Relating to Continuous Integration  in GitHub
 
-
-Initial and Eventual Software Quality Relating to Continuous Integration
-  in GitHub
-
-  The constant demand for new features and bug fixes are forcing software
-projects to shorten cycles and deliver updates ever faster, while sustaining
-software quality. The availability of inexpensive, virtualized, cloud-computing
-has helped shorten schedules, by enabling continuous integration (CI) on
-demand. Platforms like GitHub support CI in-the-cloud. In projects using CI, a
-user submitting a pull request triggers a CI step. Besides speeding up build
-and test, this fortuitously creates voluminous archives of build and test
-successes and failures. CI is a relatively new phenomenon, and these archives
-allow a detailed study of CI. How many problems are exposed? Where do they
-occur? What factors affect CI failures? Does the "initial quality" as
-ascertained by CI predict how many bugs will later appear ("eventual quality")
-in the code? In this paper, we undertake a large-scale, fine resolution study
-of these records, to better understand CI processes, the nature, and predictors
-of CI failures, and the relationship of CI failures to the eventual quality of
-the code. We find that: a) CI failures appear to be concentrated in a few
-files, just like normal bugs; b) CI failures are not very highly correlated
-with eventual failures; c) The use of CI in a pull request doesn't necessarily
-mean the code in that request is of good quality.
-
+  The constant demand for new features and bug fixes are forcing softwareprojects to shorten cycles and deliver updates ever faster, while sustainingsoftware quality. The availability of inexpensive, virtualized, cloud-computinghas helped shorten schedules, by enabling continuous integration (CI) ondemand. Platforms like GitHub support CI in-the-cloud. In projects using CI, auser submitting a pull request triggers a CI step. Besides speeding up buildand test, this fortuitously creates voluminous archives of build and testsuccesses and failures. CI is a relatively new phenomenon, and these archivesallow a detailed study of CI. How many problems are exposed? Where do theyoccur? What factors affect CI failures? Does the "initial quality" asascertained by CI predict how many bugs will later appear ("eventual quality")in the code? In this paper, we undertake a large-scale, fine resolution studyof these records, to better understand CI processes, the nature, and predictorsof CI failures, and the relationship of CI failures to the eventual quality ofthe code. We find that: a) CI failures appear to be concentrated in a fewfiles, just like normal bugs; b) CI failures are not very highly correlatedwith eventual failures; c) The use of CI in a pull request doesn't necessarilymean the code in that request is of good quality.
 
 Matchmaking Semantic Based for Information System Interoperability
 
-  Unlike the traditional model of information pull, matchmaking is base on a
-cooperative partnership between information providers and consumers, assisted
-by an intelligent facilitator (the matchmaker). Refer to some experiments, the
-matchmaking to be most useful in two different ways: locating information
-sources or services that appear dynamically and notification of information
-changes. Effective information and services sharing in distributed such as P2P
-based environments raises many challenges, including discovery and localization
-of resources, exchange over heterogeneous sources, and query processing. One
-traditional approach for dealing with some of the above challenges is to create
-unified integrated schemas or services to combine the heterogeneous sources.
-This approach does not scale well when applied in dynamic distributed
-environments and has many drawbacks related to the large numbers of sources.
-The main issues in matchmaking are how to represent advertising and request,
-and how to calculate possibility matching between advertising and request. The
-advertising and request can represent data or services by using many model of
-representation. In this paper, we address an approach of matchmaking by
-considering semantic agreement between sources.
-
+  Unlike the traditional model of information pull, matchmaking is base on acooperative partnership between information providers and consumers, assistedby an intelligent facilitator (the matchmaker). Refer to some experiments, thematchmaking to be most useful in two different ways: locating informationsources or services that appear dynamically and notification of informationchanges. Effective information and services sharing in distributed such as P2Pbased environments raises many challenges, including discovery and localizationof resources, exchange over heterogeneous sources, and query processing. Onetraditional approach for dealing with some of the above challenges is to createunified integrated schemas or services to combine the heterogeneous sources.This approach does not scale well when applied in dynamic distributedenvironments and has many drawbacks related to the large numbers of sources.The main issues in matchmaking are how to represent advertising and request,and how to calculate possibility matching between advertising and request. Theadvertising and request can represent data or services by using many model ofrepresentation. In this paper, we address an approach of matchmaking byconsidering semantic agreement between sources.
 
 Resonant Impurity Scattering in a Strongly Correlated Electron Model
 
-  Scattering by a single impurity introduced in a strongly correlated
-electronic system is studied by exact diagonalization of small clusters. It is
-shown that an inert site which is spinless and unable to accomodate holes can
-give rise to strong resonant scattering. A calculation of the local density of
-state reveals that, for increasing antiferromagnetic exchange coupling, d, s
-and p-wave symmetry bound states in which a mobile hole is trapped by the
-impurity potential induced by a local distortion of the antiferromagnetic
-background successively pull out from the continuum.
-
+  Scattering by a single impurity introduced in a strongly correlatedelectronic system is studied by exact diagonalization of small clusters. It isshown that an inert site which is spinless and unable to accomodate holes cangive rise to strong resonant scattering. A calculation of the local density ofstate reveals that, for increasing antiferromagnetic exchange coupling, d, sand p-wave symmetry bound states in which a mobile hole is trapped by theimpurity potential induced by a local distortion of the antiferromagneticbackground successively pull out from the continuum.
 
 Establishing Personal Trust-based Connections in Distributed Teams
 
-  Trust is a factor that dramatically contributes to the success or failure of
-distributed software teams. We present a research model showing that social
-communication between distant developers enables the affective appraisal of
-trustworthiness even from a distance, thus increasing project performance. To
-overcome the limitations of self-reported data, typically questionnaires, we
-focus on software projects following a pull request-based development model and
-approximate the overall performance of a software project with the history of
-successful collaborations occurring between developers.
-
+  Trust is a factor that dramatically contributes to the success or failure ofdistributed software teams. We present a research model showing that socialcommunication between distant developers enables the affective appraisal oftrustworthiness even from a distance, thus increasing project performance. Toovercome the limitations of self-reported data, typically questionnaires, wefocus on software projects following a pull request-based development model andapproximate the overall performance of a software project with the history ofsuccessful collaborations occurring between developers.
 
 Adaptive Video Streaming in MU-MIMO Networks
 
-  We consider extensions and improvements on our previous work on dynamic
-adaptive video streaming in a multi-cell multiuser ``small cell'' wireless
-network. Previously, we treated the case of single-antenna base stations and,
-starting from a network utility maximization (NUM) formulation, we devised a
-``push'' scheduling policy, where users place requests to sequential video
-chunks to possibly different base stations with adaptive video quality, and
-base stations schedule their downlink transmissions in order to stabilize their
-transmission queues. In this paper we consider a ``pull'' strategy, where every
-user maintains a request queue, such that users keep track of the video chunks
-that are effectively delivered. The pull scheme allows to download the chunks
-in the playback order without skipping or missing them. In addition, motivated
-by the recent/forthcoming progress in small cell networks (e.g., in wave-2 of
-the recent IEEE 802.11ac standard), we extend our dynamic streaming approach to
-the case of base stations capable of multiuser MIMO downlink, i.e., serving
-multiple users on the same time-frequency slot by spatial multiplexing. By
-exploiting the ``channel hardening'' effect of high dimensional MIMO channels,
-we devise a low complexity user selection scheme to solve the underlying
-max-weighted rate scheduling, which can be easily implemented and runs
-independently at each base station. Through simulations, we show MIMO gains in
-terms of video streaming QoE metrics like the pre-buffering and re-buffering
-times.
+  We consider extensions and improvements on our previous work on dynamicadaptive video streaming in a multi-cell multiuser ``small cell'' wirelessnetwork. Previously, we treated the case of single-antenna base stations and,starting from a network utility maximization (NUM) formulation, we devised a``push'' scheduling policy, where users place requests to sequential videochunks to possibly different base stations with adaptive video quality, andbase stations schedule their downlink transmissions in order to stabilize theirtransmission queues. In this paper we consider a ``pull'' strategy, where everyuser maintains a request queue, such that users keep track of the video chunksthat are effectively delivered. The pull scheme allows to download the chunksin the playback order without skipping or missing them. In addition, motivatedby the recent/forthcoming progress in small cell networks (e.g., in wave-2 ofthe recent IEEE 802.11ac standard), we extend our dynamic streaming approach tothe case of base stations capable of multiuser MIMO downlink, i.e., servingmultiple users on the same time-frequency slot by spatial multiplexing. Byexploiting the ``channel hardening'' effect of high dimensional MIMO channels,we devise a low complexity user selection scheme to solve the underlyingmax-weighted rate scheduling, which can be easily implemented and runsindependently at each base station. Through simulations, we show MIMO gains interms of video streaming QoE metrics like the pre-buffering and re-bufferingtimes.
 
+Whom Are You Going to Call?: Determinants of @-Mentions in GitHub  Discussions
 
-Whom Are You Going to Call?: Determinants of @-Mentions in GitHub
-  Discussions
-
-  Open Source Software (OSS) project success relies on crowd contributions.
-When an issue arises in pull-request based systems, @-mentions are used to call
-on people to task; previous studies have shown that @-mentions in discussions
-are associated with faster issue resolution. In most projects there may be many
-developers who could technically handle a variety of tasks. But OSS supports
-dynamic teams distributed across a wide variety of social and geographic
-backgrounds, as well as levels of involvement. It is, then, important to know
-whom to call on, i.e., who can be relied or trusted with important task-related
-duties, and why.
-  In this paper, we sought to understand which observable socio-technical
-attributes of developers can be used to build good models of them being future
-@-mentioned in GitHub issues and pull request discussions. We built overall and
-project-specific predictive models of future @-mentions, in order to capture
-the determinants of @-mentions in each of two hundred GitHub projects, and to
-understand if and how those determinants differ between projects. We found that
-visibility, expertise, and productivity are associated with an increase in
-@-mentions, while responsiveness is not, in the presence of a number of control
-variables. Also, we find that though project-specific differences exist, the
-overall model can be used for cross-project prediction, indicating its
-GitHub-wide utility.
-
+  Open Source Software (OSS) project success relies on crowd contributions.When an issue arises in pull-request based systems, @-mentions are used to callon people to task; previous studies have shown that @-mentions in discussionsare associated with faster issue resolution. In most projects there may be manydevelopers who could technically handle a variety of tasks. But OSS supportsdynamic teams distributed across a wide variety of social and geographicbackgrounds, as well as levels of involvement. It is, then, important to knowwhom to call on, i.e., who can be relied or trusted with important task-relatedduties, and why.  In this paper, we sought to understand which observable socio-technicalattributes of developers can be used to build good models of them being future@-mentioned in GitHub issues and pull request discussions. We built overall andproject-specific predictive models of future @-mentions, in order to capturethe determinants of @-mentions in each of two hundred GitHub projects, and tounderstand if and how those determinants differ between projects. We found thatvisibility, expertise, and productivity are associated with an increase in@-mentions, while responsiveness is not, in the presence of a number of controlvariables. Also, we find that though project-specific differences exist, theoverall model can be used for cross-project prediction, indicating itsGitHub-wide utility.
 
 Longest Wait First for Broadcast Scheduling
 
-  We consider online algorithms for broadcast scheduling. In the pull-based
-broadcast model there are $n$ unit-sized pages of information at a server and
-requests arrive online for pages. When the server transmits a page $p$, all
-outstanding requests for that page are satisfied. The longest-wait-first} (LWF)
-algorithm is a natural algorithm that has been shown to have good empirical
-performance. In this paper we make two main contributions to the analysis of
-LWF and broadcast scheduling. \begin{itemize} \item We give an intuitive and
-easy to understand analysis of LWF which shows that it is
-$O(1/\eps^2)$-competitive for average flow-time with $(4+\eps)$ speed. Using a
-more involved analysis, we show that LWF is $O(1/\eps^3)$-competitive for
-average flow-time with $(3.4+\epsilon)$ speed. \item We show that a natural
-extension of LWF is O(1)-speed O(1)-competitive for more general objective
-functions such as average delay-factor and $L_k$ norms of delay-factor (for
-fixed $k$). \end{itemize}
+  We consider online algorithms for broadcast scheduling. In the pull-basedbroadcast model there are $n$ unit-sized pages of information at a server andrequests arrive online for pages. When the server transmits a page $p$, alloutstanding requests for that page are satisfied. The longest-wait-first} (LWF)algorithm is a natural algorithm that has been shown to have good empiricalperformance. In this paper we make two main contributions to the analysis ofLWF and broadcast scheduling. \begin{itemize} \item We give an intuitive andeasy to understand analysis of LWF which shows that it is$O(1/\eps^2)$-competitive for average flow-time with $(4+\eps)$ speed. Using amore involved analysis, we show that LWF is $O(1/\eps^3)$-competitive foraverage flow-time with $(3.4+\epsilon)$ speed. \item We show that a naturalextension of LWF is O(1)-speed O(1)-competitive for more general objectivefunctions such as average delay-factor and $L_k$ norms of delay-factor (forfixed $k$). \end{itemize}
 
+A Chunk Caching Location and Searching Scheme in Content Centric  Networking
 
-A Chunk Caching Location and Searching Scheme in Content Centric
-  Networking
-
-  Content Centric Networking (CCN) is a new network infrastructure around
-content dissemination and retrieval, shift from host addresses to named data.
-Each CCN router has a cache to store the chunks passed by it. Therefore the
-caching strategy about chunk placement can greatly affect the whole CCN
-performance. This paper proposes an implicit coordinate chunk caching location
-and searching scheme (CLS) in CCN hierarchical infrastructure. In CLS, there is
-at most one copy of a chunk cached on the path between a server and a leaf
-router. This copy is pulled down one level towards the leaf router by a request
-or pushed up one level towards the server by the cache eviction. Thus, it is
-possible to store more diverse contents in the whole CCN and improve the
-network performance. Plus, in order to reduce the server workload and file
-download time, a caching trail of chunk is created to direct the following
-request where to find the chunk. Extensive test-bed experiments have been
-performed to evaluate the proposed scheme in terms of a wide range of
-performance metrics. The results show that the proposed scheme outperforms
-existing algorithms.
-
+  Content Centric Networking (CCN) is a new network infrastructure aroundcontent dissemination and retrieval, shift from host addresses to named data.Each CCN router has a cache to store the chunks passed by it. Therefore thecaching strategy about chunk placement can greatly affect the whole CCNperformance. This paper proposes an implicit coordinate chunk caching locationand searching scheme (CLS) in CCN hierarchical infrastructure. In CLS, there isat most one copy of a chunk cached on the path between a server and a leafrouter. This copy is pulled down one level towards the leaf router by a requestor pushed up one level towards the server by the cache eviction. Thus, it ispossible to store more diverse contents in the whole CCN and improve thenetwork performance. Plus, in order to reduce the server workload and filedownload time, a caching trail of chunk is created to direct the followingrequest where to find the chunk. Extensive test-bed experiments have beenperformed to evaluate the proposed scheme in terms of a wide range ofperformance metrics. The results show that the proposed scheme outperformsexisting algorithms.
 
 Location Privacy in Spatial Crowdsourcing
 
-  Spatial crowdsourcing (SC) is a new platform that engages individuals in
-collecting and analyzing environmental, social and other spatiotemporal
-information. With SC, requesters outsource their spatiotemporal tasks to a set
-of workers, who will perform the tasks by physically traveling to the tasks'
-locations. This chapter identifies privacy threats toward both workers and
-requesters during the two main phases of spatial crowdsourcing, tasking and
-reporting. Tasking is the process of identifying which tasks should be assigned
-to which workers. This process is handled by a spatial crowdsourcing server
-(SC-server). The latter phase is reporting, in which workers travel to the
-tasks' locations, complete the tasks and upload their reports to the SC-server.
-The challenge is to enable effective and efficient tasking as well as reporting
-in SC without disclosing the actual locations of workers (at least until they
-agree to perform a task) and the tasks themselves (at least to workers who are
-not assigned to those tasks). This chapter aims to provide an overview of the
-state-of-the-art in protecting users' location privacy in spatial
-crowdsourcing. We provide a comparative study of a diverse set of solutions in
-terms of task publishing modes (push vs. pull), problem focuses (tasking and
-reporting), threats (server, requester and worker), and underlying technical
-approaches (from pseudonymity, cloaking, and perturbation to exchange-based and
-encryption-based techniques). The strengths and drawbacks of the techniques are
-highlighted, leading to a discussion of open problems and future work.
-
+  Spatial crowdsourcing (SC) is a new platform that engages individuals incollecting and analyzing environmental, social and other spatiotemporalinformation. With SC, requesters outsource their spatiotemporal tasks to a setof workers, who will perform the tasks by physically traveling to the tasks'locations. This chapter identifies privacy threats toward both workers andrequesters during the two main phases of spatial crowdsourcing, tasking andreporting. Tasking is the process of identifying which tasks should be assignedto which workers. This process is handled by a spatial crowdsourcing server(SC-server). The latter phase is reporting, in which workers travel to thetasks' locations, complete the tasks and upload their reports to the SC-server.The challenge is to enable effective and efficient tasking as well as reportingin SC without disclosing the actual locations of workers (at least until theyagree to perform a task) and the tasks themselves (at least to workers who arenot assigned to those tasks). This chapter aims to provide an overview of thestate-of-the-art in protecting users' location privacy in spatialcrowdsourcing. We provide a comparative study of a diverse set of solutions interms of task publishing modes (push vs. pull), problem focuses (tasking andreporting), threats (server, requester and worker), and underlying technicalapproaches (from pseudonymity, cloaking, and perturbation to exchange-based andencryption-based techniques). The strengths and drawbacks of the techniques arehighlighted, leading to a discussion of open problems and future work.
 
 WiFlix: Adaptive Video Streaming in Massive MU-MIMO Wireless Networks
 
-  We consider the problem of simultaneous on-demand streaming of stored video
-to multiple users in a multi-cell wireless network where multiple unicast
-streaming sessions are run in parallel and share the same frequency band. Each
-streaming session is formed by the sequential transmission of video "chunks,"
-such that each chunk arrives into the corresponding user playback buffer within
-its playback deadline. We formulate the problem as a Network Utility
-Maximization (NUM) where the objective is to fairly maximize users' video
-streaming Quality of Experience (QoE) and then derive an iterative control
-policy using Lyapunov Optimization, which solves the NUM problem up to any
-level of accuracy and yields an online protocol with control actions at every
-iteration decomposing into two layers interconnected by the users' request
-queues : i) a video streaming adaptation layer reminiscent of DASH, implemented
-at each user node; ii) a transmission scheduling layer where a max-weight
-scheduler is implemented at each base station. The proposed chunk request
-scheme is a pull strategy where every user opportunistically requests video
-chunks from the neighboring base stations and dynamically adapts the quality of
-its requests based on the current size of the request queue. For the
-transmission scheduling component, we first describe the general max-weight
-scheduler and then particularize it to a wireless network where the base
-stations have multiuser MIMO (MU-MIMO) beamforming capabilities. We exploit the
-channel hardening effect of large-dimensional MIMO channels (massive MIMO) and
-devise a low complexity user selection scheme to solve the underlying
-combinatorial problem of selecting user subsets for downlink beamforming, which
-can be easily implemented and run independently at each base station.
-
+  We consider the problem of simultaneous on-demand streaming of stored videoto multiple users in a multi-cell wireless network where multiple unicaststreaming sessions are run in parallel and share the same frequency band. Eachstreaming session is formed by the sequential transmission of video "chunks,"such that each chunk arrives into the corresponding user playback buffer withinits playback deadline. We formulate the problem as a Network UtilityMaximization (NUM) where the objective is to fairly maximize users' videostreaming Quality of Experience (QoE) and then derive an iterative controlpolicy using Lyapunov Optimization, which solves the NUM problem up to anylevel of accuracy and yields an online protocol with control actions at everyiteration decomposing into two layers interconnected by the users' requestqueues : i) a video streaming adaptation layer reminiscent of DASH, implementedat each user node; ii) a transmission scheduling layer where a max-weightscheduler is implemented at each base station. The proposed chunk requestscheme is a pull strategy where every user opportunistically requests videochunks from the neighboring base stations and dynamically adapts the quality ofits requests based on the current size of the request queue. For thetransmission scheduling component, we first describe the general max-weightscheduler and then particularize it to a wireless network where the basestations have multiuser MIMO (MU-MIMO) beamforming capabilities. We exploit thechannel hardening effect of large-dimensional MIMO channels (massive MIMO) anddevise a low complexity user selection scheme to solve the underlyingcombinatorial problem of selecting user subsets for downlink beamforming, whichcan be easily implemented and run independently at each base station.
 
 Avalanches in the Weakly Driven Frenkel-Kontorova Model
 
-  A damped chain of particles with harmonic nearest-neighbor interactions in a
-spatially periodic, piecewise harmonic potential (Frenkel-Kontorova model) is
-studied numerically. One end of the chain is pulled slowly which acts as a weak
-driving mechanism. The numerical study was performed in the limit of infinitely
-weak driving. The model exhibits avalanches starting at the pulled end of the
-chain. The dynamics of the avalanches and their size and strength distributions
-are studied in detail. The behavior depends on the value of the damping
-constant. For moderate values a erratic sequence of avalanches of all sizes
-occurs. The avalanche distributions are power-laws which is a key feature of
-self-organized criticality (SOC). It will be shown that the system selects a
-state where perturbations are just able to propagate through the whole system.
-For strong damping a regular behavior occurs where a sequence of states
-reappears periodically but shifted by an integer multiple of the period of the
-external potential. There is a broad transition regime between regular and
-irregular behavior, which is characterized by multistability between regular
-and irregular behavior. The avalanches are build up by sound waves and shock
-waves. Shock waves can turn their direction of propagation, or they can split
-into two pulses propagating in opposite directions leading to transient
-spatio-temporal chaos. PACS numbers: 05.70.Ln,05.50.+q,46.10.+z
+  A damped chain of particles with harmonic nearest-neighbor interactions in aspatially periodic, piecewise harmonic potential (Frenkel-Kontorova model) isstudied numerically. One end of the chain is pulled slowly which acts as a weakdriving mechanism. The numerical study was performed in the limit of infinitelyweak driving. The model exhibits avalanches starting at the pulled end of thechain. The dynamics of the avalanches and their size and strength distributionsare studied in detail. The behavior depends on the value of the dampingconstant. For moderate values a erratic sequence of avalanches of all sizesoccurs. The avalanche distributions are power-laws which is a key feature ofself-organized criticality (SOC). It will be shown that the system selects astate where perturbations are just able to propagate through the whole system.For strong damping a regular behavior occurs where a sequence of statesreappears periodically but shifted by an integer multiple of the period of theexternal potential. There is a broad transition regime between regular andirregular behavior, which is characterized by multistability between regularand irregular behavior. The avalanches are build up by sound waves and shockwaves. Shock waves can turn their direction of propagation, or they can splitinto two pulses propagating in opposite directions leading to transientspatio-temporal chaos. PACS numbers: 05.70.Ln,05.50.+q,46.10.+z
 
+Minimizing Maximum Response Time and Delay Factor in Broadcast  Scheduling
 
-Minimizing Maximum Response Time and Delay Factor in Broadcast
-  Scheduling
+  We consider online algorithms for pull-based broadcast scheduling. In thissetting there are n pages of information at a server and requests for pagesarrive online. When the server serves (broadcasts) a page p, all outstandingrequests for that page are satisfied. We study two related metrics, namelymaximum response time (waiting time) and maximum delay-factor and theirweighted versions. We obtain the following results in the worst-case onlinecompetitive model.  - We show that FIFO (first-in first-out) is 2-competitive even when the pagesizes are different. Previously this was known only for unit-sized pages [10]via a delicate argument. Our proof differs from [10] and is perhaps moreintuitive.  - We give an online algorithm for maximum delay-factor that isO(1/eps^2)-competitive with (1+\eps)-speed for unit-sized pages and with(2+\eps)-speed for different sized pages. This improves on the algorithm in[12] which required (2+\eps)-speed and (4+\eps)-speed respectively. In additionwe show that the algorithm and analysis can be extended to obtain the sameresults for maximum weighted response time and delay factor.  - We show that a natural greedy algorithm modeled after LWF(Longest-Wait-First) is not O(1)-competitive for maximum delay factor with anyconstant speed even in the setting of standard scheduling with unit-sized jobs.This complements our upper bound and demonstrates the importance of thetradeoff made in our algorithm.
 
-  We consider online algorithms for pull-based broadcast scheduling. In this
-setting there are n pages of information at a server and requests for pages
-arrive online. When the server serves (broadcasts) a page p, all outstanding
-requests for that page are satisfied. We study two related metrics, namely
-maximum response time (waiting time) and maximum delay-factor and their
-weighted versions. We obtain the following results in the worst-case online
-competitive model.
-  - We show that FIFO (first-in first-out) is 2-competitive even when the page
-sizes are different. Previously this was known only for unit-sized pages [10]
-via a delicate argument. Our proof differs from [10] and is perhaps more
-intuitive.
-  - We give an online algorithm for maximum delay-factor that is
-O(1/eps^2)-competitive with (1+\eps)-speed for unit-sized pages and with
-(2+\eps)-speed for different sized pages. This improves on the algorithm in
-[12] which required (2+\eps)-speed and (4+\eps)-speed respectively. In addition
-we show that the algorithm and analysis can be extended to obtain the same
-results for maximum weighted response time and delay factor.
-  - We show that a natural greedy algorithm modeled after LWF
-(Longest-Wait-First) is not O(1)-competitive for maximum delay factor with any
-constant speed even in the setting of standard scheduling with unit-sized jobs.
-This complements our upper bound and demonstrates the importance of the
-tradeoff made in our algorithm.
+Optimizing Maximum Flow Time and Maximum Throughput in Broadcast  Scheduling
 
+  We consider the pull-based broadcast scheduling model. In this model, thereare n unit-sized pages of information available at the server. Requests arriveover time at the server asking for a specific page. When the server transmits apage, all outstanding requests for the page are simultaneously satisfied, andthis is what distinguishes broadcast scheduling from the standard schedulingsetting where each job must be processed separately by the server. Broadcastscheduling has received a considerable amount of attention due to thealgorithmic challenges that it gives in addition to its applications inmulticast systems and wireless and LAN networks. In this paper, we give thefollowing new approximation results for two popular objectives:  - For the objective of minimizing the maximum flow time, we give the firstPTAS. Previously, it was known that the algorithm First-In-First-Out (FIFO) isa 2-approximation, and it is tight. It has been suggested as an open problem toobtain a better approximation.  - For the objective of maximizing the throughput, we give a0.7759-approximation which improves upon the previous best known0.75-approximation.  Our improved results are enabled by our novel rounding schemes and linearprogramming which can effectively reduce congestion in schedule which is oftenthe main bottleneck in designing scheduling algorithms based on linearprogramming. We believe that our algorithmic ideas and techniques could be ofpotential use for other scheduling problems.
 
-Optimizing Maximum Flow Time and Maximum Throughput in Broadcast
-  Scheduling
+Towards Realisation of Heterogeneous Earth-Observation Sensor Database  Framework for the Sensor Observation Service based on PostGIS
 
-  We consider the pull-based broadcast scheduling model. In this model, there
-are n unit-sized pages of information available at the server. Requests arrive
-over time at the server asking for a specific page. When the server transmits a
-page, all outstanding requests for the page are simultaneously satisfied, and
-this is what distinguishes broadcast scheduling from the standard scheduling
-setting where each job must be processed separately by the server. Broadcast
-scheduling has received a considerable amount of attention due to the
-algorithmic challenges that it gives in addition to its applications in
-multicast systems and wireless and LAN networks. In this paper, we give the
-following new approximation results for two popular objectives:
-  - For the objective of minimizing the maximum flow time, we give the first
-PTAS. Previously, it was known that the algorithm First-In-First-Out (FIFO) is
-a 2-approximation, and it is tight. It has been suggested as an open problem to
-obtain a better approximation.
-  - For the objective of maximizing the throughput, we give a
-0.7759-approximation which improves upon the previous best known
-0.75-approximation.
-  Our improved results are enabled by our novel rounding schemes and linear
-programming which can effectively reduce congestion in schedule which is often
-the main bottleneck in designing scheduling algorithms based on linear
-programming. We believe that our algorithmic ideas and techniques could be of
-potential use for other scheduling problems.
-
-
-Towards Realisation of Heterogeneous Earth-Observation Sensor Database
-  Framework for the Sensor Observation Service based on PostGIS
-
-  Environmental monitoring and management systems in most cases deal with
-models and spatial analytics that involve the integration of in-situ and remote
-Geosensor observations. In-situ sensor observations and those gathered by
-remote sensors are usually provided by different databases and services in
-real-time dynamic services such as the Geo-Web Services. Thus, data have to be
-pulled from different databases and transferred over the network before they
-are fused and processed on the service middleware. This process is very massive
-and unnecessary communication-work load on the service middleware. Massive work
-load in large raster downloads from flat-file raster data sources each time a
-request is made and huge integration and geo-processing work load on the
-service middleware which could actually be better leveraged at the database
-This paper therefore proposes the realization of heterogeneous sensor database
-framework based on PostGIS for integration, geo-processing and spatial analysis
-of remote and in-situ sensor observations at the database level. Also discussed
-in this paper is how the framework can be integrated in the Sensor Observation
-Service (SOS) to reduce communication and massive workload on the Geospatial
-Web Services and as well make query request from the user end a lot more
-flexible. Keywords: Earth-Observation, Heterogeneous Earth-Observation Sensor
-Database, PostGIS , Sensor Observation Service.
-
+  Environmental monitoring and management systems in most cases deal withmodels and spatial analytics that involve the integration of in-situ and remoteGeosensor observations. In-situ sensor observations and those gathered byremote sensors are usually provided by different databases and services inreal-time dynamic services such as the Geo-Web Services. Thus, data have to bepulled from different databases and transferred over the network before theyare fused and processed on the service middleware. This process is very massiveand unnecessary communication-work load on the service middleware. Massive workload in large raster downloads from flat-file raster data sources each time arequest is made and huge integration and geo-processing work load on theservice middleware which could actually be better leveraged at the databaseThis paper therefore proposes the realization of heterogeneous sensor databaseframework based on PostGIS for integration, geo-processing and spatial analysisof remote and in-situ sensor observations at the database level. Also discussedin this paper is how the framework can be integrated in the Sensor ObservationService (SOS) to reduce communication and massive workload on the GeospatialWeb Services and as well make query request from the user end a lot moreflexible. Keywords: Earth-Observation, Heterogeneous Earth-Observation SensorDatabase, PostGIS , Sensor Observation Service.
 
 Differenciated Bandwidth Allocation in P2P Layered Streaming
 
-  There is an increasing demand for P2P streaming in particular for layered
-video. In this category of applications, the stream is composed of
-hierarchically encoded sub-streams layers namely the base layer and
-enhancements layers. We consider a scenario where the receiver peer uses the
-pull-based approach to adjust the video quality level to their capability by
-subscribing to different number of layers. We note that higher layers received
-without their corresponding lower layers are considered as useless and cannot
-be played, consequently the throughput of the system will drastically degrade.
-To avoid this situation, we propose an economical model based on auction
-mechanisms to optimize the allocation of sender peers' upload bandwidth. The
-upstream peers organize auctions to "sell" theirs items (links' bandwidth)
-according to bids submitted by the downstream peers taking into consideration
-the peers priorities and the requested layers importance. The ultimate goal is
-to satisfy the quality level requirement for each peer, while reducing the
-overall streaming cost. Through theoretical study and performance evaluation we
-show the effectiveness of our model in terms of users and network's utility.
+  There is an increasing demand for P2P streaming in particular for layeredvideo. In this category of applications, the stream is composed ofhierarchically encoded sub-streams layers namely the base layer andenhancements layers. We consider a scenario where the receiver peer uses thepull-based approach to adjust the video quality level to their capability bysubscribing to different number of layers. We note that higher layers receivedwithout their corresponding lower layers are considered as useless and cannotbe played, consequently the throughput of the system will drastically degrade.To avoid this situation, we propose an economical model based on auctionmechanisms to optimize the allocation of sender peers' upload bandwidth. Theupstream peers organize auctions to "sell" theirs items (links' bandwidth)according to bids submitted by the downstream peers taking into considerationthe peers priorities and the requested layers importance. The ultimate goal isto satisfy the quality level requirement for each peer, while reducing theoverall streaming cost. Through theoretical study and performance evaluation weshow the effectiveness of our model in terms of users and network's utility.
 
+Continuous integration in a social-coding world: Empirical evidence from  GitHub. **Updated version with corrections**
 
-Continuous integration in a social-coding world: Empirical evidence from
-  GitHub. **Updated version with corrections**
+  Continuous integration is a software engineering practice of frequentlymerging all developer working copies with a shared main branch, e.g., severaltimes a day. With the advent of GitHub, a platform well known for its "socialcoding" features that aid collaboration and sharing, and currently the largestcode host in the open source world, collaborative software development hasnever been more prominent. In GitHub development one can distinguish betweentwo types of developer contributions to a project: direct ones, coming from atypically small group of developers with write access to the main projectrepository, and indirect ones, coming from developers who fork the mainrepository, update their copies locally, and submit pull requests for reviewand merger. In this paper we explore how GitHub developers use continuousintegration as well as whether the contribution type (direct versus indirect)and different project characteristics (e.g., main programming language, orproject age) are associated with the success of the automatic builds.
 
-  Continuous integration is a software engineering practice of frequently
-merging all developer working copies with a shared main branch, e.g., several
-times a day. With the advent of GitHub, a platform well known for its "social
-coding" features that aid collaboration and sharing, and currently the largest
-code host in the open source world, collaborative software development has
-never been more prominent. In GitHub development one can distinguish between
-two types of developer contributions to a project: direct ones, coming from a
-typically small group of developers with write access to the main project
-repository, and indirect ones, coming from developers who fork the main
-repository, update their copies locally, and submit pull requests for review
-and merger. In this paper we explore how GitHub developers use continuous
-integration as well as whether the contribution type (direct versus indirect)
-and different project characteristics (e.g., main programming language, or
-project age) are associated with the success of the automatic builds.
+A Preliminary Analysis on the Effects of Propensity to Trust in  Distributed Software Development
 
+  Establishing trust between developers working at distant sites facilitatesteam collaboration in distributed software development. While previous researchhas focused on how to build and spread trust in absence of direct, face-to-facecommunication, it has overlooked the effects of the propensity to trust, i.e.,the trait of personality representing the individual disposition to perceivethe others as trustworthy. In this study, we present a preliminary,quantitative analysis on how the propensity to trust affects the success ofcollaborations in a distributed project, where the success is represented bypull requests whose code changes and contributions are successfully merged intothe project's repository.
 
-A Preliminary Analysis on the Effects of Propensity to Trust in
-  Distributed Software Development
+GitHub and Stack Overflow: Analyzing Developer Interests Across Multiple  Social Collaborative Platforms
 
-  Establishing trust between developers working at distant sites facilitates
-team collaboration in distributed software development. While previous research
-has focused on how to build and spread trust in absence of direct, face-to-face
-communication, it has overlooked the effects of the propensity to trust, i.e.,
-the trait of personality representing the individual disposition to perceive
-the others as trustworthy. In this study, we present a preliminary,
-quantitative analysis on how the propensity to trust affects the success of
-collaborations in a distributed project, where the success is represented by
-pull requests whose code changes and contributions are successfully merged into
-the project's repository.
+  Increasingly, software developers are using a wide array of socialcollaborative platforms for software development and learning. In this work, weexamined the similarities in developer's interests within and across GitHub andStack Overflow. Our study finds that developers share common interests inGitHub and Stack Overflow, on average, 39% of the GitHub repositories and StackOverflow questions that a developer had participated fall in the commoninterests. Also, developers do share similar interests with other developerswho co-participated activities in the two platforms. In particular, developerswho co-commit and co-pull-request same GitHub repositories and co-answer sameStack Overflow questions, share more common interests compare to otherdevelopers who co-participate in other platform activities.
 
+The Health and Wealth of OSS Projects: Evidence from Community  Activities and Product Evolution
 
-GitHub and Stack Overflow: Analyzing Developer Interests Across Multiple
-  Social Collaborative Platforms
+  Background: Understanding the condition of OSS projects is important toanalyze features and predict the future of projects. In the field of demographyand economics, health and wealth are considered to understand the condition ofa country. Aim: In this paper, we apply this framework to OSS projects tounderstand the communities and the evolution of OSS projects from theperspectives of health and wealth. Method: We define two measures of Workforce(WF) and Gross Product Pull Requests (GPPR). We analyze OSS projects in GitHuband investigate three typical cases. Results: We find that wealthy projectsattract and rely on the casual workforce. Less wealthy projects may requireadditional efforts from their more experienced contributors. Conclusions: Thispaper presents an approach to assess the relationship between health and wealthof OSS projects. An interactive demo of our analysis is available atgoo.gl/Ig6NTR.
 
-  Increasingly, software developers are using a wide array of social
-collaborative platforms for software development and learning. In this work, we
-examined the similarities in developer's interests within and across GitHub and
-Stack Overflow. Our study finds that developers share common interests in
-GitHub and Stack Overflow, on average, 39% of the GitHub repositories and Stack
-Overflow questions that a developer had participated fall in the common
-interests. Also, developers do share similar interests with other developers
-who co-participated activities in the two platforms. In particular, developers
-who co-commit and co-pull-request same GitHub repositories and co-answer same
-Stack Overflow questions, share more common interests compare to other
-developers who co-participate in other platform activities.
+HoPP: Robust and Resilient Publish-Subscribe for an Information-Centric  Internet of Things
 
-
-The Health and Wealth of OSS Projects: Evidence from Community
-  Activities and Product Evolution
-
-  Background: Understanding the condition of OSS projects is important to
-analyze features and predict the future of projects. In the field of demography
-and economics, health and wealth are considered to understand the condition of
-a country. Aim: In this paper, we apply this framework to OSS projects to
-understand the communities and the evolution of OSS projects from the
-perspectives of health and wealth. Method: We define two measures of Workforce
-(WF) and Gross Product Pull Requests (GPPR). We analyze OSS projects in GitHub
-and investigate three typical cases. Results: We find that wealthy projects
-attract and rely on the casual workforce. Less wealthy projects may require
-additional efforts from their more experienced contributors. Conclusions: This
-paper presents an approach to assess the relationship between health and wealth
-of OSS projects. An interactive demo of our analysis is available at
-goo.gl/Ig6NTR.
-
-
-HoPP: Robust and Resilient Publish-Subscribe for an Information-Centric
-  Internet of Things
-
-  This paper revisits NDN deployment in the IoT with a special focus on the
-interaction of sensors and actuators. Such scenarios require high
-responsiveness and limited control state at the constrained nodes. We argue
-that the NDN request-response pattern which prevents data push is vital for IoT
-networks. We contribute HoP-and-Pull (HoPP), a robust publish-subscribe scheme
-for typical IoT scenarios that targets IoT networks consisting of hundreds of
-resource constrained devices at intermittent connectivity. Our approach limits
-the FIB tables to a minimum and naturally supports mobility, temporary network
-partitioning, data aggregation and near real-time reactivity. We experimentally
-evaluate the protocol in a real-world deployment using the IoT-Lab testbed with
-varying numbers of constrained devices, each wirelessly interconnected via IEEE
-802.15.4 LowPANs. Implementations are built on CCN-lite with RIOT and support
-experiments using various single- and multi-hop scenarios.
-
+  This paper revisits NDN deployment in the IoT with a special focus on theinteraction of sensors and actuators. Such scenarios require highresponsiveness and limited control state at the constrained nodes. We arguethat the NDN request-response pattern which prevents data push is vital for IoTnetworks. We contribute HoP-and-Pull (HoPP), a robust publish-subscribe schemefor typical IoT scenarios that targets IoT networks consisting of hundreds ofresource constrained devices at intermittent connectivity. Our approach limitsthe FIB tables to a minimum and naturally supports mobility, temporary networkpartitioning, data aggregation and near real-time reactivity. We experimentallyevaluate the protocol in a real-world deployment using the IoT-Lab testbed withvarying numbers of constrained devices, each wirelessly interconnected via IEEE802.15.4 LowPANs. Implementations are built on CCN-lite with RIOT and supportexperiments using various single- and multi-hop scenarios.
 
 Impact of Continuous Integration on Code Reviews
 
-  Peer code review and continuous integration often interleave with each other
-in the modern software quality management. Although several studies investigate
-how non-technical factors (e.g., reviewer workload), developer participation
-and even patch size affect the code review process, the impact of continuous
-integration on code reviews is not yet properly understood. In this paper, we
-report an exploratory study using 578K automated build entries where we
-investigate the impact of automated builds on the code reviews. Our
-investigation suggests that successfully passed builds are more likely to
-encourage new code review participation in a pull request. Frequently built
-projects are found to be maintaining a steady level of reviewing activities
-over the years, which was quite missing from the rarely built projects.
-Experiments with 26,516 automated build entries reported that our proposed
-model can identify 64% of the builds that triggered new code reviews later.
-
+  Peer code review and continuous integration often interleave with each otherin the modern software quality management. Although several studies investigatehow non-technical factors (e.g., reviewer workload), developer participationand even patch size affect the code review process, the impact of continuousintegration on code reviews is not yet properly understood. In this paper, wereport an exploratory study using 578K automated build entries where weinvestigate the impact of automated builds on the code reviews. Ourinvestigation suggests that successfully passed builds are more likely toencourage new code review participation in a pull request. Frequently builtprojects are found to be maintaining a steady level of reviewing activitiesover the years, which was quite missing from the rarely built projects.Experiments with 26,516 automated build entries reported that our proposedmodel can identify 64% of the builds that triggered new code reviews later.
 
 TFLMS: Large Model Support in TensorFlow by Graph Rewriting
 
-  While accelerators such as GPUs have limited memory, deep neural networks are
-becoming larger and will not fit with the memory limitation of accelerators for
-training. We propose an approach to tackle this problem by rewriting the
-computational graph of a neural network, in which swap-out and swap-in
-operations are inserted to temporarily store intermediate results on CPU
-memory. In particular, we first revise the concept of a computational graph by
-defining a concrete semantics for variables in a graph. We then formally show
-how to derive swap-out and swap-in operations from an existing graph and
-present rules to optimize the graph. To realize our approach, we developed a
-module in TensorFlow, named TFLMS. TFLMS is published as a pull request in the
-TensorFlow repository for contributing to the TensorFlow community. With TFLMS,
-we were able to train ResNet-50 and 3DUnet with 4.7x and 2x larger batch size,
-respectively. In particular, we were able to train 3DUNet using images of size
-of $192^3$ for image segmentation, which, without TFLMS, had been done only by
-dividing the images to smaller images, which affects the accuracy.
-
+  While accelerators such as GPUs have limited memory, deep neural networks arebecoming larger and will not fit with the memory limitation of accelerators fortraining. We propose an approach to tackle this problem by rewriting thecomputational graph of a neural network, in which swap-out and swap-inoperations are inserted to temporarily store intermediate results on CPUmemory. In particular, we first revise the concept of a computational graph bydefining a concrete semantics for variables in a graph. We then formally showhow to derive swap-out and swap-in operations from an existing graph andpresent rules to optimize the graph. To realize our approach, we developed amodule in TensorFlow, named TFLMS. TFLMS is published as a pull request in theTensorFlow repository for contributing to the TensorFlow community. With TFLMS,we were able to train ResNet-50 and 3DUnet with 4.7x and 2x larger batch size,respectively. In particular, we were able to train 3DUNet using images of sizeof $192^3$ for image segmentation, which, without TFLMS, had been done only bydividing the images to smaller images, which affects the accuracy.
 
 A First Look at Emoji Usage on GitHub: An Empirical Study
 
-  Emoji is becoming a ubiquitous language and gaining worldwide popularity in
-recent years including the field of software engineering (SE). As nonverbal
-cues, emojis are widely used in user understanding tasks such as sentiment
-analysis, but few work has been done to study emojis in SE scenarios. This
-paper presents a large scale empirical study on how GitHub users use emojis in
-development-related communications. We find that emojis are used by a
-considerable proportion of GitHub users. In comparison to Internet users,
-developers show interesting usage characteristics and have their own
-interpretation of the meanings of emojis. In addition, the usage of emojis
-reflects a positive and supportive culture of this community. Through a manual
-annotation task, we find that sentimental usage is a main intention of using
-emojis in issues, pull requests, and comments, while emojis are mainly used to
-emphasize important contents in README. These findings not only deepen our
-understanding about the culture of SE communities, but also provide
-implications on how to facilitate SE tasks with emojis such as sentiment
-analysis.
-
+  Emoji is becoming a ubiquitous language and gaining worldwide popularity inrecent years including the field of software engineering (SE). As nonverbalcues, emojis are widely used in user understanding tasks such as sentimentanalysis, but few work has been done to study emojis in SE scenarios. Thispaper presents a large scale empirical study on how GitHub users use emojis indevelopment-related communications. We find that emojis are used by aconsiderable proportion of GitHub users. In comparison to Internet users,developers show interesting usage characteristics and have their owninterpretation of the meanings of emojis. In addition, the usage of emojisreflects a positive and supportive culture of this community. Through a manualannotation task, we find that sentimental usage is a main intention of usingemojis in issues, pull requests, and comments, while emojis are mainly used toemphasize important contents in README. These findings not only deepen ourunderstanding about the culture of SE communities, but also provideimplications on how to facilitate SE tasks with emojis such as sentimentanalysis.
 
 Catalog of Energy Patterns for Mobile Applications
 
-  Software engineers make use of design patterns for reasons that range from
-performance to code comprehensibility. Several design patterns capturing the
-body of knowledge of best practices have been proposed in the past, namely
-creational, structural and behavioral patterns. However, with the advent of
-mobile devices, it becomes a necessity a catalog of design patterns for energy
-efficiency. In this work, we inspect commits, issues and pull requests of 1027
-Android and 756 iOS apps to identify common practices when improving energy
-efficiency. This analysis yielded a catalog, available online, with 22 design
-patterns related to improving the energy efficiency of mobile apps. We argue
-that this catalog might be of relevance to other domains such as Cyber-Physical
-Systems and Internet of Things. As a side contribution, an analysis of the
-differences between Android and iOS devices shows that the Android community is
-more energy-aware.
-
+  Software engineers make use of design patterns for reasons that range fromperformance to code comprehensibility. Several design patterns capturing thebody of knowledge of best practices have been proposed in the past, namelycreational, structural and behavioral patterns. However, with the advent ofmobile devices, it becomes a necessity a catalog of design patterns for energyefficiency. In this work, we inspect commits, issues and pull requests of 1027Android and 756 iOS apps to identify common practices when improving energyefficiency. This analysis yielded a catalog, available online, with 22 designpatterns related to improving the energy efficiency of mobile apps. We arguethat this catalog might be of relevance to other domains such as Cyber-PhysicalSystems and Internet of Things. As a side contribution, an analysis of thedifferences between Android and iOS devices shows that the Android community ismore energy-aware.
 
 9.6 Million Links in Source Code Comments: Purpose, Evolution, and Decay
 
-  Links are an essential feature of the World Wide Web, and source code
-repositories are no exception. However, despite their many undisputed benefits,
-links can suffer from decay, insufficient versioning, and lack of bidirectional
-traceability. In this paper, we investigate the role of links contained in
-source code comments from these perspectives. We conducted a large-scale study
-of around 9.6 million links to establish their prevalence, and we used a
-mixed-methods approach to identify the links' targets, purposes, decay, and
-evolutionary aspects. We found that links are prevalent in source code
-repositories, that licenses, software homepages, and specifications are common
-types of link targets, and that links are often included to provide metadata or
-attribution. Links are rarely updated, but many link targets evolve. Almost 10%
-of the links included in source code comments are dead. We then submitted a
-batch of link-fixing pull requests to open source software repositories,
-resulting in most of our fixes being merged successfully. Our findings indicate
-that links in source code comments can indeed be fragile, and our work opens up
-avenues for future work to address these problems.
-
+  Links are an essential feature of the World Wide Web, and source coderepositories are no exception. However, despite their many undisputed benefits,links can suffer from decay, insufficient versioning, and lack of bidirectionaltraceability. In this paper, we investigate the role of links contained insource code comments from these perspectives. We conducted a large-scale studyof around 9.6 million links to establish their prevalence, and we used amixed-methods approach to identify the links' targets, purposes, decay, andevolutionary aspects. We found that links are prevalent in source coderepositories, that licenses, software homepages, and specifications are commontypes of link targets, and that links are often included to provide metadata orattribution. Links are rarely updated, but many link targets evolve. Almost 10%of the links included in source code comments are dead. We then submitted abatch of link-fixing pull requests to open source software repositories,resulting in most of our fixes being merged successfully. Our findings indicatethat links in source code comments can indeed be fragile, and our work opens upavenues for future work to address these problems.
 
 The Effect of DNS on Tor's Anonymity
 
-  Previous attacks that link the sender and receiver of traffic in the Tor
-network ("correlation attacks") have generally relied on analyzing traffic from
-TCP connections. The TCP connections of a typical client application, however,
-are often accompanied by DNS requests and responses. This additional traffic
-presents more opportunities for correlation attacks. This paper quantifies how
-DNS traffic can make Tor users more vulnerable to correlation attacks. We
-investigate how incorporating DNS traffic can make existing correlation attacks
-more powerful and how DNS lookups can leak information to third parties about
-anonymous communication. We (i) develop a method to identify the DNS resolvers
-of Tor exit relays; (ii) develop a new set of correlation attacks (DefecTor
-attacks) that incorporate DNS traffic to improve precision; (iii) analyze the
-Internet-scale effects of these new attacks on Tor users; and (iv) develop
-improved methods to evaluate correlation attacks. First, we find that there
-exist adversaries who can mount DefecTor attacks: for example, Google's DNS
-resolver observes almost 40% of all DNS requests exiting the Tor network. We
-also find that DNS requests often traverse ASes that the corresponding TCP
-connections do not transit, enabling additional ASes to gain information about
-Tor users' traffic. We then show that an adversary who can mount a DefecTor
-attack can often determine the website that a Tor user is visiting with perfect
-precision, particularly for less popular websites where the set of DNS names
-associated with that website may be unique to the site. We also use the Tor
-Path Simulator (TorPS) in combination with traceroute data from vantage points
-co-located with Tor exit relays to estimate the power of AS-level adversaries
-who might mount DefecTor attacks in practice.
-
+  Previous attacks that link the sender and receiver of traffic in the Tornetwork ("correlation attacks") have generally relied on analyzing traffic fromTCP connections. The TCP connections of a typical client application, however,are often accompanied by DNS requests and responses. This additional trafficpresents more opportunities for correlation attacks. This paper quantifies howDNS traffic can make Tor users more vulnerable to correlation attacks. Weinvestigate how incorporating DNS traffic can make existing correlation attacksmore powerful and how DNS lookups can leak information to third parties aboutanonymous communication. We (i) develop a method to identify the DNS resolversof Tor exit relays; (ii) develop a new set of correlation attacks (DefecTorattacks) that incorporate DNS traffic to improve precision; (iii) analyze theInternet-scale effects of these new attacks on Tor users; and (iv) developimproved methods to evaluate correlation attacks. First, we find that thereexist adversaries who can mount DefecTor attacks: for example, Google's DNSresolver observes almost 40% of all DNS requests exiting the Tor network. Wealso find that DNS requests often traverse ASes that the corresponding TCPconnections do not transit, enabling additional ASes to gain information aboutTor users' traffic. We then show that an adversary who can mount a DefecTorattack can often determine the website that a Tor user is visiting with perfectprecision, particularly for less popular websites where the set of DNS namesassociated with that website may be unique to the site. We also use the TorPath Simulator (TorPS) in combination with traceroute data from vantage pointsco-located with Tor exit relays to estimate the power of AS-level adversarieswho might mount DefecTor attacks in practice.
 
 Discovery through Gossip
 
-  We study randomized gossip-based processes in dynamic networks that are
-motivated by discovery processes in large-scale distributed networks like
-peer-to-peer or social networks.
-  A well-studied problem in peer-to-peer networks is the resource discovery
-problem. There, the goal for nodes (hosts with IP addresses) is to discover the
-IP addresses of all other hosts. In social networks, nodes (people) discover
-new nodes through exchanging contacts with their neighbors (friends). In both
-cases the discovery of new nodes changes the underlying network - new edges are
-added to the network - and the process continues in the changed network.
-Rigorously analyzing such dynamic (stochastic) processes with a continuously
-self-changing topology remains a challenging problem with obvious applications.
-  This paper studies and analyzes two natural gossip-based discovery processes.
-In the push process, each node repeatedly chooses two random neighbors and puts
-them in contact (i.e., "pushes" their mutual information to each other). In the
-pull discovery process, each node repeatedly requests or "pulls" a random
-contact from a random neighbor. Both processes are lightweight, local, and
-naturally robust due to their randomization.
-  Our main result is an almost-tight analysis of the time taken for these two
-randomized processes to converge. We show that in any undirected n-node graph
-both processes take O(n log^2 n) rounds to connect every node to all other
-nodes with high probability, whereas Omega(n log n) is a lower bound. In the
-directed case we give an O(n^2 log n) upper bound and an Omega(n^2) lower bound
-for strongly connected directed graphs. A key technical challenge that we
-overcome is the analysis of a randomized process that itself results in a
-constantly changing network which leads to complicated dependencies in every
-round.
+  We study randomized gossip-based processes in dynamic networks that aremotivated by discovery processes in large-scale distributed networks likepeer-to-peer or social networks.  A well-studied problem in peer-to-peer networks is the resource discoveryproblem. There, the goal for nodes (hosts with IP addresses) is to discover theIP addresses of all other hosts. In social networks, nodes (people) discovernew nodes through exchanging contacts with their neighbors (friends). In bothcases the discovery of new nodes changes the underlying network - new edges areadded to the network - and the process continues in the changed network.Rigorously analyzing such dynamic (stochastic) processes with a continuouslyself-changing topology remains a challenging problem with obvious applications.  This paper studies and analyzes two natural gossip-based discovery processes.In the push process, each node repeatedly chooses two random neighbors and putsthem in contact (i.e., "pushes" their mutual information to each other). In thepull discovery process, each node repeatedly requests or "pulls" a randomcontact from a random neighbor. Both processes are lightweight, local, andnaturally robust due to their randomization.  Our main result is an almost-tight analysis of the time taken for these tworandomized processes to converge. We show that in any undirected n-node graphboth processes take O(n log^2 n) rounds to connect every node to all othernodes with high probability, whereas Omega(n log n) is a lower bound. In thedirected case we give an O(n^2 log n) upper bound and an Omega(n^2) lower boundfor strongly connected directed graphs. A key technical challenge that weovercome is the analysis of a randomized process that itself results in aconstantly changing network which leads to complicated dependencies in everyround.
 
+A Mobile Message Scheduling and Delivery System using m-Learning  framework
 
-A Mobile Message Scheduling and Delivery System using m-Learning
-  framework
+  Wireless data communications in form of Short Message Service (SMS) andWireless Access Protocols (WAP) browsers have gained global popularity, yet,not much has been done to extend the usage of these devices in electroniclearning (e-learning) and information sharing. This project explores theextension of e learning into wireless/ handheld (W/H) computing devices withthe help of a mobile learning (m-learning) framework. This framework providesthe requirements to develop m-learning application that can be used to shareacademic and administrative information among people within the universitycampus. A prototype application has been developed to demonstrate the importantfunctionality of the proposed system in simulated environment. This system issupposed to work both in bulk SMS and interactive SMS delivery mode. Here wehave combined both Short Message Service (SMS) and Wireless Access Protocols(WAP) browsers. SMS is used for Short and in time information delivery and WAPis used for detailed information delivery like course content, trainingmaterial, interactive evolution tests etc. The push model is used for sendingpersonalized multicasting messages to a group of mobile users with a commonprofile thereby improving the effectiveness and usefulness of the cntentdelivered. Again pull mechanism can be applied for sending information as SMSwhen requested by end user in interactive SMS delivery mode. The main strengthof the system is that, the actual SMS delivery application can be hosted on amobile device, which can operate even when the device is on move.
 
-  Wireless data communications in form of Short Message Service (SMS) and
-Wireless Access Protocols (WAP) browsers have gained global popularity, yet,
-not much has been done to extend the usage of these devices in electronic
-learning (e-learning) and information sharing. This project explores the
-extension of e learning into wireless/ handheld (W/H) computing devices with
-the help of a mobile learning (m-learning) framework. This framework provides
-the requirements to develop m-learning application that can be used to share
-academic and administrative information among people within the university
-campus. A prototype application has been developed to demonstrate the important
-functionality of the proposed system in simulated environment. This system is
-supposed to work both in bulk SMS and interactive SMS delivery mode. Here we
-have combined both Short Message Service (SMS) and Wireless Access Protocols
-(WAP) browsers. SMS is used for Short and in time information delivery and WAP
-is used for detailed information delivery like course content, training
-material, interactive evolution tests etc. The push model is used for sending
-personalized multicasting messages to a group of mobile users with a common
-profile thereby improving the effectiveness and usefulness of the cntent
-delivered. Again pull mechanism can be applied for sending information as SMS
-when requested by end user in interactive SMS delivery mode. The main strength
-of the system is that, the actual SMS delivery application can be hosted on a
-mobile device, which can operate even when the device is on move.
+Statistical Decision Making for Optimal Budget Allocation in Crowd  Labeling
 
-
-Statistical Decision Making for Optimal Budget Allocation in Crowd
-  Labeling
-
-  In crowd labeling, a large amount of unlabeled data instances are outsourced
-to a crowd of workers. Workers will be paid for each label they provide, but
-the labeling requester usually has only a limited amount of the budget. Since
-data instances have different levels of labeling difficulty and workers have
-different reliability, it is desirable to have an optimal policy to allocate
-the budget among all instance-worker pairs such that the overall labeling
-accuracy is maximized. We consider categorical labeling tasks and formulate the
-budget allocation problem as a Bayesian Markov decision process (MDP), which
-simultaneously conducts learning and decision making. Using the dynamic
-programming (DP) recurrence, one can obtain the optimal allocation policy.
-However, DP quickly becomes computationally intractable when the size of the
-problem increases. To solve this challenge, we propose a computationally
-efficient approximate policy, called optimistic knowledge gradient policy. Our
-MDP is a quite general framework, which applies to both pull crowdsourcing
-marketplaces with homogeneous workers and push marketplaces with heterogeneous
-workers. It can also incorporate the contextual information of instances when
-they are available. The experiments on both simulated and real data show that
-the proposed policy achieves a higher labeling accuracy than other existing
-policies at the same budget level.
-
+  In crowd labeling, a large amount of unlabeled data instances are outsourcedto a crowd of workers. Workers will be paid for each label they provide, butthe labeling requester usually has only a limited amount of the budget. Sincedata instances have different levels of labeling difficulty and workers havedifferent reliability, it is desirable to have an optimal policy to allocatethe budget among all instance-worker pairs such that the overall labelingaccuracy is maximized. We consider categorical labeling tasks and formulate thebudget allocation problem as a Bayesian Markov decision process (MDP), whichsimultaneously conducts learning and decision making. Using the dynamicprogramming (DP) recurrence, one can obtain the optimal allocation policy.However, DP quickly becomes computationally intractable when the size of theproblem increases. To solve this challenge, we propose a computationallyefficient approximate policy, called optimistic knowledge gradient policy. OurMDP is a quite general framework, which applies to both pull crowdsourcingmarketplaces with homogeneous workers and push marketplaces with heterogeneousworkers. It can also incorporate the contextual information of instances whenthey are available. The experiments on both simulated and real data show thatthe proposed policy achieves a higher labeling accuracy than other existingpolicies at the same budget level.
 
 Universal entrainment mechanism governs contact times with motile cells
 
-  Contact between particles and motile cells underpins a wide variety of
-biological processes, from nutrient capture and ligand binding, to grazing,
-viral infection and cell-cell communication. The window of opportunity for
-these interactions is ultimately determined by the physical mechanism that
-enables proximity and governs the contact time. Jeanneret et al. (Nat. Comm. 7:
-12518, 2016) reported recently that for the biflagellate microalga
-Chlamydomonas reinhardtii contact with microparticles is controlled by events
-in which the object is entrained by the swimmer over large distances. However,
-neither the universality of this interaction mechanism nor its physical origins
-are currently understood. Here we show that particle entrainment is indeed a
-generic feature for microorganisms either pushed or pulled by flagella. By
-combining experiments, simulations and analytical modelling we reveal that
-entrainment length, and therefore contact time, can be understood within the
-framework of Taylor dispersion as a competition between advection by the no
-slip surface of the cell body and microparticle diffusion. The existence of an
-optimal tracer size is predicted theoretically, and observed experimentally for
-C. reinhardtii. Spatial organisation of flagella, swimming speed, swimmer and
-tracer size influence entrainment features and provide different trade-offs
-that may be tuned to optimise microbial interactions like predation and
-infection.
-
+  Contact between particles and motile cells underpins a wide variety ofbiological processes, from nutrient capture and ligand binding, to grazing,viral infection and cell-cell communication. The window of opportunity forthese interactions is ultimately determined by the physical mechanism thatenables proximity and governs the contact time. Jeanneret et al. (Nat. Comm. 7:12518, 2016) reported recently that for the biflagellate microalgaChlamydomonas reinhardtii contact with microparticles is controlled by eventsin which the object is entrained by the swimmer over large distances. However,neither the universality of this interaction mechanism nor its physical originsare currently understood. Here we show that particle entrainment is indeed ageneric feature for microorganisms either pushed or pulled by flagella. Bycombining experiments, simulations and analytical modelling we reveal thatentrainment length, and therefore contact time, can be understood within theframework of Taylor dispersion as a competition between advection by the noslip surface of the cell body and microparticle diffusion. The existence of anoptimal tracer size is predicted theoretically, and observed experimentally forC. reinhardtii. Spatial organisation of flagella, swimming speed, swimmer andtracer size influence entrainment features and provide different trade-offsthat may be tuned to optimise microbial interactions like predation andinfection.
 

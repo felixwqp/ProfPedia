@@ -1,171 +1,32 @@
-A Fast Implementation of Singular Value Thresholding Algorithm using
-  Recycling Rank Revealing Randomized Singular Value Decomposition
+A Fast Implementation of Singular Value Thresholding Algorithm using  Recycling Rank Revealing Randomized Singular Value Decomposition
 
-  In this paper, we present a fast implementation of the Singular Value
-Thresholding (SVT) algorithm for matrix completion. A rank-revealing randomized
-singular value decomposition (R3SVD) algorithm is used to adaptively carry out
-partial singular value decomposition (SVD) to fast approximate the SVT operator
-given a desired, fixed precision. We extend the R3SVD algorithm to a recycling
-rank revealing randomized singular value decomposition (R4SVD) algorithm by
-reusing the left singular vectors obtained from the previous iteration as the
-approximate basis in the current iteration, where the computational cost for
-partial SVD at each SVT iteration is significantly reduced. A simulated
-annealing style cooling mechanism is employed to adaptively adjust the low-rank
-approximation precision threshold as SVT progresses. Our fast SVT
-implementation is effective in both large and small matrices, which is
-demonstrated in matrix completion applications including image recovery and
-movie recommendation system.
+  In this paper, we present a fast implementation of the Singular ValueThresholding (SVT) algorithm for matrix completion. A rank-revealing randomizedsingular value decomposition (R3SVD) algorithm is used to adaptively carry outpartial singular value decomposition (SVD) to fast approximate the SVT operatorgiven a desired, fixed precision. We extend the R3SVD algorithm to a recyclingrank revealing randomized singular value decomposition (R4SVD) algorithm byreusing the left singular vectors obtained from the previous iteration as theapproximate basis in the current iteration, where the computational cost forpartial SVD at each SVT iteration is significantly reduced. A simulatedannealing style cooling mechanism is employed to adaptively adjust the low-rankapproximation precision threshold as SVT progresses. Our fast SVTimplementation is effective in both large and small matrices, which isdemonstrated in matrix completion applications including image recovery andmovie recommendation system.
 
+Gaussian Variant of Freivalds' Algorithm for Efficient and Reliable  Matrix Product Verification
 
-Gaussian Variant of Freivalds' Algorithm for Efficient and Reliable
-  Matrix Product Verification
-
-  In this article, we consider the general problem of checking the correctness
-of matrix multiplication. Given three $n \times n$ matrices $A$, $B$, and $C$,
-the goal is to verify that $A \times B=C$ without carrying out the
-computationally costly operations of matrix multiplication and comparing the
-product $A \times B$ with $C$, term by term. This is especially important when
-some or all of these matrices are very large, and when the computing
-environment is prone to soft errors. Here we extend Freivalds' algorithm to a
-Gaussian Variant of Freivalds' Algorithm (GVFA) by projecting the product $A
-\times B$ as well as $C$ onto a Gaussian random vector and then comparing the
-resulting vectors. The computational complexity of GVFA is consistent with that
-of Freivalds' algorithm, which is $O(n^{2})$. However, unlike Freivalds'
-algorithm, whose probability of a false positive is $2^{-k}$, where $k$ is the
-number of iterations. Our theoretical analysis shows that when $A \times B \neq
-C$, GVFA produces a false positive on set of inputs of measure zero with exact
-arithmetic. When we introduce round-off error and floating point arithmetic
-into our analysis, we can show that the larger this error, the higher the
-probability that GVFA avoids false positives. Moreover, by iterating GVFA $k$
-times, the probability of a false positive decreases as $p^k$, where $p$ is a
-very small value depending on the nature of the fault on the result matrix and
-the arithmetic system's floating-point precision. Unlike deterministic
-algorithms, there do not exist any fault patterns that are completely
-undetectable with GVFA. Thus GVFA can be used to provide efficient fault
-tolerance in numerical linear algebra, and it can be efficiently implemented on
-modern computing architectures. In particular, GVFA can be very efficiently
-implemented on architectures with hardware support for fused multiply-add
-operations.
-
+  In this article, we consider the general problem of checking the correctnessof matrix multiplication. Given three $n \times n$ matrices $A$, $B$, and $C$,the goal is to verify that $A \times B=C$ without carrying out thecomputationally costly operations of matrix multiplication and comparing theproduct $A \times B$ with $C$, term by term. This is especially important whensome or all of these matrices are very large, and when the computingenvironment is prone to soft errors. Here we extend Freivalds' algorithm to aGaussian Variant of Freivalds' Algorithm (GVFA) by projecting the product $A\times B$ as well as $C$ onto a Gaussian random vector and then comparing theresulting vectors. The computational complexity of GVFA is consistent with thatof Freivalds' algorithm, which is $O(n^{2})$. However, unlike Freivalds'algorithm, whose probability of a false positive is $2^{-k}$, where $k$ is thenumber of iterations. Our theoretical analysis shows that when $A \times B \neqC$, GVFA produces a false positive on set of inputs of measure zero with exactarithmetic. When we introduce round-off error and floating point arithmeticinto our analysis, we can show that the larger this error, the higher theprobability that GVFA avoids false positives. Moreover, by iterating GVFA $k$times, the probability of a false positive decreases as $p^k$, where $p$ is avery small value depending on the nature of the fault on the result matrix andthe arithmetic system's floating-point precision. Unlike deterministicalgorithms, there do not exist any fault patterns that are completelyundetectable with GVFA. Thus GVFA can be used to provide efficient faulttolerance in numerical linear algebra, and it can be efficiently implemented onmodern computing architectures. In particular, GVFA can be very efficientlyimplemented on architectures with hardware support for fused multiply-addoperations.
 
 Single-Pass PCA of Large High-Dimensional Data
 
-  Principal component analysis (PCA) is a fundamental dimension reduction tool
-in statistics and machine learning. For large and high-dimensional data,
-computing the PCA (i.e., the singular vectors corresponding to a number of
-dominant singular values of the data matrix) becomes a challenging task. In
-this work, a single-pass randomized algorithm is proposed to compute PCA with
-only one pass over the data. It is suitable for processing extremely large and
-high-dimensional data stored in slow memory (hard disk) or the data generated
-in a streaming fashion. Experiments with synthetic and real data validate the
-algorithm's accuracy, which has orders of magnitude smaller error than an
-existing single-pass algorithm. For a set of high-dimensional data stored as a
-150 GB file, the proposed algorithm is able to compute the first 50 principal
-components in just 24 minutes on a typical 24-core computer, with less than 1
-GB memory cost.
+  Principal component analysis (PCA) is a fundamental dimension reduction toolin statistics and machine learning. For large and high-dimensional data,computing the PCA (i.e., the singular vectors corresponding to a number ofdominant singular values of the data matrix) becomes a challenging task. Inthis work, a single-pass randomized algorithm is proposed to compute PCA withonly one pass over the data. It is suitable for processing extremely large andhigh-dimensional data stored in slow memory (hard disk) or the data generatedin a streaming fashion. Experiments with synthetic and real data validate thealgorithm's accuracy, which has orders of magnitude smaller error than anexisting single-pass algorithm. For a set of high-dimensional data stored as a150 GB file, the proposed algorithm is able to compute the first 50 principalcomponents in just 24 minutes on a typical 24-core computer, with less than 1GB memory cost.
 
+A GPU-based Large-scale Monte Carlo Simulation Method for Systems with  Long-range Interactions
 
-A GPU-based Large-scale Monte Carlo Simulation Method for Systems with
-  Long-range Interactions
+  In this work we present an efficient implementation of Canonical Monte Carlosimulation for Coulomb many body systems on graphics processing units (GPU).Our method takes advantage of the GPU Single Instruction, Multiple Data (SIMD)architectures. It adopts the sequential updating scheme of Metropolisalgorithm, and makes no approximation in the computation of energy. It reachesa remarkable 440-fold speedup, compared with the serial implementation on CPU.We use this method to simulate primitive model electrolytes. We measure veryprecisely all ion-ion pair correlation functions at high concentrations, andextract renormalized Debye length, renormalized valences of constituent ions,and renormalized dielectric constants. These results demonstrate unequivocallyphysics beyond the classical Poisson-Boltzmann theory.
 
-  In this work we present an efficient implementation of Canonical Monte Carlo
-simulation for Coulomb many body systems on graphics processing units (GPU).
-Our method takes advantage of the GPU Single Instruction, Multiple Data (SIMD)
-architectures. It adopts the sequential updating scheme of Metropolis
-algorithm, and makes no approximation in the computation of energy. It reaches
-a remarkable 440-fold speedup, compared with the serial implementation on CPU.
-We use this method to simulate primitive model electrolytes. We measure very
-precisely all ion-ion pair correlation functions at high concentrations, and
-extract renormalized Debye length, renormalized valences of constituent ions,
-and renormalized dielectric constants. These results demonstrate unequivocally
-physics beyond the classical Poisson-Boltzmann theory.
+A Rank Revealing Randomized Singular Value Decomposition (R3SVD)  Algorithm for Low-rank Matrix Approximations
 
-
-A Rank Revealing Randomized Singular Value Decomposition (R3SVD)
-  Algorithm for Low-rank Matrix Approximations
-
-  In this paper, we present a Rank Revealing Randomized Singular Value
-Decomposition (R3SVD) algorithm to incrementally construct a low-rank
-approximation of a potentially large matrix while adaptively estimating the
-appropriate rank that can capture most of the actions of the matrix. Starting
-from a low-rank approximation with an initial guessed rank, R3SVD adopts an
-orthogonal Gaussian sampling approach to obtain the dominant subspace within
-the leftover space, which is used to add up to the existing low-rank
-approximation. Orthogonal Gaussian sampling is repeated until an appropriate
-low-rank approximation with satisfactory accuracy, measured by the overall
-energy percentage of the original matrix, is obtained. While being a fast
-algorithm, R3SVD is also a memory-aware algorithm where the computational
-process can be decomposed into a series of sampling tasks that use constant
-amount of memory. Numerical examples in image compression and matrix completion
-are used to demonstrate the effectiveness of R3SVD in low-rank approximation.
-
+  In this paper, we present a Rank Revealing Randomized Singular ValueDecomposition (R3SVD) algorithm to incrementally construct a low-rankapproximation of a potentially large matrix while adaptively estimating theappropriate rank that can capture most of the actions of the matrix. Startingfrom a low-rank approximation with an initial guessed rank, R3SVD adopts anorthogonal Gaussian sampling approach to obtain the dominant subspace withinthe leftover space, which is used to add up to the existing low-rankapproximation. Orthogonal Gaussian sampling is repeated until an appropriatelow-rank approximation with satisfactory accuracy, measured by the overallenergy percentage of the original matrix, is obtained. While being a fastalgorithm, R3SVD is also a memory-aware algorithm where the computationalprocess can be decomposed into a series of sampling tasks that use constantamount of memory. Numerical examples in image compression and matrix completionare used to demonstrate the effectiveness of R3SVD in low-rank approximation.
 
 Faster Matrix Completion Using Randomized SVD
 
-  Matrix completion is a widely used technique for image inpainting and
-personalized recommender system, etc. In this work, we focus on accelerating
-the matrix completion using faster randomized singular value decomposition
-(rSVD). Firstly, two fast randomized algorithms (rSVD-PI and rSVD- BKI) are
-proposed for handling sparse matrix. They make use of an eigSVD procedure and
-several accelerating skills. Then, with the rSVD-BKI algorithm and a new
-subspace recycling technique, we accelerate the singular value thresholding
-(SVT) method in [1] to realize faster matrix completion. Experiments show that
-the proposed rSVD algorithms can be 6X faster than the basic rSVD algorithm [2]
-while keeping same accuracy. For image inpainting and movie-rating estimation
-problems, the proposed accelerated SVT algorithm consumes 15X and 8X less CPU
-time than the methods using svds and lansvd respectively, without loss of
-accuracy.
+  Matrix completion is a widely used technique for image inpainting andpersonalized recommender system, etc. In this work, we focus on acceleratingthe matrix completion using faster randomized singular value decomposition(rSVD). Firstly, two fast randomized algorithms (rSVD-PI and rSVD- BKI) areproposed for handling sparse matrix. They make use of an eigSVD procedure andseveral accelerating skills. Then, with the rSVD-BKI algorithm and a newsubspace recycling technique, we accelerate the singular value thresholding(SVT) method in [1] to realize faster matrix completion. Experiments show thatthe proposed rSVD algorithms can be 6X faster than the basic rSVD algorithm [2]while keeping same accuracy. For image inpainting and movie-rating estimationproblems, the proposed accelerated SVT algorithm consumes 15X and 8X less CPUtime than the methods using svds and lansvd respectively, without loss ofaccuracy.
 
+Efficient Randomized Algorithms for the Fixed-Precision Low-Rank Matrix  Approximation
 
-Efficient Randomized Algorithms for the Fixed-Precision Low-Rank Matrix
-  Approximation
+  Randomized algorithms for low-rank matrix approximation are investigated,with the emphasis on the fixed-precision problem and computational efficiencyfor handling large matrices. The algorithms are based on the so-called QBfactorization, where Q is an orthonormal matrix. Firstly, a mechanism forcalculating the approximation error in Frobenius norm is proposed, whichenables efficient adaptive rank determination for large and/or sparse matrix.It can be combined with any QB-form factorization algorithm in which B's rowsare incrementally generated. Based on the blocked randQB algorithm by P.-G.Martinsson and S. Voronin, this results in an algorithm called randQB EI. Then,we further revise the algorithm to obtain a pass-efficient algorithm, randQBFP, which is mathematically equivalent to the existing randQB algorithms andalso suitable for the fixed-precision problem. Especially, randQB FP can serveas a single-pass algorithm for calculating leading singular values, undercertain condition. With large and/or sparse test matrices, we have empiricallyvalidated the merits of the proposed techniques, which exhibit remarkablespeedup and memory saving over the blocked randQB algorithm. We have alsodemonstrated that the single-pass algorithm derived by randQB FP is much moreaccurate than an existing single-pass algorithm. And with data from a scenicimage and an information retrieval application, we have shown the advantages ofthe proposed algorithms over the adaptive range finder algorithm for solvingthe fixed-precision problem.
 
-  Randomized algorithms for low-rank matrix approximation are investigated,
-with the emphasis on the fixed-precision problem and computational efficiency
-for handling large matrices. The algorithms are based on the so-called QB
-factorization, where Q is an orthonormal matrix. Firstly, a mechanism for
-calculating the approximation error in Frobenius norm is proposed, which
-enables efficient adaptive rank determination for large and/or sparse matrix.
-It can be combined with any QB-form factorization algorithm in which B's rows
-are incrementally generated. Based on the blocked randQB algorithm by P.-G.
-Martinsson and S. Voronin, this results in an algorithm called randQB EI. Then,
-we further revise the algorithm to obtain a pass-efficient algorithm, randQB
-FP, which is mathematically equivalent to the existing randQB algorithms and
-also suitable for the fixed-precision problem. Especially, randQB FP can serve
-as a single-pass algorithm for calculating leading singular values, under
-certain condition. With large and/or sparse test matrices, we have empirically
-validated the merits of the proposed techniques, which exhibit remarkable
-speedup and memory saving over the blocked randQB algorithm. We have also
-demonstrated that the single-pass algorithm derived by randQB FP is much more
-accurate than an existing single-pass algorithm. And with data from a scenic
-image and an information retrieval application, we have shown the advantages of
-the proposed algorithms over the adaptive range finder algorithm for solving
-the fixed-precision problem.
+A Revisit of Block Power Methods for Finite State Markov Chain  Applications
 
-
-A Revisit of Block Power Methods for Finite State Markov Chain
-  Applications
-
-  In this paper, we revisit the generalized block power methods for
-approximating the eigenvector associated with $\lambda_1 = 1$ of a Markov chain
-transition matrix. Our analysis of the block power method shows that when $s$
-linearly independent probability vectors are used as the initial block, the
-convergence of the block power method to the stationary distribution depends on
-the magnitude of the $(s+1)$th dominant eigenvalue $\lambda_{s+1}$ of $P$
-instead of that of $\lambda_2$ in the power method. Therefore, the block power
-method with block size $s$ is particularly effective for transition matrices
-where $|\lambda_{s+1}|$ is well separated from $\lambda_1 = 1$ but
-$|\lambda_2|$ is not. This approach is particularly useful when visiting the
-elements of a large transition matrix is the main computational bottleneck over
-matrix--vector multiplications, where the block power method can effectively
-reduce the total number of times to pass over the matrix. To further reduce the
-overall computational cost, we combine the block power method with a sliding
-window scheme, taking advantage of the subsequent vectors of the latest $s$
-iterations to assemble the block matrix. The sliding window scheme correlates
-vectors in the sliding window to quickly remove the influences from the
-eigenvalues whose magnitudes are smaller than $|\lambda_{s}|$ to reduce the
-overall number of matrix--vector multiplications to reach convergence. Finally,
-we compare the effectiveness of these methods in a Markov chain model
-representing a stochastic luminal calcium release site.
-
+  In this paper, we revisit the generalized block power methods forapproximating the eigenvector associated with $\lambda_1 = 1$ of a Markov chaintransition matrix. Our analysis of the block power method shows that when $s$linearly independent probability vectors are used as the initial block, theconvergence of the block power method to the stationary distribution depends onthe magnitude of the $(s+1)$th dominant eigenvalue $\lambda_{s+1}$ of $P$instead of that of $\lambda_2$ in the power method. Therefore, the block powermethod with block size $s$ is particularly effective for transition matriceswhere $|\lambda_{s+1}|$ is well separated from $\lambda_1 = 1$ but$|\lambda_2|$ is not. This approach is particularly useful when visiting theelements of a large transition matrix is the main computational bottleneck overmatrix--vector multiplications, where the block power method can effectivelyreduce the total number of times to pass over the matrix. To further reduce theoverall computational cost, we combine the block power method with a slidingwindow scheme, taking advantage of the subsequent vectors of the latest $s$iterations to assemble the block matrix. The sliding window scheme correlatesvectors in the sliding window to quickly remove the influences from theeigenvalues whose magnitudes are smaller than $|\lambda_{s}|$ to reduce theoverall number of matrix--vector multiplications to reach convergence. Finally,we compare the effectiveness of these methods in a Markov chain modelrepresenting a stochastic luminal calcium release site.
 

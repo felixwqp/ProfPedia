@@ -1,407 +1,92 @@
 Bethe Bounds and Approximating the Global Optimum
 
-  Inference in general Markov random fields (MRFs) is NP-hard, though
-identifying the maximum a posteriori (MAP) configuration of pairwise MRFs with
-submodular cost functions is efficiently solvable using graph cuts. Marginal
-inference, however, even for this restricted class, is in #P. We prove new
-formulations of derivatives of the Bethe free energy, provide bounds on the
-derivatives and bracket the locations of stationary points, introducing a new
-technique called Bethe bound propagation. Several results apply to pairwise
-models whether associative or not. Applying these to discretized
-pseudo-marginals in the associative case we present a polynomial time
-approximation scheme for global optimization provided the maximum degree is
-$O(\log n)$, and discuss several extensions.
+  Inference in general Markov random fields (MRFs) is NP-hard, thoughidentifying the maximum a posteriori (MAP) configuration of pairwise MRFs withsubmodular cost functions is efficiently solvable using graph cuts. Marginalinference, however, even for this restricted class, is in #P. We prove newformulations of derivatives of the Bethe free energy, provide bounds on thederivatives and bracket the locations of stationary points, introducing a newtechnique called Bethe bound propagation. Several results apply to pairwisemodels whether associative or not. Applying these to discretizedpseudo-marginals in the associative case we present a polynomial timeapproximation scheme for global optimization provided the maximum degree is$O(\log n)$, and discuss several extensions.
 
+A refinement of Bennett's inequality with applications to portfolio  optimization
 
-A refinement of Bennett's inequality with applications to portfolio
-  optimization
-
-  A refinement of Bennett's inequality is introduced which is strictly tighter
-than the classical bound. The new bound establishes the convergence of the
-average of independent random variables to its expected value. It also
-carefully exploits information about the potentially heterogeneous mean,
-variance, and ceiling of each random variable. The bound is strictly sharper in
-the homogeneous setting and very often significantly sharper in the
-heterogeneous setting. The improved convergence rates are obtained by
-leveraging Lambert's W function. We apply the new bound in a portfolio
-optimization setting to allocate a budget across investments with heterogeneous
-returns.
-
+  A refinement of Bennett's inequality is introduced which is strictly tighterthan the classical bound. The new bound establishes the convergence of theaverage of independent random variables to its expected value. It alsocarefully exploits information about the potentially heterogeneous mean,variance, and ceiling of each random variable. The bound is strictly sharper inthe homogeneous setting and very often significantly sharper in theheterogeneous setting. The improved convergence rates are obtained byleveraging Lambert's W function. We apply the new bound in a portfoliooptimization setting to allocate a budget across investments with heterogeneousreturns.
 
 Approximating the Permanent with Belief Propagation
 
-  This work describes a method of approximating matrix permanents efficiently
-using belief propagation. We formulate a probability distribution whose
-partition function is exactly the permanent, then use Bethe free energy to
-approximate this partition function. After deriving some speedups to standard
-belief propagation, the resulting algorithm requires $(n^2)$ time per
-iteration. Finally, we demonstrate the advantages of using this approximation.
+  This work describes a method of approximating matrix permanents efficientlyusing belief propagation. We formulate a probability distribution whosepartition function is exactly the permanent, then use Bethe free energy toapproximate this partition function. After deriving some speedups to standardbelief propagation, the resulting algorithm requires $(n^2)$ time periteration. Finally, we demonstrate the advantages of using this approximation.
 
+Proceedings of the 2017 ICML Workshop on Human Interpretability in  Machine Learning (WHI 2017)
 
-Proceedings of the 2017 ICML Workshop on Human Interpretability in
-  Machine Learning (WHI 2017)
-
-  This is the Proceedings of the 2017 ICML Workshop on Human Interpretability
-in Machine Learning (WHI 2017), which was held in Sydney, Australia, August 10,
-2017. Invited speakers were Tony Jebara, Pang Wei Koh, and David Sontag.
-
+  This is the Proceedings of the 2017 ICML Workshop on Human Interpretabilityin Machine Learning (WHI 2017), which was held in Sydney, Australia, August 10,2017. Invited speakers were Tony Jebara, Pang Wei Koh, and David Sontag.
 
 MAP Estimation, Message Passing, and Perfect Graphs
 
-  Efficiently finding the maximum a posteriori (MAP) configuration of a
-graphical model is an important problem which is often implemented using
-message passing algorithms. The optimality of such algorithms is only well
-established for singly-connected graphs and other limited settings. This
-article extends the set of graphs where MAP estimation is in P and where
-message passing recovers the exact solution to so-called perfect graphs. This
-result leverages recent progress in defining perfect graphs (the strong perfect
-graph theorem), linear programming relaxations of MAP estimation and recent
-convergent message passing schemes. The article converts graphical models into
-nand Markov random fields which are straightforward to relax into linear
-programs. Therein, integrality can be established in general by testing for
-graph perfection. This perfection test is performed efficiently using a
-polynomial time algorithm. Alternatively, known decomposition tools from
-perfect graph theory may be used to prove perfection for certain families of
-graphs. Thus, a general graph framework is provided for determining when MAP
-estimation in any graphical model is in P, has an integral linear programming
-relaxation and is exactly recoverable by message passing.
-
-
-Feature Selection and Dualities in Maximum Entropy Discrimination
-
-  Incorporating feature selection into a classification or regression method
-often carries a number of advantages. In this paper we formalize feature
-selection specifically from a discriminative perspective of improving
-classification/regression accuracy. The feature selection method is developed
-as an extension to the recently proposed maximum entropy discrimination (MED)
-framework. We describe MED as a flexible (Bayesian) regularization approach
-that subsumes, e.g., support vector classification, regression and exponential
-family models. For brevity, we restrict ourselves primarily to feature
-selection in the context of linear classification/regression methods and
-demonstrate that the proposed approach indeed carries substantial improvements
-in practice. Moreover, we discuss and develop various extensions of feature
-selection, including the problem of dealing with example specific but
-unobserved degrees of freedom -- alignments or invariants.
-
+  Efficiently finding the maximum a posteriori (MAP) configuration of agraphical model is an important problem which is often implemented usingmessage passing algorithms. The optimality of such algorithms is only wellestablished for singly-connected graphs and other limited settings. Thisarticle extends the set of graphs where MAP estimation is in P and wheremessage passing recovers the exact solution to so-called perfect graphs. Thisresult leverages recent progress in defining perfect graphs (the strong perfectgraph theorem), linear programming relaxations of MAP estimation and recentconvergent message passing schemes. The article converts graphical models intonand Markov random fields which are straightforward to relax into linearprograms. Therein, integrality can be established in general by testing forgraph perfection. This perfection test is performed efficiently using apolynomial time algorithm. Alternatively, known decomposition tools fromperfect graph theory may be used to prove perfection for certain families ofgraphs. Thus, a general graph framework is provided for determining when MAPestimation in any graphical model is in P, has an integral linear programmingrelaxation and is exactly recoverable by message passing.
 
 Bayesian Out-Trees
 
-  A Bayesian treatment of latent directed graph structure for non-iid data is
-provided where each child datum is sampled with a directed conditional
-dependence on a single unknown parent datum. The latent graph structure is
-assumed to lie in the family of directed out-tree graphs which leads to
-efficient Bayesian inference. The latent likelihood of the data and its
-gradients are computable in closed form via Tutte's directed matrix tree
-theorem using determinants and inverses of the out-Laplacian. This novel
-likelihood subsumes iid likelihood, is exchangeable and yields efficient
-unsupervised and semi-supervised learning algorithms. In addition to handling
-taxonomy and phylogenetic datasets the out-tree assumption performs
-surprisingly well as a semi-parametric density estimator on standard iid
-datasets. Experiments with unsupervised and semisupervised learning are shown
-on various UCI and taxonomy datasets.
+  A Bayesian treatment of latent directed graph structure for non-iid data isprovided where each child datum is sampled with a directed conditionaldependence on a single unknown parent datum. The latent graph structure isassumed to lie in the family of directed out-tree graphs which leads toefficient Bayesian inference. The latent likelihood of the data and itsgradients are computable in closed form via Tutte's directed matrix treetheorem using determinants and inverses of the out-Laplacian. This novellikelihood subsumes iid likelihood, is exchangeable and yields efficientunsupervised and semi-supervised learning algorithms. In addition to handlingtaxonomy and phylogenetic datasets the out-tree assumption performssurprisingly well as a semi-parametric density estimator on standard iiddatasets. Experiments with unsupervised and semisupervised learning are shownon various UCI and taxonomy datasets.
 
+Feature Selection and Dualities in Maximum Entropy Discrimination
+
+  Incorporating feature selection into a classification or regression methodoften carries a number of advantages. In this paper we formalize featureselection specifically from a discriminative perspective of improvingclassification/regression accuracy. The feature selection method is developedas an extension to the recently proposed maximum entropy discrimination (MED)framework. We describe MED as a flexible (Bayesian) regularization approachthat subsumes, e.g., support vector classification, regression and exponentialfamily models. For brevity, we restrict ourselves primarily to featureselection in the context of linear classification/regression methods anddemonstrate that the proposed approach indeed carries substantial improvementsin practice. Moreover, we discuss and develop various extensions of featureselection, including the problem of dealing with example specific butunobserved degrees of freedom -- alignments or invariants.
 
 Thompson Sampling for Noncompliant Bandits
 
-  Thompson sampling, a Bayesian method for balancing exploration and
-exploitation in bandit problems, has theoretical guarantees and exhibits strong
-empirical performance in many domains. Traditional Thompson sampling, however,
-assumes perfect compliance, where an agent's chosen action is treated as the
-implemented action. This article introduces a stochastic noncompliance model
-that relaxes this assumption. We prove that any noncompliance in a 2-armed
-Bernoulli bandit increases existing regret bounds. With our noncompliance
-model, we derive Thompson sampling variants that explicitly handle both
-observed and latent noncompliance. With extensive empirical analysis, we
-demonstrate that our algorithms either match or outperform traditional Thompson
-sampling in both compliant and noncompliant environments.
-
-
-$\propto$SVM for learning with label proportions
-
-  We study the problem of learning with label proportions in which the training
-data is provided in groups and only the proportion of each class in each group
-is known. We propose a new method called proportion-SVM, or $\propto$SVM, which
-explicitly models the latent unknown instance labels together with the known
-group label proportions in a large-margin framework. Unlike the existing works,
-our approach avoids making restrictive assumptions about the data. The
-$\propto$SVM model leads to a non-convex integer programming problem. In order
-to solve it efficiently, we propose two algorithms: one based on simple
-alternating optimization and the other based on a convex relaxation. Extensive
-experiments on standard datasets show that $\propto$SVM outperforms the
-state-of-the-art, especially for larger group sizes.
-
+  Thompson sampling, a Bayesian method for balancing exploration andexploitation in bandit problems, has theoretical guarantees and exhibits strongempirical performance in many domains. Traditional Thompson sampling, however,assumes perfect compliance, where an agent's chosen action is treated as theimplemented action. This article introduces a stochastic noncompliance modelthat relaxes this assumption. We prove that any noncompliance in a 2-armedBernoulli bandit increases existing regret bounds. With our noncompliancemodel, we derive Thompson sampling variants that explicitly handle bothobserved and latent noncompliance. With extensive empirical analysis, wedemonstrate that our algorithms either match or outperform traditional Thompsonsampling in both compliant and noncompliant environments.
 
 Dynamical Systems Trees
 
-  We propose dynamical systems trees (DSTs) as a flexible class of models for
-describing multiple processes that interact via a hierarchy of aggregating
-parent chains. DSTs extend Kalman filters, hidden Markov models and nonlinear
-dynamical systems to an interactive group scenario. Various individual
-processes interact as communities and sub-communities in a tree structure that
-is unrolled in time. To accommodate nonlinear temporal activity, each
-individual leaf process is modeled as a dynamical system containing discrete
-and/or continuous hidden states with discrete and/or Gaussian emissions.
-Subsequent higher level parent processes act like hidden Markov models and
-mediate the interaction between leaf processes or between other parent
-processes in the hierarchy. Aggregator chains are parents of child processes
-that they combine and mediate, yielding a compact overall parameterization. We
-provide tractable inference and learning algorithms for arbitrary DST
-topologies via an efficient structured mean-field algorithm. The diverse
-applicability of DSTs is demonstrated by experiments on gene expression data
-and by modeling group behavior in the setting of an American football game.
+  We propose dynamical systems trees (DSTs) as a flexible class of models fordescribing multiple processes that interact via a hierarchy of aggregatingparent chains. DSTs extend Kalman filters, hidden Markov models and nonlineardynamical systems to an interactive group scenario. Various individualprocesses interact as communities and sub-communities in a tree structure thatis unrolled in time. To accommodate nonlinear temporal activity, eachindividual leaf process is modeled as a dynamical system containing discreteand/or continuous hidden states with discrete and/or Gaussian emissions.Subsequent higher level parent processes act like hidden Markov models andmediate the interaction between leaf processes or between other parentprocesses in the hierarchy. Aggregator chains are parents of child processesthat they combine and mediate, yielding a compact overall parameterization. Weprovide tractable inference and learning algorithms for arbitrary DSTtopologies via an efficient structured mean-field algorithm. The diverseapplicability of DSTs is demonstrated by experiments on gene expression dataand by modeling group behavior in the setting of an American football game.
 
+$\propto$SVM for learning with label proportions
 
-Approximating the Bethe partition function
-
-  When belief propagation (BP) converges, it does so to a stationary point of
-the Bethe free energy $F$, and is often strikingly accurate. However, it may
-converge only to a local optimum or may not converge at all. An algorithm was
-recently introduced for attractive binary pairwise MRFs which is guaranteed to
-return an $\epsilon$-approximation to the global minimum of $F$ in polynomial
-time provided the maximum degree $\Delta=O(\log n)$, where $n$ is the number of
-variables. Here we significantly improve this algorithm and derive several
-results including a new approach based on analyzing first derivatives of $F$,
-which leads to performance that is typically far superior and yields a fully
-polynomial-time approximation scheme (FPTAS) for attractive models without any
-degree restriction. Further, the method applies to general (non-attractive)
-models, though with no polynomial time guarantee in this case, leading to the
-important result that approximating $\log$ of the Bethe partition function,
-$\log Z_B=-\min F$, for a general model to additive $\epsilon$-accuracy may be
-reduced to a discrete MAP inference problem. We explore an application to
-predicting equipment failure on an urban power network and demonstrate that the
-Bethe approximation can perform well even when BP fails to converge.
-
-
-Bethe Learning of Conditional Random Fields via MAP Decoding
-
-  Many machine learning tasks can be formulated in terms of predicting
-structured outputs. In frameworks such as the structured support vector machine
-(SVM-Struct) and the structured perceptron, discriminative functions are
-learned by iteratively applying efficient maximum a posteriori (MAP) decoding.
-However, maximum likelihood estimation (MLE) of probabilistic models over these
-same structured spaces requires computing partition functions, which is
-generally intractable. This paper presents a method for learning discrete
-exponential family models using the Bethe approximation to the MLE. Remarkably,
-this problem also reduces to iterative (MAP) decoding. This connection emerges
-by combining the Bethe approximation with a Frank-Wolfe (FW) algorithm on a
-convex dual objective which circumvents the intractable partition function. The
-result is a new single loop algorithm MLE-Struct, which is substantially more
-efficient than previous double-loop methods for approximate maximum likelihood
-estimation. Our algorithm outperforms existing methods in experiments involving
-image segmentation, matching problems from vision, and a new dataset of
-university roommate assignments.
-
+  We study the problem of learning with label proportions in which the trainingdata is provided in groups and only the proportion of each class in each groupis known. We propose a new method called proportion-SVM, or $\propto$SVM, whichexplicitly models the latent unknown instance labels together with the knowngroup label proportions in a large-margin framework. Unlike the existing works,our approach avoids making restrictive assumptions about the data. The$\propto$SVM model leads to a non-convex integer programming problem. In orderto solve it efficiently, we propose two algorithms: one based on simplealternating optimization and the other based on a convex relaxation. Extensiveexperiments on standard datasets show that $\propto$SVM outperforms thestate-of-the-art, especially for larger group sizes.
 
 Semistochastic Quadratic Bound Methods
 
-  Partition functions arise in a variety of settings, including conditional
-random fields, logistic regression, and latent gaussian models. In this paper,
-we consider semistochastic quadratic bound (SQB) methods for maximum likelihood
-inference based on partition function optimization. Batch methods based on the
-quadratic bound were recently proposed for this class of problems, and
-performed favorably in comparison to state-of-the-art techniques.
-Semistochastic methods fall in between batch algorithms, which use all the
-data, and stochastic gradient type methods, which use small random selections
-at each iteration. We build semistochastic quadratic bound-based methods, and
-prove both global convergence (to a stationary point) under very weak
-assumptions, and linear convergence rate under stronger assumptions on the
-objective. To make the proposed methods faster and more stable, we consider
-inexact subproblem minimization and batch-size selection schemes. The efficacy
-of SQB methods is demonstrated via comparison with several state-of-the-art
-techniques on commonly used datasets.
-
+  Partition functions arise in a variety of settings, including conditionalrandom fields, logistic regression, and latent gaussian models. In this paper,we consider semistochastic quadratic bound (SQB) methods for maximum likelihoodinference based on partition function optimization. Batch methods based on thequadratic bound were recently proposed for this class of problems, andperformed favorably in comparison to state-of-the-art techniques.Semistochastic methods fall in between batch algorithms, which use all thedata, and stochastic gradient type methods, which use small random selectionsat each iteration. We build semistochastic quadratic bound-based methods, andprove both global convergence (to a stationary point) under very weakassumptions, and linear convergence rate under stronger assumptions on theobjective. To make the proposed methods faster and more stable, we considerinexact subproblem minimization and batch-size selection schemes. The efficacyof SQB methods is demonstrated via comparison with several state-of-the-arttechniques on commonly used datasets.
 
 Stochastic Bound Majorization
 
-  Recently a majorization method for optimizing partition functions of
-log-linear models was proposed alongside a novel quadratic variational
-upper-bound. In the batch setting, it outperformed state-of-the-art first- and
-second-order optimization methods on various learning tasks. We propose a
-stochastic version of this bound majorization method as well as a low-rank
-modification for high-dimensional data-sets. The resulting stochastic
-second-order method outperforms stochastic gradient descent (across variations
-and various tunings) both in terms of the number of iterations and computation
-time till convergence while finding a better quality parameter setting. The
-proposed method bridges first- and second-order stochastic optimization methods
-by maintaining a computational complexity that is linear in the data dimension
-and while exploiting second order information about the pseudo-global curvature
-of the objective function (as opposed to the local curvature in the Hessian).
-
+  Recently a majorization method for optimizing partition functions oflog-linear models was proposed alongside a novel quadratic variationalupper-bound. In the batch setting, it outperformed state-of-the-art first- andsecond-order optimization methods on various learning tasks. We propose astochastic version of this bound majorization method as well as a low-rankmodification for high-dimensional data-sets. The resulting stochasticsecond-order method outperforms stochastic gradient descent (across variationsand various tunings) both in terms of the number of iterations and computationtime till convergence while finding a better quality parameter setting. Theproposed method bridges first- and second-order stochastic optimization methodsby maintaining a computational complexity that is linear in the data dimensionand while exploiting second order information about the pseudo-global curvatureof the objective function (as opposed to the local curvature in the Hessian).
 
 On MAP Inference by MWSS on Perfect Graphs
 
-  Finding the most likely (MAP) configuration of a Markov random field (MRF) is
-NP-hard in general. A promising, recent technique is to reduce the problem to
-finding a maximum weight stable set (MWSS) on a derived weighted graph, which
-if perfect, allows inference in polynomial time. We derive new results for this
-approach, including a general decomposition theorem for MRFs of any order and
-number of labels, extensions of results for binary pairwise models with
-submodular cost functions to higher order, and an exact characterization of
-which binary pairwise MRFs can be efficiently solved with this method. This
-defines the power of the approach on this class of models, improves our toolbox
-and expands the range of tractable models.
+  Finding the most likely (MAP) configuration of a Markov random field (MRF) isNP-hard in general. A promising, recent technique is to reduce the problem tofinding a maximum weight stable set (MWSS) on a derived weighted graph, whichif perfect, allows inference in polynomial time. We derive new results for thisapproach, including a general decomposition theorem for MRFs of any order andnumber of labels, extensions of results for binary pairwise models withsubmodular cost functions to higher order, and an exact characterization ofwhich binary pairwise MRFs can be efficiently solved with this method. Thisdefines the power of the approach on this class of models, improves our toolboxand expands the range of tractable models.
 
+Approximating the Bethe partition function
+
+  When belief propagation (BP) converges, it does so to a stationary point ofthe Bethe free energy $F$, and is often strikingly accurate. However, it mayconverge only to a local optimum or may not converge at all. An algorithm wasrecently introduced for attractive binary pairwise MRFs which is guaranteed toreturn an $\epsilon$-approximation to the global minimum of $F$ in polynomialtime provided the maximum degree $\Delta=O(\log n)$, where $n$ is the number ofvariables. Here we significantly improve this algorithm and derive severalresults including a new approach based on analyzing first derivatives of $F$,which leads to performance that is typically far superior and yields a fullypolynomial-time approximation scheme (FPTAS) for attractive models without anydegree restriction. Further, the method applies to general (non-attractive)models, though with no polynomial time guarantee in this case, leading to theimportant result that approximating $\log$ of the Bethe partition function,$\log Z_B=-\min F$, for a general model to additive $\epsilon$-accuracy may bereduced to a discrete MAP inference problem. We explore an application topredicting equipment failure on an urban power network and demonstrate that theBethe approximation can perform well even when BP fails to converge.
+
+Bethe Learning of Conditional Random Fields via MAP Decoding
+
+  Many machine learning tasks can be formulated in terms of predictingstructured outputs. In frameworks such as the structured support vector machine(SVM-Struct) and the structured perceptron, discriminative functions arelearned by iteratively applying efficient maximum a posteriori (MAP) decoding.However, maximum likelihood estimation (MLE) of probabilistic models over thesesame structured spaces requires computing partition functions, which isgenerally intractable. This paper presents a method for learning discreteexponential family models using the Bethe approximation to the MLE. Remarkably,this problem also reduces to iterative (MAP) decoding. This connection emergesby combining the Bethe approximation with a Frank-Wolfe (FW) algorithm on aconvex dual objective which circumvents the intractable partition function. Theresult is a new single loop algorithm MLE-Struct, which is substantially moreefficient than previous double-loop methods for approximate maximum likelihoodestimation. Our algorithm outperforms existing methods in experiments involvingimage segmentation, matching problems from vision, and a new dataset ofuniversity roommate assignments.
 
 Frank-Wolfe Algorithms for Saddle Point Problems
 
-  We extend the Frank-Wolfe (FW) optimization algorithm to solve constrained
-smooth convex-concave saddle point (SP) problems. Remarkably, the method only
-requires access to linear minimization oracles. Leveraging recent advances in
-FW optimization, we provide the first proof of convergence of a FW-type saddle
-point solver over polytopes, thereby partially answering a 30 year-old
-conjecture. We also survey other convergence results and highlight gaps in the
-theoretical underpinnings of FW-style algorithms. Motivating applications
-without known efficient alternatives are explored through structured prediction
-with combinatorial penalties as well as games over matching polytopes involving
-an exponential number of constraints.
-
+  We extend the Frank-Wolfe (FW) optimization algorithm to solve constrainedsmooth convex-concave saddle point (SP) problems. Remarkably, the method onlyrequires access to linear minimization oracles. Leveraging recent advances inFW optimization, we provide the first proof of convergence of a FW-type saddlepoint solver over polytopes, thereby partially answering a 30 year-oldconjecture. We also survey other convergence results and highlight gaps in thetheoretical underpinnings of FW-style algorithms. Motivating applicationswithout known efficient alternatives are explored through structured predictionwith combinatorial penalties as well as games over matching polytopes involvingan exponential number of constraints.
 
 Initialization and Coordinate Optimization for Multi-way Matching
 
-  We consider the problem of consistently matching multiple sets of elements to
-each other, which is a common task in fields such as computer vision. To solve
-the underlying NP-hard objective, existing methods often relax or approximate
-it, but end up with unsatisfying empirical performance due to a misaligned
-objective. We propose a coordinate update algorithm that directly optimizes the
-target objective. By using pairwise alignment information to build an
-undirected graph and initializing the permutation matrices along the edges of
-its Maximum Spanning Tree, our algorithm successfully avoids bad local optima.
-Theoretically, with high probability our algorithm guarantees an optimal
-solution under reasonable noise assumptions. Empirically, our algorithm
-consistently and significantly outperforms existing methods on several
-benchmark tasks on real datasets.
-
+  We consider the problem of consistently matching multiple sets of elements toeach other, which is a common task in fields such as computer vision. To solvethe underlying NP-hard objective, existing methods often relax or approximateit, but end up with unsatisfying empirical performance due to a misalignedobjective. We propose a coordinate update algorithm that directly optimizes thetarget objective. By using pairwise alignment information to build anundirected graph and initializing the permutation matrices along the edges ofits Maximum Spanning Tree, our algorithm successfully avoids bad local optima.Theoretically, with high probability our algorithm guarantees an optimalsolution under reasonable noise assumptions. Empirically, our algorithmconsistently and significantly outperforms existing methods on severalbenchmark tasks on real datasets.
 
 Variational Autoencoders for Collaborative Filtering
 
-  We extend variational autoencoders (VAEs) to collaborative filtering for
-implicit feedback. This non-linear probabilistic model enables us to go beyond
-the limited modeling capacity of linear factor models which still largely
-dominate collaborative filtering research.We introduce a generative model with
-multinomial likelihood and use Bayesian inference for parameter estimation.
-Despite widespread use in language modeling and economics, the multinomial
-likelihood receives less attention in the recommender systems literature. We
-introduce a different regularization parameter for the learning objective,
-which proves to be crucial for achieving competitive performance. Remarkably,
-there is an efficient way to tune the parameter using annealing. The resulting
-model and learning algorithm has information-theoretic connections to maximum
-entropy discrimination and the information bottleneck principle. Empirically,
-we show that the proposed approach significantly outperforms several
-state-of-the-art baselines, including two recently-proposed neural network
-approaches, on several real-world datasets. We also provide extended
-experiments comparing the multinomial likelihood with other commonly used
-likelihood functions in the latent factor collaborative filtering literature
-and show favorable results. Finally, we identify the pros and cons of employing
-a principled Bayesian inference approach and characterize settings where it
-provides the most significant improvements.
-
+  We extend variational autoencoders (VAEs) to collaborative filtering forimplicit feedback. This non-linear probabilistic model enables us to go beyondthe limited modeling capacity of linear factor models which still largelydominate collaborative filtering research.We introduce a generative model withmultinomial likelihood and use Bayesian inference for parameter estimation.Despite widespread use in language modeling and economics, the multinomiallikelihood receives less attention in the recommender systems literature. Weintroduce a different regularization parameter for the learning objective,which proves to be crucial for achieving competitive performance. Remarkably,there is an efficient way to tune the parameter using annealing. The resultingmodel and learning algorithm has information-theoretic connections to maximumentropy discrimination and the information bottleneck principle. Empirically,we show that the proposed approach significantly outperforms severalstate-of-the-art baselines, including two recently-proposed neural networkapproaches, on several real-world datasets. We also provide extendedexperiments comparing the multinomial likelihood with other commonly usedlikelihood functions in the latent factor collaborative filtering literatureand show favorable results. Finally, we identify the pros and cons of employinga principled Bayesian inference approach and characterize settings where itprovides the most significant improvements.
 
 Subgoal Discovery for Hierarchical Dialogue Policy Learning
 
-  Developing agents to engage in complex goal-oriented dialogues is challenging
-partly because the main learning signals are very sparse in long conversations.
-In this paper, we propose a divide-and-conquer approach that discovers and
-exploits the hidden structure of the task to enable efficient policy learning.
-First, given successful example dialogues, we propose the Subgoal Discovery
-Network (SDN) to divide a complex goal-oriented task into a set of simpler
-subgoals in an unsupervised fashion. We then use these subgoals to learn a
-multi-level policy by hierarchical reinforcement learning. We demonstrate our
-method by building a dialogue agent for the composite task of travel planning.
-Experiments with simulated and real users show that our approach performs
-competitively against a state-of-the-art method that requires human-defined
-subgoals. Moreover, we show that the learned subgoals are often human
-comprehensible.
+  Developing agents to engage in complex goal-oriented dialogues is challengingpartly because the main learning signals are very sparse in long conversations.In this paper, we propose a divide-and-conquer approach that discovers andexploits the hidden structure of the task to enable efficient policy learning.First, given successful example dialogues, we propose the Subgoal DiscoveryNetwork (SDN) to divide a complex goal-oriented task into a set of simplersubgoals in an unsupervised fashion. We then use these subgoals to learn amulti-level policy by hierarchical reinforcement learning. We demonstrate ourmethod by building a dialogue agent for the composite task of travel planning.Experiments with simulated and real users show that our approach performscompetitively against a state-of-the-art method that requires human-definedsubgoals. Moreover, we show that the learned subgoals are often humancomprehensible.
 
+Item Recommendation with Variational Autoencoders and Heterogenous  Priors
 
-Item Recommendation with Variational Autoencoders and Heterogenous
-  Priors
-
-  In recent years, Variational Autoencoders (VAEs) have been shown to be highly
-effective in both standard collaborative filtering applications and extensions
-such as incorporation of implicit feedback. We extend VAEs to collaborative
-filtering with side information, for instance when ratings are combined with
-explicit text feedback from the user. Instead of using a user-agnostic standard
-Gaussian prior, we incorporate user-dependent priors in the latent VAE space to
-encode users' preferences as functions of the review text. Taking into account
-both the rating and the text information to represent users in this multimodal
-latent space is promising to improve recommendation quality. Our proposed model
-is shown to outperform the existing VAE models for collaborative filtering (up
-to 29.41% relative improvement in ranking metric) along with other baselines
-that incorporate both user ratings and text for item recommendation.
-
-
-Coloring tournaments with forbidden substructures
-
-  Coloring graphs is an important algorithmic problem in combinatorics with
-many applications in computer science. In this paper we study coloring
-tournaments. A chromatic number of a random tournament is of order
-$\Omega(\frac{n}{\log(n)})$. The question arises whether the chromatic number
-can be proven to be smaller for more structured nontrivial classes of
-tournaments. We analyze the class of tournaments defined by a forbidden
-subtournament $H$. This paper gives a first quasi-polynomial algorithm running
-in time $e^{O(\log(n)^{2})}$ that constructs colorings of $H$-free tournaments
-using only $O(n^{1-\epsilon(H)}\log(n))$ colors, where $\epsilon(H) \geq
-2^{-2^{50|H|^{2}+1}}$ for many forbidden tournaments $H$. To the best of our
-knowledge all previously known related results required at least
-sub-exponential time and relied on the regularity lemma. Since we do not use
-the regularity lemma, we obtain the first known lower bounds on $\epsilon(H)$
-that can be given by a closed-form expression. As a corollary, we give a
-constructive proof of the celebrated open Erd\H{o}s-Hajnal conjecture with
-explicitly given lower bounds on the EH coefficients for all classes of prime
-tournaments for which the conjecture is known. Such a constractive proof was
-not known before. Thus we significantly reduce the gap between best lower and
-upper bounds on the EH coefficients from the conjecture for all known prime
-tournaments that satisfy it. We also briefly explain how our methods may be
-used for coloring $H$-free tournaments under the following conditions: $H$ is
-any tournament with $\leq 5$ vertices or: $H$ is any but one tournament of six
-vertices.
-
-
-Binary embeddings with structured hashed projections
-
-  We consider the hashing mechanism for constructing binary embeddings, that
-involves pseudo-random projections followed by nonlinear (sign function)
-mappings. The pseudo-random projection is described by a matrix, where not all
-entries are independent random variables but instead a fixed "budget of
-randomness" is distributed across the matrix. Such matrices can be efficiently
-stored in sub-quadratic or even linear space, provide reduction in randomness
-usage (i.e. number of required random values), and very often lead to
-computational speed ups. We prove several theoretical results showing that
-projections via various structured matrices followed by nonlinear mappings
-accurately preserve the angular distance between input high-dimensional
-vectors. To the best of our knowledge, these results are the first that give
-theoretical ground for the use of general structured matrices in the nonlinear
-setting. In particular, they generalize previous extensions of the
-Johnson-Lindenstrauss lemma and prove the plausibility of the approach that was
-so far only heuristically confirmed for some special structured matrices.
-Consequently, we show that many structured matrices can be used as an efficient
-information compression mechanism. Our findings build a better understanding of
-certain deep architectures, which contain randomly weighted and untrained
-layers, and yet achieve high performance on different learning tasks. We
-empirically verify our theoretical findings and show the dependence of learning
-via structured hashed projections on the performance of neural network as well
-as nearest neighbor classifier.
-
+  In recent years, Variational Autoencoders (VAEs) have been shown to be highlyeffective in both standard collaborative filtering applications and extensionssuch as incorporation of implicit feedback. We extend VAEs to collaborativefiltering with side information, for instance when ratings are combined withexplicit text feedback from the user. Instead of using a user-agnostic standardGaussian prior, we incorporate user-dependent priors in the latent VAE space toencode users' preferences as functions of the review text. Taking into accountboth the rating and the text information to represent users in this multimodallatent space is promising to improve recommendation quality. Our proposed modelis shown to outperform the existing VAE models for collaborative filtering (upto 29.41% relative improvement in ranking metric) along with other baselinesthat incorporate both user ratings and text for item recommendation.
 
 On Learning from Label Proportions
 
-  Learning from Label Proportions (LLP) is a learning setting, where the
-training data is provided in groups, or "bags", and only the proportion of each
-class in each bag is known. The task is to learn a model to predict the class
-labels of the individual instances. LLP has broad applications in political
-science, marketing, healthcare, and computer vision. This work answers the
-fundamental question, when and why LLP is possible, by introducing a general
-framework, Empirical Proportion Risk Minimization (EPRM). EPRM learns an
-instance label classifier to match the given label proportions on the training
-data. Our result is based on a two-step analysis. First, we provide a VC bound
-on the generalization error of the bag proportions. We show that the bag sample
-complexity is only mildly sensitive to the bag size. Second, we show that under
-some mild assumptions, good bag proportion prediction guarantees good instance
-label prediction. The results together provide a formal guarantee that the
-individual labels can indeed be learned in the LLP setting. We discuss
-applications of the analysis, including justification of LLP algorithms,
-learning with population proportions, and a paradigm for learning algorithms
-with privacy guarantees. We also demonstrate the feasibility of LLP based on a
-case study in real-world setting: predicting income based on census data.
+  Learning from Label Proportions (LLP) is a learning setting, where thetraining data is provided in groups, or "bags", and only the proportion of eachclass in each bag is known. The task is to learn a model to predict the classlabels of the individual instances. LLP has broad applications in politicalscience, marketing, healthcare, and computer vision. This work answers thefundamental question, when and why LLP is possible, by introducing a generalframework, Empirical Proportion Risk Minimization (EPRM). EPRM learns aninstance label classifier to match the given label proportions on the trainingdata. Our result is based on a two-step analysis. First, we provide a VC boundon the generalization error of the bag proportions. We show that the bag samplecomplexity is only mildly sensitive to the bag size. Second, we show that undersome mild assumptions, good bag proportion prediction guarantees good instancelabel prediction. The results together provide a formal guarantee that theindividual labels can indeed be learned in the LLP setting. We discussapplications of the analysis, including justification of LLP algorithms,learning with population proportions, and a paradigm for learning algorithmswith privacy guarantees. We also demonstrate the feasibility of LLP based on acase study in real-world setting: predicting income based on census data.
 
+Coloring tournaments with forbidden substructures
+
+  Coloring graphs is an important algorithmic problem in combinatorics withmany applications in computer science. In this paper we study coloringtournaments. A chromatic number of a random tournament is of order$\Omega(\frac{n}{\log(n)})$. The question arises whether the chromatic numbercan be proven to be smaller for more structured nontrivial classes oftournaments. We analyze the class of tournaments defined by a forbiddensubtournament $H$. This paper gives a first quasi-polynomial algorithm runningin time $e^{O(\log(n)^{2})}$ that constructs colorings of $H$-free tournamentsusing only $O(n^{1-\epsilon(H)}\log(n))$ colors, where $\epsilon(H) \geq2^{-2^{50|H|^{2}+1}}$ for many forbidden tournaments $H$. To the best of ourknowledge all previously known related results required at leastsub-exponential time and relied on the regularity lemma. Since we do not usethe regularity lemma, we obtain the first known lower bounds on $\epsilon(H)$that can be given by a closed-form expression. As a corollary, we give aconstructive proof of the celebrated open Erd\H{o}s-Hajnal conjecture withexplicitly given lower bounds on the EH coefficients for all classes of primetournaments for which the conjecture is known. Such a constractive proof wasnot known before. Thus we significantly reduce the gap between best lower andupper bounds on the EH coefficients from the conjecture for all known primetournaments that satisfy it. We also briefly explain how our methods may beused for coloring $H$-free tournaments under the following conditions: $H$ isany tournament with $\leq 5$ vertices or: $H$ is any but one tournament of sixvertices.
+
+Binary embeddings with structured hashed projections
+
+  We consider the hashing mechanism for constructing binary embeddings, thatinvolves pseudo-random projections followed by nonlinear (sign function)mappings. The pseudo-random projection is described by a matrix, where not allentries are independent random variables but instead a fixed "budget ofrandomness" is distributed across the matrix. Such matrices can be efficientlystored in sub-quadratic or even linear space, provide reduction in randomnessusage (i.e. number of required random values), and very often lead tocomputational speed ups. We prove several theoretical results showing thatprojections via various structured matrices followed by nonlinear mappingsaccurately preserve the angular distance between input high-dimensionalvectors. To the best of our knowledge, these results are the first that givetheoretical ground for the use of general structured matrices in the nonlinearsetting. In particular, they generalize previous extensions of theJohnson-Lindenstrauss lemma and prove the plausibility of the approach that wasso far only heuristically confirmed for some special structured matrices.Consequently, we show that many structured matrices can be used as an efficientinformation compression mechanism. Our findings build a better understanding ofcertain deep architectures, which contain randomly weighted and untrainedlayers, and yet achieve high performance on different learning tasks. Weempirically verify our theoretical findings and show the dependence of learningvia structured hashed projections on the performance of neural network as wellas nearest neighbor classifier.
 

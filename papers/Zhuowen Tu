@@ -1,449 +1,92 @@
 Layered Logic Classifiers: Exploring the `And' and `Or' Relations
 
-  Designing effective and efficient classifier for pattern analysis is a key
-problem in machine learning and computer vision. Many the solutions to the
-problem require to perform logic operations such as `and', `or', and `not'.
-Classification and regression tree (CART) include these operations explicitly.
-Other methods such as neural networks, SVM, and boosting learn/compute a
-weighted sum on features (weak classifiers), which weakly perform the 'and' and
-'or' operations. However, it is hard for these classifiers to deal with the
-'xor' pattern directly. In this paper, we propose layered logic classifiers for
-patterns of complicated distributions by combining the `and', `or', and `not'
-operations. The proposed algorithm is very general and easy to implement. We
-test the classifiers on several typical datasets from the Irvine repository and
-two challenging vision applications, object segmentation and pedestrian
-detection. We observe significant improvements on all the datasets over the
-widely used decision stump based AdaBoost algorithm. The resulting classifiers
-have much less training complexity than decision tree based AdaBoost, and can
-be applied in a wide range of domains.
-
+  Designing effective and efficient classifier for pattern analysis is a keyproblem in machine learning and computer vision. Many the solutions to theproblem require to perform logic operations such as `and', `or', and `not'.Classification and regression tree (CART) include these operations explicitly.Other methods such as neural networks, SVM, and boosting learn/compute aweighted sum on features (weak classifiers), which weakly perform the 'and' and'or' operations. However, it is hard for these classifiers to deal with the'xor' pattern directly. In this paper, we propose layered logic classifiers forpatterns of complicated distributions by combining the `and', `or', and `not'operations. The proposed algorithm is very general and easy to implement. Wetest the classifiers on several typical datasets from the Irvine repository andtwo challenging vision applications, object segmentation and pedestriandetection. We observe significant improvements on all the datasets over thewidely used decision stump based AdaBoost algorithm. The resulting classifiershave much less training complexity than decision tree based AdaBoost, and canbe applied in a wide range of domains.
 
 Deeply-Supervised Nets
 
-  Our proposed deeply-supervised nets (DSN) method simultaneously minimizes
-classification error while making the learning process of hidden layers direct
-and transparent. We make an attempt to boost the classification performance by
-studying a new formulation in deep networks. Three aspects in convolutional
-neural networks (CNN) style architectures are being looked at: (1) transparency
-of the intermediate layers to the overall classification; (2)
-discriminativeness and robustness of learned features, especially in the early
-layers; (3) effectiveness in training due to the presence of the exploding and
-vanishing gradients. We introduce "companion objective" to the individual
-hidden layers, in addition to the overall objective at the output layer (a
-different strategy to layer-wise pre-training). We extend techniques from
-stochastic gradient methods to analyze our algorithm. The advantage of our
-method is evident and our experimental result on benchmark datasets shows
-significant performance gain over existing methods (e.g. all state-of-the-art
-results on MNIST, CIFAR-10, CIFAR-100, and SVHN).
-
+  Our proposed deeply-supervised nets (DSN) method simultaneously minimizesclassification error while making the learning process of hidden layers directand transparent. We make an attempt to boost the classification performance bystudying a new formulation in deep networks. Three aspects in convolutionalneural networks (CNN) style architectures are being looked at: (1) transparencyof the intermediate layers to the overall classification; (2)discriminativeness and robustness of learned features, especially in the earlylayers; (3) effectiveness in training due to the presence of the exploding andvanishing gradients. We introduce "companion objective" to the individualhidden layers, in addition to the overall objective at the output layer (adifferent strategy to layer-wise pre-training). We extend techniques fromstochastic gradient methods to analyze our algorithm. The advantage of ourmethod is evident and our experimental result on benchmark datasets showssignificant performance gain over existing methods (e.g. all state-of-the-artresults on MNIST, CIFAR-10, CIFAR-100, and SVHN).
 
 Training Deeper Convolutional Networks with Deep Supervision
 
-  One of the most promising ways of improving the performance of deep
-convolutional neural networks is by increasing the number of convolutional
-layers. However, adding layers makes training more difficult and
-computationally expensive. In order to train deeper networks, we propose to add
-auxiliary supervision branches after certain intermediate layers during
-training. We formulate a simple rule of thumb to determine where these branches
-should be added. The resulting deeply supervised structure makes the training
-much easier and also produces better classification results on ImageNet and the
-recently released, larger MIT Places dataset
-
+  One of the most promising ways of improving the performance of deepconvolutional neural networks is by increasing the number of convolutionallayers. However, adding layers makes training more difficult andcomputationally expensive. In order to train deeper networks, we propose to addauxiliary supervision branches after certain intermediate layers duringtraining. We formulate a simple rule of thumb to determine where these branchesshould be added. The resulting deeply supervised structure makes the trainingmuch easier and also produces better classification results on ImageNet and therecently released, larger MIT Places dataset
 
 Introspective Classification with Convolutional Nets
 
-  We propose introspective convolutional networks (ICN) that emphasize the
-importance of having convolutional neural networks empowered with generative
-capabilities. We employ a reclassification-by-synthesis algorithm to perform
-training using a formulation stemmed from the Bayes theory. Our ICN tries to
-iteratively: (1) synthesize pseudo-negative samples; and (2) enhance itself by
-improving the classification. The single CNN classifier learned is at the same
-time generative --- being able to directly synthesize new samples within its
-own discriminative model. We conduct experiments on benchmark datasets
-including MNIST, CIFAR-10, and SVHN using state-of-the-art CNN architectures,
-and observe improved classification results.
-
+  We propose introspective convolutional networks (ICN) that emphasize theimportance of having convolutional neural networks empowered with generativecapabilities. We employ a reclassification-by-synthesis algorithm to performtraining using a formulation stemmed from the Bayes theory. Our ICN tries toiteratively: (1) synthesize pseudo-negative samples; and (2) enhance itself byimproving the classification. The single CNN classifier learned is at the sametime generative --- being able to directly synthesize new samples within itsown discriminative model. We conduct experiments on benchmark datasetsincluding MNIST, CIFAR-10, and SVHN using state-of-the-art CNN architectures,and observe improved classification results.
 
 Introspective Generative Modeling: Decide Discriminatively
 
-  We study unsupervised learning by developing introspective generative
-modeling (IGM) that attains a generator using progressively learned deep
-convolutional neural networks. The generator is itself a discriminator, capable
-of introspection: being able to self-evaluate the difference between its
-generated samples and the given training data. When followed by repeated
-discriminative learning, desirable properties of modern discriminative
-classifiers are directly inherited by the generator. IGM learns a cascade of
-CNN classifiers using a synthesis-by-classification algorithm. In the
-experiments, we observe encouraging results on a number of applications
-including texture modeling, artistic style transferring, face modeling, and
-semi-supervised learning.
-
+  We study unsupervised learning by developing introspective generativemodeling (IGM) that attains a generator using progressively learned deepconvolutional neural networks. The generator is itself a discriminator, capableof introspection: being able to self-evaluate the difference between itsgenerated samples and the given training data. When followed by repeateddiscriminative learning, desirable properties of modern discriminativeclassifiers are directly inherited by the generator. IGM learns a cascade ofCNN classifiers using a synthesis-by-classification algorithm. In theexperiments, we observe encouraging results on a number of applicationsincluding texture modeling, artistic style transferring, face modeling, andsemi-supervised learning.
 
 Scalable $k$-NN graph construction
 
-  The $k$-NN graph has played a central role in increasingly popular
-data-driven techniques for various learning and vision tasks; yet, finding an
-efficient and effective way to construct $k$-NN graphs remains a challenge,
-especially for large-scale high-dimensional data. In this paper, we propose a
-new approach to construct approximate $k$-NN graphs with emphasis in:
-efficiency and accuracy. We hierarchically and randomly divide the data points
-into subsets and build an exact neighborhood graph over each subset, achieving
-a base approximate neighborhood graph; we then repeat this process for several
-times to generate multiple neighborhood graphs, which are combined to yield a
-more accurate approximate neighborhood graph. Furthermore, we propose a
-neighborhood propagation scheme to further enhance the accuracy. We show both
-theoretical and empirical accuracy and efficiency of our approach to $k$-NN
-graph construction and demonstrate significant speed-up in dealing with large
-scale visual data.
-
+  The $k$-NN graph has played a central role in increasingly populardata-driven techniques for various learning and vision tasks; yet, finding anefficient and effective way to construct $k$-NN graphs remains a challenge,especially for large-scale high-dimensional data. In this paper, we propose anew approach to construct approximate $k$-NN graphs with emphasis in:efficiency and accuracy. We hierarchically and randomly divide the data pointsinto subsets and build an exact neighborhood graph over each subset, achievinga base approximate neighborhood graph; we then repeat this process for severaltimes to generate multiple neighborhood graphs, which are combined to yield amore accurate approximate neighborhood graph. Furthermore, we propose aneighborhood propagation scheme to further enhance the accuracy. We show boththeoretical and empirical accuracy and efficiency of our approach to $k$-NNgraph construction and demonstrate significant speed-up in dealing with largescale visual data.
 
 Properties of Pseudocontractive Updates in Convex Optimization
 
-  Many convex optimization methods are conceived of and analyzed in a largely
-separate fashion. In contrast to this traditional separation, this manuscript
-points out and demonstrates the utility of an important but largely unremarked
-common thread running through many prominent optimization methods. In
-particular, we show that methods such as successive orthogonal projection,
-gradient descent, projected gradient descent, the proximal-point method,
-forward-backward splitting, the alternating direction method of multipliers,
-and under- or over-relaxed variants of the preceding all involve updates that
-are of a common type --- namely, the updates satisfy a property known as
-pseudocontractivity. Moreover, since the property of pseudocontractivity is
-preserved under both composition and convex combination, updates constructed
-via these operations from pseudocontractive updates are themselves
-pseudocontractive. Having demonstrated that pseudocontractive updates are to be
-found in many optimization methods, we then provide a unified basic analysis of
-methods with pseudocontractive updates. Specifically, we prove a novel bound
-satisfied by the norm of the difference in iterates of pseudocontractive
-updates and we then use this bound to establish that the error criterion
-$\left\Vert x^{N}-Tx^{N}\right\Vert ^{2}$ is $o(1/N)$ for any method involving
-pseudocontractive updates (where $N$ is the number of iterations and $T$ is the
-iteration operator).
-
+  Many convex optimization methods are conceived of and analyzed in a largelyseparate fashion. In contrast to this traditional separation, this manuscriptpoints out and demonstrates the utility of an important but largely unremarkedcommon thread running through many prominent optimization methods. Inparticular, we show that methods such as successive orthogonal projection,gradient descent, projected gradient descent, the proximal-point method,forward-backward splitting, the alternating direction method of multipliers,and under- or over-relaxed variants of the preceding all involve updates thatare of a common type --- namely, the updates satisfy a property known aspseudocontractivity. Moreover, since the property of pseudocontractivity ispreserved under both composition and convex combination, updates constructedvia these operations from pseudocontractive updates are themselvespseudocontractive. Having demonstrated that pseudocontractive updates are to befound in many optimization methods, we then provide a unified basic analysis ofmethods with pseudocontractive updates. Specifically, we prove a novel boundsatisfied by the norm of the difference in iterates of pseudocontractiveupdates and we then use this bound to establish that the error criterion$\left\Vert x^{N}-Tx^{N}\right\Vert ^{2}$ is $o(1/N)$ for any method involvingpseudocontractive updates (where $N$ is the number of iterations and $T$ is theiteration operator).
 
 Holistically-Nested Edge Detection
 
-  We develop a new edge detection algorithm that tackles two important issues
-in this long-standing vision problem: (1) holistic image training and
-prediction; and (2) multi-scale and multi-level feature learning. Our proposed
-method, holistically-nested edge detection (HED), performs image-to-image
-prediction by means of a deep learning model that leverages fully convolutional
-neural networks and deeply-supervised nets. HED automatically learns rich
-hierarchical representations (guided by deep supervision on side responses)
-that are important in order to approach the human ability resolve the
-challenging ambiguity in edge and object boundary detection. We significantly
-advance the state-of-the-art on the BSD500 dataset (ODS F-score of .782) and
-the NYU Depth dataset (ODS F-score of .746), and do so with an improved speed
-(0.4 second per image) that is orders of magnitude faster than some recent
-CNN-based edge detection algorithms.
-
+  We develop a new edge detection algorithm that tackles two important issuesin this long-standing vision problem: (1) holistic image training andprediction; and (2) multi-scale and multi-level feature learning. Our proposedmethod, holistically-nested edge detection (HED), performs image-to-imageprediction by means of a deep learning model that leverages fully convolutionalneural networks and deeply-supervised nets. HED automatically learns richhierarchical representations (guided by deep supervision on side responses)that are important in order to approach the human ability resolve thechallenging ambiguity in edge and object boundary detection. We significantlyadvance the state-of-the-art on the BSD500 dataset (ODS F-score of .782) andthe NYU Depth dataset (ODS F-score of .746), and do so with an improved speed(0.4 second per image) that is orders of magnitude faster than some recentCNN-based edge detection algorithms.
 
 Dense Volume-to-Volume Vascular Boundary Detection
 
-  In this work, we present a novel 3D-Convolutional Neural Network (CNN)
-architecture called I2I-3D that predicts boundary location in volumetric data.
-Our fine-to-fine, deeply supervised framework addresses three critical issues
-to 3D boundary detection: (1) efficient, holistic, end-to-end volumetric label
-training and prediction (2) precise voxel-level prediction to capture fine
-scale structures prevalent in medical data and (3) directed multi-scale,
-multi-level feature learning. We evaluate our approach on a dataset consisting
-of 93 medical image volumes with a wide variety of anatomical regions and
-vascular structures. In the process, we also introduce HED-3D, a 3D extension
-of the state-of-the-art 2D edge detector (HED). We show that our deep learning
-approach out-performs, the current state-of-the-art in 3D vascular boundary
-detection (structured forests 3D), by a large margin, as well as HED applied to
-slices, and HED-3D while successfully localizing fine structures. With our
-approach, boundary detection takes about one minute on a typical 512x512x512
-volume.
-
+  In this work, we present a novel 3D-Convolutional Neural Network (CNN)architecture called I2I-3D that predicts boundary location in volumetric data.Our fine-to-fine, deeply supervised framework addresses three critical issuesto 3D boundary detection: (1) efficient, holistic, end-to-end volumetric labeltraining and prediction (2) precise voxel-level prediction to capture finescale structures prevalent in medical data and (3) directed multi-scale,multi-level feature learning. We evaluate our approach on a dataset consistingof 93 medical image volumes with a wide variety of anatomical regions andvascular structures. In the process, we also introduce HED-3D, a 3D extensionof the state-of-the-art 2D edge detector (HED). We show that our deep learningapproach out-performs, the current state-of-the-art in 3D vascular boundarydetection (structured forests 3D), by a large margin, as well as HED applied toslices, and HED-3D while successfully localizing fine structures. With ourapproach, boundary detection takes about one minute on a typical 512x512x512volume.
 
 Deep FisherNet for Object Classification
 
-  Despite the great success of convolutional neural networks (CNN) for the
-image classification task on datasets like Cifar and ImageNet, CNN's
-representation power is still somewhat limited in dealing with object images
-that have large variation in size and clutter, where Fisher Vector (FV) has
-shown to be an effective encoding strategy. FV encodes an image by aggregating
-local descriptors with a universal generative Gaussian Mixture Model (GMM). FV
-however has limited learning capability and its parameters are mostly fixed
-after constructing the codebook. To combine together the best of the two
-worlds, we propose in this paper a neural network structure with FV layer being
-part of an end-to-end trainable system that is differentiable; we name our
-network FisherNet that is learnable using backpropagation. Our proposed
-FisherNet combines convolutional neural network training and Fisher Vector
-encoding in a single end-to-end structure. We observe a clear advantage of
-FisherNet over plain CNN and standard FV in terms of both classification
-accuracy and computational efficiency on the challenging PASCAL VOC object
-classification task.
-
+  Despite the great success of convolutional neural networks (CNN) for theimage classification task on datasets like Cifar and ImageNet, CNN'srepresentation power is still somewhat limited in dealing with object imagesthat have large variation in size and clutter, where Fisher Vector (FV) hasshown to be an effective encoding strategy. FV encodes an image by aggregatinglocal descriptors with a universal generative Gaussian Mixture Model (GMM). FVhowever has limited learning capability and its parameters are mostly fixedafter constructing the codebook. To combine together the best of the twoworlds, we propose in this paper a neural network structure with FV layer beingpart of an end-to-end trainable system that is differentiable; we name ournetwork FisherNet that is learnable using backpropagation. Our proposedFisherNet combines convolutional neural network training and Fisher Vectorencoding in a single end-to-end structure. We observe a clear advantage ofFisherNet over plain CNN and standard FV in terms of both classificationaccuracy and computational efficiency on the challenging PASCAL VOC objectclassification task.
 
 Aggregated Residual Transformations for Deep Neural Networks
 
-  We present a simple, highly modularized network architecture for image
-classification. Our network is constructed by repeating a building block that
-aggregates a set of transformations with the same topology. Our simple design
-results in a homogeneous, multi-branch architecture that has only a few
-hyper-parameters to set. This strategy exposes a new dimension, which we call
-"cardinality" (the size of the set of transformations), as an essential factor
-in addition to the dimensions of depth and width. On the ImageNet-1K dataset,
-we empirically show that even under the restricted condition of maintaining
-complexity, increasing cardinality is able to improve classification accuracy.
-Moreover, increasing cardinality is more effective than going deeper or wider
-when we increase the capacity. Our models, named ResNeXt, are the foundations
-of our entry to the ILSVRC 2016 classification task in which we secured 2nd
-place. We further investigate ResNeXt on an ImageNet-5K set and the COCO
-detection set, also showing better results than its ResNet counterpart. The
-code and models are publicly available online.
-
+  We present a simple, highly modularized network architecture for imageclassification. Our network is constructed by repeating a building block thataggregates a set of transformations with the same topology. Our simple designresults in a homogeneous, multi-branch architecture that has only a fewhyper-parameters to set. This strategy exposes a new dimension, which we call"cardinality" (the size of the set of transformations), as an essential factorin addition to the dimensions of depth and width. On the ImageNet-1K dataset,we empirically show that even under the restricted condition of maintainingcomplexity, increasing cardinality is able to improve classification accuracy.Moreover, increasing cardinality is more effective than going deeper or widerwhen we increase the capacity. Our models, named ResNeXt, are the foundationsof our entry to the ILSVRC 2016 classification task in which we secured 2ndplace. We further investigate ResNeXt on an ImageNet-5K set and the COCOdetection set, also showing better results than its ResNet counterpart. Thecode and models are publicly available online.
 
 Deep Convolutional Neural Networks with Merge-and-Run Mappings
 
-  A deep residual network, built by stacking a sequence of residual blocks, is
-easy to train, because identity mappings skip residual branches and thus
-improve information flow. To further reduce the training difficulty, we present
-a simple network architecture, deep merge-and-run neural networks. The novelty
-lies in a modularized building block, merge-and-run block, which assembles
-residual branches in parallel through a merge-and-run mapping: Average the
-inputs of these residual branches (Merge), and add the average to the output of
-each residual branch as the input of the subsequent residual branch (Run),
-respectively. We show that the merge-and-run mapping is a linear idempotent
-function in which the transformation matrix is idempotent, and thus improves
-information flow, making training easy. In comparison to residual networks, our
-networks enjoy compelling advantages: they contain much shorter paths, and the
-width, i.e., the number of channels, is increased. We evaluate the performance
-on the standard recognition tasks. Our approach demonstrates consistent
-improvements over ResNets with the comparable setup, and achieves competitive
-results (e.g., $3.57\%$ testing error on CIFAR-$10$, $19.00\%$ on CIFAR-$100$,
-$1.51\%$ on SVHN).
+  A deep residual network, built by stacking a sequence of residual blocks, iseasy to train, because identity mappings skip residual branches and thusimprove information flow. To further reduce the training difficulty, we presenta simple network architecture, deep merge-and-run neural networks. The noveltylies in a modularized building block, merge-and-run block, which assemblesresidual branches in parallel through a merge-and-run mapping: Average theinputs of these residual branches (Merge), and add the average to the output ofeach residual branch as the input of the subsequent residual branch (Run),respectively. We show that the merge-and-run mapping is a linear idempotentfunction in which the transformation matrix is idempotent, and thus improvesinformation flow, making training easy. In comparison to residual networks, ournetworks enjoy compelling advantages: they contain much shorter paths, and thewidth, i.e., the number of channels, is increased. We evaluate the performanceon the standard recognition tasks. Our approach demonstrates consistentimprovements over ResNets with the comparable setup, and achieves competitiveresults (e.g., $3.57\%$ testing error on CIFAR-$10$, $19.00\%$ on CIFAR-$100$,$1.51\%$ on SVHN).
 
+Object Detection Free Instance Segmentation With Labeling  Transformations
 
-Object Detection Free Instance Segmentation With Labeling
-  Transformations
+  Instance segmentation has attracted recent attention in computer vision andexisting methods in this domain mostly have an object detection stage. In thispaper, we study the intrinsic challenge of the instance segmentation problem,the presence of a quotient space (swapping the labels of different instancesleads to the same result), and propose new methods that are object proposal-and object detection- free. We propose three alternative methods, namelypixel-based affinity mapping, superpixel-based affinity learning, andboundary-based component segmentation, all focusing on performing labelingtransformations to cope with the quotient space problem. By adopting fullyconvolutional neural networks (FCN) like models, our framework attainscompetitive results on both the PASCAL dataset (object-centric) and the Glanddataset (texture-centric), which the existing methods are not able to do. Ourwork also has the advantages in its transparency, simplicity, and being allsegmentation based.
 
-  Instance segmentation has attracted recent attention in computer vision and
-existing methods in this domain mostly have an object detection stage. In this
-paper, we study the intrinsic challenge of the instance segmentation problem,
-the presence of a quotient space (swapping the labels of different instances
-leads to the same result), and propose new methods that are object proposal-
-and object detection- free. We propose three alternative methods, namely
-pixel-based affinity mapping, superpixel-based affinity learning, and
-boundary-based component segmentation, all focusing on performing labeling
-transformations to cope with the quotient space problem. By adopting fully
-convolutional neural networks (FCN) like models, our framework attains
-competitive results on both the PASCAL dataset (object-centric) and the Gland
-dataset (texture-centric), which the existing methods are not able to do. Our
-work also has the advantages in its transparency, simplicity, and being all
-segmentation based.
+Binarized Convolutional Neural Networks with Separable Filters for  Efficient Hardware Acceleration
 
-
-Binarized Convolutional Neural Networks with Separable Filters for
-  Efficient Hardware Acceleration
-
-  State-of-the-art convolutional neural networks are enormously costly in both
-compute and memory, demanding massively parallel GPUs for execution. Such
-networks strain the computational capabilities and energy available to embedded
-and mobile processing platforms, restricting their use in many important
-applications. In this paper, we push the boundaries of hardware-effective CNN
-design by proposing BCNN with Separable Filters (BCNNw/SF), which applies
-Singular Value Decomposition (SVD) on BCNN kernels to further reduce
-computational and storage complexity. To enable its implementation, we provide
-a closed form of the gradient over SVD to calculate the exact gradient with
-respect to every binarized weight in backward propagation. We verify BCNNw/SF
-on the MNIST, CIFAR-10, and SVHN datasets, and implement an accelerator for
-CIFAR-10 on FPGA hardware. Our BCNNw/SF accelerator realizes memory savings of
-17% and execution time reduction of 31.3% compared to BCNN with only minor
-accuracy sacrifices.
-
+  State-of-the-art convolutional neural networks are enormously costly in bothcompute and memory, demanding massively parallel GPUs for execution. Suchnetworks strain the computational capabilities and energy available to embeddedand mobile processing platforms, restricting their use in many importantapplications. In this paper, we push the boundaries of hardware-effective CNNdesign by proposing BCNN with Separable Filters (BCNNw/SF), which appliesSingular Value Decomposition (SVD) on BCNN kernels to further reducecomputational and storage complexity. To enable its implementation, we providea closed form of the gradient over SVD to calculate the exact gradient withrespect to every binarized weight in backward propagation. We verify BCNNw/SFon the MNIST, CIFAR-10, and SVHN datasets, and implement an accelerator forCIFAR-10 on FPGA hardware. Our BCNNw/SF accelerator realizes memory savings of17% and execution time reduction of 31.3% compared to BCNN with only minoraccuracy sacrifices.
 
 Wasserstein Introspective Neural Networks
 
-  We present Wasserstein introspective neural networks (WINN) that are both a
-generator and a discriminator within a single model. WINN provides a
-significant improvement over the recent introspective neural networks (INN)
-method by enhancing INN's generative modeling capability. WINN has three
-interesting properties: (1) A mathematical connection between the formulation
-of the INN algorithm and that of Wasserstein generative adversarial networks
-(WGAN) is made. (2) The explicit adoption of the Wasserstein distance into INN
-results in a large enhancement to INN, achieving compelling results even with a
-single classifier --- e.g., providing nearly a 20 times reduction in model size
-over INN for unsupervised generative modeling. (3) When applied to supervised
-classification, WINN also gives rise to improved robustness against adversarial
-examples in terms of the error reduction. In the experiments, we report
-encouraging results on unsupervised learning problems including texture, face,
-and object modeling, as well as a supervised classification task against
-adversarial attacks.
-
+  We present Wasserstein introspective neural networks (WINN) that are both agenerator and a discriminator within a single model. WINN provides asignificant improvement over the recent introspective neural networks (INN)method by enhancing INN's generative modeling capability. WINN has threeinteresting properties: (1) A mathematical connection between the formulationof the INN algorithm and that of Wasserstein generative adversarial networks(WGAN) is made. (2) The explicit adoption of the Wasserstein distance into INNresults in a large enhancement to INN, achieving compelling results even with asingle classifier --- e.g., providing nearly a 20 times reduction in model sizeover INN for unsupervised generative modeling. (3) When applied to supervisedclassification, WINN also gives rise to improved robustness against adversarialexamples in terms of the error reduction. In the experiments, we reportencouraging results on unsupervised learning problems including texture, face,and object modeling, as well as a supervised classification task againstadversarial attacks.
 
 Controllable Top-down Feature Transformer
 
-  We study the intrinsic transformation of feature maps across convolutional
-network layers with explicit top-down control. To this end, we develop top-down
-feature transformer (TFT), under controllable parameters, that are able to
-account for the hidden layer transformation while maintaining the overall
-consistency across layers. The learned generators capture the underlying
-feature transformation processes that are independent of particular training
-images. Our proposed TFT framework brings insights to and helps the
-understanding of, an important problem of studying the CNN internal feature
-representation and transformation under the top-down processes. In the case of
-spatial transformations, we demonstrate the significant advantage of TFT over
-existing data-driven approaches in building data-independent transformations.
-We also show that it can be adopted in other applications such as data
-augmentation and image style transfer.
-
+  We study the intrinsic transformation of feature maps across convolutionalnetwork layers with explicit top-down control. To this end, we develop top-downfeature transformer (TFT), under controllable parameters, that are able toaccount for the hidden layer transformation while maintaining the overallconsistency across layers. The learned generators capture the underlyingfeature transformation processes that are independent of particular trainingimages. Our proposed TFT framework brings insights to and helps theunderstanding of, an important problem of studying the CNN internal featurerepresentation and transformation under the top-down processes. In the case ofspatial transformations, we demonstrate the significant advantage of TFT overexisting data-driven approaches in building data-independent transformations.We also show that it can be adopted in other applications such as dataaugmentation and image style transfer.
 
 Local Binary Pattern Networks
 
-  Memory and computation efficient deep learning architec- tures are crucial to
-continued proliferation of machine learning capabili- ties to new platforms and
-systems. Binarization of operations in convo- lutional neural networks has
-shown promising results in reducing model size and computing efficiency. In
-this paper, we tackle the problem us- ing a strategy different from the
-existing literature by proposing local binary pattern networks or LBPNet, that
-is able to learn and perform binary operations in an end-to-end fashion.
-LBPNet1 uses local binary comparisons and random projection in place of
-conventional convolu- tion (or approximation of convolution) operations. These
-operations can be implemented efficiently on different platforms including
-direct hard- ware implementation. We applied LBPNet and its variants on
-standard benchmarks. The results are promising across benchmarks while provid-
-ing an important means to improve memory and speed efficiency that is
-particularly suited for small footprint devices and hardware accelerators.
-
+  Memory and computation efficient deep learning architec- tures are crucial tocontinued proliferation of machine learning capabili- ties to new platforms andsystems. Binarization of operations in convo- lutional neural networks hasshown promising results in reducing model size and computing efficiency. Inthis paper, we tackle the problem us- ing a strategy different from theexisting literature by proposing local binary pattern networks or LBPNet, thatis able to learn and perform binary operations in an end-to-end fashion.LBPNet1 uses local binary comparisons and random projection in place ofconventional convolu- tion (or approximation of convolution) operations. Theseoperations can be implemented efficiently on different platforms includingdirect hard- ware implementation. We applied LBPNet and its variants onstandard benchmarks. The results are promising across benchmarks while provid-ing an important means to improve memory and speed efficiency that isparticularly suited for small footprint devices and hardware accelerators.
 
 Deeply supervised salient object detection with short connections
 
-  Recent progress on saliency detection is substantial, benefiting mostly from
-the explosive development of Convolutional Neural Networks (CNNs). Semantic
-segmentation and saliency detection algorithms developed lately have been
-mostly based on Fully Convolutional Neural Networks (FCNs). There is still a
-large room for improvement over the generic FCN models that do not explicitly
-deal with the scale-space problem. Holistically-Nested Edge Detector (HED)
-provides a skip-layer structure with deep supervision for edge and boundary
-detection, but the performance gain of HED on salience detection is not
-obvious. In this paper, we propose a new method for saliency detection by
-introducing short connections to the skip-layer structures within the HED
-architecture. Our framework provides rich multi-scale feature maps at each
-layer, a property that is critically needed to perform segment detection. Our
-method produces state-of-the-art results on 5 widely tested salient object
-detection benchmarks, with advantages in terms of efficiency (0.15 seconds per
-image), effectiveness, and simplicity over the existing algorithms.
+  Recent progress on saliency detection is substantial, benefiting mostly fromthe explosive development of Convolutional Neural Networks (CNNs). Semanticsegmentation and saliency detection algorithms developed lately have beenmostly based on Fully Convolutional Neural Networks (FCNs). There is still alarge room for improvement over the generic FCN models that do not explicitlydeal with the scale-space problem. Holistically-Nested Edge Detector (HED)provides a skip-layer structure with deep supervision for edge and boundarydetection, but the performance gain of HED on salience detection is notobvious. In this paper, we propose a new method for saliency detection byintroducing short connections to the skip-layer structures within the HEDarchitecture. Our framework provides rich multi-scale feature maps at eachlayer, a property that is critically needed to perform segment detection. Ourmethod produces state-of-the-art results on 5 widely tested salient objectdetection benchmarks, with advantages in terms of efficiency (0.15 seconds perimage), effectiveness, and simplicity over the existing algorithms.
 
+Generalizing Pooling Functions in Convolutional Neural Networks: Mixed,  Gated, and Tree
 
-What Happened to My Dog in That Network: Unraveling Top-down Generators
-  in Convolutional Neural Networks
+  We seek to improve deep neural networks by generalizing the poolingoperations that play a central role in current architectures. We pursue acareful exploration of approaches to allow pooling to learn and to adapt tocomplex and variable patterns. The two primary directions lie in (1) learning apooling function via (two strategies of) combining of max and average pooling,and (2) learning a pooling function in the form of a tree-structured fusion ofpooling filters that are themselves learned. In our experiments everygeneralized pooling operation we explore improves performance when used inplace of average or max pooling. We experimentally demonstrate that theproposed pooling operations provide a boost in invariance properties relativeto conventional pooling and set the state of the art on several widely adoptedbenchmark datasets; they are also easy to implement, and can be applied withinvarious deep neural network architectures. These benefits come with only alight increase in computational overhead during training and a very modestincrease in the number of model parameters.
 
-  Top-down information plays a central role in human perception, but plays
-relatively little role in many current state-of-the-art deep networks, such as
-Convolutional Neural Networks (CNNs). This work seeks to explore a path by
-which top-down information can have a direct impact within current deep
-networks. We explore this path by learning and using "generators" corresponding
-to the network internal effects of three types of transformation (each a
-restriction of a general affine transformation): rotation, scaling, and
-translation. We demonstrate how these learned generators can be used to
-transfer top-down information to novel settings, as mediated by the "feature
-flows" that the transformations (and the associated generators) correspond to
-inside the network. Specifically, we explore three aspects: 1) using generators
-as part of a method for synthesizing transformed images --- given a previously
-unseen image, produce versions of that image corresponding to one or more
-specified transformations, 2) "zero-shot learning" --- when provided with a
-feature flow corresponding to the effect of a transformation of unknown amount,
-leverage learned generators as part of a method by which to perform an accurate
-categorization of the amount of transformation, even for amounts never observed
-during training, and 3) (inside-CNN) "data augmentation" --- improve the
-classification performance of an existing network by using the learned
-generators to directly provide additional training "inside the CNN".
+What Happened to My Dog in That Network: Unraveling Top-down Generators  in Convolutional Neural Networks
 
+  Top-down information plays a central role in human perception, but playsrelatively little role in many current state-of-the-art deep networks, such asConvolutional Neural Networks (CNNs). This work seeks to explore a path bywhich top-down information can have a direct impact within current deepnetworks. We explore this path by learning and using "generators" correspondingto the network internal effects of three types of transformation (each arestriction of a general affine transformation): rotation, scaling, andtranslation. We demonstrate how these learned generators can be used totransfer top-down information to novel settings, as mediated by the "featureflows" that the transformations (and the associated generators) correspond toinside the network. Specifically, we explore three aspects: 1) using generatorsas part of a method for synthesizing transformed images --- given a previouslyunseen image, produce versions of that image corresponding to one or morespecified transformations, 2) "zero-shot learning" --- when provided with afeature flow corresponding to the effect of a transformation of unknown amount,leverage learned generators as part of a method by which to perform an accuratecategorization of the amount of transformation, even for amounts never observedduring training, and 3) (inside-CNN) "data augmentation" --- improve theclassification performance of an existing network by using the learnedgenerators to directly provide additional training "inside the CNN".
 
 Top-Down Learning for Structured Labeling with Convolutional Pseudoprior
 
-  Current practice in convolutional neural networks (CNN) remains largely
-bottom-up and the role of top-down process in CNN for pattern analysis and
-visual inference is not very clear. In this paper, we propose a new method for
-structured labeling by developing convolutional pseudo-prior (ConvPP) on the
-ground-truth labels. Our method has several interesting properties: (1)
-compared with classical machine learning algorithms like CRFs and Structural
-SVM, ConvPP automatically learns rich convolutional kernels to capture both
-short- and long- range contexts; (2) compared with cascade classifiers like
-Auto-Context, ConvPP avoids the iterative steps of learning a series of
-discriminative classifiers and automatically learns contextual configurations;
-(3) compared with recent efforts combing CNN models with CRFs and RNNs, ConvPP
-learns convolution in the labeling space with much improved modeling capability
-and less manual specification; (4) compared with Bayesian models like MRFs,
-ConvPP capitalizes on the rich representation power of convolution by
-automatically learning priors built on convolutional filters. We accomplish our
-task using pseudo-likelihood approximation to the prior under a novel
-fixed-point network structure that facilitates an end-to-end learning process.
-We show state-of-the-art results on sequential labeling and image labeling
-benchmarks.
+  Current practice in convolutional neural networks (CNN) remains largelybottom-up and the role of top-down process in CNN for pattern analysis andvisual inference is not very clear. In this paper, we propose a new method forstructured labeling by developing convolutional pseudo-prior (ConvPP) on theground-truth labels. Our method has several interesting properties: (1)compared with classical machine learning algorithms like CRFs and StructuralSVM, ConvPP automatically learns rich convolutional kernels to capture bothshort- and long- range contexts; (2) compared with cascade classifiers likeAuto-Context, ConvPP avoids the iterative steps of learning a series ofdiscriminative classifiers and automatically learns contextual configurations;(3) compared with recent efforts combing CNN models with CRFs and RNNs, ConvPPlearns convolution in the labeling space with much improved modeling capabilityand less manual specification; (4) compared with Bayesian models like MRFs,ConvPP capitalizes on the rich representation power of convolution byautomatically learning priors built on convolutional filters. We accomplish ourtask using pseudo-likelihood approximation to the prior under a novelfixed-point network structure that facilitates an end-to-end learning process.We show state-of-the-art results on sequential labeling and image labelingbenchmarks.
 
+DeepRadiologyNet: Radiologist Level Pathology Detection in CT Head  Images
 
-Generalizing Pooling Functions in Convolutional Neural Networks: Mixed,
-  Gated, and Tree
+  We describe a system to automatically filter clinically significant findingsfrom computerized tomography (CT) head scans, operating at performance levelsexceeding that of practicing radiologists. Our system, named DeepRadiologyNet,builds on top of deep convolutional neural networks (CNNs) trained usingapproximately 3.5 million CT head images gathered from over 24,000 studiestaken from January 1, 2015 to August 31, 2015 and January 1, 2016 to April 302016 in over 80 clinical sites. For our initial system, we identified 30phenomenological traits to be recognized in the CT scans. To test the system,we designed a clinical trial using over 4.8 million CT head images (29,925studies), completely disjoint from the training and validation set, interpretedby 35 US Board Certified radiologists with specialized CT head experience. Wemeasured clinically significant error rates to ascertain whether theperformance of DeepRadiologyNet was comparable to or better than that of USBoard Certified radiologists. DeepRadiologyNet achieved a clinicallysignificant miss rate of 0.0367% on automatically selected high-confidencestudies. Thus, DeepRadiologyNet enables significant reduction in the workloadof human radiologists by automatically filtering studies and reporting on thehigh-confidence ones at an operating point well below the literal error ratefor US Board Certified radiologists, estimated at 0.82%.
 
-  We seek to improve deep neural networks by generalizing the pooling
-operations that play a central role in current architectures. We pursue a
-careful exploration of approaches to allow pooling to learn and to adapt to
-complex and variable patterns. The two primary directions lie in (1) learning a
-pooling function via (two strategies of) combining of max and average pooling,
-and (2) learning a pooling function in the form of a tree-structured fusion of
-pooling filters that are themselves learned. In our experiments every
-generalized pooling operation we explore improves performance when used in
-place of average or max pooling. We experimentally demonstrate that the
-proposed pooling operations provide a boost in invariance properties relative
-to conventional pooling and set the state of the art on several widely adopted
-benchmark datasets; they are also easy to implement, and can be applied within
-various deep neural network architectures. These benefits come with only a
-light increase in computational overhead during training and a very modest
-increase in the number of model parameters.
+Rethinking Spatiotemporal Feature Learning: Speed-Accuracy Trade-offs in  Video Classification
 
-
-DeepRadiologyNet: Radiologist Level Pathology Detection in CT Head
-  Images
-
-  We describe a system to automatically filter clinically significant findings
-from computerized tomography (CT) head scans, operating at performance levels
-exceeding that of practicing radiologists. Our system, named DeepRadiologyNet,
-builds on top of deep convolutional neural networks (CNNs) trained using
-approximately 3.5 million CT head images gathered from over 24,000 studies
-taken from January 1, 2015 to August 31, 2015 and January 1, 2016 to April 30
-2016 in over 80 clinical sites. For our initial system, we identified 30
-phenomenological traits to be recognized in the CT scans. To test the system,
-we designed a clinical trial using over 4.8 million CT head images (29,925
-studies), completely disjoint from the training and validation set, interpreted
-by 35 US Board Certified radiologists with specialized CT head experience. We
-measured clinically significant error rates to ascertain whether the
-performance of DeepRadiologyNet was comparable to or better than that of US
-Board Certified radiologists. DeepRadiologyNet achieved a clinically
-significant miss rate of 0.0367% on automatically selected high-confidence
-studies. Thus, DeepRadiologyNet enables significant reduction in the workload
-of human radiologists by automatically filtering studies and reporting on the
-high-confidence ones at an operating point well below the literal error rate
-for US Board Certified radiologists, estimated at 0.82%.
-
-
-Rethinking Spatiotemporal Feature Learning: Speed-Accuracy Trade-offs in
-  Video Classification
-
-  Despite the steady progress in video analysis led by the adoption of
-convolutional neural networks (CNNs), the relative improvement has been less
-drastic as that in 2D static image classification. Three main challenges exist
-including spatial (image) feature representation, temporal information
-representation, and model/computation complexity. It was recently shown by
-Carreira and Zisserman that 3D CNNs, inflated from 2D networks and pretrained
-on ImageNet, could be a promising way for spatial and temporal representation
-learning. However, as for model/computation complexity, 3D CNNs are much more
-expensive than 2D CNNs and prone to overfit. We seek a balance between speed
-and accuracy by building an effective and efficient video classification system
-through systematic exploration of critical network design choices. In
-particular, we show that it is possible to replace many of the 3D convolutions
-by low-cost 2D convolutions. Rather surprisingly, best result (in both speed
-and accuracy) is achieved when replacing the 3D convolutions at the bottom of
-the network, suggesting that temporal representation learning on high-level
-semantic features is more useful. Our conclusion generalizes to datasets with
-very different properties. When combined with several other cost-effective
-designs including separable spatial/temporal convolution and feature gating,
-our system results in an effective video classification system that that
-produces very competitive results on several action classification benchmarks
-(Kinetics, Something-something, UCF101 and HMDB), as well as two action
-detection (localization) benchmarks (JHMDB and UCF101-24).
-
+  Despite the steady progress in video analysis led by the adoption ofconvolutional neural networks (CNNs), the relative improvement has been lessdrastic as that in 2D static image classification. Three main challenges existincluding spatial (image) feature representation, temporal informationrepresentation, and model/computation complexity. It was recently shown byCarreira and Zisserman that 3D CNNs, inflated from 2D networks and pretrainedon ImageNet, could be a promising way for spatial and temporal representationlearning. However, as for model/computation complexity, 3D CNNs are much moreexpensive than 2D CNNs and prone to overfit. We seek a balance between speedand accuracy by building an effective and efficient video classification systemthrough systematic exploration of critical network design choices. Inparticular, we show that it is possible to replace many of the 3D convolutionsby low-cost 2D convolutions. Rather surprisingly, best result (in both speedand accuracy) is achieved when replacing the 3D convolutions at the bottom ofthe network, suggesting that temporal representation learning on high-levelsemantic features is more useful. Our conclusion generalizes to datasets withvery different properties. When combined with several other cost-effectivedesigns including separable spatial/temporal convolution and feature gating,our system results in an effective video classification system that thatproduces very competitive results on several action classification benchmarks(Kinetics, Something-something, UCF101 and HMDB), as well as two actiondetection (localization) benchmarks (JHMDB and UCF101-24).
 

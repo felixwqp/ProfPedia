@@ -1,884 +1,200 @@
 TensorLog: Deep Learning Meets Probabilistic DBs
 
-  We present an implementation of a probabilistic first-order logic called
-TensorLog, in which classes of logical queries are compiled into differentiable
-functions in a neural-network infrastructure such as Tensorflow or Theano. This
-leads to a close integration of probabilistic logical reasoning with
-deep-learning infrastructure: in particular, it enables high-performance deep
-learning frameworks to be used for tuning the parameters of a probabilistic
-logic. Experimental results show that TensorLog scales to problems involving
-hundreds of thousands of knowledge-base triples and tens of thousands of
-examples.
-
+  We present an implementation of a probabilistic first-order logic calledTensorLog, in which classes of logical queries are compiled into differentiablefunctions in a neural-network infrastructure such as Tensorflow or Theano. Thisleads to a close integration of probabilistic logical reasoning withdeep-learning infrastructure: in particular, it enables high-performance deeplearning frameworks to be used for tuning the parameters of a probabilisticlogic. Experimental results show that TensorLog scales to problems involvinghundreds of thousands of knowledge-base triples and tens of thousands ofexamples.
 
 The 2-log-convexity of the Apery Numbers
 
-  We present an approach to proving the 2-log-convexity of sequences satisfying
-three-term recurrence relations. We show that the Apery numbers, the Cohen-Rhin
-numbers, the Motzkin numbers, the Fine numbers, the Franel numbers of order 3
-and 4 and the large Schroder numbers are all 2-log-convex. Numerical evidence
-suggests that all these sequences are k-log-convex for any $k\geq 1$ possibly
-except for a constant number of terms at the beginning.
-
+  We present an approach to proving the 2-log-convexity of sequences satisfyingthree-term recurrence relations. We show that the Apery numbers, the Cohen-Rhinnumbers, the Motzkin numbers, the Fine numbers, the Franel numbers of order 3and 4 and the large Schroder numbers are all 2-log-convex. Numerical evidencesuggests that all these sequences are k-log-convex for any $k\geq 1$ possiblyexcept for a constant number of terms at the beginning.
 
 TensorLog: A Differentiable Deductive Database
 
-  Large knowledge bases (KBs) are useful in many tasks, but it is unclear how
-to integrate this sort of knowledge into "deep" gradient-based learning
-systems. To address this problem, we describe a probabilistic deductive
-database, called TensorLog, in which reasoning uses a differentiable process.
-In TensorLog, each clause in a logical theory is first converted into certain
-type of factor graph. Then, for each type of query to the factor graph, the
-message-passing steps required to perform belief propagation (BP) are
-"unrolled" into a function, which is differentiable. We show that these
-functions can be composed recursively to perform inference in non-trivial
-logical theories containing multiple interrelated clauses and predicates. Both
-compilation and inference in TensorLog are efficient: compilation is linear in
-theory size and proof depth, and inference is linear in database size and the
-number of message-passing steps used in BP. We also present experimental
-results with TensorLog and discuss its relationship to other first-order
-probabilistic logics.
+  Large knowledge bases (KBs) are useful in many tasks, but it is unclear howto integrate this sort of knowledge into "deep" gradient-based learningsystems. To address this problem, we describe a probabilistic deductivedatabase, called TensorLog, in which reasoning uses a differentiable process.In TensorLog, each clause in a logical theory is first converted into certaintype of factor graph. Then, for each type of query to the factor graph, themessage-passing steps required to perform belief propagation (BP) are"unrolled" into a function, which is differentiable. We show that thesefunctions can be composed recursively to perform inference in non-triviallogical theories containing multiple interrelated clauses and predicates. Bothcompilation and inference in TensorLog are efficient: compilation is linear intheory size and proof depth, and inference is linear in database size and thenumber of message-passing steps used in BP. We also present experimentalresults with TensorLog and discuss its relationship to other first-orderprobabilistic logics.
 
+Programming with Personalized PageRank: A Locally Groundable First-Order  Probabilistic Logic
 
-Programming with Personalized PageRank: A Locally Groundable First-Order
-  Probabilistic Logic
+  In many probabilistic first-order representation systems, inference isperformed by "grounding"---i.e., mapping it to a propositional representation,and then performing propositional inference. With a large database of facts,groundings can be very large, making inference and learning computationallyexpensive. Here we present a first-order probabilistic language which iswell-suited to approximate "local" grounding: every query $Q$ can beapproximately grounded with a small graph. The language is an extension ofstochastic logic programs where inference is performed by a variant ofpersonalized PageRank. Experimentally, we show that the approach performs wellwithout weight learning on an entity resolution task; that supervisedweight-learning improves accuracy; and that grounding time is independent of DBsize. We also show that order-of-magnitude speedups are possible byparallelizing learning.
 
-  In many probabilistic first-order representation systems, inference is
-performed by "grounding"---i.e., mapping it to a propositional representation,
-and then performing propositional inference. With a large database of facts,
-groundings can be very large, making inference and learning computationally
-expensive. Here we present a first-order probabilistic language which is
-well-suited to approximate "local" grounding: every query $Q$ can be
-approximately grounded with a small graph. The language is an extension of
-stochastic logic programs where inference is performed by a variant of
-personalized PageRank. Experimentally, we show that the approach performs well
-without weight learning on an entity resolution task; that supervised
-weight-learning improves accuracy; and that grounding time is independent of DB
-size. We also show that order-of-magnitude speedups are possible by
-parallelizing learning.
+WebSets: Extracting Sets of Entities from the Web Using Unsupervised  Information Extraction
 
-
-WebSets: Extracting Sets of Entities from the Web Using Unsupervised
-  Information Extraction
-
-  We describe a open-domain information extraction method for extracting
-concept-instance pairs from an HTML corpus. Most earlier approaches to this
-problem rely on combining clusters of distributionally similar terms and
-concept-instance pairs obtained with Hearst patterns. In contrast, our method
-relies on a novel approach for clustering terms found in HTML tables, and then
-assigning concept names to these clusters using Hearst patterns. The method can
-be efficiently applied to a large corpus, and experimental results on several
-datasets show that our method can accurately extract large numbers of
-concept-instance pairs.
-
+  We describe a open-domain information extraction method for extractingconcept-instance pairs from an HTML corpus. Most earlier approaches to thisproblem rely on combining clusters of distributionally similar terms andconcept-instance pairs obtained with Hearst patterns. In contrast, our methodrelies on a novel approach for clustering terms found in HTML tables, and thenassigning concept names to these clusters using Hearst patterns. The method canbe efficiently applied to a large corpus, and experimental results on severaldatasets show that our method can accurately extract large numbers ofconcept-instance pairs.
 
 A Comparative Study of Word Embeddings for Reading Comprehension
 
-  The focus of past machine learning research for Reading Comprehension tasks
-has been primarily on the design of novel deep learning architectures. Here we
-show that seemingly minor choices made on (1) the use of pre-trained word
-embeddings, and (2) the representation of out-of-vocabulary tokens at test
-time, can turn out to have a larger impact than architectural choices on the
-final performance. We systematically explore several options for these choices,
-and provide recommendations to researchers working in this area.
-
+  The focus of past machine learning research for Reading Comprehension taskshas been primarily on the design of novel deep learning architectures. Here weshow that seemingly minor choices made on (1) the use of pre-trained wordembeddings, and (2) the representation of out-of-vocabulary tokens at testtime, can turn out to have a larger impact than architectural choices on thefinal performance. We systematically explore several options for these choices,and provide recommendations to researchers working in this area.
 
 Bispindles in strongly connected digraphs with large chromatic number
 
-  A $(k_1+k_2)$-bispindle is the union of $k_1$ $(x,y)$-dipaths and $k_2$
-$(y,x)$-dipaths, all these dipaths being pairwise internally disjoint.
-Recently, Cohen et al. showed that for every $(1,1)$- bispindle $B$, there
-exists an integer $k$ such that every strongly connected digraph with chromatic
-number greater than $k$ contains a subdivision of $B$. We investigate
-generalisations of this result by first showing constructions of strongly
-connected digraphs with large chromatic number without any $(3,0)$-bispindle or
-$(2,2)$-bispindle. Then we show that strongly connected digraphs with large
-chromatic number contains a $(2,1)$-bispindle, where at least one of the
-$(x,y)$-dipaths and the $(y,x)$-dipath are long.
+  A $(k_1+k_2)$-bispindle is the union of $k_1$ $(x,y)$-dipaths and $k_2$$(y,x)$-dipaths, all these dipaths being pairwise internally disjoint.Recently, Cohen et al. showed that for every $(1,1)$- bispindle $B$, thereexists an integer $k$ such that every strongly connected digraph with chromaticnumber greater than $k$ contains a subdivision of $B$. We investigategeneralisations of this result by first showing constructions of stronglyconnected digraphs with large chromatic number without any $(3,0)$-bispindle or$(2,2)$-bispindle. Then we show that strongly connected digraphs with largechromatic number contains a $(2,1)$-bispindle, where at least one of the$(x,y)$-dipaths and the $(y,x)$-dipath are long.
 
+Semi-Supervised Learning with Declaratively Specified Entropy  Constraints
 
-Semi-Supervised Learning with Declaratively Specified Entropy
-  Constraints
+  We propose a technique for declaratively specifying strategies forsemi-supervised learning (SSL). The proposed method can be used to specifyensembles of semi-supervised learning, as well as agreement constraints andentropic regularization constraints between these learners, and can be used tomodel both well-known heuristics such as co-training and novel domain-specificheuristics. In addition to representing individual SSL heuristics, we show thatmultiple heuristics can also be automatically combined using Bayesianoptimization methods. We show consistent improvements on a suite ofwell-studied SSL benchmarks, including a new state-of-the-art result on adifficult relation extraction task.
 
-  We propose a technique for declaratively specifying strategies for
-semi-supervised learning (SSL). The proposed method can be used to specify
-ensembles of semi-supervised learning, as well as agreement constraints and
-entropic regularization constraints between these learners, and can be used to
-model both well-known heuristics such as co-training and novel domain-specific
-heuristics. In addition to representing individual SSL heuristics, we show that
-multiple heuristics can also be automatically combined using Bayesian
-optimization methods. We show consistent improvements on a suite of
-well-studied SSL benchmarks, including a new state-of-the-art result on a
-difficult relation extraction task.
+The Effect of Biased Communications On Both Trusting and Suspicious  Voters
 
+  In recent studies of political decision-making, apparently anomalous behaviorhas been observed on the part of voters, in which negative information about acandidate strengthens, rather than weakens, a prior positive opinion about thecandidate. This behavior appears to run counter to rational models of decisionmaking, and it is sometimes interpreted as evidence of non-rational "motivatedreasoning". We consider scenarios in which this effect arises in a model ofrational decision making which includes the possibility of deceptiveinformation. In particular, we will consider a model in which there are twoclasses of voters, which we will call trusting voters and suspicious voters,and two types of information sources, which we will call unbiased sources andbiased sources. In our model, new data about a candidate can be efficientlyincorporated by a trusting voter, and anomalous updates are impossible;however, anomalous updates can be made by suspicious voters, if the informationsource mistakenly plans for an audience of trusting voters, and if the partisangoals of the information source are known by the suspicious voter to be"opposite" to his own. Our model is based on a formalism introduced by theartificial intelligence community called "multi-agent influence diagrams",which generalize Bayesian networks to settings involving multiple agents withdistinct goals.
 
-The Effect of Biased Communications On Both Trusting and Suspicious
-  Voters
+Efficient Inference and Learning in a Large Knowledge Base: Reasoning  with Extracted Information using a Locally Groundable First-Order  Probabilistic Logic
 
-  In recent studies of political decision-making, apparently anomalous behavior
-has been observed on the part of voters, in which negative information about a
-candidate strengthens, rather than weakens, a prior positive opinion about the
-candidate. This behavior appears to run counter to rational models of decision
-making, and it is sometimes interpreted as evidence of non-rational "motivated
-reasoning". We consider scenarios in which this effect arises in a model of
-rational decision making which includes the possibility of deceptive
-information. In particular, we will consider a model in which there are two
-classes of voters, which we will call trusting voters and suspicious voters,
-and two types of information sources, which we will call unbiased sources and
-biased sources. In our model, new data about a candidate can be efficiently
-incorporated by a trusting voter, and anomalous updates are impossible;
-however, anomalous updates can be made by suspicious voters, if the information
-source mistakenly plans for an audience of trusting voters, and if the partisan
-goals of the information source are known by the suspicious voter to be
-"opposite" to his own. Our model is based on a formalism introduced by the
-artificial intelligence community called "multi-agent influence diagrams",
-which generalize Bayesian networks to settings involving multiple agents with
-distinct goals.
-
-
-Efficient Inference and Learning in a Large Knowledge Base: Reasoning
-  with Extracted Information using a Locally Groundable First-Order
-  Probabilistic Logic
-
-  One important challenge for probabilistic logics is reasoning with very large
-knowledge bases (KBs) of imperfect information, such as those produced by
-modern web-scale information extraction systems. One scalability problem shared
-by many probabilistic logics is that answering queries involves "grounding" the
-query---i.e., mapping it to a propositional representation---and the size of a
-"grounding" grows with database size. To address this bottleneck, we present a
-first-order probabilistic language called ProPPR in which that approximate
-"local groundings" can be constructed in time independent of database size.
-Technically, ProPPR is an extension to stochastic logic programs (SLPs) that is
-biased towards short derivations; it is also closely related to an earlier
-relational learning algorithm called the path ranking algorithm (PRA). We show
-that the problem of constructing proofs for this logic is related to
-computation of personalized PageRank (PPR) on a linearized version of the proof
-space, and using on this connection, we develop a proveably-correct approximate
-grounding scheme, based on the PageRank-Nibble algorithm. Building on this, we
-develop a fast and easily-parallelized weight-learning algorithm for ProPPR. In
-experiments, we show that learning for ProPPR is orders magnitude faster than
-learning for Markov logic networks; that allowing mutual recursion (joint
-learning) in KB inference leads to improvements in performance; and that ProPPR
-can learn weights for a mutually recursive program with hundreds of clauses,
-which define scores of interrelated predicates, over a KB containing one
-million entities.
-
+  One important challenge for probabilistic logics is reasoning with very largeknowledge bases (KBs) of imperfect information, such as those produced bymodern web-scale information extraction systems. One scalability problem sharedby many probabilistic logics is that answering queries involves "grounding" thequery---i.e., mapping it to a propositional representation---and the size of a"grounding" grows with database size. To address this bottleneck, we present afirst-order probabilistic language called ProPPR in which that approximate"local groundings" can be constructed in time independent of database size.Technically, ProPPR is an extension to stochastic logic programs (SLPs) that isbiased towards short derivations; it is also closely related to an earlierrelational learning algorithm called the path ranking algorithm (PRA). We showthat the problem of constructing proofs for this logic is related tocomputation of personalized PageRank (PPR) on a linearized version of the proofspace, and using on this connection, we develop a proveably-correct approximategrounding scheme, based on the PageRank-Nibble algorithm. Building on this, wedevelop a fast and easily-parallelized weight-learning algorithm for ProPPR. Inexperiments, we show that learning for ProPPR is orders magnitude faster thanlearning for Markov logic networks; that allowing mutual recursion (jointlearning) in KB inference leads to improvements in performance; and that ProPPRcan learn weights for a mutually recursive program with hundreds of clauses,which define scores of interrelated predicates, over a KB containing onemillion entities.
 
 Magnetic moments of light nuclei from lattice quantum chromodynamics
 
-  We present the results of lattice QCD calculations of the magnetic moments of
-the lightest nuclei, the deuteron, the triton and ${}^3$He, along with those of
-the neutron and proton. These calculations, performed at quark masses
-corresponding to $m_\pi \sim 800$ MeV, reveal that the structure of these
-nuclei at unphysically heavy quark masses closely resembles that at the
-physical quark masses. In particular, we find that the magnetic moment of
-${}^3$He differs only slightly from that of a free neutron, as is the case in
-nature, indicating that the shell-model configuration of two spin-paired
-protons and a valence neutron captures its dominant structure. Similarly a
-shell-model-like moment is found for the triton, $\mu_{{}^3{\rm H}} \sim
-\mu_p$. The deuteron magnetic moment is found to be equal to the nucleon
-isoscalar moment within the uncertainties of the calculations.
-
+  We present the results of lattice QCD calculations of the magnetic moments ofthe lightest nuclei, the deuteron, the triton and ${}^3$He, along with those ofthe neutron and proton. These calculations, performed at quark massescorresponding to $m_\pi \sim 800$ MeV, reveal that the structure of thesenuclei at unphysically heavy quark masses closely resembles that at thephysical quark masses. In particular, we find that the magnetic moment of${}^3$He differs only slightly from that of a free neutron, as is the case innature, indicating that the shell-model configuration of two spin-pairedprotons and a valence neutron captures its dominant structure. Similarly ashell-model-like moment is found for the triton, $\mu_{{}^3{\rm H}} \sim\mu_p$. The deuteron magnetic moment is found to be equal to the nucleonisoscalar moment within the uncertainties of the calculations.
 
 Quarkonium-Nucleus Bound States from Lattice QCD
 
-  Quarkonium-nucleus systems are composed of two interacting hadronic states
-without common valence quarks, which interact primarily through multi-gluon
-exchanges, realizing a color van der Waals force. We present lattice QCD
-calculations of the interactions of strange and charm quarkonia with light
-nuclei. Both the strangeonium-nucleus and charmonium-nucleus systems are found
-to be relatively deeply bound when the masses of the three light quarks are set
-equal to that of the physical strange quark. Extrapolation of these results to
-the physical light-quark masses suggests that the binding energy of charmonium
-to nuclear matter is B < 40 MeV.
-
+  Quarkonium-nucleus systems are composed of two interacting hadronic stateswithout common valence quarks, which interact primarily through multi-gluonexchanges, realizing a color van der Waals force. We present lattice QCDcalculations of the interactions of strange and charm quarkonia with lightnuclei. Both the strangeonium-nucleus and charmonium-nucleus systems are foundto be relatively deeply bound when the masses of the three light quarks are setequal to that of the physical strange quark. Extrapolation of these results tothe physical light-quark masses suggests that the binding energy of charmoniumto nuclear matter is B < 40 MeV.
 
 An Unusual Eclipse of a Pre-Main Sequence Star in IC 348
 
-  A solar-like pre-main sequence star (TJ 108 = H 187 = LRLL 35 = HMW 15) in
-the extremely young cluster IC 348 has been found, which apparently experienced
-an eclipse lasting ~3.5 years, much longer than has ever been detected for any
-normal eclipsing binary. The light curve is flat-bottomed and rather symmetric,
-with a depth of 0.66 mag in Cousins I. During eclipse, the system reddened by
-\~0.17 mag in R-I. We argue that the eclipsing body is not a star because of
-the small probability of detecting an eclipse in what would be a very widely
-separated binary. Instead, it appears that the eclipse was caused by a
-circumstellar or circumbinary cloud or disk feature which occulted the star, or
-one of its components, if it is a binary system. We emphasize the importance of
-more detailed study of this object, which appears to be a new member of a small
-class of pre-main sequence stars whose variability can be firmly linked to
-occultation by circumstellar (or circumbinary) matter.
+  A solar-like pre-main sequence star (TJ 108 = H 187 = LRLL 35 = HMW 15) inthe extremely young cluster IC 348 has been found, which apparently experiencedan eclipse lasting ~3.5 years, much longer than has ever been detected for anynormal eclipsing binary. The light curve is flat-bottomed and rather symmetric,with a depth of 0.66 mag in Cousins I. During eclipse, the system reddened by\~0.17 mag in R-I. We argue that the eclipsing body is not a star because ofthe small probability of detecting an eclipse in what would be a very widelyseparated binary. Instead, it appears that the eclipse was caused by acircumstellar or circumbinary cloud or disk feature which occulted the star, orone of its components, if it is a binary system. We emphasize the importance ofmore detailed study of this object, which appears to be a new member of a smallclass of pre-main sequence stars whose variability can be firmly linked tooccultation by circumstellar (or circumbinary) matter.
 
+Application of a semiclassical model for the second-quantized  many-electron Hamiltonian to nonequilibrium quantum transport: The resonant  level model
 
-Application of a semiclassical model for the second-quantized
-  many-electron Hamiltonian to nonequilibrium quantum transport: The resonant
-  level model
-
-  A semiclassical (SC) approach is developed for nonequilibrium quantum
-transport in molecular junctions. Following the early work of Miller and White
-[J. Chem. Phys. 84, 5059 (1986)], the many-electron Hamiltonian in second
-quantization is mapped onto a classical model that preserves the fermionic
-character of electrons. The resulting classical electronic Hamiltonian allows
-for real-time molecular dynamics simulations of the many-body problem from an
-uncorrelated initial state to the steady state. Comparisons with exact results
-generated for the resonant level model reveal that a semiclassical treatment of
-transport provides a quantitative description of the dynamics at all relevant
-timescales for a wide range of bias and gate potentials, and for different
-temperatures. The approach opens a door to treating nontrivial quantum
-transport problems that remain far from the reach of fully quantum
-methodologies.
-
+  A semiclassical (SC) approach is developed for nonequilibrium quantumtransport in molecular junctions. Following the early work of Miller and White[J. Chem. Phys. 84, 5059 (1986)], the many-electron Hamiltonian in secondquantization is mapped onto a classical model that preserves the fermioniccharacter of electrons. The resulting classical electronic Hamiltonian allowsfor real-time molecular dynamics simulations of the many-body problem from anuncorrelated initial state to the steady state. Comparisons with exact resultsgenerated for the resonant level model reveal that a semiclassical treatment oftransport provides a quantitative description of the dynamics at all relevanttimescales for a wide range of bias and gate potentials, and for differenttemperatures. The approach opens a door to treating nontrivial quantumtransport problems that remain far from the reach of fully quantummethodologies.
 
 Vlasov simulation in multiple spatial dimensions
 
-  A long-standing challenge encountered in modeling plasma dynamics is
-achieving practical Vlasov equation simulation in multiple spatial dimensions
-over large length and time scales. While direct multi-dimension Vlasov
-simulation methods using adaptive mesh methods [J. W. Banks et al., Physics of
-Plasmas 18, no. 5 (2011): 052102; B. I. Cohen et al., November 10, 2010,
-http://meetings.aps.org/link/BAPS.2010.DPP.NP9.142] have recently shown
-promising results, in this paper we present an alternative, the Vlasov Multi
-Dimensional (VMD) model, that is specifically designed to take advantage of
-solution properties in regimes when plasma waves are confined to a narrow cone,
-as may be the case for stimulated Raman scatter in large optic f# laser beams.
-Perpendicular grid spacing large compared to a Debye length is then possible
-without instability, enabling an order 10 decrease in required computational
-resources compared to standard particle in cell (PIC) methods in 2D, with
-another reduction of that order in 3D. Further advantage compared to PIC
-methods accrues in regimes where particle noise is an issue. VMD and PIC
-results in a 2D model of localized Langmuir waves are in qualitative agreement.
-
+  A long-standing challenge encountered in modeling plasma dynamics isachieving practical Vlasov equation simulation in multiple spatial dimensionsover large length and time scales. While direct multi-dimension Vlasovsimulation methods using adaptive mesh methods [J. W. Banks et al., Physics ofPlasmas 18, no. 5 (2011): 052102; B. I. Cohen et al., November 10, 2010,http://meetings.aps.org/link/BAPS.2010.DPP.NP9.142] have recently shownpromising results, in this paper we present an alternative, the Vlasov MultiDimensional (VMD) model, that is specifically designed to take advantage ofsolution properties in regimes when plasma waves are confined to a narrow cone,as may be the case for stimulated Raman scatter in large optic f# laser beams.Perpendicular grid spacing large compared to a Debye length is then possiblewithout instability, enabling an order 10 decrease in required computationalresources compared to standard particle in cell (PIC) methods in 2D, withanother reduction of that order in 3D. Further advantage compared to PICmethods accrues in regimes where particle noise is an issue. VMD and PICresults in a 2D model of localized Langmuir waves are in qualitative agreement.
 
 Exploratory Learning
 
-  In multiclass semi-supervised learning (SSL), it is sometimes the case that
-the number of classes present in the data is not known, and hence no labeled
-examples are provided for some classes. In this paper we present variants of
-well-known semi-supervised multiclass learning methods that are robust when the
-data contains an unknown number of classes. In particular, we present an
-"exploratory" extension of expectation-maximization (EM) that explores
-different numbers of classes while learning. "Exploratory" SSL greatly improves
-performance on three datasets in terms of F1 on the classes with seed examples
-i.e., the classes which are expected to be in the data. Our Exploratory EM
-algorithm also outperforms a SSL method based non-parametric Bayesian
-clustering.
+  In multiclass semi-supervised learning (SSL), it is sometimes the case thatthe number of classes present in the data is not known, and hence no labeledexamples are provided for some classes. In this paper we present variants ofwell-known semi-supervised multiclass learning methods that are robust when thedata contains an unknown number of classes. In particular, we present an"exploratory" extension of expectation-maximization (EM) that exploresdifferent numbers of classes while learning. "Exploratory" SSL greatly improvesperformance on three datasets in terms of F1 on the classes with seed examplesi.e., the classes which are expected to be in the data. Our Exploratory EMalgorithm also outperforms a SSL method based non-parametric Bayesianclustering.
 
+Grounded Discovery of Coordinate Term Relationships between Software  Entities
 
-Grounded Discovery of Coordinate Term Relationships between Software
-  Entities
-
-  We present an approach for the detection of coordinate-term relationships
-between entities from the software domain, that refer to Java classes. Usually,
-relations are found by examining corpus statistics associated with text
-entities. In some technical domains, however, we have access to additional
-information about the real-world objects named by the entities, suggesting that
-coupling information about the "grounded" entities with corpus statistics might
-lead to improved methods for relation discovery. To this end, we develop a
-similarity measure for Java classes using distributional information about how
-they are used in software, which we combine with corpus statistics on the
-distribution of contexts in which the classes appear in text. Using our
-approach, cross-validation accuracy on this dataset can be improved
-dramatically, from around 60% to 88%. Human labeling results show that our
-classifier has an F1 score of 86% over the top 1000 predicted pairs.
-
-
-Gated-Attention Readers for Text Comprehension
-
-  In this paper we study the problem of answering cloze-style questions over
-documents. Our model, the Gated-Attention (GA) Reader, integrates a multi-hop
-architecture with a novel attention mechanism, which is based on multiplicative
-interactions between the query embedding and the intermediate states of a
-recurrent neural network document reader. This enables the reader to build
-query-specific representations of tokens in the document for accurate answer
-selection. The GA Reader obtains state-of-the-art results on three benchmarks
-for this task--the CNN \& Daily Mail news stories and the Who Did What dataset.
-The effectiveness of multiplicative interaction is demonstrated by an ablation
-study, and by comparing to alternative compositional operators for implementing
-the gated-attention. The code is available at
-https://github.com/bdhingra/ga-reader.
-
-
-Bootstrapping Distantly Supervised IE using Joint Learning and Small
-  Well-structured Corpora
-
-  We propose a framework to improve performance of distantly-supervised
-relation extraction, by jointly learning to solve two related tasks:
-concept-instance extraction and relation extraction. We combine this with a
-novel use of document structure: in some small, well-structured corpora,
-sections can be identified that correspond to relation arguments, and
-distantly-labeled examples from such sections tend to have good precision.
-Using these as seeds we extract additional relation examples by applying label
-propagation on a graph composed of noisy examples extracted from a large
-unstructured testing corpus. Combined with the soft constraint that concept
-examples should have the same type as the second argument of the relation, we
-get significant improvements over several state-of-the-art approaches to
-distantly-supervised relation extraction.
-
+  We present an approach for the detection of coordinate-term relationshipsbetween entities from the software domain, that refer to Java classes. Usually,relations are found by examining corpus statistics associated with textentities. In some technical domains, however, we have access to additionalinformation about the real-world objects named by the entities, suggesting thatcoupling information about the "grounded" entities with corpus statistics mightlead to improved methods for relation discovery. To this end, we develop asimilarity measure for Java classes using distributional information about howthey are used in software, which we combine with corpus statistics on thedistribution of contexts in which the classes appear in text. Using ourapproach, cross-validation accuracy on this dataset can be improveddramatically, from around 60% to 88%. Human labeling results show that ourclassifier has an F1 score of 86% over the top 1000 predicted pairs.
 
 Distant IE by Bootstrapping Using Lists and Document Structure
 
-  Distant labeling for information extraction (IE) suffers from noisy training
-data. We describe a way of reducing the noise associated with distant IE by
-identifying coupling constraints between potential instance labels. As one
-example of coupling, items in a list are likely to have the same label. A
-second example of coupling comes from analysis of document structure: in some
-corpora, sections can be identified such that items in the same section are
-likely to have the same label. Such sections do not exist in all corpora, but
-we show that augmenting a large corpus with coupling constraints from even a
-small, well-structured corpus can improve performance substantially, doubling
-F1 on one task.
-
+  Distant labeling for information extraction (IE) suffers from noisy trainingdata. We describe a way of reducing the noise associated with distant IE byidentifying coupling constraints between potential instance labels. As oneexample of coupling, items in a list are likely to have the same label. Asecond example of coupling comes from analysis of document structure: in somecorpora, sections can be identified such that items in the same section arelikely to have the same label. Such sections do not exist in all corpora, butwe show that augmenting a large corpus with coupling constraints from even asmall, well-structured corpus can improve performance substantially, doublingF1 on one task.
 
 Revisiting Semi-Supervised Learning with Graph Embeddings
 
-  We present a semi-supervised learning framework based on graph embeddings.
-Given a graph between instances, we train an embedding for each instance to
-jointly predict the class label and the neighborhood context in the graph. We
-develop both transductive and inductive variants of our method. In the
-transductive variant of our method, the class labels are determined by both the
-learned embeddings and input feature vectors, while in the inductive variant,
-the embeddings are defined as a parametric function of the feature vectors, so
-predictions can be made on instances not seen during training. On a large and
-diverse set of benchmark tasks, including text classification, distantly
-supervised entity extraction, and entity classification, we show improved
-performance over many of the existing models.
-
+  We present a semi-supervised learning framework based on graph embeddings.Given a graph between instances, we train an embedding for each instance tojointly predict the class label and the neighborhood context in the graph. Wedevelop both transductive and inductive variants of our method. In thetransductive variant of our method, the class labels are determined by both thelearned embeddings and input feature vectors, while in the inductive variant,the embeddings are defined as a parametric function of the feature vectors, sopredictions can be made on instances not seen during training. On a large anddiverse set of benchmark tasks, including text classification, distantlysupervised entity extraction, and entity classification, we show improvedperformance over many of the existing models.
 
 Tweet2Vec: Character-Based Distributed Representations for Social Media
 
-  Text from social media provides a set of challenges that can cause
-traditional NLP approaches to fail. Informal language, spelling errors,
-abbreviations, and special characters are all commonplace in these posts,
-leading to a prohibitively large vocabulary size for word-level approaches. We
-propose a character composition model, tweet2vec, which finds vector-space
-representations of whole tweets by learning complex, non-local dependencies in
-character sequences. The proposed model outperforms a word-level baseline at
-predicting user-annotated hashtags associated with the posts, doing
-significantly better when the input contains many out-of-vocabulary words or
-unusual character sequences. Our tweet2vec encoder is publicly available.
-
+  Text from social media provides a set of challenges that can causetraditional NLP approaches to fail. Informal language, spelling errors,abbreviations, and special characters are all commonplace in these posts,leading to a prohibitively large vocabulary size for word-level approaches. Wepropose a character composition model, tweet2vec, which finds vector-spacerepresentations of whole tweets by learning complex, non-local dependencies incharacter sequences. The proposed model outperforms a word-level baseline atpredicting user-annotated hashtags associated with the posts, doingsignificantly better when the input contains many out-of-vocabulary words orunusual character sequences. Our tweet2vec encoder is publicly available.
 
 Review Networks for Caption Generation
 
-  We propose a novel extension of the encoder-decoder framework, called a
-review network. The review network is generic and can enhance any existing
-encoder- decoder model: in this paper, we consider RNN decoders with both CNN
-and RNN encoders. The review network performs a number of review steps with
-attention mechanism on the encoder hidden states, and outputs a thought vector
-after each review step; the thought vectors are used as the input of the
-attention mechanism in the decoder. We show that conventional encoder-decoders
-are a special case of our framework. Empirically, we show that our framework
-improves over state-of- the-art encoder-decoder systems on the tasks of image
-captioning and source code captioning.
+  We propose a novel extension of the encoder-decoder framework, called areview network. The review network is generic and can enhance any existingencoder- decoder model: in this paper, we consider RNN decoders with both CNNand RNN encoders. The review network performs a number of review steps withattention mechanism on the encoder hidden states, and outputs a thought vectorafter each review step; the thought vectors are used as the input of theattention mechanism in the decoder. We show that conventional encoder-decodersare a special case of our framework. Empirically, we show that our frameworkimproves over state-of- the-art encoder-decoder systems on the tasks of imagecaptioning and source code captioning.
 
+Gated-Attention Readers for Text Comprehension
+
+  In this paper we study the problem of answering cloze-style questions overdocuments. Our model, the Gated-Attention (GA) Reader, integrates a multi-hoparchitecture with a novel attention mechanism, which is based on multiplicativeinteractions between the query embedding and the intermediate states of arecurrent neural network document reader. This enables the reader to buildquery-specific representations of tokens in the document for accurate answerselection. The GA Reader obtains state-of-the-art results on three benchmarksfor this task--the CNN \& Daily Mail news stories and the Who Did What dataset.The effectiveness of multiplicative interaction is demonstrated by an ablationstudy, and by comparing to alternative compositional operators for implementingthe gated-attention. The code is available athttps://github.com/bdhingra/ga-reader.
+
+Bootstrapping Distantly Supervised IE using Joint Learning and Small  Well-structured Corpora
+
+  We propose a framework to improve performance of distantly-supervisedrelation extraction, by jointly learning to solve two related tasks:concept-instance extraction and relation extraction. We combine this with anovel use of document structure: in some small, well-structured corpora,sections can be identified that correspond to relation arguments, anddistantly-labeled examples from such sections tend to have good precision.Using these as seeds we extract additional relation examples by applying labelpropagation on a graph composed of noisy examples extracted from a largeunstructured testing corpus. Combined with the soft constraint that conceptexamples should have the same type as the second argument of the relation, weget significant improvements over several state-of-the-art approaches todistantly-supervised relation extraction.
 
 Words or Characters? Fine-grained Gating for Reading Comprehension
 
-  Previous work combines word-level and character-level representations using
-concatenation or scalar weighting, which is suboptimal for high-level tasks
-like reading comprehension. We present a fine-grained gating mechanism to
-dynamically combine word-level and character-level representations based on
-properties of the words. We also extend the idea of fine-grained gating to
-modeling the interaction between questions and paragraphs for reading
-comprehension. Experiments show that our approach can improve the performance
-on reading comprehension tasks, achieving new state-of-the-art results on the
-Children's Book Test dataset. To demonstrate the generality of our gating
-mechanism, we also show improved results on a social media tag prediction task.
-
+  Previous work combines word-level and character-level representations usingconcatenation or scalar weighting, which is suboptimal for high-level taskslike reading comprehension. We present a fine-grained gating mechanism todynamically combine word-level and character-level representations based onproperties of the words. We also extend the idea of fine-grained gating tomodeling the interaction between questions and paragraphs for readingcomprehension. Experiments show that our approach can improve the performanceon reading comprehension tasks, achieving new state-of-the-art results on theChildren's Book Test dataset. To demonstrate the generality of our gatingmechanism, we also show improved results on a social media tag prediction task.
 
 Semi-Supervised QA with Generative Domain-Adaptive Nets
 
-  We study the problem of semi-supervised question answering----utilizing
-unlabeled text to boost the performance of question answering models. We
-propose a novel training framework, the Generative Domain-Adaptive Nets. In
-this framework, we train a generative model to generate questions based on the
-unlabeled text, and combine model-generated questions with human-generated
-questions for training question answering models. We develop novel domain
-adaptation algorithms, based on reinforcement learning, to alleviate the
-discrepancy between the model-generated data distribution and the
-human-generated data distribution. Experiments show that our proposed framework
-obtains substantial improvement from unlabeled text.
-
+  We study the problem of semi-supervised question answering----utilizingunlabeled text to boost the performance of question answering models. Wepropose a novel training framework, the Generative Domain-Adaptive Nets. Inthis framework, we train a generative model to generate questions based on theunlabeled text, and combine model-generated questions with human-generatedquestions for training question answering models. We develop novel domainadaptation algorithms, based on reinforcement learning, to alleviate thediscrepancy between the model-generated data distribution and thehuman-generated data distribution. Experiments show that our proposed frameworkobtains substantial improvement from unlabeled text.
 
 Differentiable Learning of Logical Rules for Knowledge Base Reasoning
 
-  We study the problem of learning probabilistic first-order logical rules for
-knowledge base reasoning. This learning problem is difficult because it
-requires learning the parameters in a continuous space as well as the structure
-in a discrete space. We propose a framework, Neural Logic Programming, that
-combines the parameter and structure learning of first-order logical rules in
-an end-to-end differentiable model. This approach is inspired by a
-recently-developed differentiable logic called TensorLog, where inference tasks
-can be compiled into sequences of differentiable operations. We design a neural
-controller system that learns to compose these operations. Empirically, our
-method outperforms prior work on multiple knowledge base benchmark datasets,
-including Freebase and WikiMovies.
+  We study the problem of learning probabilistic first-order logical rules forknowledge base reasoning. This learning problem is difficult because itrequires learning the parameters in a continuous space as well as the structurein a discrete space. We propose a framework, Neural Logic Programming, thatcombines the parameter and structure learning of first-order logical rules inan end-to-end differentiable model. This approach is inspired by arecently-developed differentiable logic called TensorLog, where inference taskscan be compiled into sequences of differentiable operations. We design a neuralcontroller system that learns to compose these operations. Empirically, ourmethod outperforms prior work on multiple knowledge base benchmark datasets,including Freebase and WikiMovies.
 
+Using Graphs of Classifiers to Impose Declarative Constraints on  Semi-supervised Learning
 
-Using Graphs of Classifiers to Impose Declarative Constraints on
-  Semi-supervised Learning
-
-  We propose a general approach to modeling semi-supervised learning (SSL)
-algorithms. Specifically, we present a declarative language for modeling both
-traditional supervised classification tasks and many SSL heuristics, including
-both well-known heuristics such as co-training and novel domain-specific
-heuristics. In addition to representing individual SSL heuristics, we show that
-multiple heuristics can be automatically combined using Bayesian optimization
-methods. We experiment with two classes of tasks, link-based text
-classification and relation extraction. We show modest improvements on
-well-studied link-based classification benchmarks, and state-of-the-art results
-on relation-extraction tasks for two realistic domains.
-
+  We propose a general approach to modeling semi-supervised learning (SSL)algorithms. Specifically, we present a declarative language for modeling bothtraditional supervised classification tasks and many SSL heuristics, includingboth well-known heuristics such as co-training and novel domain-specificheuristics. In addition to representing individual SSL heuristics, we show thatmultiple heuristics can be automatically combined using Bayesian optimizationmethods. We experiment with two classes of tasks, link-based textclassification and relation extraction. We show modest improvements onwell-studied link-based classification benchmarks, and state-of-the-art resultson relation-extraction tasks for two realistic domains.
 
 Linguistic Knowledge as Memory for Recurrent Neural Networks
 
-  Training recurrent neural networks to model long term dependencies is
-difficult. Hence, we propose to use external linguistic knowledge as an
-explicit signal to inform the model which memories it should utilize.
-Specifically, external knowledge is used to augment a sequence with typed edges
-between arbitrarily distant elements, and the resulting graph is decomposed
-into directed acyclic subgraphs. We introduce a model that encodes such graphs
-as explicit memory in recurrent neural networks, and use it to model
-coreference relations in text. We apply our model to several text comprehension
-tasks and achieve new state-of-the-art results on all considered benchmarks,
-including CNN, bAbi, and LAMBADA. On the bAbi QA tasks, our model solves 15 out
-of the 20 tasks with only 1000 training examples per task. Analysis of the
-learned representations further demonstrates the ability of our model to encode
-fine-grained entity information across a document.
+  Training recurrent neural networks to model long term dependencies isdifficult. Hence, we propose to use external linguistic knowledge as anexplicit signal to inform the model which memories it should utilize.Specifically, external knowledge is used to augment a sequence with typed edgesbetween arbitrarily distant elements, and the resulting graph is decomposedinto directed acyclic subgraphs. We introduce a model that encodes such graphsas explicit memory in recurrent neural networks, and use it to modelcoreference relations in text. We apply our model to several text comprehensiontasks and achieve new state-of-the-art results on all considered benchmarks,including CNN, bAbi, and LAMBADA. On the bAbi QA tasks, our model solves 15 outof the 20 tasks with only 1000 training examples per task. Analysis of thelearned representations further demonstrates the ability of our model to encodefine-grained entity information across a document.
 
+Transfer Learning for Sequence Tagging with Hierarchical Recurrent  Networks
 
-Transfer Learning for Sequence Tagging with Hierarchical Recurrent
-  Networks
-
-  Recent papers have shown that neural networks obtain state-of-the-art
-performance on several different sequence tagging tasks. One appealing property
-of such systems is their generality, as excellent performance can be achieved
-with a unified architecture and without task-specific feature engineering.
-However, it is unclear if such systems can be used for tasks without large
-amounts of training data. In this paper we explore the problem of transfer
-learning for neural sequence taggers, where a source task with plentiful
-annotations (e.g., POS tagging on Penn Treebank) is used to improve performance
-on a target task with fewer available annotations (e.g., POS tagging for
-microblogs). We examine the effects of transfer learning for deep hierarchical
-recurrent networks across domains, applications, and languages, and show that
-significant improvement can often be obtained. These improvements lead to
-improvements over the current state-of-the-art on several well-studied tasks.
-
+  Recent papers have shown that neural networks obtain state-of-the-artperformance on several different sequence tagging tasks. One appealing propertyof such systems is their generality, as excellent performance can be achievedwith a unified architecture and without task-specific feature engineering.However, it is unclear if such systems can be used for tasks without largeamounts of training data. In this paper we explore the problem of transferlearning for neural sequence taggers, where a source task with plentifulannotations (e.g., POS tagging on Penn Treebank) is used to improve performanceon a target task with fewer available annotations (e.g., POS tagging formicroblogs). We examine the effects of transfer learning for deep hierarchicalrecurrent networks across domains, applications, and languages, and show thatsignificant improvement can often be obtained. These improvements lead toimprovements over the current state-of-the-art on several well-studied tasks.
 
 Good Semi-supervised Learning that Requires a Bad GAN
 
-  Semi-supervised learning methods based on generative adversarial networks
-(GANs) obtained strong empirical results, but it is not clear 1) how the
-discriminator benefits from joint training with a generator, and 2) why good
-semi-supervised classification performance and a good generator cannot be
-obtained at the same time. Theoretically, we show that given the discriminator
-objective, good semisupervised learning indeed requires a bad generator, and
-propose the definition of a preferred generator. Empirically, we derive a novel
-formulation based on our analysis that substantially improves over feature
-matching GANs, obtaining state-of-the-art results on multiple benchmark
-datasets.
-
+  Semi-supervised learning methods based on generative adversarial networks(GANs) obtained strong empirical results, but it is not clear 1) how thediscriminator benefits from joint training with a generator, and 2) why goodsemi-supervised classification performance and a good generator cannot beobtained at the same time. Theoretically, we show that given the discriminatorobjective, good semisupervised learning indeed requires a bad generator, andpropose the definition of a preferred generator. Empirically, we derive a novelformulation based on our analysis that substantially improves over featurematching GANs, obtaining state-of-the-art results on multiple benchmarkdatasets.
 
 Breaking the Softmax Bottleneck: A High-Rank RNN Language Model
 
-  We formulate language modeling as a matrix factorization problem, and show
-that the expressiveness of Softmax-based models (including the majority of
-neural language models) is limited by a Softmax bottleneck. Given that natural
-language is highly context-dependent, this further implies that in practice
-Softmax with distributed word embeddings does not have enough capacity to model
-natural language. We propose a simple and effective method to address this
-issue, and improve the state-of-the-art perplexities on Penn Treebank and
-WikiText-2 to 47.69 and 40.68 respectively. The proposed method also excels on
-the large-scale 1B Word dataset, outperforming the baseline by over 5.6 points
-in perplexity.
-
+  We formulate language modeling as a matrix factorization problem, and showthat the expressiveness of Softmax-based models (including the majority ofneural language models) is limited by a Softmax bottleneck. Given that naturallanguage is highly context-dependent, this further implies that in practiceSoftmax with distributed word embeddings does not have enough capacity to modelnatural language. We propose a simple and effective method to address thisissue, and improve the state-of-the-art perplexities on Penn Treebank andWikiText-2 to 47.69 and 40.68 respectively. The proposed method also excels onthe large-scale 1B Word dataset, outperforming the baseline by over 5.6 pointsin perplexity.
 
 Neural Models for Reasoning over Multiple Mentions using Coreference
 
-  Many problems in NLP require aggregating information from multiple mentions
-of the same entity which may be far apart in the text. Existing Recurrent
-Neural Network (RNN) layers are biased towards short-term dependencies and
-hence not suited to such tasks. We present a recurrent layer which is instead
-biased towards coreferent dependencies. The layer uses coreference annotations
-extracted from an external system to connect entity mentions belonging to the
-same cluster. Incorporating this layer into a state-of-the-art reading
-comprehension model improves performance on three datasets -- Wikihop, LAMBADA
-and the bAbi AI tasks -- with large gains when training data is scarce.
+  Many problems in NLP require aggregating information from multiple mentionsof the same entity which may be far apart in the text. Existing RecurrentNeural Network (RNN) layers are biased towards short-term dependencies andhence not suited to such tasks. We present a recurrent layer which is insteadbiased towards coreferent dependencies. The layer uses coreference annotationsextracted from an external system to connect entity mentions belonging to thesame cluster. Incorporating this layer into a state-of-the-art readingcomprehension model improves performance on three datasets -- Wikihop, LAMBADAand the bAbi AI tasks -- with large gains when training data is scarce.
 
+GLoMo: Unsupervisedly Learned Relational Graphs as Transferable  Representations
 
-GLoMo: Unsupervisedly Learned Relational Graphs as Transferable
-  Representations
+  Modern deep transfer learning approaches have mainly focused on learninggeneric feature vectors from one task that are transferable to other tasks,such as word embeddings in language and pretrained convolutional features invision. However, these approaches usually transfer unary features and largelyignore more structured graphical representations. This work explores thepossibility of learning generic latent relational graphs that capturedependencies between pairs of data units (e.g., words or pixels) fromlarge-scale unlabeled data and transferring the graphs to downstream tasks. Ourproposed transfer learning framework improves performance on various tasksincluding question answering, natural language inference, sentiment analysis,and image classification. We also show that the learned graphs are genericenough to be transferred to different embeddings on which the graphs have notbeen trained (including GloVe embeddings, ELMo embeddings, and task-specificRNN hidden unit), or embedding-free units such as image pixels.
 
-  Modern deep transfer learning approaches have mainly focused on learning
-generic feature vectors from one task that are transferable to other tasks,
-such as word embeddings in language and pretrained convolutional features in
-vision. However, these approaches usually transfer unary features and largely
-ignore more structured graphical representations. This work explores the
-possibility of learning generic latent relational graphs that capture
-dependencies between pairs of data units (e.g., words or pixels) from
-large-scale unlabeled data and transferring the graphs to downstream tasks. Our
-proposed transfer learning framework improves performance on various tasks
-including question answering, natural language inference, sentiment analysis,
-and image classification. We also show that the learned graphs are generic
-enough to be transferred to different embeddings on which the graphs have not
-been trained (including GloVe embeddings, ELMo embeddings, and task-specific
-RNN hidden unit), or embedding-free units such as image pixels.
+Open Domain Question Answering Using Early Fusion of Knowledge Bases and  Text
 
+  Open Domain Question Answering (QA) is evolving from complex pipelinedsystems to end-to-end deep neural networks. Specialized neural models have beendeveloped for extracting answers from either text alone or Knowledge Bases(KBs) alone. In this paper we look at a more practical setting, namely QA overthe combination of a KB and entity-linked text, which is appropriate when anincomplete KB is available with a large text corpus. Building on recentadvances in graph representation learning we propose a novel model, GRAFT-Net,for extracting answers from a question-specific subgraph containing text and KBentities and relations. We construct a suite of benchmark tasks for thisproblem, varying the difficulty of questions, the amount of training data, andKB completeness. We show that GRAFT-Net is competitive with thestate-of-the-art when tested using either KBs or text alone, and vastlyoutperforms existing methods in the combined setting. Source code is availableat https://github.com/OceanskySun/GraftNet .
 
-Open Domain Question Answering Using Early Fusion of Knowledge Bases and
-  Text
+HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question  Answering
 
-  Open Domain Question Answering (QA) is evolving from complex pipelined
-systems to end-to-end deep neural networks. Specialized neural models have been
-developed for extracting answers from either text alone or Knowledge Bases
-(KBs) alone. In this paper we look at a more practical setting, namely QA over
-the combination of a KB and entity-linked text, which is appropriate when an
-incomplete KB is available with a large text corpus. Building on recent
-advances in graph representation learning we propose a novel model, GRAFT-Net,
-for extracting answers from a question-specific subgraph containing text and KB
-entities and relations. We construct a suite of benchmark tasks for this
-problem, varying the difficulty of questions, the amount of training data, and
-KB completeness. We show that GRAFT-Net is competitive with the
-state-of-the-art when tested using either KBs or text alone, and vastly
-outperforms existing methods in the combined setting. Source code is available
-at https://github.com/OceanskySun/GraftNet .
-
-
-HotpotQA: A Dataset for Diverse, Explainable Multi-hop Question
-  Answering
-
-  Existing question answering (QA) datasets fail to train QA systems to perform
-complex reasoning and provide explanations for answers. We introduce HotpotQA,
-a new dataset with 113k Wikipedia-based question-answer pairs with four key
-features: (1) the questions require finding and reasoning over multiple
-supporting documents to answer; (2) the questions are diverse and not
-constrained to any pre-existing knowledge bases or knowledge schemas; (3) we
-provide sentence-level supporting facts required for reasoning, allowing QA
-systems to reason with strong supervision and explain the predictions; (4) we
-offer a new type of factoid comparison questions to test QA systems' ability to
-extract relevant facts and perform necessary comparison. We show that HotpotQA
-is challenging for the latest QA systems, and the supporting facts enable
-models to improve performance and make explainable predictions.
-
+  Existing question answering (QA) datasets fail to train QA systems to performcomplex reasoning and provide explanations for answers. We introduce HotpotQA,a new dataset with 113k Wikipedia-based question-answer pairs with four keyfeatures: (1) the questions require finding and reasoning over multiplesupporting documents to answer; (2) the questions are diverse and notconstrained to any pre-existing knowledge bases or knowledge schemas; (3) weprovide sentence-level supporting facts required for reasoning, allowing QAsystems to reason with strong supervision and explain the predictions; (4) weoffer a new type of factoid comparison questions to test QA systems' ability toextract relevant facts and perform necessary comparison. We show that HotpotQAis challenging for the latest QA systems, and the supporting facts enablemodels to improve performance and make explainable predictions.
 
 Incremental Reading for Question Answering
 
-  Any system which performs goal-directed continual learning must not only
-learn incrementally but process and absorb information incrementally. Such a
-system also has to understand when its goals have been achieved. In this paper,
-we consider these issues in the context of question answering. Current
-state-of-the-art question answering models reason over an entire passage, not
-incrementally. As we will show, naive approaches to incremental reading, such
-as restriction to unidirectional language models in the model, perform poorly.
-We present extensions to the DocQA [2] model to allow incremental reading
-without loss of accuracy. The model also jointly learns to provide the best
-answer given the text that is seen so far and predict whether this best-so-far
-answer is sufficient.
-
+  Any system which performs goal-directed continual learning must not onlylearn incrementally but process and absorb information incrementally. Such asystem also has to understand when its goals have been achieved. In this paper,we consider these issues in the context of question answering. Currentstate-of-the-art question answering models reason over an entire passage, notincrementally. As we will show, naive approaches to incremental reading, suchas restriction to unidirectional language models in the model, perform poorly.We present extensions to the DocQA [2] model to allow incremental readingwithout loss of accuracy. The model also jointly learns to provide the bestanswer given the text that is seen so far and predict whether this best-so-faranswer is sufficient.
 
 Probing Biomedical Embeddings from Language Models
 
-  Contextualized word embeddings derived from pre-trained language models (LMs)
-show significant improvements on downstream NLP tasks. Pre-training on
-domain-specific corpora, such as biomedical articles, further improves their
-performance. In this paper, we conduct probing experiments to determine what
-additional information is carried intrinsically by the in-domain trained
-contextualized embeddings. For this we use the pre-trained LMs as fixed feature
-extractors and restrict the downstream task models to not have additional
-sequence modeling layers. We compare BERT, ELMo, BioBERT and BioELMo, a
-biomedical version of ELMo trained on 10M PubMed abstracts. Surprisingly, while
-fine-tuned BioBERT is better than BioELMo in biomedical NER and NLI tasks, as a
-fixed feature extractor BioELMo outperforms BioBERT in our probing tasks. We
-use visualization and nearest neighbor analysis to show that better encoding of
-entity-type and relational information leads to this superiority.
+  Contextualized word embeddings derived from pre-trained language models (LMs)show significant improvements on downstream NLP tasks. Pre-training ondomain-specific corpora, such as biomedical articles, further improves theirperformance. In this paper, we conduct probing experiments to determine whatadditional information is carried intrinsically by the in-domain trainedcontextualized embeddings. For this we use the pre-trained LMs as fixed featureextractors and restrict the downstream task models to not have additionalsequence modeling layers. We compare BERT, ELMo, BioBERT and BioELMo, abiomedical version of ELMo trained on 10M PubMed abstracts. Surprisingly, whilefine-tuned BioBERT is better than BioELMo in biomedical NER and NLI tasks, as afixed feature extractor BioELMo outperforms BioBERT in our probing tasks. Weuse visualization and nearest neighbor analysis to show that better encoding ofentity-type and relational information leads to this superiority.
 
+The First Extrasolar Planet Discovered with a New Generation High  Throughput Doppler Instrument
 
-The First Extrasolar Planet Discovered with a New Generation High
-  Throughput Doppler Instrument
+  We report the detection of the first extrasolar planet, ET-1 (HD 102195b),using the Exoplanet Tracker (ET), a new generation Doppler instrument. Theplanet orbits HD 102195, a young star with solar metallicity that may be partof the local association. The planet imparts radial velocity variability to thestar with a semiamplitude of $63.4\pm2.0$ m s$^{-1}$ and a period of 4.11 days.The planetary minimum mass ($m \sin i$) is $0.488\pm0.015$ $M_J$.
 
-  We report the detection of the first extrasolar planet, ET-1 (HD 102195b),
-using the Exoplanet Tracker (ET), a new generation Doppler instrument. The
-planet orbits HD 102195, a young star with solar metallicity that may be part
-of the local association. The planet imparts radial velocity variability to the
-star with a semiamplitude of $63.4\pm2.0$ m s$^{-1}$ and a period of 4.11 days.
-The planetary minimum mass ($m \sin i$) is $0.488\pm0.015$ $M_J$.
+Nuclear σ-terms and Scalar-Isoscalar WIMP-Nucleus Interactions from  Lattice QCD
 
-
-Nuclear σ-terms and Scalar-Isoscalar WIMP-Nucleus Interactions from
-  Lattice QCD
-
-  It has been argued that the leading scalar-isoscalar WIMP-nucleus
-interactions receive parametrically enhanced contributions in the context of
-nuclear effective field theories. These contributions arise from meson-exchange
-currents (MECs) and potentially modify the impulse approximation estimates of
-these interactions by 10--60%. We point out that these MECs also contribute to
-the quark mass dependence of nuclear binding energies, that is, nuclear
-\sigma-terms. In this work, we use recent lattice QCD calculations of the
-binding energies of the deuteron, He-3 and He-4 at pion masses near 500 MeV and
-800 MeV, combined with the experimentally determined binding energies at the
-physical point, to provide approximate determinations of the \sigma-terms for
-these light nuclei. For each nucleus, we find that the deviation of the
-corresponding nuclear \sigma-term from the single-nucleon estimate is at the
-few percent level, in conflict with the conjectured enhancement. As a
-consequence, lattice QCD calculations currently indicate that the cross
-sections for scalar-isoscalar WIMP-nucleus interactions arising from
-fundamental WIMP interactions with quarks do not suffer from significant
-uncertainties due to enhanced meson-exchange currents.
-
+  It has been argued that the leading scalar-isoscalar WIMP-nucleusinteractions receive parametrically enhanced contributions in the context ofnuclear effective field theories. These contributions arise from meson-exchangecurrents (MECs) and potentially modify the impulse approximation estimates ofthese interactions by 10--60%. We point out that these MECs also contribute tothe quark mass dependence of nuclear binding energies, that is, nuclear\sigma-terms. In this work, we use recent lattice QCD calculations of thebinding energies of the deuteron, He-3 and He-4 at pion masses near 500 MeV and800 MeV, combined with the experimentally determined binding energies at thephysical point, to provide approximate determinations of the \sigma-terms forthese light nuclei. For each nucleus, we find that the deviation of thecorresponding nuclear \sigma-term from the single-nucleon estimate is at thefew percent level, in conflict with the conjectured enhancement. As aconsequence, lattice QCD calculations currently indicate that the crosssections for scalar-isoscalar WIMP-nucleus interactions arising fromfundamental WIMP interactions with quarks do not suffer from significantuncertainties due to enhanced meson-exchange currents.
 
 A Multi-Year Photometric Study of IC 348
 
-  The extremely young cluster IC 348 has been monitored photometrically over 5
-observing seasons from Dec 1998 to March 2003 in Cousins I with a 0.6 m
-telescope at Van Vleck Observatory. Twenty-eight periodic variables and 16
-irregular variables have been identified. Among the brighter stars, 14 of the
-16 known K or M-type WTTS were found to be periodic variables, while all 5 of
-the known CTTS were found to be irregular variables. In the full sample, which
-includes 150 stars with I mag as faint as 18, we find that 40% of the 63 WTTS
-are detected as variables, nearly all of them periodic, while 55% of the 20
-CTTS are also detected as variable, with none of them periodic. Our study
-suggests that 80-90% of all WTTS in young clusters will be detected as periodic
-variables given sufficiently precise and extended monitoring, whereas CTTS will
-reveal themselves primarily or solely as irregular variables. This has clear
-consequences for PMS rotational studies based on photometric periods. We
-examine the stability of the periodic light curves from season to season. All
-periodic stars show modulations of their amplitude, mean brightness and light
-curve shape on time scales of less than 1 yr, presumably due to changes in spot
-configurations and/or physical characteristics. In no case, however, can we
-find definitive evidence of a change in period, indicating that differential
-rotation is probably much less on WTTS than it is on the Sun. Among the
-non-periodic stars, we report the detection of two possible UXors as well as a
-pre-main sequence star, HMW 15, which apparently undergoes an eclipse with a
-duration exceeding three years.
+  The extremely young cluster IC 348 has been monitored photometrically over 5observing seasons from Dec 1998 to March 2003 in Cousins I with a 0.6 mtelescope at Van Vleck Observatory. Twenty-eight periodic variables and 16irregular variables have been identified. Among the brighter stars, 14 of the16 known K or M-type WTTS were found to be periodic variables, while all 5 ofthe known CTTS were found to be irregular variables. In the full sample, whichincludes 150 stars with I mag as faint as 18, we find that 40% of the 63 WTTSare detected as variables, nearly all of them periodic, while 55% of the 20CTTS are also detected as variable, with none of them periodic. Our studysuggests that 80-90% of all WTTS in young clusters will be detected as periodicvariables given sufficiently precise and extended monitoring, whereas CTTS willreveal themselves primarily or solely as irregular variables. This has clearconsequences for PMS rotational studies based on photometric periods. Weexamine the stability of the periodic light curves from season to season. Allperiodic stars show modulations of their amplitude, mean brightness and lightcurve shape on time scales of less than 1 yr, presumably due to changes in spotconfigurations and/or physical characteristics. In no case, however, can wefind definitive evidence of a change in period, indicating that differentialrotation is probably much less on WTTS than it is on the Sun. Among thenon-periodic stars, we report the detection of two possible UXors as well as apre-main sequence star, HMW 15, which apparently undergoes an eclipse with aduration exceeding three years.
 
+Semantic Scan: Detecting Subtle, Spatially Localized Events in Text  Streams
 
-Semantic Scan: Detecting Subtle, Spatially Localized Events in Text
-  Streams
-
-  Early detection and precise characterization of emerging topics in text
-streams can be highly useful in applications such as timely and targeted public
-health interventions and discovering evolving regional business trends. Many
-methods have been proposed for detecting emerging events in text streams using
-topic modeling. However, these methods have numerous shortcomings that make
-them unsuitable for rapid detection of locally emerging events on massive text
-streams. In this paper, we describe Semantic Scan (SS) that has been developed
-specifically to overcome these shortcomings in detecting new spatially compact
-events in text streams.
-  Semantic Scan integrates novel contrastive topic modeling with online
-document assignment and principled likelihood ratio-based spatial scanning to
-identify emerging events with unexpected patterns of keywords hidden in text
-streams. This enables more timely and accurate detection and characterization
-of anomalous, spatially localized emerging events. Semantic Scan does not
-require manual intervention or labeled training data, and is robust to noise in
-real-world text data since it identifies anomalous text patterns that occur in
-a cluster of new documents rather than an anomaly in a single new document.
-  We compare Semantic Scan to alternative state-of-the-art methods such as
-Topics over Time, Online LDA, and Labeled LDA on two real-world tasks: (i) a
-disease surveillance task monitoring free-text Emergency Department chief
-complaints in Allegheny County, and (ii) an emerging business trend detection
-task based on Yelp reviews. On both tasks, we find that Semantic Scan provides
-significantly better event detection and characterization accuracy than
-competing approaches, while providing up to an order of magnitude speedup.
-
+  Early detection and precise characterization of emerging topics in textstreams can be highly useful in applications such as timely and targeted publichealth interventions and discovering evolving regional business trends. Manymethods have been proposed for detecting emerging events in text streams usingtopic modeling. However, these methods have numerous shortcomings that makethem unsuitable for rapid detection of locally emerging events on massive textstreams. In this paper, we describe Semantic Scan (SS) that has been developedspecifically to overcome these shortcomings in detecting new spatially compactevents in text streams.  Semantic Scan integrates novel contrastive topic modeling with onlinedocument assignment and principled likelihood ratio-based spatial scanning toidentify emerging events with unexpected patterns of keywords hidden in textstreams. This enables more timely and accurate detection and characterizationof anomalous, spatially localized emerging events. Semantic Scan does notrequire manual intervention or labeled training data, and is robust to noise inreal-world text data since it identifies anomalous text patterns that occur ina cluster of new documents rather than an anomaly in a single new document.  We compare Semantic Scan to alternative state-of-the-art methods such asTopics over Time, Online LDA, and Labeled LDA on two real-world tasks: (i) adisease surveillance task monitoring free-text Emergency Department chiefcomplaints in Allegheny County, and (ii) an emerging business trend detectiontask based on Yelp reviews. On both tasks, we find that Semantic Scan providessignificantly better event detection and characterization accuracy thancompeting approaches, while providing up to an order of magnitude speedup.
 
 Quasar: Datasets for Question Answering by Search and Reading
 
-  We present two new large-scale datasets aimed at evaluating systems designed
-to comprehend a natural language query and extract its answer from a large
-corpus of text. The Quasar-S dataset consists of 37000 cloze-style
-(fill-in-the-gap) queries constructed from definitions of software entity tags
-on the popular website Stack Overflow. The posts and comments on the website
-serve as the background corpus for answering the cloze questions. The Quasar-T
-dataset consists of 43000 open-domain trivia questions and their answers
-obtained from various internet sources. ClueWeb09 serves as the background
-corpus for extracting these answers. We pose these datasets as a challenge for
-two related subtasks of factoid Question Answering: (1) searching for relevant
-pieces of text that include the correct answer to a query, and (2) reading the
-retrieved text to answer the query. We also describe a retrieval system for
-extracting relevant sentences and documents from the corpus given a query, and
-include these in the release for researchers wishing to only focus on (2). We
-evaluate several baselines on both datasets, ranging from simple heuristics to
-powerful neural models, and show that these lag behind human performance by
-16.4% and 32.1% for Quasar-S and -T respectively. The datasets are available at
-https://github.com/bdhingra/quasar .
-
+  We present two new large-scale datasets aimed at evaluating systems designedto comprehend a natural language query and extract its answer from a largecorpus of text. The Quasar-S dataset consists of 37000 cloze-style(fill-in-the-gap) queries constructed from definitions of software entity tagson the popular website Stack Overflow. The posts and comments on the websiteserve as the background corpus for answering the cloze questions. The Quasar-Tdataset consists of 43000 open-domain trivia questions and their answersobtained from various internet sources. ClueWeb09 serves as the backgroundcorpus for extracting these answers. We pose these datasets as a challenge fortwo related subtasks of factoid Question Answering: (1) searching for relevantpieces of text that include the correct answer to a query, and (2) reading theretrieved text to answer the query. We also describe a retrieval system forextracting relevant sentences and documents from the corpus given a query, andinclude these in the release for researchers wishing to only focus on (2). Weevaluate several baselines on both datasets, ranging from simple heuristics topowerful neural models, and show that these lag behind human performance by16.4% and 32.1% for Quasar-S and -T respectively. The datasets are available athttps://github.com/bdhingra/quasar .
 
 Learning to Organize Knowledge and Answer Questions with N-Gram Machines
 
-  Though deep neural networks have great success in natural language
-processing, they are limited at more knowledge intensive AI tasks, such as
-open-domain Question Answering (QA). Existing end-to-end deep QA models need to
-process the entire text after observing the question, and therefore their
-complexity in responding a question is linear in the text size. This is
-prohibitive for practical tasks such as QA from Wikipedia, a novel, or the Web.
-We propose to solve this scalability issue by using symbolic meaning
-representations, which can be indexed and retrieved efficiently with complexity
-that is independent of the text size. We apply our approach, called the N-Gram
-Machine (NGM), to three representative tasks. First as proof-of-concept, we
-demonstrate that NGM successfully solves the bAbI tasks of synthetic text.
-Second, we show that NGM scales to large corpus by experimenting on "life-long
-bAbI", a special version of bAbI that contains millions of sentences. Lastly on
-the WikiMovies dataset, we use NGM to induce latent structure (i.e. schema) and
-answer questions from natural language Wikipedia text, with only QA pairs as
-weak supervision.
+  Though deep neural networks have great success in natural languageprocessing, they are limited at more knowledge intensive AI tasks, such asopen-domain Question Answering (QA). Existing end-to-end deep QA models need toprocess the entire text after observing the question, and therefore theircomplexity in responding a question is linear in the text size. This isprohibitive for practical tasks such as QA from Wikipedia, a novel, or the Web.We propose to solve this scalability issue by using symbolic meaningrepresentations, which can be indexed and retrieved efficiently with complexitythat is independent of the text size. We apply our approach, called the N-GramMachine (NGM), to three representative tasks. First as proof-of-concept, wedemonstrate that NGM successfully solves the bAbI tasks of synthetic text.Second, we show that NGM scales to large corpus by experimenting on "life-longbAbI", a special version of bAbI that contains millions of sentences. Lastly onthe WikiMovies dataset, we use NGM to induce latent structure (i.e. schema) andanswer questions from natural language Wikipedia text, with only QA pairs asweak supervision.
 
+From genome to phenome: Predicting multiple cancer phenotypes based on  somatic genomic alterations via the genomic impact transformer
 
-From genome to phenome: Predicting multiple cancer phenotypes based on
-  somatic genomic alterations via the genomic impact transformer
+  Motivation: Cancers are mainly caused by somatic genomic alterations (SGAs)that perturb cellular signaling systems and eventually activate oncogenicprocesses. Therefore, understanding the functional impact of SGAs is afundamental task in cancer biology and precision oncology. Here, we present adeep neural network model with encoder-decoder architecture, referred to asgenomic impact transformer (GIT), to infer the functional impact of SGAs oncellular signaling systems through modeling the statistical relationshipsbetween SGA events and differentially expressed genes (DEGs) in tumors. Themodel utilizes multi-head self-attention mechanism to identify SGAs that likelycause DEGs, or in other words differentiating potential driver SGAs frompassenger ones in a tumor. GIT model learns a vector (gene embedding) as anabstract representation of functional impact for each SGA-affected gene. GivenSGAs of a tumor, the model can instantiate the states of the hidden layer,providing abstract representation (tumor embedding) reflecting characteristicsof perturbed molecular/cellular processes in the tumor, which in turn can beused to predict multiple phenotypes. Results: We apply the GIT model to 4,468tumors profiled by The Cancer Genome Atlas (TCGA) project. The attentionmechanism enables the model to better capture the statistical relationshipbetween SGAs and DEGs than conventional methods, and distinguishes cancerdrivers from passengers. The learned gene embeddings capture the functionalsimilarity of SGAs perturbing common pathways. The tumor embeddings are shownto be useful for tumor status representation, and phenotype predictionincluding patient survival time and drug response of cancer cell lines.
 
-  Motivation: Cancers are mainly caused by somatic genomic alterations (SGAs)
-that perturb cellular signaling systems and eventually activate oncogenic
-processes. Therefore, understanding the functional impact of SGAs is a
-fundamental task in cancer biology and precision oncology. Here, we present a
-deep neural network model with encoder-decoder architecture, referred to as
-genomic impact transformer (GIT), to infer the functional impact of SGAs on
-cellular signaling systems through modeling the statistical relationships
-between SGA events and differentially expressed genes (DEGs) in tumors. The
-model utilizes multi-head self-attention mechanism to identify SGAs that likely
-cause DEGs, or in other words differentiating potential driver SGAs from
-passenger ones in a tumor. GIT model learns a vector (gene embedding) as an
-abstract representation of functional impact for each SGA-affected gene. Given
-SGAs of a tumor, the model can instantiate the states of the hidden layer,
-providing abstract representation (tumor embedding) reflecting characteristics
-of perturbed molecular/cellular processes in the tumor, which in turn can be
-used to predict multiple phenotypes. Results: We apply the GIT model to 4,468
-tumors profiled by The Cancer Genome Atlas (TCGA) project. The attention
-mechanism enables the model to better capture the statistical relationship
-between SGAs and DEGs than conventional methods, and distinguishes cancer
-drivers from passengers. The learned gene embeddings capture the functional
-similarity of SGAs perturbing common pathways. The tumor embeddings are shown
-to be useful for tumor status representation, and phenotype prediction
-including patient survival time and drug response of cancer cell lines.
+The Spitzer Local Volume Legacy: Survey Description and Infrared  Photometry
 
+  The survey description and the near-, mid-, and far-infrared flux propertiesare presented for the 258 galaxies in the Local Volume Legacy (LVL). LVL is aSpitzer Space Telescope legacy program that surveys the local universe out to11 Mpc, built upon a foundation of ultraviolet, H-alpha, and HST imaging from11HUGS (11 Mpc H-alpha and Ultraviolet Galaxy Survey) and ANGST (ACS NearbyGalaxy Survey Treasury). LVL covers an unbiased, representative, andstatistically robust sample of nearby star-forming galaxies, exploiting thehighest extragalactic spatial resolution achievable with Spitzer. As a resultof its approximately volume-limited nature, LVL augments previous Spitzerobservations of present-day galaxies with improved sampling of thelow-luminosity galaxy population. The collection of LVL galaxies shows a largespread in mid-infrared colors, likely due to the conspicuous deficiency of 8umPAH emission from low-metallicity, low-luminosity galaxies. Conversely, thefar-infrared emission tightly tracks the total infrared emission, with adispersion in their flux ratio of only 0.1 dex. In terms of the relationbetween infrared-to-ultraviolet ratio and ultraviolet spectral slope, the LVLsample shows redder colors and/or lower infrared-to-ultraviolet ratios thanstarburst galaxies, suggesting that reprocessing by dust is less important inthe lower mass systems that dominate the LVL sample. Comparisons withtheoretical models suggest that the amplitude of deviations from the relationfound for starburst galaxies correlates with the age of the stellar populationsthat dominate the ultraviolet/optical luminosities.
 
-The Spitzer Local Volume Legacy: Survey Description and Infrared
-  Photometry
+Extinction and Dust Geometry in M83 HII Regions: A Hubble Space  Telescope/WFC3 Study
 
-  The survey description and the near-, mid-, and far-infrared flux properties
-are presented for the 258 galaxies in the Local Volume Legacy (LVL). LVL is a
-Spitzer Space Telescope legacy program that surveys the local universe out to
-11 Mpc, built upon a foundation of ultraviolet, H-alpha, and HST imaging from
-11HUGS (11 Mpc H-alpha and Ultraviolet Galaxy Survey) and ANGST (ACS Nearby
-Galaxy Survey Treasury). LVL covers an unbiased, representative, and
-statistically robust sample of nearby star-forming galaxies, exploiting the
-highest extragalactic spatial resolution achievable with Spitzer. As a result
-of its approximately volume-limited nature, LVL augments previous Spitzer
-observations of present-day galaxies with improved sampling of the
-low-luminosity galaxy population. The collection of LVL galaxies shows a large
-spread in mid-infrared colors, likely due to the conspicuous deficiency of 8um
-PAH emission from low-metallicity, low-luminosity galaxies. Conversely, the
-far-infrared emission tightly tracks the total infrared emission, with a
-dispersion in their flux ratio of only 0.1 dex. In terms of the relation
-between infrared-to-ultraviolet ratio and ultraviolet spectral slope, the LVL
-sample shows redder colors and/or lower infrared-to-ultraviolet ratios than
-starburst galaxies, suggesting that reprocessing by dust is less important in
-the lower mass systems that dominate the LVL sample. Comparisons with
-theoretical models suggest that the amplitude of deviations from the relation
-found for starburst galaxies correlates with the age of the stellar populations
-that dominate the ultraviolet/optical luminosities.
+  We present HST/WFC3 narrow-band imaging of the starburst galaxy M83 targetingthe hydrogen recombination lines (H$\beta$, H$\alpha$ and Pa$\beta$), which weuse to investigate the dust extinction in the HII regions. We derive extinctionmaps with 6 parsec spatial resolution from two combinations of hydrogen lines(H$\alpha$/H$\beta$ and H$\alpha$/Pa$\beta$), and show that the longerwavelengths probe larger optical depths, with $A_V$ values larger by $\gtrsim$1mag than those derived from the shorter wavelengths. This difference leads to afactor $\gtrsim$2 discrepancy in the extinction-corrected H$\alpha$ luminosity,a significant effect when studying extragalactic HII regions. By comparingthese observations to a series of simple models, we conclude that a largediversity of absorber/emitter geometric configurations can account for thedata, implying a more complex physical structure than the classical foreground"dust screen" assumption. However, most data points are bracketed by theforeground screen and a model where dust and emitters are uniformly mixed. Whenaveraged over large ($\gtrsim$100--200 pc) scales, the extinction becomesconsistent with a "dust screen", suggesting that other geometries tend to berestricted to more local scales. Moreover, the extinction in any region can bedescribed by a combination of the foreground screen and the uniform mixturemodel with weights of 1/3 and 2/3 in the center ($\lesssim$2 kpc),respectively, and 2/3 and 1/3 for the rest of the disk. This simpleprescription significantly improves the accuracy of the dust extinctioncorrections and can be especially useful for pixel-based analyses of galaxiessimilar to M83.
 
+Spitzer Survey of the Large Magellanic Cloud, Surveying the Agents of a  Galaxy's Evolution (SAGE) I: Overview and Initial Results
 
-Extinction and Dust Geometry in M83 HII Regions: A Hubble Space
-  Telescope/WFC3 Study
+  We are performing a uniform and unbiased, ~7x7 degrees imaging survey of theLarge Magellanic Cloud (LMC), using the IRAC and MIPS instruments on board theSpitzer Space Telescope in order to survey the agents of a galaxy's evolution(SAGE), the interstellar medium (ISM) and stars in the LMC. The detection ofdiffuse ISM with column densities >1.2x10^21 H cm^-2 permits detailed studiesof dust processes in the ISM. SAGE's point source sensitivity enables acomplete census of newly formed stars with masses >3 solar masses that willdetermine the current star formation rate in the LMC. SAGE's detection ofevolved stars with mass loss rates >1x10^-8 solar masses per year will quantifythe rate at which evolved stars inject mass into the ISM of the LMC. Theobserving strategy includes two epochs in 2005, separated by three months, thatboth mitigate instrumental artifacts and constrain source variability. The SAGEdata are non-proprietary. The data processing includes IRAC and MIPS pipelinesand a database for mining the point source catalogs, which will be released tothe community in support of Spitzer proposal cycles 4 and 5. We present initialresults on the epoch 1 data with a special focus on the N79 and N83 region. TheSAGE epoch 1 point source catalog has ~4 million sources. The point sourcecounts are highest for the IRAC 3.6 microns band and decrease dramaticallytowards longer wavelengths consistent with the fact that stars dominate thepoint source catalogs and that the dusty objects, e.g. young stellar objectsand dusty evolved stars that detected at the longer wavelengths, are rare incomparison. We outline a strategy for identifying foreground MW stars, that maycomprise as much as 18% of the source list, and background galaxies, that maycomprise ~12% of the source list.
 
-  We present HST/WFC3 narrow-band imaging of the starburst galaxy M83 targeting
-the hydrogen recombination lines (H$\beta$, H$\alpha$ and Pa$\beta$), which we
-use to investigate the dust extinction in the HII regions. We derive extinction
-maps with 6 parsec spatial resolution from two combinations of hydrogen lines
-(H$\alpha$/H$\beta$ and H$\alpha$/Pa$\beta$), and show that the longer
-wavelengths probe larger optical depths, with $A_V$ values larger by $\gtrsim$1
-mag than those derived from the shorter wavelengths. This difference leads to a
-factor $\gtrsim$2 discrepancy in the extinction-corrected H$\alpha$ luminosity,
-a significant effect when studying extragalactic HII regions. By comparing
-these observations to a series of simple models, we conclude that a large
-diversity of absorber/emitter geometric configurations can account for the
-data, implying a more complex physical structure than the classical foreground
-"dust screen" assumption. However, most data points are bracketed by the
-foreground screen and a model where dust and emitters are uniformly mixed. When
-averaged over large ($\gtrsim$100--200 pc) scales, the extinction becomes
-consistent with a "dust screen", suggesting that other geometries tend to be
-restricted to more local scales. Moreover, the extinction in any region can be
-described by a combination of the foreground screen and the uniform mixture
-model with weights of 1/3 and 2/3 in the center ($\lesssim$2 kpc),
-respectively, and 2/3 and 1/3 for the rest of the disk. This simple
-prescription significantly improves the accuracy of the dust extinction
-corrections and can be especially useful for pixel-based analyses of galaxies
-similar to M83.
+IceCube Collaboration Contributions to the 2009 International Cosmic Ray  Conference
 
+  IceCube Collaboration Contributions to the 2009 International Cosmic RayConference
 
-Spitzer Survey of the Large Magellanic Cloud, Surveying the Agents of a
-  Galaxy's Evolution (SAGE) I: Overview and Initial Results
+Ionization Electron Signal Processing in Single Phase LArTPCs I.  Algorithm Description and Quantitative Evaluation with MicroBooNE Simulation
 
-  We are performing a uniform and unbiased, ~7x7 degrees imaging survey of the
-Large Magellanic Cloud (LMC), using the IRAC and MIPS instruments on board the
-Spitzer Space Telescope in order to survey the agents of a galaxy's evolution
-(SAGE), the interstellar medium (ISM) and stars in the LMC. The detection of
-diffuse ISM with column densities >1.2x10^21 H cm^-2 permits detailed studies
-of dust processes in the ISM. SAGE's point source sensitivity enables a
-complete census of newly formed stars with masses >3 solar masses that will
-determine the current star formation rate in the LMC. SAGE's detection of
-evolved stars with mass loss rates >1x10^-8 solar masses per year will quantify
-the rate at which evolved stars inject mass into the ISM of the LMC. The
-observing strategy includes two epochs in 2005, separated by three months, that
-both mitigate instrumental artifacts and constrain source variability. The SAGE
-data are non-proprietary. The data processing includes IRAC and MIPS pipelines
-and a database for mining the point source catalogs, which will be released to
-the community in support of Spitzer proposal cycles 4 and 5. We present initial
-results on the epoch 1 data with a special focus on the N79 and N83 region. The
-SAGE epoch 1 point source catalog has ~4 million sources. The point source
-counts are highest for the IRAC 3.6 microns band and decrease dramatically
-towards longer wavelengths consistent with the fact that stars dominate the
-point source catalogs and that the dusty objects, e.g. young stellar objects
-and dusty evolved stars that detected at the longer wavelengths, are rare in
-comparison. We outline a strategy for identifying foreground MW stars, that may
-comprise as much as 18% of the source list, and background galaxies, that may
-comprise ~12% of the source list.
+  We describe the concept and procedure of drifted-charge extraction developedin the MicroBooNE experiment, a single-phase liquid argon time projectionchamber (LArTPC). This technique converts the raw digitized TPC waveform to thenumber of ionization electrons passing through a wire plane at a given time. Arobust recovery of the number of ionization electrons from both induction andcollection anode wire planes will augment the 3D reconstruction, and isparticularly important for tomographic reconstruction algorithms. A number ofbuilding blocks of the overall procedure are described. The performance of thesignal processing is quantitatively evaluated by comparing extracted chargewith the true charge through a detailed TPC detector simulation taking intoaccount position-dependent induced current inside a single wire region andacross multiple wires. Some areas for further improvement of the performance ofthe charge extraction procedure are also discussed.
 
+Ionization Electron Signal Processing in Single Phase LArTPCs II.  Data/Simulation Comparison and Performance in MicroBooNE
 
-IceCube Collaboration Contributions to the 2009 International Cosmic Ray
-  Conference
-
-  IceCube Collaboration Contributions to the 2009 International Cosmic Ray
-Conference
-
-
-Ionization Electron Signal Processing in Single Phase LArTPCs I.
-  Algorithm Description and Quantitative Evaluation with MicroBooNE Simulation
-
-  We describe the concept and procedure of drifted-charge extraction developed
-in the MicroBooNE experiment, a single-phase liquid argon time projection
-chamber (LArTPC). This technique converts the raw digitized TPC waveform to the
-number of ionization electrons passing through a wire plane at a given time. A
-robust recovery of the number of ionization electrons from both induction and
-collection anode wire planes will augment the 3D reconstruction, and is
-particularly important for tomographic reconstruction algorithms. A number of
-building blocks of the overall procedure are described. The performance of the
-signal processing is quantitatively evaluated by comparing extracted charge
-with the true charge through a detailed TPC detector simulation taking into
-account position-dependent induced current inside a single wire region and
-across multiple wires. Some areas for further improvement of the performance of
-the charge extraction procedure are also discussed.
-
-
-Ionization Electron Signal Processing in Single Phase LArTPCs II.
-  Data/Simulation Comparison and Performance in MicroBooNE
-
-  The single-phase liquid argon time projection chamber (LArTPC) provides a
-large amount of detailed information in the form of fine-grained drifted
-ionization charge from particle traces. To fully utilize this information, the
-deposited charge must be accurately extracted from the raw digitized waveforms
-via a robust signal processing chain. Enabled by the ultra-low noise levels
-associated with cryogenic electronics in the MicroBooNE detector, the precise
-extraction of ionization charge from the induction wire planes in a
-single-phase LArTPC is qualitatively demonstrated on MicroBooNE data with event
-display images, and quantitatively demonstrated via waveform-level and
-track-level metrics. Improved performance of induction plane calorimetry is
-demonstrated through the agreement of extracted ionization charge measurements
-across different wire planes for various event topologies. In addition to the
-comprehensive waveform-level comparison of data and simulation, a calibration
-of the cryogenic electronics response is presented and solutions to various
-MicroBooNE-specific TPC issues are discussed. This work presents an important
-improvement in LArTPC signal processing, the foundation of reconstruction and
-therefore physics analyses in MicroBooNE.
-
+  The single-phase liquid argon time projection chamber (LArTPC) provides alarge amount of detailed information in the form of fine-grained driftedionization charge from particle traces. To fully utilize this information, thedeposited charge must be accurately extracted from the raw digitized waveformsvia a robust signal processing chain. Enabled by the ultra-low noise levelsassociated with cryogenic electronics in the MicroBooNE detector, the preciseextraction of ionization charge from the induction wire planes in asingle-phase LArTPC is qualitatively demonstrated on MicroBooNE data with eventdisplay images, and quantitatively demonstrated via waveform-level andtrack-level metrics. Improved performance of induction plane calorimetry isdemonstrated through the agreement of extracted ionization charge measurementsacross different wire planes for various event topologies. In addition to thecomprehensive waveform-level comparison of data and simulation, a calibrationof the cryogenic electronics response is presented and solutions to variousMicroBooNE-specific TPC issues are discussed. This work presents an importantimprovement in LArTPC signal processing, the foundation of reconstruction andtherefore physics analyses in MicroBooNE.
 

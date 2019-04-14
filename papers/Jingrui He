@@ -1,97 +1,16 @@
 Optimizing the Wisdom of the Crowd: Inference, Learning, and Teaching
 
-  The unprecedented demand for large amount of data has catalyzed the trend of
-combining human insights with machine learning techniques, which facilitate the
-use of crowdsourcing to enlist label information both effectively and
-efficiently. The classic work on crowdsourcing mainly focuses on the label
-inference problem under the categorization setting. However, inferring the true
-label requires sophisticated aggregation models that usually can only perform
-well under certain assumptions. Meanwhile, no matter how complicated the
-aggregation model is, the true model that generated the crowd labels remains
-unknown. Therefore, the label inference problem can never infer the ground
-truth perfectly. Based on the fact that the crowdsourcing labels are abundant
-and utilizing aggregation will lose such kind of rich annotation information
-(e.g., which worker provided which labels), we believe that it is critical to
-take the diverse labeling abilities of the crowdsourcing workers as well as
-their correlations into consideration. To address the above challenge, we
-propose to tackle three research problems, namely inference, learning, and
-teaching.
+  The unprecedented demand for large amount of data has catalyzed the trend ofcombining human insights with machine learning techniques, which facilitate theuse of crowdsourcing to enlist label information both effectively andefficiently. The classic work on crowdsourcing mainly focuses on the labelinference problem under the categorization setting. However, inferring the truelabel requires sophisticated aggregation models that usually can only performwell under certain assumptions. Meanwhile, no matter how complicated theaggregation model is, the true model that generated the crowd labels remainsunknown. Therefore, the label inference problem can never infer the groundtruth perfectly. Based on the fact that the crowdsourcing labels are abundantand utilizing aggregation will lose such kind of rich annotation information(e.g., which worker provided which labels), we believe that it is critical totake the diverse labeling abilities of the crowdsourcing workers as well astheir correlations into consideration. To address the above challenge, wepropose to tackle three research problems, namely inference, learning, andteaching.
 
+Unlearn What You Have Learned: Adaptive Crowd Teaching with  Exponentially Decayed Memory Learners
 
-Unlearn What You Have Learned: Adaptive Crowd Teaching with
-  Exponentially Decayed Memory Learners
+  With the increasing demand for large amount of labeled data, crowdsourcinghas been used in many large-scale data mining applications. However, mostexisting works in crowdsourcing mainly focus on label inference and incentivedesign. In this paper, we address a different problem of adaptive crowdteaching, which is a sub-area of machine teaching in the context ofcrowdsourcing. Compared with machines, human beings are extremely good atlearning a specific target concept (e.g., classifying the images into givencategories) and they can also easily transfer the learned concepts into similarlearning tasks. Therefore, a more effective way of utilizing crowdsourcing isby supervising the crowd to label in the form of teaching. In order to performthe teaching and expertise estimation simultaneously, we propose an adaptiveteaching framework named JEDI to construct the personalized optimal teachingset for the crowdsourcing workers. In JEDI teaching, the teacher assumes thateach learner has an exponentially decayed memory. Furthermore, it ensurescomprehensiveness in the learning process by carefully balancing teachingdiversity and learner's accurate learning in terms of teaching usefulness.Finally, we validate the effectiveness and efficacy of JEDI teaching incomparison with the state-of-the-art techniques on multiple data sets with bothsynthetic learners and real crowdsourcing workers.
 
-  With the increasing demand for large amount of labeled data, crowdsourcing
-has been used in many large-scale data mining applications. However, most
-existing works in crowdsourcing mainly focus on label inference and incentive
-design. In this paper, we address a different problem of adaptive crowd
-teaching, which is a sub-area of machine teaching in the context of
-crowdsourcing. Compared with machines, human beings are extremely good at
-learning a specific target concept (e.g., classifying the images into given
-categories) and they can also easily transfer the learned concepts into similar
-learning tasks. Therefore, a more effective way of utilizing crowdsourcing is
-by supervising the crowd to label in the form of teaching. In order to perform
-the teaching and expertise estimation simultaneously, we propose an adaptive
-teaching framework named JEDI to construct the personalized optimal teaching
-set for the crowdsourcing workers. In JEDI teaching, the teacher assumes that
-each learner has an exponentially decayed memory. Furthermore, it ensures
-comprehensiveness in the learning process by carefully balancing teaching
-diversity and learner's accurate learning in terms of teaching usefulness.
-Finally, we validate the effectiveness and efficacy of JEDI teaching in
-comparison with the state-of-the-art techniques on multiple data sets with both
-synthetic learners and real crowdsourcing workers.
+ImVerde: Vertex-Diminished Random Walk for Learning Network  Representation from Imbalanced Data
 
-
-ImVerde: Vertex-Diminished Random Walk for Learning Network
-  Representation from Imbalanced Data
-
-  Imbalanced data widely exists in many high-impact applications. An example is
-in air traffic control, where we aim to identify the leading indicators for
-each type of accident cause from historical records. Among all three types of
-accident causes, historical records with 'personnel issues' are much more than
-the other two types ('aircraft issues' and 'environmental issues') combined.
-Thus, the resulting dataset is highly imbalanced, and can be naturally modeled
-as a network. Up until now, most existing work on imbalanced data analysis
-focused on the classification setting, and very little is devoted to learning
-the node representation from imbalanced networks. To address this problem, in
-this paper, we propose Vertex-Diminished Random Walk (VDRW) for imbalanced
-network analysis. The key idea is to encourage the random particle to walk
-within the same class by adjusting the transition probabilities each step. It
-resembles the existing Vertex Reinforced Random Walk in terms of the dynamic
-nature of the transition probabilities, as well as some convergence properties.
-However, it is more suitable for analyzing imbalanced networks as it leads to
-more separable node representations in the embedding space. Then, based on
-VDRW, we propose a semi-supervised network representation learning framework
-named ImVerde for imbalanced networks, in which context sampling uses VDRW and
-the label information to create node-context pairs, and balanced-batch sampling
-adopts a simple under-sampling method to balance these pairs in different
-classes. Experimental results demonstrate that ImVerde based on VDRW
-outperforms state-of-the-art algorithms for learning network representation
-from imbalanced data.
-
+  Imbalanced data widely exists in many high-impact applications. An example isin air traffic control, where we aim to identify the leading indicators foreach type of accident cause from historical records. Among all three types ofaccident causes, historical records with 'personnel issues' are much more thanthe other two types ('aircraft issues' and 'environmental issues') combined.Thus, the resulting dataset is highly imbalanced, and can be naturally modeledas a network. Up until now, most existing work on imbalanced data analysisfocused on the classification setting, and very little is devoted to learningthe node representation from imbalanced networks. To address this problem, inthis paper, we propose Vertex-Diminished Random Walk (VDRW) for imbalancednetwork analysis. The key idea is to encourage the random particle to walkwithin the same class by adjusting the transition probabilities each step. Itresembles the existing Vertex Reinforced Random Walk in terms of the dynamicnature of the transition probabilities, as well as some convergence properties.However, it is more suitable for analyzing imbalanced networks as it leads tomore separable node representations in the embedding space. Then, based onVDRW, we propose a semi-supervised network representation learning frameworknamed ImVerde for imbalanced networks, in which context sampling uses VDRW andthe label information to create node-context pairs, and balanced-batch samplingadopts a simple under-sampling method to balance these pairs in differentclasses. Experimental results demonstrate that ImVerde based on VDRWoutperforms state-of-the-art algorithms for learning network representationfrom imbalanced data.
 
 Deep Multimodality Model for Multi-task Multi-view Learning
 
-  Many real-world problems exhibit the coexistence of multiple types of
-heterogeneity, such as view heterogeneity (i.e., multi-view property) and task
-heterogeneity (i.e., multi-task property). For example, in an image
-classification problem containing multiple poses of the same object, each pose
-can be considered as one view, and the detection of each type of object can be
-treated as one task. Furthermore, in some problems, the data type of multiple
-views might be different. In a web classification problem, for instance, we
-might be provided an image and text mixed data set, where the web pages are
-characterized by both images and texts. A common strategy to solve this kind of
-problem is to leverage the consistency of views and the relatedness of tasks to
-build the prediction model. In the context of deep neural network, multi-task
-relatedness is usually realized by grouping tasks at each layer, while
-multi-view consistency is usually enforced by finding the maximal correlation
-coefficient between views. However, there is no existing deep learning
-algorithm that jointly models task and view dual heterogeneity, particularly
-for a data set with multiple modalities (text and image mixed data set or text
-and video mixed data set, etc.). In this paper, we bridge this gap by proposing
-a deep multi-task multi-view learning framework that learns a deep
-representation for such dual-heterogeneity problems. Empirical studies on
-multiple real-world data sets demonstrate the effectiveness of our proposed
-Deep-MTMV algorithm.
-
+  Many real-world problems exhibit the coexistence of multiple types ofheterogeneity, such as view heterogeneity (i.e., multi-view property) and taskheterogeneity (i.e., multi-task property). For example, in an imageclassification problem containing multiple poses of the same object, each posecan be considered as one view, and the detection of each type of object can betreated as one task. Furthermore, in some problems, the data type of multipleviews might be different. In a web classification problem, for instance, wemight be provided an image and text mixed data set, where the web pages arecharacterized by both images and texts. A common strategy to solve this kind ofproblem is to leverage the consistency of views and the relatedness of tasks tobuild the prediction model. In the context of deep neural network, multi-taskrelatedness is usually realized by grouping tasks at each layer, whilemulti-view consistency is usually enforced by finding the maximal correlationcoefficient between views. However, there is no existing deep learningalgorithm that jointly models task and view dual heterogeneity, particularlyfor a data set with multiple modalities (text and image mixed data set or textand video mixed data set, etc.). In this paper, we bridge this gap by proposinga deep multi-task multi-view learning framework that learns a deeprepresentation for such dual-heterogeneity problems. Empirical studies onmultiple real-world data sets demonstrate the effectiveness of our proposedDeep-MTMV algorithm.
 

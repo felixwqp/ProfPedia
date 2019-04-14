@@ -1,379 +1,80 @@
 Online Stochastic Optimization with Multiple Objectives
 
-  In this paper we propose a general framework to characterize and solve the
-stochastic optimization problems with multiple objectives underlying many real
-world learning applications. We first propose a projection based algorithm
-which attains an $O(T^{-1/3})$ convergence rate. Then, by leveraging on the
-theory of Lagrangian in constrained optimization, we devise a novel primal-dual
-stochastic approximation algorithm which attains the optimal convergence rate
-of $O(T^{-1/2})$ for general Lipschitz continuous objectives.
-
+  In this paper we propose a general framework to characterize and solve thestochastic optimization problems with multiple objectives underlying many realworld learning applications. We first propose a projection based algorithmwhich attains an $O(T^{-1/3})$ convergence rate. Then, by leveraging on thetheory of Lagrangian in constrained optimization, we devise a novel primal-dualstochastic approximation algorithm which attains the optimal convergence rateof $O(T^{-1/2})$ for general Lipschitz continuous objectives.
 
 Efficient Constrained Regret Minimization
 
-  Online learning constitutes a mathematical and compelling framework to
-analyze sequential decision making problems in adversarial environments. The
-learner repeatedly chooses an action, the environment responds with an outcome,
-and then the learner receives a reward for the played action. The goal of the
-learner is to maximize his total reward. However, there are situations in
-which, in addition to maximizing the cumulative reward, there are some
-additional constraints on the sequence of decisions that must be satisfied on
-average by the learner. In this paper we study an extension to the online
-learning where the learner aims to maximize the total reward given that some
-additional constraints need to be satisfied. By leveraging on the theory of
-Lagrangian method in constrained optimization, we propose Lagrangian
-exponentially weighted average (LEWA) algorithm, which is a primal-dual variant
-of the well known exponentially weighted average algorithm, to efficiently
-solve constrained online decision making problems. Using novel theoretical
-analysis, we establish the regret and the violation of the constraint bounds in
-full information and bandit feedback models.
-
+  Online learning constitutes a mathematical and compelling framework toanalyze sequential decision making problems in adversarial environments. Thelearner repeatedly chooses an action, the environment responds with an outcome,and then the learner receives a reward for the played action. The goal of thelearner is to maximize his total reward. However, there are situations inwhich, in addition to maximizing the cumulative reward, there are someadditional constraints on the sequence of decisions that must be satisfied onaverage by the learner. In this paper we study an extension to the onlinelearning where the learner aims to maximize the total reward given that someadditional constraints need to be satisfied. By leveraging on the theory ofLagrangian method in constrained optimization, we propose Lagrangianexponentially weighted average (LEWA) algorithm, which is a primal-dual variantof the well known exponentially weighted average algorithm, to efficientlysolve constrained online decision making problems. Using novel theoreticalanalysis, we establish the regret and the violation of the constraint bounds infull information and bandit feedback models.
 
 An Improved Bound for the Nystrom Method for Large Eigengap
 
-  We develop an improved bound for the approximation error of the Nystr\"{o}m
-method under the assumption that there is a large eigengap in the spectrum of
-kernel matrix. This is based on the empirical observation that the eigengap has
-a significant impact on the approximation error of the Nystr\"{o}m method. Our
-approach is based on the concentration inequality of integral operator and the
-theory of matrix perturbation. Our analysis shows that when there is a large
-eigengap, we can improve the approximation error of the Nystr\"{o}m method from
-$O(N/m^{1/4})$ to $O(N/m^{1/2})$ when measured in Frobenius norm, where $N$ is
-the size of the kernel matrix, and $m$ is the number of sampled columns.
-
+  We develop an improved bound for the approximation error of the Nystr\"{o}mmethod under the assumption that there is a large eigengap in the spectrum ofkernel matrix. This is based on the empirical observation that the eigengap hasa significant impact on the approximation error of the Nystr\"{o}m method. Ourapproach is based on the concentration inequality of integral operator and thetheory of matrix perturbation. Our analysis shows that when there is a largeeigengap, we can improve the approximation error of the Nystr\"{o}m method from$O(N/m^{1/4})$ to $O(N/m^{1/2})$ when measured in Frobenius norm, where $N$ isthe size of the kernel matrix, and $m$ is the number of sampled columns.
 
 Sparse Multiple Kernel Learning with Geometric Convergence Rate
 
-  In this paper, we study the problem of sparse multiple kernel learning (MKL),
-where the goal is to efficiently learn a combination of a fixed small number of
-kernels from a large pool that could lead to a kernel classifier with a small
-prediction error. We develop an efficient algorithm based on the greedy
-coordinate descent algorithm, that is able to achieve a geometric convergence
-rate under appropriate conditions. The convergence rate is achieved by
-measuring the size of functional gradients by an empirical $\ell_2$ norm that
-depends on the empirical data distribution. This is in contrast to previous
-algorithms that use a functional norm to measure the size of gradients, which
-is independent from the data samples. We also establish a generalization error
-bound of the learned sparse kernel classifier using the technique of local
-Rademacher complexity.
-
+  In this paper, we study the problem of sparse multiple kernel learning (MKL),where the goal is to efficiently learn a combination of a fixed small number ofkernels from a large pool that could lead to a kernel classifier with a smallprediction error. We develop an efficient algorithm based on the greedycoordinate descent algorithm, that is able to achieve a geometric convergencerate under appropriate conditions. The convergence rate is achieved bymeasuring the size of functional gradients by an empirical $\ell_2$ norm thatdepends on the empirical data distribution. This is in contrast to previousalgorithms that use a functional norm to measure the size of gradients, whichis independent from the data samples. We also establish a generalization errorbound of the learned sparse kernel classifier using the technique of localRademacher complexity.
 
 Passive Learning with Target Risk
 
-  In this paper we consider learning in passive setting but with a slight
-modification. We assume that the target expected loss, also referred to as
-target risk, is provided in advance for learner as prior knowledge. Unlike most
-studies in the learning theory that only incorporate the prior knowledge into
-the generalization bounds, we are able to explicitly utilize the target risk in
-the learning process. Our analysis reveals a surprising result on the sample
-complexity of learning: by exploiting the target risk in the learning
-algorithm, we show that when the loss function is both strongly convex and
-smooth, the sample complexity reduces to $\O(\log (\frac{1}{\epsilon}))$, an
-exponential improvement compared to the sample complexity
-$\O(\frac{1}{\epsilon})$ for learning with strongly convex loss functions.
-Furthermore, our proof is constructive and is based on a computationally
-efficient stochastic optimization algorithm for such settings which demonstrate
-that the proposed algorithm is practically useful.
+  In this paper we consider learning in passive setting but with a slightmodification. We assume that the target expected loss, also referred to astarget risk, is provided in advance for learner as prior knowledge. Unlike moststudies in the learning theory that only incorporate the prior knowledge intothe generalization bounds, we are able to explicitly utilize the target risk inthe learning process. Our analysis reveals a surprising result on the samplecomplexity of learning: by exploiting the target risk in the learningalgorithm, we show that when the loss function is both strongly convex andsmooth, the sample complexity reduces to $\O(\log (\frac{1}{\epsilon}))$, anexponential improvement compared to the sample complexity$\O(\frac{1}{\epsilon})$ for learning with strongly convex loss functions.Furthermore, our proof is constructive and is based on a computationallyefficient stochastic optimization algorithm for such settings which demonstratethat the proposed algorithm is practically useful.
 
+MixedGrad: An O(1/T) Convergence Rate Algorithm for Stochastic Smooth  Optimization
 
-MixedGrad: An O(1/T) Convergence Rate Algorithm for Stochastic Smooth
-  Optimization
-
-  It is well known that the optimal convergence rate for stochastic
-optimization of smooth functions is $O(1/\sqrt{T})$, which is same as
-stochastic optimization of Lipschitz continuous convex functions. This is in
-contrast to optimizing smooth functions using full gradients, which yields a
-convergence rate of $O(1/T^2)$. In this work, we consider a new setup for
-optimizing smooth functions, termed as {\bf Mixed Optimization}, which allows
-to access both a stochastic oracle and a full gradient oracle. Our goal is to
-significantly improve the convergence rate of stochastic optimization of smooth
-functions by having an additional small number of accesses to the full gradient
-oracle. We show that, with an $O(\ln T)$ calls to the full gradient oracle and
-an $O(T)$ calls to the stochastic oracle, the proposed mixed optimization
-algorithm is able to achieve an optimization error of $O(1/T)$.
-
+  It is well known that the optimal convergence rate for stochasticoptimization of smooth functions is $O(1/\sqrt{T})$, which is same asstochastic optimization of Lipschitz continuous convex functions. This is incontrast to optimizing smooth functions using full gradients, which yields aconvergence rate of $O(1/T^2)$. In this work, we consider a new setup foroptimizing smooth functions, termed as {\bf Mixed Optimization}, which allowsto access both a stochastic oracle and a full gradient oracle. Our goal is tosignificantly improve the convergence rate of stochastic optimization of smoothfunctions by having an additional small number of accesses to the full gradientoracle. We show that, with an $O(\ln T)$ calls to the full gradient oracle andan $O(T)$ calls to the stochastic oracle, the proposed mixed optimizationalgorithm is able to achieve an optimization error of $O(1/T)$.
 
 Excess Risk Bounds for Exponentially Concave Losses
 
-  The overarching goal of this paper is to derive excess risk bounds for
-learning from exp-concave loss functions in passive and sequential learning
-settings. Exp-concave loss functions encompass several fundamental problems in
-machine learning such as squared loss in linear regression, logistic loss in
-classification, and negative logarithm loss in portfolio management. In batch
-setting, we obtain sharp bounds on the performance of empirical risk
-minimization performed in a linear hypothesis space and with respect to the
-exp-concave loss functions. We also extend the results to the online setting
-where the learner receives the training examples in a sequential manner. We
-propose an online learning algorithm that is a properly modified version of
-online Newton method to obtain sharp risk bounds. Under an additional mild
-assumption on the loss function, we show that in both settings we are able to
-achieve an excess risk bound of $O(d\log n/n)$ that holds with a high
-probability.
-
+  The overarching goal of this paper is to derive excess risk bounds forlearning from exp-concave loss functions in passive and sequential learningsettings. Exp-concave loss functions encompass several fundamental problems inmachine learning such as squared loss in linear regression, logistic loss inclassification, and negative logarithm loss in portfolio management. In batchsetting, we obtain sharp bounds on the performance of empirical riskminimization performed in a linear hypothesis space and with respect to theexp-concave loss functions. We also extend the results to the online settingwhere the learner receives the training examples in a sequential manner. Wepropose an online learning algorithm that is a properly modified version ofonline Newton method to obtain sharp risk bounds. Under an additional mildassumption on the loss function, we show that in both settings we are able toachieve an excess risk bound of $O(d\log n/n)$ that holds with a highprobability.
 
 Binary Excess Risk for Smooth Convex Surrogates
 
-  In statistical learning theory, convex surrogates of the 0-1 loss are highly
-preferred because of the computational and theoretical virtues that convexity
-brings in. This is of more importance if we consider smooth surrogates as
-witnessed by the fact that the smoothness is further beneficial both
-computationally- by attaining an {\it optimal} convergence rate for
-optimization, and in a statistical sense- by providing an improved {\it
-optimistic} rate for generalization bound. In this paper we investigate the
-smoothness property from the viewpoint of statistical consistency and show how
-it affects the binary excess risk. We show that in contrast to optimization and
-generalization errors that favor the choice of smooth surrogate loss, the
-smoothness of loss function may degrade the binary excess risk. Motivated by
-this negative result, we provide a unified analysis that integrates
-optimization error, generalization bound, and the error in translating convex
-excess risk into a binary excess risk when examining the impact of smoothness
-on the binary excess risk. We show that under favorable conditions appropriate
-choice of smooth convex loss will result in a binary excess risk that is better
-than $O(1/\sqrt{n})$.
+  In statistical learning theory, convex surrogates of the 0-1 loss are highlypreferred because of the computational and theoretical virtues that convexitybrings in. This is of more importance if we consider smooth surrogates aswitnessed by the fact that the smoothness is further beneficial bothcomputationally- by attaining an {\it optimal} convergence rate foroptimization, and in a statistical sense- by providing an improved {\itoptimistic} rate for generalization bound. In this paper we investigate thesmoothness property from the viewpoint of statistical consistency and show howit affects the binary excess risk. We show that in contrast to optimization andgeneralization errors that favor the choice of smooth surrogate loss, thesmoothness of loss function may degrade the binary excess risk. Motivated bythis negative result, we provide a unified analysis that integratesoptimization error, generalization bound, and the error in translating convexexcess risk into a binary excess risk when examining the impact of smoothnesson the binary excess risk. We show that under favorable conditions appropriatechoice of smooth convex loss will result in a binary excess risk that is betterthan $O(1/\sqrt{n})$.
 
+Exploiting Smoothness in Statistical Learning, Sequential Prediction,  and Stochastic Optimization
 
-Exploiting Smoothness in Statistical Learning, Sequential Prediction,
-  and Stochastic Optimization
-
-  In the last several years, the intimate connection between convex
-optimization and learning problems, in both statistical and sequential
-frameworks, has shifted the focus of algorithmic machine learning to examine
-this interplay. In particular, on one hand, this intertwinement brings forward
-new challenges in reassessment of the performance of learning algorithms
-including generalization and regret bounds under the assumptions imposed by
-convexity such as analytical properties of loss functions (e.g., Lipschitzness,
-strong convexity, and smoothness). On the other hand, emergence of datasets of
-an unprecedented size, demands the development of novel and more efficient
-optimization algorithms to tackle large-scale learning problems.
-  The overarching goal of this thesis is to reassess the smoothness of loss
-functions in statistical learning, sequential prediction/online learning, and
-stochastic optimization and explicate its consequences. In particular we
-examine how smoothness of loss function could be beneficial or detrimental in
-these settings in terms of sample complexity, statistical consistency, regret
-analysis, and convergence rate, and investigate how smoothness can be leveraged
-to devise more efficient learning algorithms.
-
+  In the last several years, the intimate connection between convexoptimization and learning problems, in both statistical and sequentialframeworks, has shifted the focus of algorithmic machine learning to examinethis interplay. In particular, on one hand, this intertwinement brings forwardnew challenges in reassessment of the performance of learning algorithmsincluding generalization and regret bounds under the assumptions imposed byconvexity such as analytical properties of loss functions (e.g., Lipschitzness,strong convexity, and smoothness). On the other hand, emergence of datasets ofan unprecedented size, demands the development of novel and more efficientoptimization algorithms to tackle large-scale learning problems.  The overarching goal of this thesis is to reassess the smoothness of lossfunctions in statistical learning, sequential prediction/online learning, andstochastic optimization and explicate its consequences. In particular weexamine how smoothness of loss function could be beneficial or detrimental inthese settings in terms of sample complexity, statistical consistency, regretanalysis, and convergence rate, and investigate how smoothness can be leveragedto devise more efficient learning algorithms.
 
 Matrix Factorization with Explicit Trust and Distrust Relationships
 
-  With the advent of online social networks, recommender systems have became
-crucial for the success of many online applications/services due to their
-significance role in tailoring these applications to user-specific needs or
-preferences. Despite their increasing popularity, in general recommender
-systems suffer from the data sparsity and the cold-start problems. To alleviate
-these issues, in recent years there has been an upsurge of interest in
-exploiting social information such as trust relations among users along with
-the rating data to improve the performance of recommender systems. The main
-motivation for exploiting trust information in recommendation process stems
-from the observation that the ideas we are exposed to and the choices we make
-are significantly influenced by our social context. However, in large user
-communities, in addition to trust relations, the distrust relations also exist
-between users. For instance, in Epinions the concepts of personal "web of
-trust" and personal "block list" allow users to categorize their friends based
-on the quality of reviews into trusted and distrusted friends, respectively. In
-this paper, we propose a matrix factorization based model for recommendation in
-social rating networks that properly incorporates both trust and distrust
-relationships aiming to improve the quality of recommendations and mitigate the
-data sparsity and the cold-start users issues. Through experiments on the
-Epinions data set, we show that our new algorithm outperforms its standard
-trust-enhanced or distrust-enhanced counterparts with respect to accuracy,
-thereby demonstrating the positive effect that incorporation of explicit
-distrust information can have on recommender systems.
+  With the advent of online social networks, recommender systems have becamecrucial for the success of many online applications/services due to theirsignificance role in tailoring these applications to user-specific needs orpreferences. Despite their increasing popularity, in general recommendersystems suffer from the data sparsity and the cold-start problems. To alleviatethese issues, in recent years there has been an upsurge of interest inexploiting social information such as trust relations among users along withthe rating data to improve the performance of recommender systems. The mainmotivation for exploiting trust information in recommendation process stemsfrom the observation that the ideas we are exposed to and the choices we makeare significantly influenced by our social context. However, in large usercommunities, in addition to trust relations, the distrust relations also existbetween users. For instance, in Epinions the concepts of personal "web oftrust" and personal "block list" allow users to categorize their friends basedon the quality of reviews into trusted and distrusted friends, respectively. Inthis paper, we propose a matrix factorization based model for recommendation insocial rating networks that properly incorporates both trust and distrustrelationships aiming to improve the quality of recommendations and mitigate thedata sparsity and the cold-start users issues. Through experiments on theEpinions data set, we show that our new algorithm outperforms its standardtrust-enhanced or distrust-enhanced counterparts with respect to accuracy,thereby demonstrating the positive effect that incorporation of explicitdistrust information can have on recommender systems.
 
+Trading Regret for Efficiency: Online Convex Optimization with Long Term  Constraints
 
-Trading Regret for Efficiency: Online Convex Optimization with Long Term
-  Constraints
-
-  In this paper we propose a framework for solving constrained online convex
-optimization problem. Our motivation stems from the observation that most
-algorithms proposed for online convex optimization require a projection onto
-the convex set $\mathcal{K}$ from which the decisions are made. While for
-simple shapes (e.g. Euclidean ball) the projection is straightforward, for
-arbitrary complex sets this is the main computational challenge and may be
-inefficient in practice. In this paper, we consider an alternative online
-convex optimization problem. Instead of requiring decisions belong to
-$\mathcal{K}$ for all rounds, we only require that the constraints which define
-the set $\mathcal{K}$ be satisfied in the long run. We show that our framework
-can be utilized to solve a relaxed version of online learning with side
-constraints addressed in \cite{DBLP:conf/colt/MannorT06} and
-\cite{DBLP:conf/aaai/KvetonYTM08}. By turning the problem into an online
-convex-concave optimization problem, we propose an efficient algorithm which
-achieves $\tilde{\mathcal{O}}(\sqrt{T})$ regret bound and
-$\tilde{\mathcal{O}}(T^{3/4})$ bound for the violation of constraints. Then we
-modify the algorithm in order to guarantee that the constraints are satisfied
-in the long run. This gain is achieved at the price of getting
-$\tilde{\mathcal{O}}(T^{3/4})$ regret bound. Our second algorithm is based on
-the Mirror Prox method \citep{nemirovski-2005-prox} to solve variational
-inequalities which achieves $\tilde{\mathcal{\mathcal{O}}}(T^{2/3})$ bound for
-both regret and the violation of constraints when the domain $\K$ can be
-described by a finite number of linear constraints. Finally, we extend the
-result to the setting where we only have partial access to the convex set
-$\mathcal{K}$ and propose a multipoint bandit feedback algorithm with the same
-bounds in expectation as our first algorithm.
-
-
-An Efficient Primal-Dual Prox Method for Non-Smooth Optimization
-
-  We study the non-smooth optimization problems in machine learning, where both
-the loss function and the regularizer are non-smooth functions. Previous
-studies on efficient empirical loss minimization assume either a smooth loss
-function or a strongly convex regularizer, making them unsuitable for
-non-smooth optimization. We develop a simple yet efficient method for a family
-of non-smooth optimization problems where the dual form of the loss function is
-bilinear in primal and dual variables. We cast a non-smooth optimization
-problem into a minimax optimization problem, and develop a primal dual prox
-method that solves the minimax optimization problem at a rate of $O(1/T)$
-{assuming that the proximal step can be efficiently solved}, significantly
-faster than a standard subgradient descent method that has an $O(1/\sqrt{T})$
-convergence rate. Our empirical study verifies the efficiency of the proposed
-method for various non-smooth optimization problems that arise ubiquitously in
-machine learning by comparing it to the state-of-the-art first order methods.
-
-
-Recovering the Optimal Solution by Dual Random Projection
-
-  Random projection has been widely used in data classification. It maps
-high-dimensional data into a low-dimensional subspace in order to reduce the
-computational cost in solving the related optimization problem. While previous
-studies are focused on analyzing the classification performance of using random
-projection, in this work, we consider the recovery problem, i.e., how to
-accurately recover the optimal solution to the original optimization problem in
-the high-dimensional space based on the solution learned from the subspace
-spanned by random projections. We present a simple algorithm, termed Dual
-Random Projection, that uses the dual solution of the low-dimensional
-optimization problem to recover the optimal solution to the original problem.
-Our theoretical analysis shows that with a high probability, the proposed
-algorithm is able to accurately recover the optimal solution to the original
-problem, provided that the data matrix is of low rank or can be well
-approximated by a low rank matrix.
-
+  In this paper we propose a framework for solving constrained online convexoptimization problem. Our motivation stems from the observation that mostalgorithms proposed for online convex optimization require a projection ontothe convex set $\mathcal{K}$ from which the decisions are made. While forsimple shapes (e.g. Euclidean ball) the projection is straightforward, forarbitrary complex sets this is the main computational challenge and may beinefficient in practice. In this paper, we consider an alternative onlineconvex optimization problem. Instead of requiring decisions belong to$\mathcal{K}$ for all rounds, we only require that the constraints which definethe set $\mathcal{K}$ be satisfied in the long run. We show that our frameworkcan be utilized to solve a relaxed version of online learning with sideconstraints addressed in \cite{DBLP:conf/colt/MannorT06} and\cite{DBLP:conf/aaai/KvetonYTM08}. By turning the problem into an onlineconvex-concave optimization problem, we propose an efficient algorithm whichachieves $\tilde{\mathcal{O}}(\sqrt{T})$ regret bound and$\tilde{\mathcal{O}}(T^{3/4})$ bound for the violation of constraints. Then wemodify the algorithm in order to guarantee that the constraints are satisfiedin the long run. This gain is achieved at the price of getting$\tilde{\mathcal{O}}(T^{3/4})$ regret bound. Our second algorithm is based onthe Mirror Prox method \citep{nemirovski-2005-prox} to solve variationalinequalities which achieves $\tilde{\mathcal{\mathcal{O}}}(T^{2/3})$ bound forboth regret and the violation of constraints when the domain $\K$ can bedescribed by a finite number of linear constraints. Finally, we extend theresult to the setting where we only have partial access to the convex set$\mathcal{K}$ and propose a multipoint bandit feedback algorithm with the samebounds in expectation as our first algorithm.
 
 Regret Bound by Variation for Online Convex Optimization
 
-  In citep{Hazan-2008-extract}, the authors showed that the regret of online
-linear optimization can be bounded by the total variation of the cost vectors.
-In this paper, we extend this result to general online convex optimization. We
-first analyze the limitations of the algorithm in \citep{Hazan-2008-extract}
-when applied it to online convex optimization. We then present two algorithms
-for online convex optimization whose regrets are bounded by the variation of
-cost functions. We finally consider the bandit setting, and present a
-randomized algorithm for online bandit convex optimization with a
-variation-based regret bound. We show that the regret bound for online bandit
-convex optimization is optimal when the variation of cost functions is
-independent of the number of trials.
+  In citep{Hazan-2008-extract}, the authors showed that the regret of onlinelinear optimization can be bounded by the total variation of the cost vectors.In this paper, we extend this result to general online convex optimization. Wefirst analyze the limitations of the algorithm in \citep{Hazan-2008-extract}when applied it to online convex optimization. We then present two algorithmsfor online convex optimization whose regrets are bounded by the variation ofcost functions. We finally consider the bandit setting, and present arandomized algorithm for online bandit convex optimization with avariation-based regret bound. We show that the regret bound for online banditconvex optimization is optimal when the variation of cost functions isindependent of the number of trials.
 
+An Efficient Primal-Dual Prox Method for Non-Smooth Optimization
+
+  We study the non-smooth optimization problems in machine learning, where boththe loss function and the regularizer are non-smooth functions. Previousstudies on efficient empirical loss minimization assume either a smooth lossfunction or a strongly convex regularizer, making them unsuitable fornon-smooth optimization. We develop a simple yet efficient method for a familyof non-smooth optimization problems where the dual form of the loss function isbilinear in primal and dual variables. We cast a non-smooth optimizationproblem into a minimax optimization problem, and develop a primal dual proxmethod that solves the minimax optimization problem at a rate of $O(1/T)${assuming that the proximal step can be efficiently solved}, significantlyfaster than a standard subgradient descent method that has an $O(1/\sqrt{T})$convergence rate. Our empirical study verifies the efficiency of the proposedmethod for various non-smooth optimization problems that arise ubiquitously inmachine learning by comparing it to the state-of-the-art first order methods.
 
 Multiple Kernel Learning from Noisy Labels by Stochastic Programming
 
-  We study the problem of multiple kernel learning from noisy labels. This is
-in contrast to most of the previous studies on multiple kernel learning that
-mainly focus on developing efficient algorithms and assume perfectly labeled
-training examples. Directly applying the existing multiple kernel learning
-algorithms to noisily labeled examples often leads to suboptimal performance
-due to the incorrect class assignments. We address this challenge by casting
-multiple kernel learning from noisy labels into a stochastic programming
-problem, and presenting a minimax formulation. We develop an efficient
-algorithm for solving the related convex-concave optimization problem with a
-fast convergence rate of $O(1/T)$ where $T$ is the number of iterations.
-Empirical studies on UCI data sets verify both the effectiveness of the
-proposed framework and the efficiency of the proposed optimization algorithm.
+  We study the problem of multiple kernel learning from noisy labels. This isin contrast to most of the previous studies on multiple kernel learning thatmainly focus on developing efficient algorithms and assume perfectly labeledtraining examples. Directly applying the existing multiple kernel learningalgorithms to noisily labeled examples often leads to suboptimal performancedue to the incorrect class assignments. We address this challenge by castingmultiple kernel learning from noisy labels into a stochastic programmingproblem, and presenting a minimax formulation. We develop an efficientalgorithm for solving the related convex-concave optimization problem with afast convergence rate of $O(1/T)$ where $T$ is the number of iterations.Empirical studies on UCI data sets verify both the effectiveness of theproposed framework and the efficiency of the proposed optimization algorithm.
 
+Recovering the Optimal Solution by Dual Random Projection
+
+  Random projection has been widely used in data classification. It mapshigh-dimensional data into a low-dimensional subspace in order to reduce thecomputational cost in solving the related optimization problem. While previousstudies are focused on analyzing the classification performance of using randomprojection, in this work, we consider the recovery problem, i.e., how toaccurately recover the optimal solution to the original optimization problem inthe high-dimensional space based on the solution learned from the subspacespanned by random projections. We present a simple algorithm, termed DualRandom Projection, that uses the dual solution of the low-dimensionaloptimization problem to recover the optimal solution to the original problem.Our theoretical analysis shows that with a high probability, the proposedalgorithm is able to accurately recover the optimal solution to the originalproblem, provided that the data matrix is of low rank or can be wellapproximated by a low rank matrix.
 
 Train and Test Tightness of LP Relaxations in Structured Prediction
 
-  Structured prediction is used in areas such as computer vision and natural
-language processing to predict structured outputs such as segmentations or
-parse trees. In these settings, prediction is performed by MAP inference or,
-equivalently, by solving an integer linear program. Because of the complex
-scoring functions required to obtain accurate predictions, both learning and
-inference typically require the use of approximate solvers. We propose a
-theoretical explanation to the striking observation that approximations based
-on linear programming (LP) relaxations are often tight on real-world instances.
-In particular, we show that learning with LP relaxed inference encourages
-integrality of training instances, and that tightness generalizes from train to
-test data.
+  Structured prediction is used in areas such as computer vision and naturallanguage processing to predict structured outputs such as segmentations orparse trees. In these settings, prediction is performed by MAP inference or,equivalently, by solving an integer linear program. Because of the complexscoring functions required to obtain accurate predictions, both learning andinference typically require the use of approximate solvers. We propose atheoretical explanation to the striking observation that approximations basedon linear programming (LP) relaxations are often tight on real-world instances.In particular, we show that learning with LP relaxed inference encouragesintegrality of training instances, and that tightness generalizes from train totest data.
 
+Sketching Meets Random Projection in the Dual: A Provable Recovery  Algorithm for Big and High-dimensional Data
 
-Sketching Meets Random Projection in the Dual: A Provable Recovery
-  Algorithm for Big and High-dimensional Data
+  Sketching techniques have become popular for scaling up machine learningalgorithms by reducing the sample size or dimensionality of massive data sets,while still maintaining the statistical power of big data. In this paper, westudy sketching from an optimization point of view: we first show that theiterative Hessian sketch is an optimization process with preconditioning, anddevelop accelerated iterative Hessian sketch via the searching the conjugatedirection; we then establish primal-dual connections between the Hessian sketchand dual random projection, and apply the preconditioned conjugate gradientapproach on the dual problem, which leads to the accelerated iterative dualrandom projection methods. Finally to tackle the challenges from both largesample size and high-dimensionality, we propose the primal-dual sketch, whichiteratively sketches the primal and dual formulations. We show that using alogarithmic number of calls to solvers of small scale problem, primal-dualsketch is able to recover the optimum of the original problem up to arbitraryprecision. The proposed algorithms are validated via extensive experiments onsynthetic and real data sets which complements our theoretical results.
 
-  Sketching techniques have become popular for scaling up machine learning
-algorithms by reducing the sample size or dimensionality of massive data sets,
-while still maintaining the statistical power of big data. In this paper, we
-study sketching from an optimization point of view: we first show that the
-iterative Hessian sketch is an optimization process with preconditioning, and
-develop accelerated iterative Hessian sketch via the searching the conjugate
-direction; we then establish primal-dual connections between the Hessian sketch
-and dual random projection, and apply the preconditioned conjugate gradient
-approach on the dual problem, which leads to the accelerated iterative dual
-random projection methods. Finally to tackle the challenges from both large
-sample size and high-dimensionality, we propose the primal-dual sketch, which
-iteratively sketches the primal and dual formulations. We show that using a
-logarithmic number of calls to solvers of small scale problem, primal-dual
-sketch is able to recover the optimum of the original problem up to arbitrary
-precision. The proposed algorithms are validated via extensive experiments on
-synthetic and real data sets which complements our theoretical results.
+Learning Feature Nonlinearities with Non-Convex Regularized Binned  Regression
 
+  For various applications, the relations between the dependent and independentvariables are highly nonlinear. Consequently, for large scale complex problems,neural networks and regression trees are commonly preferred over linear modelssuch as Lasso. This work proposes learning the feature nonlinearities bybinning feature values and finding the best fit in each quantile usingnon-convex regularized linear regression. The algorithm first captures thedependence between neighboring quantiles by enforcing smoothness viapiecewise-constant/linear approximation and then selects a sparse subset ofgood features. We prove that the proposed algorithm is statistically andcomputationally efficient. In particular, it achieves linear rate ofconvergence while requiring near-minimal number of samples. Evaluations onsynthetic and real datasets demonstrate that algorithm is competitive withcurrent state-of-the-art and accurately learns feature nonlinearities. Finally,we explore an interesting connection between the binning stage of our algorithmand sparse Johnson-Lindenstrauss matrices.
 
-Learning Feature Nonlinearities with Non-Convex Regularized Binned
-  Regression
+Improved Bound for the Nystrom's Method and its Application to Kernel  Classification
 
-  For various applications, the relations between the dependent and independent
-variables are highly nonlinear. Consequently, for large scale complex problems,
-neural networks and regression trees are commonly preferred over linear models
-such as Lasso. This work proposes learning the feature nonlinearities by
-binning feature values and finding the best fit in each quantile using
-non-convex regularized linear regression. The algorithm first captures the
-dependence between neighboring quantiles by enforcing smoothness via
-piecewise-constant/linear approximation and then selects a sparse subset of
-good features. We prove that the proposed algorithm is statistically and
-computationally efficient. In particular, it achieves linear rate of
-convergence while requiring near-minimal number of samples. Evaluations on
-synthetic and real datasets demonstrate that algorithm is competitive with
-current state-of-the-art and accurately learns feature nonlinearities. Finally,
-we explore an interesting connection between the binning stage of our algorithm
-and sparse Johnson-Lindenstrauss matrices.
-
-
-Improved Bound for the Nystrom's Method and its Application to Kernel
-  Classification
-
-  We develop two approaches for analyzing the approximation error bound for the
-Nystr\"{o}m method, one based on the concentration inequality of integral
-operator, and one based on the compressive sensing theory. We show that the
-approximation error, measured in the spectral norm, can be improved from
-$O(N/\sqrt{m})$ to $O(N/m^{1 - \rho})$ in the case of large eigengap, where $N$
-is the total number of data points, $m$ is the number of sampled data points,
-and $\rho \in (0, 1/2)$ is a positive constant that characterizes the eigengap.
-When the eigenvalues of the kernel matrix follow a $p$-power law, our analysis
-based on compressive sensing theory further improves the bound to $O(N/m^{p -
-1})$ under an incoherence assumption, which explains why the Nystr\"{o}m method
-works well for kernel matrix with skewed eigenvalues. We present a kernel
-classification approach based on the Nystr\"{o}m method and derive its
-generalization performance using the improved bound. We show that when the
-eigenvalues of kernel matrix follow a $p$-power law, we can reduce the number
-of support vectors to $N^{2p/(p^2 - 1)}$, a number less than $N$ when $p >
-1+\sqrt{2}$, without seriously sacrificing its generalization performance.
-
+  We develop two approaches for analyzing the approximation error bound for theNystr\"{o}m method, one based on the concentration inequality of integraloperator, and one based on the compressive sensing theory. We show that theapproximation error, measured in the spectral norm, can be improved from$O(N/\sqrt{m})$ to $O(N/m^{1 - \rho})$ in the case of large eigengap, where $N$is the total number of data points, $m$ is the number of sampled data points,and $\rho \in (0, 1/2)$ is a positive constant that characterizes the eigengap.When the eigenvalues of the kernel matrix follow a $p$-power law, our analysisbased on compressive sensing theory further improves the bound to $O(N/m^{p -1})$ under an incoherence assumption, which explains why the Nystr\"{o}m methodworks well for kernel matrix with skewed eigenvalues. We present a kernelclassification approach based on the Nystr\"{o}m method and derive itsgeneralization performance using the improved bound. We show that when theeigenvalues of kernel matrix follow a $p$-power law, we can reduce the numberof support vectors to $N^{2p/(p^2 - 1)}$, a number less than $N$ when $p >1+\sqrt{2}$, without seriously sacrificing its generalization performance.
 
 Beating the Minimax Rate of Active Learning with Prior Knowledge
 
-  Active learning refers to the learning protocol where the learner is allowed
-to choose a subset of instances for labeling. Previous studies have shown that,
-compared with passive learning, active learning is able to reduce the label
-complexity exponentially if the data are linearly separable or satisfy the
-Tsybakov noise condition with parameter $\kappa=1$. In this paper, we propose a
-novel active learning algorithm using a convex surrogate loss, with the goal to
-broaden the cases for which active learning achieves an exponential
-improvement. We make use of a convex loss not only because it reduces the
-computational cost, but more importantly because it leads to a tight bound for
-the empirical process (i.e., the difference between the empirical estimation
-and the expectation) when the current solution is close to the optimal one.
-Under the assumption that the norm of the optimal classifier that minimizes the
-convex risk is available, our analysis shows that the introduction of the
-convex surrogate loss yields an exponential reduction in the label complexity
-even when the parameter $\kappa$ of the Tsybakov noise is larger than $1$. To
-the best of our knowledge, this is the first work that improves the minimax
-rate of active learning by utilizing certain priori knowledge.
-
+  Active learning refers to the learning protocol where the learner is allowedto choose a subset of instances for labeling. Previous studies have shown that,compared with passive learning, active learning is able to reduce the labelcomplexity exponentially if the data are linearly separable or satisfy theTsybakov noise condition with parameter $\kappa=1$. In this paper, we propose anovel active learning algorithm using a convex surrogate loss, with the goal tobroaden the cases for which active learning achieves an exponentialimprovement. We make use of a convex loss not only because it reduces thecomputational cost, but more importantly because it leads to a tight bound forthe empirical process (i.e., the difference between the empirical estimationand the expectation) when the current solution is close to the optimal one.Under the assumption that the norm of the optimal classifier that minimizes theconvex risk is available, our analysis shows that the introduction of theconvex surrogate loss yields an exponential reduction in the label complexityeven when the parameter $\kappa$ of the Tsybakov noise is larger than $1$. Tothe best of our knowledge, this is the first work that improves the minimaxrate of active learning by utilizing certain priori knowledge.
 

@@ -1,468 +1,96 @@
 A Collective, Probabilistic Approach to Schema Mapping: Appendix
 
-  In this appendix we provide additional supplementary material to "A
-Collective, Probabilistic Approach to Schema Mapping." We include an additional
-extended example, supplementary experiment details, and proof for the
-complexity result stated in the main paper.
-
+  In this appendix we provide additional supplementary material to "ACollective, Probabilistic Approach to Schema Mapping." We include an additionalextended example, supplementary experiment details, and proof for thecomplexity result stated in the main paper.
 
 Integrating Structured Metadata with Relational Affinity Propagation
 
-  Structured and semi-structured data describing entities, taxonomies and
-ontologies appears in many domains. There is a huge interest in integrating
-structured information from multiple sources; however integrating structured
-data to infer complex common structures is a difficult task because the
-integration must aggregate similar structures while avoiding structural
-inconsistencies that may appear when the data is combined. In this work, we
-study the integration of structured social metadata: shallow personal
-hierarchies specified by many individual users on the SocialWeb, and focus on
-inferring a collection of integrated, consistent taxonomies. We frame this task
-as an optimization problem with structural constraints. We propose a new
-inference algorithm, which we refer to as Relational Affinity Propagation (RAP)
-that extends affinity propagation (Frey and Dueck 2007) by introducing
-structural constraints. We validate the approach on a real-world social media
-dataset, collected from the photosharing website Flickr. Our empirical results
-show that our proposed approach is able to construct deeper and denser
-structures compared to an approach using only the standard affinity propagation
-algorithm.
+  Structured and semi-structured data describing entities, taxonomies andontologies appears in many domains. There is a huge interest in integratingstructured information from multiple sources; however integrating structureddata to infer complex common structures is a difficult task because theintegration must aggregate similar structures while avoiding structuralinconsistencies that may appear when the data is combined. In this work, westudy the integration of structured social metadata: shallow personalhierarchies specified by many individual users on the SocialWeb, and focus oninferring a collection of integrated, consistent taxonomies. We frame this taskas an optimization problem with structural constraints. We propose a newinference algorithm, which we refer to as Relational Affinity Propagation (RAP)that extends affinity propagation (Frey and Dueck 2007) by introducingstructural constraints. We validate the approach on a real-world social mediadataset, collected from the photosharing website Flickr. Our empirical resultsshow that our proposed approach is able to construct deeper and denserstructures compared to an approach using only the standard affinity propagationalgorithm.
 
+Growing a Tree in the Forest: Constructing Folksonomies by Integrating  Structured Metadata
 
-Growing a Tree in the Forest: Constructing Folksonomies by Integrating
-  Structured Metadata
-
-  Many social Web sites allow users to annotate the content with descriptive
-metadata, such as tags, and more recently to organize content hierarchically.
-These types of structured metadata provide valuable evidence for learning how a
-community organizes knowledge. For instance, we can aggregate many personal
-hierarchies into a common taxonomy, also known as a folksonomy, that will aid
-users in visualizing and browsing social content, and also to help them in
-organizing their own content. However, learning from social metadata presents
-several challenges, since it is sparse, shallow, ambiguous, noisy, and
-inconsistent. We describe an approach to folksonomy learning based on
-relational clustering, which exploits structured metadata contained in personal
-hierarchies. Our approach clusters similar hierarchies using their structure
-and tag statistics, then incrementally weaves them into a deeper, bushier tree.
-We study folksonomy learning using social metadata extracted from the
-photo-sharing site Flickr, and demonstrate that the proposed approach addresses
-the challenges. Moreover, comparing to previous work, the approach produces
-larger, more accurate folksonomies, and in addition, scales better.
-
+  Many social Web sites allow users to annotate the content with descriptivemetadata, such as tags, and more recently to organize content hierarchically.These types of structured metadata provide valuable evidence for learning how acommunity organizes knowledge. For instance, we can aggregate many personalhierarchies into a common taxonomy, also known as a folksonomy, that will aidusers in visualizing and browsing social content, and also to help them inorganizing their own content. However, learning from social metadata presentsseveral challenges, since it is sparse, shallow, ambiguous, noisy, andinconsistent. We describe an approach to folksonomy learning based onrelational clustering, which exploits structured metadata contained in personalhierarchies. Our approach clusters similar hierarchies using their structureand tag statistics, then incrementally weaves them into a deeper, bushier tree.We study folksonomy learning using social metadata extracted from thephoto-sharing site Flickr, and demonstrate that the proposed approach addressesthe challenges. Moreover, comparing to previous work, the approach produceslarger, more accurate folksonomies, and in addition, scales better.
 
 A Probabilistic Approach for Learning Folksonomies from Structured Data
 
-  Learning structured representations has emerged as an important problem in
-many domains, including document and Web data mining, bioinformatics, and image
-analysis. One approach to learning complex structures is to integrate many
-smaller, incomplete and noisy structure fragments. In this work, we present an
-unsupervised probabilistic approach that extends affinity propagation to
-combine the small ontological fragments into a collection of integrated,
-consistent, and larger folksonomies. This is a challenging task because the
-method must aggregate similar structures while avoiding structural
-inconsistencies and handling noise. We validate the approach on a real-world
-social media dataset, comprised of shallow personal hierarchies specified by
-many individual users, collected from the photosharing website Flickr. Our
-empirical results show that our proposed approach is able to construct deeper
-and denser structures, compared to an approach using only the standard affinity
-propagation algorithm. Additionally, the approach yields better overall
-integration quality than a state-of-the-art approach based on incremental
-relational clustering.
-
+  Learning structured representations has emerged as an important problem inmany domains, including document and Web data mining, bioinformatics, and imageanalysis. One approach to learning complex structures is to integrate manysmaller, incomplete and noisy structure fragments. In this work, we present anunsupervised probabilistic approach that extends affinity propagation tocombine the small ontological fragments into a collection of integrated,consistent, and larger folksonomies. This is a challenging task because themethod must aggregate similar structures while avoiding structuralinconsistencies and handling noise. We validate the approach on a real-worldsocial media dataset, comprised of shallow personal hierarchies specified bymany individual users, collected from the photosharing website Flickr. Ourempirical results show that our proposed approach is able to construct deeperand denser structures, compared to an approach using only the standard affinitypropagation algorithm. Additionally, the approach yields better overallintegration quality than a state-of-the-art approach based on incrementalrelational clustering.
 
 Lifted Graphical Models: A Survey
 
-  This article presents a survey of work on lifted graphical models. We review
-a general form for a lifted graphical model, a par-factor graph, and show how a
-number of existing statistical relational representations map to this
-formalism. We discuss inference algorithms, including lifted inference
-algorithms, that efficiently compute the answers to probabilistic queries. We
-also review work in learning lifted graphical models from data. It is our
-belief that the need for statistical relational models (whether it goes by that
-name or another) will grow in the coming decades, as we are inundated with data
-which is a mix of structured and unstructured, with entities and relations
-extracted in a noisy manner from text, and with the need to reason effectively
-with this data. We hope that this synthesis of ideas from many different
-research groups will provide an accessible starting point for new researchers
-in this expanding field.
-
-
-Bisimulation-based Approximate Lifted Inference
-
-  There has been a great deal of recent interest in methods for performing
-lifted inference; however, most of this work assumes that the first-order model
-is given as input to the system. Here, we describe lifted inference algorithms
-that determine symmetries and automatically lift the probabilistic model to
-speedup inference. In particular, we describe approximate lifted inference
-techniques that allow the user to trade off inference accuracy for
-computational efficiency by using a handful of tunable parameters, while
-keeping the error bounded. Our algorithms are closely related to the
-graph-theoretic concept of bisimulation. We report experiments on both
-synthetic and real data to show that in the presence of symmetries, run-times
-for inference can be improved significantly, with approximate lifted inference
-providing orders of magnitude speedup over ground inference.
-
-
-Graph-based Generalization Bounds for Learning Binary Relations
-
-  We investigate the generalizability of learned binary relations: functions
-that map pairs of instances to a logical indicator. This problem has
-application in numerous areas of machine learning, such as ranking, entity
-resolution and link prediction. Our learning framework incorporates an example
-labeler that, given a sequence $X$ of $n$ instances and a desired training size
-$m$, subsamples $m$ pairs from $X \times X$ without replacement. The challenge
-in analyzing this learning scenario is that pairwise combinations of random
-variables are inherently dependent, which prevents us from using traditional
-learning-theoretic arguments. We present a unified, graph-based analysis, which
-allows us to analyze this dependence using well-known graph identities. We are
-then able to bound the generalization error of learned binary relations using
-Rademacher complexity and algorithmic stability. The rate of uniform
-convergence is partially determined by the labeler's subsampling process. We
-thus examine how various assumptions about subsampling affect generalization;
-under a natural random subsampling process, our bounds guarantee
-$\tilde{O}(1/\sqrt{n})$ uniform convergence.
-
-
-Multi-relational Learning Using Weighted Tensor Decomposition with
-  Modular Loss
-
-  We propose a modular framework for multi-relational learning via tensor
-decomposition. In our learning setting, the training data contains multiple
-types of relationships among a set of objects, which we represent by a sparse
-three-mode tensor. The goal is to predict the values of the missing entries. To
-do so, we model each relationship as a function of a linear combination of
-latent factors. We learn this latent representation by computing a low-rank
-tensor decomposition, using quasi-Newton optimization of a weighted objective
-function. Sparsity in the observed data is captured by the weighted objective,
-leading to improved accuracy when training data is limited. Exploiting sparsity
-also improves efficiency, potentially up to an order of magnitude over
-unweighted approaches. In addition, our framework accommodates arbitrary
-combinations of smooth, task-specific loss functions, making it better suited
-for learning different types of relations. For the typical cases of real-valued
-functions and binary relations, we propose several loss functions and derive
-the associated parameter gradients. We evaluate our method on synthetic and
-real data, showing significant improvements in both accuracy and scalability
-over related factorization techniques.
-
-
-A Hypergraph-Partitioned Vertex Programming Approach for Large-scale
-  Consensus Optimization
-
-  In modern data science problems, techniques for extracting value from big
-data require performing large-scale optimization over heterogenous, irregularly
-structured data. Much of this data is best represented as multi-relational
-graphs, making vertex programming abstractions such as those of Pregel and
-GraphLab ideal fits for modern large-scale data analysis. In this paper, we
-describe a vertex-programming implementation of a popular consensus
-optimization technique known as the alternating direction of multipliers
-(ADMM). ADMM consensus optimization allows elegant solution of complex
-objectives such as inference in rich probabilistic models. We also introduce a
-novel hypergraph partitioning technique that improves over state-of-the-art
-partitioning techniques for vertex programming and significantly reduces the
-communication cost by reducing the number of replicated nodes up to an order of
-magnitude. We implemented our algorithm in GraphLab and measure scaling
-performance on a variety of realistic bipartite graph distributions and a large
-synthetic voter-opinion analysis application. In our experiments, we are able
-to achieve a 50% improvement in runtime over the current state-of-the-art
-GraphLab partitioning scheme.
-
+  This article presents a survey of work on lifted graphical models. We reviewa general form for a lifted graphical model, a par-factor graph, and show how anumber of existing statistical relational representations map to thisformalism. We discuss inference algorithms, including lifted inferencealgorithms, that efficiently compute the answers to probabilistic queries. Wealso review work in learning lifted graphical models from data. It is ourbelief that the need for statistical relational models (whether it goes by thatname or another) will grow in the coming decades, as we are inundated with datawhich is a mix of structured and unstructured, with entities and relationsextracted in a noisy manner from text, and with the need to reason effectivelywith this data. We hope that this synthesis of ideas from many differentresearch groups will provide an accessible starting point for new researchersin this expanding field.
 
 Probabilistic Similarity Logic
 
-  Many machine learning applications require the ability to learn from and
-reason about noisy multi-relational data. To address this, several effective
-representations have been developed that provide both a language for expressing
-the structural regularities of a domain, and principled support for
-probabilistic inference. In addition to these two aspects, however, many
-applications also involve a third aspect-the need to reason about
-similarities-which has not been directly supported in existing frameworks. This
-paper introduces probabilistic similarity logic (PSL), a general-purpose
-framework for joint reasoning about similarity in relational domains that
-incorporates probabilistic reasoning about similarities and relational
-structure in a principled way. PSL can integrate any existing domain-specific
-similarity measures and also supports reasoning about similarities between sets
-of entities. We provide efficient inference and learning techniques for PSL and
-demonstrate its effectiveness both in common relational tasks and in settings
-that require reasoning about similarity.
+  Many machine learning applications require the ability to learn from andreason about noisy multi-relational data. To address this, several effectiverepresentations have been developed that provide both a language for expressingthe structural regularities of a domain, and principled support forprobabilistic inference. In addition to these two aspects, however, manyapplications also involve a third aspect-the need to reason aboutsimilarities-which has not been directly supported in existing frameworks. Thispaper introduces probabilistic similarity logic (PSL), a general-purposeframework for joint reasoning about similarity in relational domains thatincorporates probabilistic reasoning about similarities and relationalstructure in a principled way. PSL can integrate any existing domain-specificsimilarity measures and also supports reasoning about similarities between setsof entities. We provide efficient inference and learning techniques for PSL anddemonstrate its effectiveness both in common relational tasks and in settingsthat require reasoning about similarity.
 
+Bisimulation-based Approximate Lifted Inference
+
+  There has been a great deal of recent interest in methods for performinglifted inference; however, most of this work assumes that the first-order modelis given as input to the system. Here, we describe lifted inference algorithmsthat determine symmetries and automatically lift the probabilistic model tospeedup inference. In particular, we describe approximate lifted inferencetechniques that allow the user to trade off inference accuracy forcomputational efficiency by using a handful of tunable parameters, whilekeeping the error bounded. Our algorithms are closely related to thegraph-theoretic concept of bisimulation. We report experiments on bothsynthetic and real data to show that in the presence of symmetries, run-timesfor inference can be improved significantly, with approximate lifted inferenceproviding orders of magnitude speedup over ground inference.
 
 LA-LDA: A Limited Attention Topic Model for Social Recommendation
 
-  Social media users have finite attention which limits the number of incoming
-messages from friends they can process. Moreover, they pay more attention to
-opinions and recommendations of some friends more than others. In this paper,
-we propose LA-LDA, a latent topic model which incorporates limited,
-non-uniformly divided attention in the diffusion process by which opinions and
-information spread on the social network. We show that our proposed model is
-able to learn more accurate user models from users' social network and item
-adoption behavior than models which do not take limited attention into account.
-We analyze voting on news items on the social news aggregator Digg and show
-that our proposed model is better able to predict held out votes than
-alternative models. Our study demonstrates that psycho-socially motivated
-models have better ability to describe and predict observed behavior than
-models which only consider topics.
+  Social media users have finite attention which limits the number of incomingmessages from friends they can process. Moreover, they pay more attention toopinions and recommendations of some friends more than others. In this paper,we propose LA-LDA, a latent topic model which incorporates limited,non-uniformly divided attention in the diffusion process by which opinions andinformation spread on the social network. We show that our proposed model isable to learn more accurate user models from users' social network and itemadoption behavior than models which do not take limited attention into account.We analyze voting on news items on the social news aggregator Digg and showthat our proposed model is better able to predict held out votes thanalternative models. Our study demonstrates that psycho-socially motivatedmodels have better ability to describe and predict observed behavior thanmodels which only consider topics.
 
+Graph-based Generalization Bounds for Learning Binary Relations
 
-Value of Information Lattice: Exploiting Probabilistic Independence for
-  Effective Feature Subset Acquisition
+  We investigate the generalizability of learned binary relations: functionsthat map pairs of instances to a logical indicator. This problem hasapplication in numerous areas of machine learning, such as ranking, entityresolution and link prediction. Our learning framework incorporates an examplelabeler that, given a sequence $X$ of $n$ instances and a desired training size$m$, subsamples $m$ pairs from $X \times X$ without replacement. The challengein analyzing this learning scenario is that pairwise combinations of randomvariables are inherently dependent, which prevents us from using traditionallearning-theoretic arguments. We present a unified, graph-based analysis, whichallows us to analyze this dependence using well-known graph identities. We arethen able to bound the generalization error of learned binary relations usingRademacher complexity and algorithmic stability. The rate of uniformconvergence is partially determined by the labeler's subsampling process. Wethus examine how various assumptions about subsampling affect generalization;under a natural random subsampling process, our bounds guarantee$\tilde{O}(1/\sqrt{n})$ uniform convergence.
 
-  We address the cost-sensitive feature acquisition problem, where
-misclassifying an instance is costly but the expected misclassification cost
-can be reduced by acquiring the values of the missing features. Because
-acquiring the features is costly as well, the objective is to acquire the right
-set of features so that the sum of the feature acquisition cost and
-misclassification cost is minimized. We describe the Value of Information
-Lattice (VOILA), an optimal and efficient feature subset acquisition framework.
-Unlike the common practice, which is to acquire features greedily, VOILA can
-reason with subsets of features. VOILA efficiently searches the space of
-possible feature subsets by discovering and exploiting conditional independence
-properties between the features and it reuses probabilistic inference
-computations to further speed up the process. Through empirical evaluation on
-five medical datasets, we show that the greedy strategy is often reluctant to
-acquire features, as it cannot forecast the benefit of acquiring multiple
-features in combination.
+Multi-relational Learning Using Weighted Tensor Decomposition with  Modular Loss
 
+  We propose a modular framework for multi-relational learning via tensordecomposition. In our learning setting, the training data contains multipletypes of relationships among a set of objects, which we represent by a sparsethree-mode tensor. The goal is to predict the values of the missing entries. Todo so, we model each relationship as a function of a linear combination oflatent factors. We learn this latent representation by computing a low-ranktensor decomposition, using quasi-Newton optimization of a weighted objectivefunction. Sparsity in the observed data is captured by the weighted objective,leading to improved accuracy when training data is limited. Exploiting sparsityalso improves efficiency, potentially up to an order of magnitude overunweighted approaches. In addition, our framework accommodates arbitrarycombinations of smooth, task-specific loss functions, making it better suitedfor learning different types of relations. For the typical cases of real-valuedfunctions and binary relations, we propose several loss functions and derivethe associated parameter gradients. We evaluate our method on synthetic andreal data, showing significant improvements in both accuracy and scalabilityover related factorization techniques.
 
-Subgraph Pattern Matching over Uncertain Graphs with Identity Linkage
-  Uncertainty
+Subgraph Pattern Matching over Uncertain Graphs with Identity Linkage  Uncertainty
 
-  There is a growing need for methods which can capture uncertainties and
-answer queries over graph-structured data. Two common types of uncertainty are
-uncertainty over the attribute values of nodes and uncertainty over the
-existence of edges. In this paper, we combine those with identity uncertainty.
-Identity uncertainty represents uncertainty over the mapping from objects
-mentioned in the data, or references, to the underlying real-world entities. We
-propose the notion of a probabilistic entity graph (PEG), a probabilistic graph
-model that defines a distribution over possible graphs at the entity level. The
-model takes into account node attribute uncertainty, edge existence
-uncertainty, and identity uncertainty, and thus enables us to systematically
-reason about all three types of uncertainties in a uniform manner. We introduce
-a general framework for constructing a PEG given uncertain data at the
-reference level and develop highly efficient algorithms to answer subgraph
-pattern matching queries in this setting. Our algorithms are based on two novel
-ideas: context-aware path indexing and reduction by join-candidates, which
-drastically reduce the query search space. A comprehensive experimental
-evaluation shows that our approach outperforms baseline implementations by
-orders of magnitude.
+  There is a growing need for methods which can capture uncertainties andanswer queries over graph-structured data. Two common types of uncertainty areuncertainty over the attribute values of nodes and uncertainty over theexistence of edges. In this paper, we combine those with identity uncertainty.Identity uncertainty represents uncertainty over the mapping from objectsmentioned in the data, or references, to the underlying real-world entities. Wepropose the notion of a probabilistic entity graph (PEG), a probabilistic graphmodel that defines a distribution over possible graphs at the entity level. Themodel takes into account node attribute uncertainty, edge existenceuncertainty, and identity uncertainty, and thus enables us to systematicallyreason about all three types of uncertainties in a uniform manner. We introducea general framework for constructing a PEG given uncertain data at thereference level and develop highly efficient algorithms to answer subgraphpattern matching queries in this setting. Our algorithms are based on two novelideas: context-aware path indexing and reduction by join-candidates, whichdrastically reduce the query search space. A comprehensive experimentalevaluation shows that our approach outperforms baseline implementations byorders of magnitude.
 
+A Hypergraph-Partitioned Vertex Programming Approach for Large-scale  Consensus Optimization
 
-Hinge-loss Markov Random Fields: Convex Inference for Structured
-  Prediction
+  In modern data science problems, techniques for extracting value from bigdata require performing large-scale optimization over heterogenous, irregularlystructured data. Much of this data is best represented as multi-relationalgraphs, making vertex programming abstractions such as those of Pregel andGraphLab ideal fits for modern large-scale data analysis. In this paper, wedescribe a vertex-programming implementation of a popular consensusoptimization technique known as the alternating direction of multipliers(ADMM). ADMM consensus optimization allows elegant solution of complexobjectives such as inference in rich probabilistic models. We also introduce anovel hypergraph partitioning technique that improves over state-of-the-artpartitioning techniques for vertex programming and significantly reduces thecommunication cost by reducing the number of replicated nodes up to an order ofmagnitude. We implemented our algorithm in GraphLab and measure scalingperformance on a variety of realistic bipartite graph distributions and a largesynthetic voter-opinion analysis application. In our experiments, we are ableto achieve a 50% improvement in runtime over the current state-of-the-artGraphLab partitioning scheme.
 
-  Graphical models for structured domains are powerful tools, but the
-computational complexities of combinatorial prediction spaces can force
-restrictions on models, or require approximate inference in order to be
-tractable. Instead of working in a combinatorial space, we use hinge-loss
-Markov random fields (HL-MRFs), an expressive class of graphical models with
-log-concave density functions over continuous variables, which can represent
-confidences in discrete predictions. This paper demonstrates that HL-MRFs are
-general tools for fast and accurate structured prediction. We introduce the
-first inference algorithm that is both scalable and applicable to the full
-class of HL-MRFs, and show how to train HL-MRFs with several learning
-algorithms. Our experiments show that HL-MRFs match or surpass the predictive
-performance of state-of-the-art methods, including discrete models, in four
-application domains.
+Hinge-loss Markov Random Fields: Convex Inference for Structured  Prediction
 
+  Graphical models for structured domains are powerful tools, but thecomputational complexities of combinatorial prediction spaces can forcerestrictions on models, or require approximate inference in order to betractable. Instead of working in a combinatorial space, we use hinge-lossMarkov random fields (HL-MRFs), an expressive class of graphical models withlog-concave density functions over continuous variables, which can representconfidences in discrete predictions. This paper demonstrates that HL-MRFs aregeneral tools for fast and accurate structured prediction. We introduce thefirst inference algorithm that is both scalable and applicable to the fullclass of HL-MRFs, and show how to train HL-MRFs with several learningalgorithms. Our experiments show that HL-MRFs match or surpass the predictiveperformance of state-of-the-art methods, including discrete models, in fourapplication domains.
 
-Adaptive Neighborhood Graph Construction for Inference in
-  Multi-Relational Networks
+Value of Information Lattice: Exploiting Probabilistic Independence for  Effective Feature Subset Acquisition
 
-  A neighborhood graph, which represents the instances as vertices and their
-relations as weighted edges, is the basis of many semi-supervised and
-relational models for node labeling and link prediction. Most methods employ a
-sequential process to construct the neighborhood graph. This process often
-consists of generating a candidate graph, pruning the candidate graph to make a
-neighborhood graph, and then performing inference on the variables (i.e.,
-nodes) in the neighborhood graph. In this paper, we propose a framework that
-can dynamically adapt the neighborhood graph based on the states of variables
-from intermediate inference results, as well as structural properties of the
-relations connecting them. A key strength of our framework is its ability to
-handle multi-relational data and employ varying amounts of relations for each
-instance based on the intermediate inference results. We formulate the link
-prediction task as inference on neighborhood graphs, and include preliminary
-results illustrating the effects of different strategies in our proposed
-framework.
+  We address the cost-sensitive feature acquisition problem, wheremisclassifying an instance is costly but the expected misclassification costcan be reduced by acquiring the values of the missing features. Becauseacquiring the features is costly as well, the objective is to acquire the rightset of features so that the sum of the feature acquisition cost andmisclassification cost is minimized. We describe the Value of InformationLattice (VOILA), an optimal and efficient feature subset acquisition framework.Unlike the common practice, which is to acquire features greedily, VOILA canreason with subsets of features. VOILA efficiently searches the space ofpossible feature subsets by discovering and exploiting conditional independenceproperties between the features and it reuses probabilistic inferencecomputations to further speed up the process. Through empirical evaluation onfive medical datasets, we show that the greedy strategy is often reluctant toacquire features, as it cannot forecast the benefit of acquiring multiplefeatures in combination.
 
+Adaptive Neighborhood Graph Construction for Inference in  Multi-Relational Networks
+
+  A neighborhood graph, which represents the instances as vertices and theirrelations as weighted edges, is the basis of many semi-supervised andrelational models for node labeling and link prediction. Most methods employ asequential process to construct the neighborhood graph. This process oftenconsists of generating a candidate graph, pruning the candidate graph to make aneighborhood graph, and then performing inference on the variables (i.e.,nodes) in the neighborhood graph. In this paper, we propose a framework thatcan dynamically adapt the neighborhood graph based on the states of variablesfrom intermediate inference results, as well as structural properties of therelations connecting them. A key strength of our framework is its ability tohandle multi-relational data and employ varying amounts of relations for eachinstance based on the intermediate inference results. We formulate the linkprediction task as inference on neighborhood graphs, and include preliminaryresults illustrating the effects of different strategies in our proposedframework.
 
 Generic Statistical Relational Entity Resolution in Knowledge Graphs
 
-  Entity resolution, the problem of identifying the underlying entity of
-references found in data, has been researched for many decades in many
-communities. A common theme in this research has been the importance of
-incorporating relational features into the resolution process. Relational
-entity resolution is particularly important in knowledge graphs (KGs), which
-have a regular structure capturing entities and their interrelationships. We
-identify three major problems in KG entity resolution: (1) intra-KG reference
-ambiguity; (2) inter-KG reference ambiguity; and (3) ambiguity when extending
-KGs with new facts. We implement a framework that generalizes across these
-three settings and exploits this regular structure of KGs. Our framework has
-many advantages over custom solutions widely deployed in industry, including
-collective inference, scalability, and interpretability. We apply our framework
-to two real-world KG entity resolution problems, ambiguity in NELL and merging
-data from Freebase and MusicBrainz, demonstrating the importance of relational
-features.
-
+  Entity resolution, the problem of identifying the underlying entity ofreferences found in data, has been researched for many decades in manycommunities. A common theme in this research has been the importance ofincorporating relational features into the resolution process. Relationalentity resolution is particularly important in knowledge graphs (KGs), whichhave a regular structure capturing entities and their interrelationships. Weidentify three major problems in KG entity resolution: (1) intra-KG referenceambiguity; (2) inter-KG reference ambiguity; and (3) ambiguity when extendingKGs with new facts. We implement a framework that generalizes across thesethree settings and exploits this regular structure of KGs. Our framework hasmany advantages over custom solutions widely deployed in industry, includingcollective inference, scalability, and interpretability. We apply our frameworkto two real-world KG entity resolution problems, ambiguity in NELL and mergingdata from Freebase and MusicBrainz, demonstrating the importance of relationalfeatures.
 
 Using Noisy Extractions to Discover Causal Knowledge
 
-  Knowledge bases (KB) constructed through information extraction from text
-play an important role in query answering and reasoning. In this work, we study
-a particular reasoning task, the problem of discovering causal relationships
-between entities, known as causal discovery. There are two contrasting types of
-approaches to discovering causal knowledge. One approach attempts to identify
-causal relationships from text using automatic extraction techniques, while the
-other approach infers causation from observational data. However, extractions
-alone are often insufficient to capture complex patterns and full observational
-data is expensive to obtain. We introduce a probabilistic method for fusing
-noisy extractions with observational data to discover causal knowledge. We
-propose a principled approach that uses the probabilistic soft logic (PSL)
-framework to encode well-studied constraints to recover long-range patterns and
-consistent predictions, while cheaply acquired extractions provide a proxy for
-unseen observations. We apply our method gene regulatory networks and show the
-promise of exploiting KB signals in causal discovery, suggesting a critical,
-new area of research.
-
+  Knowledge bases (KB) constructed through information extraction from textplay an important role in query answering and reasoning. In this work, we studya particular reasoning task, the problem of discovering causal relationshipsbetween entities, known as causal discovery. There are two contrasting types ofapproaches to discovering causal knowledge. One approach attempts to identifycausal relationships from text using automatic extraction techniques, while theother approach infers causation from observational data. However, extractionsalone are often insufficient to capture complex patterns and full observationaldata is expensive to obtain. We introduce a probabilistic method for fusingnoisy extractions with observational data to discover causal knowledge. Wepropose a principled approach that uses the probabilistic soft logic (PSL)framework to encode well-studied constraints to recover long-range patterns andconsistent predictions, while cheaply acquired extractions provide a proxy forunseen observations. We apply our method gene regulatory networks and show thepromise of exploiting KB signals in causal discovery, suggesting a critical,new area of research.
 
 Scalable Structure Learning for Probabilistic Soft Logic
 
-  Statistical relational frameworks such as Markov logic networks and
-probabilistic soft logic (PSL) encode model structure with weighted first-order
-logical clauses. Learning these clauses from data is referred to as structure
-learning. Structure learning alleviates the manual cost of specifying models.
-However, this benefit comes with high computational costs; structure learning
-typically requires an expensive search over the space of clauses which involves
-repeated optimization of clause weights. In this paper, we propose the first
-two approaches to structure learning for PSL. We introduce a greedy
-search-based algorithm and a novel optimization method that trade-off
-scalability and approximations to the structure learning problem in varying
-ways. The highly scalable optimization method combines data-driven generation
-of clauses with a piecewise pseudolikelihood (PPLL) objective that learns model
-structure by optimizing clause weights only once. We compare both methods
-across five real-world tasks, showing that PPLL achieves an order of magnitude
-runtime speedup and AUC gains up to 15% over greedy search.
-
+  Statistical relational frameworks such as Markov logic networks andprobabilistic soft logic (PSL) encode model structure with weighted first-orderlogical clauses. Learning these clauses from data is referred to as structurelearning. Structure learning alleviates the manual cost of specifying models.However, this benefit comes with high computational costs; structure learningtypically requires an expensive search over the space of clauses which involvesrepeated optimization of clause weights. In this paper, we propose the firsttwo approaches to structure learning for PSL. We introduce a greedysearch-based algorithm and a novel optimization method that trade-offscalability and approximations to the structure learning problem in varyingways. The highly scalable optimization method combines data-driven generationof clauses with a piecewise pseudolikelihood (PPLL) objective that learns modelstructure by optimizing clause weights only once. We compare both methodsacross five real-world tasks, showing that PPLL achieves an order of magnituderuntime speedup and AUC gains up to 15% over greedy search.
 
 A Fairness-aware Hybrid Recommender System
 
-  Recommender systems are used in variety of domains affecting people's lives.
-This has raised concerns about possible biases and discrimination that such
-systems might exacerbate. There are two primary kinds of biases inherent in
-recommender systems: observation bias and bias stemming from imbalanced data.
-Observation bias exists due to a feedback loop which causes the model to learn
-to only predict recommendations similar to previous ones. Imbalance in data
-occurs when systematic societal, historical, or other ambient bias is present
-in the data. In this paper, we address both biases by proposing a hybrid
-fairness-aware recommender system. Our model provides efficient and accurate
-recommendations by incorporating multiple user-user and item-item similarity
-measures, content, and demographic information, while addressing recommendation
-biases. We implement our model using a powerful and expressive probabilistic
-programming language called probabilistic soft logic. We experimentally
-evaluate our approach on a popular movie recommendation dataset, showing that
-our proposed model can provide more accurate and fairer recommendations,
-compared to a state-of-the art fair recommender system.
-
-
-Scalable Text and Link Analysis with Mixed-Topic Link Models
-
-  Many data sets contain rich information about objects, as well as pairwise
-relations between them. For instance, in networks of websites, scientific
-papers, and other documents, each node has content consisting of a collection
-of words, as well as hyperlinks or citations to other nodes. In order to
-perform inference on such data sets, and make predictions and recommendations,
-it is useful to have models that are able to capture the processes which
-generate the text at each node and the links between them. In this paper, we
-combine classic ideas in topic modeling with a variant of the mixed-membership
-block model recently developed in the statistical physics community. The
-resulting model has the advantage that its parameters, including the mixture of
-topics of each document and the resulting overlapping communities, can be
-inferred with a simple and scalable expectation-maximization algorithm. We test
-our model on three data sets, performing unsupervised topic classification and
-link prediction. For both tasks, our model outperforms several existing
-state-of-the-art methods, achieving higher accuracy with significantly less
-computation, analyzing a data set with 1.3 million words and 44 thousand links
-in a few minutes.
-
+  Recommender systems are used in variety of domains affecting people's lives.This has raised concerns about possible biases and discrimination that suchsystems might exacerbate. There are two primary kinds of biases inherent inrecommender systems: observation bias and bias stemming from imbalanced data.Observation bias exists due to a feedback loop which causes the model to learnto only predict recommendations similar to previous ones. Imbalance in dataoccurs when systematic societal, historical, or other ambient bias is presentin the data. In this paper, we address both biases by proposing a hybridfairness-aware recommender system. Our model provides efficient and accuraterecommendations by incorporating multiple user-user and item-item similaritymeasures, content, and demographic information, while addressing recommendationbiases. We implement our model using a powerful and expressive probabilisticprogramming language called probabilistic soft logic. We experimentallyevaluate our approach on a popular movie recommendation dataset, showing thatour proposed model can provide more accurate and fairer recommendations,compared to a state-of-the art fair recommender system.
 
 Utility Elicitation as a Classification Problem
 
-  We investigate the application of classification techniques to utility
-elicitation. In a decision problem, two sets of parameters must generally be
-elicited: the probabilities and the utilities. While the prior and conditional
-probabilities in the model do not change from user to user, the utility models
-do. Thus it is necessary to elicit a utility model separately for each new
-user. Elicitation is long and tedious, particularly if the outcome space is
-large and not decomposable. There are two common approaches to utility function
-elicitation. The first is to base the determination of the users utility
-function solely ON elicitation OF qualitative preferences.The second makes
-assumptions about the form AND decomposability OF the utility function.Here we
-take a different approach: we attempt TO identify the new USERs utility
-function based on classification relative to a database of previously collected
-utility functions. We do this by identifying clusters of utility functions that
-minimize an appropriate distance measure. Having identified the clusters, we
-develop a classification scheme that requires many fewer and simpler
-assessments than full utility elicitation and is more robust than utility
-elicitation based solely on preferences. We have tested our algorithm on a
-small database of utility functions in a prenatal diagnosis domain and the
-results are quite promising.
+  We investigate the application of classification techniques to utilityelicitation. In a decision problem, two sets of parameters must generally beelicited: the probabilities and the utilities. While the prior and conditionalprobabilities in the model do not change from user to user, the utility modelsdo. Thus it is necessary to elicit a utility model separately for each newuser. Elicitation is long and tedious, particularly if the outcome space islarge and not decomposable. There are two common approaches to utility functionelicitation. The first is to base the determination of the users utilityfunction solely ON elicitation OF qualitative preferences.The second makesassumptions about the form AND decomposability OF the utility function.Here wetake a different approach: we attempt TO identify the new USERs utilityfunction based on classification relative to a database of previously collectedutility functions. We do this by identifying clusters of utility functions thatminimize an appropriate distance measure. Having identified the clusters, wedevelop a classification scheme that requires many fewer and simplerassessments than full utility elicitation and is more robust than utilityelicitation based solely on preferences. We have tested our algorithm on asmall database of utility functions in a prenatal diagnosis domain and theresults are quite promising.
 
+Scalable Text and Link Analysis with Mixed-Topic Link Models
+
+  Many data sets contain rich information about objects, as well as pairwiserelations between them. For instance, in networks of websites, scientificpapers, and other documents, each node has content consisting of a collectionof words, as well as hyperlinks or citations to other nodes. In order toperform inference on such data sets, and make predictions and recommendations,it is useful to have models that are able to capture the processes whichgenerate the text at each node and the links between them. In this paper, wecombine classic ideas in topic modeling with a variant of the mixed-membershipblock model recently developed in the statistical physics community. Theresulting model has the advantage that its parameters, including the mixture oftopics of each document and the resulting overlapping communities, can beinferred with a simple and scalable expectation-maximization algorithm. We testour model on three data sets, performing unsupervised topic classification andlink prediction. For both tasks, our model outperforms several existingstate-of-the-art methods, achieving higher accuracy with significantly lesscomputation, analyzing a data set with 1.3 million words and 44 thousand linksin a few minutes.
+
+'Beating the news' with EMBERS: Forecasting Civil Unrest using Open  Source Indicators
+
+  We describe the design, implementation, and evaluation of EMBERS, anautomated, 24x7 continuous system for forecasting civil unrest across 10countries of Latin America using open source indicators such as tweets, newssources, blogs, economic indicators, and other data sources. Unlikeretrospective studies, EMBERS has been making forecasts into the future sinceNov 2012 which have been (and continue to be) evaluated by an independent T&Eteam (MITRE). Of note, EMBERS has successfully forecast the uptick and downtickof incidents during the June 2013 protests in Brazil. We outline the systemarchitecture of EMBERS, individual models that leverage specific data sources,and a fusion and suppression engine that supports trading off specificevaluation criteria. EMBERS also provides an audit trail interface that enablesthe investigation of why specific predictions were made along with the datautilized for forecasting. Through numerous evaluations, we demonstrate thesuperiority of EMBERS over baserate methods and its capability to forecastsignificant societal happenings.
 
 Hinge-Loss Markov Random Fields and Probabilistic Soft Logic
 
-  A fundamental challenge in developing high-impact machine learning
-technologies is balancing the need to model rich, structured domains with the
-ability to scale to big data. Many important problem areas are both richly
-structured and large scale, from social and biological networks, to knowledge
-graphs and the Web, to images, video, and natural language. In this paper, we
-introduce two new formalisms for modeling structured data, and show that they
-can both capture rich structure and scale to big data. The first, hinge-loss
-Markov random fields (HL-MRFs), is a new kind of probabilistic graphical model
-that generalizes different approaches to convex inference. We unite three
-approaches from the randomized algorithms, probabilistic graphical models, and
-fuzzy logic communities, showing that all three lead to the same inference
-objective. We then define HL-MRFs by generalizing this unified objective. The
-second new formalism, probabilistic soft logic (PSL), is a probabilistic
-programming language that makes HL-MRFs easy to define using a syntax based on
-first-order logic. We introduce an algorithm for inferring most-probable
-variable assignments (MAP inference) that is much more scalable than
-general-purpose convex optimization methods, because it uses message passing to
-take advantage of sparse dependency structures. We then show how to learn the
-parameters of HL-MRFs. The learned HL-MRFs are as accurate as analogous
-discrete models, but much more scalable. Together, these algorithms enable
-HL-MRFs and PSL to model rich, structured data at scales not previously
-possible.
-
-
-'Beating the news' with EMBERS: Forecasting Civil Unrest using Open
-  Source Indicators
-
-  We describe the design, implementation, and evaluation of EMBERS, an
-automated, 24x7 continuous system for forecasting civil unrest across 10
-countries of Latin America using open source indicators such as tweets, news
-sources, blogs, economic indicators, and other data sources. Unlike
-retrospective studies, EMBERS has been making forecasts into the future since
-Nov 2012 which have been (and continue to be) evaluated by an independent T&E
-team (MITRE). Of note, EMBERS has successfully forecast the uptick and downtick
-of incidents during the June 2013 protests in Brazil. We outline the system
-architecture of EMBERS, individual models that leverage specific data sources,
-and a fusion and suppression engine that supports trading off specific
-evaluation criteria. EMBERS also provides an audit trail interface that enables
-the investigation of why specific predictions were made along with the data
-utilized for forecasting. Through numerous evaluations, we demonstrate the
-superiority of EMBERS over baserate methods and its capability to forecast
-significant societal happenings.
-
+  A fundamental challenge in developing high-impact machine learningtechnologies is balancing the need to model rich, structured domains with theability to scale to big data. Many important problem areas are both richlystructured and large scale, from social and biological networks, to knowledgegraphs and the Web, to images, video, and natural language. In this paper, weintroduce two new formalisms for modeling structured data, and show that theycan both capture rich structure and scale to big data. The first, hinge-lossMarkov random fields (HL-MRFs), is a new kind of probabilistic graphical modelthat generalizes different approaches to convex inference. We unite threeapproaches from the randomized algorithms, probabilistic graphical models, andfuzzy logic communities, showing that all three lead to the same inferenceobjective. We then define HL-MRFs by generalizing this unified objective. Thesecond new formalism, probabilistic soft logic (PSL), is a probabilisticprogramming language that makes HL-MRFs easy to define using a syntax based onfirst-order logic. We introduce an algorithm for inferring most-probablevariable assignments (MAP inference) that is much more scalable thangeneral-purpose convex optimization methods, because it uses message passing totake advantage of sparse dependency structures. We then show how to learn theparameters of HL-MRFs. The learned HL-MRFs are as accurate as analogousdiscrete models, but much more scalable. Together, these algorithms enableHL-MRFs and PSL to model rich, structured data at scales not previouslypossible.
 
 SysML: The New Frontier of Machine Learning Systems
 
-  Machine learning (ML) techniques are enjoying rapidly increasing adoption.
-However, designing and implementing the systems that support ML models in
-real-world deployments remains a significant obstacle, in large part due to the
-radically different development and deployment profile of modern ML methods,
-and the range of practical concerns that come with broader adoption. We propose
-to foster a new systems machine learning research community at the intersection
-of the traditional systems and ML communities, focused on topics such as
-hardware systems for ML, software systems for ML, and ML optimized for metrics
-beyond predictive accuracy. To do this, we describe a new conference, SysML,
-that explicitly targets research at the intersection of systems and machine
-learning with a program committee split evenly between experts in systems and
-ML, and an explicit focus on topics at the intersection of the two.
-
+  Machine learning (ML) techniques are enjoying rapidly increasing adoption.However, designing and implementing the systems that support ML models inreal-world deployments remains a significant obstacle, in large part due to theradically different development and deployment profile of modern ML methods,and the range of practical concerns that come with broader adoption. We proposeto foster a new systems machine learning research community at the intersectionof the traditional systems and ML communities, focused on topics such ashardware systems for ML, software systems for ML, and ML optimized for metricsbeyond predictive accuracy. To do this, we describe a new conference, SysML,that explicitly targets research at the intersection of systems and machinelearning with a program committee split evenly between experts in systems andML, and an explicit focus on topics at the intersection of the two.
 

@@ -1,1057 +1,200 @@
 Maximum planar subgraphs in dense graphs
 
-  K\"uhn, Osthus and Taraz showed that for each \gamma>0 there exists C such
-that any n-vertex graph with minimum degree \gamma n contains a planar subgraph
-with at least 2n-C edges. We find the optimum value of C for all \gamma<1/2 and
-sufficiently large n.
-
+  K\"uhn, Osthus and Taraz showed that for each \gamma>0 there exists C suchthat any n-vertex graph with minimum degree \gamma n contains a planar subgraphwith at least 2n-C edges. We find the optimum value of C for all \gamma<1/2 andsufficiently large n.
 
 The Allen Telescope Array Commensal Observing System
 
-  This memo describes the system used to conduct commensal correlator and
-beamformer observations at the Allen Telescope Array (ATA). This system was
-deployed for ~2 years until the ATA hibernation in 2011 and was responsible for
-collecting >5 TB of data during thousands of hours of observations. The general
-system design is presented and the implementation is discussed in detail. I
-emphasize the rationale for various design decisions and attempt to document a
-few aspects of ATA operations that might not be obvious to non-insiders. I
-close with some recommendations from my experience developing the software
-infrastructure and managing the correlator observations. These include: reuse
-existing systems; solve, don't avoid, tensions between projects, and share
-infrastructure; plan to make standalone observations to complement the
-commensal ones; and be considerate of observatory staff when deploying new and
-unusual observing modes. The structure of the software codebase is documented.
-
+  This memo describes the system used to conduct commensal correlator andbeamformer observations at the Allen Telescope Array (ATA). This system wasdeployed for ~2 years until the ATA hibernation in 2011 and was responsible forcollecting >5 TB of data during thousands of hours of observations. The generalsystem design is presented and the implementation is discussed in detail. Iemphasize the rationale for various design decisions and attempt to document afew aspects of ATA operations that might not be obvious to non-insiders. Iclose with some recommendations from my experience developing the softwareinfrastructure and managing the correlator observations. These include: reuseexisting systems; solve, don't avoid, tensions between projects, and shareinfrastructure; plan to make standalone observations to complement thecommensal ones; and be considerate of observatory staff when deploying new andunusual observing modes. The structure of the software codebase is documented.
 
 The Bandwidth Theorem in sparse graphs
 
-  The bandwidth theorem [Mathematische Annalen, 343(1):175--205, 2009] states
-that any $n$-vertex graph $G$ with minimum degree
-$\big(\tfrac{k-1}{k}+o(1)\big)n$ contains all $n$-vertex $k$-colourable graphs
-$H$ with bounded maximum degree and bandwidth $o(n)$. We provide sparse
-analogues of this statement in random graphs as well as pseudorandom graphs.
-  More precisely, we show that for $p\gg \big(\tfrac{\log
-n}{n}\big)^{1/\Delta}$ a.a.s. each spanning subgraph $G$ of $G(n,p)$ with
-minimum degree $\big(\tfrac{k-1}{k}+o(1)\big)pn$ contains all $n$-vertex
-$k$-colourable graphs $H$ with maximum degree $\Delta$, bandwidth $o(n)$, and
-at least $C p^{-2}$ vertices not contained in any triangle. A similar result is
-shown for sufficiently bijumbled graphs, which, to the best of our knowledge,
-is the first resilience result in pseudorandom graphs for a rich class of
-subgraphs. Finally, we provide improved results for $H$ with small degeneracy,
-which in particular imply a resilience result in $G(n,p)$ with respect to the
-containment of spanning bounded degree trees for $p\gg \big(\tfrac{\log
-n}{n}\big)^{1/3}$.
-
+  The bandwidth theorem [Mathematische Annalen, 343(1):175--205, 2009] statesthat any $n$-vertex graph $G$ with minimum degree$\big(\tfrac{k-1}{k}+o(1)\big)n$ contains all $n$-vertex $k$-colourable graphs$H$ with bounded maximum degree and bandwidth $o(n)$. We provide sparseanalogues of this statement in random graphs as well as pseudorandom graphs.  More precisely, we show that for $p\gg \big(\tfrac{\logn}{n}\big)^{1/\Delta}$ a.a.s. each spanning subgraph $G$ of $G(n,p)$ withminimum degree $\big(\tfrac{k-1}{k}+o(1)\big)pn$ contains all $n$-vertex$k$-colourable graphs $H$ with maximum degree $\Delta$, bandwidth $o(n)$, andat least $C p^{-2}$ vertices not contained in any triangle. A similar result isshown for sufficiently bijumbled graphs, which, to the best of our knowledge,is the first resilience result in pseudorandom graphs for a rich class ofsubgraphs. Finally, we provide improved results for $H$ with small degeneracy,which in particular imply a resilience result in $G(n,p)$ with respect to thecontainment of spanning bounded degree trees for $p\gg \big(\tfrac{\logn}{n}\big)^{1/3}$.
 
 A New Brown Dwarf Desert? A Scarcity of Wide Ultracool Binaries
 
-  We present the results of a deep-imaging search for wide companions to
-low-mass stars and brown dwarfs using NSFCam on IRTF. We searched a sample of
-132 M7-L8 dwarfs to magnitude limits of $J \sim 20.5$ and $K \sim 18.5$,
-corresponding to secondary-primary mass ratios of $\sim 0.5$. No companions
-were found with separations between $2{\arcsec}$ to $31{\arcsec}$ ($\sim$40 AU
-to $\sim$1000 AU). This null result implies a wide companion frequency below
-2.3% at the 95% confidence level within the sensitivity limits of the survey.
-Preliminary modeling efforts indicate that we could have detected 85% of
-companions more massive than $0.05 M_{\odot}$ and 50% above $0.03 M_{\odot}$.
-
+  We present the results of a deep-imaging search for wide companions tolow-mass stars and brown dwarfs using NSFCam on IRTF. We searched a sample of132 M7-L8 dwarfs to magnitude limits of $J \sim 20.5$ and $K \sim 18.5$,corresponding to secondary-primary mass ratios of $\sim 0.5$. No companionswere found with separations between $2{\arcsec}$ to $31{\arcsec}$ ($\sim$40 AUto $\sim$1000 AU). This null result implies a wide companion frequency below2.3% at the 95% confidence level within the sensitivity limits of the survey.Preliminary modeling efforts indicate that we could have detected 85% ofcompanions more massive than $0.05 M_{\odot}$ and 50% above $0.03 M_{\odot}$.
 
 Powers of Hamilton cycles in pseudorandom graphs
 
-  We study the appearance of powers of Hamilton cycles in pseudorandom graphs,
-using the following comparatively weak pseudorandomness notion. A graph $G$ is
-$(\varepsilon,p,k,\ell)$-pseudorandom if for all disjoint $X$ and $Y\subset
-V(G)$ with $|X|\ge\varepsilon p^kn$ and $|Y|\ge\varepsilon p^\ell n$ we have
-$e(X,Y)=(1\pm\varepsilon)p|X||Y|$. We prove that for all $\beta>0$ there is an
-$\varepsilon>0$ such that an $(\varepsilon,p,1,2)$-pseudorandom graph on $n$
-vertices with minimum degree at least $\beta pn$ contains the square of a
-Hamilton cycle. In particular, this implies that $(n,d,\lambda)$-graphs with
-$\lambda\ll d^{5/2 }n^{-3/2}$ contain the square of a Hamilton cycle, and thus
-a triangle factor if $n$ is a multiple of $3$. This improves on a result of
-Krivelevich, Sudakov and Szab\'o [Triangle factors in sparse pseudo-random
-graphs, Combinatorica 24 (2004), no. 3, 403--426].
-  We also extend our result to higher powers of Hamilton cycles and establish
-corresponding counting versions.
-
+  We study the appearance of powers of Hamilton cycles in pseudorandom graphs,using the following comparatively weak pseudorandomness notion. A graph $G$ is$(\varepsilon,p,k,\ell)$-pseudorandom if for all disjoint $X$ and $Y\subsetV(G)$ with $|X|\ge\varepsilon p^kn$ and $|Y|\ge\varepsilon p^\ell n$ we have$e(X,Y)=(1\pm\varepsilon)p|X||Y|$. We prove that for all $\beta>0$ there is an$\varepsilon>0$ such that an $(\varepsilon,p,1,2)$-pseudorandom graph on $n$vertices with minimum degree at least $\beta pn$ contains the square of aHamilton cycle. In particular, this implies that $(n,d,\lambda)$-graphs with$\lambda\ll d^{5/2 }n^{-3/2}$ contain the square of a Hamilton cycle, and thusa triangle factor if $n$ is a multiple of $3$. This improves on a result ofKrivelevich, Sudakov and Szab\'o [Triangle factors in sparse pseudo-randomgraphs, Combinatorica 24 (2004), no. 3, 403--426].  We also extend our result to higher powers of Hamilton cycles and establishcorresponding counting versions.
 
 New Low-Mass Stars and Brown Dwarfs with Disks in Lupus
 
-  Using the Infrared Array Camera and the Multiband Imaging Photometer aboard
-the {\it Spitzer Space Telescope}, we have obtained images of the Lupus 3
-star-forming cloud at 3.6, 4.5, 5.8, 8.0, and 24 \micron. We present photometry
-in these bands for the 41 previously known members that are within our images.
-In addition, we have identified 19 possible new members of the cloud based on
-red 3.6-8.0 \micron colors that are indicative of circumstellar disks. We have
-performed optical spectroscopy on 6 of these candidates, all of which are
-confirmed as young low-mass members of Lupus 3. The spectral types of these new
-members range from M4.75 to M8, corresponding to masses of 0.2-0.03 $M_\odot$
-for ages of $\sim1$ Myr according to theoretical evolutionary models. We also
-present optical spectroscopy of a candidate disk-bearing object in the vicinity
-of the Lupus 1 cloud, 2M 1541-3345, which Jayawardhana & Ivanov recently
-classified as a young brown dwarf ($M\sim0.03$ $M_\odot$) with a spectral type
-of M8. In contrast to their results, we measure an earlier spectral type of
-M5.75$\pm$0.25 for this object, indicating that it is probably a low-mass star
-($M\sim0.1$ $M_\odot$). In fact, according to its gravity-sensitive absorption
-lines and its luminosity, 2M 1541-3345 is older than members of the Lupus
-clouds ($\tau\sim1$ Myr) and instead is probably a more evolved
-pre-main-sequence star that is not directly related to the current generation
-of star formation in Lupus.
-
+  Using the Infrared Array Camera and the Multiband Imaging Photometer aboardthe {\it Spitzer Space Telescope}, we have obtained images of the Lupus 3star-forming cloud at 3.6, 4.5, 5.8, 8.0, and 24 \micron. We present photometryin these bands for the 41 previously known members that are within our images.In addition, we have identified 19 possible new members of the cloud based onred 3.6-8.0 \micron colors that are indicative of circumstellar disks. We haveperformed optical spectroscopy on 6 of these candidates, all of which areconfirmed as young low-mass members of Lupus 3. The spectral types of these newmembers range from M4.75 to M8, corresponding to masses of 0.2-0.03 $M_\odot$for ages of $\sim1$ Myr according to theoretical evolutionary models. We alsopresent optical spectroscopy of a candidate disk-bearing object in the vicinityof the Lupus 1 cloud, 2M 1541-3345, which Jayawardhana & Ivanov recentlyclassified as a young brown dwarf ($M\sim0.03$ $M_\odot$) with a spectral typeof M8. In contrast to their results, we measure an earlier spectral type ofM5.75$\pm$0.25 for this object, indicating that it is probably a low-mass star($M\sim0.1$ $M_\odot$). In fact, according to its gravity-sensitive absorptionlines and its luminosity, 2M 1541-3345 is older than members of the Lupusclouds ($\tau\sim1$ Myr) and instead is probably a more evolvedpre-main-sequence star that is not directly related to the current generationof star formation in Lupus.
 
 A density Corrádi-Hajnal Theorem
 
-  We find, for all sufficiently large $n$ and each $k$, the maximum number of
-edges in an $n$-vertex graph which does not contain $k+1$ vertex-disjoint
-triangles.
-  This extends a result of Moon [Canad. J. Math. 20 (1968), 96-102] which is in
-turn an extension of Mantel's Theorem. Our result can also be viewed as a
-density version of the Corradi-Hajnal Theorem.
+  We find, for all sufficiently large $n$ and each $k$, the maximum number ofedges in an $n$-vertex graph which does not contain $k+1$ vertex-disjointtriangles.  This extends a result of Moon [Canad. J. Math. 20 (1968), 96-102] which is inturn an extension of Mantel's Theorem. Our result can also be viewed as adensity version of the Corradi-Hajnal Theorem.
 
+Low-Mass Tertiary Companions to Spectroscopic Binaries I: Common Proper  Motion Survey for Wide Companions using 2MASS
 
-Low-Mass Tertiary Companions to Spectroscopic Binaries I: Common Proper
-  Motion Survey for Wide Companions using 2MASS
+  We report the first results of a multi-epoch search for wide (separationsgreater than a few tens of AU), low-mass tertiary companions of avolume-limited sample of 118 known spectroscopic binaries within 30 pc of theSun, using the 2MASS Point Source Catalog and follow-up observations with theKPNO and CTIO 4m telescopes. Note that this sample is not volume-complete butvolume-limited, and, thus, there is incompleteness in our reported companionrates. We are sensitive to common proper motion companions with separationsfrom roughly 200 AU to 10,000 AU (~10" -> ~10'). From 77 sources followed-up todate, we recover 11 previously known tertiaries, three previously knowncandidate tertiaries, of which two are spectroscopically confirmed and onerejected, and three new candidates, of which two are confirmed and onerejected. This yields an estimated wide tertiary fraction of 19.5^+5.2%_-3.7%.This observed fraction is consistent with predictions set out in star formationsimulations where the fraction of wide, low-mass companions to spectroscopicbinaries is >10%, and is roughly twice the wide companion rate of single stars.
 
-  We report the first results of a multi-epoch search for wide (separations
-greater than a few tens of AU), low-mass tertiary companions of a
-volume-limited sample of 118 known spectroscopic binaries within 30 pc of the
-Sun, using the 2MASS Point Source Catalog and follow-up observations with the
-KPNO and CTIO 4m telescopes. Note that this sample is not volume-complete but
-volume-limited, and, thus, there is incompleteness in our reported companion
-rates. We are sensitive to common proper motion companions with separations
-from roughly 200 AU to 10,000 AU (~10" -> ~10'). From 77 sources followed-up to
-date, we recover 11 previously known tertiaries, three previously known
-candidate tertiaries, of which two are spectroscopically confirmed and one
-rejected, and three new candidates, of which two are confirmed and one
-rejected. This yields an estimated wide tertiary fraction of 19.5^+5.2%_-3.7%.
-This observed fraction is consistent with predictions set out in star formation
-simulations where the fraction of wide, low-mass companions to spectroscopic
-binaries is >10%, and is roughly twice the wide companion rate of single stars.
+Evaluating the Calorimeter Model with Broadband, Continuous Spectra of  Starburst Galaxies Observed with the Allen Telescope Array
 
+  Although the relationship between the far-infrared and cm-wave radioluminosities of normal galaxies is one of the most striking correlations inastronomy, a solid understanding of its physical basis is lacking. In oneinterpretation, the "calorimeter model," rapid synchrotron cooling of cosmicray electrons is essential in reproducing the observed linear relationship.Observed radio spectra, however, are shallower than what is expected of cooledsynchrotron emission. In Thompson et al. (2006), a simple parameterized modelis presented to explain how relatively shallow observed spectra might ariseeven in the presence of rapid synchrotron cooling by accounting for ionizationlosses and other cooling mechanisms. During the commissioning of the 42-elementAllen Telescope Array, we observed the starburst galaxies M82, NGC 253, and Arp220 at frequencies ranging from 1 to 7 GHz, obtaining unprecedented broadbandcontinuous radio spectra of these sources. We combine our observations withhigh-frequency data from the literature to separate the spectra into thermaland nonthermal components. The nonthermal components all steepen in the cm-waveregime and cannot be well-modeled as simple power laws. The model of Thompsonet al. is consistent with our M82 results when plausible parameters are chosen,and our results in fact significantly shrink the space of allowed modelparameters. The model is only marginally consistent with our NGC 253 data.Assuming the Thompson et al. model, a steep electron energy injection index ofp = -2.5 is ruled out in M82 and NGC 253 to >99% confidence. We describe indetail the observing procedures, calibration methods, analysis, and consistencychecks used for broadband spectral observations with the Allen Telescope Array.
 
-Evaluating the Calorimeter Model with Broadband, Continuous Spectra of
-  Starburst Galaxies Observed with the Allen Telescope Array
+Commensal observing with the Allen Telescope array: software command and  control
 
-  Although the relationship between the far-infrared and cm-wave radio
-luminosities of normal galaxies is one of the most striking correlations in
-astronomy, a solid understanding of its physical basis is lacking. In one
-interpretation, the "calorimeter model," rapid synchrotron cooling of cosmic
-ray electrons is essential in reproducing the observed linear relationship.
-Observed radio spectra, however, are shallower than what is expected of cooled
-synchrotron emission. In Thompson et al. (2006), a simple parameterized model
-is presented to explain how relatively shallow observed spectra might arise
-even in the presence of rapid synchrotron cooling by accounting for ionization
-losses and other cooling mechanisms. During the commissioning of the 42-element
-Allen Telescope Array, we observed the starburst galaxies M82, NGC 253, and Arp
-220 at frequencies ranging from 1 to 7 GHz, obtaining unprecedented broadband
-continuous radio spectra of these sources. We combine our observations with
-high-frequency data from the literature to separate the spectra into thermal
-and nonthermal components. The nonthermal components all steepen in the cm-wave
-regime and cannot be well-modeled as simple power laws. The model of Thompson
-et al. is consistent with our M82 results when plausible parameters are chosen,
-and our results in fact significantly shrink the space of allowed model
-parameters. The model is only marginally consistent with our NGC 253 data.
-Assuming the Thompson et al. model, a steep electron energy injection index of
-p = -2.5 is ruled out in M82 and NGC 253 to >99% confidence. We describe in
-detail the observing procedures, calibration methods, analysis, and consistency
-checks used for broadband spectral observations with the Allen Telescope Array.
-
-
-Commensal observing with the Allen Telescope array: software command and
-  control
-
-  The Allen Telescope Array (ATA) is a Large-Number-Small-Diameter radio
-telescope array currently with 42 individual antennas and 5 independent
-back-end science systems (2 imaging FX correlators and 3 time domain beam
-formers) located at the Hat Creek Radio Observatory (HCRO). The goal of the ATA
-is to run multiple back-ends simultaneously, supporting multiple science
-projects commensally. The primary software control systems are based on a
-combination of Java, JRuby and Ruby on Rails. The primary control API is
-simplified to provide easy integration with new back-end systems while the
-lower layers of the software stack are handled by a master observing system.
-Scheduling observations for the ATA is based on finding a union between the
-science needs of multiple projects and automatically determining an efficient
-path to operating the various sub-components to meet those needs. When
-completed, the ATA is expected to be a world-class radio telescope, combining
-dedicated SETI projects with numerous radio astronomy science projects.
-
+  The Allen Telescope Array (ATA) is a Large-Number-Small-Diameter radiotelescope array currently with 42 individual antennas and 5 independentback-end science systems (2 imaging FX correlators and 3 time domain beamformers) located at the Hat Creek Radio Observatory (HCRO). The goal of the ATAis to run multiple back-ends simultaneously, supporting multiple scienceprojects commensally. The primary software control systems are based on acombination of Java, JRuby and Ruby on Rails. The primary control API issimplified to provide easy integration with new back-end systems while thelower layers of the software stack are handled by a master observing system.Scheduling observations for the ATA is based on finding a union between thescience needs of multiple projects and automatically determining an efficientpath to operating the various sub-components to meet those needs. Whencompleted, the ATA is expected to be a world-class radio telescope, combiningdedicated SETI projects with numerous radio astronomy science projects.
 
 The Shape of Dark Matter Haloes, I. HI Observations of Edge-on Galaxies
 
-  We present neutral hydrogen observations for a sample of eight nearby,
-late-type, edge-on galaxies. All of the galaxies have been well resolved in the
-radial direction, while six have also been well resolved in the vertical
-direction. We find that each of the galaxies has approximately the same maximum
-surface brightness temperature throughout its disc. We argue that
-self-absorption is the main cause of this phenomenon and that subsequent
-decompositions will require a treatment of this.
-
+  We present neutral hydrogen observations for a sample of eight nearby,late-type, edge-on galaxies. All of the galaxies have been well resolved in theradial direction, while six have also been well resolved in the verticaldirection. We find that each of the galaxies has approximately the same maximumsurface brightness temperature throughout its disc. We argue thatself-absorption is the main cause of this phenomenon and that subsequentdecompositions will require a treatment of this.
 
 Turan numbers for bipartite graphs plus an odd cycle
 
-  For an odd integer $k$, let $\mathcal{C}_k = \{C_3,C_5,...,C_k\}$ denote the
-family of all odd cycles of length at most $k$ and let $\mathcal{C}$ denote the
-family of all odd cycles. Erd\H{o}s and Simonovits \cite{ESi1} conjectured that
-for every family $\mathcal{F}$ of bipartite graphs, there exists $k$ such that
-$\ex{n}{\mathcal{F} \cup \mathcal{C}_k} \sim \ex{n}{\mathcal{F} \cup
-\mathcal{C}}$ as $n \rightarrow \infty$. This conjecture was proved by
-Erd\H{o}s and Simonovits when $\mathcal{F} = \{C_4\}$, and for certain families
-of even cycles in \cite{KSV}. In this paper, we give a general approach to the
-conjecture using Scott's sparse regularity lemma. Our approach proves the
-conjecture for complete bipartite graphs $K_{2,t}$ and $K_{3,3}$: we obtain
-more strongly that for any odd $k \geq 5$, \[ \ex{n}{\mathcal{F} \cup \{C_k\}}
-\sim \ex{n}{\mathcal{F} \cup \mathcal{C}}\] and we show further that the
-extremal graphs can be made bipartite by deleting very few edges. In contrast,
-this formula does not extend to triangles -- the case $k = 3$ -- and we give an
-algebraic construction for odd $t \geq 3$ of $K_{2,t}$-free $C_3$-free graphs
-with substantially more edges than an extremal $K_{2,t}$-free bipartite graph
-on $n$ vertices. Our general approach to the Erd\H{o}s-Simonovits conjecture is
-effective based on some reasonable assumptions on the maximum number of edges
-in an $m$ by $n$ bipartite $\mathcal{F}$-free graph.
+  For an odd integer $k$, let $\mathcal{C}_k = \{C_3,C_5,...,C_k\}$ denote thefamily of all odd cycles of length at most $k$ and let $\mathcal{C}$ denote thefamily of all odd cycles. Erd\H{o}s and Simonovits \cite{ESi1} conjectured thatfor every family $\mathcal{F}$ of bipartite graphs, there exists $k$ such that$\ex{n}{\mathcal{F} \cup \mathcal{C}_k} \sim \ex{n}{\mathcal{F} \cup\mathcal{C}}$ as $n \rightarrow \infty$. This conjecture was proved byErd\H{o}s and Simonovits when $\mathcal{F} = \{C_4\}$, and for certain familiesof even cycles in \cite{KSV}. In this paper, we give a general approach to theconjecture using Scott's sparse regularity lemma. Our approach proves theconjecture for complete bipartite graphs $K_{2,t}$ and $K_{3,3}$: we obtainmore strongly that for any odd $k \geq 5$, \[ \ex{n}{\mathcal{F} \cup \{C_k\}}\sim \ex{n}{\mathcal{F} \cup \mathcal{C}}\] and we show further that theextremal graphs can be made bipartite by deleting very few edges. In contrast,this formula does not extend to triangles -- the case $k = 3$ -- and we give analgebraic construction for odd $t \geq 3$ of $K_{2,t}$-free $C_3$-free graphswith substantially more edges than an extremal $K_{2,t}$-free bipartite graphon $n$ vertices. Our general approach to the Erd\H{o}s-Simonovits conjecture iseffective based on some reasonable assumptions on the maximum number of edgesin an $m$ by $n$ bipartite $\mathcal{F}$-free graph.
 
+Luminosity Functions of Young Clusters: Modeling the Substellar Mass  Regime
 
-Luminosity Functions of Young Clusters: Modeling the Substellar Mass
-  Regime
-
-  We predict near-infrared luminosity functions of young (5 Myr to 1 Gyr) star
-clusters by combining evolutionary models of very low-mass ($1 M_J$ to $0.15
-M_{\odot}$) dwarfs with empirical bolometric corrections. We identify several
-characteristic features in our results. These can be attributed to three
-causes: (1) deuterium burning in the most massive substellar objects; (2)
-methane absorption in bodies with $T_{eff}$ less than 1300 K, the temperature
-of the L/T transition; and (3) the formation of dust clouds and the rainout of
-dust at roughly the same effective temperature as methane formation. Accurate
-reconstruction of the substellar mass function from luminosity function
-observations requires that these phenomena are taken into account. At present,
-few observational studies extend to sufficient sensitivities to allow detection
-of these effects. However, the luminosity function of the young open cluster IC
-2391 shows a clear peak at $M_I \sim 14$ which we attribute to the result of
-deuterium burning in substellar objects. The location of this feature is a
-strong function of age, and we estimate an age of 35 Myr for IC 2391. This is
-significantly younger than the 53 Myr derived from the location of the lithium
-depletion boundary but agrees with the main sequence turnoff age. We consider
-the implications of this result and our multi-band luminosity functions for
-future observational studies. All predicted luminosity function features are,
-or will be, accessible to observations using new wide-field IR imagers and the
-Space Infrared Telescope Facility.
-
+  We predict near-infrared luminosity functions of young (5 Myr to 1 Gyr) starclusters by combining evolutionary models of very low-mass ($1 M_J$ to $0.15M_{\odot}$) dwarfs with empirical bolometric corrections. We identify severalcharacteristic features in our results. These can be attributed to threecauses: (1) deuterium burning in the most massive substellar objects; (2)methane absorption in bodies with $T_{eff}$ less than 1300 K, the temperatureof the L/T transition; and (3) the formation of dust clouds and the rainout ofdust at roughly the same effective temperature as methane formation. Accuratereconstruction of the substellar mass function from luminosity functionobservations requires that these phenomena are taken into account. At present,few observational studies extend to sufficient sensitivities to allow detectionof these effects. However, the luminosity function of the young open cluster IC2391 shows a clear peak at $M_I \sim 14$ which we attribute to the result ofdeuterium burning in substellar objects. The location of this feature is astrong function of age, and we estimate an age of 35 Myr for IC 2391. This issignificantly younger than the 53 Myr derived from the location of the lithiumdepletion boundary but agrees with the main sequence turnoff age. We considerthe implications of this result and our multi-band luminosity functions forfuture observational studies. All predicted luminosity function features are,or will be, accessible to observations using new wide-field IR imagers and theSpace Infrared Telescope Facility.
 
 Tight cycles and regular slices in dense hypergraphs
 
-  We study properties of random subcomplexes of partitions returned by (a
-suitable form of) the Strong Hypergraph Regularity Lemma, which we call regular
-slices. We argue that these subcomplexes capture many important structural
-properties of the original hypergraph. Accordingly we advocate their use in
-extremal hypergraph theory, and explain how they can lead to considerable
-simplifications in existing proofs in this field. We also use them for
-establishing the following two new results.
-  Firstly, we prove a hypergraph extension of the Erd\H{o}s-Gallai Theorem: for
-every $\delta>0$ every sufficiently large $k$-uniform hypergraph with at least
-$(\alpha+\delta)\binom{n}{k}$ edges contains a tight cycle of length $\alpha n$
-for each $\alpha\in[0,1]$.
-  Secondly, we find (asymptotically) the minimum codegree requirement for a
-$k$-uniform $k$-partite hypergraph, each of whose parts has $n$ vertices, to
-contain a tight cycle of length $\alpha kn$, for each $0<\alpha<1$.
-
+  We study properties of random subcomplexes of partitions returned by (asuitable form of) the Strong Hypergraph Regularity Lemma, which we call regularslices. We argue that these subcomplexes capture many important structuralproperties of the original hypergraph. Accordingly we advocate their use inextremal hypergraph theory, and explain how they can lead to considerablesimplifications in existing proofs in this field. We also use them forestablishing the following two new results.  Firstly, we prove a hypergraph extension of the Erd\H{o}s-Gallai Theorem: forevery $\delta>0$ every sufficiently large $k$-uniform hypergraph with at least$(\alpha+\delta)\binom{n}{k}$ edges contains a tight cycle of length $\alpha n$for each $\alpha\in[0,1]$.  Secondly, we find (asymptotically) the minimum codegree requirement for a$k$-uniform $k$-partite hypergraph, each of whose parts has $n$ vertices, tocontain a tight cycle of length $\alpha kn$, for each $0<\alpha<1$.
 
 Two-Point Green's Function in PT-Symmetric Theories
 
-  The Hamiltonian $H={1\over2} p^2+{1\over2}m^2x^2+gx^2(ix)^\delta$ with
-$\delta,g\geq0$ is non-Hermitian, but the energy levels are real and positive
-as a consequence of ${\cal PT}$ symmetry. The quantum mechanical theory
-described by $H$ is treated as a one-dimensional Euclidean quantum field
-theory. The two-point Green's function for this theory is investigated using
-perturbative and numerical techniques. The K\"allen-Lehmann representation for
-the Green's function is constructed, and it is shown that by virtue of ${\cal
-PT}$ symmetry the Green's function is entirely real. While the wave-function
-renormalization constant $Z$ cannot be interpreted as a conventional
-probability, it still obeys a normalization determined by the commutation
-relations of the field. This provides strong evidence that the eigenfunctions
-of the Hamiltonian are complete.
+  The Hamiltonian $H={1\over2} p^2+{1\over2}m^2x^2+gx^2(ix)^\delta$ with$\delta,g\geq0$ is non-Hermitian, but the energy levels are real and positiveas a consequence of ${\cal PT}$ symmetry. The quantum mechanical theorydescribed by $H$ is treated as a one-dimensional Euclidean quantum fieldtheory. The two-point Green's function for this theory is investigated usingperturbative and numerical techniques. The K\"allen-Lehmann representation forthe Green's function is constructed, and it is shown that by virtue of ${\calPT}$ symmetry the Green's function is entirely real. While the wave-functionrenormalization constant $Z$ cannot be interpreted as a conventionalprobability, it still obeys a normalization determined by the commutationrelations of the field. This provides strong evidence that the eigenfunctionsof the Hamiltonian are complete.
 
+The Shape of Dark Matter Haloes II. The Galactus HI Modelling & Fitting  Tool
 
-The Shape of Dark Matter Haloes II. The Galactus HI Modelling & Fitting
-  Tool
+  We present a new HI modelling tool called \textsc{Galactus}. The program hasbeen designed to perform automated fits of disc-galaxy models to observations.It includes a treatment for the self-absorption of the gas. The software hasbeen released into the public domain. We describe the design philosophy andinner workings of the program. After this, we model the face-on galaxy NGC2403,using both self-absorption and optically thin models, showing thatself-absorption occurs even in face-on galaxies. It is shown that the maximumsurface brightness plateaus seen in Paper I of this series are indeed signs ofself-absorption. The apparent HI mass of an edge-on galaxy can be drasticallylower compared to that same galaxy seen face-on. The Tully-Fisher relation isfound to be relatively free from self-absorption issues.
 
-  We present a new HI modelling tool called \textsc{Galactus}. The program has
-been designed to perform automated fits of disc-galaxy models to observations.
-It includes a treatment for the self-absorption of the gas. The software has
-been released into the public domain. We describe the design philosophy and
-inner workings of the program. After this, we model the face-on galaxy NGC2403,
-using both self-absorption and optically thin models, showing that
-self-absorption occurs even in face-on galaxies. It is shown that the maximum
-surface brightness plateaus seen in Paper I of this series are indeed signs of
-self-absorption. The apparent HI mass of an edge-on galaxy can be drastically
-lower compared to that same galaxy seen face-on. The Tully-Fisher relation is
-found to be relatively free from self-absorption issues.
+The Shape of Dark Matter Haloes III. Kinematics and Structure of the HI  disc
 
-
-The Shape of Dark Matter Haloes III. Kinematics and Structure of the HI
-  disc
-
-  We present a new strategy for fitting the structure and kinematics of the HI
-in edge-on galaxies using a fit to the terminal-velocity channel maps of a HI
-data cube. The strategy can deal with self-absorbing HI gas and the presence of
-warps. The method is first tested on a series of models. We demonstrate that
-fitting optically thin models to real galaxies will lead to an overestimation
-of the thickness and velocity dispersion, and to a serious underestimation of
-the HI face-on column densities. We subsequently fit both self-absorption and
-optically thin models to the HI data of six edge-on galaxies. In three of these
-we have also measured the velocity dispersion. On average 27 \pm 6 % of the
-total HI mass of edge-on galaxies is hidden by self-absorption. This implies
-that the HI mass, thickness and velocity dispersion of galaxies is typically
-underestimated in the literature.
-
+  We present a new strategy for fitting the structure and kinematics of the HIin edge-on galaxies using a fit to the terminal-velocity channel maps of a HIdata cube. The strategy can deal with self-absorbing HI gas and the presence ofwarps. The method is first tested on a series of models. We demonstrate thatfitting optically thin models to real galaxies will lead to an overestimationof the thickness and velocity dispersion, and to a serious underestimation ofthe HI face-on column densities. We subsequently fit both self-absorption andoptically thin models to the HI data of six edge-on galaxies. In three of thesewe have also measured the velocity dispersion. On average 27 \pm 6 % of thetotal HI mass of edge-on galaxies is hidden by self-absorption. This impliesthat the HI mass, thickness and velocity dispersion of galaxies is typicallyunderestimated in the literature.
 
 Workspace Aware Online Grasp Planning
 
-  This work provides a framework for a workspace aware online grasp planner.
-This framework greatly improves the performance of standard online grasp
-planning algorithms by incorporating a notion of reachability into the online
-grasp planning process. Offline, a database of hundreds of thousands of unique
-end-effector poses were queried for feasability. At runtime, our grasp planner
-uses this database to bias the hand towards reachable end-effector
-configurations.
-  The bias keeps the grasp planner in accessible regions of the planning scene
-so that the resulting grasps are tailored to the situation at hand. This
-results in a higher percentage of reachable grasps, a higher percentage of
-successful grasp executions, and a reduced planning time. We also present
-experimental results using simulated and real environments.
-
+  This work provides a framework for a workspace aware online grasp planner.This framework greatly improves the performance of standard online graspplanning algorithms by incorporating a notion of reachability into the onlinegrasp planning process. Offline, a database of hundreds of thousands of uniqueend-effector poses were queried for feasability. At runtime, our grasp planneruses this database to bias the hand towards reachable end-effectorconfigurations.  The bias keeps the grasp planner in accessible regions of the planning sceneso that the resulting grasps are tailored to the situation at hand. Thisresults in a higher percentage of reachable grasps, a higher percentage ofsuccessful grasp executions, and a reduced planning time. We also presentexperimental results using simulated and real environments.
 
 Greedy low-rank algorithm for spatial connectome regression
 
-  We study a smooth matrix regression problem formulated to recover brain
-connectivity from data. The problem is set up as a general algebraic linear
-matrix equation of high dimension, and the desired solution is approximated by
-a low-rank factorization. This factorization is computed iteratively by an
-efficient greedy low-rank algorithm that exploits important properties of the
-original matrix equation, such as sparsity and positive definiteness. The
-performance of the method is evaluated on three test cases: a toy artificial
-dataset and two cortical problems employing data from the Allen Mouse Brain
-Connectivity Atlas. We find numerically that the method is significantly faster
-than previous gradient-based methods and converges to the full rank solution as
-the rank increases. This speedup allows for the estimation of increasingly
-large-scale connectomes as these data become available from tracing
-experiments.
+  We study a smooth matrix regression problem formulated to recover brainconnectivity from data. The problem is set up as a general algebraic linearmatrix equation of high dimension, and the desired solution is approximated bya low-rank factorization. This factorization is computed iteratively by anefficient greedy low-rank algorithm that exploits important properties of theoriginal matrix equation, such as sparsity and positive definiteness. Theperformance of the method is evaluated on three test cases: a toy artificialdataset and two cortical problems employing data from the Allen Mouse BrainConnectivity Atlas. We find numerically that the method is significantly fasterthan previous gradient-based methods and converges to the full rank solution asthe rank increases. This speedup allows for the estimation of increasinglylarge-scale connectomes as these data become available from tracingexperiments.
 
+Pixel-Attentive Policy Gradient for Multi-Fingered Grasping in Cluttered  Scenes
 
-Pixel-Attentive Policy Gradient for Multi-Fingered Grasping in Cluttered
-  Scenes
+  Recent advances in on-policy reinforcement learning (RL) methods enabledlearning agents in virtual environments to master complex tasks withhigh-dimensional and continuous observation and action spaces. However,leveraging this family of algorithms in multi-fingered robotic grasping remainsa challenge due to large sim-to-real fidelity gaps and the high samplecomplexity of on-policy RL algorithms. This work aims to bridge these gaps byfirst reinforcement-learning a multi-fingered robotic grasping policy insimulation that operates in the pixel space of the input: a single depth image.Using a mapping from pixel space to Cartesian space according to the depth map,this method transfers to the real world with high fidelity and introduces anovel attention mechanism that substantially improves grasp success rate incluttered environments. Finally, the direct-generative nature of this methodallows learning of multi-fingered grasps that have flexible end-effectorpositions, orientations and rotations, as well as all degrees of freedom of thehand.
 
-  Recent advances in on-policy reinforcement learning (RL) methods enabled
-learning agents in virtual environments to master complex tasks with
-high-dimensional and continuous observation and action spaces. However,
-leveraging this family of algorithms in multi-fingered robotic grasping remains
-a challenge due to large sim-to-real fidelity gaps and the high sample
-complexity of on-policy RL algorithms. This work aims to bridge these gaps by
-first reinforcement-learning a multi-fingered robotic grasping policy in
-simulation that operates in the pixel space of the input: a single depth image.
-Using a mapping from pixel space to Cartesian space according to the depth map,
-this method transfers to the real world with high fidelity and introduces a
-novel attention mechanism that substantially improves grasp success rate in
-cluttered environments. Finally, the direct-generative nature of this method
-allows learning of multi-fingered grasps that have flexible end-effector
-positions, orientations and rotations, as well as all degrees of freedom of the
-hand.
+The Allen Telescope Array Twenty-centimeter Survey -- A  700-Square-Degree, Multi-Epoch Radio Dataset -- II: Individual Epoch  Transient Statistics
 
+  We present our second paper on the Allen Telescope Array Twenty-centimeterSurvey (ATATS), a multi-epoch, ~700 sq. deg. radio image and catalog at 1.4GHz. The survey is designed to detect rare, bright transients as well as tocommission the ATA's wide-field survey capabilities. ATATS explores thechallenges of multi-epoch transient and variable source surveys in the domainof dynamic range limits and changing (u,v) coverage.  Here we present images made using data from the individual epochs, as well asa revised image combining data from all ATATS epochs. The combined image hasRMS noise 3.96 mJy / beam, with a circular beam of 150 arcsec FWHM. Thecatalog, generated using a false detection rate algorithm, contains 4984sources, and is >90% complete to 37.9 mJy. The catalogs generated from snapshotimages of the individual epochs contain between 1170 and 2019 sources over the564 sq. deg. area in common to all epochs. The 90% completeness limits of thesingle epoch catalogs range from 98.6 to 232 mJy.  We compare the catalog generated from the combined image to those fromindividual epochs, and from the NRAO VLA Sky Survey (NVSS), a legacy survey atthe same frequency. We are able to place new constraints on the transientpopulation: fewer than 6e-4 transients / sq. deg., for transients brighter than350 mJy with characteristic timescales of minutes to days. This strongly rulesout an astronomical origin for the ~1 Jy sources reported by Matsumura et al.(2009), based on their stated rate of 3.1e-3 / sq. deg.
 
-The Allen Telescope Array Twenty-centimeter Survey -- A
-  700-Square-Degree, Multi-Epoch Radio Dataset -- II: Individual Epoch
-  Transient Statistics
+The Allen Telescope Array Twenty-centimeter Survey - A  690-Square-Degree, 12-Epoch Radio Dataset - I: Catalog and Long-Duration  Transient Statistics
 
-  We present our second paper on the Allen Telescope Array Twenty-centimeter
-Survey (ATATS), a multi-epoch, ~700 sq. deg. radio image and catalog at 1.4
-GHz. The survey is designed to detect rare, bright transients as well as to
-commission the ATA's wide-field survey capabilities. ATATS explores the
-challenges of multi-epoch transient and variable source surveys in the domain
-of dynamic range limits and changing (u,v) coverage.
-  Here we present images made using data from the individual epochs, as well as
-a revised image combining data from all ATATS epochs. The combined image has
-RMS noise 3.96 mJy / beam, with a circular beam of 150 arcsec FWHM. The
-catalog, generated using a false detection rate algorithm, contains 4984
-sources, and is >90% complete to 37.9 mJy. The catalogs generated from snapshot
-images of the individual epochs contain between 1170 and 2019 sources over the
-564 sq. deg. area in common to all epochs. The 90% completeness limits of the
-single epoch catalogs range from 98.6 to 232 mJy.
-  We compare the catalog generated from the combined image to those from
-individual epochs, and from the NRAO VLA Sky Survey (NVSS), a legacy survey at
-the same frequency. We are able to place new constraints on the transient
-population: fewer than 6e-4 transients / sq. deg., for transients brighter than
-350 mJy with characteristic timescales of minutes to days. This strongly rules
-out an astronomical origin for the ~1 Jy sources reported by Matsumura et al.
-(2009), based on their stated rate of 3.1e-3 / sq. deg.
+  We present the Allen Telescope Array Twenty-centimeter Survey (ATATS), amulti-epoch (12 visits), 690 square degree radio image and catalog at 1.4GHz.The survey is designed to detect rare, very bright transients as well as toverify the capabilities of the ATA to form large mosaics. The combined imageusing data from all 12 ATATS epochs has RMS noise sigma = 3.94mJy / beam anddynamic range 180, with a circular beam of 150 arcsec FWHM. It contains 4408sources to a limiting sensitivity of S = 20 mJy / beam. We compare the cataloggenerated from this 12-epoch combined image to the NRAO VLA Sky Survey (NVSS),a legacy survey at the same frequency, and find that we can measure sourcepositions to better than ~20 arcsec. For sources above the ATATS completenesslimit, the median flux density is 97% of the median value for matched NVSSsources, indicative of an accurate overall flux calibration. We examine theeffects of source confusion due to the effects of differing resolution betweenATATS and NVSS on our ability to compare flux densities. We detect notransients at flux densities greater than 40 mJy in comparison with NVSS, andplace a 2-sigma upper limit on the transient rate for such sources of 0.004 persquare degree. These results suggest that the > 1 Jy transients reported byMatsumura et al. (2009) may not be true transients, but rather variable sourcesat their flux density threshold.
 
+The Allen Telescope Array Pi GHz Sky Survey I. Survey Description and  Static Catalog Results for the Bootes Field
 
-The Allen Telescope Array Twenty-centimeter Survey - A
-  690-Square-Degree, 12-Epoch Radio Dataset - I: Catalog and Long-Duration
-  Transient Statistics
+  The Pi GHz Sky Survey (PiGSS) is a key project of the Allen Telescope Array.PiGSS is a 3.1 GHz survey of radio continuum emission in the extragalactic skywith an emphasis on synoptic observations that measure the static andtime-variable properties of the sky. During the 2.5-year campaign, PiGSS willtwice observe ~250,000 radio sources in the 10,000 deg^2 region of the sky withb > 30 deg to an rms sensitivity of ~1 mJy. Additionally, sub-regions of thesky will be observed multiple times to characterize variability on time scalesof days to years. We present here observations of a 10 deg^2 region in theBootes constellation overlapping the NOAO Deep Wide Field Survey field. ThePiGSS image was constructed from 75 daily observations distributed over a4-month period and has an rms flux density between 200 and 250 microJy. Thisrepresents a deeper image by a factor of 4 to 8 than we will achieve over theentire 10,000 deg^2. We provide flux densities, source sizes, and spectralindices for the 425 sources detected in the image. We identify ~100$ new flatspectrum radio sources; we project that when completed PiGSS will identify 10^4flat spectrum sources. We identify one source that is a possible transientradio source. This survey provides new limits on faint radio transients andvariables with characteristic durations of months.
 
-  We present the Allen Telescope Array Twenty-centimeter Survey (ATATS), a
-multi-epoch (12 visits), 690 square degree radio image and catalog at 1.4GHz.
-The survey is designed to detect rare, very bright transients as well as to
-verify the capabilities of the ATA to form large mosaics. The combined image
-using data from all 12 ATATS epochs has RMS noise sigma = 3.94mJy / beam and
-dynamic range 180, with a circular beam of 150 arcsec FWHM. It contains 4408
-sources to a limiting sensitivity of S = 20 mJy / beam. We compare the catalog
-generated from this 12-epoch combined image to the NRAO VLA Sky Survey (NVSS),
-a legacy survey at the same frequency, and find that we can measure source
-positions to better than ~20 arcsec. For sources above the ATATS completeness
-limit, the median flux density is 97% of the median value for matched NVSS
-sources, indicative of an accurate overall flux calibration. We examine the
-effects of source confusion due to the effects of differing resolution between
-ATATS and NVSS on our ability to compare flux densities. We detect no
-transients at flux densities greater than 40 mJy in comparison with NVSS, and
-place a 2-sigma upper limit on the transient rate for such sources of 0.004 per
-square degree. These results suggest that the > 1 Jy transients reported by
-Matsumura et al. (2009) may not be true transients, but rather variable sources
-at their flux density threshold.
+Primary Beam and Dish Surface Characterization at the Allen Telescope  Array by Radio Holography
 
+  The Allen Telescope Array (ATA) is a cm-wave interferometer in California,comprising 42 antenna elements with 6-m diameter dishes. We characterize theantenna optical accuracy using two-antenna interferometry and radio holography.The distortion of each telescope relative to the average is small, with RMSdifferences of 1 percent of beam peak value. Holography provides images of dishillumination pattern, allowing characterization of as-built mirror surfaces.The ATA dishes can experience mm-scale distortions across -2 meter lengths dueto mounting stresses or solar radiation. Experimental RMS errors are 0.7 mm atnight and 3 mm under worst case solar illumination. For frequencies 4, 10, and15 GHz, the nighttime values indicate sensitivity losses of 1, 10 and 20percent, respectively. The ATA.s exceptional wide-bandwidth permitsobservations over a continuous range 0.5 to 11.2 GHz, and future retrofits mayincrease this range to 15 GHz. Beam patterns show a slowly varying focusfrequency dependence. We probe the antenna optical gain and beam patternstability as a function of focus and observation frequency, concluding that ATAcan produce high fidelity images over a decade of simultaneous observationfrequencies. In the day, the antenna sensitivity and pointing accuracy areaffected. We find that at frequencies greater than 5 GHz, daytime observationsgreater than 5 GHz will suffer some sensitivity loss and it may be necessary tomake antenna pointing corrections on a 1 to 2 hourly basis.
 
-The Allen Telescope Array Pi GHz Sky Survey I. Survey Description and
-  Static Catalog Results for the Bootes Field
+ASGARD: A Large Survey for Slow Galactic Radio Transients. I. Overview  and First Results
 
-  The Pi GHz Sky Survey (PiGSS) is a key project of the Allen Telescope Array.
-PiGSS is a 3.1 GHz survey of radio continuum emission in the extragalactic sky
-with an emphasis on synoptic observations that measure the static and
-time-variable properties of the sky. During the 2.5-year campaign, PiGSS will
-twice observe ~250,000 radio sources in the 10,000 deg^2 region of the sky with
-b > 30 deg to an rms sensitivity of ~1 mJy. Additionally, sub-regions of the
-sky will be observed multiple times to characterize variability on time scales
-of days to years. We present here observations of a 10 deg^2 region in the
-Bootes constellation overlapping the NOAO Deep Wide Field Survey field. The
-PiGSS image was constructed from 75 daily observations distributed over a
-4-month period and has an rms flux density between 200 and 250 microJy. This
-represents a deeper image by a factor of 4 to 8 than we will achieve over the
-entire 10,000 deg^2. We provide flux densities, source sizes, and spectral
-indices for the 425 sources detected in the image. We identify ~100$ new flat
-spectrum radio sources; we project that when completed PiGSS will identify 10^4
-flat spectrum sources. We identify one source that is a possible transient
-radio source. This survey provides new limits on faint radio transients and
-variables with characteristic durations of months.
-
-
-Primary Beam and Dish Surface Characterization at the Allen Telescope
-  Array by Radio Holography
-
-  The Allen Telescope Array (ATA) is a cm-wave interferometer in California,
-comprising 42 antenna elements with 6-m diameter dishes. We characterize the
-antenna optical accuracy using two-antenna interferometry and radio holography.
-The distortion of each telescope relative to the average is small, with RMS
-differences of 1 percent of beam peak value. Holography provides images of dish
-illumination pattern, allowing characterization of as-built mirror surfaces.
-The ATA dishes can experience mm-scale distortions across -2 meter lengths due
-to mounting stresses or solar radiation. Experimental RMS errors are 0.7 mm at
-night and 3 mm under worst case solar illumination. For frequencies 4, 10, and
-15 GHz, the nighttime values indicate sensitivity losses of 1, 10 and 20
-percent, respectively. The ATA.s exceptional wide-bandwidth permits
-observations over a continuous range 0.5 to 11.2 GHz, and future retrofits may
-increase this range to 15 GHz. Beam patterns show a slowly varying focus
-frequency dependence. We probe the antenna optical gain and beam pattern
-stability as a function of focus and observation frequency, concluding that ATA
-can produce high fidelity images over a decade of simultaneous observation
-frequencies. In the day, the antenna sensitivity and pointing accuracy are
-affected. We find that at frequencies greater than 5 GHz, daytime observations
-greater than 5 GHz will suffer some sensitivity loss and it may be necessary to
-make antenna pointing corrections on a 1 to 2 hourly basis.
-
-
-ASGARD: A Large Survey for Slow Galactic Radio Transients. I. Overview
-  and First Results
-
-  Searches for slow radio transients and variables have generally focused on
-extragalactic populations, and the basic parameters of Galactic populations
-remain poorly characterized. We present a large 3 GHz survey performed with the
-Allen Telescope Array (ATA) that aims to improve this situation: ASGARD, the
-ATA Survey of Galactic Radio Dynamism. ASGARD observations spanned 2 years with
-weekly visits to 23 deg^2 in two fields in the Galactic Plane, totaling 900 hr
-of integration time on science fields and making it significantly larger than
-previous efforts. The typical blind unresolved source detection limit was 10
-mJy. We describe the observations and data analysis techniques in detail,
-demonstrating our ability to create accurate wide-field images while
-effectively modeling and subtracting large-scale radio emission, allowing
-standard transient-and-variability analysis techniques to be used. We present
-early results from the analysis of two pointings: one centered on the
-microquasar Cygnus X-3 and one overlapping the Kepler field of view (l =
-76{\deg}, b = +13.5{\deg}). Our results include images, catalog statistics,
-completeness functions, variability measurements, and a transient search. Out
-of 134 sources detected in these pointings, the only compellingly variable one
-is Cygnus X-3, and no transients are detected. We estimate number counts for
-potential Galactic radio transients and compare our current limits to previous
-work and our projection for the fully-analyzed ASGARD dataset.
-
+  Searches for slow radio transients and variables have generally focused onextragalactic populations, and the basic parameters of Galactic populationsremain poorly characterized. We present a large 3 GHz survey performed with theAllen Telescope Array (ATA) that aims to improve this situation: ASGARD, theATA Survey of Galactic Radio Dynamism. ASGARD observations spanned 2 years withweekly visits to 23 deg^2 in two fields in the Galactic Plane, totaling 900 hrof integration time on science fields and making it significantly larger thanprevious efforts. The typical blind unresolved source detection limit was 10mJy. We describe the observations and data analysis techniques in detail,demonstrating our ability to create accurate wide-field images whileeffectively modeling and subtracting large-scale radio emission, allowingstandard transient-and-variability analysis techniques to be used. We presentearly results from the analysis of two pointings: one centered on themicroquasar Cygnus X-3 and one overlapping the Kepler field of view (l =76{\deg}, b = +13.5{\deg}). Our results include images, catalog statistics,completeness functions, variability measurements, and a transient search. Outof 134 sources detected in these pointings, the only compellingly variable oneis Cygnus X-3, and no transients are detected. We estimate number counts forpotential Galactic radio transients and compare our current limits to previouswork and our projection for the fully-analyzed ASGARD dataset.
 
 Grains in Photo-Ionized Environments
 
-  Ever since the pioneering study of Spitzer, it has been widely recognized
-that grains play an important role in the heating and cooling of photo-ionized
-environments. This includes the diffuse ISM, as well as H II regions, planetary
-nebulae, and photo-dissociation regions.
-  A detailed code is necessary to model grains in a photo-ionized medium since
-the interactions of grains with their environment include a host of
-microphysical processes, and their importance can only be judged by performing
-a complete simulation. In this paper we will use the spectral synthesis code
-Cloudy for this purpose. A comprehensive upgrade of the grain model has been
-recently incorporated in Cloudy, and certain aspects of this upgrade will be
-discussed. Special emphasis will be on the new grain charge model. We will
-consider in detail the physics of grains in both ionized and neutral
-environments, and will present a calculation of photo-electric heating and
-collisional cooling rates for a range of physical conditions and grain
-materials and for a range of grain sizes (including a realistic size
-distribution). We conclude with a brief discussion of the problems currently
-hampering progress in this field. The new grain model will be used to model the
-silicate emission in the Ney-Allen nebula, and will help us better understand
-the nature of the grains in that part of the Orion complex.
+  Ever since the pioneering study of Spitzer, it has been widely recognizedthat grains play an important role in the heating and cooling of photo-ionizedenvironments. This includes the diffuse ISM, as well as H II regions, planetarynebulae, and photo-dissociation regions.  A detailed code is necessary to model grains in a photo-ionized medium sincethe interactions of grains with their environment include a host ofmicrophysical processes, and their importance can only be judged by performinga complete simulation. In this paper we will use the spectral synthesis codeCloudy for this purpose. A comprehensive upgrade of the grain model has beenrecently incorporated in Cloudy, and certain aspects of this upgrade will bediscussed. Special emphasis will be on the new grain charge model. We willconsider in detail the physics of grains in both ionized and neutralenvironments, and will present a calculation of photo-electric heating andcollisional cooling rates for a range of physical conditions and grainmaterials and for a range of grain sizes (including a realistic sizedistribution). We conclude with a brief discussion of the problems currentlyhampering progress in this field. The new grain model will be used to model thesilicate emission in the Ney-Allen nebula, and will help us better understandthe nature of the grains in that part of the Orion complex.
 
+The Spitzer c2d survey of Large, Nearby, Interstellar Clouds. V.  Chamaeleon II Observed with IRAC
 
-The Spitzer c2d survey of Large, Nearby, Interstellar Clouds. V.
-  Chamaeleon II Observed with IRAC
+  We present IRAC (3.6, 4.5, 5.8, and 8.0 micron) observations of theChamaeleon II molecular cloud. The observed area covers about 1 square degreedefined by $A_V >2$. Analysis of the data in the 2005 c2d catalogs reveals asmall number of sources (40) with properties similar to those of youngstellaror substellar objects (YSOs). The surface density of these YSOcandidates is low, and contamination by background galaxies appears to besubstantial, especially for sources classified as Class I or flat SED. Wediscuss this problem in some detail and conclude that very few of the candidateYSOs in early evolutionary stages are actually in the Cha II cloud. Using arefined set of criteria, we define a smaller, but more reliable, set of 24 YSOcandidates.
 
-  We present IRAC (3.6, 4.5, 5.8, and 8.0 micron) observations of the
-Chamaeleon II molecular cloud. The observed area covers about 1 square degree
-defined by $A_V >2$. Analysis of the data in the 2005 c2d catalogs reveals a
-small number of sources (40) with properties similar to those of young
-stellaror substellar objects (YSOs). The surface density of these YSO
-candidates is low, and contamination by background galaxies appears to be
-substantial, especially for sources classified as Class I or flat SED. We
-discuss this problem in some detail and conclude that very few of the candidate
-YSOs in early evolutionary stages are actually in the Cha II cloud. Using a
-refined set of criteria, we define a smaller, but more reliable, set of 24 YSO
-candidates.
+The Shape of Dark Matter Haloes, V. Analysis of observations of edge-on  galaxies
 
+  In the previous papers in this series, we have measured the stellar and \hicontent in a sample of edge-on galaxies. In the present paper, we perform asimultaneous rotation curve and vertical force field gradient decomposition forfive of these edge-on galaxies. The rotation curve decomposition provides ameasure of the radial dark matter potential, while the vertical force fieldgradient provide a measure of the vertical dark matter potential. We fit darkmatter halo models to these potentials. Using our \hi self-absorption results,we find that a typical dark matter halo has a less dense core($0.094\pm0.230$\,M$_\odot$/pc$^3$) compared to an optically thin \hi model($0.150\pm0.124$\,M$_\odot$/pc$^3$). The HI self-absorption dark matter halohas a longer scale length $R_c$ of $1.42\pm 3.48$\,kpc, versus $1.10\pm1.81$\,kpc for the optically thin HI model. The median halo shape is spherical,at $q=1.0\pm0.6$ (self-absorbing \hi), while it is prolate at $q=1.5\pm0.6$ forthe optically thin. Our best results were obtained for ESO\,274-G001 andUGC\,7321, for which we were able to measure the velocity dispersion in PaperIII. These two galaxies have drastically different halo shapes, with one oblateand one strongly prolate. Overall, we find that the many assumptions requiredmake this type of analysis susceptible to errors.
 
-The Shape of Dark Matter Haloes, V. Analysis of observations of edge-on
-  galaxies
+Analysis of large-scale anisotropy of ultra-high energy cosmic rays in  HiRes data
 
-  In the previous papers in this series, we have measured the stellar and \hi
-content in a sample of edge-on galaxies. In the present paper, we perform a
-simultaneous rotation curve and vertical force field gradient decomposition for
-five of these edge-on galaxies. The rotation curve decomposition provides a
-measure of the radial dark matter potential, while the vertical force field
-gradient provide a measure of the vertical dark matter potential. We fit dark
-matter halo models to these potentials. Using our \hi self-absorption results,
-we find that a typical dark matter halo has a less dense core
-($0.094\pm0.230$\,M$_\odot$/pc$^3$) compared to an optically thin \hi model
-($0.150\pm0.124$\,M$_\odot$/pc$^3$). The HI self-absorption dark matter halo
-has a longer scale length $R_c$ of $1.42\pm 3.48$\,kpc, versus $1.10\pm
-1.81$\,kpc for the optically thin HI model. The median halo shape is spherical,
-at $q=1.0\pm0.6$ (self-absorbing \hi), while it is prolate at $q=1.5\pm0.6$ for
-the optically thin. Our best results were obtained for ESO\,274-G001 and
-UGC\,7321, for which we were able to measure the velocity dispersion in Paper
-III. These two galaxies have drastically different halo shapes, with one oblate
-and one strongly prolate. Overall, we find that the many assumptions required
-make this type of analysis susceptible to errors.
+  Stereo data collected by the HiRes experiment over a six year period areexamined for large-scale anisotropy related to the inhomogeneous distributionof matter in the nearby Universe. We consider the generic case of smallcosmic-ray deflections and a large number of sources tracing the matterdistribution. In this matter tracer model the expected cosmic ray flux dependsessentially on a single free parameter, the typical deflection angle theta. Wefind that the HiRes data with threshold energies of 40 EeV and 57 EeV areincompatible with the matter tracer model at a 95% confidence level unlesstheta is larger than 10 degrees and are compatible with an isotropic flux. Thedata set above 10 EeV is compatible with both the matter tracer model and anisotropic flux.
 
+The Spitzer c2d Survey of Large, Nearby, Interstellar Clouds: VII.  Ophiuchus Observed with MIPS
 
-Analysis of large-scale anisotropy of ultra-high energy cosmic rays in
-  HiRes data
+  We present maps of 14.4 deg^2 of the Ophiuchus dark clouds observed by theSpitzer Space Telescope Multiband Imaging Photometer for Spitzer (MIPS). Thesehigh quality maps depict both numerous point sources as well as extended dustemission within the star-forming and non-star-forming portions of these clouds.Using PSF-fitting photometry, we detect 5779 sources at 24 um and 81 sources at70 um at the 10 sigma level of significance. Three hundred twenty-threecandidate young stellar objects (YSOs) were identified according to theirpositions on the MIPS/2MASS K versus K$-$[24] color-magnitude diagrams ascompared to 24 um detections in the SWIRE extragalactic survey. We find thatmore than half of the YSO candidates, and almost all the ones with protostellarClass I spectral energy distributions, are confined to the known cluster andaggregates.
 
-  Stereo data collected by the HiRes experiment over a six year period are
-examined for large-scale anisotropy related to the inhomogeneous distribution
-of matter in the nearby Universe. We consider the generic case of small
-cosmic-ray deflections and a large number of sources tracing the matter
-distribution. In this matter tracer model the expected cosmic ray flux depends
-essentially on a single free parameter, the typical deflection angle theta. We
-find that the HiRes data with threshold energies of 40 EeV and 57 EeV are
-incompatible with the matter tracer model at a 95% confidence level unless
-theta is larger than 10 degrees and are compatible with an isotropic flux. The
-data set above 10 EeV is compatible with both the matter tracer model and an
-isotropic flux.
+Development of the (d,n) proton-transfer reaction in inverse kinematics  for structure studies
 
-
-The Spitzer c2d Survey of Large, Nearby, Interstellar Clouds: VII.
-  Ophiuchus Observed with MIPS
-
-  We present maps of 14.4 deg^2 of the Ophiuchus dark clouds observed by the
-Spitzer Space Telescope Multiband Imaging Photometer for Spitzer (MIPS). These
-high quality maps depict both numerous point sources as well as extended dust
-emission within the star-forming and non-star-forming portions of these clouds.
-Using PSF-fitting photometry, we detect 5779 sources at 24 um and 81 sources at
-70 um at the 10 sigma level of significance. Three hundred twenty-three
-candidate young stellar objects (YSOs) were identified according to their
-positions on the MIPS/2MASS K versus K$-$[24] color-magnitude diagrams as
-compared to 24 um detections in the SWIRE extragalactic survey. We find that
-more than half of the YSO candidates, and almost all the ones with protostellar
-Class I spectral energy distributions, are confined to the known cluster and
-aggregates.
-
-
-Development of the (d,n) proton-transfer reaction in inverse kinematics
-  for structure studies
-
-  Transfer reactions have provided exciting opportunities to study the
-structure of exotic nuclei and are often used to inform studies relating to
-nucleosynthesis and applications. In order to benefit from these reactions and
-their application to rare ion beams (RIBs) it is necessary to develop the tools
-and techniques to perform and analyze the data from reactions performed in
-inverse kinematics, that is with targets of light nuclei and heavier beams. We
-are continuing to expand the transfer reaction toolbox in preparation for the
-next generation of facilities, such as the Facility for Rare Ion Beams (FRIB),
-which is scheduled for completion in 2022. An important step in this process is
-to perform the (d,n) reaction in inverse kinematics, with analyses that include
-Q-value spectra and differential cross sections. In this way, proton-transfer
-reactions can be placed on the same level as the more commonly used
-neutron-transfer reactions, such as (d,p), (9Be,8Be), and (13C,12C). Here we
-present an overview of the techniques used in (d,p) and (d,n), and some recent
-data from (d,n) reactions in inverse kinematics using stable beams of 12C and
-16O.
-
+  Transfer reactions have provided exciting opportunities to study thestructure of exotic nuclei and are often used to inform studies relating tonucleosynthesis and applications. In order to benefit from these reactions andtheir application to rare ion beams (RIBs) it is necessary to develop the toolsand techniques to perform and analyze the data from reactions performed ininverse kinematics, that is with targets of light nuclei and heavier beams. Weare continuing to expand the transfer reaction toolbox in preparation for thenext generation of facilities, such as the Facility for Rare Ion Beams (FRIB),which is scheduled for completion in 2022. An important step in this process isto perform the (d,n) reaction in inverse kinematics, with analyses that includeQ-value spectra and differential cross sections. In this way, proton-transferreactions can be placed on the same level as the more commonly usedneutron-transfer reactions, such as (d,p), (9Be,8Be), and (13C,12C). Here wepresent an overview of the techniques used in (d,p) and (d,n), and some recentdata from (d,n) reactions in inverse kinematics using stable beams of 12C and16O.
 
 The 2dF-SDSS LRG and QSO (2SLAQ) Luminous Red Galaxy Survey
 
-  We present a spectroscopic survey of almost 15,000 candidate
-intermediate-redshift Luminous Red Galaxies (LRGs) brighter than i=19.8,
-observed with 2dF on the Anglo-Australian Telescope. The targets were selected
-photometrically from the Sloan Digital Sky Survey (SDSS) and lie along two
-narrow equatorial strips covering 180 sq deg. Reliable redshifts were obtained
-for 92% of the targets and the selection is very efficient: over 90% have
-redshifts between 0.45 and 0.8. More than 80% of the ~11,000 red galaxies have
-pure absorption-line spectra consistent with a passively-evolving old stellar
-population. The redshift, photometric and spatial distributions of the LRGs are
-described. The 2SLAQ data will be released publicly from mid-2006, providing a
-powerful resource for observational cosmology and the study of galaxy
-evolution.
+  We present a spectroscopic survey of almost 15,000 candidateintermediate-redshift Luminous Red Galaxies (LRGs) brighter than i=19.8,observed with 2dF on the Anglo-Australian Telescope. The targets were selectedphotometrically from the Sloan Digital Sky Survey (SDSS) and lie along twonarrow equatorial strips covering 180 sq deg. Reliable redshifts were obtainedfor 92% of the targets and the selection is very efficient: over 90% haveredshifts between 0.45 and 0.8. More than 80% of the ~11,000 red galaxies havepure absorption-line spectra consistent with a passively-evolving old stellarpopulation. The redshift, photometric and spatial distributions of the LRGs aredescribed. The 2SLAQ data will be released publicly from mid-2006, providing apowerful resource for observational cosmology and the study of galaxyevolution.
 
+Mass Transport Processes and their Roles in the Formation, Structure,  and Evolution of Stars and Stellar Systems
 
-Mass Transport Processes and their Roles in the Formation, Structure,
-  and Evolution of Stars and Stellar Systems
-
-  We summarize some of the compelling new scientific opportunities for
-understanding stars and stellar systems that can be enabled by sub-mas angular
-resolution, UV/Optical spectral imaging observations, which can reveal the
-details of the many dynamic processes (e.g., variable magnetic fields,
-accretion, convection, shocks, pulsations, winds, and jets) that affect their
-formation, structure, and evolution. These observations can only be provided by
-long-baseline interferometers or sparse aperture telescopes in space, since the
-aperture diameters required are in excess of 500 m - a regime in which
-monolithic or segmented designs are not and will not be feasible - and since
-they require observations at wavelengths (UV) not accessible from the ground.
-Two mission concepts which could provide these invaluable observations are
-NASA's Stellar Imager (SI; http://hires.gsfc.nasa.gov/si/) interferometer and
-ESA's Luciola sparse aperture hypertelescope, which each could resolve hundreds
-of stars and stellar systems. These observatories will also open an immense new
-discovery space for astrophysical research in general and, in particular, for
-Active Galactic Nuclei (Kraemer et al. Decadal Survey Science Whitepaper). The
-technology developments needed for these missions are challenging, but
-eminently feasible (Carpenter et al. Decadal Survey Technology Whitepaper) with
-a reasonable investment over the next decade to enable flight in the 2025+
-timeframe. That investment would enable tremendous gains in our understanding
-of the individual stars and stellar systems that are the building blocks of our
-Universe and which serve as the hosts for life throughout the Cosmos.
-
+  We summarize some of the compelling new scientific opportunities forunderstanding stars and stellar systems that can be enabled by sub-mas angularresolution, UV/Optical spectral imaging observations, which can reveal thedetails of the many dynamic processes (e.g., variable magnetic fields,accretion, convection, shocks, pulsations, winds, and jets) that affect theirformation, structure, and evolution. These observations can only be provided bylong-baseline interferometers or sparse aperture telescopes in space, since theaperture diameters required are in excess of 500 m - a regime in whichmonolithic or segmented designs are not and will not be feasible - and sincethey require observations at wavelengths (UV) not accessible from the ground.Two mission concepts which could provide these invaluable observations areNASA's Stellar Imager (SI; http://hires.gsfc.nasa.gov/si/) interferometer andESA's Luciola sparse aperture hypertelescope, which each could resolve hundredsof stars and stellar systems. These observatories will also open an immense newdiscovery space for astrophysical research in general and, in particular, forActive Galactic Nuclei (Kraemer et al. Decadal Survey Science Whitepaper). Thetechnology developments needed for these missions are challenging, buteminently feasible (Carpenter et al. Decadal Survey Technology Whitepaper) witha reasonable investment over the next decade to enable flight in the 2025+timeframe. That investment would enable tremendous gains in our understandingof the individual stars and stellar systems that are the building blocks of ourUniverse and which serve as the hosts for life throughout the Cosmos.
 
 Overview of the Kepler Science Processing Pipeline
 
-  The Kepler Mission Science Operations Center (SOC) performs several critical
-functions including managing the ~156,000 target stars, associated target
-tables, science data compression tables and parameters, as well as processing
-the raw photometric data downlinked from the spacecraft each month. The raw
-data are first calibrated at the pixel level to correct for bias, smear induced
-by a shutterless readout, and other detector and electronic effects. A
-background sky flux is estimated from ~4500 pixels on each of the 84 CCD
-readout channels, and simple aperture photometry is performed on an optimal
-aperture for each star. Ancillary engineering data and diagnostic information
-extracted from the science data are used to remove systematic errors in the
-flux time series that are correlated with these data prior to searching for
-signatures of transiting planets with a wavelet-based, adaptive matched filter.
-Stars with signatures exceeding 7.1 sigma are subjected to a suite of
-statistical tests including an examination of each star's centroid motion to
-reject false positives caused by background eclipsing binaries. Physical
-parameters for each planetary candidate are fitted to the transit signature,
-and signatures of additional transiting planets are sought in the residual
-light curve. The pipeline is operational, finding planetary signatures and
-providing robust eliminations of false positives.
+  The Kepler Mission Science Operations Center (SOC) performs several criticalfunctions including managing the ~156,000 target stars, associated targettables, science data compression tables and parameters, as well as processingthe raw photometric data downlinked from the spacecraft each month. The rawdata are first calibrated at the pixel level to correct for bias, smear inducedby a shutterless readout, and other detector and electronic effects. Abackground sky flux is estimated from ~4500 pixels on each of the 84 CCDreadout channels, and simple aperture photometry is performed on an optimalaperture for each star. Ancillary engineering data and diagnostic informationextracted from the science data are used to remove systematic errors in theflux time series that are correlated with these data prior to searching forsignatures of transiting planets with a wavelet-based, adaptive matched filter.Stars with signatures exceeding 7.1 sigma are subjected to a suite ofstatistical tests including an examination of each star's centroid motion toreject false positives caused by background eclipsing binaries. Physicalparameters for each planetary candidate are fitted to the transit signature,and signatures of additional transiting planets are sought in the residuallight curve. The pipeline is operational, finding planetary signatures andproviding robust eliminations of false positives.
 
+Primary Beam Shape Calibration from Mosaicked, Interferometric  Observations
 
-Primary Beam Shape Calibration from Mosaicked, Interferometric
-  Observations
-
-  Image quality in mosaicked observations from interferometric radio telescopes
-is strongly dependent on the accuracy with which the antenna primary beam is
-calibrated. The next generation of radio telescope arrays such as the Allen
-Telescope Array (ATA) and the Square Kilometer Array (SKA) have key science
-goals that involve making large mosaicked observations filled with bright point
-sources. We present a new method for calibrating the shape of the telescope's
-mean primary beam that uses the multiple redundant observations of these bright
-sources in the mosaic. The method has an analytical solution for simple
-Gaussian beam shapes but can also be applied to more complex beam shapes
-through $\chi^2$ minimization. One major benefit of this simple, conceptually
-clean method is that it makes use of the science data for calibration purposes,
-thus saving telescope time and improving accuracy through simultaneous
-calibration and observation. We apply the method both to 1.43 GHz data taken
-during the ATA Twenty Centimeter Survey (ATATS) and to 3.14 GHz data taken
-during the ATA's Pi Gigahertz Sky Survey (PiGSS). We find that the beam's
-calculated full width at half maximum (FWHM) values are consistent with the
-theoretical values, the values measured by several independent methods, and the
-values from the simulation we use to demonstrate the effectiveness of our
-method on data from future telescopes such as the expanded ATA and the SKA.
-These results are preliminary, and can be expanded upon by fitting more complex
-beam shapes. We also investigate, by way of a simulation, the dependence of the
-accuracy of the telescope's FWHM on antenna number. We find that the
-uncertainty returned by our fitting method is inversely proportional to the
-number of antennas in the array.
-
+  Image quality in mosaicked observations from interferometric radio telescopesis strongly dependent on the accuracy with which the antenna primary beam iscalibrated. The next generation of radio telescope arrays such as the AllenTelescope Array (ATA) and the Square Kilometer Array (SKA) have key sciencegoals that involve making large mosaicked observations filled with bright pointsources. We present a new method for calibrating the shape of the telescope'smean primary beam that uses the multiple redundant observations of these brightsources in the mosaic. The method has an analytical solution for simpleGaussian beam shapes but can also be applied to more complex beam shapesthrough $\chi^2$ minimization. One major benefit of this simple, conceptuallyclean method is that it makes use of the science data for calibration purposes,thus saving telescope time and improving accuracy through simultaneouscalibration and observation. We apply the method both to 1.43 GHz data takenduring the ATA Twenty Centimeter Survey (ATATS) and to 3.14 GHz data takenduring the ATA's Pi Gigahertz Sky Survey (PiGSS). We find that the beam'scalculated full width at half maximum (FWHM) values are consistent with thetheoretical values, the values measured by several independent methods, and thevalues from the simulation we use to demonstrate the effectiveness of ourmethod on data from future telescopes such as the expanded ATA and the SKA.These results are preliminary, and can be expanded upon by fitting more complexbeam shapes. We also investigate, by way of a simulation, the dependence of theaccuracy of the telescope's FWHM on antenna number. We find that theuncertainty returned by our fitting method is inversely proportional to thenumber of antennas in the array.
 
 Ramsey-goodness -- and otherwise
 
-  A celebrated result of Chv\'atal, R\"odl, Szemer\'edi and Trotter states (in
-slightly weakened form) that, for every natural number $\Delta$, there is a
-constant $r_\Delta$ such that, for any connected $n$-vertex graph $G$ with
-maximum degree $\Delta$, the Ramsey number $R(G,G)$ is at most $r_\Delta n$,
-provided $n$ is sufficiently large. In 1987, Burr made a strong conjecture
-implying that one may take $r_\Delta = \Delta$. However, Graham, R\"odl and
-Ruci\'nski showed, by taking $G$ to be a suitable expander graph, that
-necessarily $r_\Delta > 2^{c\Delta}$ for some constant $c>0$. We show that the
-use of expanders is essential: if we impose the additional restriction that the
-bandwidth of $G$ be at most some function $\beta (n) = o(n)$, then $R(G,G) \le
-(2\chi(G)+4)n\leq (2\Delta+6)n$, i.e., $r_\Delta = 2\Delta +6$ suffices. On the
-other hand, we show that Burr's conjecture itself fails even for $P_n^k$, the
-$k$th power of a path $P_n$. Brandt showed that for any $c$, if $\Delta$ is
-sufficiently large, there are connected $n$-vertex graphs $G$ with
-$\Delta(G)\leq\Delta$ but $R(G,K_3)>cn$. We show that, given $\Delta$ and $H$,
-there are $\beta>0$ and $n_0$ such that, if $G$ is a connected graph on $n\ge
-n_0$ vertices with maximum degree at most $\Delta$ and bandwidth at most $\beta
-n$, then we have $R(G,H)=(\chi(H)-1)(n-1)+\sigma(H)$, where $\sigma(H)$ is the
-smallest size of any part in any $\chi(H)$-partition of $H$. We also show that
-the same conclusion holds without any restriction on the maximum degree of $G$
-if the bandwidth of $G$ is at most $\epsilon(H) \log n/\log\log n$.
+  A celebrated result of Chv\'atal, R\"odl, Szemer\'edi and Trotter states (inslightly weakened form) that, for every natural number $\Delta$, there is aconstant $r_\Delta$ such that, for any connected $n$-vertex graph $G$ withmaximum degree $\Delta$, the Ramsey number $R(G,G)$ is at most $r_\Delta n$,provided $n$ is sufficiently large. In 1987, Burr made a strong conjectureimplying that one may take $r_\Delta = \Delta$. However, Graham, R\"odl andRuci\'nski showed, by taking $G$ to be a suitable expander graph, thatnecessarily $r_\Delta > 2^{c\Delta}$ for some constant $c>0$. We show that theuse of expanders is essential: if we impose the additional restriction that thebandwidth of $G$ be at most some function $\beta (n) = o(n)$, then $R(G,G) \le(2\chi(G)+4)n\leq (2\Delta+6)n$, i.e., $r_\Delta = 2\Delta +6$ suffices. On theother hand, we show that Burr's conjecture itself fails even for $P_n^k$, the$k$th power of a path $P_n$. Brandt showed that for any $c$, if $\Delta$ issufficiently large, there are connected $n$-vertex graphs $G$ with$\Delta(G)\leq\Delta$ but $R(G,K_3)>cn$. We show that, given $\Delta$ and $H$,there are $\beta>0$ and $n_0$ such that, if $G$ is a connected graph on $n\gen_0$ vertices with maximum degree at most $\Delta$ and bandwidth at most $\betan$, then we have $R(G,H)=(\chi(H)-1)(n-1)+\sigma(H)$, where $\sigma(H)$ is thesmallest size of any part in any $\chi(H)$-partition of $H$. We also show thatthe same conclusion holds without any restriction on the maximum degree of $G$if the bandwidth of $G$ is at most $\epsilon(H) \log n/\log\log n$.
 
+The Allen Telescope Array Pi GHz Sky Survey II. Daily and Monthly  Monitoring for Transients and Variability in the Bootes Field
 
-The Allen Telescope Array Pi GHz Sky Survey II. Daily and Monthly
-  Monitoring for Transients and Variability in the Bootes Field
+  We present results from daily radio continuum observations of the Bootesfield as part of the Pi GHz Sky Survey (PiGSS). These results are part of asystematic and unbiased campaign to characterize variable and transient sourcesin the radio sky. The observations include 78 individual epochs distributedover 5 months at a radio frequency of 3.1 GHz with a median RMS image noise ineach epoch of 2.8 mJy. We produce 5 monthly images with a median RMS of 0.6mJy. No transient radio sources are detected in the daily or monthly images. At15 mJy, we set an upper limit (2 sigma) to the surface density of 1-day radiotransients at 0.025 deg^-2. At 5 mJy, we set an upper limit (2\sigma) to thesurface density of 1-month radio transients at 0.18 deg^-2. We also producelight curves for 425 sources and explore the variability properties of thesesources. Approximately 20% of the sources exhibit some variability on daily andmonthly time scales. The maximum RMS fractional modulations on the 1 day and 1month time scales for sources brighter than 10 mJy are 2 and 0.5, respectively.The probability of a daily fluctuation for all sources and all epochs by afactor of 10 is less than 10^-4. We compare the radio to mid-infraredvariability for sources in the field and find no correlation. Finally, we applythe statistics of transient and variable populations to constrain models for avariety of source classes.
 
-  We present results from daily radio continuum observations of the Bootes
-field as part of the Pi GHz Sky Survey (PiGSS). These results are part of a
-systematic and unbiased campaign to characterize variable and transient sources
-in the radio sky. The observations include 78 individual epochs distributed
-over 5 months at a radio frequency of 3.1 GHz with a median RMS image noise in
-each epoch of 2.8 mJy. We produce 5 monthly images with a median RMS of 0.6
-mJy. No transient radio sources are detected in the daily or monthly images. At
-15 mJy, we set an upper limit (2 sigma) to the surface density of 1-day radio
-transients at 0.025 deg^-2. At 5 mJy, we set an upper limit (2\sigma) to the
-surface density of 1-month radio transients at 0.18 deg^-2. We also produce
-light curves for 425 sources and explore the variability properties of these
-sources. Approximately 20% of the sources exhibit some variability on daily and
-monthly time scales. The maximum RMS fractional modulations on the 1 day and 1
-month time scales for sources brighter than 10 mJy are 2 and 0.5, respectively.
-The probability of a daily fluctuation for all sources and all epochs by a
-factor of 10 is less than 10^-4. We compare the radio to mid-infrared
-variability for sources in the field and find no correlation. Finally, we apply
-the statistics of transient and variable populations to constrain models for a
-variety of source classes.
+Search for Anisotropy of Ultra-High Energy Cosmic Rays with the  Telescope Array Experiment
 
-
-Search for Anisotropy of Ultra-High Energy Cosmic Rays with the
-  Telescope Array Experiment
-
-  We study the anisotropy of Ultra-High Energy Cosmic Ray (UHECR) events
-collected by the Telescope Array (TA) detector in the first 40 months of
-operation. Following earlier studies, we examine event sets with energy
-thresholds of 10 EeV, 40 EeV, and 57 EeV. We find that the distributions of the
-events in right ascension and declination are compatible with an isotropic
-distribution in all three sets. We then compare with previously reported
-clustering of the UHECR events at small angular scales. No significant
-clustering is found in the TA data. We then check the events with E>57 EeV for
-correlations with nearby active galactic nuclei. No significant correlation is
-found. Finally, we examine all three sets for correlations with the large-scale
-structure of the Universe. We find that the two higher-energy sets are
-compatible with both an isotropic distribution and the hypothesis that UHECR
-sources follow the matter distribution of the Universe (the LSS hypothesis),
-while the event set with E>10 EeV is compatible with isotropy and is not
-compatible with the LSS hypothesis at 95% CL unless large deflection angles are
-also assumed. We show that accounting for UHECR deflections in a realistic
-model of the Galactic magnetic field can make this set compatible with the LSS
-hypothesis.
-
+  We study the anisotropy of Ultra-High Energy Cosmic Ray (UHECR) eventscollected by the Telescope Array (TA) detector in the first 40 months ofoperation. Following earlier studies, we examine event sets with energythresholds of 10 EeV, 40 EeV, and 57 EeV. We find that the distributions of theevents in right ascension and declination are compatible with an isotropicdistribution in all three sets. We then compare with previously reportedclustering of the UHECR events at small angular scales. No significantclustering is found in the TA data. We then check the events with E>57 EeV forcorrelations with nearby active galactic nuclei. No significant correlation isfound. Finally, we examine all three sets for correlations with the large-scalestructure of the Universe. We find that the two higher-energy sets arecompatible with both an isotropic distribution and the hypothesis that UHECRsources follow the matter distribution of the Universe (the LSS hypothesis),while the event set with E>10 EeV is compatible with isotropy and is notcompatible with the LSS hypothesis at 95% CL unless large deflection angles arealso assumed. We show that accounting for UHECR deflections in a realisticmodel of the Galactic magnetic field can make this set compatible with the LSShypothesis.
 
 The Astropy Problem
 
-  The Astropy Project (http://astropy.org) is, in its own words, "a community
-effort to develop a single core package for Astronomy in Python and foster
-interoperability between Python astronomy packages." For five years this
-project has been managed, written, and operated as a grassroots,
-self-organized, almost entirely volunteer effort while the software is used by
-the majority of the astronomical community. Despite this, the project has
-always been and remains to this day effectively unfunded. Further, contributors
-receive little or no formal recognition for creating and supporting what is now
-critical software. This paper explores the problem in detail, outlines possible
-solutions to correct this, and presents a few suggestions on how to address the
-sustainability of general purpose astronomical software.
+  The Astropy Project (http://astropy.org) is, in its own words, "a communityeffort to develop a single core package for Astronomy in Python and fosterinteroperability between Python astronomy packages." For five years thisproject has been managed, written, and operated as a grassroots,self-organized, almost entirely volunteer effort while the software is used bythe majority of the astronomical community. Despite this, the project hasalways been and remains to this day effectively unfunded. Further, contributorsreceive little or no formal recognition for creating and supporting what is nowcritical software. This paper explores the problem in detail, outlines possiblesolutions to correct this, and presents a few suggestions on how to address thesustainability of general purpose astronomical software.
 
+The Spitzer c2d Survey of Large, Nearby, Interstellar Clouds. IV. Lupus  Observed with MIPS
 
-The Spitzer c2d Survey of Large, Nearby, Interstellar Clouds. IV. Lupus
-  Observed with MIPS
+  We present maps of 7.78 square degrees of the Lupus molecular cloud complexat 24, 70, and $160\:\mu$m. They were made with the Spitzer Space Telescope'sMultiband Imaging Photometer for Spitzer (MIPS) instrument as part of theSpitzer Legacy Program, ``From Molecular Cores to Planet-Forming Disks'' (c2d).The maps cover three separate regions in Lupus, denoted I, III, and IV. Wediscuss the c2d pipeline and how our data processing differs from it. Wecompare source counts in the three regions with two other data sets andpredicted star counts from the Wainscoat model. This comparison shows thecontribution from background galaxies in Lupus I. We also create two colormagnitude diagrams using the 2MASS and MIPS data. From these results, we canidentify background galaxies and distinguish them from probable young stellarobjects. The sources in our catalogs are classified based on their spectralenergy distribution (SED) from 2MASS and Spitzer wavelengths to create a sampleof young stellar object candidates. From 2MASS data, we create extinction mapsfor each region and note a strong corresponence between the extinction and the$160\:\mu$m emission. The masses we derived in each Lupus cloud from ourextinction maps are compared to masses estimated from $^{13}$CO and C$^{18}$Oand found to be similar to our extinction masses in some regions, butsignificantly different in others. Finally, based on our color-magnitudediagrams, we selected 12 of our reddest candidate young stellar objects forindividual discussion. Five of the 12 appear to be newly-discovered YSOs.
 
-  We present maps of 7.78 square degrees of the Lupus molecular cloud complex
-at 24, 70, and $160\:\mu$m. They were made with the Spitzer Space Telescope's
-Multiband Imaging Photometer for Spitzer (MIPS) instrument as part of the
-Spitzer Legacy Program, ``From Molecular Cores to Planet-Forming Disks'' (c2d).
-The maps cover three separate regions in Lupus, denoted I, III, and IV. We
-discuss the c2d pipeline and how our data processing differs from it. We
-compare source counts in the three regions with two other data sets and
-predicted star counts from the Wainscoat model. This comparison shows the
-contribution from background galaxies in Lupus I. We also create two color
-magnitude diagrams using the 2MASS and MIPS data. From these results, we can
-identify background galaxies and distinguish them from probable young stellar
-objects. The sources in our catalogs are classified based on their spectral
-energy distribution (SED) from 2MASS and Spitzer wavelengths to create a sample
-of young stellar object candidates. From 2MASS data, we create extinction maps
-for each region and note a strong corresponence between the extinction and the
-$160\:\mu$m emission. The masses we derived in each Lupus cloud from our
-extinction maps are compared to masses estimated from $^{13}$CO and C$^{18}$O
-and found to be similar to our extinction masses in some regions, but
-significantly different in others. Finally, based on our color-magnitude
-diagrams, we selected 12 of our reddest candidate young stellar objects for
-individual discussion. Five of the 12 appear to be newly-discovered YSOs.
+Kepler Mission Design, Realized Photometric Performance, and Early  Science
 
-
-Kepler Mission Design, Realized Photometric Performance, and Early
-  Science
-
-  The Kepler Mission, launched on Mar 6, 2009 was designed with the explicit
-capability to detect Earth-size planets in the habitable zone of solar-like
-stars using the transit photometry method. Results from just forty-three days
-of data along with ground-based follow-up observations have identified five new
-transiting planets with measurements of their masses, radii, and orbital
-periods. Many aspects of stellar astrophysics also benefit from the unique,
-precise, extended and nearly continuous data set for a large number and variety
-of stars. Early results for classical variables and eclipsing stars show great
-promise. To fully understand the methodology, processes and eventually the
-results from the mission, we present the underlying rationale that ultimately
-led to the flight and ground system designs used to achieve the exquisite
-photometric performance. As an example of the initial photometric results, we
-present variability measurements that can be used to distinguish dwarf stars
-from red giants.
-
+  The Kepler Mission, launched on Mar 6, 2009 was designed with the explicitcapability to detect Earth-size planets in the habitable zone of solar-likestars using the transit photometry method. Results from just forty-three daysof data along with ground-based follow-up observations have identified five newtransiting planets with measurements of their masses, radii, and orbitalperiods. Many aspects of stellar astrophysics also benefit from the unique,precise, extended and nearly continuous data set for a large number and varietyof stars. Early results for classical variables and eclipsing stars show greatpromise. To fully understand the methodology, processes and eventually theresults from the mission, we present the underlying rationale that ultimatelyled to the flight and ground system designs used to achieve the exquisitephotometric performance. As an example of the initial photometric results, wepresent variability measurements that can be used to distinguish dwarf starsfrom red giants.
 
 Discovery and Rossiter-McLaughlin Effect of Exoplanet Kepler-8b
 
-  We report the discovery and the Rossiter-McLaughlin effect of Kepler-8b, a
-transiting planet identified by the NASA Kepler Mission. Kepler photometry and
-Keck-HIRES radial velocities yield the radius and mass of the planet around
-this F8IV subgiant host star. The planet has a radius RP = 1.419 RJ and a mass,
-MP = 0.60 MJ, yielding a density of 0.26 g cm^-3, among the lowest density
-planets known. The orbital period is P = 3.523 days and orbital semima jor axis
-is 0.0483+0.0006/-0.0012 AU. The star has a large rotational v sin i of 10.5
-+/- 0.7 km s^-1 and is relatively faint (V = 13.89 mag), both properties
-deleterious to precise Doppler measurements. The velocities are indeed noisy,
-with scatter of 30 m s^-1, but exhibit a period and phase consistent with the
-planet implied by the photometry. We securely detect the Rossiter-McLaughlin
-effect, confirming the planet's existence and establishing its orbit as
-prograde. We measure an inclination between the projected planetary orbital
-axis and the projected stellar rotation axis of lambda = -26.9 +/- 4.6 deg,
-indicating a moderate inclination of the planetary orbit. Rossiter-McLaughlin
-measurements of a large sample of transiting planets from Kepler will provide a
-statistically robust measure of the true distribution of spin-orbit
-orientations for hot jupiters in general.
+  We report the discovery and the Rossiter-McLaughlin effect of Kepler-8b, atransiting planet identified by the NASA Kepler Mission. Kepler photometry andKeck-HIRES radial velocities yield the radius and mass of the planet aroundthis F8IV subgiant host star. The planet has a radius RP = 1.419 RJ and a mass,MP = 0.60 MJ, yielding a density of 0.26 g cm^-3, among the lowest densityplanets known. The orbital period is P = 3.523 days and orbital semima jor axisis 0.0483+0.0006/-0.0012 AU. The star has a large rotational v sin i of 10.5+/- 0.7 km s^-1 and is relatively faint (V = 13.89 mag), both propertiesdeleterious to precise Doppler measurements. The velocities are indeed noisy,with scatter of 30 m s^-1, but exhibit a period and phase consistent with theplanet implied by the photometry. We securely detect the Rossiter-McLaughlineffect, confirming the planet's existence and establishing its orbit asprograde. We measure an inclination between the projected planetary orbitalaxis and the projected stellar rotation axis of lambda = -26.9 +/- 4.6 deg,indicating a moderate inclination of the planetary orbit. Rossiter-McLaughlinmeasurements of a large sample of transiting planets from Kepler will provide astatistically robust measure of the true distribution of spin-orbitorientations for hot jupiters in general.
 
+Accelerating infall and rotational spin-up in the hot molecular core  G31.41+0.31
 
-Accelerating infall and rotational spin-up in the hot molecular core
-  G31.41+0.31
+  As part of our effort to search for circumstellar disks around high-massstellar objects, we observed the well-known core G31.41+0.31 with ALMA at 1.4mm with an angular resolution of~0.22" (~1700 au). The dust continuum emissionhas been resolved into two cores namely Main and NE. The Main core, which hasthe stronger emission and is the more chemically rich, has a diameter of ~5300au, and is associated with two free-free continuum sources. The Main core looksfeatureless and homogeneous in dust continuum emission and does not present anyhint of fragmentation. Each transition of CH3CN and CH3OCHO, both ground andvibrationally excited, as well as those of CH3CN isotopologues, shows a clearvelocity gradient along the NE-SW direction, with velocity linearly increasingwith distance from the center, consistent with solid-body rotation. However,when comparing the velocity field of transitions with different upper levelenergies, the rotation velocity increases with increasing energy of thetransition, which suggests that the rotation speeds up towards the center.Spectral lines towards the dust continuum peak show an inverse P-Cygni profilethat supports the existence of infall in the core. The infall velocityincreases with the energy of the transition suggesting that the infall isaccelerating towards the center of the core, consistent with gravitationalcollapse. Despite the monolithic appearance of the Main core, the presence ofred-shifted absorption, the existence of two embedded free-free sources at thecenter, and the rotational spin-up are consistent with an unstable coreundergoing fragmentation with infall and differential rotation due toconservation of angular momentum. Therefore, the most likely explanation forthe monolithic morphology is that the large opacity of the dust emissionprevents the detection of any inhomogeneity in the core.
 
-  As part of our effort to search for circumstellar disks around high-mass
-stellar objects, we observed the well-known core G31.41+0.31 with ALMA at 1.4
-mm with an angular resolution of~0.22" (~1700 au). The dust continuum emission
-has been resolved into two cores namely Main and NE. The Main core, which has
-the stronger emission and is the more chemically rich, has a diameter of ~5300
-au, and is associated with two free-free continuum sources. The Main core looks
-featureless and homogeneous in dust continuum emission and does not present any
-hint of fragmentation. Each transition of CH3CN and CH3OCHO, both ground and
-vibrationally excited, as well as those of CH3CN isotopologues, shows a clear
-velocity gradient along the NE-SW direction, with velocity linearly increasing
-with distance from the center, consistent with solid-body rotation. However,
-when comparing the velocity field of transitions with different upper level
-energies, the rotation velocity increases with increasing energy of the
-transition, which suggests that the rotation speeds up towards the center.
-Spectral lines towards the dust continuum peak show an inverse P-Cygni profile
-that supports the existence of infall in the core. The infall velocity
-increases with the energy of the transition suggesting that the infall is
-accelerating towards the center of the core, consistent with gravitational
-collapse. Despite the monolithic appearance of the Main core, the presence of
-red-shifted absorption, the existence of two embedded free-free sources at the
-center, and the rotational spin-up are consistent with an unstable core
-undergoing fragmentation with infall and differential rotation due to
-conservation of angular momentum. Therefore, the most likely explanation for
-the monolithic morphology is that the large opacity of the dust emission
-prevents the detection of any inhomogeneity in the core.
+Chasing discs around O-type (proto)stars - ALMA evidence for an SiO disc  and disc wind from G17.64+0.16
 
+  We present high angular resolution 0.2 arcsec continuum and molecularemission line Atacama Large Millimeter/sub-millimeter Array (ALMA) observationsof G17.64+0.16 in Band 6 (220GHz) taken as part of a campaign in search ofcircumstellar discs around (proto)-O-stars. At a resolution of 400au the maincontinuum core is essentially unresolved and isolated from other strong andcompact emission peaks. At a resolution of 400au the main continuum core isessentially unresolved and isolated from other strong and compact emissionpeaks. We detect SiO (5-4) emission that is marginally resolved and elongatedin a direction perpendicular to the large-scale outflow seen in the 13CO (2-1)line using the main ALMA array in conjunction with the Atacama Compact Array(ACA). Morphologically, the SiO appears to represent a disc-like structure.Using parametric models we show that the position-velocity profile of the SiOis consistent with the Keplerian rotation of a disc around an object between10-30Mo in mass, only if there is also radial expansion from a separatestructure. The radial motion component can be interpreted as a disc wind fromthe disc surface. Models with a central stellar object mass between 20 and 30Moare the most consistent with the stellar luminosity (100000 Lo) and indicativeof an O-type star. The H30a millimetre recombination line (231.9GHz) is alsodetected, but spatially unresolved, and is indicative of a very compact, hot,ionised region co-spatial with the dust continuum core. Accounting for allobservables, we suggest that G17.64 is consistent with a O-type young stellarobject in the final stages of protostellar assembly, driving a wind, but thathas not yet developed into a compact HII region. The existance and detection ofthe disc in G17.64 is likely related to its isolated and possibly more evolvednature, traits which may underpin discs in similar sources.
 
-Chasing discs around O-type (proto)stars - ALMA evidence for an SiO disc
-  and disc wind from G17.64+0.16
+Hitomi Observations of the LMC SNR N132D: Highly Redshifted X-ray  Emission from Iron Ejecta
 
-  We present high angular resolution 0.2 arcsec continuum and molecular
-emission line Atacama Large Millimeter/sub-millimeter Array (ALMA) observations
-of G17.64+0.16 in Band 6 (220GHz) taken as part of a campaign in search of
-circumstellar discs around (proto)-O-stars. At a resolution of 400au the main
-continuum core is essentially unresolved and isolated from other strong and
-compact emission peaks. At a resolution of 400au the main continuum core is
-essentially unresolved and isolated from other strong and compact emission
-peaks. We detect SiO (5-4) emission that is marginally resolved and elongated
-in a direction perpendicular to the large-scale outflow seen in the 13CO (2-1)
-line using the main ALMA array in conjunction with the Atacama Compact Array
-(ACA). Morphologically, the SiO appears to represent a disc-like structure.
-Using parametric models we show that the position-velocity profile of the SiO
-is consistent with the Keplerian rotation of a disc around an object between
-10-30Mo in mass, only if there is also radial expansion from a separate
-structure. The radial motion component can be interpreted as a disc wind from
-the disc surface. Models with a central stellar object mass between 20 and 30Mo
-are the most consistent with the stellar luminosity (100000 Lo) and indicative
-of an O-type star. The H30a millimetre recombination line (231.9GHz) is also
-detected, but spatially unresolved, and is indicative of a very compact, hot,
-ionised region co-spatial with the dust continuum core. Accounting for all
-observables, we suggest that G17.64 is consistent with a O-type young stellar
-object in the final stages of protostellar assembly, driving a wind, but that
-has not yet developed into a compact HII region. The existance and detection of
-the disc in G17.64 is likely related to its isolated and possibly more evolved
-nature, traits which may underpin discs in similar sources.
+  We present Hitomi observations of N132D, a young, X-ray bright, O-richcore-collapse supernova remnant in the Large Magellanic Cloud (LMC). Despite avery short observation of only 3.7 ks, the Soft X-ray Spectrometer (SXS) easilydetects the line complexes of highly ionized S K and Fe K with 16-17 counts ineach. The Fe feature is measured for the first time at high spectralresolution. Based on the plausible assumption that the Fe K emission isdominated by He-like ions, we find that the material responsible for this Feemission is highly redshifted at ~800 km/s compared to the local LMCinterstellar medium (ISM), with a 90% credible interval of 50-1500 km/s if aweakly informative prior is placed on possible line broadening. This indicates(1) that the Fe emission arises from the supernova ejecta, and (2) that theseejecta are highly asymmetric, since no blue-shifted component is found. The S Kvelocity is consistent with the local LMC ISM, and is likely from swept-up ISMmaterial. These results are consistent with spatial mapping that shows theHe-like Fe concentrated in the interior of the remnant and the S tracing theouter shell. The results also show that even with a very small number ofcounts, direct velocity measurements from Doppler-shifted lines detected inextended objects like supernova remnants are now possible. Thanks to the verylow SXS background of ~1 event per spectral resolution element per 100 ks, suchresults are obtainable during short pointed or slew observations with similarinstruments. This highlights the power of high-spectral-resolution imagingobservations, and demonstrates the new window that has been opened with Hitomiand will be greatly widened with future missions such as the X-ray AstronomyRecovery Mission (XARM) and Athena.
 
+First observations of speed of light tracks by a fluorescence detector  looking down on the atmosphere
 
-Hitomi Observations of the LMC SNR N132D: Highly Redshifted X-ray
-  Emission from Iron Ejecta
+  EUSO-Balloon is a pathfinder mission for the Extreme Universe SpaceObservatory onboard the Japanese Experiment Module (JEM-EUSO). It was launchedon the moonless night of the 25$^{th}$ of August 2014 from Timmins, Canada. Theflight ended successfully after maintaining the target altitude of 38 km forfive hours. One part of the mission was a 2.5 hour underflight using ahelicopter equipped with three UV light sources (LED, xenon flasher and laser)to perform an inflight calibration and examine the detectors capability tomeasure tracks moving at the speed of light. We describe the helicopter lasersystem and details of the underflight as well as how the laser tracks wererecorded and found in the data. These are the first recorded laser tracksmeasured from a fluorescence detector looking down on the atmosphere. Finally,we present a first reconstruction of the direction of the laser tracks relativeto the detector.
 
-  We present Hitomi observations of N132D, a young, X-ray bright, O-rich
-core-collapse supernova remnant in the Large Magellanic Cloud (LMC). Despite a
-very short observation of only 3.7 ks, the Soft X-ray Spectrometer (SXS) easily
-detects the line complexes of highly ionized S K and Fe K with 16-17 counts in
-each. The Fe feature is measured for the first time at high spectral
-resolution. Based on the plausible assumption that the Fe K emission is
-dominated by He-like ions, we find that the material responsible for this Fe
-emission is highly redshifted at ~800 km/s compared to the local LMC
-interstellar medium (ISM), with a 90% credible interval of 50-1500 km/s if a
-weakly informative prior is placed on possible line broadening. This indicates
-(1) that the Fe emission arises from the supernova ejecta, and (2) that these
-ejecta are highly asymmetric, since no blue-shifted component is found. The S K
-velocity is consistent with the local LMC ISM, and is likely from swept-up ISM
-material. These results are consistent with spatial mapping that shows the
-He-like Fe concentrated in the interior of the remnant and the S tracing the
-outer shell. The results also show that even with a very small number of
-counts, direct velocity measurements from Doppler-shifted lines detected in
-extended objects like supernova remnants are now possible. Thanks to the very
-low SXS background of ~1 event per spectral resolution element per 100 ks, such
-results are obtainable during short pointed or slew observations with similar
-instruments. This highlights the power of high-spectral-resolution imaging
-observations, and demonstrates the new window that has been opened with Hitomi
-and will be greatly widened with future missions such as the X-ray Astronomy
-Recovery Mission (XARM) and Athena.
+Searches for Large-Scale Anisotropy in the Arrival Directions of Cosmic  Rays Detected above Energy of $10^{19}$ eV at the Pierre Auger Observatory  and the Telescope Array
 
-
-First observations of speed of light tracks by a fluorescence detector
-  looking down on the atmosphere
-
-  EUSO-Balloon is a pathfinder mission for the Extreme Universe Space
-Observatory onboard the Japanese Experiment Module (JEM-EUSO). It was launched
-on the moonless night of the 25$^{th}$ of August 2014 from Timmins, Canada. The
-flight ended successfully after maintaining the target altitude of 38 km for
-five hours. One part of the mission was a 2.5 hour underflight using a
-helicopter equipped with three UV light sources (LED, xenon flasher and laser)
-to perform an inflight calibration and examine the detectors capability to
-measure tracks moving at the speed of light. We describe the helicopter laser
-system and details of the underflight as well as how the laser tracks were
-recorded and found in the data. These are the first recorded laser tracks
-measured from a fluorescence detector looking down on the atmosphere. Finally,
-we present a first reconstruction of the direction of the laser tracks relative
-to the detector.
-
-
-Searches for Large-Scale Anisotropy in the Arrival Directions of Cosmic
-  Rays Detected above Energy of $10^{19}$ eV at the Pierre Auger Observatory
-  and the Telescope Array
-
-  Spherical harmonic moments are well-suited for capturing anisotropy at any
-scale in the flux of cosmic rays. An unambiguous measurement of the full set of
-spherical harmonic coefficients requires full-sky coverage. This can be
-achieved by combining data from observatories located in both the northern and
-southern hemispheres. To this end, a joint analysis using data recorded at the
-Telescope Array and the Pierre Auger Observatory above $10^{19}$ eV is
-presented in this work. The resulting multipolar expansion of the flux of
-cosmic rays allows us to perform a series of anisotropy searches, and in
-particular to report on the angular power spectrum of cosmic rays above
-$10^{19}$ eV. No significant deviation from isotropic expectations is found
-throughout the analyses performed. Upper limits on the amplitudes of the dipole
-and quadrupole moments are derived as a function of the direction in the sky,
-varying between 7% and 13% for the dipole and between 7% and 10% for a
-symmetric quadrupole.
-
+  Spherical harmonic moments are well-suited for capturing anisotropy at anyscale in the flux of cosmic rays. An unambiguous measurement of the full set ofspherical harmonic coefficients requires full-sky coverage. This can beachieved by combining data from observatories located in both the northern andsouthern hemispheres. To this end, a joint analysis using data recorded at theTelescope Array and the Pierre Auger Observatory above $10^{19}$ eV ispresented in this work. The resulting multipolar expansion of the flux ofcosmic rays allows us to perform a series of anisotropy searches, and inparticular to report on the angular power spectrum of cosmic rays above$10^{19}$ eV. No significant deviation from isotropic expectations is foundthroughout the analyses performed. Upper limits on the amplitudes of the dipoleand quadrupole moments are derived as a function of the direction in the sky,varying between 7% and 13% for the dipole and between 7% and 10% for asymmetric quadrupole.
 
 Hitomi constraints on the 3.5 keV line in the Perseus galaxy cluster
 
-  High-resolution X-ray spectroscopy with Hitomi was expected to resolve the
-origin of the faint unidentified E=3.5 keV emission line reported in several
-low-resolution studies of various massive systems, such as galaxies and
-clusters, including the Perseus cluster. We have analyzed the Hitomi
-first-light observation of the Perseus cluster. The emission line expected for
-Perseus based on the XMM-Newton signal from the large cluster sample under the
-dark matter decay scenario is too faint to be detectable in the Hitomi data.
-However, the previously reported 3.5 keV flux from Perseus was anomalously high
-compared to the sample-based prediction. We find no unidentified line at the
-reported high flux level. Taking into account the XMM measurement uncertainties
-for this region, the inconsistency with Hitomi is at a 99% significance for a
-broad dark-matter line and at 99.7% for a narrow line from the gas. We do not
-find anomalously high fluxes of the nearby faint K line or the Ar satellite
-line that were proposed as explanations for the earlier 3.5 keV detections. We
-do find a hint of a broad excess near the energies of high-n transitions of
-Sxvi (E=3.44 keV rest-frame) -- a possible signature of charge exchange in the
-molecular nebula and another proposed explanation for the unidentified line.
-While its energy is consistent with XMM pn detections, it is unlikely to
-explain the MOS signal. A confirmation of this interesting feature has to wait
-for a more sensitive observation with a future calorimeter experiment.
+  High-resolution X-ray spectroscopy with Hitomi was expected to resolve theorigin of the faint unidentified E=3.5 keV emission line reported in severallow-resolution studies of various massive systems, such as galaxies andclusters, including the Perseus cluster. We have analyzed the Hitomifirst-light observation of the Perseus cluster. The emission line expected forPerseus based on the XMM-Newton signal from the large cluster sample under thedark matter decay scenario is too faint to be detectable in the Hitomi data.However, the previously reported 3.5 keV flux from Perseus was anomalously highcompared to the sample-based prediction. We find no unidentified line at thereported high flux level. Taking into account the XMM measurement uncertaintiesfor this region, the inconsistency with Hitomi is at a 99% significance for abroad dark-matter line and at 99.7% for a narrow line from the gas. We do notfind anomalously high fluxes of the nearby faint K line or the Ar satelliteline that were proposed as explanations for the earlier 3.5 keV detections. Wedo find a hint of a broad excess near the energies of high-n transitions ofSxvi (E=3.44 keV rest-frame) -- a possible signature of charge exchange in themolecular nebula and another proposed explanation for the unidentified line.While its energy is consistent with XMM pn detections, it is unlikely toexplain the MOS signal. A confirmation of this interesting feature has to waitfor a more sensitive observation with a future calorimeter experiment.
 
+Search for Thermal X-ray Features from the Crab nebula with Hitomi Soft  X-ray Spectrometer
 
-Search for Thermal X-ray Features from the Crab nebula with Hitomi Soft
-  X-ray Spectrometer
+  The Crab nebula originated from a core-collapse supernova (SN) explosionobserved in 1054 A.D. When viewed as a supernova remnant (SNR), it has ananomalously low observed ejecta mass and kinetic energy for an Fe-core collapseSN. Intensive searches were made for a massive shell that solves thisdiscrepancy, but none has been detected. An alternative idea is that the SN1054is an electron-capture (EC) explosion with a lower explosion energy by an orderof magnitude than Fe-core collapse SNe. In the X-rays, imaging searches wereperformed for the plasma emission from the shell in the Crab outskirts to set astringent upper limit to the X-ray emitting mass. However, the extremebrightness of the source hampers access to its vicinity. We thus employedspectroscopic technique using the X-ray micro-calorimeter onboard the Hitomisatellite. By exploiting its superb energy resolution, we set an upper limitfor emission or absorption features from yet undetected thermal plasma in the2-12 keV range. We also re-evaluated the existing Chandra and XMM-Newton data.By assembling these results, a new upper limit was obtained for the X-rayplasma mass of <~ 1Mo for a wide range of assumed shell radius, size, andplasma temperature both in and out of the collisional equilibrium. To comparewith the observation, we further performed hydrodynamic simulations of the CrabSNR for two SN models (Fe-core versus EC) under two SN environments (uniformISM versus progenitor wind). We found that the observed mass limit can becompatible with both SN models if the SN environment has a low density of <~0.03 cm-3 (Fe core) or <~ 0.1 cm-3 (EC) for the uniform density, or aprogenitor wind density somewhat less than that provided by a mass loss rate of10-5 Mo yr-1 at 20 km s-1 for the wind environment.
 
-  The Crab nebula originated from a core-collapse supernova (SN) explosion
-observed in 1054 A.D. When viewed as a supernova remnant (SNR), it has an
-anomalously low observed ejecta mass and kinetic energy for an Fe-core collapse
-SN. Intensive searches were made for a massive shell that solves this
-discrepancy, but none has been detected. An alternative idea is that the SN1054
-is an electron-capture (EC) explosion with a lower explosion energy by an order
-of magnitude than Fe-core collapse SNe. In the X-rays, imaging searches were
-performed for the plasma emission from the shell in the Crab outskirts to set a
-stringent upper limit to the X-ray emitting mass. However, the extreme
-brightness of the source hampers access to its vicinity. We thus employed
-spectroscopic technique using the X-ray micro-calorimeter onboard the Hitomi
-satellite. By exploiting its superb energy resolution, we set an upper limit
-for emission or absorption features from yet undetected thermal plasma in the
-2-12 keV range. We also re-evaluated the existing Chandra and XMM-Newton data.
-By assembling these results, a new upper limit was obtained for the X-ray
-plasma mass of <~ 1Mo for a wide range of assumed shell radius, size, and
-plasma temperature both in and out of the collisional equilibrium. To compare
-with the observation, we further performed hydrodynamic simulations of the Crab
-SNR for two SN models (Fe-core versus EC) under two SN environments (uniform
-ISM versus progenitor wind). We found that the observed mass limit can be
-compatible with both SN models if the SN environment has a low density of <~
-0.03 cm-3 (Fe core) or <~ 0.1 cm-3 (EC) for the uniform density, or a
-progenitor wind density somewhat less than that provided by a mass loss rate of
-10-5 Mo yr-1 at 20 km s-1 for the wind environment.
+Measurements of resonant scattering in the Perseus cluster core with  Hitomi SXS
 
-
-Measurements of resonant scattering in the Perseus cluster core with
-  Hitomi SXS
-
-  Thanks to its high spectral resolution (~5 eV at 6 keV), the Soft X-ray
-Spectrometer (SXS) on board Hitomi enables us to measure the detailed structure
-of spatially resolved emission lines from highly ionized ions in galaxy
-clusters for the first time. In this series of papers, using the SXS we have
-measured the velocities of gas motions, metallicities and the multi-temperature
-structure of the gas in the core of the Perseus cluster. Here, we show that
-when inferring physical properties from line emissivities in systems like
-Perseus, the resonant scattering (RS) effect should be taken into account. In
-the Hitomi waveband, RS mostly affects the FeXXV He$\alpha$ line ($w$) - the
-strongest line in the spectrum. The flux measured by Hitomi in this line is
-suppressed by a factor ~1.3 in the inner ~30 kpc, compared to predictions for
-an optically thin plasma; the suppression decreases with the distance from the
-center. The $w$ line also appears slightly broader than other lines from the
-same ion. The observed distortions of the $w$ line flux, shape and distance
-dependence are all consistent with the expected effect of the resonant
-scattering in the Perseus core. By measuring the ratio of fluxes in optically
-thick ($w$) and thin (FeXXV forbidden, He$\beta$, Ly$\alpha$) lines, and
-comparing these ratios with predictions from Monte Carlo radiative transfer
-simulations, the velocities of gas motions have been obtained. The results are
-consistent with the direct measurements of gas velocities from line broadening
-described elsewhere in this series, although the systematic and statistical
-uncertainties remain significant. Further improvements in the predictions of
-line emissivities in plasma models, and deeper observations with future X-ray
-missions will enable RS measurements to provide powerful constraints on the
-amplitude and anisotropy of clusters gas motions.
-
+  Thanks to its high spectral resolution (~5 eV at 6 keV), the Soft X-raySpectrometer (SXS) on board Hitomi enables us to measure the detailed structureof spatially resolved emission lines from highly ionized ions in galaxyclusters for the first time. In this series of papers, using the SXS we havemeasured the velocities of gas motions, metallicities and the multi-temperaturestructure of the gas in the core of the Perseus cluster. Here, we show thatwhen inferring physical properties from line emissivities in systems likePerseus, the resonant scattering (RS) effect should be taken into account. Inthe Hitomi waveband, RS mostly affects the FeXXV He$\alpha$ line ($w$) - thestrongest line in the spectrum. The flux measured by Hitomi in this line issuppressed by a factor ~1.3 in the inner ~30 kpc, compared to predictions foran optically thin plasma; the suppression decreases with the distance from thecenter. The $w$ line also appears slightly broader than other lines from thesame ion. The observed distortions of the $w$ line flux, shape and distancedependence are all consistent with the expected effect of the resonantscattering in the Perseus core. By measuring the ratio of fluxes in opticallythick ($w$) and thin (FeXXV forbidden, He$\beta$, Ly$\alpha$) lines, andcomparing these ratios with predictions from Monte Carlo radiative transfersimulations, the velocities of gas motions have been obtained. The results areconsistent with the direct measurements of gas velocities from line broadeningdescribed elsewhere in this series, although the systematic and statisticaluncertainties remain significant. Further improvements in the predictions ofline emissivities in plasma models, and deeper observations with future X-raymissions will enable RS measurements to provide powerful constraints on theamplitude and anisotropy of clusters gas motions.
 

@@ -1,773 +1,200 @@
-Can neural machine translation do simultaneous translation?
-
-  We investigate the potential of attention-based neural machine translation in
-simultaneous translation. We introduce a novel decoding algorithm, called
-simultaneous greedy decoding, that allows an existing neural machine
-translation model to begin translating before a full source sentence is
-received. This approach is unique from previous works on simultaneous
-translation in that segmentation and translation are done jointly to maximize
-the translation quality and that translating each segment is strongly
-conditioned on all the previous segments. This paper presents a first step
-toward building a full simultaneous translation system based on neural machine
-translation.
-
-
 Natural Language Understanding with Distributed Representation
 
-  This is a lecture note for the course DS-GA 3001 <Natural Language
-Understanding with Distributed Representation> at the Center for Data Science ,
-New York University in Fall, 2015. As the name of the course suggests, this
-lecture note introduces readers to a neural network based approach to natural
-language understanding/processing. In order to make it as self-contained as
-possible, I spend much time on describing basics of machine learning and neural
-networks, only after which how they are used for natural languages is
-introduced. On the language front, I almost solely focus on language modelling
-and machine translation, two of which I personally find most fascinating and
-most fundamental to natural language understanding.
+  This is a lecture note for the course DS-GA 3001 <Natural LanguageUnderstanding with Distributed Representation> at the Center for Data Science ,New York University in Fall, 2015. As the name of the course suggests, thislecture note introduces readers to a neural network based approach to naturallanguage understanding/processing. In order to make it as self-contained aspossible, I spend much time on describing basics of machine learning and neuralnetworks, only after which how they are used for natural languages isintroduced. On the language front, I almost solely focus on language modellingand machine translation, two of which I personally find most fascinating andmost fundamental to natural language understanding.
 
+Can neural machine translation do simultaneous translation?
+
+  We investigate the potential of attention-based neural machine translation insimultaneous translation. We introduce a novel decoding algorithm, calledsimultaneous greedy decoding, that allows an existing neural machinetranslation model to begin translating before a full source sentence isreceived. This approach is unique from previous works on simultaneoustranslation in that segmentation and translation are done jointly to maximizethe translation quality and that translating each segment is stronglyconditioned on all the previous segments. This paper presents a first steptoward building a full simultaneous translation system based on neural machinetranslation.
 
 Strawman: an Ensemble of Deep Bag-of-Ngrams for Sentiment Analysis
 
-  This paper describes a builder entry, named "strawman", to the sentence-level
-sentiment analysis task of the "Build It, Break It" shared task of the First
-Workshop on Building Linguistically Generalizable NLP Systems. The goal of a
-builder is to provide an automated sentiment analyzer that would serve as a
-target for breakers whose goal is to find pairs of minimally-differing
-sentences that break the analyzer.
+  This paper describes a builder entry, named "strawman", to the sentence-levelsentiment analysis task of the "Build It, Break It" shared task of the FirstWorkshop on Building Linguistically Generalizable NLP Systems. The goal of abuilder is to provide an automated sentiment analyzer that would serve as atarget for breakers whose goal is to find pairs of minimally-differingsentences that break the analyzer.
 
+Overcoming the Curse of Sentence Length for Neural Machine Translation  using Automatic Segmentation
 
-Overcoming the Curse of Sentence Length for Neural Machine Translation
-  using Automatic Segmentation
-
-  The authors of (Cho et al., 2014a) have shown that the recently introduced
-neural network translation systems suffer from a significant drop in
-translation quality when translating long sentences, unlike existing
-phrase-based translation systems. In this paper, we propose a way to address
-this issue by automatically segmenting an input sentence into phrases that can
-be easily translated by the neural network translation model. Once each segment
-has been independently translated by the neural machine translation model, the
-translated clauses are concatenated to form a final translation. Empirical
-results show a significant improvement in translation quality for long
-sentences.
-
-
-Understanding Dropout: Training Multi-Layer Perceptrons with Auxiliary
-  Independent Stochastic Neurons
-
-  In this paper, a simple, general method of adding auxiliary stochastic
-neurons to a multi-layer perceptron is proposed. It is shown that the proposed
-method is a generalization of recently successful methods of dropout (Hinton et
-al., 2012), explicit noise injection (Vincent et al., 2010; Bishop, 1995) and
-semantic hashing (Salakhutdinov & Hinton, 2009). Under the proposed framework,
-an extension of dropout which allows using separate dropping probabilities for
-different hidden neurons, or layers, is found to be available. The use of
-different dropping probabilities for hidden layers separately is empirically
-investigated.
-
-
-Classifying and Visualizing Motion Capture Sequences using Deep Neural
-  Networks
-
-  The gesture recognition using motion capture data and depth sensors has
-recently drawn more attention in vision recognition. Currently most systems
-only classify dataset with a couple of dozens different actions. Moreover,
-feature extraction from the data is often computational complex. In this paper,
-we propose a novel system to recognize the actions from skeleton data with
-simple, but effective, features using deep neural networks. Features are
-extracted for each frame based on the relative positions of joints (PO),
-temporal differences (TD), and normalized trajectories of motion (NT). Given
-these features a hybrid multi-layer perceptron is trained, which simultaneously
-classifies and reconstructs input data. We use deep autoencoder to visualize
-learnt features, and the experiments show that deep neural networks can capture
-more discriminative information than, for instance, principal component
-analysis can. We test our system on a public database with 65 classes and more
-than 2,000 motion sequences. We obtain an accuracy above 95% which is, to our
-knowledge, the state of the art result for such a large dataset.
-
+  The authors of (Cho et al., 2014a) have shown that the recently introducedneural network translation systems suffer from a significant drop intranslation quality when translating long sentences, unlike existingphrase-based translation systems. In this paper, we propose a way to addressthis issue by automatically segmenting an input sentence into phrases that canbe easily translated by the neural network translation model. Once each segmenthas been independently translated by the neural machine translation model, thetranslated clauses are concatenated to form a final translation. Empiricalresults show a significant improvement in translation quality for longsentences.
 
 Boltzmann Machines and Denoising Autoencoders for Image Denoising
 
-  Image denoising based on a probabilistic model of local image patches has
-been employed by various researchers, and recently a deep (denoising)
-autoencoder has been proposed by Burger et al. [2012] and Xie et al. [2012] as
-a good model for this. In this paper, we propose that another popular family of
-models in the field of deep learning, called Boltzmann machines, can perform
-image denoising as well as, or in certain cases of high level of noise, better
-than denoising autoencoders. We empirically evaluate the two models on three
-different sets of images with different types and levels of noise. Throughout
-the experiments we also examine the effect of the depth of the models. The
-experiments confirmed our claim and revealed that the performance can be
-improved by adding more hidden layers, especially when the level of noise is
-high.
+  Image denoising based on a probabilistic model of local image patches hasbeen employed by various researchers, and recently a deep (denoising)autoencoder has been proposed by Burger et al. [2012] and Xie et al. [2012] asa good model for this. In this paper, we propose that another popular family ofmodels in the field of deep learning, called Boltzmann machines, can performimage denoising as well as, or in certain cases of high level of noise, betterthan denoising autoencoders. We empirically evaluate the two models on threedifferent sets of images with different types and levels of noise. Throughoutthe experiments we also examine the effect of the depth of the models. Theexperiments confirmed our claim and revealed that the performance can beimproved by adding more hidden layers, especially when the level of noise ishigh.
 
+Understanding Dropout: Training Multi-Layer Perceptrons with Auxiliary  Independent Stochastic Neurons
 
-On the Properties of Neural Machine Translation: Encoder-Decoder
-  Approaches
+  In this paper, a simple, general method of adding auxiliary stochasticneurons to a multi-layer perceptron is proposed. It is shown that the proposedmethod is a generalization of recently successful methods of dropout (Hinton etal., 2012), explicit noise injection (Vincent et al., 2010; Bishop, 1995) andsemantic hashing (Salakhutdinov & Hinton, 2009). Under the proposed framework,an extension of dropout which allows using separate dropping probabilities fordifferent hidden neurons, or layers, is found to be available. The use ofdifferent dropping probabilities for hidden layers separately is empiricallyinvestigated.
 
-  Neural machine translation is a relatively new approach to statistical
-machine translation based purely on neural networks. The neural machine
-translation models often consist of an encoder and a decoder. The encoder
-extracts a fixed-length representation from a variable-length input sentence,
-and the decoder generates a correct translation from this representation. In
-this paper, we focus on analyzing the properties of the neural machine
-translation using two models; RNN Encoder--Decoder and a newly proposed gated
-recursive convolutional neural network. We show that the neural machine
-translation performs relatively well on short sentences without unknown words,
-but its performance degrades rapidly as the length of the sentence and the
-number of unknown words increase. Furthermore, we find that the proposed gated
-recursive convolutional network learns a grammatical structure of a sentence
-automatically.
+Classifying and Visualizing Motion Capture Sequences using Deep Neural  Networks
 
-
-On Using Very Large Target Vocabulary for Neural Machine Translation
-
-  Neural machine translation, a recently proposed approach to machine
-translation based purely on neural networks, has shown promising results
-compared to the existing approaches such as phrase-based statistical machine
-translation. Despite its recent success, neural machine translation has its
-limitation in handling a larger vocabulary, as training complexity as well as
-decoding complexity increase proportionally to the number of target words. In
-this paper, we propose a method that allows us to use a very large target
-vocabulary without increasing training complexity, based on importance
-sampling. We show that decoding can be efficiently done even with the model
-having a very large target vocabulary by selecting only a small subset of the
-whole target vocabulary. The models trained by the proposed approach are
-empirically found to outperform the baseline models with a small vocabulary as
-well as the LSTM-based neural machine translation models. Furthermore, when we
-use the ensemble of a few models with very large target vocabularies, we
-achieve the state-of-the-art translation performance (measured by BLEU) on the
-English->German translation and almost as high performance as state-of-the-art
-English->French translation system.
-
-
-Learning Phrase Representations using RNN Encoder-Decoder for
-  Statistical Machine Translation
-
-  In this paper, we propose a novel neural network model called RNN
-Encoder-Decoder that consists of two recurrent neural networks (RNN). One RNN
-encodes a sequence of symbols into a fixed-length vector representation, and
-the other decodes the representation into another sequence of symbols. The
-encoder and decoder of the proposed model are jointly trained to maximize the
-conditional probability of a target sequence given a source sequence. The
-performance of a statistical machine translation system is empirically found to
-improve by using the conditional probabilities of phrase pairs computed by the
-RNN Encoder-Decoder as an additional feature in the existing log-linear model.
-Qualitatively, we show that the proposed model learns a semantically and
-syntactically meaningful representation of linguistic phrases.
-
-
-First Step toward Model-Free, Anonymous Object Tracking with Recurrent
-  Neural Networks
-
-  In this paper, we propose and study a novel visual object tracking approach
-based on convolutional networks and recurrent networks. The proposed approach
-is distinct from the existing approaches to visual object tracking, such as
-filtering-based ones and tracking-by-detection ones, in the sense that the
-tracking system is explicitly trained off-line to track anonymous objects in a
-noisy environment. The proposed visual tracking model is end-to-end trainable,
-minimizing any adversarial effect from mismatches in object representation and
-between the true underlying dynamics and learning dynamics. We empirically show
-that the proposed tracking approach works well in various scenarios by
-generating artificial video sequences with varying conditions; the number of
-objects, amount of noise and the match between the training shapes and test
-shapes.
-
+  The gesture recognition using motion capture data and depth sensors hasrecently drawn more attention in vision recognition. Currently most systemsonly classify dataset with a couple of dozens different actions. Moreover,feature extraction from the data is often computational complex. In this paper,we propose a novel system to recognize the actions from skeleton data withsimple, but effective, features using deep neural networks. Features areextracted for each frame based on the relative positions of joints (PO),temporal differences (TD), and normalized trajectories of motion (NT). Giventhese features a hybrid multi-layer perceptron is trained, which simultaneouslyclassifies and reconstructs input data. We use deep autoencoder to visualizelearnt features, and the experiments show that deep neural networks can capturemore discriminative information than, for instance, principal componentanalysis can. We test our system on a public database with 65 classes and morethan 2,000 motion sequences. We obtain an accuracy above 95% which is, to ourknowledge, the state of the art result for such a large dataset.
 
 On the Number of Linear Regions of Deep Neural Networks
 
-  We study the complexity of functions computable by deep feedforward neural
-networks with piecewise linear activations in terms of the symmetries and the
-number of linear regions that they have. Deep networks are able to sequentially
-map portions of each layer's input-space to the same output. In this way, deep
-models compute functions that react equally to complicated patterns of
-different inputs. The compositional structure of these functions enables them
-to re-use pieces of computation exponentially often in terms of the network's
-depth. This paper investigates the complexity of such compositional maps and
-contributes new theoretical results regarding the advantage of depth for neural
-networks with piecewise linear activation functions. In particular, our
-analysis is not specific to a single family of models, and as an example, we
-employ it for rectifier and maxout networks. We improve complexity bounds from
-pre-existing work and investigate the behavior of units in higher layers.
+  We study the complexity of functions computable by deep feedforward neuralnetworks with piecewise linear activations in terms of the symmetries and thenumber of linear regions that they have. Deep networks are able to sequentiallymap portions of each layer's input-space to the same output. In this way, deepmodels compute functions that react equally to complicated patterns ofdifferent inputs. The compositional structure of these functions enables themto re-use pieces of computation exponentially often in terms of the network'sdepth. This paper investigates the complexity of such compositional maps andcontributes new theoretical results regarding the advantage of depth for neuralnetworks with piecewise linear activation functions. In particular, ouranalysis is not specific to a single family of models, and as an example, weemploy it for rectifier and maxout networks. We improve complexity bounds frompre-existing work and investigate the behavior of units in higher layers.
 
+Learning Phrase Representations using RNN Encoder-Decoder for  Statistical Machine Translation
 
-Describing Multimedia Content using Attention-based Encoder--Decoder
-  Networks
+  In this paper, we propose a novel neural network model called RNNEncoder-Decoder that consists of two recurrent neural networks (RNN). One RNNencodes a sequence of symbols into a fixed-length vector representation, andthe other decodes the representation into another sequence of symbols. Theencoder and decoder of the proposed model are jointly trained to maximize theconditional probability of a target sequence given a source sequence. Theperformance of a statistical machine translation system is empirically found toimprove by using the conditional probabilities of phrase pairs computed by theRNN Encoder-Decoder as an additional feature in the existing log-linear model.Qualitatively, we show that the proposed model learns a semantically andsyntactically meaningful representation of linguistic phrases.
 
-  Whereas deep neural networks were first mostly used for classification tasks,
-they are rapidly expanding in the realm of structured output problems, where
-the observed target is composed of multiple random variables that have a rich
-joint distribution, given the input. We focus in this paper on the case where
-the input also has a rich structure and the input and output structures are
-somehow related. We describe systems that learn to attend to different places
-in the input, for each element of the output, for a variety of tasks: machine
-translation, image caption generation, video clip description and speech
-recognition. All these systems are based on a shared set of building blocks:
-gated recurrent neural networks and convolutional neural networks, along with
-trained attention mechanisms. We report on experimental results with these
-systems, showing impressively good performance and the advantage of the
-attention mechanism.
+On the Properties of Neural Machine Translation: Encoder-Decoder  Approaches
 
+  Neural machine translation is a relatively new approach to statisticalmachine translation based purely on neural networks. The neural machinetranslation models often consist of an encoder and a decoder. The encoderextracts a fixed-length representation from a variable-length input sentence,and the decoder generates a correct translation from this representation. Inthis paper, we focus on analyzing the properties of the neural machinetranslation using two models; RNN Encoder--Decoder and a newly proposed gatedrecursive convolutional neural network. We show that the neural machinetranslation performs relatively well on short sentences without unknown words,but its performance degrades rapidly as the length of the sentence and thenumber of unknown words increase. Furthermore, we find that the proposed gatedrecursive convolutional network learns a grammatical structure of a sentenceautomatically.
 
-Noisy Parallel Approximate Decoding for Conditional Recurrent Language
-  Model
+On Using Very Large Target Vocabulary for Neural Machine Translation
 
-  Recent advances in conditional recurrent language modelling have mainly
-focused on network architectures (e.g., attention mechanism), learning
-algorithms (e.g., scheduled sampling and sequence-level training) and novel
-applications (e.g., image/video description generation, speech recognition,
-etc.) On the other hand, we notice that decoding algorithms/strategies have not
-been investigated as much, and it has become standard to use greedy or beam
-search. In this paper, we propose a novel decoding strategy motivated by an
-earlier observation that nonlinear hidden layers of a deep neural network
-stretch the data manifold. The proposed strategy is embarrassingly
-parallelizable without any communication overhead, while improving an existing
-decoding algorithm. We extensively evaluate it with attention-based neural
-machine translation on the task of En->Cz translation.
+  Neural machine translation, a recently proposed approach to machinetranslation based purely on neural networks, has shown promising resultscompared to the existing approaches such as phrase-based statistical machinetranslation. Despite its recent success, neural machine translation has itslimitation in handling a larger vocabulary, as training complexity as well asdecoding complexity increase proportionally to the number of target words. Inthis paper, we propose a method that allows us to use a very large targetvocabulary without increasing training complexity, based on importancesampling. We show that decoding can be efficiently done even with the modelhaving a very large target vocabulary by selecting only a small subset of thewhole target vocabulary. The models trained by the proposed approach areempirically found to outperform the baseline models with a small vocabulary aswell as the LSTM-based neural machine translation models. Furthermore, when weuse the ensemble of a few models with very large target vocabularies, weachieve the state-of-the-art translation performance (measured by BLEU) on theEnglish->German translation and almost as high performance as state-of-the-artEnglish->French translation system.
 
+Describing Multimedia Content using Attention-based Encoder--Decoder  Networks
+
+  Whereas deep neural networks were first mostly used for classification tasks,they are rapidly expanding in the realm of structured output problems, wherethe observed target is composed of multiple random variables that have a richjoint distribution, given the input. We focus in this paper on the case wherethe input also has a rich structure and the input and output structures aresomehow related. We describe systems that learn to attend to different placesin the input, for each element of the output, for a variety of tasks: machinetranslation, image caption generation, video clip description and speechrecognition. All these systems are based on a shared set of building blocks:gated recurrent neural networks and convolutional neural networks, along withtrained attention mechanisms. We report on experimental results with thesesystems, showing impressively good performance and the advantage of theattention mechanism.
+
+First Step toward Model-Free, Anonymous Object Tracking with Recurrent  Neural Networks
+
+  In this paper, we propose and study a novel visual object tracking approachbased on convolutional networks and recurrent networks. The proposed approachis distinct from the existing approaches to visual object tracking, such asfiltering-based ones and tracking-by-detection ones, in the sense that thetracking system is explicitly trained off-line to track anonymous objects in anoisy environment. The proposed visual tracking model is end-to-end trainable,minimizing any adversarial effect from mismatches in object representation andbetween the true underlying dynamics and learning dynamics. We empirically showthat the proposed tracking approach works well in various scenarios bygenerating artificial video sequences with varying conditions; the number ofobjects, amount of noise and the match between the training shapes and testshapes.
+
+Noisy Parallel Approximate Decoding for Conditional Recurrent Language  Model
+
+  Recent advances in conditional recurrent language modelling have mainlyfocused on network architectures (e.g., attention mechanism), learningalgorithms (e.g., scheduled sampling and sequence-level training) and novelapplications (e.g., image/video description generation, speech recognition,etc.) On the other hand, we notice that decoding algorithms/strategies have notbeen investigated as much, and it has become standard to use greedy or beamsearch. In this paper, we propose a novel decoding strategy motivated by anearlier observation that nonlinear hidden layers of a deep neural networkstretch the data manifold. The proposed strategy is embarrassinglyparallelizable without any communication overhead, while improving an existingdecoding algorithm. We extensively evaluate it with attention-based neuralmachine translation on the task of En->Cz translation.
 
 Emergent Linguistic Phenomena in Multi-Agent Communication Games
 
-  In this work, we propose a computational framework in which agents equipped
-with communication capabilities simultaneously play a series of referential
-games, where agents are trained using deep reinforcement learning. We
-demonstrate that the framework mirrors linguistic phenomena observed in natural
-language: i) the outcome of contact between communities is a function of inter-
-and intra-group connectivity; ii) linguistic contact either converges to the
-majority protocol, or in balanced cases leads to novel creole languages of
-lower complexity; and iii) a linguistic continuum emerges where neighboring
-languages are more mutually intelligible than farther removed languages. We
-conclude that intricate properties of language evolution need not depend on
-complex evolved linguistic capabilities, but can emerge from simple social
-exchanges between perceptually-enabled agents playing communication games.
-
+  In this work, we propose a computational framework in which agents equippedwith communication capabilities simultaneously play a series of referentialgames, where agents are trained using deep reinforcement learning. Wedemonstrate that the framework mirrors linguistic phenomena observed in naturallanguage: i) the outcome of contact between communities is a function of inter-and intra-group connectivity; ii) linguistic contact either converges to themajority protocol, or in balanced cases leads to novel creole languages oflower complexity; and iii) a linguistic continuum emerges where neighboringlanguages are more mutually intelligible than farther removed languages. Weconclude that intricate properties of language evolution need not depend oncomplex evolved linguistic capabilities, but can emerge from simple socialexchanges between perceptually-enabled agents playing communication games.
 
 Not All Neural Embeddings are Born Equal
 
-  Neural language models learn word representations that capture rich
-linguistic and conceptual information. Here we investigate the embeddings
-learned by neural machine translation models. We show that translation-based
-embeddings outperform those learned by cutting-edge monolingual models at
-single-language tasks requiring knowledge of conceptual similarity and/or
-syntactic role. The findings suggest that, while monolingual models learn
-information about how concepts are related, neural-translation models better
-capture their true ontological status.
+  Neural language models learn word representations that capture richlinguistic and conceptual information. Here we investigate the embeddingslearned by neural machine translation models. We show that translation-basedembeddings outperform those learned by cutting-edge monolingual models atsingle-language tasks requiring knowledge of conceptual similarity and/orsyntactic role. The findings suggest that, while monolingual models learninformation about how concepts are related, neural-translation models bettercapture their true ontological status.
 
+Empirical Evaluation of Gated Recurrent Neural Networks on Sequence  Modeling
 
-Empirical Evaluation of Gated Recurrent Neural Networks on Sequence
-  Modeling
+  In this paper we compare different types of recurrent units in recurrentneural networks (RNNs). Especially, we focus on more sophisticated units thatimplement a gating mechanism, such as a long short-term memory (LSTM) unit anda recently proposed gated recurrent unit (GRU). We evaluate these recurrentunits on the tasks of polyphonic music modeling and speech signal modeling. Ourexperiments revealed that these advanced recurrent units are indeed better thanmore traditional recurrent units such as tanh units. Also, we found GRU to becomparable to LSTM.
 
-  In this paper we compare different types of recurrent units in recurrent
-neural networks (RNNs). Especially, we focus on more sophisticated units that
-implement a gating mechanism, such as a long short-term memory (LSTM) unit and
-a recently proposed gated recurrent unit (GRU). We evaluate these recurrent
-units on the tasks of polyphonic music modeling and speech signal modeling. Our
-experiments revealed that these advanced recurrent units are indeed better than
-more traditional recurrent units such as tanh units. Also, we found GRU to be
-comparable to LSTM.
+Multi-Way, Multilingual Neural Machine Translation with a Shared  Attention Mechanism
 
+  We propose multi-way, multilingual neural machine translation. The proposedapproach enables a single neural translation model to translate betweenmultiple languages, with a number of parameters that grows only linearly withthe number of languages. This is made possible by having a single attentionmechanism that is shared across all language pairs. We train the proposedmulti-way, multilingual model on ten language pairs from WMT'15 simultaneouslyand observe clear performance improvements over models trained on only onelanguage pair. In particular, we observe that the proposed model significantlyimproves the translation quality of low-resource language pairs.
 
-Efficient Character-level Document Classification by Combining
-  Convolution and Recurrent Layers
+Efficient Character-level Document Classification by Combining  Convolution and Recurrent Layers
 
-  Document classification tasks were primarily tackled at word level. Recent
-research that works with character-level inputs shows several benefits over
-word-level approaches such as natural incorporation of morphemes and better
-handling of rare words. We propose a neural network architecture that utilizes
-both convolution and recurrent layers to efficiently encode character inputs.
-We validate the proposed model on eight large scale document classification
-tasks and compare with character-level convolution-only models. It achieves
-comparable performances with much less parameters.
-
+  Document classification tasks were primarily tackled at word level. Recentresearch that works with character-level inputs shows several benefits overword-level approaches such as natural incorporation of morphemes and betterhandling of rare words. We propose a neural network architecture that utilizesboth convolution and recurrent layers to efficiently encode character inputs.We validate the proposed model on eight large scale document classificationtasks and compare with character-level convolution-only models. It achievescomparable performances with much less parameters.
 
 Learning Distributed Representations of Sentences from Unlabelled Data
 
-  Unsupervised methods for learning distributed representations of words are
-ubiquitous in today's NLP research, but far less is known about the best ways
-to learn distributed phrase or sentence representations from unlabelled data.
-This paper is a systematic comparison of models that learn such
-representations. We find that the optimal approach depends critically on the
-intended application. Deeper, more complex models are preferable for
-representations to be used in supervised systems, but shallow log-linear models
-work best for building representation spaces that can be decoded with simple
-spatial distance metrics. We also propose two new unsupervised
-representation-learning objectives designed to optimise the trade-off between
-training time, domain portability and performance.
-
+  Unsupervised methods for learning distributed representations of words areubiquitous in today's NLP research, but far less is known about the best waysto learn distributed phrase or sentence representations from unlabelled data.This paper is a systematic comparison of models that learn suchrepresentations. We find that the optimal approach depends critically on theintended application. Deeper, more complex models are preferable forrepresentations to be used in supervised systems, but shallow log-linear modelswork best for building representation spaces that can be decoded with simplespatial distance metrics. We also propose two new unsupervisedrepresentation-learning objectives designed to optimise the trade-off betweentraining time, domain portability and performance.
 
 Zero-Resource Translation with Multi-Lingual Neural Machine Translation
 
-  In this paper, we propose a novel finetuning algorithm for the recently
-introduced multi-way, mulitlingual neural machine translate that enables
-zero-resource machine translation. When used together with novel many-to-one
-translation strategies, we empirically show that this finetuning algorithm
-allows the multi-way, multilingual model to translate a zero-resource language
-pair (1) as well as a single-pair neural translation model trained with up to
-1M direct parallel sentences of the same language pair and (2) better than
-pivot-based translation strategy, while keeping only one additional copy of
-attention-related parameters.
-
-
-Multi-Way, Multilingual Neural Machine Translation with a Shared
-  Attention Mechanism
-
-  We propose multi-way, multilingual neural machine translation. The proposed
-approach enables a single neural translation model to translate between
-multiple languages, with a number of parameters that grows only linearly with
-the number of languages. This is made possible by having a single attention
-mechanism that is shared across all language pairs. We train the proposed
-multi-way, multilingual model on ten language pairs from WMT'15 simultaneously
-and observe clear performance improvements over models trained on only one
-language pair. In particular, we observe that the proposed model significantly
-improves the translation quality of low-resource language pairs.
-
-
-Does Neural Machine Translation Benefit from Larger Context?
-
-  We propose a neural machine translation architecture that models the
-surrounding text in addition to the source sentence. These models lead to
-better performance, both in terms of general translation quality and pronoun
-prediction, when trained on small corpora, although this improvement largely
-disappears when trained with a larger corpus. We also discover that
-attention-based neural machine translation is well suited for pronoun
-prediction and compares favorably with other approaches that were specifically
-designed for this task.
-
+  In this paper, we propose a novel finetuning algorithm for the recentlyintroduced multi-way, mulitlingual neural machine translate that enableszero-resource machine translation. When used together with novel many-to-onetranslation strategies, we empirically show that this finetuning algorithmallows the multi-way, multilingual model to translate a zero-resource languagepair (1) as well as a single-pair neural translation model trained with up to1M direct parallel sentences of the same language pair and (2) better thanpivot-based translation strategy, while keeping only one additional copy ofattention-related parameters.
 
 Towards Music Captioning: Generating Music Playlist Descriptions
 
-  Descriptions are often provided along with recommendations to help users'
-discovery. Recommending automatically generated music playlists (e.g.
-personalised playlists) introduces the problem of generating descriptions. In
-this paper, we propose a method for generating music playlist descriptions,
-which is called as music captioning. In the proposed method, audio content
-analysis and natural language processing are adopted to utilise the information
-of each track.
-
+  Descriptions are often provided along with recommendations to help users'discovery. Recommending automatically generated music playlists (e.g.personalised playlists) introduces the problem of generating descriptions. Inthis paper, we propose a method for generating music playlist descriptions,which is called as music captioning. In the proposed method, audio contentanalysis and natural language processing are adopted to utilise the informationof each track.
 
 Learning to Parse and Translate Improves Neural Machine Translation
 
-  There has been relatively little attention to incorporating linguistic prior
-to neural machine translation. Much of the previous work was further
-constrained to considering linguistic prior on the source side. In this paper,
-we propose a hybrid model, called NMT+RNNG, that learns to parse and translate
-by combining the recurrent neural network grammar into the attention-based
-neural machine translation. Our approach encourages the neural machine
-translation model to incorporate linguistic prior during training, and lets it
-translate on its own afterward. Extensive experiments with four language pairs
-show the effectiveness of the proposed NMT+RNNG.
-
+  There has been relatively little attention to incorporating linguistic priorto neural machine translation. Much of the previous work was furtherconstrained to considering linguistic prior on the source side. In this paper,we propose a hybrid model, called NMT+RNNG, that learns to parse and translateby combining the recurrent neural network grammar into the attention-basedneural machine translation. Our approach encourages the neural machinetranslation model to incorporate linguistic prior during training, and lets ittranslate on its own afterward. Extensive experiments with four language pairsshow the effectiveness of the proposed NMT+RNNG.
 
 Nematus: a Toolkit for Neural Machine Translation
 
-  We present Nematus, a toolkit for Neural Machine Translation. The toolkit
-prioritizes high translation accuracy, usability, and extensibility. Nematus
-has been used to build top-performing submissions to shared translation tasks
-at WMT and IWSLT, and has been used to train systems for production
-environments.
+  We present Nematus, a toolkit for Neural Machine Translation. The toolkitprioritizes high translation accuracy, usability, and extensibility. Nematushas been used to build top-performing submissions to shared translation tasksat WMT and IWSLT, and has been used to train systems for productionenvironments.
 
+Does Neural Machine Translation Benefit from Larger Context?
 
-A Comparison of Audio Signal Preprocessing Methods for Deep Neural
-  Networks on Music Tagging
+  We propose a neural machine translation architecture that models thesurrounding text in addition to the source sentence. These models lead tobetter performance, both in terms of general translation quality and pronounprediction, when trained on small corpora, although this improvement largelydisappears when trained with a larger corpus. We also discover thatattention-based neural machine translation is well suited for pronounprediction and compares favorably with other approaches that were specificallydesigned for this task.
 
-  In this paper, we empirically investigate the effect of audio preprocessing
-on music tagging with deep neural networks. We perform comprehensive
-experiments involving audio preprocessing using different time-frequency
-representations, logarithmic magnitude compression, frequency weighting, and
-scaling. We show that many commonly used input preprocessing techniques are
-redundant except magnitude compression.
+A Comparison of Audio Signal Preprocessing Methods for Deep Neural  Networks on Music Tagging
 
+  In this paper, we empirically investigate the effect of audio preprocessingon music tagging with deep neural networks. We perform comprehensiveexperiments involving audio preprocessing using different time-frequencyrepresentations, logarithmic magnitude compression, frequency weighting, andscaling. We show that many commonly used input preprocessing techniques areredundant except magnitude compression.
 
-Attention-based Mixture Density Recurrent Networks for History-based
-  Recommendation
+Attention-based Mixture Density Recurrent Networks for History-based  Recommendation
 
-  The goal of personalized history-based recommendation is to automatically
-output a distribution over all the items given a sequence of previous purchases
-of a user. In this work, we present a novel approach that uses a recurrent
-network for summarizing the history of purchases, continuous vectors
-representing items for scalability, and a novel attention-based recurrent
-mixture density network, which outputs each component in a mixture
-sequentially, for modelling a multi-modal conditional distribution. We evaluate
-the proposed approach on two publicly available datasets, MovieLens-20M and
-RecSys15. The experiments show that the proposed approach, which explicitly
-models the multi-modal nature of the predictive distribution, is able to
-improve the performance over various baselines in terms of precision, recall
-and nDCG.
+  The goal of personalized history-based recommendation is to automaticallyoutput a distribution over all the items given a sequence of previous purchasesof a user. In this work, we present a novel approach that uses a recurrentnetwork for summarizing the history of purchases, continuous vectorsrepresenting items for scalability, and a novel attention-based recurrentmixture density network, which outputs each component in a mixturesequentially, for modelling a multi-modal conditional distribution. We evaluatethe proposed approach on two publicly available datasets, MovieLens-20M andRecSys15. The experiments show that the proposed approach, which explicitlymodels the multi-modal nature of the predictive distribution, is able toimprove the performance over various baselines in terms of precision, recalland nDCG.
 
+Graph Convolutional Networks for Classification with a Structured Label  Space
 
-Graph Convolutional Networks for Classification with a Structured Label
-  Space
+  It is a usual practice to ignore any structural information underlyingclasses in multi-class classification. In this paper, we propose a graphconvolutional network (GCN) augmented neural network classifier to exploit aknown, underlying graph structure of labels. The proposed approach resembles an(approximate) inference procedure in, for instance, a conditional random field(CRF). We evaluate the proposed approach on document classification and objectrecognition and report both accuracies and graph-theoretic metrics thatcorrespond to the consistency of the model's prediction. The experiment resultsreveal that the proposed model outperforms a baseline method which ignores thegraph structures of a label space in terms of graph-theoretic metrics.
 
-  It is a usual practice to ignore any structural information underlying
-classes in multi-class classification. In this paper, we propose a graph
-convolutional network (GCN) augmented neural network classifier to exploit a
-known, underlying graph structure of labels. The proposed approach resembles an
-(approximate) inference procedure in, for instance, a conditional random field
-(CRF). We evaluate the proposed approach on document classification and object
-recognition and report both accuracies and graph-theoretic metrics that
-correspond to the consistency of the model's prediction. The experiment results
-reveal that the proposed model outperforms a baseline method which ignores the
-graph structures of a label space in terms of graph-theoretic metrics.
+Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative  Refinement
 
+  We propose a conditional non-autoregressive neural sequence model based oniterative refinement. The proposed model is designed based on the principles oflatent variable models and denoising autoencoders, and is generally applicableto any sequence generation task. We extensively evaluate the proposed model onmachine translation (En-De and En-Ro) and image caption generation, and observethat it significantly speeds up decoding while maintaining the generationquality comparable to the autoregressive counterpart.
 
-Deterministic Non-Autoregressive Neural Sequence Modeling by Iterative
-  Refinement
+Retrieval-Augmented Convolutional Neural Networks for Improved  Robustness against Adversarial Examples
 
-  We propose a conditional non-autoregressive neural sequence model based on
-iterative refinement. The proposed model is designed based on the principles of
-latent variable models and denoising autoencoders, and is generally applicable
-to any sequence generation task. We extensively evaluate the proposed model on
-machine translation (En-De and En-Ro) and image caption generation, and observe
-that it significantly speeds up decoding while maintaining the generation
-quality comparable to the autoregressive counterpart.
-
-
-Retrieval-Augmented Convolutional Neural Networks for Improved
-  Robustness against Adversarial Examples
-
-  We propose a retrieval-augmented convolutional network and propose to train
-it with local mixup, a novel variant of the recently proposed mixup algorithm.
-The proposed hybrid architecture combining a convolutional network and an
-off-the-shelf retrieval engine was designed to mitigate the adverse effect of
-off-manifold adversarial examples, while the proposed local mixup addresses
-on-manifold ones by explicitly encouraging the classifier to locally behave
-linearly on the data manifold. Our evaluation of the proposed approach against
-five readily-available adversarial attacks on three datasets--CIFAR-10, SVHN
-and ImageNet--demonstrate the improved robustness compared to the vanilla
-convolutional network.
-
+  We propose a retrieval-augmented convolutional network and propose to trainit with local mixup, a novel variant of the recently proposed mixup algorithm.The proposed hybrid architecture combining a convolutional network and anoff-the-shelf retrieval engine was designed to mitigate the adverse effect ofoff-manifold adversarial examples, while the proposed local mixup addresseson-manifold ones by explicitly encouraging the classifier to locally behavelinearly on the data manifold. Our evaluation of the proposed approach againstfive readily-available adversarial attacks on three datasets--CIFAR-10, SVHNand ImageNet--demonstrate the improved robustness compared to the vanillaconvolutional network.
 
 Vehicle Communication Strategies for Simulated Highway Driving
 
-  Interest in emergent communication has recently surged in Machine Learning.
-The focus of this interest has largely been either on investigating the
-properties of the learned protocol or on utilizing emergent communication to
-better solve problems that already have a viable solution. Here, we consider
-self-driving cars coordinating with each other and focus on how communication
-influences the agents' collective behavior. Our main result is that
-communication helps (most) with adverse conditions.
-
+  Interest in emergent communication has recently surged in Machine Learning.The focus of this interest has largely been either on investigating theproperties of the learned protocol or on utilizing emergent communication tobetter solve problems that already have a viable solution. Here, we considerself-driving cars coordinating with each other and focus on how communicationinfluences the agents' collective behavior. Our main result is thatcommunication helps (most) with adverse conditions.
 
 Dynamic Meta-Embeddings for Improved Sentence Representations
 
-  While one of the first steps in many NLP systems is selecting what
-pre-trained word embeddings to use, we argue that such a step is better left
-for neural networks to figure out by themselves. To that end, we introduce
-dynamic meta-embeddings, a simple yet effective method for the supervised
-learning of embedding ensembles, which leads to state-of-the-art performance
-within the same model class on a variety of tasks. We subsequently show how the
-technique can be used to shed new light on the usage of word embeddings in NLP
-systems.
-
+  While one of the first steps in many NLP systems is selecting whatpre-trained word embeddings to use, we argue that such a step is better leftfor neural networks to figure out by themselves. To that end, we introducedynamic meta-embeddings, a simple yet effective method for the supervisedlearning of embedding ensembles, which leads to state-of-the-art performancewithin the same model class on a variety of tasks. We subsequently show how thetechnique can be used to shed new light on the usage of word embeddings in NLPsystems.
 
 Classifier-agnostic saliency map extraction
 
-  Extracting saliency maps, which indicate parts of the image important to
-classification, requires many tricks to achieve satisfactory performance when
-using classifier-dependent methods. Instead, we propose classifier-agnostic
-saliency map extraction, which finds all parts of the image that any classifier
-could use, not just one given in advance. We observe that the proposed approach
-extracts higher quality saliency maps and outperforms existing
-weakly-supervised localization techniques, setting the new state of the art
-result on the ImageNet dataset. We made our code publicly available at
-https://github.com/kondiz/casme .
-
+  Extracting saliency maps, which indicate parts of the image important toclassification, requires many tricks to achieve satisfactory performance whenusing classifier-dependent methods. Instead, we propose classifier-agnosticsaliency map extraction, which finds all parts of the image that any classifiercould use, not just one given in advance. We observe that the proposed approachextracts higher quality saliency maps and outperforms existingweakly-supervised localization techniques, setting the new state of the artresult on the ImageNet dataset. We made our code publicly available athttps://github.com/kondiz/casme .
 
 Pommerman: A Multi-Agent Playground
 
-  We present Pommerman, a multi-agent environment based on the classic console
-game Bomberman. Pommerman consists of a set of scenarios, each having at least
-four players and containing both cooperative and competitive aspects. We
-believe that success in Pommerman will require a diverse set of tools and
-methods, including planning, opponent/teammate modeling, game theory, and
-communication, and consequently can serve well as a multi-agent benchmark. To
-date, we have already hosted one competition, and our next one will be featured
-in the NIPS 2018 competition track.
-
+  We present Pommerman, a multi-agent environment based on the classic consolegame Bomberman. Pommerman consists of a set of scenarios, each having at leastfour players and containing both cooperative and competitive aspects. Webelieve that success in Pommerman will require a diverse set of tools andmethods, including planning, opponent/teammate modeling, game theory, andcommunication, and consequently can serve well as a multi-agent benchmark. Todate, we have already hosted one competition, and our next one will be featuredin the NIPS 2018 competition track.
 
 Dialogue Natural Language Inference
 
-  Consistency is a long standing issue faced by dialogue models. In this paper,
-we frame the consistency of dialogue agents as natural language inference (NLI)
-and create a new natural language inference dataset called Dialogue NLI. We
-propose a method which demonstrates that a model trained on Dialogue NLI can be
-used to improve the consistency of a dialogue model, and evaluate the method
-with human evaluation and with automatic metrics on a suite of evaluation sets
-designed to measure a dialogue model's consistency.
+  Consistency is a long standing issue faced by dialogue models. In this paper,we frame the consistency of dialogue agents as natural language inference (NLI)and create a new natural language inference dataset called Dialogue NLI. Wepropose a method which demonstrates that a model trained on Dialogue NLI can beused to improve the consistency of a dialogue model, and evaluate the methodwith human evaluation and with automatic metrics on a suite of evaluation setsdesigned to measure a dialogue model's consistency.
 
+BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field  Language Model
 
-BERT has a Mouth, and It Must Speak: BERT as a Markov Random Field
-  Language Model
-
-  We show that BERT (Devlin et al., 2018) is a Markov random field language
-model. This formulation gives way to a natural procedure to sample sentences
-from BERT. We generate from BERT and find that it can produce high-quality,
-fluent generations. Compared to the generations of a traditional left-to-right
-language model, BERT generates sentences that are more diverse but of slightly
-worse quality.
-
+  We show that BERT (Devlin et al., 2018) is a Markov random field languagemodel. This formulation gives way to a natural procedure to sample sentencesfrom BERT. We generate from BERT and find that it can produce high-quality,fluent generations. Compared to the generations of a traditional left-to-rightlanguage model, BERT generates sentences that are more diverse but of slightlyworse quality.
 
 Context-Aware Learning for Neural Machine Translation
 
-  Interest in larger-context neural machine translation, including
-document-level and multi-modal translation, has been growing. Multiple works
-have proposed new network architectures or evaluation schemes, but potentially
-helpful context is still sometimes ignored by larger-context translation
-models. In this paper, we propose a novel learning algorithm that explicitly
-encourages a neural translation model to take into account additional context
-using a multilevel pair-wise ranking loss. We evaluate the proposed learning
-algorithm with a transformer-based larger-context translation system on
-document-level translation. By comparing performance using actual and random
-contexts, we show that a model trained with the proposed algorithm is more
-sensitive to the additional context.
-
-
-On the Equivalence Between Deep NADE and Generative Stochastic Networks
-
-  Neural Autoregressive Distribution Estimators (NADEs) have recently been
-shown as successful alternatives for modeling high dimensional multimodal
-distributions. One issue associated with NADEs is that they rely on a
-particular order of factorization for $P(\mathbf{x})$. This issue has been
-recently addressed by a variant of NADE called Orderless NADEs and its deeper
-version, Deep Orderless NADE. Orderless NADEs are trained based on a criterion
-that stochastically maximizes $P(\mathbf{x})$ with all possible orders of
-factorizations. Unfortunately, ancestral sampling from deep NADE is very
-expensive, corresponding to running through a neural net separately predicting
-each of the visible variables given some others. This work makes a connection
-between this criterion and the training criterion for Generative Stochastic
-Networks (GSNs). It shows that training NADEs in this way also trains a GSN,
-which defines a Markov chain associated with the NADE model. Based on this
-connection, we show an alternative way to sample from a trained Orderless NADE
-that allows to trade-off computing time and quality of the samples: a 3 to
-10-fold speedup (taking into account the waste due to correlations between
-consecutive samples of the chain) can be obtained without noticeably reducing
-the quality of the samples. This is achieved using a novel sampling procedure
-for GSNs called annealed GSN sampling, similar to tempering methods that
-combines fast mixing (obtained thanks to steps at high noise levels) with
-accurate samples (obtained thanks to steps at low noise levels).
-
-
-Identifying and attacking the saddle point problem in high-dimensional
-  non-convex optimization
-
-  A central challenge to many fields of science and engineering involves
-minimizing non-convex error functions over continuous, high dimensional spaces.
-Gradient descent or quasi-Newton methods are almost ubiquitously used to
-perform such minimizations, and it is often thought that a main source of
-difficulty for these local methods to find the global minimum is the
-proliferation of local minima with much higher error than the global minimum.
-Here we argue, based on results from statistical physics, random matrix theory,
-neural network theory, and empirical evidence, that a deeper and more profound
-difficulty originates from the proliferation of saddle points, not local
-minima, especially in high dimensional problems of practical interest. Such
-saddle points are surrounded by high error plateaus that can dramatically slow
-down learning, and give the illusory impression of the existence of a local
-minimum. Motivated by these arguments, we propose a new approach to
-second-order optimization, the saddle-free Newton method, that can rapidly
-escape high dimensional saddle points, unlike gradient descent and quasi-Newton
-methods. We apply this algorithm to deep or recurrent neural network training,
-and provide numerical evidence for its superior optimization performance.
-
-
-Exponentially Increasing the Capacity-to-Computation Ratio for
-  Conditional Computation in Deep Learning
-
-  Many state-of-the-art results obtained with deep networks are achieved with
-the largest models that could be trained, and if more computation power was
-available, we might be able to exploit much larger datasets in order to improve
-generalization ability. Whereas in learning algorithms such as decision trees
-the ratio of capacity (e.g., the number of parameters) to computation is very
-favorable (up to exponentially more parameters than computation), the ratio is
-essentially 1 for deep neural networks. Conditional computation has been
-proposed as a way to increase the capacity of a deep neural network without
-increasing the amount of computation required, by activating some parameters
-and computation "on-demand", on a per-example basis. In this note, we propose a
-novel parametrization of weight matrices in neural networks which has the
-potential to increase up to exponentially the ratio of the number of parameters
-to computation. The proposed approach is based on turning on some parameters
-(weight matrices) when specific bit patterns of hidden unit activations are
-obtained. In order to better control for the overfitting that might result, we
-propose a parametrization that is tree-structured, where each node of the tree
-corresponds to a prefix of a sequence of sign bits, or gating units, associated
-with hidden units.
-
+  Interest in larger-context neural machine translation, includingdocument-level and multi-modal translation, has been growing. Multiple workshave proposed new network architectures or evaluation schemes, but potentiallyhelpful context is still sometimes ignored by larger-context translationmodels. In this paper, we propose a novel learning algorithm that explicitlyencourages a neural translation model to take into account additional contextusing a multilevel pair-wise ranking loss. We evaluate the proposed learningalgorithm with a transformer-based larger-context translation system ondocument-level translation. By comparing performance using actual and randomcontexts, we show that a model trained with the proposed algorithm is moresensitive to the additional context.
 
 How to Construct Deep Recurrent Neural Networks
 
-  In this paper, we explore different ways to extend a recurrent neural network
-(RNN) to a \textit{deep} RNN. We start by arguing that the concept of depth in
-an RNN is not as clear as it is in feedforward neural networks. By carefully
-analyzing and understanding the architecture of an RNN, however, we find three
-points of an RNN which may be made deeper; (1) input-to-hidden function, (2)
-hidden-to-hidden transition and (3) hidden-to-output function. Based on this
-observation, we propose two novel architectures of a deep RNN which are
-orthogonal to an earlier attempt of stacking multiple recurrent layers to build
-a deep RNN (Schmidhuber, 1992; El Hihi and Bengio, 1996). We provide an
-alternative interpretation of these deep RNNs using a novel framework based on
-neural operators. The proposed deep RNNs are empirically evaluated on the tasks
-of polyphonic music prediction and language modeling. The experimental result
-supports our claim that the proposed deep RNNs benefit from the depth and
-outperform the conventional, shallow RNNs.
+  In this paper, we explore different ways to extend a recurrent neural network(RNN) to a \textit{deep} RNN. We start by arguing that the concept of depth inan RNN is not as clear as it is in feedforward neural networks. By carefullyanalyzing and understanding the architecture of an RNN, however, we find threepoints of an RNN which may be made deeper; (1) input-to-hidden function, (2)hidden-to-hidden transition and (3) hidden-to-output function. Based on thisobservation, we propose two novel architectures of a deep RNN which areorthogonal to an earlier attempt of stacking multiple recurrent layers to builda deep RNN (Schmidhuber, 1992; El Hihi and Bengio, 1996). We provide analternative interpretation of these deep RNNs using a novel framework based onneural operators. The proposed deep RNNs are empirically evaluated on the tasksof polyphonic music prediction and language modeling. The experimental resultsupports our claim that the proposed deep RNNs benefit from the depth andoutperform the conventional, shallow RNNs.
 
+Identifying and attacking the saddle point problem in high-dimensional  non-convex optimization
+
+  A central challenge to many fields of science and engineering involvesminimizing non-convex error functions over continuous, high dimensional spaces.Gradient descent or quasi-Newton methods are almost ubiquitously used toperform such minimizations, and it is often thought that a main source ofdifficulty for these local methods to find the global minimum is theproliferation of local minima with much higher error than the global minimum.Here we argue, based on results from statistical physics, random matrix theory,neural network theory, and empirical evidence, that a deeper and more profounddifficulty originates from the proliferation of saddle points, not localminima, especially in high dimensional problems of practical interest. Suchsaddle points are surrounded by high error plateaus that can dramatically slowdown learning, and give the illusory impression of the existence of a localminimum. Motivated by these arguments, we propose a new approach tosecond-order optimization, the saddle-free Newton method, that can rapidlyescape high dimensional saddle points, unlike gradient descent and quasi-Newtonmethods. We apply this algorithm to deep or recurrent neural network training,and provide numerical evidence for its superior optimization performance.
+
+Exponentially Increasing the Capacity-to-Computation Ratio for  Conditional Computation in Deep Learning
+
+  Many state-of-the-art results obtained with deep networks are achieved withthe largest models that could be trained, and if more computation power wasavailable, we might be able to exploit much larger datasets in order to improvegeneralization ability. Whereas in learning algorithms such as decision treesthe ratio of capacity (e.g., the number of parameters) to computation is veryfavorable (up to exponentially more parameters than computation), the ratio isessentially 1 for deep neural networks. Conditional computation has beenproposed as a way to increase the capacity of a deep neural network withoutincreasing the amount of computation required, by activating some parametersand computation "on-demand", on a per-example basis. In this note, we propose anovel parametrization of weight matrices in neural networks which has thepotential to increase up to exponentially the ratio of the number of parametersto computation. The proposed approach is based on turning on some parameters(weight matrices) when specific bit patterns of hidden unit activations areobtained. In order to better control for the overfitting that might result, wepropose a parametrization that is tree-structured, where each node of the treecorresponds to a prefix of a sequence of sign bits, or gating units, associatedwith hidden units.
+
+On the Equivalence Between Deep NADE and Generative Stochastic Networks
+
+  Neural Autoregressive Distribution Estimators (NADEs) have recently beenshown as successful alternatives for modeling high dimensional multimodaldistributions. One issue associated with NADEs is that they rely on aparticular order of factorization for $P(\mathbf{x})$. This issue has beenrecently addressed by a variant of NADE called Orderless NADEs and its deeperversion, Deep Orderless NADE. Orderless NADEs are trained based on a criterionthat stochastically maximizes $P(\mathbf{x})$ with all possible orders offactorizations. Unfortunately, ancestral sampling from deep NADE is veryexpensive, corresponding to running through a neural net separately predictingeach of the visible variables given some others. This work makes a connectionbetween this criterion and the training criterion for Generative StochasticNetworks (GSNs). It shows that training NADEs in this way also trains a GSN,which defines a Markov chain associated with the NADE model. Based on thisconnection, we show an alternative way to sample from a trained Orderless NADEthat allows to trade-off computing time and quality of the samples: a 3 to10-fold speedup (taking into account the waste due to correlations betweenconsecutive samples of the chain) can be obtained without noticeably reducingthe quality of the samples. This is achieved using a novel sampling procedurefor GSNs called annealed GSN sampling, similar to tempering methods thatcombines fast mixing (obtained thanks to steps at high noise levels) withaccurate samples (obtained thanks to steps at low noise levels).
 
 Learned-Norm Pooling for Deep Feedforward and Recurrent Neural Networks
 
-  In this paper we propose and investigate a novel nonlinear unit, called $L_p$
-unit, for deep neural networks. The proposed $L_p$ unit receives signals from
-several projections of a subset of units in the layer below and computes a
-normalized $L_p$ norm. We notice two interesting interpretations of the $L_p$
-unit. First, the proposed unit can be understood as a generalization of a
-number of conventional pooling operators such as average, root-mean-square and
-max pooling widely used in, for instance, convolutional neural networks (CNN),
-HMAX models and neocognitrons. Furthermore, the $L_p$ unit is, to a certain
-degree, similar to the recently proposed maxout unit (Goodfellow et al., 2013)
-which achieved the state-of-the-art object recognition results on a number of
-benchmark datasets. Secondly, we provide a geometrical interpretation of the
-activation function based on which we argue that the $L_p$ unit is more
-efficient at representing complex, nonlinear separating boundaries. Each $L_p$
-unit defines a superelliptic boundary, with its exact shape defined by the
-order $p$. We claim that this makes it possible to model arbitrarily shaped,
-curved boundaries more efficiently by combining a few $L_p$ units of different
-orders. This insight justifies the need for learning different orders for each
-unit in the model. We empirically evaluate the proposed $L_p$ units on a number
-of datasets and show that multilayer perceptrons (MLP) consisting of the $L_p$
-units achieve the state-of-the-art results on a number of benchmark datasets.
-Furthermore, we evaluate the proposed $L_p$ unit on the recently proposed deep
-recurrent neural networks (RNN).
-
-
-End-to-end Continuous Speech Recognition using Attention-based Recurrent
-  NN: First Results
-
-  We replace the Hidden Markov Model (HMM) which is traditionally used in in
-continuous speech recognition with a bi-directional recurrent neural network
-encoder coupled to a recurrent neural network decoder that directly emits a
-stream of phonemes. The alignment between the input and output sequences is
-established using an attention mechanism: the decoder emits each symbol based
-on a context created with a subset of input symbols elected by the attention
-mechanism. We report initial results demonstrating that this new approach
-achieves phoneme error rates that are comparable to the state-of-the-art
-HMM-based decoders, on the TIMIT dataset.
-
-
-Learning to Understand Phrases by Embedding the Dictionary
-
-  Distributional models that learn rich semantic word representations are a
-success story of recent NLP research. However, developing models that learn
-useful representations of phrases and sentences has proved far harder. We
-propose using the definitions found in everyday dictionaries as a means of
-bridging this gap between lexical and phrasal semantics. Neural language
-embedding models can be effectively trained to map dictionary definitions
-(phrases) to (lexical) representations of the words defined by those
-definitions. We present two applications of these architectures: "reverse
-dictionaries" that return the name of a concept given a definition or
-description and general-knowledge crossword question answerers. On both tasks,
-neural language embedding models trained on definitions from a handful of
-freely-available lexical resources perform as well or better than existing
-commercial systems that rely on significant task-specific engineering. The
-results highlight the effectiveness of both neural embedding architectures and
-definition-based training for developing models that understand phrases and
-sentences.
-
-
-ReNet: A Recurrent Neural Network Based Alternative to Convolutional
-  Networks
-
-  In this paper, we propose a deep neural network architecture for object
-recognition based on recurrent neural networks. The proposed network, called
-ReNet, replaces the ubiquitous convolution+pooling layer of the deep
-convolutional neural network with four recurrent neural networks that sweep
-horizontally and vertically in both directions across the image. We evaluate
-the proposed ReNet on three widely-used benchmark datasets; MNIST, CIFAR-10 and
-SVHN. The result suggests that ReNet is a viable alternative to the deep
-convolutional neural network, and that further investigation is needed.
-
+  In this paper we propose and investigate a novel nonlinear unit, called $L_p$unit, for deep neural networks. The proposed $L_p$ unit receives signals fromseveral projections of a subset of units in the layer below and computes anormalized $L_p$ norm. We notice two interesting interpretations of the $L_p$unit. First, the proposed unit can be understood as a generalization of anumber of conventional pooling operators such as average, root-mean-square andmax pooling widely used in, for instance, convolutional neural networks (CNN),HMAX models and neocognitrons. Furthermore, the $L_p$ unit is, to a certaindegree, similar to the recently proposed maxout unit (Goodfellow et al., 2013)which achieved the state-of-the-art object recognition results on a number ofbenchmark datasets. Secondly, we provide a geometrical interpretation of theactivation function based on which we argue that the $L_p$ unit is moreefficient at representing complex, nonlinear separating boundaries. Each $L_p$unit defines a superelliptic boundary, with its exact shape defined by theorder $p$. We claim that this makes it possible to model arbitrarily shaped,curved boundaries more efficiently by combining a few $L_p$ units of differentorders. This insight justifies the need for learning different orders for eachunit in the model. We empirically evaluate the proposed $L_p$ units on a numberof datasets and show that multilayer perceptrons (MLP) consisting of the $L_p$units achieve the state-of-the-art results on a number of benchmark datasets.Furthermore, we evaluate the proposed $L_p$ unit on the recently proposed deeprecurrent neural networks (RNN).
 
 Bounding the Test Log-Likelihood of Generative Models
 
-  Several interesting generative learning algorithms involve a complex
-probability distribution over many random variables, involving intractable
-normalization constants or latent variable normalization. Some of them may even
-not have an analytic expression for the unnormalized probability function and
-no tractable approximation. This makes it difficult to estimate the quality of
-these models, once they have been trained, or to monitor their quality (e.g.
-for early stopping) while training. A previously proposed method is based on
-constructing a non-parametric density estimator of the model's probability
-function from samples generated by the model. We revisit this idea, propose a
-more efficient estimator, and prove that it provides a lower bound on the true
-test log-likelihood, and an unbiased estimator as the number of generated
-samples goes to infinity, although one that incorporates the effect of poor
-mixing. We further propose a biased variant of the estimator that can be used
-reliably with a finite number of samples for the purpose of model comparison.
-
+  Several interesting generative learning algorithms involve a complexprobability distribution over many random variables, involving intractablenormalization constants or latent variable normalization. Some of them may evennot have an analytic expression for the unnormalized probability function andno tractable approximation. This makes it difficult to estimate the quality ofthese models, once they have been trained, or to monitor their quality (e.g.for early stopping) while training. A previously proposed method is based onconstructing a non-parametric density estimator of the model's probabilityfunction from samples generated by the model. We revisit this idea, propose amore efficient estimator, and prove that it provides a lower bound on the truetest log-likelihood, and an unbiased estimator as the number of generatedsamples goes to infinity, although one that incorporates the effect of poormixing. We further propose a biased variant of the estimator that can be usedreliably with a finite number of samples for the purpose of model comparison.
 
 Iterative Neural Autoregressive Distribution Estimator (NADE-k)
 
-  Training of the neural autoregressive density estimator (NADE) can be viewed
-as doing one step of probabilistic inference on missing values in data. We
-propose a new model that extends this inference scheme to multiple steps,
-arguing that it is easier to learn to improve a reconstruction in $k$ steps
-rather than to learn to reconstruct in a single inference step. The proposed
-model is an unsupervised building block for deep learning that combines the
-desirable properties of NADE and multi-predictive training: (1) Its test
-likelihood can be computed analytically, (2) it is easy to generate independent
-samples from it, and (3) it uses an inference engine that is a superset of
-variational inference for Boltzmann machines. The proposed NADE-k is
-competitive with the state-of-the-art in density estimation on the two datasets
-tested.
+  Training of the neural autoregressive density estimator (NADE) can be viewedas doing one step of probabilistic inference on missing values in data. Wepropose a new model that extends this inference scheme to multiple steps,arguing that it is easier to learn to improve a reconstruction in $k$ stepsrather than to learn to reconstruct in a single inference step. The proposedmodel is an unsupervised building block for deep learning that combines thedesirable properties of NADE and multi-predictive training: (1) Its testlikelihood can be computed analytically, (2) it is easy to generate independentsamples from it, and (3) it uses an inference engine that is a superset ofvariational inference for Boltzmann machines. The proposed NADE-k iscompetitive with the state-of-the-art in density estimation on the two datasetstested.
 
+End-to-end Continuous Speech Recognition using Attention-based Recurrent  NN: First Results
 
-Gated Word-Character Recurrent Language Model
+  We replace the Hidden Markov Model (HMM) which is traditionally used in incontinuous speech recognition with a bi-directional recurrent neural networkencoder coupled to a recurrent neural network decoder that directly emits astream of phonemes. The alignment between the input and output sequences isestablished using an attention mechanism: the decoder emits each symbol basedon a context created with a subset of input symbols elected by the attentionmechanism. We report initial results demonstrating that this new approachachieves phoneme error rates that are comparable to the state-of-the-artHMM-based decoders, on the TIMIT dataset.
 
-  We introduce a recurrent neural network language model (RNN-LM) with long
-short-term memory (LSTM) units that utilizes both character-level and
-word-level inputs. Our model has a gate that adaptively finds the optimal
-mixture of the character-level and word-level inputs. The gate creates the
-final vector representation of a word by combining two distinct representations
-of the word. The character-level inputs are converted into vector
-representations of words using a bidirectional LSTM. The word-level inputs are
-projected into another high-dimensional space by a word lookup table. The final
-vector representations of words are used in the LSTM language model which
-predicts the next word given all the preceding words. Our model with the gating
-mechanism effectively utilizes the character-level inputs for rare and
-out-of-vocabulary words and outperforms word-level language models on several
-English corpora.
+Gated Feedback Recurrent Neural Networks
 
+  In this work, we propose a novel recurrent neural network (RNN) architecture.The proposed RNN, gated-feedback RNN (GF-RNN), extends the existing approach ofstacking multiple recurrent layers by allowing and controlling signals flowingfrom upper recurrent layers to lower layers using a global gating unit for eachpair of layers. The recurrent signals exchanged between layers are gatedadaptively based on the previous hidden states and the current input. Weevaluated the proposed GF-RNN with different types of recurrent units, such astanh, long short-term memory and gated recurrent units, on the tasks ofcharacter-level language modeling and Python program evaluation. Our empiricalevaluation of different RNN units, revealed that in both tasks, the GF-RNNoutperforms the conventional approaches to build deep stacked RNNs. We suggestthat the improvement arises because the GF-RNN can adaptively assign differentlayers to different timescales and layer-to-layer interactions (including thetop-down ones which are not usually present in a stacked RNN) by learning togate these interactions.
 
-Recurrent Neural Networks for Multivariate Time Series with Missing
-  Values
+Show, Attend and Tell: Neural Image Caption Generation with Visual  Attention
 
-  Multivariate time series data in practical applications, such as health care,
-geoscience, and biology, are characterized by a variety of missing values. In
-time series prediction and other related tasks, it has been noted that missing
-values and their missing patterns are often correlated with the target labels,
-a.k.a., informative missingness. There is very limited work on exploiting the
-missing patterns for effective imputation and improving prediction performance.
-In this paper, we develop novel deep learning models, namely GRU-D, as one of
-the early attempts. GRU-D is based on Gated Recurrent Unit (GRU), a
-state-of-the-art recurrent neural network. It takes two representations of
-missing patterns, i.e., masking and time interval, and effectively incorporates
-them into a deep model architecture so that it not only captures the long-term
-temporal dependencies in time series, but also utilizes the missing patterns to
-achieve better prediction results. Experiments of time series classification
-tasks on real-world clinical datasets (MIMIC-III, PhysioNet) and synthetic
-datasets demonstrate that our models achieve state-of-the-art performance and
-provides useful insights for better understanding and utilization of missing
-values in time series analysis.
+  Inspired by recent work in machine translation and object detection, weintroduce an attention based model that automatically learns to describe thecontent of images. We describe how we can train this model in a deterministicmanner using standard backpropagation techniques and stochastically bymaximizing a variational lower bound. We also show through visualization howthe model is able to automatically learn to fix its gaze on salient objectswhile generating the corresponding words in the output sequence. We validatethe use of attention with state-of-the-art performance on three benchmarkdatasets: Flickr8k, Flickr30k and MS COCO.
 
+On Using Monolingual Corpora in Neural Machine Translation
 
-First Result on Arabic Neural Machine Translation
+  Recent work on end-to-end neural network-based architectures for machinetranslation has shown promising results for En-Fr and En-De translation.Arguably, one of the major factors behind this success has been theavailability of high quality parallel corpora. In this work, we investigate howto leverage abundant monolingual corpora for neural machine translation.Compared to a phrase-based and hierarchical baseline, we obtain up to $1.96$BLEU improvement on the low-resource language pair Turkish-English, and $1.59$BLEU on the focused domain task of Chinese-English chat messages. While ourmethod was initially targeted toward such tasks with less parallel data, weshow that it also extends to high resource languages such as Cs-En and De-Enwhere we obtain an improvement of $0.39$ and $0.47$ BLEU scores over the neuralmachine translation baselines, respectively.
 
-  Neural machine translation has become a major alternative to widely used
-phrase-based statistical machine translation. We notice however that much of
-research on neural machine translation has focused on European languages
-despite its language agnostic nature. In this paper, we apply neural machine
-translation to the task of Arabic translation (Ar<->En) and compare it against
-a standard phrase-based translation system. We run extensive comparison using
-various configurations in preprocessing Arabic script and show that the
-phrase-based and neural translation systems perform comparably to each other
-and that proper preprocessing of Arabic script has a similar effect on both of
-the systems. We however observe that the neural machine translation
-significantly outperform the phrase-based system on an out-of-domain test set,
-making it attractive for real-world deployment.
+Learning to Understand Phrases by Embedding the Dictionary
 
+  Distributional models that learn rich semantic word representations are asuccess story of recent NLP research. However, developing models that learnuseful representations of phrases and sentences has proved far harder. Wepropose using the definitions found in everyday dictionaries as a means ofbridging this gap between lexical and phrasal semantics. Neural languageembedding models can be effectively trained to map dictionary definitions(phrases) to (lexical) representations of the words defined by thosedefinitions. We present two applications of these architectures: "reversedictionaries" that return the name of a concept given a definition ordescription and general-knowledge crossword question answerers. On both tasks,neural language embedding models trained on definitions from a handful offreely-available lexical resources perform as well or better than existingcommercial systems that rely on significant task-specific engineering. Theresults highlight the effectiveness of both neural embedding architectures anddefinition-based training for developing models that understand phrases andsentences.
+
+ReNet: A Recurrent Neural Network Based Alternative to Convolutional  Networks
+
+  In this paper, we propose a deep neural network architecture for objectrecognition based on recurrent neural networks. The proposed network, calledReNet, replaces the ubiquitous convolution+pooling layer of the deepconvolutional neural network with four recurrent neural networks that sweephorizontally and vertically in both directions across the image. We evaluatethe proposed ReNet on three widely-used benchmark datasets; MNIST, CIFAR-10 andSVHN. The result suggests that ReNet is a viable alternative to the deepconvolutional neural network, and that further investigation is needed.
 

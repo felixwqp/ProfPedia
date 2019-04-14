@@ -1,108 +1,20 @@
 Contamination Estimation via Convex Relaxations
 
-  Identifying anomalies and contamination in datasets is important in a wide
-variety of settings. In this paper, we describe a new technique for estimating
-contamination in large, discrete valued datasets. Our approach considers the
-normal condition of the data to be specified by a model consisting of a set of
-distributions. Our key contribution is in our approach to contamination
-estimation. Specifically, we develop a technique that identifies the minimum
-number of data points that must be discarded (i.e., the level of contamination)
-from an empirical data set in order to match the model to within a specified
-goodness-of-fit, controlled by a p-value. Appealing to results from large
-deviations theory, we show a lower bound on the level of contamination is
-obtained by solving a series of convex programs. Theoretical results guarantee
-the bound converges at a rate of $O(\sqrt{\log(p)/p})$, where p is the size of
-the empirical data set.
-
+  Identifying anomalies and contamination in datasets is important in a widevariety of settings. In this paper, we describe a new technique for estimatingcontamination in large, discrete valued datasets. Our approach considers thenormal condition of the data to be specified by a model consisting of a set ofdistributions. Our key contribution is in our approach to contaminationestimation. Specifically, we develop a technique that identifies the minimumnumber of data points that must be discarded (i.e., the level of contamination)from an empirical data set in order to match the model to within a specifiedgoodness-of-fit, controlled by a p-value. Appealing to results from largedeviations theory, we show a lower bound on the level of contamination isobtained by solving a series of convex programs. Theoretical results guaranteethe bound converges at a rate of $O(\sqrt{\log(p)/p})$, where p is the size ofthe empirical data set.
 
 A System for Clock Synchronization in an Internet of Things
 
-  Synchronizing clocks on Internet of Things (IoT) devices is important for
-applications such as monitoring and real time control. In this paper, we
-describe a system for clock synchronization in IoT devices that is designed to
-be scalable, flexibly accommodate diverse hardware, and maintain tight
-synchronization over a range of operating conditions. We begin by examining
-clock drift on two standard IoT prototyping platforms. We observe clock drift
-on the order of seconds over relatively short time periods, as well as poor
-clock rate stability, each of which make standard synchronization protocols
-ineffective. To address this problem, we develop a synchronization system,
-which includes a lightweight client, a new packet exchange protocol called SPoT
-and a scalable reference server. We evaluate the efficacy of our system over a
-range of configurations, operating conditions and target platforms. We find
-that SPoT performs synchronization 22x and 17x more accurately than MQTT and
-SNTP, respectively, at high noise levels, and maintains a clock accuracy of
-within ~15ms at various noise levels. Finally, we report on the scalability of
-our server implementation through microbenchmark and wide area experiments,
-which show that our system can scale to support large numbers of clients
-efficiently.
-
+  Synchronizing clocks on Internet of Things (IoT) devices is important forapplications such as monitoring and real time control. In this paper, wedescribe a system for clock synchronization in IoT devices that is designed tobe scalable, flexibly accommodate diverse hardware, and maintain tightsynchronization over a range of operating conditions. We begin by examiningclock drift on two standard IoT prototyping platforms. We observe clock drifton the order of seconds over relatively short time periods, as well as poorclock rate stability, each of which make standard synchronization protocolsineffective. To address this problem, we develop a synchronization system,which includes a lightweight client, a new packet exchange protocol called SPoTand a scalable reference server. We evaluate the efficacy of our system over arange of configurations, operating conditions and target platforms. We findthat SPoT performs synchronization 22x and 17x more accurately than MQTT andSNTP, respectively, at high noise levels, and maintains a clock accuracy ofwithin ~15ms at various noise levels. Finally, we report on the scalability ofour server implementation through microbenchmark and wide area experiments,which show that our system can scale to support large numbers of clientsefficiently.
 
 Adscape: Harvesting and Analyzing Online Display Ads
 
-  Over the past decade, advertising has emerged as the primary source of
-revenue for many web sites and apps. In this paper we report a
-first-of-its-kind study that seeks to broadly understand the features,
-mechanisms and dynamics of display advertising on the web - i.e., the Adscape.
-Our study takes the perspective of users who are the targets of display ads
-shown on web sites. We develop a scalable crawling capability that enables us
-to gather the details of display ads including creatives and landing pages. Our
-crawling strategy is focused on maximizing the number of unique ads harvested.
-Of critical importance to our study is the recognition that a user's profile
-(i.e. browser profile and cookies) can have a significant impact on which ads
-are shown. We deploy our crawler over a variety of websites and profiles and
-this yields over 175K distinct display ads.
-  We find that while targeting is widely used, there remain many instances in
-which delivered ads do not depend on user profile; further, ads vary more over
-user profiles than over websites. We also assess the population of advertisers
-seen and identify over 3.7K distinct entities from a variety of business
-segments. Finally, we find that when targeting is used, the specific types of
-ads delivered generally correspond with the details of user profiles, and also
-on users' patterns of visit.
-
+  Over the past decade, advertising has emerged as the primary source ofrevenue for many web sites and apps. In this paper we report afirst-of-its-kind study that seeks to broadly understand the features,mechanisms and dynamics of display advertising on the web - i.e., the Adscape.Our study takes the perspective of users who are the targets of display adsshown on web sites. We develop a scalable crawling capability that enables usto gather the details of display ads including creatives and landing pages. Ourcrawling strategy is focused on maximizing the number of unique ads harvested.Of critical importance to our study is the recognition that a user's profile(i.e. browser profile and cookies) can have a significant impact on which adsare shown. We deploy our crawler over a variety of websites and profiles andthis yields over 175K distinct display ads.  We find that while targeting is widely used, there remain many instances inwhich delivered ads do not depend on user profile; further, ads vary more overuser profiles than over websites. We also assess the population of advertisersseen and identify over 3.7K distinct entities from a variety of businesssegments. Finally, we find that when targeting is used, the specific types ofads delivered generally correspond with the details of user profiles, and alsoon users' patterns of visit.
 
 TimeWeaver: Opportunistic One Way Delay Measurement via NTP
 
-  One-way delay (OWD) between end hosts has important implications for Internet
-applications, protocols, and measurement-based analyses. We describe a new
-approach for identifying OWDs via passive measurement of Network Time Protocol
-(NTP) traffic. NTP traffic offers the opportunity to measure OWDs accurately
-and continuously from hosts throughout the Internet. Based on detailed examina-
-tion of NTP implementations and in-situ behavior, we develop an analysis tool
-that we call TimeWeaver, which enables assessment of precision and accuracy of
-OWD measurements from NTP. We apply TimeWeaver to a ~1TB corpus of NTP traffic
-collected from 19 servers located in the US and report on the characteristics
-of hosts and their associated OWDs, which we classify in a precision/accuracy
-hierarchy. To demonstrate the utility of these measurements, we apply iterative
-hard-threshold singular value decomposition to estimate OWDs between arbitrary
-hosts from the high- est tier in the hierarchy. We show that this approach
-results in highly accurate estimates of OWDs, with average error rates on the
-order of less than 2%. Finally, we outline a number of applications---in
-particular, IP geolocation, network operations and management---for hosts in
-lower tiers of the precision hierarchy that can benefit from TimeWeaver,
-offering directions for future work.
+  One-way delay (OWD) between end hosts has important implications for Internetapplications, protocols, and measurement-based analyses. We describe a newapproach for identifying OWDs via passive measurement of Network Time Protocol(NTP) traffic. NTP traffic offers the opportunity to measure OWDs accuratelyand continuously from hosts throughout the Internet. Based on detailed examina-tion of NTP implementations and in-situ behavior, we develop an analysis toolthat we call TimeWeaver, which enables assessment of precision and accuracy ofOWD measurements from NTP. We apply TimeWeaver to a ~1TB corpus of NTP trafficcollected from 19 servers located in the US and report on the characteristicsof hosts and their associated OWDs, which we classify in a precision/accuracyhierarchy. To demonstrate the utility of these measurements, we apply iterativehard-threshold singular value decomposition to estimate OWDs between arbitraryhosts from the high- est tier in the hierarchy. We show that this approachresults in highly accurate estimates of OWDs, with average error rates on theorder of less than 2%. Finally, we outline a number of applications---inparticular, IP geolocation, network operations and management---for hosts inlower tiers of the precision hierarchy that can benefit from TimeWeaver,offering directions for future work.
 
+GreyFiber: A System for Providing Flexible Access to Wide-Area  Connectivity
 
-GreyFiber: A System for Providing Flexible Access to Wide-Area
-  Connectivity
-
-  Access to fiber-optic connectivity in the Internet is traditionally offered
-either via lit circuits or dark fiber. Economic (capex vs. opex) and
-operational considerations (latency, capacity) dictate the choice between these
-two offerings, but neither may effectively address the specific needs of
-modern-day enterprises or service providers over a range of use scenarios. In
-this paper, we describe a new approach for fiber-optic connectivity in the
-Internet that we call GreyFiber. The core idea of GreyFiber is to offer
-flexible access to fiber-optic paths between end points (e.g., datacenters or
-colocation facilities) over a range of timescales. We identify and discuss
-operational issues and systems challenges that need to be addressed to make
-GreyFiber a viable and realistic option for offering flexible access to
-infrastructure (similar to cloud computing). We investigate the efficacy of
-GreyFiber with a prototype implementation deployed in the GENI and CloudLab
-testbeds. Our scaling experiments show that 50 circuits can be provisioned
-within a minute. We also show that backup paths can be provisioned 28 times
-faster than an OSPF-based solution during failure/maintenance events. Our
-experiments also examine GreyFiber overhead demands and show that the time
-spent in circuit creation is dependent on the network infrastructure,
-indicating avenues for future improvements.
-
+  Access to fiber-optic connectivity in the Internet is traditionally offeredeither via lit circuits or dark fiber. Economic (capex vs. opex) andoperational considerations (latency, capacity) dictate the choice between thesetwo offerings, but neither may effectively address the specific needs ofmodern-day enterprises or service providers over a range of use scenarios. Inthis paper, we describe a new approach for fiber-optic connectivity in theInternet that we call GreyFiber. The core idea of GreyFiber is to offerflexible access to fiber-optic paths between end points (e.g., datacenters orcolocation facilities) over a range of timescales. We identify and discussoperational issues and systems challenges that need to be addressed to makeGreyFiber a viable and realistic option for offering flexible access toinfrastructure (similar to cloud computing). We investigate the efficacy ofGreyFiber with a prototype implementation deployed in the GENI and CloudLabtestbeds. Our scaling experiments show that 50 circuits can be provisionedwithin a minute. We also show that backup paths can be provisioned 28 timesfaster than an OSPF-based solution during failure/maintenance events. Ourexperiments also examine GreyFiber overhead demands and show that the timespent in circuit creation is dependent on the network infrastructure,indicating avenues for future improvements.
 

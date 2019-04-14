@@ -1,270 +1,40 @@
 Hop: Heterogeneity-Aware Decentralized Training
 
-  Recent work has shown that decentralized algorithms can deliver superior
-performance over centralized ones in the context of machine learning. The two
-approaches, with the main difference residing in their distinct communication
-patterns, are both susceptible to performance degradation in heterogeneous
-environments. Although vigorous efforts have been devoted to supporting
-centralized algorithms against heterogeneity, little has been explored in
-decentralized algorithms regarding this problem.
-  This paper proposes Hop, the first heterogeneity-aware decentralized training
-protocol. Based on a unique characteristic of decentralized training that we
-have identified, the iteration gap, we propose a queue-based synchronization
-mechanism that can efficiently implement backup workers and bounded staleness
-in the decentralized setting. To cope with deterministic slowdown, we propose
-skipping iterations so that the effect of slower workers is further mitigated.
-We build a prototype implementation of Hop on TensorFlow. The experiment
-results on CNN and SVM show significant speedup over standard decentralized
-training in heterogeneous settings.
-
+  Recent work has shown that decentralized algorithms can deliver superiorperformance over centralized ones in the context of machine learning. The twoapproaches, with the main difference residing in their distinct communicationpatterns, are both susceptible to performance degradation in heterogeneousenvironments. Although vigorous efforts have been devoted to supportingcentralized algorithms against heterogeneity, little has been explored indecentralized algorithms regarding this problem.  This paper proposes Hop, the first heterogeneity-aware decentralized trainingprotocol. Based on a unique characteristic of decentralized training that wehave identified, the iteration gap, we propose a queue-based synchronizationmechanism that can efficiently implement backup workers and bounded stalenessin the decentralized setting. To cope with deterministic slowdown, we proposeskipping iterations so that the effect of slower workers is further mitigated.We build a prototype implementation of Hop on TensorFlow. The experimentresults on CNN and SVM show significant speedup over standard decentralizedtraining in heterogeneous settings.
 
 VIBNN: Hardware Acceleration of Bayesian Neural Networks
 
-  Bayesian Neural Networks (BNNs) have been proposed to address the problem of
-model uncertainty in training and inference. By introducing weights associated
-with conditioned probability distributions, BNNs are capable of resolving the
-overfitting issue commonly seen in conventional neural networks and allow for
-small-data training, through the variational inference process. Frequent usage
-of Gaussian random variables in this process requires a properly optimized
-Gaussian Random Number Generator (GRNG). The high hardware cost of conventional
-GRNG makes the hardware implementation of BNNs challenging.
-  In this paper, we propose VIBNN, an FPGA-based hardware accelerator design
-for variational inference on BNNs. We explore the design space for massive
-amount of Gaussian variable sampling tasks in BNNs. Specifically, we introduce
-two high performance Gaussian (pseudo) random number generators: the RAM-based
-Linear Feedback Gaussian Random Number Generator (RLF-GRNG), which is inspired
-by the properties of binomial distribution and linear feedback logics; and the
-Bayesian Neural Network-oriented Wallace Gaussian Random Number Generator. To
-achieve high scalability and efficient memory access, we propose a deep
-pipelined accelerator architecture with fast execution and good hardware
-utilization. Experimental results demonstrate that the proposed VIBNN
-implementations on an FPGA can achieve throughput of 321,543.4 Images/s and
-energy efficiency upto 52,694.8 Images/J while maintaining similar accuracy as
-its software counterpart.
+  Bayesian Neural Networks (BNNs) have been proposed to address the problem ofmodel uncertainty in training and inference. By introducing weights associatedwith conditioned probability distributions, BNNs are capable of resolving theoverfitting issue commonly seen in conventional neural networks and allow forsmall-data training, through the variational inference process. Frequent usageof Gaussian random variables in this process requires a properly optimizedGaussian Random Number Generator (GRNG). The high hardware cost of conventionalGRNG makes the hardware implementation of BNNs challenging.  In this paper, we propose VIBNN, an FPGA-based hardware accelerator designfor variational inference on BNNs. We explore the design space for massiveamount of Gaussian variable sampling tasks in BNNs. Specifically, we introducetwo high performance Gaussian (pseudo) random number generators: the RAM-basedLinear Feedback Gaussian Random Number Generator (RLF-GRNG), which is inspiredby the properties of binomial distribution and linear feedback logics; and theBayesian Neural Network-oriented Wallace Gaussian Random Number Generator. Toachieve high scalability and efficient memory access, we propose a deeppipelined accelerator architecture with fast execution and good hardwareutilization. Experimental results demonstrate that the proposed VIBNNimplementations on an FPGA can achieve throughput of 321,543.4 Images/s andenergy efficiency upto 52,694.8 Images/J while maintaining similar accuracy asits software counterpart.
 
+Towards Ultra-High Performance and Energy Efficiency of Deep Learning  Systems: An Algorithm-Hardware Co-Optimization Framework
 
-Towards Ultra-High Performance and Energy Efficiency of Deep Learning
-  Systems: An Algorithm-Hardware Co-Optimization Framework
-
-  Hardware accelerations of deep learning systems have been extensively
-investigated in industry and academia. The aim of this paper is to achieve
-ultra-high energy efficiency and performance for hardware implementations of
-deep neural networks (DNNs). An algorithm-hardware co-optimization framework is
-developed, which is applicable to different DNN types, sizes, and application
-scenarios. The algorithm part adopts the general block-circulant matrices to
-achieve a fine-grained tradeoff between accuracy and compression ratio. It
-applies to both fully-connected and convolutional layers and contains a
-mathematically rigorous proof of the effectiveness of the method. The proposed
-algorithm reduces computational complexity per layer from O($n^2$) to O($n\log
-n$) and storage complexity from O($n^2$) to O($n$), both for training and
-inference. The hardware part consists of highly efficient Field Programmable
-Gate Array (FPGA)-based implementations using effective reconfiguration, batch
-processing, deep pipelining, resource re-using, and hierarchical control.
-Experimental results demonstrate that the proposed framework achieves at least
-152X speedup and 71X energy efficiency gain compared with IBM TrueNorth
-processor under the same test accuracy. It achieves at least 31X energy
-efficiency gain compared with the reference FPGA-based work.
-
+  Hardware accelerations of deep learning systems have been extensivelyinvestigated in industry and academia. The aim of this paper is to achieveultra-high energy efficiency and performance for hardware implementations ofdeep neural networks (DNNs). An algorithm-hardware co-optimization framework isdeveloped, which is applicable to different DNN types, sizes, and applicationscenarios. The algorithm part adopts the general block-circulant matrices toachieve a fine-grained tradeoff between accuracy and compression ratio. Itapplies to both fully-connected and convolutional layers and contains amathematically rigorous proof of the effectiveness of the method. The proposedalgorithm reduces computational complexity per layer from O($n^2$) to O($n\logn$) and storage complexity from O($n^2$) to O($n$), both for training andinference. The hardware part consists of highly efficient Field ProgrammableGate Array (FPGA)-based implementations using effective reconfiguration, batchprocessing, deep pipelining, resource re-using, and hierarchical control.Experimental results demonstrate that the proposed framework achieves at least152X speedup and 71X energy efficiency gain compared with IBM TrueNorthprocessor under the same test accuracy. It achieves at least 31X energyefficiency gain compared with the reference FPGA-based work.
 
 HyPar: Towards Hybrid Parallelism for Deep Learning Accelerator Array
 
-  With the rise of artificial intelligence in recent years, Deep Neural
-Networks (DNNs) have been widely used in many domains. To achieve high
-performance and energy efficiency, hardware acceleration (especially inference)
-of DNNs is intensively studied both in academia and industry. However, we still
-face two challenges: large DNN models and datasets, which incur frequent
-off-chip memory accesses; and the training of DNNs, which is not well-explored
-in recent accelerator designs. To truly provide high throughput and energy
-efficient acceleration for the training of deep and large models, we inevitably
-need to use multiple accelerators to explore the coarse-grain parallelism,
-compared to the fine-grain parallelism inside a layer considered in most of the
-existing architectures. It poses the key research question to seek the best
-organization of computation and dataflow among accelerators. In this paper, we
-propose a solution HyPar to determine layer-wise parallelism for deep neural
-network training with an array of DNN accelerators. HyPar partitions the
-feature map tensors (input and output), the kernel tensors, the gradient
-tensors, and the error tensors for the DNN accelerators. A partition
-constitutes the choice of parallelism for weighted layers. The optimization
-target is to search a partition that minimizes the total communication during
-training a complete DNN. To solve this problem, we propose a communication
-model to explain the source and amount of communications. Then, we use a
-hierarchical layer-wise dynamic programming method to search for the partition
-for each layer.
+  With the rise of artificial intelligence in recent years, Deep NeuralNetworks (DNNs) have been widely used in many domains. To achieve highperformance and energy efficiency, hardware acceleration (especially inference)of DNNs is intensively studied both in academia and industry. However, we stillface two challenges: large DNN models and datasets, which incur frequentoff-chip memory accesses; and the training of DNNs, which is not well-exploredin recent accelerator designs. To truly provide high throughput and energyefficient acceleration for the training of deep and large models, we inevitablyneed to use multiple accelerators to explore the coarse-grain parallelism,compared to the fine-grain parallelism inside a layer considered in most of theexisting architectures. It poses the key research question to seek the bestorganization of computation and dataflow among accelerators. In this paper, wepropose a solution HyPar to determine layer-wise parallelism for deep neuralnetwork training with an array of DNN accelerators. HyPar partitions thefeature map tensors (input and output), the kernel tensors, the gradienttensors, and the error tensors for the DNN accelerators. A partitionconstitutes the choice of parallelism for weighted layers. The optimizationtarget is to search a partition that minimizes the total communication duringtraining a complete DNN. To solve this problem, we propose a communicationmodel to explain the source and amount of communications. Then, we use ahierarchical layer-wise dynamic programming method to search for the partitionfor each layer.
 
+SC-DCNN: Highly-Scalable Deep Convolutional Neural Network using  Stochastic Computing
 
-SC-DCNN: Highly-Scalable Deep Convolutional Neural Network using
-  Stochastic Computing
-
-  With recent advancing of Internet of Things (IoTs), it becomes very
-attractive to implement the deep convolutional neural networks (DCNNs) onto
-embedded/portable systems. Presently, executing the software-based DCNNs
-requires high-performance server clusters in practice, restricting their
-widespread deployment on the mobile devices. To overcome this issue,
-considerable research efforts have been conducted in the context of developing
-highly-parallel and specific DCNN hardware, utilizing GPGPUs, FPGAs, and ASICs.
-Stochastic Computing (SC), which uses bit-stream to represent a number within
-[-1, 1] by counting the number of ones in the bit-stream, has a high potential
-for implementing DCNNs with high scalability and ultra-low hardware footprint.
-Since multiplications and additions can be calculated using AND gates and
-multiplexers in SC, significant reductions in power/energy and hardware
-footprint can be achieved compared to the conventional binary arithmetic
-implementations. The tremendous savings in power (energy) and hardware
-resources bring about immense design space for enhancing scalability and
-robustness for hardware DCNNs. This paper presents the first comprehensive
-design and optimization framework of SC-based DCNNs (SC-DCNNs). We first
-present the optimal designs of function blocks that perform the basic
-operations, i.e., inner product, pooling, and activation function. Then we
-propose the optimal design of four types of combinations of basic function
-blocks, named feature extraction blocks, which are in charge of extracting
-features from input feature maps. Besides, weight storage methods are
-investigated to reduce the area and power/energy consumption for storing
-weights. Finally, the whole SC-DCNN implementation is optimized, with feature
-extraction blocks carefully selected, to minimize area and power/energy
-consumption while maintaining a high network accuracy level.
-
+  With recent advancing of Internet of Things (IoTs), it becomes veryattractive to implement the deep convolutional neural networks (DCNNs) ontoembedded/portable systems. Presently, executing the software-based DCNNsrequires high-performance server clusters in practice, restricting theirwidespread deployment on the mobile devices. To overcome this issue,considerable research efforts have been conducted in the context of developinghighly-parallel and specific DCNN hardware, utilizing GPGPUs, FPGAs, and ASICs.Stochastic Computing (SC), which uses bit-stream to represent a number within[-1, 1] by counting the number of ones in the bit-stream, has a high potentialfor implementing DCNNs with high scalability and ultra-low hardware footprint.Since multiplications and additions can be calculated using AND gates andmultiplexers in SC, significant reductions in power/energy and hardwarefootprint can be achieved compared to the conventional binary arithmeticimplementations. The tremendous savings in power (energy) and hardwareresources bring about immense design space for enhancing scalability androbustness for hardware DCNNs. This paper presents the first comprehensivedesign and optimization framework of SC-based DCNNs (SC-DCNNs). We firstpresent the optimal designs of function blocks that perform the basicoperations, i.e., inner product, pooling, and activation function. Then wepropose the optimal design of four types of combinations of basic functionblocks, named feature extraction blocks, which are in charge of extractingfeatures from input feature maps. Besides, weight storage methods areinvestigated to reduce the area and power/energy consumption for storingweights. Finally, the whole SC-DCNN implementation is optimized, with featureextraction blocks carefully selected, to minimize area and power/energyconsumption while maintaining a high network accuracy level.
 
 GraphR: Accelerating Graph Processing Using ReRAM
 
-  This paper presents GRAPHR, the first ReRAM-based graph processing
-accelerator. GRAPHR follows the principle of near-data processing and explores
-the opportunity of performing massive parallel analog operations with low
-hardware and energy cost. The analog computation is suit- able for graph
-processing because: 1) The algorithms are iterative and could inherently
-tolerate the imprecision; 2) Both probability calculation (e.g., PageRank and
-Collaborative Filtering) and typical graph algorithms involving integers (e.g.,
-BFS/SSSP) are resilient to errors. The key insight of GRAPHR is that if a
-vertex program of a graph algorithm can be expressed in sparse matrix vector
-multiplication (SpMV), it can be efficiently performed by ReRAM crossbar. We
-show that this assumption is generally true for a large set of graph
-algorithms. GRAPHR is a novel accelerator architecture consisting of two
-components: memory ReRAM and graph engine (GE). The core graph computations are
-performed in sparse matrix format in GEs (ReRAM crossbars). The
-vector/matrix-based graph computation is not new, but ReRAM offers the unique
-opportunity to realize the massive parallelism with unprecedented energy
-efficiency and low hardware cost. With small subgraphs processed by GEs, the
-gain of performing parallel operations overshadows the wastes due to sparsity.
-The experiment results show that GRAPHR achieves a 16.01x (up to 132.67x)
-speedup and a 33.82x energy saving on geometric mean compared to a CPU baseline
-system. Com- pared to GPU, GRAPHR achieves 1.69x to 2.19x speedup and consumes
-4.77x to 8.91x less energy. GRAPHR gains a speedup of 1.16x to 4.12x, and is
-3.67x to 10.96x more energy efficiency compared to PIM-based architecture.
+  This paper presents GRAPHR, the first ReRAM-based graph processingaccelerator. GRAPHR follows the principle of near-data processing and exploresthe opportunity of performing massive parallel analog operations with lowhardware and energy cost. The analog computation is suit- able for graphprocessing because: 1) The algorithms are iterative and could inherentlytolerate the imprecision; 2) Both probability calculation (e.g., PageRank andCollaborative Filtering) and typical graph algorithms involving integers (e.g.,BFS/SSSP) are resilient to errors. The key insight of GRAPHR is that if avertex program of a graph algorithm can be expressed in sparse matrix vectormultiplication (SpMV), it can be efficiently performed by ReRAM crossbar. Weshow that this assumption is generally true for a large set of graphalgorithms. GRAPHR is a novel accelerator architecture consisting of twocomponents: memory ReRAM and graph engine (GE). The core graph computations areperformed in sparse matrix format in GEs (ReRAM crossbars). Thevector/matrix-based graph computation is not new, but ReRAM offers the uniqueopportunity to realize the massive parallelism with unprecedented energyefficiency and low hardware cost. With small subgraphs processed by GEs, thegain of performing parallel operations overshadows the wastes due to sparsity.The experiment results show that GRAPHR achieves a 16.01x (up to 132.67x)speedup and a 33.82x energy saving on geometric mean compared to a CPU baselinesystem. Com- pared to GPU, GRAPHR achieves 1.69x to 2.19x speedup and consumes4.77x to 8.91x less energy. GRAPHR gains a speedup of 1.16x to 4.12x, and is3.67x to 10.96x more energy efficiency compared to PIM-based architecture.
 
+CirCNN: Accelerating and Compressing Deep Neural Networks Using  Block-CirculantWeight Matrices
 
-CirCNN: Accelerating and Compressing Deep Neural Networks Using
-  Block-CirculantWeight Matrices
-
-  Large-scale deep neural networks (DNNs) are both compute and memory
-intensive. As the size of DNNs continues to grow, it is critical to improve the
-energy efficiency and performance while maintaining accuracy. For DNNs, the
-model size is an important factor affecting performance, scalability and energy
-efficiency. Weight pruning achieves good compression ratios but suffers from
-three drawbacks: 1) the irregular network structure after pruning; 2) the
-increased training complexity; and 3) the lack of rigorous guarantee of
-compression ratio and inference accuracy. To overcome these limitations, this
-paper proposes CirCNN, a principled approach to represent weights and process
-neural networks using block-circulant matrices. CirCNN utilizes the Fast
-Fourier Transform (FFT)-based fast multiplication, simultaneously reducing the
-computational complexity (both in inference and training) from O(n2) to
-O(nlogn) and the storage complexity from O(n2) to O(n), with negligible
-accuracy loss. Compared to other approaches, CirCNN is distinct due to its
-mathematical rigor: it can converge to the same effectiveness as DNNs without
-compression. The CirCNN architecture, a universal DNN inference engine that can
-be implemented on various hardware/software platforms with configurable network
-architecture. To demonstrate the performance and energy efficiency, we test
-CirCNN in FPGA, ASIC and embedded processors. Our results show that CirCNN
-architecture achieves very high energy efficiency and performance with a small
-hardware footprint. Based on the FPGA implementation and ASIC synthesis
-results, CirCNN achieves 6-102X energy efficiency improvements compared with
-the best state-of-the-art results.
-
+  Large-scale deep neural networks (DNNs) are both compute and memoryintensive. As the size of DNNs continues to grow, it is critical to improve theenergy efficiency and performance while maintaining accuracy. For DNNs, themodel size is an important factor affecting performance, scalability and energyefficiency. Weight pruning achieves good compression ratios but suffers fromthree drawbacks: 1) the irregular network structure after pruning; 2) theincreased training complexity; and 3) the lack of rigorous guarantee ofcompression ratio and inference accuracy. To overcome these limitations, thispaper proposes CirCNN, a principled approach to represent weights and processneural networks using block-circulant matrices. CirCNN utilizes the FastFourier Transform (FFT)-based fast multiplication, simultaneously reducing thecomputational complexity (both in inference and training) from O(n2) toO(nlogn) and the storage complexity from O(n2) to O(n), with negligibleaccuracy loss. Compared to other approaches, CirCNN is distinct due to itsmathematical rigor: it can converge to the same effectiveness as DNNs withoutcompression. The CirCNN architecture, a universal DNN inference engine that canbe implemented on various hardware/software platforms with configurable networkarchitecture. To demonstrate the performance and energy efficiency, we testCirCNN in FPGA, ASIC and embedded processors. Our results show that CirCNNarchitecture achieves very high energy efficiency and performance with a smallhardware footprint. Based on the FPGA implementation and ASIC synthesisresults, CirCNN achieves 6-102X energy efficiency improvements compared withthe best state-of-the-art results.
 
 A Case for Asymmetric Non-Volatile Memory Architecture
 
-  The byte-addressable Non-Volatile Memory (NVM) is a promising technology
-since it simultaneously provides DRAM-like performance, disk-like capacity, and
-persistency. The current NVM deployment is symmetric, where NVM devices are
-directly attached to servers. Due to the higher density, NVM provides larger
-capacity and can be shared among servers. Unfortunately, in the symmetric
-setting, the availability of NVM devices is affected by the specific machine it
-is attached to. High availability can be realized by replicating data to NVM on
-a remote machine. However, it requires full replication of data structure in
-local memory, limiting the size of the working set. This paper rethinks NVM
-deployment and makes a case for the asymmetric NVM architecture, which
-decouples servers from persistent data storage. In the proposed AsymNVM
-architecture, NVM devices (back-end nodes) can be shared by multiple servers
-(front-end nodes) and provide recoverable persistent data structures. The
-asymmetric architecture is made possible by RDMA, and follows the recent
-industry trend of resource disaggregation. We build AsymNVM framework based on
-AsymNVM architecture that implements: 1) high performance persistent data
-structure update; 2) NVM data management; 3) concurrency control; and 4)
-crash-consistency and replication. The central idea is to use operation logs to
-reduce the stall due to RDMA writes and enable efficient batching and caching
-in front-end nodes. To evaluation performance, we construct eight widely used
-data structures and two applications based on AsymNVM framework, and use traces
-of industry workloads. In a cluster with ten machines, the results show that
-AsymNVM achieves comparable performance to the best possible symmetric
-architecture while avoiding all the drawbacks with disaggregation. Compared to
-the baseline AsymNVM, speedup brought by the proposed optimizations is 6~22x.
+  The byte-addressable Non-Volatile Memory (NVM) is a promising technologysince it simultaneously provides DRAM-like performance, disk-like capacity, andpersistency. The current NVM deployment is symmetric, where NVM devices aredirectly attached to servers. Due to the higher density, NVM provides largercapacity and can be shared among servers. Unfortunately, in the symmetricsetting, the availability of NVM devices is affected by the specific machine itis attached to. High availability can be realized by replicating data to NVM ona remote machine. However, it requires full replication of data structure inlocal memory, limiting the size of the working set. This paper rethinks NVMdeployment and makes a case for the asymmetric NVM architecture, whichdecouples servers from persistent data storage. In the proposed AsymNVMarchitecture, NVM devices (back-end nodes) can be shared by multiple servers(front-end nodes) and provide recoverable persistent data structures. Theasymmetric architecture is made possible by RDMA, and follows the recentindustry trend of resource disaggregation. We build AsymNVM framework based onAsymNVM architecture that implements: 1) high performance persistent datastructure update; 2) NVM data management; 3) concurrency control; and 4)crash-consistency and replication. The central idea is to use operation logs toreduce the stall due to RDMA writes and enable efficient batching and cachingin front-end nodes. To evaluation performance, we construct eight widely useddata structures and two applications based on AsymNVM framework, and use tracesof industry workloads. In a cluster with ten machines, the results show thatAsymNVM achieves comparable performance to the best possible symmetricarchitecture while avoiding all the drawbacks with disaggregation. Compared tothe baseline AsymNVM, speedup brought by the proposed optimizations is 6~22x.
 
+E-RNN: Design Optimization for Efficient Recurrent Neural Networks in  FPGAs
 
-E-RNN: Design Optimization for Efficient Recurrent Neural Networks in
-  FPGAs
+  Recurrent Neural Networks (RNNs) are becoming increasingly important for timeseries-related applications which require efficient and real-timeimplementations. The two major types are Long Short-Term Memory (LSTM) andGated Recurrent Unit (GRU) networks. It is a challenging task to havereal-time, efficient, and accurate hardware RNN implementations because of thehigh sensitivity to imprecision accumulation and the requirement of specialactivation function implementations.  A key limitation of the prior works is the lack of a systematic designoptimization framework of RNN model and hardware implementations, especiallywhen the block size (or compression ratio) should be jointly optimized with RNNtype, layer size, etc. In this paper, we adopt the block-circulant matrix-basedframework, and present the Efficient RNN (E-RNN) framework for FPGAimplementations of the Automatic Speech Recognition (ASR) application. Theoverall goal is to improve performance/energy efficiency under accuracyrequirement. We use the alternating direction method of multipliers (ADMM)technique for more accurate block-circulant training, and present two designexplorations providing guidance on block size and reducing RNN training trials.Based on the two observations, we decompose E-RNN in two phases: Phase I ondetermining RNN model to reduce computation and storage subject to accuracyrequirement, and Phase II on hardware implementations given RNN model,including processing element design/optimization, quantization, activationimplementation, etc. Experimental results on actual FPGA deployments show thatE-RNN achieves a maximum energy efficiency improvement of 37.4$\times$ comparedwith ESE, and more than 2$\times$ compared with C-LSTM, under the sameaccuracy.
 
-  Recurrent Neural Networks (RNNs) are becoming increasingly important for time
-series-related applications which require efficient and real-time
-implementations. The two major types are Long Short-Term Memory (LSTM) and
-Gated Recurrent Unit (GRU) networks. It is a challenging task to have
-real-time, efficient, and accurate hardware RNN implementations because of the
-high sensitivity to imprecision accumulation and the requirement of special
-activation function implementations.
-  A key limitation of the prior works is the lack of a systematic design
-optimization framework of RNN model and hardware implementations, especially
-when the block size (or compression ratio) should be jointly optimized with RNN
-type, layer size, etc. In this paper, we adopt the block-circulant matrix-based
-framework, and present the Efficient RNN (E-RNN) framework for FPGA
-implementations of the Automatic Speech Recognition (ASR) application. The
-overall goal is to improve performance/energy efficiency under accuracy
-requirement. We use the alternating direction method of multipliers (ADMM)
-technique for more accurate block-circulant training, and present two design
-explorations providing guidance on block size and reducing RNN training trials.
-Based on the two observations, we decompose E-RNN in two phases: Phase I on
-determining RNN model to reduce computation and storage subject to accuracy
-requirement, and Phase II on hardware implementations given RNN model,
-including processing element design/optimization, quantization, activation
-implementation, etc. Experimental results on actual FPGA deployments show that
-E-RNN achieves a maximum energy efficiency improvement of 37.4$\times$ compared
-with ESE, and more than 2$\times$ compared with C-LSTM, under the same
-accuracy.
+ADMM-NN: An Algorithm-Hardware Co-Design Framework of DNNs Using  Alternating Direction Method of Multipliers
 
-
-ADMM-NN: An Algorithm-Hardware Co-Design Framework of DNNs Using
-  Alternating Direction Method of Multipliers
-
-  To facilitate efficient embedded and hardware implementations of deep neural
-networks (DNNs), two important categories of DNN model compression techniques:
-weight pruning and weight quantization are investigated. The former leverages
-the redundancy in the number of weights, whereas the latter leverages the
-redundancy in bit representation of weights. However, there lacks a systematic
-framework of joint weight pruning and quantization of DNNs, thereby limiting
-the available model compression ratio. Moreover, the computation reduction,
-energy efficiency improvement, and hardware performance overhead need to be
-accounted for besides simply model size reduction.
-  To address these limitations, we present ADMM-NN, the first
-algorithm-hardware co-optimization framework of DNNs using Alternating
-Direction Method of Multipliers (ADMM), a powerful technique to deal with
-non-convex optimization problems with possibly combinatorial constraints. The
-first part of ADMM-NN is a systematic, joint framework of DNN weight pruning
-and quantization using ADMM. It can be understood as a smart regularization
-technique with regularization target dynamically updated in each ADMM
-iteration, thereby resulting in higher performance in model compression than
-prior work. The second part is hardware-aware DNN optimizations to facilitate
-hardware-level implementations.
-  Without accuracy loss, we can achieve 85$\times$ and 24$\times$ pruning on
-LeNet-5 and AlexNet models, respectively, significantly higher than prior work.
-The improvement becomes more significant when focusing on computation
-reductions. Combining weight pruning and quantization, we achieve 1,910$\times$
-and 231$\times$ reductions in overall model size on these two benchmarks, when
-focusing on data storage. Highly promising results are also observed on other
-representative DNNs such as VGGNet and ResNet-50.
-
+  To facilitate efficient embedded and hardware implementations of deep neuralnetworks (DNNs), two important categories of DNN model compression techniques:weight pruning and weight quantization are investigated. The former leveragesthe redundancy in the number of weights, whereas the latter leverages theredundancy in bit representation of weights. However, there lacks a systematicframework of joint weight pruning and quantization of DNNs, thereby limitingthe available model compression ratio. Moreover, the computation reduction,energy efficiency improvement, and hardware performance overhead need to beaccounted for besides simply model size reduction.  To address these limitations, we present ADMM-NN, the firstalgorithm-hardware co-optimization framework of DNNs using AlternatingDirection Method of Multipliers (ADMM), a powerful technique to deal withnon-convex optimization problems with possibly combinatorial constraints. Thefirst part of ADMM-NN is a systematic, joint framework of DNN weight pruningand quantization using ADMM. It can be understood as a smart regularizationtechnique with regularization target dynamically updated in each ADMMiteration, thereby resulting in higher performance in model compression thanprior work. The second part is hardware-aware DNN optimizations to facilitatehardware-level implementations.  Without accuracy loss, we can achieve 85$\times$ and 24$\times$ pruning onLeNet-5 and AlexNet models, respectively, significantly higher than prior work.The improvement becomes more significant when focusing on computationreductions. Combining weight pruning and quantization, we achieve 1,910$\times$and 231$\times$ reductions in overall model size on these two benchmarks, whenfocusing on data storage. Highly promising results are also observed on otherrepresentative DNNs such as VGGNet and ResNet-50.
 

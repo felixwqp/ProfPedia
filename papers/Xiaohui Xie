@@ -1,731 +1,140 @@
-Inference in Kingman's Coalescent with Particle Markov Chain Monte Carlo
-  Method
+Inference in Kingman's Coalescent with Particle Markov Chain Monte Carlo  Method
 
-  We propose a new algorithm to do posterior sampling of Kingman's coalescent,
-based upon the Particle Markov Chain Monte Carlo methodology. Specifically, the
-algorithm is an instantiation of the Particle Gibbs Sampling method, which
-alternately samples coalescent times conditioned on coalescent tree structures,
-and tree structures conditioned on coalescent times via the conditional
-Sequential Monte Carlo procedure. We implement our algorithm as a C++ package,
-and demonstrate its utility via a parameter estimation task in population
-genetics on both single- and multiple-locus data. The experiment results show
-that the proposed algorithm performs comparable to or better than several
-well-developed methods.
-
+  We propose a new algorithm to do posterior sampling of Kingman's coalescent,based upon the Particle Markov Chain Monte Carlo methodology. Specifically, thealgorithm is an instantiation of the Particle Gibbs Sampling method, whichalternately samples coalescent times conditioned on coalescent tree structures,and tree structures conditioned on coalescent times via the conditionalSequential Monte Carlo procedure. We implement our algorithm as a C++ package,and demonstrate its utility via a parameter estimation task in populationgenetics on both single- and multiple-locus data. The experiment results showthat the proposed algorithm performs comparable to or better than severalwell-developed methods.
 
 Learning sparse gradients for variable selection and dimension reduction
 
-  Variable selection and dimension reduction are two commonly adopted
-approaches for high-dimensional data analysis, but have traditionally been
-treated separately. Here we propose an integrated approach, called sparse
-gradient learning (SGL), for variable selection and dimension reduction via
-learning the gradients of the prediction function directly from samples. By
-imposing a sparsity constraint on the gradients, variable selection is achieved
-by selecting variables corresponding to non-zero partial derivatives, and
-effective dimensions are extracted based on the eigenvectors of the derived
-sparse empirical gradient covariance matrix. An error analysis is given for the
-convergence of the estimated gradients to the true ones in both the Euclidean
-and the manifold setting. We also develop an efficient forward-backward
-splitting algorithm to solve the SGL problem, making the framework practically
-scalable for medium or large datasets. The utility of SGL for variable
-selection and feature extraction is explicitly given and illustrated on
-artificial data as well as real-world examples. The main advantages of our
-method include variable selection for both linear and nonlinear predictions,
-effective dimension reduction with sparse loadings, and an efficient algorithm
-for large p, small n problems.
-
+  Variable selection and dimension reduction are two commonly adoptedapproaches for high-dimensional data analysis, but have traditionally beentreated separately. Here we propose an integrated approach, called sparsegradient learning (SGL), for variable selection and dimension reduction vialearning the gradients of the prediction function directly from samples. Byimposing a sparsity constraint on the gradients, variable selection is achievedby selecting variables corresponding to non-zero partial derivatives, andeffective dimensions are extracted based on the eigenvectors of the derivedsparse empirical gradient covariance matrix. An error analysis is given for theconvergence of the estimated gradients to the true ones in both the Euclideanand the manifold setting. We also develop an efficient forward-backwardsplitting algorithm to solve the SGL problem, making the framework practicallyscalable for medium or large datasets. The utility of SGL for variableselection and feature extraction is explicitly given and illustrated onartificial data as well as real-world examples. The main advantages of ourmethod include variable selection for both linear and nonlinear predictions,effective dimension reduction with sparse loadings, and an efficient algorithmfor large p, small n problems.
 
 Split Bregman method for large scale fused Lasso
 
-  rdering of regression or classification coefficients occurs in many
-real-world applications. Fused Lasso exploits this ordering by explicitly
-regularizing the differences between neighboring coefficients through an
-$\ell_1$ norm regularizer. However, due to nonseparability and nonsmoothness of
-the regularization term, solving the fused Lasso problem is computationally
-demanding. Existing solvers can only deal with problems of small or medium
-size, or a special case of the fused Lasso problem in which the predictor
-matrix is identity matrix. In this paper, we propose an iterative algorithm
-based on split Bregman method to solve a class of large-scale fused Lasso
-problems, including a generalized fused Lasso and a fused Lasso support vector
-classifier. We derive our algorithm using augmented Lagrangian method and prove
-its convergence properties. The performance of our method is tested on both
-artificial data and real-world applications including proteomic data from mass
-spectrometry and genomic data from array CGH. We demonstrate that our method is
-many times faster than the existing solvers, and show that it is especially
-efficient for large p, small n problems.
+  rdering of regression or classification coefficients occurs in manyreal-world applications. Fused Lasso exploits this ordering by explicitlyregularizing the differences between neighboring coefficients through an$\ell_1$ norm regularizer. However, due to nonseparability and nonsmoothness ofthe regularization term, solving the fused Lasso problem is computationallydemanding. Existing solvers can only deal with problems of small or mediumsize, or a special case of the fused Lasso problem in which the predictormatrix is identity matrix. In this paper, we propose an iterative algorithmbased on split Bregman method to solve a class of large-scale fused Lassoproblems, including a generalized fused Lasso and a fused Lasso support vectorclassifier. We derive our algorithm using augmented Lagrangian method and proveits convergence properties. The performance of our method is tested on bothartificial data and real-world applications including proteomic data from massspectrometry and genomic data from array CGH. We demonstrate that our method ismany times faster than the existing solvers, and show that it is especiallyefficient for large p, small n problems.
 
+Split Bregman Method for Sparse Inverse Covariance Estimation with  Matrix Iteration Acceleration
 
-Split Bregman Method for Sparse Inverse Covariance Estimation with
-  Matrix Iteration Acceleration
+  We consider the problem of estimating the inverse covariance matrix bymaximizing the likelihood function with a penalty added to encourage thesparsity of the resulting matrix. We propose a new approach based on the splitBregman method to solve the regularized maximum likelihood estimation problem.We show that our method is significantly faster than the widely used graphicallasso method, which is based on blockwise coordinate descent, on bothartificial and real-world data. More importantly, different from the graphicallasso, the split Bregman based method is much more general, and can be appliedto a class of regularization terms other than the $\ell_1$ norm
 
-  We consider the problem of estimating the inverse covariance matrix by
-maximizing the likelihood function with a penalty added to encourage the
-sparsity of the resulting matrix. We propose a new approach based on the split
-Bregman method to solve the regularized maximum likelihood estimation problem.
-We show that our method is significantly faster than the widely used graphical
-lasso method, which is based on blockwise coordinate descent, on both
-artificial and real-world data. More importantly, different from the graphical
-lasso, the split Bregman based method is much more general, and can be applied
-to a class of regularization terms other than the $\ell_1$ norm
+Efficient Latent Variable Graphical Model Selection via Split Bregman  Method
 
+  We consider the problem of covariance matrix estimation in the presence oflatent variables. Under suitable conditions, it is possible to learn themarginal covariance matrix of the observed variables via a tractable convexprogram, where the concentration matrix of the observed variables is decomposedinto a sparse matrix (representing the graphical structure of the observedvariables) and a low rank matrix (representing the marginalization effect oflatent variables). We present an efficient first-order method based on splitBregman to solve the convex problem. The algorithm is guaranteed to convergeunder mild conditions. We show that our algorithm is significantly faster thanthe state-of-the-art algorithm on both artificial and real-world data. Applyingthe algorithm to a gene expression data involving thousands of genes, we showthat most of the correlation between observed variables can be explained byonly a few dozen latent factors.
 
-Efficient Latent Variable Graphical Model Selection via Split Bregman
-  Method
+Comprehensive Optimization of Parametric Kernels for Graphics Processing  Units
 
-  We consider the problem of covariance matrix estimation in the presence of
-latent variables. Under suitable conditions, it is possible to learn the
-marginal covariance matrix of the observed variables via a tractable convex
-program, where the concentration matrix of the observed variables is decomposed
-into a sparse matrix (representing the graphical structure of the observed
-variables) and a low rank matrix (representing the marginalization effect of
-latent variables). We present an efficient first-order method based on split
-Bregman to solve the convex problem. The algorithm is guaranteed to converge
-under mild conditions. We show that our algorithm is significantly faster than
-the state-of-the-art algorithm on both artificial and real-world data. Applying
-the algorithm to a gene expression data involving thousands of genes, we show
-that most of the correlation between observed variables can be explained by
-only a few dozen latent factors.
-
-
-Comprehensive Optimization of Parametric Kernels for Graphics Processing
-  Units
-
-  This work deals with the optimization of computer programs targeting Graphics
-Processing Units (GPUs). The goal is to lift, from programmers to optimizing
-compilers, the heavy burden of determining program details that are dependent
-on the hardware characteristics. The expected benefit is to improve robustness,
-portability and efficiency of the generated computer programs. We address these
-requirements by: (1) treating machine and program parameters as unknown symbols
-during code generation, and (2) generating optimized programs in the form of a
-case discussion, based on the possible values of the machine and program
-parameters. By taking advantage of recent advances in the area of computer
-algebra, preliminary experimentation yield promising results.
-
+  This work deals with the optimization of computer programs targeting GraphicsProcessing Units (GPUs). The goal is to lift, from programmers to optimizingcompilers, the heavy burden of determining program details that are dependenton the hardware characteristics. The expected benefit is to improve robustness,portability and efficiency of the generated computer programs. We address theserequirements by: (1) treating machine and program parameters as unknown symbolsduring code generation, and (2) generating optimized programs in the form of acase discussion, based on the possible values of the machine and programparameters. By taking advantage of recent advances in the area of computeralgebra, preliminary experimentation yield promising results.
 
 Why People Search for Images using Web Search Engines
 
-  What are the intents or goals behind human interactions with image search
-engines? Knowing why people search for images is of major concern to Web image
-search engines because user satisfaction may vary as intent varies. Previous
-analyses of image search behavior have mostly been query-based, focusing on
-what images people search for, rather than intent-based, that is, why people
-search for images. To date, there is no thorough investigation of how different
-image search intents affect users' search behavior.
-  In this paper, we address the following questions: (1)Why do people search
-for images in text-based Web image search systems? (2)How does image search
-behavior change with user intent? (3)Can we predict user intent effectively
-from interactions during the early stages of a search session? To this end, we
-conduct both a lab-based user study and a commercial search log analysis.
-  We show that user intents in image search can be grouped into three classes:
-Explore/Learn, Entertain, and Locate/Acquire. Our lab-based user study reveals
-different user behavior patterns under these three intents, such as first click
-time, query reformulation, dwell time and mouse movement on the result page.
-Based on user interaction features during the early stages of an image search
-session, that is, before mouse scroll, we develop an intent classifier that is
-able to achieve promising results for classifying intents into our three intent
-classes. Given that all features can be obtained online and unobtrusively, the
-predicted intents can provide guidance for choosing ranking methods immediately
-after scrolling.
-
+  What are the intents or goals behind human interactions with image searchengines? Knowing why people search for images is of major concern to Web imagesearch engines because user satisfaction may vary as intent varies. Previousanalyses of image search behavior have mostly been query-based, focusing onwhat images people search for, rather than intent-based, that is, why peoplesearch for images. To date, there is no thorough investigation of how differentimage search intents affect users' search behavior.  In this paper, we address the following questions: (1)Why do people searchfor images in text-based Web image search systems? (2)How does image searchbehavior change with user intent? (3)Can we predict user intent effectivelyfrom interactions during the early stages of a search session? To this end, weconduct both a lab-based user study and a commercial search log analysis.  We show that user intents in image search can be grouped into three classes:Explore/Learn, Entertain, and Locate/Acquire. Our lab-based user study revealsdifferent user behavior patterns under these three intents, such as first clicktime, query reformulation, dwell time and mouse movement on the result page.Based on user interaction features during the early stages of an image searchsession, that is, before mouse scroll, we develop an intent classifier that isable to achieve promising results for classifying intents into our three intentclasses. Given that all features can be obtained online and unobtrusively, thepredicted intents can provide guidance for choosing ranking methods immediatelyafter scrolling.
 
 Constructing an Interaction Behavior Model for Web Image Search
 
-  User interaction behavior is a valuable source of implicit relevance
-feedback. In Web image search a different type of search result presentation is
-used than in general Web search, which leads to different interaction
-mechanisms and user behavior. For example, image search results are
-self-contained, so that users do not need to click the results to view the
-landing page as in general Web search, which generates sparse click data. Also,
-two-dimensional result placement instead of a linear result list makes browsing
-behaviors more complex. Thus, it is hard to apply standard user behavior models
-(e.g., click models) developed for general Web search to Web image search.
-  In this paper, we conduct a comprehensive image search user behavior analysis
-using data from a lab-based user study as well as data from a commercial search
-log. We then propose a novel interaction behavior model, called grid-based user
-browsing model (GUBM), whose design is motivated by observations from our data
-analysis. GUBM can both capture users' interaction behavior, including cursor
-hovering, and alleviate position bias. The advantages of GUBM are two-fold: (1)
-It is based on an unsupervised learning method and does not need manually
-annotated data for training. (2) It is based on user interaction features on
-search engine result pages (SERPs) and is easily transferable to other
-scenarios that have a grid-based interface such as video search engines. We
-conduct extensive experiments to test the performance of our model using a
-large-scale commercial image search log. Experimental results show that in
-terms of behavior prediction (perplexity), and topical relevance and image
-quality (normalized discounted cumulative gain (NDCG)), GUBM outperforms
-state-of-the-art baseline models as well as the original ranking. We make the
-implementation of GUBM and related datasets publicly available for future
-studies.
+  User interaction behavior is a valuable source of implicit relevancefeedback. In Web image search a different type of search result presentation isused than in general Web search, which leads to different interactionmechanisms and user behavior. For example, image search results areself-contained, so that users do not need to click the results to view thelanding page as in general Web search, which generates sparse click data. Also,two-dimensional result placement instead of a linear result list makes browsingbehaviors more complex. Thus, it is hard to apply standard user behavior models(e.g., click models) developed for general Web search to Web image search.  In this paper, we conduct a comprehensive image search user behavior analysisusing data from a lab-based user study as well as data from a commercial searchlog. We then propose a novel interaction behavior model, called grid-based userbrowsing model (GUBM), whose design is motivated by observations from our dataanalysis. GUBM can both capture users' interaction behavior, including cursorhovering, and alleviate position bias. The advantages of GUBM are two-fold: (1)It is based on an unsupervised learning method and does not need manuallyannotated data for training. (2) It is based on user interaction features onsearch engine result pages (SERPs) and is easily transferable to otherscenarios that have a grid-based interface such as video search engines. Weconduct extensive experiments to test the performance of our model using alarge-scale commercial image search log. Experimental results show that interms of behavior prediction (perplexity), and topical relevance and imagequality (normalized discounted cumulative gain (NDCG)), GUBM outperformsstate-of-the-art baseline models as well as the original ranking. We make theimplementation of GUBM and related datasets publicly available for futurestudies.
 
+A large enhancement of carrier mobility in phosphorene by introducing  hexagonal boron nitride substrate
 
-A large enhancement of carrier mobility in phosphorene by introducing
-  hexagonal boron nitride substrate
+  Carrier mobility is a crucial character for electronic devices since itdomains power dissipation and switching speed. Materials with certain highcarrier mobility, equally, unveil rich unusual physical phenomena elusive intheir conventional counterparts. As a consequence, the methods to enhance thecarrier mobility of materials receive immense research interests due to theirpotential applications in more effective electronic devices and enrichment ofmore unusual phenomena. For instance, introducing a flat hexagonal boronnitride (h-BN) substrate to enhance the carrier mobility has been achievedexperimentally. However, the underlying mechanics is not well understood. Inthis study, we estimate the carrier mobility of phosphorene on h-BN substrate(P/h-BN) within the framework of the phonon-limited scattering model atfirst-principles level. %Our results are generic. Besides high-$\kappa$dielectric property, h-BN also possesses excellent mechanical property of ahigh two-dimensional elastic modulus. The P/h-BN heterostructure inherits thehigh elastic modulus of h-BN, leading to an enhanced carrier mobility inphosphorene. Owing to the weak van der Waals interactions between the layers,the unique electronic properties of phosphorene are almost perfectly preservednear the Fermi level, guaranteeing the superior electronic transport in P/h-BN.Our findings offer a new perspective to improve the carrier mobility inphosphorene as well as other 2D materials based field effect transistors.
 
-  Carrier mobility is a crucial character for electronic devices since it
-domains power dissipation and switching speed. Materials with certain high
-carrier mobility, equally, unveil rich unusual physical phenomena elusive in
-their conventional counterparts. As a consequence, the methods to enhance the
-carrier mobility of materials receive immense research interests due to their
-potential applications in more effective electronic devices and enrichment of
-more unusual phenomena. For instance, introducing a flat hexagonal boron
-nitride (h-BN) substrate to enhance the carrier mobility has been achieved
-experimentally. However, the underlying mechanics is not well understood. In
-this study, we estimate the carrier mobility of phosphorene on h-BN substrate
-(P/h-BN) within the framework of the phonon-limited scattering model at
-first-principles level. %Our results are generic. Besides high-$\kappa$
-dielectric property, h-BN also possesses excellent mechanical property of a
-high two-dimensional elastic modulus. The P/h-BN heterostructure inherits the
-high elastic modulus of h-BN, leading to an enhanced carrier mobility in
-phosphorene. Owing to the weak van der Waals interactions between the layers,
-the unique electronic properties of phosphorene are almost perfectly preserved
-near the Fermi level, guaranteeing the superior electronic transport in P/h-BN.
-Our findings offer a new perspective to improve the carrier mobility in
-phosphorene as well as other 2D materials based field effect transistors.
+Generating Realistic Training Images Based on Tonality-Alignment  Generative Adversarial Networks for Hand Pose Estimation
 
+  Hand pose estimation from a monocular RGB image is an important butchallenging task. The main factor affecting its performance is the lack of asufficiently large training dataset with accurate hand-keypoint annotations. Inthis work, we circumvent this problem by proposing an effective method forgenerating realistic hand poses and show that state-of-the-art algorithms forhand pose estimation can be greatly improved by utilizing the generated handposes as training data. Specifically, we first adopt an augmented reality (AR)simulator to synthesize hand poses with accurate hand-keypoint labels. Althoughthe synthetic hand poses come with precise joint labels, eliminating the needof manual annotations, they look unnatural and are not the ideal training data.To produce more realistic hand poses, we propose to blend a synthetic hand posewith a real background, such as arms and sleeves. To this end, we developtonality-alignment generative adversarial networks (TAGANs), which align thetonality and color distributions between synthetic hand poses and realbackgrounds, and can generate high quality hand poses. We evaluate TAGAN onthree benchmarks, including the RHP, STB, and CMU-PS hand pose datasets. Withthe aid of the synthesized poses, our method performs favorably against thestate-of-the-arts in both $2$D and $3$D hand pose estimations.
 
-Generating Realistic Training Images Based on Tonality-Alignment
-  Generative Adversarial Networks for Hand Pose Estimation
+A Novel Uplink Data Transmission Scheme For Small Packets In Massive  MIMO System
 
-  Hand pose estimation from a monocular RGB image is an important but
-challenging task. The main factor affecting its performance is the lack of a
-sufficiently large training dataset with accurate hand-keypoint annotations. In
-this work, we circumvent this problem by proposing an effective method for
-generating realistic hand poses and show that state-of-the-art algorithms for
-hand pose estimation can be greatly improved by utilizing the generated hand
-poses as training data. Specifically, we first adopt an augmented reality (AR)
-simulator to synthesize hand poses with accurate hand-keypoint labels. Although
-the synthetic hand poses come with precise joint labels, eliminating the need
-of manual annotations, they look unnatural and are not the ideal training data.
-To produce more realistic hand poses, we propose to blend a synthetic hand pose
-with a real background, such as arms and sleeves. To this end, we develop
-tonality-alignment generative adversarial networks (TAGANs), which align the
-tonality and color distributions between synthetic hand poses and real
-backgrounds, and can generate high quality hand poses. We evaluate TAGAN on
-three benchmarks, including the RHP, STB, and CMU-PS hand pose datasets. With
-the aid of the synthesized poses, our method performs favorably against the
-state-of-the-arts in both $2$D and $3$D hand pose estimations.
+  Intelligent terminals often produce a large number of data packets of smalllengths. For these packets, it is inefficient to follow the conventional mediumaccess control (MAC) protocols because they lead to poor utilization of serviceresources. We propose a novel multiple access scheme that targets massivemultiple-input multiple-output (MIMO) systems based on compressive sensing(CS). We employ block precoding in the time domain to enable the simultaneoustransmissions of many users, which could be even more than the number ofreceive antennas at the base station. We develop a block-sparse system modeland adopt the block orthogonal matching pursuit (BOMP) algorithm to recover thetransmitted signals. Conditions for data recovery guarantees are identified andnumerical results demonstrate that our scheme is efficient for uplink smallpacket transmission.
 
+Co-occurrence Feature Learning for Skeleton based Action Recognition  using Regularized Deep LSTM Networks
 
-Co-occurrence Feature Learning for Skeleton based Action Recognition
-  using Regularized Deep LSTM Networks
+  Skeleton based action recognition distinguishes human actions using thetrajectories of skeleton joints, which provide a very good representation fordescribing actions. Considering that recurrent neural networks (RNNs) with LongShort-Term Memory (LSTM) can learn feature representations and model long-termtemporal dependencies automatically, we propose an end-to-end fully connecteddeep LSTM network for skeleton based action recognition. Inspired by theobservation that the co-occurrences of the joints intrinsically characterizehuman actions, we take the skeleton as the input at each time slot andintroduce a novel regularization scheme to learn the co-occurrence features ofskeleton joints. To train the deep LSTM network effectively, we propose a newdropout algorithm which simultaneously operates on the gates, cells, and outputresponses of the LSTM neurons. Experimental results on three human actionrecognition datasets consistently demonstrate the effectiveness of the proposedmodel.
 
-  Skeleton based action recognition distinguishes human actions using the
-trajectories of skeleton joints, which provide a very good representation for
-describing actions. Considering that recurrent neural networks (RNNs) with Long
-Short-Term Memory (LSTM) can learn feature representations and model long-term
-temporal dependencies automatically, we propose an end-to-end fully connected
-deep LSTM network for skeleton based action recognition. Inspired by the
-observation that the co-occurrences of the joints intrinsically characterize
-human actions, we take the skeleton as the input at each time slot and
-introduce a novel regularization scheme to learn the co-occurrence features of
-skeleton joints. To train the deep LSTM network effectively, we propose a new
-dropout algorithm which simultaneously operates on the gates, cells, and output
-responses of the LSTM neurons. Experimental results on three human action
-recognition datasets consistently demonstrate the effectiveness of the proposed
-model.
+Deep Multi-instance Networks with Sparse Label Assignment for Whole  Mammogram Classification
 
-
-A Novel Uplink Data Transmission Scheme For Small Packets In Massive
-  MIMO System
-
-  Intelligent terminals often produce a large number of data packets of small
-lengths. For these packets, it is inefficient to follow the conventional medium
-access control (MAC) protocols because they lead to poor utilization of service
-resources. We propose a novel multiple access scheme that targets massive
-multiple-input multiple-output (MIMO) systems based on compressive sensing
-(CS). We employ block precoding in the time domain to enable the simultaneous
-transmissions of many users, which could be even more than the number of
-receive antennas at the base station. We develop a block-sparse system model
-and adopt the block orthogonal matching pursuit (BOMP) algorithm to recover the
-transmitted signals. Conditions for data recovery guarantees are identified and
-numerical results demonstrate that our scheme is efficient for uplink small
-packet transmission.
-
-
-Deep Multi-instance Networks with Sparse Label Assignment for Whole
-  Mammogram Classification
-
-  Mammogram classification is directly related to computer-aided diagnosis of
-breast cancer. Traditional methods requires great effort to annotate the
-training data by costly manual labeling and specialized computational models to
-detect these annotations during test. Inspired by the success of using deep
-convolutional features for natural image analysis and multi-instance learning
-for labeling a set of instances/patches, we propose end-to-end trained deep
-multi-instance networks for mass classification based on whole mammogram
-without the aforementioned costly need to annotate the training data. We
-explore three different schemes to construct deep multi-instance networks for
-whole mammogram classification. Experimental results on the INbreast dataset
-demonstrate the robustness of proposed deep networks compared to previous work
-using segmentation and detection annotations in the training.
-
+  Mammogram classification is directly related to computer-aided diagnosis ofbreast cancer. Traditional methods requires great effort to annotate thetraining data by costly manual labeling and specialized computational models todetect these annotations during test. Inspired by the success of using deepconvolutional features for natural image analysis and multi-instance learningfor labeling a set of instances/patches, we propose end-to-end trained deepmulti-instance networks for mass classification based on whole mammogramwithout the aforementioned costly need to annotate the training data. Weexplore three different schemes to construct deep multi-instance networks forwhole mammogram classification. Experimental results on the INbreast datasetdemonstrate the robustness of proposed deep networks compared to previous workusing segmentation and detection annotations in the training.
 
 Adversarial Deep Structural Networks for Mammographic Mass Segmentation
 
-  Mass segmentation is an important task in mammogram analysis, providing
-effective morphological features and regions of interest (ROI) for mass
-detection and classification. Inspired by the success of using deep
-convolutional features for natural image analysis and conditional random fields
-(CRF) for structural learning, we propose an end-to-end network for
-mammographic mass segmentation. The network employs a fully convolutional
-network (FCN) to model potential function, followed by a CRF to perform
-structural learning. Because the mass distribution varies greatly with pixel
-position, the FCN is combined with position priori for the task. Due to the
-small size of mammogram datasets, we use adversarial training to control
-over-fitting. Four models with different convolutional kernels are further
-fused to improve the segmentation results. Experimental results on two public
-datasets, INbreast and DDSM-BCRP, show that our end-to-end network combined
-with adversarial training achieves the-state-of-the-art results.
-
+  Mass segmentation is an important task in mammogram analysis, providingeffective morphological features and regions of interest (ROI) for massdetection and classification. Inspired by the success of using deepconvolutional features for natural image analysis and conditional random fields(CRF) for structural learning, we propose an end-to-end network formammographic mass segmentation. The network employs a fully convolutionalnetwork (FCN) to model potential function, followed by a CRF to performstructural learning. Because the mass distribution varies greatly with pixelposition, the FCN is combined with position priori for the task. Due to thesmall size of mammogram datasets, we use adversarial training to controlover-fitting. Four models with different convolutional kernels are furtherfused to improve the segmentation results. Experimental results on two publicdatasets, INbreast and DDSM-BCRP, show that our end-to-end network combinedwith adversarial training achieves the-state-of-the-art results.
 
 HLA class I binding prediction via convolutional neural networks
 
-  Many biological processes are governed by protein-ligand interactions. One
-such example is the recognition of self and nonself cells by the immune system.
-This immune response process is regulated by the major histocompatibility
-complex (MHC) protein which is encoded by the human leukocyte antigen (HLA)
-complex. Understanding the binding potential between MHC and peptides can lead
-to the design of more potent, peptide-based vaccines and immunotherapies for
-infectious autoimmune diseases.
-  We apply machine learning techniques from the natural language processing
-(NLP) domain to address the task of MHC-peptide binding prediction. More
-specifically, we introduce a new distributed representation of amino acids,
-name HLA-Vec, that can be used for a variety of downstream proteomic machine
-learning tasks. We then propose a deep convolutional neural network
-architecture, name HLA-CNN, for the task of HLA class I-peptide binding
-prediction. Experimental results show combining the new distributed
-representation with our HLA-CNN architecture achieves state-of-the-art results
-in the majority of the latest two Immune Epitope Database (IEDB) weekly
-automated benchmark datasets. We further apply our model to predict binding on
-the human genome and identify 15 genes with potential for self binding.
+  Many biological processes are governed by protein-ligand interactions. Onesuch example is the recognition of self and nonself cells by the immune system.This immune response process is regulated by the major histocompatibilitycomplex (MHC) protein which is encoded by the human leukocyte antigen (HLA)complex. Understanding the binding potential between MHC and peptides can leadto the design of more potent, peptide-based vaccines and immunotherapies forinfectious autoimmune diseases.  We apply machine learning techniques from the natural language processing(NLP) domain to address the task of MHC-peptide binding prediction. Morespecifically, we introduce a new distributed representation of amino acids,name HLA-Vec, that can be used for a variety of downstream proteomic machinelearning tasks. We then propose a deep convolutional neural networkarchitecture, name HLA-CNN, for the task of HLA class I-peptide bindingprediction. Experimental results show combining the new distributedrepresentation with our HLA-CNN architecture achieves state-of-the-art resultsin the majority of the latest two Immune Epitope Database (IEDB) weeklyautomated benchmark datasets. We further apply our model to predict binding onthe human genome and identify 15 genes with potential for self binding.
 
+Deep Multi-instance Networks with Sparse Label Assignment for Whole  Mammogram Classification
 
-Deep Multi-instance Networks with Sparse Label Assignment for Whole
-  Mammogram Classification
+  Mammogram classification is directly related to computer-aided diagnosis ofbreast cancer. Traditional methods rely on regions of interest (ROIs) whichrequire great efforts to annotate. Inspired by the success of using deepconvolutional features for natural image analysis and multi-instance learning(MIL) for labeling a set of instances/patches, we propose end-to-end traineddeep multi-instance networks for mass classification based on whole mammogramwithout the aforementioned ROIs. We explore three different schemes toconstruct deep multi-instance networks for whole mammogram classification.Experimental results on the INbreast dataset demonstrate the robustness ofproposed networks compared to previous work using segmentation and detectionannotations.
 
-  Mammogram classification is directly related to computer-aided diagnosis of
-breast cancer. Traditional methods rely on regions of interest (ROIs) which
-require great efforts to annotate. Inspired by the success of using deep
-convolutional features for natural image analysis and multi-instance learning
-(MIL) for labeling a set of instances/patches, we propose end-to-end trained
-deep multi-instance networks for mass classification based on whole mammogram
-without the aforementioned ROIs. We explore three different schemes to
-construct deep multi-instance networks for whole mammogram classification.
-Experimental results on the INbreast dataset demonstrate the robustness of
-proposed networks compared to previous work using segmentation and detection
-annotations.
+DeepLung: 3D Deep Convolutional Nets for Automated Pulmonary Nodule  Detection and Classification
 
-
-DeepLung: 3D Deep Convolutional Nets for Automated Pulmonary Nodule
-  Detection and Classification
-
-  In this work, we present a fully automated lung CT cancer diagnosis system,
-DeepLung. DeepLung contains two parts, nodule detection and classification.
-Considering the 3D nature of lung CT data, two 3D networks are designed for the
-nodule detection and classification respectively. Specifically, a 3D Faster
-R-CNN is designed for nodule detection with a U-net-like encoder-decoder
-structure to effectively learn nodule features. For nodule classification,
-gradient boosting machine (GBM) with 3D dual path network (DPN) features is
-proposed. The nodule classification subnetwork is validated on a public dataset
-from LIDC-IDRI, on which it achieves better performance than state-of-the-art
-approaches, and surpasses the average performance of four experienced doctors.
-For the DeepLung system, candidate nodules are detected first by the nodule
-detection subnetwork, and nodule diagnosis is conducted by the classification
-subnetwork. Extensive experimental results demonstrate the DeepLung is
-comparable to the experienced doctors both for the nodule-level and
-patient-level diagnosis on the LIDC-IDRI dataset.
-
+  In this work, we present a fully automated lung CT cancer diagnosis system,DeepLung. DeepLung contains two parts, nodule detection and classification.Considering the 3D nature of lung CT data, two 3D networks are designed for thenodule detection and classification respectively. Specifically, a 3D FasterR-CNN is designed for nodule detection with a U-net-like encoder-decoderstructure to effectively learn nodule features. For nodule classification,gradient boosting machine (GBM) with 3D dual path network (DPN) features isproposed. The nodule classification subnetwork is validated on a public datasetfrom LIDC-IDRI, on which it achieves better performance than state-of-the-artapproaches, and surpasses the average performance of four experienced doctors.For the DeepLung system, candidate nodules are detected first by the noduledetection subnetwork, and nodule diagnosis is conducted by the classificationsubnetwork. Extensive experimental results demonstrate the DeepLung iscomparable to the experienced doctors both for the nodule-level andpatient-level diagnosis on the LIDC-IDRI dataset.
 
 Adversarial Deep Structured Nets for Mass Segmentation from Mammograms
 
-  Mass segmentation provides effective morphological features which are
-important for mass diagnosis. In this work, we propose a novel end-to-end
-network for mammographic mass segmentation which employs a fully convolutional
-network (FCN) to model a potential function, followed by a CRF to perform
-structured learning. Because the mass distribution varies greatly with pixel
-position, the FCN is combined with a position priori. Further, we employ
-adversarial training to eliminate over-fitting due to the small sizes of
-mammogram datasets. Multi-scale FCN is employed to improve the segmentation
-performance. Experimental results on two public datasets, INbreast and
-DDSM-BCRP, demonstrate that our end-to-end network achieves better performance
-than state-of-the-art approaches.
-\footnote{https://github.com/wentaozhu/adversarial-deep-structural-networks.git}
+  Mass segmentation provides effective morphological features which areimportant for mass diagnosis. In this work, we propose a novel end-to-endnetwork for mammographic mass segmentation which employs a fully convolutionalnetwork (FCN) to model a potential function, followed by a CRF to performstructured learning. Because the mass distribution varies greatly with pixelposition, the FCN is combined with a position priori. Further, we employadversarial training to eliminate over-fitting due to the small sizes ofmammogram datasets. Multi-scale FCN is employed to improve the segmentationperformance. Experimental results on two public datasets, INbreast andDDSM-BCRP, demonstrate that our end-to-end network achieves better performancethan state-of-the-art approaches.\footnote{https://github.com/wentaozhu/adversarial-deep-structural-networks.git}
 
+Structured Triplet Learning with POS-tag Guided Attention for Visual  Question Answering
 
-Structured Triplet Learning with POS-tag Guided Attention for Visual
-  Question Answering
+  Visual question answering (VQA) is of significant interest due to itspotential to be a strong test of image understanding systems and to probe theconnection between language and vision. Despite much recent progress, generalVQA is far from a solved problem. In this paper, we focus on the VQAmultiple-choice task, and provide some good practices for designing aneffective VQA model that can capture language-vision interactions and performjoint reasoning. We explore mechanisms of incorporating part-of-speech (POS)tag guided attention, convolutional n-grams, triplet attention interactionsbetween the image, question and candidate answer, and structured learning fortriplets based on image-question pairs. We evaluate our models on two populardatasets: Visual7W and VQA Real Multiple Choice. Our final model achieves thestate-of-the-art performance of 68.2% on Visual7W, and a very competitiveperformance of 69.6% on the test-standard split of VQA Real Multiple Choice.
 
-  Visual question answering (VQA) is of significant interest due to its
-potential to be a strong test of image understanding systems and to probe the
-connection between language and vision. Despite much recent progress, general
-VQA is far from a solved problem. In this paper, we focus on the VQA
-multiple-choice task, and provide some good practices for designing an
-effective VQA model that can capture language-vision interactions and perform
-joint reasoning. We explore mechanisms of incorporating part-of-speech (POS)
-tag guided attention, convolutional n-grams, triplet attention interactions
-between the image, question and candidate answer, and structured learning for
-triplets based on image-question pairs. We evaluate our models on two popular
-datasets: Visual7W and VQA Real Multiple Choice. Our final model achieves the
-state-of-the-art performance of 68.2% on Visual7W, and a very competitive
-performance of 69.6% on the test-standard split of VQA Real Multiple Choice.
+Deep Learning Framework for Multi-class Breast Cancer Histology Image  Classification
 
+  In this work, we present a deep learning framework for multi-class breastcancer image classification as our submission to the International Conferenceon Image Analysis and Recognition (ICIAR) 2018 Grand Challenge on BreAst CancerHistology images (BACH). As these histology images are too large to fit intoGPU memory, we first propose using Inception V3 to perform patch levelclassification. The patch level predictions are then passed through an ensemblefusion framework involving majority voting, gradient boosting machine (GBM),and logistic regression to obtain the image level prediction. We improve thesensitivity of the Normal and Benign predicted classes by designing a Dual PathNetwork (DPN) to be used as a feature extractor where these extracted featuresare further sent to a second layer of ensemble prediction fusion using GBM,logistic regression, and support vector machine (SVM) to refine predictions.Experimental results demonstrate our framework shows a 12.5$\%$ improvementover the state-of-the-art model.
 
-Deep Learning Framework for Multi-class Breast Cancer Histology Image
-  Classification
+Content-based Video Relevance Prediction Challenge: Data, Protocol, and  Baseline
 
-  In this work, we present a deep learning framework for multi-class breast
-cancer image classification as our submission to the International Conference
-on Image Analysis and Recognition (ICIAR) 2018 Grand Challenge on BreAst Cancer
-Histology images (BACH). As these histology images are too large to fit into
-GPU memory, we first propose using Inception V3 to perform patch level
-classification. The patch level predictions are then passed through an ensemble
-fusion framework involving majority voting, gradient boosting machine (GBM),
-and logistic regression to obtain the image level prediction. We improve the
-sensitivity of the Normal and Benign predicted classes by designing a Dual Path
-Network (DPN) to be used as a feature extractor where these extracted features
-are further sent to a second layer of ensemble prediction fusion using GBM,
-logistic regression, and support vector machine (SVM) to refine predictions.
-Experimental results demonstrate our framework shows a 12.5$\%$ improvement
-over the state-of-the-art model.
-
-
-Content-based Video Relevance Prediction Challenge: Data, Protocol, and
-  Baseline
-
-  Video relevance prediction is one of the most important tasks for online
-streaming service. Given the relevance of videos and viewer feedbacks, the
-system can provide personalized recommendations, which will help the user
-discover more content of interest. In most online service, the computation of
-video relevance table is based on users' implicit feedback, e.g. watch and
-search history. However, this kind of method performs poorly for "cold-start"
-problems - when a new video is added to the library, the recommendation system
-needs to bootstrap the video relevance score with very little user behavior
-known. One promising approach to solve it is analyzing video content itself,
-i.e. predicting video relevance by video frame, audio, subtitle and metadata.
-In this paper, we describe a challenge on Content-based Video Relevance
-Prediction (CBVRP) that is hosted by Hulu in the ACM Multimedia Conference
-2018. In this challenge, Hulu drives the study on an open problem of exploiting
-content characteristics directly from original video for video relevance
-prediction. We provide massive video assets and ground truth relevance derived
-from our really system, to build up a common platform for algorithm development
-and performance evaluation.
-
+  Video relevance prediction is one of the most important tasks for onlinestreaming service. Given the relevance of videos and viewer feedbacks, thesystem can provide personalized recommendations, which will help the userdiscover more content of interest. In most online service, the computation ofvideo relevance table is based on users' implicit feedback, e.g. watch andsearch history. However, this kind of method performs poorly for "cold-start"problems - when a new video is added to the library, the recommendation systemneeds to bootstrap the video relevance score with very little user behaviorknown. One promising approach to solve it is analyzing video content itself,i.e. predicting video relevance by video frame, audio, subtitle and metadata.In this paper, we describe a challenge on Content-based Video RelevancePrediction (CBVRP) that is hosted by Hulu in the ACM Multimedia Conference2018. In this challenge, Hulu drives the study on an open problem of exploitingcontent characteristics directly from original video for video relevanceprediction. We provide massive video assets and ground truth relevance derivedfrom our really system, to build up a common platform for algorithm developmentand performance evaluation.
 
 Superconductivity in a misfit layered compound (SnSe)$_{1.16}$(NbSe$_2$)
 
-  The large size single crystals of (SnSe)$_{1.16}$(NbSe$_2$) misfit layered
-compound were grown and superconductivity with $T_c$ of 3.4 K was first
-discovered in this system. Powder X-ray diffraction (XRD) and high resolution
-transmission electron microscopy (HRTEM) clearly display the misfit feature
-between SnSe and NbSe$_2$ subsystems. The Sommerfeld coefficient $\gamma$
-inferred from specific-heat measurements is 16.73 mJ mol$^{-1}$ K$^{-2}$,
-slightly larger than the usual misfit compounds. The normalized specific heat
-jump $\Delta$$C_e$/$\gamma$$T_{\rm c}$ is about 0.98, and the electron-phonon
-coupling constant $\lambda$$_{e-ph}$ is estimated to be 0.80. The estimated
-value of the in-plane upper critical magnetic field, $H_{c2}^{ab}$(0), is about
-7.82 T, exceeding the Pauli paramagnetic limit slightly. Both the specific-heat
-and $H_{c2}$ data suggest that (SnSe)$_{1.16}$(NbSe$_2$) is a multi-band
-superconductor.
+  The large size single crystals of (SnSe)$_{1.16}$(NbSe$_2$) misfit layeredcompound were grown and superconductivity with $T_c$ of 3.4 K was firstdiscovered in this system. Powder X-ray diffraction (XRD) and high resolutiontransmission electron microscopy (HRTEM) clearly display the misfit featurebetween SnSe and NbSe$_2$ subsystems. The Sommerfeld coefficient $\gamma$inferred from specific-heat measurements is 16.73 mJ mol$^{-1}$ K$^{-2}$,slightly larger than the usual misfit compounds. The normalized specific heatjump $\Delta$$C_e$/$\gamma$$T_{\rm c}$ is about 0.98, and the electron-phononcoupling constant $\lambda$$_{e-ph}$ is estimated to be 0.80. The estimatedvalue of the in-plane upper critical magnetic field, $H_{c2}^{ab}$(0), is about7.82 T, exceeding the Pauli paramagnetic limit slightly. Both the specific-heatand $H_{c2}$ data suggest that (SnSe)$_{1.16}$(NbSe$_2$) is a multi-bandsuperconductor.
 
+Sequential Embedding Induced Text Clustering, a Non-parametric Bayesian  Approach
 
-Sequential Embedding Induced Text Clustering, a Non-parametric Bayesian
-  Approach
+  Current state-of-the-art nonparametric Bayesian text clustering methods modeldocuments through multinomial distribution on bags of words. Although thesemethods can effectively utilize the word burstiness representation of documentsand achieve decent performance, they do not explore the sequential informationof text and relationships among synonyms. In this paper, the documents aremodeled as the joint of bags of words, sequential features and word embeddings.We proposed Sequential Embedding induced Dirichlet Process Mixture Model(SiDPMM) to effectively exploit this joint document representation in textclustering. The sequential features are extracted by the encoder-decodercomponent. Word embeddings produced by the continuous-bag-of-words (CBOW) modelare introduced to handle synonyms. Experimental results demonstrate thebenefits of our model in two major aspects: 1) improved performance acrossmultiple diverse text datasets in terms of the normalized mutual information(NMI); 2) more accurate inference of ground truth cluster numbers withregularization effect on tiny outlier clusters.
 
-  Current state-of-the-art nonparametric Bayesian text clustering methods model
-documents through multinomial distribution on bags of words. Although these
-methods can effectively utilize the word burstiness representation of documents
-and achieve decent performance, they do not explore the sequential information
-of text and relationships among synonyms. In this paper, the documents are
-modeled as the joint of bags of words, sequential features and word embeddings.
-We proposed Sequential Embedding induced Dirichlet Process Mixture Model
-(SiDPMM) to effectively exploit this joint document representation in text
-clustering. The sequential features are extracted by the encoder-decoder
-component. Word embeddings produced by the continuous-bag-of-words (CBOW) model
-are introduced to handle synonyms. Experimental results demonstrate the
-benefits of our model in two major aspects: 1) improved performance across
-multiple diverse text datasets in terms of the normalized mutual information
-(NMI); 2) more accurate inference of ground truth cluster numbers with
-regularization effect on tiny outlier clusters.
+Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge  Sampling on Dirichlet Process Mixtures
 
+  Motivation: With the development of droplet based systems, massive singlecell transcriptome data has become available, which enables analysis ofcellular and molecular processes at single cell resolution and is instrumentalto understanding many biological processes. While state-of-the-art clusteringmethods have been applied to the data, they face challenges in the followingaspects: (1) the clustering quality still needs to be improved; (2) most modelsneed prior knowledge on number of clusters, which is not always available; (3)there is a demand for faster computational speed. Results: We propose to tacklethese challenges with Parallel Split Merge Sampling on Dirichlet ProcessMixture Model (the Para-DPMM model). Unlike classic DPMM methods that performsampling on each single data point, the split merge mechanism samples on thecluster level, which significantly improves convergence and optimality of theresult. The model is highly parallelized and can utilize the computing power ofhigh performance computing (HPC) clusters, enabling massive clustering on hugedatasets. Experiment results show the model outperforms current widely usedmodels in both clustering quality and computational speed. Availability: Sourcecode is publicly available onhttps://github.com/tiehangd/Para_DPMM/tree/master/Para_DPMM_package
 
-Parallel Clustering of Single Cell Transcriptomic Data with Split-Merge
-  Sampling on Dirichlet Process Mixtures
+Automated pulmonary nodule detection using 3D deep convolutional neural  networks
 
-  Motivation: With the development of droplet based systems, massive single
-cell transcriptome data has become available, which enables analysis of
-cellular and molecular processes at single cell resolution and is instrumental
-to understanding many biological processes. While state-of-the-art clustering
-methods have been applied to the data, they face challenges in the following
-aspects: (1) the clustering quality still needs to be improved; (2) most models
-need prior knowledge on number of clusters, which is not always available; (3)
-there is a demand for faster computational speed. Results: We propose to tackle
-these challenges with Parallel Split Merge Sampling on Dirichlet Process
-Mixture Model (the Para-DPMM model). Unlike classic DPMM methods that perform
-sampling on each single data point, the split merge mechanism samples on the
-cluster level, which significantly improves convergence and optimality of the
-result. The model is highly parallelized and can utilize the computing power of
-high performance computing (HPC) clusters, enabling massive clustering on huge
-datasets. Experiment results show the model outperforms current widely used
-models in both clustering quality and computational speed. Availability: Source
-code is publicly available on
-https://github.com/tiehangd/Para_DPMM/tree/master/Para_DPMM_package
+  Early detection of pulmonary nodules in computed tomography (CT) images isessential for successful outcomes among lung cancer patients. Much attentionhas been given to deep convolutional neural network (DCNN)-based approaches tothis task, but models have relied at least partly on 2D or 2.5D components forinherently 3D data. In this paper, we introduce a novel DCNN approach,consisting of two stages, that is fully three-dimensional end-to-end andutilizes the state-of-the-art in object detection. First, nodule candidates areidentified with a U-Net-inspired 3D Faster R-CNN trained using online hardnegative mining. Second, false positive reduction is performed by 3D DCNNclassifiers trained on difficult examples produced during candidate screening.Finally, we introduce a method to ensemble models from both stages viaconsensus to give the final predictions. By using this framework, we rankedfirst of 2887 teams in Season One of Alibaba's 2017 TianChi AI Competition forHealthcare.
 
+An End-to-end Framework For Integrated Pulmonary Nodule Detection and  False Positive Reduction
 
-Automated pulmonary nodule detection using 3D deep convolutional neural
-  networks
+  Pulmonary nodule detection using low-dose Computed Tomography (CT) is oftenthe first step in lung disease screening and diagnosis. Recently, algorithmsbased on deep convolutional neural nets have shown great promise for automatednodule detection. Most of the existing deep learning nodule detection systemsare constructed in two steps: a) nodule candidates screening and b) falsepositive reduction, using two different models trained separately. Although itis commonly adopted, the two-step approach not only imposes significantresource overhead on training two independent deep learning models, but also issub-optimal because it prevents cross-talk between the two. In this work, wepresent an end-to-end framework for nodule detection, integrating nodulecandidate screening and false positive reduction into one model, trainedjointly. We demonstrate that the end-to-end system improves the performance by3.88\% over the two-step approach, while at the same time reducing modelcomplexity by one third and cutting inference time by 3.6 fold. Code will bemade publicly available.
 
-  Early detection of pulmonary nodules in computed tomography (CT) images is
-essential for successful outcomes among lung cancer patients. Much attention
-has been given to deep convolutional neural network (DCNN)-based approaches to
-this task, but models have relied at least partly on 2D or 2.5D components for
-inherently 3D data. In this paper, we introduce a novel DCNN approach,
-consisting of two stages, that is fully three-dimensional end-to-end and
-utilizes the state-of-the-art in object detection. First, nodule candidates are
-identified with a U-Net-inspired 3D Faster R-CNN trained using online hard
-negative mining. Second, false positive reduction is performed by 3D DCNN
-classifiers trained on difficult examples produced during candidate screening.
-Finally, we introduce a method to ensemble models from both stages via
-consensus to give the final predictions. By using this framework, we ranked
-first of 2887 teams in Season One of Alibaba's 2017 TianChi AI Competition for
-Healthcare.
+Multiple Access for Small Packets Based on Precoding and Sparsity-Aware  Detection
 
+  Modern mobile terminals often produce a large number of small data packets.For these packets, it is inefficient to follow the conventional medium accesscontrol protocols because of poor utilization of service resources. We proposea novel multiple access scheme that employs block-spreading based precoding atthe transmitters and sparsity-aware detection schemes at the base station. Theproposed scheme is well suited for the emerging massive multiple-inputmultiple-output (MIMO) systems, as well as conventional cellular systems with asmall number of base-station antennas. The transmitters employ precoding intime domain to enable the simultaneous transmissions of many users, which couldbe even more than the number of receive antennas at the base station. Thesystem is modeled as a linear system of equations with block-sparse unknowns.We first adopt the block orthogonal matching pursuit (BOMP) algorithm torecover the transmitted signals. We then develop an improved algorithm, namedinterference cancellation BOMP (ICBOMP), which takes advantage of errorcorrection and detection coding to perform perfect interference cancellationduring each iteration of BOMP algorithm. Conditions for guaranteed datarecovery are identified. The simulation results demonstrate that the proposedscheme can accommodate more simultaneous transmissions than conventionalschemes in typical small-packet transmission scenarios.
 
-An End-to-end Framework For Integrated Pulmonary Nodule Detection and
-  False Positive Reduction
+Many Access for Small Packets Based on Precoding and Sparsity-aware  Recovery
 
-  Pulmonary nodule detection using low-dose Computed Tomography (CT) is often
-the first step in lung disease screening and diagnosis. Recently, algorithms
-based on deep convolutional neural nets have shown great promise for automated
-nodule detection. Most of the existing deep learning nodule detection systems
-are constructed in two steps: a) nodule candidates screening and b) false
-positive reduction, using two different models trained separately. Although it
-is commonly adopted, the two-step approach not only imposes significant
-resource overhead on training two independent deep learning models, but also is
-sub-optimal because it prevents cross-talk between the two. In this work, we
-present an end-to-end framework for nodule detection, integrating nodule
-candidate screening and false positive reduction into one model, trained
-jointly. We demonstrate that the end-to-end system improves the performance by
-3.88\% over the two-step approach, while at the same time reducing model
-complexity by one third and cutting inference time by 3.6 fold. Code will be
-made publicly available.
+  Modern mobile terminals produce massive small data packets. For theseshort-length packets, it is inefficient to follow the current multiple accessschemes to allocate transmission resources due to heavy signaling overhead. Wepropose a non-orthogonal many-access scheme that is well suited for the futurecommunication systems equipped with many receive antennas. The system ismodeled as having a block-sparsity pattern with unknown sparsity level (i.e.,unknown number of transmitted messages). Block precoding is employed at eachsingle-antenna transmitter to enable the simultaneous transmissions of manyusers. The number of simultaneously served active users is allowed to be evenmore than the number of receive antennas. Sparsity-aware recovery is designedat the receiver for joint user detection and symbol demodulation. To reduce theeffects of channel fading on signal recovery, normalized block orthogonalmatching pursuit (BOMP) algorithm is introduced, and based on its approximateperformance analysis, we develop interference cancellation based BOMP (ICBOMP)algorithm. The ICBOMP performs error correction and detection in each iterationof the normalized BOMP. Simulation results demonstrate the effectiveness of theproposed scheme in small packet services, as well as the advantages of ICBOMPin improving signal recovery accuracy and reducing computational cost.
 
+DeepLung: Deep 3D Dual Path Nets for Automated Pulmonary Nodule  Detection and Classification
 
-Multiple Access for Small Packets Based on Precoding and Sparsity-Aware
-  Detection
+  In this work, we present a fully automated lung computed tomography (CT)cancer diagnosis system, DeepLung. DeepLung consists of two components, noduledetection (identifying the locations of candidate nodules) and classification(classifying candidate nodules into benign or malignant). Considering the 3Dnature of lung CT data and the compactness of dual path networks (DPN), twodeep 3D DPN are designed for nodule detection and classification respectively.Specifically, a 3D Faster Regions with Convolutional Neural Net (R-CNN) isdesigned for nodule detection with 3D dual path blocks and a U-net-likeencoder-decoder structure to effectively learn nodule features. For noduleclassification, gradient boosting machine (GBM) with 3D dual path networkfeatures is proposed. The nodule classification subnetwork was validated on apublic dataset from LIDC-IDRI, on which it achieved better performance thanstate-of-the-art approaches and surpassed the performance of experienceddoctors based on image modality. Within the DeepLung system, candidate nodulesare detected first by the nodule detection subnetwork, and nodule diagnosis isconducted by the classification subnetwork. Extensive experimental resultsdemonstrate that DeepLung has performance comparable to experienced doctorsboth for the nodule-level and patient-level diagnosis on the LIDC-IDRIdataset.\footnote{https://github.com/uci-cbcl/DeepLung.git}
 
-  Modern mobile terminals often produce a large number of small data packets.
-For these packets, it is inefficient to follow the conventional medium access
-control protocols because of poor utilization of service resources. We propose
-a novel multiple access scheme that employs block-spreading based precoding at
-the transmitters and sparsity-aware detection schemes at the base station. The
-proposed scheme is well suited for the emerging massive multiple-input
-multiple-output (MIMO) systems, as well as conventional cellular systems with a
-small number of base-station antennas. The transmitters employ precoding in
-time domain to enable the simultaneous transmissions of many users, which could
-be even more than the number of receive antennas at the base station. The
-system is modeled as a linear system of equations with block-sparse unknowns.
-We first adopt the block orthogonal matching pursuit (BOMP) algorithm to
-recover the transmitted signals. We then develop an improved algorithm, named
-interference cancellation BOMP (ICBOMP), which takes advantage of error
-correction and detection coding to perform perfect interference cancellation
-during each iteration of BOMP algorithm. Conditions for guaranteed data
-recovery are identified. The simulation results demonstrate that the proposed
-scheme can accommodate more simultaneous transmissions than conventional
-schemes in typical small-packet transmission scenarios.
+DeepEM: Deep 3D ConvNets With EM For Weakly Supervised Pulmonary Nodule  Detection
 
-
-Many Access for Small Packets Based on Precoding and Sparsity-aware
-  Recovery
-
-  Modern mobile terminals produce massive small data packets. For these
-short-length packets, it is inefficient to follow the current multiple access
-schemes to allocate transmission resources due to heavy signaling overhead. We
-propose a non-orthogonal many-access scheme that is well suited for the future
-communication systems equipped with many receive antennas. The system is
-modeled as having a block-sparsity pattern with unknown sparsity level (i.e.,
-unknown number of transmitted messages). Block precoding is employed at each
-single-antenna transmitter to enable the simultaneous transmissions of many
-users. The number of simultaneously served active users is allowed to be even
-more than the number of receive antennas. Sparsity-aware recovery is designed
-at the receiver for joint user detection and symbol demodulation. To reduce the
-effects of channel fading on signal recovery, normalized block orthogonal
-matching pursuit (BOMP) algorithm is introduced, and based on its approximate
-performance analysis, we develop interference cancellation based BOMP (ICBOMP)
-algorithm. The ICBOMP performs error correction and detection in each iteration
-of the normalized BOMP. Simulation results demonstrate the effectiveness of the
-proposed scheme in small packet services, as well as the advantages of ICBOMP
-in improving signal recovery accuracy and reducing computational cost.
-
-
-DeepLung: Deep 3D Dual Path Nets for Automated Pulmonary Nodule
-  Detection and Classification
-
-  In this work, we present a fully automated lung computed tomography (CT)
-cancer diagnosis system, DeepLung. DeepLung consists of two components, nodule
-detection (identifying the locations of candidate nodules) and classification
-(classifying candidate nodules into benign or malignant). Considering the 3D
-nature of lung CT data and the compactness of dual path networks (DPN), two
-deep 3D DPN are designed for nodule detection and classification respectively.
-Specifically, a 3D Faster Regions with Convolutional Neural Net (R-CNN) is
-designed for nodule detection with 3D dual path blocks and a U-net-like
-encoder-decoder structure to effectively learn nodule features. For nodule
-classification, gradient boosting machine (GBM) with 3D dual path network
-features is proposed. The nodule classification subnetwork was validated on a
-public dataset from LIDC-IDRI, on which it achieved better performance than
-state-of-the-art approaches and surpassed the performance of experienced
-doctors based on image modality. Within the DeepLung system, candidate nodules
-are detected first by the nodule detection subnetwork, and nodule diagnosis is
-conducted by the classification subnetwork. Extensive experimental results
-demonstrate that DeepLung has performance comparable to experienced doctors
-both for the nodule-level and patient-level diagnosis on the LIDC-IDRI
-dataset.\footnote{https://github.com/uci-cbcl/DeepLung.git}
-
-
-DeepEM: Deep 3D ConvNets With EM For Weakly Supervised Pulmonary Nodule
-  Detection
-
-  Recently deep learning has been witnessing widespread adoption in various
-medical image applications. However, training complex deep neural nets requires
-large-scale datasets labeled with ground truth, which are often unavailable in
-many medical image domains. For instance, to train a deep neural net to detect
-pulmonary nodules in lung computed tomography (CT) images, current practice is
-to manually label nodule locations and sizes in many CT images to construct a
-sufficiently large training dataset, which is costly and difficult to scale. On
-the other hand, electronic medical records (EMR) contain plenty of partial
-information on the content of each medical image. In this work, we explore how
-to tap this vast, but currently unexplored data source to improve pulmonary
-nodule detection. We propose DeepEM, a novel deep 3D ConvNet framework
-augmented with expectation-maximization (EM), to mine weakly supervised labels
-in EMRs for pulmonary nodule detection. Experimental results show that DeepEM
-can lead to 1.5\% and 3.9\% average improvement in free-response receiver
-operating characteristic (FROC) scores on LUNA16 and Tianchi datasets,
-respectively, demonstrating the utility of incomplete information in EMRs for
-improving deep learning
-algorithms.\footnote{https://github.com/uci-cbcl/DeepEM-for-Weakly-Supervised-Detection.git}
-
+  Recently deep learning has been witnessing widespread adoption in variousmedical image applications. However, training complex deep neural nets requireslarge-scale datasets labeled with ground truth, which are often unavailable inmany medical image domains. For instance, to train a deep neural net to detectpulmonary nodules in lung computed tomography (CT) images, current practice isto manually label nodule locations and sizes in many CT images to construct asufficiently large training dataset, which is costly and difficult to scale. Onthe other hand, electronic medical records (EMR) contain plenty of partialinformation on the content of each medical image. In this work, we explore howto tap this vast, but currently unexplored data source to improve pulmonarynodule detection. We propose DeepEM, a novel deep 3D ConvNet frameworkaugmented with expectation-maximization (EM), to mine weakly supervised labelsin EMRs for pulmonary nodule detection. Experimental results show that DeepEMcan lead to 1.5\% and 3.9\% average improvement in free-response receiveroperating characteristic (FROC) scores on LUNA16 and Tianchi datasets,respectively, demonstrating the utility of incomplete information in EMRs forimproving deep learningalgorithms.\footnote{https://github.com/uci-cbcl/DeepEM-for-Weakly-Supervised-Detection.git}
 
 Identifying viruses from metagenomic data by deep learning
 
-  The recent development of metagenomic sequencing makes it possible to
-sequence microbial genomes including viruses in an environmental sample.
-Identifying viral sequences from metagenomic data is critical for downstream
-virus analyses. The existing reference-based and gene homology-based methods
-are not efficient in identifying unknown viruses or short viral sequences. Here
-we have developed a reference-free and alignment-free machine learning method,
-DeepVirFinder, for predicting viral sequences in metagenomic data using deep
-learning techniques. DeepVirFinder was trained based on a large number of viral
-sequences discovered before May 2015. Evaluated on the sequences after that
-date, DeepVirFinder outperformed the state-of-the-art method VirFinder at all
-contig lengths. Enlarging the training data by adding millions of purified
-viral sequences from environmental metavirome samples significantly improves
-the accuracy for predicting under-represented viruses. Applying DeepVirFinder
-to real human gut metagenomic samples from patients with colorectal carcinoma
-(CRC) identified 51,138 viral sequences belonging to 175 bins. Ten bins were
-associated with the cancer status, indicating their potential use for
-non-invasive diagnosis of CRC. In summary, DeepVirFinder greatly improved the
-precision and recall rates of viral identification, and it will significantly
-accelerate the discovery rate of viruses.
-
+  The recent development of metagenomic sequencing makes it possible tosequence microbial genomes including viruses in an environmental sample.Identifying viral sequences from metagenomic data is critical for downstreamvirus analyses. The existing reference-based and gene homology-based methodsare not efficient in identifying unknown viruses or short viral sequences. Herewe have developed a reference-free and alignment-free machine learning method,DeepVirFinder, for predicting viral sequences in metagenomic data using deeplearning techniques. DeepVirFinder was trained based on a large number of viralsequences discovered before May 2015. Evaluated on the sequences after thatdate, DeepVirFinder outperformed the state-of-the-art method VirFinder at allcontig lengths. Enlarging the training data by adding millions of purifiedviral sequences from environmental metavirome samples significantly improvesthe accuracy for predicting under-represented viruses. Applying DeepVirFinderto real human gut metagenomic samples from patients with colorectal carcinoma(CRC) identified 51,138 viral sequences belonging to 175 bins. Ten bins wereassociated with the cancer status, indicating their potential use fornon-invasive diagnosis of CRC. In summary, DeepVirFinder greatly improved theprecision and recall rates of viral identification, and it will significantlyaccelerate the discovery rate of viruses.
 
 Automatic Pulmonary Lobe Segmentation Using Deep Learning
 
-  Pulmonary lobe segmentation is an important task for pulmonary disease
-related Computer Aided Diagnosis systems (CADs). Classical methods for lobe
-segmentation rely on successful detection of fissures and other anatomical
-information such as the location of blood vessels and airways. With the success
-of deep learning in recent years, Deep Convolutional Neural Network (DCNN) has
-been widely applied to analyze medical images like Computed Tomography (CT) and
-Magnetic Resonance Imaging (MRI), which, however, requires a large number of
-ground truth annotations. In this work, we release our manually labeled 50 CT
-scans which are randomly chosen from the LUNA16 dataset and explore the use of
-deep learning on this task. We propose pre-processing CT image by cropping
-region that is covered by the convex hull of the lungs in order to mitigate the
-influence of noise from outside the lungs. Moreover, we design a hybrid loss
-function with dice loss to tackle extreme class imbalance issue and focal loss
-to force model to focus on voxels that are hard to be discriminated. To
-validate the robustness and performance of our proposed framework trained with
-a small number of training examples, we further tested our model on CT scans
-from an independent dataset. Experimental results show the robustness of the
-proposed approach, which consistently improves performance across different
-datasets by a maximum of $5.87\%$ as compared to a baseline model.
+  Pulmonary lobe segmentation is an important task for pulmonary diseaserelated Computer Aided Diagnosis systems (CADs). Classical methods for lobesegmentation rely on successful detection of fissures and other anatomicalinformation such as the location of blood vessels and airways. With the successof deep learning in recent years, Deep Convolutional Neural Network (DCNN) hasbeen widely applied to analyze medical images like Computed Tomography (CT) andMagnetic Resonance Imaging (MRI), which, however, requires a large number ofground truth annotations. In this work, we release our manually labeled 50 CTscans which are randomly chosen from the LUNA16 dataset and explore the use ofdeep learning on this task. We propose pre-processing CT image by croppingregion that is covered by the convex hull of the lungs in order to mitigate theinfluence of noise from outside the lungs. Moreover, we design a hybrid lossfunction with dice loss to tackle extreme class imbalance issue and focal lossto force model to focus on voxels that are hard to be discriminated. Tovalidate the robustness and performance of our proposed framework trained witha small number of training examples, we further tested our model on CT scansfrom an independent dataset. Experimental results show the robustness of theproposed approach, which consistently improves performance across differentdatasets by a maximum of $5.87\%$ as compared to a baseline model.
 
+Regional Homogeneity: Towards Learning Transferable Universal  Adversarial Perturbations Against Defenses
 
-Regional Homogeneity: Towards Learning Transferable Universal
-  Adversarial Perturbations Against Defenses
-
-  This paper focuses on learning transferable adversarial examples specifically
-against defense models (models to defense adversarial attacks). In particular,
-we show that a simple universal perturbation can fool a series of
-state-of-the-art defenses.
-  Adversarial examples generated by existing attacks are generally hard to
-transfer to defense models. We observe the property of regional homogeneity in
-adversarial perturbations and suggest that the defenses are less robust to
-regionally homogeneous perturbations. Therefore, we propose an effective
-transforming paradigm and a customized gradient transformer module to transform
-existing perturbations into regionally homogeneous ones. Without explicitly
-forcing the perturbations to be universal, we observe that a well-trained
-gradient transformer module tends to output input-independent gradients (hence
-universal) benefiting from the under-fitting phenomenon. Thorough experiments
-demonstrate that our work significantly outperforms the prior art attacking
-algorithms (either image-dependent or universal ones) by an average improvement
-of 14.0% when attacking 9 defenses in the black-box setting. In addition to the
-cross-model transferability, we also verify that regionally homogeneous
-perturbations can well transfer across different vision tasks (attacking with
-the semantic segmentation task and testing on the object detection task).
-
+  This paper focuses on learning transferable adversarial examples specificallyagainst defense models (models to defense adversarial attacks). In particular,we show that a simple universal perturbation can fool a series ofstate-of-the-art defenses.  Adversarial examples generated by existing attacks are generally hard totransfer to defense models. We observe the property of regional homogeneity inadversarial perturbations and suggest that the defenses are less robust toregionally homogeneous perturbations. Therefore, we propose an effectivetransforming paradigm and a customized gradient transformer module to transformexisting perturbations into regionally homogeneous ones. Without explicitlyforcing the perturbations to be universal, we observe that a well-trainedgradient transformer module tends to output input-independent gradients (henceuniversal) benefiting from the under-fitting phenomenon. Thorough experimentsdemonstrate that our work significantly outperforms the prior art attackingalgorithms (either image-dependent or universal ones) by an average improvementof 14.0% when attacking 9 defenses in the black-box setting. In addition to thecross-model transferability, we also verify that regionally homogeneousperturbations can well transfer across different vision tasks (attacking withthe semantic segmentation task and testing on the object detection task).
 
 Adversarial Attacks Beyond the Image Space
 
-  Generating adversarial examples is an intriguing problem and an important way
-of understanding the working mechanism of deep neural networks. Most existing
-approaches generated perturbations in the image space, i.e., each pixel can be
-modified independently. However, in this paper we pay special attention to the
-subset of adversarial examples that correspond to meaningful changes in 3D
-physical properties (like rotation and translation, illumination condition,
-etc.). These adversaries arguably pose a more serious concern, as they
-demonstrate the possibility of causing neural network failure by easy
-perturbations of real-world 3D objects and scenes.
-  In the contexts of object classification and visual question answering, we
-augment state-of-the-art deep neural networks that receive 2D input images with
-a rendering module (either differentiable or not) in front, so that a 3D scene
-(in the physical space) is rendered into a 2D image (in the image space), and
-then mapped to a prediction (in the output space). The adversarial
-perturbations can now go beyond the image space, and have clear meanings in the
-3D physical world. Though image-space adversaries can be interpreted as
-per-pixel albedo change, we verify that they cannot be well explained along
-these physically meaningful dimensions, which often have a non-local effect.
-But it is still possible to successfully attack beyond the image space on the
-physical space, though this is more difficult than image-space attacks,
-reflected in lower success rates and heavier perturbations required.
+  Generating adversarial examples is an intriguing problem and an important wayof understanding the working mechanism of deep neural networks. Most existingapproaches generated perturbations in the image space, i.e., each pixel can bemodified independently. However, in this paper we pay special attention to thesubset of adversarial examples that correspond to meaningful changes in 3Dphysical properties (like rotation and translation, illumination condition,etc.). These adversaries arguably pose a more serious concern, as theydemonstrate the possibility of causing neural network failure by easyperturbations of real-world 3D objects and scenes.  In the contexts of object classification and visual question answering, weaugment state-of-the-art deep neural networks that receive 2D input images witha rendering module (either differentiable or not) in front, so that a 3D scene(in the physical space) is rendered into a 2D image (in the image space), andthen mapped to a prediction (in the output space). The adversarialperturbations can now go beyond the image space, and have clear meanings in the3D physical world. Though image-space adversaries can be interpreted asper-pixel albedo change, we verify that they cannot be well explained alongthese physically meaningful dimensions, which often have a non-local effect.But it is still possible to successfully attack beyond the image space on thephysical space, though this is more difficult than image-space attacks,reflected in lower success rates and heavier perturbations required.
 
+AnatomyNet: Deep Learning for Fast and Fully Automated Whole-volume  Segmentation of Head and Neck Anatomy
 
-AnatomyNet: Deep Learning for Fast and Fully Automated Whole-volume
-  Segmentation of Head and Neck Anatomy
-
-  Methods: Our deep learning model, called AnatomyNet, segments OARs from head
-and neck CT images in an end-to-end fashion, receiving whole-volume HaN CT
-images as input and generating masks of all OARs of interest in one shot.
-AnatomyNet is built upon the popular 3D U-net architecture, but extends it in
-three important ways: 1) a new encoding scheme to allow auto-segmentation on
-whole-volume CT images instead of local patches or subsets of slices, 2)
-incorporating 3D squeeze-and-excitation residual blocks in encoding layers for
-better feature representation, and 3) a new loss function combining Dice scores
-and focal loss to facilitate the training of the neural model. These features
-are designed to address two main challenges in deep-learning-based HaN
-segmentation: a) segmenting small anatomies (i.e., optic chiasm and optic
-nerves) occupying only a few slices, and b) training with inconsistent data
-annotations with missing ground truth for some anatomical structures.
-  Results: We collected 261 HaN CT images to train AnatomyNet, and used MICCAI
-Head and Neck Auto Segmentation Challenge 2015 as a benchmark dataset to
-evaluate the performance of AnatomyNet. The objective is to segment nine
-anatomies: brain stem, chiasm, mandible, optic nerve left, optic nerve right,
-parotid gland left, parotid gland right, submandibular gland left, and
-submandibular gland right. Compared to previous state-of-the-art results from
-the MICCAI 2015 competition, AnatomyNet increases Dice similarity coefficient
-by 3.3% on average. AnatomyNet takes about 0.12 seconds to fully segment a head
-and neck CT image of dimension 178 x 302 x 225, significantly faster than
-previous methods. In addition, the model is able to process whole-volume CT
-images and delineate all OARs in one pass, requiring little pre- or
-post-processing.
-https://github.com/wentaozhu/AnatomyNet-for-anatomical-segmentation.git.
-
+  Methods: Our deep learning model, called AnatomyNet, segments OARs from headand neck CT images in an end-to-end fashion, receiving whole-volume HaN CTimages as input and generating masks of all OARs of interest in one shot.AnatomyNet is built upon the popular 3D U-net architecture, but extends it inthree important ways: 1) a new encoding scheme to allow auto-segmentation onwhole-volume CT images instead of local patches or subsets of slices, 2)incorporating 3D squeeze-and-excitation residual blocks in encoding layers forbetter feature representation, and 3) a new loss function combining Dice scoresand focal loss to facilitate the training of the neural model. These featuresare designed to address two main challenges in deep-learning-based HaNsegmentation: a) segmenting small anatomies (i.e., optic chiasm and opticnerves) occupying only a few slices, and b) training with inconsistent dataannotations with missing ground truth for some anatomical structures.  Results: We collected 261 HaN CT images to train AnatomyNet, and used MICCAIHead and Neck Auto Segmentation Challenge 2015 as a benchmark dataset toevaluate the performance of AnatomyNet. The objective is to segment nineanatomies: brain stem, chiasm, mandible, optic nerve left, optic nerve right,parotid gland left, parotid gland right, submandibular gland left, andsubmandibular gland right. Compared to previous state-of-the-art results fromthe MICCAI 2015 competition, AnatomyNet increases Dice similarity coefficientby 3.3% on average. AnatomyNet takes about 0.12 seconds to fully segment a headand neck CT image of dimension 178 x 302 x 225, significantly faster thanprevious methods. In addition, the model is able to process whole-volume CTimages and delineate all OARs in one pass, requiring little pre- orpost-processing.https://github.com/wentaozhu/AnatomyNet-for-anatomical-segmentation.git.
 

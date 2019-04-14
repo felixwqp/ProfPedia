@@ -1,894 +1,188 @@
 Towards Verified Artificial Intelligence
 
-  Verified artificial intelligence (AI) is the goal of designing AI-based
-systems that are provably correct with respect to mathematically-specified
-requirements. This paper considers Verified AI from a formal methods
-perspective. We describe five challenges for achieving Verified AI, and five
-corresponding principles for addressing these challenges.
+  Verified artificial intelligence (AI) is the goal of designing AI-basedsystems that are provably correct with respect to mathematically-specifiedrequirements. This paper considers Verified AI from a formal methodsperspective. We describe five challenges for achieving Verified AI, and fivecorresponding principles for addressing these challenges.
 
+Sciduction: Combining Induction, Deduction, and Structure for  Verification and Synthesis
 
-Sciduction: Combining Induction, Deduction, and Structure for
-  Verification and Synthesis
-
-  Even with impressive advances in automated formal methods, certain problems
-in system verification and synthesis remain challenging. Examples include the
-verification of quantitative properties of software involving constraints on
-timing and energy consumption, and the automatic synthesis of systems from
-specifications. The major challenges include environment modeling,
-incompleteness in specifications, and the complexity of underlying decision
-problems.
-  This position paper proposes sciduction, an approach to tackle these
-challenges by integrating inductive inference, deductive reasoning, and
-structure hypotheses. Deductive reasoning, which leads from general rules or
-concepts to conclusions about specific problem instances, includes techniques
-such as logical inference and constraint solving. Inductive inference, which
-generalizes from specific instances to yield a concept, includes algorithmic
-learning from examples. Structure hypotheses are used to define the class of
-artifacts, such as invariants or program fragments, generated during
-verification or synthesis. Sciduction constrains inductive and deductive
-reasoning using structure hypotheses, and actively combines inductive and
-deductive reasoning: for instance, deductive techniques generate examples for
-learning, and inductive reasoning is used to guide the deductive engines.
-  We illustrate this approach with three applications: (i) timing analysis of
-software; (ii) synthesis of loop-free programs, and (iii) controller synthesis
-for hybrid systems. Some future applications are also discussed.
-
+  Even with impressive advances in automated formal methods, certain problemsin system verification and synthesis remain challenging. Examples include theverification of quantitative properties of software involving constraints ontiming and energy consumption, and the automatic synthesis of systems fromspecifications. The major challenges include environment modeling,incompleteness in specifications, and the complexity of underlying decisionproblems.  This position paper proposes sciduction, an approach to tackle thesechallenges by integrating inductive inference, deductive reasoning, andstructure hypotheses. Deductive reasoning, which leads from general rules orconcepts to conclusions about specific problem instances, includes techniquessuch as logical inference and constraint solving. Inductive inference, whichgeneralizes from specific instances to yield a concept, includes algorithmiclearning from examples. Structure hypotheses are used to define the class ofartifacts, such as invariants or program fragments, generated duringverification or synthesis. Sciduction constrains inductive and deductivereasoning using structure hypotheses, and actively combines inductive anddeductive reasoning: for instance, deductive techniques generate examples forlearning, and inductive reasoning is used to guide the deductive engines.  We illustrate this approach with three applications: (i) timing analysis ofsoftware; (ii) synthesis of loop-free programs, and (iii) controller synthesisfor hybrid systems. Some future applications are also discussed.
 
 A Formalization of Robustness for Deep Neural Networks
 
-  Deep neural networks have been shown to lack robustness to small input
-perturbations. The process of generating the perturbations that expose the lack
-of robustness of neural networks is known as adversarial input generation. This
-process depends on the goals and capabilities of the adversary, In this paper,
-we propose a unifying formalization of the adversarial input generation process
-from a formal methods perspective. We provide a definition of robustness that
-is general enough to capture different formulations. The expressiveness of our
-formalization is shown by modeling and comparing a variety of adversarial
-attack techniques.
-
+  Deep neural networks have been shown to lack robustness to small inputperturbations. The process of generating the perturbations that expose the lackof robustness of neural networks is known as adversarial input generation. Thisprocess depends on the goals and capabilities of the adversary, In this paper,we propose a unifying formalization of the adversarial input generation processfrom a formal methods perspective. We provide a definition of robustness thatis general enough to capture different formulations. The expressiveness of ourformalization is shown by modeling and comparing a variety of adversarialattack techniques.
 
 Language to Specify Syntax-Guided Synthesis Problems
 
-  We present a language to specify syntax guided synthesis (SyGuS) problems.
-Syntax guidance is a prominent theme in contemporary program synthesis
-approaches, and SyGuS was first described in [1]. This paper describes
-concretely the input format of a SyGuS solver.
-  [1] Rajeev Alur, Rastislav Bodik, Garvit Juniwal, Milo M. K. Martin, Mukund
-Raghothaman, Sanjit A. Seshia, Rishabh Singh, Armando Solar-Lezama, Emina
-Torlak, and Abhishek Udupa. Syntax-guided synthesis. In FMCAD, pages 1--17,
-2013.
-
+  We present a language to specify syntax guided synthesis (SyGuS) problems.Syntax guidance is a prominent theme in contemporary program synthesisapproaches, and SyGuS was first described in [1]. This paper describesconcretely the input format of a SyGuS solver.  [1] Rajeev Alur, Rastislav Bodik, Garvit Juniwal, Milo M. K. Martin, MukundRaghothaman, Sanjit A. Seshia, Rishabh Singh, Armando Solar-Lezama, EminaTorlak, and Abhishek Udupa. Syntax-guided synthesis. In FMCAD, pages 1--17,2013.
 
 Model Predictive Control for Signal Temporal Logic Specification
 
-  We present a mathematical programming-based method for model predictive
-control of cyber-physical systems subject to signal temporal logic (STL)
-specifications. We describe the use of STL to specify a wide range of
-properties of these systems, including safety, response and bounded liveness.
-For synthesis, we encode STL specifications as mixed integer-linear constraints
-on the system variables in the optimization problem at each step of a receding
-horizon control framework. We prove correctness of our algorithms, and present
-experimental results for controller synthesis for building energy and climate
-control.
+  We present a mathematical programming-based method for model predictivecontrol of cyber-physical systems subject to signal temporal logic (STL)specifications. We describe the use of STL to specify a wide range ofproperties of these systems, including safety, response and bounded liveness.For synthesis, we encode STL specifications as mixed integer-linear constraintson the system variables in the optimization problem at each step of a recedinghorizon control framework. We prove correctness of our algorithms, and presentexperimental results for controller synthesis for building energy and climatecontrol.
 
+Systematic Testing of Convolutional Neural Networks for Autonomous  Driving
 
-Systematic Testing of Convolutional Neural Networks for Autonomous
-  Driving
+  We present a framework to systematically analyze convolutional neuralnetworks (CNNs) used in classification of cars in autonomous vehicles. Ouranalysis procedure comprises an image generator that produces syntheticpictures by sampling in a lower dimension image modification subspace and asuite of visualization tools. The image generator produces images which can beused to test the CNN and hence expose its vulnerabilities. The presentedframework can be used to extract insights of the CNN classifier, compare acrossclassification models, or generate training and validation datasets.
 
-  We present a framework to systematically analyze convolutional neural
-networks (CNNs) used in classification of cars in autonomous vehicles. Our
-analysis procedure comprises an image generator that produces synthetic
-pictures by sampling in a lower dimension image modification subspace and a
-suite of visualization tools. The image generator produces images which can be
-used to test the CNN and hence expose its vulnerabilities. The presented
-framework can be used to extract insights of the CNN classifier, compare across
-classification models, or generate training and validation datasets.
+Learning Heuristics for Automated Reasoning through Deep Reinforcement  Learning
 
-
-Learning Heuristics for Automated Reasoning through Deep Reinforcement
-  Learning
-
-  We demonstrate how to learn efficient heuristics for automated reasoning
-algorithms through deep reinforcement learning. We consider search algorithms
-for quantified Boolean logics, that already can solve formulas of impressive
-size - up to 100s of thousands of variables. The main challenge is to find a
-representation which lends to making predictions in a scalable way. The
-heuristics learned through our approach significantly improve over the
-handwritten heuristics for several sets of formulas.
-
+  We demonstrate how to learn efficient heuristics for automated reasoningalgorithms through deep reinforcement learning. We consider search algorithmsfor quantified Boolean logics, that already can solve formulas of impressivesize - up to 100s of thousands of variables. The main challenge is to find arepresentation which lends to making predictions in a scalable way. Theheuristics learned through our approach significantly improve over thehandwritten heuristics for several sets of formulas.
 
 A Model Counter's Guide to Probabilistic Systems
 
-  In this paper, we systematize the modeling of probabilistic systems for the
-purpose of analyzing them with model counting techniques. Starting from
-unbiased coin flips, we show how to model biased coins, correlated coins, and
-distributions over finite sets. From there, we continue with modeling
-sequential systems, such as Markov chains, and revisit the relationship between
-weighted and unweighted model counting. Thereby, this work provides a
-conceptual framework for deriving #SAT encodings for probabilistic inference.
+  In this paper, we systematize the modeling of probabilistic systems for thepurpose of analyzing them with model counting techniques. Starting fromunbiased coin flips, we show how to model biased coins, correlated coins, anddistributions over finite sets. From there, we continue with modelingsequential systems, such as Markov chains, and revisit the relationship betweenweighted and unweighted model counting. Thereby, this work provides aconceptual framework for deriving #SAT encodings for probabilistic inference.
 
+Deciding Quantifier-Free Presburger Formulas Using Parameterized  Solution Bounds
 
-Deciding Quantifier-Free Presburger Formulas Using Parameterized
-  Solution Bounds
-
-  Given a formula in quantifier-free Presburger arithmetic, if it has a
-satisfying solution, there is one whose size, measured in bits, is polynomially
-bounded in the size of the formula. In this paper, we consider a special class
-of quantifier-free Presburger formulas in which most linear constraints are
-difference (separation) constraints, and the non-difference constraints are
-sparse. This class has been observed to commonly occur in software
-verification. We derive a new solution bound in terms of parameters
-characterizing the sparseness of linear constraints and the number of
-non-difference constraints, in addition to traditional measures of formula
-size. In particular, we show that the number of bits needed per integer
-variable is linear in the number of non-difference constraints and logarithmic
-in the number and size of non-zero coefficients in them, but is otherwise
-independent of the total number of linear constraints in the formula. The
-derived bound can be used in a decision procedure based on instantiating
-integer variables over a finite domain and translating the input
-quantifier-free Presburger formula to an equi-satisfiable Boolean formula,
-which is then checked using a Boolean satisfiability solver. In addition to our
-main theoretical result, we discuss several optimizations for deriving tighter
-bounds in practice. Empirical evidence indicates that our decision procedure
-can greatly outperform other decision procedures.
-
+  Given a formula in quantifier-free Presburger arithmetic, if it has asatisfying solution, there is one whose size, measured in bits, is polynomiallybounded in the size of the formula. In this paper, we consider a special classof quantifier-free Presburger formulas in which most linear constraints aredifference (separation) constraints, and the non-difference constraints aresparse. This class has been observed to commonly occur in softwareverification. We derive a new solution bound in terms of parameterscharacterizing the sparseness of linear constraints and the number ofnon-difference constraints, in addition to traditional measures of formulasize. In particular, we show that the number of bits needed per integervariable is linear in the number of non-difference constraints and logarithmicin the number and size of non-zero coefficients in them, but is otherwiseindependent of the total number of linear constraints in the formula. Thederived bound can be used in a decision procedure based on instantiatinginteger variables over a finite domain and translating the inputquantifier-free Presburger formula to an equi-satisfiable Boolean formula,which is then checked using a Boolean satisfiability solver. In addition to ourmain theoretical result, we discuss several optimizations for deriving tighterbounds in practice. Empirical evidence indicates that our decision procedurecan greatly outperform other decision procedures.
 
 Distribution-Aware Sampling and Weighted Model Counting for SAT
 
-  Given a CNF formula and a weight for each assignment of values to variables,
-two natural problems are weighted model counting and distribution-aware
-sampling of satisfying assignments. Both problems have a wide variety of
-important applications. Due to the inherent complexity of the exact versions of
-the problems, interest has focused on solving them approximately. Prior work in
-this area scaled only to small problems in practice, or failed to provide
-strong theoretical guarantees, or employed a computationally-expensive maximum
-a posteriori probability (MAP) oracle that assumes prior knowledge of a
-factored representation of the weight distribution. We present a novel approach
-that works with a black-box oracle for weights of assignments and requires only
-an {\NP}-oracle (in practice, a SAT-solver) to solve both the counting and
-sampling problems. Our approach works under mild assumptions on the
-distribution of weights of satisfying assignments, provides strong theoretical
-guarantees, and scales to problems involving several thousand variables. We
-also show that the assumptions can be significantly relaxed while improving
-computational efficiency if a factored representation of the weights is known.
+  Given a CNF formula and a weight for each assignment of values to variables,two natural problems are weighted model counting and distribution-awaresampling of satisfying assignments. Both problems have a wide variety ofimportant applications. Due to the inherent complexity of the exact versions ofthe problems, interest has focused on solving them approximately. Prior work inthis area scaled only to small problems in practice, or failed to providestrong theoretical guarantees, or employed a computationally-expensive maximuma posteriori probability (MAP) oracle that assumes prior knowledge of afactored representation of the weight distribution. We present a novel approachthat works with a black-box oracle for weights of assignments and requires onlyan {\NP}-oracle (in practice, a SAT-solver) to solve both the counting andsampling problems. Our approach works under mild assumptions on thedistribution of weights of satisfying assignments, provides strong theoreticalguarantees, and scales to problems involving several thousand variables. Wealso show that the assumptions can be significantly relaxed while improvingcomputational efficiency if a factored representation of the weights is known.
 
+Automatic Generation of Communication Requirements for Enforcing  Multi-Agent Safety
 
-Automatic Generation of Communication Requirements for Enforcing
-  Multi-Agent Safety
+  Distributed controllers are often necessary for a multi-agent system tosatisfy safety properties such as collision avoidance. Communication andcoordination are key requirements in the implementation of a distributedcontrol protocol, but maintaining an all-to-all communication topology isunreasonable and not always necessary. Given a safety objective and acontroller implementation, we consider the problem of identifying when agentsneed to communicate with one another and coordinate their actions to satisfythe safety constraint. We define a coordination-free controllable predecessoroperator that is used to derive a subset of the state space that allows agentsto act independently, without consulting other agents to double check that theaction is safe. Applications are shown for identifying an upper bound onconnection delays and a self-triggered coordination scheme. Examples areprovided which showcase the potential for designers to visually interpret asystem's ability to tolerate delays when initializing a network connection.
 
-  Distributed controllers are often necessary for a multi-agent system to
-satisfy safety properties such as collision avoidance. Communication and
-coordination are key requirements in the implementation of a distributed
-control protocol, but maintaining an all-to-all communication topology is
-unreasonable and not always necessary. Given a safety objective and a
-controller implementation, we consider the problem of identifying when agents
-need to communicate with one another and coordinate their actions to satisfy
-the safety constraint. We define a coordination-free controllable predecessor
-operator that is used to derive a subset of the state space that allows agents
-to act independently, without consulting other agents to double check that the
-action is safe. Applications are shown for identifying an upper bound on
-connection delays and a self-triggered coordination scheme. Examples are
-provided which showcase the potential for designers to visually interpret a
-system's ability to tolerate delays when initializing a network connection.
+A Learning Based Approach to Control Synthesis of Markov Decision  Processes for Linear Temporal Logic Specifications
 
-
-A Learning Based Approach to Control Synthesis of Markov Decision
-  Processes for Linear Temporal Logic Specifications
-
-  We propose to synthesize a control policy for a Markov decision process (MDP)
-such that the resulting traces of the MDP satisfy a linear temporal logic (LTL)
-property. We construct a product MDP that incorporates a deterministic Rabin
-automaton generated from the desired LTL property. The reward function of the
-product MDP is defined from the acceptance condition of the Rabin automaton.
-This construction allows us to apply techniques from learning theory to the
-problem of synthesis for LTL specifications even when the transition
-probabilities are not known a priori. We prove that our method is guaranteed to
-find a controller that satisfies the LTL property with probability one if such
-a policy exists, and we suggest empirically with a case study in traffic
-control that our method produces reasonable control strategies even when the
-LTL property cannot be satisfied with probability one.
-
+  We propose to synthesize a control policy for a Markov decision process (MDP)such that the resulting traces of the MDP satisfy a linear temporal logic (LTL)property. We construct a product MDP that incorporates a deterministic Rabinautomaton generated from the desired LTL property. The reward function of theproduct MDP is defined from the acceptance condition of the Rabin automaton.This construction allows us to apply techniques from learning theory to theproblem of synthesis for LTL specifications even when the transitionprobabilities are not known a priori. We prove that our method is guaranteed tofind a controller that satisfies the LTL property with probability one if sucha policy exists, and we suggest empirically with a case study in trafficcontrol that our method produces reasonable control strategies even when theLTL property cannot be satisfied with probability one.
 
 On Systematic Testing for Execution-Time Analysis
 
-  Given a program and a time deadline, does the program finish before the
-deadline when executed on a given platform? With the requirement to produce a
-test case when such a violation can occur, we refer to this problem as the
-worst-case execution-time testing (WCETT) problem.
-  In this paper, we present an approach for solving the WCETT problem for
-loop-free programs by timing the execution of a program on a small number of
-carefully calculated inputs. We then create a sequence of integer linear
-programs the solutions of which encode the best timing model consistent with
-the measurements. By solving the programs we can find the worst-case input as
-well as estimate execution time of any other input. Our solution is more
-accurate than previous approaches and, unlikely previous work, by increasing
-the number of measurements we can produce WCETT bounds up to any desired
-accuracy.
-  Timing of a program depends on the properties of the platform it executes on.
-We further show how our approach can be used to quantify the timing
-repeatability of the underlying platform.
-
+  Given a program and a time deadline, does the program finish before thedeadline when executed on a given platform? With the requirement to produce atest case when such a violation can occur, we refer to this problem as theworst-case execution-time testing (WCETT) problem.  In this paper, we present an approach for solving the WCETT problem forloop-free programs by timing the execution of a program on a small number ofcarefully calculated inputs. We then create a sequence of integer linearprograms the solutions of which encode the best timing model consistent withthe measurements. By solving the programs we can find the worst-case input aswell as estimate execution time of any other input. Our solution is moreaccurate than previous approaches and, unlikely previous work, by increasingthe number of measurements we can produce WCETT bounds up to any desiredaccuracy.  Timing of a program depends on the properties of the platform it executes on.We further show how our approach can be used to quantify the timingrepeatability of the underlying platform.
 
 Context-Specific Validation of Data-Driven Models
 
-  With an increasing use of data-driven models to control robotic systems, it
-has become important to develop a methodology for validating such models before
-they can be deployed to design a controller for the actual system.
-Specifically, it must be ensured that the controller designed for a learned
-model would perform as expected on the actual physical system. We propose a
-context-specific validation framework to quantify the quality of a learned
-model based on a distance measure between the closed-loop actual system and the
-learned model. We then propose an active sampling scheme to compute a
-probabilistic upper bound on this distance in a sample-efficient manner. The
-proposed framework validates the learned model against only those behaviors of
-the system that are relevant for the purpose for which we intend to use this
-model, and does not require any a priori knowledge of the system dynamics.
-Several simulations illustrate the practicality of the proposed framework for
-validating the models of real-world systems, and consequently, for controller
-synthesis.
-
+  With an increasing use of data-driven models to control robotic systems, ithas become important to develop a methodology for validating such models beforethey can be deployed to design a controller for the actual system.Specifically, it must be ensured that the controller designed for a learnedmodel would perform as expected on the actual physical system. We propose acontext-specific validation framework to quantify the quality of a learnedmodel based on a distance measure between the closed-loop actual system and thelearned model. We then propose an active sampling scheme to compute aprobabilistic upper bound on this distance in a sample-efficient manner. Theproposed framework validates the learned model against only those behaviors ofthe system that are relevant for the purpose for which we intend to use thismodel, and does not require any a priori knowledge of the system dynamics.Several simulations illustrate the practicality of the proposed framework forvalidating the models of real-world systems, and consequently, for controllersynthesis.
 
 Control Improvisation
 
-  We formalize and analyze a new problem in formal language theory termed
-control improvisation. Given a specification language, the problem is to
-produce an improviser, a probabilistic algorithm that randomly generates words
-in the language, subject to two additional constraints: the satisfaction of a
-quantitative soft constraint, and the exhibition of a specified amount of
-randomness. Control improvisation has many applications, including for example
-systematically generating random test vectors satisfying format constraints or
-preconditions while being similar to a library of seed inputs. Other
-applications include robotic surveillance, machine improvisation of music, and
-randomized variants of the supervisory control problem. We describe a general
-framework for solving the control improvisation problem, and use it to give
-efficient algorithms for several practical classes of instances with finite
-automaton and context-free grammar specifications. We also provide a detailed
-complexity analysis, establishing #P-hardness of the problem in many other
-cases. For these intractable cases, we show how symbolic techniques based on
-Boolean satisfiability (SAT) solvers can be used to find approximate solutions.
-Finally, we discuss an extension of control improvisation to multiple soft
-constraints that is useful in some applications.
+  We formalize and analyze a new problem in formal language theory termedcontrol improvisation. Given a specification language, the problem is toproduce an improviser, a probabilistic algorithm that randomly generates wordsin the language, subject to two additional constraints: the satisfaction of aquantitative soft constraint, and the exhibition of a specified amount ofrandomness. Control improvisation has many applications, including for examplesystematically generating random test vectors satisfying format constraints orpreconditions while being similar to a library of seed inputs. Otherapplications include robotic surveillance, machine improvisation of music, andrandomized variants of the supervisory control problem. We describe a generalframework for solving the control improvisation problem, and use it to giveefficient algorithms for several practical classes of instances with finiteautomaton and context-free grammar specifications. We also provide a detailedcomplexity analysis, establishing #P-hardness of the problem in many othercases. For these intractable cases, we show how symbolic techniques based onBoolean satisfiability (SAT) solvers can be used to find approximate solutions.Finally, we discuss an extension of control improvisation to multiple softconstraints that is useful in some applications.
 
+On the Computational Complexity of Satisfiability Solving for String  Theories
 
-On the Computational Complexity of Satisfiability Solving for String
-  Theories
-
-  Satisfiability solvers are increasingly playing a key role in software
-verification, with particularly effective use in the analysis of security
-vulnerabilities. String processing is a key part of many software applications,
-such as browsers and web servers. These applications are susceptible to attacks
-through malicious data received over network. Automated tools for analyzing the
-security of such applications, thus need to reason about strings. For
-efficiency reasons, it is desirable to have a solver that treats strings as
-first-class types. In this paper, we present some theories of strings that are
-useful in a software security context and analyze the computational complexity
-of the presented theories. We use this complexity analysis to motivate a
-byte-blast approach which employs a Boolean encoding of the string constraints
-to a corresponding Boolean satisfiability problem.
-
+  Satisfiability solvers are increasingly playing a key role in softwareverification, with particularly effective use in the analysis of securityvulnerabilities. String processing is a key part of many software applications,such as browsers and web servers. These applications are susceptible to attacksthrough malicious data received over network. Automated tools for analyzing thesecurity of such applications, thus need to reason about strings. Forefficiency reasons, it is desirable to have a solver that treats strings asfirst-class types. In this paper, we present some theories of strings that areuseful in a software security context and analyze the computational complexityof the presented theories. We use this complexity analysis to motivate abyte-blast approach which employs a Boolean encoding of the string constraintsto a corresponding Boolean satisfiability problem.
 
 Robust Online Monitoring of Signal Temporal Logic
 
-  Signal Temporal Logic (STL) is a formalism used to rigorously specify
-requirements of cyberphysical systems (CPS), i.e., systems mixing digital or
-discrete components in interaction with a continuous environment or analog com-
-ponents. STL is naturally equipped with a quantitative semantics which can be
-used for various purposes: from assessing the robustness of a specification to
-guiding searches over the input and parameter space with the goal of falsifying
-the given property over system behaviors. Algorithms have been proposed and
-implemented for offline computation of such quantitative semantics, but only
-few methods exist for an online setting, where one would want to monitor the
-satisfaction of a formula during simulation. In this paper, we formalize a
-semantics for robust online monitoring of partial traces, i.e., traces for
-which there might not be enough data to decide the Boolean satisfaction (and to
-compute its quantitative counterpart). We propose an efficient algorithm to
-compute it and demonstrate its usage on two large scale real-world case studies
-coming from the automotive domain and from CPS education in a Massively Open
-Online Course (MOOC) setting. We show that savings in computationally expensive
-simulations far outweigh any overheads incurred by an online approach.
+  Signal Temporal Logic (STL) is a formalism used to rigorously specifyrequirements of cyberphysical systems (CPS), i.e., systems mixing digital ordiscrete components in interaction with a continuous environment or analog com-ponents. STL is naturally equipped with a quantitative semantics which can beused for various purposes: from assessing the robustness of a specification toguiding searches over the input and parameter space with the goal of falsifyingthe given property over system behaviors. Algorithms have been proposed andimplemented for offline computation of such quantitative semantics, but onlyfew methods exist for an online setting, where one would want to monitor thesatisfaction of a formula during simulation. In this paper, we formalize asemantics for robust online monitoring of partial traces, i.e., traces forwhich there might not be enough data to decide the Boolean satisfaction (and tocompute its quantitative counterpart). We propose an efficient algorithm tocompute it and demonstrate its usage on two large scale real-world case studiescoming from the automotive domain and from CPS education in a Massively OpenOnline Course (MOOC) setting. We show that savings in computationally expensivesimulations far outweigh any overheads incurred by an online approach.
 
+Robust Subspace System Identification via Weighted Nuclear Norm  Optimization
+
+  Subspace identification is a classical and very well studied problem insystem identification. The problem was recently posed as a convex optimizationproblem via the nuclear norm relaxation. Inspired by robust PCA, we extend thisframework to handle outliers. The proposed framework takes the form of a convexoptimization problem with an objective that trades off fit, rank and sparsity.As in robust PCA, it can be problematic to find a suitable regularizationparameter. We show how the space in which a suitable parameter should be soughtcan be limited to a bounded open set of the two dimensional parameter space. Inpractice, this is very useful since it restricts the parameter space that isneeded to be surveyed.
 
 Speeding Up SMT-Based Quantitative Program Analysis
 
-  Quantitative program analysis involves computing numerical quantities about
-individual or collections of program executions. An example of such a
-computation is quantitative information flow analysis, where one estimates the
-amount of information leaked about secret data through a program's output
-channels. Such information can be quantified in several ways, including channel
-capacity and (Shannon) entropy. In this paper, we formalize a class of
-quantitative analysis problems defined over a weighted control flow graph of a
-loop-free program. These problems can be solved using a combination of path
-enumeration, SMT solving, and model counting. However, existing methods can
-only handle very small programs, primarily because the number of execution
-paths can be exponential in the program size. We show how path explosion can be
-mitigated in some practical cases by taking advantage of special branching
-structure and by novel algorithm design. We demonstrate our techniques by
-computing the channel capacities of the timing side-channels of two programs
-with extremely large numbers of paths.
+  Quantitative program analysis involves computing numerical quantities aboutindividual or collections of program executions. An example of such acomputation is quantitative information flow analysis, where one estimates theamount of information leaked about secret data through a program's outputchannels. Such information can be quantified in several ways, including channelcapacity and (Shannon) entropy. In this paper, we formalize a class ofquantitative analysis problems defined over a weighted control flow graph of aloop-free program. These problems can be solved using a combination of pathenumeration, SMT solving, and model counting. However, existing methods canonly handle very small programs, primarily because the number of executionpaths can be exponential in the program size. We show how path explosion can bemitigated in some practical cases by taking advantage of special branchingstructure and by novel algorithm design. We demonstrate our techniques bycomputing the channel capacities of the timing side-channels of two programswith extremely large numbers of paths.
 
+Compositional Falsification of Cyber-Physical Systems with Machine  Learning Components
 
-Robust Subspace System Identification via Weighted Nuclear Norm
-  Optimization
+  Cyber-physical systems (CPS), such as automotive systems, are starting toinclude sophisticated machine learning (ML) components. Their correctness,therefore, depends on properties of the inner ML modules. While learningalgorithms aim to generalize from examples, they are only as good as theexamples provided, and recent efforts have shown that they can produceinconsistent output under small adversarial perturbations. This raises thequestion: can the output from learning components can lead to a failure of theentire CPS? In this work, we address this question by formulating it as aproblem of falsifying signal temporal logic (STL) specifications for CPS withML components. We propose a compositional falsification framework where atemporal logic falsifier and a machine learning analyzer cooperate with the aimof finding falsifying executions of the considered model. The efficacy of theproposed technique is shown on an automatic emergency braking system model witha perception component based on deep neural networks.
 
-  Subspace identification is a classical and very well studied problem in
-system identification. The problem was recently posed as a convex optimization
-problem via the nuclear norm relaxation. Inspired by robust PCA, we extend this
-framework to handle outliers. The proposed framework takes the form of a convex
-optimization problem with an objective that trades off fit, rank and sparsity.
-As in robust PCA, it can be problematic to find a suitable regularization
-parameter. We show how the space in which a suitable parameter should be sought
-can be limited to a bounded open set of the two dimensional parameter space. In
-practice, this is very useful since it restricts the parameter space that is
-needed to be surveyed.
+Tunable Reactive Synthesis for Lipschitz-Bounded Systems with Temporal  Logic Specifications
 
-
-Compositional Falsification of Cyber-Physical Systems with Machine
-  Learning Components
-
-  Cyber-physical systems (CPS), such as automotive systems, are starting to
-include sophisticated machine learning (ML) components. Their correctness,
-therefore, depends on properties of the inner ML modules. While learning
-algorithms aim to generalize from examples, they are only as good as the
-examples provided, and recent efforts have shown that they can produce
-inconsistent output under small adversarial perturbations. This raises the
-question: can the output from learning components can lead to a failure of the
-entire CPS? In this work, we address this question by formulating it as a
-problem of falsifying signal temporal logic (STL) specifications for CPS with
-ML components. We propose a compositional falsification framework where a
-temporal logic falsifier and a machine learning analyzer cooperate with the aim
-of finding falsifying executions of the considered model. The efficacy of the
-proposed technique is shown on an automatic emergency braking system model with
-a perception component based on deep neural networks.
-
-
-Tunable Reactive Synthesis for Lipschitz-Bounded Systems with Temporal
-  Logic Specifications
-
-  We address the problem of synthesizing reactive controllers for
-cyber-physical systems subject to Signal Temporal Logic (STL) specifications in
-the presence of adversarial inputs. Given a finite horizon, we define a
-reactive hierarchy of control problems that differ in the degree of information
-available to the system about the adversary's actions over the horizon. We show
-how to construct reactive controllers at various levels of the hierarchy,
-leveraging the existence of Lipschitz bounds on system dynamics and the
-quantitative semantics of STL. Our approach, a counterexample-guided inductive
-synthesis (CEGIS) scheme based on optimization and satisfiability modulo
-theories (SMT) solving, builds a strategy tree representing the interaction
-between the system and its environment. In every iteration of the CEGIS loop,
-we use a mix of optimization and SMT to maximally discard controllers falsified
-by a given counterexample. Our approach can be applied to any system with local
-Lipschitz-bounded dynamics, including linear, piecewise-linear and
-differentially-flat systems. Finally we show an application in the autonomous
-car domain.
-
+  We address the problem of synthesizing reactive controllers forcyber-physical systems subject to Signal Temporal Logic (STL) specifications inthe presence of adversarial inputs. Given a finite horizon, we define areactive hierarchy of control problems that differ in the degree of informationavailable to the system about the adversary's actions over the horizon. We showhow to construct reactive controllers at various levels of the hierarchy,leveraging the existence of Lipschitz bounds on system dynamics and thequantitative semantics of STL. Our approach, a counterexample-guided inductivesynthesis (CEGIS) scheme based on optimization and satisfiability modulotheories (SMT) solving, builds a strategy tree representing the interactionbetween the system and its environment. In every iteration of the CEGIS loop,we use a mix of optimization and SMT to maximally discard controllers falsifiedby a given counterexample. Our approach can be applied to any system with localLipschitz-bounded dynamics, including linear, piecewise-linear anddifferentially-flat systems. Finally we show an application in the autonomouscar domain.
 
 Time Series Learning using Monotonic Logical Properties
 
-  Cyber-physical systems of today are generating large volumes of time-series
-data. As manual inspection of such data is not tractable, the need for learning
-methods to help discover logical structure in the data has increased. We
-propose a logic-based framework that allows domain-specific knowledge to be
-embedded into formulas in a parametric logical specification over time-series
-data. The key idea is to then map a time series to a surface in the parameter
-space of the formula. Given this mapping, we identify the Hausdorff distance
-between boundaries as a natural distance metric between two time-series data
-under the lens of the parametric specification. This enables embedding
-non-trivial domain-specific knowledge into the distance metric and then using
-off-the-shelf machine learning tools to label the data. After labeling the
-data, we demonstrate how to extract a logical specification for each label.
-Finally, we showcase our technique on real world traffic data to learn
-classifiers/monitors for slow-downs and traffic jams.
+  Cyber-physical systems of today are generating large volumes of time-seriesdata. As manual inspection of such data is not tractable, the need for learningmethods to help discover logical structure in the data has increased. Wepropose a logic-based framework that allows domain-specific knowledge to beembedded into formulas in a parametric logical specification over time-seriesdata. The key idea is to then map a time series to a surface in the parameterspace of the formula. Given this mapping, we identify the Hausdorff distancebetween boundaries as a natural distance metric between two time-series dataunder the lens of the parametric specification. This enables embeddingnon-trivial domain-specific knowledge into the distance metric and then usingoff-the-shelf machine learning tools to label the data. After labeling thedata, we demonstrate how to extract a logical specification for each label.Finally, we showcase our technique on real world traffic data to learnclassifiers/monitors for slow-downs and traffic jams.
 
+A Satisfiability Modulo Theory Approach to Secure State Reconstruction  in Differentially Flat Systems Under Sensor Attacks
 
-Diagnosis and Repair for Synthesis from Signal Temporal Logic
-  Specifications
-
-  We address the problem of diagnosing and repairing specifications for hybrid
-systems formalized in signal temporal logic (STL). Our focus is on the setting
-of automatic synthesis of controllers in a model predictive control (MPC)
-framework. We build on recent approaches that reduce the controller synthesis
-problem to solving one or more mixed integer linear programs (MILPs), where
-infeasibility of a MILP usually indicates unrealizability of the controller
-synthesis problem. Given an infeasible STL synthesis problem, we present
-algorithms that provide feedback on the reasons for unrealizability, and
-suggestions for making it realizable. Our algorithms are sound and complete,
-i.e., they provide a correct diagnosis, and always terminate with a non-trivial
-specification that is feasible using the chosen synthesis method, when such a
-solution exists. We demonstrate the effectiveness of our approach on the
-synthesis of controllers for various cyber-physical systems, including an
-autonomous driving application and an aircraft electric power system.
-
+  We address the problem of estimating the state of a differentially flatsystem from measurements that may be corrupted by an adversarial attack. Incyber-physical systems, malicious attacks can directly compromise the system'ssensors or manipulate the communication between sensors and controllers. Weconsider attacks that only corrupt a subset of sensor measurements. We showthat the possibility of reconstructing the state under such attacks ischaracterized by a suitable generalization of the notion of s-sparseobservability, previously introduced by some of the authors in the linear case.We also extend our previous work on the use of Satisfiability Modulo Theorysolvers to estimate the state under sensor attacks to the context ofdifferentially flat systems. The effectiveness of our approach is illustratedon the problem of controlling a quadrotor under sensor attacks.
 
 Control Improvisation with Probabilistic Temporal Specifications
 
-  We consider the problem of generating randomized control sequences for
-complex networked systems typically actuated by human agents. Our approach
-leverages a concept known as control improvisation, which is based on a
-combination of data-driven learning and controller synthesis from formal
-specifications. We learn from existing data a generative model (for instance,
-an explicit-duration hidden Markov model, or EDHMM) and then supervise this
-model in order to guarantee that the generated sequences satisfy some desirable
-specifications given in Probabilistic Computation Tree Logic (PCTL). We present
-an implementation of our approach and apply it to the problem of mimicking the
-use of lighting appliances in a residential unit, with potential applications
-to home security and resource management. We present experimental results
-showing that our approach produces realistic control sequences, similar to
-recorded data based on human actuation, while satisfying suitable formal
-requirements.
+  We consider the problem of generating randomized control sequences forcomplex networked systems typically actuated by human agents. Our approachleverages a concept known as control improvisation, which is based on acombination of data-driven learning and controller synthesis from formalspecifications. We learn from existing data a generative model (for instance,an explicit-duration hidden Markov model, or EDHMM) and then supervise thismodel in order to guarantee that the generated sequences satisfy some desirablespecifications given in Probabilistic Computation Tree Logic (PCTL). We presentan implementation of our approach and apply it to the problem of mimicking theuse of lighting appliances in a residential unit, with potential applicationsto home security and resource management. We present experimental resultsshowing that our approach produces realistic control sequences, similar torecorded data based on human actuation, while satisfying suitable formalrequirements.
 
+Diagnosis and Repair for Synthesis from Signal Temporal Logic  Specifications
 
-A Satisfiability Modulo Theory Approach to Secure State Reconstruction
-  in Differentially Flat Systems Under Sensor Attacks
-
-  We address the problem of estimating the state of a differentially flat
-system from measurements that may be corrupted by an adversarial attack. In
-cyber-physical systems, malicious attacks can directly compromise the system's
-sensors or manipulate the communication between sensors and controllers. We
-consider attacks that only corrupt a subset of sensor measurements. We show
-that the possibility of reconstructing the state under such attacks is
-characterized by a suitable generalization of the notion of s-sparse
-observability, previously introduced by some of the authors in the linear case.
-We also extend our previous work on the use of Satisfiability Modulo Theory
-solvers to estimate the state under sensor attacks to the context of
-differentially flat systems. The effectiveness of our approach is illustrated
-on the problem of controlling a quadrotor under sensor attacks.
-
+  We address the problem of diagnosing and repairing specifications for hybridsystems formalized in signal temporal logic (STL). Our focus is on the settingof automatic synthesis of controllers in a model predictive control (MPC)framework. We build on recent approaches that reduce the controller synthesisproblem to solving one or more mixed integer linear programs (MILPs), whereinfeasibility of a MILP usually indicates unrealizability of the controllersynthesis problem. Given an infeasible STL synthesis problem, we presentalgorithms that provide feedback on the reasons for unrealizability, andsuggestions for making it realizable. Our algorithms are sound and complete,i.e., they provide a correct diagnosis, and always terminate with a non-trivialspecification that is feasible using the chosen synthesis method, when such asolution exists. We demonstrate the effectiveness of our approach on thesynthesis of controllers for various cyber-physical systems, including anautonomous driving application and an aircraft electric power system.
 
 Unsupervised Domain Adaptation: from Simulation Engine to the RealWorld
 
-  Large-scale labeled training datasets have enabled deep neural networks to
-excel on a wide range of benchmark vision tasks. However, in many applications
-it is prohibitively expensive or time-consuming to obtain large quantities of
-labeled data. To cope with limited labeled training data, many have attempted
-to directly apply models trained on a large-scale labeled source domain to
-another sparsely labeled target domain. Unfortunately, direct transfer across
-domains often performs poorly due to domain shift and dataset bias. Domain
-adaptation is the machine learning paradigm that aims to learn a model from a
-source domain that can perform well on a different (but related) target domain.
-In this paper, we summarize and compare the latest unsupervised domain
-adaptation methods in computer vision applications. We classify the non-deep
-approaches into sample re-weighting and intermediate subspace transformation
-categories, while the deep strategy includes discrepancy-based methods,
-adversarial generative models, adversarial discriminative models and
-reconstruction-based methods. We also discuss some potential directions.
-
+  Large-scale labeled training datasets have enabled deep neural networks toexcel on a wide range of benchmark vision tasks. However, in many applicationsit is prohibitively expensive or time-consuming to obtain large quantities oflabeled data. To cope with limited labeled training data, many have attemptedto directly apply models trained on a large-scale labeled source domain toanother sparsely labeled target domain. Unfortunately, direct transfer acrossdomains often performs poorly due to domain shift and dataset bias. Domainadaptation is the machine learning paradigm that aims to learn a model from asource domain that can perform well on a different (but related) target domain.In this paper, we summarize and compare the latest unsupervised domainadaptation methods in computer vision applications. We classify the non-deepapproaches into sample re-weighting and intermediate subspace transformationcategories, while the deep strategy includes discrepancy-based methods,adversarial generative models, adversarial discriminative models andreconstruction-based methods. We also discuss some potential directions.
 
 Synthesizing Switching Logic to Minimize Long-Run Cost
 
-  Given a multi-modal dynamical system, optimal switching logic synthesis
-involves generating the conditions for switching between the system modes such
-that the resulting hybrid system satisfies a quantitative specification. We
-formalize and solve the problem of optimal switching logic synthesis for
-quantitative specifications over long run behavior. Each trajectory of the
-system, and each state of the system, is associated with a cost. Our goal is to
-synthesize a system that minimizes this cost from each initial state. Our paper
-generalizes earlier work on synthesis for safety as safety specifications can
-be encoded as quantitative specifications. We present an approach for
-specifying quantitative measures using reward and penalty functions, and
-illustrate its effectiveness using several examples. We present an automated
-technique to synthesize switching logic for such quantitative measures. Our
-algorithm is based on reducing the synthesis problem to an unconstrained
-numerical optimization problem which can be solved by any off-the-shelf
-numerical optimization engines. We demonstrate the effectiveness of this
-approach with experimental results.
-
-
-Secure State Estimation For Cyber Physical Systems Under Sensor Attacks:
-  A Satisfiability Modulo Theory Approach
-
-  We address the problem of detecting and mitigating the effect of malicious
-attacks to the sensors of a linear dynamical system. We develop a novel,
-efficient algorithm that uses a Satisfiability-Modulo-Theory approach to
-isolate the compromised sensors and estimate the system state despite the
-presence of the attack, thus harnessing the intrinsic combinatorial complexity
-of the problem. By leveraging results from formal methods over real numbers, we
-provide guarantees on the soundness and completeness of our algorithm. We then
-report simulation results to compare its runtime performance with alternative
-techniques. Finally, we demonstrate its application to the problem of
-controlling an unmanned ground vehicle.
-
+  Given a multi-modal dynamical system, optimal switching logic synthesisinvolves generating the conditions for switching between the system modes suchthat the resulting hybrid system satisfies a quantitative specification. Weformalize and solve the problem of optimal switching logic synthesis forquantitative specifications over long run behavior. Each trajectory of thesystem, and each state of the system, is associated with a cost. Our goal is tosynthesize a system that minimizes this cost from each initial state. Our papergeneralizes earlier work on synthesis for safety as safety specifications canbe encoded as quantitative specifications. We present an approach forspecifying quantitative measures using reward and penalty functions, andillustrate its effectiveness using several examples. We present an automatedtechnique to synthesize switching logic for such quantitative measures. Ouralgorithm is based on reducing the synthesis problem to an unconstrainednumerical optimization problem which can be solved by any off-the-shelfnumerical optimization engines. We demonstrate the effectiveness of thisapproach with experimental results.
 
 Control Improvisation
 
-  We formalize and analyze a new automata-theoretic problem termed control
-improvisation. Given an automaton, the problem is to produce an improviser, a
-probabilistic algorithm that randomly generates words in its language, subject
-to two additional constraints: the satisfaction of an admissibility predicate,
-and the exhibition of a specified amount of randomness. Control improvisation
-has multiple applications, including, for example, generating musical
-improvisations that satisfy rhythmic and melodic constraints, where
-admissibility is determined by some bounded divergence from a reference melody.
-We analyze the complexity of the control improvisation problem, giving cases
-where it is efficiently solvable and cases where it is #P-hard or undecidable.
-We also show how symbolic techniques based on Boolean satisfiability (SAT)
-solvers can be used to approximately solve some of the intractable cases.
+  We formalize and analyze a new automata-theoretic problem termed controlimprovisation. Given an automaton, the problem is to produce an improviser, aprobabilistic algorithm that randomly generates words in its language, subjectto two additional constraints: the satisfaction of an admissibility predicate,and the exhibition of a specified amount of randomness. Control improvisationhas multiple applications, including, for example, generating musicalimprovisations that satisfy rhythmic and melodic constraints, whereadmissibility is determined by some bounded divergence from a reference melody.We analyze the complexity of the control improvisation problem, giving caseswhere it is efficiently solvable and cases where it is #P-hard or undecidable.We also show how symbolic techniques based on Boolean satisfiability (SAT)solvers can be used to approximately solve some of the intractable cases.
 
+Secure State Estimation For Cyber Physical Systems Under Sensor Attacks:  A Satisfiability Modulo Theory Approach
+
+  We address the problem of detecting and mitigating the effect of maliciousattacks to the sensors of a linear dynamical system. We develop a novel,efficient algorithm that uses a Satisfiability-Modulo-Theory approach toisolate the compromised sensors and estimate the system state despite thepresence of the attack, thus harnessing the intrinsic combinatorial complexityof the problem. By leveraging results from formal methods over real numbers, weprovide guarantees on the soundness and completeness of our algorithm. We thenreport simulation results to compare its runtime performance with alternativetechniques. Finally, we demonstrate its application to the problem ofcontrolling an unmanned ground vehicle.
 
 Counterexample-Guided Data Augmentation
 
-  We present a novel framework for augmenting data sets for machine learning
-based on counterexamples. Counterexamples are misclassified examples that have
-important properties for retraining and improving the model. Key components of
-our framework include a counterexample generator, which produces data items
-that are misclassified by the model and error tables, a novel data structure
-that stores information pertaining to misclassifications. Error tables can be
-used to explain the model's vulnerabilities and are used to efficiently
-generate counterexamples for augmentation. We show the efficacy of the proposed
-framework by comparing it to classical augmentation techniques on a case study
-of object detection in autonomous driving based on deep neural networks.
+  We present a novel framework for augmenting data sets for machine learningbased on counterexamples. Counterexamples are misclassified examples that haveimportant properties for retraining and improving the model. Key components ofour framework include a counterexample generator, which produces data itemsthat are misclassified by the model and error tables, a novel data structurethat stores information pertaining to misclassifications. Error tables can beused to explain the model's vulnerabilities and are used to efficientlygenerate counterexamples for augmentation. We show the efficacy of the proposedframework by comparing it to classical augmentation techniques on a case studyof object detection in autonomous driving based on deep neural networks.
 
+SWATI: Synthesizing Wordlengths Automatically Using Testing and  Induction
 
-SWATI: Synthesizing Wordlengths Automatically Using Testing and
-  Induction
-
-  In this paper, we present an automated technique SWATI: Synthesizing
-Wordlengths Automatically Using Testing and Induction, which uses a combination
-of Nelder-Mead optimization based testing, and induction from examples to
-automatically synthesize optimal fixedpoint implementation of numerical
-routines. The design of numerical software is commonly done using
-floating-point arithmetic in design-environments such as Matlab. However, these
-designs are often implemented using fixed-point arithmetic for speed and
-efficiency reasons especially in embedded systems. The fixed-point
-implementation reduces implementation cost, provides better performance, and
-reduces power consumption. The conversion from floating-point designs to
-fixed-point code is subject to two opposing constraints: (i) the word-width of
-fixed-point types must be minimized, and (ii) the outputs of the fixed-point
-program must be accurate. In this paper, we propose a new solution to this
-problem. Our technique takes the floating-point program, specified accuracy and
-an implementation cost model and provides the fixed-point program with
-specified accuracy and optimal implementation cost. We demonstrate the
-effectiveness of our approach on a set of examples from the domain of automated
-control, robotics and digital signal processing.
-
+  In this paper, we present an automated technique SWATI: SynthesizingWordlengths Automatically Using Testing and Induction, which uses a combinationof Nelder-Mead optimization based testing, and induction from examples toautomatically synthesize optimal fixedpoint implementation of numericalroutines. The design of numerical software is commonly done usingfloating-point arithmetic in design-environments such as Matlab. However, thesedesigns are often implemented using fixed-point arithmetic for speed andefficiency reasons especially in embedded systems. The fixed-pointimplementation reduces implementation cost, provides better performance, andreduces power consumption. The conversion from floating-point designs tofixed-point code is subject to two opposing constraints: (i) the word-width offixed-point types must be minimized, and (ii) the outputs of the fixed-pointprogram must be accurate. In this paper, we propose a new solution to thisproblem. Our technique takes the floating-point program, specified accuracy andan implementation cost model and provides the fixed-point program withspecified accuracy and optimal implementation cost. We demonstrate theeffectiveness of our approach on a set of examples from the domain of automatedcontrol, robotics and digital signal processing.
 
 Semantic Adversarial Deep Learning
 
-  Fueled by massive amounts of data, models produced by machine-learning (ML)
-algorithms, especially deep neural networks, are being used in diverse domains
-where trustworthiness is a concern, including automotive systems, finance,
-health care, natural language processing, and malware detection. Of particular
-concern is the use of ML algorithms in cyber-physical systems (CPS), such as
-self-driving cars and aviation, where an adversary can cause serious
-consequences. However, existing approaches to generating adversarial examples
-and devising robust ML algorithms mostly ignore the semantics and context of
-the overall system containing the ML component. For example, in an autonomous
-vehicle using deep learning for perception, not every adversarial example for
-the neural network might lead to a harmful consequence. Moreover, one may want
-to prioritize the search for adversarial examples towards those that
-significantly modify the desired semantics of the overall system. Along the
-same lines, existing algorithms for constructing robust ML algorithms ignore
-the specification of the overall system. In this paper, we argue that the
-semantics and specification of the overall system has a crucial role to play in
-this line of research. We present preliminary research results that support
-this claim.
-
+  Fueled by massive amounts of data, models produced by machine-learning (ML)algorithms, especially deep neural networks, are being used in diverse domainswhere trustworthiness is a concern, including automotive systems, finance,health care, natural language processing, and malware detection. Of particularconcern is the use of ML algorithms in cyber-physical systems (CPS), such asself-driving cars and aviation, where an adversary can cause seriousconsequences. However, existing approaches to generating adversarial examplesand devising robust ML algorithms mostly ignore the semantics and context ofthe overall system containing the ML component. For example, in an autonomousvehicle using deep learning for perception, not every adversarial example forthe neural network might lead to a harmful consequence. Moreover, one may wantto prioritize the search for adversarial examples towards those thatsignificantly modify the desired semantics of the overall system. Along thesame lines, existing algorithms for constructing robust ML algorithms ignorethe specification of the overall system. In this paper, we argue that thesemantics and specification of the overall system has a crucial role to play inthis line of research. We present preliminary research results that supportthis claim.
 
 Constrained Sampling and Counting: Universal Hashing Meets SAT Solving
 
-  Constrained sampling and counting are two fundamental problems in artificial
-intelligence with a diverse range of applications, spanning probabilistic
-reasoning and planning to constrained-random verification. While the theory of
-these problems was thoroughly investigated in the 1980s, prior work either did
-not scale to industrial size instances or gave up correctness guarantees to
-achieve scalability. Recently, we proposed a novel approach that combines
-universal hashing and SAT solving and scales to formulas with hundreds of
-thousands of variables without giving up correctness guarantees. This paper
-provides an overview of the key ingredients of the approach and discusses
-challenges that need to be overcome to handle larger real-world instances.
-
+  Constrained sampling and counting are two fundamental problems in artificialintelligence with a diverse range of applications, spanning probabilisticreasoning and planning to constrained-random verification. While the theory ofthese problems was thoroughly investigated in the 1980s, prior work either didnot scale to industrial size instances or gave up correctness guarantees toachieve scalability. Recently, we proposed a novel approach that combinesuniversal hashing and SAT solving and scales to formulas with hundreds ofthousands of variables without giving up correctness guarantees. This paperprovides an overview of the key ingredients of the approach and discusseschallenges that need to be overcome to handle larger real-world instances.
 
 Logic-based Clustering and Learning for Time-Series Data
 
-  To effectively analyze and design cyberphysical systems (CPS), designers
-today have to combat the data deluge problem, i.e., the burden of processing
-intractably large amounts of data produced by complex models and experiments.
-In this work, we utilize monotonic Parametric Signal Temporal Logic (PSTL) to
-design features for unsupervised classification of time series data. This
-enables using off-the-shelf machine learning tools to automatically cluster
-similar traces with respect to a given PSTL formula. We demonstrate how this
-technique produces interpretable formulas that are amenable to analysis and
-understanding using a few representative examples. We illustrate this with case
-studies related to automotive engine testing, highway traffic analysis, and
-auto-grading massively open online courses.
+  To effectively analyze and design cyberphysical systems (CPS), designerstoday have to combat the data deluge problem, i.e., the burden of processingintractably large amounts of data produced by complex models and experiments.In this work, we utilize monotonic Parametric Signal Temporal Logic (PSTL) todesign features for unsupervised classification of time series data. Thisenables using off-the-shelf machine learning tools to automatically clustersimilar traces with respect to a given PSTL formula. We demonstrate how thistechnique produces interpretable formulas that are amenable to analysis andunderstanding using a few representative examples. We illustrate this with casestudies related to automotive engine testing, highway traffic analysis, andauto-grading massively open online courses.
 
+VERIFAI: A Toolkit for the Design and Analysis of Artificial  Intelligence-Based Systems
 
-VERIFAI: A Toolkit for the Design and Analysis of Artificial
-  Intelligence-Based Systems
+  We present VERIFAI, a software toolkit for the formal design and analysis ofsystems that include artificial intelligence (AI) and machine learning (ML)components. VERIFAI particularly seeks to address challenges with applyingformal methods to perception and ML components, including those based on neuralnetworks, and to model and analyze system behavior in the presence ofenvironment uncertainty. We describe the initial version of VERIFAI whichcenters on simulation guided by formal models and specifications. Several usecases are illustrated with examples, including temporal-logic falsification,model-based systematic fuzz testing, parameter synthesis, counterexampleanalysis, and data set augmentation.
 
-  We present VERIFAI, a software toolkit for the formal design and analysis of
-systems that include artificial intelligence (AI) and machine learning (ML)
-components. VERIFAI particularly seeks to address challenges with applying
-formal methods to perception and ML components, including those based on neural
-networks, and to model and analyze system behavior in the presence of
-environment uncertainty. We describe the initial version of VERIFAI which
-centers on simulation guided by formal models and specifications. Several use
-cases are illustrated with examples, including temporal-logic falsification,
-model-based systematic fuzz testing, parameter synthesis, counterexample
-analysis, and data set augmentation.
+A New Simulation Metric to Determine Safe Environments and Controllers  for Systems with Unknown Dynamics
 
-
-A New Simulation Metric to Determine Safe Environments and Controllers
-  for Systems with Unknown Dynamics
-
-  We consider the problem of extracting safe environments and controllers for
-reach-avoid objectives for systems with known state and control spaces, but
-unknown dynamics. In a given environment, a common approach is to synthesize a
-controller from an abstraction or a model of the system (potentially learned
-from data). However, in many situations, the relationship between the dynamics
-of the model and the \textit{actual system} is not known; and hence it is
-difficult to provide safety guarantees for the system. In such cases, the
-Standard Simulation Metric (SSM), defined as the worst-case norm distance
-between the model and the system output trajectories, can be used to modify a
-reach-avoid specification for the system into a more stringent specification
-for the abstraction. Nevertheless, the obtained distance, and hence the
-modified specification, can be quite conservative. This limits the set of
-environments for which a safe controller can be obtained. We propose SPEC, a
-specification-centric simulation metric, which overcomes these limitations by
-computing the distance using only the trajectories that violate the
-specification for the system. We show that modifying a reach-avoid
-specification with SPEC allows us to synthesize a safe controller for a larger
-set of environments compared to SSM. We also propose a probabilistic method to
-compute SPEC for a general class of systems. Case studies using simulators for
-quadrotors and autonomous cars illustrate the advantages of the proposed metric
-for determining safe environment sets and controllers.
-
+  We consider the problem of extracting safe environments and controllers forreach-avoid objectives for systems with known state and control spaces, butunknown dynamics. In a given environment, a common approach is to synthesize acontroller from an abstraction or a model of the system (potentially learnedfrom data). However, in many situations, the relationship between the dynamicsof the model and the \textit{actual system} is not known; and hence it isdifficult to provide safety guarantees for the system. In such cases, theStandard Simulation Metric (SSM), defined as the worst-case norm distancebetween the model and the system output trajectories, can be used to modify areach-avoid specification for the system into a more stringent specificationfor the abstraction. Nevertheless, the obtained distance, and hence themodified specification, can be quite conservative. This limits the set ofenvironments for which a safe controller can be obtained. We propose SPEC, aspecification-centric simulation metric, which overcomes these limitations bycomputing the distance using only the trajectories that violate thespecification for the system. We show that modifying a reach-avoidspecification with SPEC allows us to synthesize a safe controller for a largerset of environments compared to SSM. We also propose a probabilistic method tocompute SPEC for a general class of systems. Case studies using simulators forquadrotors and autonomous cars illustrate the advantages of the proposed metricfor determining safe environment sets and controllers.
 
 Reactive Control Improvisation
 
-  Reactive synthesis is a paradigm for automatically building
-correct-by-construction systems that interact with an unknown or adversarial
-environment. We study how to do reactive synthesis when part of the
-specification of the system is that its behavior should be random. Randomness
-can be useful, for example, in a network protocol fuzz tester whose output
-should be varied, or a planner for a surveillance robot whose route should be
-unpredictable. However, existing reactive synthesis techniques do not provide a
-way to ensure random behavior while maintaining functional correctness. Towards
-this end, we generalize the recently-proposed framework of control
-improvisation (CI) to add reactivity. The resulting framework of reactive
-control improvisation provides a natural way to integrate a randomness
-requirement with the usual functional specifications of reactive synthesis over
-a finite window. We theoretically characterize when such problems are
-realizable, and give a general method for solving them. For specifications
-given by reachability or safety games or by deterministic finite automata, our
-method yields a polynomial-time synthesis algorithm. For various other types of
-specifications including temporal logic formulas, we obtain a polynomial-space
-algorithm and prove matching PSPACE-hardness results. We show that all of these
-randomized variants of reactive synthesis are no harder in a
-complexity-theoretic sense than their non-randomized counterparts.
-
+  Reactive synthesis is a paradigm for automatically buildingcorrect-by-construction systems that interact with an unknown or adversarialenvironment. We study how to do reactive synthesis when part of thespecification of the system is that its behavior should be random. Randomnesscan be useful, for example, in a network protocol fuzz tester whose outputshould be varied, or a planner for a surveillance robot whose route should beunpredictable. However, existing reactive synthesis techniques do not provide away to ensure random behavior while maintaining functional correctness. Towardsthis end, we generalize the recently-proposed framework of controlimprovisation (CI) to add reactivity. The resulting framework of reactivecontrol improvisation provides a natural way to integrate a randomnessrequirement with the usual functional specifications of reactive synthesis overa finite window. We theoretically characterize when such problems arerealizable, and give a general method for solving them. For specificationsgiven by reachability or safety games or by deterministic finite automata, ourmethod yields a polynomial-time synthesis algorithm. For various other types ofspecifications including temporal logic formulas, we obtain a polynomial-spacealgorithm and prove matching PSPACE-hardness results. We show that all of theserandomized variants of reactive synthesis are no harder in acomplexity-theoretic sense than their non-randomized counterparts.
 
 A Theory of Formal Synthesis via Inductive Learning
 
-  Formal synthesis is the process of generating a program satisfying a
-high-level formal specification. In recent times, effective formal synthesis
-methods have been proposed based on the use of inductive learning. We refer to
-this class of methods that learn programs from examples as formal inductive
-synthesis. In this paper, we present a theoretical framework for formal
-inductive synthesis. We discuss how formal inductive synthesis differs from
-traditional machine learning. We then describe oracle-guided inductive
-synthesis (OGIS), a framework that captures a family of synthesizers that
-operate by iteratively querying an oracle. An instance of OGIS that has had
-much practical impact is counterexample-guided inductive synthesis (CEGIS). We
-present a theoretical characterization of CEGIS for learning any program that
-computes a recursive language. In particular, we analyze the relative power of
-CEGIS variants where the types of counterexamples generated by the oracle
-varies. We also consider the impact of bounded versus unbounded memory
-available to the learning algorithm. In the special case where the universe of
-candidate programs is finite, we relate the speed of convergence to the notion
-of teaching dimension studied in machine learning theory. Altogether, the
-results of the paper take a first step towards a theoretical foundation for the
-emerging field of formal inductive synthesis.
-
+  Formal synthesis is the process of generating a program satisfying ahigh-level formal specification. In recent times, effective formal synthesismethods have been proposed based on the use of inductive learning. We refer tothis class of methods that learn programs from examples as formal inductivesynthesis. In this paper, we present a theoretical framework for formalinductive synthesis. We discuss how formal inductive synthesis differs fromtraditional machine learning. We then describe oracle-guided inductivesynthesis (OGIS), a framework that captures a family of synthesizers thatoperate by iteratively querying an oracle. An instance of OGIS that has hadmuch practical impact is counterexample-guided inductive synthesis (CEGIS). Wepresent a theoretical characterization of CEGIS for learning any program thatcomputes a recursive language. In particular, we analyze the relative power ofCEGIS variants where the types of counterexamples generated by the oraclevaries. We also consider the impact of bounded versus unbounded memoryavailable to the learning algorithm. In the special case where the universe ofcandidate programs is finite, we relate the speed of convergence to the notionof teaching dimension studied in machine learning theory. Altogether, theresults of the paper take a first step towards a theoretical foundation for theemerging field of formal inductive synthesis.
 
 SOTER: Programming Safe Robotics System using Runtime Assurance
 
-  The recent drive towards achieving greater autonomy and intelligence in
-robotics has led to high levels of complexity. Autonomous robots increasingly
-depend on third party off-the-shelf components and complex machine-learning
-techniques. This trend makes it challenging to provide strong design-time
-certification of correct operation.
-  To address these challenges, we present SOTER, a robotics programming
-framework with two key components: (1) a programming language for implementing
-and testing high-level reactive robotics software and (2) an integrated runtime
-assurance (RTA) system that helps enable the use of uncertified components,
-while still providing safety guarantees. SOTER provides language primitives to
-declaratively construct a RTA module consisting of an advanced,
-high-performance controller (uncertified), a safe, lower-performance controller
-(certified), and the desired safety specification. The framework provides a
-formal guarantee that a well-formed RTA module always satisfies the safety
-specification, without completely sacrificing performance by using higher
-performance uncertified components whenever safe. SOTER allows the complex
-robotics software stack to be constructed as a composition of RTA modules,
-where each uncertified component is protected using a RTA module.
-  To demonstrate the efficacy of our framework, we consider a real-world
-case-study of building a safe drone surveillance system. Our experiments both
-in simulation and on actual drones show that the SOTER-enabled RTA ensures the
-safety of the system, including when untrusted third-party components have bugs
-or deviate from the desired behavior.
-
+  The recent drive towards achieving greater autonomy and intelligence inrobotics has led to high levels of complexity. Autonomous robots increasinglydepend on third party off-the-shelf components and complex machine-learningtechniques. This trend makes it challenging to provide strong design-timecertification of correct operation.  To address these challenges, we present SOTER, a robotics programmingframework with two key components: (1) a programming language for implementingand testing high-level reactive robotics software and (2) an integrated runtimeassurance (RTA) system that helps enable the use of uncertified components,while still providing safety guarantees. SOTER provides language primitives todeclaratively construct a RTA module consisting of an advanced,high-performance controller (uncertified), a safe, lower-performance controller(certified), and the desired safety specification. The framework provides aformal guarantee that a well-formed RTA module always satisfies the safetyspecification, without completely sacrificing performance by using higherperformance uncertified components whenever safe. SOTER allows the complexrobotics software stack to be constructed as a composition of RTA modules,where each uncertified component is protected using a RTA module.  To demonstrate the efficacy of our framework, we consider a real-worldcase-study of building a safe drone surveillance system. Our experiments bothin simulation and on actual drones show that the SOTER-enabled RTA ensures thesafety of the system, including when untrusted third-party components have bugsor deviate from the desired behavior.
 
 Formal Policy Learning from Demonstrations for Reachability Properties
 
-  We consider the problem of learning structured, closed-loop policies
-(feedback laws) from demonstrations in order to control under-actuated robotic
-systems, so that formal behavioral specifications such as reaching a target set
-of states are satisfied. Our approach uses a ``counterexample-guided''
-iterative loop that involves the interaction between a policy learner, a
-demonstrator and a verifier. The learner is responsible for querying the
-demonstrator in order to obtain the training data to guide the construction of
-a policy candidate. This candidate is analyzed by the verifier and either
-accepted as correct, or rejected with a counterexample. In the latter case, the
-counterexample is used to update the training data and further refine the
-policy.
-  The approach is instantiated using receding horizon model-predictive
-controllers (MPCs) as demonstrators. Rather than using regression to fit a
-policy to the demonstrator actions, we extend the MPC formulation with the
-gradient of the cost-to-go function evaluated at sample states in order to
-constrain the set of policies compatible with the behavior of the demonstrator.
-We demonstrate the successful application of the resulting policy learning
-schemes on two case studies and we show how simple, formally-verified policies
-can be inferred starting from a complex and unverified nonlinear MPC
-implementations. As a further benefit, the policies are many orders of
-magnitude faster to implement when compared to the original MPCs.
-
+  We consider the problem of learning structured, closed-loop policies(feedback laws) from demonstrations in order to control under-actuated roboticsystems, so that formal behavioral specifications such as reaching a target setof states are satisfied. Our approach uses a ``counterexample-guided''iterative loop that involves the interaction between a policy learner, ademonstrator and a verifier. The learner is responsible for querying thedemonstrator in order to obtain the training data to guide the construction ofa policy candidate. This candidate is analyzed by the verifier and eitheraccepted as correct, or rejected with a counterexample. In the latter case, thecounterexample is used to update the training data and further refine thepolicy.  The approach is instantiated using receding horizon model-predictivecontrollers (MPCs) as demonstrators. Rather than using regression to fit apolicy to the demonstrator actions, we extend the MPC formulation with thegradient of the cost-to-go function evaluated at sample states in order toconstrain the set of policies compatible with the behavior of the demonstrator.We demonstrate the successful application of the resulting policy learningschemes on two case studies and we show how simple, formally-verified policiescan be inferred starting from a complex and unverified nonlinear MPCimplementations. As a further benefit, the policies are many orders ofmagnitude faster to implement when compared to the original MPCs.
 
 What's Decidable about Syntax-Guided Synthesis?
 
-  Syntax-guided synthesis (SyGuS) is a recently proposed framework for program
-synthesis problems. The SyGuS problem is to find an expression or program
-generated by a given grammar that meets a correctness specification.
-Correctness specifications are given as formulas in suitable logical theories,
-typically amongst those studied in satisfiability modulo theories (SMT).
-  In this work, we analyze the decidability of the SyGuS problem for different
-classes of grammars and correctness specifications. We prove that the SyGuS
-problem is undecidable for the theory of equality with uninterpreted functions
-(EUF).We identify a fragment of EUF, which we call regular-EUF, for which the
-SyGuS problem is decidable. We prove that this restricted problem is
-EXPTIME-complete and that the sets of solution expressions are precisely the
-regular tree languages. For theories that admit a unique, finite domain, we
-give a general algorithm to solve the SyGuS problem on tree grammars.
-Finite-domain theories include the bit-vector theory without concatenation. We
-prove SyGuS undecidable for a very simple bit-vector theory with concatenation,
-both for context-free grammars and for tree grammars. Finally, we give some
-additional results for linear arithmetic and bit-vector arithmetic along with a
-discussion of the implication of these results.
+  Syntax-guided synthesis (SyGuS) is a recently proposed framework for programsynthesis problems. The SyGuS problem is to find an expression or programgenerated by a given grammar that meets a correctness specification.Correctness specifications are given as formulas in suitable logical theories,typically amongst those studied in satisfiability modulo theories (SMT).  In this work, we analyze the decidability of the SyGuS problem for differentclasses of grammars and correctness specifications. We prove that the SyGuSproblem is undecidable for the theory of equality with uninterpreted functions(EUF).We identify a fragment of EUF, which we call regular-EUF, for which theSyGuS problem is decidable. We prove that this restricted problem isEXPTIME-complete and that the sets of solution expressions are precisely theregular tree languages. For theories that admit a unique, finite domain, wegive a general algorithm to solve the SyGuS problem on tree grammars.Finite-domain theories include the bit-vector theory without concatenation. Weprove SyGuS undecidable for a very simple bit-vector theory with concatenation,both for context-free grammars and for tree grammars. Finally, we give someadditional results for linear arithmetic and bit-vector arithmetic along with adiscussion of the implication of these results.
 
+A LiDAR Point Cloud Generator: from a Virtual World to Autonomous  Driving
 
-A LiDAR Point Cloud Generator: from a Virtual World to Autonomous
-  Driving
-
-  3D LiDAR scanners are playing an increasingly important role in autonomous
-driving as they can generate depth information of the environment. However,
-creating large 3D LiDAR point cloud datasets with point-level labels requires a
-significant amount of manual annotation. This jeopardizes the efficient
-development of supervised deep learning algorithms which are often data-hungry.
-We present a framework to rapidly create point clouds with accurate point-level
-labels from a computer game. The framework supports data collection from both
-auto-driving scenes and user-configured scenes. Point clouds from auto-driving
-scenes can be used as training data for deep learning algorithms, while point
-clouds from user-configured scenes can be used to systematically test the
-vulnerability of a neural network, and use the falsifying examples to make the
-neural network more robust through retraining. In addition, the scene images
-can be captured simultaneously in order for sensor fusion tasks, with a method
-proposed to do automatic calibration between the point clouds and captured
-scene images. We show a significant improvement in accuracy (+9%) in point
-cloud segmentation by augmenting the training dataset with the generated
-synthesized data. Our experiments also show by testing and retraining the
-network using point clouds from user-configured scenes, the weakness/blind
-spots of the neural network can be fixed.
-
+  3D LiDAR scanners are playing an increasingly important role in autonomousdriving as they can generate depth information of the environment. However,creating large 3D LiDAR point cloud datasets with point-level labels requires asignificant amount of manual annotation. This jeopardizes the efficientdevelopment of supervised deep learning algorithms which are often data-hungry.We present a framework to rapidly create point clouds with accurate point-levellabels from a computer game. The framework supports data collection from bothauto-driving scenes and user-configured scenes. Point clouds from auto-drivingscenes can be used as training data for deep learning algorithms, while pointclouds from user-configured scenes can be used to systematically test thevulnerability of a neural network, and use the falsifying examples to make theneural network more robust through retraining. In addition, the scene imagescan be captured simultaneously in order for sensor fusion tasks, with a methodproposed to do automatic calibration between the point clouds and capturedscene images. We show a significant improvement in accuracy (+9%) in pointcloud segmentation by augmenting the training dataset with the generatedsynthesized data. Our experiments also show by testing and retraining thenetwork using point clouds from user-configured scenes, the weakness/blindspots of the neural network can be fixed.
 
 Scenic: Language-Based Scene Generation
 
-  Synthetic data has proved increasingly useful in both training and testing
-machine learning models such as neural networks. The major problem in synthetic
-data generation is producing meaningful data that is not simply random but
-reflects properties of real-world data or covers particular cases of interest.
-In this paper, we show how a probabilistic programming language can be used to
-guide data synthesis by encoding domain knowledge about what data is useful.
-Specifically, we focus on data sets arising from "scenes", configurations of
-physical objects; for example, images of cars on a road. We design a
-domain-specific language, Scenic, for describing "scenarios" that are
-distributions over scenes. The syntax of Scenic makes it easy to specify
-complex relationships between the positions and orientations of objects. As a
-probabilistic programming language, Scenic allows assigning distributions to
-features of the scene, as well as declaratively imposing hard and soft
-constraints over the scene. A Scenic scenario thereby implicitly defines a
-distribution over scenes, and we formulate the problem of sampling from this
-distribution as "scene improvisation". We implement an improviser for Scenic
-scenarios and apply it in a case study generating synthetic data sets for a
-convolutional neural network designed to detect cars in road images. Our
-experiments demonstrate the usefulness of our approach by using Scenic to
-analyze and improve the performance of the network in various scenarios.
-
+  Synthetic data has proved increasingly useful in both training and testingmachine learning models such as neural networks. The major problem in syntheticdata generation is producing meaningful data that is not simply random butreflects properties of real-world data or covers particular cases of interest.In this paper, we show how a probabilistic programming language can be used toguide data synthesis by encoding domain knowledge about what data is useful.Specifically, we focus on data sets arising from "scenes", configurations ofphysical objects; for example, images of cars on a road. We design adomain-specific language, Scenic, for describing "scenarios" that aredistributions over scenes. The syntax of Scenic makes it easy to specifycomplex relationships between the positions and orientations of objects. As aprobabilistic programming language, Scenic allows assigning distributions tofeatures of the scene, as well as declaratively imposing hard and softconstraints over the scene. A Scenic scenario thereby implicitly defines adistribution over scenes, and we formulate the problem of sampling from thisdistribution as "scene improvisation". We implement an improviser for Scenicscenarios and apply it in a case study generating synthetic data sets for aconvolutional neural network designed to detect cars in road images. Ourexperiments demonstrate the usefulness of our approach by using Scenic toanalyze and improve the performance of the network in various scenarios.
 
 On the Hardness of SAT with Community Structure
 
-  Recent attempts to explain the effectiveness of Boolean satisfiability (SAT)
-solvers based on conflict-driven clause learning (CDCL) on large industrial
-benchmarks have focused on the concept of community structure. Specifically,
-industrial benchmarks have been empirically found to have good community
-structure, and experiments seem to show a correlation between such structure
-and the efficiency of CDCL. However, in this paper we establish hardness
-results suggesting that community structure is not sufficient to explain the
-success of CDCL in practice. First, we formally characterize a property shared
-by a wide class of metrics capturing community structure, including
-"modularity". Next, we show that the SAT instances with good community
-structure according to any metric with this property are still NP-hard.
-Finally, we study a class of random instances generated from the
-"pseudo-industrial" community attachment model of Gir\'aldez-Cru and Levy. We
-prove that, with high probability, instances from this model that have
-relatively few communities but are still highly modular require exponentially
-long resolution proofs and so are hard for CDCL. We also present experimental
-evidence that our result continues to hold for instances with many more
-communities. This indicates that actual industrial instances easily solved by
-CDCL may have some other relevant structure not captured by the community
-attachment model.
-
+  Recent attempts to explain the effectiveness of Boolean satisfiability (SAT)solvers based on conflict-driven clause learning (CDCL) on large industrialbenchmarks have focused on the concept of community structure. Specifically,industrial benchmarks have been empirically found to have good communitystructure, and experiments seem to show a correlation between such structureand the efficiency of CDCL. However, in this paper we establish hardnessresults suggesting that community structure is not sufficient to explain thesuccess of CDCL in practice. First, we formally characterize a property sharedby a wide class of metrics capturing community structure, including"modularity". Next, we show that the SAT instances with good communitystructure according to any metric with this property are still NP-hard.Finally, we study a class of random instances generated from the"pseudo-industrial" community attachment model of Gir\'aldez-Cru and Levy. Weprove that, with high probability, instances from this model that haverelatively few communities but are still highly modular require exponentiallylong resolution proofs and so are hard for CDCL. We also present experimentalevidence that our result continues to hold for instances with many morecommunities. This indicates that actual industrial instances easily solved byCDCL may have some other relevant structure not captured by the communityattachment model.
 
 Are There Good Mistakes? A Theoretical Analysis of CEGIS
 
-  Counterexample-guided inductive synthesis CEGIS is used to synthesize
-programs from a candidate space of programs. The technique is guaranteed to
-terminate and synthesize the correct program if the space of candidate programs
-is finite. But the technique may or may not terminate with the correct program
-if the candidate space of programs is infinite. In this paper, we perform a
-theoretical analysis of counterexample-guided inductive synthesis technique. We
-investigate whether the set of candidate spaces for which the correct program
-can be synthesized using CEGIS depends on the counterexamples used in inductive
-synthesis, that is, whether there are good mistakes which would increase the
-synthesis power. We investigate whether the use of minimal counterexamples
-instead of arbitrary counterexamples expands the set of candidate spaces of
-programs for which inductive synthesis can successfully synthesize a correct
-program. We consider two kinds of counterexamples: minimal counterexamples and
-history bounded counterexamples. The history bounded counterexample used in any
-iteration of CEGIS is bounded by the examples used in previous iterations of
-inductive synthesis. We examine the relative change in power of inductive
-synthesis in both cases. We show that the synthesis technique using minimal
-counterexamples MinCEGIS has the same synthesis power as CEGIS but the
-synthesis technique using history bounded counterexamples HCEGIS has different
-power than that of CEGIS, but none dominates the other.
-
+  Counterexample-guided inductive synthesis CEGIS is used to synthesizeprograms from a candidate space of programs. The technique is guaranteed toterminate and synthesize the correct program if the space of candidate programsis finite. But the technique may or may not terminate with the correct programif the candidate space of programs is infinite. In this paper, we perform atheoretical analysis of counterexample-guided inductive synthesis technique. Weinvestigate whether the set of candidate spaces for which the correct programcan be synthesized using CEGIS depends on the counterexamples used in inductivesynthesis, that is, whether there are good mistakes which would increase thesynthesis power. We investigate whether the use of minimal counterexamplesinstead of arbitrary counterexamples expands the set of candidate spaces ofprograms for which inductive synthesis can successfully synthesize a correctprogram. We consider two kinds of counterexamples: minimal counterexamples andhistory bounded counterexamples. The history bounded counterexample used in anyiteration of CEGIS is bounded by the examples used in previous iterations ofinductive synthesis. We examine the relative change in power of inductivesynthesis in both cases. We show that the synthesis technique using minimalcounterexamples MinCEGIS has the same synthesis power as CEGIS but thesynthesis technique using history bounded counterexamples HCEGIS has differentpower than that of CEGIS, but none dominates the other.
 
 Learning Task Specifications from Demonstrations
 
-  Real world applications often naturally decompose into several sub-tasks. In
-many settings (e.g., robotics) demonstrations provide a natural way to specify
-the sub-tasks. However, most methods for learning from demonstrations either do
-not provide guarantees that the artifacts learned for the sub-tasks can be
-safely recombined or limit the types of composition available. Motivated by
-this deficit, we consider the problem of inferring Boolean non-Markovian
-rewards (also known as logical trace properties or specifications) from
-demonstrations provided by an agent operating in an uncertain, stochastic
-environment. Crucially, specifications admit well-defined composition rules
-that are typically easy to interpret. In this paper, we formulate the
-specification inference task as a maximum a posteriori (MAP) probability
-inference problem, apply the principle of maximum entropy to derive an analytic
-demonstration likelihood model and give an efficient approach to search for the
-most likely specification in a large candidate pool of specifications. In our
-experiments, we demonstrate how learning specifications can help avoid common
-problems that often arise due to ad-hoc reward composition.
-
+  Real world applications often naturally decompose into several sub-tasks. Inmany settings (e.g., robotics) demonstrations provide a natural way to specifythe sub-tasks. However, most methods for learning from demonstrations either donot provide guarantees that the artifacts learned for the sub-tasks can besafely recombined or limit the types of composition available. Motivated bythis deficit, we consider the problem of inferring Boolean non-Markovianrewards (also known as logical trace properties or specifications) fromdemonstrations provided by an agent operating in an uncertain, stochasticenvironment. Crucially, specifications admit well-defined composition rulesthat are typically easy to interpret. In this paper, we formulate thespecification inference task as a maximum a posteriori (MAP) probabilityinference problem, apply the principle of maximum entropy to derive an analyticdemonstration likelihood model and give an efficient approach to search for themost likely specification in a large candidate pool of specifications. In ourexperiments, we demonstrate how learning specifications can help avoid commonproblems that often arise due to ad-hoc reward composition.
 
 Cloud-based Quadratic Optimization with Partially Homomorphic Encryption
 
-  The development of large-scale distributed control systems has led to the
-outsourcing of costly computations to cloud-computing platforms, as well as to
-concerns about privacy of the collected sensitive data. This paper develops a
-cloud-based protocol for a quadratic optimization problem involving multiple
-parties, each holding information it seeks to maintain private. The protocol is
-based on the projected gradient ascent on the Lagrange dual problem and
-exploits partially homomorphic encryption and secure multi-party computation
-techniques. Using formal cryptographic definitions of indistinguishability, the
-protocol is shown to achieve computational privacy, i.e., there is no
-computationally efficient algorithm that any involved party can employ to
-obtain private information beyond what can be inferred from the party's inputs
-and outputs only. In order to reduce the communication complexity of the
-proposed protocol, we introduced a variant that achieves this objective at the
-expense of weaker privacy guarantees. We discuss in detail the computational
-and communication complexity properties of both algorithms theoretically and
-also through implementations. We conclude the paper with a discussion on
-computational privacy and other notions of privacy such as the non-unique
-retrieval of the private information from the protocol outputs.
-
+  The development of large-scale distributed control systems has led to theoutsourcing of costly computations to cloud-computing platforms, as well as toconcerns about privacy of the collected sensitive data. This paper develops acloud-based protocol for a quadratic optimization problem involving multipleparties, each holding information it seeks to maintain private. The protocol isbased on the projected gradient ascent on the Lagrange dual problem andexploits partially homomorphic encryption and secure multi-party computationtechniques. Using formal cryptographic definitions of indistinguishability, theprotocol is shown to achieve computational privacy, i.e., there is nocomputationally efficient algorithm that any involved party can employ toobtain private information beyond what can be inferred from the party's inputsand outputs only. In order to reduce the communication complexity of theproposed protocol, we introduced a variant that achieves this objective at theexpense of weaker privacy guarantees. We discuss in detail the computationaland communication complexity properties of both algorithms theoretically andalso through implementations. We conclude the paper with a discussion oncomputational privacy and other notions of privacy such as the non-uniqueretrieval of the private information from the protocol outputs.
 

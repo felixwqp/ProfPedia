@@ -1,168 +1,28 @@
 DNA Hash Pooling and its Applications
 
-  In this paper we describe a new technique for the comparison of populations
-of DNA strands. Comparison is vital to the study of ecological systems, at both
-the micro and macro scales. Existing methods make use of DNA sequencing and
-cloning, which can prove costly and time consuming, even with current
-sequencing techniques. Our overall objective is to address questions such as:
-(i) (Genome detection) Is a known genome sequence present, at least in part, in
-an environmental sample? (ii) (Sequence query) Is a specific fragment sequence
-present in a sample? (iii) (Similarity discovery) How similar in terms of
-sequence content are two unsequenced samples? We propose a method involving
-multiple filtering criteria that result in "pools" of DNA of high or very high
-purity. Because our method is similar in spirit to hashing in computer science,
-we call it DNA hash pooling. To illustrate this method, we describe protocols
-using pairs of restriction enzymes. The in silico empirical results we present
-reflect a sensitivity to experimental error. Our method will normally be
-performed as a filtering step prior to sequencing in order to reduce the amount
-of sequencing required (generally by a factor of 10 or more). Even as
-sequencing becomes cheaper, an order of magnitude remains important.
-
+  In this paper we describe a new technique for the comparison of populationsof DNA strands. Comparison is vital to the study of ecological systems, at boththe micro and macro scales. Existing methods make use of DNA sequencing andcloning, which can prove costly and time consuming, even with currentsequencing techniques. Our overall objective is to address questions such as:(i) (Genome detection) Is a known genome sequence present, at least in part, inan environmental sample? (ii) (Sequence query) Is a specific fragment sequencepresent in a sample? (iii) (Similarity discovery) How similar in terms ofsequence content are two unsequenced samples? We propose a method involvingmultiple filtering criteria that result in "pools" of DNA of high or very highpurity. Because our method is similar in spirit to hashing in computer science,we call it DNA hash pooling. To illustrate this method, we describe protocolsusing pairs of restriction enzymes. The in silico empirical results we presentreflect a sensitivity to experimental error. Our method will normally beperformed as a filtering step prior to sequencing in order to reduce the amountof sequencing required (generally by a factor of 10 or more). Even assequencing becomes cheaper, an order of magnitude remains important.
 
 Locality Optimization for Data Parallel Programs
 
-  Productivity languages such as NumPy and Matlab make it much easier to
-implement data-intensive numerical algorithms. However, these languages can be
-intolerably slow for programs that don't map well to their built-in primitives.
-In this paper, we discuss locality optimizations for our system Parakeet, a
-just-in-time compiler and runtime system for an array-oriented subset of
-Python. Parakeet dynamically compiles whole user functions to high performance
-multi-threaded native code. Parakeet makes extensive use of the classic data
-parallel operators Map, Reduce, and Scan. We introduce a new set of data
-parallel operators,TiledMap, TiledReduce, and TiledScan, that break up their
-computations into local pieces of bounded size so as better to make use of
-small fast memories. We introduce a novel tiling transformation to generate
-tiled operators automatically. Applying this transformation once tiles the
-program for cache, and applying it again enables tiling for registers. The
-sizes for cache tiles are left unspecified until runtime, when an autotuning
-search is performed. Finally, we evaluate our optimizations on benchmarks and
-show significant speedups on programs that exhibit data locality.
-
+  Productivity languages such as NumPy and Matlab make it much easier toimplement data-intensive numerical algorithms. However, these languages can beintolerably slow for programs that don't map well to their built-in primitives.In this paper, we discuss locality optimizations for our system Parakeet, ajust-in-time compiler and runtime system for an array-oriented subset ofPython. Parakeet dynamically compiles whole user functions to high performancemulti-threaded native code. Parakeet makes extensive use of the classic dataparallel operators Map, Reduce, and Scan. We introduce a new set of dataparallel operators,TiledMap, TiledReduce, and TiledScan, that break up theircomputations into local pieces of bounded size so as better to make use ofsmall fast memories. We introduce a novel tiling transformation to generatetiled operators automatically. Applying this transformation once tiles theprogram for cache, and applying it again enables tiling for registers. Thesizes for cache tiles are left unspecified until runtime, when an autotuningsearch is performed. Finally, we evaluate our optimizations on benchmarks andshow significant speedups on programs that exhibit data locality.
 
 A Collaborative Approach to Computational Reproducibility
 
-  Although a standard in natural science, reproducibility has been only
-episodically applied in experimental computer science. Scientific papers often
-present a large number of tables, plots and pictures that summarize the
-obtained results, but then loosely describe the steps taken to derive them. Not
-only can the methods and the implementation be complex, but also their
-configuration may require setting many parameters and/or depend on particular
-system configurations. While many researchers recognize the importance of
-reproducibility, the challenge of making it happen often outweigh the benefits.
-Fortunately, a plethora of reproducibility solutions have been recently
-designed and implemented by the community. In particular, packaging tools
-(e.g., ReproZip) and virtualization tools (e.g., Docker) are promising
-solutions towards facilitating reproducibility for both authors and reviewers.
-To address the incentive problem, we have implemented a new publication model
-for the Reproducibility Section of Information Systems Journal. In this
-section, authors submit a reproducibility paper that explains in detail the
-computational assets from a previous published manuscript in Information
-Systems.
-
+  Although a standard in natural science, reproducibility has been onlyepisodically applied in experimental computer science. Scientific papers oftenpresent a large number of tables, plots and pictures that summarize theobtained results, but then loosely describe the steps taken to derive them. Notonly can the methods and the implementation be complex, but also theirconfiguration may require setting many parameters and/or depend on particularsystem configurations. While many researchers recognize the importance ofreproducibility, the challenge of making it happen often outweigh the benefits.Fortunately, a plethora of reproducibility solutions have been recentlydesigned and implemented by the community. In particular, packaging tools(e.g., ReproZip) and virtualization tools (e.g., Docker) are promisingsolutions towards facilitating reproducibility for both authors and reviewers.To address the incentive problem, we have implemented a new publication modelfor the Reproducibility Section of Information Systems Journal. In thissection, authors submit a reproducibility paper that explains in detail thecomputational assets from a previous published manuscript in InformationSystems.
 
 Constellation Queries over Big Data
 
-  A geometrical pattern is a set of points with all pairwise distances (or,
-more generally, relative distances) specified. Finding matches to such patterns
-has applications to spatial data in seismic, astronomical, and transportation
-contexts. For example, a particularly interesting geometric pattern in
-astronomy is the Einstein cross, which is an astronomical phenomenon in which a
-single quasar is observed as four distinct sky objects (due to gravitational
-lensing) when captured by earth telescopes. Finding such crosses, as well as
-other geometric patterns, is a challenging problem as the potential number of
-sets of elements that compose shapes is exponentially large in the size of the
-dataset and the pattern. In this paper, we denote geometric patterns as
-constellation queries and propose algorithms to find them in large data
-applications. Our methods combine quadtrees, matrix multiplication, and
-unindexed join processing to discover sets of points that match a geometric
-pattern within some additive factor on the pairwise distances. Our distributed
-experiments show that the choice of composition algorithm (matrix
-multiplication or nested loops) depends on the freedom introduced in the query
-geometry through the distance additive factor. Three clearly identified blocks
-of threshold values guide the choice of the best composition algorithm.
-Finally, solving the problem for relative distances requires a novel
-continuous-to-discrete transformation. To the best of our knowledge this paper
-is the first to investigate constellation queries at scale.
+  A geometrical pattern is a set of points with all pairwise distances (or,more generally, relative distances) specified. Finding matches to such patternshas applications to spatial data in seismic, astronomical, and transportationcontexts. For example, a particularly interesting geometric pattern inastronomy is the Einstein cross, which is an astronomical phenomenon in which asingle quasar is observed as four distinct sky objects (due to gravitationallensing) when captured by earth telescopes. Finding such crosses, as well asother geometric patterns, is a challenging problem as the potential number ofsets of elements that compose shapes is exponentially large in the size of thedataset and the pattern. In this paper, we denote geometric patterns asconstellation queries and propose algorithms to find them in large dataapplications. Our methods combine quadtrees, matrix multiplication, andunindexed join processing to discover sets of points that match a geometricpattern within some additive factor on the pairwise distances. Our distributedexperiments show that the choice of composition algorithm (matrixmultiplication or nested loops) depends on the freedom introduced in the querygeometry through the distance additive factor. Three clearly identified blocksof threshold values guide the choice of the best composition algorithm.Finally, solving the problem for relative distances requires a novelcontinuous-to-discrete transformation. To the best of our knowledge this paperis the first to investigate constellation queries at scale.
 
+SafePredict: A Meta-Algorithm for Machine Learning That Uses Refusals to  Guarantee Correctness
 
-SafePredict: A Meta-Algorithm for Machine Learning That Uses Refusals to
-  Guarantee Correctness
+  SafePredict is a novel meta-algorithm that works with any base predictionalgorithm for online data to guarantee an arbitrarily chosen correctness rate,$1-\epsilon$, by allowing refusals. Allowing refusals means that themeta-algorithm may refuse to emit a prediction produced by the base algorithmon occasion so that the error rate on non-refused predictions does not exceed$\epsilon$. The SafePredict error bound does not rely on any assumptions on thedata distribution or the base predictor. When the base predictor happens not toexceed the target error rate $\epsilon$, SafePredict refuses only a finitenumber of times. When the error rate of the base predictor changes through timeSafePredict makes use of a weight-shifting heuristic that adapts to thesechanges without knowing when the changes occur yet still maintains thecorrectness guarantee. Empirical results show that (i) SafePredict comparesfavorably with state-of-the art confidence based refusal mechanisms which failto offer robust error guarantees; and (ii) combining SafePredict with suchrefusal mechanisms can in many cases further reduce the number of refusals. Oursoftware (currently in Python) is included in the supplementary material.
 
-  SafePredict is a novel meta-algorithm that works with any base prediction
-algorithm for online data to guarantee an arbitrarily chosen correctness rate,
-$1-\epsilon$, by allowing refusals. Allowing refusals means that the
-meta-algorithm may refuse to emit a prediction produced by the base algorithm
-on occasion so that the error rate on non-refused predictions does not exceed
-$\epsilon$. The SafePredict error bound does not rely on any assumptions on the
-data distribution or the base predictor. When the base predictor happens not to
-exceed the target error rate $\epsilon$, SafePredict refuses only a finite
-number of times. When the error rate of the base predictor changes through time
-SafePredict makes use of a weight-shifting heuristic that adapts to these
-changes without knowing when the changes occur yet still maintains the
-correctness guarantee. Empirical results show that (i) SafePredict compares
-favorably with state-of-the art confidence based refusal mechanisms which fail
-to offer robust error guarantees; and (ii) combining SafePredict with such
-refusal mechanisms can in many cases further reduce the number of refusals. Our
-software (currently in Python) is included in the supplementary material.
+Go with the Flow: Compositional Abstractions for Concurrent Data  Structures (Extended Version)
 
+  Concurrent separation logics have helped to significantly simplifycorrectness proofs for concurrent data structures. However, a recurring problemin such proofs is that data structure abstractions that work well in thesequential setting are much harder to reason about in a concurrent setting dueto complex sharing and overlays. To solve this problem, we propose a novelapproach to abstracting regions in the heap by encoding the data structureinvariant into a local condition on each individual node. This condition maydepend on a quantity associated with the node that is computed as a fixpointover the entire heap graph. We refer to this quantity as a flow. Flows canencode both structural properties of the heap (e.g. the reachable nodes fromthe root form a tree) as well as data invariants (e.g. sortedness). We thenintroduce the notion of a flow interface, which expresses the relies andguarantees that a heap region imposes on its context to maintain the local flowinvariant with respect to the global heap. Our main technical result is thatthis notion leads to a new semantic model of separation logic. In this model,flow interfaces provide a general abstraction mechanism for describing complexdata structures. This abstraction mechanism admits proof rules that generalizeover a wide variety of data structures. To demonstrate the versatility of ourapproach, we show how to extend the logic RGSep with flow interfaces. We haveused this new logic to prove linearizability and memory safety of nontrivialconcurrent data structures. In particular, we obtain parametric linearizabilityproofs for concurrent dictionary algorithms that abstract from the details ofthe underlying data structure representation. These proofs cannot be easilyexpressed using the abstraction mechanisms provided by existing separationlogics.
 
-Go with the Flow: Compositional Abstractions for Concurrent Data
-  Structures (Extended Version)
+An expanded evaluation of protein function prediction methods shows an  improvement in accuracy
 
-  Concurrent separation logics have helped to significantly simplify
-correctness proofs for concurrent data structures. However, a recurring problem
-in such proofs is that data structure abstractions that work well in the
-sequential setting are much harder to reason about in a concurrent setting due
-to complex sharing and overlays. To solve this problem, we propose a novel
-approach to abstracting regions in the heap by encoding the data structure
-invariant into a local condition on each individual node. This condition may
-depend on a quantity associated with the node that is computed as a fixpoint
-over the entire heap graph. We refer to this quantity as a flow. Flows can
-encode both structural properties of the heap (e.g. the reachable nodes from
-the root form a tree) as well as data invariants (e.g. sortedness). We then
-introduce the notion of a flow interface, which expresses the relies and
-guarantees that a heap region imposes on its context to maintain the local flow
-invariant with respect to the global heap. Our main technical result is that
-this notion leads to a new semantic model of separation logic. In this model,
-flow interfaces provide a general abstraction mechanism for describing complex
-data structures. This abstraction mechanism admits proof rules that generalize
-over a wide variety of data structures. To demonstrate the versatility of our
-approach, we show how to extend the logic RGSep with flow interfaces. We have
-used this new logic to prove linearizability and memory safety of nontrivial
-concurrent data structures. In particular, we obtain parametric linearizability
-proofs for concurrent dictionary algorithms that abstract from the details of
-the underlying data structure representation. These proofs cannot be easily
-expressed using the abstraction mechanisms provided by existing separation
-logics.
-
-
-An expanded evaluation of protein function prediction methods shows an
-  improvement in accuracy
-
-  Background: The increasing volume and variety of genotypic and phenotypic
-data is a major defining characteristic of modern biomedical sciences. At the
-same time, the limitations in technology for generating data and the inherently
-stochastic nature of biomolecular events have led to the discrepancy between
-the volume of data and the amount of knowledge gleaned from it. A major
-bottleneck in our ability to understand the molecular underpinnings of life is
-the assignment of function to biological macromolecules, especially proteins.
-While molecular experiments provide the most reliable annotation of proteins,
-their relatively low throughput and restricted purview have led to an
-increasing role for computational function prediction. However, accurately
-assessing methods for protein function prediction and tracking progress in the
-field remain challenging. Methodology: We have conducted the second Critical
-Assessment of Functional Annotation (CAFA), a timed challenge to assess
-computational methods that automatically assign protein function. One hundred
-twenty-six methods from 56 research groups were evaluated for their ability to
-predict biological functions using the Gene Ontology and gene-disease
-associations using the Human Phenotype Ontology on a set of 3,681 proteins from
-18 species. CAFA2 featured significantly expanded analysis compared with CAFA1,
-with regards to data set size, variety, and assessment metrics. To review
-progress in the field, the analysis also compared the best methods
-participating in CAFA1 to those of CAFA2. Conclusions: The top performing
-methods in CAFA2 outperformed the best methods from CAFA1, demonstrating that
-computational function prediction is improving. This increased accuracy can be
-attributed to the combined effect of the growing number of experimental
-annotations and improved methods for function prediction.
-
+  Background: The increasing volume and variety of genotypic and phenotypicdata is a major defining characteristic of modern biomedical sciences. At thesame time, the limitations in technology for generating data and the inherentlystochastic nature of biomolecular events have led to the discrepancy betweenthe volume of data and the amount of knowledge gleaned from it. A majorbottleneck in our ability to understand the molecular underpinnings of life isthe assignment of function to biological macromolecules, especially proteins.While molecular experiments provide the most reliable annotation of proteins,their relatively low throughput and restricted purview have led to anincreasing role for computational function prediction. However, accuratelyassessing methods for protein function prediction and tracking progress in thefield remain challenging. Methodology: We have conducted the second CriticalAssessment of Functional Annotation (CAFA), a timed challenge to assesscomputational methods that automatically assign protein function. One hundredtwenty-six methods from 56 research groups were evaluated for their ability topredict biological functions using the Gene Ontology and gene-diseaseassociations using the Human Phenotype Ontology on a set of 3,681 proteins from18 species. CAFA2 featured significantly expanded analysis compared with CAFA1,with regards to data set size, variety, and assessment metrics. To reviewprogress in the field, the analysis also compared the best methodsparticipating in CAFA1 to those of CAFA2. Conclusions: The top performingmethods in CAFA2 outperformed the best methods from CAFA1, demonstrating thatcomputational function prediction is improving. This increased accuracy can beattributed to the combined effect of the growing number of experimentalannotations and improved methods for function prediction.
 

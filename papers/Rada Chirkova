@@ -1,186 +1,32 @@
 Database Reformulation with Integrity Constraints (extended abstract)
 
-  In this paper we study the problem of reducing the evaluation costs of
-queries on finite databases in presence of integrity constraints, by designing
-and materializing views. Given a database schema, a set of queries defined on
-the schema, a set of integrity constraints, and a storage limit, to find a
-solution to this problem means to find a set of views that satisfies the
-storage limit, provides equivalent rewritings of the queries under the
-constraints (this requirement is weaker than equivalence in the absence of
-constraints), and reduces the total costs of evaluating the queries. This
-problem, database reformulation, is important for many applications, including
-data warehousing and query optimization. We give complexity results and
-algorithms for database reformulation in presence of constraints, for
-conjunctive queries, views, and rewritings and for several types of
-constraints, including functional and inclusion dependencies. To obtain better
-complexity results, we introduce an unchase technique, which reduces the
-problem of query equivalence under constraints to equivalence in the absence of
-constraints without increasing query size.
-
+  In this paper we study the problem of reducing the evaluation costs ofqueries on finite databases in presence of integrity constraints, by designingand materializing views. Given a database schema, a set of queries defined onthe schema, a set of integrity constraints, and a storage limit, to find asolution to this problem means to find a set of views that satisfies thestorage limit, provides equivalent rewritings of the queries under theconstraints (this requirement is weaker than equivalence in the absence ofconstraints), and reduces the total costs of evaluating the queries. Thisproblem, database reformulation, is important for many applications, includingdata warehousing and query optimization. We give complexity results andalgorithms for database reformulation in presence of constraints, forconjunctive queries, views, and rewritings and for several types ofconstraints, including functional and inclusion dependencies. To obtain bettercomplexity results, we introduce an unchase technique, which reduces theproblem of query equivalence under constraints to equivalence in the absence ofconstraints without increasing query size.
 
 Obtaining Information about Queries behind Views and Dependencies
 
-  We consider the problems of finding and determining certain query answers and
-of determining containment between queries; each problem is formulated in
-presence of materialized views and dependencies under the closed-world
-assumption. We show a tight relationship between the problems in this setting.
-Further, we introduce algorithms for solving each problem for those inputs
-where all the queries and views are conjunctive, and the dependencies are
-embedded weakly acyclic. We also determine the complexity of each problem under
-the security-relevant complexity measure introduced by Zhang and Mendelzon in
-2005. The problems studied in this paper are fundamental in ensuring correct
-specification of database access-control policies, in particular in case of
-fine-grained access control. Our approaches can also be applied in the areas of
-inference control, secure data publishing, and database auditing.
-
+  We consider the problems of finding and determining certain query answers andof determining containment between queries; each problem is formulated inpresence of materialized views and dependencies under the closed-worldassumption. We show a tight relationship between the problems in this setting.Further, we introduce algorithms for solving each problem for those inputswhere all the queries and views are conjunctive, and the dependencies areembedded weakly acyclic. We also determine the complexity of each problem underthe security-relevant complexity measure introduced by Zhang and Mendelzon in2005. The problems studied in this paper are fundamental in ensuring correctspecification of database access-control policies, in particular in case offine-grained access control. Our approaches can also be applied in the areas ofinference control, secure data publishing, and database auditing.
 
 DataSlicer: Task-Based Data Selection for Visual Data Exploration
 
-  In visual exploration and analysis of data, determining how to select and
-transform the data for visualization is a challenge for data-unfamiliar or
-inexperienced users. Our main hypothesis is that for many data sets and common
-analysis tasks, there are relatively few "data slices" that result in effective
-visualizations. By focusing human users on appropriate and suitably transformed
-parts of the underlying data sets, these data slices can help the users carry
-their task to correct completion.
-  To verify this hypothesis, we develop a framework that permits us to capture
-exemplary data slices for a user task, and to explore and parse
-visual-exploration sequences into a format that makes them distinct and easy to
-compare. We develop a recommendation system, DataSlicer, that matches a
-"currently viewed" data slice with the most promising "next effective" data
-slices for the given exploration task. We report the results of controlled
-experiments with an implementation of the DataSlicer system, using four common
-analytical task types. The experiments demonstrate statistically significant
-improvements in accuracy and exploration speed versus users without access to
-our system.
-
+  In visual exploration and analysis of data, determining how to select andtransform the data for visualization is a challenge for data-unfamiliar orinexperienced users. Our main hypothesis is that for many data sets and commonanalysis tasks, there are relatively few "data slices" that result in effectivevisualizations. By focusing human users on appropriate and suitably transformedparts of the underlying data sets, these data slices can help the users carrytheir task to correct completion.  To verify this hypothesis, we develop a framework that permits us to captureexemplary data slices for a user task, and to explore and parsevisual-exploration sequences into a format that makes them distinct and easy tocompare. We develop a recommendation system, DataSlicer, that matches a"currently viewed" data slice with the most promising "next effective" dataslices for the given exploration task. We report the results of controlledexperiments with an implementation of the DataSlicer system, using four commonanalytical task types. The experiments demonstrate statistically significantimprovements in accuracy and exploration speed versus users without access toour system.
 
 Equivalence of SQL Queries in Presence of Embedded Dependencies
 
-  We consider the problem of finding equivalent minimal-size reformulations of
-SQL queries in presence of embedded dependencies [1]. Our focus is on
-select-project-join (SPJ) queries with equality comparisons, also known as safe
-conjunctive (CQ) queries, possibly with grouping and aggregation. For SPJ
-queries, the semantics of the SQL standard treat query answers as multisets
-(a.k.a. bags), whereas the stored relations may be treated either as sets,
-which is called bag-set semantics for query evaluation, or as bags, which is
-called bag semantics. (Under set semantics, both query answers and stored
-relations are treated as sets.)
-  In the context of the above Query-Reformulation Problem, we develop a
-comprehensive framework for equivalence of CQ queries under bag and bag-set
-semantics in presence of embedded dependencies, and make a number of conceptual
-and technical contributions. Specifically, we develop equivalence tests for CQ
-queries in presence of arbitrary sets of embedded dependencies under bag and
-bag-set semantics, under the condition that chase [9] under set semantics
-(set-chase) on the inputs terminates. We also present equivalence tests for
-aggregate CQ queries in presence of embedded dependencies. We use our
-equivalence tests to develop sound and complete (whenever set-chase on the
-inputs terminates) algorithms for solving instances of the Query-Reformulation
-Problem with CQ queries under each of bag and bag-set semantics, as well as for
-instances of the problem with aggregate queries.
+  We consider the problem of finding equivalent minimal-size reformulations ofSQL queries in presence of embedded dependencies [1]. Our focus is onselect-project-join (SPJ) queries with equality comparisons, also known as safeconjunctive (CQ) queries, possibly with grouping and aggregation. For SPJqueries, the semantics of the SQL standard treat query answers as multisets(a.k.a. bags), whereas the stored relations may be treated either as sets,which is called bag-set semantics for query evaluation, or as bags, which iscalled bag semantics. (Under set semantics, both query answers and storedrelations are treated as sets.)  In the context of the above Query-Reformulation Problem, we develop acomprehensive framework for equivalence of CQ queries under bag and bag-setsemantics in presence of embedded dependencies, and make a number of conceptualand technical contributions. Specifically, we develop equivalence tests for CQqueries in presence of arbitrary sets of embedded dependencies under bag andbag-set semantics, under the condition that chase [9] under set semantics(set-chase) on the inputs terminates. We also present equivalence tests foraggregate CQ queries in presence of embedded dependencies. We use ourequivalence tests to develop sound and complete (whenever set-chase on theinputs terminates) algorithms for solving instances of the Query-ReformulationProblem with CQ queries under each of bag and bag-set semantics, as well as forinstances of the problem with aggregate queries.
 
+Combined-Semantics Equivalence Is Decidable for a Practical Class of  Conjunctive Queries
 
-Combined-Semantics Equivalence Is Decidable for a Practical Class of
-  Conjunctive Queries
-
-  In this paper, we focus on the problem of determining whether two conjunctive
-("CQ") queries posed on relational data are combined-semantics equivalent [9].
-We continue the tradition of [2,5,9] of studying this problem using the tool of
-containment between queries. We introduce a syntactic necessary and sufficient
-condition for equivalence of queries belonging to a large natural language of
-"explicit-wave" combined-semantics CQ queries; this language encompasses (but
-is not limited to) all set, bag, and bag-set queries, and appears to cover all
-combined-semantics CQ queries that are expressible in SQL. Our result solves in
-the positive the decidability problem of determining combined-semantics
-equivalence for pairs of explicit-wave CQ queries. That is, for an arbitrary
-pair of combined-semantics CQ queries, it is decidable (i) to determine whether
-each of the queries is explicit wave, and (ii) to determine, in case both
-queries are explicit wave, whether or not they are combined-semantics
-equivalent, by using our syntactic criterion. (The problem of determining
-equivalence for general combined-semantics CQ queries remains open. Even so,
-our syntactic sufficient containment condition could still be used to determine
-that two general CQ queries are combined-semantics equivalent.) Our equivalence
-test, as well as our general sufficient condition for containment of
-combined-semantics CQ queries, reduce correctly to the special cases reported
-in [2,5] for set, bag, and bag-set semantics. Our containment and equivalence
-conditions also properly generalize the results of [9], provided that the
-latter are restricted to the language of (combined-semantics) CQ queries.
-
+  In this paper, we focus on the problem of determining whether two conjunctive("CQ") queries posed on relational data are combined-semantics equivalent [9].We continue the tradition of [2,5,9] of studying this problem using the tool ofcontainment between queries. We introduce a syntactic necessary and sufficientcondition for equivalence of queries belonging to a large natural language of"explicit-wave" combined-semantics CQ queries; this language encompasses (butis not limited to) all set, bag, and bag-set queries, and appears to cover allcombined-semantics CQ queries that are expressible in SQL. Our result solves inthe positive the decidability problem of determining combined-semanticsequivalence for pairs of explicit-wave CQ queries. That is, for an arbitrarypair of combined-semantics CQ queries, it is decidable (i) to determine whethereach of the queries is explicit wave, and (ii) to determine, in case bothqueries are explicit wave, whether or not they are combined-semanticsequivalent, by using our syntactic criterion. (The problem of determiningequivalence for general combined-semantics CQ queries remains open. Even so,our syntactic sufficient containment condition could still be used to determinethat two general CQ queries are combined-semantics equivalent.) Our equivalencetest, as well as our general sufficient condition for containment ofcombined-semantics CQ queries, reduce correctly to the special cases reportedin [2,5] for set, bag, and bag-set semantics. Our containment and equivalenceconditions also properly generalize the results of [9], provided that thelatter are restricted to the language of (combined-semantics) CQ queries.
 
 Assessing Achievability of Queries and Constraints
 
-  Assessing and improving the quality of data in data-intensive systems are
-fundamental challenges that have given rise to numerous applications targeting
-transformation and cleaning of data. However, while schema design, data
-cleaning, and data migration are nowadays reasonably well understood in
-isolation, not much attention has been given to the interplay between the tools
-that address issues in these areas. Our focus is on the problem of determining
-whether there exist sequences of data-transforming procedures that, when
-applied to the (untransformed) input data, would yield data satisfying the
-conditions required for performing the task in question. Our goal is to develop
-a framework that would address this problem, starting with the relational
-setting.
-  In this paper we abstract data-processing tools as black-box procedures. This
-abstraction describes procedures by a specification of which parts of the
-database might be modified by the procedure, as well as by the constraints that
-specify the required states of the database before and after applying the
-procedure. We then proceed to study fundamental algorithmic questions arising
-in this context, such as understanding when one can guarantee that sequences of
-procedures apply to original or transformed data, when they succeed at
-improving the data, and when knowledge bases can represent the outcomes of
-procedures. Finally, we turn to the problem of determining whether the
-application of a sequence of procedures to a database results in the
-satisfaction of properties specified by either queries or constraints. We show
-that this problem is decidable for some broad and realistic classes of
-procedures and properties, even when procedures are allowed to alter the schema
-of instances.
-
+  Assessing and improving the quality of data in data-intensive systems arefundamental challenges that have given rise to numerous applications targetingtransformation and cleaning of data. However, while schema design, datacleaning, and data migration are nowadays reasonably well understood inisolation, not much attention has been given to the interplay between the toolsthat address issues in these areas. Our focus is on the problem of determiningwhether there exist sequences of data-transforming procedures that, whenapplied to the (untransformed) input data, would yield data satisfying theconditions required for performing the task in question. Our goal is to developa framework that would address this problem, starting with the relationalsetting.  In this paper we abstract data-processing tools as black-box procedures. Thisabstraction describes procedures by a specification of which parts of thedatabase might be modified by the procedure, as well as by the constraints thatspecify the required states of the database before and after applying theprocedure. We then proceed to study fundamental algorithmic questions arisingin this context, such as understanding when one can guarantee that sequences ofprocedures apply to original or transformed data, when they succeed atimproving the data, and when knowledge bases can represent the outcomes ofprocedures. Finally, we turn to the problem of determining whether theapplication of a sequence of procedures to a database results in thesatisfaction of properties specified by either queries or constraints. We showthat this problem is decidable for some broad and realistic classes ofprocedures and properties, even when procedures are allowed to alter the schemaof instances.
 
 A Framework for Assessing Achievability of Data-Quality Constraints
 
-  Assessing and improving the quality of data are fundamental challenges for
-data-intensive systems that have given rise to applications targeting
-transformation and cleaning of data. However, while schema design, data
-cleaning, and data migration are now reasonably well understood in isolation,
-not much attention has been given to the interplay between the tools addressing
-issues in these areas. We focus on the problem of determining whether the
-available data-processing procedures can be used together to bring about the
-desired quality of the given data. For instance, consider an organization
-introducing new data-analysis tasks. Depending on the tasks, it may be a
-priority to determine whether the data can be processed and transformed using
-the available data-processing tools to satisfy certain properties or quality
-assurances needed for the success of the task. Here, while the organization may
-control some of its tools, some other tools may be external or proprietary,
-with only basic information available on how they process data. The problem is
-then, how to decide which tools to apply, and in which order, to make the data
-ready for the new tasks?
-  Toward addressing this problem, we develop a new framework that abstracts
-data-processing tools as black-box procedures with only some of the properties
-exposed, such as the applicability requirements, the parts of the data that the
-procedure modifies, and the conditions that the data satisfy once the procedure
-has been applied. We show how common tasks such as data cleaning and data
-migration are encapsulated into our framework and, as a proof of concept, we
-study basic properties of the framework for the case of procedures described by
-standard relational constraints. While reasoning in this framework may be
-computationally infeasible in general, we show that there exist well-behaved
-special cases with potential practical applications.
-
+  Assessing and improving the quality of data are fundamental challenges fordata-intensive systems that have given rise to applications targetingtransformation and cleaning of data. However, while schema design, datacleaning, and data migration are now reasonably well understood in isolation,not much attention has been given to the interplay between the tools addressingissues in these areas. We focus on the problem of determining whether theavailable data-processing procedures can be used together to bring about thedesired quality of the given data. For instance, consider an organizationintroducing new data-analysis tasks. Depending on the tasks, it may be apriority to determine whether the data can be processed and transformed usingthe available data-processing tools to satisfy certain properties or qualityassurances needed for the success of the task. Here, while the organization maycontrol some of its tools, some other tools may be external or proprietary,with only basic information available on how they process data. The problem isthen, how to decide which tools to apply, and in which order, to make the dataready for the new tasks?  Toward addressing this problem, we develop a new framework that abstractsdata-processing tools as black-box procedures with only some of the propertiesexposed, such as the applicability requirements, the parts of the data that theprocedure modifies, and the conditions that the data satisfy once the procedurehas been applied. We show how common tasks such as data cleaning and datamigration are encapsulated into our framework and, as a proof of concept, westudy basic properties of the framework for the case of procedures described bystandard relational constraints. While reasoning in this framework may becomputationally infeasible in general, we show that there exist well-behavedspecial cases with potential practical applications.
 
 WaveCluster with Differential Privacy
 
-  WaveCluster is an important family of grid-based clustering algorithms that
-are capable of finding clusters of arbitrary shapes. In this paper, we
-investigate techniques to perform WaveCluster while ensuring differential
-privacy. Our goal is to develop a general technique for achieving differential
-privacy on WaveCluster that accommodates different wavelet transforms. We show
-that straightforward techniques based on synthetic data generation and
-introduction of random noise when quantizing the data, though generally
-preserving the distribution of data, often introduce too much noise to preserve
-useful clusters. We then propose two optimized techniques, PrivTHR and
-PrivTHREM, which can significantly reduce data distortion during two key steps
-of WaveCluster: the quantization step and the significant grid identification
-step. We conduct extensive experiments based on four datasets that are
-particularly interesting in the context of clustering, and show that PrivTHR
-and PrivTHREM achieve high utility when privacy budgets are properly allocated.
-
+  WaveCluster is an important family of grid-based clustering algorithms thatare capable of finding clusters of arbitrary shapes. In this paper, weinvestigate techniques to perform WaveCluster while ensuring differentialprivacy. Our goal is to develop a general technique for achieving differentialprivacy on WaveCluster that accommodates different wavelet transforms. We showthat straightforward techniques based on synthetic data generation andintroduction of random noise when quantizing the data, though generallypreserving the distribution of data, often introduce too much noise to preserveuseful clusters. We then propose two optimized techniques, PrivTHR andPrivTHREM, which can significantly reduce data distortion during two key stepsof WaveCluster: the quantization step and the significant grid identificationstep. We conduct extensive experiments based on four datasets that areparticularly interesting in the context of clustering, and show that PrivTHRand PrivTHREM achieve high utility when privacy budgets are properly allocated.
 

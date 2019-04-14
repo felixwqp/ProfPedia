@@ -1,596 +1,140 @@
 On the Complexity of Solving Markov Decision Problems
 
-  Markov decision problems (MDPs) provide the foundations for a number of
-problems of interest to AI researchers studying automated planning and
-reinforcement learning. In this paper, we summarize results regarding the
-complexity of solving MDPs and the running time of MDP solution algorithms. We
-argue that, although MDPs can be solved efficiently in theory, more study is
-needed to reveal practical algorithms for solving large problems quickly. To
-encourage future research, we sketch some alternative methods of analysis that
-rely on the structure of MDPs.
-
+  Markov decision problems (MDPs) provide the foundations for a number ofproblems of interest to AI researchers studying automated planning andreinforcement learning. In this paper, we summarize results regarding thecomplexity of solving MDPs and the running time of MDP solution algorithms. Weargue that, although MDPs can be solved efficiently in theory, more study isneeded to reveal practical algorithms for solving large problems quickly. Toencourage future research, we sketch some alternative methods of analysis thatrely on the structure of MDPs.
 
 Environment-Independent Task Specifications via GLTL
 
-  We propose a new task-specification language for Markov decision processes
-that is designed to be an improvement over reward functions by being
-environment independent. The language is a variant of Linear Temporal Logic
-(LTL) that is extended to probabilistic specifications in a way that permits
-approximations to be learned in finite time. We provide several small
-environments that demonstrate the advantages of our geometric LTL (GLTL)
-language and illustrate how it can be used to specify standard
-reinforcement-learning tasks straightforwardly.
-
+  We propose a new task-specification language for Markov decision processesthat is designed to be an improvement over reward functions by beingenvironment independent. The language is a variant of Linear Temporal Logic(LTL) that is extended to probabilistic specifications in a way that permitsapproximations to be learned in finite time. We provide several smallenvironments that demonstrate the advantages of our geometric LTL (GLTL)language and illustrate how it can be used to specify standardreinforcement-learning tasks straightforwardly.
 
 Learning Approximate Stochastic Transition Models
 
-  We examine the problem of learning mappings from state to state, suitable for
-use in a model-based reinforcement-learning setting, that simultaneously
-generalize to novel states and can capture stochastic transitions. We show that
-currently popular generative adversarial networks struggle to learn these
-stochastic transition models but a modification to their loss functions results
-in a powerful learning algorithm for this class of problems.
-
+  We examine the problem of learning mappings from state to state, suitable foruse in a model-based reinforcement-learning setting, that simultaneouslygeneralize to novel states and can capture stochastic transitions. We show thatcurrently popular generative adversarial networks struggle to learn thesestochastic transition models but a modification to their loss functions resultsin a powerful learning algorithm for this class of problems.
 
 An Efficient Optimal-Equilibrium Algorithm for Two-player Game Trees
 
-  Two-player complete-information game trees are perhaps the simplest possible
-setting for studying general-sum games and the computational problem of finding
-equilibria. These games admit a simple bottom-up algorithm for finding subgame
-perfect Nash equilibria efficiently. However, such an algorithm can fail to
-identify optimal equilibria, such as those that maximize social welfare. The
-reason is that, counterintuitively, probabilistic action choices are sometimes
-needed to achieve maximum payoffs. We provide a novel polynomial-time algorithm
-for this problem that explicitly reasons about stochastic decisions and
-demonstrate its use in an example card game.
+  Two-player complete-information game trees are perhaps the simplest possiblesetting for studying general-sum games and the computational problem of findingequilibria. These games admit a simple bottom-up algorithm for finding subgameperfect Nash equilibria efficiently. However, such an algorithm can fail toidentify optimal equilibria, such as those that maximize social welfare. Thereason is that, counterintuitively, probabilistic action choices are sometimesneeded to achieve maximum payoffs. We provide a novel polynomial-time algorithmfor this problem that explicitly reasons about stochastic decisions anddemonstrate its use in an example card game.
 
+On the Computational Complexity of Stochastic Controller Optimization in  POMDPs
 
-On the Computational Complexity of Stochastic Controller Optimization in
-  POMDPs
+  We show that the problem of finding an optimal stochastic 'blind' controllerin a Markov decision process is an NP-hard problem. The corresponding decisionproblem is NP-hard, in PSPACE, and SQRT-SUM-hard, hence placing it in NP wouldimply breakthroughs in long-standing open problems in computer science. Ourresult establishes that the more general problem of stochastic controlleroptimization in POMDPs is also NP-hard. Nonetheless, we outline a special casethat is convex and admits efficient global solutions.
 
-  We show that the problem of finding an optimal stochastic 'blind' controller
-in a Markov decision process is an NP-hard problem. The corresponding decision
-problem is NP-hard, in PSPACE, and SQRT-SUM-hard, hence placing it in NP would
-imply breakthroughs in long-standing open problems in computer science. Our
-result establishes that the more general problem of stochastic controller
-optimization in POMDPs is also NP-hard. Nonetheless, we outline a special case
-that is convex and admits efficient global solutions.
+Incremental Pruning: A Simple, Fast, Exact Method for Partially  Observable Markov Decision Processes
 
-
-Incremental Pruning: A Simple, Fast, Exact Method for Partially
-  Observable Markov Decision Processes
-
-  Most exact algorithms for general partially observable Markov decision
-processes (POMDPs) use a form of dynamic programming in which a
-piecewise-linear and convex representation of one value function is transformed
-into another. We examine variations of the "incremental pruning" method for
-solving this problem and compare them to earlier algorithms from theoretical
-and empirical perspectives. We find that incremental pruning is presently the
-most efficient exact method for solving POMDPs.
-
+  Most exact algorithms for general partially observable Markov decisionprocesses (POMDPs) use a form of dynamic programming in which apiecewise-linear and convex representation of one value function is transformedinto another. We examine variations of the "incremental pruning" method forsolving this problem and compare them to earlier algorithms from theoreticaland empirical perspectives. We find that incremental pruning is presently themost efficient exact method for solving POMDPs.
 
 The Complexity of Plan Existence and Evaluation in Probabilistic Domains
 
-  We examine the computational complexity of testing and finding small plans in
-probabilistic planning domains with succinct representations. We find that many
-problems of interest are complete for a variety of complexity classes: NP,
-co-NP, PP, NP^PP, co-NP^PP, and PSPACE. Of these, the probabilistic classes PP
-and NP^PP are likely to be of special interest in the field of uncertainty in
-artificial intelligence and are deserving of additional study. These results
-suggest a fruitful direction of future algorithmic development.
+  We examine the computational complexity of testing and finding small plans inprobabilistic planning domains with succinct representations. We find that manyproblems of interest are complete for a variety of complexity classes: NP,co-NP, PP, NP^PP, co-NP^PP, and PSPACE. Of these, the probabilistic classes PPand NP^PP are likely to be of special interest in the field of uncertainty inartificial intelligence and are deserving of additional study. These resultssuggest a fruitful direction of future algorithmic development.
 
+Advantages and Limitations of using Successor Features for Transfer in  Reinforcement Learning
 
-Advantages and Limitations of using Successor Features for Transfer in
-  Reinforcement Learning
-
-  One question central to Reinforcement Learning is how to learn a feature
-representation that supports algorithm scaling and re-use of learned
-information from different tasks. Successor Features approach this problem by
-learning a feature representation that satisfies a temporal constraint. We
-present an implementation of an approach that decouples the feature
-representation from the reward function, making it suitable for transferring
-knowledge between domains. We then assess the advantages and limitations of
-using Successor Features for transfer.
-
+  One question central to Reinforcement Learning is how to learn a featurerepresentation that supports algorithm scaling and re-use of learnedinformation from different tasks. Successor Features approach this problem bylearning a feature representation that satisfies a temporal constraint. Wepresent an implementation of an approach that decouples the featurerepresentation from the reward function, making it suitable for transferringknowledge between domains. We then assess the advantages and limitations ofusing Successor Features for transfer.
 
 Lipschitz Continuity in Model-based Reinforcement Learning
 
-  We examine the impact of learning Lipschitz continuous models in the context
-of model-based reinforcement learning. We provide a novel bound on multi-step
-prediction error of Lipschitz models where we quantify the error using the
-Wasserstein metric. We go on to prove an error bound for the value-function
-estimate arising from Lipschitz models and show that the estimated value
-function is itself Lipschitz. We conclude with empirical results that show the
-benefits of controlling the Lipschitz constant of neural-network models.
+  We examine the impact of learning Lipschitz continuous models in the contextof model-based reinforcement learning. We provide a novel bound on multi-stepprediction error of Lipschitz models where we quantify the error using theWasserstein metric. We go on to prove an error bound for the value-functionestimate arising from Lipschitz models and show that the estimated valuefunction is itself Lipschitz. We conclude with empirical results that show thebenefits of controlling the Lipschitz constant of neural-network models.
 
+Towards a Simple Approach to Multi-step Model-based Reinforcement  Learning
 
-Towards a Simple Approach to Multi-step Model-based Reinforcement
-  Learning
-
-  When environmental interaction is expensive, model-based reinforcement
-learning offers a solution by planning ahead and avoiding costly mistakes.
-Model-based agents typically learn a single-step transition model. In this
-paper, we propose a multi-step model that predicts the outcome of an action
-sequence with variable length. We show that this model is easy to learn, and
-that the model can make policy-conditional predictions. We report preliminary
-results that show a clear advantage for the multi-step model compared to its
-one-step counterpart.
-
+  When environmental interaction is expensive, model-based reinforcementlearning offers a solution by planning ahead and avoiding costly mistakes.Model-based agents typically learn a single-step transition model. In thispaper, we propose a multi-step model that predicts the outcome of an actionsequence with variable length. We show that this model is easy to learn, andthat the model can make policy-conditional predictions. We report preliminaryresults that show a clear advantage for the multi-step model compared to itsone-step counterpart.
 
 Incremental Model-based Learners With Formal Learning-Time Guarantees
 
-  Model-based learning algorithms have been shown to use experience efficiently
-when learning to solve Markov Decision Processes (MDPs) with finite state and
-action spaces. However, their high computational cost due to repeatedly solving
-an internal model inhibits their use in large-scale problems. We propose a
-method based on real-time dynamic programming (RTDP) to speed up two
-model-based algorithms, RMAX and MBIE (model-based interval estimation),
-resulting in computationally much faster algorithms with little loss compared
-to existing bounds. Specifically, our two new learning algorithms, RTDP-RMAX
-and RTDP-IE, have considerably smaller computational demands than RMAX and
-MBIE. We develop a general theoretical framework that allows us to prove that
-both are efficient learners in a PAC (probably approximately correct) sense. We
-also present an experimental evaluation of these new algorithms that helps
-quantify the tradeoff between computational and experience demands.
-
+  Model-based learning algorithms have been shown to use experience efficientlywhen learning to solve Markov Decision Processes (MDPs) with finite state andaction spaces. However, their high computational cost due to repeatedly solvingan internal model inhibits their use in large-scale problems. We propose amethod based on real-time dynamic programming (RTDP) to speed up twomodel-based algorithms, RMAX and MBIE (model-based interval estimation),resulting in computationally much faster algorithms with little loss comparedto existing bounds. Specifically, our two new learning algorithms, RTDP-RMAXand RTDP-IE, have considerably smaller computational demands than RMAX andMBIE. We develop a general theoretical framework that allows us to prove thatboth are efficient learners in a PAC (probably approximately correct) sense. Wealso present an experimental evaluation of these new algorithms that helpsquantify the tradeoff between computational and experience demands.
 
 Modeling Latent Attention Within Neural Networks
 
-  Deep neural networks are able to solve tasks across a variety of domains and
-modalities of data. Despite many empirical successes, we lack the ability to
-clearly understand and interpret the learned internal mechanisms that
-contribute to such effective behaviors or, more critically, failure modes. In
-this work, we present a general method for visualizing an arbitrary neural
-network's inner mechanisms and their power and limitations. Our dataset-centric
-method produces visualizations of how a trained network attends to components
-of its inputs. The computed "attention masks" support improved interpretability
-by highlighting which input attributes are critical in determining output. We
-demonstrate the effectiveness of our framework on a variety of deep neural
-network architectures in domains from computer vision, natural language
-processing, and reinforcement learning. The primary contribution of our
-approach is an interpretable visualization of attention that provides unique
-insights into the network's underlying decision-making process irrespective of
-the data modality.
+  Deep neural networks are able to solve tasks across a variety of domains andmodalities of data. Despite many empirical successes, we lack the ability toclearly understand and interpret the learned internal mechanisms thatcontribute to such effective behaviors or, more critically, failure modes. Inthis work, we present a general method for visualizing an arbitrary neuralnetwork's inner mechanisms and their power and limitations. Our dataset-centricmethod produces visualizations of how a trained network attends to componentsof its inputs. The computed "attention masks" support improved interpretabilityby highlighting which input attributes are critical in determining output. Wedemonstrate the effectiveness of our framework on a variety of deep neuralnetwork architectures in domains from computer vision, natural languageprocessing, and reinforcement learning. The primary contribution of ourapproach is an interpretable visualization of attention that provides uniqueinsights into the network's underlying decision-making process irrespective ofthe data modality.
 
+Unsupervised Learning of Semantic Orientation from a  Hundred-Billion-Word Corpus
 
-Unsupervised Learning of Semantic Orientation from a
-  Hundred-Billion-Word Corpus
+  The evaluative character of a word is called its semantic orientation. Apositive semantic orientation implies desirability (e.g., "honest", "intrepid")and a negative semantic orientation implies undesirability (e.g., "disturbing","superfluous"). This paper introduces a simple algorithm for unsupervisedlearning of semantic orientation from extremely large corpora. The methodinvolves issuing queries to a Web search engine and using pointwise mutualinformation to analyse the results. The algorithm is empirically evaluatedusing a training corpus of approximately one hundred billion words -- thesubset of the Web that is indexed by the chosen search engine. Tested with3,596 words (1,614 positive and 1,982 negative), the algorithm attains anaccuracy of 80%. The 3,596 test words include adjectives, adverbs, nouns, andverbs. The accuracy is comparable with the results achieved by Hatzivassiloglouand McKeown (1997), using a complex four-stage supervised learning algorithmthat is restricted to determining the semantic orientation of adjectives.
 
-  The evaluative character of a word is called its semantic orientation. A
-positive semantic orientation implies desirability (e.g., "honest", "intrepid")
-and a negative semantic orientation implies undesirability (e.g., "disturbing",
-"superfluous"). This paper introduces a simple algorithm for unsupervised
-learning of semantic orientation from extremely large corpora. The method
-involves issuing queries to a Web search engine and using pointwise mutual
-information to analyse the results. The algorithm is empirically evaluated
-using a training corpus of approximately one hundred billion words -- the
-subset of the Web that is indexed by the chosen search engine. Tested with
-3,596 words (1,614 positive and 1,982 negative), the algorithm attains an
-accuracy of 80%. The 3,596 test words include adjectives, adverbs, nouns, and
-verbs. The accuracy is comparable with the results achieved by Hatzivassiloglou
-and McKeown (1997), using a complex four-stage supervised learning algorithm
-that is restricted to determining the semantic orientation of adjectives.
+Combining Independent Modules to Solve Multiple-choice Synonym and  Analogy Problems
 
-
-Combining Independent Modules to Solve Multiple-choice Synonym and
-  Analogy Problems
-
-  Existing statistical approaches to natural language problems are very coarse
-approximations to the true complexity of language processing. As such, no
-single technique will be best for all problem instances. Many researchers are
-examining ensemble methods that combine the output of successful, separately
-developed modules to create more accurate solutions. This paper examines three
-merging rules for combining probability distributions: the well known mixture
-rule, the logarithmic rule, and a novel product rule. These rules were applied
-with state-of-the-art results to two problems commonly used to assess human
-mastery of lexical semantics -- synonym questions and analogy questions. All
-three merging rules result in ensembles that are more accurate than any of
-their component modules. The differences among the three rules are not
-statistically significant, but it is suggestive that the popular mixture rule
-is not the best rule for either of the two problems.
-
+  Existing statistical approaches to natural language problems are very coarseapproximations to the true complexity of language processing. As such, nosingle technique will be best for all problem instances. Many researchers areexamining ensemble methods that combine the output of successful, separatelydeveloped modules to create more accurate solutions. This paper examines threemerging rules for combining probability distributions: the well known mixturerule, the logarithmic rule, and a novel product rule. These rules were appliedwith state-of-the-art results to two problems commonly used to assess humanmastery of lexical semantics -- synonym questions and analogy questions. Allthree merging rules result in ensembles that are more accurate than any oftheir component modules. The differences among the three rules are notstatistically significant, but it is suggestive that the popular mixture ruleis not the best rule for either of the two problems.
 
 Combining Independent Modules in Lexical Multiple-Choice Problems
 
-  Existing statistical approaches to natural language problems are very coarse
-approximations to the true complexity of language processing. As such, no
-single technique will be best for all problem instances. Many researchers are
-examining ensemble methods that combine the output of multiple modules to
-create more accurate solutions. This paper examines three merging rules for
-combining probability distributions: the familiar mixture rule, the logarithmic
-rule, and a novel product rule. These rules were applied with state-of-the-art
-results to two problems used to assess human mastery of lexical semantics --
-synonym questions and analogy questions. All three merging rules result in
-ensembles that are more accurate than any of their component modules. The
-differences among the three rules are not statistically significant, but it is
-suggestive that the popular mixture rule is not the best rule for either of the
-two problems.
+  Existing statistical approaches to natural language problems are very coarseapproximations to the true complexity of language processing. As such, nosingle technique will be best for all problem instances. Many researchers areexamining ensemble methods that combine the output of multiple modules tocreate more accurate solutions. This paper examines three merging rules forcombining probability distributions: the familiar mixture rule, the logarithmicrule, and a novel product rule. These rules were applied with state-of-the-artresults to two problems used to assess human mastery of lexical semantics --synonym questions and analogy questions. All three merging rules result inensembles that are more accurate than any of their component modules. Thedifferences among the three rules are not statistically significant, but it issuggestive that the popular mixture rule is not the best rule for either of thetwo problems.
 
+Learning is planning: near Bayes-optimal reinforcement learning via  Monte-Carlo tree search
 
-Learning is planning: near Bayes-optimal reinforcement learning via
-  Monte-Carlo tree search
+  Bayes-optimal behavior, while well-defined, is often difficult to achieve.Recent advances in the use of Monte-Carlo tree search (MCTS) have shown that itis possible to act near-optimally in Markov Decision Processes (MDPs) with verylarge or infinite state spaces. Bayes-optimal behavior in an unknown MDP isequivalent to optimal behavior in the known belief-space MDP, although the sizeof this belief-space MDP grows exponentially with the amount of historyretained, and is potentially infinite. We show how an agent can use oneparticular MCTS algorithm, Forward Search Sparse Sampling (FSSS), in anefficient way to act nearly Bayes-optimally for all but a polynomial number ofsteps, assuming that FSSS can be used to act efficiently in any possibleunderlying MDP.
 
-  Bayes-optimal behavior, while well-defined, is often difficult to achieve.
-Recent advances in the use of Monte-Carlo tree search (MCTS) have shown that it
-is possible to act near-optimally in Markov Decision Processes (MDPs) with very
-large or infinite state spaces. Bayes-optimal behavior in an unknown MDP is
-equivalent to optimal behavior in the known belief-space MDP, although the size
-of this belief-space MDP grows exponentially with the amount of history
-retained, and is potentially infinite. We show how an agent can use one
-particular MCTS algorithm, Forward Search Sparse Sampling (FSSS), in an
-efficient way to act nearly Bayes-optimally for all but a polynomial number of
-steps, assuming that FSSS can be used to act efficiently in any possible
-underlying MDP.
+Exploring compact reinforcement-learning representations with linear  regression
 
-
-Exploring compact reinforcement-learning representations with linear
-  regression
-
-  This paper presents a new algorithm for online linear regression whose
-efficiency guarantees satisfy the requirements of the KWIK (Knows What It
-Knows) framework. The algorithm improves on the complexity bounds of the
-current state-of-the-art procedure in this setting. We explore several
-applications of this algorithm for learning compact reinforcement-learning
-representations. We show that KWIK linear regression can be used to learn the
-reward function of a factored MDP and the probabilities of action outcomes in
-Stochastic STRIPS and Object Oriented MDPs, none of which have been proven to
-be efficiently learnable in the RL setting before. We also combine KWIK linear
-regression with other KWIK learners to learn larger portions of these models,
-including experiments on learning factored MDP transition and reward functions
-together.
-
+  This paper presents a new algorithm for online linear regression whoseefficiency guarantees satisfy the requirements of the KWIK (Knows What ItKnows) framework. The algorithm improves on the complexity bounds of thecurrent state-of-the-art procedure in this setting. We explore severalapplications of this algorithm for learning compact reinforcement-learningrepresentations. We show that KWIK linear regression can be used to learn thereward function of a factored MDP and the probabilities of action outcomes inStochastic STRIPS and Object Oriented MDPs, none of which have been proven tobe efficiently learnable in the RL setting before. We also combine KWIK linearregression with other KWIK learners to learn larger portions of these models,including experiments on learning factored MDP transition and reward functionstogether.
 
 A Bayesian Sampling Approach to Exploration in Reinforcement Learning
 
-  We present a modular approach to reinforcement learning that uses a Bayesian
-representation of the uncertainty over models. The approach, BOSS (Best of
-Sampled Set), drives exploration by sampling multiple models from the posterior
-and selecting actions optimistically. It extends previous work by providing a
-rule for deciding when to resample and how to combine the models. We show that
-our algorithm achieves nearoptimal reward with high probability with a sample
-complexity that is low relative to the speed at which the posterior
-distribution converges during learning. We demonstrate that BOSS performs quite
-favorably compared to state-of-the-art reinforcement-learning approaches and
-illustrate its flexibility by pairing it with a non-parametric model that
-generalizes across states.
-
+  We present a modular approach to reinforcement learning that uses a Bayesianrepresentation of the uncertainty over models. The approach, BOSS (Best ofSampled Set), drives exploration by sampling multiple models from the posteriorand selecting actions optimistically. It extends previous work by providing arule for deciding when to resample and how to combine the models. We show thatour algorithm achieves nearoptimal reward with high probability with a samplecomplexity that is low relative to the speed at which the posteriordistribution converges during learning. We demonstrate that BOSS performs quitefavorably compared to state-of-the-art reinforcement-learning approaches andillustrate its flexibility by pairing it with a non-parametric model thatgeneralizes across states.
 
 CORL: A Continuous-state Offset-dynamics Reinforcement Learner
 
-  Continuous state spaces and stochastic, switching dynamics characterize a
-number of rich, realworld domains, such as robot navigation across varying
-terrain. We describe a reinforcementlearning algorithm for learning in these
-domains and prove for certain environments the algorithm is probably
-approximately correct with a sample complexity that scales polynomially with
-the state-space dimension. Unfortunately, no optimal planning techniques exist
-in general for such problems; instead we use fitted value iteration to solve
-the learned MDP, and include the error due to approximate planning in our
-bounds. Finally, we report an experiment using a robotic car driving over
-varying terrain to demonstrate that these dynamics representations adequately
-capture real-world dynamics and that our algorithm can be used to efficiently
-solve such problems.
+  Continuous state spaces and stochastic, switching dynamics characterize anumber of rich, realworld domains, such as robot navigation across varyingterrain. We describe a reinforcementlearning algorithm for learning in thesedomains and prove for certain environments the algorithm is probablyapproximately correct with a sample complexity that scales polynomially withthe state-space dimension. Unfortunately, no optimal planning techniques existin general for such problems; instead we use fitted value iteration to solvethe learned MDP, and include the error due to approximate planning in ourbounds. Finally, we report an experiment using a robotic car driving overvarying terrain to demonstrate that these dynamics representations adequatelycapture real-world dynamics and that our algorithm can be used to efficientlysolve such problems.
 
+A Polynomial-time Nash Equilibrium Algorithm for Repeated Stochastic  Games
 
-A Polynomial-time Nash Equilibrium Algorithm for Repeated Stochastic
-  Games
-
-  We present a polynomial-time algorithm that always finds an (approximate)
-Nash equilibrium for repeated two-player stochastic games. The algorithm
-exploits the folk theorem to derive a strategy profile that forms an
-equilibrium by buttressing mutually beneficial behavior with threats, where
-possible. One component of our algorithm efficiently searches for an
-approximation of the egalitarian point, the fairest pareto-efficient solution.
-The paper concludes by applying the algorithm to a set of grid games to
-illustrate typical solutions the algorithm finds. These solutions compare very
-favorably to those found by competing algorithms, resulting in strategies with
-higher social welfare, as well as guaranteed computational efficiency.
-
+  We present a polynomial-time algorithm that always finds an (approximate)Nash equilibrium for repeated two-player stochastic games. The algorithmexploits the folk theorem to derive a strategy profile that forms anequilibrium by buttressing mutually beneficial behavior with threats, wherepossible. One component of our algorithm efficiently searches for anapproximation of the egalitarian point, the fairest pareto-efficient solution.The paper concludes by applying the algorithm to a set of grid games toillustrate typical solutions the algorithm finds. These solutions compare veryfavorably to those found by competing algorithms, resulting in strategies withhigher social welfare, as well as guaranteed computational efficiency.
 
 An Alternative Softmax Operator for Reinforcement Learning
 
-  A softmax operator applied to a set of values acts somewhat like the
-maximization function and somewhat like an average. In sequential decision
-making, softmax is often used in settings where it is necessary to maximize
-utility but also to hedge against problems that arise from putting all of one's
-weight behind a single maximum utility decision. The Boltzmann softmax operator
-is the most commonly used softmax operator in this setting, but we show that
-this operator is prone to misbehavior. In this work, we study a differentiable
-softmax operator that, among other properties, is a non-expansion ensuring a
-convergent behavior in learning and planning. We introduce a variant of SARSA
-algorithm that, by utilizing the new operator, computes a Boltzmann policy with
-a state-dependent temperature parameter. We show that the algorithm is
-convergent and that it performs favorably in practice.
-
+  A softmax operator applied to a set of values acts somewhat like themaximization function and somewhat like an average. In sequential decisionmaking, softmax is often used in settings where it is necessary to maximizeutility but also to hedge against problems that arise from putting all of one'sweight behind a single maximum utility decision. The Boltzmann softmax operatoris the most commonly used softmax operator in this setting, but we show thatthis operator is prone to misbehavior. In this work, we study a differentiablesoftmax operator that, among other properties, is a non-expansion ensuring aconvergent behavior in learning and planning. We introduce a variant of SARSAalgorithm that, by utilizing the new operator, computes a Boltzmann policy witha state-dependent temperature parameter. We show that the algorithm isconvergent and that it performs favorably in practice.
 
 Near Optimal Behavior via Approximate State Abstraction
 
-  The combinatorial explosion that plagues planning and reinforcement learning
-(RL) algorithms can be moderated using state abstraction. Prohibitively large
-task representations can be condensed such that essential information is
-preserved, and consequently, solutions are tractably computable. However, exact
-abstractions, which treat only fully-identical situations as equivalent, fail
-to present opportunities for abstraction in environments where no two
-situations are exactly alike. In this work, we investigate approximate state
-abstractions, which treat nearly-identical situations as equivalent. We present
-theoretical guarantees of the quality of behaviors derived from four types of
-approximate abstractions. Additionally, we empirically demonstrate that
-approximate abstractions lead to reduction in task complexity and bounded loss
-of optimality of behavior in a variety of environments.
-
+  The combinatorial explosion that plagues planning and reinforcement learning(RL) algorithms can be moderated using state abstraction. Prohibitively largetask representations can be condensed such that essential information ispreserved, and consequently, solutions are tractably computable. However, exactabstractions, which treat only fully-identical situations as equivalent, failto present opportunities for abstraction in environments where no twosituations are exactly alike. In this work, we investigate approximate stateabstractions, which treat nearly-identical situations as equivalent. We presenttheoretical guarantees of the quality of behaviors derived from four types ofapproximate abstractions. Additionally, we empirically demonstrate thatapproximate abstractions lead to reduction in task complexity and bounded lossof optimality of behavior in a variety of environments.
 
 Interactive Learning from Policy-Dependent Human Feedback
 
-  For agents and robots to become more useful, they must be able to quickly
-learn from non-technical users. This paper investigates the problem of
-interactively learning behaviors communicated by a human teacher using positive
-and negative feedback. Much previous work on this problem has made the
-assumption that people provide feedback for decisions that is dependent on the
-behavior they are teaching and is independent from the learner's current
-policy. We present empirical results that show this assumption to be
-false---whether human trainers give a positive or negative feedback for a
-decision is influenced by the learner's current policy. We argue that
-policy-dependent feedback, in addition to being commonplace, enables useful
-training strategies from which agents should benefit. Based on this insight, we
-introduce Convergent Actor-Critic by Humans (COACH), an algorithm for learning
-from policy-dependent feedback that converges to a local optimum. Finally, we
-demonstrate that COACH can successfully learn multiple behaviors on a physical
-robot, even with noisy image features.
+  For agents and robots to become more useful, they must be able to quicklylearn from non-technical users. This paper investigates the problem ofinteractively learning behaviors communicated by a human teacher using positiveand negative feedback. Much previous work on this problem has made theassumption that people provide feedback for decisions that is dependent on thebehavior they are teaching and is independent from the learner's currentpolicy. We present empirical results that show this assumption to befalse---whether human trainers give a positive or negative feedback for adecision is influenced by the learner's current policy. We argue thatpolicy-dependent feedback, in addition to being commonplace, enables usefultraining strategies from which agents should benefit. Based on this insight, weintroduce Convergent Actor-Critic by Humans (COACH), an algorithm for learningfrom policy-dependent feedback that converges to a local optimum. Finally, wedemonstrate that COACH can successfully learn multiple behaviors on a physicalrobot, even with noisy image features.
 
+Summable Reparameterizations of Wasserstein Critics in the  One-Dimensional Setting
 
-Summable Reparameterizations of Wasserstein Critics in the
-  One-Dimensional Setting
+  Generative adversarial networks (GANs) are an exciting alternative toalgorithms for solving density estimation problems---using data to assess howlikely samples are to be drawn from the same distribution. Instead ofexplicitly computing these probabilities, GANs learn a generator that can matchthe given probabilistic source. This paper looks particularly at this matchingcapability in the context of problems with one-dimensional outputs. We identifya class of function decompositions with properties that make them well suitedto the critic role in a leading approach to GANs known as Wasserstein GANs. Weshow that Taylor and Fourier series decompositions belong to our class, provideexamples of these critics outperforming standard GAN approaches, and suggesthow they can be scaled to higher dimensional problems in the future.
 
-  Generative adversarial networks (GANs) are an exciting alternative to
-algorithms for solving density estimation problems---using data to assess how
-likely samples are to be drawn from the same distribution. Instead of
-explicitly computing these probabilities, GANs learn a generator that can match
-the given probabilistic source. This paper looks particularly at this matching
-capability in the context of problems with one-dimensional outputs. We identify
-a class of function decompositions with properties that make them well suited
-to the critic role in a leading approach to GANs known as Wasserstein GANs. We
-show that Taylor and Fourier series decompositions belong to our class, provide
-examples of these critics outperforming standard GAN approaches, and suggest
-how they can be scaled to higher dimensional problems in the future.
+Equivalence Between Wasserstein and Value-Aware Loss for Model-based  Reinforcement Learning
 
-
-Equivalence Between Wasserstein and Value-Aware Loss for Model-based
-  Reinforcement Learning
-
-  Learning a generative model is a key component of model-based reinforcement
-learning. Though learning a good model in the tabular setting is a simple task,
-learning a useful model in the approximate setting is challenging. In this
-context, an important question is the loss function used for model learning as
-varying the loss function can have a remarkable impact on effectiveness of
-planning. Recently Farahmand et al. (2017) proposed a value-aware model
-learning (VAML) objective that captures the structure of value function during
-model learning. Using tools from Asadi et al. (2018), we show that minimizing
-the VAML objective is in fact equivalent to minimizing the Wasserstein metric.
-This equivalence improves our understanding of value-aware models, and also
-creates a theoretical foundation for applications of Wasserstein in model-based
-reinforcement~learning.
-
+  Learning a generative model is a key component of model-based reinforcementlearning. Though learning a good model in the tabular setting is a simple task,learning a useful model in the approximate setting is challenging. In thiscontext, an important question is the loss function used for model learning asvarying the loss function can have a remarkable impact on effectiveness ofplanning. Recently Farahmand et al. (2017) proposed a value-aware modellearning (VAML) objective that captures the structure of value function duringmodel learning. Using tools from Asadi et al. (2018), we show that minimizingthe VAML objective is in fact equivalent to minimizing the Wasserstein metric.This equivalence improves our understanding of value-aware models, and alsocreates a theoretical foundation for applications of Wasserstein in model-basedreinforcement~learning.
 
 Transfer with Model Features in Reinforcement Learning
 
-  A key question in Reinforcement Learning is which representation an agent can
-learn to efficiently reuse knowledge between different tasks. Recently the
-Successor Representation was shown to have empirical benefits for transferring
-knowledge between tasks with shared transition dynamics. This paper presents
-Model Features: a feature representation that clusters behaviourally equivalent
-states and that is equivalent to a Model-Reduction. Further, we present a
-Successor Feature model which shows that learning Successor Features is
-equivalent to learning a Model-Reduction. A novel optimization objective is
-developed and we provide bounds showing that minimizing this objective results
-in an increasingly improved approximation of a Model-Reduction. Further, we
-provide transfer experiments on randomly generated MDPs which vary in their
-transition and reward functions but approximately preserve behavioural
-equivalence between states. These results demonstrate that Model Features are
-suitable for transfer between tasks with varying transition and reward
-functions.
-
+  A key question in Reinforcement Learning is which representation an agent canlearn to efficiently reuse knowledge between different tasks. Recently theSuccessor Representation was shown to have empirical benefits for transferringknowledge between tasks with shared transition dynamics. This paper presentsModel Features: a feature representation that clusters behaviourally equivalentstates and that is equivalent to a Model-Reduction. Further, we present aSuccessor Feature model which shows that learning Successor Features isequivalent to learning a Model-Reduction. A novel optimization objective isdeveloped and we provide bounds showing that minimizing this objective resultsin an increasingly improved approximation of a Model-Reduction. Further, weprovide transfer experiments on randomly generated MDPs which vary in theirtransition and reward functions but approximately preserve behaviouralequivalence between states. These results demonstrate that Model Features aresuitable for transfer between tasks with varying transition and rewardfunctions.
 
 Mitigating Planner Overfitting in Model-Based Reinforcement Learning
 
-  An agent with an inaccurate model of its environment faces a difficult
-choice: it can ignore the errors in its model and act in the real world in
-whatever way it determines is optimal with respect to its model. Alternatively,
-it can take a more conservative stance and eschew its model in favor of
-optimizing its behavior solely via real-world interaction. This latter approach
-can be exceedingly slow to learn from experience, while the former can lead to
-"planner overfitting" - aspects of the agent's behavior are optimized to
-exploit errors in its model. This paper explores an intermediate position in
-which the planner seeks to avoid overfitting through a kind of regularization
-of the plans it considers. We present three different approaches that
-demonstrably mitigate planner overfitting in reinforcement-learning
-environments.
+  An agent with an inaccurate model of its environment faces a difficultchoice: it can ignore the errors in its model and act in the real world inwhatever way it determines is optimal with respect to its model. Alternatively,it can take a more conservative stance and eschew its model in favor ofoptimizing its behavior solely via real-world interaction. This latter approachcan be exceedingly slow to learn from experience, while the former can lead to"planner overfitting" - aspects of the agent's behavior are optimized toexploit errors in its model. This paper explores an intermediate position inwhich the planner seeks to avoid overfitting through a kind of regularizationof the plans it considers. We present three different approaches thatdemonstrably mitigate planner overfitting in reinforcement-learningenvironments.
 
+Successor Features Support Model-based and Model-free Reinforcement  Learning
 
-Successor Features Support Model-based and Model-free Reinforcement
-  Learning
-
-  One key challenge in reinforcement learning is the ability to generalize
-knowledge in control problems. While deep learning methods have been
-successfully combined with model-free reinforcement-learning algorithms, how to
-perform model-based reinforcement learning in the presence of approximation
-errors still remains an open problem. Using successor features, a feature
-representation that predicts a temporal constraint, this paper presents three
-contributions: First, it shows how learning successor features is equivalent to
-model-free learning. Then, it shows how successor features encode model
-reductions that compress the state space by creating state partitions of
-bisimilar states. Using this representation, an intelligent agent is guaranteed
-to accurately predict future reward outcomes, a key property of model-based
-reinforcement-learning algorithms. Lastly, it presents a loss objective and
-prediction error bounds showing that accurately predicting value functions and
-reward sequences is possible with an approximation of successor features. On
-finite control problems, we illustrate how minimizing this loss objective
-results in approximate bisimulations. The results presented in this paper
-provide a novel understanding of representations that can support model-free
-and model-based reinforcement learning.
-
+  One key challenge in reinforcement learning is the ability to generalizeknowledge in control problems. While deep learning methods have beensuccessfully combined with model-free reinforcement-learning algorithms, how toperform model-based reinforcement learning in the presence of approximationerrors still remains an open problem. Using successor features, a featurerepresentation that predicts a temporal constraint, this paper presents threecontributions: First, it shows how learning successor features is equivalent tomodel-free learning. Then, it shows how successor features encode modelreductions that compress the state space by creating state partitions ofbisimilar states. Using this representation, an intelligent agent is guaranteedto accurately predict future reward outcomes, a key property of model-basedreinforcement-learning algorithms. Lastly, it presents a loss objective andprediction error bounds showing that accurately predicting value functions andreward sequences is possible with an approximation of successor features. Onfinite control problems, we illustrate how minimizing this loss objectiveresults in approximate bisimulations. The results presented in this paperprovide a novel understanding of representations that can support model-freeand model-based reinforcement learning.
 
 Deep Reinforcement Learning from Policy-Dependent Human Feedback
 
-  To widen their accessibility and increase their utility, intelligent agents
-must be able to learn complex behaviors as specified by (non-expert) human
-users. Moreover, they will need to learn these behaviors within a reasonable
-amount of time while efficiently leveraging the sparse feedback a human trainer
-is capable of providing. Recent work has shown that human feedback can be
-characterized as a critique of an agent's current behavior rather than as an
-alternative reward signal to be maximized, culminating in the COnvergent
-Actor-Critic by Humans (COACH) algorithm for making direct policy updates based
-on human feedback. Our work builds on COACH, moving to a setting where the
-agent's policy is represented by a deep neural network. We employ a series of
-modifications on top of the original COACH algorithm that are critical for
-successfully learning behaviors from high-dimensional observations, while also
-satisfying the constraint of obtaining reduced sample complexity. We
-demonstrate the effectiveness of our Deep COACH algorithm in the rich 3D world
-of Minecraft with an agent that learns to complete tasks by mapping from raw
-pixels to actions using only real-time human feedback in 10-15 minutes of
-interaction.
+  To widen their accessibility and increase their utility, intelligent agentsmust be able to learn complex behaviors as specified by (non-expert) humanusers. Moreover, they will need to learn these behaviors within a reasonableamount of time while efficiently leveraging the sparse feedback a human traineris capable of providing. Recent work has shown that human feedback can becharacterized as a critique of an agent's current behavior rather than as analternative reward signal to be maximized, culminating in the COnvergentActor-Critic by Humans (COACH) algorithm for making direct policy updates basedon human feedback. Our work builds on COACH, moving to a setting where theagent's policy is represented by a deep neural network. We employ a series ofmodifications on top of the original COACH algorithm that are critical forsuccessfully learning behaviors from high-dimensional observations, while alsosatisfying the constraint of obtaining reduced sample complexity. Wedemonstrate the effectiveness of our Deep COACH algorithm in the rich 3D worldof Minecraft with an agent that learns to complete tasks by mapping from rawpixels to actions using only real-time human feedback in 10-15 minutes ofinteraction.
 
+Theory of Minds: Understanding Behavior in Groups Through Inverse  Planning
 
-Theory of Minds: Understanding Behavior in Groups Through Inverse
-  Planning
-
-  Human social behavior is structured by relationships. We form teams, groups,
-tribes, and alliances at all scales of human life. These structures guide
-multi-agent cooperation and competition, but when we observe others these
-underlying relationships are typically unobservable and hence must be inferred.
-Humans make these inferences intuitively and flexibly, often making rapid
-generalizations about the latent relationships that underlie behavior from just
-sparse and noisy observations. Rapid and accurate inferences are important for
-determining who to cooperate with, who to compete with, and how to cooperate in
-order to compete. Towards the goal of building machine-learning algorithms with
-human-like social intelligence, we develop a generative model of multi-agent
-action understanding based on a novel representation for these latent
-relationships called Composable Team Hierarchies (CTH). This representation is
-grounded in the formalism of stochastic games and multi-agent reinforcement
-learning. We use CTH as a target for Bayesian inference yielding a new
-algorithm for understanding behavior in groups that can both infer hidden
-relationships as well as predict future actions for multiple agents interacting
-together. Our algorithm rapidly recovers an underlying causal model of how
-agents relate in spatial stochastic games from just a few observations. The
-patterns of inference made by this algorithm closely correspond with human
-judgments and the algorithm makes the same rapid generalizations that people
-do.
-
+  Human social behavior is structured by relationships. We form teams, groups,tribes, and alliances at all scales of human life. These structures guidemulti-agent cooperation and competition, but when we observe others theseunderlying relationships are typically unobservable and hence must be inferred.Humans make these inferences intuitively and flexibly, often making rapidgeneralizations about the latent relationships that underlie behavior from justsparse and noisy observations. Rapid and accurate inferences are important fordetermining who to cooperate with, who to compete with, and how to cooperate inorder to compete. Towards the goal of building machine-learning algorithms withhuman-like social intelligence, we develop a generative model of multi-agentaction understanding based on a novel representation for these latentrelationships called Composable Team Hierarchies (CTH). This representation isgrounded in the formalism of stochastic games and multi-agent reinforcementlearning. We use CTH as a target for Bayesian inference yielding a newalgorithm for understanding behavior in groups that can both infer hiddenrelationships as well as predict future actions for multiple agents interactingtogether. Our algorithm rapidly recovers an underlying causal model of howagents relate in spatial stochastic games from just a few observations. Thepatterns of inference made by this algorithm closely correspond with humanjudgments and the algorithm makes the same rapid generalizations that peopledo.
 
 $ \ell ^{p}$-improving inequalities for Discrete Spherical Averages
 
-  Let $ \lambda ^2 \in \mathbb N $, and in dimensions $ d\geq 5$, let $ A
-_{\lambda } f (x)$ denote the average of $ f \;:\; \mathbb Z ^{d} \to \mathbb R
-$ over the lattice points on the sphere of radius $\lambda$ centered at $x$. We
-prove $ \ell ^{p}$ improving properties of $ A _{\lambda }$.
-  \begin{equation*} \lVert A _{\lambda }\rVert _{\ell ^{p} \to \ell ^{p'}} \leq
-C _{d,p, \omega (\lambda ^2 )} \lambda ^{d ( 1-\frac{2}p)}, \qquad
-\tfrac{d-1}{d+1} < p \leq \frac{d} {d-2}. \end{equation*} It holds in dimension
-$ d =4$ for odd $ \lambda ^2 $. The dependence is in terms of $ \omega (\lambda
-^2 )$, the number of distinct prime factors of $ \lambda ^2 $. These
-inequalities are discrete versions of a classical inequality of Littman and
-Strichartz on the $ L ^{p}$ improving property of spherical averages on $
-\mathbb R ^{d}$, in particular they are scale free, in a natural sense. The
-proof uses the decomposition of the corresponding multiplier whose properties
-were established by Magyar-Stein-Wainger, and Magyar. We then use a proof
-strategy of Bourgain, which dominates each part of the decomposition by an
-endpoint estimate.
-
+  Let $ \lambda ^2 \in \mathbb N $, and in dimensions $ d\geq 5$, let $ A_{\lambda } f (x)$ denote the average of $ f \;:\; \mathbb Z ^{d} \to \mathbb R$ over the lattice points on the sphere of radius $\lambda$ centered at $x$. Weprove $ \ell ^{p}$ improving properties of $ A _{\lambda }$.  \begin{equation*} \lVert A _{\lambda }\rVert _{\ell ^{p} \to \ell ^{p'}} \leqC _{d,p, \omega (\lambda ^2 )} \lambda ^{d ( 1-\frac{2}p)}, \qquad\tfrac{d-1}{d+1} < p \leq \frac{d} {d-2}. \end{equation*} It holds in dimension$ d =4$ for odd $ \lambda ^2 $. The dependence is in terms of $ \omega (\lambda^2 )$, the number of distinct prime factors of $ \lambda ^2 $. Theseinequalities are discrete versions of a classical inequality of Littman andStrichartz on the $ L ^{p}$ improving property of spherical averages on $\mathbb R ^{d}$, in particular they are scale free, in a natural sense. Theproof uses the decomposition of the corresponding multiplier whose propertieswere established by Magyar-Stein-Wainger, and Magyar. We then use a proofstrategy of Bourgain, which dominates each part of the decomposition by anendpoint estimate.
 
 Learning Analogies and Semantic Relations
 
-  We present an algorithm for learning from unlabeled text, based on the Vector
-Space Model (VSM) of information retrieval, that can solve verbal analogy
-questions of the kind found in the Scholastic Aptitude Test (SAT). A verbal
-analogy has the form A:B::C:D, meaning "A is to B as C is to D"; for example,
-mason:stone::carpenter:wood. SAT analogy questions provide a word pair, A:B,
-and the problem is to select the most analogous word pair, C:D, from a set of
-five choices. The VSM algorithm correctly answers 47% of a collection of 374
-college-level analogy questions (random guessing would yield 20% correct). We
-motivate this research by relating it to work in cognitive science and
-linguistics, and by applying it to a difficult problem in natural language
-processing, determining semantic relations in noun-modifier pairs. The problem
-is to classify a noun-modifier pair, such as "laser printer", according to the
-semantic relation between the noun (printer) and the modifier (laser). We use a
-supervised nearest-neighbour algorithm that assigns a class to a given
-noun-modifier pair by finding the most analogous noun-modifier pair in the
-training data. With 30 classes of semantic relations, on a collection of 600
-labeled noun-modifier pairs, the learning algorithm attains an F value of 26.5%
-(random guessing: 3.3%). With 5 classes of semantic relations, the F value is
-43.2% (random: 20%). The performance is state-of-the-art for these challenging
-problems.
+  We present an algorithm for learning from unlabeled text, based on the VectorSpace Model (VSM) of information retrieval, that can solve verbal analogyquestions of the kind found in the Scholastic Aptitude Test (SAT). A verbalanalogy has the form A:B::C:D, meaning "A is to B as C is to D"; for example,mason:stone::carpenter:wood. SAT analogy questions provide a word pair, A:B,and the problem is to select the most analogous word pair, C:D, from a set offive choices. The VSM algorithm correctly answers 47% of a collection of 374college-level analogy questions (random guessing would yield 20% correct). Wemotivate this research by relating it to work in cognitive science andlinguistics, and by applying it to a difficult problem in natural languageprocessing, determining semantic relations in noun-modifier pairs. The problemis to classify a noun-modifier pair, such as "laser printer", according to thesemantic relation between the noun (printer) and the modifier (laser). We use asupervised nearest-neighbour algorithm that assigns a class to a givennoun-modifier pair by finding the most analogous noun-modifier pair in thetraining data. With 30 classes of semantic relations, on a collection of 600labeled noun-modifier pairs, the learning algorithm attains an F value of 26.5%(random guessing: 3.3%). With 5 classes of semantic relations, the F value is43.2% (random: 20%). The performance is state-of-the-art for these challengingproblems.
 
+Measuring Praise and Criticism: Inference of Semantic Orientation from  Association
 
-Measuring Praise and Criticism: Inference of Semantic Orientation from
-  Association
-
-  The evaluative character of a word is called its semantic orientation.
-Positive semantic orientation indicates praise (e.g., "honest", "intrepid") and
-negative semantic orientation indicates criticism (e.g., "disturbing",
-"superfluous"). Semantic orientation varies in both direction (positive or
-negative) and degree (mild to strong). An automated system for measuring
-semantic orientation would have application in text classification, text
-filtering, tracking opinions in online discussions, analysis of survey
-responses, and automated chat systems (chatbots). This paper introduces a
-method for inferring the semantic orientation of a word from its statistical
-association with a set of positive and negative paradigm words. Two instances
-of this approach are evaluated, based on two different statistical measures of
-word association: pointwise mutual information (PMI) and latent semantic
-analysis (LSA). The method is experimentally tested with 3,596 words (including
-adjectives, adverbs, nouns, and verbs) that have been manually labeled positive
-(1,614 words) and negative (1,982 words). The method attains an accuracy of
-82.8% on the full test set, but the accuracy rises above 95% when the algorithm
-is allowed to abstain from classifying mild words.
-
+  The evaluative character of a word is called its semantic orientation.Positive semantic orientation indicates praise (e.g., "honest", "intrepid") andnegative semantic orientation indicates criticism (e.g., "disturbing","superfluous"). Semantic orientation varies in both direction (positive ornegative) and degree (mild to strong). An automated system for measuringsemantic orientation would have application in text classification, textfiltering, tracking opinions in online discussions, analysis of surveyresponses, and automated chat systems (chatbots). This paper introduces amethod for inferring the semantic orientation of a word from its statisticalassociation with a set of positive and negative paradigm words. Two instancesof this approach are evaluated, based on two different statistical measures ofword association: pointwise mutual information (PMI) and latent semanticanalysis (LSA). The method is experimentally tested with 3,596 words (includingadjectives, adverbs, nouns, and verbs) that have been manually labeled positive(1,614 words) and negative (1,982 words). The method attains an accuracy of82.8% on the full test set, but the accuracy rises above 95% when the algorithmis allowed to abstain from classifying mild words.
 
 Corpus-based Learning of Analogies and Semantic Relations
 
-  We present an algorithm for learning from unlabeled text, based on the Vector
-Space Model (VSM) of information retrieval, that can solve verbal analogy
-questions of the kind found in the SAT college entrance exam. A verbal analogy
-has the form A:B::C:D, meaning "A is to B as C is to D"; for example,
-mason:stone::carpenter:wood. SAT analogy questions provide a word pair, A:B,
-and the problem is to select the most analogous word pair, C:D, from a set of
-five choices. The VSM algorithm correctly answers 47% of a collection of 374
-college-level analogy questions (random guessing would yield 20% correct; the
-average college-bound senior high school student answers about 57% correctly).
-We motivate this research by applying it to a difficult problem in natural
-language processing, determining semantic relations in noun-modifier pairs. The
-problem is to classify a noun-modifier pair, such as "laser printer", according
-to the semantic relation between the noun (printer) and the modifier (laser).
-We use a supervised nearest-neighbour algorithm that assigns a class to a given
-noun-modifier pair by finding the most analogous noun-modifier pair in the
-training data. With 30 classes of semantic relations, on a collection of 600
-labeled noun-modifier pairs, the learning algorithm attains an F value of 26.5%
-(random guessing: 3.3%). With 5 classes of semantic relations, the F value is
-43.2% (random: 20%). The performance is state-of-the-art for both verbal
-analogies and noun-modifier relations.
-
+  We present an algorithm for learning from unlabeled text, based on the VectorSpace Model (VSM) of information retrieval, that can solve verbal analogyquestions of the kind found in the SAT college entrance exam. A verbal analogyhas the form A:B::C:D, meaning "A is to B as C is to D"; for example,mason:stone::carpenter:wood. SAT analogy questions provide a word pair, A:B,and the problem is to select the most analogous word pair, C:D, from a set offive choices. The VSM algorithm correctly answers 47% of a collection of 374college-level analogy questions (random guessing would yield 20% correct; theaverage college-bound senior high school student answers about 57% correctly).We motivate this research by applying it to a difficult problem in naturallanguage processing, determining semantic relations in noun-modifier pairs. Theproblem is to classify a noun-modifier pair, such as "laser printer", accordingto the semantic relation between the noun (printer) and the modifier (laser).We use a supervised nearest-neighbour algorithm that assigns a class to a givennoun-modifier pair by finding the most analogous noun-modifier pair in thetraining data. With 30 classes of semantic relations, on a collection of 600labeled noun-modifier pairs, the learning algorithm attains an F value of 26.5%(random guessing: 3.3%). With 5 classes of semantic relations, the F value is43.2% (random: 20%). The performance is state-of-the-art for both verbalanalogies and noun-modifier relations.
 
 Graphical Models for Game Theory
 
-  In this work, we introduce graphical modelsfor multi-player game theory, and
-give powerful algorithms for computing their Nash equilibria in certain cases.
-An n-player game is given by an undirected graph on n nodes and a set of n
-local matrices. The interpretation is that the payoff to player i is determined
-entirely by the actions of player i and his neighbors in the graph, and thus
-the payoff matrix to player i is indexed only by these players. We thus view
-the global n-player game as being composed of interacting local games, each
-involving many fewer players. Each player's action may have global impact, but
-it occurs through the propagation of local influences.Our main technical result
-is an efficient algorithm for computing Nash equilibria when the underlying
-graph is a tree (or can be turned into a tree with few node mergings). The
-algorithm runs in time polynomial in the size of the representation (the graph
-and theassociated local game matrices), and comes in two related but distinct
-flavors. The first version involves an approximation step, and computes a
-representation of all approximate Nash equilibria (of which there may be an
-exponential number in general). The second version allows the exact computation
-of Nash equilibria at the expense of weakened complexity bounds. The algorithm
-requires only local message-passing between nodes (and thus can be implemented
-by the players themselves in a distributed manner). Despite an analogy to
-inference in Bayes nets that we develop, the analysis of our algorithm is more
-involved than that for the polytree algorithm in, owing partially to the fact
-that we must either compute, or select from, an exponential number of potential
-solutions. We discuss a number of extensions, such as the computation of
-equilibria with desirable global properties (e.g. maximizing global return),
-and directions for further research.
-
+  In this work, we introduce graphical modelsfor multi-player game theory, andgive powerful algorithms for computing their Nash equilibria in certain cases.An n-player game is given by an undirected graph on n nodes and a set of nlocal matrices. The interpretation is that the payoff to player i is determinedentirely by the actions of player i and his neighbors in the graph, and thusthe payoff matrix to player i is indexed only by these players. We thus viewthe global n-player game as being composed of interacting local games, eachinvolving many fewer players. Each player's action may have global impact, butit occurs through the propagation of local influences.Our main technical resultis an efficient algorithm for computing Nash equilibria when the underlyinggraph is a tree (or can be turned into a tree with few node mergings). Thealgorithm runs in time polynomial in the size of the representation (the graphand theassociated local game matrices), and comes in two related but distinctflavors. The first version involves an approximation step, and computes arepresentation of all approximate Nash equilibria (of which there may be anexponential number in general). The second version allows the exact computationof Nash equilibria at the expense of weakened complexity bounds. The algorithmrequires only local message-passing between nodes (and thus can be implementedby the players themselves in a distributed manner). Despite an analogy toinference in Bayes nets that we develop, the analysis of our algorithm is moreinvolved than that for the polytree algorithm in, owing partially to the factthat we must either compute, or select from, an exponential number of potentialsolutions. We discuss a number of extensions, such as the computation ofequilibria with desirable global properties (e.g. maximizing global return),and directions for further research.
 

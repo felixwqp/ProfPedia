@@ -1,310 +1,60 @@
 Transferring Knowledge from Text to Predict Disease Onset
 
-  In many domains such as medicine, training data is in short supply. In such
-cases, external knowledge is often helpful in building predictive models. We
-propose a novel method to incorporate publicly available domain expertise to
-build accurate models. Specifically, we use word2vec models trained on a
-domain-specific corpus to estimate the relevance of each feature's text
-description to the prediction problem. We use these relevance estimates to
-rescale the features, causing more important features to experience weaker
-regularization.
-  We apply our method to predict the onset of five chronic diseases in the next
-five years in two genders and two age groups. Our rescaling approach improves
-the accuracy of the model, particularly when there are few positive examples.
-Furthermore, our method selects 60% fewer features, easing interpretation by
-physicians. Our method is applicable to other domains where feature and outcome
-descriptions are available.
-
+  In many domains such as medicine, training data is in short supply. In suchcases, external knowledge is often helpful in building predictive models. Wepropose a novel method to incorporate publicly available domain expertise tobuild accurate models. Specifically, we use word2vec models trained on adomain-specific corpus to estimate the relevance of each feature's textdescription to the prediction problem. We use these relevance estimates torescale the features, causing more important features to experience weakerregularization.  We apply our method to predict the onset of five chronic diseases in the nextfive years in two genders and two age groups. Our rescaling approach improvesthe accuracy of the model, particularly when there are few positive examples.Furthermore, our method selects 60% fewer features, easing interpretation byphysicians. Our method is applicable to other domains where feature and outcomedescriptions are available.
 
 Uncovering Voice Misuse Using Symbolic Mismatch
 
-  Voice disorders affect an estimated 14 million working-aged Americans, and
-many more worldwide. We present the first large scale study of vocal misuse
-based on long-term ambulatory data collected by an accelerometer placed on the
-neck. We investigate an unsupervised data mining approach to uncovering latent
-information about voice misuse.
-  We segment signals from over 253 days of data from 22 subjects into over a
-hundred million single glottal pulses (closures of the vocal folds), cluster
-segments into symbols, and use symbolic mismatch to uncover differences between
-patients and matched controls, and between patients pre- and post-treatment.
-Our results show significant behavioral differences between patients and
-controls, as well as between some pre- and post-treatment patients. Our
-proposed approach provides an objective basis for helping diagnose behavioral
-voice disorders, and is a first step towards a more data-driven understanding
-of the impact of voice therapy.
-
+  Voice disorders affect an estimated 14 million working-aged Americans, andmany more worldwide. We present the first large scale study of vocal misusebased on long-term ambulatory data collected by an accelerometer placed on theneck. We investigate an unsupervised data mining approach to uncovering latentinformation about voice misuse.  We segment signals from over 253 days of data from 22 subjects into over ahundred million single glottal pulses (closures of the vocal folds), clustersegments into symbols, and use symbolic mismatch to uncover differences betweenpatients and matched controls, and between patients pre- and post-treatment.Our results show significant behavioral differences between patients andcontrols, as well as between some pre- and post-treatment patients. Ourproposed approach provides an objective basis for helping diagnose behavioralvoice disorders, and is a first step towards a more data-driven understandingof the impact of voice therapy.
 
 EXTRACT: Strong Examples from Weakly-Labeled Sensor Data
 
-  Thanks to the rise of wearable and connected devices, sensor-generated time
-series comprise a large and growing fraction of the world's data.
-Unfortunately, extracting value from this data can be challenging, since
-sensors report low-level signals (e.g., acceleration), not the high-level
-events that are typically of interest (e.g., gestures). We introduce a
-technique to bridge this gap by automatically extracting examples of real-world
-events in low-level data, given only a rough estimate of when these events have
-taken place.
-  By identifying sets of features that repeat in the same temporal arrangement,
-we isolate examples of such diverse events as human actions, power consumption
-patterns, and spoken words with up to 96% precision and recall. Our method is
-fast enough to run in real time and assumes only minimal knowledge of which
-variables are relevant or the lengths of events. Our evaluation uses numerous
-publicly available datasets and over 1 million samples of manually labeled
-sensor data.
-
+  Thanks to the rise of wearable and connected devices, sensor-generated timeseries comprise a large and growing fraction of the world's data.Unfortunately, extracting value from this data can be challenging, sincesensors report low-level signals (e.g., acceleration), not the high-levelevents that are typically of interest (e.g., gestures). We introduce atechnique to bridge this gap by automatically extracting examples of real-worldevents in low-level data, given only a rough estimate of when these events havetaken place.  By identifying sets of features that repeat in the same temporal arrangement,we isolate examples of such diverse events as human actions, power consumptionpatterns, and spoken words with up to 96% precision and recall. Our method isfast enough to run in real time and assumes only minimal knowledge of whichvariables are relevant or the lengths of events. Our evaluation uses numerouspublicly available datasets and over 1 million samples of manually labeledsensor data.
 
 Synthesizing Images of Humans in Unseen Poses
 
-  We address the computational problem of novel human pose synthesis. Given an
-image of a person and a desired pose, we produce a depiction of that person in
-that pose, retaining the appearance of both the person and background. We
-present a modular generative neural network that synthesizes unseen poses using
-training pairs of images and poses taken from human action videos. Our network
-separates a scene into different body part and background layers, moves body
-parts to new locations and refines their appearances, and composites the new
-foreground with a hole-filled background. These subtasks, implemented with
-separate modules, are trained jointly using only a single target image as a
-supervised label. We use an adversarial discriminator to force our network to
-synthesize realistic details conditioned on pose. We demonstrate image
-synthesis results on three action classes: golf, yoga/workouts and tennis, and
-show that our method produces accurate results within action classes as well as
-across action classes. Given a sequence of desired poses, we also produce
-coherent videos of actions.
-
+  We address the computational problem of novel human pose synthesis. Given animage of a person and a desired pose, we produce a depiction of that person inthat pose, retaining the appearance of both the person and background. Wepresent a modular generative neural network that synthesizes unseen poses usingtraining pairs of images and poses taken from human action videos. Our networkseparates a scene into different body part and background layers, moves bodyparts to new locations and refines their appearances, and composites the newforeground with a hole-filled background. These subtasks, implemented withseparate modules, are trained jointly using only a single target image as asupervised label. We use an adversarial discriminator to force our network tosynthesize realistic details conditioned on pose. We demonstrate imagesynthesis results on three action classes: golf, yoga/workouts and tennis, andshow that our method produces accurate results within action classes as well asacross action classes. Given a sequence of desired poses, we also producecoherent videos of actions.
 
 Unsupervised Learning for Fast Probabilistic Diffeomorphic Registration
 
-  Traditional deformable registration techniques achieve impressive results and
-offer a rigorous theoretical treatment, but are computationally intensive since
-they solve an optimization problem for each image pair. Recently,
-learning-based methods have facilitated fast registration by learning spatial
-deformation functions. However, these approaches use restricted deformation
-models, require supervised labels, or do not guarantee a diffeomorphic
-(topology-preserving) registration. Furthermore, learning-based registration
-tools have not been derived from a probabilistic framework that can offer
-uncertainty estimates. In this paper, we present a probabilistic generative
-model and derive an unsupervised learning-based inference algorithm that makes
-use of recent developments in convolutional neural networks (CNNs). We
-demonstrate our method on a 3D brain registration task, and provide an
-empirical analysis of the algorithm. Our approach results in state of the art
-accuracy and very fast runtimes, while providing diffeomorphic guarantees and
-uncertainty estimates. Our implementation is available online at
-http://voxelmorph.csail.mit.edu .
-
+  Traditional deformable registration techniques achieve impressive results andoffer a rigorous theoretical treatment, but are computationally intensive sincethey solve an optimization problem for each image pair. Recently,learning-based methods have facilitated fast registration by learning spatialdeformation functions. However, these approaches use restricted deformationmodels, require supervised labels, or do not guarantee a diffeomorphic(topology-preserving) registration. Furthermore, learning-based registrationtools have not been derived from a probabilistic framework that can offeruncertainty estimates. In this paper, we present a probabilistic generativemodel and derive an unsupervised learning-based inference algorithm that makesuse of recent developments in convolutional neural networks (CNNs). Wedemonstrate our method on a 3D brain registration task, and provide anempirical analysis of the algorithm. Our approach results in state of the artaccuracy and very fast runtimes, while providing diffeomorphic guarantees anduncertainty estimates. Our implementation is available online athttp://voxelmorph.csail.mit.edu .
 
 Visualizing Patient Timelines in the Intensive Care Unit
 
-  Electronic Health Records (EHRs) contain a large volume of heterogeneous
-patient data, which are useful at the point of care and for retrospective
-research. These data are typically stored in relational databases. Gaining an
-integrated view of these data for a single patient typically requires complex
-SQL queries joining multiple tables. In this work, we present a visualization
-tool that integrates heterogeneous health care data (e.g., clinical notes,
-laboratory test values, vital signs) into a single timeline. We train risk
-models offline and dynamically generate and present their predictions alongside
-patient data. Our visualization is designed to enable users to understand the
-heterogeneous temporal data quickly and comprehensively, and to place the
-output of analytic models in the context of the underlying data.
+  Electronic Health Records (EHRs) contain a large volume of heterogeneouspatient data, which are useful at the point of care and for retrospectiveresearch. These data are typically stored in relational databases. Gaining anintegrated view of these data for a single patient typically requires complexSQL queries joining multiple tables. In this work, we present a visualizationtool that integrates heterogeneous health care data (e.g., clinical notes,laboratory test values, vital signs) into a single timeline. We train riskmodels offline and dynamically generate and present their predictions alongsidepatient data. Our visualization is designed to enable users to understand theheterogeneous temporal data quickly and comprehensively, and to place theoutput of analytic models in the context of the underlying data.
 
+A Framework for Understanding Unintended Consequences of Machine  Learning
 
-A Framework for Understanding Unintended Consequences of Machine
-  Learning
+  As machine learning increasingly affects people and society, it is importantthat we strive for a comprehensive and unified understanding of how and whyunwanted consequences arise. For instance, downstream harms to particulargroups are often blamed on "biased data," but this concept encompass too manyissues to be useful in developing solutions. In this paper, we provide aframework that partitions sources of downstream harm in machine learning intofive distinct categories spanning the data generation and machine learningpipeline. We describe how these issues arise, how they are relevant toparticular applications, and how they motivate different solutions. In doingso, we aim to facilitate the development of solutions that stem from anunderstanding of application-specific populations and data generationprocesses, rather than relying on general claims about what may or may not be"fair."
 
-  As machine learning increasingly affects people and society, it is important
-that we strive for a comprehensive and unified understanding of how and why
-unwanted consequences arise. For instance, downstream harms to particular
-groups are often blamed on "biased data," but this concept encompass too many
-issues to be useful in developing solutions. In this paper, we provide a
-framework that partitions sources of downstream harm in machine learning into
-five distinct categories spanning the data generation and machine learning
-pipeline. We describe how these issues arise, how they are relevant to
-particular applications, and how they motivate different solutions. In doing
-so, we aim to facilitate the development of solutions that stem from an
-understanding of application-specific populations and data generation
-processes, rather than relying on general claims about what may or may not be
-"fair."
+Anatomical Priors in Convolutional Networks for Unsupervised Biomedical  Segmentation
 
+  We consider the problem of segmenting a biomedical image into anatomicalregions of interest. We specifically address the frequent scenario where wehave no paired training data that contains images and their manualsegmentations. Instead, we employ unpaired segmentation images to build ananatomical prior. Critically these segmentations can be derived from imagingdata from a different dataset and imaging modality than the current task. Weintroduce a generative probabilistic model that employs the learned priorthrough a convolutional neural network to compute segmentations in anunsupervised setting. We conducted an empirical analysis of the proposedapproach in the context of structural brain MRI segmentation, using amulti-study dataset of more than 14,000 scans. Our results show that ananatomical prior can enable fast unsupervised segmentation which is typicallynot possible using standard convolutional networks. The integration ofanatomical priors can facilitate CNN-based anatomical segmentation in a rangeof novel clinical problems, where few or no annotations are available and thusstandard networks are not trainable. The code is freely available athttp://github.com/adalca/neuron.
 
-Anatomical Priors in Convolutional Networks for Unsupervised Biomedical
-  Segmentation
+Data augmentation using learned transformations for one-shot medical  image segmentation
 
-  We consider the problem of segmenting a biomedical image into anatomical
-regions of interest. We specifically address the frequent scenario where we
-have no paired training data that contains images and their manual
-segmentations. Instead, we employ unpaired segmentation images to build an
-anatomical prior. Critically these segmentations can be derived from imaging
-data from a different dataset and imaging modality than the current task. We
-introduce a generative probabilistic model that employs the learned prior
-through a convolutional neural network to compute segmentations in an
-unsupervised setting. We conducted an empirical analysis of the proposed
-approach in the context of structural brain MRI segmentation, using a
-multi-study dataset of more than 14,000 scans. Our results show that an
-anatomical prior can enable fast unsupervised segmentation which is typically
-not possible using standard convolutional networks. The integration of
-anatomical priors can facilitate CNN-based anatomical segmentation in a range
-of novel clinical problems, where few or no annotations are available and thus
-standard networks are not trainable. The code is freely available at
-http://github.com/adalca/neuron.
-
-
-Data augmentation using learned transformations for one-shot medical
-  image segmentation
-
-  Image segmentation is an important task in many medical applications. Methods
-based on convolutional neural networks attain state-of-the-art accuracy;
-however, they typically rely on supervised training with large labeled
-datasets. Labeling medical images requires significant expertise and time, and
-typical hand-tuned approaches for data augmentation fail to capture the complex
-variations in such images.
-  We present an automated data augmentation method for synthesizing labeled
-medical images. We demonstrate our method on the task of segmenting magnetic
-resonance imaging (MRI) brain scans. Our method requires only a single
-segmented scan, and leverages other unlabeled scans in a semi-supervised
-approach. We learn a model of transformations from the images, and use the
-model along with the labeled example to synthesize additional labeled examples.
-Each transformation is comprised of a spatial deformation field and an
-intensity change, enabling the synthesis of complex effects such as variations
-in anatomy and image acquisition procedures. We show that training a supervised
-segmenter with these new examples provides significant improvements over
-state-of-the-art methods for one-shot biomedical image segmentation. Our code
-is available at https://github.com/xamyzhao/brainstorm.
-
+  Image segmentation is an important task in many medical applications. Methodsbased on convolutional neural networks attain state-of-the-art accuracy;however, they typically rely on supervised training with large labeleddatasets. Labeling medical images requires significant expertise and time, andtypical hand-tuned approaches for data augmentation fail to capture the complexvariations in such images.  We present an automated data augmentation method for synthesizing labeledmedical images. We demonstrate our method on the task of segmenting magneticresonance imaging (MRI) brain scans. Our method requires only a singlesegmented scan, and leverages other unlabeled scans in a semi-supervisedapproach. We learn a model of transformations from the images, and use themodel along with the labeled example to synthesize additional labeled examples.Each transformation is comprised of a spatial deformation field and anintensity change, enabling the synthesis of complex effects such as variationsin anatomy and image acquisition procedures. We show that training a supervisedsegmenter with these new examples provides significant improvements overstate-of-the-art methods for one-shot biomedical image segmentation. Our codeis available at https://github.com/xamyzhao/brainstorm.
 
 Bolt: Accelerated Data Mining with Fast Vector Compression
 
-  Vectors of data are at the heart of machine learning and data mining.
-Recently, vector quantization methods have shown great promise in reducing both
-the time and space costs of operating on vectors. We introduce a vector
-quantization algorithm that can compress vectors over 12x faster than existing
-techniques while also accelerating approximate vector operations such as
-distance and dot product computations by up to 10x. Because it can encode over
-2GB of vectors per second, it makes vector quantization cheap enough to employ
-in many more circumstances. For example, using our technique to compute
-approximate dot products in a nested loop can multiply matrices faster than a
-state-of-the-art BLAS implementation, even when our algorithm must first
-compress the matrices.
-  In addition to showing the above speedups, we demonstrate that our approach
-can accelerate nearest neighbor search and maximum inner product search by over
-100x compared to floating point operations and up to 10x compared to other
-vector quantization methods. Our approximate Euclidean distance and dot product
-computations are not only faster than those of related algorithms with slower
-encodings, but also faster than Hamming distance computations, which have
-direct hardware support on the tested platforms. We also assess the errors of
-our algorithm's approximate distances and dot products, and find that it is
-competitive with existing, slower vector quantization algorithms.
-
+  Vectors of data are at the heart of machine learning and data mining.Recently, vector quantization methods have shown great promise in reducing boththe time and space costs of operating on vectors. We introduce a vectorquantization algorithm that can compress vectors over 12x faster than existingtechniques while also accelerating approximate vector operations such asdistance and dot product computations by up to 10x. Because it can encode over2GB of vectors per second, it makes vector quantization cheap enough to employin many more circumstances. For example, using our technique to computeapproximate dot products in a nested loop can multiply matrices faster than astate-of-the-art BLAS implementation, even when our algorithm must firstcompress the matrices.  In addition to showing the above speedups, we demonstrate that our approachcan accelerate nearest neighbor search and maximum inner product search by over100x compared to floating point operations and up to 10x compared to othervector quantization methods. Our approximate Euclidean distance and dot productcomputations are not only faster than those of related algorithms with slowerencodings, but also faster than Hamming distance computations, which havedirect hardware support on the tested platforms. We also assess the errors ofour algorithm's approximate distances and dot products, and find that it iscompetitive with existing, slower vector quantization algorithms.
 
 An Unsupervised Learning Model for Deformable Medical Image Registration
 
-  We present a fast learning-based algorithm for deformable, pairwise 3D
-medical image registration. Current registration methods optimize an objective
-function independently for each pair of images, which can be time-consuming for
-large data. We define registration as a parametric function, and optimize its
-parameters given a set of images from a collection of interest. Given a new
-pair of scans, we can quickly compute a registration field by directly
-evaluating the function using the learned parameters. We model this function
-using a convolutional neural network (CNN), and use a spatial transform layer
-to reconstruct one image from another while imposing smoothness constraints on
-the registration field. The proposed method does not require supervised
-information such as ground truth registration fields or anatomical landmarks.
-We demonstrate registration accuracy comparable to state-of-the-art 3D image
-registration, while operating orders of magnitude faster in practice. Our
-method promises to significantly speed up medical image analysis and processing
-pipelines, while facilitating novel directions in learning-based registration
-and its applications. Our code is available at
-https://github.com/balakg/voxelmorph .
-
+  We present a fast learning-based algorithm for deformable, pairwise 3Dmedical image registration. Current registration methods optimize an objectivefunction independently for each pair of images, which can be time-consuming forlarge data. We define registration as a parametric function, and optimize itsparameters given a set of images from a collection of interest. Given a newpair of scans, we can quickly compute a registration field by directlyevaluating the function using the learned parameters. We model this functionusing a convolutional neural network (CNN), and use a spatial transform layerto reconstruct one image from another while imposing smoothness constraints onthe registration field. The proposed method does not require supervisedinformation such as ground truth registration fields or anatomical landmarks.We demonstrate registration accuracy comparable to state-of-the-art 3D imageregistration, while operating orders of magnitude faster in practice. Ourmethod promises to significantly speed up medical image analysis and processingpipelines, while facilitating novel directions in learning-based registrationand its applications. Our code is available athttps://github.com/balakg/voxelmorph .
 
 Fast Learning-based Registration of Sparse Clinical Images
 
-  Deformable registration of clinical scans is a fundamental task for many
-applications, such as population studies or the monitoring of long-term disease
-progression in individual patients. This task is challenging because, in
-contrast to high-resolution research-quality scans, clinical images are often
-sparse, missing up to 85% of the slices in comparison. Furthermore, the anatomy
-in the acquired slices is not consistent across scans because of variations in
-patient orientation with respect to the scanner. In this work, we introduce
-Sparse VoxelMorph (SparseVM), which adapts a state-of-the-art learning-based
-registration method to improve the registration of sparse clinical images.
-SparseVM is a fast, unsupervised method that weights voxel contributions to
-registration in proportion to confidence in the voxels. This leads to improved
-registration performance on volumes with voxels of varying reliability, such as
-interpolated clinical scans. SparseVM registers 3D scans in under a second on
-the GPU, which is orders of magnitudes faster than the best performing clinical
-registration methods, while still achieving comparable accuracy. Because of its
-short runtimes and accurate behavior, SparseVM can enable clinical analyses not
-previously possible. The code is publicly available at voxelmorph.mit.edu.
-
+  Deformable registration of clinical scans is a fundamental task for manyapplications, such as population studies or the monitoring of long-term diseaseprogression in individual patients. This task is challenging because, incontrast to high-resolution research-quality scans, clinical images are oftensparse, missing up to 85% of the slices in comparison. Furthermore, the anatomyin the acquired slices is not consistent across scans because of variations inpatient orientation with respect to the scanner. In this work, we introduceSparse VoxelMorph (SparseVM), which adapts a state-of-the-art learning-basedregistration method to improve the registration of sparse clinical images.SparseVM is a fast, unsupervised method that weights voxel contributions toregistration in proportion to confidence in the voxels. This leads to improvedregistration performance on volumes with voxels of varying reliability, such asinterpolated clinical scans. SparseVM registers 3D scans in under a second onthe GPU, which is orders of magnitudes faster than the best performing clinicalregistration methods, while still achieving comparable accuracy. Because of itsshort runtimes and accurate behavior, SparseVM can enable clinical analyses notpreviously possible. The code is publicly available at voxelmorph.mit.edu.
 
 Unsupervised Data Imputation via Variational Inference of Deep Subspaces
 
-  A wide range of systems exhibit high dimensional incomplete data. Accurate
-estimation of the missing data is often desired, and is crucial for many
-downstream analyses. Many state-of-the-art recovery methods involve supervised
-learning using datasets containing full observations. In contrast, we focus on
-unsupervised estimation of missing image data, where no full observations are
-available - a common situation in practice. Unsupervised imputation methods for
-images often employ a simple linear subspace to capture correlations between
-data dimensions, omitting more complex relationships. In this work, we
-introduce a general probabilistic model that describes sparse high dimensional
-imaging data as being generated by a deep non-linear embedding. We derive a
-learning algorithm using a variational approximation based on convolutional
-neural networks and discuss its relationship to linear imputation models, the
-variational auto encoder, and deep image priors. We introduce sparsity-aware
-network building blocks that explicitly model observed and missing data. We
-analyze proposed sparsity-aware network building blocks, evaluate our method on
-public domain imaging datasets, and conclude by showing that our method enables
-imputation in an important real-world problem involving medical images. The
-code is freely available as part of the \verb|neuron| library at
-http://github.com/adalca/neuron.
+  A wide range of systems exhibit high dimensional incomplete data. Accurateestimation of the missing data is often desired, and is crucial for manydownstream analyses. Many state-of-the-art recovery methods involve supervisedlearning using datasets containing full observations. In contrast, we focus onunsupervised estimation of missing image data, where no full observations areavailable - a common situation in practice. Unsupervised imputation methods forimages often employ a simple linear subspace to capture correlations betweendata dimensions, omitting more complex relationships. In this work, weintroduce a general probabilistic model that describes sparse high dimensionalimaging data as being generated by a deep non-linear embedding. We derive alearning algorithm using a variational approximation based on convolutionalneural networks and discuss its relationship to linear imputation models, thevariational auto encoder, and deep image priors. We introduce sparsity-awarenetwork building blocks that explicitly model observed and missing data. Weanalyze proposed sparsity-aware network building blocks, evaluate our method onpublic domain imaging datasets, and conclude by showing that our method enablesimputation in an important real-world problem involving medical images. Thecode is freely available as part of the \verb|neuron| library athttp://github.com/adalca/neuron.
 
+Unsupervised Learning of Probabilistic Diffeomorphic Registration for  Images and Surfaces
 
-Unsupervised Learning of Probabilistic Diffeomorphic Registration for
-  Images and Surfaces
+  Classical deformable registration techniques achieve impressive results andoffer a rigorous theoretical treatment, but are computationally intensive sincethey solve an optimization problem for each image pair. Recently,learning-based methods have facilitated fast registration by learning spatialdeformation functions. However, these approaches use restricted deformationmodels, require supervised labels, or do not guarantee a diffeomorphic(topology-preserving) registration. Furthermore, learning-based registrationtools have not been derived from a probabilistic framework that can offeruncertainty estimates.  In this paper, we build a connection between classical and learning-basedmethods. We present a probabilistic generative model and derive an unsupervisedlearning-based inference algorithm that uses insights from classicalregistration methods and makes use of recent developments in convolutionalneural networks (CNNs). We demonstrate our method on a 3D brain registrationtask for both images and anatomical surfaces, and provide extensive empiricalanalyses of the algorithm. Our principled approach results in state of the artaccuracy and very fast runtimes, while providing diffeomorphic guarantees. Ourimplementation is available online at http://voxelmorph.csail.mit.edu.
 
-  Classical deformable registration techniques achieve impressive results and
-offer a rigorous theoretical treatment, but are computationally intensive since
-they solve an optimization problem for each image pair. Recently,
-learning-based methods have facilitated fast registration by learning spatial
-deformation functions. However, these approaches use restricted deformation
-models, require supervised labels, or do not guarantee a diffeomorphic
-(topology-preserving) registration. Furthermore, learning-based registration
-tools have not been derived from a probabilistic framework that can offer
-uncertainty estimates.
-  In this paper, we build a connection between classical and learning-based
-methods. We present a probabilistic generative model and derive an unsupervised
-learning-based inference algorithm that uses insights from classical
-registration methods and makes use of recent developments in convolutional
-neural networks (CNNs). We demonstrate our method on a 3D brain registration
-task for both images and anatomical surfaces, and provide extensive empirical
-analyses of the algorithm. Our principled approach results in state of the art
-accuracy and very fast runtimes, while providing diffeomorphic guarantees. Our
-implementation is available online at http://voxelmorph.csail.mit.edu.
+VoxelMorph: A Learning Framework for Deformable Medical Image  Registration
 
-
-VoxelMorph: A Learning Framework for Deformable Medical Image
-  Registration
-
-  We present VoxelMorph, a fast learning-based framework for deformable,
-pairwise medical image registration. Traditional registration methods optimize
-an objective function for each pair of images, which can be time-consuming for
-large datasets or rich deformation models. In contrast to this approach, and
-building on recent learning-based methods, we formulate registration as a
-function that maps an input image pair to a deformation field that aligns these
-images. We parameterize the function via a convolutional neural network (CNN),
-and optimize the parameters of the neural network on a set of images. Given a
-new pair of scans, VoxelMorph rapidly computes a deformation field by directly
-evaluating the function. In this work, we explore two different training
-strategies. In the first (unsupervised) setting, we train the model to maximize
-standard image matching objective functions that are based on the image
-intensities. In the second setting, we leverage auxiliary segmentations
-available in the training data. We demonstrate that the unsupervised model's
-accuracy is comparable to state-of-the-art methods, while operating orders of
-magnitude faster. We also show that VoxelMorph trained with auxiliary data
-improves registration accuracy at test time, and evaluate the effect of
-training set size on registration. Our method promises to speed up medical
-image analysis and processing pipelines, while facilitating novel directions in
-learning-based registration and its applications. Our code is freely available
-at voxelmorph.csail.mit.edu.
-
+  We present VoxelMorph, a fast learning-based framework for deformable,pairwise medical image registration. Traditional registration methods optimizean objective function for each pair of images, which can be time-consuming forlarge datasets or rich deformation models. In contrast to this approach, andbuilding on recent learning-based methods, we formulate registration as afunction that maps an input image pair to a deformation field that aligns theseimages. We parameterize the function via a convolutional neural network (CNN),and optimize the parameters of the neural network on a set of images. Given anew pair of scans, VoxelMorph rapidly computes a deformation field by directlyevaluating the function. In this work, we explore two different trainingstrategies. In the first (unsupervised) setting, we train the model to maximizestandard image matching objective functions that are based on the imageintensities. In the second setting, we leverage auxiliary segmentationsavailable in the training data. We demonstrate that the unsupervised model'saccuracy is comparable to state-of-the-art methods, while operating orders ofmagnitude faster. We also show that VoxelMorph trained with auxiliary dataimproves registration accuracy at test time, and evaluate the effect oftraining set size on registration. Our method promises to speed up medicalimage analysis and processing pipelines, while facilitating novel directions inlearning-based registration and its applications. Our code is freely availableat voxelmorph.csail.mit.edu.
 

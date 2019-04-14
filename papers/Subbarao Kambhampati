@@ -1,968 +1,200 @@
 Cost Based Satisficing Search Considered Harmful
 
-  Recently, several researchers have found that cost-based satisficing search
-with A* often runs into problems. Although some "work arounds" have been
-proposed to ameliorate the problem, there has not been any concerted effort to
-pinpoint its origin. In this paper, we argue that the origins can be traced
-back to the wide variance in action costs that is observed in most planning
-domains. We show that such cost variance misleads A* search, and that this is
-no trifling detail or accidental phenomenon, but a systemic weakness of the
-very concept of "cost-based evaluation functions + systematic search +
-combinatorial graphs". We show that satisficing search with sized-based
-evaluation functions is largely immune to this problem.
+  Recently, several researchers have found that cost-based satisficing searchwith A* often runs into problems. Although some "work arounds" have beenproposed to ameliorate the problem, there has not been any concerted effort topinpoint its origin. In this paper, we argue that the origins can be tracedback to the wide variance in action costs that is observed in most planningdomains. We show that such cost variance misleads A* search, and that this isno trifling detail or accidental phenomenon, but a systemic weakness of thevery concept of "cost-based evaluation functions + systematic search +combinatorial graphs". We show that satisficing search with sized-basedevaluation functions is largely immune to this problem.
 
+Loosely Coupled Formulations for Automated Planning: An Integer  Programming Perspective
 
-Loosely Coupled Formulations for Automated Planning: An Integer
-  Programming Perspective
+  We represent planning as a set of loosely coupled network flow problems,where each network corresponds to one of the state variables in the planningdomain. The network nodes correspond to the state variable values and thenetwork arcs correspond to the value transitions. The planning problem is tofind a path (a sequence of actions) in each network such that, when merged,they constitute a feasible plan. In this paper we present a number of integerprogramming formulations that model these loosely coupled networks with varyingdegrees of flexibility. Since merging may introduce exponentially many orderingconstraints we implement a so-called branch-and-cut algorithm, in which theseconstraints are dynamically generated and added to the formulation when needed.Our results are very promising, they improve upon previous planning as integerprogramming approaches and lay the foundation for integer programmingapproaches for cost optimal planning.
 
-  We represent planning as a set of loosely coupled network flow problems,
-where each network corresponds to one of the state variables in the planning
-domain. The network nodes correspond to the state variable values and the
-network arcs correspond to the value transitions. The planning problem is to
-find a path (a sequence of actions) in each network such that, when merged,
-they constitute a feasible plan. In this paper we present a number of integer
-programming formulations that model these loosely coupled networks with varying
-degrees of flexibility. Since merging may introduce exponentially many ordering
-constraints we implement a so-called branch-and-cut algorithm, in which these
-constraints are dynamically generated and added to the formulation when needed.
-Our results are very promising, they improve upon previous planning as integer
-programming approaches and lay the foundation for integer programming
-approaches for cost optimal planning.
+Surrogate Search As a Way to Combat Harmful Effects of Ill-behaved  Evaluation Functions
 
-
-Surrogate Search As a Way to Combat Harmful Effects of Ill-behaved
-  Evaluation Functions
-
-  Recently, several researchers have found that cost-based satisficing search
-with A* often runs into problems. Although some "work arounds" have been
-proposed to ameliorate the problem, there has been little concerted effort to
-pinpoint its origin. In this paper, we argue that the origins of this problem
-can be traced back to the fact that most planners that try to optimize cost
-also use cost-based evaluation functions (i.e., f(n) is a cost estimate). We
-show that cost-based evaluation functions become ill-behaved whenever there is
-a wide variance in action costs; something that is all too common in planning
-domains. The general solution to this malady is what we call a surrogatesearch,
-where a surrogate evaluation function that doesn't directly track the cost
-objective, and is resistant to cost-variance, is used. We will discuss some
-compelling choices for surrogate evaluation functions that are based on size
-rather that cost. Of particular practical interest is a cost-sensitive version
-of size-based evaluation function -- where the heuristic estimates the size of
-cheap paths, as it provides attractive quality vs. speed tradeoffs
-
-
-Cost Sensitive Reachability Heuristics for Handling State Uncertainty
-
-  While POMDPs provide a general platform for non-deterministic conditional
-planning under a variety of quality metrics they have limited scalability. On
-the other hand, non-deterministic conditional planners scale very well, but
-many lack the ability to optimize plan quality metrics. We present a novel
-generalization of planning graph based heuristics that helps conditional
-planners both scale and generate high quality plans when using actions with
-nonuniform costs. We make empirical comparisons with two state of the art
-planners to show the benefit of our techniques.
-
+  Recently, several researchers have found that cost-based satisficing searchwith A* often runs into problems. Although some "work arounds" have beenproposed to ameliorate the problem, there has been little concerted effort topinpoint its origin. In this paper, we argue that the origins of this problemcan be traced back to the fact that most planners that try to optimize costalso use cost-based evaluation functions (i.e., f(n) is a cost estimate). Weshow that cost-based evaluation functions become ill-behaved whenever there isa wide variance in action costs; something that is all too common in planningdomains. The general solution to this malady is what we call a surrogatesearch,where a surrogate evaluation function that doesn't directly track the costobjective, and is resistant to cost-variance, is used. We will discuss somecompelling choices for surrogate evaluation functions that are based on sizerather that cost. Of particular practical interest is a cost-sensitive versionof size-based evaluation function -- where the heuristic estimates the size ofcheap paths, as it provides attractive quality vs. speed tradeoffs
 
 Ranking Tweets Considering Trust and Relevance
 
-  The increasing popularity of Twitter and other microblogs makes improved
-trustworthiness and relevance assessment of microblogs evermore important. We
-propose a method of ranking of tweets considering trustworthiness and content
-based popularity. The analysis of trustworthiness and popularity exploits the
-implicit relationships between the tweets. We model microblog ecosystem as a
-three-layer graph consisting of : (i) users (ii) tweets and (iii) web pages. We
-propose to derive trust and popularity scores of entities in these three
-layers, and propagate the scores to tweets considering the inter-layer
-relations. Our preliminary evaluations show improvement in precision and
-trustworthiness over the baseline methods and acceptable computation timings.
+  The increasing popularity of Twitter and other microblogs makes improvedtrustworthiness and relevance assessment of microblogs evermore important. Wepropose a method of ranking of tweets considering trustworthiness and contentbased popularity. The analysis of trustworthiness and popularity exploits theimplicit relationships between the tweets. We model microblog ecosystem as athree-layer graph consisting of : (i) users (ii) tweets and (iii) web pages. Wepropose to derive trust and popularity scores of entities in these threelayers, and propagate the scores to tweets considering the inter-layerrelations. Our preliminary evaluations show improvement in precision andtrustworthiness over the baseline methods and acceptable computation timings.
 
+Cost Sensitive Reachability Heuristics for Handling State Uncertainty
 
-Compliant Conditions for Polynomial Time Approximation of Operator
-  Counts
+  While POMDPs provide a general platform for non-deterministic conditionalplanning under a variety of quality metrics they have limited scalability. Onthe other hand, non-deterministic conditional planners scale very well, butmany lack the ability to optimize plan quality metrics. We present a novelgeneralization of planning graph based heuristics that helps conditionalplanners both scale and generate high quality plans when using actions withnonuniform costs. We make empirical comparisons with two state of the artplanners to show the benefit of our techniques.
 
-  In this paper, we develop a computationally simpler version of the operator
-count heuristic for a particular class of domains. The contribution of this
-abstract is threefold, we (1) propose an efficient closed form approximation to
-the operator count heuristic using the Lagrangian dual; (2) leverage compressed
-sensing techniques to obtain an integer approximation for operator counts in
-polynomial time; and (3) discuss the relationship of the proposed formulation
-to existing heuristics and investigate properties of domains where such
-approaches appear to be useful.
+Compliant Conditions for Polynomial Time Approximation of Operator  Counts
 
+  In this paper, we develop a computationally simpler version of the operatorcount heuristic for a particular class of domains. The contribution of thisabstract is threefold, we (1) propose an efficient closed form approximation tothe operator count heuristic using the Lagrangian dual; (2) leverage compressedsensing techniques to obtain an integer approximation for operator counts inpolynomial time; and (3) discuss the relationship of the proposed formulationto existing heuristics and investigate properties of domains where suchapproaches appear to be useful.
 
-Planning with Explanatory Actions: A Joint Approach to Plan
-  Explicability and Explanations in Human-Aware Planning
+Planning with Explanatory Actions: A Joint Approach to Plan  Explicability and Explanations in Human-Aware Planning
 
-  In this work, we formulate the process of generating explanations as model
-reconciliation for planning problems as one of planning with explanatory
-actions. We show that these problems could be better understood within the
-framework of epistemic planning and that, in fact, most earlier works on
-explanation as model reconciliation correspond to tractable subsets of
-epistemic planning problems. We empirically show how our approach is
-computationally more efficient than existing techniques for explanation
-generation and we end the paper with a discussion of how this formulation could
-be extended to generate novel explanatory behaviors.
+  In this work, we formulate the process of generating explanations as modelreconciliation for planning problems as one of planning with explanatoryactions. We show that these problems could be better understood within theframework of epistemic planning and that, in fact, most earlier works onexplanation as model reconciliation correspond to tractable subsets ofepistemic planning problems. We empirically show how our approach iscomputationally more efficient than existing techniques for explanationgeneration and we end the paper with a discussion of how this formulation couldbe extended to generate novel explanatory behaviors.
 
+SmartInt: Using Mined Attribute Dependencies to Integrate Fragmented Web  Databases
 
-SmartInt: Using Mined Attribute Dependencies to Integrate Fragmented Web
-  Databases
-
-  Many web databases can be seen as providing partial and overlapping
-information about entities in the world. To answer queries effectively, we need
-to integrate the information about the individual entities that are fragmented
-over multiple sources. At first blush this is just the inverse of traditional
-database normalization problem - rather than go from a universal relation to
-normalized tables, we want to reconstruct the universal relation given the
-tables (sources). The standard way of reconstructing the entities will involve
-joining the tables. Unfortunately, because of the autonomous and decentralized
-way in which the sources are populated, they often do not have Primary Key -
-Foreign Key relations. While tables may share attributes, naive joins over
-these shared attributes can result in reconstruction of many spurious entities
-thus seriously compromising precision. Our system, \smartint\ is aimed at
-addressing the problem of data integration in such scenarios. Given a query,
-our system uses the Approximate Functional Dependencies (AFDs) to piece
-together a tree of relevant tables to answer it. The result tuples produced by
-our system are able to strike a favorable balance between precision and recall.
-
+  Many web databases can be seen as providing partial and overlappinginformation about entities in the world. To answer queries effectively, we needto integrate the information about the individual entities that are fragmentedover multiple sources. At first blush this is just the inverse of traditionaldatabase normalization problem - rather than go from a universal relation tonormalized tables, we want to reconstruct the universal relation given thetables (sources). The standard way of reconstructing the entities will involvejoining the tables. Unfortunately, because of the autonomous and decentralizedway in which the sources are populated, they often do not have Primary Key -Foreign Key relations. While tables may share attributes, naive joins overthese shared attributes can result in reconstruction of many spurious entitiesthus seriously compromising precision. Our system, \smartint\ is aimed ataddressing the problem of data integration in such scenarios. Given a query,our system uses the Approximate Functional Dependencies (AFDs) to piecetogether a tree of relevant tables to answer it. The result tuples produced byour system are able to strike a favorable balance between precision and recall.
 
 Defining and Mining Functional Dependencies in Probabilistic Databases
 
-  Functional dependencies -- traditional, approximate and conditional are of
-critical importance in relational databases, as they inform us about the
-relationships between attributes. They are useful in schema normalization, data
-rectification and source selection. Most of these were however developed in the
-context of deterministic data. Although uncertain databases have started
-receiving attention, these dependencies have not been defined for them, nor are
-fast algorithms available to evaluate their confidences. This paper defines the
-logical extensions of various forms of functional dependencies for
-probabilistic databases and explores the connections between them. We propose a
-pruning-based exact algorithm to evaluate the confidence of functional
-dependencies, a Monte-Carlo based algorithm to evaluate the confidence of
-approximate functional dependencies and algorithms for their conditional
-counterparts in probabilistic databases. Experiments are performed on both
-synthetic and real data evaluating the performance of these algorithms in
-assessing the confidence of dependencies and mining them from data. We believe
-that having these dependencies and algorithms available for probabilistic
-databases will drive adoption of probabilistic data storage in the industry.
+  Functional dependencies -- traditional, approximate and conditional are ofcritical importance in relational databases, as they inform us about therelationships between attributes. They are useful in schema normalization, datarectification and source selection. Most of these were however developed in thecontext of deterministic data. Although uncertain databases have startedreceiving attention, these dependencies have not been defined for them, nor arefast algorithms available to evaluate their confidences. This paper defines thelogical extensions of various forms of functional dependencies forprobabilistic databases and explores the connections between them. We propose apruning-based exact algorithm to evaluate the confidence of functionaldependencies, a Monte-Carlo based algorithm to evaluate the confidence ofapproximate functional dependencies and algorithms for their conditionalcounterparts in probabilistic databases. Experiments are performed on bothsynthetic and real data evaluating the performance of these algorithms inassessing the confidence of dependencies and mining them from data. We believethat having these dependencies and algorithms available for probabilisticdatabases will drive adoption of probabilistic data storage in the industry.
 
+Learning Probabilistic Hierarchical Task Networks to Capture User  Preferences
 
-Learning Probabilistic Hierarchical Task Networks to Capture User
-  Preferences
-
-  We propose automatically learning probabilistic Hierarchical Task Networks
-(pHTNs) in order to capture a user's preferences on plans, by observing only
-the user's behavior. HTNs are a common choice of representation for a variety
-of purposes in planning, including work on learning in planning. Our
-contributions are (a) learning structure and (b) representing preferences. In
-contrast, prior work employing HTNs considers learning method preconditions
-(instead of structure) and representing domain physics or search control
-knowledge (rather than preferences). Initially we will assume that the observed
-distribution of plans is an accurate representation of user preference, and
-then generalize to the situation where feasibility constraints frequently
-prevent the execution of preferred plans. In order to learn a distribution on
-plans we adapt an Expectation-Maximization (EM) technique from the discipline
-of (probabilistic) grammar induction, taking the perspective of task reductions
-as productions in a context-free grammar over primitive actions. To account for
-the difference between the distributions of possible and preferred plans we
-subsequently modify this core EM technique, in short, by rescaling its input.
-
+  We propose automatically learning probabilistic Hierarchical Task Networks(pHTNs) in order to capture a user's preferences on plans, by observing onlythe user's behavior. HTNs are a common choice of representation for a varietyof purposes in planning, including work on learning in planning. Ourcontributions are (a) learning structure and (b) representing preferences. Incontrast, prior work employing HTNs considers learning method preconditions(instead of structure) and representing domain physics or search controlknowledge (rather than preferences). Initially we will assume that the observeddistribution of plans is an accurate representation of user preference, andthen generalize to the situation where feasibility constraints frequentlyprevent the execution of preferred plans. In order to learn a distribution onplans we adapt an Expectation-Maximization (EM) technique from the disciplineof (probabilistic) grammar induction, taking the perspective of task reductionsas productions in a context-free grammar over primitive actions. To account forthe difference between the distributions of possible and preferred plans wesubsequently modify this core EM technique, in short, by rescaling its input.
 
 Planning with Partial Preference Models
 
-  Current work in planning with preferences assume that the user's preference
-models are completely specified and aim to search for a single solution plan.
-In many real-world planning scenarios, however, the user probably cannot
-provide any information about her desired plans, or in some cases can only
-express partial preferences. In such situations, the planner has to present not
-only one but a set of plans to the user, with the hope that some of them are
-similar to the plan she prefers. We first propose the usage of different
-measures to capture quality of plan sets that are suitable for such scenarios:
-domain-independent distance measures defined based on plan elements (actions,
-states, causal links) if no knowledge of the user's preferences is given, and
-the Integrated Convex Preference measure in case the user's partial preference
-is provided. We then investigate various heuristic approaches to find set of
-plans according to these measures, and present empirical results demonstrating
-the promise of our approach.
-
+  Current work in planning with preferences assume that the user's preferencemodels are completely specified and aim to search for a single solution plan.In many real-world planning scenarios, however, the user probably cannotprovide any information about her desired plans, or in some cases can onlyexpress partial preferences. In such situations, the planner has to present notonly one but a set of plans to the user, with the hope that some of them aresimilar to the plan she prefers. We first propose the usage of differentmeasures to capture quality of plan sets that are suitable for such scenarios:domain-independent distance measures defined based on plan elements (actions,states, causal links) if no knowledge of the user's preferences is given, andthe Integrated Convex Preference measure in case the user's partial preferenceis provided. We then investigate various heuristic approaches to find set ofplans according to these measures, and present empirical results demonstratingthe promise of our approach.
 
 Synthesizing Robust Plans under Incomplete Domain Models
 
-  Most current planners assume complete domain models and focus on generating
-correct plans. Unfortunately, domain modeling is a laborious and error-prone
-task. While domain experts cannot guarantee completeness, often they are able
-to circumscribe the incompleteness of the model by providing annotations as to
-which parts of the domain model may be incomplete. In such cases, the goal
-should be to generate plans that are robust with respect to any known
-incompleteness of the domain. In this paper, we first introduce annotations
-expressing the knowledge of the domain incompleteness, and formalize the notion
-of plan robustness with respect to an incomplete domain model. We then propose
-an approach to compiling the problem of finding robust plans to the conformant
-probabilistic planning problem. We present experimental results with
-Probabilistic-FF, a state-of-the-art planner, showing the promise of our
-approach.
-
-
-ET-LDA: Joint Topic Modeling for Aligning Events and their Twitter
-  Feedback
-
-  During broadcast events such as the Superbowl, the U.S. Presidential and
-Primary debates, etc., Twitter has become the de facto platform for crowds to
-share perspectives and commentaries about them. Given an event and an
-associated large-scale collection of tweets, there are two fundamental research
-problems that have been receiving increasing attention in recent years. One is
-to extract the topics covered by the event and the tweets; the other is to
-segment the event. So far these problems have been viewed separately and
-studied in isolation. In this work, we argue that these problems are in fact
-inter-dependent and should be addressed together. We develop a joint Bayesian
-model that performs topic modeling and event segmentation in one unified
-framework. We evaluate the proposed model both quantitatively and qualitatively
-on two large-scale tweet datasets associated with two events from different
-domains to show that it improves significantly over baseline models.
-
-
-Model-Lite Case-Based Planning
-
-  There is increasing awareness in the planning community that depending on
-complete models impedes the applicability of planning technology in many real
-world domains where the burden of specifying complete domain models is too
-high. In this paper, we consider a novel solution for this challenge that
-combines generative planning on incomplete domain models with a library of plan
-cases that are known to be correct. While this was arguably the original
-motivation for case-based planning, most existing case-based planners assume
-(and depend on) from-scratch planners that work on complete domain models. In
-contrast, our approach views the plan generated with respect to the incomplete
-model as a "skeletal plan" and augments it with directed mining of plan
-fragments from library cases. We will present the details of our approach and
-present an empirical evaluation of our method in comparison to a
-state-of-the-art case-based planner that depends on complete domain models.
-
-
-The Metrics Matter! On the Incompatibility of Different Flavors of
-  Replanning
-
-  When autonomous agents are executing in the real world, the state of the
-world as well as the objectives of the agent may change from the agent's
-original model. In such cases, the agent's planning process must modify the
-plan under execution to make it amenable to the new conditions, and to resume
-execution. This brings up the replanning problem, and the various techniques
-that have been proposed to solve it. In all, three main techniques -- based on
-three different metrics -- have been proposed in prior automated planning work.
-An open question is whether these metrics are interchangeable; answering this
-requires a normalized comparison of the various replanning quality metrics. In
-this paper, we show that it is possible to support such a comparison by
-compiling all the respective techniques into a single substrate. Using this
-novel compilation, we demonstrate that these different metrics are not
-interchangeable, and that they are not good surrogates for each other. Thus we
-focus attention on the incompatibility of the various replanning flavors with
-each other, founded in the differences between the metrics that they
-respectively seek to optimize.
-
-
-Analyzing User Activities, Demographics, Social Network Structure and
-  User-Generated Content on Instagram
-
-  Instagram is a relatively new form of communication where users can instantly
-share their current status by taking pictures and tweaking them using filters.
-It has seen a rapid growth in the number of users as well as uploads since it
-was launched in October 2010. Inspite of the fact that it is the most popular
-photo sharing application, it has attracted relatively less attention from the
-web and social media research community. In this paper, we present a
-large-scale quantitative analysis on millions of users and pictures we crawled
-over 1 month from Instagram. Our analysis reveals several insights on Instagram
-which were never studied before: 1) its social network properties are quite
-different from other popular social media like Twitter and Flickr, 2) people
-typically post once a week, and 3) people like to share their locations with
-friends. To the best of our knowledge, this is the first in-depth analysis of
-user activities, demographics, social network structure and user-generated
-content on Instagram.
-
-
-Trending Chic: Analyzing the Influence of Social Media on Fashion Brands
-
-  Social media platforms are popular venues for fashion brand marketing and
-advertising. With the introduction of native advertising, users don't have to
-endure banner ads that hold very little saliency and are unattractive. Using
-images and subtle text overlays, even in a world of ever-depreciating attention
-span, brands can retain their audience and have a capacious creative potential.
-While an assortment of marketing strategies are conjectured, the subtle
-distinctions between various types of marketing strategies remain
-under-explored. This paper presents a qualitative analysis on the influence of
-social media platforms on different behaviors of fashion brand marketing. We
-employ both linguistic and computer vision techniques while comparing and
-contrasting strategic idiosyncrasies. We also analyze brand audience retention
-and social engagement hence providing suggestions in adapting advertising and
-marketing strategies over Twitter and Instagram.
-
-
-Proactive Decision Support using Automated Planning
-
-  Proactive decision support (PDS) helps in improving the decision making
-experience of human decision makers in human-in-the-loop planning environments.
-Here both the quality of the decisions and the ease of making them are
-enhanced. In this regard, we propose a PDS framework, named RADAR, based on the
-research in Automated Planning in AI, that aids the human decision maker with
-her plan to achieve her goals by providing alerts on: whether such a plan can
-succeed at all, whether there exist any resource constraints that may foil her
-plan, etc. This is achieved by generating and analyzing the landmarks that must
-be accomplished by any successful plan on the way to achieving the goals. Note
-that, this approach also supports naturalistic decision making which is being
-acknowledged as a necessary element in proactive decision support, since it
-only aids the human decision maker through suggestions and alerts rather than
-enforcing fixed plans or decisions. We demonstrate the utility of the proposed
-framework through search-and-rescue examples in a fire-fighting domain.
-
+  Most current planners assume complete domain models and focus on generatingcorrect plans. Unfortunately, domain modeling is a laborious and error-pronetask. While domain experts cannot guarantee completeness, often they are ableto circumscribe the incompleteness of the model by providing annotations as towhich parts of the domain model may be incomplete. In such cases, the goalshould be to generate plans that are robust with respect to any knownincompleteness of the domain. In this paper, we first introduce annotationsexpressing the knowledge of the domain incompleteness, and formalize the notionof plan robustness with respect to an incomplete domain model. We then proposean approach to compiling the problem of finding robust plans to the conformantprobabilistic planning problem. We present experimental results withProbabilistic-FF, a state-of-the-art planner, showing the promise of ourapproach.
 
 Bayesian Data Cleaning for Web Data
 
-  Data Cleaning is a long standing problem, which is growing in importance with
-the mass of uncurated web data. State of the art approaches for handling
-inconsistent data are systems that learn and use conditional functional
-dependencies (CFDs) to rectify data. These methods learn data
-patterns--CFDs--from a clean sample of the data and use them to rectify the
-dirty/inconsistent data. While getting a clean training sample is feasible in
-enterprise data scenarios, it is infeasible in web databases where there is no
-separate curated data. CFD based methods are unfortunately particularly
-sensitive to noise; we will empirically demonstrate that the number of CFDs
-learned falls quite drastically with even a small amount of noise. In order to
-overcome this limitation, we propose a fully probabilistic framework for
-cleaning data. Our approach involves learning both the generative and error
-(corruption) models of the data and using them to clean the data. For
-generative models, we learn Bayes networks from the data. For error models, we
-consider a maximum entropy framework for combing multiple error processes. The
-generative and error models are learned directly from the noisy data. We
-present the details of the framework and demonstrate its effectiveness in
-rectifying web data.
+  Data Cleaning is a long standing problem, which is growing in importance withthe mass of uncurated web data. State of the art approaches for handlinginconsistent data are systems that learn and use conditional functionaldependencies (CFDs) to rectify data. These methods learn datapatterns--CFDs--from a clean sample of the data and use them to rectify thedirty/inconsistent data. While getting a clean training sample is feasible inenterprise data scenarios, it is infeasible in web databases where there is noseparate curated data. CFD based methods are unfortunately particularlysensitive to noise; we will empirically demonstrate that the number of CFDslearned falls quite drastically with even a small amount of noise. In order toovercome this limitation, we propose a fully probabilistic framework forcleaning data. Our approach involves learning both the generative and error(corruption) models of the data and using them to clean the data. Forgenerative models, we learn Bayes networks from the data. For error models, weconsider a maximum entropy framework for combing multiple error processes. Thegenerative and error models are learned directly from the noisy data. Wepresent the details of the framework and demonstrate its effectiveness inrectifying web data.
 
+Model-Lite Case-Based Planning
 
-Discovering Underlying Plans Based on Distributed Representations of
-  Actions
+  There is increasing awareness in the planning community that depending oncomplete models impedes the applicability of planning technology in many realworld domains where the burden of specifying complete domain models is toohigh. In this paper, we consider a novel solution for this challenge thatcombines generative planning on incomplete domain models with a library of plancases that are known to be correct. While this was arguably the originalmotivation for case-based planning, most existing case-based planners assume(and depend on) from-scratch planners that work on complete domain models. Incontrast, our approach views the plan generated with respect to the incompletemodel as a "skeletal plan" and augments it with directed mining of planfragments from library cases. We will present the details of our approach andpresent an empirical evaluation of our method in comparison to astate-of-the-art case-based planner that depends on complete domain models.
 
-  Plan recognition aims to discover target plans (i.e., sequences of actions)
-behind observed actions, with history plan libraries or domain models in hand.
-Previous approaches either discover plans by maximally "matching" observed
-actions to plan libraries, assuming target plans are from plan libraries, or
-infer plans by executing domain models to best explain the observed actions,
-assuming complete domain models are available. In real world applications,
-however, target plans are often not from plan libraries and complete domain
-models are often not available, since building complete sets of plans and
-complete domain models are often difficult or expensive. In this paper we view
-plan libraries as corpora and learn vector representations of actions using the
-corpora; we then discover target plans based on the vector representations. Our
-approach is capable of discovering underlying plans that are not from plan
-libraries, without requiring domain models provided. We empirically demonstrate
-the effectiveness of our approach by comparing its performance to traditional
-plan recognition approaches in three planning domains.
+ET-LDA: Joint Topic Modeling for Aligning Events and their Twitter  Feedback
 
+  During broadcast events such as the Superbowl, the U.S. Presidential andPrimary debates, etc., Twitter has become the de facto platform for crowds toshare perspectives and commentaries about them. Given an event and anassociated large-scale collection of tweets, there are two fundamental researchproblems that have been receiving increasing attention in recent years. One isto extract the topics covered by the event and the tweets; the other is tosegment the event. So far these problems have been viewed separately andstudied in isolation. In this work, we argue that these problems are in factinter-dependent and should be addressed together. We develop a joint Bayesianmodel that performs topic modeling and event segmentation in one unifiedframework. We evaluate the proposed model both quantitatively and qualitativelyon two large-scale tweet datasets associated with two events from differentdomains to show that it improves significantly over baseline models.
 
-Tweeting the Mind and Instagramming the Heart: Exploring Differentiated
-  Content Sharing on Social Media
+The Metrics Matter! On the Incompatibility of Different Flavors of  Replanning
 
-  Understanding the usage of multiple OSNs (Online Social Networks) has been of
-significant research interest as it helps in identifying the unique and
-distinguishing trait in each social media platform that contributes to its
-continued existence. The comparison between the OSNs is insightful when it is
-done based on the representative majority of the users holding active accounts
-on all the platforms. In this research, we collected a set of user profiles
-holding accounts on both Twitter and Instagram, these platforms being of
-prominence among a majority of users. An extensive textual and visual analysis
-on the media content posted by these users revealed that both these platforms
-are indeed perceived differently at a fundamental level with Instagram engaging
-more of the users' heart and Twitter capturing more of their mind. These
-differences got reflected in almost every microscopic analysis done upon the
-linguistic, topical and visual aspects.
+  When autonomous agents are executing in the real world, the state of theworld as well as the objectives of the agent may change from the agent'soriginal model. In such cases, the agent's planning process must modify theplan under execution to make it amenable to the new conditions, and to resumeexecution. This brings up the replanning problem, and the various techniquesthat have been proposed to solve it. In all, three main techniques -- based onthree different metrics -- have been proposed in prior automated planning work.An open question is whether these metrics are interchangeable; answering thisrequires a normalized comparison of the various replanning quality metrics. Inthis paper, we show that it is possible to support such a comparison bycompiling all the respective techniques into a single substrate. Using thisnovel compilation, we demonstrate that these different metrics are notinterchangeable, and that they are not good surrogates for each other. Thus wefocus attention on the incompatibility of the various replanning flavors witheach other, founded in the differences between the metrics that theyrespectively seek to optimize.
 
+Analyzing User Activities, Demographics, Social Network Structure and  User-Generated Content on Instagram
 
-Tweeting AI: Perceptions of AI-Tweeters (AIT) vs Expert AI-Tweeters
-  (EAIT)
-
-  With the recent advancements in Artificial Intelligence (AI), various
-organizations and individuals started debating about the progress of AI as a
-blessing or a curse for the future of the society. This paper conducts an
-investigation on how the public perceives the progress of AI by utilizing the
-data shared on Twitter. Specifically, this paper performs a comparative
-analysis on the understanding of users from two categories -- general
-AI-Tweeters (AIT) and the expert AI-Tweeters (EAIT) who share posts about AI on
-Twitter. Our analysis revealed that users from both the categories express
-distinct emotions and interests towards AI. Users from both the categories
-regard AI as positive and are optimistic about the progress of AI but the
-experts are more negative than the general AI-Tweeters. Characterization of
-users manifested that `London' is the popular location of users from where they
-tweet about AI. Tweets posted by AIT are highly retweeted than posts made by
-EAIT that reveals greater diffusion of information from AIT.
-
+  Instagram is a relatively new form of communication where users can instantlyshare their current status by taking pictures and tweaking them using filters.It has seen a rapid growth in the number of users as well as uploads since itwas launched in October 2010. Inspite of the fact that it is the most popularphoto sharing application, it has attracted relatively less attention from theweb and social media research community. In this paper, we present alarge-scale quantitative analysis on millions of users and pictures we crawledover 1 month from Instagram. Our analysis reveals several insights on Instagramwhich were never studied before: 1) its social network properties are quitedifferent from other popular social media like Twitter and Flickr, 2) peopletypically post once a week, and 3) people like to share their locations withfriends. To the best of our knowledge, this is the first in-depth analysis ofuser activities, demographics, social network structure and user-generatedcontent on Instagram.
 
 BayesWipe: A Scalable Probabilistic Framework for Cleaning BigData
 
-  Recent efforts in data cleaning of structured data have focused exclusively
-on problems like data deduplication, record matching, and data standardization;
-none of the approaches addressing these problems focus on fixing incorrect
-attribute values in tuples. Correcting values in tuples is typically performed
-by a minimum cost repair of tuples that violate static constraints like CFDs
-(which have to be provided by domain experts, or learned from a clean sample of
-the database). In this paper, we provide a method for correcting individual
-attribute values in a structured database using a Bayesian generative model and
-a statistical error model learned from the noisy database directly. We thus
-avoid the necessity for a domain expert or clean master data. We also show how
-to efficiently perform consistent query answering using this model over a dirty
-database, in case write permissions to the database are unavailable. We
-evaluate our methods over both synthetic and real data.
+  Recent efforts in data cleaning of structured data have focused exclusivelyon problems like data deduplication, record matching, and data standardization;none of the approaches addressing these problems focus on fixing incorrectattribute values in tuples. Correcting values in tuples is typically performedby a minimum cost repair of tuples that violate static constraints like CFDs(which have to be provided by domain experts, or learned from a clean sample ofthe database). In this paper, we provide a method for correcting individualattribute values in a structured database using a Bayesian generative model anda statistical error model learned from the noisy database directly. We thusavoid the necessity for a domain expert or clean master data. We also show howto efficiently perform consistent query answering using this model over a dirtydatabase, in case write permissions to the database are unavailable. Weevaluate our methods over both synthetic and real data.
 
+Discovering Underlying Plans Based on Distributed Representations of  Actions
 
-UbuntuWorld 1.0 LTS - A Platform for Automated Problem Solving &
-  Troubleshooting in the Ubuntu OS
+  Plan recognition aims to discover target plans (i.e., sequences of actions)behind observed actions, with history plan libraries or domain models in hand.Previous approaches either discover plans by maximally "matching" observedactions to plan libraries, assuming target plans are from plan libraries, orinfer plans by executing domain models to best explain the observed actions,assuming complete domain models are available. In real world applications,however, target plans are often not from plan libraries and complete domainmodels are often not available, since building complete sets of plans andcomplete domain models are often difficult or expensive. In this paper we viewplan libraries as corpora and learn vector representations of actions using thecorpora; we then discover target plans based on the vector representations. Ourapproach is capable of discovering underlying plans that are not from planlibraries, without requiring domain models provided. We empirically demonstratethe effectiveness of our approach by comparing its performance to traditionalplan recognition approaches in three planning domains.
 
-  In this paper, we present UbuntuWorld 1.0 LTS - a platform for developing
-automated technical support agents in the Ubuntu operating system.
-Specifically, we propose to use the Bash terminal as a simulator of the Ubuntu
-environment for a learning-based agent and demonstrate the usefulness of
-adopting reinforcement learning (RL) techniques for basic problem solving and
-troubleshooting in this environment. We provide a plug-and-play interface to
-the simulator as a python package where different types of agents can be
-plugged in and evaluated, and provide pathways for integrating data from online
-support forums like AskUbuntu into an automated agent's learning process.
-Finally, we show that the use of this data significantly improves the agent's
-learning efficiency. We believe that this platform can be adopted as a
-real-world test bed for research on automated technical support.
+Trending Chic: Analyzing the Influence of Social Media on Fashion Brands
 
+  Social media platforms are popular venues for fashion brand marketing andadvertising. With the introduction of native advertising, users don't have toendure banner ads that hold very little saliency and are unattractive. Usingimages and subtle text overlays, even in a world of ever-depreciating attentionspan, brands can retain their audience and have a capacious creative potential.While an assortment of marketing strategies are conjectured, the subtledistinctions between various types of marketing strategies remainunder-explored. This paper presents a qualitative analysis on the influence ofsocial media platforms on different behaviors of fashion brand marketing. Weemploy both linguistic and computer vision techniques while comparing andcontrasting strategic idiosyncrasies. We also analyze brand audience retentionand social engagement hence providing suggestions in adapting advertising andmarketing strategies over Twitter and Instagram.
+
+Tweeting the Mind and Instagramming the Heart: Exploring Differentiated  Content Sharing on Social Media
+
+  Understanding the usage of multiple OSNs (Online Social Networks) has been ofsignificant research interest as it helps in identifying the unique anddistinguishing trait in each social media platform that contributes to itscontinued existence. The comparison between the OSNs is insightful when it isdone based on the representative majority of the users holding active accountson all the platforms. In this research, we collected a set of user profilesholding accounts on both Twitter and Instagram, these platforms being ofprominence among a majority of users. An extensive textual and visual analysison the media content posted by these users revealed that both these platformsare indeed perceived differently at a fundamental level with Instagram engagingmore of the users' heart and Twitter capturing more of their mind. Thesedifferences got reflected in almost every microscopic analysis done upon thelinguistic, topical and visual aspects.
+
+Proactive Decision Support using Automated Planning
+
+  Proactive decision support (PDS) helps in improving the decision makingexperience of human decision makers in human-in-the-loop planning environments.Here both the quality of the decisions and the ease of making them areenhanced. In this regard, we propose a PDS framework, named RADAR, based on theresearch in Automated Planning in AI, that aids the human decision maker withher plan to achieve her goals by providing alerts on: whether such a plan cansucceed at all, whether there exist any resource constraints that may foil herplan, etc. This is achieved by generating and analyzing the landmarks that mustbe accomplished by any successful plan on the way to achieving the goals. Notethat, this approach also supports naturalistic decision making which is beingacknowledged as a necessary element in proactive decision support, since itonly aids the human decision maker through suggestions and alerts rather thanenforcing fixed plans or decisions. We demonstrate the utility of the proposedframework through search-and-rescue examples in a fire-fighting domain.
+
+UbuntuWorld 1.0 LTS - A Platform for Automated Problem Solving &  Troubleshooting in the Ubuntu OS
+
+  In this paper, we present UbuntuWorld 1.0 LTS - a platform for developingautomated technical support agents in the Ubuntu operating system.Specifically, we propose to use the Bash terminal as a simulator of the Ubuntuenvironment for a learning-based agent and demonstrate the usefulness ofadopting reinforcement learning (RL) techniques for basic problem solving andtroubleshooting in this environment. We provide a plug-and-play interface tothe simulator as a python package where different types of agents can beplugged in and evaluated, and provide pathways for integrating data from onlinesupport forums like AskUbuntu into an automated agent's learning process.Finally, we show that the use of this data significantly improves the agent'slearning efficiency. We believe that this platform can be adopted as areal-world test bed for research on automated technical support.
 
 Explicablility as Minimizing Distance from Expected Behavior
 
-  In order to have effective human-AI collaboration, it is necessary to address
-how the AI agent's behavior is being perceived by the humans-in-the-loop. When
-the agent's task plans are generated without such considerations, they may
-often demonstrate inexplicable behavior from the human's point of view. This
-problem may arise due to the human's partial or inaccurate understanding of the
-agent's planning model. This may have serious implications from increased
-cognitive load to more serious concerns of safety around a physical agent. In
-this paper, we address this issue by modeling plan explicability as a function
-of the distance between a plan that agent makes and the plan that human expects
-it to make. We learn a regression model for mapping the plan distances to
-explicability scores of plans and develop an anytime search algorithm that can
-use this model as a heuristic to come up with progressively explicable plans.
-We evaluate the effectiveness of our approach in a simulated autonomous car
-domain and a physical robot domain.
+  In order to have effective human-AI collaboration, it is necessary to addresshow the AI agent's behavior is being perceived by the humans-in-the-loop. Whenthe agent's task plans are generated without such considerations, they mayoften demonstrate inexplicable behavior from the human's point of view. Thisproblem may arise due to the human's partial or inaccurate understanding of theagent's planning model. This may have serious implications from increasedcognitive load to more serious concerns of safety around a physical agent. Inthis paper, we address this issue by modeling plan explicability as a functionof the distance between a plan that agent makes and the plan that human expectsit to make. We learn a regression model for mapping the plan distances toexplicability scores of plans and develop an anytime search algorithm that canuse this model as a heuristic to come up with progressively explicable plans.We evaluate the effectiveness of our approach in a simulated autonomous cardomain and a physical robot domain.
 
+Plan Explanations as Model Reconciliation: Moving Beyond Explanation as  Soliloquy
 
-Plan Explanations as Model Reconciliation: Moving Beyond Explanation as
-  Soliloquy
+  When AI systems interact with humans in the loop, they are often called on toprovide explanations for their plans and behavior. Past work on planexplanations primarily involved the AI system explaining the correctness of itsplan and the rationale for its decision in terms of its own model. Suchsoliloquy is wholly inadequate in most realistic scenarios where the humanshave domain and task models that differ significantly from that used by the AIsystem. We posit that the explanations are best studied in light of thesediffering models. In particular, we show how explanation can be seen as a"model reconciliation problem" (MRP), where the AI system in effect suggestschanges to the human's model, so as to make its plan be optimal with respect tothat changed human model. We will study the properties of such explanations,present algorithms for automatically computing them, and evaluate theperformance of the algorithms.
 
-  When AI systems interact with humans in the loop, they are often called on to
-provide explanations for their plans and behavior. Past work on plan
-explanations primarily involved the AI system explaining the correctness of its
-plan and the rationale for its decision in terms of its own model. Such
-soliloquy is wholly inadequate in most realistic scenarios where the humans
-have domain and task models that differ significantly from that used by the AI
-system. We posit that the explanations are best studied in light of these
-differing models. In particular, we show how explanation can be seen as a
-"model reconciliation problem" (MRP), where the AI system in effect suggests
-changes to the human's model, so as to make its plan be optimal with respect to
-that changed human model. We will study the properties of such explanations,
-present algorithms for automatically computing them, and evaluate the
-performance of the algorithms.
+Tweeting AI: Perceptions of AI-Tweeters (AIT) vs Expert AI-Tweeters  (EAIT)
 
+  With the recent advancements in Artificial Intelligence (AI), variousorganizations and individuals started debating about the progress of AI as ablessing or a curse for the future of the society. This paper conducts aninvestigation on how the public perceives the progress of AI by utilizing thedata shared on Twitter. Specifically, this paper performs a comparativeanalysis on the understanding of users from two categories -- generalAI-Tweeters (AIT) and the expert AI-Tweeters (EAIT) who share posts about AI onTwitter. Our analysis revealed that users from both the categories expressdistinct emotions and interests towards AI. Users from both the categoriesregard AI as positive and are optimistic about the progress of AI but theexperts are more negative than the general AI-Tweeters. Characterization ofusers manifested that `London' is the popular location of users from where theytweet about AI. Tweets posted by AIT are highly retweeted than posts made byEAIT that reveals greater diffusion of information from AIT.
 
-An ROS-based Shared Communication Middleware for Plug & Play Modular
-  Intelligent Design of Smart Systems
+An ROS-based Shared Communication Middleware for Plug & Play Modular  Intelligent Design of Smart Systems
 
-  Centralized architectures for systems such as smart offices and homes are
-rapidly becoming obsolete due to inherent inflexibility in their design and
-management. This is because such systems should not only be easily
-re-configurable with the addition of newer capabilities over time but should
-also have the ability to adapt to multiple points of failure. Fully harnessing
-the capabilities of these massively integrated systems requires higher level
-reasoning engines that allow them to plan for and achieve diverse long-term
-goals, rather than being limited to a few predefined tasks. In this paper, we
-propose a set of properties that will accommodate such capabilities, and
-develop a general architecture for integrating automated planning components
-into smart systems. We show how the reasoning capabilities are embedded in the
-design and operation of the system and demonstrate the same on a real-world
-implementation of a smart office.
-
+  Centralized architectures for systems such as smart offices and homes arerapidly becoming obsolete due to inherent inflexibility in their design andmanagement. This is because such systems should not only be easilyre-configurable with the addition of newer capabilities over time but shouldalso have the ability to adapt to multiple points of failure. Fully harnessingthe capabilities of these massively integrated systems requires higher levelreasoning engines that allow them to plan for and achieve diverse long-termgoals, rather than being limited to a few predefined tasks. In this paper, wepropose a set of properties that will accommodate such capabilities, anddevelop a general architecture for integrating automated planning componentsinto smart systems. We show how the reasoning capabilities are embedded in thedesign and operation of the system and demonstrate the same on a real-worldimplementation of a smart office.
 
 AI Challenges in Human-Robot Cognitive Teaming
 
-  Among the many anticipated roles for robots in the future is that of being a
-human teammate. Aside from all the technological hurdles that have to be
-overcome with respect to hardware and control to make robots fit to work with
-humans, the added complication here is that humans have many conscious and
-subconscious expectations of their teammates - indeed, we argue that teaming is
-mostly a cognitive rather than physical coordination activity. This introduces
-new challenges for the AI and robotics community and requires fundamental
-changes to the traditional approach to the design of autonomy. With this in
-mind, we propose an update to the classical view of the intelligent agent
-architecture, highlighting the requirements for mental modeling of the human in
-the deliberative process of the autonomous agent. In this article, we outline
-briefly the recent efforts of ours, and others in the community, towards
-developing cognitive teammates along these guidelines.
-
+  Among the many anticipated roles for robots in the future is that of being ahuman teammate. Aside from all the technological hurdles that have to beovercome with respect to hardware and control to make robots fit to work withhumans, the added complication here is that humans have many conscious andsubconscious expectations of their teammates - indeed, we argue that teaming ismostly a cognitive rather than physical coordination activity. This introducesnew challenges for the AI and robotics community and requires fundamentalchanges to the traditional approach to the design of autonomy. With this inmind, we propose an update to the classical view of the intelligent agentarchitecture, highlighting the requirements for mental modeling of the human inthe deliberative process of the autonomous agent. In this article, we outlinebriefly the recent efforts of ours, and others in the community, towardsdeveloping cognitive teammates along these guidelines.
 
 Tweeting AI: Perceptions of Lay vs Expert Twitterati
 
-  With the recent advancements in Artificial Intelligence (AI), various
-organizations and individuals are debating about the progress of AI as a
-blessing or a curse for the future of the society. This paper conducts an
-investigation on how the public perceives the progress of AI by utilizing the
-data shared on Twitter. Specifically, this paper performs a comparative
-analysis on the understanding of users belonging to two categories -- general
-AI-Tweeters (AIT) and expert AI-Tweeters (EAIT) who share posts about AI on
-Twitter. Our analysis revealed that users from both the categories express
-distinct emotions and interests towards AI. Users from both the categories
-regard AI as positive and are optimistic about the progress of AI but the
-experts are more negative than the general AI-Tweeters. Expert AI-Tweeters
-share relatively large percentage of tweets about their personal news compared
-to technical aspects of AI. However, the effects of automation on the future
-are of primary concern to AIT than to EAIT. When the expert category is
-sub-categorized, the emotion analysis revealed that students and industry
-professionals have more insights in their tweets about AI than academicians.
+  With the recent advancements in Artificial Intelligence (AI), variousorganizations and individuals are debating about the progress of AI as ablessing or a curse for the future of the society. This paper conducts aninvestigation on how the public perceives the progress of AI by utilizing thedata shared on Twitter. Specifically, this paper performs a comparativeanalysis on the understanding of users belonging to two categories -- generalAI-Tweeters (AIT) and expert AI-Tweeters (EAIT) who share posts about AI onTwitter. Our analysis revealed that users from both the categories expressdistinct emotions and interests towards AI. Users from both the categoriesregard AI as positive and are optimistic about the progress of AI but theexperts are more negative than the general AI-Tweeters. Expert AI-Tweetersshare relatively large percentage of tweets about their personal news comparedto technical aspects of AI. However, the effects of automation on the futureare of primary concern to AIT than to EAIT. When the expert category issub-categorized, the emotion analysis revealed that students and industryprofessionals have more insights in their tweets about AI than academicians.
 
+What's up with Privacy?: User Preferences and Privacy Concerns in  Intelligent Personal Assistants
 
-What's up with Privacy?: User Preferences and Privacy Concerns in
-  Intelligent Personal Assistants
+  The recent breakthroughs in Artificial Intelligence (AI) have allowedindividuals to rely on automated systems for a variety of reasons. Some ofthese systems are the currently popular voice-enabled systems like Echo byAmazon and Home by Google that are also called as Intelligent PersonalAssistants (IPAs). Though there are raising concerns about privacy and ethicalimplications, users of these IPAs seem to continue using these systems. We aimto investigate why users are concerned about privacy and how they are handlingthese concerns while using the IPAs. By utilizing the reviews posted onlinealong with the responses to a survey, this paper provides a set of insightsabout the detected markers related to user interests and privacy challenges.The insights suggest that users of these systems irrespective of their concernsabout privacy, are generally positive in terms of utilizing IPAs in theireveryday lives. However, there is a significant percentage of users who areconcerned about privacy and took further actions to address the relatedconcerns. Some percentage of users expressed that they do not have any privacyconcerns but when they learned about the "always listening" feature of thesedevices, their concern about privacy increased.
 
-  The recent breakthroughs in Artificial Intelligence (AI) have allowed
-individuals to rely on automated systems for a variety of reasons. Some of
-these systems are the currently popular voice-enabled systems like Echo by
-Amazon and Home by Google that are also called as Intelligent Personal
-Assistants (IPAs). Though there are raising concerns about privacy and ethical
-implications, users of these IPAs seem to continue using these systems. We aim
-to investigate why users are concerned about privacy and how they are handling
-these concerns while using the IPAs. By utilizing the reviews posted online
-along with the responses to a survey, this paper provides a set of insights
-about the detected markers related to user interests and privacy challenges.
-The insights suggest that users of these systems irrespective of their concerns
-about privacy, are generally positive in terms of utilizing IPAs in their
-everyday lives. However, there is a significant percentage of users who are
-concerned about privacy and took further actions to address the related
-concerns. Some percentage of users expressed that they do not have any privacy
-concerns but when they learned about the "always listening" feature of these
-devices, their concern about privacy increased.
+Algorithms for the Greater Good! On Mental Modeling and Acceptable  Symbiosis in Human-AI Collaboration
 
-
-Algorithms for the Greater Good! On Mental Modeling and Acceptable
-  Symbiosis in Human-AI Collaboration
-
-  Effective collaboration between humans and AI-based systems requires
-effective modeling of the human in the loop, both in terms of the mental state
-as well as the physical capabilities of the latter. However, these models can
-also open up pathways for manipulating and exploiting the human in the hopes of
-achieving some greater good, especially when the intent or values of the AI and
-the human are not aligned or when they have an asymmetrical relationship with
-respect to knowledge or computation power. In fact, such behavior does not
-necessarily require any malicious intent but can rather be borne out of
-cooperative scenarios. It is also beyond simple misinterpretation of intents,
-as in the case of value alignment problems, and thus can be effectively
-engineered if desired. Such techniques already exist and pose several
-unresolved ethical and moral questions with regards to the design of autonomy.
-In this paper, we illustrate some of these issues in a teaming scenario and
-investigate how they are perceived by participants in a thought experiment.
-
+  Effective collaboration between humans and AI-based systems requireseffective modeling of the human in the loop, both in terms of the mental stateas well as the physical capabilities of the latter. However, these models canalso open up pathways for manipulating and exploiting the human in the hopes ofachieving some greater good, especially when the intent or values of the AI andthe human are not aligned or when they have an asymmetrical relationship withrespect to knowledge or computation power. In fact, such behavior does notnecessarily require any malicious intent but can rather be borne out ofcooperative scenarios. It is also beyond simple misinterpretation of intents,as in the case of value alignment problems, and thus can be effectivelyengineered if desired. Such techniques already exist and pose severalunresolved ethical and moral questions with regards to the design of autonomy.In this paper, we illustrate some of these issues in a teaming scenario andinvestigate how they are perceived by participants in a thought experiment.
 
 Plan Explanations as Model Reconciliation -- An Empirical Study
 
-  Recent work in explanation generation for decision making agents has looked
-at how unexplained behavior of autonomous systems can be understood in terms of
-differences in the model of the system and the human's understanding of the
-same, and how the explanation process as a result of this mismatch can be then
-seen as a process of reconciliation of these models. Existing algorithms in
-such settings, while having been built on contrastive, selective and social
-properties of explanations as studied extensively in the psychology literature,
-have not, to the best of our knowledge, been evaluated in settings with actual
-humans in the loop. As such, the applicability of such explanations to human-AI
-and human-robot interactions remains suspect. In this paper, we set out to
-evaluate these explanation generation algorithms in a series of studies in a
-mock search and rescue scenario with an internal semi-autonomous robot and an
-external human commander. We demonstrate to what extent the properties of these
-algorithms hold as they are evaluated by humans, and how the dynamics of trust
-between the human and the robot evolve during the process of these
-interactions.
+  Recent work in explanation generation for decision making agents has lookedat how unexplained behavior of autonomous systems can be understood in terms ofdifferences in the model of the system and the human's understanding of thesame, and how the explanation process as a result of this mismatch can be thenseen as a process of reconciliation of these models. Existing algorithms insuch settings, while having been built on contrastive, selective and socialproperties of explanations as studied extensively in the psychology literature,have not, to the best of our knowledge, been evaluated in settings with actualhumans in the loop. As such, the applicability of such explanations to human-AIand human-robot interactions remains suspect. In this paper, we set out toevaluate these explanation generation algorithms in a series of studies in amock search and rescue scenario with an internal semi-autonomous robot and anexternal human commander. We demonstrate to what extent the properties of thesealgorithms hold as they are evaluated by humans, and how the dynamics of trustbetween the human and the robot evolve during the process of theseinteractions.
 
+Hierarchical Expertise-Level Modeling for User Specific Robot-Behavior  Explanations
 
-Hierarchical Expertise-Level Modeling for User Specific Robot-Behavior
-  Explanations
+  There is a growing interest within the AI research community to developautonomous systems capable of explaining their behavior to users. One aspect ofthe explanation generation problem that has yet to receive much attention isthe task of explaining plans to users whose level of expertise differ from thatof the explainer. We propose an approach for addressing this problem byrepresenting the user's model as an abstraction of the domain model that theplanner uses. We present algorithms for generating minimal explanations incases where this abstract human model is not known. We reduce the problem ofgenerating explanation to a search over the space of abstract models andinvestigate possible greedy approximations for minimal explanations. We alsoempirically show that our approach can efficiently compute explanations for avariety of problems.
 
-  There is a growing interest within the AI research community to develop
-autonomous systems capable of explaining their behavior to users. One aspect of
-the explanation generation problem that has yet to receive much attention is
-the task of explaining plans to users whose level of expertise differ from that
-of the explainer. We propose an approach for addressing this problem by
-representing the user's model as an abstraction of the domain model that the
-planner uses. We present algorithms for generating minimal explanations in
-cases where this abstract human model is not known. We reduce the problem of
-generating explanation to a search over the space of abstract models and
-investigate possible greedy approximations for minimal explanations. We also
-empirically show that our approach can efficiently compute explanations for a
-variety of problems.
+Extracting Action Sequences from Texts Based on Deep Reinforcement  Learning
 
+  Extracting action sequences from natural language texts is challenging, as itrequires commonsense inferences based on world knowledge. Although there hasbeen work on extracting action scripts, instructions, navigation actions, etc.,they require that either the set of candidate actions be provided in advance,or that action descriptions are restricted to a specific form, e.g.,description templates. In this paper, we aim to extract action sequences fromtexts in free natural language, i.e., without any restricted templates,provided the candidate set of actions is unknown. We propose to extract actionsequences from texts based on the deep reinforcement learning framework.Specifically, we view "selecting" or "eliminating" words from texts as"actions", and the texts associated with actions as "states". We then buildQ-networks to learn the policy of extracting actions and extract plans from thelabeled texts. We demonstrate the effectiveness of our approach on severaldatasets with comparison to state-of-the-art approaches, including onlineexperiments interacting with humans.
 
-Extracting Action Sequences from Texts Based on Deep Reinforcement
-  Learning
+Twitter for Sparking a Movement, Reddit for Sharing the Moment: #metoo  through the Lens of Social Media
 
-  Extracting action sequences from natural language texts is challenging, as it
-requires commonsense inferences based on world knowledge. Although there has
-been work on extracting action scripts, instructions, navigation actions, etc.,
-they require that either the set of candidate actions be provided in advance,
-or that action descriptions are restricted to a specific form, e.g.,
-description templates. In this paper, we aim to extract action sequences from
-texts in free natural language, i.e., without any restricted templates,
-provided the candidate set of actions is unknown. We propose to extract action
-sequences from texts based on the deep reinforcement learning framework.
-Specifically, we view "selecting" or "eliminating" words from texts as
-"actions", and the texts associated with actions as "states". We then build
-Q-networks to learn the policy of extracting actions and extract plans from the
-labeled texts. We demonstrate the effectiveness of our approach on several
-datasets with comparison to state-of-the-art approaches, including online
-experiments interacting with humans.
+  Social media platforms are revolutionizing the way users communicate byincreasing the exposure to highly stigmatized issues in the society. Sexualabuse is one such issue that recently took over social media via attaching thehashtag #metoo to the shared posts. Individuals with different backgrounds andethnicities began sharing their unfortunate personal experiences of beingassaulted. Through comparative analysis of the tweets via #meToo on Twitterversus the posts shared on the #meToo subreddit, this paper makes an initialattempt to assess public reactions and emotions. Though nearly equal ratios ofnegative and positive posts are shared on both platforms, Reddit posts arefocused on the sexual assaults within families and workplaces while Twitterposts are on showing empathy and encouraging others to continue the #metoomovement. The data collected in this research and preliminary analysisdemonstrate that users use various ways to share their experience, exchangeideas and encourage each other, and social media is suitable for groundswellssuch as #metoo movement.
 
+Imagining an Engineer: On GAN-Based Data Augmentation Perpetuating  Biases
 
-Twitter for Sparking a Movement, Reddit for Sharing the Moment: #metoo
-  through the Lens of Social Media
+  The use of synthetic data generated by Generative Adversarial Networks (GANs)has become quite a popular method to do data augmentation for manyapplications. While practitioners celebrate this as an economical way to getmore synthetic data that can be used to train downstream classifiers, it is notclear that they recognize the inherent pitfalls of this technique. In thispaper, we aim to exhort practitioners against deriving any false sense ofsecurity against data biases based on data augmentation. To drive this pointhome, we show that starting with a dataset consisting of head-shots ofengineering researchers, GAN-based augmentation "imagines" synthetic engineers,most of whom have masculine features and white skin color (inferred from ahuman subject study conducted on Amazon Mechanical Turk). This demonstrates howbiases inherent in the training data are reinforced, and sometimes evenamplified, by GAN-based data augmentation; it should serve as a cautionary talefor the lay practitioners.
 
-  Social media platforms are revolutionizing the way users communicate by
-increasing the exposure to highly stigmatized issues in the society. Sexual
-abuse is one such issue that recently took over social media via attaching the
-hashtag #metoo to the shared posts. Individuals with different backgrounds and
-ethnicities began sharing their unfortunate personal experiences of being
-assaulted. Through comparative analysis of the tweets via #meToo on Twitter
-versus the posts shared on the #meToo subreddit, this paper makes an initial
-attempt to assess public reactions and emotions. Though nearly equal ratios of
-negative and positive posts are shared on both platforms, Reddit posts are
-focused on the sexual assaults within families and workplaces while Twitter
-posts are on showing empathy and encouraging others to continue the #metoo
-movement. The data collected in this research and preliminary analysis
-demonstrate that users use various ways to share their experience, exchange
-ideas and encourage each other, and social media is suitable for groundswells
-such as #metoo movement.
+Explicability? Legibility? Predictability? Transparency? Privacy?  Security? The Emerging Landscape of Interpretable Agent Behavior
 
+  There has been significant interest of late in generating behavior of agentsthat is interpretable to the human (observer) in the loop. However, the work inthis area has typically lacked coherence on the topic, with proposed solutionsfor "explicable", "legible", "predictable" and "transparent" planning withoverlapping, and sometimes conflicting, semantics all aimed at some notion ofunderstanding what intentions the observer will ascribe to an agent byobserving its behavior. This is also true for the recent works on "security"and "privacy" of plans which are also trying to answer the same question, butfrom the opposite point of view -- i.e. when the agent is trying to hideinstead of revealing its intentions. This paper attempts to provide a workabletaxonomy of relevant concepts in this exciting and emerging field of inquiry.
 
-Imagining an Engineer: On GAN-Based Data Augmentation Perpetuating
-  Biases
+TGE-viz : Transition Graph Embedding for Visualization of Plan Traces  and Domains
 
-  The use of synthetic data generated by Generative Adversarial Networks (GANs)
-has become quite a popular method to do data augmentation for many
-applications. While practitioners celebrate this as an economical way to get
-more synthetic data that can be used to train downstream classifiers, it is not
-clear that they recognize the inherent pitfalls of this technique. In this
-paper, we aim to exhort practitioners against deriving any false sense of
-security against data biases based on data augmentation. To drive this point
-home, we show that starting with a dataset consisting of head-shots of
-engineering researchers, GAN-based augmentation "imagines" synthetic engineers,
-most of whom have masculine features and white skin color (inferred from a
-human subject study conducted on Amazon Mechanical Turk). This demonstrates how
-biases inherent in the training data are reinforced, and sometimes even
-amplified, by GAN-based data augmentation; it should serve as a cautionary tale
-for the lay practitioners.
-
-
-Explicability? Legibility? Predictability? Transparency? Privacy?
-  Security? The Emerging Landscape of Interpretable Agent Behavior
-
-  There has been significant interest of late in generating behavior of agents
-that is interpretable to the human (observer) in the loop. However, the work in
-this area has typically lacked coherence on the topic, with proposed solutions
-for "explicable", "legible", "predictable" and "transparent" planning with
-overlapping, and sometimes conflicting, semantics all aimed at some notion of
-understanding what intentions the observer will ascribe to an agent by
-observing its behavior. This is also true for the recent works on "security"
-and "privacy" of plans which are also trying to answer the same question, but
-from the opposite point of view -- i.e. when the agent is trying to hide
-instead of revealing its intentions. This paper attempts to provide a workable
-taxonomy of relevant concepts in this exciting and emerging field of inquiry.
-
-
-TGE-viz : Transition Graph Embedding for Visualization of Plan Traces
-  and Domains
-
-  Existing work for plan trace visualization in automated planning uses
-pipeline-style visualizations, similar to plans in Gantt charts. Such
-visualization do not capture the domain structure or dependencies between the
-various fluents and actions. Additionally, plan traces in such visualizations
-cannot be easily compared with one another without parsing the details of
-individual actions, which imposes a higher cognitive load. We introduce
-TGE-viz, a technique to visualize plan traces within an embedding of the entire
-transition graph of a domain in low dimensional space. TGE-viz allows users to
-visualize and criticize plans more intuitively for mixed-initiative planning.
-It also allows users to visually appraise the structure of domains and the
-dependencies in it.
-
+  Existing work for plan trace visualization in automated planning usespipeline-style visualizations, similar to plans in Gantt charts. Suchvisualization do not capture the domain structure or dependencies between thevarious fluents and actions. Additionally, plan traces in such visualizationscannot be easily compared with one another without parsing the details ofindividual actions, which imposes a higher cognitive load. We introduceTGE-viz, a technique to visualize plan traces within an embedding of the entiretransition graph of a domain in low dimensional space. TGE-viz allows users tovisualize and criticize plans more intuitively for mixed-initiative planning.It also allows users to visually appraise the structure of domains and thedependencies in it.
 
 Model-Free Model Reconciliation
 
-  Designing agents capable of explaining complex sequential decisions remain a
-significant open problem in automated decision-making. Recently, there has been
-a lot of interest in developing approaches for generating such explanations for
-various decision-making paradigms. One such approach has been the idea of {\em
-explanation as model-reconciliation}. The framework hypothesizes that one of
-the common reasons for the user's confusion could be the mismatch between the
-user's model of the task and the one used by the system to generate the
-decisions. While this is a general framework, most works that have been
-explicitly built on this explanatory philosophy have focused on settings where
-the model of user's knowledge is available in a declarative form. Our goal in
-this paper is to adapt the model reconciliation approach to the cases where
-such user models are no longer explicitly provided. We present a simple and
-easy to learn labeling model that can help an explainer decide what information
-could help achieve model reconciliation between the user and the agent.
+  Designing agents capable of explaining complex sequential decisions remain asignificant open problem in automated decision-making. Recently, there has beena lot of interest in developing approaches for generating such explanations forvarious decision-making paradigms. One such approach has been the idea of {\emexplanation as model-reconciliation}. The framework hypothesizes that one ofthe common reasons for the user's confusion could be the mismatch between theuser's model of the task and the one used by the system to generate thedecisions. While this is a general framework, most works that have beenexplicitly built on this explanatory philosophy have focused on settings wherethe model of user's knowledge is available in a declarative form. Our goal inthis paper is to adapt the model reconciliation approach to the cases wheresuch user models are no longer explicitly provided. We present a simple andeasy to learn labeling model that can help an explainer decide what informationcould help achieve model reconciliation between the user and the agent.
 
+Why Couldn't You do that? Explaining Unsolvability of Classical Planning  Problems in the Presence of Plan Advice
 
-Why Couldn't You do that? Explaining Unsolvability of Classical Planning
-  Problems in the Presence of Plan Advice
+  Explainable planning is widely accepted as a prerequisite for autonomousagents to successfully work with humans. While there has been a lot of researchon generating explanations of solutions to planning problems, explaining theabsence of solutions remains an open and under-studied problem, even thoughsuch situations can be the hardest to understand or debug. In this paper, weshow that hierarchical abstractions can be used to efficiently generate reasonsfor unsolvability of planning problems. In contrast to related work oncomputing certificates of unsolvability, we show that these methods cangenerate compact, human-understandable reasons for unsolvability. Empiricalanalysis and user studies show the validity of our methods as well as theircomputational efficacy on a number of benchmark planning domains.
 
-  Explainable planning is widely accepted as a prerequisite for autonomous
-agents to successfully work with humans. While there has been a lot of research
-on generating explanations of solutions to planning problems, explaining the
-absence of solutions remains an open and under-studied problem, even though
-such situations can be the hardest to understand or debug. In this paper, we
-show that hierarchical abstractions can be used to efficiently generate reasons
-for unsolvability of planning problems. In contrast to related work on
-computing certificates of unsolvability, we show that these methods can
-generate compact, human-understandable reasons for unsolvability. Empirical
-analysis and user studies show the validity of our methods as well as their
-computational efficacy on a number of benchmark planning domains.
+Bayes Networks for Supporting Query Processing Over Incomplete  Autonomous Databases
 
-
-RAProp: Ranking Tweets by Exploiting the Tweet/User/Web Ecosystem and
-  Inter-Tweet Agreement
-
-  The increasing popularity of Twitter renders improved trustworthiness and
-relevance assessment of tweets much more important for search. However, given
-the limitations on the size of tweets, it is hard to extract measures for
-ranking from the tweets' content alone. We present a novel ranking method,
-called RAProp, which combines two orthogonal measures of relevance and
-trustworthiness of a tweet. The first, called Feature Score, measures the
-trustworthiness of the source of the tweet. This is done by extracting features
-from a 3-layer twitter ecosystem, consisting of users, tweets and the pages
-referred to in the tweets. The second measure, called agreement analysis,
-estimates the trustworthiness of the content of the tweet, by analyzing how and
-whether the content is independently corroborated by other tweets. We view the
-candidate result set of tweets as the vertices of a graph, with the edges
-measuring the estimated agreement between each pair of tweets. The feature
-score is propagated over this agreement graph to compute the top-k tweets that
-have both trustworthy sources and independent corroboration. The evaluation of
-our method on 16 million tweets from the TREC 2011 Microblog Dataset shows that
-for top-30 precision we achieve 53% higher than current best performing method
-on the Dataset and over 300% over current Twitter Search. We also present a
-detailed internal empirical evaluation of RAProp in comparison to several
-alternative approaches proposed by us.
-
-
-Bayes Networks for Supporting Query Processing Over Incomplete
-  Autonomous Databases
-
-  As the information available to lay users through autonomous data sources
-continues to increase, mediators become important to ensure that the wealth of
-information available is tapped effectively. A key challenge that these
-information mediators need to handle is the varying levels of incompleteness in
-the underlying databases in terms of missing attribute values. Existing
-approaches such as QPIAD aim to mine and use Approximate Functional
-Dependencies (AFDs) to predict and retrieve relevant incomplete tuples. These
-approaches make independence assumptions about missing values---which
-critically hobbles their performance when there are tuples containing missing
-values for multiple correlated attributes. In this paper, we present a
-principled probabilistic alternative that views an incomplete tuple as defining
-a distribution over the complete tuples that it stands for. We learn this
-distribution in terms of Bayes networks. Our approach involves
-mining/"learning" Bayes networks from a sample of the database, and using it to
-do both imputation (predict a missing value) and query rewriting (retrieve
-relevant results with incompleteness on the query-constrained attributes, when
-the data sources are autonomous). We present empirical studies to demonstrate
-that (i) at higher levels of incompleteness, when multiple attribute values are
-missing, Bayes networks do provide a significantly higher classification
-accuracy and (ii) the relevant possible answers retrieved by the queries
-reformulated using Bayes networks provide higher precision and recall than AFDs
-while keeping query processing costs manageable.
-
+  As the information available to lay users through autonomous data sourcescontinues to increase, mediators become important to ensure that the wealth ofinformation available is tapped effectively. A key challenge that theseinformation mediators need to handle is the varying levels of incompleteness inthe underlying databases in terms of missing attribute values. Existingapproaches such as QPIAD aim to mine and use Approximate FunctionalDependencies (AFDs) to predict and retrieve relevant incomplete tuples. Theseapproaches make independence assumptions about missing values---whichcritically hobbles their performance when there are tuples containing missingvalues for multiple correlated attributes. In this paper, we present aprincipled probabilistic alternative that views an incomplete tuple as defininga distribution over the complete tuples that it stands for. We learn thisdistribution in terms of Bayes networks. Our approach involvesmining/"learning" Bayes networks from a sample of the database, and using it todo both imputation (predict a missing value) and query rewriting (retrieverelevant results with incompleteness on the query-constrained attributes, whenthe data sources are autonomous). We present empirical studies to demonstratethat (i) at higher levels of incompleteness, when multiple attribute values aremissing, Bayes networks do provide a significantly higher classificationaccuracy and (ii) the relevant possible answers retrieved by the queriesreformulated using Bayes networks provide higher precision and recall than AFDswhile keeping query processing costs manageable.
 
 Herding the Crowd: Automated Planning for Crowdsourced Planning
 
-  There has been significant interest in crowdsourcing and human computation.
-One subclass of human computation applications are those directed at tasks that
-involve planning (e.g. travel planning) and scheduling (e.g. conference
-scheduling). Much of this work appears outside the traditional automated
-planning forums, and at the outset it is not clear whether automated planning
-has much of a role to play in these human computation systems. Interestingly
-however, work on these systems shows that even primitive forms of automated
-oversight of the human planner does help in significantly improving the
-effectiveness of the humans/crowd. In this paper, we will argue that the
-automated oversight used in these systems can be viewed as a primitive
-automated planner, and that there are several opportunities for more
-sophisticated automated planning in effectively steering crowdsourced planning.
-Straightforward adaptation of current planning technology is however hampered
-by the mismatch between the capabilities of human workers and automated
-planners. We identify two important challenges that need to be overcome before
-such adaptation of planning technology can occur: (i) interpreting the inputs
-of the human workers (and the requester) and (ii) steering or critiquing the
-plans being produced by the human workers armed only with incomplete domain and
-preference models. In this paper, we discuss approaches for handling these
-challenges, and characterize existing human computation systems in terms of the
-specific choices they make in handling these challenges.
+  There has been significant interest in crowdsourcing and human computation.One subclass of human computation applications are those directed at tasks thatinvolve planning (e.g. travel planning) and scheduling (e.g. conferencescheduling). Much of this work appears outside the traditional automatedplanning forums, and at the outset it is not clear whether automated planninghas much of a role to play in these human computation systems. Interestinglyhowever, work on these systems shows that even primitive forms of automatedoversight of the human planner does help in significantly improving theeffectiveness of the humans/crowd. In this paper, we will argue that theautomated oversight used in these systems can be viewed as a primitiveautomated planner, and that there are several opportunities for moresophisticated automated planning in effectively steering crowdsourced planning.Straightforward adaptation of current planning technology is however hamperedby the mismatch between the capabilities of human workers and automatedplanners. We identify two important challenges that need to be overcome beforesuch adaptation of planning technology can occur: (i) interpreting the inputsof the human workers (and the requester) and (ii) steering or critiquing theplans being produced by the human workers armed only with incomplete domain andpreference models. In this paper, we discuss approaches for handling thesechallenges, and characterize existing human computation systems in terms of thespecific choices they make in handling these challenges.
 
+RAProp: Ranking Tweets by Exploiting the Tweet/User/Web Ecosystem and  Inter-Tweet Agreement
+
+  The increasing popularity of Twitter renders improved trustworthiness andrelevance assessment of tweets much more important for search. However, giventhe limitations on the size of tweets, it is hard to extract measures forranking from the tweets' content alone. We present a novel ranking method,called RAProp, which combines two orthogonal measures of relevance andtrustworthiness of a tweet. The first, called Feature Score, measures thetrustworthiness of the source of the tweet. This is done by extracting featuresfrom a 3-layer twitter ecosystem, consisting of users, tweets and the pagesreferred to in the tweets. The second measure, called agreement analysis,estimates the trustworthiness of the content of the tweet, by analyzing how andwhether the content is independently corroborated by other tweets. We view thecandidate result set of tweets as the vertices of a graph, with the edgesmeasuring the estimated agreement between each pair of tweets. The featurescore is propagated over this agreement graph to compute the top-k tweets thathave both trustworthy sources and independent corroboration. The evaluation ofour method on 16 million tweets from the TREC 2011 Microblog Dataset shows thatfor top-30 precision we achieve 53% higher than current best performing methodon the Dataset and over 300% over current Twitter Search. We also present adetailed internal empirical evaluation of RAProp in comparison to severalalternative approaches proposed by us.
 
 A Formal Analysis of Required Cooperation in Multi-agent Planning
 
-  Research on multi-agent planning has been popular in recent years. While
-previous research has been motivated by the understanding that, through
-cooperation, multi-agent systems can achieve tasks that are unachievable by
-single-agent systems, there are no formal characterizations of situations where
-cooperation is required to achieve a goal, thus warranting the application of
-multi-agent systems. In this paper, we provide such a formal discussion from
-the planning aspect. We first show that determining whether there is required
-cooperation (RC) is intractable is general. Then, by dividing the problems that
-require cooperation (referred to as RC problems) into two classes -- problems
-with heterogeneous and homogeneous agents, we aim to identify all the
-conditions that can cause RC in these two classes. We establish that when none
-of these identified conditions hold, the problem is single-agent solvable.
-Furthermore, with a few assumptions, we provide an upper bound on the minimum
-number of agents required for RC problems with homogeneous agents. This study
-not only provides new insights into multi-agent planning, but also has many
-applications. For example, in human-robot teaming, when a robot cannot achieve
-a task, it may be due to RC. In such cases, the human teammate should be
-informed and, consequently, coordinate with other available robots for a
-solution.
+  Research on multi-agent planning has been popular in recent years. Whileprevious research has been motivated by the understanding that, throughcooperation, multi-agent systems can achieve tasks that are unachievable bysingle-agent systems, there are no formal characterizations of situations wherecooperation is required to achieve a goal, thus warranting the application ofmulti-agent systems. In this paper, we provide such a formal discussion fromthe planning aspect. We first show that determining whether there is requiredcooperation (RC) is intractable is general. Then, by dividing the problems thatrequire cooperation (referred to as RC problems) into two classes -- problemswith heterogeneous and homogeneous agents, we aim to identify all theconditions that can cause RC in these two classes. We establish that when noneof these identified conditions hold, the problem is single-agent solvable.Furthermore, with a few assumptions, we provide an upper bound on the minimumnumber of agents required for RC problems with homogeneous agents. This studynot only provides new insights into multi-agent planning, but also has manyapplications. For example, in human-robot teaming, when a robot cannot achievea task, it may be due to RC. In such cases, the human teammate should beinformed and, consequently, coordinate with other available robots for asolution.
 
+Learning of Agent Capability Models with Applications in Multi-agent  Planning
+
+  One important challenge for a set of agents to achieve more efficientcollaboration is for these agents to maintain proper models of each other. Animportant aspect of these models of other agents is that they are often partialand incomplete. Thus far, there are two common representations of agent models:MDP based and action based, which are both based on action modeling. In manyapplications, agent models may not have been given, and hence must be learnt.While it may seem convenient to use either MDP based or action based models forlearning, in this paper, we introduce a new representation based on capabilitymodels, which has several unique advantages. First, we show that learningcapability models can be performed efficiently online via Bayesian learning,and the learning process is robust to high degrees of incompleteness in planexecution traces (e.g., with only start and end states). While high degrees ofincompleteness in plan execution traces presents learning challenges for MDPbased and action based models, capability models can still learn to {\emabstract} useful information out of these traces. As a result, capabilitymodels are useful in applications in which such incompleteness is common, e.g.,robot learning human model from observations and interactions. Furthermore,when used in multi-agent planning (with each agent modeled separately),capability models provide flexible abstraction of actions. The limitation,however, is that the synthesized plan is incomplete and abstract.
 
 Plan or not: Remote Human-robot Teaming with Incomplete Task Information
 
-  Human-robot interaction can be divided into two categories based on the
-physical distance between the human and robot: remote and proximal. In proximal
-interaction, the human and robot often engage in close coordination; in remote
-interaction, the human and robot are less coupled due to communication
-constraints. As a result, providing automation for the robot in remote
-interaction becomes more important. Thus far, human factor studies on
-automation in remote human-robot interaction have been restricted to various
-forms of supervision, in which the robot is essentially being used as a smart
-mobile manipulation platform with sensing capabilities. In this paper, we
-investigate the incorporation of general planning capability into the robot to
-facilitate peer-to-peer human-robot teaming, in which the human and robot are
-viewed as teammates that are physically separated. The human and robot share
-the same global goal and collaborate to achieve it. Note that humans may feel
-uncomfortable at such robot autonomy, which can potentially reduce teaming
-performance. One important difference between peer-to-peer teaming and
-supervised teaming is that an autonomous robot in peer-to-peer teaming can
-achieve the goal alone when the task information is completely specified.
-However, incompleteness often exists, which implies information asymmetry.
-While information asymmetry can be desirable sometimes, it may also lead to the
-robot choosing improper actions that negatively influence the teaming
-performance. We aim to investigate the various trade-offs, e.g., mental
-workload and situation awareness, between these two types of remote human-robot
-teaming.
-
-
-Moving Target Defense for Web Applications using Bayesian Stackelberg
-  Games
-
-  The present complexity in designing web applications makes software security
-a difficult goal to achieve. An attacker can explore a deployed service on the
-web and attack at his/her own leisure. Moving Target Defense (MTD) in web
-applications is an effective mechanism to nullify this advantage of their
-reconnaissance but the framework demands a good switching strategy when
-switching between multiple configurations for its web-stack. To address this
-issue, we propose modeling of a real-world MTD web application as a repeated
-Bayesian game. We then formulate an optimization problem that generates an
-effective switching strategy while considering the cost of switching between
-different web-stack configurations. To incorporate this model into a developed
-MTD system, we develop an automated system for generating attack sets of Common
-Vulnerabilities and Exposures (CVEs) for input attacker types with predefined
-capabilities. Our framework obtains realistic reward values for the players
-(defenders and attackers) in this game by using security domain expertise on
-CVEs obtained from the National Vulnerability Database (NVD). We also address
-the issue of prioritizing vulnerabilities that when fixed, improves the
-security of the MTD system. Lastly, we demonstrate the robustness of our
-proposed model by evaluating its performance when there is uncertainty about
-input attacker information.
-
+  Human-robot interaction can be divided into two categories based on thephysical distance between the human and robot: remote and proximal. In proximalinteraction, the human and robot often engage in close coordination; in remoteinteraction, the human and robot are less coupled due to communicationconstraints. As a result, providing automation for the robot in remoteinteraction becomes more important. Thus far, human factor studies onautomation in remote human-robot interaction have been restricted to variousforms of supervision, in which the robot is essentially being used as a smartmobile manipulation platform with sensing capabilities. In this paper, weinvestigate the incorporation of general planning capability into the robot tofacilitate peer-to-peer human-robot teaming, in which the human and robot areviewed as teammates that are physically separated. The human and robot sharethe same global goal and collaborate to achieve it. Note that humans may feeluncomfortable at such robot autonomy, which can potentially reduce teamingperformance. One important difference between peer-to-peer teaming andsupervised teaming is that an autonomous robot in peer-to-peer teaming canachieve the goal alone when the task information is completely specified.However, incompleteness often exists, which implies information asymmetry.While information asymmetry can be desirable sometimes, it may also lead to therobot choosing improper actions that negatively influence the teamingperformance. We aim to investigate the various trade-offs, e.g., mentalworkload and situation awareness, between these two types of remote human-robotteaming.
 
 Plan Explicability and Predictability for Robot Task Planning
 
-  Intelligent robots and machines are becoming pervasive in human populated
-environments. A desirable capability of these agents is to respond to
-goal-oriented commands by autonomously constructing task plans. However, such
-autonomy can add significant cognitive load and potentially introduce safety
-risks to humans when agents behave unexpectedly. Hence, for such agents to be
-helpful, one important requirement is for them to synthesize plans that can be
-easily understood by humans. While there exists previous work that studied
-socially acceptable robots that interact with humans in "natural ways", and
-work that investigated legible motion planning, there lacks a general solution
-for high level task planning. To address this issue, we introduce the notions
-of plan {\it explicability} and {\it predictability}. To compute these
-measures, first, we postulate that humans understand agent plans by associating
-abstract tasks with agent actions, which can be considered as a labeling
-process. We learn the labeling scheme of humans for agent plans from training
-examples using conditional random fields (CRFs). Then, we use the learned model
-to label a new plan to compute its explicability and predictability. These
-measures can be used by agents to proactively choose or directly synthesize
-plans that are more explicable and predictable to humans. We provide
-evaluations on a synthetic domain and with human subjects using physical robots
-to show the effectiveness of our approach
+  Intelligent robots and machines are becoming pervasive in human populatedenvironments. A desirable capability of these agents is to respond togoal-oriented commands by autonomously constructing task plans. However, suchautonomy can add significant cognitive load and potentially introduce safetyrisks to humans when agents behave unexpectedly. Hence, for such agents to behelpful, one important requirement is for them to synthesize plans that can beeasily understood by humans. While there exists previous work that studiedsocially acceptable robots that interact with humans in "natural ways", andwork that investigated legible motion planning, there lacks a general solutionfor high level task planning. To address this issue, we introduce the notionsof plan {\it explicability} and {\it predictability}. To compute thesemeasures, first, we postulate that humans understand agent plans by associatingabstract tasks with agent actions, which can be considered as a labelingprocess. We learn the labeling scheme of humans for agent plans from trainingexamples using conditional random fields (CRFs). Then, we use the learned modelto label a new plan to compute its explicability and predictability. Thesemeasures can be used by agents to proactively choose or directly synthesizeplans that are more explicable and predictable to humans. We provideevaluations on a synthetic domain and with human subjects using physical robotsto show the effectiveness of our approach
 
+Moving Target Defense for Web Applications using Bayesian Stackelberg  Games
 
-Learning of Agent Capability Models with Applications in Multi-agent
-  Planning
+  The present complexity in designing web applications makes software securitya difficult goal to achieve. An attacker can explore a deployed service on theweb and attack at his/her own leisure. Moving Target Defense (MTD) in webapplications is an effective mechanism to nullify this advantage of theirreconnaissance but the framework demands a good switching strategy whenswitching between multiple configurations for its web-stack. To address thisissue, we propose modeling of a real-world MTD web application as a repeatedBayesian game. We then formulate an optimization problem that generates aneffective switching strategy while considering the cost of switching betweendifferent web-stack configurations. To incorporate this model into a developedMTD system, we develop an automated system for generating attack sets of CommonVulnerabilities and Exposures (CVEs) for input attacker types with predefinedcapabilities. Our framework obtains realistic reward values for the players(defenders and attackers) in this game by using security domain expertise onCVEs obtained from the National Vulnerability Database (NVD). We also addressthe issue of prioritizing vulnerabilities that when fixed, improves thesecurity of the MTD system. Lastly, we demonstrate the robustness of ourproposed model by evaluating its performance when there is uncertainty aboutinput attacker information.
 
-  One important challenge for a set of agents to achieve more efficient
-collaboration is for these agents to maintain proper models of each other. An
-important aspect of these models of other agents is that they are often partial
-and incomplete. Thus far, there are two common representations of agent models:
-MDP based and action based, which are both based on action modeling. In many
-applications, agent models may not have been given, and hence must be learnt.
-While it may seem convenient to use either MDP based or action based models for
-learning, in this paper, we introduce a new representation based on capability
-models, which has several unique advantages. First, we show that learning
-capability models can be performed efficiently online via Bayesian learning,
-and the learning process is robust to high degrees of incompleteness in plan
-execution traces (e.g., with only start and end states). While high degrees of
-incompleteness in plan execution traces presents learning challenges for MDP
-based and action based models, capability models can still learn to {\em
-abstract} useful information out of these traces. As a result, capability
-models are useful in applications in which such incompleteness is common, e.g.,
-robot learning human model from observations and interactions. Furthermore,
-when used in multi-agent planning (with each agent modeled separately),
-capability models provide flexible abstraction of actions. The limitation,
-however, is that the synthesized plan is incomplete and abstract.
+Alternative Modes of Interaction in Proximal Human-in-the-Loop Operation  of Robots
 
+  Ambiguity and noise in natural language instructions create a significantbarrier towards adopting autonomous systems into safety critical workflowsinvolving humans and machines. In this paper, we propose to build on recentadvances in electrophysiological monitoring methods and augmented realitytechnologies, to develop alternative modes of communication between humans androbots involved in large-scale proximal collaborative tasks. We will firstintroduce augmented reality techniques for projecting a robot's intentions toits human teammate, who can interact with these cues to engage in real-timecollaborative plan execution with the robot. We will then look at howelectroencephalographic (EEG) feedback can be used to monitor human response toboth discrete events, as well as longer term affective states while executionof a plan. These signals can be used by a learning agent, a.k.a an affectiverobot, to modify its policy. We will present an end-to-end system capable ofdemonstrating these modalities of interaction. We hope that the proposed systemwill inspire research in augmenting human-robot interactions with alternativeforms of communications in the interests of safety, productivity, and fluencyof teaming, particularly in engineered settings such as the factory floor orthe assembly line in the manufacturing industry where the use of such wearablescan be enforced.
 
-Alternative Modes of Interaction in Proximal Human-in-the-Loop Operation
-  of Robots
+MTDeep: Boosting the Security of Deep Neural Nets Against Adversarial  Attacks with Moving Target Defense
 
-  Ambiguity and noise in natural language instructions create a significant
-barrier towards adopting autonomous systems into safety critical workflows
-involving humans and machines. In this paper, we propose to build on recent
-advances in electrophysiological monitoring methods and augmented reality
-technologies, to develop alternative modes of communication between humans and
-robots involved in large-scale proximal collaborative tasks. We will first
-introduce augmented reality techniques for projecting a robot's intentions to
-its human teammate, who can interact with these cues to engage in real-time
-collaborative plan execution with the robot. We will then look at how
-electroencephalographic (EEG) feedback can be used to monitor human response to
-both discrete events, as well as longer term affective states while execution
-of a plan. These signals can be used by a learning agent, a.k.a an affective
-robot, to modify its policy. We will present an end-to-end system capable of
-demonstrating these modalities of interaction. We hope that the proposed system
-will inspire research in augmenting human-robot interactions with alternative
-forms of communications in the interests of safety, productivity, and fluency
-of teaming, particularly in engineered settings such as the factory floor or
-the assembly line in the manufacturing industry where the use of such wearables
-can be enforced.
-
-
-MTDeep: Boosting the Security of Deep Neural Nets Against Adversarial
-  Attacks with Moving Target Defense
-
-  Recent works on gradient-based attacks and universal perturbations can
-adversarially modify images to bring down the accuracy of state-of-the-art
-classification techniques based on deep neural networks to as low as 10\% on
-popular datasets like MNIST and ImageNet. The design of general defense
-strategies against a wide range of such attacks remains a challenging problem.
-In this paper, we derive inspiration from recent advances in the fields of
-cybersecurity and multi-agent systems and propose to use the concept of Moving
-Target Defense (MTD) for increasing the robustness of a set of deep networks
-against such adversarial attacks. To this end, we formalize and exploit the
-notion of differential immunity of an ensemble of networks to specific attacks.
-To classify an input image, a trained network is picked from this set of
-networks by formulating the interaction between a Defender (who hosts the
-classification networks) and their (Legitimate and Malicious) Users as a
-repeated Bayesian Stackelberg Game (BSG). We empirically show that our
-approach, MTDeep reduces misclassification on perturbed images for MNIST and
-ImageNet datasets while maintaining high classification accuracy on legitimate
-test images. Lastly, we demonstrate that our framework can be used in
-conjunction with any existing defense mechanism to provide more resilience to
-adversarial attacks than those defense mechanisms by themselves.
-
+  Recent works on gradient-based attacks and universal perturbations canadversarially modify images to bring down the accuracy of state-of-the-artclassification techniques based on deep neural networks to as low as 10\% onpopular datasets like MNIST and ImageNet. The design of general defensestrategies against a wide range of such attacks remains a challenging problem.In this paper, we derive inspiration from recent advances in the fields ofcybersecurity and multi-agent systems and propose to use the concept of MovingTarget Defense (MTD) for increasing the robustness of a set of deep networksagainst such adversarial attacks. To this end, we formalize and exploit thenotion of differential immunity of an ensemble of networks to specific attacks.To classify an input image, a trained network is picked from this set ofnetworks by formulating the interaction between a Defender (who hosts theclassification networks) and their (Legitimate and Malicious) Users as arepeated Bayesian Stackelberg Game (BSG). We empirically show that ourapproach, MTDeep reduces misclassification on perturbed images for MNIST andImageNet datasets while maintaining high classification accuracy on legitimatetest images. Lastly, we demonstrate that our framework can be used inconjunction with any existing defense mechanism to provide more resilience toadversarial attacks than those defense mechanisms by themselves.
 

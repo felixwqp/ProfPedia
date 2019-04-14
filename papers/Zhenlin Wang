@@ -1,325 +1,64 @@
 Parallel Level set algorithm with MPI and accelerated on GPU
 
-  Level set method has been used to capture interface motion. Narrow band
-algorithm is applied to localize the solving of level-set PDE on global domain
-to a tube around interface. Due to the unknown evolving interface, narrow band
-algorithm brings load balance problem for parallelizing computing. This work
-presents a tool for evenly distributing work loads on CPUs. On the other hand,
-numerically solving level-set PDE only needs simple operations but on large
-grid points. This work also presents a GPU acceleration for solving level-set
-PDE using finite difference method.
+  Level set method has been used to capture interface motion. Narrow bandalgorithm is applied to localize the solving of level-set PDE on global domainto a tube around interface. Due to the unknown evolving interface, narrow bandalgorithm brings load balance problem for parallelizing computing. This workpresents a tool for evenly distributing work loads on CPUs. On the other hand,numerically solving level-set PDE only needs simple operations but on largegrid points. This work also presents a GPU acceleration for solving level-setPDE using finite difference method.
 
+Intercalation driven porosity effects in coupled continuum models for  the electrical, chemical, thermal and mechanical response of battery  electrode materials
 
-Intercalation driven porosity effects in coupled continuum models for
-  the electrical, chemical, thermal and mechanical response of battery
-  electrode materials
+  We present a coupled continuum formulation for the electrostatic, chemical,thermal and mechanical processes in battery materials. Our treatment applies onthe macroscopic scale, at which electrodes can be modelled as porous materialsmade up of active particles held together by binders and perfused by theelectrolyte. Starting with the description common to the field, in terms ofreaction-transport partial differential equations for ions, variants of theclassical Poisson equation for electrostatics, and the heat equation, we addmechanics to the problem. Our main contribution is to model the evolution ofporosity as a consequence of strains induced by intercalation, thermalexpansion and mechanical stresses. Recognizing the potential for large localdeformations, we have settled on the finite strain framework. We present adetailed computational study of the influence of the dynamically evolvingporosity, upon ion distribution, electrostatic potential fields,charge-discharge cycles and mechanical force generated in the cell.
 
-  We present a coupled continuum formulation for the electrostatic, chemical,
-thermal and mechanical processes in battery materials. Our treatment applies on
-the macroscopic scale, at which electrodes can be modelled as porous materials
-made up of active particles held together by binders and perfused by the
-electrolyte. Starting with the description common to the field, in terms of
-reaction-transport partial differential equations for ions, variants of the
-classical Poisson equation for electrostatics, and the heat equation, we add
-mechanics to the problem. Our main contribution is to model the evolution of
-porosity as a consequence of strains induced by intercalation, thermal
-expansion and mechanical stresses. Recognizing the potential for large local
-deformations, we have settled on the finite strain framework. We present a
-detailed computational study of the influence of the dynamically evolving
-porosity, upon ion distribution, electrostatic potential fields,
-charge-discharge cycles and mechanical force generated in the cell.
+A multi-physics battery model with particle scale resolution of porosity  evolution driven by intercalation strain and electrolyte flow
 
+  We present a coupled continuum formulation for the electrostatic, chemical,thermal, mechanical and fluid physics in battery materials. Our treatment is atthe particle scale, at which the active particles held together bycarbon-binders, the porous separator, current collectors and the perfusingelectrolyte are explicitly modeled. Starting with the description common to thefield, in terms of reaction-transport partial differential equations for ions,variants of the classical Poisson equation for electrostatics, and the heatequation, we introduce solid-fluid interaction to the problem. Our maincontribution is to model the electrolyte as an incompressible fluid driven byelastic, thermal and lithium intercalation strains in the active material. Ourtreatment is in the finite strain setting, and uses the ArbitraryLagrangian-Eulerian (ALE) framework to account for mechanical coupling of thesolid and fluid. We present a detailed computational study of the influence ofsolid-fluid interaction and magnitude of intercalation strain upon porosityevolution, ion distribution and electrostatic potential fields in the cell.
 
-A multi-physics battery model with particle scale resolution of porosity
-  evolution driven by intercalation strain and electrolyte flow
+Variational system identification of the partial differential equations  governing pattern-forming physics: Inference under varying fidelity and noise
 
-  We present a coupled continuum formulation for the electrostatic, chemical,
-thermal, mechanical and fluid physics in battery materials. Our treatment is at
-the particle scale, at which the active particles held together by
-carbon-binders, the porous separator, current collectors and the perfusing
-electrolyte are explicitly modeled. Starting with the description common to the
-field, in terms of reaction-transport partial differential equations for ions,
-variants of the classical Poisson equation for electrostatics, and the heat
-equation, we introduce solid-fluid interaction to the problem. Our main
-contribution is to model the electrolyte as an incompressible fluid driven by
-elastic, thermal and lithium intercalation strains in the active material. Our
-treatment is in the finite strain setting, and uses the Arbitrary
-Lagrangian-Eulerian (ALE) framework to account for mechanical coupling of the
-solid and fluid. We present a detailed computational study of the influence of
-solid-fluid interaction and magnitude of intercalation strain upon porosity
-evolution, ion distribution and electrostatic potential fields in the cell.
+  We present a contribution to the field of system identification of partialdifferential equations (PDEs), with emphasis on discerning between competingmathematical models of pattern-forming physics. The motivation comes fromdevelopmental biology, where pattern formation is central to the development ofany multicellular organism, and from materials physics, where phase transitionssimilarly lead to microstructure. In both these fields there is a collection ofnonlinear, parabolic PDEs that, over suitable parameter intervals and regimesof physics, can resolve the patterns or microstructures with comparablefidelity. This observation frames the question of which PDE best describes thedata at hand. This question is particularly compelling because knowledge of thegoverning PDE immediately delivers insights to the physics underlying thesystems. While building on recent work that uses stepwise regression, wepresent advances that leverage the variational framework and statistical tests.We also address the influences of variable fidelity and noise in the data.
 
+A three dimensional field formulation, and isogeometric solutions to  point and line defects using Toupin's theory of gradient elasticity at finite  strains
 
-Variational system identification of the partial differential equations
-  governing pattern-forming physics: Inference under varying fidelity and noise
+  We present a field formulation for defects that draws from the classicalrepresentation of the cores as force dipoles. We write these dipoles assingular distributions. Exploiting the key insight that the variational settingis the only appropriate one for the theory of distributions, we arrive atuniversally applicable weak forms for defects in nonlinear elasticity.Remarkably, the standard, Galerkin finite element method yields numericalsolutions for the elastic fields of defects that, when parameterized suitably,match very well with classical, linearized elasticity solutions. The truepotential of our approach, however, lies in its easy extension to generatesolutions to elastic fields of defects in the regime of nonlinear elasticity,and even more notably for Toupin's theory of gradient elasticity at finitestrains(Arch. Rat. Mech. Anal., 11, 385, 1962). In computing these solutions weadopt recent numerical work on an isogeometric analytic framework that enabledthe first three-dimensional solutions to general boundary value problems ofToupin's theory (Rudraraju et al. Comp. Meth. App. Mech. Engr., 278, 705,2014). We first present exhaustive solutions to point defects, edge and screwdislocations, and a study on the energetics of interacting dislocations. Then,to demonstrate the generality and potential of our treatment, we apply it toother complex dislocation configurations, including loops and low-angle grainboundaries.
 
-  We present a contribution to the field of system identification of partial
-differential equations (PDEs), with emphasis on discerning between competing
-mathematical models of pattern-forming physics. The motivation comes from
-developmental biology, where pattern formation is central to the development of
-any multicellular organism, and from materials physics, where phase transitions
-similarly lead to microstructure. In both these fields there is a collection of
-nonlinear, parabolic PDEs that, over suitable parameter intervals and regimes
-of physics, can resolve the patterns or microstructures with comparable
-fidelity. This observation frames the question of which PDE best describes the
-data at hand. This question is particularly compelling because knowledge of the
-governing PDE immediately delivers insights to the physics underlying the
-systems. While building on recent work that uses stepwise regression, we
-present advances that leverage the variational framework and statistical tests.
-We also address the influences of variable fidelity and noise in the data.
+Analog Circuit Applications based on Ambipolar Graphene/MoTe2 Vertical  Transistors
 
-
-A three dimensional field formulation, and isogeometric solutions to
-  point and line defects using Toupin's theory of gradient elasticity at finite
-  strains
-
-  We present a field formulation for defects that draws from the classical
-representation of the cores as force dipoles. We write these dipoles as
-singular distributions. Exploiting the key insight that the variational setting
-is the only appropriate one for the theory of distributions, we arrive at
-universally applicable weak forms for defects in nonlinear elasticity.
-Remarkably, the standard, Galerkin finite element method yields numerical
-solutions for the elastic fields of defects that, when parameterized suitably,
-match very well with classical, linearized elasticity solutions. The true
-potential of our approach, however, lies in its easy extension to generate
-solutions to elastic fields of defects in the regime of nonlinear elasticity,
-and even more notably for Toupin's theory of gradient elasticity at finite
-strains(Arch. Rat. Mech. Anal., 11, 385, 1962). In computing these solutions we
-adopt recent numerical work on an isogeometric analytic framework that enabled
-the first three-dimensional solutions to general boundary value problems of
-Toupin's theory (Rudraraju et al. Comp. Meth. App. Mech. Engr., 278, 705,
-2014). We first present exhaustive solutions to point defects, edge and screw
-dislocations, and a study on the energetics of interacting dislocations. Then,
-to demonstrate the generality and potential of our treatment, we apply it to
-other complex dislocation configurations, including loops and low-angle grain
-boundaries.
-
-
-Analog Circuit Applications based on Ambipolar Graphene/MoTe2 Vertical
-  Transistors
-
-  The current integrated circuit (IC) technology based on conventional MOS-FET
-(metal-oxide-semiconductor field-effect transistor) is approaching the limit of
-miniaturization with increasing demand on energy. Several analog circuit
-applications based on graphene FETs have been demonstrated with less components
-comparing to the conventional technology. However, low on/off current ratio
-caused by the semimetal nature of graphene has severely hindered its practical
-applications. Here we report a graphene/MoTe2 van der Waals (vdW) vertical
-transistor with V-shaped ambipolar field effect transfer characteristics to
-overcome this challenge. Investigations on temperature dependence of transport
-properties reveal that gate tunable asymmetric barriers of the devices are
-account for the ambipolar behaviors. Furthermore, to demonstrate the analog
-circuit applications of such vdW vertical transistors, we successfully realized
-output polarity controllable (OPC) amplifier and frequency doubler. These
-results enable vdW heterojunction based electronic devices to open up new
-possibilities for wide perspective in telecommunication field.
-
+  The current integrated circuit (IC) technology based on conventional MOS-FET(metal-oxide-semiconductor field-effect transistor) is approaching the limit ofminiaturization with increasing demand on energy. Several analog circuitapplications based on graphene FETs have been demonstrated with less componentscomparing to the conventional technology. However, low on/off current ratiocaused by the semimetal nature of graphene has severely hindered its practicalapplications. Here we report a graphene/MoTe2 van der Waals (vdW) verticaltransistor with V-shaped ambipolar field effect transfer characteristics toovercome this challenge. Investigations on temperature dependence of transportproperties reveal that gate tunable asymmetric barriers of the devices areaccount for the ambipolar behaviors. Furthermore, to demonstrate the analogcircuit applications of such vdW vertical transistors, we successfully realizedoutput polarity controllable (OPC) amplifier and frequency doubler. Theseresults enable vdW heterojunction based electronic devices to open up newpossibilities for wide perspective in telecommunication field.
 
 Periodic elastic nanodomains in ultrathin tetrogonal-like BiFeO3 films
 
-  We present a synchrotron grazing incidence x-ray diffraction analysis of the
-domain structure and polar symmetry of highly strained BiFeO3 thin films grown
-on LaAlO3 substrate. We revealed the existence of periodic elastic nanodomains
-in the pure tetragonal-like BFO ultrathin films down to a thickness of 6 nm. A
-unique shear strain accommodation mechanism is disclosed. We further
-demonstrated that the periodicity of the nanodomains increases with film
-thickness but deviates from the classical Kittel's square root law in ultrathin
-thickness regime (6 - 30 nm). Temperature-dependent experiments also reveal the
-disappearance of periodic modulation above 90C due to a MC-MA structural phase
-transition.
+  We present a synchrotron grazing incidence x-ray diffraction analysis of thedomain structure and polar symmetry of highly strained BiFeO3 thin films grownon LaAlO3 substrate. We revealed the existence of periodic elastic nanodomainsin the pure tetragonal-like BFO ultrathin films down to a thickness of 6 nm. Aunique shear strain accommodation mechanism is disclosed. We furtherdemonstrated that the periodicity of the nanodomains increases with filmthickness but deviates from the classical Kittel's square root law in ultrathinthickness regime (6 - 30 nm). Temperature-dependent experiments also reveal thedisappearance of periodic modulation above 90C due to a MC-MA structural phasetransition.
 
+Tunable hyperbolic metamaterial cavity towards few exciton strong  coupling
 
-Tunable hyperbolic metamaterial cavity towards few exciton strong
-  coupling
+  We theoretically investigate coupling interaction between molecule excitonsand whispering gallery modes (WGMs) that approaches the limit of single excitonstrong coupling in hyperbolic metamaterial (HMM) cavity, composed of adielectric core wrapped by several stacks of alternative layers of metal anddielectric. We demonstrate that associated with the excitation of thewhispering gallery mode, the electric fields with resonance wavelengths thatare much larger than the cavity size can be highly localized within adielectric layer, leading to extremely small mode volumes. By using temporalcoupled mode theory to model the interaction in the proposed WGMs-excitonsystem, we are able to demonstrate that the coupling between molecular excitonsand hyperbolic cavity WGMs can reach the strong coupling regime. Furthermore,we also prove that changing both the thickness of inner core and outermostlayer can lead to invariant resonance frequency while the threshold number ofcoupled excitons to fulfill the criteria for strong coupling remains ~ 4 invarious sets of tunable HMM cavities.
 
-  We theoretically investigate coupling interaction between molecule excitons
-and whispering gallery modes (WGMs) that approaches the limit of single exciton
-strong coupling in hyperbolic metamaterial (HMM) cavity, composed of a
-dielectric core wrapped by several stacks of alternative layers of metal and
-dielectric. We demonstrate that associated with the excitation of the
-whispering gallery mode, the electric fields with resonance wavelengths that
-are much larger than the cavity size can be highly localized within a
-dielectric layer, leading to extremely small mode volumes. By using temporal
-coupled mode theory to model the interaction in the proposed WGMs-exciton
-system, we are able to demonstrate that the coupling between molecular excitons
-and hyperbolic cavity WGMs can reach the strong coupling regime. Furthermore,
-we also prove that changing both the thickness of inner core and outermost
-layer can lead to invariant resonance frequency while the threshold number of
-coupled excitons to fulfill the criteria for strong coupling remains ~ 4 in
-various sets of tunable HMM cavities.
+Optical Lattices with Higher-order Exceptional Points by Non-Hermitian  Coupling
 
+  Exceptional points (EPs) are degeneracies in open wave systems withcoalescence of at least two energy levels and their corresponding eigenstates.In higher dimensions, more complex EP physics not found in two-state systems isobserved. We consider the emergence and interaction of multiple EPs in a fourcoupled optical waveguides system by non-Hermitian coupling showing a unique EPformation pattern in a phase diagram. In addition, absolute phase rigiditiesare computed to show the mixing of the different states in definite parameterregimes. Our results could be potentially important for developing furtherunderstanding of EP physics in higher dimensions via generalized paradigm ofnonHermitian coupling for a new generation of parity-time (PT) devices.
 
-Optical Lattices with Higher-order Exceptional Points by Non-Hermitian
-  Coupling
+Generation of optical frequency comb in a chi-2 sheet micro optical  parametric oscillator via cavity phase matching
 
-  Exceptional points (EPs) are degeneracies in open wave systems with
-coalescence of at least two energy levels and their corresponding eigenstates.
-In higher dimensions, more complex EP physics not found in two-state systems is
-observed. We consider the emergence and interaction of multiple EPs in a four
-coupled optical waveguides system by non-Hermitian coupling showing a unique EP
-formation pattern in a phase diagram. In addition, absolute phase rigidities
-are computed to show the mixing of the different states in definite parameter
-regimes. Our results could be potentially important for developing further
-understanding of EP physics in higher dimensions via generalized paradigm of
-nonHermitian coupling for a new generation of parity-time (PT) devices.
+  Chi-3 micro resonators have enabled compact and portable frequency combgeneration, but require sophisticated dispersion control. Here we demonstratean alternative approach using a chi-2 sheet cavity, where the dispersionrequirement is relaxed by cavity phase matching. 21.2 THz broadband combgeneration is achieved with uniform line spacing of 133.0 GHz, despite arelatively large dispersion of 275.4 fs^2/mm around 1064nm. With 22.6 % highslope efficiency and 14.9 kW peak power handling, this chi-2 comb can befurther stabilized for navigation, telecommunication, astronomy, andspectroscopy applications.
 
+Experimental identification of critical condition for drastically  enhancing thermoelectric power factor of two-dimensional layered materials
 
-Generation of optical frequency comb in a chi-2 sheet micro optical
-  parametric oscillator via cavity phase matching
+  Nano-structuring is an extremely promising path to high performancethermoelectrics. Favorable improvements in thermal conductivity are attainablein many material systems, and theoretical work points to large improvements inelectronic properties. However, realization of the electronic benefits inpractical materials has been elusive experimentally. A key challenge is thatexperimental identification of the quantum confinement length, below which thethermoelectric power factor is significantly enhanced, remains elusive due tolack of simultaneous control of size and carrier density. Here we investigategate tunable and temperature-dependent thermoelectric transport in $\gamma$phase indium selenide ($\gamma$ InSe, n type semiconductor) samples withthickness varying from 7 to 29 nm. This allows us to properly map out dimensionand doping space. Combining theoretical and experimental studies, we revealthat the sharper pre-edge of the conduction-band density of states arising fromquantum confinement gives rise to an enhancement of the Seebeck coefficient andthe power factor in the thinner InSe samples. Most importantly, weexperimentally identify the role of the competition between quantum confinementlength and thermal de Broglie wavelength in the enhancement of power factor.Our results provide an important and general experimental guideline foroptimizing the power factor and improving the thermoelectric performance oftwo-dimensional layered semiconductors.
 
-  Chi-3 micro resonators have enabled compact and portable frequency comb
-generation, but require sophisticated dispersion control. Here we demonstrate
-an alternative approach using a chi-2 sheet cavity, where the dispersion
-requirement is relaxed by cavity phase matching. 21.2 THz broadband comb
-generation is achieved with uniform line spacing of 133.0 GHz, despite a
-relatively large dispersion of 275.4 fs^2/mm around 1064nm. With 22.6 % high
-slope efficiency and 14.9 kW peak power handling, this chi-2 comb can be
-further stabilized for navigation, telecommunication, astronomy, and
-spectroscopy applications.
+Low-Symmetry Monoclinic Phases and Polarization Rotation Path Mediated  By Epitaxial Strain in Multiferroic BiFeO3 Thin Films
 
+  A morphotropic phase boundary driven by epitaxial strain has been observed ina lead-free multiferroic BiFeO3 thin films and the strain-driven phasetransitions were widely reported to be iso-symmetric Cc-Cc ones by recentworks. In this paper, we suggest that the tetragonal-like BiFeO3 phaseidentified in epitaxial films on (001) LaAlO3 single crystal substrates ismonoclinic MC. This MC phase is different from MA type monoclinic phasereported in BiFeO3 films grown on low mismatch substrates, such as SrTiO3. Thisis confirmed not only by synchrotron x-ray studies but also by piezoresponseforce microscopy measurements. The polarization vectors of the tetragonal-likephase lie in the (100) plane, not the (110) plane as previously reported. Aphenomenological analysis was proposed to explain the formation of MC Phase.Such a low symmetry MC phase, with its linkage to MA phase and the multiphasecoexistence open an avenue for large piezoelectric response in BiFeO3 films andshed light on a complete understanding towards possible polarization rotationpaths and enhanced multiferroicity in BiFeO3 films mediated by epitaxialstrain. This work may also aid the understanding of developing new lead-freestrain-driven morphotropic phase boundary in other ferroic systems.
 
-Experimental identification of critical condition for drastically
-  enhancing thermoelectric power factor of two-dimensional layered materials
+Optimal double resonant condition in metallic core-shell nanocavity for  third harmonic generation
 
-  Nano-structuring is an extremely promising path to high performance
-thermoelectrics. Favorable improvements in thermal conductivity are attainable
-in many material systems, and theoretical work points to large improvements in
-electronic properties. However, realization of the electronic benefits in
-practical materials has been elusive experimentally. A key challenge is that
-experimental identification of the quantum confinement length, below which the
-thermoelectric power factor is significantly enhanced, remains elusive due to
-lack of simultaneous control of size and carrier density. Here we investigate
-gate tunable and temperature-dependent thermoelectric transport in $\gamma$
-phase indium selenide ($\gamma$ InSe, n type semiconductor) samples with
-thickness varying from 7 to 29 nm. This allows us to properly map out dimension
-and doping space. Combining theoretical and experimental studies, we reveal
-that the sharper pre-edge of the conduction-band density of states arising from
-quantum confinement gives rise to an enhancement of the Seebeck coefficient and
-the power factor in the thinner InSe samples. Most importantly, we
-experimentally identify the role of the competition between quantum confinement
-length and thermal de Broglie wavelength in the enhancement of power factor.
-Our results provide an important and general experimental guideline for
-optimizing the power factor and improving the thermoelectric performance of
-two-dimensional layered semiconductors.
+  As the rapid development of nonlinear optics, the enhancement of opticalthird harmonic generation becomes a pop research realm in the fields ofphysics, chemistry, biology, materials science, information science and otherfields. In this letter, theoretical analysis on double resonance situation inmetallic core-shell nanostructure is performed in order to optimize theefficiency of third harmonic generation. As plenty of cavity modes ranging fromvisible area to near infrared can be excited efficiently in core-shellnanospheres, kinds of double resonant conditions can be formed by matching twodifferent multipolar cavity modes. Numerical simulations show that the thirdharmonic generation (THG) intensity in the far field can be enhanced remarkablywhen the THG signal couples well with the high order cavity mode. Moreimportantly, THG efficiency is optimum from the cavity on double resonantconditions coupling two modes with the same order. The THG intensity differs upto 3 magnitudes on this condition. Subsequent theoretical analysis indicatesthat changing third-order nonlinear susceptibility of the metal shell whilekeeping that of the core fixed has almost no effect on THG efficiency. Thisfinding about optimal double resonance has an appreciable effect on optimizingTHG in spherical cavity structures.
 
+Gate-Tunable Negative Longitudinal Magnetoresistance in the Predicted  Type-II Weyl Semimetal WTe2
 
-Low-Symmetry Monoclinic Phases and Polarization Rotation Path Mediated
-  By Epitaxial Strain in Multiferroic BiFeO3 Thin Films
+  The progress in exploiting new electronic materials and devices has been amajor driving force in solid-state physics. As a new state of matter, a Weylsemimetal (WSM), particularly a type-II WSM, hosts Weyl fermions as emergentquasiparticles and may harbor novel electrical transport properties because ofthe exotic Fermi surface. Nevertheless, such a type-II WSM material has notbeen experimentally observed in nature. In this work, by performing systematicmagneto-transport studies on thin films of a predicted material candidate WTe2,we observe notable angle-sensitive (between the electric and magnetic fields)negative longitudinal magnetoresistance (MR), which can likely be attributed tothe chiral anomaly in WSM. This phenomenon also exhibits strong planarorientation dependence with the absence of negative longitudinal MR along thetungsten chains (a axis), which is consistent with the distinctive feature of atype-II WSM. By applying a gate voltage, we demonstrate that the Fermi energycan be tuned through the Weyl points via the electric field effect; this is thefirst report of controlling the unique transport properties in situ in a WSMsystem. Our results have important implications for investigating simulatedquantum field theory in solid-state systems and may open opportunities forimplementing new types of electronic applications, such as field-effect chiralelectronic devices.
 
-  A morphotropic phase boundary driven by epitaxial strain has been observed in
-a lead-free multiferroic BiFeO3 thin films and the strain-driven phase
-transitions were widely reported to be iso-symmetric Cc-Cc ones by recent
-works. In this paper, we suggest that the tetragonal-like BiFeO3 phase
-identified in epitaxial films on (001) LaAlO3 single crystal substrates is
-monoclinic MC. This MC phase is different from MA type monoclinic phase
-reported in BiFeO3 films grown on low mismatch substrates, such as SrTiO3. This
-is confirmed not only by synchrotron x-ray studies but also by piezoresponse
-force microscopy measurements. The polarization vectors of the tetragonal-like
-phase lie in the (100) plane, not the (110) plane as previously reported. A
-phenomenological analysis was proposed to explain the formation of MC Phase.
-Such a low symmetry MC phase, with its linkage to MA phase and the multiphase
-coexistence open an avenue for large piezoelectric response in BiFeO3 films and
-shed light on a complete understanding towards possible polarization rotation
-paths and enhanced multiferroicity in BiFeO3 films mediated by epitaxial
-strain. This work may also aid the understanding of developing new lead-free
-strain-driven morphotropic phase boundary in other ferroic systems.
+Low-Temperature Eutectic Synthesis of PtTe2 with Weak Antilocalization  and Controlled Layer Thinning
 
+  Metallic transition metal dichalcogenides (TMDs) have exhibited variousexotic physical properties and hold the promise of novel optoelectronic andtopological devices applications. However, the synthesis of metallic TMDs isbased on gas-phase methods and requires high temperature condition. As analternative to the gas-phase synthetic approach, lower temperature eutecticliquid-phase synthesis presents a very promising approach with the potentialfor larger-scale and controllable growth of high-quality thin metallic TMDssingle crystals. Herein, we report the first realization of low-temperatureeutectic liquid-phase synthesis of type-II Dirac semimetal PtTe2 singlecrystals with thickness ranging from 2 to 200 nm. The electrical measurement ofsynthesized PtTe2 reveals a record-high conductivity of as high as 3.3*106 S/mat room temperature. Besides, we experimentally identify the weakantilocalization behavior in the type-II Dirac semimetal PtTe2 for the firsttime. Furthermore, we develop a simple and general strategy to obtainatomically-thin PtTe2 crystal by thinning as-synthesized bulk samples, whichcan still retain highly crystalline and exhibits excellent electricconductivity. Our results of controllable and scalable low-temperature eutecticliquid-phase synthesis and layer-by-layer thinning of high-quality thin PtTe2single crystals offer a simple and general approach for obtaining differentthickness metallic TMDs with high-melting point transition metal.
 
-Optimal double resonant condition in metallic core-shell nanocavity for
-  third harmonic generation
+Controllable Defect Driven Symmetry Change and Domain Structure  Evolution in BiFeO3 with Enhanced Tetragonality
 
-  As the rapid development of nonlinear optics, the enhancement of optical
-third harmonic generation becomes a pop research realm in the fields of
-physics, chemistry, biology, materials science, information science and other
-fields. In this letter, theoretical analysis on double resonance situation in
-metallic core-shell nanostructure is performed in order to optimize the
-efficiency of third harmonic generation. As plenty of cavity modes ranging from
-visible area to near infrared can be excited efficiently in core-shell
-nanospheres, kinds of double resonant conditions can be formed by matching two
-different multipolar cavity modes. Numerical simulations show that the third
-harmonic generation (THG) intensity in the far field can be enhanced remarkably
-when the THG signal couples well with the high order cavity mode. More
-importantly, THG efficiency is optimum from the cavity on double resonant
-conditions coupling two modes with the same order. The THG intensity differs up
-to 3 magnitudes on this condition. Subsequent theoretical analysis indicates
-that changing third-order nonlinear susceptibility of the metal shell while
-keeping that of the core fixed has almost no effect on THG efficiency. This
-finding about optimal double resonance has an appreciable effect on optimizing
-THG in spherical cavity structures.
-
-
-Gate-Tunable Negative Longitudinal Magnetoresistance in the Predicted
-  Type-II Weyl Semimetal WTe2
-
-  The progress in exploiting new electronic materials and devices has been a
-major driving force in solid-state physics. As a new state of matter, a Weyl
-semimetal (WSM), particularly a type-II WSM, hosts Weyl fermions as emergent
-quasiparticles and may harbor novel electrical transport properties because of
-the exotic Fermi surface. Nevertheless, such a type-II WSM material has not
-been experimentally observed in nature. In this work, by performing systematic
-magneto-transport studies on thin films of a predicted material candidate WTe2,
-we observe notable angle-sensitive (between the electric and magnetic fields)
-negative longitudinal magnetoresistance (MR), which can likely be attributed to
-the chiral anomaly in WSM. This phenomenon also exhibits strong planar
-orientation dependence with the absence of negative longitudinal MR along the
-tungsten chains (a axis), which is consistent with the distinctive feature of a
-type-II WSM. By applying a gate voltage, we demonstrate that the Fermi energy
-can be tuned through the Weyl points via the electric field effect; this is the
-first report of controlling the unique transport properties in situ in a WSM
-system. Our results have important implications for investigating simulated
-quantum field theory in solid-state systems and may open opportunities for
-implementing new types of electronic applications, such as field-effect chiral
-electronic devices.
-
-
-Low-Temperature Eutectic Synthesis of PtTe2 with Weak Antilocalization
-  and Controlled Layer Thinning
-
-  Metallic transition metal dichalcogenides (TMDs) have exhibited various
-exotic physical properties and hold the promise of novel optoelectronic and
-topological devices applications. However, the synthesis of metallic TMDs is
-based on gas-phase methods and requires high temperature condition. As an
-alternative to the gas-phase synthetic approach, lower temperature eutectic
-liquid-phase synthesis presents a very promising approach with the potential
-for larger-scale and controllable growth of high-quality thin metallic TMDs
-single crystals. Herein, we report the first realization of low-temperature
-eutectic liquid-phase synthesis of type-II Dirac semimetal PtTe2 single
-crystals with thickness ranging from 2 to 200 nm. The electrical measurement of
-synthesized PtTe2 reveals a record-high conductivity of as high as 3.3*106 S/m
-at room temperature. Besides, we experimentally identify the weak
-antilocalization behavior in the type-II Dirac semimetal PtTe2 for the first
-time. Furthermore, we develop a simple and general strategy to obtain
-atomically-thin PtTe2 crystal by thinning as-synthesized bulk samples, which
-can still retain highly crystalline and exhibits excellent electric
-conductivity. Our results of controllable and scalable low-temperature eutectic
-liquid-phase synthesis and layer-by-layer thinning of high-quality thin PtTe2
-single crystals offer a simple and general approach for obtaining different
-thickness metallic TMDs with high-melting point transition metal.
-
-
-Controllable Defect Driven Symmetry Change and Domain Structure
-  Evolution in BiFeO3 with Enhanced Tetragonality
-
-  Defect engineering has been a powerful tool to enable the creation of exotic
-phases and the discovery of intriguing phenomena in ferroelectric oxides.
-However, accurate control the concentration of defects remains a big challenge.
-In this work, ion implantation, that can provide controllable point defects,
-allows us the ability to produce a controlled defect-driven true
-super-tetragonal (T) phase with enhanced tetragonality in ferroelectric BiFeO3
-thin films. This point defect engineering is found to drive the phase
-transition from the as-grown mixed rhombohedral-like (R) and tetragonal-like
-(MC) phase to true tetragonal (T) symmetry. By further increasing the injected
-dose of He ion, we demonstrate an enhanced tetragonality super-tetragonal
-(super-T) phase with the largest c/a ratio (~ 1.3) that has ever been
-experimentally achieved in BiFeO3. A combination of morphology change and
-domain evolution further confirm that the mixed R/MC phase structure transforms
-to the single-domain-state true tetragonal phase. Moreover, the re-emergence of
-R phase and in-plane stripe nanodomains after heat treatment reveal the memory
-effect and reversible phase transition. Our findings demonstrate the control of
-R-Mc-T-super T symmetry changes and the creation of true T phase BiFeO3 with
-enhanced tetragonality through controllable defect engineering. This work also
-provides a pathway to generate large tetragonality (or c/a ratio) that could be
-extended to other ferroelectric material systems (such as PbTiO3, BaTiO3 and
-HfO2) which may lead to strong polarization enhancement.
-
+  Defect engineering has been a powerful tool to enable the creation of exoticphases and the discovery of intriguing phenomena in ferroelectric oxides.However, accurate control the concentration of defects remains a big challenge.In this work, ion implantation, that can provide controllable point defects,allows us the ability to produce a controlled defect-driven truesuper-tetragonal (T) phase with enhanced tetragonality in ferroelectric BiFeO3thin films. This point defect engineering is found to drive the phasetransition from the as-grown mixed rhombohedral-like (R) and tetragonal-like(MC) phase to true tetragonal (T) symmetry. By further increasing the injecteddose of He ion, we demonstrate an enhanced tetragonality super-tetragonal(super-T) phase with the largest c/a ratio (~ 1.3) that has ever beenexperimentally achieved in BiFeO3. A combination of morphology change anddomain evolution further confirm that the mixed R/MC phase structure transformsto the single-domain-state true tetragonal phase. Moreover, the re-emergence ofR phase and in-plane stripe nanodomains after heat treatment reveal the memoryeffect and reversible phase transition. Our findings demonstrate the control ofR-Mc-T-super T symmetry changes and the creation of true T phase BiFeO3 withenhanced tetragonality through controllable defect engineering. This work alsoprovides a pathway to generate large tetragonality (or c/a ratio) that could beextended to other ferroelectric material systems (such as PbTiO3, BaTiO3 andHfO2) which may lead to strong polarization enhancement.
 

@@ -1,379 +1,72 @@
-Generalized Davidson and multidirectional-type methods for the
-  generalized singular value decomposition
+Generalized Davidson and multidirectional-type methods for the  generalized singular value decomposition
 
-  We propose new iterative methods for computing nontrivial extremal
-generalized singular values and vectors. The first method is a generalized
-Davidson-type algorithm and the second method employs a multidirectional
-subspace expansion technique. Essential to the latter is a fast truncation step
-designed to remove a low quality search direction and to ensure moderate growth
-of the search space. Both methods rely on thick restarts and may be combined
-with two different deflation approaches. We argue that the methods have
-monotonic and (asymptotic) linear convergence, derive and discuss locally
-optimal expansion vectors, and explain why the fast truncation step ideally
-removes search directions orthogonal to the desired generalized singular
-vector. Furthermore, we identify the relation between our generalized
-Davidson-type algorithm and the Jacobi--Davidson algorithm for the generalized
-singular value decomposition. Finally, we generalize several known convergence
-results for the Hermitian eigenvalue problem to the Hermitian positive definite
-generalized eigenvalue problem. Numerical experiments indicate that both
-methods are competitive.
-
+  We propose new iterative methods for computing nontrivial extremalgeneralized singular values and vectors. The first method is a generalizedDavidson-type algorithm and the second method employs a multidirectionalsubspace expansion technique. Essential to the latter is a fast truncation stepdesigned to remove a low quality search direction and to ensure moderate growthof the search space. Both methods rely on thick restarts and may be combinedwith two different deflation approaches. We argue that the methods havemonotonic and (asymptotic) linear convergence, derive and discuss locallyoptimal expansion vectors, and explain why the fast truncation step ideallyremoves search directions orthogonal to the desired generalized singularvector. Furthermore, we identify the relation between our generalizedDavidson-type algorithm and the Jacobi--Davidson algorithm for the generalizedsingular value decomposition. Finally, we generalize several known convergenceresults for the Hermitian eigenvalue problem to the Hermitian positive definitegeneralized eigenvalue problem. Numerical experiments indicate that bothmethods are competitive.
 
 Rank Restricted Semidefinite Matrices and Image Closedness
 
-  We study the closure of the projection of the (nonconvex) cone of rank
-restricted positive semidefinite matrices onto subsets of the matrix entries.
-This defines the feasible sets for semidefinite completion problems with
-restrictions on the ranks. Applications include conditions for low-rank
-completions using the nuclear norm heuristic.
-
+  We study the closure of the projection of the (nonconvex) cone of rankrestricted positive semidefinite matrices onto subsets of the matrix entries.This defines the feasible sets for semidefinite completion problems withrestrictions on the ranks. Applications include conditions for low-rankcompletions using the nuclear norm heuristic.
 
 Minimum Message Length Clustering Using Gibbs Sampling
 
-  The K-Mean and EM algorithms are popular in clustering and mixture modeling,
-due to their simplicity and ease of implementation. However, they have several
-significant limitations. Both coverage to a local optimum of their respective
-objective functions (ignoring the uncertainty in the model space), require the
-apriori specification of the number of classes/clsuters, and are inconsistent.
-In this work we overcome these limitations by using the Minimum Message Length
-(MML) principle and a variation to the K-Means/EM observation assignment and
-parameter calculation scheme. We maintain the simplicity of these approaches
-while constructing a Bayesian mixture modeling tool that samples/searches the
-model space using a Markov Chain Monte Carlo (MCMC) sampler known as a Gibbs
-sampler. Gibbs sampling allows us to visit each model according to its
-posterior probability. Therefore, if the model space is multi-modal we will
-visit all models and not get stuck in local optima. We call our approach
-multiple chains at equilibrium (MCE) MML sampling.
-
+  The K-Mean and EM algorithms are popular in clustering and mixture modeling,due to their simplicity and ease of implementation. However, they have severalsignificant limitations. Both coverage to a local optimum of their respectiveobjective functions (ignoring the uncertainty in the model space), require theapriori specification of the number of classes/clsuters, and are inconsistent.In this work we overcome these limitations by using the Minimum Message Length(MML) principle and a variation to the K-Means/EM observation assignment andparameter calculation scheme. We maintain the simplicity of these approacheswhile constructing a Bayesian mixture modeling tool that samples/searches themodel space using a Markov Chain Monte Carlo (MCMC) sampler known as a Gibbssampler. Gibbs sampling allows us to visit each model according to itsposterior probability. Therefore, if the model space is multi-modal we willvisit all models and not get stuck in local optima. We call our approachmultiple chains at equilibrium (MCE) MML sampling.
 
 Deep Constrained Clustering - Algorithms and Advances
 
-  The area of constrained clustering has been extensively explored by
-researchers and used by practitioners. Constrained clustering formulations
-exist for popular algorithms such as k-means, mixture models, and spectral
-clustering but have several limitations. We explore a deep learning formulation
-of constrained clustering and in particular explore how it can extend the field
-of constrained clustering. We show that our formulation can not only handle
-standard together/apart constraints without the well documented negative
-effects reported but can also model instance level constraints
-(level-of-difficulty), cluster level constraints (balancing cluster size) and
-triplet constraints. The first two are new ways for domain experts to enforce
-guidance whilst the later importantly allows generating ordering constraints
-from continuous side-information.
-
+  The area of constrained clustering has been extensively explored byresearchers and used by practitioners. Constrained clustering formulationsexist for popular algorithms such as k-means, mixture models, and spectralclustering but have several limitations. We explore a deep learning formulationof constrained clustering and in particular explore how it can extend the fieldof constrained clustering. We show that our formulation can not only handlestandard together/apart constraints without the well documented negativeeffects reported but can also model instance level constraints(level-of-difficulty), cluster level constraints (balancing cluster size) andtriplet constraints. The first two are new ways for domain experts to enforceguidance whilst the later importantly allows generating ordering constraintsfrom continuous side-information.
 
 Some Advances in Role Discovery in Graphs
 
-  Role discovery in graphs is an emerging area that allows analysis of complex
-graphs in an intuitive way. In contrast to other graph prob- lems such as
-community discovery, which finds groups of highly connected nodes, the role
-discovery problem finds groups of nodes that share similar graph topological
-structure. However, existing work so far has two severe limitations that
-prevent its use in some domains. Firstly, it is completely unsupervised which
-is undesirable for a number of reasons. Secondly, most work is limited to a
-single relational graph. We address both these lim- itations in an intuitive
-and easy to implement alternating least squares framework. Our framework allows
-convex constraints to be placed on the role discovery problem which can provide
-useful supervision. In par- ticular we explore supervision to enforce i)
-sparsity, ii) diversity and iii) alternativeness. We then show how to lift this
-work for multi-relational graphs. A natural representation of a
-multi-relational graph is an order 3 tensor (rather than a matrix) and that a
-Tucker decomposition allows us to find complex interactions between collections
-of entities (E-groups) and the roles they play for a combination of relations
-(R-groups). Existing Tucker decomposition methods in tensor toolboxes are not
-suited for our purpose, so we create our own algorithm that we demonstrate is
-pragmatically useful.
+  Role discovery in graphs is an emerging area that allows analysis of complexgraphs in an intuitive way. In contrast to other graph prob- lems such ascommunity discovery, which finds groups of highly connected nodes, the rolediscovery problem finds groups of nodes that share similar graph topologicalstructure. However, existing work so far has two severe limitations thatprevent its use in some domains. Firstly, it is completely unsupervised whichis undesirable for a number of reasons. Secondly, most work is limited to asingle relational graph. We address both these lim- itations in an intuitiveand easy to implement alternating least squares framework. Our framework allowsconvex constraints to be placed on the role discovery problem which can provideuseful supervision. In par- ticular we explore supervision to enforce i)sparsity, ii) diversity and iii) alternativeness. We then show how to lift thiswork for multi-relational graphs. A natural representation of amulti-relational graph is an order 3 tensor (rather than a matrix) and that aTucker decomposition allows us to find complex interactions between collectionsof entities (E-groups) and the roles they play for a combination of relations(R-groups). Existing Tucker decomposition methods in tensor toolboxes are notsuited for our purpose, so we create our own algorithm that we demonstrate ispragmatically useful.
 
+On The Equivalence of Tries and Dendrograms - Efficient Hierarchical  Clustering of Traffic Data
 
-On The Equivalence of Tries and Dendrograms - Efficient Hierarchical
-  Clustering of Traffic Data
-
-  The widespread use of GPS-enabled devices generates voluminous and continuous
-amounts of traffic data but analyzing such data for interpretable and
-actionable insights poses challenges. A hierarchical clustering of the trips
-has many uses such as discovering shortest paths, common routes and often
-traversed areas. However, hierarchical clustering typically has time complexity
-of $O(n^2 \log n)$ where $n$ is the number of instances, and is difficult to
-scale to large data sets associated with GPS data. Furthermore, incremental
-hierarchical clustering is still a developing area. Prefix trees (also called
-tries) can be efficiently constructed and updated in linear time (in $n$). We
-show how a specially constructed trie can compactly store the trips and further
-show this trie is equivalent to a dendrogram that would have been built by
-classic agglomerative hierarchical algorithms using a specific distance metric.
-This allows creating hierarchical clusterings of GPS trip data and updating
-this hierarchy in linear time. %we can extract a meaningful kernel and can also
-interpret the structure as clusterings of differing granularity as one
-progresses down the tree. We demonstrate the usefulness of our proposed
-approach on a real world data set of half a million taxis' GPS traces, well
-beyond the capabilities of agglomerative clustering methods. Our work is not
-limited to trip data and can be used with other data with a string
-representation.
-
+  The widespread use of GPS-enabled devices generates voluminous and continuousamounts of traffic data but analyzing such data for interpretable andactionable insights poses challenges. A hierarchical clustering of the tripshas many uses such as discovering shortest paths, common routes and oftentraversed areas. However, hierarchical clustering typically has time complexityof $O(n^2 \log n)$ where $n$ is the number of instances, and is difficult toscale to large data sets associated with GPS data. Furthermore, incrementalhierarchical clustering is still a developing area. Prefix trees (also calledtries) can be efficiently constructed and updated in linear time (in $n$). Weshow how a specially constructed trie can compactly store the trips and furthershow this trie is equivalent to a dendrogram that would have been built byclassic agglomerative hierarchical algorithms using a specific distance metric.This allows creating hierarchical clusterings of GPS trip data and updatingthis hierarchy in linear time. %we can extract a meaningful kernel and can alsointerpret the structure as clusterings of differing granularity as oneprogresses down the tree. We demonstrate the usefulness of our proposedapproach on a real world data set of half a million taxis' GPS traces, wellbeyond the capabilities of agglomerative clustering methods. Our work is notlimited to trip data and can be used with other data with a stringrepresentation.
 
 The Magnetic Field Morphology of the Class 0 Protostar L1157-mm
 
-  We present the first detection of polarization around the Class 0 low-mass
-protostar L1157-mm at two different wavelengths. We show polarimetric maps at
-large scales (10" resolution at 350 um) from the SHARC-II Polarimeter and at
-smaller scales (1.2"-4.5" at 1.3 mm) from the Combined Array for Research in
-Millimeter-wave Astronomy (CARMA). The observations are consistent with each
-other and show inferred magnetic field lines aligned with the outflow. The
-CARMA observations suggest a full hourglass magnetic field morphology centered
-about the core; this is only the second well-defined hourglass detected around
-a low-mass protostar to date. We apply two different methods to CARMA
-polarimetric observations to estimate the plane-of-sky magnetic field
-magnitude, finding values of 1.4 and 3.4 mG.
+  We present the first detection of polarization around the Class 0 low-massprotostar L1157-mm at two different wavelengths. We show polarimetric maps atlarge scales (10" resolution at 350 um) from the SHARC-II Polarimeter and atsmaller scales (1.2"-4.5" at 1.3 mm) from the Combined Array for Research inMillimeter-wave Astronomy (CARMA). The observations are consistent with eachother and show inferred magnetic field lines aligned with the outflow. TheCARMA observations suggest a full hourglass magnetic field morphology centeredabout the core; this is only the second well-defined hourglass detected arounda low-mass protostar to date. We apply two different methods to CARMApolarimetric observations to estimate the plane-of-sky magnetic fieldmagnitude, finding values of 1.4 and 3.4 mG.
 
+Towards a spectroscopically accurate set of potentials for heavy hydride  laser cooling candidates: effective core potential calculations of BaH
 
-Towards a spectroscopically accurate set of potentials for heavy hydride
-  laser cooling candidates: effective core potential calculations of BaH
-
-  BaH (and its isotopomers) is an attractive molecular candidate for laser
-cooling to ultracold temperatures and a potential precursor for the production
-of ultracold gases of hydrogen and deuterium. The theoretical challenge is to
-simulate the laser cooling cycle as reliably as possible and this paper
-addresses the generation of a highly accurate ab initio $^{2}\Sigma^+$
-potential for such studies. The performance of various basis sets within the
-multi-reference configuration-interaction (MRCI) approximation with the
-Davidson correction (MRCI+Q) is tested and taken to the complete basis set
-limit. It is shown that the calculated molecular constants using a 46 electron
-Effective Core-Potential (ECP), the augmented polarized core-valence quintuplet
-basis set (aug-pCV5Z-PP) but only including three active electrons in the MRCI
-calculation are in close agreement with the available experimental values. The
-predicted dissociation energy D$_e$ for the X$^2\Sigma^+$ state (extrapolated
-to the complete basis set (CBS) limit) is 16895.12 cm$^{-1}$ (2.094 eV), which
-agrees within 0.1$\%$ of a revised experimental value of $<$16910.6 cm$^{-1}$,
-while the calculated r$_e$ is within 0.03 pm of the experimental result.
-
+  BaH (and its isotopomers) is an attractive molecular candidate for lasercooling to ultracold temperatures and a potential precursor for the productionof ultracold gases of hydrogen and deuterium. The theoretical challenge is tosimulate the laser cooling cycle as reliably as possible and this paperaddresses the generation of a highly accurate ab initio $^{2}\Sigma^+$potential for such studies. The performance of various basis sets within themulti-reference configuration-interaction (MRCI) approximation with theDavidson correction (MRCI+Q) is tested and taken to the complete basis setlimit. It is shown that the calculated molecular constants using a 46 electronEffective Core-Potential (ECP), the augmented polarized core-valence quintupletbasis set (aug-pCV5Z-PP) but only including three active electrons in the MRCIcalculation are in close agreement with the available experimental values. Thepredicted dissociation energy D$_e$ for the X$^2\Sigma^+$ state (extrapolatedto the complete basis set (CBS) limit) is 16895.12 cm$^{-1}$ (2.094 eV), whichagrees within 0.1$\%$ of a revised experimental value of $<$16910.6 cm$^{-1}$,while the calculated r$_e$ is within 0.03 pm of the experimental result.
 
 Dense Transformer Networks
 
-  The key idea of current deep learning methods for dense prediction is to
-apply a model on a regular patch centered on each pixel to make pixel-wise
-predictions. These methods are limited in the sense that the patches are
-determined by network architecture instead of learned from data. In this work,
-we propose the dense transformer networks, which can learn the shapes and sizes
-of patches from data. The dense transformer networks employ an encoder-decoder
-architecture, and a pair of dense transformer modules are inserted into each of
-the encoder and decoder paths. The novelty of this work is that we provide
-technical solutions for learning the shapes and sizes of patches from data and
-efficiently restoring the spatial correspondence required for dense prediction.
-The proposed dense transformer modules are differentiable, thus the entire
-network can be trained. We apply the proposed networks on natural and
-biological image segmentation tasks and show superior performance is achieved
-in comparison to baseline methods.
-
+  The key idea of current deep learning methods for dense prediction is toapply a model on a regular patch centered on each pixel to make pixel-wisepredictions. These methods are limited in the sense that the patches aredetermined by network architecture instead of learned from data. In this work,we propose the dense transformer networks, which can learn the shapes and sizesof patches from data. The dense transformer networks employ an encoder-decoderarchitecture, and a pair of dense transformer modules are inserted into each ofthe encoder and decoder paths. The novelty of this work is that we providetechnical solutions for learning the shapes and sizes of patches from data andefficiently restoring the spatial correspondence required for dense prediction.The proposed dense transformer modules are differentiable, thus the entirenetwork can be trained. We apply the proposed networks on natural andbiological image segmentation tasks and show superior performance is achievedin comparison to baseline methods.
 
 Transfer Regression via Pairwise Similarity Regularization
 
-  Transfer learning methods address the situation where little labeled training
-data from the "target" problem exists, but much training data from a related
-"source" domain is available. However, the overwhelming majority of transfer
-learning methods are designed for simple settings where the source and target
-predictive functions are almost identical, limiting the applicability of
-transfer learning methods to real world data. We propose a novel, weaker,
-property of the source domain that can be transferred even when the source and
-target predictive functions diverge. Our method assumes the source and target
-functions share a Pairwise Similarity property, where if the source function
-makes similar predictions on a pair of instances, then so will the target
-function. We propose Pairwise Similarity Regularization Transfer, a flexible
-graph-based regularization framework which can incorporate this modeling
-assumption into standard supervised learning algorithms. We show how users can
-encode domain knowledge into our regularizer in the form of spatial continuity,
-pairwise "similarity constraints" and how our method can be scaled to large
-data sets using the Nystrom approximation. Finally, we present positive and
-negative results on real and synthetic data sets and discuss when our Pairwise
-Similarity transfer assumption seems to hold in practice.
-
+  Transfer learning methods address the situation where little labeled trainingdata from the "target" problem exists, but much training data from a related"source" domain is available. However, the overwhelming majority of transferlearning methods are designed for simple settings where the source and targetpredictive functions are almost identical, limiting the applicability oftransfer learning methods to real world data. We propose a novel, weaker,property of the source domain that can be transferred even when the source andtarget predictive functions diverge. Our method assumes the source and targetfunctions share a Pairwise Similarity property, where if the source functionmakes similar predictions on a pair of instances, then so will the targetfunction. We propose Pairwise Similarity Regularization Transfer, a flexiblegraph-based regularization framework which can incorporate this modelingassumption into standard supervised learning algorithms. We show how users canencode domain knowledge into our regularizer in the form of spatial continuity,pairwise "similarity constraints" and how our method can be scaled to largedata sets using the Nystrom approximation. Finally, we present positive andnegative results on real and synthetic data sets and discuss when our PairwiseSimilarity transfer assumption seems to hold in practice.
 
 Probabilistic Formulations of Regression with Mixed Guidance
 
-  Regression problems assume every instance is annotated (labeled) with a real
-value, a form of annotation we call \emph{strong guidance}. In order for these
-annotations to be accurate, they must be the result of a precise experiment or
-measurement. However, in some cases additional \emph{weak guidance} might be
-given by imprecise measurements, a domain expert or even crowd sourcing.
-Current formulations of regression are unable to use both types of guidance. We
-propose a regression framework that can also incorporate weak guidance based on
-relative orderings, bounds, neighboring and similarity relations. Consider
-learning to predict ages from portrait images, these new types of guidance
-allow weaker forms of guidance such as stating a person is in their 20s or two
-people are similar in age. These types of annotations can be easier to generate
-than strong guidance. We introduce a probabilistic formulation for these forms
-of weak guidance and show that the resulting optimization problems are convex.
-Our experimental results show the benefits of these formulations on several
-data sets.
-
+  Regression problems assume every instance is annotated (labeled) with a realvalue, a form of annotation we call \emph{strong guidance}. In order for theseannotations to be accurate, they must be the result of a precise experiment ormeasurement. However, in some cases additional \emph{weak guidance} might begiven by imprecise measurements, a domain expert or even crowd sourcing.Current formulations of regression are unable to use both types of guidance. Wepropose a regression framework that can also incorporate weak guidance based onrelative orderings, bounds, neighboring and similarity relations. Considerlearning to predict ages from portrait images, these new types of guidanceallow weaker forms of guidance such as stating a person is in their 20s or twopeople are similar in age. These types of annotations can be easier to generatethan strong guidance. We introduce a probabilistic formulation for these formsof weak guidance and show that the resulting optimization problems are convex.Our experimental results show the benefits of these formulations on severaldata sets.
 
 Towards Fair Deep Clustering With Multi-State Protected Variables
 
-  Fair clustering under the disparate impact doctrine requires that population
-of each protected group should be approximately equal in every cluster.
-Previous work investigated a difficult-to-scale pre-processing step for
-$k$-center and $k$-median style algorithms for the special case of this problem
-when the number of protected groups is two. In this work, we consider a more
-general and practical setting where there can be many protected groups. To this
-end, we propose Deep Fair Clustering, which learns a discriminative but fair
-cluster assignment function. The experimental results on three public datasets
-with different types of protected attribute show that our approach can steadily
-improve the degree of fairness while only having minor loss in terms of
-clustering quality.
-
+  Fair clustering under the disparate impact doctrine requires that populationof each protected group should be approximately equal in every cluster.Previous work investigated a difficult-to-scale pre-processing step for$k$-center and $k$-median style algorithms for the special case of this problemwhen the number of protected groups is two. In this work, we consider a moregeneral and practical setting where there can be many protected groups. To thisend, we propose Deep Fair Clustering, which learns a discriminative but faircluster assignment function. The experimental results on three public datasetswith different types of protected attribute show that our approach can steadilyimprove the degree of fairness while only having minor loss in terms ofclustering quality.
 
 On Constrained Spectral Clustering and Its Applications
 
-  Constrained clustering has been well-studied for algorithms such as $K$-means
-and hierarchical clustering. However, how to satisfy many constraints in these
-algorithmic settings has been shown to be intractable. One alternative to
-encode many constraints is to use spectral clustering, which remains a
-developing area. In this paper, we propose a flexible framework for constrained
-spectral clustering. In contrast to some previous efforts that implicitly
-encode Must-Link and Cannot-Link constraints by modifying the graph Laplacian
-or constraining the underlying eigenspace, we present a more natural and
-principled formulation, which explicitly encodes the constraints as part of a
-constrained optimization problem. Our method offers several practical
-advantages: it can encode the degree of belief in Must-Link and Cannot-Link
-constraints; it guarantees to lower-bound how well the given constraints are
-satisfied using a user-specified threshold; it can be solved deterministically
-in polynomial time through generalized eigendecomposition. Furthermore, by
-inheriting the objective function from spectral clustering and encoding the
-constraints explicitly, much of the existing analysis of unconstrained spectral
-clustering techniques remains valid for our formulation. We validate the
-effectiveness of our approach by empirical results on both artificial and real
-datasets. We also demonstrate an innovative use of encoding large number of
-constraints: transfer learning via constraints.
+  Constrained clustering has been well-studied for algorithms such as $K$-meansand hierarchical clustering. However, how to satisfy many constraints in thesealgorithmic settings has been shown to be intractable. One alternative toencode many constraints is to use spectral clustering, which remains adeveloping area. In this paper, we propose a flexible framework for constrainedspectral clustering. In contrast to some previous efforts that implicitlyencode Must-Link and Cannot-Link constraints by modifying the graph Laplacianor constraining the underlying eigenspace, we present a more natural andprincipled formulation, which explicitly encodes the constraints as part of aconstrained optimization problem. Our method offers several practicaladvantages: it can encode the degree of belief in Must-Link and Cannot-Linkconstraints; it guarantees to lower-bound how well the given constraints aresatisfied using a user-specified threshold; it can be solved deterministicallyin polynomial time through generalized eigendecomposition. Furthermore, byinheriting the objective function from spectral clustering and encoding theconstraints explicitly, much of the existing analysis of unconstrained spectralclustering techniques remains valid for our formulation. We validate theeffectiveness of our approach by empirical results on both artificial and realdatasets. We also demonstrate an innovative use of encoding large number ofconstraints: transfer learning via constraints.
 
+A Reconstruction Error Formulation for Semi-Supervised Multi-task and  Multi-view Learning
 
-A Reconstruction Error Formulation for Semi-Supervised Multi-task and
-  Multi-view Learning
+  A significant challenge to make learning techniques more suitable for generalpurpose use is to move beyond i) complete supervision, ii) low dimensionaldata, iii) a single task and single view per instance. Solving these challengesallows working with "Big Data" problems that are typically high dimensionalwith multiple (but possibly incomplete) labelings and views. While other workhas addressed each of these problems separately, in this paper we show how toaddress them together, namely semi-supervised dimension reduction formulti-task and multi-view learning (SSDR-MML), which performs optimization fordimension reduction and label inference in semi-supervised setting. Theproposed framework is designed to handle both multi-task and multi-viewlearning settings, and can be easily adapted to many useful applications.Information obtained from all tasks and views is combined via reconstructionerrors in a linear fashion that can be efficiently solved using an alternatingoptimization scheme. Our formulation has a number of advantages. We explicitlymodel the information combining mechanism as a data structure (aweight/nearest-neighbor matrix) which allows investigating fundamentalquestions in multi-task and multi-view learning. We address one such questionby presenting a general measure to quantify the success of simultaneouslearning of multiple tasks or from multiple views. We show that our SSDR-MMLapproach can outperform many state-of-the-art baseline methods and demonstratethe effectiveness of connecting dimension reduction and learning.
 
-  A significant challenge to make learning techniques more suitable for general
-purpose use is to move beyond i) complete supervision, ii) low dimensional
-data, iii) a single task and single view per instance. Solving these challenges
-allows working with "Big Data" problems that are typically high dimensional
-with multiple (but possibly incomplete) labelings and views. While other work
-has addressed each of these problems separately, in this paper we show how to
-address them together, namely semi-supervised dimension reduction for
-multi-task and multi-view learning (SSDR-MML), which performs optimization for
-dimension reduction and label inference in semi-supervised setting. The
-proposed framework is designed to handle both multi-task and multi-view
-learning settings, and can be easily adapted to many useful applications.
-Information obtained from all tasks and views is combined via reconstruction
-errors in a linear fashion that can be efficiently solved using an alternating
-optimization scheme. Our formulation has a number of advantages. We explicitly
-model the information combining mechanism as a data structure (a
-weight/nearest-neighbor matrix) which allows investigating fundamental
-questions in multi-task and multi-view learning. We address one such question
-by presenting a general measure to quantify the success of simultaneous
-learning of multiple tasks or from multiple views. We show that our SSDR-MML
-approach can outperform many state-of-the-art baseline methods and demonstrate
-the effectiveness of connecting dimension reduction and learning.
+Stochastic Coordinate Coding and Its Application for Drosophila Gene  Expression Pattern Annotation
 
-
-Stochastic Coordinate Coding and Its Application for Drosophila Gene
-  Expression Pattern Annotation
-
-  \textit{Drosophila melanogaster} has been established as a model organism for
-investigating the fundamental principles of developmental gene interactions.
-The gene expression patterns of \textit{Drosophila melanogaster} can be
-documented as digital images, which are annotated with anatomical ontology
-terms to facilitate pattern discovery and comparison. The automated annotation
-of gene expression pattern images has received increasing attention due to the
-recent expansion of the image database. The effectiveness of gene expression
-pattern annotation relies on the quality of feature representation. Previous
-studies have demonstrated that sparse coding is effective for extracting
-features from gene expression images. However, solving sparse coding remains a
-computationally challenging problem, especially when dealing with large-scale
-data sets and learning large size dictionaries. In this paper, we propose a
-novel algorithm to solve the sparse coding problem, called Stochastic
-Coordinate Coding (SCC). The proposed algorithm alternatively updates the
-sparse codes via just a few steps of coordinate descent and updates the
-dictionary via second order stochastic gradient descent. The computational cost
-is further reduced by focusing on the non-zero components of the sparse codes
-and the corresponding columns of the dictionary only in the updating procedure.
-Thus, the proposed algorithm significantly improves the efficiency and the
-scalability, making sparse coding applicable for large-scale data sets and
-large dictionary sizes. Our experiments on Drosophila gene expression data sets
-demonstrate the efficiency and the effectiveness of the proposed algorithm.
-
+  \textit{Drosophila melanogaster} has been established as a model organism forinvestigating the fundamental principles of developmental gene interactions.The gene expression patterns of \textit{Drosophila melanogaster} can bedocumented as digital images, which are annotated with anatomical ontologyterms to facilitate pattern discovery and comparison. The automated annotationof gene expression pattern images has received increasing attention due to therecent expansion of the image database. The effectiveness of gene expressionpattern annotation relies on the quality of feature representation. Previousstudies have demonstrated that sparse coding is effective for extractingfeatures from gene expression images. However, solving sparse coding remains acomputationally challenging problem, especially when dealing with large-scaledata sets and learning large size dictionaries. In this paper, we propose anovel algorithm to solve the sparse coding problem, called StochasticCoordinate Coding (SCC). The proposed algorithm alternatively updates thesparse codes via just a few steps of coordinate descent and updates thedictionary via second order stochastic gradient descent. The computational costis further reduced by focusing on the non-zero components of the sparse codesand the corresponding columns of the dictionary only in the updating procedure.Thus, the proposed algorithm significantly improves the efficiency and thescalability, making sparse coding applicable for large-scale data sets andlarge dictionary sizes. Our experiments on Drosophila gene expression data setsdemonstrate the efficiency and the effectiveness of the proposed algorithm.
 
 Learning Latent Dynamics for Planning from Pixels
 
-  Planning has been very successful for control tasks with known environment
-dynamics. To leverage planning in unknown environments, the agent needs to
-learn the dynamics from interactions with the world. However, learning dynamics
-models that are accurate enough for planning has been a long-standing
-challenge, especially in image-based domains. We propose the Deep Planning
-Network (PlaNet), a purely model-based agent that learns the environment
-dynamics from images and chooses actions through fast online planning in latent
-space. To achieve high performance, the dynamics model must accurately predict
-the rewards ahead for multiple time steps. We approach this problem using a
-latent dynamics model with both deterministic and stochastic transition
-components and a multi-step variational inference objective that we call latent
-overshooting. Using only pixel observations, our agent solves continuous
-control tasks with contact dynamics, partial observability, and sparse rewards,
-which exceed the difficulty of tasks that were previously solved by planning
-with learned models. PlaNet uses substantially fewer episodes and reaches final
-performance close to and sometimes higher than strong model-free algorithms.
+  Planning has been very successful for control tasks with known environmentdynamics. To leverage planning in unknown environments, the agent needs tolearn the dynamics from interactions with the world. However, learning dynamicsmodels that are accurate enough for planning has been a long-standingchallenge, especially in image-based domains. We propose the Deep PlanningNetwork (PlaNet), a purely model-based agent that learns the environmentdynamics from images and chooses actions through fast online planning in latentspace. To achieve high performance, the dynamics model must accurately predictthe rewards ahead for multiple time steps. We approach this problem using alatent dynamics model with both deterministic and stochastic transitioncomponents and a multi-step variational inference objective that we call latentovershooting. Using only pixel observations, our agent solves continuouscontrol tasks with contact dynamics, partial observability, and sparse rewards,which exceed the difficulty of tasks that were previously solved by planningwith learned models. PlaNet uses substantially fewer episodes and reaches finalperformance close to and sometimes higher than strong model-free algorithms.
 
+The Thirteenth Data Release of the Sloan Digital Sky Survey: First  Spectroscopic Data from the SDSS-IV Survey MApping Nearby Galaxies at Apache  Point Observatory
 
-The Thirteenth Data Release of the Sloan Digital Sky Survey: First
-  Spectroscopic Data from the SDSS-IV Survey MApping Nearby Galaxies at Apache
-  Point Observatory
+  The fourth generation of the Sloan Digital Sky Survey (SDSS-IV) beganobservations in July 2014. It pursues three core programs: APOGEE-2, MaNGA, andeBOSS. In addition, eBOSS contains two major subprograms: TDSS and SPIDERS.This paper describes the first data release from SDSS-IV, Data Release 13(DR13), which contains new data, reanalysis of existing data sets and, like allSDSS data releases, is inclusive of previously released data. DR13 makespublicly available 1390 spatially resolved integral field unit observations ofnearby galaxies from MaNGA, the first data released from this survey. Itincludes new observations from eBOSS, completing SEQUELS. In addition totargeting galaxies and quasars, SEQUELS also targeted variability-selectedobjects from TDSS and X-ray selected objects from SPIDERS. DR13 includes newreductions of the SDSS-III BOSS data, improving the spectrophotometriccalibration and redshift classification. DR13 releases new reductions of theAPOGEE-1 data from SDSS-III, with abundances of elements not previouslyincluded and improved stellar parameters for dwarf stars and cooler stars. Forthe SDSS imaging data, DR13 provides new, more robust and precise photometriccalibrations. Several value-added catalogs are being released in tandem withDR13, in particular target catalogs relevant for eBOSS, TDSS, and SPIDERS, andan updated red-clump catalog for APOGEE. This paper describes the location andformat of the data now publicly available, as well as providing references tothe important technical papers that describe the targeting, observing, and datareduction. The SDSS website, http://www.sdss.org, provides links to the data,tutorials and examples of data access, and extensive documentation of thereduction and analysis procedures. DR13 is the first of a scheduled set thatwill contain new data and analyses from the planned ~6-year operations ofSDSS-IV.
 
-  The fourth generation of the Sloan Digital Sky Survey (SDSS-IV) began
-observations in July 2014. It pursues three core programs: APOGEE-2, MaNGA, and
-eBOSS. In addition, eBOSS contains two major subprograms: TDSS and SPIDERS.
-This paper describes the first data release from SDSS-IV, Data Release 13
-(DR13), which contains new data, reanalysis of existing data sets and, like all
-SDSS data releases, is inclusive of previously released data. DR13 makes
-publicly available 1390 spatially resolved integral field unit observations of
-nearby galaxies from MaNGA, the first data released from this survey. It
-includes new observations from eBOSS, completing SEQUELS. In addition to
-targeting galaxies and quasars, SEQUELS also targeted variability-selected
-objects from TDSS and X-ray selected objects from SPIDERS. DR13 includes new
-reductions of the SDSS-III BOSS data, improving the spectrophotometric
-calibration and redshift classification. DR13 releases new reductions of the
-APOGEE-1 data from SDSS-III, with abundances of elements not previously
-included and improved stellar parameters for dwarf stars and cooler stars. For
-the SDSS imaging data, DR13 provides new, more robust and precise photometric
-calibrations. Several value-added catalogs are being released in tandem with
-DR13, in particular target catalogs relevant for eBOSS, TDSS, and SPIDERS, and
-an updated red-clump catalog for APOGEE. This paper describes the location and
-format of the data now publicly available, as well as providing references to
-the important technical papers that describe the targeting, observing, and data
-reduction. The SDSS website, http://www.sdss.org, provides links to the data,
-tutorials and examples of data access, and extensive documentation of the
-reduction and analysis procedures. DR13 is the first of a scheduled set that
-will contain new data and analyses from the planned ~6-year operations of
-SDSS-IV.
+The Fourteenth Data Release of the Sloan Digital Sky Survey: First  Spectroscopic Data from the extended Baryon Oscillation Spectroscopic Survey  and from the second phase of the Apache Point Observatory Galactic Evolution  Experiment
 
-
-The Fourteenth Data Release of the Sloan Digital Sky Survey: First
-  Spectroscopic Data from the extended Baryon Oscillation Spectroscopic Survey
-  and from the second phase of the Apache Point Observatory Galactic Evolution
-  Experiment
-
-  The fourth generation of the Sloan Digital Sky Survey (SDSS-IV) has been in
-operation since July 2014. This paper describes the second data release from
-this phase, and the fourteenth from SDSS overall (making this, Data Release
-Fourteen or DR14). This release makes public data taken by SDSS-IV in its first
-two years of operation (July 2014-2016). Like all previous SDSS releases, DR14
-is cumulative, including the most recent reductions and calibrations of all
-data taken by SDSS since the first phase began operations in 2000. New in DR14
-is the first public release of data from the extended Baryon Oscillation
-Spectroscopic Survey (eBOSS); the first data from the second phase of the
-Apache Point Observatory (APO) Galactic Evolution Experiment (APOGEE-2),
-including stellar parameter estimates from an innovative data driven machine
-learning algorithm known as "The Cannon"; and almost twice as many data cubes
-from the Mapping Nearby Galaxies at APO (MaNGA) survey as were in the previous
-release (N = 2812 in total). This paper describes the location and format of
-the publicly available data from SDSS-IV surveys. We provide references to the
-important technical papers describing how these data have been taken (both
-targeting and observation details) and processed for scientific use. The SDSS
-website (www.sdss.org) has been updated for this release, and provides links to
-data downloads, as well as tutorials and examples of data use. SDSS-IV is
-planning to continue to collect astronomical data until 2020, and will be
-followed by SDSS-V.
-
+  The fourth generation of the Sloan Digital Sky Survey (SDSS-IV) has been inoperation since July 2014. This paper describes the second data release fromthis phase, and the fourteenth from SDSS overall (making this, Data ReleaseFourteen or DR14). This release makes public data taken by SDSS-IV in its firsttwo years of operation (July 2014-2016). Like all previous SDSS releases, DR14is cumulative, including the most recent reductions and calibrations of alldata taken by SDSS since the first phase began operations in 2000. New in DR14is the first public release of data from the extended Baryon OscillationSpectroscopic Survey (eBOSS); the first data from the second phase of theApache Point Observatory (APO) Galactic Evolution Experiment (APOGEE-2),including stellar parameter estimates from an innovative data driven machinelearning algorithm known as "The Cannon"; and almost twice as many data cubesfrom the Mapping Nearby Galaxies at APO (MaNGA) survey as were in the previousrelease (N = 2812 in total). This paper describes the location and format ofthe publicly available data from SDSS-IV surveys. We provide references to theimportant technical papers describing how these data have been taken (bothtargeting and observation details) and processed for scientific use. The SDSSwebsite (www.sdss.org) has been updated for this release, and provides links todata downloads, as well as tutorials and examples of data use. SDSS-IV isplanning to continue to collect astronomical data until 2020, and will befollowed by SDSS-V.
 

@@ -1,947 +1,200 @@
 Semi-Supervised Learning via New Deep Network Inversion
 
-  We exploit a recently derived inversion scheme for arbitrary deep neural
-networks to develop a new semi-supervised learning framework that applies to a
-wide range of systems and problems. The approach outperforms current
-state-of-the-art methods on MNIST reaching $99.14\%$ of test set accuracy while
-using $5$ labeled examples per class. Experiments with one-dimensional signals
-highlight the generality of the method. Importantly, our approach is simple,
-efficient, and requires no change in the deep network architecture.
-
-
-Sparse Bilinear Logistic Regression
-
-  In this paper, we introduce the concept of sparse bilinear logistic
-regression for decision problems involving explanatory variables that are
-two-dimensional matrices. Such problems are common in computer vision,
-brain-computer interfaces, style/content factorization, and parallel factor
-analysis. The underlying optimization problem is bi-convex; we study its
-solution and develop an efficient algorithm based on block coordinate descent.
-We provide a theoretical guarantee for global convergence and estimate the
-asymptotical convergence rate using the Kurdyka-{\L}ojasiewicz inequality. A
-range of experiments with simulated and real data demonstrate that sparse
-bilinear logistic regression outperforms current techniques in several
-important applications.
-
+  We exploit a recently derived inversion scheme for arbitrary deep neuralnetworks to develop a new semi-supervised learning framework that applies to awide range of systems and problems. The approach outperforms currentstate-of-the-art methods on MNIST reaching $99.14\%$ of test set accuracy whileusing $5$ labeled examples per class. Experiments with one-dimensional signalshighlight the generality of the method. Importantly, our approach is simple,efficient, and requires no change in the deep network architecture.
 
 Anisotropic Nonlocal Means Denoising
 
-  It has recently been proved that the popular nonlocal means (NLM) denoising
-algorithm does not optimally denoise images with sharp edges. Its weakness lies
-in the isotropic nature of the neighborhoods it uses to set its smoothing
-weights. In response, in this paper we introduce several theoretical and
-practical anisotropic nonlocal means (ANLM) algorithms and prove that they are
-near minimax optimal for edge-dominated images from the Horizon class. On
-real-world test images, an ANLM algorithm that adapts to the underlying image
-gradients outperforms NLM by a significant margin.
+  It has recently been proved that the popular nonlocal means (NLM) denoisingalgorithm does not optimally denoise images with sharp edges. Its weakness liesin the isotropic nature of the neighborhoods it uses to set its smoothingweights. In response, in this paper we introduce several theoretical andpractical anisotropic nonlocal means (ANLM) algorithms and prove that they arenear minimax optimal for edge-dominated images from the Horizon class. Onreal-world test images, an ANLM algorithm that adapts to the underlying imagegradients outperforms NLM by a significant margin.
 
+Sparse Bilinear Logistic Regression
 
-An Information-Theoretic Measure of Dependency Among Variables in Large
-  Datasets
+  In this paper, we introduce the concept of sparse bilinear logisticregression for decision problems involving explanatory variables that aretwo-dimensional matrices. Such problems are common in computer vision,brain-computer interfaces, style/content factorization, and parallel factoranalysis. The underlying optimization problem is bi-convex; we study itssolution and develop an efficient algorithm based on block coordinate descent.We provide a theoretical guarantee for global convergence and estimate theasymptotical convergence rate using the Kurdyka-{\L}ojasiewicz inequality. Arange of experiments with simulated and real data demonstrate that sparsebilinear logistic regression outperforms current techniques in severalimportant applications.
 
-  The maximal information coefficient (MIC), which measures the amount of
-dependence between two variables, is able to detect both linear and non-linear
-associations. However, computational cost grows rapidly as a function of the
-dataset size. In this paper, we develop a computationally efficient
-approximation to the MIC that replaces its dynamic programming step with a much
-simpler technique based on the uniform partitioning of data grid. A variety of
-experiments demonstrate the quality of our approximation.
+An Information-Theoretic Measure of Dependency Among Variables in Large  Datasets
 
+  The maximal information coefficient (MIC), which measures the amount ofdependence between two variables, is able to detect both linear and non-linearassociations. However, computational cost grows rapidly as a function of thedataset size. In this paper, we develop a computationally efficientapproximation to the MIC that replaces its dynamic programming step with a muchsimpler technique based on the uniform partitioning of data grid. A variety ofexperiments demonstrate the quality of our approximation.
 
 Optimal sampling strategies for multiscale stochastic processes
 
-  In this paper, we determine which non-random sampling of fixed size gives the
-best linear predictor of the sum of a finite spatial population. We employ
-different multiscale superpopulation models and use the minimum mean-squared
-error as our optimality criterion. In multiscale superpopulation tree models,
-the leaves represent the units of the population, interior nodes represent
-partial sums of the population, and the root node represents the total sum of
-the population. We prove that the optimal sampling pattern varies dramatically
-with the correlation structure of the tree nodes. While uniform sampling is
-optimal for trees with ``positive correlation progression'', it provides the
-worst possible sampling with ``negative correlation progression.'' As an
-analysis tool, we introduce and study a class of independent innovations trees
-that are of interest in their own right. We derive a fast water-filling
-algorithm to determine the optimal sampling of the leaves to estimate the root
-of an independent innovations tree.
-
+  In this paper, we determine which non-random sampling of fixed size gives thebest linear predictor of the sum of a finite spatial population. We employdifferent multiscale superpopulation models and use the minimum mean-squarederror as our optimality criterion. In multiscale superpopulation tree models,the leaves represent the units of the population, interior nodes representpartial sums of the population, and the root node represents the total sum ofthe population. We prove that the optimal sampling pattern varies dramaticallywith the correlation structure of the tree nodes. While uniform sampling isoptimal for trees with ``positive correlation progression'', it provides theworst possible sampling with ``negative correlation progression.'' As ananalysis tool, we introduce and study a class of independent innovations treesthat are of interest in their own right. We derive a fast water-fillingalgorithm to determine the optimal sampling of the leaves to estimate the rootof an independent innovations tree.
 
 Bayesian Compressive Sensing via Belief Propagation
 
-  Compressive sensing (CS) is an emerging field based on the revelation that a
-small collection of linear projections of a sparse signal contains enough
-information for stable, sub-Nyquist signal acquisition. When a statistical
-characterization of the signal is available, Bayesian inference can complement
-conventional CS methods based on linear programming or greedy algorithms. We
-perform approximate Bayesian inference using belief propagation (BP) decoding,
-which represents the CS encoding matrix as a graphical model. Fast computation
-is obtained by reducing the size of the graphical model with sparse encoding
-matrices. To decode a length-N signal containing K large coefficients, our
-CS-BP decoding algorithm uses O(Klog(N)) measurements and O(Nlog^2(N))
-computation. Finally, although we focus on a two-state mixture Gaussian model,
-CS-BP is easily adapted to other signal models.
-
+  Compressive sensing (CS) is an emerging field based on the revelation that asmall collection of linear projections of a sparse signal contains enoughinformation for stable, sub-Nyquist signal acquisition. When a statisticalcharacterization of the signal is available, Bayesian inference can complementconventional CS methods based on linear programming or greedy algorithms. Weperform approximate Bayesian inference using belief propagation (BP) decoding,which represents the CS encoding matrix as a graphical model. Fast computationis obtained by reducing the size of the graphical model with sparse encodingmatrices. To decode a length-N signal containing K large coefficients, ourCS-BP decoding algorithm uses O(Klog(N)) measurements and O(Nlog^2(N))computation. Finally, although we focus on a two-state mixture Gaussian model,CS-BP is easily adapted to other signal models.
 
 A simple proof that random matrices are democratic
 
-  The recently introduced theory of compressive sensing (CS) enables the
-reconstruction of sparse or compressible signals from a small set of
-nonadaptive, linear measurements. If properly chosen, the number of
-measurements can be significantly smaller than the ambient dimension of the
-signal and yet preserve the significant signal information. Interestingly, it
-can be shown that random measurement schemes provide a near-optimal encoding in
-terms of the required number of measurements. In this report, we explore
-another relatively unexplored, though often alluded to, advantage of using
-random matrices to acquire CS measurements. Specifically, we show that random
-matrices are democractic, meaning that each measurement carries roughly the
-same amount of signal information. We demonstrate that by slightly increasing
-the number of measurements, the system is robust to the loss of a small number
-of arbitrary measurements. In addition, we draw connections to oversampling and
-demonstrate stability from the loss of significantly more measurements.
-
+  The recently introduced theory of compressive sensing (CS) enables thereconstruction of sparse or compressible signals from a small set ofnonadaptive, linear measurements. If properly chosen, the number ofmeasurements can be significantly smaller than the ambient dimension of thesignal and yet preserve the significant signal information. Interestingly, itcan be shown that random measurement schemes provide a near-optimal encoding interms of the required number of measurements. In this report, we exploreanother relatively unexplored, though often alluded to, advantage of usingrandom matrices to acquire CS measurements. Specifically, we show that randommatrices are democractic, meaning that each measurement carries roughly thesame amount of signal information. We demonstrate that by slightly increasingthe number of measurements, the system is robust to the loss of a small numberof arbitrary measurements. In addition, we draw connections to oversampling anddemonstrate stability from the loss of significantly more measurements.
 
 Measurement Bounds for Sparse Signal Ensembles via Graphical Models
 
-  In compressive sensing, a small collection of linear projections of a sparse
-signal contains enough information to permit signal recovery. Distributed
-compressive sensing (DCS) extends this framework by defining ensemble sparsity
-models, allowing a correlated ensemble of sparse signals to be jointly
-recovered from a collection of separately acquired compressive measurements. In
-this paper, we introduce a framework for modeling sparse signal ensembles that
-quantifies the intra- and inter-signal dependencies within and among the
-signals. This framework is based on a novel bipartite graph representation that
-links the sparse signal coefficients with the measurements obtained for each
-signal. Using our framework, we provide fundamental bounds on the number of
-noiseless measurements that each sensor must collect to ensure that the signals
-are jointly recoverable.
-
+  In compressive sensing, a small collection of linear projections of a sparsesignal contains enough information to permit signal recovery. Distributedcompressive sensing (DCS) extends this framework by defining ensemble sparsitymodels, allowing a correlated ensemble of sparse signals to be jointlyrecovered from a collection of separately acquired compressive measurements. Inthis paper, we introduce a framework for modeling sparse signal ensembles thatquantifies the intra- and inter-signal dependencies within and among thesignals. This framework is based on a novel bipartite graph representation thatlinks the sparse signal coefficients with the measurements obtained for eachsignal. Using our framework, we provide fundamental bounds on the number ofnoiseless measurements that each sensor must collect to ensure that the signalsare jointly recoverable.
 
 Stable Restoration and Separation of Approximately Sparse Signals
 
-  This paper develops new theory and algorithms to recover signals that are
-approximately sparse in some general dictionary (i.e., a basis, frame, or
-over-/incomplete matrix) but corrupted by a combination of interference having
-a sparse representation in a second general dictionary and measurement noise.
-The algorithms and analytical recovery conditions consider varying degrees of
-signal and interference support-set knowledge. Particular applications covered
-by the proposed framework include the restoration of signals impaired by
-impulse noise, narrowband interference, or saturation/clipping, as well as
-image in-painting, super-resolution, and signal separation. Two application
-examples for audio and image restoration demonstrate the efficacy of the
-approach.
-
-
-Signal Recovery on Incoherent Manifolds
-
-  Suppose that we observe noisy linear measurements of an unknown signal that
-can be modeled as the sum of two component signals, each of which arises from a
-nonlinear sub-manifold of a high dimensional ambient space. We introduce SPIN,
-a first order projected gradient method to recover the signal components.
-Despite the nonconvex nature of the recovery problem and the possibility of
-underdetermined measurements, SPIN provably recovers the signal components,
-provided that the signal manifolds are incoherent and that the measurement
-operator satisfies a certain restricted isometry property. SPIN significantly
-extends the scope of current recovery models and algorithms for low dimensional
-linear inverse problems and matches (or exceeds) the current state of the art
-in terms of performance.
-
-
-Convex Biclustering
-
-  In the biclustering problem, we seek to simultaneously group observations and
-features. While biclustering has applications in a wide array of domains,
-ranging from text mining to collaborative filtering, the problem of identifying
-structure in high dimensional genomic data motivates this work. In this
-context, biclustering enables us to identify subsets of genes that are
-co-expressed only within a subset of experimental conditions. We present a
-convex formulation of the biclustering problem that possesses a unique global
-minimizer and an iterative algorithm, COBRA, that is guaranteed to identify it.
-Our approach generates an entire solution path of possible biclusters as a
-single tuning parameter is varied. We also show how to reduce the problem of
-selecting this tuning parameter to solving a trivial modification of the convex
-biclustering problem. The key contributions of our work are its simplicity,
-interpretability, and algorithmic guarantees - features that arguably are
-lacking in the current alternative algorithms. We demonstrate the advantages of
-our approach, which includes stably and reproducibly identifying biclusterings,
-on simulated and real microarray data.
-
+  This paper develops new theory and algorithms to recover signals that areapproximately sparse in some general dictionary (i.e., a basis, frame, orover-/incomplete matrix) but corrupted by a combination of interference havinga sparse representation in a second general dictionary and measurement noise.The algorithms and analytical recovery conditions consider varying degrees ofsignal and interference support-set knowledge. Particular applications coveredby the proposed framework include the restoration of signals impaired byimpulse noise, narrowband interference, or saturation/clipping, as well asimage in-painting, super-resolution, and signal separation. Two applicationexamples for audio and image restoration demonstrate the efficacy of theapproach.
 
 Regime Change: Bit-Depth versus Measurement-Rate in Compressive Sensing
 
-  The recently introduced compressive sensing (CS) framework enables digital
-signal acquisition systems to take advantage of signal structures beyond
-bandlimitedness. Indeed, the number of CS measurements required for stable
-reconstruction is closer to the order of the signal complexity than the Nyquist
-rate. To date, the CS theory has focused on real-valued measurements, but in
-practice, measurements are mapped to bits from a finite alphabet. Moreover, in
-many potential applications the total number of measurement bits is
-constrained, which suggests a tradeoff between the number of measurements and
-the number of bits per measurement. We study this situation in this paper and
-show that there exist two distinct regimes of operation that correspond to
-high/low signal-to-noise ratio (SNR). In the measurement compression (MC)
-regime, a high SNR favors acquiring fewer measurements with more bits per
-measurement; in the quantization compression (QC) regime, a low SNR favors
-acquiring more measurements with fewer bits per measurement. A surprise from
-our analysis and experiments is that in many practical applications it is
-better to operate in the QC regime, even acquiring as few as 1 bit per
-measurement.
-
-
-Democratic Representations
-
-  Minimization of the $\ell_{\infty}$ (or maximum) norm subject to a constraint
-that imposes consistency to an underdetermined system of linear equations finds
-use in a large number of practical applications, including vector quantization,
-approximate nearest neighbor search, peak-to-average power ratio (or "crest
-factor") reduction in communication systems, and peak force minimization in
-robotics and control. This paper analyzes the fundamental properties of signal
-representations obtained by solving such a convex optimization problem. We
-develop bounds on the maximum magnitude of such representations using the
-uncertainty principle (UP) introduced by Lyubarskii and Vershynin, and study
-the efficacy of $\ell_{\infty}$-norm-based dynamic range reduction. Our
-analysis shows that matrices satisfying the UP, such as randomly subsampled
-Fourier or i.i.d. Gaussian matrices, enable the computation of what we call
-democratic representations, whose entries all have small and similar magnitude,
-as well as low dynamic range. To compute democratic representations at low
-computational complexity, we present two new, efficient convex optimization
-algorithms. We finally demonstrate the efficacy of democratic representations
-for dynamic range reduction in a DVB-T2-based broadcast system.
-
-
-Video Compressive Sensing for Dynamic MRI
-
-  We present a video compressive sensing framework, termed kt-CSLDS, to
-accelerate the image acquisition process of dynamic magnetic resonance imaging
-(MRI). We are inspired by a state-of-the-art model for video compressive
-sensing that utilizes a linear dynamical system (LDS) to model the motion
-manifold. Given compressive measurements, the state sequence of an LDS can be
-first estimated using system identification techniques. We then reconstruct the
-observation matrix using a joint structured sparsity assumption. In particular,
-we minimize an objective function with a mixture of wavelet sparsity and joint
-sparsity within the observation matrix. We derive an efficient convex
-optimization algorithm through alternating direction method of multipliers
-(ADMM), and provide a theoretical guarantee for global convergence. We
-demonstrate the performance of our approach for video compressive sensing, in
-terms of reconstruction accuracy. We also investigate the impact of various
-sampling strategies. We apply this framework to accelerate the acquisition
-process of dynamic MRI and show it achieves the best reconstruction accuracy
-with the least computational time compared with existing algorithms in the
-literature.
-
-
-Active Learning for Undirected Graphical Model Selection
-
-  This paper studies graphical model selection, i.e., the problem of estimating
-a graph of statistical relationships among a collection of random variables.
-Conventional graphical model selection algorithms are passive, i.e., they
-require all the measurements to have been collected before processing begins.
-We propose an active learning algorithm that uses junction tree representations
-to adapt future measurements based on the information gathered from prior
-measurements. We prove that, under certain conditions, our active learning
-algorithm requires fewer scalar measurements than any passive algorithm to
-reliably estimate a graph. A range of numerical results validate our theory and
-demonstrates the benefits of active learning.
-
-
-Quantized Matrix Completion for Personalized Learning
-
-  The recently proposed SPARse Factor Analysis (SPARFA) framework for
-personalized learning performs factor analysis on ordinal or binary-valued
-(e.g., correct/incorrect) graded learner responses to questions. The underlying
-factors are termed "concepts" (or knowledge components) and are used for
-learning analytics (LA), the estimation of learner concept-knowledge profiles,
-and for content analytics (CA), the estimation of question-concept associations
-and question difficulties. While SPARFA is a powerful tool for LA and CA, it
-requires a number of algorithm parameters (including the number of concepts),
-which are difficult to determine in practice. In this paper, we propose
-SPARFA-Lite, a convex optimization-based method for LA that builds on matrix
-completion, which only requires a single algorithm parameter and enables us to
-automatically identify the required number of concepts. Using a variety of
-educational datasets, we demonstrate that SPARFALite (i) achieves comparable
-performance in predicting unobserved learner responses to existing methods,
-including item response theory (IRT) and SPARFA, and (ii) is computationally
-more efficient.
-
-
-A Probabilistic Theory of Deep Learning
-
-  A grand challenge in machine learning is the development of computational
-algorithms that match or outperform humans in perceptual inference tasks that
-are complicated by nuisance variation. For instance, visual object recognition
-involves the unknown object position, orientation, and scale in object
-recognition while speech recognition involves the unknown voice pronunciation,
-pitch, and speed. Recently, a new breed of deep learning algorithms have
-emerged for high-nuisance inference tasks that routinely yield pattern
-recognition systems with near- or super-human capabilities. But a fundamental
-question remains: Why do they work? Intuitions abound, but a coherent framework
-for understanding, analyzing, and synthesizing deep learning architectures has
-remained elusive. We answer this question by developing a new probabilistic
-framework for deep learning based on the Deep Rendering Model: a generative
-probabilistic model that explicitly captures latent nuisance variation. By
-relaxing the generative model to a discriminative one, we can recover two of
-the current leading deep learning systems, deep convolutional neural networks
-and random decision forests, providing insights into their successes and
-shortcomings, as well as a principled route to their improvement.
-
-
-oASIS: Adaptive Column Sampling for Kernel Matrix Approximation
-
-  Kernel matrices (e.g. Gram or similarity matrices) are essential for many
-state-of-the-art approaches to classification, clustering, and dimensionality
-reduction. For large datasets, the cost of forming and factoring such kernel
-matrices becomes intractable. To address this challenge, we introduce a new
-adaptive sampling algorithm called Accelerated Sequential Incoherence Selection
-(oASIS) that samples columns without explicitly computing the entire kernel
-matrix. We provide conditions under which oASIS is guaranteed to exactly
-recover the kernel matrix with an optimal number of columns selected. Numerical
-experiments on both synthetic and real-world datasets demonstrate that oASIS
-achieves performance comparable to state-of-the-art adaptive sampling methods
-at a fraction of the computational cost. The low runtime complexity of oASIS
-and its low memory footprint enable the solution of large problems that are
-simply intractable using other adaptive methods.
-
+  The recently introduced compressive sensing (CS) framework enables digitalsignal acquisition systems to take advantage of signal structures beyondbandlimitedness. Indeed, the number of CS measurements required for stablereconstruction is closer to the order of the signal complexity than the Nyquistrate. To date, the CS theory has focused on real-valued measurements, but inpractice, measurements are mapped to bits from a finite alphabet. Moreover, inmany potential applications the total number of measurement bits isconstrained, which suggests a tradeoff between the number of measurements andthe number of bits per measurement. We study this situation in this paper andshow that there exist two distinct regimes of operation that correspond tohigh/low signal-to-noise ratio (SNR). In the measurement compression (MC)regime, a high SNR favors acquiring fewer measurements with more bits permeasurement; in the quantization compression (QC) regime, a low SNR favorsacquiring more measurements with fewer bits per measurement. A surprise fromour analysis and experiments is that in many practical applications it isbetter to operate in the QC regime, even acquiring as few as 1 bit permeasurement.
 
 Suboptimality of Nonlocal Means for Images with Sharp Edges
 
-  We conduct an asymptotic risk analysis of the nonlocal means image denoising
-algorithm for the Horizon class of images that are piecewise constant with a
-sharp edge discontinuity. We prove that the mean square risk of an optimally
-tuned nonlocal means algorithm decays according to $n^{-1}\log^{1/2+\epsilon}
-n$, for an $n$-pixel image with $\epsilon>0$. This decay rate is an improvement
-over some of the predecessors of this algorithm, including the linear
-convolution filter, median filter, and the SUSAN filter, each of which provides
-a rate of only $n^{-2/3}$. It is also within a logarithmic factor from
-optimally tuned wavelet thresholding. However, it is still substantially lower
-than the the optimal minimax rate of $n^{-4/3}$.
+  We conduct an asymptotic risk analysis of the nonlocal means image denoisingalgorithm for the Horizon class of images that are piecewise constant with asharp edge discontinuity. We prove that the mean square risk of an optimallytuned nonlocal means algorithm decays according to $n^{-1}\log^{1/2+\epsilon}n$, for an $n$-pixel image with $\epsilon>0$. This decay rate is an improvementover some of the predecessors of this algorithm, including the linearconvolution filter, median filter, and the SUSAN filter, each of which providesa rate of only $n^{-2/3}$. It is also within a logarithmic factor fromoptimally tuned wavelet thresholding. However, it is still substantially lowerthan the the optimal minimax rate of $n^{-4/3}$.
 
+Signal Recovery on Incoherent Manifolds
+
+  Suppose that we observe noisy linear measurements of an unknown signal thatcan be modeled as the sum of two component signals, each of which arises from anonlinear sub-manifold of a high dimensional ambient space. We introduce SPIN,a first order projected gradient method to recover the signal components.Despite the nonconvex nature of the recovery problem and the possibility ofunderdetermined measurements, SPIN provably recovers the signal components,provided that the signal manifolds are incoherent and that the measurementoperator satisfies a certain restricted isometry property. SPIN significantlyextends the scope of current recovery models and algorithms for low dimensionallinear inverse problems and matches (or exceeds) the current state of the artin terms of performance.
+
+Asymptotic Analysis of LASSOs Solution Path with Implications for  Approximate Message Passing
+
+  This paper concerns the performance of the LASSO (also knows as basis pursuitdenoising) for recovering sparse signals from undersampled, randomized, noisymeasurements. We consider the recovery of the signal $x_o \in \mathbb{R}^N$from $n$ random and noisy linear observations $y= Ax_o + w$, where $A$ is themeasurement matrix and $w$ is the noise. The LASSO estimate is given by thesolution to the optimization problem $x_o$ with $\hat{x}_{\lambda} = \arg\min_x \frac{1}{2} \|y-Ax\|_2^2 + \lambda \|x\|_1$. Despite major progress inthe theoretical analysis of the LASSO solution, little is known about itsbehavior as a function of the regularization parameter $\lambda$. In this paperwe study two questions in the asymptotic setting (i.e., where $N \rightarrow\infty$, $n \rightarrow \infty$ while the ratio $n/N$ converges to a fixednumber in $(0,1)$): (i) How does the size of the active set$\|\hat{x}_\lambda\|_0/N$ behave as a function of $\lambda$, and (ii) How doesthe mean square error $\|\hat{x}_{\lambda} - x_o\|_2^2/N$ behave as a functionof $\lambda$? We then employ these results in a new, reliable algorithm forsolving LASSO based on approximate message passing (AMP).
 
 Parameterless Optimal Approximate Message Passing
 
-  Iterative thresholding algorithms are well-suited for high-dimensional
-problems in sparse recovery and compressive sensing. The performance of this
-class of algorithms depends heavily on the tuning of certain threshold
-parameters. In particular, both the final reconstruction error and the
-convergence rate of the algorithm crucially rely on how the threshold parameter
-is set at each step of the algorithm. In this paper, we propose a
-parameter-free approximate message passing (AMP) algorithm that sets the
-threshold parameter at each iteration in a fully automatic way without either
-having an information about the signal to be reconstructed or needing any
-tuning from the user. We show that the proposed method attains both the minimum
-reconstruction error and the highest convergence rate. Our method is based on
-applying the Stein unbiased risk estimate (SURE) along with a modified gradient
-descent to find the optimal threshold in each iteration. Motivated by the
-connections between AMP and LASSO, it could be employed to find the solution of
-the LASSO for the optimal regularization parameter. To the best of our
-knowledge, this is the first work concerning parameter tuning that obtains the
-fastest convergence rate with theoretical guarantees.
+  Iterative thresholding algorithms are well-suited for high-dimensionalproblems in sparse recovery and compressive sensing. The performance of thisclass of algorithms depends heavily on the tuning of certain thresholdparameters. In particular, both the final reconstruction error and theconvergence rate of the algorithm crucially rely on how the threshold parameteris set at each step of the algorithm. In this paper, we propose aparameter-free approximate message passing (AMP) algorithm that sets thethreshold parameter at each iteration in a fully automatic way without eitherhaving an information about the signal to be reconstructed or needing anytuning from the user. We show that the proposed method attains both the minimumreconstruction error and the highest convergence rate. Our method is based onapplying the Stein unbiased risk estimate (SURE) along with a modified gradientdescent to find the optimal threshold in each iteration. Motivated by theconnections between AMP and LASSO, it could be employed to find the solution ofthe LASSO for the optimal regularization parameter. To the best of ourknowledge, this is the first work concerning parameter tuning that obtains thefastest convergence rate with theoretical guarantees.
 
+Swapping Variables for High-Dimensional Sparse Regression with  Correlated Measurements
 
-RankMap: A Platform-Aware Framework for Distributed Learning from Dense
-  Datasets
-
-  This paper introduces RankMap, a platform-aware end-to-end framework for
-efficient execution of a broad class of iterative learning algorithms for
-massive and dense datasets. Our framework exploits data structure to factorize
-it into an ensemble of lower rank subspaces. The factorization creates sparse
-low-dimensional representations of the data, a property which is leveraged to
-devise effective mapping and scheduling of iterative learning algorithms on the
-distributed computing machines. We provide two APIs, one matrix-based and one
-graph-based, which facilitate automated adoption of the framework for
-performing several contemporary learning applications. To demonstrate the
-utility of RankMap, we solve sparse recovery and power iteration problems on
-various real-world datasets with up to 1.8 billion non-zeros. Our evaluations
-are performed on Amazon EC2 and IBM iDataPlex servers using up to 244 cores.
-The results demonstrate up to two orders of magnitude improvements in memory
-usage, execution speed, and bandwidth compared with the best reported prior
-work, while achieving the same level of learning accuracy.
-
-
-Asymptotic Analysis of LASSOs Solution Path with Implications for
-  Approximate Message Passing
-
-  This paper concerns the performance of the LASSO (also knows as basis pursuit
-denoising) for recovering sparse signals from undersampled, randomized, noisy
-measurements. We consider the recovery of the signal $x_o \in \mathbb{R}^N$
-from $n$ random and noisy linear observations $y= Ax_o + w$, where $A$ is the
-measurement matrix and $w$ is the noise. The LASSO estimate is given by the
-solution to the optimization problem $x_o$ with $\hat{x}_{\lambda} = \arg
-\min_x \frac{1}{2} \|y-Ax\|_2^2 + \lambda \|x\|_1$. Despite major progress in
-the theoretical analysis of the LASSO solution, little is known about its
-behavior as a function of the regularization parameter $\lambda$. In this paper
-we study two questions in the asymptotic setting (i.e., where $N \rightarrow
-\infty$, $n \rightarrow \infty$ while the ratio $n/N$ converges to a fixed
-number in $(0,1)$): (i) How does the size of the active set
-$\|\hat{x}_\lambda\|_0/N$ behave as a function of $\lambda$, and (ii) How does
-the mean square error $\|\hat{x}_{\lambda} - x_o\|_2^2/N$ behave as a function
-of $\lambda$? We then employ these results in a new, reliable algorithm for
-solving LASSO based on approximate message passing (AMP).
-
-
-Swapping Variables for High-Dimensional Sparse Regression with
-  Correlated Measurements
-
-  We consider the high-dimensional sparse linear regression problem of
-accurately estimating a sparse vector using a small number of linear
-measurements that are contaminated by noise. It is well known that the standard
-cadre of computationally tractable sparse regression algorithms---such as the
-Lasso, Orthogonal Matching Pursuit (OMP), and their extensions---perform poorly
-when the measurement matrix contains highly correlated columns. To address this
-shortcoming, we develop a simple greedy algorithm, called SWAP, that
-iteratively swaps variables until convergence. SWAP is surprisingly effective
-in handling measurement matrices with high correlations. In fact, we prove that
-SWAP outputs the true support, the locations of the non-zero entries in the
-sparse vector, under a relatively mild condition on the measurement matrix.
-Furthermore, we show that SWAP can be used to boost the performance of any
-sparse regression algorithm. We empirically demonstrate the advantages of SWAP
-by comparing it with several state-of-the-art sparse regression algorithms.
-
+  We consider the high-dimensional sparse linear regression problem ofaccurately estimating a sparse vector using a small number of linearmeasurements that are contaminated by noise. It is well known that the standardcadre of computationally tractable sparse regression algorithms---such as theLasso, Orthogonal Matching Pursuit (OMP), and their extensions---perform poorlywhen the measurement matrix contains highly correlated columns. To address thisshortcoming, we develop a simple greedy algorithm, called SWAP, thatiteratively swaps variables until convergence. SWAP is surprisingly effectivein handling measurement matrices with high correlations. In fact, we prove thatSWAP outputs the true support, the locations of the non-zero entries in thesparse vector, under a relatively mild condition on the measurement matrix.Furthermore, we show that SWAP can be used to boost the performance of anysparse regression algorithm. We empirically demonstrate the advantages of SWAPby comparing it with several state-of-the-art sparse regression algorithms.
 
 Time-varying Learning and Content Analytics via Sparse Factor Analysis
 
-  We propose SPARFA-Trace, a new machine learning-based framework for
-time-varying learning and content analytics for education applications. We
-develop a novel message passing-based, blind, approximate Kalman filter for
-sparse factor analysis (SPARFA), that jointly (i) traces learner concept
-knowledge over time, (ii) analyzes learner concept knowledge state transitions
-(induced by interacting with learning resources, such as textbook sections,
-lecture videos, etc, or the forgetting effect), and (iii) estimates the content
-organization and intrinsic difficulty of the assessment questions. These
-quantities are estimated solely from binary-valued (correct/incorrect) graded
-learner response data and a summary of the specific actions each learner
-performs (e.g., answering a question or studying a learning resource) at each
-time instance. Experimental results on two online course datasets demonstrate
-that SPARFA-Trace is capable of tracing each learner's concept knowledge
-evolution over time, as well as analyzing the quality and content organization
-of learning resources, the question-concept associations, and the question
-intrinsic difficulties. Moreover, we show that SPARFA-Trace achieves comparable
-or better performance in predicting unobserved learner responses than existing
-collaborative filtering and knowledge tracing approaches for personalized
-education.
+  We propose SPARFA-Trace, a new machine learning-based framework fortime-varying learning and content analytics for education applications. Wedevelop a novel message passing-based, blind, approximate Kalman filter forsparse factor analysis (SPARFA), that jointly (i) traces learner conceptknowledge over time, (ii) analyzes learner concept knowledge state transitions(induced by interacting with learning resources, such as textbook sections,lecture videos, etc, or the forgetting effect), and (iii) estimates the contentorganization and intrinsic difficulty of the assessment questions. Thesequantities are estimated solely from binary-valued (correct/incorrect) gradedlearner response data and a summary of the specific actions each learnerperforms (e.g., answering a question or studying a learning resource) at eachtime instance. Experimental results on two online course datasets demonstratethat SPARFA-Trace is capable of tracing each learner's concept knowledgeevolution over time, as well as analyzing the quality and content organizationof learning resources, the question-concept associations, and the questionintrinsic difficulties. Moreover, we show that SPARFA-Trace achieves comparableor better performance in predicting unobserved learner responses than existingcollaborative filtering and knowledge tracing approaches for personalizededucation.
 
+Democratic Representations
 
-Path Thresholding: Asymptotically Tuning-Free High-Dimensional Sparse
-  Regression
+  Minimization of the $\ell_{\infty}$ (or maximum) norm subject to a constraintthat imposes consistency to an underdetermined system of linear equations findsuse in a large number of practical applications, including vector quantization,approximate nearest neighbor search, peak-to-average power ratio (or "crestfactor") reduction in communication systems, and peak force minimization inrobotics and control. This paper analyzes the fundamental properties of signalrepresentations obtained by solving such a convex optimization problem. Wedevelop bounds on the maximum magnitude of such representations using theuncertainty principle (UP) introduced by Lyubarskii and Vershynin, and studythe efficacy of $\ell_{\infty}$-norm-based dynamic range reduction. Ouranalysis shows that matrices satisfying the UP, such as randomly subsampledFourier or i.i.d. Gaussian matrices, enable the computation of what we calldemocratic representations, whose entries all have small and similar magnitude,as well as low dynamic range. To compute democratic representations at lowcomputational complexity, we present two new, efficient convex optimizationalgorithms. We finally demonstrate the efficacy of democratic representationsfor dynamic range reduction in a DVB-T2-based broadcast system.
 
-  In this paper, we address the challenging problem of selecting tuning
-parameters for high-dimensional sparse regression. We propose a simple and
-computationally efficient method, called path thresholding (PaTh), that
-transforms any tuning parameter-dependent sparse regression algorithm into an
-asymptotically tuning-free sparse regression algorithm. More specifically, we
-prove that, as the problem size becomes large (in the number of variables and
-in the number of observations), PaTh performs accurate sparse regression, under
-appropriate conditions, without specifying a tuning parameter. In
-finite-dimensional settings, we demonstrate that PaTh can alleviate the
-computational burden of model selection algorithms by significantly reducing
-the search space of tuning parameters.
+Video Compressive Sensing for Dynamic MRI
 
+  We present a video compressive sensing framework, termed kt-CSLDS, toaccelerate the image acquisition process of dynamic magnetic resonance imaging(MRI). We are inspired by a state-of-the-art model for video compressivesensing that utilizes a linear dynamical system (LDS) to model the motionmanifold. Given compressive measurements, the state sequence of an LDS can befirst estimated using system identification techniques. We then reconstruct theobservation matrix using a joint structured sparsity assumption. In particular,we minimize an objective function with a mixture of wavelet sparsity and jointsparsity within the observation matrix. We derive an efficient convexoptimization algorithm through alternating direction method of multipliers(ADMM), and provide a theoretical guarantee for global convergence. Wedemonstrate the performance of our approach for video compressive sensing, interms of reconstruction accuracy. We also investigate the impact of varioussampling strategies. We apply this framework to accelerate the acquisitionprocess of dynamic MRI and show it achieves the best reconstruction accuracywith the least computational time compared with existing algorithms in theliterature.
+
+Path Thresholding: Asymptotically Tuning-Free High-Dimensional Sparse  Regression
+
+  In this paper, we address the challenging problem of selecting tuningparameters for high-dimensional sparse regression. We propose a simple andcomputationally efficient method, called path thresholding (PaTh), thattransforms any tuning parameter-dependent sparse regression algorithm into anasymptotically tuning-free sparse regression algorithm. More specifically, weprove that, as the problem size becomes large (in the number of variables andin the number of observations), PaTh performs accurate sparse regression, underappropriate conditions, without specifying a tuning parameter. Infinite-dimensional settings, we demonstrate that PaTh can alleviate thecomputational burden of model selection algorithms by significantly reducingthe search space of tuning parameters.
+
+Active Learning for Undirected Graphical Model Selection
+
+  This paper studies graphical model selection, i.e., the problem of estimatinga graph of statistical relationships among a collection of random variables.Conventional graphical model selection algorithms are passive, i.e., theyrequire all the measurements to have been collected before processing begins.We propose an active learning algorithm that uses junction tree representationsto adapt future measurements based on the information gathered from priormeasurements. We prove that, under certain conditions, our active learningalgorithm requires fewer scalar measurements than any passive algorithm toreliably estimate a graph. A range of numerical results validate our theory anddemonstrates the benefits of active learning.
+
+Convex Biclustering
+
+  In the biclustering problem, we seek to simultaneously group observations andfeatures. While biclustering has applications in a wide array of domains,ranging from text mining to collaborative filtering, the problem of identifyingstructure in high dimensional genomic data motivates this work. In thiscontext, biclustering enables us to identify subsets of genes that areco-expressed only within a subset of experimental conditions. We present aconvex formulation of the biclustering problem that possesses a unique globalminimizer and an iterative algorithm, COBRA, that is guaranteed to identify it.Our approach generates an entire solution path of possible biclusters as asingle tuning parameter is varied. We also show how to reduce the problem ofselecting this tuning parameter to solving a trivial modification of the convexbiclustering problem. The key contributions of our work are its simplicity,interpretability, and algorithmic guarantees - features that arguably arelacking in the current alternative algorithms. We demonstrate the advantages ofour approach, which includes stably and reproducibly identifying biclusterings,on simulated and real microarray data.
 
 $k$-POD: A Method for $k$-Means Clustering of Missing Data
 
-  The $k$-means algorithm is often used in clustering applications but its
-usage requires a complete data matrix. Missing data, however, is common in many
-applications. Mainstream approaches to clustering missing data reduce the
-missing data problem to a complete data formulation through either deletion or
-imputation but these solutions may incur significant costs. Our $k$-POD method
-presents a simple extension of $k$-means clustering for missing data that works
-even when the missingness mechanism is unknown, when external information is
-unavailable, and when there is significant missingness in the data.
+  The $k$-means algorithm is often used in clustering applications but itsusage requires a complete data matrix. Missing data, however, is common in manyapplications. Mainstream approaches to clustering missing data reduce themissing data problem to a complete data formulation through either deletion orimputation but these solutions may incur significant costs. Our $k$-POD methodpresents a simple extension of $k$-means clustering for missing data that workseven when the missingness mechanism is unknown, when external information isunavailable, and when there is significant missingness in the data.
 
+Quantized Matrix Completion for Personalized Learning
+
+  The recently proposed SPARse Factor Analysis (SPARFA) framework forpersonalized learning performs factor analysis on ordinal or binary-valued(e.g., correct/incorrect) graded learner responses to questions. The underlyingfactors are termed "concepts" (or knowledge components) and are used forlearning analytics (LA), the estimation of learner concept-knowledge profiles,and for content analytics (CA), the estimation of question-concept associationsand question difficulties. While SPARFA is a powerful tool for LA and CA, itrequires a number of algorithm parameters (including the number of concepts),which are difficult to determine in practice. In this paper, we proposeSPARFA-Lite, a convex optimization-based method for LA that builds on matrixcompletion, which only requires a single algorithm parameter and enables us toautomatically identify the required number of concepts. Using a variety ofeducational datasets, we demonstrate that SPARFALite (i) achieves comparableperformance in predicting unobserved learner responses to existing methods,including item response theory (IRT) and SPARFA, and (ii) is computationallymore efficient.
 
 SPRITE: A Response Model For Multiple Choice Testing
 
-  Item response theory (IRT) models for categorical response data are widely
-used in the analysis of educational data, computerized adaptive testing, and
-psychological surveys. However, most IRT models rely on both the assumption
-that categories are strictly ordered and the assumption that this ordering is
-known a priori. These assumptions are impractical in many real-world scenarios,
-such as multiple-choice exams where the levels of incorrectness for the
-distractor categories are often unknown. While a number of results exist on IRT
-models for unordered categorical data, they tend to have restrictive modeling
-assumptions that lead to poor data fitting performance in practice.
-Furthermore, existing unordered categorical models have parameters that are
-difficult to interpret. In this work, we propose a novel methodology for
-unordered categorical IRT that we call SPRITE (short for stochastic polytomous
-response item model) that: (i) analyzes both ordered and unordered categories,
-(ii) offers interpretable outputs, and (iii) provides improved data fitting
-compared to existing models. We compare SPRITE to existing item response models
-and demonstrate its efficacy on both synthetic and real-world educational
-datasets.
+  Item response theory (IRT) models for categorical response data are widelyused in the analysis of educational data, computerized adaptive testing, andpsychological surveys. However, most IRT models rely on both the assumptionthat categories are strictly ordered and the assumption that this ordering isknown a priori. These assumptions are impractical in many real-world scenarios,such as multiple-choice exams where the levels of incorrectness for thedistractor categories are often unknown. While a number of results exist on IRTmodels for unordered categorical data, they tend to have restrictive modelingassumptions that lead to poor data fitting performance in practice.Furthermore, existing unordered categorical models have parameters that aredifficult to interpret. In this work, we propose a novel methodology forunordered categorical IRT that we call SPRITE (short for stochastic polytomousresponse item model) that: (i) analyzes both ordered and unordered categories,(ii) offers interpretable outputs, and (iii) provides improved data fittingcompared to existing models. We compare SPRITE to existing item response modelsand demonstrate its efficacy on both synthetic and real-world educationaldatasets.
 
+RankMap: A Platform-Aware Framework for Distributed Learning from Dense  Datasets
+
+  This paper introduces RankMap, a platform-aware end-to-end framework forefficient execution of a broad class of iterative learning algorithms formassive and dense datasets. Our framework exploits data structure to factorizeit into an ensemble of lower rank subspaces. The factorization creates sparselow-dimensional representations of the data, a property which is leveraged todevise effective mapping and scheduling of iterative learning algorithms on thedistributed computing machines. We provide two APIs, one matrix-based and onegraph-based, which facilitate automated adoption of the framework forperforming several contemporary learning applications. To demonstrate theutility of RankMap, we solve sparse recovery and power iteration problems onvarious real-world datasets with up to 1.8 billion non-zeros. Our evaluationsare performed on Amazon EC2 and IBM iDataPlex servers using up to 244 cores.The results demonstrate up to two orders of magnitude improvements in memoryusage, execution speed, and bandwidth compared with the best reported priorwork, while achieving the same level of learning accuracy.
+
+A Probabilistic Theory of Deep Learning
+
+  A grand challenge in machine learning is the development of computationalalgorithms that match or outperform humans in perceptual inference tasks thatare complicated by nuisance variation. For instance, visual object recognitioninvolves the unknown object position, orientation, and scale in objectrecognition while speech recognition involves the unknown voice pronunciation,pitch, and speed. Recently, a new breed of deep learning algorithms haveemerged for high-nuisance inference tasks that routinely yield patternrecognition systems with near- or super-human capabilities. But a fundamentalquestion remains: Why do they work? Intuitions abound, but a coherent frameworkfor understanding, analyzing, and synthesizing deep learning architectures hasremained elusive. We answer this question by developing a new probabilisticframework for deep learning based on the Deep Rendering Model: a generativeprobabilistic model that explicitly captures latent nuisance variation. Byrelaxing the generative model to a discriminative one, we can recover two ofthe current leading deep learning systems, deep convolutional neural networksand random decision forests, providing insights into their successes andshortcomings, as well as a principled route to their improvement.
+
+oASIS: Adaptive Column Sampling for Kernel Matrix Approximation
+
+  Kernel matrices (e.g. Gram or similarity matrices) are essential for manystate-of-the-art approaches to classification, clustering, and dimensionalityreduction. For large datasets, the cost of forming and factoring such kernelmatrices becomes intractable. To address this challenge, we introduce a newadaptive sampling algorithm called Accelerated Sequential Incoherence Selection(oASIS) that samples columns without explicitly computing the entire kernelmatrix. We provide conditions under which oASIS is guaranteed to exactlyrecover the kernel matrix with an optimal number of columns selected. Numericalexperiments on both synthetic and real-world datasets demonstrate that oASISachieves performance comparable to state-of-the-art adaptive sampling methodsat a fraction of the computational cost. The low runtime complexity of oASISand its low memory footprint enable the solution of large problems that aresimply intractable using other adaptive methods.
 
 A Deep Learning Approach to Structured Signal Recovery
 
-  In this paper, we develop a new framework for sensing and recovering
-structured signals. In contrast to compressive sensing (CS) systems that employ
-linear measurements, sparse representations, and computationally complex
-convex/greedy algorithms, we introduce a deep learning framework that supports
-both linear and mildly nonlinear measurements, that learns a structured
-representation from training data, and that efficiently computes a signal
-estimate. In particular, we apply a stacked denoising autoencoder (SDA), as an
-unsupervised feature learner. SDA enables us to capture statistical
-dependencies between the different elements of certain signals and improve
-signal recovery performance as compared to the CS approach.
-
+  In this paper, we develop a new framework for sensing and recoveringstructured signals. In contrast to compressive sensing (CS) systems that employlinear measurements, sparse representations, and computationally complexconvex/greedy algorithms, we introduce a deep learning framework that supportsboth linear and mildly nonlinear measurements, that learns a structuredrepresentation from training data, and that efficiently computes a signalestimate. In particular, we apply a stacked denoising autoencoder (SDA), as anunsupervised feature learner. SDA enables us to capture statisticaldependencies between the different elements of certain signals and improvesignal recovery performance as compared to the CS approach.
 
 A Probabilistic Framework for Deep Learning
 
-  We develop a probabilistic framework for deep learning based on the Deep
-Rendering Mixture Model (DRMM), a new generative probabilistic model that
-explicitly capture variations in data due to latent task nuisance variables. We
-demonstrate that max-sum inference in the DRMM yields an algorithm that exactly
-reproduces the operations in deep convolutional neural networks (DCNs),
-providing a first principles derivation. Our framework provides new insights
-into the successes and shortcomings of DCNs as well as a principled route to
-their improvement. DRMM training via the Expectation-Maximization (EM)
-algorithm is a powerful alternative to DCN back-propagation, and initial
-training results are promising. Classification based on the DRMM and other
-variants outperforms DCNs in supervised digit classification, training 2-3x
-faster while achieving similar accuracy. Moreover, the DRMM is applicable to
-semi-supervised and unsupervised learning tasks, achieving results that are
-state-of-the-art in several categories on the MNIST benchmark and comparable to
-state of the art on the CIFAR10 benchmark.
-
+  We develop a probabilistic framework for deep learning based on the DeepRendering Mixture Model (DRMM), a new generative probabilistic model thatexplicitly capture variations in data due to latent task nuisance variables. Wedemonstrate that max-sum inference in the DRMM yields an algorithm that exactlyreproduces the operations in deep convolutional neural networks (DCNs),providing a first principles derivation. Our framework provides new insightsinto the successes and shortcomings of DCNs as well as a principled route totheir improvement. DRMM training via the Expectation-Maximization (EM)algorithm is a powerful alternative to DCN back-propagation, and initialtraining results are promising. Classification based on the DRMM and othervariants outperforms DCNs in supervised digit classification, training 2-3xfaster while achieving similar accuracy. Moreover, the DRMM is applicable tosemi-supervised and unsupervised learning tasks, achieving results that arestate-of-the-art in several categories on the MNIST benchmark and comparable tostate of the art on the CIFAR10 benchmark.
 
 Semi-Supervised Learning with the Deep Rendering Mixture Model
 
-  Semi-supervised learning algorithms reduce the high cost of acquiring labeled
-training data by using both labeled and unlabeled data during learning. Deep
-Convolutional Networks (DCNs) have achieved great success in supervised tasks
-and as such have been widely employed in the semi-supervised learning. In this
-paper we leverage the recently developed Deep Rendering Mixture Model (DRMM), a
-probabilistic generative model that models latent nuisance variation, and whose
-inference algorithm yields DCNs. We develop an EM algorithm for the DRMM to
-learn from both labeled and unlabeled data. Guided by the theory of the DRMM,
-we introduce a novel non-negativity constraint and a variational inference
-term. We report state-of-the-art performance on MNIST and SVHN and competitive
-results on CIFAR10. We also probe deeper into how a DRMM trained in a
-semi-supervised setting represents latent nuisance variation using
-synthetically rendered images. Taken together, our work provides a unified
-framework for supervised, unsupervised, and semi-supervised learning.
-
+  Semi-supervised learning algorithms reduce the high cost of acquiring labeledtraining data by using both labeled and unlabeled data during learning. DeepConvolutional Networks (DCNs) have achieved great success in supervised tasksand as such have been widely employed in the semi-supervised learning. In thispaper we leverage the recently developed Deep Rendering Mixture Model (DRMM), aprobabilistic generative model that models latent nuisance variation, and whoseinference algorithm yields DCNs. We develop an EM algorithm for the DRMM tolearn from both labeled and unlabeled data. Guided by the theory of the DRMM,we introduce a novel non-negativity constraint and a variational inferenceterm. We report state-of-the-art performance on MNIST and SVHN and competitiveresults on CIFAR10. We also probe deeper into how a DRMM trained in asemi-supervised setting represents latent nuisance variation usingsynthetically rendered images. Taken together, our work provides a unifiedframework for supervised, unsupervised, and semi-supervised learning.
 
 Insense: Incoherent Sensor Selection for Sparse Signals
 
-  Sensor selection refers to the problem of intelligently selecting a small
-subset of a collection of available sensors to reduce the sensing cost while
-preserving signal acquisition performance. The majority of sensor selection
-algorithms find the subset of sensors that best recovers an arbitrary signal
-from a number of linear measurements that is larger than the dimension of the
-signal. In this paper, we develop a new sensor selection algorithm for sparse
-(or near sparse) signals that finds a subset of sensors that best recovers such
-signals from a number of measurements that is much smaller than the dimension
-of the signal. Existing sensor selection algorithms cannot be applied in such
-situations. Our proposed Incoherent Sensor Selection (Insense) algorithm
-minimizes a coherence-based cost function that is adapted from recent results
-in sparse recovery theory. Using six datasets, including two real-world
-datasets on microbial diagnostics and structural health monitoring, we
-demonstrate the superior performance of Insense for sparse-signal sensor
-selection.
-
+  Sensor selection refers to the problem of intelligently selecting a smallsubset of a collection of available sensors to reduce the sensing cost whilepreserving signal acquisition performance. The majority of sensor selectionalgorithms find the subset of sensors that best recovers an arbitrary signalfrom a number of linear measurements that is larger than the dimension of thesignal. In this paper, we develop a new sensor selection algorithm for sparse(or near sparse) signals that finds a subset of sensors that best recovers suchsignals from a number of measurements that is much smaller than the dimensionof the signal. Existing sensor selection algorithms cannot be applied in suchsituations. Our proposed Incoherent Sensor Selection (Insense) algorithmminimizes a coherence-based cost function that is adapted from recent resultsin sparse recovery theory. Using six datasets, including two real-worlddatasets on microbial diagnostics and structural health monitoring, wedemonstrate the superior performance of Insense for sparse-signal sensorselection.
 
 Data-Mining Textual Responses to Uncover Misconception Patterns
 
-  An important, yet largely unstudied, problem in student data analysis is to
-detect misconceptions from students' responses to open-response questions.
-Misconception detection enables instructors to deliver more targeted feedback
-on the misconceptions exhibited by many students in their class, thus improving
-the quality of instruction. In this paper, we propose a new natural language
-processing-based framework to detect the common misconceptions among students'
-textual responses to short-answer questions. We propose a probabilistic model
-for students' textual responses involving misconceptions and experimentally
-validate it on a real-world student-response dataset. Experimental results show
-that our proposed framework excels at classifying whether a response exhibits
-one or more misconceptions. More importantly, it can also automatically detect
-the common misconceptions exhibited across responses from multiple students to
-multiple questions; this property is especially important at large scale, since
-instructors will no longer need to manually specify all possible misconceptions
-that students might exhibit.
+  An important, yet largely unstudied, problem in student data analysis is todetect misconceptions from students' responses to open-response questions.Misconception detection enables instructors to deliver more targeted feedbackon the misconceptions exhibited by many students in their class, thus improvingthe quality of instruction. In this paper, we propose a new natural languageprocessing-based framework to detect the common misconceptions among students'textual responses to short-answer questions. We propose a probabilistic modelfor students' textual responses involving misconceptions and experimentallyvalidate it on a real-world student-response dataset. Experimental results showthat our proposed framework excels at classifying whether a response exhibitsone or more misconceptions. More importantly, it can also automatically detectthe common misconceptions exhibited across responses from multiple students tomultiple questions; this property is especially important at large scale, sinceinstructors will no longer need to manually specify all possible misconceptionsthat students might exhibit.
 
+DeepCodec: Adaptive Sensing and Recovery via Deep Convolutional Neural  Networks
 
-DeepCodec: Adaptive Sensing and Recovery via Deep Convolutional Neural
-  Networks
-
-  In this paper we develop a novel computational sensing framework for sensing
-and recovering structured signals. When trained on a set of representative
-signals, our framework learns to take undersampled measurements and recover
-signals from them using a deep convolutional neural network. In other words, it
-learns a transformation from the original signals to a near-optimal number of
-undersampled measurements and the inverse transformation from measurements to
-signals. This is in contrast to traditional compressive sensing (CS) systems
-that use random linear measurements and convex optimization or iterative
-algorithms for signal recovery. We compare our new framework with
-$\ell_1$-minimization from the phase transition point of view and demonstrate
-that it outperforms $\ell_1$-minimization in the regions of phase transition
-plot where $\ell_1$-minimization cannot recover the exact solution. In
-addition, we experimentally demonstrate how learning measurements enhances the
-overall recovery performance, speeds up training of recovery framework, and
-leads to having fewer parameters to learn.
-
+  In this paper we develop a novel computational sensing framework for sensingand recovering structured signals. When trained on a set of representativesignals, our framework learns to take undersampled measurements and recoversignals from them using a deep convolutional neural network. In other words, itlearns a transformation from the original signals to a near-optimal number ofundersampled measurements and the inverse transformation from measurements tosignals. This is in contrast to traditional compressive sensing (CS) systemsthat use random linear measurements and convex optimization or iterativealgorithms for signal recovery. We compare our new framework with$\ell_1$-minimization from the phase transition point of view and demonstratethat it outperforms $\ell_1$-minimization in the regions of phase transitionplot where $\ell_1$-minimization cannot recover the exact solution. Inaddition, we experimentally demonstrate how learning measurements enhances theoverall recovery performance, speeds up training of recovery framework, andleads to having fewer parameters to learn.
 
 prDeep: Robust Phase Retrieval with a Flexible Deep Network
 
-  Phase retrieval algorithms have become an important component in many modern
-computational imaging systems. For instance, in the context of ptychography and
-speckle correlation imaging, they enable imaging past the diffraction limit and
-through scattering media, respectively. Unfortunately, traditional phase
-retrieval algorithms struggle in the presence of noise. Progress has been made
-recently on more robust algorithms using signal priors, but at the expense of
-limiting the range of supported measurement models (e.g., to Gaussian or coded
-diffraction patterns). In this work we leverage the regularization-by-denoising
-framework and a convolutional neural network denoiser to create prDeep, a new
-phase retrieval algorithm that is both robust and broadly applicable. We test
-and validate prDeep in simulation to demonstrate that it is robust to noise and
-can handle a variety of system models.
-  A MatConvNet implementation of prDeep is available at
-https://github.com/ricedsp/prDeep.
-
+  Phase retrieval algorithms have become an important component in many moderncomputational imaging systems. For instance, in the context of ptychography andspeckle correlation imaging, they enable imaging past the diffraction limit andthrough scattering media, respectively. Unfortunately, traditional phaseretrieval algorithms struggle in the presence of noise. Progress has been maderecently on more robust algorithms using signal priors, but at the expense oflimiting the range of supported measurement models (e.g., to Gaussian or codeddiffraction patterns). In this work we leverage the regularization-by-denoisingframework and a convolutional neural network denoiser to create prDeep, a newphase retrieval algorithm that is both robust and broadly applicable. We testand validate prDeep in simulation to demonstrate that it is robust to noise andcan handle a variety of system models.  A MatConvNet implementation of prDeep is available athttps://github.com/ricedsp/prDeep.
 
 MISSION: Ultra Large-Scale Feature Selection using Count-Sketches
 
-  Feature selection is an important challenge in machine learning. It plays a
-crucial role in the explainability of machine-driven decisions that are rapidly
-permeating throughout modern society. Unfortunately, the explosion in the size
-and dimensionality of real-world datasets poses a severe challenge to standard
-feature selection algorithms. Today, it is not uncommon for datasets to have
-billions of dimensions. At such scale, even storing the feature vector is
-impossible, causing most existing feature selection methods to fail.
-Workarounds like feature hashing, a standard approach to large-scale machine
-learning, helps with the computational feasibility, but at the cost of losing
-the interpretability of features. In this paper, we present MISSION, a novel
-framework for ultra large-scale feature selection that performs stochastic
-gradient descent while maintaining an efficient representation of the features
-in memory using a Count-Sketch data structure. MISSION retains the simplicity
-of feature hashing without sacrificing the interpretability of the features
-while using only O(log^2(p)) working memory. We demonstrate that MISSION
-accurately and efficiently performs feature selection on real-world,
-large-scale datasets with billions of dimensions.
+  Feature selection is an important challenge in machine learning. It plays acrucial role in the explainability of machine-driven decisions that are rapidlypermeating throughout modern society. Unfortunately, the explosion in the sizeand dimensionality of real-world datasets poses a severe challenge to standardfeature selection algorithms. Today, it is not uncommon for datasets to havebillions of dimensions. At such scale, even storing the feature vector isimpossible, causing most existing feature selection methods to fail.Workarounds like feature hashing, a standard approach to large-scale machinelearning, helps with the computational feasibility, but at the cost of losingthe interpretability of features. In this paper, we present MISSION, a novelframework for ultra large-scale feature selection that performs stochasticgradient descent while maintaining an efficient representation of the featuresin memory using a Count-Sketch data structure. MISSION retains the simplicityof feature hashing without sacrificing the interpretability of the featureswhile using only O(log^2(p)) working memory. We demonstrate that MISSIONaccurately and efficiently performs feature selection on real-world,large-scale datasets with billions of dimensions.
 
+An Expectation-Maximization Approach to Tuning Generalized Vector  Approximate Message Passing
 
-An Expectation-Maximization Approach to Tuning Generalized Vector
-  Approximate Message Passing
+  Generalized Vector Approximate Message Passing (GVAMP) is an efficientiterative algorithm for approximately minimum-mean-squared-error estimation ofa random vector $\mathbf{x}\sim p_{\mathbf{x}}(\mathbf{x})$ from generalizedlinear measurements, i.e., measurements of the form $\mathbf{y}=Q(\mathbf{z})$where $\mathbf{z}=\mathbf{Ax}$ with known $\mathbf{A}$, and $Q(\cdot)$ is anoisy, potentially nonlinear, componentwise function. Problems of this formshow up in numerous applications, including robust regression, binaryclassification, quantized compressive sensing, and phase retrieval. In somecases, the prior $p_{\mathbf{x}}$ and/or channel $Q(\cdot)$ depend on unknowndeterministic parameters $\boldsymbol{\theta}$, which prevents a directapplication of GVAMP. In this paper we propose a way to combine expectationmaximization (EM) with GVAMP to jointly estimate $\mathbf{x}$ and$\boldsymbol{\theta}$. We then demonstrate how EM-GVAMP can solve the phaseretrieval problem with unknown measurement-noise variance.
 
-  Generalized Vector Approximate Message Passing (GVAMP) is an efficient
-iterative algorithm for approximately minimum-mean-squared-error estimation of
-a random vector $\mathbf{x}\sim p_{\mathbf{x}}(\mathbf{x})$ from generalized
-linear measurements, i.e., measurements of the form $\mathbf{y}=Q(\mathbf{z})$
-where $\mathbf{z}=\mathbf{Ax}$ with known $\mathbf{A}$, and $Q(\cdot)$ is a
-noisy, potentially nonlinear, componentwise function. Problems of this form
-show up in numerous applications, including robust regression, binary
-classification, quantized compressive sensing, and phase retrieval. In some
-cases, the prior $p_{\mathbf{x}}$ and/or channel $Q(\cdot)$ depend on unknown
-deterministic parameters $\boldsymbol{\theta}$, which prevents a direct
-application of GVAMP. In this paper we propose a way to combine expectation
-maximization (EM) with GVAMP to jointly estimate $\mathbf{x}$ and
-$\boldsymbol{\theta}$. We then demonstrate how EM-GVAMP can solve the phase
-retrieval problem with unknown measurement-noise variance.
+RACE: Sub-Linear Memory Sketches for Approximate Near-Neighbor Search on  Streaming Data
 
-
-RACE: Sub-Linear Memory Sketches for Approximate Near-Neighbor Search on
-  Streaming Data
-
-  We present the first sublinear memory sketch which can be queried to find the
-$v$ nearest neighbors in a dataset. Our online sketching algorithm can compress
-an $N$-element dataset to a sketch of size $O(N^b \log^3{N})$ in $O(N^{b+1}
-\log^3{N})$ time, where $b < 1$ when the query satisfies a data-dependent
-near-neighbor stability condition.
-  We achieve data-dependent sublinear space by combining recent advances in
-locality sensitive hashing (LSH)-based estimators with compressed sensing. Our
-results shed new light on the memory-accuracy tradeoff for near-neighbor
-search. The techniques presented reveal a deep connection between the
-fundamental compressed sensing (or heavy hitters) recovery problem and
-near-neighbor search, leading to new insight for geometric search problems and
-implications for sketching algorithms.
-
+  We present the first sublinear memory sketch which can be queried to find the$v$ nearest neighbors in a dataset. Our online sketching algorithm can compressan $N$-element dataset to a sketch of size $O(N^b \log^3{N})$ in $O(N^{b+1}\log^3{N})$ time, where $b < 1$ when the query satisfies a data-dependentnear-neighbor stability condition.  We achieve data-dependent sublinear space by combining recent advances inlocality sensitive hashing (LSH)-based estimators with compressed sensing. Ourresults shed new light on the memory-accuracy tradeoff for near-neighborsearch. The techniques presented reveal a deep connection between thefundamental compressed sensing (or heavy hitters) recovery problem andnear-neighbor search, leading to new insight for geometric search problems andimplications for sketching algorithms.
 
 Adaptive Estimation for Approximate k-Nearest-Neighbor Computations
 
-  Algorithms often carry out equally many computations for "easy" and "hard"
-problem instances. In particular, algorithms for finding nearest neighbors
-typically have the same running time regardless of the particular problem
-instance. In this paper, we consider the approximate k-nearest-neighbor
-problem, which is the problem of finding a subset of O(k) points in a given set
-of points that contains the set of k nearest neighbors of a given query point.
-We propose an algorithm based on adaptively estimating the distances, and show
-that it is essentially optimal out of algorithms that are only allowed to
-adaptively estimate distances. We then demonstrate both theoretically and
-experimentally that the algorithm can achieve significant speedups relative to
-the naive method.
+  Algorithms often carry out equally many computations for "easy" and "hard"problem instances. In particular, algorithms for finding nearest neighborstypically have the same running time regardless of the particular probleminstance. In this paper, we consider the approximate k-nearest-neighborproblem, which is the problem of finding a subset of O(k) points in a given setof points that contains the set of k nearest neighbors of a given query point.We propose an algorithm based on adaptively estimating the distances, and showthat it is essentially optimal out of algorithms that are only allowed toadaptively estimate distances. We then demonstrate both theoretically andexperimentally that the algorithm can achieve significant speedups relative tothe naive method.
 
+Representing Formal Languages: A Comparison Between Finite Automata and  Recurrent Neural Networks
 
-Representing Formal Languages: A Comparison Between Finite Automata and
-  Recurrent Neural Networks
+  We investigate the internal representations that a recurrent neural network(RNN) uses while learning to recognize a regular formal language. Specifically,we train a RNN on positive and negative examples from a regular language, andask if there is a simple decoding function that maps states of this RNN tostates of the minimal deterministic finite automaton (MDFA) for the language.Our experiments show that such a decoding function indeed exists, and that itmaps states of the RNN not to MDFA states, but to states of an {\emabstraction} obtained by clustering small sets of MDFA states into"superstates". A qualitative analysis reveals that the abstraction often has asimple interpretation. Overall, the results suggest a strong structuralrelationship between internal representations used by RNNs and finite automata,and explain the well-known ability of RNNs to recognize formal grammaticalstructure.
 
-  We investigate the internal representations that a recurrent neural network
-(RNN) uses while learning to recognize a regular formal language. Specifically,
-we train a RNN on positive and negative examples from a regular language, and
-ask if there is a simple decoding function that maps states of this RNN to
-states of the minimal deterministic finite automaton (MDFA) for the language.
-Our experiments show that such a decoding function indeed exists, and that it
-maps states of the RNN not to MDFA states, but to states of an {\em
-abstraction} obtained by clustering small sets of MDFA states into
-"superstates". A qualitative analysis reveals that the abstraction often has a
-simple interpretation. Overall, the results suggest a strong structural
-relationship between internal representations used by RNNs and finite automata,
-and explain the well-known ability of RNNs to recognize formal grammatical
-structure.
+Robust 1-Bit Compressive Sensing via Binary Stable Embeddings of Sparse  Vectors
 
-
-Robust 1-Bit Compressive Sensing via Binary Stable Embeddings of Sparse
-  Vectors
-
-  The Compressive Sensing (CS) framework aims to ease the burden on
-analog-to-digital converters (ADCs) by reducing the sampling rate required to
-acquire and stably recover sparse signals. Practical ADCs not only sample but
-also quantize each measurement to a finite number of bits; moreover, there is
-an inverse relationship between the achievable sampling rate and the bit depth.
-In this paper, we investigate an alternative CS approach that shifts the
-emphasis from the sampling rate to the number of bits per measurement. In
-particular, we explore the extreme case of 1-bit CS measurements, which capture
-just their sign. Our results come in two flavors. First, we consider ideal
-reconstruction from noiseless 1-bit measurements and provide a lower bound on
-the best achievable reconstruction error. We also demonstrate that i.i.d.
-random Gaussian matrices describe measurement mappings achieving, with
-overwhelming probability, nearly optimal error decay. Next, we consider
-reconstruction robustness to measurement errors and noise and introduce the
-Binary $\epsilon$-Stable Embedding (B$\epsilon$SE) property, which
-characterizes the robustness measurement process to sign changes. We show the
-same class of matrices that provide almost optimal noiseless performance also
-enable such a robust mapping. On the practical side, we introduce the Binary
-Iterative Hard Thresholding (BIHT) algorithm for signal reconstruction from
-1-bit measurements that offers state-of-the-art performance.
-
+  The Compressive Sensing (CS) framework aims to ease the burden onanalog-to-digital converters (ADCs) by reducing the sampling rate required toacquire and stably recover sparse signals. Practical ADCs not only sample butalso quantize each measurement to a finite number of bits; moreover, there isan inverse relationship between the achievable sampling rate and the bit depth.In this paper, we investigate an alternative CS approach that shifts theemphasis from the sampling rate to the number of bits per measurement. Inparticular, we explore the extreme case of 1-bit CS measurements, which capturejust their sign. Our results come in two flavors. First, we consider idealreconstruction from noiseless 1-bit measurements and provide a lower bound onthe best achievable reconstruction error. We also demonstrate that i.i.d.random Gaussian matrices describe measurement mappings achieving, withoverwhelming probability, nearly optimal error decay. Next, we considerreconstruction robustness to measurement errors and noise and introduce theBinary $\epsilon$-Stable Embedding (B$\epsilon$SE) property, whichcharacterizes the robustness measurement process to sign changes. We show thesame class of matrices that provide almost optimal noiseless performance alsoenable such a robust mapping. On the practical side, we introduce the BinaryIterative Hard Thresholding (BIHT) algorithm for signal reconstruction from1-bit measurements that offers state-of-the-art performance.
 
 A Theoretical Analysis of Joint Manifolds
 
-  The emergence of low-cost sensor architectures for diverse modalities has
-made it possible to deploy sensor arrays that capture a single event from a
-large number of vantage points and using multiple modalities. In many
-scenarios, these sensors acquire very high-dimensional data such as audio
-signals, images, and video. To cope with such high-dimensional data, we
-typically rely on low-dimensional models. Manifold models provide a
-particularly powerful model that captures the structure of high-dimensional
-data when it is governed by a low-dimensional set of parameters. However, these
-models do not typically take into account dependencies among multiple sensors.
-We thus propose a new joint manifold framework for data ensembles that exploits
-such dependencies. We show that simple algorithms can exploit the joint
-manifold structure to improve their performance on standard signal processing
-applications. Additionally, recent results concerning dimensionality reduction
-for manifolds enable us to formulate a network-scalable data compression scheme
-that uses random projections of the sensed data. This scheme efficiently fuses
-the data from all sensors through the addition of such projections, regardless
-of the data modalities and dimensions.
-
+  The emergence of low-cost sensor architectures for diverse modalities hasmade it possible to deploy sensor arrays that capture a single event from alarge number of vantage points and using multiple modalities. In manyscenarios, these sensors acquire very high-dimensional data such as audiosignals, images, and video. To cope with such high-dimensional data, wetypically rely on low-dimensional models. Manifold models provide aparticularly powerful model that captures the structure of high-dimensionaldata when it is governed by a low-dimensional set of parameters. However, thesemodels do not typically take into account dependencies among multiple sensors.We thus propose a new joint manifold framework for data ensembles that exploitssuch dependencies. We show that simple algorithms can exploit the jointmanifold structure to improve their performance on standard signal processingapplications. Additionally, recent results concerning dimensionality reductionfor manifolds enable us to formulate a network-scalable data compression schemethat uses random projections of the sensed data. This scheme efficiently fusesthe data from all sensors through the addition of such projections, regardlessof the data modalities and dimensions.
 
 Distributed Compressive Sensing
 
-  Compressive sensing is a signal acquisition framework based on the revelation
-that a small collection of linear projections of a sparse signal contains
-enough information for stable recovery. In this paper we introduce a new theory
-for distributed compressive sensing (DCS) that enables new distributed coding
-algorithms for multi-signal ensembles that exploit both intra- and inter-signal
-correlation structures. The DCS theory rests on a new concept that we term the
-joint sparsity of a signal ensemble. Our theoretical contribution is to
-characterize the fundamental performance limits of DCS recovery for jointly
-sparse signal ensembles in the noiseless measurement setting; our result
-connects single-signal, joint, and distributed (multi-encoder) compressive
-sensing. To demonstrate the efficacy of our framework and to show that
-additional challenges such as computational tractability can be addressed, we
-study in detail three example models for jointly sparse signals. For these
-models, we develop practical algorithms for joint recovery of multiple signals
-from incoherent projections. In two of our three models, the results are
-asymptotically best-possible, meaning that both the upper and lower bounds
-match the performance of our practical algorithms. Moreover, simulations
-indicate that the asymptotics take effect with just a moderate number of
-signals. DCS is immediately applicable to a range of problems in sensor arrays
-and networks.
-
+  Compressive sensing is a signal acquisition framework based on the revelationthat a small collection of linear projections of a sparse signal containsenough information for stable recovery. In this paper we introduce a new theoryfor distributed compressive sensing (DCS) that enables new distributed codingalgorithms for multi-signal ensembles that exploit both intra- and inter-signalcorrelation structures. The DCS theory rests on a new concept that we term thejoint sparsity of a signal ensemble. Our theoretical contribution is tocharacterize the fundamental performance limits of DCS recovery for jointlysparse signal ensembles in the noiseless measurement setting; our resultconnects single-signal, joint, and distributed (multi-encoder) compressivesensing. To demonstrate the efficacy of our framework and to show thatadditional challenges such as computational tractability can be addressed, westudy in detail three example models for jointly sparse signals. For thesemodels, we develop practical algorithms for joint recovery of multiple signalsfrom incoherent projections. In two of our three models, the results areasymptotically best-possible, meaning that both the upper and lower boundsmatch the performance of our practical algorithms. Moreover, simulationsindicate that the asymptotics take effect with just a moderate number ofsignals. DCS is immediately applicable to a range of problems in sensor arraysand networks.
 
 Beyond Nyquist: Efficient Sampling of Sparse Bandlimited Signals
 
-  Wideband analog signals push contemporary analog-to-digital conversion
-systems to their performance limits. In many applications, however, sampling at
-the Nyquist rate is inefficient because the signals of interest contain only a
-small number of significant frequencies relative to the bandlimit, although the
-locations of the frequencies may not be known a priori. For this type of sparse
-signal, other sampling strategies are possible. This paper describes a new type
-of data acquisition system, called a random demodulator, that is constructed
-from robust, readily available components. Let K denote the total number of
-frequencies in the signal, and let W denote its bandlimit in Hz. Simulations
-suggest that the random demodulator requires just O(K log(W/K)) samples per
-second to stably reconstruct the signal. This sampling rate is exponentially
-lower than the Nyquist rate of W Hz. In contrast with Nyquist sampling, one
-must use nonlinear methods, such as convex programming, to recover the signal
-from the samples taken by the random demodulator. This paper provides a
-detailed theoretical analysis of the system's performance that supports the
-empirical observations.
-
+  Wideband analog signals push contemporary analog-to-digital conversionsystems to their performance limits. In many applications, however, sampling atthe Nyquist rate is inefficient because the signals of interest contain only asmall number of significant frequencies relative to the bandlimit, although thelocations of the frequencies may not be known a priori. For this type of sparsesignal, other sampling strategies are possible. This paper describes a new typeof data acquisition system, called a random demodulator, that is constructedfrom robust, readily available components. Let K denote the total number offrequencies in the signal, and let W denote its bandlimit in Hz. Simulationssuggest that the random demodulator requires just O(K log(W/K)) samples persecond to stably reconstruct the signal. This sampling rate is exponentiallylower than the Nyquist rate of W Hz. In contrast with Nyquist sampling, onemust use nonlinear methods, such as convex programming, to recover the signalfrom the samples taken by the random demodulator. This paper provides adetailed theoretical analysis of the system's performance that supports theempirical observations.
 
 Sampling and Recovery of Pulse Streams
 
-  Compressive Sensing (CS) is a new technique for the efficient acquisition of
-signals, images, and other data that have a sparse representation in some
-basis, frame, or dictionary. By sparse we mean that the N-dimensional basis
-representation has just K<<N significant coefficients; in this case, the CS
-theory maintains that just M = K log N random linear signal measurements will
-both preserve all of the signal information and enable robust signal
-reconstruction in polynomial time. In this paper, we extend the CS theory to
-pulse stream data, which correspond to S-sparse signals/images that are
-convolved with an unknown F-sparse pulse shape. Ignoring their convolutional
-structure, a pulse stream signal is K=SF sparse. Such signals figure
-prominently in a number of applications, from neuroscience to astronomy. Our
-specific contributions are threefold. First, we propose a pulse stream signal
-model and show that it is equivalent to an infinite union of subspaces. Second,
-we derive a lower bound on the number of measurements M required to preserve
-the essential information present in pulse streams. The bound is linear in the
-total number of degrees of freedom S + F, which is significantly smaller than
-the naive bound based on the total signal sparsity K=SF. Third, we develop an
-efficient signal recovery algorithm that infers both the shape of the impulse
-response as well as the locations and amplitudes of the pulses. The algorithm
-alternatively estimates the pulse locations and the pulse shape in a manner
-reminiscent of classical deconvolution algorithms. Numerical experiments on
-synthetic and real data demonstrate the advantages of our approach over
-standard CS.
+  Compressive Sensing (CS) is a new technique for the efficient acquisition ofsignals, images, and other data that have a sparse representation in somebasis, frame, or dictionary. By sparse we mean that the N-dimensional basisrepresentation has just K<<N significant coefficients; in this case, the CStheory maintains that just M = K log N random linear signal measurements willboth preserve all of the signal information and enable robust signalreconstruction in polynomial time. In this paper, we extend the CS theory topulse stream data, which correspond to S-sparse signals/images that areconvolved with an unknown F-sparse pulse shape. Ignoring their convolutionalstructure, a pulse stream signal is K=SF sparse. Such signals figureprominently in a number of applications, from neuroscience to astronomy. Ourspecific contributions are threefold. First, we propose a pulse stream signalmodel and show that it is equivalent to an infinite union of subspaces. Second,we derive a lower bound on the number of measurements M required to preservethe essential information present in pulse streams. The bound is linear in thetotal number of degrees of freedom S + F, which is significantly smaller thanthe naive bound based on the total signal sparsity K=SF. Third, we develop anefficient signal recovery algorithm that infers both the shape of the impulseresponse as well as the locations and amplitudes of the pulses. The algorithmalternatively estimates the pulse locations and the pulse shape in a mannerreminiscent of classical deconvolution algorithms. Numerical experiments onsynthetic and real data demonstrate the advantages of our approach overstandard CS.
 
+Deterministic Bounds for Restricted Isometry of Compressed Sensing  Matrices
 
-Deterministic Bounds for Restricted Isometry of Compressed Sensing
-  Matrices
+  Compressed Sensing (CS) is an emerging field that enables reconstruction of asparse signal $x \in {\mathbb R} ^n$ that has only $k \ll n$ non-zerocoefficients from a small number $m \ll n$ of linear projections. Theprojections are obtained by multiplying $x$ by a matrix $\Phi \in {\mathbbR}^{m \times n}$ --- called a CS matrix --- where $k < m \ll n$. In this work,we ask the following question: given the triplet $\{k, m, n \}$ that definesthe CS problem size, what are the deterministic limits on the performance ofthe best CS matrix in ${\mathbb R}^{m \times n}$? We select Restricted Isometryas the performance metric. We derive two deterministic converse bounds and onedeterministic achievable bound on the Restricted Isometry for matrices in${\mathbb R}^{m \times n}$ in terms of $n$, $m$ and $k$. The first conversebound (structural bound) is derived by exploiting the intricate relationshipsbetween the singular values of sub-matrices and the complete matrix. The secondconverse bound (packing bound) and the achievable bound (covering bound) arederived by recognizing the equivalence of CS matrices to codes on Grassmannianspaces. Simulations reveal that random Gaussian $\Phi$ provide far from optimalperformance. The derivation of the three bounds offers several new geometricinsights that relate optimal CS matrices to equi-angular tight frames, theWelch bound, codes on Grassmannian spaces, and the Generalized PythagoreanTheorem (GPT).
 
-  Compressed Sensing (CS) is an emerging field that enables reconstruction of a
-sparse signal $x \in {\mathbb R} ^n$ that has only $k \ll n$ non-zero
-coefficients from a small number $m \ll n$ of linear projections. The
-projections are obtained by multiplying $x$ by a matrix $\Phi \in {\mathbb
-R}^{m \times n}$ --- called a CS matrix --- where $k < m \ll n$. In this work,
-we ask the following question: given the triplet $\{k, m, n \}$ that defines
-the CS problem size, what are the deterministic limits on the performance of
-the best CS matrix in ${\mathbb R}^{m \times n}$? We select Restricted Isometry
-as the performance metric. We derive two deterministic converse bounds and one
-deterministic achievable bound on the Restricted Isometry for matrices in
-${\mathbb R}^{m \times n}$ in terms of $n$, $m$ and $k$. The first converse
-bound (structural bound) is derived by exploiting the intricate relationships
-between the singular values of sub-matrices and the complete matrix. The second
-converse bound (packing bound) and the achievable bound (covering bound) are
-derived by recognizing the equivalence of CS matrices to codes on Grassmannian
-spaces. Simulations reveal that random Gaussian $\Phi$ provide far from optimal
-performance. The derivation of the three bounds offers several new geometric
-insights that relate optimal CS matrices to equi-angular tight frames, the
-Welch bound, codes on Grassmannian spaces, and the Generalized Pythagorean
-Theorem (GPT).
+The Pros and Cons of Compressive Sensing for Wideband Signal  Acquisition: Noise Folding vs. Dynamic Range
 
+  Compressive sensing (CS) exploits the sparsity present in many signals toreduce the number of measurements needed for digital acquisition. With thisreduction would come, in theory, commensurate reductions in the size, weight,power consumption, and/or monetary cost of both signal sensors and anyassociated communication links. This paper examines the use of CS in the designof a wideband radio receiver in a noisy environment. We formulate the problemstatement for such a receiver and establish a reasonable set of requirementsthat a receiver should meet to be practically useful. We then evaluate theperformance of a CS-based receiver in two ways: via a theoretical analysis ofits expected performance, with a particular emphasis on noise and dynamicrange, and via simulations that compare the CS receiver against the performanceexpected from a conventional implementation. On the one hand, we show thatCS-based systems that aim to reduce the number of acquired measurements aresomewhat sensitive to signal noise, exhibiting a 3dB SNR loss per octave ofsubsampling, which parallels the classic noise-folding phenomenon. On the otherhand, we demonstrate that since they sample at a lower rate, CS-based systemscan potentially attain a significantly larger dynamic range. Hence, we concludethat while a CS-based system has inherent limitations that do impose somerestrictions on its potential applications, it also has attributes that make ithighly desirable in a number of important practical settings.
 
-The Pros and Cons of Compressive Sensing for Wideband Signal
-  Acquisition: Noise Folding vs. Dynamic Range
+A Theory for Optical flow-based Transport on Image Manifolds
 
-  Compressive sensing (CS) exploits the sparsity present in many signals to
-reduce the number of measurements needed for digital acquisition. With this
-reduction would come, in theory, commensurate reductions in the size, weight,
-power consumption, and/or monetary cost of both signal sensors and any
-associated communication links. This paper examines the use of CS in the design
-of a wideband radio receiver in a noisy environment. We formulate the problem
-statement for such a receiver and establish a reasonable set of requirements
-that a receiver should meet to be practically useful. We then evaluate the
-performance of a CS-based receiver in two ways: via a theoretical analysis of
-its expected performance, with a particular emphasis on noise and dynamic
-range, and via simulations that compare the CS receiver against the performance
-expected from a conventional implementation. On the one hand, we show that
-CS-based systems that aim to reduce the number of acquired measurements are
-somewhat sensitive to signal noise, exhibiting a 3dB SNR loss per octave of
-subsampling, which parallels the classic noise-folding phenomenon. On the other
-hand, we demonstrate that since they sample at a lower rate, CS-based systems
-can potentially attain a significantly larger dynamic range. Hence, we conclude
-that while a CS-based system has inherent limitations that do impose some
-restrictions on its potential applications, it also has attributes that make it
-highly desirable in a number of important practical settings.
-
+  An image articulation manifold (IAM) is the collection of images formed whenan object is articulated in front of a camera. IAMs arise in a variety of imageprocessing and computer vision applications, where they provide a naturallow-dimensional embedding of the collection of high-dimensional images. To dateIAMs have been studied as embedded submanifolds of Euclidean spaces.Unfortunately, their promise has not been realized in practice, because realworld imagery typically contains sharp edges that render an IAMnon-differentiable and hence non-isometric to the low-dimensional parameterspace under the Euclidean metric. As a result, the standard tools fromdifferential geometry, in particular using linear tangent spaces to transportalong the IAM, have limited utility. In this paper, we explore a nonlineartransport operator for IAMs based on the optical flow between images anddevelop new analytical tools reminiscent of those from differential geometryusing the idea of optical flow manifolds (OFMs). We define a new metric forIAMs that satisfies certain local isometry conditions, and we show how to usethis metric to develop a new tools such as flow fields on IAMs, parallel flowfields, parallel transport, as well as a intuitive notion of curvature. Thespace of optical flow fields along a path of constant curvature has a naturalmulti-scale structure via a monoid structure on the space of all flow fieldsalong a path. We also develop lower bounds on approximation errors whileapproximating non-parallel flow fields by parallel flow fields.
 
 Compressive Acquisition of Dynamic Scenes
 
-  Compressive sensing (CS) is a new approach for the acquisition and recovery
-of sparse signals and images that enables sampling rates significantly below
-the classical Nyquist rate. Despite significant progress in the theory and
-methods of CS, little headway has been made in compressive video acquisition
-and recovery. Video CS is complicated by the ephemeral nature of dynamic
-events, which makes direct extensions of standard CS imaging architectures and
-signal models difficult. In this paper, we develop a new framework for video CS
-for dynamic textured scenes that models the evolution of the scene as a linear
-dynamical system (LDS). This reduces the video recovery problem to first
-estimating the model parameters of the LDS from compressive measurements, and
-then reconstructing the image frames. We exploit the low-dimensional dynamic
-parameters (the state sequence) and high-dimensional static parameters (the
-observation matrix) of the LDS to devise a novel compressive measurement
-strategy that measures only the dynamic part of the scene at each instant and
-accumulates measurements over time to estimate the static parameters. This
-enables us to lower the compressive measurement rate considerably. We validate
-our approach with a range of experiments involving both video recovery, sensing
-hyper-spectral data, and classification of dynamic scenes from compressive
-data. Together, these applications demonstrate the effectiveness of the
-approach.
-
+  Compressive sensing (CS) is a new approach for the acquisition and recoveryof sparse signals and images that enables sampling rates significantly belowthe classical Nyquist rate. Despite significant progress in the theory andmethods of CS, little headway has been made in compressive video acquisitionand recovery. Video CS is complicated by the ephemeral nature of dynamicevents, which makes direct extensions of standard CS imaging architectures andsignal models difficult. In this paper, we develop a new framework for video CSfor dynamic textured scenes that models the evolution of the scene as a lineardynamical system (LDS). This reduces the video recovery problem to firstestimating the model parameters of the LDS from compressive measurements, andthen reconstructing the image frames. We exploit the low-dimensional dynamicparameters (the state sequence) and high-dimensional static parameters (theobservation matrix) of the LDS to devise a novel compressive measurementstrategy that measures only the dynamic part of the scene at each instant andaccumulates measurements over time to estimate the static parameters. Thisenables us to lower the compressive measurement rate considerably. We validateour approach with a range of experiments involving both video recovery, sensinghyper-spectral data, and classification of dynamic scenes from compressivedata. Together, these applications demonstrate the effectiveness of theapproach.
 
 Greedy Feature Selection for Subspace Clustering
 
-  Unions of subspaces provide a powerful generalization to linear subspace
-models for collections of high-dimensional data. To learn a union of subspaces
-from a collection of data, sets of signals in the collection that belong to the
-same subspace must be identified in order to obtain accurate estimates of the
-subspace structures present in the data. Recently, sparse recovery methods have
-been shown to provide a provable and robust strategy for exact feature
-selection (EFS)--recovering subsets of points from the ensemble that live in
-the same subspace. In parallel with recent studies of EFS with L1-minimization,
-in this paper, we develop sufficient conditions for EFS with a greedy method
-for sparse signal recovery known as orthogonal matching pursuit (OMP).
-Following our analysis, we provide an empirical study of feature selection
-strategies for signals living on unions of subspaces and characterize the gap
-between sparse recovery methods and nearest neighbor (NN)-based approaches. In
-particular, we demonstrate that sparse recovery methods provide significant
-advantages over NN methods and the gap between the two approaches is
-particularly pronounced when the sampling of subspaces in the dataset is
-sparse. Our results suggest that OMP may be employed to reliably recover exact
-feature sets in a number of regimes where NN approaches fail to reveal the
-subspace membership of points in the ensemble.
-
+  Unions of subspaces provide a powerful generalization to linear subspacemodels for collections of high-dimensional data. To learn a union of subspacesfrom a collection of data, sets of signals in the collection that belong to thesame subspace must be identified in order to obtain accurate estimates of thesubspace structures present in the data. Recently, sparse recovery methods havebeen shown to provide a provable and robust strategy for exact featureselection (EFS)--recovering subsets of points from the ensemble that live inthe same subspace. In parallel with recent studies of EFS with L1-minimization,in this paper, we develop sufficient conditions for EFS with a greedy methodfor sparse signal recovery known as orthogonal matching pursuit (OMP).Following our analysis, we provide an empirical study of feature selectionstrategies for signals living on unions of subspaces and characterize the gapbetween sparse recovery methods and nearest neighbor (NN)-based approaches. Inparticular, we demonstrate that sparse recovery methods provide significantadvantages over NN methods and the gap between the two approaches isparticularly pronounced when the sampling of subspaces in the dataset issparse. Our results suggest that OMP may be employed to reliably recover exactfeature sets in a number of regimes where NN approaches fail to reveal thesubspace membership of points in the ensemble.
 
 Sparse Factor Analysis for Learning and Content Analytics
 
-  We develop a new model and algorithms for machine learning-based learning
-analytics, which estimate a learner's knowledge of the concepts underlying a
-domain, and content analytics, which estimate the relationships among a
-collection of questions and those concepts. Our model represents the
-probability that a learner provides the correct response to a question in terms
-of three factors: their understanding of a set of underlying concepts, the
-concepts involved in each question, and each question's intrinsic difficulty.
-We estimate these factors given the graded responses to a collection of
-questions. The underlying estimation problem is ill-posed in general,
-especially when only a subset of the questions are answered. The key
-observation that enables a well-posed solution is the fact that typical
-educational domains of interest involve only a small number of key concepts.
-Leveraging this observation, we develop both a bi-convex maximum-likelihood and
-a Bayesian solution to the resulting SPARse Factor Analysis (SPARFA) problem.
-We also incorporate user-defined tags on questions to facilitate the
-interpretability of the estimated factors. Experiments with synthetic and
-real-world data demonstrate the efficacy of our approach. Finally, we make a
-connection between SPARFA and noisy, binary-valued (1-bit) dictionary learning
-that is of independent interest.
-
-
-Tag-Aware Ordinal Sparse Factor Analysis for Learning and Content
-  Analytics
-
-  Machine learning offers novel ways and means to design personalized learning
-systems wherein each student's educational experience is customized in real
-time depending on their background, learning goals, and performance to date.
-SPARse Factor Analysis (SPARFA) is a novel framework for machine learning-based
-learning analytics, which estimates a learner's knowledge of the concepts
-underlying a domain, and content analytics, which estimates the relationships
-among a collection of questions and those concepts. SPARFA jointly learns the
-associations among the questions and the concepts, learner concept knowledge
-profiles, and the underlying question difficulties, solely based on the
-correct/incorrect graded responses of a population of learners to a collection
-of questions. In this paper, we extend the SPARFA framework significantly to
-enable: (i) the analysis of graded responses on an ordinal scale (partial
-credit) rather than a binary scale (correct/incorrect); (ii) the exploitation
-of tags/labels for questions that partially describe the question{concept
-associations. The resulting Ordinal SPARFA-Tag framework greatly enhances the
-interpretability of the estimated concepts. We demonstrate using real
-educational data that Ordinal SPARFA-Tag outperforms both SPARFA and existing
-collaborative filtering techniques in predicting missing learner responses.
-
+  We develop a new model and algorithms for machine learning-based learninganalytics, which estimate a learner's knowledge of the concepts underlying adomain, and content analytics, which estimate the relationships among acollection of questions and those concepts. Our model represents theprobability that a learner provides the correct response to a question in termsof three factors: their understanding of a set of underlying concepts, theconcepts involved in each question, and each question's intrinsic difficulty.We estimate these factors given the graded responses to a collection ofquestions. The underlying estimation problem is ill-posed in general,especially when only a subset of the questions are answered. The keyobservation that enables a well-posed solution is the fact that typicaleducational domains of interest involve only a small number of key concepts.Leveraging this observation, we develop both a bi-convex maximum-likelihood anda Bayesian solution to the resulting SPARse Factor Analysis (SPARFA) problem.We also incorporate user-defined tags on questions to facilitate theinterpretability of the estimated factors. Experiments with synthetic andreal-world data demonstrate the efficacy of our approach. Finally, we make aconnection between SPARFA and noisy, binary-valued (1-bit) dictionary learningthat is of independent interest.
 
