@@ -35,6 +35,7 @@ inverted_index = dict()
 paper_list = []
 
 doc_id = 0
+avg_doc_length = 0.0
 
 #read each file from dir "papers" 
 def read_doc():
@@ -44,6 +45,7 @@ def read_doc():
     global paperid_to_words_of_title
     global prof_to_info_map
     global paper_list
+    global avg_doc_length
     
     
     papers_dir = os.listdir('papers_test')
@@ -74,6 +76,7 @@ def read_doc():
             #abstract
             abstract = preprocesss(each_file[j+2])
             currPaper.abstract = abstract
+            avg_doc_length += len(abstract)
             
             if prof_name not in prof_to_paperids_map:
                 prof_to_paperids_map[prof_name] = list()
@@ -84,8 +87,9 @@ def read_doc():
 
             paper_list.append(currPaper)
             j = j + 4
+
+    avg_doc_length/=len(paper_list) 
                 
-        
         #indexDocument(each_doc, doc_weighting, query_weighting, inverted_index)
 
 
@@ -139,14 +143,23 @@ def construct_single_vector(doc_tokens, docid):
 
     for token in uniqueTokens: 
         if token in inverted_index:
-            output_vector[token] = (float(inverted_index[token][docid])/float(maxFreq)) * math.log10(float(len(paper_list))/float(inverted_index[token][0]))
+            tf = (float(inverted_index[token][docid])/float(maxFreq))
+            idf = math.log10(float(len(paper_list))/float(inverted_index[token][0]))
+            
+            # tf-idf weights
+            weight_TFIDF = tf * idf
+            # BM-25 weights, with tuning factors k1 = 1.2, b = 0,75
+            weight_BM = ((tf * (1.2 + 1.0))/(tf * (1.2 * ((1 - 0.75) + 0.75 * (float(len(doc_tokens))/avg_doc_length))))) * idf  
+            
+            output_vector[token] = weight_TFIDF           
+
+
     return output_vector
 
 # constructing paperid_to_vector_map
 def construct_vector_map():
     for doc_id in range(len(paper_list)): 
         paperid_to_vector_map[doc_id] = construct_single_vector(paper_list[doc_id].abstract, doc_id)
-
 
 
 if __name__ == '__main__':
