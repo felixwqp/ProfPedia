@@ -74,13 +74,6 @@ def get_score_for_paper(query, paperid):
   return np.dot(queryVector, paperVector)
 
 
-def get_score_for_profs(query):
-  #output: profs_to_score_map
-  pass
-
-
-def prof_in_constraints(prof_name, university, field):
-  pass
 
 
 def handle_query(query):
@@ -118,10 +111,3 @@ def main():
 
   pass
 
-<<<<<<< HEAD
-
-Test cases:
-Input: phrase and university and field
-Output: 
-=======
->>>>>>> 2a57627637e2e5eea193b5da6e3261b3990c7494

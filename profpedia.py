@@ -104,7 +104,8 @@ def preprocesss(doc_str):
         doc_str[i] = doc_str[i].replace(punctuation, ' ')
     '''
     doc_str = nltk.word_tokenize(doc_str)
-    doc_str = [word for word in doc_str if word not in stopwords.words('english') ]
+    doc_str = [word for word in doc_str if word not in stopwords.words('english') or word not in string.punctuation ] 
+
     output_str = []
     for word in doc_str:
         output_str.append(ps.stem(word))
