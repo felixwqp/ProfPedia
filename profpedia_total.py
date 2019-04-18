@@ -44,6 +44,14 @@ avg_doc_length = 0.0
 
 # read each file from dir "papers"
 
+def read_in_prof_homepage():
+    for prof_name, prof_info in prof_to_info_map.items():
+        try:
+            each_file = open(os.path.join('profs', prof_name), 'r').read().splitlines() 
+        except:
+            print(prof_name)
+        prof_info.homepage_url = each_file[0]
+
 
 def read_doc():
     global doc_id
@@ -263,8 +271,9 @@ def handle_query(query):
         #if prof_in_constraints(prof, university, field):
         count += 1
         # printProf(prof)
-        print(prof)
-        print(score)
+        print(str(count) + ": " + prof)
+        print("Homepage: " + prof_to_info_map[prof].homepage_url)
+        print("Score: " + str(score))
         if count == 10:
             break
 
@@ -277,19 +286,33 @@ def printProf(profName):
     # f.close()
 
 
+"""
 def main():
-    getData()
-    # inverted_index()
-    # construct_vector_space_model()
 
     query = "machine learning"
     while (query != ""):
         handle_query(query)
     pass
+    """
+
+def usage():
+    print("This is ProfPedia Search Engine")
+    print("Usage: python profpedia_total.py <query_doc>")
+    print("query_doc: ")
+    print("Line 1: query")
+    print("Line 2: university")
+    print("Line 3: field")
 
 
 if __name__ == '__main__':
+    """
+    if len(sys.argv) != 2:
+        usage()
+        exit()
+        """
+
     read_doc()
+    read_in_prof_homepage()
     construct_vector_map()
     query = "machine learning"
     handle_query(query)
