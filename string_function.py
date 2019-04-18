@@ -8,6 +8,7 @@ import os
 import re
 
 def createFieldFiles(inputStr, fieldDir):
+	res = set()
 	try: 
 		os.mkdir('fields')
 	except OSError: 
@@ -37,6 +38,9 @@ def createFieldFiles(inputStr, fieldDir):
 						break
 
 					output = fieldFile_helper('fields/'+find+'/'+field)
+					tempName  = ' '.join(profName)
+					res.add(tempName)
+
 					for name in profName: 	
 						output.write(name + ' ')
 					output.write('\n')
@@ -55,12 +59,14 @@ def createFieldFiles(inputStr, fieldDir):
 
 				for name in profName: 	
 					output.write(name + ' ')
-
+				tempName = ' '.join(profName)
+				res.add(tempName)
 				output.write('\n')
 				output.close()
 				profName = []
 		else: 
 			profName.append(word)
+	return res
 
 # Helper Function for createFieldFiles, returns correct file object, 
 # either for creating new files or appending data to existing files	

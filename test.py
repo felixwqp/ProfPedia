@@ -25,9 +25,9 @@ if __name__ == "__main__":
 
     browser = webdriver.Chrome()
     browser.get('http://csrankings.org/')
-    browser.find_element_by_id('all_areas_off').click()
-    time.sleep(5)
-    browser.find_element_by_id('ai').click()
+    browser.find_element_by_id('all_areas_on').click()
+    # time.sleep(5)
+    # browser.find_element_by_id('ai').click()
     time.sleep(5)
     browser.find_element_by_id('Carnegie%20Mellon%20University-widget').click()
     time.sleep(5)
@@ -85,12 +85,16 @@ if __name__ == "__main__":
     prof = re.findall(r'(?<=@)(.*)(?=)',data)
 
     for i in range(len(name)):
-        f= open('universities/'+name[i] , 'w+')
-        f.write(prof[i])
-        createFieldFiles(prof[i],fieldDir)
+        if(len(name[i])<5):
+            continue
+        f= open('universities/'+name[i]+'.txt' , 'w+')
+
+        names = createFieldFiles(prof[i], fieldDir)
+
+        for nameTemp in names:
+            f.write(nameTemp+'\n')
+        # f.write(prof[i])
         f.close()
-
-
 
     # data.replace('▼','#')
     # print(data)
