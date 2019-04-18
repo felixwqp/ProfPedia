@@ -87,7 +87,9 @@ if __name__ == "__main__":
     for i in range(len(name)):
         if(len(name[i])<5):
             continue
-        f= open('universities/'+name[i]+'.txt' , 'w+')
+        temp = name[i].strip()
+        temp = temp.replace(' ', '_')
+        f= open('universities/'+temp+'.txt' , 'w+')
 
         names = createFieldFiles(prof[i], fieldDir)
 
