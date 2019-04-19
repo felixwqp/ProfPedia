@@ -303,6 +303,26 @@ def usage():
     print("Line 2: university")
     print("Line 3: field")
 
+def move_file():
+    file = open(os.getcwd()+"/universities/University_of_Michigan.txt","r")
+    namelist = []
+
+    line = file.readline()
+
+    while line:
+        name = line.strip("\n")
+        namelist.append(name)
+        line = file.readline()
+    
+    for name in namelist:
+        try:
+            each_file = open(os.path.join('papers/', name), 'r').read()
+            save_file = open(os.path.join('papers_test2/', name), 'w')
+            save_file.write(each_file)
+        except:
+            continue
+
+    
 
 if __name__ == '__main__':
     """
@@ -310,9 +330,9 @@ if __name__ == '__main__':
         usage()
         exit()
         """
-
+    move_file()
     read_doc()
     read_in_prof_homepage()
     construct_vector_map()
-    query = "machine learning"
+    query = "unsupervised learning natural language processing"
     handle_query(query)

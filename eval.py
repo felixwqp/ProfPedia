@@ -63,5 +63,9 @@ line = testcase.readline()
 while line:
     university, query = line.strip("\n").split(", ")
     ranking = rank(university, query)
-    print(ranking[:10])
+    print(query)
+    for idx, content in enumerate(ranking[:10]):
+        print(idx+1, ": ", content[1].strip("\n"))
+        print("score: ", content[0])
+    print("\n")
     line = testcase.readline()
