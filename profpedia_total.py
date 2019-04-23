@@ -36,6 +36,12 @@ paperid_to_words_of_title = dict()
 # term -> df & tf for each doc which is a double dimension dict
 # inverted_index doesnt store the title !!!
 inverted_index = dict()
+
+#univeristy to set of profs  //set for look uo efficiency
+university_to_prof = dict()
+#field to set of profs
+field_to_prof = dict()
+
 paper_list = []
 
 doc_id = 0
@@ -51,8 +57,9 @@ def read_in_prof_homepage():
         except:
             print(prof_name)
         prof_info.homepage_url = each_file[0]
-
-
+    
+    
+    
 def read_doc():
     global doc_id
     global inverted_index
@@ -110,6 +117,51 @@ def read_doc():
     # indexDocument(each_doc, doc_weighting, query_weighting, inverted_index)
 
 
+    
+def read_university_field():
+    global prof_to_info_map
+    global university_to_prof
+    global field_to_prof
+    
+    
+    #read in the university to prof  
+    university_dir = os.listdir('universities')
+    for i in range(len(university_dir)):
+        try:
+            each_university_file = open(os.path.join('universities', university_dir[i]), 'r').read().splitlines() 
+            #print(university_dir[i][:-4])
+        except:
+            print("not a valid univeristy file")
+        current_university = university_dir[i][:-4]
+        for j in range(len(each_university_file)):
+            if each_university_file[j] in prof_to_info_map:
+                prof_to_info_map[each_university_file[j]].university = current_university
+            if current_university not in university_to_prof:
+                university_to_prof[current_university] = set()             
+            university_to_prof[current_university].add(each_university_file[j])
+    
+    #read in the fields
+    field_dir = os.listdir('fields')
+    for i in range(len(field_dir)):
+        sub_path = os.path.join('fields', field_dir[i])
+        sub_field_dir = os.listdir(sub_path)
+        for j in range(len(sub_field_dir)):
+            each_sub_field_file = open(os.path.join(sub_path, sub_field_dir[j]), 'r').read().splitlines()
+            for k in range(len(each_sub_field_file)):
+                if each_sub_field_file[k] in prof_to_info_map:
+                    prof_to_info_map[each_sub_field_file[k]].field.append(sub_field_dir[j])
+                if sub_field_dir[j] not in field_to_prof:
+                    field_to_prof[sub_field_dir[j]] = set()
+                field_to_prof[sub_field_dir[j]].add(each_sub_field_file[k][:-1])
+          
+   # print("Hu Ding" in field_to_prof['ai'])
+            
+            
+            
+
+   # for i in range()
+    
+    
 # pass each doc (title/abstract) and return the list of tokens
 # remove stopword  & porter stemming
 def preprocesss(doc_str):
@@ -329,10 +381,13 @@ if __name__ == '__main__':
     if len(sys.argv) != 2:
         usage()
         exit()
-        """
+    """
+
     move_file()
     read_doc()
+    read_university_field()
     read_in_prof_homepage()
     construct_vector_map()
     query = "unsupervised learning natural language processing"
     handle_query(query)
+  
