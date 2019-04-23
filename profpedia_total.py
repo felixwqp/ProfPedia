@@ -69,11 +69,11 @@ def read_doc():
     global paper_list
     global avg_doc_length
 
-    papers_dir = os.listdir('papers_test2')
+    papers_dir = os.listdir('papers')
 
     for i in range(len(papers_dir)):
         try:
-            each_file = open(os.path.join('papers_test2', papers_dir[i]), 'r').read().splitlines() 
+            each_file = open(os.path.join('papers', papers_dir[i]), 'r').read().splitlines() 
         except:
             print(papers_dir[i])
         j = 0
@@ -312,6 +312,8 @@ def prof_in_constraints(prof_name, university, field):
 
 
 def handle_query(query):
+    #TODO:
+    #add the univerisity and filed to be the filter!!!!!!!!!!!!!!!!!
     university = ""
     field = ""
     profs_to_score_map = get_score_for_profs(query)
@@ -320,12 +322,11 @@ def handle_query(query):
     count = 0
     print("enter query")
     for prof, score in rankedProfs:
-        #if prof_in_constraints(prof, university, field):
-        count += 1
-        # printProf(prof)
-        print(str(count) + ": " + prof)
-        print("Homepage: " + prof_to_info_map[prof].homepage_url)
-        print("Score: " + str(score))
+        if prof_in_constraints(prof, university, field):
+            count += 1
+            print(str(count) + ": " + prof)
+            print("Homepage: " + prof_to_info_map[prof].homepage_url)
+            print("Score: " + str(score))
         if count == 10:
             break
 
