@@ -8,7 +8,7 @@ import re
 import os
 from nltk.corpus import stopwords
 
-def crawl_dblp(professor):
+def crawl_dblp(find_prof, professor):
     name = professor.replace("\n","").split(" ")
     profname = ""
     for i in range(len(name)-1):
@@ -21,9 +21,12 @@ def crawl_dblp(professor):
 
     file = open(path,"r")
     content = file.read()
-    num_paper = content.count("<title>")
 
-    return num_paper
+    find_prof = find_prof.replace("\n","")
+    if content.count(find_prof) > 1:
+        return content.count(find_prof) -1 
+    else:
+        return 0
 
 def rank(univerity, query):
     # remove stop words, reform query
@@ -51,7 +54,7 @@ def rank(univerity, query):
         prof = file.readline()
     
     # get rank results
-    professor_rankscore = [[crawl_dblp(x[1]),x[0]] for x in professor_query]
+    professor_rankscore = [[crawl_dblp(x[0],x[1]),x[0]] for x in professor_query]
 
     professor_rankscore = sorted(professor_rankscore, reverse = True)
     return professor_rankscore
@@ -65,7 +68,8 @@ while line:
     ranking = rank(university, query)
     print(query)
     for idx, content in enumerate(ranking[:10]):
-        print(idx+1, ": ", content[1].strip("\n"))
-        print("score: ", content[0])
+        if (content[0] != 0):
+            print(idx+1, ": ", content[1].strip("\n"))
+            print("score: ", content[0])
     print("\n")
     line = testcase.readline()
