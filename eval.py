@@ -69,12 +69,27 @@ while line:
     ranking = rank(university, query)
     print(query)
     output.write(query)
-    for idx, content in enumerate(ranking[:10]):
+    top10 = 0
+    top10_data = 0
+    for idx, content in enumerate(ranking[:]):
+        top10 += 1
         if (content[0] != 0):
-            print(str(idx+1) + ": " + content[1].strip("\n") + "\n")
+            print(str(idx+1) + ": " + content[1].strip("\n"))
             output.write(str(idx+1) + ": " + content[1].strip("\n") + "\n")
-            print("score: " + str(content[0]) + "\n")
+            print("score: " + str(content[0]))
             output.write("score: " + str(content[0]) + "\n")
+            if top10 == 10:
+                top10_data = content[0]
+            if top10 >= 10:
+                if top10 < len(ranking) and ranking[top10][0] == top10_data:
+                    continue
+                else:
+                    break
+        else:
+            break
+            
+
+
     output.write("\n")
     
     line = testcase.readline()
