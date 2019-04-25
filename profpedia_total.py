@@ -311,9 +311,12 @@ def get_score_for_profs(query):
 
 
 def prof_in_constraints(prof_name, university, field):
+    if university == "":
+        return True 
     prof_info = prof_to_info_map[prof_name]
     try:
-        if university == prof_info.university and field == prof_info.field:
+        #if university == prof_info.university and field == prof_info.field:
+        if university == prof_info.university: 
             return True
         else:
             return False
