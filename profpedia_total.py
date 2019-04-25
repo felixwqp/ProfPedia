@@ -8,6 +8,7 @@ from nltk.stem import PorterStemmer
 import string
 import math
 import operator
+import pickle
 
 
 class Paper():
@@ -19,6 +20,11 @@ class Paper():
 
 class Professor():
     def Professor(self):
+        self.name = ""
+        self.homepage_url = ""
+        self.university = ""
+        self.field = []
+    def __init__(self):
         self.name = ""
         self.homepage_url = ""
         self.university = ""
@@ -149,7 +155,8 @@ def read_university_field():
             each_sub_field_file = open(os.path.join(sub_path, sub_field_dir[j]), 'r').read().splitlines()
             for k in range(len(each_sub_field_file)):
                 if each_sub_field_file[k] in prof_to_info_map:
-                    prof_to_info_map[each_sub_field_file[k]].field.append(sub_field_dir[j])
+                    prof_to_info_map[each_sub_field_file[k][:-1]].field.append(sub_field_dir[j])
+                    print(prof_to_info_map[each_sub_field_file[k][:-1]].field)
                 if sub_field_dir[j] not in field_to_prof:
                     field_to_prof[sub_field_dir[j]] = set()
                 field_to_prof[sub_field_dir[j]].add(each_sub_field_file[k][:-1])
@@ -305,17 +312,18 @@ def get_score_for_profs(query):
 
 def prof_in_constraints(prof_name, university, field):
     prof_info = prof_to_info_map[prof_name]
-    if university == prof_info.university and field == prof_info.field:
-        return True
-    else:
+    try:
+        if university == prof_info.university and field == prof_info.field:
+            return True
+        else:
+            return False
+    except:
         return False
 
 
-def handle_query(query):
+def handle_query(query, university, field):
     #TODO:
     #add the univerisity and filed to be the filter!!!!!!!!!!!!!!!!!
-    university = ""
-    field = ""
     profs_to_score_map = get_score_for_profs(query)
     rankedProfs = list({k: v for k, v in sorted(
         profs_to_score_map.items(), key=lambda x: x[1], reverse=True)}.items())
@@ -384,11 +392,81 @@ if __name__ == '__main__':
         exit()
     """
 
+
     move_file()
     read_doc()
     read_university_field()
+
+    """
     read_in_prof_homepage()
     construct_vector_map()
-    query = "unsupervised learning natural language processing"
-    handle_query(query)
+    print("Finish reading")
+
+    file = open("prof_to_info_map.pickle", 'wb')
+    pickle.dump(prof_to_info_map, file)
+    file.close
+
+    file = open("prof_to_paperids_map.pickle", 'wb')
+    pickle.dump(prof_to_paperids_map, file)
+    file.close
+
+    file = open("paperid_to_vector_map.pickle", 'wb')
+    pickle.dump(paperid_to_vector_map, file)
+    file.close
+
+    file = open("paperid_to_length.pickle", 'wb')
+    pickle.dump(paperid_to_length, file)
+    file.close
+
+    file = open("paperid_to_words_of_title.pickle", 'wb')
+    pickle.dump(paperid_to_words_of_title, file)
+    file.close
+
+
+    file = open("inverted_index.pickle", 'wb')
+    pickle.dump(inverted_index, file)
+    file.close
+    """
+
+    file = open("prof_to_info_map.pickle", 'rb')
+    prof_to_info_map = pickle.load(file)
+    file.close
+
+    file = open("prof_to_paperids_map.pickle", 'rb')
+    prof_to_paperids_map = pickle.load(file)
+    file.close
+
+    file = open("paperid_to_vector_map.pickle", 'rb')
+    paperid_to_vector_map = pickle.load(file)
+    file.close
+
+    file = open("paperid_to_length.pickle", 'rb')
+    paperid_to_length = pickle.load(file)
+    file.close
+
+    file = open("paperid_to_words_of_title.pickle", 'rb')
+    paperid_to_words_of_title = pickle.load(file)
+    file.close
+
+    file = open("inverted_index.pickle", 'rb')
+    inverted_index = pickle.load(file)
+    file.close
+    #print(prof_to_info_map)
+    
+
+    """
+    test_prof_name = "Vibhav Gogate"
+    prof_info = prof_to_info_map[test_prof_name]
+    print("Name: " + prof_info.name)
+    #print("Homepage: " + prof_info.homepage_url)
+    print("Univeristy: " + prof_info.university)
+    print( prof_info.field)
+    """
+
+
+    while 1:
+        query = input("Query: ")
+        university = input("University: ")
+        field = input("field: ")
+        handle_query(query, university, field)
   
