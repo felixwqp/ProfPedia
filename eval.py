@@ -63,13 +63,18 @@ def rank(univerity, query):
 testcase = open("Testcase.txt","r")
 line = testcase.readline()
 
+output = open("Test_result.txt", "w")
 while line:
     university, query = line.strip("\n").split(", ")
     ranking = rank(university, query)
     print(query)
+    output.write(query)
     for idx, content in enumerate(ranking[:10]):
         if (content[0] != 0):
-            print(idx+1, ": ", content[1].strip("\n"))
-            print("score: ", content[0])
-    print("\n")
+            print(str(idx+1) + ": " + content[1].strip("\n") + "\n")
+            output.write(str(idx+1) + ": " + content[1].strip("\n") + "\n")
+            print("score: " + str(content[0]) + "\n")
+            output.write("score: " + str(content[0]) + "\n")
+    output.write("\n")
+    
     line = testcase.readline()
