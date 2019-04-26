@@ -68,7 +68,7 @@ while line:
     university, query = line.strip("\n").split(", ")
     ranking = rank(university, query)
     print(query)
-    output.write(query)
+    output.write(query+"\n")
     top10 = 0
     top10_data = 0
     for idx, content in enumerate(ranking[:]):
@@ -88,8 +88,7 @@ while line:
         else:
             break
             
-
-
+    print("")
     output.write("\n")
     
     line = testcase.readline()
